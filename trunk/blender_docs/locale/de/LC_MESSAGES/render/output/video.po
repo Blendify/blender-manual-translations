@@ -1,0 +1,287 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 2.76\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-15 16:28+1100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../manual/render/output/video.rst:4
+msgid "Video Output"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:7
+msgid "Preparing your work for video"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:9
+msgid ""
+"Once you have mastered the trick of animation you will surely start to "
+"produce wonderful animations, encoded with your favorite codecs, and "
+"possibly you'll share them on the Internet with the rest of the community."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:13
+msgid ""
+"Sooner or later you will be struck with the desire to build an animation for"
+" television, or maybe burn your own DVDs. To spare you some disappointment, "
+"here are some tips specifically targeted at Video preparation. The first and"
+" principal one is to remember the double-dashed white lines in the camera "
+"view!"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:18
+msgid ""
+"If you render for PC then the whole rendered image which lies within the "
+"*outer* dashed rectangle will be shown. For television, some lines and some "
+"part of the lines will be lost due to the mechanics of the electron beam "
+"scanning in your TV's cathode ray tube. You are guaranteed that what is "
+"within the *inner* dashed rectangle in camera view will be visible on the "
+"screen. Everything within the two rectangles may or may not be visible, "
+"depending on the given TV set that your audience watches the video on."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:28
+msgid "Dimensions Presets"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:32
+msgid ""
+"The rendering size is strictly dictated by the TV standard. There are "
+"various popular presets included, more can be added for your convenience."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:35
+msgid "Saved information is:"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:37
+msgid "X, Y & percentage scale"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:38
+msgid "pixel aspect ratio"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:39
+msgid "frames per second, for animation"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:41
+msgid "See also :ref:`render_output_dimensions`"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:45
+msgid "Pixel Aspect Ratio"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:47
+msgid ""
+"Unlike regular computer monitors, some screens (typically older TV sets) do "
+"*not* have the square pixels making it it necessary to generate *pre-"
+"distorted* images which will look stretched on a computer but which will "
+"display correctly on a TV set. It is important that you use the correct "
+"pixel aspect ratio when rendering to prevent re-scaling, resulting in "
+"lowered image quality."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:55
+msgid "Color Saturation"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:57
+msgid ""
+"Most video tapes and video signals are not based on the RGB model but on the"
+" YCrCb model: more precisely, the YUV in Europe (PAL), and the YIQ in the "
+"USA (NTSC), the latter being quite similar to the former. Hence some "
+"knowledge of this is necessary too."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:61
+msgid ""
+"The YCrCb model sends information as 'Luminance', or intensity (Y) and two "
+"'Crominance' signals, red and blue (Cr and Cb). Actually a Black and White "
+"TV set shows only luminance, while color TV sets reconstruct color from "
+"Crominances (and from luminance). Construction of the YCrCb values from the "
+"RGB ones takes two steps (the constants *in italics* depend on the system: "
+"PAL or NTSC):"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:68
+msgid "First, the Gamma correction (*g* varies: 2.2 for NTSC, 2.8 for PAL):"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:70
+msgid "R' = R :sup:`1/g` :\\*G' = G :sup:`1/g`"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:71
+msgid "B' = B :sup:`1/g`"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:73
+msgid "Then, the conversion itself:"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:75
+msgid "Y = 0.299R' + 0.587G' + 0.114B'"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:76
+msgid "Cr = *a* :sub:`1` (R' - Y) + *b* :sub:`1` (B' - Y)"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:77
+msgid "Cb = *a* :sub:`2` (R' - Y) + *b* :sub:`2` (B' - Y)"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:79
+msgid ""
+"Whereas a standard 24 bit RGB picture has 8 bits for each channel, to keep "
+"bandwidth down, and considering that the human eye is more sensitive to "
+"luminance than to chrominance, the luminance signal is sent with more bits "
+"than the two chrominance signals. This bit expansion results in a smaller "
+"dynamic of colors in video, than what you are used to on monitors. You hence"
+" have to keep in mind that not all colors can be correctly displayed."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:86
+msgid ""
+"A rule of thumb is to keep the colors as 'grayish' or 'unsaturated' as "
+"possible; this roughly means keeping the dynamics of your colors within 80% "
+"of one another. In other words, the difference between the highest RGB value"
+" and the lowest RGB value should not exceed 0.8 ([0-1] range) or 200 "
+"([0-255] range)."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:92
+msgid ""
+"This is not strict - something more than 0.8 is acceptable - but an RGB "
+"display with color contrast that ranges from 0.0 to 1.0 will appear to be "
+"very ugly (over-saturated) on video, while appearing bright and dynamic on a"
+" computer monitor."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:98
+msgid "Rendering to fields"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:102
+msgid "Field Rendering result."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:105
+msgid ""
+"The TV standards prescribe that there should be 25 frames per second (PAL) "
+"or 30 frames per second (NTSC). Since the phosphors of the screen do not "
+"maintain luminosity for very long, this could produce a noticeable "
+"flickering."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:110
+msgid ""
+"To minimize this, a TV does not represent frames as a computer does "
+"('progressive' mode), but rather represents half-frames, or *fields* at a "
+"double refresh rate, hence 50 half frames per second on PAL and 60 half "
+"frames per second on NTSC. This was originally bound to the frequency of "
+"power lines in Europe (50Hz) and the US (60Hz)."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:115
+msgid ""
+"In particular, fields are \"interlaced\" in the sense that one field "
+"presents all the even lines of the complete frame and the subsequent field "
+"the odd ones."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:118
+msgid ""
+"Since there is a non-negligible time difference between each field (1/50 or "
+"1/60 of a second) merely rendering a frame the usual way and splitting it "
+"into two half frames does not work. A noticeable jitter of the edges of "
+"moving objects would be present."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:124
+msgid "Options"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:128
+msgid "Field Rendering setup."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:137
+msgid "Fields"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:132
+msgid ""
+"Enable field rendering. When the *Fields* button in the *Render* Panel is "
+"pressed (*Post Processing* section), Blender prepares each frame in two "
+"passes. On the first it renders only the even lines, then it *advances in "
+"time by half a time step* and renders all the odd lines. This produces odd "
+"results on a PC screen *(Field Rendering result)*. but will show correctly "
+"on a TV set."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:139
+msgid "Upper First / Lower First"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:140
+msgid "Toggles between rendering the even and odd frames first."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:143
+msgid "Still"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:142
+msgid "Disables the half-frame time step between fields (*x*)."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:145
+msgid "Setting up the correct field order"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:147
+msgid ""
+"Blender's default setting is to produce Even fields *before* Odd fields; "
+"this complies with European PAL standards. Odd fields are scanned first on "
+"NTSC."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:151
+msgid ""
+"Of course, if you make the wrong selection things are even worse than if no "
+"Field rendering at all was used!"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:154
+msgid ""
+"If you are really confused, a simple trick to determine the correct field "
+"order is to render a short test animation of a white square moving from left"
+" to right on a black background. Prepare one version with odd field order "
+"and another with even field order, and look at them on a television screen. "
+"The one with the right field order will look smooth and the other one "
+"horrible. Doing this simple test will save you *hours* of wasted rendering "
+"time..."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:162
+msgid "Fields and Composite Nodes"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:164
+msgid ""
+"Nodes are currently not field-aware. This is partly due to the fact that in "
+"fields, too much information is missing to do good neighborhood operations "
+"(blur, vector blur etc.). The solution is to render your animation at double"
+" the frame rate without fields and do the interlacing of the footage "
+"afterwards."
+msgstr ""
