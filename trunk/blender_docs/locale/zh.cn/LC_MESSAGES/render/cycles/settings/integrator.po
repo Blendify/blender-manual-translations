@@ -14,11 +14,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.2\n"
 
-#: ..\..\render\cycles\settings\integrator.rst:4
+#: ../../manual/render/cycles/settings/integrator.rst:4
 msgid "Integrator"
 msgstr "积分器"
 
-#: ..\..\render\cycles\settings\integrator.rst:6
+#: ../../manual/render/cycles/settings/integrator.rst:6
 msgid ""
 "The integrator is the rendering algorithm used to compute the lighting. "
 "Cycles currently supports a path tracing integrator with direct light "
@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "积分器是一种用于计算光照的渲染算法。目前，Cycles引擎支持一种积分器，一种带直接光照采样的路径追踪积分器。它可以很好地适用于各种照明设定，但不适用于焦散以及其它一些复杂的光照情形。"
 
-#: ..\..\render\cycles\settings\integrator.rst:11
+#: ../../manual/render/cycles/settings/integrator.rst:11
 msgid ""
 "Rays are traced from the camera into the scene, bouncing around until they "
 "find a light source such as a lamp, an object emitting light, or the world "
@@ -37,15 +37,15 @@ msgid ""
 msgstr ""
 "光线从摄像机出发射到场景中，并来回反弹，直到它们找到一个光源，例如一个灯光物体，一个发光物体，或是环境背景光。为了找到灯光或发光的表面，间接照明采样（让光线跟随表面BSDF）与直接照明采样（选取一个光源并追踪射向它的光线）都将会用到。"
 
-#: ..\..\render\cycles\settings\integrator.rst:19
+#: ../../manual/render/cycles/settings/integrator.rst:19
 msgid "Scene Settings"
 msgstr "场景设定"
 
-#: ..\..\render\cycles\settings\integrator.rst:22
+#: ../../manual/render/cycles/settings/integrator.rst:22
 msgid "Sampling"
 msgstr "采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:24
+#: ../../manual/render/cycles/settings/integrator.rst:24
 msgid ""
 "There are two integrator modes that can be used: path tracing and branched "
 "path tracing. The **path tracing integrator** is a pure path tracer; at each"
@@ -56,26 +56,26 @@ msgstr ""
 "积分器有两种模式可以使用：路径追踪和分支路径追踪。**路径追踪积分器** "
 "是纯粹的路径追踪；在每个光线与物体的交汇点只会有一个方向的反弹光线出去、也只接受一条光线的入射。这样能使每个采样会非常快速的计算出来，但是就要求非常多的采样来降低和清除噪点。"
 
-#: ..\..\render\cycles\settings\integrator.rst:31
+#: ../../manual/render/cycles/settings/integrator.rst:31
 msgid "Render Samples"
 msgstr "渲染采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:31
+#: ../../manual/render/cycles/settings/integrator.rst:31
 msgid ""
 "Number of paths to trace for each pixel in the final render. As more samples"
 " are taken, the solution becomes less noisy and more accurate."
 msgstr "这是最终渲染中单像素的光程追踪次数。采样次数越多，结果中的噪点就会越少，也会更加精确。"
 
-#: ..\..\render\cycles\settings\integrator.rst:34
+#: ../../manual/render/cycles/settings/integrator.rst:34
 msgid "Preview Samples"
 msgstr "预览采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:34
-#: ..\..\render\cycles\settings\integrator.rst:48
+#: ../../manual/render/cycles/settings/integrator.rst:34
+#: ../../manual/render/cycles/settings/integrator.rst:48
 msgid "Number of samples for viewport rendering."
 msgstr "这是视窗渲染时的采样次数。"
 
-#: ..\..\render\cycles\settings\integrator.rst:36
+#: ../../manual/render/cycles/settings/integrator.rst:36
 msgid ""
 "The **branched path tracing integrator** (formerly called non-progressive "
 "integrator) is similar, but at the first hit it will split the path for "
@@ -90,96 +90,96 @@ msgstr ""
 "（普遍称为非渐进式积分器）也是类似的，但是在第一次光线跟表面发生交汇时，会将光线路径按不同的表面属性分支，也会将所有的灯光考虑到着色过程上而不是单单只算一条光线。这样会让每个采样变得比较慢一些，但是可以降低噪点，特别是那些主要是直接或单次反射光的场景上。要跟普通路径追踪获得一样的漫射采样数的话，需要注意是这样计算"
 " 250路径追踪采样 = 10 抗锯齿采样 x 25 漫射采样。采样面板显示了总采样数值。"
 
-#: ..\..\render\cycles\settings\integrator.rst:45
+#: ../../manual/render/cycles/settings/integrator.rst:45
 msgid "AA Render Samples"
 msgstr "抗锯齿采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:46
+#: ../../manual/render/cycles/settings/integrator.rst:46
 msgid ""
 "Number of samples to take for each pixel in the final render. More samples "
 "will improve antialiasing."
 msgstr "最终渲染的时候每个像素点包含的采样数值。越多的采样会提升抗锯齿效果。"
 
-#: ..\..\render\cycles\settings\integrator.rst:48
+#: ../../manual/render/cycles/settings/integrator.rst:48
 msgid "AA Preview Samples"
 msgstr "抗锯齿采预览样"
 
-#: ..\..\render\cycles\settings\integrator.rst:50
+#: ../../manual/render/cycles/settings/integrator.rst:50
 msgid "Diffuse Samples"
 msgstr "漫射色采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:51
+#: ../../manual/render/cycles/settings/integrator.rst:51
 msgid "Number of diffuse bounce samples to take for each AA sample."
 msgstr "每个抗锯齿采样中的漫射反弹采样数"
 
-#: ..\..\render\cycles\settings\integrator.rst:52
+#: ../../manual/render/cycles/settings/integrator.rst:52
 msgid "Glossy Samples"
 msgstr "光泽采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:53
+#: ../../manual/render/cycles/settings/integrator.rst:53
 msgid "Number of glossy bounce samples to take for each AA sample."
 msgstr "每个抗锯齿采样中的光泽反弹采样数"
 
-#: ..\..\render\cycles\settings\integrator.rst:54
+#: ../../manual/render/cycles/settings/integrator.rst:54
 msgid "Transmission Samples"
 msgstr "传递采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:55
+#: ../../manual/render/cycles/settings/integrator.rst:55
 msgid "Number of transmission bounce samples to take for each AA sample."
 msgstr "每个抗锯齿采样中的漫射传递采样数"
 
-#: ..\..\render\cycles\settings\integrator.rst:56
+#: ../../manual/render/cycles/settings/integrator.rst:56
 msgid "AO Samples"
 msgstr "环境光遮罩采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:57
+#: ../../manual/render/cycles/settings/integrator.rst:57
 msgid "Number of ambient occlusion samples to take for each AA sample."
 msgstr "每个抗锯齿采样中的环境遮罩采样数"
 
-#: ..\..\render\cycles\settings\integrator.rst:58
+#: ../../manual/render/cycles/settings/integrator.rst:58
 msgid "Mesh Light Samples"
 msgstr "网格照明采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:59
+#: ../../manual/render/cycles/settings/integrator.rst:59
 msgid "Number of mesh light samples to take for each AA sample."
 msgstr "每个抗锯齿采样中的网格照明采样数"
 
-#: ..\..\render\cycles\settings\integrator.rst:61
+#: ../../manual/render/cycles/settings/integrator.rst:61
 msgid "Subsurface Samples"
 msgstr "次表面采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:61
+#: ../../manual/render/cycles/settings/integrator.rst:61
 msgid "Number of subsurface scattering samples to take for each AA sample."
 msgstr "每个抗锯齿采样中的次表面散射采样数"
 
-#: ..\..\render\cycles\settings\integrator.rst:63
+#: ../../manual/render/cycles/settings/integrator.rst:63
 msgid "For both integrators the noise pattern can be controlled."
 msgstr "两种积分器的噪点模式都是可以控制的"
 
-#: ..\..\render\cycles\settings\integrator.rst:67
+#: ../../manual/render/cycles/settings/integrator.rst:67
 msgid "Seed"
 msgstr "采样种"
 
-#: ..\..\render\cycles\settings\integrator.rst:66
+#: ../../manual/render/cycles/settings/integrator.rst:66
 msgid ""
 "Random number generator seed; each different value gives a different noise "
 "pattern."
 msgstr "这是生成器采样种的随机采样次数，不同的值都会带来不同的噪点结果。"
 
-#: ..\..\render\cycles\settings\integrator.rst:72
+#: ../../manual/render/cycles/settings/integrator.rst:72
 msgid "Bounces"
 msgstr "反弹"
 
-#: ..\..\render\cycles\settings\integrator.rst:76
-#: ..\..\render\cycles\settings\integrator.rst:193
+#: ../../manual/render/cycles/settings/integrator.rst:76
+#: ../../manual/render/cycles/settings/integrator.rst:193
 msgid "Max Bounces"
 msgstr "最大反弹次数"
 
-#: ..\..\render\cycles\settings\integrator.rst:82
+#: ../../manual/render/cycles/settings/integrator.rst:82
 msgid "Min Bounces"
 msgstr "最低反弹次数"
 
-#: ..\..\render\cycles\settings\integrator.rst:79
+#: ../../manual/render/cycles/settings/integrator.rst:79
 msgid ""
 "Minimum number of light bounces for each path, after which the integrator "
 "uses Russian Roulette to terminate paths that contribute less to the image. "
@@ -189,71 +189,71 @@ msgid ""
 msgstr ""
 "每条光路的最小光线反弹数，积分器通过使用罗斯轮盘方法来终结对图片没有贡献的一些光路。数值设置高可以减少噪点，但是会增长很长的渲染时间。如果反弹比较少，非常强烈的建议设置数值跟最大反弹值相等。"
 
-#: ..\..\render\cycles\settings\integrator.rst:84
+#: ../../manual/render/cycles/settings/integrator.rst:84
 msgid "Diffuse Bounces"
 msgstr "漫射反弹"
 
-#: ..\..\render\cycles\settings\integrator.rst:85
+#: ../../manual/render/cycles/settings/integrator.rst:85
 msgid "Maximum number of diffuse bounces."
 msgstr "漫射反弹的最大次数"
 
-#: ..\..\render\cycles\settings\integrator.rst:86
+#: ../../manual/render/cycles/settings/integrator.rst:86
 msgid "Glossy Bounces"
 msgstr "光泽反弹"
 
-#: ..\..\render\cycles\settings\integrator.rst:87
+#: ../../manual/render/cycles/settings/integrator.rst:87
 msgid "Maximum number of glossy bounces."
 msgstr "光泽反弹的最大次数"
 
-#: ..\..\render\cycles\settings\integrator.rst:90
+#: ../../manual/render/cycles/settings/integrator.rst:90
 msgid "Transmission Bounces"
 msgstr "传递反弹"
 
-#: ..\..\render\cycles\settings\integrator.rst:89
+#: ../../manual/render/cycles/settings/integrator.rst:89
 msgid "Maximum number of transmission bounces."
 msgstr "传递反弹的最大次数"
 
-#: ..\..\render\cycles\settings\integrator.rst:93
+#: ../../manual/render/cycles/settings/integrator.rst:93
 msgid "Transparency"
 msgstr "透射"
 
-#: ..\..\render\cycles\settings\integrator.rst:95
+#: ../../manual/render/cycles/settings/integrator.rst:95
 msgid "Transparency Max"
 msgstr "透射最大值"
 
-#: ..\..\render\cycles\settings\integrator.rst:96
+#: ../../manual/render/cycles/settings/integrator.rst:96
 msgid "Maximum number of transparency bounces."
 msgstr "透射反弹的最大次数"
 
-#: ..\..\render\cycles\settings\integrator.rst:97
+#: ../../manual/render/cycles/settings/integrator.rst:97
 msgid "Transparency Min"
 msgstr "透射最小值"
 
-#: ..\..\render\cycles\settings\integrator.rst:98
+#: ../../manual/render/cycles/settings/integrator.rst:98
 msgid ""
 "Minimum number of transparency bounces, after which Russian Roulette "
 "termination is used."
 msgstr "透射反弹的最小值，决定选用哪种罗斯轮盘。"
 
-#: ..\..\render\cycles\settings\integrator.rst:102
+#: ../../manual/render/cycles/settings/integrator.rst:102
 msgid "Transparent Shadows"
 msgstr "透明阴影"
 
-#: ..\..\render\cycles\settings\integrator.rst:100
+#: ../../manual/render/cycles/settings/integrator.rst:100
 msgid ""
 "For direct light sampling, use transparency of surfaces in between to "
 "produce shadows affected by transparency of those surfaces."
 msgstr "对于直射光采样，用在阴影面和光源之间的表面的透明度来生成受表面透明度影响的阴影。"
 
-#: ..\..\render\cycles\settings\integrator.rst:105
+#: ../../manual/render/cycles/settings/integrator.rst:105
 msgid "Tricks"
 msgstr "技巧"
 
-#: ..\..\render\cycles\settings\integrator.rst:113
+#: ../../manual/render/cycles/settings/integrator.rst:113
 msgid "No Caustics"
 msgstr "无焦散"
 
-#: ..\..\render\cycles\settings\integrator.rst:110
+#: ../../manual/render/cycles/settings/integrator.rst:110
 msgid ""
 "While in principle path tracing supports rendering of caustics with a "
 "sufficient number of samples, in practice it may be inefficient to the point"
@@ -261,18 +261,18 @@ msgid ""
 " them entirely."
 msgstr "如果采样次数足够多，光程追踪大体上能够支持焦散渲染，实际上，这也有不足之处，因为会产生太多的噪点。该选项可以将其彻底禁用。"
 
-#: ..\..\render\cycles\settings\integrator.rst:131
+#: ../../manual/render/cycles/settings/integrator.rst:131
 msgid "Filter Glossy"
 msgstr "滤除光泽"
 
-#: ..\..\render\cycles\settings\integrator.rst:118
+#: ../../manual/render/cycles/settings/integrator.rst:118
 msgid ""
 "When using a value higher than 0.0, this will blur glossy reflections after "
 "blurry bounces, to reduce noise at the cost of accuracy. 1.0 is a good "
 "starting value to tweak."
 msgstr "设置一个高于 0.0的值的话，会在模糊反弹后将光泽反射模糊掉，通过降低精度来达到减少噪点的目的。1.0是用来调优的最好的起始值。"
 
-#: ..\..\render\cycles\settings\integrator.rst:121
+#: ../../manual/render/cycles/settings/integrator.rst:121
 msgid ""
 "Some light paths have a low probability of being found while contributing "
 "much light to the pixel. As a result these light paths will be found in some"
@@ -283,7 +283,7 @@ msgid ""
 msgstr ""
 "在光线要对某个像素点贡献很大光亮的时候这些光路被寻找到的概率是非常低的。正因为如此，这样的光路可能会在某些像素点上找到，在另外的像素点又找不到，这就引起了亮点问题。一般引起这样问题的原因比如：非常锐利的光泽材质上的很小的一个高光反光点产生的反射光。"
 
-#: ..\..\render\cycles\settings\integrator.rst:128
+#: ../../manual/render/cycles/settings/integrator.rst:128
 msgid ""
 "With path tracing it is difficult to find the specular highlight, but if we "
 "increase the roughness on the material, the highlight gets bigger and "
@@ -293,18 +293,18 @@ msgid ""
 msgstr ""
 "路径追踪是很难找到反射高光的，但是如果我们把材质的粗糙度提高，高光会更大和柔和，也更容易找到。通常这种模糊很难被发觉，因为我们是在模糊的材质上看到的，不过也会损失掉一些光线的细节。"
 
-#: ..\..\render\cycles\settings\integrator.rst:144
+#: ../../manual/render/cycles/settings/integrator.rst:144
 msgid "Clamp Samples"
 msgstr "限定采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:136
+#: ../../manual/render/cycles/settings/integrator.rst:136
 msgid ""
 "This option will clamp all samples to a maximum intensity they can "
 "contribute to the pixel, again to reduce noise at the cost of accuracy. With"
 " value 0.0 this option is disabled; lower values clamp more light away."
 msgstr "这个选项会限定所有采样针对像素点的的最大密度贡献，同样减少噪点同时降低精度。值设为0.0的时候是关闭的；低数值会限定掉更多的光。"
 
-#: ..\..\render\cycles\settings\integrator.rst:141
+#: ../../manual/render/cycles/settings/integrator.rst:141
 msgid ""
 "If the image has fireflies, there will be samples that contribute very high "
 "values to pixels, and this option provides a way to limit that. However note"
@@ -315,17 +315,17 @@ msgid ""
 msgstr ""
 "如果图片中有亮点，说明像素点里面有很高值的采样，这个选项提供了限制这类事情发生的方法。但是也要注意，你限定了一些值，很多很亮的但是没有噪点的地方也会丢失。所以可能需要在去除噪点但是要保持图像中的亮丽颜色之间做出平衡。"
 
-#: ..\..\render\cycles\settings\integrator.rst:149
+#: ../../manual/render/cycles/settings/integrator.rst:149
 msgid "Material Settings"
 msgstr "材质设置"
 
-#: ..\..\render\cycles\settings\integrator.rst:159
-#: ..\..\render\cycles\settings\integrator.rst:170
-#: ..\..\render\cycles\settings\integrator.rst:186
+#: ../../manual/render/cycles/settings/integrator.rst:159
+#: ../../manual/render/cycles/settings/integrator.rst:170
+#: ../../manual/render/cycles/settings/integrator.rst:186
 msgid "Multiple Importance Sample"
 msgstr "多重重要性采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:152
+#: ../../manual/render/cycles/settings/integrator.rst:152
 msgid ""
 "By default objects with emitting materials use both direct and indirect "
 "light sampling methods, but in some cases it may lead to less noise overall "
@@ -336,17 +336,17 @@ msgstr ""
 "默认情况下，带有自发光材质的物体采用了直接和间接光采样方法，但是在某些情况下某些材质如果屏蔽掉直接光采样的话反而会总体上减少噪点。通过关闭 "
 "*多重重要性采样* 选项可以做到这点。相对于其他光源看着很大的物体只发射很小的光的物体采用这个方法是非常有用的。"
 
-#: ..\..\render\cycles\settings\integrator.rst:158
+#: ../../manual/render/cycles/settings/integrator.rst:158
 msgid ""
 "This option will only have an influence if the material contains an emission"
 " node; it will be automatically disabled otherwise."
 msgstr "这个选项只有在材质包含有自发光节点的时候会产生影响；其他情况下都会自动关闭。"
 
-#: ..\..\render\cycles\settings\integrator.rst:164
+#: ../../manual/render/cycles/settings/integrator.rst:164
 msgid "World Settings"
 msgstr "Cycles 世界设定"
 
-#: ..\..\render\cycles\settings\integrator.rst:167
+#: ../../manual/render/cycles/settings/integrator.rst:167
 msgid ""
 "By default lighting from the world is computed solely with indirect light "
 "sampling. However for more complex environment maps this can be too noisy, "
@@ -356,11 +356,11 @@ msgid ""
 msgstr ""
 "默认情况下，世界里的光只是单独的进行了间接光采样计算。但是在更复杂的环境贴图的时候，噪点会非常多，因为对BSDF进行采样是没有那么简单能找到环境贴图图像里的高光的。启用这个选项，世界背景可以被当做一盏灯来进行采样，亮的地方自动的增加采样数。"
 
-#: ..\..\render\cycles\settings\integrator.rst:178
+#: ../../manual/render/cycles/settings/integrator.rst:178
 msgid "Map Resolution"
 msgstr "贴图精度"
 
-#: ..\..\render\cycles\settings\integrator.rst:173
+#: ../../manual/render/cycles/settings/integrator.rst:173
 msgid ""
 "When Multiple Importance Sample is enabled, this specifies the size of the "
 "importance map (resolution x resolution). Before rendering starts, an "
@@ -373,66 +373,66 @@ msgstr ""
 "当多重重要性采样开启的时候，指定了重要性贴图的大小（分辨率 x 分辨率）。在渲染开始前，通过从世界着色器上 *烘焙* "
 "一张灰阶贴图生成到一张重要性贴图上。接着就可以决定背景的哪些地方比较亮需要比暗的部分多放一些采样点。高分辨率可以得到更加准确的采样但是会耗费更多的准备时间和更多的内存。"
 
-#: ..\..\render\cycles\settings\integrator.rst:181
+#: ../../manual/render/cycles/settings/integrator.rst:181
 msgid "Lamp Settings"
 msgstr "Cycles 的灯光设置"
 
-#: ..\..\render\cycles\settings\integrator.rst:184
+#: ../../manual/render/cycles/settings/integrator.rst:184
 msgid ""
 "By default lamps use only direct light sampling. For area lights and sharp "
 "glossy reflections, however, this can be noisy, and enabling this option "
 "will enable indirect light sampling to be used in addition to reduce noise."
 msgstr "默认情况下灯光采用直接光采样。但是面光源和锐利的光泽反射会有很多的噪点，启用该选项可以将间接光采样使用起来，从而降低噪点。"
 
-#: ..\..\render\cycles\settings\integrator.rst:190
+#: ../../manual/render/cycles/settings/integrator.rst:190
 msgid "Samples"
 msgstr "采样"
 
-#: ..\..\render\cycles\settings\integrator.rst:189
+#: ../../manual/render/cycles/settings/integrator.rst:189
 msgid ""
 "For the branch path tracing integrator, this specifies the number of direct "
 "light samples per AA sample. Point lamps might need only one sample, while "
 "area lamps typically need more."
 msgstr "针对分支路径追踪积分器，该选项指定了每个抗锯齿采样的直接光采样数。点光源只需要一个采样，面光源可能需要更多的采样。"
 
-#: ..\..\render\cycles\settings\integrator.rst:202
+#: ../../manual/render/cycles/settings/integrator.rst:202
 msgid "Volume Render Settings"
 msgstr "体渲染设置"
 
-#: ..\..\render\cycles\settings\integrator.rst:204
+#: ../../manual/render/cycles/settings/integrator.rst:204
 msgid "The scene has these settings:"
 msgstr "场景中有这些设置："
 
-#: ..\..\render\cycles\settings\integrator.rst:207
+#: ../../manual/render/cycles/settings/integrator.rst:207
 msgid "Step Size"
 msgstr "步阶尺寸"
 
-#: ..\..\render\cycles\settings\integrator.rst:207
+#: ../../manual/render/cycles/settings/integrator.rst:207
 msgid ""
 "Distance between volume shader samples when rendering the volume. Lower "
 "values give more accurate and detailed results but also increased render "
 "time."
 msgstr "渲染体材质的时候，体着色器采样间的距离。小数值给出更多精度和细节但是会增加渲染时间。"
 
-#: ..\..\render\cycles\settings\integrator.rst:211
+#: ../../manual/render/cycles/settings/integrator.rst:211
 msgid "Max Steps"
 msgstr "最大阶数"
 
-#: ..\..\render\cycles\settings\integrator.rst:210
+#: ../../manual/render/cycles/settings/integrator.rst:210
 msgid ""
 "Maximum number of steps through the volume before giving up, to protect from"
 " extremely long render times with big objects or small step sizes."
 msgstr "体素里放弃穿过前通过的最大步数，为了避免在太大体材质物体里或者太小的步阶尺寸引起的非常长的渲染时间。"
 
-#: ..\..\render\cycles\settings\integrator.rst:213
+#: ../../manual/render/cycles/settings/integrator.rst:213
 msgid "The world and materials have the following setting:"
 msgstr "世界和材质又有如下的设置："
 
-#: ..\..\render\cycles\settings\integrator.rst:217
+#: ../../manual/render/cycles/settings/integrator.rst:217
 msgid "Homogeneous Volume"
 msgstr "均质体积"
 
-#: ..\..\render\cycles\settings\integrator.rst:216
+#: ../../manual/render/cycles/settings/integrator.rst:216
 msgid ""
 "Assume volume has the same density everywhere (not using any textures), for "
 "faster rendering. For example absorption in a glass object would typically "
@@ -441,11 +441,11 @@ msgid ""
 msgstr ""
 "假设体素所有地方都是一样的密度（不使用任何材质），可以加快渲染。比如在玻璃物体中的吸收是没有任何材质的，我们可以避免用小歩长来采样体着色器。"
 
-#: ..\..\render\cycles\settings\integrator.rst:224
+#: ../../manual/render/cycles/settings/integrator.rst:224
 msgid "Sampling Method"
 msgstr "采样方法"
 
-#: ..\..\render\cycles\settings\integrator.rst:220
+#: ../../manual/render/cycles/settings/integrator.rst:220
 msgid ""
 "Options are \"Multiple Importance\", \"Distance\" or \"Equiangular\". If "
 "you've got a pretty dense volume that's lit from far away then distance "
@@ -456,7 +456,7 @@ msgstr ""
 "选项有 \"多重重要性\", \"距离\" 或者 \"等角\" "
 "。如果很密的体素在较远的地方发亮，距离采样是一个高效的选择。如果有个光源在体素里或者在它旁边，等角采样是个好的选择。如果几个情况一齐发生了，那么多重重要性采样会更好。"
 
-#: ..\..\render\cycles\settings\integrator.rst:75
+#: ../../manual/render/cycles/settings/integrator.rst:75
 msgid ""
 "Maximum number of light bounces. For best quality, this should be set to the"
 " maximum. However, in practice, it may be good to set it to lower values for"
@@ -464,15 +464,15 @@ msgid ""
 "lighting only."
 msgstr "光线反弹最大数值。要最好的质量的话，可以将该数值设到最大。但从实践来说，较小的数值会渲染得快一些。只能在直接光线下把最大值设置为零。"
 
-#: ..\..\render\cycles\settings\integrator.rst:193
+#: ../../manual/render/cycles/settings/integrator.rst:193
 msgid "The maximum amount of bounces this light will contribute to the scene."
 msgstr "该光线会在场景中反弹的最大次数。"
 
-#: ..\..\render\cycles\settings\integrator.rst:199
+#: ../../manual/render/cycles/settings/integrator.rst:199
 msgid "Portal"
 msgstr "采光面"
 
-#: ..\..\render\cycles\settings\integrator.rst:196
+#: ../../manual/render/cycles/settings/integrator.rst:196
 msgid ""
 "Only available for Area lamps. This setting enables area lamps to function "
 "as a light portal, helping to sample the environment lamp and therefore "
