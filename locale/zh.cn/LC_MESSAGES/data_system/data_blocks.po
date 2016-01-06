@@ -1,642 +1,882 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Reference Manual 2.76\n"
+"Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 23:58+1100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2015-10-23 11:19+0800\n"
+"PO-Revision-Date: 2015-12-14 17:45+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.6\n"
 
-#: ../../manual/data_system/data_blocks.rst:4
+# ee04c79e43eb4eada7d0cdeb739b461d
+#: ..\..\data_system\data_blocks.rst:4
 msgid "Data-Blocks"
-msgstr ""
+msgstr "数据块--阿尔翻译"
 
-#: ../../manual/data_system/data_blocks.rst:6
+#: ..\..\data_system\data_blocks.rst:6
 msgid ""
 "The base unit for any Blender project is the data-block. Examples of data-"
 "blocks include: meshes, objects, materials, textures, node-trees, scenes, "
 "texts, brushes and even screens."
 msgstr ""
+"Blender 项目的基本单元是数据块。例如：网格（meshes）、物体（objects）、材质（materials）、纹理（textures）、节点树"
+"（node-trees）、场景（scenes）、文本（texts）、笔刷（brushes） ，甚至是屏幕（screens）。"
 
-#: ../../manual/data_system/data_blocks.rst:10
+#: ..\..\data_system\data_blocks.rst:10
 msgid ""
 "For clarity, bones, sequence strips and vertex groups are **not** data-"
 "blocks, they belong to armature, scene and mesh types respectively."
 msgstr ""
+"区分说明：骨骼（bones），序列片段（sequence strips） 和顶点组（vertex groups） **不是** 数据块, "
+"而是分别属于骨架（armature），场景（scene） 和网格（mesh）的 类型。 "
 
-#: ../../manual/data_system/data_blocks.rst:13
+#: ..\..\data_system\data_blocks.rst:13
 msgid "Some common characteristics:"
-msgstr ""
+msgstr "公共特性："
 
-#: ../../manual/data_system/data_blocks.rst:15
+#: ..\..\data_system\data_blocks.rst:15
 msgid "They're the primary contents of the ``.blend`` file."
-msgstr ""
+msgstr "``.blend`` 文件的主要内容。"
 
-#: ../../manual/data_system/data_blocks.rst:16
+#: ..\..\data_system\data_blocks.rst:16
 msgid ""
 "They can link to each other, for reuse and instancing. *(child/parent, "
 "object/object-data, with modifiers and constraints too).*"
-msgstr ""
+msgstr "能通过父/子、对象/对象数据，以及修改器和约束等方式互相链接便于重用。"
 
-#: ../../manual/data_system/data_blocks.rst:18
+#: ..\..\data_system\data_blocks.rst:18
 msgid "Their names are unique."
-msgstr ""
+msgstr "具有唯一名字。"
 
-#: ../../manual/data_system/data_blocks.rst:19
+#: ..\..\data_system\data_blocks.rst:19
 msgid "They can be added/removed/edited/duplicated."
-msgstr ""
+msgstr "允许被添加、删除、修改和复制。"
 
-#: ../../manual/data_system/data_blocks.rst:20
+#: ..\..\data_system\data_blocks.rst:20
 msgid ""
 "They can be linked between files *(only enabled for a limited set of data-"
 "blocks)*"
-msgstr ""
+msgstr "能在文件之间链接（仅限部分数据块）"
 
-#: ../../manual/data_system/data_blocks.rst:22
+#: ..\..\data_system\data_blocks.rst:22
 msgid "They can have their own animation data."
-msgstr ""
+msgstr "能有自己的动画数据"
 
-#: ../../manual/data_system/data_blocks.rst:23
+#: ..\..\data_system\data_blocks.rst:23
 msgid "They can have custom properties."
-msgstr ""
+msgstr "能有可定制属性"
 
-#: ../../manual/data_system/data_blocks.rst:26
+#: ..\..\data_system\data_blocks.rst:26
 msgid ""
 "When doing more complex projects managing data-blocks becomes more "
 "important, especially when inter-linking ``.blend`` files."
-msgstr ""
+msgstr "当处理很复杂的工程管理任务时，数据块就会变得更加重要，特别是对 ``.blend`` 文件进行内部链接的时候。"
 
-#: ../../manual/data_system/data_blocks.rst:33
+# b127049434db48ab9f9119032901c440
+#: ..\..\data_system\data_blocks.rst:33
 msgid "Data-blocks view"
-msgstr ""
+msgstr "数据块视图"
 
-#: ../../manual/data_system/data_blocks.rst:37
+#: ..\..\data_system\data_blocks.rst:37
 msgid "Users (Garbage Collection)"
-msgstr ""
+msgstr "使用者（垃圾回收）"
 
-#: ../../manual/data_system/data_blocks.rst:39
+#: ..\..\data_system\data_blocks.rst:39
 msgid ""
 "It's good to be aware of how Blender, handles data-blocks life-time, when "
 "they are freed and why."
-msgstr ""
+msgstr "如果了解 Blender 在数据块的生命周期中何时因什么原因释放数据块，对于使用 Blender 更有帮助。"
 
-#: ../../manual/data_system/data_blocks.rst:42
+# b4e62d8df78743f6bd5ce0008e308c82
+#: ..\..\data_system\data_blocks.rst:42
 msgid ""
 "Blender follows the general rule where unused data is eventually removed."
-msgstr ""
+msgstr "Blender 使用常规的数据块处理规则，没有被使用就移除。"
 
-#: ../../manual/data_system/data_blocks.rst:44
+# 9ecaa20303f7493e8dfbd62cbb09665a
+#: ..\..\data_system\data_blocks.rst:44
 msgid ""
 "Since its common to add and remove a lot of data while working, this has the"
 " advantage of not having to manually manage every single data-block."
-msgstr ""
+msgstr "该规则通过设置一个数据块的使用数目来实现，当一个数据块的使用数目为 0 时，该数据块就会被释放。"
 
-#: ../../manual/data_system/data_blocks.rst:47
+#: ..\..\data_system\data_blocks.rst:47
 msgid ""
 "This works by skipping zero user data-blocks when writing ``.blend`` files."
-msgstr ""
+msgstr "当写入 ``.blend`` 文件的时候，这些零使用数据块将将不会被保存。"
 
-#: ../../manual/data_system/data_blocks.rst:49
+# 30f37bbd72b44faa9945a786d1757535
+#: ..\..\data_system\data_blocks.rst:49
 msgid ""
 "In some cases you want to save a data-block even when its unused *(typically"
 " for re-usable asset libraries).* see `Fake User`_."
-msgstr ""
+msgstr "在你想保存一些没被使用的数据块（通常是资源库中可重用）的时候，请看 `伪使用`。"
 
-#: ../../manual/data_system/data_blocks.rst:54
+#: ..\..\data_system\data_blocks.rst:54
 msgid "Fake User"
-msgstr ""
+msgstr "伪使用者"
 
-#: ../../manual/data_system/data_blocks.rst:56
+#: ..\..\data_system\data_blocks.rst:56
 msgid ""
 "Since zero user data-blocks aren't saved. There are times when you want to "
 "force the data to be kept irrespective of its users."
-msgstr ""
+msgstr "由于零使用数的数据块不会被保存，肯定会有想强制保留这些数据，又不想要这些数据块有使用者的时候。"
 
-#: ../../manual/data_system/data_blocks.rst:59
+#: ..\..\data_system\data_blocks.rst:59
 msgid ""
 "If you're building a ``.blend`` file to serve as a library of things that "
 "you intend to link-to from *other* files, you'll need to make sure that they"
 " don't accidentally get deleted from the library file."
-msgstr ""
+msgstr "你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么需要非常小心的确保这些数据不会在库文件中被删掉。"
 
-#: ../../manual/data_system/data_blocks.rst:62
+#: ..\..\data_system\data_blocks.rst:62
 msgid ""
 "Do this by giving the data-blocks a *Fake User*, by pressing the *F* button "
 "next to the name of the data-block. This prevents the user count from ever "
 "becoming zero: therefore, the data-block won't be deleted. (since Blender "
 "doesn't keep track of how many other files link to this one.)"
 msgstr ""
+"只需要点击数据块旁边的 *F* 按钮，就可以给数据块添加一个 "
+"*伪使用者*。这样就可以让Blender在数据块的使用者计数为零的时候，在关闭文件后也不删除这个块。（因为Blender不会管有多少其他文件链接了这个数据块的数量的，会直接删除，如果不用*F*将数据块添加伪用户的话。）"
 
-#: ../../manual/data_system/data_blocks.rst:70
+#: ..\..\data_system\data_blocks.rst:70
 msgid "Users (Sharing)"
-msgstr ""
+msgstr "使用者（共享）"
 
-#: ../../manual/data_system/data_blocks.rst:72
+#: ..\..\data_system\data_blocks.rst:72
 msgid "Many data-blocks can be shared among other data-blocks,"
-msgstr ""
+msgstr "很多种类的数据块可以与其他的数据库共享"
 
-#: ../../manual/data_system/data_blocks.rst:74
+#: ..\..\data_system\data_blocks.rst:74
 msgid "Examples where sharing data is common."
-msgstr ""
+msgstr "比如在通常的数据共享形式里："
 
-#: ../../manual/data_system/data_blocks.rst:76
+#: ..\..\data_system\data_blocks.rst:76
 msgid "Sharing textures among materials."
-msgstr ""
+msgstr "在材质中共享纹理。"
 
-#: ../../manual/data_system/data_blocks.rst:77
+#: ..\..\data_system\data_blocks.rst:77
 msgid "Sharing meshes between objects (instances)."
-msgstr ""
+msgstr "不同的物体中共享网格。（实例化）"
 
-#: ../../manual/data_system/data_blocks.rst:78
+#: ..\..\data_system\data_blocks.rst:78
 msgid ""
 "Sharing animated actions between objects, for example to make all the lights"
 " dim together."
-msgstr ""
+msgstr "不同的物体中分享动画动作，比如让所有的灯光同时变暗。"
 
-#: ../../manual/data_system/data_blocks.rst:81
+# f0b7b21db56d44988a4d9e9de3102c60
+#: ..\..\data_system\data_blocks.rst:81
 msgid "You can also share data-blocks between files, see."
-msgstr ""
+msgstr "你也可以在文件间共享数据库，详见："
 
-#: ../../manual/data_system/data_blocks.rst:83
+# d80859f14a1842e096941f6ff84edcf9
+#: ..\..\data_system\data_blocks.rst:83
 msgid ":doc:`linked libraries </data_system/linked_libraries>`."
-msgstr ""
+msgstr ":doc:`linked libraries </data_system/linked_libraries>`."
 
-#: ../../manual/data_system/data_blocks.rst:87
+# 2d6cd627e53945ed9fa770c182b73d8c
+#: ..\..\data_system\data_blocks.rst:87
 msgid "Removing Data-Blocks"
-msgstr ""
+msgstr "删除数据块"
 
-#: ../../manual/data_system/data_blocks.rst:89
+#: ..\..\data_system\data_blocks.rst:89
 msgid ""
 "As covered in `Users (Garbage Collection)`_, data-blocks are typically "
 "removed when they're no longer used."
-msgstr ""
+msgstr "在 `使用者（垃圾收集）`_ 中讲过的那样。 数据块通常会在他们不被使用后就删除了。"
 
-#: ../../manual/data_system/data_blocks.rst:91
+#: ..\..\data_system\data_blocks.rst:91
 msgid "There are some exceptions to this however."
-msgstr ""
+msgstr "但是也有例外的时候。"
 
-#: ../../manual/data_system/data_blocks.rst:93
+# 378321b53bcb4cb492eb5c2e5e7a71f6
+#: ..\..\data_system\data_blocks.rst:93
 msgid ""
 "The following data-blocks can be removed directly: Scene, Text, Group and "
 "Screen."
-msgstr ""
+msgstr "Scene, Text, Group 和 Screen 这些数据块可以被直接移除。"
 
-#: ../../manual/data_system/data_blocks.rst:96
+#: ..\..\data_system\data_blocks.rst:96
 msgid ""
 "Other data-blocks such as groups and actions can be *Unlinked* from the "
 "*Outliner* context menu."
-msgstr ""
+msgstr "其他数据块，比如组和动作可以在 *大纲编辑器* 的上下文按钮中 *取消链接* 。"
 
-#: ../../manual/data_system/data_blocks.rst:100
+#: ..\..\data_system\data_blocks.rst:100
 msgid ""
 "Some data (images especially) is hard to keep track of, especially since "
 "image views are counted as users."
-msgstr ""
+msgstr "很多数据（特别是图像）是非常难于统计和追踪的，就算图像查看可以统计用户数也有问题。"
 
-#: ../../manual/data_system/data_blocks.rst:103
+#: ..\..\data_system\data_blocks.rst:103
 msgid ""
 "For data-blocks that can be unlinked - hold :kbd:`Shift` while pressing on "
 "the *X* button, This force-clears the user-count, so the data-block will be "
 "removed on reload."
 msgstr ""
+"对能够取消链接的数据块来说 - 按住 :kbd:`Shift` 的时候点击  *X*  "
+"按钮，可以强制删除使用者计数，这样数据块可以在文件重载后直接移除掉了。"
 
-#: ../../manual/data_system/data_blocks.rst:111
+# 24d70b790d7346e1a91684070461f853
+#: ..\..\data_system\data_blocks.rst:111
 msgid "Data-Block Types"
-msgstr ""
+msgstr "数据块类型"
 
-#: ../../manual/data_system/data_blocks.rst:120
+# b5a9a6d567264743a67a6f7a084a6c1e
+#: ..\..\data_system\data_blocks.rst:120
 msgid ""
 "For reference, here is a table of data-blocks types stored in ``.blend`` "
 "files."
-msgstr ""
+msgstr "这里有一张可存储在``.blend``文件的数据块的表用于参考。"
 
-#: ../../manual/data_system/data_blocks.rst:123
+# 5572a2a9d9e84170a58bbc0787514f25
+#: ..\..\data_system\data_blocks.rst:123
 msgid "Library Linking, *supports bing linked into other blend files*."
-msgstr ""
+msgstr "库连接，*支持链接到其他 blend 文件*。"
 
-#: ../../manual/data_system/data_blocks.rst:124
+# ed3333e91cda4c098ceb60921308fa0b
+#: ..\..\data_system\data_blocks.rst:124
 msgid ""
 "File Packing, *supports file contents being packed into the blend file*."
-msgstr ""
+msgstr "文件打包，*文件内容能被打包进 blend 文件*。"
 
-#: ../../manual/data_system/data_blocks.rst:141
+# d85c759bc8ab4701999f937bdb7f7e42
+#: ..\..\data_system\data_blocks.rst:141
 msgid "Type"
-msgstr ""
+msgstr "类型（Type）"
 
-#: ../../manual/data_system/data_blocks.rst:142
+# a0431efb44a846f2a4676b4c1364efba
+#: ..\..\data_system\data_blocks.rst:142
 msgid "Link"
-msgstr ""
+msgstr "链接（Link）"
 
-#: ../../manual/data_system/data_blocks.rst:143
+# 72c69984701e4857a09e3fd5444d0cc8
+#: ..\..\data_system\data_blocks.rst:143
 msgid "Pack"
-msgstr ""
+msgstr "打包（Pack）"
 
-#: ../../manual/data_system/data_blocks.rst:144
+# 17aa0216e3544586ad5ec42f670a60c6
+#: ..\..\data_system\data_blocks.rst:144
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
-#: ../../manual/data_system/data_blocks.rst:145
+# aa877c5dd5b643df95e0df1a7927a9b1
+#: ..\..\data_system\data_blocks.rst:145
 msgid "Action"
-msgstr ""
+msgstr "动作（Action）"
 
-#: ../../manual/data_system/data_blocks.rst:146
-#: ../../manual/data_system/data_blocks.rst:152
-#: ../../manual/data_system/data_blocks.rst:157
-#: ../../manual/data_system/data_blocks.rst:161
-#: ../../manual/data_system/data_blocks.rst:165
-#: ../../manual/data_system/data_blocks.rst:169
-#: ../../manual/data_system/data_blocks.rst:170
-#: ../../manual/data_system/data_blocks.rst:174
-#: ../../manual/data_system/data_blocks.rst:180
-#: ../../manual/data_system/data_blocks.rst:185
-#: ../../manual/data_system/data_blocks.rst:186
-#: ../../manual/data_system/data_blocks.rst:190
-#: ../../manual/data_system/data_blocks.rst:200
-#: ../../manual/data_system/data_blocks.rst:204
-#: ../../manual/data_system/data_blocks.rst:208
-#: ../../manual/data_system/data_blocks.rst:213
-#: ../../manual/data_system/data_blocks.rst:218
-#: ../../manual/data_system/data_blocks.rst:223
-#: ../../manual/data_system/data_blocks.rst:228
-#: ../../manual/data_system/data_blocks.rst:233
-#: ../../manual/data_system/data_blocks.rst:238
-#: ../../manual/data_system/data_blocks.rst:244
-#: ../../manual/data_system/data_blocks.rst:249
-#: ../../manual/data_system/data_blocks.rst:254
-#: ../../manual/data_system/data_blocks.rst:269
-#: ../../manual/data_system/data_blocks.rst:270
-#: ../../manual/data_system/data_blocks.rst:274
-#: ../../manual/data_system/data_blocks.rst:279
-#: ../../manual/data_system/data_blocks.rst:284
-#: ../../manual/data_system/data_blocks.rst:289
+# 52bf115caf2f41e8a28a37cf103f29b0
+# ae6b6aba0164402e9e912ea1375931be
+# 2ab88b8ea97545e3b8fe2a2c5994f94d
+# 1f4afe2a9e524832a6e07a8241513408
+# b3273e672a0a4617aa6b05ca6aa95dd2
+# acf9d4b36f42467b9d1a900ae7e89361
+# d7d46e9559c14290a7f78c55c8c94cac
+# 10a3fa0e0f2f428cb069640d0e290d3d
+# 5bd1399d495847a8a18790ff1b5d2b67
+# 88d3c768a4b843be96c1775c7cb642c2
+# 22ba71893f40433d94d187bcbb9c114a
+# b991c19fde7a44d48221aa4d72c5859b
+# 1d4c225828764ca9855114a59c4a31c0
+# b69106250bde428381dd6cc9ee5e70f6
+# 300f1b3b3f23449e9982c39a933a24cc
+# 13459595f69c47b38ce740a09385d717
+# ce9db463c7b045f7b526b5e561067276
+# fe8018a569314e22b1288e26198131d7
+# 8740acc2eba14514aa626ea735101b48
+# e69f9e8c2ce648ba884257b4aadf8d4a
+# 7a88e16a45f741be8ec945ab81f92835
+# c5e29673fb2f43acb1427b336434d22c
+# 1ce77ca4f4d3482da3ce5757db4753a8
+# 7b52c641711a42cabe4269f12198bc71
+# 52644d8986ff430d8b51db61ee037fd4
+# 5014b11cde0c415f8184bd887f38b6e3
+# 1087345cc5d34c878afc71e99c32e8b2
+# 09093e749eee430ca22048fc46fd4f42
+# f797622793c048948f3b2577a08bedf3
+# dc1465fc1fe649db96e9c1ac867a94f8
+#: ..\..\data_system\data_blocks.rst:146 ..\..\data_system\data_blocks.rst:152
+#: ..\..\data_system\data_blocks.rst:157 ..\..\data_system\data_blocks.rst:161
+#: ..\..\data_system\data_blocks.rst:165 ..\..\data_system\data_blocks.rst:169
+#: ..\..\data_system\data_blocks.rst:170 ..\..\data_system\data_blocks.rst:174
+#: ..\..\data_system\data_blocks.rst:180 ..\..\data_system\data_blocks.rst:185
+#: ..\..\data_system\data_blocks.rst:186 ..\..\data_system\data_blocks.rst:190
+#: ..\..\data_system\data_blocks.rst:200 ..\..\data_system\data_blocks.rst:204
+#: ..\..\data_system\data_blocks.rst:208 ..\..\data_system\data_blocks.rst:213
+#: ..\..\data_system\data_blocks.rst:218 ..\..\data_system\data_blocks.rst:223
+#: ..\..\data_system\data_blocks.rst:228 ..\..\data_system\data_blocks.rst:233
+#: ..\..\data_system\data_blocks.rst:238 ..\..\data_system\data_blocks.rst:244
+#: ..\..\data_system\data_blocks.rst:249 ..\..\data_system\data_blocks.rst:254
+#: ..\..\data_system\data_blocks.rst:269 ..\..\data_system\data_blocks.rst:270
+#: ..\..\data_system\data_blocks.rst:274 ..\..\data_system\data_blocks.rst:279
+#: ..\..\data_system\data_blocks.rst:284 ..\..\data_system\data_blocks.rst:289
 msgid "|tick|"
-msgstr ""
+msgstr "|tick|"
 
-#: ../../manual/data_system/data_blocks.rst:147
-#: ../../manual/data_system/data_blocks.rst:153
-#: ../../manual/data_system/data_blocks.rst:158
-#: ../../manual/data_system/data_blocks.rst:162
-#: ../../manual/data_system/data_blocks.rst:166
-#: ../../manual/data_system/data_blocks.rst:175
-#: ../../manual/data_system/data_blocks.rst:181
-#: ../../manual/data_system/data_blocks.rst:191
-#: ../../manual/data_system/data_blocks.rst:194
-#: ../../manual/data_system/data_blocks.rst:195
-#: ../../manual/data_system/data_blocks.rst:199
-#: ../../manual/data_system/data_blocks.rst:205
-#: ../../manual/data_system/data_blocks.rst:209
-#: ../../manual/data_system/data_blocks.rst:214
-#: ../../manual/data_system/data_blocks.rst:219
-#: ../../manual/data_system/data_blocks.rst:224
-#: ../../manual/data_system/data_blocks.rst:229
-#: ../../manual/data_system/data_blocks.rst:234
-#: ../../manual/data_system/data_blocks.rst:239
-#: ../../manual/data_system/data_blocks.rst:245
-#: ../../manual/data_system/data_blocks.rst:250
-#: ../../manual/data_system/data_blocks.rst:255
-#: ../../manual/data_system/data_blocks.rst:259
-#: ../../manual/data_system/data_blocks.rst:260
-#: ../../manual/data_system/data_blocks.rst:264
-#: ../../manual/data_system/data_blocks.rst:265
-#: ../../manual/data_system/data_blocks.rst:275
-#: ../../manual/data_system/data_blocks.rst:280
-#: ../../manual/data_system/data_blocks.rst:285
-#: ../../manual/data_system/data_blocks.rst:290
+# 8241e0a1c4504c69afe7a28034b71308
+# e8cf2596b8534953a7e69666d1b6f36e
+# ebee3174c0f640b58c4b34a41b0664a9
+# 08fdaa06d5184711ab277daadc23d94a
+# ac8e6018ae8f4b4a9a38a14b9dd3e217
+# 2ff1ec7ecd634eec93f2eec5a6fd80c4
+# 40cc4da4c9a942bfb275c112fccd5433
+# 96d3169a94024817b94117b06fabeeac
+# 308d3c2be2dd4e33b069cd642fd47bc0
+# 73a95ca53b1e406b8946ec1f4e07ad30
+# 045580b267a047afb58f230f2ef5a813
+# 91b03cd66c694f18ba7f0ee9b5b00dc3
+# 691b16c2156a4cc7a18d81d0422f2ca2
+# 6a4adabd60ce46218bd80505a83a1fe7
+# f5fc63ee4daa409e8c4bc193a1357112
+# 5d9df259cfcb4dfb936af8c0211f5986
+# 869dff464f654be3b8fa095876107009
+# 85ad5b144d6144f089bf9399cf8eae48
+# 818a8e9454804c44af860a59b48d8259
+# 34bbf5ace4094d35bd13d5c7674de9ee
+# 7815cf36aac3453880e3cca151f1ad40
+# d5dd69048bc44591bc72830dbe818822
+# 6f8e11955f8e4ee1a316b590396e51a6
+# ced98b66805749f6a19edbf2e5ca2949
+# 8352faa558c64214a7b2bb27cf6e40c7
+# eb32b39dcfc04312b63fd793f8cdaba4
+# d29be819830847029332f7898aa572bf
+# 02f24109985a4499939d00fe973bab15
+# 0db6b77023ac478f8cdbd84f9eca106a
+# 5ea3405c2d8046f2a29ee8c18547629d
+#: ..\..\data_system\data_blocks.rst:147 ..\..\data_system\data_blocks.rst:153
+#: ..\..\data_system\data_blocks.rst:158 ..\..\data_system\data_blocks.rst:162
+#: ..\..\data_system\data_blocks.rst:166 ..\..\data_system\data_blocks.rst:175
+#: ..\..\data_system\data_blocks.rst:181 ..\..\data_system\data_blocks.rst:191
+#: ..\..\data_system\data_blocks.rst:194 ..\..\data_system\data_blocks.rst:195
+#: ..\..\data_system\data_blocks.rst:199 ..\..\data_system\data_blocks.rst:205
+#: ..\..\data_system\data_blocks.rst:209 ..\..\data_system\data_blocks.rst:214
+#: ..\..\data_system\data_blocks.rst:219 ..\..\data_system\data_blocks.rst:224
+#: ..\..\data_system\data_blocks.rst:229 ..\..\data_system\data_blocks.rst:234
+#: ..\..\data_system\data_blocks.rst:239 ..\..\data_system\data_blocks.rst:245
+#: ..\..\data_system\data_blocks.rst:250 ..\..\data_system\data_blocks.rst:255
+#: ..\..\data_system\data_blocks.rst:259 ..\..\data_system\data_blocks.rst:260
+#: ..\..\data_system\data_blocks.rst:264 ..\..\data_system\data_blocks.rst:265
+#: ..\..\data_system\data_blocks.rst:275 ..\..\data_system\data_blocks.rst:280
+#: ..\..\data_system\data_blocks.rst:285 ..\..\data_system\data_blocks.rst:290
 msgid "|cross|"
-msgstr ""
+msgstr "|cross|"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 77b204264ba54a0e98791334bf6d7a10
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Stores animation FCurves."
-msgstr ""
+msgstr "存储动画函数曲线。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 1a18487fd04d4a49b0e6f935b6dc6c7f
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used as data-block animation data,"
-msgstr ""
+msgstr "用作动画数据，"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# f5c51df01e544e58bb14340934bcbcf5
+#: ..\..\data_system\data_blocks.rst:0
 msgid "and the Non-Linear-Editor."
-msgstr ""
+msgstr "以及非线性编辑"
 
-#: ../../manual/data_system/data_blocks.rst:151
+# 7d01102d3e1f4613b3f14fce8463410d
+#: ..\..\data_system\data_blocks.rst:151
 msgid "Armature"
-msgstr ""
+msgstr "骨架（Armature）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 2a67a9f873734ceeae6275a40cfe2163
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Skeleton used to deform meshes."
-msgstr ""
+msgstr "形变网格的骨骼。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 7ee9c640651f4857b35be63e44c66779
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used as object-data & by the Armature Modifier."
-msgstr ""
+msgstr "骨架修改器（Armature Modifier）使用的数据。"
 
-#: ../../manual/data_system/data_blocks.rst:156
+# 84e6741afeee498e91688ceb452f2e8e
+#: ..\..\data_system\data_blocks.rst:156
 msgid "Brush"
-msgstr ""
+msgstr "笔刷（Brush）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# b58fcc702c234a158651ec7002576f5a
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by paint tools."
-msgstr ""
+msgstr "画图工具"
 
-#: ../../manual/data_system/data_blocks.rst:160
+# bfc032a3d07d4e2a961a799c86c2bd5b
+#: ..\..\data_system\data_blocks.rst:160
 msgid "Camera"
-msgstr ""
+msgstr "相机（Camera）"
 
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
+# 2e83c9cb6035478dac71beaa344edae3
+# cffba5d83903438c8be9ef36b200a8e4
+# 044dd6bc71be426fa96be2e18429cc64
+# d6db94e1831d40f480270e13d41bf060
+# 73c9e192d1d048ebaed3f3c8186b254c
+#: ..\..\data_system\data_blocks.rst:0 ..\..\data_system\data_blocks.rst:0
+#: ..\..\data_system\data_blocks.rst:0 ..\..\data_system\data_blocks.rst:0
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used as object-data."
-msgstr ""
+msgstr "用作对象数据"
 
-#: ../../manual/data_system/data_blocks.rst:164
+# 146b16e680a0478ab6978ba6290deda1
+#: ..\..\data_system\data_blocks.rst:164
 msgid "Curve"
-msgstr ""
+msgstr "曲线（Curve）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# a548cc4f78eb4d238e3f53e85c9847ed
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by camera, font & surface objects."
-msgstr ""
+msgstr "应用于相机，文字以及物体表面"
 
-#: ../../manual/data_system/data_blocks.rst:168
+# d853f34321da404fa307a3a60c2ec69c
+#: ..\..\data_system\data_blocks.rst:168
 msgid "Font"
-msgstr ""
+msgstr "字形（Font）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# a6b8750dfaf74c66b1c68172ea25ec5b
+#: ..\..\data_system\data_blocks.rst:0
 msgid "References font files."
-msgstr ""
+msgstr "字体文件参考。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# cb0860ee064841a887a22ba8f7c69772
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by Font object-data."
-msgstr ""
+msgstr "应用于字形数据"
 
-#: ../../manual/data_system/data_blocks.rst:173
+# 2a62f5e29f194d77b41a8b336fe0e4b9
+#: ..\..\data_system\data_blocks.rst:173
 msgid "GreasePencil"
-msgstr ""
+msgstr "蜡笔（GreasePencil）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 3bd03b7c27fb4fb5a1a3dcad66adf893
+#: ..\..\data_system\data_blocks.rst:0
 msgid "2D/3D sketch data."
-msgstr ""
+msgstr "2D/3D 素描数据"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# afde9c20f35842b5a5c969033f07908e
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used as overlay *helper* info, by the"
-msgstr ""
+msgstr "在 3D 视窗，图像、序列&影片剪辑编辑器中"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# ece8954728824cbda73bab0de7a3d914
+#: ..\..\data_system\data_blocks.rst:0
 msgid "3D-View, Image, Sequencer & MovieClip editors."
-msgstr ""
+msgstr "覆盖*帮助*信息。"
 
-#: ../../manual/data_system/data_blocks.rst:179
+# 42d5c26ffb79424fbaaddd08e623de11
+#: ..\..\data_system\data_blocks.rst:179
 msgid "Group"
-msgstr ""
+msgstr "组（Group）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# e0d4d1a834bf48819526985be488594d
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Reference object's."
-msgstr ""
+msgstr "物体的引用。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 818c00a5aa174868980635c6c8db80f3
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by dupli-grous & often library-linking."
-msgstr ""
+msgstr "用作副本组和常用库链接。"
 
-#: ../../manual/data_system/data_blocks.rst:184
+# 790244dbc6c2413cb2d09e35dd6ee65f
+#: ..\..\data_system\data_blocks.rst:184
 msgid "Image"
-msgstr ""
+msgstr "图像（Image）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 33a4ea204005499eaf1ac42f61d7e8a9
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Image files."
-msgstr ""
+msgstr "图像文件。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 97efe6dc4b6047518bf3bc6754c69b2c
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by textures & shader nodes."
-msgstr ""
+msgstr "应用于纹理以及着色器节点。"
 
-#: ../../manual/data_system/data_blocks.rst:189
+# 12f66eb235c94f23ac30b56683e01239
+#: ..\..\data_system\data_blocks.rst:189
 msgid "Lamp"
-msgstr ""
+msgstr "灯（Lamp）"
 
-#: ../../manual/data_system/data_blocks.rst:193
+# 58cda85a4dcc4053853130c8051acbd3
+#: ..\..\data_system\data_blocks.rst:193
 msgid "Lattice"
-msgstr ""
+msgstr "晶格（Lattice）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 9747a67ea0a44c6fb6ffd34d3c5a486e
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Grid based lattice deformation."
-msgstr ""
+msgstr "基于网格的晶格变形"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# b142bdac8c00494999ea714cec5d6764
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used as object-data and by the Lattice Modifier."
-msgstr ""
+msgstr "晶格编辑器的对象数据"
 
-#: ../../manual/data_system/data_blocks.rst:198
+# dbf77cf0043b4e278882224132d3c1c4
+#: ..\..\data_system\data_blocks.rst:198
 msgid "Library"
-msgstr ""
+msgstr "库（Library）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 08d49546248441c1a5c762409fc68462
+#: ..\..\data_system\data_blocks.rst:0
 msgid "References to external ``.blend`` files."
-msgstr ""
+msgstr "引用到外部``.blend``文件。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 198dee58758645ad855c58cef83e8918
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Access from the outliner's *Blendfile* view."
-msgstr ""
+msgstr "从大纲视图的*Blend文件*视图查看。"
 
-#: ../../manual/data_system/data_blocks.rst:203
+# d1dc9a63d7d543048f01e3d97b85945c
+#: ..\..\data_system\data_blocks.rst:203
 msgid "LineStyle"
-msgstr ""
+msgstr "线条样式（LineStyle）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 2c87a483911641d19c56b402331405ff
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by the FreeStyle render-engine."
-msgstr ""
+msgstr "FreeStyle 渲染引擎使用。"
 
-#: ../../manual/data_system/data_blocks.rst:207
+# e89f7e2ffb94495280542ad8944ef988
+#: ..\..\data_system\data_blocks.rst:207
 msgid "Mask"
-msgstr ""
+msgstr "遮罩（Mask）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# d9e1a6a6231c40aaa5f6d97a874c626a
+#: ..\..\data_system\data_blocks.rst:0
 msgid "2D animated mask curves."
-msgstr ""
+msgstr "平面动态遮盖曲线"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 5c4448a28dad4713926b12f086610156
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by compositing nodes & sequencer strip."
-msgstr ""
+msgstr "被合成节点与序列片段使用。"
 
-#: ../../manual/data_system/data_blocks.rst:212
+# 32220fc25be540fb8d0fca2cf0287f31
+#: ..\..\data_system\data_blocks.rst:212
 msgid "Material"
-msgstr ""
+msgstr "材质（Material）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 5f7183f7104941f7871c941d053975ed
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Set shading and texturing render properties."
-msgstr ""
+msgstr "设置阴影和纹理的渲染属性"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 6f35142faa944047b0de2695390e56fb
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by objects, meshes & curves."
-msgstr ""
+msgstr "应用于物件，网格与曲线。"
 
-#: ../../manual/data_system/data_blocks.rst:217
+# abaca72dbb6149e6adefcb13bba4faca
+#: ..\..\data_system\data_blocks.rst:217
 msgid "Mesh"
-msgstr ""
+msgstr "网格（Mesh）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 3ac434373a2e4be78e3a7e8935352a6d
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Geometry verts/edges/faces."
-msgstr ""
+msgstr "几何形状（顶点/边/面）"
 
-#: ../../manual/data_system/data_blocks.rst:222
+# 337a4081d6a04fdd85a4691812104fee
+#: ..\..\data_system\data_blocks.rst:222
 msgid "MetaBall"
-msgstr ""
+msgstr "融球（MetaBall）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 4981d93c4399424ea78ed770e14dc80d
+#: ..\..\data_system\data_blocks.rst:0
 msgid "An isosurface in 3D space."
-msgstr ""
+msgstr "三维的等值曲面"
 
-#: ../../manual/data_system/data_blocks.rst:227
+# e6a3575ac5a644349ea8fc596ee66fc5
+#: ..\..\data_system\data_blocks.rst:227
 msgid "MovieClip"
-msgstr ""
+msgstr "影片剪辑（MovieClip）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# b7dd59a50c7246809d89a2c7d990b691
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Reference to an image sequence or video file."
-msgstr ""
+msgstr "引用给图片序列或视频文件"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 77dc3ec678284522b97a0ca7a7b8caf3
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used in the motion-tracking editor."
-msgstr ""
+msgstr "用于运动追踪编辑器"
 
-#: ../../manual/data_system/data_blocks.rst:232
+# 65b84c637393408683a070fd4a6a2799
+#: ..\..\data_system\data_blocks.rst:232
 msgid "NodeGroup"
-msgstr ""
+msgstr "节点组（NodeGroup）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 755bece248b24413b998a616460cc448
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Collections of re-usable nodes."
-msgstr ""
+msgstr "复用节点的收集"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# a7869477930d4cbeb409672440221fee
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used in the node-editor."
-msgstr ""
+msgstr "用于节点编辑器"
 
-#: ../../manual/data_system/data_blocks.rst:237
+# 4693ee1df2c64c6c8f3ed81c260c6d22
+#: ..\..\data_system\data_blocks.rst:237
 msgid "Object"
-msgstr ""
+msgstr "物体（Object）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 61031392054f482d9783e989a66a2f6c
+#: ..\..\data_system\data_blocks.rst:0
 msgid "An entity in the scene with location,"
-msgstr ""
+msgstr "场景中有位置，"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 06ec697fcd12486fa8eb3c20d89fd365
+#: ..\..\data_system\data_blocks.rst:0
 msgid "scale, rotation."
-msgstr ""
+msgstr "旋转和缩放的物体。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 8d03568f37c24fda8c1737b2225a2723
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by scenes & groups."
-msgstr ""
+msgstr "被用于场景和组"
 
-#: ../../manual/data_system/data_blocks.rst:243
+# c2d29e54b0af427bae5cfaf281a448cc
+#: ..\..\data_system\data_blocks.rst:243
 msgid "Particle"
-msgstr ""
+msgstr "粒子（Particle）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 03c379e119f24436b829464a17f39158
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Particle settings."
-msgstr ""
+msgstr "粒子设置"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 857cdae921204e7689cf29ca8f61b7d8
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by particle systems."
-msgstr ""
+msgstr "用于粒子系统"
 
-#: ../../manual/data_system/data_blocks.rst:248
+# c24debd05f4f41929c3f438f585ab4b8
+#: ..\..\data_system\data_blocks.rst:248
 msgid "Palette"
-msgstr ""
+msgstr "调色板（Palette）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 1136b69ac703460797059e04bd352ef9
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Store color presets."
-msgstr ""
+msgstr "存储预设的颜色"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 69432b051c7e45c5a04cdfff4f99a0e0
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Access from the paint tools."
-msgstr ""
+msgstr "从绘图工具中使用"
 
-#: ../../manual/data_system/data_blocks.rst:253
+# 347c6a3556344888b83000c3a77a9fae
+#: ..\..\data_system\data_blocks.rst:253
 msgid "Scene"
-msgstr ""
+msgstr "场景（Scene）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 007640014c0a4e9586854fc490add776
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Primary store of all data displayed and animated."
-msgstr ""
+msgstr "主要存储所有的显示数据和动画数据。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 624048e30d474de5bc1ccee1198f0315
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used as top-level storage for objects & animation."
-msgstr ""
+msgstr "是物体和动画的最高存储位置。"
 
-#: ../../manual/data_system/data_blocks.rst:258
+# 9cd9d455b01c460c82421bf791e433bd
+#: ..\..\data_system\data_blocks.rst:258
 msgid "Screen"
-msgstr ""
+msgstr "屏幕（Screen）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 27fccd01124c421cadc65055ef0837f9
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Screen layout."
-msgstr ""
+msgstr "屏幕布局"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 82550fc444e84972836e105a8a65f548
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by each window, which has its own screen."
-msgstr ""
+msgstr "被每个有自己屏幕的窗口使用。"
 
-#: ../../manual/data_system/data_blocks.rst:263
+# cc17e603a3924cdcb33958e20c19d5df
+#: ..\..\data_system\data_blocks.rst:263
 msgid "ShapeKeys"
-msgstr ""
+msgstr "形变关键帧（ShapeKeys）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 9560f90179e845a198b90e167147fc80
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Geometry shape storage, which can be animated."
-msgstr ""
+msgstr "几何形状的形变信息。"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 2e8e1e96c9774f39b0ff82fc141f182f
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by mesh, curve and lattice objects."
-msgstr ""
+msgstr "被网格，曲线和晶格物体使用。"
 
-#: ../../manual/data_system/data_blocks.rst:268
+# 88863d967f004a5ca00576d9a127dfec
+#: ..\..\data_system\data_blocks.rst:268
 msgid "Sounds"
-msgstr ""
+msgstr "声音（Sounds）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# f2ab1d21d40144b88d8807c94f5ef9c4
+#: ..\..\data_system\data_blocks.rst:0
 msgid "References to sound files."
-msgstr ""
+msgstr "声音文件的引用"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# b425ec7b2eeb40709a58c02e24271583
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by speaker objects and the game-engine."
-msgstr ""
+msgstr "用于扬声器物件和游戏引擎"
 
-#: ../../manual/data_system/data_blocks.rst:273
+# 3d20c7c8069848ce88fa15ccfe8bac2d
+#: ..\..\data_system\data_blocks.rst:273
 msgid "Speaker"
-msgstr ""
+msgstr "扬声器（Speaker）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# e71d29607668491494c83ea11d110cfe
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Sound sources for a 3D scene."
-msgstr ""
+msgstr "为三维场景的发声源"
 
-#: ../../manual/data_system/data_blocks.rst:278
+# c066cc4583d043c1832397418763cdeb
+#: ..\..\data_system\data_blocks.rst:278
 msgid "Text"
-msgstr ""
+msgstr "文本（Text）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 88531728b7a04c47a4af2388adccc236
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Text data."
-msgstr ""
+msgstr "文本数据"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 14508640aae042b589e6946388f02b35
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by Python scripts and OSL shaders."
-msgstr ""
+msgstr "用于 Pyhont 脚本和 QSL shaders"
 
-#: ../../manual/data_system/data_blocks.rst:283
+# 726babd146d647f4a5f1a63cf0ded903
+#: ..\..\data_system\data_blocks.rst:283
 msgid "Texture"
-msgstr ""
+msgstr "纹理（Texture）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# b9a143ce271d4882b754e407adb06939
+#: ..\..\data_system\data_blocks.rst:0
 msgid "2D/3D textures."
-msgstr ""
+msgstr "2D/3D 纹理"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# b3da37b9e7a44d389644a176072c9c30
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by materials, world and brushes."
-msgstr ""
+msgstr "用于材质，世界和笔刷"
 
-#: ../../manual/data_system/data_blocks.rst:288
+# c1b71bfb7b464ff3a60230c24d1df0f0
+#: ..\..\data_system\data_blocks.rst:288
 msgid "World"
-msgstr ""
+msgstr "世界（World）"
 
-#: ../../manual/data_system/data_blocks.rst:0
+# 2f9a7cb7c239494a8ca011f95a26b26e
+#: ..\..\data_system\data_blocks.rst:0
 msgid "Used by scenes for render environment settings."
-msgstr ""
+msgstr "用于场景的环境渲染设置"
+
+#~ msgid "Datablocks"
+#~ msgstr "数据块"
+
+#~ msgid "Datablocks view"
+#~ msgstr "数据块视图"
+
+#~ msgid ""
+#~ "Blender follows the general rule that data which isn't used, will be freed."
+#~ msgstr "Blender 释放数据的规则是：若是该数据不再被使用，则被释放。"
+
+#~ msgid ""
+#~ "Its common to add and remove a lot of data while working, this has the "
+#~ "advantage of not having to manually manage every single data-block."
+#~ msgstr "该规则通过设置一个数据块的用户数目来实现，当一个数据块的用户数目为 0 时，该数据块就会被释放。"
+
+#~ msgid ""
+#~ "While this is acceptable as default behavior, there are times when you want "
+#~ "to save a data-block even when its unused *(typically for re-usable asset "
+#~ "libraries).* see `Fake User`_."
+#~ msgstr "所以不必手动去删除这些数据块了。当你想保留一个数据块时（即使它并未被使用），可以参看下一个 “伪用户”章节。"
+
+#~ msgid "Copying and Linking Objects Between Scenes"
+#~ msgstr "在不同场景中复制和链接物体们"
+
+#~ msgid ""
+#~ "Sometimes you may want to link or copy objects between scenes. This is "
+#~ "possible by first selecting objects you want to link or copy and then using "
+#~ "the *Make Links* and *Make Single User* items found in *Object* menu in the "
+#~ "3D viewport header. Use *Make Links* to make links between scenes. To make a"
+#~ " plain copy, you first make a link and then use *Make Single User* to make a"
+#~ " stand-alone copy of the object in your current scene. Further information "
+#~ "on working with scenes can be found :doc:`here </data_system/scenes>`."
+#~ msgstr ""
+#~ "有些时候需要在不同场景中复制或者链接物体。只需要首先在场景中选择到想要链接或者复制的物体，在3D视图的标题栏中，找到 *物体* 的菜单，点击 "
+#~ "*生成链接* 和 *生成单个使用者* 的按键就可以了。使用 *生成链接* 在各个场景中生成链接。要生成直接的复制物体，首先生成链接，然后使用 "
+#~ "*生成单个使用者* 来确保你当前场景的物体生成独立的副本。更多的在场景中工作的信息可以在  :doc:`这个文档 "
+#~ "</data_system/scenes>` 中找到。"
+
+#~ msgid "Appending or Linking Across Files"
+#~ msgstr "在多个文件中追加或链接"
+
+#~ msgid ""
+#~ "The content of one ``.blend`` file is easily accessed and put into your "
+#~ "current file by using :menuselection:`File --> Append` or "
+#~ ":menuselection:`File --> Link` To find out more about how to copy or link "
+#~ "objects across ``.blend`` files, see :doc:`linked libraries "
+#~ "</data_system/linked_libraries>`."
+#~ msgstr ""
+#~ "使用  :menuselection:`文件 --> 附加` 或者 :menuselection:`文件 --> 链接` 来将一个  "
+#~ "``.blend`` 文件中的内容非常容易的放到你当前的文件中来。更多关于Blender的复制和链接信息，查看  :doc:`链接库文件 "
+#~ "</data_system/linked_libraries>` 。"
+
+#~ msgid "Copying and Linking"
+#~ msgstr "复制和链接"
+
+#~ msgid "It is possible to copy or link most of Blender's data-block."
+#~ msgstr "Blender大部分的数据库都是可以复制和链接的。"
+
+#~ msgid "See:"
+#~ msgstr "见："
+
+#~ msgid ":doc:`Adding scenes </data_system/scenes>`"
+#~ msgstr ":doc:`添加场景 </data_system/scenes>`"
+
+#~ msgid ":doc:`Object duplication </modeling/objects/duplication>`"
+#~ msgstr ":doc:`物体复制 </modeling/objects/duplication>`"
+
+#~ msgid ""
+#~ "When an *ObData* data-block is used (linked) by more than one object, a "
+#~ "small button with its number of linked objects (users) shows up next to its "
+#~ "name *(also visible for materials, textures, images)*. If you click on it, "
+#~ "you create a single-user copy of this data-block for the current object."
+#~ msgstr ""
+#~ "当一个  *ObData* 数据块被多于一个的物体使用（被链接）的时候，在它的名字旁边 *(也存在于材质，纹理，图像中)* "
+#~ "有一个很小的数字按钮，表面这个数据块被多少物体（使用者）链接。如果点击了这个小按钮，会直接产生当前物体数据块的的一个单独使用者副本。"
+
+#~ msgid "Removing Datablocks"
+#~ msgstr "移除数据块"
+
+#~ msgid "Scenes, text, can be removed directly."
+#~ msgstr "场景，文字可以直接删除。"
+
+#~ msgid "Copying and Linking Datablocks"
+#~ msgstr "复制和链接数据块"
+
+#~ msgid "Copying and Linking Object Datablocks"
+#~ msgstr "复制和链接物体数据块"
+
+#~ msgid "Full copy"
+#~ msgstr "完整复制"
+
+#~ msgid "Linked copy"
+#~ msgstr "链接复制"
+
+#~ msgid "Unlinked Datablocks"
+#~ msgstr "取消链接数据块"
