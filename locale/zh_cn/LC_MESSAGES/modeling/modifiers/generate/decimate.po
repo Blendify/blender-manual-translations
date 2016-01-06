@@ -1,25 +1,28 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Reference Manual 2.76\n"
+"Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 23:58+1100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2015-04-22 04:13+0800\n"
+"PO-Revision-Date: 2015-11-24 03:38+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:4
 msgid "Decimate Modifier"
-msgstr ""
+msgstr "精简修改器--knight翻译"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:6
 msgid ""
 "The Decimate modifier allows you to reduce the vertex/face count of a mesh "
 "with minimal shape changes."
-msgstr ""
+msgstr "精简修改器允许你在尽量不改变网面形状的情况下，减少其顶点、面的数量。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:8
 msgid ""
@@ -30,6 +33,7 @@ msgid ""
 "modifier can be used to reduce the polygon count for a performance increase,"
 " or simply remove unnecessary vertices and edges."
 msgstr ""
+"一般不会应用在已经通过仔细地和经济地建模（所有的顶点和面都是正确地决定形状的必要部分）的网面上。但是如果网面是复杂建模地结果，雕刻和/或应用过细分表面、多分辨率修改器的话，精简修改器可以用来减少多边形的数量，以换取性能上的提升，或者简单地移除不必要的顶点和边。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:14
 msgid ""
@@ -39,167 +43,174 @@ msgid ""
 "permanent and destroys original mesh data, can be done interactively and "
 "safely using a modifier."
 msgstr ""
+"精简修改器是一种快速和简单的以非破坏性方式减少网面多边形数量的方式。该修改器论证了网面修改器系统的优势，因为它展示了一种交互式地并安全地使用修改器的操作，它是标准永久的，且会破坏原始网面数据。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:19
 msgid ""
 "Unlike the majority of existing modifiers, the Decimate modifier does not "
 "allow you to visualize your changes in Edit Mode."
-msgstr ""
+msgstr "不同于大多数现有的修改器，精简修改器不允许你在编辑模式下查看所作的更改。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:24
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:28
 msgid "decimate modifier"
-msgstr ""
+msgstr "精简修改器"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:79
 msgid "Decimate Type"
-msgstr ""
+msgstr "精简类型"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:50
 msgid "Collapse"
-msgstr ""
+msgstr "塌陷"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:33
 msgid ""
 "Merge vertices together progressively, taking the shape of the mesh into "
 "account."
-msgstr ""
+msgstr "渐进式地同时合并顶点，会考虑网面的形状。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:50
 msgid "Ratio"
-msgstr ""
+msgstr "比率"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:36
 msgid "The ratio of faces to keep after decimation."
-msgstr ""
+msgstr "精简后保留面数量的比例。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:38
 msgid "On ``1.0``, the mesh is unchanged."
-msgstr ""
+msgstr "取 ``1.0`` 时，网面不发生改变。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:39
 msgid ""
 "On ``0.5``, edges have been collapsed such that half the number of faces "
 "remain (See *Note* below)."
-msgstr ""
+msgstr "取 ``0.5`` 时，边会塌陷，并满足保留一半数量的面（见下面的 *注解*）。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:40
 msgid "On ``0.0``, all faces have been removed."
-msgstr ""
+msgstr "取 ``0.0`` 时，所有的网面被移除。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:44
 msgid ""
 "Although the *Ratio* is directly proportional to the number of remaining "
 "faces, triangles are used when calculating the ratio."
-msgstr ""
+msgstr "虽然 *比率* 与剩余面的数量直接成正比，但在计算比率时，三角形也会使用。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:47
 msgid ""
 "This means that if your mesh contains quads, the number of remaining faces "
 "will be larger than expected, because quads remain unchanged if their edges "
 "are not collapsed."
-msgstr ""
+msgstr "这意味着，如果你的网面包含四边形，剩余面的数量会大于预期数量，因为如果他们的边缘不塌陷的话，四边形是保持不变的。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:50
 msgid "This is only true if the *Triangulate* option is disabled."
-msgstr ""
+msgstr "在禁用了 *三角化* 选项，上面的话才算正确。"
+
+#: ../../manual/modeling/modifiers/generate/decimate.rst:89
+msgid ""
+"N-Gons are currently not supported when collapsing edges, the operation will"
+" still succeed, but edges attached aren't considered for reduction."
+msgstr "多边形在塌陷边时是不被支持的，操作仍然会成功，但附加的边不视为减少。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:59
 msgid "Un-Subdivide"
-msgstr ""
+msgstr "取消细分"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:53
 msgid ""
 "Can be thought of as the reverse of subdivide. Attempts to remove edges that"
 " were the result of a subdivide operation. If additional editing has been "
 "done after the subdivide operation, the results may be unexpected."
-msgstr ""
+msgstr "可以认为是相反的细分。它试图删除一次细分操作结果的边。如果在细分操作后又做了一些编辑操作，结果可能在意料之外。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:59
 msgid "Iterations"
-msgstr ""
+msgstr "迭代次数"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:58
 msgid ""
 "The number of times to perform the un-subdivide operation. Two iterations is"
 " the same as one subdivide operation, so you will usually want to use even "
 "numbers."
-msgstr ""
+msgstr "执行取消细分操作的次数。两次迭代算是同一个细分操作，所以你通常会用偶数。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:79
 msgid "Planar"
-msgstr ""
+msgstr "平面的"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:62
 msgid "Dissolve geometry on the same plane."
-msgstr ""
+msgstr "让同一个平面上的几何线消失。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:65
 msgid "Angle Limit"
-msgstr ""
+msgstr "角度限制"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:65
 msgid "Dissolve geometry which form angles lower than this setting."
-msgstr ""
+msgstr "让构成角度低于该设置值的几何线消失。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:69
 msgid "All Boundaries"
-msgstr ""
+msgstr "所有边界"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:68
 msgid ""
 "When enabled, all vertices along the boundaries of faces are dissolved. This"
 " can give nicer results when using a high *Angle Limit*."
-msgstr ""
+msgstr "启用后，所有沿着边界面的顶点会消失掉。这样可以在用高的 *角度限制* 值时可以得到更好的结果。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:79
 msgid "Delimit"
-msgstr ""
+msgstr "定界"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:72
 msgid "Prevent dissolving geometry in certain places."
-msgstr ""
+msgstr "阻止某些地方的几何线消失。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:74
 msgid "Normal"
-msgstr ""
+msgstr "法线"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:75
 msgid ""
 "Does not dissolve edges on the borders of areas where the face normals are "
 "reversed."
-msgstr ""
+msgstr "不要让边界区域面的法线翻转了的边消失掉。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:76
 msgid "Material"
-msgstr ""
+msgstr "材质"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:77
 msgid ""
 "Does not dissolve edges on the borders of where different materials are "
 "assigned."
-msgstr ""
+msgstr "对于分配了不同材质的边界不作消失处理。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:79
 msgid "Seam"
-msgstr ""
+msgstr "边沿"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:79
 msgid "Does not dissolve edges marked as seams."
-msgstr ""
+msgstr "对标记为边沿的棱不作消失处理。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:83
 msgid "Face Count"
-msgstr ""
+msgstr "面数"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:82
 msgid ""
 "This field shows the number of remaining faces as a result of applying the "
 "Decimate modifier."
-msgstr ""
+msgstr "该字段显示使用了精简修改器后，剩余面的数量。"
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:86
 msgid "Known Limitations"
@@ -207,10 +218,4 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/decimate.rst:92
 msgid "N-Gons"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/generate/decimate.rst:89
-msgid ""
-"N-Gons are currently not supported when collapsing edges, the operation will"
-" still succeed, but edges attached aren't considered for reduction."
 msgstr ""
