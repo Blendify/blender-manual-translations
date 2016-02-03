@@ -114,33 +114,33 @@ msgstr "环境光"
 msgid "Bakes the environment as seen from the center of the object."
 msgstr "烘焙从物体中心所观察到的环境。"
 
-#: ../../manual/render/cycles/baking.rst:91
+#: ../../manual/render/cycles/baking.rst:92
 msgid "Additional Options"
 msgstr "附加选项"
 
-#: ../../manual/render/cycles/baking.rst:94
+#: ../../manual/render/cycles/baking.rst:95
 msgid "Margin"
 msgstr "边距"
 
-#: ../../manual/render/cycles/baking.rst:94
+#: ../../manual/render/cycles/baking.rst:95
 msgid ""
 "Baked result is extended this many pixels beyond the border of each UV "
 "\"island,\" to soften seams in the texture."
 msgstr "烘焙的结果将会超出每一个UV块的边界，以此来柔和纹理中的接缝。"
 
-#: ../../manual/render/cycles/baking.rst:97
+#: ../../manual/render/cycles/baking.rst:98
 msgid "Clear"
 msgstr "清空"
 
-#: ../../manual/render/cycles/baking.rst:97
+#: ../../manual/render/cycles/baking.rst:98
 msgid "If selected, clears the image before baking render."
 msgstr "选择该项时，在渲染烘焙前会先清空图像。"
 
-#: ../../manual/render/cycles/baking.rst:104
+#: ../../manual/render/cycles/baking.rst:105
 msgid "Select to Active"
 msgstr "所选物体>主控物体"
 
-#: ../../manual/render/cycles/baking.rst:100
+#: ../../manual/render/cycles/baking.rst:101
 msgid ""
 "Bake shading on the surface of selected objects to the active object. The "
 "rays are cast from the lowpoly object inwards towards the highpoly object. "
@@ -151,11 +151,11 @@ msgid ""
 msgstr ""
 "烘焙所选物体的着色到活动物体。光线会从外面的低模物体投射到内部的高模物体。倘若高模物体没能被低模物体完全包裹，你可以通过调节光线距离或是罩体挤出（取决于你是否使用罩体）来调节光线的起点。对于更多的控制，你可以通过指定罩体物体来实现。"
 
-#: ../../manual/render/cycles/baking.rst:108
+#: ../../manual/render/cycles/baking.rst:109
 msgid "**Memory Usage**"
 msgstr "**内存使用**"
 
-#: ../../manual/render/cycles/baking.rst:110
+#: ../../manual/render/cycles/baking.rst:111
 msgid ""
 "There is a CPU fixed memory footprint for every object used to bake from. In"
 " order to avoid crashes due to lack of memory the highpoly objects can be "
@@ -165,12 +165,12 @@ msgid ""
 msgstr ""
 "由于烘焙时，每一个物体都会占用一定的CPU和内存，为了避免内存不足而造成的崩溃，在烘焙之前，可以先将高模物体进行合并。渲染中的分块设置，也会影响到内存的使用。比如分的块越大，CPU占用的越少，而内存则会占用的更多（不管是CPU，还是GPU）。"
 
-#: ../../manual/render/cycles/baking.rst:120
-#: ../../manual/render/cycles/baking.rst:140
+#: ../../manual/render/cycles/baking.rst:121
+#: ../../manual/render/cycles/baking.rst:141
 msgid "Cage"
 msgstr "罩体"
 
-#: ../../manual/render/cycles/baking.rst:116
+#: ../../manual/render/cycles/baking.rst:117
 msgid ""
 "Cast rays to active object from a cage. A cage is a ballooned-out version of"
 " the lowpoly mesh created either automatically (by adjusting the ray "
@@ -181,21 +181,21 @@ msgid ""
 msgstr ""
 "光线会从罩体投射到活动的物体，罩体是指从低模通过手动（指定要用的物体）或自动（调整光线距离）创建出来的膨胀版本。如果不使用罩体，光线会依循网格的法线，这在边线的地方会产生一些小的瑕疵，为了避免这些瑕疵，可以围着边线添加额外的循环边，在烘焙平面时，这或许是一个不错的方法。"
 
-#: ../../manual/render/cycles/baking.rst:124
+#: ../../manual/render/cycles/baking.rst:125
 msgid "Ray Distance"
 msgstr "光线距离"
 
-#: ../../manual/render/cycles/baking.rst:123
+#: ../../manual/render/cycles/baking.rst:124
 msgid ""
 "Distance to use for the inward ray cast when using selected to active. Ray "
 "distance is only available when not using *Cage*."
 msgstr "在使用所选物体>活动物体时，控制光线向内投射的距离。该项仅在不使用罩体时可用。"
 
-#: ../../manual/render/cycles/baking.rst:130
+#: ../../manual/render/cycles/baking.rst:131
 msgid "Cage Extrusion"
 msgstr "罩体挤出"
 
-#: ../../manual/render/cycles/baking.rst:127
+#: ../../manual/render/cycles/baking.rst:128
 msgid ""
 "Distance to use for the inward ray cast when using *Selected to Active* and "
 "*Cage*. The inward rays are casted from a version of the active object with "
@@ -205,13 +205,13 @@ msgid ""
 msgstr ""
 "在使用所选物体>活动物体时，控制光线向内投射的距离。向内投射的光线会由不含有边线分割修改器版本的活动物体发出。当然强制分割（如应用掉边线分割修改器）也不行。因为这些都会导致边线处的法线变得不为平滑。"
 
-#: ../../manual/render/cycles/baking.rst:133
+#: ../../manual/render/cycles/baking.rst:134
 msgid ""
 "Object to use as cage instead of calculating the cage from the active object"
 " with the *Cage Extrusion*."
 msgstr "指定作为罩体的物体，以此替代活动物体的罩体挤出"
 
-#: ../../manual/render/cycles/baking.rst:137
+#: ../../manual/render/cycles/baking.rst:138
 msgid ""
 "When the base mesh extruded doesn't give good results, you can create a copy"
 " of the base mesh and modify it to use as a *Cage*. Both meshes need to have"
@@ -258,13 +258,13 @@ msgid ""
 " surface and independent of sampling refinement."
 msgstr "烘焙材质的光泽颜色。光泽颜色属于表面属性，并不会受到采样的影响。"
 
-#: ../../manual/render/cycles/baking.rst:86
+#: ../../manual/render/cycles/baking.rst:87
 msgid ""
 "If color is not selected, you get the direct and/or indirect contributions "
 "in grayscale."
 msgstr ""
 
-#: ../../manual/render/cycles/baking.rst:88
+#: ../../manual/render/cycles/baking.rst:89
 msgid ""
 "If color and either direct or indirect is selected you get the direct and/or"
 " indirect contributions colored."
