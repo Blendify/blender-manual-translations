@@ -35,10 +35,10 @@ msgstr "Lambertian（兰伯特）与Oren-Nayar（奥伦-纳亚尔）漫反射类
 #: ../../manual/render/cycles/nodes/shaders.rst:214
 #: ../../manual/render/cycles/nodes/shaders.rst:251
 #: ../../manual/render/cycles/nodes/shaders.rst:275
-#: ../../manual/render/cycles/nodes/shaders.rst:319
-#: ../../manual/render/cycles/nodes/shaders.rst:356
-#: ../../manual/render/cycles/nodes/shaders.rst:399
-#: ../../manual/render/cycles/nodes/shaders.rst:438
+#: ../../manual/render/cycles/nodes/shaders.rst:323
+#: ../../manual/render/cycles/nodes/shaders.rst:360
+#: ../../manual/render/cycles/nodes/shaders.rst:403
+#: ../../manual/render/cycles/nodes/shaders.rst:442
 msgid "Color input"
 msgstr "输入色"
 
@@ -71,7 +71,7 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/shaders.rst:221
 #: ../../manual/render/cycles/nodes/shaders.rst:255
 #: ../../manual/render/cycles/nodes/shaders.rst:280
-#: ../../manual/render/cycles/nodes/shaders.rst:328
+#: ../../manual/render/cycles/nodes/shaders.rst:332
 msgid "Normal input"
 msgstr "法线输入"
 
@@ -83,7 +83,7 @@ msgstr "法线输入"
 #: ../../manual/render/cycles/nodes/shaders.rst:222
 #: ../../manual/render/cycles/nodes/shaders.rst:256
 #: ../../manual/render/cycles/nodes/shaders.rst:281
-#: ../../manual/render/cycles/nodes/shaders.rst:329
+#: ../../manual/render/cycles/nodes/shaders.rst:333
 msgid ""
 "Normal used for shading; if nothing is connected the default shading normal "
 "is used."
@@ -167,7 +167,7 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/shaders.rst:109
 #: ../../manual/render/cycles/nodes/shaders.rst:148
 #: ../../manual/render/cycles/nodes/shaders.rst:276
-#: ../../manual/render/cycles/nodes/shaders.rst:320
+#: ../../manual/render/cycles/nodes/shaders.rst:324
 msgid ""
 "Color of the surface, or physically speaking, the probability that light is "
 "reflected for each wavelength."
@@ -474,58 +474,43 @@ msgid ""
 "distinctive red-colored shadows, and a soft appearance."
 msgstr "至于颜色多远才会散射可以通过每个RGB颜色通道来调节。例如，在皮肤中，红色会散射的更长一些，致使阴影中出呈现出柔和的红色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:317
+#: ../../manual/render/cycles/nodes/shaders.rst:321
 msgid "Falloff"
 msgstr "衰减"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:311
-msgid ""
-"Lighting distance falloff function. **Cubic** is a sharp falloff useful for "
-"many simple materials. The function is (radius - x) :sup:`3` **Gaussian** "
-"gives a smoother falloff following a normal distribution, which is "
-"particularly useful for more advanced materials that use measured data that "
-"was fitted to one or more such Gaussian functions. The function is e "
-":sup:`-8x`:sup:`2`:sup:`/radius`:sup:`2`, such that the radius roughly "
-"matches the maximum falloff distance. To match a given measured variance v, "
-"set radius = sqrt(16*v)."
-msgstr ""
-"光线在距离上的衰减函数，矩形会得到较为锐化的衰减，在很多简易材质中会非常有用。其公式为 (radius - x) "
-"3。高斯得到的结果较为平滑，其衰减会顺着法线分布，因此常会被用于一些高级的材质中，以实现类似高斯的过滤效果。其公式为e-8x2/radius2，另外，要让半径能够匹配到最大的衰减距离上。为了能够匹配测量的变量V，半径应该设为radius"
-" = sqrt(16*v)"
-
-#: ../../manual/render/cycles/nodes/shaders.rst:321
+#: ../../manual/render/cycles/nodes/shaders.rst:325
 msgid "Scale input"
 msgstr "比例输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:322
+#: ../../manual/render/cycles/nodes/shaders.rst:326
 msgid "Global scale factor for the scattering radius."
 msgstr "散射半径的全局缩放系数"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:323
+#: ../../manual/render/cycles/nodes/shaders.rst:327
 msgid "Radius input"
 msgstr "半径输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:324
+#: ../../manual/render/cycles/nodes/shaders.rst:328
 msgid ""
 "Scattering radius for each RGB color channel, the maximum distance that "
 "light can scatter."
 msgstr "每个RGB颜色通道的散射半径，最大距离即为光线能够散射的距离。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:326
+#: ../../manual/render/cycles/nodes/shaders.rst:330
 msgid "Sharpness input"
 msgstr "蜕化输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:326
+#: ../../manual/render/cycles/nodes/shaders.rst:330
 msgid ""
 "Used only with **Cubic** falloff. Values increasing from 0 to 1 prevents "
 "softening of sharp edges and reduces unwanted darkening."
 msgstr "仅用于矩形衰减模式下。该值从0增加到1时，可以用来防止锐化边缘的柔化，降低不想要的加深。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:338
+#: ../../manual/render/cycles/nodes/shaders.rst:342
 msgid "Texture Blur input"
 msgstr "纹理模糊输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:331
+#: ../../manual/render/cycles/nodes/shaders.rst:335
 msgid ""
 "How much of the texture will be blurred along with the lighting, mixing the "
 "texture at the incoming and outgoing points on the surface. Note that the "
@@ -540,11 +525,11 @@ msgid ""
 msgstr ""
 "纹理伴随光线的模糊程度，光线会在表面的入点和出点之间混合纹理。要注意，其正确与否会取决于纹理。举例来说，从一张皮肤照片中创建的纹理，在这种情况下，颜色会被预先模糊，纹理模糊应当设置为0。即使是手绘纹理，没有模糊，或是仅有一点的模糊都可以。手绘的纹理在绘制过程中已经较为柔和，另外，我们平时甚至没有见过未模糊皮肤纹理的样子，平时看到的都是模糊的。而对于程序纹理而言，该项通常需要设定的较高一些。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:342
+#: ../../manual/render/cycles/nodes/shaders.rst:346
 msgid "BSSRDF output"
 msgstr "BSSRDF 输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:341
+#: ../../manual/render/cycles/nodes/shaders.rst:345
 msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution function)` "
 "shader."
@@ -552,29 +537,29 @@ msgstr ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution function)` "
 "着色器."
 
-#: ../../manual/render/cycles/nodes/shaders.rst:346
+#: ../../manual/render/cycles/nodes/shaders.rst:350
 msgid "A skin-toned SSS shader with color radius: 1.0, 0.8, 0.5."
 msgstr "皮肤的SSS着色效果，颜色半径为1.0、0.8、0.5。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:352
+#: ../../manual/render/cycles/nodes/shaders.rst:356
 msgid "Emission"
 msgstr "自发光"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:354
+#: ../../manual/render/cycles/nodes/shaders.rst:358
 msgid "Lambertian emission, to be used for material and lamp surface outputs."
 msgstr "自发光着色，用于材质或是灯光的面输出。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:357
-#: ../../manual/render/cycles/nodes/shaders.rst:400
+#: ../../manual/render/cycles/nodes/shaders.rst:361
+#: ../../manual/render/cycles/nodes/shaders.rst:404
 msgid "Color of the emitted light."
 msgstr "设置自发光颜色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:360
-#: ../../manual/render/cycles/nodes/shaders.rst:401
+#: ../../manual/render/cycles/nodes/shaders.rst:364
+#: ../../manual/render/cycles/nodes/shaders.rst:405
 msgid "Strength input"
 msgstr "强度输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:359
+#: ../../manual/render/cycles/nodes/shaders.rst:363
 msgid ""
 "Strength of the emitted light. For point and area lamps, the unit is Watts. "
 "For materials, a value of 1.0 will ensure that the object in the image has "
@@ -582,23 +567,23 @@ msgid ""
 msgstr ""
 "控制发出的光线强度，对于点光源和面光，其单位是瓦特。在材质上，当该值为1.0时，会确保物体的材质颜色与颜色输入端口中的颜色相同，就像“无阴暗”一样。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:364
+#: ../../manual/render/cycles/nodes/shaders.rst:368
 msgid "Emission output"
 msgstr "自发光输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:363
+#: ../../manual/render/cycles/nodes/shaders.rst:367
 msgid "Emission shader."
 msgstr "自发光着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:370
+#: ../../manual/render/cycles/nodes/shaders.rst:374
 msgid "Emission shader, with strength at ``1.0``"
 msgstr "强度为1.0的自发光着色"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:374
+#: ../../manual/render/cycles/nodes/shaders.rst:378
 msgid "Emission shader, with strength at ``3.0``"
 msgstr "强度为3.0的自发光着色"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:377
+#: ../../manual/render/cycles/nodes/shaders.rst:381
 msgid ""
 "Cycles uses a physically correct light falloff by default, whereas Blender "
 "Internal uses a smoothed falloff with a Distance parameter. A similar effect"
@@ -606,7 +591,7 @@ msgid ""
 msgstr ""
 "Cycles灯光默认使用的是物理纠正的衰减方式，而内部渲染器则是在距离参量上的平滑衰减。在灯光设置中你也可以使用平滑参量进行衰减，以得到类似的效果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:381
+#: ../../manual/render/cycles/nodes/shaders.rst:385
 msgid ""
 "Lamp strength for point, spot and area lamps is specified in Watts. This "
 "means you typically need higher values than Blender Internal, as you "
@@ -615,7 +600,7 @@ msgid ""
 msgstr ""
 "点光源，聚光灯和面光的强度都是以瓦特为单位的。也就是说，在这里你需要键入比内部渲染器更高的数值才行，就像你不可能用1W的灯泡来照亮一个房间，你需要设置更亮的灯泡，比如100W。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:385
+#: ../../manual/render/cycles/nodes/shaders.rst:389
 msgid ""
 "Sun lamps are specified in Watts/m^2, which require much smaller values like"
 " 1 W/m^2. This can be confusing, but specifying strength in Watts wouldn't "
@@ -625,62 +610,62 @@ msgid ""
 msgstr ""
 "日光的单位为Watts/m^2，而这个通常就需要较小的数值了，比如1W/m^2。这可能会有些乱，但是在这里使用瓦特是不方便的，因此真实太阳的强度为384600000000000000000000000W。带有自发光着色器的网格，其单位也是Watts/m^2。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:394
+#: ../../manual/render/cycles/nodes/shaders.rst:398
 msgid "Background"
 msgstr "背景"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:396
+#: ../../manual/render/cycles/nodes/shaders.rst:400
 msgid ""
 "Background light emission. This node should only be used for the world "
 "surface output; it is ignored in other cases."
 msgstr "设置世界中的背景光。该节点仅用于世界的面输出上；其他地方是不可用的。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:402
+#: ../../manual/render/cycles/nodes/shaders.rst:406
 msgid "Strength of the emitted light."
 msgstr "设置灯光强度。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:405
+#: ../../manual/render/cycles/nodes/shaders.rst:409
 msgid "Background output"
 msgstr "背景输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:404
+#: ../../manual/render/cycles/nodes/shaders.rst:408
 msgid "Background shader."
 msgstr "输出背景着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:410
+#: ../../manual/render/cycles/nodes/shaders.rst:414
 msgid "Holdout"
 msgstr "阻隔"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:412
+#: ../../manual/render/cycles/nodes/shaders.rst:416
 msgid ""
 "The holdout shader creates a \"hole\" in the image with zero alpha "
 "transparency, which is useful for compositing (see :term:`alpha channel`)."
 msgstr "阻隔着色器会在渲染的图像中创建一个Alpha为0的透明“孔洞”，这在合成中非常有用（参考Alpha通道部分）。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:415
+#: ../../manual/render/cycles/nodes/shaders.rst:419
 msgid ""
 "Note that the holdout shader can only create alpha when "
 ":menuselection:`Properties --> Render --> Film --> Transparent` is enabled. "
 "If it's disabled, the holdout shader will be black."
 msgstr "注意，仅有在属性>渲染>胶片>透明选项启用时，阻隔着色器才能创建出Alpha通道。如果未启用该项，则会渲染为黑色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:421
+#: ../../manual/render/cycles/nodes/shaders.rst:425
 msgid "Holdout output"
 msgstr "阻隔输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:420
+#: ../../manual/render/cycles/nodes/shaders.rst:424
 msgid "Holdout shader."
 msgstr "输出阻隔着色器。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:425
+#: ../../manual/render/cycles/nodes/shaders.rst:429
 msgid "The checkered area is a region with zero alpha."
 msgstr "棋盘格中测试球的地方Alpha为0。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:431
+#: ../../manual/render/cycles/nodes/shaders.rst:435
 msgid "Ambient Occlusion"
 msgstr "环境光遮蔽"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:433
+#: ../../manual/render/cycles/nodes/shaders.rst:437
 msgid ""
 "The ambient occlusion node gives per-material control for the amount of AO. "
 "When AO is enabled in the world, it affects all diffuse BSDFs in the scene. "
@@ -689,67 +674,111 @@ msgid ""
 msgstr ""
 "环境光遮蔽节点可以对每一个材质进行AO控制。在世界面板中启用AO时，会影响到场景中所有的漫射BSDF。而该材质可以仅让某些材质受到AO的影响。或者说会或多或少的影响到其他的材质。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:439
+#: ../../manual/render/cycles/nodes/shaders.rst:443
 msgid "surface reflection color."
 msgstr "设置表面的反射颜色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:442
+#: ../../manual/render/cycles/nodes/shaders.rst:446
 msgid "AO output"
 msgstr "AO输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:441
+#: ../../manual/render/cycles/nodes/shaders.rst:445
 msgid "Ambient Occlusion shader."
 msgstr "输出环境光遮蔽着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:446
+#: ../../manual/render/cycles/nodes/shaders.rst:450
 msgid "White AO shader."
 msgstr "白色AO着色"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:452
+#: ../../manual/render/cycles/nodes/shaders.rst:456
 msgid "Mix and Add"
 msgstr "混合和相加"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:454
+#: ../../manual/render/cycles/nodes/shaders.rst:458
 msgid ""
 "Mix or add shaders together. Mixing can be used for material layering, where"
 " the *Fac* input may, for example, be connected to a Blend Weight node."
 msgstr "将两个着色器进行混合或是相加。混合可以基于系数输入端口对材质进行层叠。如与一个混合权重的节点相连。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:457
+#: ../../manual/render/cycles/nodes/shaders.rst:461
 msgid "Shader inputs"
 msgstr "着色器输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:458
+#: ../../manual/render/cycles/nodes/shaders.rst:462
 msgid ""
 "Shaders to mix, such that incoming rays hit either with the specified "
 "probability in the *Fac* socket."
 msgstr "输入要混合的着色器，好能够让两个着色器同时受到光线的碰撞，或是通过系数来指定混合的比率。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:460
+#: ../../manual/render/cycles/nodes/shaders.rst:464
 msgid "Fac input"
 msgstr "系数输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:460
+#: ../../manual/render/cycles/nodes/shaders.rst:464
 msgid ""
 "Blend weight to use for mixing two shaders; at zero it uses the first shader"
 " entirely and at one the second shader."
 msgstr "用于设置两个着色器之间的混合权重；为零时仅使用第一个着色，为1时，则只使用第二个着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:464
+#: ../../manual/render/cycles/nodes/shaders.rst:468
 msgid "Shader output"
 msgstr "着色器输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:463
+#: ../../manual/render/cycles/nodes/shaders.rst:467
 msgid "Mixed shader."
 msgstr "输出混合后的着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:468
+#: ../../manual/render/cycles/nodes/shaders.rst:472
 msgid "A mix of a glossy and a diffuse shader makes a nice ceramic material."
 msgstr "通过混合光泽和漫射着色器得到的漂亮瓷器材质。"
 
 #: ../../manual/render/cycles/nodes/shaders.rst:219
 msgid ":term:`IOR` input"
 msgstr ":term:`IOR` 输入"
+
+#: ../../manual/render/cycles/nodes/shaders.rst:311
+msgid "Lighting distance falloff function."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:313
+msgid ""
+"**Cubic** is a sharp falloff useful for many simple materials. The function "
+"is (radius - x) :sup:`3`"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:314
+#, fuzzy
+msgid ""
+"**Gaussian** gives a smoother falloff following a normal distribution, which"
+" is particularly useful for more advanced materials that use measured data "
+"that was fitted to one or more such Gaussian functions. The function is e "
+":sup:`-8x`:sup:`2`:sup:`/radius`:sup:`2`, such that the radius roughly "
+"matches the maximum falloff distance. To match a given measured variance v, "
+"set radius = sqrt(16*v)."
+msgstr ""
+"光线在距离上的衰减函数，矩形会得到较为锐化的衰减，在很多简易材质中会非常有用。其公式为 (radius - x) "
+"3。高斯得到的结果较为平滑，其衰减会顺着法线分布，因此常会被用于一些高级的材质中，以实现类似高斯的过滤效果。其公式为e-8x2/radius2，另外，要让半径能够匹配到最大的衰减距离上。为了能够匹配测量的变量V，半径应该设为radius"
+" = sqrt(16*v)"
+
+#: ../../manual/render/cycles/nodes/shaders.rst:320
+msgid ""
+"**Christensen-Burley** is an approximation to physically based volume "
+"scattering. Gives less blurry results than Cubic and Gaussian functions."
+msgstr ""
+
+#~ msgid ""
+#~ "Lighting distance falloff function. **Cubic** is a sharp falloff useful for "
+#~ "many simple materials. The function is (radius - x) :sup:`3` **Gaussian** "
+#~ "gives a smoother falloff following a normal distribution, which is "
+#~ "particularly useful for more advanced materials that use measured data that "
+#~ "was fitted to one or more such Gaussian functions. The function is e "
+#~ ":sup:`-8x`:sup:`2`:sup:`/radius`:sup:`2`, such that the radius roughly "
+#~ "matches the maximum falloff distance. To match a given measured variance v, "
+#~ "set radius = sqrt(16*v)."
+#~ msgstr ""
+#~ "光线在距离上的衰减函数，矩形会得到较为锐化的衰减，在很多简易材质中会非常有用。其公式为 (radius - x) "
+#~ "3。高斯得到的结果较为平滑，其衰减会顺着法线分布，因此常会被用于一些高级的材质中，以实现类似高斯的过滤效果。其公式为e-8x2/radius2，另外，要让半径能够匹配到最大的衰减距离上。为了能够匹配测量的变量V，半径应该设为radius"
+#~ " = sqrt(16*v)"
 
 #~ msgid "IOR input"
 #~ msgstr ""
