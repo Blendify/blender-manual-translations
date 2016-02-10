@@ -31,39 +31,25 @@ msgstr ""
 msgid ":doc:`Surface Shader </render/cycles/materials/surface>`"
 msgstr ":doc:`表面着色器 </render/cycles/materials/surface>`"
 
-#: ../../manual/render/cycles/materials/introduction.rst:16
-msgid ""
-"The surface shader defines the light interaction at the surface of the mesh."
-" One or more :abbr:`BSDF (Bidirectional scattering distribution function)` s"
-" specify if incoming light is reflected back, refracted into the mesh, or "
-"absorbed."
-msgstr "表面着色器定义了光线对网格外表面作用的结果。需由一个或多个 BSDF（双向散射分布函数）指定入射光是否被反射、折射或是吸收。"
-
 #: ../../manual/render/cycles/materials/introduction.rst:20
-msgid ""
-"Emission defines how light is emitted from the surface, allowing any surface"
-" to become a light source."
-msgstr "自发光定义了光线从表面发射的方式，可以让任意表面变成光源。"
-
-#: ../../manual/render/cycles/materials/introduction.rst:25
 msgid ":doc:`Volume Shader </render/cycles/materials/volume>`"
 msgstr ":doc:`体积着色器  </render/cycles/materials/volume>`"
 
-#: ../../manual/render/cycles/materials/introduction.rst:27
+#: ../../manual/render/cycles/materials/introduction.rst:22
 msgid ""
 "When the surface shader does not reflect or absorb light, it enters into the"
 " volume. If no volume shader is specified, it will pass straight through to "
 "the other side of the mesh."
 msgstr "当表面着色器既不反射也不吸收光线时，光线会进入到物体内部。如果不指定任何的体积属性，它将直接穿透到达网格的另一面。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:30
+#: ../../manual/render/cycles/materials/introduction.rst:25
 msgid ""
 "If it is defined, a volume shader describes the light interaction as it "
 "passes through the volume of the mesh. Light may be scattered, absorbed, or "
 "emitted at any point in the volume."
 msgstr "如果进行了定义，那么一个体积着色器就会对光线经过物体内部时的作用效果进行说明。光线可能会被散射、吸收或是照亮内部的任意点。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:34
+#: ../../manual/render/cycles/materials/introduction.rst:29
 msgid ""
 "A material may have both a surface and a volume shader, or only one of "
 "either. Using both may be useful for materials such as glass, water or ice, "
@@ -72,29 +58,29 @@ msgid ""
 msgstr ""
 "一个材质可以同时具有表面着色器和体积着色器属性，或是只含其一。同时使用二者时，有助于表现如玻璃、水或冰块等材质，换句话说，你需要一部分光在穿过物体被吸收，例如兼具玻璃着色器和光泽着色器属性的表面。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:41
+#: ../../manual/render/cycles/materials/introduction.rst:36
 msgid ":doc:`Displacement </render/cycles/materials/displacement>`"
 msgstr ":doc:`置换着色器 </render/cycles/materials/displacement>`"
 
-#: ../../manual/render/cycles/materials/introduction.rst:43
+#: ../../manual/render/cycles/materials/introduction.rst:38
 msgid ""
 "The shape of the surface and the volume inside it may be altered by "
 "displacement shaders. This way, textures can then be used to make the mesh "
 "surface more detailed."
 msgstr "表面以及内部的形状可以通过置换着色器改变。用这种方式，贴图可以让网格表面的细节程度得到增强。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:46
+#: ../../manual/render/cycles/materials/introduction.rst:41
 msgid ""
 "Depending on the settings, the displacement may be virtual, only modifying "
 "the surface normals to give the impression of displacement, which is known "
 "as bump mapping, or a combination of real and virtual displacement."
 msgstr "如果设置得当，置换效果可以虚拟出来，只需调节表面法线即可让置换效果得到呈现，也就是凹凸贴图，或者将真实与虚拟两种置换方式结合运用。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:52
+#: ../../manual/render/cycles/materials/introduction.rst:47
 msgid "Energy Conservation"
 msgstr "能量守恒"
 
-#: ../../manual/render/cycles/materials/introduction.rst:54
+#: ../../manual/render/cycles/materials/introduction.rst:49
 msgid ""
 "The material system is built with physics-based rendering in mind, cleanly "
 "separating how a material looks and which rendering algorithm is used to "
@@ -103,7 +89,7 @@ msgid ""
 msgstr ""
 "材质系统建立在基于物理渲染思想的特性之上，将材质的感官形式与所用的渲染算法进行泾渭分明的划分。这样做会比较易于获得逼真的效果以及均衡的光照，不过需要注意几点。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:59
+#: ../../manual/render/cycles/materials/introduction.rst:54
 msgid ""
 "In order for materials to work well with global illumination, they should "
 "be, speaking in terms of physics, energy conserving. That means they cannot "
@@ -116,7 +102,7 @@ msgstr ""
 "他们应该遵循物理法则，质能守恒定律。这意味着，他们所反射的光量不能多于入射的光量。这种属性并做严格的限定，但如果色彩值在0.0-1.0之间，并且  "
 ":abbr:`BSDF (双向散射分布函数)` 着色器只通过Mix Shader（混合着色器）结点进行混合的话，那么结果就是正确的。"
 
-#: ../../manual/render/cycles/materials/introduction.rst:66
+#: ../../manual/render/cycles/materials/introduction.rst:61
 msgid ""
 "It is however possible to break this, with color values higher than 1.0 or "
 "using the Add Shader node, but one must be careful when doing this to keep "
@@ -128,3 +114,20 @@ msgstr ""
 "然而，还是有可能打破这种情况的，当色彩值高于1.0，或者使用了Add "
 "Shader（叠加着色器）结点的时候，而你必须谨慎操作，确保材质的效果在各种光照情况下都在预料之内。这会导致在系统中每当光线被反射时都会被多反射一次，使得"
 " :abbr:`BSDF (双向散射分布函数)`  着色器呈现出一种类似于自发光的效果。"
+
+#: ../../manual/render/cycles/materials/introduction.rst:16
+msgid ""
+"The surface shader defines the light interaction at the surface of the mesh."
+msgstr ""
+
+#~ msgid ""
+#~ "The surface shader defines the light interaction at the surface of the mesh."
+#~ " One or more :abbr:`BSDF (Bidirectional scattering distribution function)` s"
+#~ " specify if incoming light is reflected back, refracted into the mesh, or "
+#~ "absorbed."
+#~ msgstr "表面着色器定义了光线对网格外表面作用的结果。需由一个或多个 BSDF（双向散射分布函数）指定入射光是否被反射、折射或是吸收。"
+
+#~ msgid ""
+#~ "Emission defines how light is emitted from the surface, allowing any surface"
+#~ " to become a light source."
+#~ msgstr "自发光定义了光线从表面发射的方式，可以让任意表面变成光源。"
