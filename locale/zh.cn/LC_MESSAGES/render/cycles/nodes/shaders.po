@@ -27,18 +27,18 @@ msgid "Lambertian and Oren-Nayar diffuse reflection."
 msgstr "Lambertian（兰伯特）与Oren-Nayar（奥伦-纳亚尔）漫反射类型。"
 
 #: ../../manual/render/cycles/nodes/shaders.rst:15
-#: ../../manual/render/cycles/nodes/shaders.rst:46
-#: ../../manual/render/cycles/nodes/shaders.rst:75
-#: ../../manual/render/cycles/nodes/shaders.rst:108
-#: ../../manual/render/cycles/nodes/shaders.rst:147
-#: ../../manual/render/cycles/nodes/shaders.rst:176
-#: ../../manual/render/cycles/nodes/shaders.rst:214
-#: ../../manual/render/cycles/nodes/shaders.rst:251
-#: ../../manual/render/cycles/nodes/shaders.rst:275
-#: ../../manual/render/cycles/nodes/shaders.rst:323
-#: ../../manual/render/cycles/nodes/shaders.rst:360
-#: ../../manual/render/cycles/nodes/shaders.rst:403
-#: ../../manual/render/cycles/nodes/shaders.rst:442
+#: ../../manual/render/cycles/nodes/shaders.rst:45
+#: ../../manual/render/cycles/nodes/shaders.rst:74
+#: ../../manual/render/cycles/nodes/shaders.rst:107
+#: ../../manual/render/cycles/nodes/shaders.rst:146
+#: ../../manual/render/cycles/nodes/shaders.rst:175
+#: ../../manual/render/cycles/nodes/shaders.rst:213
+#: ../../manual/render/cycles/nodes/shaders.rst:250
+#: ../../manual/render/cycles/nodes/shaders.rst:274
+#: ../../manual/render/cycles/nodes/shaders.rst:322
+#: ../../manual/render/cycles/nodes/shaders.rst:359
+#: ../../manual/render/cycles/nodes/shaders.rst:427
+#: ../../manual/render/cycles/nodes/shaders.rst:466
 msgid "Color input"
 msgstr "输入色"
 
@@ -49,10 +49,10 @@ msgid ""
 msgstr "物体表面的颜色，或者从物理角度来讲，即不同波长光线的反射或透射几率。"
 
 #: ../../manual/render/cycles/nodes/shaders.rst:17
-#: ../../manual/render/cycles/nodes/shaders.rst:77
-#: ../../manual/render/cycles/nodes/shaders.rst:110
-#: ../../manual/render/cycles/nodes/shaders.rst:216
-#: ../../manual/render/cycles/nodes/shaders.rst:253
+#: ../../manual/render/cycles/nodes/shaders.rst:76
+#: ../../manual/render/cycles/nodes/shaders.rst:109
+#: ../../manual/render/cycles/nodes/shaders.rst:215
+#: ../../manual/render/cycles/nodes/shaders.rst:252
 msgid "Roughness input"
 msgstr "粗糙度"
 
@@ -64,6 +64,18 @@ msgstr ""
 "表面粗糙值为0.0时，代表标准的Lambert（兰伯特）反射，大于0.0的值代表激活Oren-Nayar（奥伦-纳亚尔）类型的BSDF着色器。"
 
 #: ../../manual/render/cycles/nodes/shaders.rst:19
+#: ../../manual/render/cycles/nodes/shaders.rst:47
+#: ../../manual/render/cycles/nodes/shaders.rst:78
+#: ../../manual/render/cycles/nodes/shaders.rst:120
+#: ../../manual/render/cycles/nodes/shaders.rst:152
+#: ../../manual/render/cycles/nodes/shaders.rst:220
+#: ../../manual/render/cycles/nodes/shaders.rst:254
+#: ../../manual/render/cycles/nodes/shaders.rst:279
+#: ../../manual/render/cycles/nodes/shaders.rst:331
+msgid "Normal input"
+msgstr "法线输入"
+
+#: ../../manual/render/cycles/nodes/shaders.rst:20
 #: ../../manual/render/cycles/nodes/shaders.rst:48
 #: ../../manual/render/cycles/nodes/shaders.rst:79
 #: ../../manual/render/cycles/nodes/shaders.rst:121
@@ -72,32 +84,20 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/shaders.rst:255
 #: ../../manual/render/cycles/nodes/shaders.rst:280
 #: ../../manual/render/cycles/nodes/shaders.rst:332
-msgid "Normal input"
-msgstr "法线输入"
-
-#: ../../manual/render/cycles/nodes/shaders.rst:20
-#: ../../manual/render/cycles/nodes/shaders.rst:49
-#: ../../manual/render/cycles/nodes/shaders.rst:80
-#: ../../manual/render/cycles/nodes/shaders.rst:122
-#: ../../manual/render/cycles/nodes/shaders.rst:154
-#: ../../manual/render/cycles/nodes/shaders.rst:222
-#: ../../manual/render/cycles/nodes/shaders.rst:256
-#: ../../manual/render/cycles/nodes/shaders.rst:281
-#: ../../manual/render/cycles/nodes/shaders.rst:333
 msgid ""
 "Normal used for shading; if nothing is connected the default shading normal "
 "is used."
 msgstr "设置着色法线，若无连接，默认使用着色的法线。"
 
 #: ../../manual/render/cycles/nodes/shaders.rst:23
-#: ../../manual/render/cycles/nodes/shaders.rst:52
-#: ../../manual/render/cycles/nodes/shaders.rst:82
-#: ../../manual/render/cycles/nodes/shaders.rst:126
-#: ../../manual/render/cycles/nodes/shaders.rst:157
-#: ../../manual/render/cycles/nodes/shaders.rst:180
-#: ../../manual/render/cycles/nodes/shaders.rst:224
-#: ../../manual/render/cycles/nodes/shaders.rst:259
-#: ../../manual/render/cycles/nodes/shaders.rst:284
+#: ../../manual/render/cycles/nodes/shaders.rst:51
+#: ../../manual/render/cycles/nodes/shaders.rst:81
+#: ../../manual/render/cycles/nodes/shaders.rst:125
+#: ../../manual/render/cycles/nodes/shaders.rst:156
+#: ../../manual/render/cycles/nodes/shaders.rst:179
+#: ../../manual/render/cycles/nodes/shaders.rst:223
+#: ../../manual/render/cycles/nodes/shaders.rst:258
+#: ../../manual/render/cycles/nodes/shaders.rst:283
 msgid "BSDF output"
 msgstr "BSDF 输出"
 
@@ -111,50 +111,50 @@ msgstr "漫反射 :abbr:`BSDF (双向散射分布函数)` 着色器。"
 msgid "Diffuse behavior"
 msgstr "漫反射行为"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:42
+#: ../../manual/render/cycles/nodes/shaders.rst:41
 msgid "Translucent"
 msgstr "半透着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:44
+#: ../../manual/render/cycles/nodes/shaders.rst:43
 msgid "Lambertian diffuse transmission."
 msgstr "Lambertian（兰伯特）漫反射透射类型。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:47
-#: ../../manual/render/cycles/nodes/shaders.rst:215
+#: ../../manual/render/cycles/nodes/shaders.rst:46
+#: ../../manual/render/cycles/nodes/shaders.rst:214
 msgid ""
 "Color of the surface, or physically speaking, the probability that light is "
 "transmitted for each wavelength."
 msgstr "物体表面的颜色，或者从物理角度来讲，即不同波长的光线的透射几率。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:51
+#: ../../manual/render/cycles/nodes/shaders.rst:50
 msgid ""
 "Translucent :abbr:`BSDF (Bidirectional scattering distribution function)` "
 "shader."
 msgstr "半透 :abbr:`BSDF (双向散射分布函数)` 着色器。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:61
+#: ../../manual/render/cycles/nodes/shaders.rst:60
 msgid "Translucent Shader"
 msgstr "半透着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:67
+#: ../../manual/render/cycles/nodes/shaders.rst:66
 msgid "Glossy"
 msgstr "光泽"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:69
+#: ../../manual/render/cycles/nodes/shaders.rst:68
 msgid ""
 "Glossy reflection with microfacet distribution, used for materials such as "
 "metal or mirrors."
 msgstr "光泽反射具有微面分布特性，用于表现如金属或镜面等材质。光泽着色器有可能产生大量的类萤火点。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:73
-#: ../../manual/render/cycles/nodes/shaders.rst:106
-#: ../../manual/render/cycles/nodes/shaders.rst:212
-#: ../../manual/render/cycles/nodes/shaders.rst:249
+#: ../../manual/render/cycles/nodes/shaders.rst:72
+#: ../../manual/render/cycles/nodes/shaders.rst:105
+#: ../../manual/render/cycles/nodes/shaders.rst:211
+#: ../../manual/render/cycles/nodes/shaders.rst:248
 msgid "Distribution"
 msgstr "分布"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:72
-#: ../../manual/render/cycles/nodes/shaders.rst:105
+#: ../../manual/render/cycles/nodes/shaders.rst:71
+#: ../../manual/render/cycles/nodes/shaders.rst:104
 msgid ""
 "Microfacet distribution to use. *Sharp* results in perfectly sharp "
 "reflections like a mirror, while *Beckmann*, *GGX* and *Ashikhmin-Shirley* "
@@ -163,41 +163,41 @@ msgstr ""
 "所采用的微面分布方式。Sharp（锐利）可以产生完美的类似镜面的那种锐利反射，而Beckmann（贝克曼）和GGX "
 "则可以使用Roughness（粗糙度）输入接口调节出模糊的反射效果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:76
-#: ../../manual/render/cycles/nodes/shaders.rst:109
-#: ../../manual/render/cycles/nodes/shaders.rst:148
-#: ../../manual/render/cycles/nodes/shaders.rst:276
-#: ../../manual/render/cycles/nodes/shaders.rst:324
+#: ../../manual/render/cycles/nodes/shaders.rst:75
+#: ../../manual/render/cycles/nodes/shaders.rst:108
+#: ../../manual/render/cycles/nodes/shaders.rst:147
+#: ../../manual/render/cycles/nodes/shaders.rst:275
+#: ../../manual/render/cycles/nodes/shaders.rst:323
 msgid ""
 "Color of the surface, or physically speaking, the probability that light is "
 "reflected for each wavelength."
 msgstr "物体表面的颜色，或者从物理角度来讲，即不同波长光线的反射几率。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:78
+#: ../../manual/render/cycles/nodes/shaders.rst:77
 msgid ""
 "Influences sharpness of the reflection; perfectly sharp at 0.0 and smoother "
 "with higher values."
 msgstr "影响反射的锐利程度，当值为0.0时代表完全锐利，值越高，则越平滑。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:82
-#: ../../manual/render/cycles/nodes/shaders.rst:258
+#: ../../manual/render/cycles/nodes/shaders.rst:81
+#: ../../manual/render/cycles/nodes/shaders.rst:257
 msgid ""
 "Glossy :abbr:`BSDF (Bidirectional scattering distribution function)` shader."
 msgstr "光泽  :abbr:`BSDF (双向散射分布函数)`  着色器。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:87
+#: ../../manual/render/cycles/nodes/shaders.rst:86
 msgid "Sharp Glossy"
 msgstr "锐利光泽"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:88
+#: ../../manual/render/cycles/nodes/shaders.rst:87
 msgid "Rough Glossy"
 msgstr "粗糙光泽"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:98
+#: ../../manual/render/cycles/nodes/shaders.rst:97
 msgid "Anisotropic"
 msgstr "各向异性"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:100
+#: ../../manual/render/cycles/nodes/shaders.rst:99
 msgid ""
 "Anisotropic glossy reflection, with separate control over U and V direction "
 "roughness. The tangents used for shading are derived from the active UV map."
@@ -206,17 +206,17 @@ msgid ""
 msgstr ""
 "各向异性光泽反射，可以对U向和V向的粗糙度分别进行控制。着色的切向由活动的UV贴图决定，如果没有可用的UV贴图，将会自动使用生成的坐标，并基于网格边界框进行球形映射包裹。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:111
+#: ../../manual/render/cycles/nodes/shaders.rst:110
 msgid ""
 "Sharpness of the reflection; perfectly sharp at 0.0 and smoother with higher"
 " values."
 msgstr "控制反射的锐化度，该值为0时，镜面反射，增加该值会模糊反射。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:114
+#: ../../manual/render/cycles/nodes/shaders.rst:113
 msgid "Anisotropy input"
 msgstr "各向异性输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:113
+#: ../../manual/render/cycles/nodes/shaders.rst:112
 msgid ""
 "Amount of anisotropy in the reflection; 0.0 gives a round highlight. Higher "
 "values give elongated highlights orthogonal to the tangent direction; "
@@ -224,85 +224,85 @@ msgid ""
 msgstr ""
 "控制各项异性在反射中的强度。当该值为0.0时，会得到一个圆点的高光。该值越高，高光越趋近于与切向垂直的方向，若为负值时，高光的方向会沿着切向的方向。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:119
+#: ../../manual/render/cycles/nodes/shaders.rst:118
 msgid "Rotation input"
 msgstr "旋转输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:117
+#: ../../manual/render/cycles/nodes/shaders.rst:116
 msgid ""
 "Rotation of the anisotropic tangent direction. Value 0.0 equals 0- rotation,"
 " 0.25 equals 90- and 1.0 equals 360- = 0- . This can be used to texture the "
 "tangent direction."
 msgstr "旋转各向异性的切向方向。该值为就是没有选择，若为0.25则旋转90度，1.0旋转360度，也就与0时相同。该项可用于控制纹理的切向方向。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:123
+#: ../../manual/render/cycles/nodes/shaders.rst:122
 msgid "Tangent input"
 msgstr "切线输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:124
+#: ../../manual/render/cycles/nodes/shaders.rst:123
 msgid ""
 "Tangent used for shading; if nothing is connected the default shading "
 "tangent is used."
 msgstr "设置着色法线，若无连接，默认使用着色的法线。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:126
+#: ../../manual/render/cycles/nodes/shaders.rst:125
 msgid ""
 "Anisotropic glossy :abbr:`BSDF (Bidirectional scattering distribution "
 "function)` shader."
 msgstr "各项异性 :abbr:`BSDF (双向散射分布函数)` 着色器。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:132
+#: ../../manual/render/cycles/nodes/shaders.rst:131
 msgid "Anisotropic rotation on 0"
 msgstr "各向异性旋转为0"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:136
+#: ../../manual/render/cycles/nodes/shaders.rst:135
 msgid "Anisotropic rotation on 0.25 (90- )"
 msgstr "各向异性旋转为0.25 (90- )"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:142
+#: ../../manual/render/cycles/nodes/shaders.rst:141
 msgid "Toon"
 msgstr "卡通效果"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:144
+#: ../../manual/render/cycles/nodes/shaders.rst:143
 msgid ""
 "Diffuse and Glossy Toon :abbr:`BSDF (Bidirectional scattering distribution "
 "function)` for creating cartoon light effects."
 msgstr "漫射和光泽卡通BSDF着色，用于制作卡通的光线效果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:149
+#: ../../manual/render/cycles/nodes/shaders.rst:148
 msgid "Size input"
 msgstr "尺寸输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:150
+#: ../../manual/render/cycles/nodes/shaders.rst:149
 msgid ""
 "Parameter between 0.0 and 1.0 that gives a angle of reflection between 0- "
 "and 90- ."
 msgstr "参数范围可在0.0-1.0之间进行调节，其表现的反射角度范围为0-90度。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:151
+#: ../../manual/render/cycles/nodes/shaders.rst:150
 msgid "Smooth input"
 msgstr "光滑输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:152
+#: ../../manual/render/cycles/nodes/shaders.rst:151
 msgid ""
 "This value specifies an angle over which a smooth transition from full to no"
 " reflection happens."
 msgstr "该值用于控制反射和无反射区域之间的平滑过渡。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:156
+#: ../../manual/render/cycles/nodes/shaders.rst:155
 msgid ""
 "Toon :abbr:`BSDF (Bidirectional scattering distribution function)` shader."
 msgstr "卡通 :abbr:`BSDF (双向散射分布函数)` 着色器."
 
-#: ../../manual/render/cycles/nodes/shaders.rst:161
+#: ../../manual/render/cycles/nodes/shaders.rst:160
 msgid "Toon Shader"
 msgstr "卡通着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:167
+#: ../../manual/render/cycles/nodes/shaders.rst:166
 msgid "Transparent"
 msgstr "透明"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:169
+#: ../../manual/render/cycles/nodes/shaders.rst:168
 msgid ""
 "Transparent :abbr:`BSDF (Bidirectional scattering distribution function)` "
 "without refraction, passing straight through the surface, as if there were "
@@ -314,35 +314,35 @@ msgid ""
 msgstr ""
 "透明BSDF并没有折射，光线会直接从中穿过，就像没有几何形状一样。该着色在使用Alpha贴图时非常有用。该着色对光线的影响与其他着色略有不同。注意，仅有当纯白色时才会完全透明。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:176
+#: ../../manual/render/cycles/nodes/shaders.rst:175
 msgid ""
 "Color of the surface, or physically speaking, the probability for each "
 "wavelength that light is blocked or passes straight through the surface."
 msgstr "表面颜色，在物理上来讲，主要用于控制不同波长的光线是受到表面阻挡还是直接穿过。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:179
+#: ../../manual/render/cycles/nodes/shaders.rst:178
 msgid ""
 "Transparent :abbr:`BSDF (Bidirectional scattering distribution function)` "
 "shader."
 msgstr "输出透明BSDF着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:187
+#: ../../manual/render/cycles/nodes/shaders.rst:186
 msgid "Transparent behaviour"
 msgstr "透明的光线行为"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:193
+#: ../../manual/render/cycles/nodes/shaders.rst:192
 msgid "Transparent Shader (pure white)"
 msgstr "透明着色器（纯白色） "
 
-#: ../../manual/render/cycles/nodes/shaders.rst:197
+#: ../../manual/render/cycles/nodes/shaders.rst:196
 msgid "Transparent Shader (gray)"
 msgstr "透明着色器（灰色）"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:203
+#: ../../manual/render/cycles/nodes/shaders.rst:202
 msgid "Glass"
 msgstr "玻璃 "
 
-#: ../../manual/render/cycles/nodes/shaders.rst:205
+#: ../../manual/render/cycles/nodes/shaders.rst:204
 msgid ""
 "Glass-like shader mixing refraction and reflection at grazing angles. Like "
 "the transparent shader, only pure white will make it transparent. The glass "
@@ -354,7 +354,7 @@ msgstr ""
 "玻璃是一类既有折射又有镜面反射特性的材质效果。和透明着色器相同的是，只有纯白色才会实现完全的透明效果。玻璃着色器可能会产生由于焦散而产生的噪点， "
 ":ref:`更多鞋架参看 <render-cycles-reducing_noise-glass_and_transp_shadows>` 。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:212
+#: ../../manual/render/cycles/nodes/shaders.rst:211
 msgid ""
 "Microfacet distribution to use. *Sharp* results in perfectly sharp "
 "refractions like clear glass, while *Beckmann* and *GGX* can use the "
@@ -363,38 +363,38 @@ msgstr ""
 "所采用的微面分布方式。Sharp（锐利） "
 "可以产生完美的镜面反射效果，而Beckmann（贝克曼）和GGX则可以使用Roughness（粗糙度）输入接口调节出毛玻璃的反射效果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:217
-#: ../../manual/render/cycles/nodes/shaders.rst:254
+#: ../../manual/render/cycles/nodes/shaders.rst:216
+#: ../../manual/render/cycles/nodes/shaders.rst:253
 msgid ""
 "Influences sharpness of the refraction; perfectly sharp at 0.0 and smoother "
 "with higher values."
 msgstr "影响反射的锐利程度，当值为0.0时代表完全锐利，值越高，则越平滑。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:219
+#: ../../manual/render/cycles/nodes/shaders.rst:218
 msgid ""
 "Index of refraction defining how much the ray changes direction. At 1. 0 "
 "rays pass straight through like transparent; higher values give more "
 "refraction."
 msgstr "折射率定义了光线方向受到改变的程度。值为1.0时，光线会直接从中通过，如同通过透明的物体一般，值越高，则折射程度越大。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:224
+#: ../../manual/render/cycles/nodes/shaders.rst:223
 msgid ""
 "Glass :abbr:`BSDF (Bidirectional scattering distribution function)` shader."
 msgstr "玻璃 :abbr:`BSDF (双向散射分布函数)` 着色器。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:229
+#: ../../manual/render/cycles/nodes/shaders.rst:228
 msgid "Sharp Glass"
 msgstr "光滑玻璃"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:230
+#: ../../manual/render/cycles/nodes/shaders.rst:229
 msgid "Rough Glass"
 msgstr "模糊玻璃"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:240
+#: ../../manual/render/cycles/nodes/shaders.rst:239
 msgid "Refraction"
 msgstr "折射"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:242
+#: ../../manual/render/cycles/nodes/shaders.rst:241
 msgid ""
 "Glossy refraction with sharp or microfacet distribution, used for materials "
 "that transmit light. For best results this node should be considered as a "
@@ -404,7 +404,7 @@ msgid ""
 msgstr ""
 "光泽的折射要么锐利，要么模糊，用在材质上可以用来弯曲光线。在使用时，为了能够得到更好的结果，通常会和其他着色器结合使用，不会单独使用。比如，会基于菲涅尔系数将其与光泽着色器进行混合。同时在边缘的地方，会由于光线反射的缘故，呈现出较暗的结果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:249
+#: ../../manual/render/cycles/nodes/shaders.rst:248
 msgid ""
 "Microfacet distribution to use. *Sharp* results in perfectly sharp "
 "refractions, while *Beckmann* and *GGX* can use the *Roughness* input for "
@@ -413,51 +413,51 @@ msgstr ""
 "所采用的微面分布方式。Sharp（锐利） "
 "可以产生完美的镜面反射效果，而Beckmann（贝克曼）和GGX则可以使用Roughness（粗糙度）输入接口调节出毛玻璃的反射效果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:252
+#: ../../manual/render/cycles/nodes/shaders.rst:251
 msgid ""
 "Color of the surface, or physically speaking, the probability that light is "
 "refracted for each wavelength."
 msgstr "物体表面的颜色，或者从物理角度来讲，即不同波长的光线的透射几率。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:263
+#: ../../manual/render/cycles/nodes/shaders.rst:262
 msgid "Refraction Shader."
 msgstr "折射着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:269
+#: ../../manual/render/cycles/nodes/shaders.rst:268
 msgid "Velvet"
 msgstr "平绒"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:271
+#: ../../manual/render/cycles/nodes/shaders.rst:270
 msgid ""
 "Velvet reflection shader for materials such as cloth. It is meant to be used"
 " together with other shaders (such as a *Diffuse Shader*) and isn't "
 "particularly useful on it's own."
 msgstr "用于模拟布料之类的丝绒反射着色。该着色通常也会单独使用，多是和其他着色器进行混合使用（例如漫射着色器）。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:278
+#: ../../manual/render/cycles/nodes/shaders.rst:277
 msgid "Sigma input"
 msgstr "西格玛输入接口"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:278
+#: ../../manual/render/cycles/nodes/shaders.rst:277
 msgid ""
 "Variance of the normal distribution, controlling the sharpness of the peak -"
 " can be thought of as a kind of *roughness*."
 msgstr "用于控制法线分布的变化，高光点的锐利程度，也可以将其设想为一种模糊。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:283
+#: ../../manual/render/cycles/nodes/shaders.rst:282
 msgid ""
 "Velvet :abbr:`BSDF (Bidirectional scattering distribution function)` shader."
 msgstr "丝绒 :abbr:`BSDF (Bidirectional scattering distribution function)` 着色器."
 
-#: ../../manual/render/cycles/nodes/shaders.rst:293
+#: ../../manual/render/cycles/nodes/shaders.rst:292
 msgid "The Velvet Shader"
 msgstr "丝绒着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:299
+#: ../../manual/render/cycles/nodes/shaders.rst:298
 msgid "Subsurface Scattering"
 msgstr "次表面散射"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:301
+#: ../../manual/render/cycles/nodes/shaders.rst:300
 msgid ""
 "Simple subsurface multiple scattering, for materials such as skin, wax, "
 "marble, milk and others. For these materials, rather than light being "
@@ -467,50 +467,50 @@ msgid ""
 msgstr ""
 "在简单的次表面中都会含有散射，像是皮肤，蜡烛，大理石，牛奶等等。在这些材质中，光线并不是单纯在表面的进行反射，它还会穿透物体并在物体内部进行反弹，直到光线被吸收或是离开表面。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:306
+#: ../../manual/render/cycles/nodes/shaders.rst:305
 msgid ""
 "How far the color scatters on average can be configured per RGB color "
 "channel. For example, for skin, red colors scatter further, which gives "
 "distinctive red-colored shadows, and a soft appearance."
 msgstr "至于颜色多远才会散射可以通过每个RGB颜色通道来调节。例如，在皮肤中，红色会散射的更长一些，致使阴影中出呈现出柔和的红色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:321
+#: ../../manual/render/cycles/nodes/shaders.rst:320
 msgid "Falloff"
 msgstr "衰减"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:325
+#: ../../manual/render/cycles/nodes/shaders.rst:324
 msgid "Scale input"
 msgstr "比例输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:326
+#: ../../manual/render/cycles/nodes/shaders.rst:325
 msgid "Global scale factor for the scattering radius."
 msgstr "散射半径的全局缩放系数"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:327
+#: ../../manual/render/cycles/nodes/shaders.rst:326
 msgid "Radius input"
 msgstr "半径输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:328
+#: ../../manual/render/cycles/nodes/shaders.rst:327
 msgid ""
 "Scattering radius for each RGB color channel, the maximum distance that "
 "light can scatter."
 msgstr "每个RGB颜色通道的散射半径，最大距离即为光线能够散射的距离。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:330
+#: ../../manual/render/cycles/nodes/shaders.rst:329
 msgid "Sharpness input"
 msgstr "蜕化输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:330
+#: ../../manual/render/cycles/nodes/shaders.rst:329
 msgid ""
 "Used only with **Cubic** falloff. Values increasing from 0 to 1 prevents "
 "softening of sharp edges and reduces unwanted darkening."
 msgstr "仅用于矩形衰减模式下。该值从0增加到1时，可以用来防止锐化边缘的柔化，降低不想要的加深。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:342
+#: ../../manual/render/cycles/nodes/shaders.rst:341
 msgid "Texture Blur input"
 msgstr "纹理模糊输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:335
+#: ../../manual/render/cycles/nodes/shaders.rst:334
 msgid ""
 "How much of the texture will be blurred along with the lighting, mixing the "
 "texture at the incoming and outgoing points on the surface. Note that the "
@@ -525,11 +525,11 @@ msgid ""
 msgstr ""
 "纹理伴随光线的模糊程度，光线会在表面的入点和出点之间混合纹理。要注意，其正确与否会取决于纹理。举例来说，从一张皮肤照片中创建的纹理，在这种情况下，颜色会被预先模糊，纹理模糊应当设置为0。即使是手绘纹理，没有模糊，或是仅有一点的模糊都可以。手绘的纹理在绘制过程中已经较为柔和，另外，我们平时甚至没有见过未模糊皮肤纹理的样子，平时看到的都是模糊的。而对于程序纹理而言，该项通常需要设定的较高一些。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:346
+#: ../../manual/render/cycles/nodes/shaders.rst:345
 msgid "BSSRDF output"
 msgstr "BSSRDF 输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:345
+#: ../../manual/render/cycles/nodes/shaders.rst:344
 msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution function)` "
 "shader."
@@ -537,29 +537,29 @@ msgstr ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution function)` "
 "着色器."
 
-#: ../../manual/render/cycles/nodes/shaders.rst:350
+#: ../../manual/render/cycles/nodes/shaders.rst:349
 msgid "A skin-toned SSS shader with color radius: 1.0, 0.8, 0.5."
 msgstr "皮肤的SSS着色效果，颜色半径为1.0、0.8、0.5。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:356
+#: ../../manual/render/cycles/nodes/shaders.rst:355
 msgid "Emission"
 msgstr "自发光"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:358
+#: ../../manual/render/cycles/nodes/shaders.rst:357
 msgid "Lambertian emission, to be used for material and lamp surface outputs."
 msgstr "自发光着色，用于材质或是灯光的面输出。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:361
-#: ../../manual/render/cycles/nodes/shaders.rst:404
+#: ../../manual/render/cycles/nodes/shaders.rst:360
+#: ../../manual/render/cycles/nodes/shaders.rst:428
 msgid "Color of the emitted light."
 msgstr "设置自发光颜色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:364
-#: ../../manual/render/cycles/nodes/shaders.rst:405
+#: ../../manual/render/cycles/nodes/shaders.rst:363
+#: ../../manual/render/cycles/nodes/shaders.rst:429
 msgid "Strength input"
 msgstr "强度输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:363
+#: ../../manual/render/cycles/nodes/shaders.rst:362
 msgid ""
 "Strength of the emitted light. For point and area lamps, the unit is Watts. "
 "For materials, a value of 1.0 will ensure that the object in the image has "
@@ -567,23 +567,23 @@ msgid ""
 msgstr ""
 "控制发出的光线强度，对于点光源和面光，其单位是瓦特。在材质上，当该值为1.0时，会确保物体的材质颜色与颜色输入端口中的颜色相同，就像“无阴暗”一样。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:368
+#: ../../manual/render/cycles/nodes/shaders.rst:367
 msgid "Emission output"
 msgstr "自发光输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:367
+#: ../../manual/render/cycles/nodes/shaders.rst:366
 msgid "Emission shader."
 msgstr "自发光着色器"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:374
+#: ../../manual/render/cycles/nodes/shaders.rst:373
 msgid "Emission shader, with strength at ``1.0``"
 msgstr "强度为1.0的自发光着色"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:378
+#: ../../manual/render/cycles/nodes/shaders.rst:377
 msgid "Emission shader, with strength at ``3.0``"
 msgstr "强度为3.0的自发光着色"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:381
+#: ../../manual/render/cycles/nodes/shaders.rst:380
 msgid ""
 "Cycles uses a physically correct light falloff by default, whereas Blender "
 "Internal uses a smoothed falloff with a Distance parameter. A similar effect"
@@ -591,7 +591,7 @@ msgid ""
 msgstr ""
 "Cycles灯光默认使用的是物理纠正的衰减方式，而内部渲染器则是在距离参量上的平滑衰减。在灯光设置中你也可以使用平滑参量进行衰减，以得到类似的效果。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:385
+#: ../../manual/render/cycles/nodes/shaders.rst:384
 msgid ""
 "Lamp strength for point, spot and area lamps is specified in Watts. This "
 "means you typically need higher values than Blender Internal, as you "
@@ -600,7 +600,7 @@ msgid ""
 msgstr ""
 "点光源，聚光灯和面光的强度都是以瓦特为单位的。也就是说，在这里你需要键入比内部渲染器更高的数值才行，就像你不可能用1W的灯泡来照亮一个房间，你需要设置更亮的灯泡，比如100W。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:389
+#: ../../manual/render/cycles/nodes/shaders.rst:388
 msgid ""
 "Sun lamps are specified in Watts/m^2, which require much smaller values like"
 " 1 W/m^2. This can be confusing, but specifying strength in Watts wouldn't "
@@ -610,62 +610,62 @@ msgid ""
 msgstr ""
 "日光的单位为Watts/m^2，而这个通常就需要较小的数值了，比如1W/m^2。这可能会有些乱，但是在这里使用瓦特是不方便的，因此真实太阳的强度为384600000000000000000000000W。带有自发光着色器的网格，其单位也是Watts/m^2。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:398
+#: ../../manual/render/cycles/nodes/shaders.rst:422
 msgid "Background"
 msgstr "背景"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:400
+#: ../../manual/render/cycles/nodes/shaders.rst:424
 msgid ""
 "Background light emission. This node should only be used for the world "
 "surface output; it is ignored in other cases."
 msgstr "设置世界中的背景光。该节点仅用于世界的面输出上；其他地方是不可用的。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:406
+#: ../../manual/render/cycles/nodes/shaders.rst:430
 msgid "Strength of the emitted light."
 msgstr "设置灯光强度。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:409
+#: ../../manual/render/cycles/nodes/shaders.rst:433
 msgid "Background output"
 msgstr "背景输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:408
+#: ../../manual/render/cycles/nodes/shaders.rst:432
 msgid "Background shader."
 msgstr "输出背景着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:414
+#: ../../manual/render/cycles/nodes/shaders.rst:438
 msgid "Holdout"
 msgstr "阻隔"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:416
+#: ../../manual/render/cycles/nodes/shaders.rst:440
 msgid ""
 "The holdout shader creates a \"hole\" in the image with zero alpha "
 "transparency, which is useful for compositing (see :term:`alpha channel`)."
 msgstr "阻隔着色器会在渲染的图像中创建一个Alpha为0的透明“孔洞”，这在合成中非常有用（参考Alpha通道部分）。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:419
+#: ../../manual/render/cycles/nodes/shaders.rst:443
 msgid ""
 "Note that the holdout shader can only create alpha when "
 ":menuselection:`Properties --> Render --> Film --> Transparent` is enabled. "
 "If it's disabled, the holdout shader will be black."
 msgstr "注意，仅有在属性>渲染>胶片>透明选项启用时，阻隔着色器才能创建出Alpha通道。如果未启用该项，则会渲染为黑色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:425
+#: ../../manual/render/cycles/nodes/shaders.rst:449
 msgid "Holdout output"
 msgstr "阻隔输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:424
+#: ../../manual/render/cycles/nodes/shaders.rst:448
 msgid "Holdout shader."
 msgstr "输出阻隔着色器。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:429
+#: ../../manual/render/cycles/nodes/shaders.rst:453
 msgid "The checkered area is a region with zero alpha."
 msgstr "棋盘格中测试球的地方Alpha为0。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:435
+#: ../../manual/render/cycles/nodes/shaders.rst:459
 msgid "Ambient Occlusion"
 msgstr "环境光遮蔽"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:437
+#: ../../manual/render/cycles/nodes/shaders.rst:461
 msgid ""
 "The ambient occlusion node gives per-material control for the amount of AO. "
 "When AO is enabled in the world, it affects all diffuse BSDFs in the scene. "
@@ -674,79 +674,79 @@ msgid ""
 msgstr ""
 "环境光遮蔽节点可以对每一个材质进行AO控制。在世界面板中启用AO时，会影响到场景中所有的漫射BSDF。而该材质可以仅让某些材质受到AO的影响。或者说会或多或少的影响到其他的材质。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:443
+#: ../../manual/render/cycles/nodes/shaders.rst:467
 msgid "surface reflection color."
 msgstr "设置表面的反射颜色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:446
+#: ../../manual/render/cycles/nodes/shaders.rst:470
 msgid "AO output"
 msgstr "AO输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:445
+#: ../../manual/render/cycles/nodes/shaders.rst:469
 msgid "Ambient Occlusion shader."
 msgstr "输出环境光遮蔽着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:450
+#: ../../manual/render/cycles/nodes/shaders.rst:474
 msgid "White AO shader."
 msgstr "白色AO着色"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:456
+#: ../../manual/render/cycles/nodes/shaders.rst:480
 msgid "Mix and Add"
 msgstr "混合和相加"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:458
+#: ../../manual/render/cycles/nodes/shaders.rst:482
 msgid ""
 "Mix or add shaders together. Mixing can be used for material layering, where"
 " the *Fac* input may, for example, be connected to a Blend Weight node."
 msgstr "将两个着色器进行混合或是相加。混合可以基于系数输入端口对材质进行层叠。如与一个混合权重的节点相连。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:461
+#: ../../manual/render/cycles/nodes/shaders.rst:485
 msgid "Shader inputs"
 msgstr "着色器输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:462
+#: ../../manual/render/cycles/nodes/shaders.rst:486
 msgid ""
 "Shaders to mix, such that incoming rays hit either with the specified "
 "probability in the *Fac* socket."
 msgstr "输入要混合的着色器，好能够让两个着色器同时受到光线的碰撞，或是通过系数来指定混合的比率。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:464
+#: ../../manual/render/cycles/nodes/shaders.rst:488
 msgid "Fac input"
 msgstr "系数输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:464
+#: ../../manual/render/cycles/nodes/shaders.rst:488
 msgid ""
 "Blend weight to use for mixing two shaders; at zero it uses the first shader"
 " entirely and at one the second shader."
 msgstr "用于设置两个着色器之间的混合权重；为零时仅使用第一个着色，为1时，则只使用第二个着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:468
+#: ../../manual/render/cycles/nodes/shaders.rst:492
 msgid "Shader output"
 msgstr "着色器输出"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:467
+#: ../../manual/render/cycles/nodes/shaders.rst:491
 msgid "Mixed shader."
 msgstr "输出混合后的着色。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:472
+#: ../../manual/render/cycles/nodes/shaders.rst:496
 msgid "A mix of a glossy and a diffuse shader makes a nice ceramic material."
 msgstr "通过混合光泽和漫射着色器得到的漂亮瓷器材质。"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:219
+#: ../../manual/render/cycles/nodes/shaders.rst:218
 msgid ":term:`IOR` input"
 msgstr ":term:`IOR` 输入"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:311
+#: ../../manual/render/cycles/nodes/shaders.rst:310
 msgid "Lighting distance falloff function."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/shaders.rst:313
+#: ../../manual/render/cycles/nodes/shaders.rst:312
 msgid ""
 "**Cubic** is a sharp falloff useful for many simple materials. The function "
 "is (radius - x) :sup:`3`"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/shaders.rst:314
+#: ../../manual/render/cycles/nodes/shaders.rst:313
 #, fuzzy
 msgid ""
 "**Gaussian** gives a smoother falloff following a normal distribution, which"
@@ -760,10 +760,92 @@ msgstr ""
 "3。高斯得到的结果较为平滑，其衰减会顺着法线分布，因此常会被用于一些高级的材质中，以实现类似高斯的过滤效果。其公式为e-8x2/radius2，另外，要让半径能够匹配到最大的衰减距离上。为了能够匹配测量的变量V，半径应该设为radius"
 " = sqrt(16*v)"
 
-#: ../../manual/render/cycles/nodes/shaders.rst:320
+#: ../../manual/render/cycles/nodes/shaders.rst:319
 msgid ""
 "**Christensen-Burley** is an approximation to physically based volume "
 "scattering. Gives less blurry results than Cubic and Gaussian functions."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:397
+msgid "Hair"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:399
+msgid "Used to add shading for :doc:`Hair </physics/particles/hair/index>`."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:407
+msgid "Component"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:402
+msgid ""
+"There are two components that can be used to control the look of the hair. "
+"Usually you are going to want each of these and use a :ref:`Mix Node "
+"<cycles_shader_mix_add>`."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:405
+msgid "Reflection"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:406
+msgid "The light that bounces off the surface of the hair."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:407
+msgid "Transmission"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:408
+msgid "The light that passes through the hair and comes out the other side."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:409
+msgid "Color"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:410
+msgid "Color of the hair."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:411
+msgid "Offset"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:412
+msgid "Controls the way the light is rotated for the reflection/transmission."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:413
+msgid "Roughness U/V"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:414
+msgid ""
+"Controls the roughness in the direction light is skewed, and perpendicular "
+"to it."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:417
+msgid "Tangent"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:416
+msgid "Input tangent."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:500
+msgid "Volume Absorption"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:502
+#: ../../manual/render/cycles/nodes/shaders.rst:507
+msgid "Todo."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/shaders.rst:505
+msgid "Volume Scatter"
 msgstr ""
 
 #~ msgid ""
