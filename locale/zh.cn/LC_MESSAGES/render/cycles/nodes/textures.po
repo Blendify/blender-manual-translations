@@ -1,18 +1,21 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) : This page is public domain as CC0
+# This file is distributed under the same license as the Blender Reference
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-26 01:29+0800\n"
+"POT-Creation-Date: 2016-03-21 11:20+1100\n"
 "PO-Revision-Date: 2015-07-26 02:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.3\n"
+"Generated-By: Babel 2.2.0\n"
 
 #: ../../manual/render/cycles/nodes/textures.rst:5
 msgid "Texture Nodes"
@@ -23,16 +26,53 @@ msgid "Image Texture"
 msgstr "图像纹理"
 
 #: ../../manual/render/cycles/nodes/textures.rst:13
-msgid "Image texture from `GoodTextures.com <http://www.goodtextures.com/>`__"
+#, fuzzy
+msgid "Image texture from `GoodTextures.com <https://www.goodtextures.com/>`__"
 msgstr "该图像纹理源于 `GoodTextures.com <http://www.goodtextures.com/>`__"
 
 #: ../../manual/render/cycles/nodes/textures.rst:16
 msgid "Use an image file as a texture."
 msgstr "使用一张图像作为纹理。"
 
+#: ../../manual/render/cycles/nodes/textures.rst:19
+#: ../../manual/render/cycles/nodes/textures.rst:67
+#, fuzzy
+msgid "Image Data-Block"
+msgstr "图像数据块"
+
+#: ../../manual/render/cycles/nodes/textures.rst:19
+#, fuzzy
+msgid ""
+"Image data-block used as the image source. Currently not all images "
+"supported by Blender can be used by Cycles. In particular, generated, "
+"packed images or animations are not supported currently."
+msgstr "图像数据块可以用为图像源。目前，Blender还不能支持所有的图像，来被Cycles使用。尤其是生成的，图像打包的动画尚还不能被支持。"
+
 #: ../../manual/render/cycles/nodes/textures.rst:28
 msgid "Projection"
 msgstr "投影"
+
+#: ../../manual/render/cycles/nodes/textures.rst:22
+msgid "Projection to use for mapping the textures."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:24
+msgid "*Flat* will use the XY coordinates for mapping."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:25
+msgid ""
+"*Box* will map the image to the 6 sides of a virtual box, based on the "
+"normal, using XY, YZ and XYZ coordinates depending on the side."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:27
+msgid "*Sphere* will map the image to the sphere using Z axis as central."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:28
+msgid "*Tube* will map the tube to the sphere using Z axis as central."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:33
 msgid "Projection Blend"
@@ -40,12 +80,11 @@ msgstr "投射混合"
 
 #: ../../manual/render/cycles/nodes/textures.rst:31
 msgid ""
-"For Box mapping, the amount to blend between sides of the box, to get rid of"
-" sharp transitions between the different sides. Blending is useful to map a "
-"procedural-like image texture pattern seamlessly on a model. 0.0 gives no "
-"blending; higher values give a smoother transition."
-msgstr ""
-"该项针对于方框映射，用来控制方框侧面之间的混合度，以避免侧面之间出现锐利的过渡。混合在处理贴图上非常有用，可以让图像纹理无缝的映射在模型上。0.0没有混合，该值越高过渡越位平缓。"
+"For Box mapping, the amount to blend between sides of the box, to get rid"
+" of sharp transitions between the different sides. Blending is useful to "
+"map a procedural-like image texture pattern seamlessly on a model. 0.0 "
+"gives no blending; higher values give a smoother transition."
+msgstr "该项针对于方框映射，用来控制方框侧面之间的混合度，以避免侧面之间出现锐利的过渡。混合在处理贴图上非常有用，可以让图像纹理无缝的映射在模型上。0.0没有混合，该值越高过渡越位平缓。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:37
 #: ../../manual/render/cycles/nodes/textures.rst:71
@@ -55,12 +94,35 @@ msgstr "色彩空间"
 #: ../../manual/render/cycles/nodes/textures.rst:36
 #: ../../manual/render/cycles/nodes/textures.rst:70
 msgid ""
-"Type of data that the image contains, either Color or Non-Color Data. For "
-"most color textures the default of Color should be used, but in case of e.g."
-" a bump or alpha map, the pixel values should be interpreted as Non-Color "
-"Data, to avoid doing any unwanted color space conversions."
+"Type of data that the image contains, either Color or Non-Color Data. For"
+" most color textures the default of Color should be used, but in case of "
+"e.g. a bump or alpha map, the pixel values should be interpreted as Non-"
+"Color Data, to avoid doing any unwanted color space conversions."
+msgstr "图像所包含的数据类型，色彩或是非色彩。对于大多数彩色纹理应该使用默认的色彩模式，但是一些凹凸或是alpha贴图，像素的插值方式是非色彩数据，以此可以避免做一些不想要的色彩空间转换操作。"
+
+#: ../../manual/render/cycles/nodes/textures.rst:44
+msgid "Extension Type"
 msgstr ""
-"图像所包含的数据类型，色彩或是非色彩。对于大多数彩色纹理应该使用默认的色彩模式，但是一些凹凸或是alpha贴图，像素的插值方式是非色彩数据，以此可以避免做一些不想要的色彩空间转换操作。"
+
+#: ../../manual/render/cycles/nodes/textures.rst:40
+msgid ""
+"Extension type defines how the image is extrapolated past the original "
+"bounds:"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:42
+msgid ""
+"*Repeat* will repeat the image horizontally and vertically giving tiled-"
+"looking result."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:43
+msgid "*Extend* will extend the image by repeating pixels on it's edges."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:44
+msgid "*Clip* will set all the extended pixels values to transparent black."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:47
 #: ../../manual/render/cycles/nodes/textures.rst:88
@@ -76,8 +138,8 @@ msgstr "矢量输入"
 
 #: ../../manual/render/cycles/nodes/textures.rst:47
 msgid ""
-"Texture coordinate for texture lookup. If this socket is left unconnected, "
-"UV coordinates from the active UV render layer are used."
+"Texture coordinate for texture lookup. If this socket is left "
+"unconnected, UV coordinates from the active UV render layer are used."
 msgstr "指定纹理坐标。如果该端口未连接，则会使用UV层中活动的UV坐标。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:50
@@ -98,8 +160,8 @@ msgstr "颜色输出"
 #: ../../manual/render/cycles/nodes/textures.rst:50
 msgid ""
 "RGB color from image. If the image has alpha, the color is premultiplied "
-"with alpha if the Alpha output is used, and unpremultiplied or straight if "
-"the Alpha output is not used."
+"with alpha if the Alpha output is used, and unpremultiplied or straight "
+"if the Alpha output is not used."
 msgstr "输出图像的RGB颜色。如果图像中有Alpha，在使用Alpha输出时，颜色将会与Alpha预乘，非预乘或是直接的Alpha输出是不可用的。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:54
@@ -115,18 +177,83 @@ msgid "Environment Texture"
 msgstr "环境纹理"
 
 #: ../../manual/render/cycles/nodes/textures.rst:62
-msgid "HDR image from `OpenFootage.net <http://www.openfootage.net/?p=986>`__"
+#, fuzzy
+msgid "HDR image from `OpenFootage.net <https://www.openfootage.net/?p=986>`__"
 msgstr "源于 `OpenFootage.net <http://www.openfootage.net/?p=986>`__  的HDR图像"
+
+#: ../../manual/render/cycles/nodes/textures.rst:65
+msgid ""
+"Environmental textures are used to light your scene using an environment "
+"map image file as a texture."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:68
+msgid "Image data-block used as the image source."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:79
+msgid "Texture Interpolation"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:74
+msgid ""
+"Interpolation method used for the environment texture. The following "
+"interpolations are available:"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:76
+msgid "Default."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:77
+msgid "No interpolation."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:78
+msgid "Only available when rendering on the CPU."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:79
+msgid ""
+"Bicubic when magnifying else Bilinear is used. This is only available for"
+" :doc:`OSL </render/cycles/osl>`."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:85
+msgid "Projection Method"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:82
+msgid ""
+"Allows you to use different types of environmental maps. The following "
+"methods are supported:"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:84
+msgid "Projection from an Equirectangular photo."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:85
+msgid "Projection from an orthographic photo or mirror ball."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:88
 msgid ""
-"Texture coordinate for texture lookup. If this socket is left unconnected, "
-"the image is mapped as environment with the Z axis as up."
+"Texture coordinate for texture lookup. If this socket is left "
+"unconnected, the image is mapped as environment with the Z axis as up."
 msgstr "指定纹理坐标。如果该端口未连接，图像则以Z轴向上的方式映射到环境中。"
+
+#: ../../manual/render/cycles/nodes/textures.rst:91
+msgid "RGB color from the image."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:95
 msgid "Sky Texture"
 msgstr "天空纹理"
+
+#: ../../manual/render/cycles/nodes/textures.rst:100
+msgid "Sky Texture."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:103
 msgid "Procedural Sky texture."
@@ -154,8 +281,8 @@ msgstr "浑浊度"
 
 #: ../../manual/render/cycles/nodes/textures.rst:110
 msgid ""
-"Atmospheric turbidity. (2: Arctic like, 3: clear sky, 6: warm/moist day, 10:"
-" hazy day)"
+"Atmospheric turbidity. (2: Arctic like, 3: clear sky, 6: warm/moist day, "
+"10: hazy day)"
 msgstr "大气浑浊度（2：极低天气，3：晴朗的天空，6：温暖/潮湿气候，10：朦胧雾霾）"
 
 #: ../../manual/render/cycles/nodes/textures.rst:111
@@ -164,8 +291,8 @@ msgstr "地面反照率"
 
 #: ../../manual/render/cycles/nodes/textures.rst:112
 msgid ""
-"Amount of light reflected from the planet surface back into the atmosphere. "
-"(RGB 0,0,0 is black, 1,1,1 is white)."
+"Amount of light reflected from the planet surface back into the "
+"atmosphere. (RGB 0,0,0 is black, 1,1,1 is white)."
 msgstr "设置星球表面将光线反射回大气中的数量。（RGB为0、0、0为黑色，1、1、1为白色）。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:114
@@ -209,8 +336,8 @@ msgstr "高细节杂色纹理"
 
 #: ../../manual/render/cycles/nodes/textures.rst:129
 msgid ""
-"Procedural Perlin noise texture, similar to the Clouds texture in Blender "
-"Internal."
+"Procedural Perlin noise texture, similar to the Clouds texture in Blender"
+" Internal."
 msgstr "程序杂色纹理，类似于BI中的云纹理。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:134
@@ -294,10 +421,26 @@ msgstr "类型"
 msgid "*Bands* or *Rings* shaped waves."
 msgstr "设置波浪形状为条带或环形。"
 
+#: ../../manual/render/cycles/nodes/textures.rst:163
+msgid "Wave Profile"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:160
+msgid "Controls the look of the wave type."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:162
+msgid "Uses a sawtooth profile."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/textures.rst:163
+msgid "Uses the standard sine profile."
+msgstr ""
+
 #: ../../manual/render/cycles/nodes/textures.rst:171
 msgid ""
-"Amount of distortion of the wave (similar to the Marble texture in Blender "
-"Internal)."
+"Amount of distortion of the wave (similar to the Marble texture in "
+"Blender Internal)."
 msgstr "纹理采样坐标，若无任何连接，默认为生成的纹理坐标。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:173
@@ -338,8 +481,8 @@ msgstr "马氏分形纹理"
 
 #: ../../manual/render/cycles/nodes/textures.rst:216
 msgid ""
-"Advanced procedural noise texture. Note that it often needs some adjustments"
-" (multiplication and addition) in order to see more detail."
+"Advanced procedural noise texture. Note that it often needs some "
+"adjustments (multiplication and addition) in order to see more detail."
 msgstr "高级程序噪点纹理，注意通常需要一些调整（相乘或相加）才能得到更多的细节。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:224
@@ -352,24 +495,45 @@ msgstr "调整后的马氏分形纹理，细节丰富可见"
 
 #: ../../manual/render/cycles/nodes/textures.rst:233
 msgid ""
-"Multifractal, Ridged Multifractal, Hybrid Multifractal, fBM, Hetero Terrain."
+"Multifractal, Ridged Multifractal, Hybrid Multifractal, fBM, Hetero "
+"Terrain."
 msgstr "多重分形、脊状多重分形、混合式多重分形、fbm、异向地形。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:241
 msgid "Dimension input"
 msgstr "尺寸输入"
 
+#: ../../manual/render/cycles/nodes/textures.rst:242
+msgid ""
+"The highest fractal dimension, specified as the highest scale for the "
+"steps of the intensity."
+msgstr ""
+
 #: ../../manual/render/cycles/nodes/textures.rst:243
 msgid "Lacunarity input"
 msgstr "缺顶输入"
+
+#: ../../manual/render/cycles/nodes/textures.rst:244
+msgid "The space of the lacunarity, specified as a frequency factor."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:245
 msgid "Offset input"
 msgstr "偏移量"
 
+#: ../../manual/render/cycles/nodes/textures.rst:246
+msgid ""
+"The offset of the fractal, specified between black and white values "
+"(Intensity)"
+msgstr ""
+
 #: ../../manual/render/cycles/nodes/textures.rst:247
 msgid "Gain input"
 msgstr "增益输入"
+
+#: ../../manual/render/cycles/nodes/textures.rst:248
+msgid "A multiplier for the gain input"
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:256
 msgid "Gradient Texture"
@@ -429,6 +593,15 @@ msgstr "颜色1/2输入"
 msgid "Color of the checkers."
 msgstr "设置棋盘格颜色。"
 
+#: ../../manual/render/cycles/nodes/textures.rst:319
+msgid ""
+"Overall texture scale. The scale is a factor of the bounding box of the "
+"face divided by the scale. For example, a scale of 15 will result in 15 "
+"alternate patterns over the overall UV bounding box. Different patterns "
+"could be achieved using other nodes to give different input patterns to "
+"this socket. For example, using the Math Node."
+msgstr ""
+
 #: ../../manual/render/cycles/nodes/textures.rst:326
 msgid "Checker 1 mask (1 = Checker 1)."
 msgstr "棋盘格1遮罩（1=一个格）"
@@ -465,8 +638,8 @@ msgstr "频率"
 
 #: ../../manual/render/cycles/nodes/textures.rst:347
 msgid ""
-"Determines the offset frequency. A value of 2 gives a even/uneven pattern of"
-" rows."
+"Determines the offset frequency. A value of 2 gives a even/uneven pattern"
+" of rows."
 msgstr "控制偏移频率。 该值为2时，会得到一个奇偶相间的团。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:348
@@ -512,8 +685,8 @@ msgstr "偏移"
 
 #: ../../manual/render/cycles/nodes/textures.rst:364
 msgid ""
-"The color variation between Brick color 1 / 2. Values of -1 and 1 only use "
-"one of the two colors; values in between mix the colors."
+"The color variation between Brick color 1 / 2. Values of -1 and 1 only "
+"use one of the two colors; values in between mix the colors."
 msgstr "控制在砖块颜色1和2之间的颜色变化。-1和1只会使用两者之一的颜色。而它们之间的数值则会使用二者的混合颜色。"
 
 #: ../../manual/render/cycles/nodes/textures.rst:366
@@ -536,78 +709,20 @@ msgstr "设置行高度。"
 msgid "Mortar mask (1 = mortar)."
 msgstr "输出灰泥遮罩（灰泥=1）。"
 
-#: ../../manual/render/cycles/nodes/textures.rst:19
-#: ../../manual/render/cycles/nodes/textures.rst:67
-#, fuzzy
-msgid "Image Data-Block"
-msgstr "图像数据块"
-
-#: ../../manual/render/cycles/nodes/textures.rst:19
-#, fuzzy
-msgid ""
-"Image data-block used as the image source. Currently not all images "
-"supported by Blender can be used by Cycles. In particular, generated, packed"
-" images or animations are not supported currently."
-msgstr "图像数据块可以用为图像源。目前，Blender还不能支持所有的图像，来被Cycles使用。尤其是生成的，图像打包的动画尚还不能被支持。"
-
-#: ../../manual/render/cycles/nodes/textures.rst:22
-msgid "Projection to use for mapping the textures."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:24
-msgid "*Flat* will use the XY coordinates for mapping."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:25
-msgid ""
-"*Box* will map the image to the 6 sides of a virtual box, based on the "
-"normal, using XY, YZ and XYZ coordinates depending on the side."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:27
-msgid "*Sphere* will map the image to the sphere using Z axis as central."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:28
-msgid "*Tube* will map the tube to the sphere using Z axis as central."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:44
-msgid "Extension Type"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:40
-msgid ""
-"Extension type defines how the image is extrapolated past the original "
-"bounds:"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:42
-msgid ""
-"*Repeat* will repeat the image horizontally and vertically giving tiled-"
-"looking result."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:43
-msgid "*Extend* will extend the image by repeating pixels on it's edges."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:44
-msgid "*Clip* will set all the extended pixels values to transparent black."
-msgstr ""
-
 #: ../../manual/render/cycles/nodes/textures.rst:378
 msgid "Point Density"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:383
 msgid ""
-"Domain object with Point Density texture using vertices from ball as points."
+"Domain object with Point Density texture using vertices from ball as "
+"points."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:386
 msgid ""
-"Used to add volumetric points for each particle or vertex of another object."
+"Used to add volumetric points for each particle or vertex of another "
+"object."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:397
@@ -669,9 +784,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:409
 msgid ""
-"Fit the points from the source particles/vertices inside the bounding box of"
-" the object with the point density texture. .. TODO As far as I can tell "
-"this is how it works, but should be checked with a developer."
+"Fit the points from the source particles/vertices inside the bounding box"
+" of the object with the point density texture. .. TODO As far as I can "
+"tell this is how it works, but should be checked with a developer."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:413
@@ -714,8 +829,8 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:423
 msgid ""
-"Use cubic falloff, producing very soft points. Useful when points are very "
-"densely packed."
+"Use cubic falloff, producing very soft points. Useful when points are "
+"very densely packed."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/textures.rst:424
@@ -748,125 +863,8 @@ msgstr ""
 msgid "Density of volume."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/textures.rst:242
-msgid ""
-"The highest fractal dimension, specified as the highest scale for the steps "
-"of the intensity."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:244
-msgid "The space of the lacunarity, specified as a frequency factor."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:246
-msgid ""
-"The offset of the fractal, specified between black and white values "
-"(Intensity)"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:248
-msgid "A multiplier for the gain input"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:319
-msgid ""
-"Overall texture scale. The scale is a factor of the bounding box of the face"
-" divided by the scale. For example, a scale of 15 will result in 15 "
-"alternate patterns over the overall UV bounding box. Different patterns "
-"could be achieved using other nodes to give different input patterns to this"
-" socket. For example, using the Math Node."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:65
-msgid ""
-"Environmental textures are used to light your scene using an environment map"
-" image file as a texture."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:68
-msgid "Image data-block used as the image source."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:79
-msgid "Texture Interpolation"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:74
-msgid ""
-"Interpolation method used for the environment texture. The following "
-"interpolations are available:"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:76
-msgid "Default."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:77
-msgid "No interpolation."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:78
-msgid "Only available when rendering on the CPU."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:79
-msgid ""
-"Bicubic when magnifying else Bilinear is used. This is only available for "
-":doc:`OSL </render/cycles/osl>`."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:85
-msgid "Projection Method"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:82
-msgid ""
-"Allows you to use different types of environmental maps. The following "
-"methods are supported:"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:84
-msgid "Projection from an Equirectangular photo."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:85
-msgid "Projection from an orthographic photo or mirror ball."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:91
-msgid "RGB color from the image."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:100
-msgid "Sky Texture."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:163
-msgid "Wave Profile"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:160
-msgid "Controls the look of the wave type."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:162
-msgid "Uses a sawtooth profile."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/textures.rst:163
-msgid "Uses the standard sine profile."
-msgstr ""
-
 #~ msgid ""
-#~ "Use an environment map image file as a texture. The environment map is "
-#~ "expected to be in Latitude/Longitude or 'latlong' format."
-#~ msgstr "使用环境贴图图像文件作为纹理。环境贴图通常会以经/纬或是“latlong”的结构布局。"
-
-#~ msgid ""
-#~ "RGB color from the image. If the image has alpha, the color is premultiplied"
-#~ " with alpha if the Alpha output is used, and unpremultiplied if the Alpha "
-#~ "output is not used."
-#~ msgstr "输出图像的RGB颜色。如果图像中有Alpha，在使用Alpha输出时，颜色将会与Alpha预乘，非预乘或是直接的Alpha输出是不可用的。"
+#~ msgstr "对使用的纹理进行投影映射。平展会使用XY坐标进行映射，方框则会从边界框的六个面进行映射，并基于法线，使用XY、XZ和XYZ坐标来决定侧面。"
 
 #~ msgid "*TBD*"
 #~ msgstr ""
@@ -874,15 +872,3 @@ msgstr ""
 #~ msgid "Image Datablock"
 #~ msgstr "图像数据块"
 
-#~ msgid ""
-#~ "Image datablock used as the image source. Currently not all images supported"
-#~ " by Blender can be used by Cycles. In particular, generated, packed images "
-#~ "or animations are not supported currently."
-#~ msgstr "图像数据块可以用为图像源。目前，Blender还不能支持所有的图像，来被Cycles使用。尤其是生成的，图像打包的动画尚还不能被支持。"
-
-#~ msgid ""
-#~ "Projection to use for mapping the textures. *Flat* will use the XY "
-#~ "coordinates for mapping. Box will map the image to the 6 sides of a virtual "
-#~ "box, based on the normal, using XY, YZ and XYZ coordinates depending on the "
-#~ "side."
-#~ msgstr "对使用的纹理进行投影映射。平展会使用XY坐标进行映射，方框则会从边界框的六个面进行映射，并基于法线，使用XY、XZ和XYZ坐标来决定侧面。"
