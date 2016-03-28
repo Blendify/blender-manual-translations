@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-23 11:19+0800\n"
-"PO-Revision-Date: 2015-12-14 17:45+0800\n"
+"PO-Revision-Date: 2016-03-28 22:36+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 
 # ee04c79e43eb4eada7d0cdeb739b461d
 #: ../../manual/data_system/data_blocks.rst:4
@@ -25,17 +25,18 @@ msgid ""
 "blocks include: meshes, objects, materials, textures, node-trees, scenes, "
 "texts, brushes and even screens."
 msgstr ""
-"Blender "
-"项目的基本单元是数据块。例如：网格（meshes）、物体（objects）、材质（materials）、纹理（textures）、节点树（node-"
-"trees）、场景（scenes）、文本（texts）、笔刷（brushes） ，甚至是屏幕（screens）。"
+"Blender 项目的基本单元是数据块。例如：网格（meshes）、物体（objects）、材质"
+"（materials）、纹理（textures）、节点树（node-trees）、场景（scenes）、文本"
+"（texts）、笔刷（brushes） ，甚至是屏幕（screens）。"
 
 #: ../../manual/data_system/data_blocks.rst:10
 msgid ""
-"For clarity, bones, sequence strips and vertex groups are **not** data-"
-"blocks, they belong to armature, scene and mesh types respectively."
+"For clarity, bones, sequence strips and vertex groups are **not** data-blocks, "
+"they belong to armature, scene and mesh types respectively."
 msgstr ""
-"区分说明：骨骼（bones），序列片段（sequence strips） 和顶点组（vertex groups） **不是** 数据块, "
-"而是分别属于骨架（armature），场景（scene） 和网格（mesh）的 类型。 "
+"区分说明：骨骼（bones），序列片段（sequence strips） 和顶点组（vertex groups） "
+"**不是** 数据块, 而是分别属于骨架（armature），场景（scene） 和网格（mesh）的 "
+"类型。 "
 
 #: ../../manual/data_system/data_blocks.rst:13
 msgid "Some common characteristics:"
@@ -43,8 +44,8 @@ msgstr "公共特性："
 
 #: ../../manual/data_system/data_blocks.rst:16
 msgid ""
-"They can link to each other, for reuse and instancing. *(child/parent, "
-"object/object-data, with modifiers and constraints too).*"
+"They can link to each other, for reuse and instancing. *(child/parent, object/"
+"object-data, with modifiers and constraints too).*"
 msgstr "能通过父/子、对象/对象数据，以及修改器和约束等方式互相链接便于重用。"
 
 #: ../../manual/data_system/data_blocks.rst:18
@@ -80,16 +81,17 @@ msgstr "使用者（垃圾回收）"
 
 # b4e62d8df78743f6bd5ce0008e308c82
 #: ../../manual/data_system/data_blocks.rst:41
-msgid ""
-"Blender follows the general rule where unused data is eventually removed."
+msgid "Blender follows the general rule where unused data is eventually removed."
 msgstr "Blender 使用常规的数据块处理规则，没有被使用就移除。"
 
 # 9ecaa20303f7493e8dfbd62cbb09665a
 #: ../../manual/data_system/data_blocks.rst:43
 msgid ""
-"Since its common to add and remove a lot of data while working, this has the"
-" advantage of not having to manually manage every single data-block."
-msgstr "该规则通过设置一个数据块的使用数目来实现，当一个数据块的使用数目为 0 时，该数据块就会被释放。"
+"Since its common to add and remove a lot of data while working, this has the "
+"advantage of not having to manually manage every single data-block."
+msgstr ""
+"该规则通过设置一个数据块的使用数目来实现，当一个数据块的使用数目为 0 时，该数据"
+"块就会被释放。"
 
 #: ../../manual/data_system/data_blocks.rst:52
 msgid "Fake User"
@@ -99,7 +101,9 @@ msgstr "伪使用者"
 msgid ""
 "Since zero user data-blocks aren't saved. There are times when you want to "
 "force the data to be kept irrespective of its users."
-msgstr "由于零使用数的数据块不会被保存，肯定会有想强制保留这些数据，又不想要这些数据块有使用者的时候。"
+msgstr ""
+"由于零使用数的数据块不会被保存，肯定会有想强制保留这些数据，又不想要这些数据块"
+"有使用者的时候。"
 
 #: ../../manual/data_system/data_blocks.rst:60
 msgid ""
@@ -108,8 +112,10 @@ msgid ""
 "becoming zero: therefore, the data-block won't be deleted. (since Blender "
 "doesn't keep track of how many other files link to this one.)"
 msgstr ""
-"只需要点击数据块旁边的 *F* 按钮，就可以给数据块添加一个 "
-"*伪使用者*。这样就可以让Blender在数据块的使用者计数为零的时候，在关闭文件后也不删除这个块。（因为Blender不会管有多少其他文件链接了这个数据块的数量的，会直接删除，如果不用*F*将数据块添加伪用户的话。）"
+"只需要点击数据块旁边的 *F* 按钮，就可以给数据块添加一个 *伪使用者*。这样就可以"
+"让Blender在数据块的使用者计数为零的时候，在关闭文件后也不删除这个块。（因为"
+"Blender不会管有多少其他文件链接了这个数据块的数量的，会直接删除，如果不用*F*将"
+"数据块添加伪用户的话。）"
 
 #: ../../manual/data_system/data_blocks.rst:68
 msgid "Users (Sharing)"
@@ -133,8 +139,8 @@ msgstr "不同的物体中共享网格。（实例化）"
 
 #: ../../manual/data_system/data_blocks.rst:76
 msgid ""
-"Sharing animated actions between objects, for example to make all the lights"
-" dim together."
+"Sharing animated actions between objects, for example to make all the lights "
+"dim together."
 msgstr "不同的物体中分享动画动作，比如让所有的灯光同时变暗。"
 
 # f0b7b21db56d44988a4d9e9de3102c60
@@ -154,9 +160,10 @@ msgstr "删除数据块"
 
 #: ../../manual/data_system/data_blocks.rst:87
 msgid ""
-"As covered in `Users (Garbage Collection)`_, data-blocks are typically "
-"removed when they're no longer used."
-msgstr "在 `使用者（垃圾收集）`_ 中讲过的那样。 数据块通常会在他们不被使用后就删除了。"
+"As covered in `Users (Garbage Collection)`_, data-blocks are typically removed "
+"when they're no longer used."
+msgstr ""
+"在 `使用者（垃圾收集）`_ 中讲过的那样。 数据块通常会在他们不被使用后就删除了。"
 
 # 378321b53bcb4cb492eb5c2e5e7a71f6
 #: ../../manual/data_system/data_blocks.rst:91
@@ -173,9 +180,11 @@ msgstr "其他数据块，比如组和动作可以在 *大纲编辑器* 的上�
 
 #: ../../manual/data_system/data_blocks.rst:98
 msgid ""
-"Some data (images especially) is hard to keep track of, especially since "
-"image views are counted as users."
-msgstr "很多数据（特别是图像）是非常难于统计和追踪的，就算图像查看可以统计用户数也有问题。"
+"Some data (images especially) is hard to keep track of, especially since image "
+"views are counted as users."
+msgstr ""
+"很多数据（特别是图像）是非常难于统计和追踪的，就算图像查看可以统计用户数也有问"
+"题。"
 
 # 24d70b790d7346e1a91684070461f853
 #: ../../manual/data_system/data_blocks.rst:108
@@ -383,10 +392,6 @@ msgstr "相机（Camera）"
 # 044dd6bc71be426fa96be2e18429cc64
 # d6db94e1831d40f480270e13d41bf060
 # 73c9e192d1d048ebaed3f3c8186b254c
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
-#: ../../manual/data_system/data_blocks.rst:0
 #: ../../manual/data_system/data_blocks.rst:0
 msgid "Used as object-data."
 msgstr "用作对象数据"
@@ -742,95 +747,92 @@ msgid "Used by scenes for render environment settings."
 msgstr "用于场景的环境渲染设置"
 
 #: ../../manual/data_system/data_blocks.rst:15
-#, fuzzy
 msgid "They're the primary contents of the blend-file."
 msgstr "``.blend`` 文件的主要内容。"
 
 #: ../../manual/data_system/data_blocks.rst:25
-#, fuzzy
 msgid ""
-"When doing more complex projects managing data-blocks becomes more "
-"important, especially when inter-linking blend-files."
-msgstr "当处理很复杂的工程管理任务时，数据块就会变得更加重要，特别是对 ``.blend`` 文件进行内部链接的时候。"
+"When doing more complex projects managing data-blocks becomes more important, "
+"especially when inter-linking blend-files."
+msgstr ""
+"当处理很复杂的工程管理任务时，数据块就会变得更加重要，特别是对 ``.blend`` 文件"
+"进行内部链接的时候。"
 
 #: ../../manual/data_system/data_blocks.rst:46
-#, fuzzy
 msgid "This works by skipping zero user data-blocks when writing blend-files."
 msgstr "当写入 ``.blend`` 文件的时候，这些零使用数据块将将不会被保存。"
 
 #: ../../manual/data_system/data_blocks.rst:117
-#, fuzzy
 msgid ""
 "For reference, here is a table of data-blocks types stored in blend-files."
 msgstr "这里有一张可存储在``.blend``文件的数据块的表用于参考。"
 
 #: ../../manual/data_system/data_blocks.rst:120
-#, fuzzy
 msgid "Library Linking, *supports bing linked into other blend-files*."
 msgstr "库连接，*支持链接到其他 blend 文件*。"
 
 #: ../../manual/data_system/data_blocks.rst:121
-#, fuzzy
-msgid ""
-"File Packing, *supports file contents being packed into the blend-file*."
+msgid "File Packing, *supports file contents being packed into the blend-file*."
 msgstr "文件打包，*文件内容能被打包进 blend 文件*。"
 
 #: ../../manual/data_system/data_blocks.rst:0
-#, fuzzy
 msgid "References to external blend-files."
 msgstr "引用到外部``.blend``文件。"
 
 #: ../../manual/data_system/data_blocks.rst:38
-#, fuzzy
 msgid ""
-"It's good to be aware of how Blender, handles data-blocks lifetime, when "
-"they are freed and why."
-msgstr "如果了解 Blender 在数据块的生命周期中何时因什么原因释放数据块，对于使用 Blender 更有帮助。"
+"It's good to be aware of how Blender, handles data-blocks lifetime, when they "
+"are freed and why."
+msgstr ""
+"如果了解 Blender 在数据块的生命周期中何时因什么原因释放数据块，对于使用 "
+"Blender 更有帮助。"
 
 #: ../../manual/data_system/data_blocks.rst:48
-#, fuzzy
 msgid ""
-"In some cases, you want to save a data-block even when it's unused "
-"*(typically for re-usable asset libraries).* see `Fake User`_."
-msgstr "在你想保存一些没被使用的数据块（通常是资源库中可重用）的时候，请看 `伪使用`。"
+"In some cases, you want to save a data-block even when it's unused *(typically "
+"for re-usable asset libraries).* see `Fake User`_."
+msgstr ""
+"在你想保存一些没被使用的数据块（通常是资源库中可重用）的时候，请看 `伪使用`。"
 
 #: ../../manual/data_system/data_blocks.rst:57
-#, fuzzy
 msgid ""
 "If you're building a blend-file to serve as a library of things that you "
-"intend to link to and from *other* files, you'll need to make sure that they"
-" don't accidentally get deleted from the library file."
-msgstr "你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么需要非常小心的确保这些数据不会在库文件中被删掉。"
+"intend to link to and from *other* files, you'll need to make sure that they "
+"don't accidentally get deleted from the library file."
+msgstr ""
+"你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么需"
+"要非常小心的确保这些数据不会在库文件中被删掉。"
 
 #: ../../manual/data_system/data_blocks.rst:89
-#, fuzzy
 msgid "There are some exceptions to this, however."
 msgstr "但是也有例外的时候。"
 
 #: ../../manual/data_system/data_blocks.rst:101
-#, fuzzy
 msgid ""
-"For data-blocks that can be unlinked - hold :kbd:`Shift` while pressing on "
-"the *X* button, This force clears the user-count, so the data-block will be "
+"For data-blocks that can be unlinked - hold :kbd:`Shift` while pressing on the "
+"*X* button, This force clears the user-count, so the data-block will be "
 "removed on reloading."
 msgstr ""
-"对能够取消链接的数据块来说 - 按住 :kbd:`Shift` 的时候点击  *X*  "
-"按钮，可以强制删除使用者计数，这样数据块可以在文件重载后直接移除掉了。"
+"对能够取消链接的数据块来说 - 按住 :kbd:`Shift` 的时候点击  *X*  按钮，可以强制"
+"删除使用者计数，这样数据块可以在文件重载后直接移除掉了。"
 
 #: ../../manual/data_system/data_blocks.rst:0
-#, fuzzy
 msgid "Used by dupli-groups & often library-linking."
 msgstr "用作副本组和常用库链接。"
 
 #~ msgid ""
 #~ "It's good to be aware of how Blender, handles data-blocks life-time, when "
 #~ "they are freed and why."
-#~ msgstr "如果了解 Blender 在数据块的生命周期中何时因什么原因释放数据块，对于使用 Blender 更有帮助。"
+#~ msgstr ""
+#~ "如果了解 Blender 在数据块的生命周期中何时因什么原因释放数据块，对于使用 "
+#~ "Blender 更有帮助。"
 
 #~ msgid ""
-#~ "In some cases you want to save a data-block even when its unused *(typically"
-#~ " for re-usable asset libraries).* see `Fake User`_."
-#~ msgstr "在你想保存一些没被使用的数据块（通常是资源库中可重用）的时候，请看 `伪使用`。"
+#~ "In some cases you want to save a data-block even when its unused "
+#~ "*(typically for re-usable asset libraries).* see `Fake User`_."
+#~ msgstr ""
+#~ "在你想保存一些没被使用的数据块（通常是资源库中可重用）的时候，请看 `伪使用"
+#~ "`。"
 
 #~ msgid "There are some exceptions to this however."
 #~ msgstr "但是也有例外的时候。"
@@ -840,8 +842,8 @@ msgstr "用作副本组和常用库链接。"
 #~ "the *X* button, This force-clears the user-count, so the data-block will be "
 #~ "removed on reload."
 #~ msgstr ""
-#~ "对能够取消链接的数据块来说 - 按住 :kbd:`Shift` 的时候点击  *X*  "
-#~ "按钮，可以强制删除使用者计数，这样数据块可以在文件重载后直接移除掉了。"
+#~ "对能够取消链接的数据块来说 - 按住 :kbd:`Shift` 的时候点击  *X*  按钮，可以强"
+#~ "制删除使用者计数，这样数据块可以在文件重载后直接移除掉了。"
 
 #~ msgid "Used by dupli-grous & often library-linking."
 #~ msgstr "用作副本组和常用库链接。"
@@ -850,7 +852,9 @@ msgstr "用作副本组和常用库链接。"
 #~ "If you're building a blend-file to serve as a library of things that you "
 #~ "intend to link-to from *other* files, you'll need to make sure that they "
 #~ "don't accidentally get deleted from the library file."
-#~ msgstr "你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么需要非常小心的确保这些数据不会在库文件中被删掉。"
+#~ msgstr ""
+#~ "你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么"
+#~ "需要非常小心的确保这些数据不会在库文件中被删掉。"
 
 #~ msgid "They're the primary contents of the ``.blend`` file."
 #~ msgstr "``.blend`` 文件的主要内容。"
@@ -858,7 +862,9 @@ msgstr "用作副本组和常用库链接。"
 #~ msgid ""
 #~ "When doing more complex projects managing data-blocks becomes more "
 #~ "important, especially when inter-linking ``.blend`` files."
-#~ msgstr "当处理很复杂的工程管理任务时，数据块就会变得更加重要，特别是对 ``.blend`` 文件进行内部链接的时候。"
+#~ msgstr ""
+#~ "当处理很复杂的工程管理任务时，数据块就会变得更加重要，特别是对 ``.blend`` 文"
+#~ "件进行内部链接的时候。"
 
 #~ msgid ""
 #~ "This works by skipping zero user data-blocks when writing ``.blend`` files."
@@ -866,9 +872,11 @@ msgstr "用作副本组和常用库链接。"
 
 #~ msgid ""
 #~ "If you're building a ``.blend`` file to serve as a library of things that "
-#~ "you intend to link-to from *other* files, you'll need to make sure that they"
-#~ " don't accidentally get deleted from the library file."
-#~ msgstr "你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么需要非常小心的确保这些数据不会在库文件中被删掉。"
+#~ "you intend to link-to from *other* files, you'll need to make sure that "
+#~ "they don't accidentally get deleted from the library file."
+#~ msgstr ""
+#~ "你如果创建了一个 ``.blend`` 文件来作为一个库文件提供给其他的文件来链接，那么"
+#~ "需要非常小心的确保这些数据不会在库文件中被删掉。"
 
 #~ msgid ""
 #~ "For reference, here is a table of data-blocks types stored in ``.blend`` "
@@ -898,13 +906,17 @@ msgstr "用作副本组和常用库链接。"
 #~ msgid ""
 #~ "Its common to add and remove a lot of data while working, this has the "
 #~ "advantage of not having to manually manage every single data-block."
-#~ msgstr "该规则通过设置一个数据块的用户数目来实现，当一个数据块的用户数目为 0 时，该数据块就会被释放。"
+#~ msgstr ""
+#~ "该规则通过设置一个数据块的用户数目来实现，当一个数据块的用户数目为 0 时，该"
+#~ "数据块就会被释放。"
 
 #~ msgid ""
 #~ "While this is acceptable as default behavior, there are times when you want "
 #~ "to save a data-block even when its unused *(typically for re-usable asset "
 #~ "libraries).* see `Fake User`_."
-#~ msgstr "所以不必手动去删除这些数据块了。当你想保留一个数据块时（即使它并未被使用），可以参看下一个 “伪用户”章节。"
+#~ msgstr ""
+#~ "所以不必手动去删除这些数据块了。当你想保留一个数据块时（即使它并未被使用），"
+#~ "可以参看下一个 “伪用户”章节。"
 
 #~ msgid "Copying and Linking Objects Between Scenes"
 #~ msgstr "在不同场景中复制和链接物体们"
@@ -913,29 +925,32 @@ msgstr "用作副本组和常用库链接。"
 #~ "Sometimes you may want to link or copy objects between scenes. This is "
 #~ "possible by first selecting objects you want to link or copy and then using "
 #~ "the *Make Links* and *Make Single User* items found in *Object* menu in the "
-#~ "3D viewport header. Use *Make Links* to make links between scenes. To make a"
-#~ " plain copy, you first make a link and then use *Make Single User* to make a"
-#~ " stand-alone copy of the object in your current scene. Further information "
+#~ "3D viewport header. Use *Make Links* to make links between scenes. To make "
+#~ "a plain copy, you first make a link and then use *Make Single User* to make "
+#~ "a stand-alone copy of the object in your current scene. Further information "
 #~ "on working with scenes can be found :doc:`here </data_system/scenes>`."
 #~ msgstr ""
-#~ "有些时候需要在不同场景中复制或者链接物体。只需要首先在场景中选择到想要链接或者复制的物体，在3D视图的标题栏中，找到 *物体* 的菜单，点击 "
-#~ "*生成链接* 和 *生成单个使用者* 的按键就可以了。使用 *生成链接* 在各个场景中生成链接。要生成直接的复制物体，首先生成链接，然后使用 "
-#~ "*生成单个使用者* 来确保你当前场景的物体生成独立的副本。更多的在场景中工作的信息可以在  :doc:`这个文档 "
-#~ "</data_system/scenes>` 中找到。"
+#~ "有些时候需要在不同场景中复制或者链接物体。只需要首先在场景中选择到想要链接或"
+#~ "者复制的物体，在3D视图的标题栏中，找到 *物体* 的菜单，点击 *生成链接* 和 *生"
+#~ "成单个使用者* 的按键就可以了。使用 *生成链接* 在各个场景中生成链接。要生成直"
+#~ "接的复制物体，首先生成链接，然后使用 *生成单个使用者* 来确保你当前场景的物体"
+#~ "生成独立的副本。更多的在场景中工作的信息可以在  :doc:`这个文档 </"
+#~ "data_system/scenes>` 中找到。"
 
 #~ msgid "Appending or Linking Across Files"
 #~ msgstr "在多个文件中追加或链接"
 
 #~ msgid ""
 #~ "The content of one ``.blend`` file is easily accessed and put into your "
-#~ "current file by using :menuselection:`File --> Append` or "
-#~ ":menuselection:`File --> Link` To find out more about how to copy or link "
-#~ "objects across ``.blend`` files, see :doc:`linked libraries "
-#~ "</data_system/linked_libraries>`."
+#~ "current file by using :menuselection:`File --> Append` or :menuselection:"
+#~ "`File --> Link` To find out more about how to copy or link objects across "
+#~ "``.blend`` files, see :doc:`linked libraries </data_system/"
+#~ "linked_libraries>`."
 #~ msgstr ""
-#~ "使用  :menuselection:`文件 --> 附加` 或者 :menuselection:`文件 --> 链接` 来将一个  "
-#~ "``.blend`` 文件中的内容非常容易的放到你当前的文件中来。更多关于Blender的复制和链接信息，查看  :doc:`链接库文件 "
-#~ "</data_system/linked_libraries>` 。"
+#~ "使用  :menuselection:`文件 --> 附加` 或者 :menuselection:`文件 --> 链接` 来"
+#~ "将一个  ``.blend`` 文件中的内容非常容易的放到你当前的文件中来。更多关于"
+#~ "Blender的复制和链接信息，查看  :doc:`链接库文件 </data_system/"
+#~ "linked_libraries>` 。"
 
 #~ msgid "Copying and Linking"
 #~ msgstr "复制和链接"
@@ -958,8 +973,10 @@ msgstr "用作副本组和常用库链接。"
 #~ "name *(also visible for materials, textures, images)*. If you click on it, "
 #~ "you create a single-user copy of this data-block for the current object."
 #~ msgstr ""
-#~ "当一个  *ObData* 数据块被多于一个的物体使用（被链接）的时候，在它的名字旁边 *(也存在于材质，纹理，图像中)* "
-#~ "有一个很小的数字按钮，表面这个数据块被多少物体（使用者）链接。如果点击了这个小按钮，会直接产生当前物体数据块的的一个单独使用者副本。"
+#~ "当一个  *ObData* 数据块被多于一个的物体使用（被链接）的时候，在它的名字旁边 "
+#~ "*(也存在于材质，纹理，图像中)* 有一个很小的数字按钮，表面这个数据块被多少物"
+#~ "体（使用者）链接。如果点击了这个小按钮，会直接产生当前物体数据块的的一个单独"
+#~ "使用者副本。"
 
 #~ msgid "Removing Datablocks"
 #~ msgstr "移除数据块"
