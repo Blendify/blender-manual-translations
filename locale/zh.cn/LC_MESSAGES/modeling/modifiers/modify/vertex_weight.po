@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-21 11:20+1100\n"
+"POT-Creation-Date: 2016-04-27 11:07+1000\n"
 "PO-Revision-Date: 2015-11-16 10:08+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/modeling/modifiers/modify/vertex_weight.rst:4
 msgid "Vertex Weight Modifiers"
@@ -658,25 +658,30 @@ msgid ""
 msgstr "作为第一个例子，让我们用一个修改后的顶点组来动态控制一个 *波形* 修改器。"
 
 #: ../../manual/modeling/modifiers/modify/vertex_weight.rst:273
+msgid "Add a *Grid* mesh with **100×100** x/y subdivisions and a **5** BU Radius"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:275
+#, fuzzy
 msgid ""
-"Add a *Grid* mesh, with many vertices (e.g. a **100×100** vertices), and "
-"``10`` BU side-length. Switch to *Edit* mode (:kbd:`Tab`), and in the "
-"*Object Data* properties, *Vertex Groups* panel, add a vertex group. "
-"Assign to it all your mesh's vertices (with e.g. a ``1.0`` weight). Go "
-"back to *Object* mode."
+"Switch to *Edit* mode (:kbd:`Tab`), and in the *Object Data* properties, "
+"*Vertex Groups* panel, add a vertex group. Assign to it all your mesh's "
+"vertices with ``1.0`` weight."
 msgstr ""
 "添加一个有许多顶点（例如，一个 **100×100** 规模的顶点），边长为  ``10`` Blender 单元的*格子* 网面。切换到 "
 "*编辑* 模式（:kbd:`Tab`），在 *物体数据* 属性的 *顶点组* 面板里，添加一个顶点组，把所有的网格顶点加进来（比如权重为 "
 "``1.0``），然后回到 *物体* 模式。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:279
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:278
+#, fuzzy
 msgid ""
-"Then, go to the *Modifiers* properties, and add a *Vertex Weight "
-"Proximity* modifier. Set the mode to *Object Distance*. Select your "
-"vertex group, and the target object you want (here I used the lamp)."
+"Go back to *Object* mode. Then, go to the *Modifiers* properties, and add"
+" a *Vertex Weight Proximity* modifier. Set the Distance mode to *Object*."
+" Select your vertex group, and the target object you want (here I used "
+"the lamp)."
 msgstr "然后，前往 *修改器* 属性面板，添加 *顶点权重亲近* 修改器。设置模式为 *物体距离*。选择你的顶点组和想要的目标物体（这里我用的是灯）。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:284
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:281
 msgid ""
 "You will likely have to adjust the linear mapping of the weights produced"
 " by the *Vertex Weight Proximity* modifier. To do so, edit *Lowest Dist* "
@@ -687,13 +692,23 @@ msgstr ""
 "你很可能不得不调节 *顶点权重亲近* 修改器所产生的线性映射权重。在调节时，编辑 *最小距离* 和 "
 "*最大距离*，让前者对应目标物体和你想要的最小权重的顶点的距离，同样的，让后者对应最大的距离……"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:290
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:287
+msgid ""
+"If your lamp is at Z-hight **2** then set the settings for the weight "
+"proximity modifier to: Lowest: **2** and highest:**7**(this will stop the"
+" waves under the lamp) If you want waves to be only under the lamp, set "
+"the lowest to **7** and highest to **2**."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:291
+#, fuzzy
 msgid ""
 "Now add a *Wave* modifier, set it to your liking, and use the same vertex"
-" group to control it."
+" group to control it. Example settings--speed: **0.10** , Height: **1.0**"
+" , Width **1.50** , Narrowness: **1.50**."
 msgstr "现在添加一个 *波形* 修改器，设置好你喜欢的选项，然后用相同的顶点组控制它。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:293
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:294
 msgid ""
 "Animate your target object, making it move over the grid. As you can see,"
 " the waves are only visible around the reference object! Note that you "
@@ -704,7 +719,7 @@ msgstr ""
 "让你的目标物体运动起来，让它在网格上移动。你会看到，波仅仅在引用的物体周围可见！注意到你可以在 *波浪* 修改器之前插入一个 *顶点权重编辑* "
 "修改器，然后用它的 *定制曲线* 映射选项来获取更大的、更窄的\"波影响程度的坡度\"。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:300
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:301
 #, fuzzy
 msgid ""
 "`The Blender file "
@@ -715,28 +730,28 @@ msgstr ""
 "<http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__，"
 " ``TEST_1`` 场景。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:304
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:305
 msgid "Using Distance from a Target Object's Geometry"
 msgstr "使用目标物体的几何形体的距离"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:306
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:307
 msgid "We're going to illustrate this with a *Displace* modifier."
 msgstr "我们将用 *位移* 修改器来阐明这个选项。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:308
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:309
 msgid ""
 "Add a **10×10** BU **100×100** vertices grid, and in *Edit* mode, add to "
 "it a vertex group containing all of its vertices, as above. You can even "
 "further sub-divide it with a first *Subsurf* modifier."
 msgstr "添加一个 **10×10** Blender 单元的 **100×100** 规模的顶点网格，在编辑模式下，添加到顶点组"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:312
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:313
 msgid ""
 "Now add a curve circle, and place it ``0.25`` BU above the grid. Scale it"
 " up a bit (e.g. ``4.0``)."
 msgstr "添加一个曲线圆，放置到网格子上面 ``0.25`` Blender 单元。放大一点（例如``4.0``）。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:315
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:316
 msgid ""
 "Back to the grid object, add to it a *Vertex Weight Proximity* modifier, "
 "in *Geometry Distance* mode. Enable *Edge* (if you use *Vertex* only, and"
@@ -750,21 +765,21 @@ msgstr ""
 msgid "Wavy patterns."
 msgstr "波浪形模式。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:327
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:328
 msgid "Distance from edges."
 msgstr "使用边的距离。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:332
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:333
 msgid "Distance from vertices."
 msgstr "使用点的距离。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:335
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:336
 msgid ""
 "Set the *Lowest Dist* to ``0.2``, and the *Highest Dist* to ``2.0``, to "
 "map back the computed distances into the regular weight range."
 msgstr "设置 *最低*"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:338
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:339
 msgid ""
 "Add a third *Displace* modifier and affect it the texture you like. Now, "
 "we want the vertices of the grid nearest to the curve circle to remain "
@@ -777,7 +792,7 @@ msgstr ""
 "修改器，并用纹理随意影响它。现在，我们想让最靠近曲线圆的网格的顶点保持非置换状态。它们会得到接近0的权重，这也意味着你可以设置位移的 *中间级别*"
 " 为 ``0.0``。让它用我们受影响的顶点组，对，就这样！你漂亮的山在曲线圆附近刚刚收缩成一个平面。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:345
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:346
 msgid ""
 "As in the previous example, you can insert a *Vertex Weight Edit* "
 "modifier before the *Displace* one, and play with the *Custom Curve* "
@@ -788,23 +803,23 @@ msgstr "跟上一个例子一样，你可以在 *置换* 修改器之前插入�
 msgid "*Curve Map* variations."
 msgstr "不同的 *曲线映射* 。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:356
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:357
 msgid "Concave-type mapping curve."
 msgstr "凹面类型的映射曲线。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:361
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:362
 msgid "No mapping curve (linear)."
 msgstr "无映射曲线（线性）。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:366
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:367
 msgid "Convex-type mapping curve."
 msgstr "凸面类型的映射曲线。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:372
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:373
 msgid "Vertices with a computed weight below 0.1 removed from the vertex group."
 msgstr "从顶点组移除了计算权重低于 0.1 的顶点。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:375
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:376
 msgid ""
 "You can also add a fifth *Mask* modifier, and enable *Vertex Weight Edit*"
 " 's *Group Remove* option, with a *Remove Threshold* of ``0.1``, to see "
@@ -856,7 +871,7 @@ msgstr ""
 "*混合集*。这样，所有的顶点将受影响。受影响的顶点组没有任何数据，所以它们的权重默认为 ``0.0``，将会被第二个默认权重 ``1.0`` "
 "替换。所有这些顶点也将添加到受影响的顶点组里。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:403
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:402
 msgid ""
 "Now, select or create a masking texture - here I chose a default *Magic* "
 "one. The values of this texture will control how much of the \"second "
@@ -866,7 +881,7 @@ msgstr ""
 "现在，选择或者创建一个遮罩纹理——这里我用一个默认的 *不可思议* 的纹理。这张纹理的值将控制 *第二个权重* (``1.0``) 替换 "
 "*第一个权重* (``0.0``)的程度……换句话讲，它们被当做权重值啦！"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:407
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:406
 msgid ""
 "You can then select which texture coordinates and channel to use. Leave "
 "the mapping to the default *Local* option, and play with the various "
@@ -877,30 +892,30 @@ msgstr "你可以选择使用哪个纹理坐标和通道。映射就用默认的
 msgid "Texture channel variations."
 msgstr "各种纹理通道。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:417
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:416
 msgid "Using intensity."
 msgstr "使用亮度值。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:422
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:421
 msgid "Using Red."
 msgstr "使用红色通道值。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:427
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:426
 msgid "Using Saturation."
 msgstr "使用饱和度值。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:430
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:429
 msgid "Don't forget to add a *Wave* modifier, and select your vertex group in it!"
 msgstr "不要忘记添加 *波浪* 修改器，然后选择里面的顶点组！"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:432
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:431
 msgid ""
 "You can use the weights created this way directly, but if you want to "
 "play with the curve mapping, you must add the famous *Vertex Weight Edit*"
 " modifier, and enable its *Custom Curve* mapping."
 msgstr "你可以直接使用这种方式创建的权重，但是如果你想用曲线映射，必须添加大名鼎鼎的 *顶点权重编辑* 修改器，并启用它的 *定制曲线* 映射。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:437
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:436
 msgid ""
 "By default, it's a one-to-one linear mapping - in other words, it does "
 "nothing! Change it to something like in (*A customized mapping curve*), "
@@ -916,19 +931,19 @@ msgstr ""
 msgid "Custom mapping curve."
 msgstr "定制映射曲线"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:450
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:449
 msgid "A customized mapping curve."
 msgstr "定制的映射曲线"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:455
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:454
 msgid "Custom Mapping disabled."
 msgstr "关闭定制映射"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:460
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:459
 msgid "Custom Mapping enabled."
 msgstr "开启定制映射"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:465
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:464
 #, fuzzy
 msgid ""
 "`The Blender file "
@@ -939,17 +954,16 @@ msgstr ""
 "<http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__，"
 " ``TEST_4`` 场景。"
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:469
-msgid "See Also"
-msgstr "另见"
-
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:471
-#, fuzzy
-msgid ""
-"The `Development page "
-"<https://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
-msgstr "`开发页面 <http://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
-
 #~ msgid ""
 #~ msgstr "这是一个标准的纹理 :doc:`数据块 </data_system/datablocks>` 控件，开启后，会显示其他设置："
+
+#~ msgid "See Also"
+#~ msgstr "另见"
+
+#~ msgid ""
+#~ "The `Development page "
+#~ "<https://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
+#~ msgstr ""
+#~ "`开发页面 "
+#~ "<http://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
 
