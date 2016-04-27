@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-21 11:20+1100\n"
+"POT-Creation-Date: 2016-04-27 11:07+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/modeling/modifiers/modify/vertex_weight.rst:4
 msgid "Vertex Weight Modifiers"
@@ -653,22 +653,25 @@ msgid ""
 msgstr ""
 
 #: ../../manual/modeling/modifiers/modify/vertex_weight.rst:273
-msgid ""
-"Add a *Grid* mesh, with many vertices (e.g. a **100×100** vertices), and "
-"``10`` BU side-length. Switch to *Edit* mode (:kbd:`Tab`), and in the "
-"*Object Data* properties, *Vertex Groups* panel, add a vertex group. "
-"Assign to it all your mesh's vertices (with e.g. a ``1.0`` weight). Go "
-"back to *Object* mode."
+msgid "Add a *Grid* mesh with **100×100** x/y subdivisions and a **5** BU Radius"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:279
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:275
 msgid ""
-"Then, go to the *Modifiers* properties, and add a *Vertex Weight "
-"Proximity* modifier. Set the mode to *Object Distance*. Select your "
-"vertex group, and the target object you want (here I used the lamp)."
+"Switch to *Edit* mode (:kbd:`Tab`), and in the *Object Data* properties, "
+"*Vertex Groups* panel, add a vertex group. Assign to it all your mesh's "
+"vertices with ``1.0`` weight."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:284
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:278
+msgid ""
+"Go back to *Object* mode. Then, go to the *Modifiers* properties, and add"
+" a *Vertex Weight Proximity* modifier. Set the Distance mode to *Object*."
+" Select your vertex group, and the target object you want (here I used "
+"the lamp)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:281
 msgid ""
 "You will likely have to adjust the linear mapping of the weights produced"
 " by the *Vertex Weight Proximity* modifier. To do so, edit *Lowest Dist* "
@@ -677,13 +680,22 @@ msgid ""
 "similarly with the second and highest weight..."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:290
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:287
 msgid ""
-"Now add a *Wave* modifier, set it to your liking, and use the same vertex"
-" group to control it."
+"If your lamp is at Z-hight **2** then set the settings for the weight "
+"proximity modifier to: Lowest: **2** and highest:**7**(this will stop the"
+" waves under the lamp) If you want waves to be only under the lamp, set "
+"the lowest to **7** and highest to **2**."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:293
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:291
+msgid ""
+"Now add a *Wave* modifier, set it to your liking, and use the same vertex"
+" group to control it. Example settings--speed: **0.10** , Height: **1.0**"
+" , Width **1.50** , Narrowness: **1.50**."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:294
 msgid ""
 "Animate your target object, making it move over the grid. As you can see,"
 " the waves are only visible around the reference object! Note that you "
@@ -692,35 +704,35 @@ msgid ""
 "slopes\"."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:300
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:301
 msgid ""
 "`The Blender file "
 "<https://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__,"
 " ``TEST_1`` scene."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:304
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:305
 msgid "Using Distance from a Target Object's Geometry"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:306
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:307
 msgid "We're going to illustrate this with a *Displace* modifier."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:308
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:309
 msgid ""
 "Add a **10×10** BU **100×100** vertices grid, and in *Edit* mode, add to "
 "it a vertex group containing all of its vertices, as above. You can even "
 "further sub-divide it with a first *Subsurf* modifier."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:312
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:313
 msgid ""
 "Now add a curve circle, and place it ``0.25`` BU above the grid. Scale it"
 " up a bit (e.g. ``4.0``)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:315
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:316
 msgid ""
 "Back to the grid object, add to it a *Vertex Weight Proximity* modifier, "
 "in *Geometry Distance* mode. Enable *Edge* (if you use *Vertex* only, and"
@@ -732,21 +744,21 @@ msgstr ""
 msgid "Wavy patterns."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:327
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:328
 msgid "Distance from edges."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:332
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:333
 msgid "Distance from vertices."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:335
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:336
 msgid ""
 "Set the *Lowest Dist* to ``0.2``, and the *Highest Dist* to ``2.0``, to "
 "map back the computed distances into the regular weight range."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:338
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:339
 msgid ""
 "Add a third *Displace* modifier and affect it the texture you like. Now, "
 "we want the vertices of the grid nearest to the curve circle to remain "
@@ -756,7 +768,7 @@ msgid ""
 "a flat plane near the curve circle."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:345
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:346
 msgid ""
 "As in the previous example, you can insert a *Vertex Weight Edit* "
 "modifier before the *Displace* one, and play with the *Custom Curve* "
@@ -767,23 +779,23 @@ msgstr ""
 msgid "*Curve Map* variations."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:356
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:357
 msgid "Concave-type mapping curve."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:361
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:362
 msgid "No mapping curve (linear)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:366
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:367
 msgid "Convex-type mapping curve."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:372
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:373
 msgid "Vertices with a computed weight below 0.1 removed from the vertex group."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:375
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:376
 msgid ""
 "You can also add a fifth *Mask* modifier, and enable *Vertex Weight Edit*"
 " 's *Group Remove* option, with a *Remove Threshold* of ``0.1``, to see "
@@ -825,7 +837,7 @@ msgid ""
 "vertices are also added to the affected vertex group."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:403
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:402
 msgid ""
 "Now, select or create a masking texture - here I chose a default *Magic* "
 "one. The values of this texture will control how much of the \"second "
@@ -833,7 +845,7 @@ msgid ""
 "words, they are taken as weight values!"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:407
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:406
 msgid ""
 "You can then select which texture coordinates and channel to use. Leave "
 "the mapping to the default *Local* option, and play with the various "
@@ -844,30 +856,30 @@ msgstr ""
 msgid "Texture channel variations."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:417
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:416
 msgid "Using intensity."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:422
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:421
 msgid "Using Red."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:427
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:426
 msgid "Using Saturation."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:430
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:429
 msgid "Don't forget to add a *Wave* modifier, and select your vertex group in it!"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:432
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:431
 msgid ""
 "You can use the weights created this way directly, but if you want to "
 "play with the curve mapping, you must add the famous *Vertex Weight Edit*"
 " modifier, and enable its *Custom Curve* mapping."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:437
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:436
 msgid ""
 "By default, it's a one-to-one linear mapping - in other words, it does "
 "nothing! Change it to something like in (*A customized mapping curve*), "
@@ -880,55 +892,60 @@ msgstr ""
 msgid "Custom mapping curve."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:450
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:449
 msgid "A customized mapping curve."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:455
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:454
 msgid "Custom Mapping disabled."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:460
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:459
 msgid "Custom Mapping enabled."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:465
+#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:464
 msgid ""
 "`The Blender file "
 "<https://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__,"
 " ``TEST_4`` scene."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:469
-msgid "See Also"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/modify/vertex_weight.rst:471
-msgid ""
-"The `Development page "
-"<https://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
-msgstr ""
-
 #~ msgid ""
-#~ "`The Blender file "
-#~ "<http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__,"
-#~ " ``TEST_1`` scene."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "`The Blender file "
-#~ "<http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__,"
-#~ " ``TEST_2`` scene."
+#~ "Add a *Grid* mesh, with many "
+#~ "vertices (e.g. a **100×100** vertices), "
+#~ "and ``10`` BU side-length. Switch "
+#~ "to *Edit* mode (:kbd:`Tab`), and in "
+#~ "the *Object Data* properties, *Vertex "
+#~ "Groups* panel, add a vertex group. "
+#~ "Assign to it all your mesh's "
+#~ "vertices (with e.g. a ``1.0`` weight)."
+#~ " Go back to *Object* mode."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "`The Blender file "
-#~ "<http://wiki.blender.org/index.php/Media:ManModifiersWeightVGroupEx.blend>`__,"
-#~ " ``TEST_4`` scene."
+#~ "Then, go to the *Modifiers* properties,"
+#~ " and add a *Vertex Weight Proximity*"
+#~ " modifier. Set the mode to *Object"
+#~ " Distance*. Select your vertex group, "
+#~ "and the target object you want "
+#~ "(here I used the lamp)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now add a *Wave* modifier, set it"
+#~ " to your liking, and use the "
+#~ "same vertex group to control it."
+#~ msgstr ""
+
+#~ msgid "See Also"
 #~ msgstr ""
 
 #~ msgid ""
 #~ "The `Development page "
-#~ "<http://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
+#~ "<https://wiki.blender.org/index.php/User:Mont29/WeightVGroup/Dev>`__."
 #~ msgstr ""
 

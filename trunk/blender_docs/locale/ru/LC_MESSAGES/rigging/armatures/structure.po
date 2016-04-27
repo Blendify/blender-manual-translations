@@ -3,13 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-12 01:27+1100\n"
+"POT-Creation-Date: 2016-04-27 11:07+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/rigging/armatures/structure.rst:4
 msgid "Armature Structure"
@@ -21,14 +22,15 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:11
 msgid ""
-"Armatures mimic real skeletons. They are made out of bones, which are (by "
-"default) rigid elements. But you have more possibilities than with real "
-"skeletons: In addition to the \"natural\" rotation of bones, you can also "
-"translate and even scale them! And your bones do not have to be connected to"
-" each other; they can be completely free if you want. However, the most "
-"natural and useful setups imply that some bones are related to others, "
-"forming so-called \"chains of bones\", which create some sort of \"limbs\" "
-"in your armature, as detailed in `Chains of Bones`_."
+"Armatures mimic real skeletons. They are made out of bones, which are (by"
+" default) rigid elements. But you have more possibilities than with real "
+"skeletons: In addition to the \"natural\" rotation of bones, you can also"
+" translate and even scale them! And your bones do not have to be "
+"connected to each other; they can be completely free if you want. "
+"However, the most natural and useful setups imply that some bones are "
+"related to others, forming so-called \"chains of bones\", which create "
+"some sort of \"limbs\" in your armature, as detailed in `Chains of "
+"Bones`_."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:22
@@ -41,21 +43,21 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:30
 msgid ""
-"The bones inside an armature can be completely independent from each other "
-"(i.e. the modification of one bone does not affect the others). But this is "
-"not often a useful set up: To create a leg, all bones \"after\" the thigh "
-"bone should move \"with\" it in a well-coordinated manner. This is exactly "
-"what happens in armatures - by parenting a bone to the next one in the limb,"
-" you create a \"chains of bones\". These chains can be ramified. For "
-"example, five fingers attached to a single \"hand\" bone."
+"The bones inside an armature can be completely independent from each "
+"other (i.e. the modification of one bone does not affect the others). But"
+" this is not often a useful set up: To create a leg, all bones \"after\" "
+"the thigh bone should move \"with\" it in a well-coordinated manner. This"
+" is exactly what happens in armatures - by parenting a bone to the next "
+"one in the limb, you create a \"chains of bones\". These chains can be "
+"ramified. For example, five fingers attached to a single \"hand\" bone."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:38
 msgid ""
-"Bones are chained by linking the tip of the parent to the root of the child."
-" Root and tip can be *connected*, i.e. they are always exactly at the same "
-"point; or they can be *free*, like in a standard parent-child object "
-"relationship."
+"Bones are chained by linking the tip of the parent to the root of the "
+"child. Root and tip can be *connected*, i.e. they are always exactly at "
+"the same point; or they can be *free*, like in a standard parent-child "
+"object relationship."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:42
@@ -66,9 +68,19 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:45
 msgid ""
-"The bone at the beginning of a chain is called its *root bone*, and the last"
-" bone of a chain is the *tip bone* (don't confuse them with similar names of"
-" bones' ends!)."
+"The bone at the beginning of a chain is called its *root bone*, and the "
+"last bone of a chain is the *tip bone* (don't confuse them with similar "
+"names of bones' ends!)."
+msgstr ""
+
+#: ../../manual/rigging/armatures/structure.rst:49
+msgid ""
+"Chains of bones are a particularly important topic in :doc:`posing "
+"</rigging/posing/index>` (especially with the standard *forward "
+"kinematics* versus \"automatic\" *inverse kinematics* posing techniques)."
+" You create/edit them in *Edit* mode, but except in case of connected "
+"bones, their relationships have no effect on bone transformations in this"
+" mode (i.e. transforming a parent bone won't affect its children)."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:57
@@ -77,8 +89,8 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:59
 msgid ""
-"This is detailed in the :ref:`editing pages <armature-bone_chain_edit>`, but"
-" let us have a quick look at this important feature."
+"This is detailed in the :ref:`editing pages <armature-bone_chain_edit>`, "
+"but let us have a quick look at this important feature."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:66
@@ -95,8 +107,8 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:72
 msgid ""
-"First, :doc:`select </rigging/armatures/selecting>` the bones you want to "
-"edit (selection order does not matter here)."
+"First, :doc:`select </rigging/armatures/bones/selecting>` the bones you "
+"want to edit (selection order does not matter here)."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:74
@@ -107,7 +119,8 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:75
 msgid ""
-"To *unparent* a bone, just select the void entry in the same *Parent* list."
+"To *unparent* a bone, just select the void entry in the same *Parent* "
+"list."
 msgstr ""
 
 #: ../../manual/rigging/armatures/structure.rst:76
@@ -118,21 +131,12 @@ msgstr ""
 msgid "To *unconnect* a bone, disable its *Con* button."
 msgstr ""
 
-#: ../../manual/rigging/armatures/structure.rst:49
-msgid ""
-"Chains of bones are a particularly important topic in :doc:`posing "
-"</rigging/posing/index>` (especially with the standard *forward kinematics* "
-"versus \"automatic\" *inverse kinematics* posing techniques). You "
-"create/edit them in *Edit* mode, but except in case of connected bones, "
-"their relationships have no effect on bone transformations in this mode "
-"(i.e. transforming a parent bone won't affect its children)."
-msgstr ""
+#~ msgid ""
+#~ msgstr ""
 
 #~ msgid ""
-#~ "Chains of bones are a particularly important topic in :doc:`posing "
-#~ "</rigging/posing>` (especially with the standard *forward kinematics* versus"
-#~ " \"automatic\" *inverse kinematics* posing techniques). You create/edit them"
-#~ " in *Edit* mode, but except in case of connected bones, their relationships "
-#~ "have no effect on bone transformations in this mode (i.e. transforming a "
-#~ "parent bone won't affect its children)."
+#~ "First, :doc:`select </rigging/armatures/selecting>` "
+#~ "the bones you want to edit "
+#~ "(selection order does not matter here)."
 #~ msgstr ""
+
