@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-01 02:01+1000\n"
-"PO-Revision-Date: 2016-05-03 05:16+0100\n"
+"PO-Revision-Date: 2016-05-03 19:11+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,14 @@ msgid ""
 "value larger than 0.5 acceleration in negative axis direction (like -Z), a "
 "value smaller than 0.5 acceleration in positive axis direction (like +Z)."
 msgstr ""
+"Vous pouvez utiliser un champ de force *Texture* pour créer un champ de "
+"force arbitrairement compliqué, dont la force dans les 3 directions est codé "
+"dans la couleur. Rouge code pour l'axe X, vert code pour l'axe Y et bleu "
+"code pour l'axe Z ( les mêmes couleurs que pour les axes dans la fenêtre "
+"3D ). Une valeur de 0,5 signifie aucune force, une valeur plus grande que "
+"0,5 correspond à une accélération dans la direction négative de l'axe ( -X ; "
+"-Y ; -Z ), une valeur plus petite que 0,5 est une accélération dans le sens "
+"positif de l'axe ( +X ; +Y ; +Z )."
 
 #: ../../manual/physics/force_fields/types/texture.rst:21
 msgid "UI for a Texture force field."
@@ -49,6 +57,7 @@ msgstr "Mode Texture"
 #: ../../manual/physics/force_fields/types/texture.rst:24
 msgid "This sets the way a force vector is derived from the texture."
 msgstr ""
+"Cela fixe la façon dont le vecteur force est dérivé à partir de la texture."
 
 #: ../../manual/physics/force_fields/types/texture.rst:28
 msgid "RGB"
@@ -60,10 +69,14 @@ msgid ""
 "color encoded directions. You need an RGB texture for this, e.g. an image or "
 "a colorband. So a *Blend* texture without a colorband would not suffice."
 msgstr ""
+"Utilise les composantes de la couleur directement en tant que force dans les "
+"directions encodées dans les couleurs. Vous avez besoin d'une texture RVB "
+"pour cela, càd une image ou une colorband. Ainsi une texture *Blend* sans "
+"une colorband ne suffirait pas."
 
 #: ../../manual/physics/force_fields/types/texture.rst:31
 msgid "Gradient"
-msgstr "Gradient"
+msgstr "Dégradé"
 
 #: ../../manual/physics/force_fields/types/texture.rst:31
 msgid ""
@@ -71,10 +84,13 @@ msgid ""
 "of the texture. The gradient vector always points to the direction of "
 "increasing brightness."
 msgstr ""
+"Calcule le vecteur force comme le gradient 3D de l'intensité ( échelle de "
+"gris ) de la texture. Le vecteur gradient pointe toujours vers la direction "
+"de la luminosité croissante."
 
 #: ../../manual/physics/force_fields/types/texture.rst:36
 msgid "Curl"
-msgstr ""
+msgstr "Boucle"
 
 #: ../../manual/physics/force_fields/types/texture.rst:34
 msgid ""
@@ -83,6 +99,10 @@ msgid ""
 "example to create a nice looking turbulence force with a color clouds "
 "texture with perlin noise."
 msgstr ""
+"Calcule le vecteur force depuis la boucle de la texture RVB 3D ( rotation "
+"des vecteurs RVB ). Cela marche aussi seulement avec une texture couleur. "
+"Cela peut être utilisé par exemple pour créer une force de turbulence "
+"agréable à voir avec une texture colorée de nuages et avec un bruit perlin."
 
 #: ../../manual/physics/force_fields/types/texture.rst:39
 msgid "Nabla"
@@ -93,6 +113,8 @@ msgid ""
 "It is the offset used to calculate the partial derivatives needed for "
 "*Gradient* and *Curl* texture modes."
 msgstr ""
+"C'est le décalage utilisé pour calculer les dérivées partielles nécessaire "
+"pour les modes de texture *Dégradé* et *Boucle*."
 
 #: ../../manual/physics/force_fields/types/texture.rst:42
 msgid "Use Object Coordinates"
@@ -124,10 +146,13 @@ msgid ""
 "The *2D* button disregards the particles z-coordinate and only uses "
 "particles x&y as the texture coordinates."
 msgstr ""
+"Avec le bouton *2D* il n'est pas tenu compte de la coordonnée z des "
+"particules. On utilise seulement les x&y des particules comme coordonnées de "
+"texture."
 
 #: ../../manual/physics/force_fields/types/texture.rst:51
 msgid "Remember that only procedural texture are truly 3D."
-msgstr ""
+msgstr "Rappelez-vous que seules les textures procédurales sont totalement 3D."
 
 #: ../../manual/physics/force_fields/types/texture.rst:55
 msgid "Examples"
@@ -138,6 +163,8 @@ msgid ""
 "A single colored texture 0.5/0.0/0.5 creates a force in the direction of the "
 "positive y-axis, e.g. hair is orientated to the y-axis."
 msgstr ""
+"Une simple texture colorée 0,5/0,0/0,5 crée une force dans la direction de "
+"l'axe y positif, par.ex. les cheveux sont orientés dans l'axe des y."
 
 #: ../../manual/physics/force_fields/types/texture.rst:59
 msgid ""
@@ -146,7 +173,14 @@ msgid ""
 "force plane perpendicular to XY (i.e. parallel to Z). If you use an object "
 "for the coordinates, you can use the object to push particles around."
 msgstr ""
+"Une texture blend avec colorband peut être utilisée pour créer une force "
+"\"plane\". Par.ex. sur le côté gauche 0,5/0,5/0,5; sur le côté droit "
+"1,0/0,5/0,5 vous avez une force plane perpendiculaire à XY ( càd parallèle à "
+"Z ). Si vous utilisez un objet pour les coordonnées, vous pouvez utiliser "
+"l'objet pour bousculer les particules."
 
 #: ../../manual/physics/force_fields/types/texture.rst:62
 msgid "An animated wood texture can be used to create a wave like motion."
 msgstr ""
+"Une texture bois animée peut être utilisée pour créer une vague comme "
+"déplacement."
