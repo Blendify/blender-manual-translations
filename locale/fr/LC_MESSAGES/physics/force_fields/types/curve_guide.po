@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-01 02:01+1000\n"
-"PO-Revision-Date: 2016-05-02 23:09+0100\n"
+"PO-Revision-Date: 2016-05-03 19:51+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:4
 msgid "Curve Guide"
-msgstr ""
+msgstr "Guide Courbe"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:8
 msgid "Curve Guide force field."
-msgstr ""
+msgstr "UI pour un champ de force Guide Courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:10
 msgid ""
@@ -36,12 +36,19 @@ msgid ""
 "particle flow in a motor. You can use *Curve Guide* s also to shape certain "
 "hair strands."
 msgstr ""
+"Le *Guide Courbe* est utilisé pour forcer les particules à suivre un certain "
+"chemin défini par un :doc:`Objet Courbe </modeling/curves/index>`. Un "
+"scénario typique serait de déplacer une cellule rouge  à l'intérieur d'une "
+"veine, ou d'animer le flux de particules dans un moteur. Vous pouvez aussi "
+"utiliser *Guide Courbe*  pour sculpter certaines mèches de cheveux."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:18
 msgid ""
 "You can also use the :doc:`Particle Mode </physics/particles/mode>` to "
 "define a path."
 msgstr ""
+"Vous pouvez aussi utiliser le :doc:`Mode Particules </physics/particles/"
+"mode>`  pour définir un chemin."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:20
 msgid ""
@@ -49,6 +56,10 @@ msgid ""
 "build very complex animations while keeping great control and keeping the "
 "simulation time to a minimum."
 msgstr ""
+"Etant donné que vous pouvez animer les courbes en tant que Softbody ou d'une "
+"autre façon habituelle, vous pouvez construire des animations très complexes "
+"tout en gardant un grand contrôle et en ayant un temps de simulation au "
+"minimum."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:23
 msgid ""
@@ -57,6 +68,10 @@ msgid ""
 "context) to *Spin* and leave the rotation constant (i.e. don't turn on "
 "*Dynamic*)."
 msgstr ""
+"L'option *Suivre une Courbe* ne marche pas avec les particules. Au lieu de "
+"cela, vous devez positionner la *Vitesse Angulaire* ( dans le panneau "
+"*Physics* du sous contexte *Particules* ) pour les faire *Tourner* et "
+"laisser la rotation constante ( càd ne mettez pas en marche *Dynamique* )."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:27
 msgid ""
@@ -66,23 +81,30 @@ msgid ""
 "course). But you can limit their influence radius by changing there *Minimum "
 "Distance* (see below)."
 msgstr ""
+"*Guide Courbe* affecte toutes les particules sur le même calque, "
+"indépendamment de leur distance à la courbe. Si vous avez plusieurs guides "
+"dans le calque, leurs champs s'ajoutent les uns les autres ( de la façon que "
+"vous avez apprise en cours de Physique ). Mais vous pouvez limites leur "
+"rayon d'influence en changeant leur *Distance Minimum* ( voir ci-dessous )."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:34
 msgid ""
 "The Curve Guide does not effect :doc:`Softbodys </physics/soft_body/index>`."
 msgstr ""
+"Le Guide Courbe n'affecte pas les :doc:`Softbodys </physics/soft_body/"
+"index>`."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:38
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:43
 msgid "UI for a Curve Guide force field."
-msgstr ""
+msgstr "UI pour un champ de force courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:49
 msgid "Minimum Distance"
-msgstr ""
+msgstr "Distance Minimum"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:46
 msgid ""
@@ -92,77 +114,98 @@ msgid ""
 "infinity). *MinDist* is shown with a circle at the endpoints of the curve in "
 "the 3D window."
 msgstr ""
+"La distance depuis la courbe, jusqu'à laquelle le champ de force est "
+"effectif avec sa force totale. Si vous avez une *Décroissance* (falloff) de "
+"0 ce paramètre ne fait rien, parce que le champ est effectif avec sa force "
+"maximale jusqu'à *DistMax* ( ou l'infini ). *DistMin* est montrée avec un "
+"cercle aux points finaux de la courbe dans la fenêtre 3D. "
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:52
 msgid "Free"
-msgstr ""
+msgstr "Libre"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:52
 msgid "Fraction of particle life time, that is not used for the curve."
 msgstr ""
+"Fraction du temps de vie de la particule, qui n'est pas utilisée pour la "
+"courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:56
 msgid "Fall-off"
-msgstr ""
+msgstr "Atténuation."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:55
 msgid ""
 "This setting governs the strength of the guide between *MinDist* and "
 "*MaxDist*. A *Fall-off* of 1 means a linear progression."
 msgstr ""
+"Cette option gouverne la force du guide entre *DistMin* et *DistMax*. Une "
+"*Atténuation* de 1 signifie une progression linéaire."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:58
 msgid ""
 "A particle follows a *Curve Guide* during it's lifetime, the velocity "
 "depends from it's lifetime and the length of the path."
 msgstr ""
+"Une particule suit un *Guide Courbe* durant son temps de vie, la vitesse "
+"dépend de son temps de vie et de la longueur du chemin."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:61
 msgid "Additive"
-msgstr ""
+msgstr "Additive"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:62
 msgid ""
 "If you use *Additive*, the speed of the particles is also evaluated "
 "depending on the *Fall-off*."
 msgstr ""
+"Si vous utilisez *Additive*, la vitesse des particules est aussi évaluée "
+"fonction de l'*Atténuation*."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:63
 msgid "Weights"
-msgstr ""
+msgstr "Poids"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:64
 msgid "Use Curve weights to influence the particle influence along the curve."
 msgstr ""
+"Utiliser les poids de la Courbe pour changer l'influence de la particule le "
+"long de la courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:66
 msgid "Maximum Distance / Use Max"
-msgstr ""
+msgstr "Distance Maximum  / Utiliser Distance"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:66
 msgid ""
 "The maximum influence radius. Shown by an additional circle around the curve "
 "object."
 msgstr ""
+"Le rayon d'influence maximale. Montré par un cercle additionnel autour de "
+"l'objet courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:68
 msgid "The other settings govern the form of the force field along the curve."
 msgstr ""
+"Les autres options gouvernent la forme du champ de force le long de la "
+"courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:70
 msgid "Clumping Amount"
-msgstr ""
+msgstr "Agglutination - Quantité"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:71
 msgid ""
 "The particles come together at the end of the curve (1) or they drift apart "
 "(-1)."
 msgstr ""
+"Les particules restent ensemble à la fin de la courbe (1) ou elles "
+"s'éloignent les unes des autres (-1)."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:75
 #: ../../manual/physics/force_fields/types/curve_guide.rst:101
 msgid "Shape"
-msgstr ""
+msgstr "Forme"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:73
 msgid ""
@@ -170,85 +213,93 @@ msgid ""
 "meet at the end of the curve. 0: linear progression along the curve. -0.99: "
 "the particles meet at the beginning of the curve."
 msgstr ""
+"Définie la forme dans laquelle les particules se rassemblent. +0,99 : les "
+"particules se rencontrent à la fin de la courbe. 0 : progression linéaire le "
+"long de la courbe. -0,99: les particules rencontrent au début de la courbe."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:89
 msgid "Kink"
-msgstr ""
+msgstr "Entortiller"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:78
 msgid "Changes the shape that the particles can take:"
-msgstr ""
+msgstr "Change la forme que les particules peuvent prendre:"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:80
 msgid "Curl"
-msgstr ""
+msgstr "Boucle"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:81
 msgid ""
 "The radius of the influence depends on the distance of the curve to the "
 "emitter."
 msgstr ""
+"Le rayon de l'influence dépend de la distance de la courbe de l'émetteur."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:82
 msgid "Radial"
-msgstr ""
+msgstr "Radiale"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:83
 msgid "A three dimensional, standing wave."
-msgstr ""
+msgstr "Une Onde stationnaire à 3 dimensions."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:84
 msgid "Wave"
-msgstr ""
+msgstr "Vague"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:85
 msgid "A two dimensional, standing wave."
-msgstr ""
+msgstr "Une onde stationnaire à deux dimensions."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:86
 msgid "Braid"
-msgstr ""
+msgstr "Tresse"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:87
 msgid "Braid."
-msgstr ""
+msgstr "Tresse"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:89
 msgid "Roll"
-msgstr ""
+msgstr "Roulis"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:89
 msgid "A one dimensional, standing wave."
-msgstr ""
+msgstr "Une onde stationnaire à une dimension."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:91
 msgid ""
 "It is not so easy to describe the resulting shapes, so have a look at the "
 "example below."
 msgstr ""
+"Ce n'est pas facile de décrire les formes résultantes, donc regarder les "
+"exemples ci-dessous."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:96
 msgid ""
 "Kink options of a curve guide. From left to right: Radial, Wave, Braid, "
 "Roll. `Animation <https://www.vimeo.com/1866538>`__"
 msgstr ""
+"Les options d'entortillement d'un guide courbe. De gauche à droite : "
+"Radiale, Vague, Tresse, Roulis. `Animation <https://www.vimeo.com/1866538>`__"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:99
 msgid "Frequency"
-msgstr ""
+msgstr "Fréquence"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:100
 msgid "The frequency of the offset."
-msgstr ""
+msgstr "La fréquence du décalage."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:102
 msgid "Adjust the offset to the beginning/end."
-msgstr ""
+msgstr "Ajuste le décalage des début/fin."
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:105
 msgid "Amplitude"
-msgstr ""
+msgstr "Amplitude"
 
 #: ../../manual/physics/force_fields/types/curve_guide.rst:104
 msgid "The Amplitude of the offset."
-msgstr ""
+msgstr "L'Amplitude du décalage."
