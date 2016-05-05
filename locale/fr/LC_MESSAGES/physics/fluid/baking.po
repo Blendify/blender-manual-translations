@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-11 10:15+1100\n"
-"PO-Revision-Date: 2016-05-05 08:26+0100\n"
+"PO-Revision-Date: 2016-05-05 22:28+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,14 +35,23 @@ msgid ""
 "quality, one for the *Preview* quality), plus one ``.bvel.gz`` (for the "
 "*Final* quality) will be in the selected output directory for each frame."
 msgstr ""
+"Effectuer la simulation actuelle du fluide. Blender continuera à travaille "
+"normalement, excepté qu'il y aura une barre d'état dans le haut de la "
+"fenêtre, près du menu déroulant de rendu. La touche  :kbd:`Echap` ou le \"x"
+"\" près de la barre d'état arrêtera la simulation. Ensuite, pour chaque "
+"frame, deux  ``.bobj.gz``  (un pour la qualité *finale*, un pour la qualité "
+"de la *prévisualisation*) , et une ``.bvel.gz`` (pour la qualité *finale*) "
+"seront créés dans le répertoire de sortie sélectionné."
 
 #: ../../manual/physics/fluid/baking.rst:24
 msgid "Bake directory"
-msgstr "Répertoire *Précalcul*"
+msgstr "Répertoire de précalcul"
 
 #: ../../manual/physics/fluid/baking.rst:26
 msgid "Directory and file prefix to store baked surface meshes."
 msgstr ""
+"Le répertoire et le préfixe de fichier pour enregistrer les meshs de surface "
+"précalculés."
 
 #: ../../manual/physics/fluid/baking.rst:28
 msgid ""
@@ -53,18 +62,26 @@ msgid ""
 "be done several times with different settings, and allows quick changes "
 "between the different sets of surface data."
 msgstr ""
+"Ceci est similaire aux réglages de sortie pour l'animation, simplement, "
+"sélectionner un fichier est un peu différent : quand vous sélectionnez un "
+"des meshs de surface précédemment généré (par exemple  "
+"``test1_fluidsurface_final_0132.bobj.gz``), le préfixe sera automatiquement "
+"positionné (à  ``test1_``  dans cet exemple). De cette façon al simulation "
+"peut être faite plusieurs fois avec différentes options, ce qui permet des "
+"changes rapides enrte les différentes jeux de données de surface déjà "
+"calculés."
 
 #: ../../manual/physics/fluid/baking.rst:37
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 #: ../../manual/physics/fluid/baking.rst:41
 msgid "Unique domain"
-msgstr ""
+msgstr "Domaine Unique"
 
 #: ../../manual/physics/fluid/baking.rst:47
 msgid "Selecting a Baked Domain"
-msgstr ""
+msgstr "Sélectionner un domaine de précalcul"
 
 #: ../../manual/physics/fluid/baking.rst:44
 msgid ""
@@ -73,10 +90,16 @@ msgid ""
 "any frame and select (:kbd:`RMB`) the fluid mesh. Then you can click the "
 "*BAKE* button again to recompute the fluid flows inside that domain."
 msgstr ""
+"Après avoir précalculé un domaine, il se change en mesh de fluide. Pour "
+"resélectionner le domaine afin d'effectuer un nouveau précalcul après avoir "
+"fait des changements, allez à n'importe quelle frame et sélectionnez  (:kbd:"
+"`RMB`) le mesh de fluide ( objet domaine ). Alors vous pourrez cliquer sur "
+"le bouton de *Précalcul* pour recalculer le flux de fluide à l'intérieur du "
+"domaine."
 
 #: ../../manual/physics/fluid/baking.rst:52
 msgid "Baking always starts at Frame #1"
-msgstr ""
+msgstr "Le précalcul commence toujours à la frame n :sup:`o` 1"
 
 #: ../../manual/physics/fluid/baking.rst:50
 msgid ""
@@ -85,6 +108,11 @@ msgid ""
 "than frame 1, you must key the fluid objects in your domain to be inactive "
 "until the frame you desire to start the simulation."
 msgstr ""
+"Le simulateur de fluide ne tient pas compte de réglage *Début* dans le "
+"panneau *Animation*, le fluide sera toujours calculé à partir de la frame 1. "
+"Si vous voulez  une simulation qui commence à une autre frame, vous devez "
+"imposer aoux objets fluide dans votre domaine à être inactif jusqu'à la "
+"frame à laquelle vous désirez voir démarrer la simulation."
 
 #: ../../manual/physics/fluid/baking.rst:55
 msgid ""
@@ -92,10 +120,13 @@ msgid ""
 "then you should (if your start time is 0) set your animation to end at frame "
 "``4.0 × 25 = 100``"
 msgstr ""
+"Si votre framerate est de 25 frames par seconde, et que la durée de fin est "
+"4,0 secondes, alors vous devrez (si votre temps de départ est 0) mettre la "
+"frame de fin de votre animation à ``4.0 × 25 = 100``"
 
 #: ../../manual/physics/fluid/baking.rst:62
 msgid "Freeing the previous baked solutions"
-msgstr ""
+msgstr "Libérer les solutions précalculées précédentes"
 
 #: ../../manual/physics/fluid/baking.rst:60
 msgid ""
@@ -104,10 +135,14 @@ msgid ""
 "directory (be sure they use different filenames, or they will overwrite one "
 "another)!"
 msgstr ""
+"Détruire le contenu deu répertoire de \"Précalcul\" est une façon "
+"destructrice de l'obtenir. Soyez prudent si plus d'une simulation utilise le "
+"même répertoire de Précalcul ( soyez certain qu'ils utilisent des noms "
+"différents, sinon ils s'effaceront les uns les autres)!"
 
 #: ../../manual/physics/fluid/baking.rst:68
 msgid "Reusing Bakes"
-msgstr ""
+msgstr "Réutiliser les précalculs"
 
 #: ../../manual/physics/fluid/baking.rst:65
 msgid ""
@@ -116,17 +151,25 @@ msgid ""
 "mesh deformation to use that which existed during the old bake. Thus, you "
 "can re-use baked flows by simply pointing to them in this field."
 msgstr ""
+"Entrer manuellement (ou chercher) un répertoire précédent de précalculs "
+"sauvegardés et un masque de noms de fichiers va changer le flux du fluide et "
+"la déformation du mesh, afin d'utiliser ce qui a été calculé et enregistré "
+"durant l'ancien précalcul. Ainsi, vous pouvez réutiliser les flux "
+"précalculés en pointant vers eux dans ce champ."
 
 #: ../../manual/physics/fluid/baking.rst:79
 msgid "Baking processing time"
-msgstr ""
+msgstr "Temps pour effectuer le précalcul"
 
+# ??
 #: ../../manual/physics/fluid/baking.rst:71
 msgid ""
 "Baking takes a **lot** of compute power (hence time). Depending on the "
 "scene, it might be preferable to bake overnight."
 msgstr ""
+"Le précalcul prend un **grand** temps de puissance d'ordinateur (hence time)."
 
+# ??
 #: ../../manual/physics/fluid/baking.rst:74
 msgid ""
 "If the mesh has modifiers, the rendering settings are used for exporting the "
@@ -137,13 +180,24 @@ msgid ""
 "is correct, you can always increase settings to yield a more realistic "
 "result."
 msgstr ""
+"Si le mesh a des modificateurs, les réglages du rendu sont utilisés pour "
+"exporter le mesh au résolveur de fluide. Selon les réglages, le temps de "
+"calcul et l'utilisation de la mémoire peut augmenter exponentiellement. Par "
+"Exemple, si on  utilise un mesh se déplaçant avec un obstacle modifier par "
+"un *SurfaceSubdivision*, cela pourrait aider de diminuer le temps de "
+"simulation en le mettant à zéro, ou à un niveau de subdivision plus petit. "
+"Dès que le setup/rig est correcte, vous pouvez toujours augmenter les "
+"réglages pour obtenir un résultat plus réaliste.\" "
 
 #: ../../manual/physics/fluid/baking.rst:57
 msgid "Baking always ends at the *End* Frame set in the *Animation* panel"
-msgstr ""
+msgstr "Le précalcul fini toujours à la frame de *Fin*  du panneau *Animation*"
 
 #: ../../manual/physics/fluid/baking.rst:40
 msgid ""
 "Because of the possibility of spanning and linking between scenes, there can "
 "only be one domain in an entire blend-file."
 msgstr ""
+"A cause des possibilités de liens et regroupements entre les différentes "
+"scènes d'un fichier blend. il ne peut y avoir qu'un seul domaine dans la "
+"totalité d'un fichier blend."

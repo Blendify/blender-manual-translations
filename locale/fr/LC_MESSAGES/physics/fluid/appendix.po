@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-12 01:27+1100\n"
-"PO-Revision-Date: 2016-05-04 03:28+0100\n"
+"PO-Revision-Date: 2016-05-05 23:54+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #: ../../manual/physics/fluid/appendix.rst:6
 msgid "Fluid Appendix"
-msgstr ""
+msgstr "Annexe de Fluide"
 
 #: ../../manual/physics/fluid/appendix.rst:51
 msgid "Limitations & Workarounds"
-msgstr ""
+msgstr "Limites et Approches Variées"
 
 #: ../../manual/physics/fluid/appendix.rst:53
 msgid ""
@@ -28,12 +28,17 @@ msgid ""
 "(hence, enter *Edit mode*, select all, and recalculate normals once in a "
 "while)."
 msgstr ""
+"Si la configuration semble mal se comporter, soyez sur que toutes les "
+"normales sont correctes ( entrez dans le *Mode Edit*, sélectionne tout, et "
+"recalcul les normales une fois pour toutes)."
 
 #: ../../manual/physics/fluid/appendix.rst:57
 msgid ""
 "Currently there's a problem with zero gravity simulation - simply select a "
 "very small gravity until this is fixed."
 msgstr ""
+"Actuellement il y a un problème avec une gravité nulle - simplement "
+"sélectionnez un gravité très petite jusqu'à ce que ce soit fixé."
 
 #: ../../manual/physics/fluid/appendix.rst:60
 msgid ""
@@ -41,6 +46,9 @@ msgid ""
 "inner side (a plane won't work). To use planes, switch to *Shell*, or "
 "extrude the plane."
 msgstr ""
+"Si un objet est initialisé en *Volume* il doit être fermé et donc avoir un "
+"côté interne (un plan ne marche pas). Pour utiliser des plans, change en "
+"*Coque*, ou extrude le plan."
 
 #: ../../manual/physics/fluid/appendix.rst:64
 msgid ""
@@ -49,6 +57,10 @@ msgid ""
 "memory is swapped to hard disk, making everything horribly slow. Reducing "
 "the resolution should help in this case."
 msgstr ""
+"Blender gèle après avori cliquer sur le bouton *Précalcul*. La touche  :kbd:"
+"`Echap` le fait remarché après un temps - ce peut arriver si la résolution "
+"est trop grand et que la mémoire est swappée sur le disque dur, rendant tout "
+"horriblement lent. Réduire la résolution pourrait aider dans ce cas."
 
 #: ../../manual/physics/fluid/appendix.rst:77
 msgid ""
@@ -57,6 +69,11 @@ msgid ""
 "vertices are closed meshes. Unfortunately, the Suzanne (monkey) mesh in "
 "Blender is not a closed mesh (the eyes are separate)."
 msgstr ""
+"Les meshs devraient être fermés, donc si quelques parties - par exmple d'un "
+"objet fluide - ne sont pas initialisées comme fluide dans une simulation, "
+"vérifiez que toutes les parties des coins connectés sont des meshs fermés. "
+"Malheureusement, le mesh Suzanne (le singe) dans Blender n'est pas un mesh "
+"fermé ( les yeux et orbites sont séparés)."
 
 #: ../../manual/physics/fluid/appendix.rst:83
 msgid ""
@@ -64,6 +81,10 @@ msgid ""
 "\"init has failed\"), make sure you have valid settings for the domain "
 "object, e.g. by resetting them to the defaults."
 msgstr ""
+"Si la simulation de fluide existe avec un message d'erreur (déclarant par "
+"exemple que \"l'init has failed\") soyez sûr que vous avez des réglages "
+"valides pour l'objet domaine, par exemple en les remettant aux valeurs par "
+"défaut."
 
 #: ../../manual/physics/fluid/appendix.rst:87
 msgid ""
@@ -72,25 +93,32 @@ msgid ""
 "awhile. If so, try to bake one frame at the middle or end at full res so "
 "you'll see if it works."
 msgstr ""
+"Notez que la première frame peut bien ne prendre que quelques centaines de "
+"MB dans la mémoire RAM, mais que plus tard on monte jusqu'à plus d'un GB, ce "
+"qui peut être la raison pour laquelle votre précalcul rate après un moment. "
+"Si c'est le cas, essayez de précalculer une frame au milieu ou à la fin à la "
+"résolution maximale afin de voir si ça marche."
 
 #: ../../manual/physics/fluid/appendix.rst:92
 msgid "Memory used doubles when you set surface subdivision from 1 to 2."
 msgstr ""
+"La mémoire utilisée double quand vous faîtes passer la sous division de "
+"surface de 1 à 2."
 
 #: ../../manual/physics/fluid/appendix.rst:95
 msgid ""
 "Using \"generate particles\" will also add memory requirements, as they "
 "increase surface area and complexity. Ordinary fluid-sim generated particles "
 "probably eat less memory."
-msgstr ""
+msgstr "Utiliser des \"particules générées\" va aussi ajouter des "
 
 #: ../../manual/physics/fluid/appendix.rst:9
 msgid "Hints"
-msgstr ""
+msgstr "Conseils"
 
 #: ../../manual/physics/fluid/appendix.rst:11
 msgid "Some useful hints about fluid simulation in Blender:"
-msgstr ""
+msgstr "Quelques conseils utiles sur la simulation de fluide dans Blender:"
 
 #: ../../manual/physics/fluid/appendix.rst:14
 msgid ""
@@ -99,6 +127,11 @@ msgid ""
 "a .gz file for each frame of the animation. Each file contains the "
 "simulation result - so you'll need them."
 msgstr ""
+"Ne soyez pas surpris, mais vous aurez un groupe de fichiers de meshs (.bobj."
+"gz) après une simulation. Un groupe est pour la prévisualisation, et un "
+"autre pour le final. Chaque groupe a un fichier .gz pour chaque frame de "
+"l'animation. Chaque fichier contient le résultat de la simulation - donc "
+"vous aurez besoin d'eux."
 
 #: ../../manual/physics/fluid/appendix.rst:20
 msgid ""
@@ -109,12 +142,22 @@ msgid ""
 "yourself. If you want to stop using the fluid simulation, you can simply "
 "delete all the ``*fluid*.bobj.gz`` files."
 msgstr ""
+"Ces fichiers ne seront habituellement pas détruits, donc ce peut être une "
+"bonne chose de, par exemple, créer un répertorie dédié pour garder les "
+"résultats de la simulation. Faire une simulation de fluide est identique à "
+"cliquer sur le bouton *Animation*  - vous avez besoin de faire attention à "
+"organiser les meshs de surface de fluide dans un répertoire vous-même. Si "
+"vous voulez arrêter d'utiliser la simulation de fluide, vous pouvez "
+"simplement détruire tous les fichiers  ``*fluid*.bobj.gz``."
 
 #: ../../manual/physics/fluid/appendix.rst:27
 msgid ""
 "Before running a high resolution simulation that might take hours, check the "
 "overall timing first by doing lower resolution runs."
 msgstr ""
+"Avant de faire une simulation à haute résolution qui pourrait prendre des "
+"heures, vérifier le temps totale d'abord en faisant un test à basse "
+"résolution."
 
 #: ../../manual/physics/fluid/appendix.rst:31
 msgid ""
@@ -124,12 +167,21 @@ msgid ""
 "appear in the simulation, if the chosen resolution is too coarse to resolve "
 "them (increasing it might solve this problem)."
 msgstr ""
+"Les objets fluide doivent être entièrement contenus dans la boîte englobante "
+"du domaine. Sinon, le précalcul peut ne pas marcher correctement du tout. "
+"Les objets Fluide et Obstacle peuvent être des meshs avec de géométries "
+"complexes. Les objets très fin pourraient ne pas apparaître dans la "
+"simulation, si la résolution choisie est trop épaisse pour les résoudre (les "
+"agrandir peut résoudre le problème)"
 
 #: ../../manual/physics/fluid/appendix.rst:38
 msgid ""
 "Don't try to do a complicated scene all at once. Blender has a powerful "
 "compositor that you can use to combine multiple animations."
 msgstr ""
+"N'essayez pas de faire une scène compliquée en une seule fois. Blender a une "
+"capacité puissante pour  de recomposition que vous pouvez utiliser pour "
+"combiner de multiples animations."
 
 #: ../../manual/physics/fluid/appendix.rst:41
 msgid ""
@@ -143,6 +195,16 @@ msgid ""
 "flashes, trash blowing around, all as separate animations, compositing the "
 "total for a truly spectacular result."
 msgstr ""
+"Par exemple, pour produire une animation montrant deux flux de fluide "
+"séparés tout en gardant votre domaine petit, faites un rendu .avi avec le "
+"premier. Puis déplacez le domaine et faites en un deuxième avec l'autre flux "
+"en faisant un canal alpha ( dans un fichier N/B .avi séparé?). Ensuite, "
+"recomposez-les ensemble en utilisant les fonctions de compositions. Un "
+"troisième ``.avi`` courant est la fumée et la brume et on le place au dessus "
+"de tout. Ajouter un calque de pluie sur le haut de la brume et des "
+"gouttelettes et vous aurez une tempête en préparation! Et alors ajoutez des "
+"lumières qui flashent, des ordures qui volent partout, pour composer un "
+"résultat vraiment spcctaculaire.  "
 
 #: ../../manual/physics/fluid/appendix.rst:70
 msgid ""
@@ -152,3 +214,8 @@ msgid ""
 "memory that can be allocated by a *process*, such as Blender, even if the "
 "*machine* has more memory installed."
 msgstr ""
+"Blender crash après avoir cliquer sur *Précalcul*\" - ce peut arriver si la "
+"résolution est vraiment haute et que plus de 2 GB sont alloués, obligeant "
+"Blender à crasher. Réduisez la résolution. Beaucoup de systèmes limitent la "
+"quantité totale de mémoire qu'un processus unique, comme Blender,  peut "
+"s'allouer, même si la *machine* a plus de mémoire installée."
