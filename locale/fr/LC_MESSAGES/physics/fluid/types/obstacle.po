@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-01 02:01+1000\n"
-"PO-Revision-Date: 2016-05-04 03:30+0100\n"
+"PO-Revision-Date: 2016-05-05 04:57+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,8 +22,9 @@ msgstr ""
 
 #: ../../manual/physics/fluid/types/obstacle.rst:5
 msgid "Fluid Obstacle"
-msgstr ""
+msgstr "Obstacle de Fluide"
 
+# ??
 #: ../../manual/physics/fluid/types/obstacle.rst:7
 msgid ""
 "This object will be used as an obstacle in the simulation. As with a fluid "
@@ -36,18 +37,28 @@ msgid ""
 "subsurf>` before baking the simulation could also be a good idea if the mesh "
 "is not animated."
 msgstr ""
+"Cet objet sera utilisé comme obstacle dans la simulation. Comme pour un "
+"objet fluide, les objets obstacle ne devraient pas se couper. Comme les "
+"objets fluides, la géométrie actuelle du mesh est utilisée pour l'obstacle. "
+"Pour les objets avec un volume, soyez sur que les normales de l'obstacle "
+"sont calculées correctement, et rayonnent proprement vers l'extérieur "
+"( utiliser le bouton *inverser direction*, en mode *Edit* , dans le panneau  "
+"*Mesh Tools*, *Editing* context), en particulier quand on utilise un "
+"contenant arrondi. Appliquer un :doc:`Modificateur SubSurf </modeling/"
+"modifiers/generate/subsurf>` avant de précalculer la simulation pourrait "
+"aussi être une bonne idée si le mesh n'est pas animé.\""
 
 #: ../../manual/physics/fluid/types/obstacle.rst:17
 msgid "Volume Initialization Type"
-msgstr ""
+msgstr "Type d'initialisation du Volume"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:17
 msgid "See :ref:`Volume Initialization Type <fluid-initialization>`"
-msgstr ""
+msgstr "Voir :ref:`Type d'initialisation du Volume <fluid-initialization>`"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:32
 msgid "Boundary type"
-msgstr ""
+msgstr "Type de Frontière"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:20
 msgid ""
@@ -55,37 +66,46 @@ msgid ""
 "\". Surface Adhesion depends in real-world on the fluid and the graininess "
 "or friction/adhesion/absorption qualities of the surface."
 msgstr ""
+"Détermine l'épaisseur de la surface de l'obstacle, appelé \" Adhésion de "
+"Surface\". L'Adhésion de Surface dépend, dans le monde réel, du fluide et du "
+"grain ou de la qualité de friction/adhésion/absorption de la surface."
 
 #: ../../manual/physics/fluid/types/obstacle.rst:24
 msgid "No Slip"
-msgstr ""
+msgstr "Glissement Nul"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:25
 msgid "Causes the fluid to stick to the obstacle (zero velocity)."
-msgstr ""
+msgstr "Fait coller le fluide à l'obstacle ( vitesse nulle)."
 
 #: ../../manual/physics/fluid/types/obstacle.rst:26
 msgid "Free Slip"
-msgstr ""
+msgstr "Glissement Libre"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:27
 msgid "Allows movement along the obstacle (only zero normal velocity)."
 msgstr ""
+"Permet le mouvement le long de l'obstacle ( vitesse normale seulement "
+"nulle). "
 
 #: ../../manual/physics/fluid/types/obstacle.rst:29
 msgid "Part Slip"
-msgstr ""
+msgstr "Glissement Partiel"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:29
 msgid ""
 "Mixes both types, with 0 being mostly no slip, and 1 being identical to free "
 "slip."
 msgstr ""
+"Mixe les deux types, avec 0 étant pratiquement glissement nul, et 1 étant "
+"identique au glissement libre."
 
 #: ../../manual/physics/fluid/types/obstacle.rst:31
 msgid ""
 "Note that if the mesh is moving, it will be treated as no slip automatically."
 msgstr ""
+"Notez que si le mesh se déplace, il sera traité comme glissement nul "
+"automatiquement."
 
 #: ../../manual/physics/fluid/types/obstacle.rst:36
 msgid ""
@@ -93,26 +113,29 @@ msgid ""
 "wall. From left to right: no-slip, part-slip 0.3, part-slip 0.7 and free-"
 "slip."
 msgstr ""
+"Exemple des différents types de frontière pour une goutte tombant sur un mur "
+"incliné. De gauche à droite: glissement nul, glissement partiel 0,3 ; "
+"glissement partiel 0,7 et glissement libre."
 
 #: ../../manual/physics/fluid/types/obstacle.rst:40
 msgid "Animated Mesh/Export"
-msgstr ""
+msgstr "Exporter Mesh Animé"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:40
 msgid "See :ref:`Animated Mesh/Export <fluid-animated-mesh>`"
-msgstr ""
+msgstr "Voir :ref:`Exporter Mesh Animé <fluid-animated-mesh>`"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:43
 msgid "PartSlip Amount"
-msgstr ""
+msgstr "Quantité de glissement partiel"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:43
 msgid "Amount of mixing between no- and free-slip, described above."
-msgstr ""
+msgstr "Quantité de mélange entre glissement nul et libre, décrit au-dessus."
 
 #: ../../manual/physics/fluid/types/obstacle.rst:50
 msgid "Impact Factor"
-msgstr ""
+msgstr "Facteur d'Impact"
 
 #: ../../manual/physics/fluid/types/obstacle.rst:46
 msgid ""
@@ -121,3 +144,8 @@ msgid ""
 "it if is and the fluid collides with it, a negative value takes volume away "
 "from the Domain, and a positive number adds to it. Ranges from -2.0 to 10.0."
 msgstr ""
+"La quantité de correction du volume de fluide pour un gain/perte lors de "
+"l'impacte avec des objets se déplaçant. Si cette objet ne se déplace pas, ce "
+"réglage n'a pas d'effet. Cependant, si le fluide le touche, une valeur "
+"négative sort du volume du domaine, et une valeur positive en ajoute. Les "
+"valeurs vont de -2,0 à 10,0. "
