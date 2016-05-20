@@ -3,21 +3,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-12 01:27+1100\n"
+"POT-Creation-Date: 2016-05-20 12:05+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/advanced/scripting/python/security.rst:4
 msgid "Scripting & Security"
 msgstr ""
 
-#: ../../manual/advanced/scripting/python/security.rst:10
+#: ../../manual/advanced/scripting/python/security.rst:6
 msgid ""
-"Therefore, you should only run scripts from sources you know and trust."
+"The ability to include Python scripts within blend-files is valuable for "
+"advanced tasks such as rigging, automation and using the game-engine, "
+"however, it poses a security risk since Python doesn't restrict what a "
+"script can do."
+msgstr ""
+
+#: ../../manual/advanced/scripting/python/security.rst:10
+msgid "Therefore, you should only run scripts from sources you know and trust."
+msgstr ""
+
+#: ../../manual/advanced/scripting/python/security.rst:12
+msgid ""
+"Automatic execution is disabled by default, however, some blend-files "
+"need this to function properly."
+msgstr ""
+
+#: ../../manual/advanced/scripting/python/security.rst:15
+msgid ""
+"When a blend-file tries to execute a script and is not allowed, a message"
+" will appear in the header with the option to **Reload Trusted** or "
+"**Ignore** the message."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:24
@@ -28,14 +49,18 @@ msgstr ""
 msgid "Auto Execution"
 msgstr ""
 
+#: ../../manual/advanced/scripting/python/security.rst:29
+msgid "Here are the different ways blend-files may automatically run scripts."
+msgstr ""
+
 #: ../../manual/advanced/scripting/python/security.rst:32
 msgid "Registered Text-Blocks"
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:33
 msgid ""
-"A text block can have its *Register* option enabled which means it will load"
-" on start."
+"A text block can have its *Register* option enabled which means it will "
+"load on start."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:34
@@ -44,25 +69,40 @@ msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:35
 msgid ""
-"Python expressions can be used to *Drive* values and are often used in more "
-"advanced rigs and animations."
+"Python expressions can be used to *Drive* values and are often used in "
+"more advanced rigs and animations."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:38
 msgid "Game Engine Auto-Start"
 msgstr ""
 
+#: ../../manual/advanced/scripting/python/security.rst:37
+msgid ""
+"Scripts are often used for game logic, blend-files can have *Auto Start* "
+"enabled with runs the game on load."
+msgstr ""
+
 #: ../../manual/advanced/scripting/python/security.rst:41
 msgid "Manual Execution"
 msgstr ""
 
+#: ../../manual/advanced/scripting/python/security.rst:43
+msgid ""
+"There are other ways scripts in a blend-file may execute that require "
+"user interaction (therefore will run even when auto-execution is off), "
+"but you should be aware that this is the case since it's not necessarily "
+"obvious."
+msgstr ""
+
 #: ../../manual/advanced/scripting/python/security.rst:49
-msgid "Running a script in the text editor *(ok, this is obvious!)*."
+msgid "Running a script in the text editor."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:50
 msgid ""
-"Rendering with FreeStyle - *FreeStyle uses scripts to control line styles*"
+"Rendering with FreeStyle, because FreeStyle uses scripts to control line "
+"styles."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:51
@@ -73,26 +113,46 @@ msgstr ""
 msgid "Controlling Script Execution"
 msgstr ""
 
+#: ../../manual/advanced/scripting/python/security.rst:57
+msgid ""
+"Blender provides a number of ways to control whether scripts from a "
+"blend-file are allowed to automatically execute."
+msgstr ""
+
 #: ../../manual/advanced/scripting/python/security.rst:60
 msgid ""
-"First of all, the file-selector has the option **Trusted Source** which you "
-"can use on a case-by-case basis to control auto-execution."
+"First of all, the file-selector has the option **Trusted Source** which "
+"you can use on a case-by-case basis to control auto-execution."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:63
 msgid ""
-"However you may forget to set this, or open a file without going through the"
-" file selector - so you can change the default (described next)."
+"However you may forget to set this, or open a file without going through "
+"the file selector - so you can change the default (described next)."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:69
 msgid "Setting Defaults"
 msgstr ""
 
+#: ../../manual/advanced/scripting/python/security.rst:71
+msgid ""
+"In the **File** section of the user-preferences, there is the toggle "
+"**Auto-Run Python Scripts**."
+msgstr ""
+
+#: ../../manual/advanced/scripting/python/security.rst:74
+msgid ""
+"This means the **Trusted Source** option in the file-selector will be "
+"enabled by default, and scripts can run when blend-files are loaded "
+"without using the file selector."
+msgstr ""
+
 #: ../../manual/advanced/scripting/python/security.rst:77
 msgid ""
-"Once enabled you have the option to exclude certain directories, a typical "
-"configuration would be to trust all paths except for the download directory."
+"Once enabled you have the option to exclude certain directories, a "
+"typical configuration would be to trust all paths except for the download"
+" directory."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:86
@@ -101,8 +161,14 @@ msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:88
 msgid ""
-"You may want to perform batch rendering or some other task from the command "
-"line - running Blender without an interface."
+"You may want to perform batch rendering or some other task from the "
+"command line - running Blender without an interface."
+msgstr ""
+
+#: ../../manual/advanced/scripting/python/security.rst:91
+msgid ""
+"In this case, the user-preferences are still used but you may want to "
+"override them."
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:93
@@ -115,147 +181,27 @@ msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:96
 msgid ""
-"Example - rendering an animation in background mode, allowing drivers and "
-"other scripts to run:"
+"Example - rendering an animation in background mode, allowing drivers and"
+" other scripts to run:"
 msgstr ""
 
 #: ../../manual/advanced/scripting/python/security.rst:104
 msgid ""
-"These command line arguments can be used to start a regular blender instance"
-" and will still override the user-preferences."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:15
-msgid ""
-"When a blend-file tries to execute a script and is not allowed, a message "
-"will appear in the header with the option to **Reload Trusted** or "
-"**Ignore** the message."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:29
-msgid "Here are the different ways blend-files may automatically run scripts."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:37
-msgid ""
-"Scripts are often used for game logic, blend-files can have *Auto Start* "
-"enabled with runs the game on load."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:57
-msgid ""
-"Blender provides a number of ways to control whether scripts from a blend-"
-"file are allowed to automatically execute."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:74
-msgid ""
-"This means the **Trusted Source** option in the file-selector will be "
-"enabled by default, and scripts can run when blend-files are loaded without "
-"using the file selector."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:6
-msgid ""
-"The ability to include Python scripts within blend-files is valuable for "
-"advanced tasks such as rigging, automation and using the game-engine, "
-"however, it poses a security risk since Python doesn't restrict what a "
-"script can do."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:12
-msgid ""
-"Automatic execution is disabled by default, however, some blend-files need "
-"this to function properly."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:43
-msgid ""
-"There are other ways scripts in a blend-file may execute that require user "
-"interaction (therefore will run even when auto-execution is off), but you "
-"should be aware that this is the case since it's not necessarily obvious."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:71
-msgid ""
-"In the **File** section of the user-preferences, there is the toggle **Auto-"
-"Run Python Scripts**."
-msgstr ""
-
-#: ../../manual/advanced/scripting/python/security.rst:91
-msgid ""
-"In this case, the user-preferences are still used but you may want to "
-"override them."
+"These command line arguments can be used to start a regular blender "
+"instance and will still override the user-preferences."
 msgstr ""
 
 #~ msgid ""
-#~ "In the **File** section of the user-preferences there is the toggle **Auto-"
-#~ "Run Python Scripts**."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In this case the user-preferences are still used but you may want to "
-#~ "override them."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The ability to include Python scripts within blend-files is valuable for "
-#~ "advanced tasks such as rigging, automation and using the game-engine, "
-#~ "however it poses a security risk since Python doesn't restrict what a script"
-#~ " can do."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Automatic execution is disabled by default, however some blend-files need "
-#~ "this to function properly."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There are other ways scripts in a blend-file may execute that require user "
-#~ "interaction (therefor will run even when auto-execution is off), but you "
-#~ "should be aware that this is the case since it's not necessarily obvious."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The ability to include Python scripts within blend files is valuable for "
-#~ "advanced tasks such as rigging, automation and using the game-engine, "
-#~ "however it poses a security risk since Python doesn't restrict what a script"
-#~ " can do."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Automatic execution is disabled by default, however some blend files need "
-#~ "this to function properly."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When a blend file tries to execute a script and is not allowed, a message "
-#~ "will appear in the header with the option to **Reload Trusted** or "
-#~ "**Ignore** the message."
 #~ msgstr ""
 
 #~ msgid "Here are the different ways blend files may automatically run scripts."
 #~ msgstr ""
 
-#~ msgid ""
-#~ "Scripts are often used for game logic, blend files can have *Auto Start* "
-#~ "enabled with runs the game on load."
+#~ msgid "Running a script in the text editor *(ok, this is obvious!)*."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "There are other ways scripts in a ``blend`` file may execute that require "
-#~ "user interaction (therefor will run even when auto-execution is off), but "
-#~ "you should be aware that this is the case since it's not necessarily "
-#~ "obvious."
+#~ "Rendering with FreeStyle - *FreeStyle "
+#~ "uses scripts to control line styles*"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "Blender provides a number of ways to control whether scripts from a blend "
-#~ "file are allowed to automatically execute."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This means the **Trusted Source** option in the file-selector will be "
-#~ "enabled by default, and scripts can run when blend files are loaded without "
-#~ "using the file selector."
-#~ msgstr ""
