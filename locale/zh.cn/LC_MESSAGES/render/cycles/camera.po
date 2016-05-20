@@ -3,16 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-22 04:13+0800\n"
+"POT-Creation-Date: 2016-05-20 12:05+1000\n"
 "PO-Revision-Date: 2015-05-17 08:25+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.6\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/camera.rst:4
 msgid "Camera"
@@ -46,17 +44,32 @@ msgstr "控制物体投射在图像上的物体尺寸。"
 msgid "Panoramic"
 msgstr "全景模式"
 
+#: ../../manual/render/cycles/camera.rst:33
+#, fuzzy
+msgid ""
+"Cycles supports Equirectangular and Fisheye panoramic cameras. Note that "
+"these can't be displayed with OpenGL rendering in the view-port; they "
+"will only work for rendering."
+msgstr "Cycles支持方形与鱼眼两种全景类型，需要注意到是，它们都无法在OpenGL渲染时正常显示，只会体现在渲染结果中。"
+
 #: ../../manual/render/cycles/camera.rst:39
 msgid "Equirectangular"
 msgstr "方形"
 
+#: ../../manual/render/cycles/camera.rst:41
+msgid ""
+"Render a panoramic view of the scenes from the camera location and use an"
+" equirectangular projection, always rendering the full 360- over the "
+"X-axis and 180- over the Y-axis."
+msgstr ""
+
 #: ../../manual/render/cycles/camera.rst:44
 msgid ""
-"This projection is compatible with the environment texture as used for world"
-" shaders, so it can be used to render an environment map. To match the "
-"default mapping, set the camera object rotation to (90, 0, -90) or pointing "
-"along the positive X-axis. This corresponds to looking at the center of the "
-"image using the default environment texture mapping."
+"This projection is compatible with the environment texture as used for "
+"world shaders, so it can be used to render an environment map. To match "
+"the default mapping, set the camera object rotation to (90, 0, -90) or "
+"pointing along the positive X-axis. This corresponds to looking at the "
+"center of the image using the default environment texture mapping."
 msgstr ""
 "这种投影方法与世界着色器所使用的环境纹理相容，因此可用来渲染环境贴图。若要查看默认映射，需将摄像机物体的旋转设置为(90, 0, "
 "-90)，也就是朝向X轴正向。这样便可以让摄像机朝向默认的环境纹理贴图的中央了。"
@@ -69,12 +82,23 @@ msgstr "鱼眼"
 msgid ""
 "Fisheye lenses are typically wide angle lenses with strong distortion, "
 "useful for creating panoramic images for e.g. dome projection, or as an "
-"artistic effect. The *Fisheye Equisolid* lens will best match real cameras. "
-"It provides a lens focal length and field of view angle, and will also take "
-"the sensor dimensions into account."
+"artistic effect. The *Fisheye Equisolid* lens will best match real "
+"cameras. It provides a lens focal length and field of view angle, and "
+"will also take the sensor dimensions into account."
 msgstr ""
 "鱼眼镜头属于典型的广角镜头，会产生强烈的扭曲，常用于制作全景图，例如圆顶投影或某些艺术效果等。Fisheye "
 "Equisolid（等立体角型鱼眼）镜头可与实现与真实摄像机的最佳匹配效果。它提供了镜头焦距和可视角度的设定，同时会考虑传感器的大小。"
+
+#: ../../manual/render/cycles/camera.rst:60
+#, fuzzy
+msgid ""
+"The *Fisheye Equidistant* lens does not correspond to any real lens "
+"model; it will give a circular fish-eye that doesn't take any sensor "
+"information into account but rather uses the whole sensor. This is a good"
+" lens for full dome projection."
+msgstr ""
+"Fisheye "
+"Equisolid（等立体角型鱼眼）镜头不属于任何一类真实镜头模型，它会产生一种不考虑任何传感器信息圆形鱼眼效果，但会使用完整的传感器。这种镜头非常适用于完整的圆顶投影。"
 
 #: ../../manual/render/cycles/camera.rst:64
 msgid "Lens"
@@ -90,46 +114,13 @@ msgstr "可视角"
 
 #: ../../manual/render/cycles/camera.rst:67
 msgid ""
-"Field of view angle, going to 360 and more to capture the whole environment."
+"Field of view angle, going to 360 and more to capture the whole "
+"environment."
 msgstr "镜头的可视角度值，设定为360或更高的角度值可拍摄到完整的环境。"
 
 #: ../../manual/render/cycles/camera.rst:71
 msgid "Depth of Field"
 msgstr "景深"
-
-#: ../../manual/render/cycles/camera.rst:126
-msgid "Clipping"
-msgstr "截断区间"
-
-#: ../../manual/render/cycles/camera.rst:135
-msgid "Clip Start and End"
-msgstr "截断起始点和截断结束点"
-
-#: ../../manual/render/cycles/camera.rst:33
-#, fuzzy
-msgid ""
-"Cycles supports Equirectangular and Fisheye panoramic cameras. Note that "
-"these can't be displayed with OpenGL rendering in the view-port; they will "
-"only work for rendering."
-msgstr "Cycles支持方形与鱼眼两种全景类型，需要注意到是，它们都无法在OpenGL渲染时正常显示，只会体现在渲染结果中。"
-
-#: ../../manual/render/cycles/camera.rst:41
-msgid ""
-"Render a panoramic view of the scenes from the camera location and use an "
-"equirectangular projection, always rendering the full 360- over the X-axis "
-"and 180- over the Y-axis."
-msgstr ""
-
-#: ../../manual/render/cycles/camera.rst:60
-#, fuzzy
-msgid ""
-"The *Fisheye Equidistant* lens does not correspond to any real lens model; "
-"it will give a circular fish-eye that doesn't take any sensor information "
-"into account but rather uses the whole sensor. This is a good lens for full "
-"dome projection."
-msgstr ""
-"Fisheye "
-"Equisolid（等立体角型鱼眼）镜头不属于任何一类真实镜头模型，它会产生一种不考虑任何传感器信息圆形鱼眼效果，但会使用完整的传感器。这种镜头非常适用于完整的圆顶投影。"
 
 #: ../../manual/render/cycles/camera.rst:77
 msgid "Focus"
@@ -137,8 +128,8 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:76
 msgid ""
-"Set an object to be used as a focal point by the camera, causing the camera "
-"to focus on the selected object."
+"Set an object to be used as a focal point by the camera, causing the "
+"camera to focus on the selected object."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:82
@@ -147,9 +138,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:80
 msgid ""
-"When an object is not used, the camera can be set to focus on an area in 3D "
-"space set by the distance from the camera. Using the *Limit* Display option,"
-" you are able to view the distance in the 3D space."
+"When an object is not used, the camera can be set to focus on an area in "
+"3D space set by the distance from the camera. Using the *Limit* Display "
+"option, you are able to view the distance in the 3D space."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:87
@@ -158,10 +149,10 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:85
 msgid ""
-"Enables the High Quality *view-port* depth of field, giving a more accurate "
-"representation of *depth of field*. This allows the view-port depth of field"
-" to be closely represented to that of the render and render preview depth of"
-" field."
+"Enables the High Quality *view-port* depth of field, giving a more "
+"accurate representation of *depth of field*. This allows the view-port "
+"depth of field to be closely represented to that of the render and render"
+" preview depth of field."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:91
@@ -170,8 +161,8 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:90
 msgid ""
-"Viewport depth of field aperture measured in F-Stops. Smaller numbers will "
-"cause more blur in the view-port, OpenGL renders, and sequencer."
+"Viewport depth of field aperture measured in F-Stops. Smaller numbers "
+"will cause more blur in the view-port, OpenGL renders, and sequencer."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:96
@@ -181,9 +172,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:94
 msgid ""
-"The number of polygonal sides to give blurred objects in the view-port. The "
-"minimum number of blades needed to enable the bokeh effect is 3 (triangle). "
-"*Only available with High Quality*"
+"The number of polygonal sides to give blurred objects in the view-port. "
+"The minimum number of blades needed to enable the bokeh effect is 3 "
+"(triangle). (Only available with High Quality)."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:100
@@ -192,9 +183,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:99
 msgid ""
-"Use F-Stop or Radius to set the aperture for the render, and render preview."
-" F-Stop is the focal ratio, where Radius is the the raidus of the focal "
-"point."
+"Use F-Stop or Radius to set the aperture for the render, and render "
+"preview. F-Stop is the focal ratio, where Radius is the the raidus of the"
+" focal point."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:105
@@ -203,9 +194,10 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:103
 msgid ""
-"Aperture radius *size*, or F-Stop *number* used for the render, and render "
-"preview. Using the F-Stop with a low number, or Radius with a large size "
-"will result in a strong blur, also allowing the use of the *bokeh effect*."
+"Aperture radius *size*, or F-Stop *number* used for the render, and "
+"render preview. Using the F-Stop with a low number, or Radius with a "
+"large size will result in a strong blur, also allowing the use of the "
+"*bokeh effect*."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:108
@@ -232,16 +224,25 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:117
 msgid ""
-"Change the amount of distortion to simulate the anamorphic bokeh effect. A "
-"setting of 1.0 shows no distortion, where a number below 1.0 will cause a "
-"horizontal distortion, and a higher number will cause a vertical distortion."
+"Change the amount of distortion to simulate the anamorphic bokeh effect. "
+"A setting of 1.0 shows no distortion, where a number below 1.0 will cause"
+" a horizontal distortion, and a higher number will cause a vertical "
+"distortion."
 msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:126
+msgid "Clipping"
+msgstr "截断区间"
+
+#: ../../manual/render/cycles/camera.rst:135
+msgid "Clip Start and End"
+msgstr "截断起始点和截断结束点"
 
 #: ../../manual/render/cycles/camera.rst:129
 msgid ""
-"The interval in which objects are directly visible, Any objects outside this"
-" range still influence the image indirectly, as further light bounces are "
-"not clipped."
+"The interval in which objects are directly visible, Any objects outside "
+"this range still influence the image indirectly, as further light bounces"
+" are not clipped."
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:133
@@ -249,68 +250,19 @@ msgid ":ref:`Camera Clipping <camera-clipping>`."
 msgstr ""
 
 #~ msgid ""
-#~ "Cycles supports Equirectangular and Fisheye panoramic cameras. Note that "
-#~ "these can't be displayed with OpenGL rendering in the viewport; they will "
-#~ "only work for rendering."
-#~ msgstr "Cycles支持方形与鱼眼两种全景类型，需要注意到是，它们都无法在OpenGL渲染时正常显示，只会体现在渲染结果中。"
-
-#~ msgid ""
-#~ "Render a panoramic view of the scenes from the camera location and use an "
-#~ "equirectangular"
-#~ msgstr "根据摄像机的位置，通过方形投影方法对场景进行全景视角的渲染"
-
-#~ msgid ""
-#~ "projection, always rendering the full 360- over the X-axis and 180- over the"
-#~ " Y-axis."
-#~ msgstr "，并且总是渲染X轴向上360°的完整视角，以及Y轴向上的180°的视角范围。"
-
-#~ msgid ""
-#~ "The *Fisheye Equidistant* lens does not correspond to any real lens model; "
-#~ "it will give a circular fisheye that doesn't take any sensor information "
-#~ "into account but rather uses the whole sensor. This is a good lens for full "
-#~ "dome projection."
 #~ msgstr ""
-#~ "Fisheye "
-#~ "Equisolid（等立体角型鱼眼）镜头不属于任何一类真实镜头模型，它会产生一种不考虑任何传感器信息圆形鱼眼效果，但会使用完整的传感器。这种镜头非常适用于完整的圆顶投影。"
 
 #~ msgid "Aperture Type"
 #~ msgstr "光圈类型"
 
-#~ msgid ""
-#~ "Method with which to specify the size of the camera opening through which "
-#~ "light enters. With Radius the radius of the opening can be specified, while "
-#~ "F/Stop specifies the size relative to the camera focal length, a measure "
-#~ "more common in photography. Their relation is: *aperture radius = focal "
-#~ "length / (2 f-stop)*"
-#~ msgstr ""
-#~ "控制光圈（让光线进入相机）数值的方法。使用透镜半径（光圈大小）半径数据可以控制；使用光圈级数可以控制相机焦距的长度，这在摄影学中更常用。对于真实摄像机而言，光圈大小可以通过焦距和光圈级数进行调节，他们之间的关系是：“光圈大小=焦距/(2"
-#~ " * 光圈值)”"
-
 #~ msgid "Aperture Size"
 #~ msgstr "光圈大小"
-
-#~ msgid ""
-#~ "Also called lens radius. If this is zero, all objects will appear in focus, "
-#~ "while larger values will make objects farther than the focal distance appear"
-#~ " out of focus."
-#~ msgstr "摄像机入光口的大小（有时也称“透镜半径”）。如果设为0，所有物体都将得到清晰的呈现。值越大，则距离焦距较远的物体会变得模糊。"
 
 #~ msgid "Aperture F/Stop"
 #~ msgstr "光圈级数"
 
-#~ msgid ""
-#~ "Also called F-number or relative aperture. Lower numbers give more depth of "
-#~ "field; higher numbers give a sharper image."
-#~ msgstr "也被称作光圈数值或者相对光圈。小数值可以拍出更多焦散；高数值给出更锐利的图像。"
-
 #~ msgid "Aperture Blades"
 #~ msgstr "光圈形状"
-
-#~ msgid ""
-#~ "If this setting is 3 or more, a polygonal-shaped aperture will be used "
-#~ "instead of a circle, which will affect the shape of out of focus highlights "
-#~ "in the rendered image."
-#~ msgstr "如果设定为3或更大的值，圆形光圈将被多边形状的光圈所取代，这将影响到最终渲染图中焦距外的高光所呈现的形状。"
 
 #~ msgid "Aperture Rotation"
 #~ msgstr "光圈转角"
@@ -322,16 +274,11 @@ msgstr ""
 #~ msgstr "焦距"
 
 #~ msgid ""
-#~ "Distance at which objects are in perfect focus. Alternatively, an object can"
-#~ " be specified whose distance from the camera will be used."
-#~ msgstr "物体呈现最清晰效果时的焦距值，另外，也可以指定某物体，将它与摄像机间的直线距离用作焦距。"
-
-#~ msgid ""
-#~ "The interval in which objects are directly visible. Any objects outside this"
-#~ " range still influence the image indirectly, as further light bounces are "
-#~ "not clipped. For OpenGL rendering, setting clipping distances to limited "
-#~ "values is important to ensure sufficient rasterization precision. Ray "
-#~ "tracing does not suffer from this issue much, and as such more extreme "
-#~ "values can safely be set."
+#~ "The number of polygonal sides to "
+#~ "give blurred objects in the view-"
+#~ "port. The minimum number of blades "
+#~ "needed to enable the bokeh effect "
+#~ "is 3 (triangle). *Only available with"
+#~ " High Quality*"
 #~ msgstr ""
-#~ "在该区间内的物体均直接可见。此区间外的任何物体仍然会对渲染结果产生间接的影响，因为远处的光线反弹不会被覆盖。对于OpenGL渲染而言，将覆盖区间设定为有限的值，这对于有效保证光栅化精度至关重要。而对于光线追踪而言则无关紧要，而区间值也完全可以设得大一些。"
+
