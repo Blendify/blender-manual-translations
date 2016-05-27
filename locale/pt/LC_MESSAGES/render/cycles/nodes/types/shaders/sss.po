@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-05 17:14+1000\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgid ""
 "distinctive red-colored shadows, and a soft appearance."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:27
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:30
 msgid "Falloff"
 msgstr ""
 
@@ -47,80 +47,92 @@ msgid "Lighting distance falloff function."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:19
-msgid ""
-"**Cubic** is a sharp falloff useful for many simple materials. The "
-"function is (radius - x) :sup:`3`"
+msgid "Cubic"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:20
 msgid ""
-"**Gaussian** gives a smoother falloff following a normal distribution, "
-"which is particularly useful for more advanced materials that use "
-"measured data that was fitted to one or more such Gaussian functions. The"
-" function is e :sup:`-8x`:sup:`2`:sup:`/radius`:sup:`2`, such that the "
-"radius roughly matches the maximum falloff distance. To match a given "
-"measured variance v, set radius = sqrt(16*v)."
+"Is a sharp falloff useful for many simple materials. The function is "
+"(*radius* - *x*)\\ :sup:`3` \\"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:26
-msgid ""
-"**Christensen-Burley** is an approximation to physically based volume "
-"scattering. Gives less blurry results than Cubic and Gaussian functions."
+msgid "Gaussian"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:29
-msgid "Color input"
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:22
+msgid ""
+"Gives a smoother falloff following a normal distribution, which is "
+"particularly useful for more advanced materials that use measured data "
+"that was fitted to one or more such Gaussian functions. The function is e"
+" :sup:`-8x^2/ radius^2`, such that the radius roughly matches the maximum"
+" falloff distance. To match a given measured variance *v*, set *radius* ="
+" sqrt(16 \\* \\ *v*)."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:30
+msgid "Christensen-Burley"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:29
+msgid ""
+"Is an approximation to physically based volume scattering. Gives less "
+"blurry results than Cubic and Gaussian functions."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:32
+msgid "Color input"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:33
 msgid ""
 "Color of the surface, or physically speaking, the probability that light "
 "is reflected for each wavelength."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:31
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:34
 msgid "Scale input"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:32
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:35
 msgid "Global scale factor for the scattering radius."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:33
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:36
 msgid "Radius input"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:34
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:37
 msgid ""
 "Scattering radius for each RGB color channel, the maximum distance that "
 "light can scatter."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:36
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:39
 msgid "Sharpness input"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:36
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:39
 msgid ""
-"Used only with **Cubic** falloff. Values increasing from 0 to 1 prevents "
+"Used only with *Cubic* falloff. Values increasing from 0 to 1 prevents "
 "softening of sharp edges and reduces unwanted darkening."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:38
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:41
 msgid "Normal input"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:39
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:42
 msgid ""
 "Normal used for shading; if nothing is connected the default shading "
 "normal is used."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:48
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:51
 msgid "Texture Blur input"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:41
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:44
 msgid ""
 "How much of the texture will be blurred along with the lighting, mixing "
 "the texture at the incoming and outgoing points on the surface. Note that"
@@ -134,17 +146,51 @@ msgid ""
 "higher value."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:52
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:55
 msgid "BSSRDF output"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:51
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:54
 msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution "
 "function)` shader."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:56
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:59
 msgid "A skin-toned SSS shader with color radius: 1.0, 0.8, 0.5."
 msgstr ""
+
+#~ msgid ""
+#~ "**Cubic** is a sharp falloff useful "
+#~ "for many simple materials. The function"
+#~ " is (radius - x) :sup:`3`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Gaussian** gives a smoother falloff "
+#~ "following a normal distribution, which "
+#~ "is particularly useful for more advanced"
+#~ " materials that use measured data "
+#~ "that was fitted to one or more "
+#~ "such Gaussian functions. The function is"
+#~ " e :sup:`-8x`:sup:`2`:sup:`/radius`:sup:`2`, such "
+#~ "that the radius roughly matches the "
+#~ "maximum falloff distance. To match a "
+#~ "given measured variance v, set radius"
+#~ " = sqrt(16*v)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Christensen-Burley** is an approximation "
+#~ "to physically based volume scattering. "
+#~ "Gives less blurry results than Cubic "
+#~ "and Gaussian functions."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Used only with **Cubic** falloff. Values"
+#~ " increasing from 0 to 1 prevents "
+#~ "softening of sharp edges and reduces "
+#~ "unwanted darkening."
+#~ msgstr ""
 

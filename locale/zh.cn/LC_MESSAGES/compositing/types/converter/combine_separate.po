@@ -3,20 +3,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 23:58+1100\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:4
 msgid "Combine/Separate Nodes"
 msgstr ""
 
+#: ../../manual/compositing/types/converter/combine_separate.rst:6
+msgid ""
+"All of these nodes do essentially the same thing: they split out an image"
+" into (or recombine an image from) it's composite color channels. Each "
+"format supports the Alpha (transparency) channel. The standard way of "
+"representing color in an image is called a *color space*. There are "
+"several color spaces supported:"
+msgstr ""
+
 #: ../../manual/compositing/types/converter/combine_separate.rst:12
 msgid "RGB"
+msgstr ""
+
+#: ../../manual/compositing/types/converter/combine_separate.rst:13
+msgid ""
+"Red-Green-Blue traditional primary colors also broadcast directly to most"
+" computer monitors"
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:22
@@ -25,8 +41,8 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:15
 msgid ""
-"Three values, often considered as more intuitive than the RGB system (nearly"
-" only used on computers):"
+"Three values, often considered as more intuitive than the RGB system "
+"(nearly only used on computers):"
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:17
@@ -34,12 +50,21 @@ msgid "Hue"
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:18
-msgid ""
-"the **Hue** of the color (in some way, choose a 'color' of the rainbow);"
+msgid "The *Hue* of the color (in some way, choose a 'color' of the rainbow);"
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:19
 msgid "Saturation"
+msgstr ""
+
+#: ../../manual/compositing/types/converter/combine_separate.rst:20
+msgid ""
+"The *quantity* of hue in the color (from desaturating - a shade of gray -"
+" to saturate - brighter colors)"
+msgstr ""
+
+#: ../../manual/compositing/types/converter/combine_separate.rst:22
+msgid "Value: the *brightness* of the color"
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:22
@@ -54,8 +79,8 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:25
 msgid ""
-"Luminance-Chrominance standard used in broadcasting analog PAL (European) "
-"video."
+"Luminance-Chrominance standard used in broadcasting analog PAL (European)"
+" video."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:28
@@ -64,9 +89,9 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:27
 msgid ""
-"Luminance-ChannelBlue-ChannelRed Component video for digital broadcast use, "
-"whose standards have been updated for HDTV and commonly referred to as the "
-"HDMI format for component video."
+"Luminance-ChannelBlue-ChannelRed Component video for digital broadcast "
+"use, whose standards have been updated for HDTV and commonly referred to "
+"as the HDMI format for component video."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:30
@@ -83,8 +108,8 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:42
 msgid ""
-"This node separates an image into its red, green, blue and alpha channels. "
-"There's a socket for each channel on the right."
+"This node separates an image into its red, green, blue and alpha "
+"channels. There's a socket for each channel on the right."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:48
@@ -93,13 +118,31 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:50
 msgid ""
-"This node combines separate input images as each color and alpha channel, "
-"producing a composite image. You use this node combine the channels after "
-"working on each color channel separately."
+"This node combines separate input images as each color and alpha channel,"
+" producing a composite image. You use this node combine the channels "
+"after working on each color channel separately."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:56
 msgid "Examples"
+msgstr ""
+
+#: ../../manual/compositing/types/converter/combine_separate.rst:61
+msgid ""
+"In this first example, we take the Alpha channel and blur it, and then "
+"combine it back with the colors. When placed in a scene, the edges of it "
+"will blend in, instead of having a hard edge. This is almost like anti-"
+"aliasing but in a three-dimensional sense. Use this noodle when adding CG"
+" elements to live action to remove any hard edges. Animating this effect "
+"on a broader scale will make the object appear to \"phase\" in and out, "
+"as an \"out-of-phase\" time-traveling sync effect."
+msgstr ""
+
+#: ../../manual/compositing/types/converter/combine_separate.rst:72
+msgid ""
+"In this node set up, we make all the reds become green, and all the green"
+" both Red and Blue, and remove Blue from the image completely. Very cute."
+" Very fun."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:78
@@ -113,8 +156,19 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:85
 msgid ""
-"This node separates an image into image maps for the hue, saturation, value "
-"and alpha channels."
+"This node separates an image into image maps for the hue, saturation, "
+"value and alpha channels."
+msgstr ""
+
+#: ../../manual/compositing/types/converter/combine_separate.rst:87
+msgid ""
+"Use and manipulate the separated channels for different purposes; i.e. to"
+" achieve some compositing/color adjustment result. For example, you could"
+" expand the Value channel (by using the Multiply Node) to make all the "
+"colors brighter. You could make an image more relaxed by diminishing (via"
+" the divide or map value node) the Saturation channel. You could isolate "
+"a specific range of colors (by clipping the Hue channel via the Colorramp"
+" node) and change their color (by the Add/Subtract mix node)."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:102
@@ -128,8 +182,8 @@ msgstr ""
 #: ../../manual/compositing/types/converter/combine_separate.rst:109
 msgid ""
 "This node converts an RGBA image to YUVA color space, then splits each "
-"channel out to its own output so that they can be manipulated independently."
-" Note that U and V values range from -0.5 to +0.5."
+"channel out to its own output so that they can be manipulated "
+"independently. Note that U and V values range from -0.5 to +0.5."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:116
@@ -138,9 +192,9 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:118
 msgid ""
-"Combines the channels back into a composite image. If you do not connect any"
-" input socket, you can set a default value for the whole image for that "
-"channel using the numeric controls shown."
+"Combines the channels back into a composite image. If you do not connect "
+"any input socket, you can set a default value for the whole image for "
+"that channel using the numeric controls shown."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:123
@@ -154,7 +208,8 @@ msgstr ""
 #: ../../manual/compositing/types/converter/combine_separate.rst:130
 msgid ""
 "This node converts an RGBA image to YCbCrA color space, then splits each "
-"channel out to its own output so that they can be manipulated independently:"
+"channel out to its own output so that they can be manipulated "
+"independently:"
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:133
@@ -172,8 +227,8 @@ msgstr ""
 #: ../../manual/compositing/types/converter/combine_separate.rst:139
 msgid ""
 "If running these channels through a ColorRamp to adjust value, use the "
-"Cardinal scale for accurate representation. Using the Exponential scale on "
-"the luminance channel gives high-contrast effect."
+"Cardinal scale for accurate representation. Using the Exponential scale "
+"on the luminance channel gives high-contrast effect."
 msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:146
@@ -182,108 +237,30 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/combine_separate.rst:148
 msgid ""
-"So, I kinda think you get the idea, and I was trying to think of some other "
-"creative way to write down the same thing, but I can't. So, you'll have to "
-"figure this node out on your own."
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:22
-msgid "Value: the **luminosity** of the color"
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:6
-msgid ""
-"All of these nodes do essentially the same thing: they split out an image "
-"into (or recombine an image from) it's composite color channels. Each format"
-" supports the Alpha (transparency) channel. The standard way of representing"
-" color in an image is called a *color space*. There are several color spaces"
-" supported:"
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:13
-msgid ""
-"Red-Green-Blue traditional primary colors also broadcast directly to most "
-"computer monitors"
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:20
-msgid ""
-"the **quantity** of hue in the color (from desaturating - a shade of gray - "
-"to saturate - brighter colors)"
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:61
-msgid ""
-"In this first example, we take the Alpha channel and blur it, and then "
-"combine it back with the colors. When placed in a scene, the edges of it "
-"will blend in, instead of having a hard edge. This is almost like anti-"
-"aliasing but in a three-dimensional sense. Use this noodle when adding CG "
-"elements to live action to remove any hard edges. Animating this effect on a"
-" broader scale will make the object appear to \"phase\" in and out, as an "
-"\"out-of-phase\" time-traveling sync effect."
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:72
-msgid ""
-"In this node set up, we make all the reds become green, and all the green "
-"both Red and Blue, and remove Blue from the image completely. Very cute. "
-"Very fun."
-msgstr ""
-
-#: ../../manual/compositing/types/converter/combine_separate.rst:87
-msgid ""
-"Use and manipulate the separated channels for different purposes; i.e. to "
-"achieve some compositing/color adjustment result. For example, you could "
-"expand the Value channel (by using the Multiply Node) to make all the colors"
-" brighter. You could make an image more relaxed by diminishing (via the "
-"divide or map value node) the Saturation channel. You could isolate a "
-"specific range of colors (by clipping the Hue channel via the Colorramp "
-"node) and change their color (by the Add/Subtract mix node)."
+"So, I kinda think you get the idea, and I was trying to think of some "
+"other creative way to write down the same thing, but I can't. So, you'll "
+"have to figure this node out on your own."
 msgstr ""
 
 #~ msgid ""
-#~ "All of these node do essentially the same thing: they split out an image "
-#~ "into (or recombine an image from) its composite color channels. Each format "
-#~ "supports the Alpha (transparency) channel. The standard way of representing "
-#~ "color in an image is called a *color space*. There are several color spaces "
-#~ "supported:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Red-Green-Blue traditional primary colors, also broadcast directly to most "
-#~ "computer monitors"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "the **quantity** of hue in the color (from desaturate - shade of gray - to "
-#~ "saturate - brighter colors)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In this first example, we take the Alpha channel and blur it, and then "
-#~ "combine it back with the colors. When placed in a scene, the edges of it "
-#~ "will blend in, instead of having a hard edge. This is almost like anti-"
-#~ "aliasing, but in a three-dimensional sense. Use this noodle when adding CG "
-#~ "elements to live action to remove any hard edges. Animating this effect over"
-#~ " a broader scale will make the object appear to \"phase\" in and out, as a "
-#~ "\"out-of-phase\" time-traveling sync effect."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In this fun little noodle we make all the reds become green, and all the "
-#~ "green both Red and Blue, and remove Blue from the image completely. Very "
-#~ "cute. Very fun."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Use and manipulate the separated channels for different purposes; i.e. to "
-#~ "achieve some compositing/color adjustment result. For example, you could "
-#~ "expand the Value channel (by using the multiply node) to make all the colors"
-#~ " brighter. You could make an image more relaxed by diminishing (via the "
-#~ "divide or map value node) the Saturation channel. You could isolate a "
-#~ "specific range of colors (by clipping the Hue channel via the Colorramp "
-#~ "node) and change their color (by the Add/Subtract mix node)."
 #~ msgstr ""
 
 #~ msgid "Value: the luminosity of the color"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "the **Hue** of the color (in some"
+#~ " way, choose a 'color' of the "
+#~ "rainbow);"
+#~ msgstr ""
+
+#~ msgid "Value: the **luminosity** of the color"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the **quantity** of hue in the "
+#~ "color (from desaturating - a shade "
+#~ "of gray - to saturate - brighter"
+#~ " colors)"
+#~ msgstr ""
+

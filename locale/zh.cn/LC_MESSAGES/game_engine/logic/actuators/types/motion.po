@@ -3,13 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 23:58+1100\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/game_engine/logic/actuators/types/motion.rst:4
 msgid "Motion Actuator"
@@ -22,188 +23,205 @@ msgid ""
 "rotate, or dynamically move."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:10
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:12
 msgid ""
-"See :doc:`Actuator Common Options "
+":doc:`Actuator Common Options "
 "</game_engine/logic/actuators/common_options>` for common options."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:13
-msgid "Special Options: **Motion Type**, which determines the type of motion:"
-msgstr ""
-
 #: ../../manual/game_engine/logic/actuators/types/motion.rst:15
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:31
-msgid "Simple Motion"
-msgstr ""
-
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:16
-msgid "Applies a change in location and/or rotation directly."
+msgid "Special Options:"
 msgstr ""
 
 #: ../../manual/game_engine/logic/actuators/types/motion.rst:18
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:52
-msgid "Servo Control"
-msgstr ""
-
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:18
-msgid "Sets a target speed, and also how quickly it reaches that speed."
+msgid "Motion Type"
 msgstr ""
 
 #: ../../manual/game_engine/logic/actuators/types/motion.rst:20
-msgid ""
-"The `Simple Motion`_ actuator gives control over position and velocity, but "
-"does this as an instant displacement; the object never passes any of the "
-"coordinates between the start and end positions. This can interfere with the"
-" physical simulation of other objects, and can cause an object to go through"
-" another object. The `Servo Control`_ actuator does not suffer from this, "
-"since it produces physically correct velocities, and leaves updating the "
-"position to the physics simulation."
+msgid "Which determines the type of motion:"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:36
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:22
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:38
+msgid "Simple Motion"
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:23
+msgid "Applies a change in location and/or rotation directly."
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:25
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:59
+msgid "Servo Control"
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:25
+msgid "Sets a target speed, and also how quickly it reaches that speed."
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:27
+msgid ""
+"The `Simple Motion`_ actuator gives control over position and velocity, "
+"but does this as an instant displacement; the object never passes any of "
+"the coordinates between the start and end positions. This can interfere "
+"with the physical simulation of other objects, and can cause an object to"
+" go through another object. The `Servo Control`_ actuator does not suffer"
+" from this, since it produces physically correct velocities, and leaves "
+"updating the position to the physics simulation."
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:43
 msgid "Motion actuator for Simple Motion"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:41
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:48
 msgid "Loc"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:40
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:47
 msgid ""
-"The object jumps the number of blender units entered, each time a pulse is "
-"received."
+"The object jumps the number of blender units entered, each time a pulse "
+"is received."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:45
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:52
 msgid "Rot"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:44
-msgid ""
-"The object rotates by the specified amount, each time a pulse is received."
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:51
+msgid "The object rotates by the specified amount, each time a pulse is received."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:49
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:92
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:56
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:99
 msgid "L"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:48
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:55
 msgid "Coordinates specified are Global (gray) or Local (White)."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:57
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:64
 msgid "Motion actuator set to *Servo Control*"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:59
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:66
 msgid ""
 "The Servo Control actuator influences the velocity of a game object by "
 "applying forces, resulting in correct behavior when colliding with other "
-"objects controlled by the physics simulation. The amount of force necessary "
-"is determined by a `PID controller`_, a type of controller that is often "
-"used in control systems. Only the positional velocity is influenced by this "
-"actuator; it does not control rotation at all, and it controls position only"
-" indirectly."
+"objects controlled by the physics simulation. The amount of force "
+"necessary is determined by a `PID controller`_, a type of controller that"
+" is often used in control systems. Only the positional velocity is "
+"influenced by this actuator; it does not control rotation at all, and it "
+"controls position only indirectly."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:67
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:74
 msgid ""
-"Controlling the position is not necessary in that respect; that is left to a"
-" player moving the object via direction-type controls (such as the WSAD keys"
-" in a first person shooter). In such a scenario, each direction-key sensor "
-"should be attached to a different Servo Control actuator setting a different"
-" target velocity."
-msgstr ""
-
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:75
-msgid ""
-"To use the Servo Control actuator, it is necessary to set the object's "
-"Physics Type to \"Dynamic\" or \"Rigid Body\", and to mark the object as "
-"\"Actor\" in the same panel. This actuator does not work with the Character "
-"physics type."
-msgstr ""
-
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:85
-msgid "Reference Object"
+"Controlling the position is not necessary in that respect; that is left "
+"to a player moving the object via direction-type controls (such as the "
+"WSAD keys in a first person shooter). In such a scenario, each direction-"
+"key sensor should be attached to a different Servo Control actuator "
+"setting a different target velocity."
 msgstr ""
 
 #: ../../manual/game_engine/logic/actuators/types/motion.rst:82
 msgid ""
-"Specifies the object which the actuator uses as a reference for the "
-"velocity. When set, it will use a velocity relative to that object instead "
-"of absolute (i.e. world-relative) velocity. Use this for a player object "
-"standing on a moving platform."
+"To use the Servo Control actuator, it is necessary to set the object's "
+"Physics Type to \"Dynamic\" or \"Rigid Body\", and to mark the object as "
+"\"Actor\" in the same panel. This actuator does not work with the "
+"Character physics type."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:88
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:92
+msgid "Reference Object"
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:89
+msgid ""
+"Specifies the object which the actuator uses as a reference for the "
+"velocity. When set, it will use a velocity relative to that object "
+"instead of absolute (i.e. world-relative) velocity. Use this for a player"
+" object standing on a moving platform."
+msgstr ""
+
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:95
 msgid "Linear Velocity"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:88
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:95
 msgid "The target linear velocity for the object."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:91
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:98
 msgid ""
 "Determines whether the Linear Velocity specified are in Local (button "
 "depressed) or Global (button released) coordinates."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:97
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:104
 msgid "X, Y, Z force limits"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:95
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:102
 msgid ""
 "Sets minimum and maximum limits for the force applied to the object. If "
 "disabled (i.e. X, Y or Z buttons are depressed) the force applied is "
 "unlimited."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:99
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:106
 msgid ""
 "The following three coefficients determine the response to the *velocity "
-"error*, which is the difference between the target velocity and the object's"
-" actual velocity."
+"error*, which is the difference between the target velocity and the "
+"object's actual velocity."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:107
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:114
 msgid "Proportional Coefficient"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:104
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:111
 msgid ""
-"This controls the reaction proportional to the velocity error. Small values "
-"cause smooth (but possibly too slow) changes in velocity. Higher values "
-"cause rapid changes, but may cause overshooting."
+"This controls the reaction proportional to the velocity error. Small "
+"values cause smooth (but possibly too slow) changes in velocity. Higher "
+"values cause rapid changes, but may cause overshooting."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:120
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:127
 msgid "Integral Coefficient"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:110
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:117
 msgid ""
 "This controls the reaction to the sum of errors so far. Using only the "
-"Proportional component results in a systematic velocity error if there is "
-"friction: some velocity delta is necessary to produce the force that "
+"Proportional component results in a systematic velocity error if there is"
+" friction: some velocity delta is necessary to produce the force that "
 "compensates the friction. Using the Integral component suppresses this "
 "effect (the target velocity is achieved on average) but can create "
 "oscillations; the control will speed to compensate the initial velocity "
 "error. To avoid the oscillation, the Proportional component must be used "
-"with the Integral component (the Proportional component damps the control) "
-"This is why the GUI sets the Proportional Coefficient systematically when "
-"you change the Integral Coefficient."
+"with the Integral component (the Proportional component damps the "
+"control) This is why the GUI sets the Proportional Coefficient "
+"systematically when you change the Integral Coefficient."
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:124
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:131
 msgid "Derivative Coefficient"
 msgstr ""
 
-#: ../../manual/game_engine/logic/actuators/types/motion.rst:123
+#: ../../manual/game_engine/logic/actuators/types/motion.rst:130
 msgid ""
 "Set the Derivative Coefficient. This dampens the acceleration when the "
 "target velocity is almost reached."
 msgstr ""
+
+#~ msgid ""
+#~ "See :doc:`Actuator Common Options "
+#~ "</game_engine/logic/actuators/common_options>` for common"
+#~ " options."
+#~ msgstr ""
+
+#~ msgid "Special Options: **Motion Type**, which determines the type of motion:"
+#~ msgstr ""
+

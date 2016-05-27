@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-27 11:07+1000\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
 "PO-Revision-Date: 2015-11-15 11:34+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,10 +40,10 @@ msgid "Texture"
 msgstr "纹理"
 
 #: ../../manual/modeling/modifiers/deform/displace.rst:22
+#, fuzzy
 msgid ""
 "The name of the texture from which the displacement for each vertex is "
-"derived. If this field is empty, the modifier defaults to ``1.0`` "
-"(white)."
+"derived. If this field is empty, the modifier defaults to 1.0 (white)."
 msgstr "给每个顶点偏移量的纹理的名称。如果该字段为空，修改器默认取值``1.0`` （白色）。"
 
 #: ../../manual/modeling/modifiers/deform/displace.rst:36
@@ -178,7 +178,7 @@ msgid ""
 "modifier. If left empty, the modifier affects all vertices equally."
 msgstr "用来控制修改器影响因子的顶点数组的名字。如果留空，修改器会同样影响所有的顶点。"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:89
+#: ../../manual/modeling/modifiers/deform/displace.rst:90
 msgid "Midlevel"
 msgstr "中间值"
 
@@ -191,35 +191,46 @@ msgid ""
 msgstr "没有使用移位修改器的纹理值。低于此值会在所选方向上负向偏移，高于此值会在所选方向上正向偏移。"
 
 #: ../../manual/modeling/modifiers/deform/displace.rst:87
+msgid "*displacement* = *texture_value* - *Midlevel*"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/displace.rst:89
+#, fuzzy
 msgid ""
-"This is achieved by the equation ``displacement = texture_value - "
-"Midlevel``. Recall that color/luminosity values are typically between "
-"``0.0`` and ``1.0`` in Blender, and not between ``0`` and ``255``."
+"Recall that color/ luminosity values are typically between (0.0 to 1.0) "
+"in Blender, and not between (0 to 255)."
 msgstr ""
 "这是通过方程 ``displacement = texture_value - Midlevel`` "
 "实现的。回想一下，color/luminosity 的值在 Blender 里通常是在 ``0.0`` 与 ``1.0`` 之间,而不是 "
 "``0`` and ``255`` 之间。"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:96
+#: ../../manual/modeling/modifiers/deform/displace.rst:99
 msgid "Strength"
 msgstr "强度"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:92
+#: ../../manual/modeling/modifiers/deform/displace.rst:93
+#, fuzzy
 msgid ""
 "The strength of the displacement. After offsetting by the *Midlevel* "
 "value, the displacement will be multiplied by the *Strength* value to "
-"give the final vertex offset. This is achieved by the equation "
-"``vertex_offset = displacement * Strength``. A negative strength can be "
-"used to invert the effect of the modifier."
+"give the final vertex offset."
 msgstr ""
 "移位的强度。偏移 *Midlevel* 数值之后，移位将被乘以 *Strength* 值得到最终的顶点偏移量。这是通过方程 "
 "``vertex_offset = displacement * Strength`` 实现的。负的 strength 可以产生翻转的效果。"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:99
+#: ../../manual/modeling/modifiers/deform/displace.rst:96
+msgid "*vertex_offset* = *displacement* \\* *Strength*."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/displace.rst:98
+msgid "A negative strength can be used to invert the effect of the modifier."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/displace.rst:102
 msgid "Example"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:104
+#: ../../manual/modeling/modifiers/deform/displace.rst:107
 msgid ""
 "A highly subsurfed plane with an image of the Braille alphabet used as "
 "the displacement texture."
