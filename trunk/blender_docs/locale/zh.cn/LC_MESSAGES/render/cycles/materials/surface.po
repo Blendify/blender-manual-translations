@@ -3,16 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-22 04:13+0800\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
 "PO-Revision-Date: 2015-05-21 16:02+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.6\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/materials/surface.rst:5
 msgid "Surface"
@@ -20,16 +18,16 @@ msgstr "表面材质"
 
 #: ../../manual/render/cycles/materials/surface.rst:7
 msgid ""
-"The surface shader defines the light interaction at the surface of the mesh."
-" One or more :abbr:`BSDF (Bidirectional scattering distribution function)` s"
-" specify if incoming light is reflected back, refracted into the mesh, or "
-"absorbed."
+"The surface shader defines the light interaction at the surface of the "
+"mesh. One or more :abbr:`BSDF (Bidirectional scattering distribution "
+"function)` s specify if incoming light is reflected back, refracted into "
+"the mesh, or absorbed."
 msgstr "表面着色器定义了光线对网格外表面作用的结果。需由一个或多个 BSDF（双向散射分布函数）指定入射光是否被反射、折射或是吸收。"
 
 #: ../../manual/render/cycles/materials/surface.rst:11
 msgid ""
-"Emission defines how light is emitted from the surface, allowing any surface"
-" to become a light source."
+"Emission defines how light is emitted from the surface, allowing any "
+"surface to become a light source."
 msgstr "自发光定义了光线从表面发射的方式，可以让任意表面变成光源。"
 
 #: ../../manual/render/cycles/materials/surface.rst:16
@@ -37,74 +35,79 @@ msgid "Terminology"
 msgstr "术语解释"
 
 #: ../../manual/render/cycles/materials/surface.rst:19
-msgid "It defines how light is reflected and refracted at a surface."
+msgid "BSDF"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/surface.rst:19
+#, fuzzy
+msgid ""
+"stands for bidirectional scattering distribution function. It defines how"
+" light is reflected and refracted at a surface."
 msgstr "它定义了光线经过物体表面时的反射与折射方式。"
 
-#: ../../manual/render/cycles/materials/surface.rst:21
-msgid "Reflect an incoming ray on the same side of the surface."
-msgstr "会对来自与表面同侧的入射光线进行反射。"
+#: ../../manual/render/cycles/materials/surface.rst:22
+msgid "Reflection"
+msgstr ""
 
-#: ../../manual/render/cycles/materials/surface.rst:23
+#: ../../manual/render/cycles/materials/surface.rst:22
+#, fuzzy
 msgid ""
-"Transmit an incoming ray through the surface, leaving on the other side."
-msgstr "让入射光透过表面，从另外一侧透射出去。"
+":abbr:`BSDF (Bidirectional scattering distribution function)` s Reflect "
+"an incoming ray on the same side of the surface."
+msgstr "**折射** :abbr:`BSDF (双向散射分布函数)` s是一种 **透射** 类型"
 
 #: ../../manual/render/cycles/materials/surface.rst:25
+msgid "Transmission"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/surface.rst:25
+#, fuzzy
 msgid ""
-"Transmitting an incoming ray and changing its direction as it exits on the "
-"other side of the surface."
+":abbr:`BSDF (Bidirectional scattering distribution function)` s Transmit "
+"an incoming ray through the surface, leaving on the other side."
+msgstr "让入射光透过表面，从另外一侧透射出去。"
+
+#: ../../manual/render/cycles/materials/surface.rst:30
+msgid "Refraction"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/surface.rst:28
+#, fuzzy
+msgid ""
+":abbr:`BSDF (Bidirectional scattering distribution function)` s are a "
+"type of *Transmission*, Transmitting an incoming ray and changing its "
+"direction as it exits on the other side of the surface."
 msgstr "让入射光进行投射，并让它从其它方向的表面射出时改变其方向。"
 
-#: ../../manual/render/cycles/materials/surface.rst:29
+#: ../../manual/render/cycles/materials/surface.rst:33
 msgid "BSDF Parameters"
 msgstr "BSDF参数"
 
-#: ../../manual/render/cycles/materials/surface.rst:31
+#: ../../manual/render/cycles/materials/surface.rst:35
 msgid ""
-"A major difference from non-physically based renderers is that direct light "
-"reflection from lamps and indirect light reflection of other surfaces are "
-"not decoupled, but rather handled using a single :abbr:`BSDF (Bidirectional "
-"scattering distribution function)`. This limits the possibilities a bit, but"
-" we believe overall it is helpful in creating consistent-looking renders "
-"with fewer parameters to tune."
+"A major difference from non-physically based renderers is that direct "
+"light reflection from lamps and indirect light reflection of other "
+"surfaces are not decoupled, but rather handled using a single :abbr:`BSDF"
+" (Bidirectional scattering distribution function)`. This limits the "
+"possibilities a bit, but we believe overall it is helpful in creating "
+"consistent-looking renders with fewer parameters to tune."
 msgstr ""
 "与非物理渲染引擎的显著区别在于，对光源发出光线的直接反射，和其它表面的间接反射光并不是分离开的，而是使用了多种  :abbr:`BSDF "
 "(双向散射分布函数)` 。这会局限些许的可能性，然而我们相信，只需对为数不多的参数进行调节，就可以在总体上呈现出均衡的渲染效果。"
 
-#: ../../manual/render/cycles/materials/surface.rst:37
+#: ../../manual/render/cycles/materials/surface.rst:41
+#, fuzzy
 msgid ""
-"For glossy :abbr:`BSDF (Bidirectional scattering distribution function)` s, "
-"**roughness** parameters control the sharpness of the reflection, from 0.0 "
-"(perfectly sharp) to 1.0 (very soft). Compared to **hardness** or "
-"**exponent** parameters, it has the advantage of being in the range "
+"For glossy :abbr:`BSDF (Bidirectional scattering distribution function)` "
+"s, *roughness* parameters control the sharpness of the reflection, from "
+"0.0 (perfectly sharp) to 1.0 (very soft). Compared to *hardness* or "
+"*exponent* parameters, it has the advantage of being in the range "
 "0.0..1.0, and as a result gives more linear control and is more easily "
-"textureable. The relation is roughly: *roughness = 1 - 1/hardness*"
+"textureable. The relation is roughly: *roughness* = 1 - 1/*hardness*"
 msgstr ""
 "对于光泽 :abbr:`BSDF (双向散射分布函数)` "
 "s，roughness（粗糙度）参数控制着反射的锐度，从0.0的完美反射到1.0非常柔和的反射效果。与hardness（硬度）或exponent（指数）参数相比，它的优势在于能够在0.0到1.0之间取值，进而获得更多的线性控制以及更方便的纹理处理方式，他们的关系大致是这样的：粗糙度"
 " = 1 - 1/硬度"
-
-#: ../../manual/render/cycles/materials/surface.rst:18
-msgid "**BSDF** stands for bidirectional scattering distribution function."
-msgstr "**BSDF** 是“双向散射分布函数”的简称"
-
-#: ../../manual/render/cycles/materials/surface.rst:20
-msgid ""
-"**Reflection** :abbr:`BSDF (Bidirectional scattering distribution function)`"
-" s"
-msgstr "**反射** :abbr:`BSDF (双向散射分布函数)` s"
-
-#: ../../manual/render/cycles/materials/surface.rst:22
-msgid ""
-"**Transmission** :abbr:`BSDF (Bidirectional scattering distribution "
-"function)` s"
-msgstr "**透射** :abbr:`BSDF (双向散射分布函数)` s"
-
-#: ../../manual/render/cycles/materials/surface.rst:26
-msgid ""
-"**Refraction** :abbr:`BSDF (Bidirectional scattering distribution function)`"
-" s are a type of **Transmission**,"
-msgstr "**折射** :abbr:`BSDF (双向散射分布函数)` s是一种 **透射** 类型"
 
 #~ msgid "BSDF stands for bidirectional scattering distribution function."
 #~ msgstr "**BSDF** 是“双向散射分布函数”的简称"
@@ -117,3 +120,20 @@ msgstr "**折射** :abbr:`BSDF (双向散射分布函数)` s是一种 **透射**
 
 #~ msgid "Refraction BSDF s are a type of Transmission,"
 #~ msgstr ""
+
+#~ msgid "Reflect an incoming ray on the same side of the surface."
+#~ msgstr "会对来自与表面同侧的入射光线进行反射。"
+
+#~ msgid "**BSDF** stands for bidirectional scattering distribution function."
+#~ msgstr "**BSDF** 是“双向散射分布函数”的简称"
+
+#~ msgid ""
+#~ "**Reflection** :abbr:`BSDF (Bidirectional scattering"
+#~ " distribution function)` s"
+#~ msgstr "**反射** :abbr:`BSDF (双向散射分布函数)` s"
+
+#~ msgid ""
+#~ "**Transmission** :abbr:`BSDF (Bidirectional "
+#~ "scattering distribution function)` s"
+#~ msgstr "**透射** :abbr:`BSDF (双向散射分布函数)` s"
+

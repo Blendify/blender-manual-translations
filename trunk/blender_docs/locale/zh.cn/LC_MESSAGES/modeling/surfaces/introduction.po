@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-25 11:00+1000\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
 "PO-Revision-Date: 2015-12-17 21:15+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -33,11 +33,12 @@ msgstr ""
 " 不可能再添加曲线类型。）"
 
 #: ../../manual/modeling/surfaces/introduction.rst:18
+#, fuzzy
 msgid ""
 "As surfaces are 2D, they have two interpolation axes, U (as for curves) "
-"and V. It is important to understand that *you can control the "
-"interpolation rules (knot, order, resolution) independently for each of "
-"these two dimensions* (the *U* and *V* fields for all these settings, of "
+"and V. It is important to understand that you can control the "
+"interpolation rules (knot, order, resolution) *independently* for each of"
+" these two dimensions (the *U* and *V* fields for all these settings, of "
 "course)."
 msgstr "曲面同样是2D的，他有两个插值坐标轴，U（类似于曲线中的）和V坐标轴，你可以独立控制两个坐标轴（U和V的设置）的插值规则（节点，阶数，分辨率）。"
 
@@ -83,10 +84,11 @@ msgid "Visualization"
 msgstr "可视化"
 
 #: ../../manual/modeling/surfaces/introduction.rst:53
+#, fuzzy
 msgid ""
-"There is nearly no difference from NURBS curves, except that the ``U`` "
-"direction is indicated by yellow grid lines, and the ``V`` one is "
-"materialized by pink grid lines, as you can see in (*Surface*)."
+"There is nearly no difference from NURBS curves, except that the *U* "
+"direction is indicated by yellow grid lines, and the *V* one is "
+"materialized by pink grid lines, as you can see in Fig. Surface."
 msgstr "除了U向坐标是用黄色的网格线，V向坐标是由粉红网格线标识出来之外，曲面跟NURBS曲线几乎没有区别，你可以自己建一个曲面看看。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:58
@@ -158,9 +160,9 @@ msgid ""
 "A \"row\" is a set of control points forming one \"line\" in one "
 "interpolation direction (a bit similar to :ref:`edge loops <modeling-"
 "mesh-structure-edge_loops>` for meshes). So you have \"U-rows\" and "
-"\"V-rows\" in a NURBS surface. The key point is that *all rows of a given"
-" type (U or V) have the same number of control points*. Each control "
-"point belongs to exactly one U-row and one V-row."
+"\"V-rows\" in a NURBS surface. The key point is that *all* rows of a "
+"given type (U or V) have the *same* number of control points. Each "
+"control point belongs to exactly one U-row and one V-row."
 msgstr "“行”就是在一个插值方向的一组控制点（有点类似于网格的边循环），对NURBS曲面来说，有”U行”和”V行”，一个关键点是对于U向或V向行来说，每一行都有相同数目的控制点，每一个控制点都处在一个U行和V行的交界处。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:103
@@ -207,10 +209,11 @@ msgid "Resolution 3x3."
 msgstr "3 x3的分辨率。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:133
+#, fuzzy
 msgid ""
-"(*Resolution 1x1*) is an example of a surface resolution of 3 for both "
-"``U`` and ``V``. (*Resolution 3x3 surface*) is an example of a surface "
-"resolution of 12 for both ``U`` and ``V``."
+"Fig. Resolution 1x1 is an example of a surface resolution of 3 for both U"
+" and V. Fig. Resolution 3x3 surface is an example of a surface resolution"
+" of 12 for both U and V."
 msgstr "U,V方向都是1的分辨率和U,V方向都是3的分辨率"
 
 #: ../../manual/modeling/surfaces/introduction.rst:139
@@ -254,17 +257,19 @@ msgid "Endpoint U."
 msgstr "U向的端点模式。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:169
+#, fuzzy
 msgid ""
-"In (*Endpoint U*), the U interpolation axis is labeled as ``U`` and the V"
-" interpolation axis is labeled as ``V``. The ``U`` 's interpolation axis "
-"has been set to *Endpoint* and as such the surface now extends to the "
-"outer edges from ``E1`` to ``E2`` along the ``U`` interpolation axis."
+"In Fig. Endpoint U the U interpolation axis is labeled as *U* and the *V*"
+" interpolation axis is labeled as *V*. The *U* 's interpolation axis has "
+"been set to *Endpoint* and as such the surface now extends to the outer "
+"edges from E1 to E2 along the *U* interpolation axis."
 msgstr "如图所示，分别标识出了U向和V向，U向设置了端点模式，可以看出来，U向上的曲面延伸到了端点上，既从图上E1到E2。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:174
+#, fuzzy
 msgid ""
-"To cause the surface to extend to all edges you would set the ``V`` 's "
-"axis to *Endpoint* as well."
+"To cause the surface to extend to all edges you would set the *V* 's axis"
+" to *Endpoint* as well."
 msgstr "如果想让V向也这样延伸的话，只需要把V向也设置成端点模式既可。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:179
@@ -277,9 +282,9 @@ msgid ""
 "One more time, this property is the same as with :ref:`NURBS Curves "
 "<modeling-curve-order>`; it specifies how much the control points are "
 "taken into account for calculating the curve of the surface shape. For "
-"high *Orders*, (*1*), the surface pulls away from the control points, "
+"high Fig. Orders 1 the surface pulls away from the control points, "
 "creating a smoother surface - assuming that the `Surface Resolution`_ is "
-"high enough. For lowest *Orders*, (*2*), the surface follows the control "
+"high enough. For lowest Fig. Orders 2 the surface follows the control "
 "points, creating a surface that tends to follow the grid cage."
 msgstr "同样的，它跟曲线上的阶数拥有同样的含义，他指定了有多少控制点被列入到影响曲面形状的曲线计算当中。对于高阶来说：（1）曲面会离控制点更远，更平滑——在分辨率足够高的前提下，（2）曲面跟随控制点，创建一个倾向于跟随栅格笼子的曲面（自己试一试很容易知道这个别扭的描述说的是什么意思。）"
 
@@ -288,17 +293,19 @@ msgid "Order 2 and order 4 surface."
 msgstr "阶数2和阶数4"
 
 #: ../../manual/modeling/surfaces/introduction.rst:194
+#, fuzzy
 msgid ""
-"For illustration purposes, in both (*Order 4 surface*) and (*Order 2 "
-"surface*), the knot vectors were set to *Endpoint*, causing the surface "
-"to extend to all edges."
+"For illustration purposes, in both Fig. Order 4 surface and Fig. Order 2 "
+"surface, the knot vectors were set to *Endpoint*, causing the surface to "
+"extend to all edges."
 msgstr "出于演示的目的，它们都设置成了端点模式，所以曲面都延伸到了边界。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:197
+#, fuzzy
 msgid ""
 "You can set independently the order for each interpolation axis, and like"
-" curves, it cannot be lower than **2**, and higher than **6** or the "
-"number of control points on the relevant axis."
+" curves, it **cannot** be lower than 2, and higher than 6 or the number "
+"of control points on the relevant axis."
 msgstr "你可以对每个插值坐标轴独立设置阶数，和在曲线里一样，他的取值范围也是2到6，如果某一个轴向的控制点不足6的话，其值最大可以设置成控制点的数量。（译注：比如U向列只有5个控制点，那么在这里它最大只能到5）。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:205
@@ -319,10 +326,10 @@ msgstr "跟NURBS曲线差不多，权重指定了控制了“拉扯”曲面的�
 
 #: ../../manual/modeling/surfaces/introduction.rst:216
 msgid ""
-"In (*Surface Weight 5*), a single control point, labeled ``C``, has had "
-"its *Weight* set to **5.0** while all others are at their default of **1."
-" 0**. As you can see, that control point *pulls* the surface towards it."
-msgstr "如上图所示，标识C的那个控制点的权重设置成了5，其它控制点为默认值1，像你看到的那样，C点把曲面拉向了他。"
+"In Fig. Surface Weight 5 a single control point, labeled \"C\", has had "
+"its *Weight* set to 5.0 while all others are at their default of 1.0. As "
+"you can see, that control point *pulls* the surface towards it."
+msgstr ""
 
 #: ../../manual/modeling/surfaces/introduction.rst:220
 msgid ""
@@ -337,7 +344,7 @@ msgid ""
 "The *Weight* of any particular control point is visible in the "
 ":doc:`Transform Properties panel "
 "</editors/3dview/transform/transform_control/transform_properties>` "
-":kbd:`N`, *in the* *W* *field* (and not the *Weight* field...)."
+":kbd:`N`, in the *W* field (and not the *Weight* field...)."
 msgstr "任何特定控制点的权重都可以在变换特性面板（N面板）里查看到。注意是控制点的W项，而不是权重域的值。"
 
 #: ../../manual/modeling/surfaces/introduction.rst:230
@@ -362,8 +369,7 @@ msgstr "NURBS可以创建纯圆，圆柱，球体等形状（贝塞尔曲线的�
 msgid ""
 "To create a sphere with 2D surfaces, its the same principle as with a 2D "
 "circle - you'll note that the four different weights needed for creating "
-"a sphere (**1.0**, **0.707** = ``sqrt(0.5)``, **0.354** = ``sqrt(2)/4``, "
-"and **0.25**)."
+"a sphere (1.0, 0.707 = sqrt(0.5), 0.354 = sqrt(2)/4, and 0.25)."
 msgstr ""
 
 #: ../../manual/modeling/surfaces/introduction.rst:250
@@ -407,4 +413,24 @@ msgstr "注意这里的曲线和圆环和曲线里的曲线和圆环是不一样
 
 #~ msgid "Surface Weight 5."
 #~ msgstr "曲面权重5"
+
+#~ msgid ""
+#~ "In (*Surface Weight 5*), a single "
+#~ "control point, labeled ``C``, has had"
+#~ " its *Weight* set to **5.0** while"
+#~ " all others are at their default "
+#~ "of **1. 0**. As you can see, "
+#~ "that control point *pulls* the surface"
+#~ " towards it."
+#~ msgstr "如上图所示，标识C的那个控制点的权重设置成了5，其它控制点为默认值1，像你看到的那样，C点把曲面拉向了他。"
+
+#~ msgid ""
+#~ "To create a sphere with 2D "
+#~ "surfaces, its the same principle as "
+#~ "with a 2D circle - you'll note "
+#~ "that the four different weights needed"
+#~ " for creating a sphere (**1.0**, "
+#~ "**0.707** = ``sqrt(0.5)``, **0.354** = "
+#~ "``sqrt(2)/4``, and **0.25**)."
+#~ msgstr ""
 
