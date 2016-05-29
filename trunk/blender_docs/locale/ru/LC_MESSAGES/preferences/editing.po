@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-28 00:35+1000\n"
+"POT-Creation-Date: 2016-05-30 09:40+1000\n"
 "PO-Revision-Date: 2016-02-18 00:18+0400\n"
 "Last-Translator: Sergey_Klimkin <sklimkin@inbox.ru>\n"
 "Language-Team: \n"
@@ -27,7 +27,8 @@ msgid "Link Materials To"
 msgstr "Привязать материал к (Link Materials To)"
 
 #: ../../manual/preferences/editing.rst:18
-msgid "Example for a Mesh"
+#, fuzzy
+msgid "Example for a Mesh."
 msgstr "Пример для полисетки (Mesh)"
 
 #: ../../manual/preferences/editing.rst:21
@@ -223,19 +224,21 @@ msgstr "Сглаживает карандашную линию, когда он�
 msgid "Playback"
 msgstr "Воспроизведение (Playback)"
 
-#: ../../manual/preferences/editing.rst:97
+#: ../../manual/preferences/editing.rst:98
 msgid "Allow Negative Frame"
 msgstr "Разрешить отрицательные кадры (Allow Negative Frame)"
 
 #: ../../manual/preferences/editing.rst:96
-msgid "If set, negative framenumbers might be used."
-msgstr "Если установлено, отрицательные номера кадров разрешаются."
+msgid ""
+"Time Cursor can be set to negative frames with mouse or keyboard. When "
+"using *Use Preview Range*, this also allows playback."
+msgstr ""
 
-#: ../../manual/preferences/editing.rst:100
+#: ../../manual/preferences/editing.rst:101
 msgid "Keyframing"
 msgstr "Создание кадров (Keyframing)"
 
-#: ../../manual/preferences/editing.rst:102
+#: ../../manual/preferences/editing.rst:103
 msgid ""
 "In many situations, animation is controlled by keyframes. The state of a "
 "value (e.g. location) is recorded in a keyframe and the animation between"
@@ -246,55 +249,61 @@ msgstr ""
 "ключевой кадр и анимация между ключевыми кадрами интерполируется "
 "Blender'ом."
 
-#: ../../manual/preferences/editing.rst:105
+#: ../../manual/preferences/editing.rst:108
 msgid "Visual Keying"
 msgstr "Визуальная вставка кадров (Visual Keying)"
 
-#: ../../manual/preferences/editing.rst:106
-msgid "Use Visual keying automatically for constrained objects."
-msgstr ""
-"Используйте визуальное автоматическое создание ключей для создания "
-"объектов."
-
 #: ../../manual/preferences/editing.rst:107
+msgid ""
+"When an object is using constraints, the objects property value doesnt "
+"actually change. *Visual Keying* will add keyframes to the object "
+"property, with a value based on the visual transformation from the "
+"constraint."
+msgstr ""
+
+#: ../../manual/preferences/editing.rst:110
 msgid "Only Insert Needed"
 msgstr "Вставка по необходимости (Only Insert Needed)"
 
-#: ../../manual/preferences/editing.rst:108
-msgid "When enabled, new keyframes will be created only when needed."
+#: ../../manual/preferences/editing.rst:111
+msgid "This will only insert keyframes if the value of the propery is different."
 msgstr ""
-"Если включено, новые ключевые кадры будут созданы только когда это "
-"необходимо."
 
 #: ../../manual/preferences/editing.rst:112
 msgid "Auto Keyframing"
 msgstr "Автосоздание кадров (Auto Keyframing)"
 
-#: ../../manual/preferences/editing.rst:110
-msgid ""
-"Automatic keyframe insertion for Objects and Bones. Auto Keyframe is not "
-"enabled by default."
+#: ../../manual/preferences/editing.rst:113
+msgid "Enables *Auto Keyframe* by default for new scenes."
 msgstr ""
-"Автоматическое создание ключевых кадров для *объектов* (Objects) и "
-"*костей* (Bones). По умолчанию не установлен."
 
-#: ../../manual/preferences/editing.rst:112
+#: ../../manual/preferences/editing.rst:114
+msgid "Show Auto Keying Warning"
+msgstr ""
+
+#: ../../manual/preferences/editing.rst:115
+msgid ""
+"Displays a warning at the top right of the *3D View*, when moving "
+"objects, if *Auto Keyframe* is on."
+msgstr ""
+
+#: ../../manual/preferences/editing.rst:118
 msgid "Only Insert Available"
 msgstr "Вставлять только доступные (Only Insert Available)"
 
-#: ../../manual/preferences/editing.rst:113
-msgid "Automatic keyframe insertion in available curves."
-msgstr "Автоматическая вставка ключевых кадров для имеющихся F-кривых."
+#: ../../manual/preferences/editing.rst:117
+msgid "This will only add keyframes to channel F-Curves that already exist."
+msgstr ""
 
-#: ../../manual/preferences/editing.rst:122
+#: ../../manual/preferences/editing.rst:121
 msgid "New F-Curve Defaults"
 msgstr "Настройки F-кривых по умолчанию (New F-Curve Defaults)"
 
-#: ../../manual/preferences/editing.rst:117
+#: ../../manual/preferences/editing.rst:125
 msgid "Interpolation"
 msgstr "Интерполяция (Interpolation)"
 
-#: ../../manual/preferences/editing.rst:116
+#: ../../manual/preferences/editing.rst:124
 msgid ""
 "This controls how the state between two keyframes is computed. Default "
 "interpolation for new keyframes is Bezier which provides smooth "
@@ -308,11 +317,11 @@ msgstr ""
 "*Линейно* (Linear) или *Постоянно* (Constant) определяет более резкое "
 "поведение."
 
-#: ../../manual/preferences/editing.rst:122
+#: ../../manual/preferences/editing.rst:130
 msgid "XYZ to RGB"
 msgstr "XYZ в RGB"
 
-#: ../../manual/preferences/editing.rst:120
+#: ../../manual/preferences/editing.rst:128
 msgid ""
 "Color for X, Y or Z animation curves (location, scale or rotation) are "
 "the same as the color for the X, Y and Z axis."
@@ -320,15 +329,15 @@ msgstr ""
 "Цвета для X, Y или Z кривых анимации (положение, масштаб или вращение) "
 "такие же, как цвета для осей X, Y и Z."
 
-#: ../../manual/preferences/editing.rst:125
+#: ../../manual/preferences/editing.rst:133
 msgid "Transform"
 msgstr "Преобразования (Transform)"
 
-#: ../../manual/preferences/editing.rst:131
+#: ../../manual/preferences/editing.rst:139
 msgid "Release confirm"
 msgstr "Подтверждать отпусканием (Release confirm)"
 
-#: ../../manual/preferences/editing.rst:128
+#: ../../manual/preferences/editing.rst:136
 msgid ""
 "Dragging :kbd:`LMB` on an object will move it. To confirm this (and "
 "other) transforms, a :kbd:`LMB` is necessary by default. When this option"
@@ -340,11 +349,11 @@ msgstr ""
 "Если же данная опция активирована, отпускание кнопки :kbd:`LMB` действует"
 " как подтверждение трансформации."
 
-#: ../../manual/preferences/editing.rst:134
+#: ../../manual/preferences/editing.rst:142
 msgid "Sculpt Overlay Color"
 msgstr "Цвет перекрытия скульпинга (Sculpt Overlay Color)"
 
-#: ../../manual/preferences/editing.rst:136
+#: ../../manual/preferences/editing.rst:144
 msgid ""
 "This color selector allows the user to define a color to be used in the "
 "inner part of the brushes circle when in sculpt mode, and it is placed as"
@@ -365,11 +374,11 @@ msgstr ""
 "кисти, расположенного в верхней части *Полки инструмента* (Tool Shelf), в"
 " *Режиме скульпинга* (Sculpt Mode)."
 
-#: ../../manual/preferences/editing.rst:148
+#: ../../manual/preferences/editing.rst:156
 msgid "Duplicate Data"
 msgstr "Дублирование данных (Duplicate Data)"
 
-#: ../../manual/preferences/editing.rst:150
+#: ../../manual/preferences/editing.rst:158
 msgid ""
 "The 'Duplicate Data' check-boxes define what data is copied with a "
 "duplicated Object and what data remains linked. Any boxes that are "
@@ -384,7 +393,7 @@ msgstr ""
 "установлены, данные исходного объекта, будут связаны с дублированным "
 "объектом."
 
-#: ../../manual/preferences/editing.rst:155
+#: ../../manual/preferences/editing.rst:163
 msgid ""
 "For example, if you have Mesh checked, then a full copy of the mesh data "
 "is created with the new Object, and each mesh will behave independently "
@@ -398,11 +407,37 @@ msgstr ""
 "*Полисетка* (Mesh), то при изменении сетки одного объекта, изменения "
 "будут отражены в его дубликате."
 
-#: ../../manual/preferences/editing.rst:161
+#: ../../manual/preferences/editing.rst:169
 msgid ""
 "The same rules apply to each of the check-boxes in the 'Duplicate Data' "
 "list."
 msgstr ""
 "Те же правила применяются к каждому из чек-боксов в списке *Дублирование "
 "данных* (Duplicate Data)."
+
+#~ msgid "If set, negative framenumbers might be used."
+#~ msgstr "Если установлено, отрицательные номера кадров разрешаются."
+
+#~ msgid "Use Visual keying automatically for constrained objects."
+#~ msgstr ""
+#~ "Используйте визуальное автоматическое создание "
+#~ "ключей для создания объектов."
+
+#~ msgid "When enabled, new keyframes will be created only when needed."
+#~ msgstr ""
+#~ "Если включено, новые ключевые кадры "
+#~ "будут созданы только когда это "
+#~ "необходимо."
+
+#~ msgid ""
+#~ "Automatic keyframe insertion for Objects "
+#~ "and Bones. Auto Keyframe is not "
+#~ "enabled by default."
+#~ msgstr ""
+#~ "Автоматическое создание ключевых кадров для"
+#~ " *объектов* (Objects) и *костей* (Bones)."
+#~ " По умолчанию не установлен."
+
+#~ msgid "Automatic keyframe insertion in available curves."
+#~ msgstr "Автоматическая вставка ключевых кадров для имеющихся F-кривых."
 

@@ -3,20 +3,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-15 16:28+1100\n"
+"POT-Creation-Date: 2016-05-30 09:40+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/world.rst:4
 msgid "World"
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:8
-msgid "Lighting with an HDR image"
+msgid "Lighting with an HDR image."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:11
@@ -31,12 +32,12 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:18
 msgid ""
-"The surface shader defines the light emission from the environment into the "
-"scene. The world surface is rendered as if it is very distant from the "
-"scene, and as such there is no two-way interacting between objects in the "
-"scene and the environment, only light coming in. The only shader accepted is"
-" the Background node with a color input and strength factor for the "
-"intensity of the light."
+"The surface shader defines the light emission from the environment into "
+"the scene. The world surface is rendered as if it is very distant from "
+"the scene, and as such there is no two-way interacting between objects in"
+" the scene and the environment, only light coming in. The only shader "
+"accepted is the Background node with a color input and strength factor "
+"for the intensity of the light."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:26
@@ -45,10 +46,10 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:28
 msgid ""
-"For image based lighting, use the Environment Texture node rather than the "
-"Image Texture node for correct mapping. This supports Equirectangular (also "
-"known as Lat/Long) for environment maps, and Mirror Ball mapping for "
-"converting photos of mirror balls to environment maps."
+"For image based lighting, use the Environment Texture node rather than "
+"the Image Texture node for correct mapping. This supports Equirectangular"
+" (also known as Lat/Long) for environment maps, and Mirror Ball mapping "
+"for converting photos of mirror balls to environment maps."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:35
@@ -63,15 +64,16 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:39
 msgid ""
-"Currently this is most useful for night time or other dark scenes, as the "
-"world surface shader or sun lamps will have no effect if a volume shader is "
-"used. This is because the world background is assumed to be infinitely far "
-"away, which is accurate enough for the sun for example. However for modeling"
-" effects such as fog or atmospheric scattering, it is not a good assumption "
-"that the volume fills the entire space, as most of the distance between the "
-"sun and the earth is empty space. For such effects it is be better to create"
-" a volume object surrounding the scene. The size of this object will "
-"determine how much light is scattered or absorbed."
+"Currently this is most useful for night time or other dark scenes, as the"
+" world surface shader or sun lamps will have no effect if a volume shader"
+" is used. This is because the world background is assumed to be "
+"infinitely far away, which is accurate enough for the sun for example. "
+"However for modeling effects such as fog or atmospheric scattering, it is"
+" not a good assumption that the volume fills the entire space, as most of"
+" the distance between the sun and the earth is empty space. For such "
+"effects it is be better to create a volume object surrounding the scene. "
+"The size of this object will determine how much light is scattered or "
+"absorbed."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:51
@@ -82,8 +84,8 @@ msgstr ""
 msgid ""
 "Ambient occlusion is a lighting method based on how much a point on a "
 "surface is occluded by nearby surfaces. This is a trick that is not "
-"physically accurate, but it is useful to emphasize shapes of surfaces, or as"
-" a cheap way to get an effect that looks a bit like indirect lighting."
+"physically accurate, but it is useful to emphasize shapes of surfaces, or"
+" as a cheap way to get an effect that looks a bit like indirect lighting."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:59
@@ -103,22 +105,22 @@ msgstr ""
 #: ../../manual/render/cycles/world.rst:62
 msgid ""
 "Distance from shading point to trace rays. A shorter distance emphasizes "
-"nearby features, while longer distances make it also take objects further "
-"away into account."
+"nearby features, while longer distances make it also take objects further"
+" away into account."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:66
 msgid ""
-"Lighting from ambient occlusion is only applied to diffuse reflection BSDFs;"
-" glossy or transmission BSDFs are not affected. Transparency of surfaces "
-"will be taken into account, i.e. a half-transparent surface will only half "
-"occlude."
+"Lighting from ambient occlusion is only applied to diffuse reflection "
+"BSDFs; glossy or transmission BSDFs are not affected. Transparency of "
+"surfaces will be taken into account, i.e. a half-transparent surface will"
+" only half occlude."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:71
 msgid ""
-"An alternative method of using Ambient Occlusion on a per-shader basis is to"
-" use the :ref:`cycles_shader_ao` shader."
+"An alternative method of using Ambient Occlusion on a per-shader basis is"
+" to use the :ref:`cycles_shader_ao` shader."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:76
@@ -131,9 +133,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:79
 msgid ""
-"Enabling this will sample the background texture such that lighter parts are"
-" favored, producing less noise in the render. It is almost always a good "
-"idea to enable this when using an image texture to light the scene, "
+"Enabling this will sample the background texture such that lighter parts "
+"are favored, producing less noise in the render. It is almost always a "
+"good idea to enable this when using an image texture to light the scene, "
 "otherwise noise can take a very long time to converge."
 msgstr ""
 
@@ -143,37 +145,37 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:84
 msgid ""
-"Sets the resolution of the 'Multiple Importance Sample' map. Higher values "
-"may produce less noise when using high-res images, but will take up more "
-"memory and render slightly slower."
+"Sets the resolution of the 'Multiple Importance Sample' map. Higher "
+"values may produce less noise when using high-res images, but will take "
+"up more memory and render slightly slower."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:88
 msgid ""
-"Below is a comparison between Multiple Importance Sample Off and On - both "
-"images rendered for 25 seconds (Off: 1500 samples, On: 1000 samples)"
+"Below is a comparison between Multiple Importance Sample Off and On - "
+"both images rendered for 25 seconds (Off: 1500 samples, On: 1000 samples)"
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:96
-msgid "Multiple Importance Sample Off"
+msgid "Multiple Importance Sample Off."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:100
-msgid "Multiple Importance Sample On"
+msgid "Multiple Importance Sample On."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:103
 msgid ""
-"For interior scenes, noise can be significantly reduce by setting up area "
-"lamps as :doc:`light portals </render/cycles/lamps>`."
+"For interior scenes, noise can be significantly reduce by setting up area"
+" lamps as :doc:`light portals </render/cycles/lamps>`."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:111
-msgid "Without Light Portals"
+msgid "Without Light Portals."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:116
-msgid "With Light Portals"
+msgid "With Light Portals."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:119
@@ -182,8 +184,8 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:121
 msgid ""
-"As with other objects, *Ray Visibility* allows you to control which other "
-"shaders can \"see\" the environment."
+"As with other objects, *Ray Visibility* allows you to control which other"
+" shaders can \"see\" the environment."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:126
@@ -192,20 +194,39 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:128
 msgid ""
-"Sometimes it may be useful to have a different background that is directly "
-"visible versus one that is indirectly lighting the objects. A simple "
-"solution to this is to add a Mix node, with the Blend Factor set to Is "
-"Camera Ray. The first input color is then the indirect color, and the second"
-" the directly visible color. This is useful when using a high-res image for "
-"the background and a low-res image for the actual lighting."
+"Sometimes it may be useful to have a different background that is "
+"directly visible versus one that is indirectly lighting the objects. A "
+"simple solution to this is to add a Mix node, with the Blend Factor set "
+"to Is Camera Ray. The first input color is then the indirect color, and "
+"the second the directly visible color. This is useful when using a high-"
+"res image for the background and a low-res image for the actual lighting."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:134
 msgid ""
-"Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the "
-"high-res image will also be visible in reflections."
+"Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the"
+" high-res image will also be visible in reflections."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:141
-msgid "Nodes for the trick above"
+msgid "Nodes for the trick above."
 msgstr ""
+
+#~ msgid "Lighting with an HDR image"
+#~ msgstr ""
+
+#~ msgid "Multiple Importance Sample Off"
+#~ msgstr ""
+
+#~ msgid "Multiple Importance Sample On"
+#~ msgstr ""
+
+#~ msgid "Without Light Portals"
+#~ msgstr ""
+
+#~ msgid "With Light Portals"
+#~ msgstr ""
+
+#~ msgid "Nodes for the trick above"
+#~ msgstr ""
+
