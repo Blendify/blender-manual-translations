@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-28 00:35+1000\n"
+"POT-Creation-Date: 2016-05-30 09:40+1000\n"
 "PO-Revision-Date: 2016-05-24 01:19+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
@@ -141,16 +141,16 @@ msgstr ""
 "Pour une vue d'ensemble des caractéristiques  supportées, vérifier la "
 "comparaison dans les :doc:`caractéristiques </render/cycles/features>`."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:64
-msgid "CUDA:"
-msgstr "cuda"
+#: ../../manual/render/cycles/gpu_rendering.rst:65
+msgid "CUDA limitations:"
+msgstr ""
 
 #: ../../manual/render/cycles/gpu_rendering.rst:62
+#, fuzzy
 msgid ""
 "The maximum amount of individual textures is limited to 88 byte-image "
 "textures (PNG, JPEG, ..) and 5 float-image textures (OpenEXR, 16 bit "
-"TIFF, ..) on GTX 4xx/5xx cards, and 145 byte-image textures and 5 float-"
-"image textures on GTX6xx cards and above."
+"TIFF, ..) on GTX 4xx/5xx cards. Newer cards don't have this limit."
 msgstr ""
 "La  quantité maximum de textures individuelles est limité à 88 byte-image"
 " textures (png, jpeg, ..) et 5 float-image textures (OpenEXR, 16 bit "
@@ -158,22 +158,14 @@ msgstr ""
 "float-image textures sur les cartes gtx6xx et au dessus."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:68
-msgid "OpenCL:"
-msgstr "OpenCL:"
-
-#: ../../manual/render/cycles/gpu_rendering.rst:67
-msgid "No support for HDR (float) textures at the moment."
-msgstr "Aucun support pour les textures  hdr (float)  pour le moment."
-
-#: ../../manual/render/cycles/gpu_rendering.rst:71
 msgid "Frequently Asked Questions"
 msgstr "Questions Souvent Posées (FAQ)"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:75
+#: ../../manual/render/cycles/gpu_rendering.rst:72
 msgid "Why is Blender unresponsive during rendering?"
 msgstr "Pourquoi Blender ne répond-il pas pendant le rendu?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:77
+#: ../../manual/render/cycles/gpu_rendering.rst:74
 msgid ""
 "While a graphics card is rendering, it can not redraw the user interface,"
 " which makes Blender unresponsive. We attempt to avoid this problem by "
@@ -190,7 +182,7 @@ msgstr ""
 "des cartes graphiques pour laquelle aucune vraie solution n'existe, bien "
 "que nous puissions être capable d'améliorer ça dans le futur."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:84
+#: ../../manual/render/cycles/gpu_rendering.rst:81
 msgid ""
 "If possible, it is best to install more than one GPU, using one for "
 "display and the other(s) for rendering."
@@ -198,11 +190,11 @@ msgstr ""
 "Si possible, il vaut mieux installer plus d'un gpu, en utilisant un pour "
 "l'affichage et l'autre (les autres) pour le rendu."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:89
+#: ../../manual/render/cycles/gpu_rendering.rst:86
 msgid "Why does a scene that renders on the CPU not render on the GPU?"
 msgstr "Pourquoi une scène qui rend sur un cpu ne rend pas sur le gpu?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:91
+#: ../../manual/render/cycles/gpu_rendering.rst:88
 msgid ""
 "There maybe be multiple causes, but the most common is that there is not "
 "enough memory on your graphics card. We can currently only render scenes "
@@ -217,7 +209,7 @@ msgstr ""
 " par exemple, des textures images de 8k, 4k, 2k et 1k prennent "
 "respectivement 256mb, 64mb, 16mb et 4mb de mémoire."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:97
+#: ../../manual/render/cycles/gpu_rendering.rst:94
 msgid ""
 "We do intend to add a system to support scenes bigger than GPU memory, "
 "but this will not be added soon."
@@ -225,11 +217,11 @@ msgstr ""
 "Nous avons l'intention d'ajouter un système pour supporter scènes plus "
 "grandes que la mémoire gpu, mais cela ne va pas être ajouté rapidement."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:102
+#: ../../manual/render/cycles/gpu_rendering.rst:99
 msgid "Can I use multiple GPUs for rendering?"
 msgstr "Puis-je utiliser plusieurs gpus pour le rendu?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:104
+#: ../../manual/render/cycles/gpu_rendering.rst:101
 msgid ""
 "Yes, go to :menuselection:`User Preferences --> System --> Compute Device"
 " Panel`, and configure it as you desire."
@@ -237,19 +229,19 @@ msgstr ""
 "Oui, aller à  :menuselection:`préférences utilisateur  --> système --> "
 "panneau périphérique de calculs`, et configurer le comme vous le désirez."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:108
+#: ../../manual/render/cycles/gpu_rendering.rst:105
 msgid "Would multiple GPUs increase available memory?"
 msgstr "Est-ce que plusieurs gpus devrait augmenter la mémoire autorisée?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:110
+#: ../../manual/render/cycles/gpu_rendering.rst:107
 msgid "No, each GPU can only access its own memory."
 msgstr "Non, chaque gpu ne peut accéder qu'à sa propre mémoire."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:114
+#: ../../manual/render/cycles/gpu_rendering.rst:111
 msgid "What renders faster, NVIDIA or AMD, CUDA or OpenCL?"
 msgstr "Qu'est-ce qui rend le plus vite, NVIDIA ou amd, cuda ou opencl?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:116
+#: ../../manual/render/cycles/gpu_rendering.rst:113
 msgid ""
 "Currently NVIDIA with CUDA is rendering faster. There is no fundamental "
 "reason why this should be so - we don't use any CUDA - specific features "
@@ -264,19 +256,19 @@ msgstr ""
 "support Opencl est encore à une étape précédente et n'a pas été tellement"
 " optimisé."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:123
+#: ../../manual/render/cycles/gpu_rendering.rst:120
 msgid "Error Messages"
 msgstr "Messages d'Erreur "
 
-#: ../../manual/render/cycles/gpu_rendering.rst:127
+#: ../../manual/render/cycles/gpu_rendering.rst:124
 msgid "Unsupported GNU version! gcc 4.7 and up are not supported!"
 msgstr "Unsupported GNU version! gcc 4.7 and up are not supported!"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:129
+#: ../../manual/render/cycles/gpu_rendering.rst:126
 msgid "On Linux, depending on your GCC version you might get this error."
 msgstr "Sur linux, selon votre version gcc, vous pourriez obtenir cette erreur."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:131
+#: ../../manual/render/cycles/gpu_rendering.rst:128
 msgid ""
 "If so, delete the following line in "
 "``/usr/local/cuda/include/host_config.h``"
@@ -284,11 +276,11 @@ msgstr ""
 "Si c'est le cas, détruisez la ligne suivante dans "
 "``/usr/local/cuda/inclure/host_config.h``"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:139
+#: ../../manual/render/cycles/gpu_rendering.rst:136
 msgid "CUDA Error: Invalid kernel image"
 msgstr "CUDA Error: Invalid kernel image"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:141
+#: ../../manual/render/cycles/gpu_rendering.rst:138
 msgid ""
 "If you get this error on MS-Windows 64-bit, be sure to use the 64-bit "
 "build of Blender, not the 32-bit version."
@@ -296,11 +288,11 @@ msgstr ""
 "Si vous obtenez cette erreur sur MS-Windows 64-bit, soyez sûr d'utiliser "
 "la version 64-bit de Blender, pas la version 32-bit."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:146
+#: ../../manual/render/cycles/gpu_rendering.rst:143
 msgid "CUDA Error: Out of memory"
 msgstr "CUDA Error: Out of memory"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:148
+#: ../../manual/render/cycles/gpu_rendering.rst:145
 msgid ""
 "This usually means there is not enough memory to store the scene on the "
 "GPU. We can currently only render scenes that fit in graphics card "
@@ -313,11 +305,11 @@ msgstr ""
 "est habituellement plus petit celle du cpu.  Voir au dessus pour plus de "
 "détails."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:154
+#: ../../manual/render/cycles/gpu_rendering.rst:151
 msgid "The NVIDIA OpenGL driver lost connection with the display driver"
 msgstr "Le pilote NVIDIA opengl a perdu la connexion avec le pilote d'affichage"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:156
+#: ../../manual/render/cycles/gpu_rendering.rst:153
 msgid ""
 "If a GPU is used for both display and rendering, MS-Windows has a limit "
 "on the time the GPU can do render computations. If you have a "
@@ -333,7 +325,7 @@ msgstr ""
 "performance peut atténuer le problème, mais la seule solution réelle est "
 "d'utiliser des cartes graphiques séparées pour l'affichage et le rendu."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:162
+#: ../../manual/render/cycles/gpu_rendering.rst:159
 msgid ""
 "Another solution can be to increase the timeout, although this will make "
 "the user interface less responsive when rendering heavy scenes. `Learn "
@@ -345,11 +337,11 @@ msgstr ""
 "lourdes scènes. `apprenez en plus ici <https://msdn.microsoft.com/en-"
 "us/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:168
+#: ../../manual/render/cycles/gpu_rendering.rst:165
 msgid "CUDA error: Unknown error in cuCtxSynchronize()"
 msgstr "CUDA error: Unknown error in cuCtxSynchronize()"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:170
+#: ../../manual/render/cycles/gpu_rendering.rst:167
 msgid ""
 "An unknown error can have many causes, but one possibility is that it's a"
 " timeout. See the above answer for solutions."
@@ -359,4 +351,13 @@ msgstr ""
 
 #~ msgid ""
 #~ msgstr ""
+
+#~ msgid "CUDA:"
+#~ msgstr "cuda"
+
+#~ msgid "OpenCL:"
+#~ msgstr "OpenCL:"
+
+#~ msgid "No support for HDR (float) textures at the moment."
+#~ msgstr "Aucun support pour les textures  hdr (float)  pour le moment."
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-28 00:35+1000\n"
+"POT-Creation-Date: 2016-05-30 09:40+1000\n"
 "PO-Revision-Date: 2015-12-17 21:15+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -134,27 +134,24 @@ msgstr "然而，你可以用曲线构造2D曲面（使用挤出工具，或者�
 #, fuzzy
 msgid ""
 "Visually you can tell which is which by entering *Edit mode* and looking "
-"at the 3D window's header: either the header shows *Surface* or *Curve* "
-"as one of the menu choices. Also, you can :doc:`extrude "
+"at the 3D View header: either the header shows *Surface* or *Curve* as "
+"one of the menu choices. Also, you can :doc:`extrude "
 "</modeling/curves/editing/extrude>` a whole NURBS surface curve to create"
-" a surface, but you can't with a simple NURBS curve (we talk here about "
-"the \"standard\" *Extrude* tool, the one activated with the *E* shortcut,"
-" not the quite-specific curve extrusion tools - yes, I know, it's not "
-"easy to follow...)."
+" a surface, but you can't with a simple NURBS curve."
 msgstr "视觉上想要分辨出他们也很容易，只要进入编辑模式看一看3D视图下方的工具栏菜单就可以了（他们的菜单选项是不同的），你也可以挤出整条曲面曲线（译注：曲面里的NURBS曲线和曲线里的NURBS曲线不是一回事）来形成一个曲面。（我们这里谈论的是“标准”挤压工具，就是说直接可以用E键挤出。而不是“特定”的挤出工具。）"
 
-#: ../../manual/modeling/surfaces/introduction.rst:91
+#: ../../manual/modeling/surfaces/introduction.rst:90
 msgid "Control Points, Rows and Grid"
 msgstr "控制点，栅格和行"
 
-#: ../../manual/modeling/surfaces/introduction.rst:93
+#: ../../manual/modeling/surfaces/introduction.rst:92
 msgid ""
 "Control points for NURBS surfaces are the same as for NURBS curves. "
 "However, their layout is quite constraining. The concept of \"segment\" "
 "disappears, replaced by \"rows\" and the overall \"grid\"."
 msgstr "NURBS曲面的控制点和NURBS曲线是一样的，然而，这些控制点的布局是有限制的，这里没有段的概念，有的是栅格和行。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:97
+#: ../../manual/modeling/surfaces/introduction.rst:96
 #, fuzzy
 msgid ""
 "A \"row\" is a set of control points forming one \"line\" in one "
@@ -165,7 +162,7 @@ msgid ""
 "control point belongs to exactly one U-row and one V-row."
 msgstr "“行”就是在一个插值方向的一组控制点（有点类似于网格的边循环），对NURBS曲面来说，有”U行”和”V行”，一个关键点是对于U向或V向行来说，每一行都有相同数目的控制点，每一个控制点都处在一个U行和V行的交界处。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:103
+#: ../../manual/modeling/surfaces/introduction.rst:102
 #, fuzzy
 msgid ""
 "All this forms a \"grid\", or \"cage\", the shape of which controls the "
@@ -173,7 +170,7 @@ msgid ""
 "</modeling/modifiers/deform/lattice>` ..."
 msgstr "所有的这些点构成了一个栅格，或者说是笼子，它控制了曲面的形状，有点类似于晶格一样。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:106
+#: ../../manual/modeling/surfaces/introduction.rst:105
 msgid ""
 "This is very important to grasp: you cannot add a single control point to"
 " a NURBS surface; you have to add a whole U- or V-row at once (in "
@@ -184,11 +181,11 @@ msgid ""
 "together."
 msgstr "有一个重点需要掌握：在曲面上你不能只添加一个点，必须一下子添加一个U行或V行（在实践中，通常可以使用E键挤压，或者是复制），这也就意味着如果你想合并两个面，他们必须有某一行(U或者V）是匹配的。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:114
+#: ../../manual/modeling/surfaces/introduction.rst:113
 msgid "Surface Resolution"
 msgstr "曲面分辨率"
 
-#: ../../manual/modeling/surfaces/introduction.rst:116
+#: ../../manual/modeling/surfaces/introduction.rst:115
 #, fuzzy
 msgid ""
 "Just like :ref:`NURBS curves <modeling-curve-nurbs>`, *Resolution* "
@@ -200,15 +197,15 @@ msgid ""
 "Tools* panel)..."
 msgstr "如同NURBS曲线，分辨率控制着曲面的细节，分辨率越高曲面越平滑。注意，曲面有两个方向的分辨率（U和V）可以分别设置。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:126
+#: ../../manual/modeling/surfaces/introduction.rst:125
 msgid "Resolution 1x1."
 msgstr "1 x1的分辨率。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:130
+#: ../../manual/modeling/surfaces/introduction.rst:129
 msgid "Resolution 3x3."
 msgstr "3 x3的分辨率。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:133
+#: ../../manual/modeling/surfaces/introduction.rst:132
 #, fuzzy
 msgid ""
 "Fig. Resolution 1x1 is an example of a surface resolution of 3 for both U"
@@ -216,21 +213,21 @@ msgid ""
 " of 12 for both U and V."
 msgstr "U,V方向都是1的分辨率和U,V方向都是3的分辨率"
 
-#: ../../manual/modeling/surfaces/introduction.rst:139
+#: ../../manual/modeling/surfaces/introduction.rst:137
 msgid "Resolution panel."
 msgstr "分辨率面板"
 
-#: ../../manual/modeling/surfaces/introduction.rst:142
+#: ../../manual/modeling/surfaces/introduction.rst:140
 msgid ""
 "You can adjust the resolution separately for both preview and render, to "
 "not slow things down in the viewport, but still get good render results."
 msgstr "你可以单独调节预览和渲染模式的分辨率，这样既保持视图的高速工作，又不影响渲染的精细。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:147
+#: ../../manual/modeling/surfaces/introduction.rst:145
 msgid "Closed and Open Surfaces"
 msgstr "封闭或开放的曲面"
 
-#: ../../manual/modeling/surfaces/introduction.rst:149
+#: ../../manual/modeling/surfaces/introduction.rst:147
 #, fuzzy
 msgid ""
 "Like curves, surfaces can be closed (cyclical) or open, independently in "
@@ -239,11 +236,11 @@ msgid ""
 "working with surfaces quite easy."
 msgstr "如同曲线一样，曲面也可以是封闭的或开放的。曲面的两个方向各自独立，你可以轻松的创建一个管子，圆环图或者圆球。在编辑模式下你可以把他们当成是实心的，这使得对曲面的工作变得相当容易。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:156
+#: ../../manual/modeling/surfaces/introduction.rst:154
 msgid "Knots"
 msgstr "节点"
 
-#: ../../manual/modeling/surfaces/introduction.rst:158
+#: ../../manual/modeling/surfaces/introduction.rst:156
 msgid ""
 "Just like with :ref:`NURBS curves <modeling-curve-knot>`, NURBS surfaces "
 "have two knot vectors, one for each U and V axis. Here again, they can be"
@@ -252,11 +249,11 @@ msgid ""
 "direction) are affected by this setting..."
 msgstr ""
 
-#: ../../manual/modeling/surfaces/introduction.rst:166
+#: ../../manual/modeling/surfaces/introduction.rst:163
 msgid "Endpoint U."
 msgstr "U向的端点模式。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:169
+#: ../../manual/modeling/surfaces/introduction.rst:166
 #, fuzzy
 msgid ""
 "In Fig. Endpoint U the U interpolation axis is labeled as *U* and the *V*"
@@ -265,18 +262,18 @@ msgid ""
 "edges from E1 to E2 along the *U* interpolation axis."
 msgstr "如图所示，分别标识出了U向和V向，U向设置了端点模式，可以看出来，U向上的曲面延伸到了端点上，既从图上E1到E2。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:174
+#: ../../manual/modeling/surfaces/introduction.rst:171
 #, fuzzy
 msgid ""
 "To cause the surface to extend to all edges you would set the *V* 's axis"
 " to *Endpoint* as well."
 msgstr "如果想让V向也这样延伸的话，只需要把V向也设置成端点模式既可。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:179
+#: ../../manual/modeling/surfaces/introduction.rst:176
 msgid "Order"
 msgstr "阶数"
 
-#: ../../manual/modeling/surfaces/introduction.rst:181
+#: ../../manual/modeling/surfaces/introduction.rst:178
 #, fuzzy
 msgid ""
 "One more time, this property is the same as with :ref:`NURBS Curves "
@@ -288,11 +285,11 @@ msgid ""
 "points, creating a surface that tends to follow the grid cage."
 msgstr "同样的，它跟曲线上的阶数拥有同样的含义，他指定了有多少控制点被列入到影响曲面形状的曲线计算当中。对于高阶来说：（1）曲面会离控制点更远，更平滑——在分辨率足够高的前提下，（2）曲面跟随控制点，创建一个倾向于跟随栅格笼子的曲面（自己试一试很容易知道这个别扭的描述说的是什么意思。）"
 
-#: ../../manual/modeling/surfaces/introduction.rst:191
+#: ../../manual/modeling/surfaces/introduction.rst:187
 msgid "Order 2 and order 4 surface."
 msgstr "阶数2和阶数4"
 
-#: ../../manual/modeling/surfaces/introduction.rst:194
+#: ../../manual/modeling/surfaces/introduction.rst:190
 #, fuzzy
 msgid ""
 "For illustration purposes, in both Fig. Order 4 surface and Fig. Order 2 "
@@ -300,7 +297,7 @@ msgid ""
 "extend to all edges."
 msgstr "出于演示的目的，它们都设置成了端点模式，所以曲面都延伸到了边界。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:197
+#: ../../manual/modeling/surfaces/introduction.rst:193
 #, fuzzy
 msgid ""
 "You can set independently the order for each interpolation axis, and like"
@@ -308,15 +305,15 @@ msgid ""
 "of control points on the relevant axis."
 msgstr "你可以对每个插值坐标轴独立设置阶数，和在曲线里一样，他的取值范围也是2到6，如果某一个轴向的控制点不足6的话，其值最大可以设置成控制点的数量。（译注：比如U向列只有5个控制点，那么在这里它最大只能到5）。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:205
+#: ../../manual/modeling/surfaces/introduction.rst:201
 msgid "Weight"
 msgstr "权重"
 
-#: ../../manual/modeling/surfaces/introduction.rst:210
-msgid "One control point with a weight of 100"
+#: ../../manual/modeling/surfaces/introduction.rst:206
+msgid "One control point with a weight of 100."
 msgstr ""
 
-#: ../../manual/modeling/surfaces/introduction.rst:213
+#: ../../manual/modeling/surfaces/introduction.rst:209
 #, fuzzy
 msgid ""
 "Guess what? Yes, it works exactly like :ref:`NURBS Curves <modeling-"
@@ -324,21 +321,21 @@ msgid ""
 " on the curve."
 msgstr "跟NURBS曲线差不多，权重指定了控制了“拉扯”曲面的能力。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:216
+#: ../../manual/modeling/surfaces/introduction.rst:212
 msgid ""
 "In Fig. Surface Weight 5 a single control point, labeled \"C\", has had "
 "its *Weight* set to 5.0 while all others are at their default of 1.0. As "
 "you can see, that control point *pulls* the surface towards it."
 msgstr ""
 
-#: ../../manual/modeling/surfaces/introduction.rst:220
+#: ../../manual/modeling/surfaces/introduction.rst:216
 msgid ""
 "If all the control points have the same *Weight* then each effectively "
 "cancels each other out. It is the difference in the weights that cause "
 "the surface to move towards or away from a control point."
 msgstr "如果所有的控制点权重值都相同，他们互相抵消了影响反而体现不出什么。权重的不同导致了曲面趋近或远离一个控制点。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:224
+#: ../../manual/modeling/surfaces/introduction.rst:220
 #, fuzzy
 msgid ""
 "The *Weight* of any particular control point is visible in the "
@@ -347,15 +344,15 @@ msgid ""
 ":kbd:`N`, in the *W* field (and not the *Weight* field...)."
 msgstr "任何特定控制点的权重都可以在变换特性面板（N面板）里查看到。注意是控制点的W项，而不是权重域的值。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:230
+#: ../../manual/modeling/surfaces/introduction.rst:226
 msgid "Preset Weights"
 msgstr "预设权重"
 
-#: ../../manual/modeling/surfaces/introduction.rst:235
+#: ../../manual/modeling/surfaces/introduction.rst:231
 msgid "A sphere surface."
 msgstr "一个球体曲面。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:238
+#: ../../manual/modeling/surfaces/introduction.rst:234
 msgid ""
 "NURBS can create pure shapes such as circles, cylinders, and spheres "
 "(note that a Bézier circle is not a pure circle). To create pure circles,"
@@ -365,18 +362,18 @@ msgid ""
 "read more on NURBS before trying this."
 msgstr "NURBS可以创建纯圆，圆柱，球体等形状（贝塞尔曲线的圆不是精确圆）。为了创建纯圆，球体或者圆柱，你必须对控制点设置特定的权重值——有些在曲线工具面板（右下角）做为预设值提供了。这不是靠直觉，你应该在尝试之前阅读更多关于NURBS的知识。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:244
+#: ../../manual/modeling/surfaces/introduction.rst:240
 msgid ""
 "To create a sphere with 2D surfaces, its the same principle as with a 2D "
 "circle - you'll note that the four different weights needed for creating "
 "a sphere (1.0, 0.707 = sqrt(0.5), 0.354 = sqrt(2)/4, and 0.25)."
 msgstr ""
 
-#: ../../manual/modeling/surfaces/introduction.rst:250
+#: ../../manual/modeling/surfaces/introduction.rst:246
 msgid "Primitives"
 msgstr "基元物体（既新建曲面里的几种预置物体）"
 
-#: ../../manual/modeling/surfaces/introduction.rst:252
+#: ../../manual/modeling/surfaces/introduction.rst:248
 #, fuzzy
 msgid ""
 "To help get started in creating surfaces there are four preset NURBS "
@@ -384,21 +381,21 @@ msgid ""
 " NURBS Tube, NURBS Sphere and NURBS Torus`."
 msgstr "为了更方便创建曲面，blender预置了四种曲面。在添加》曲面菜单，可以看到表面，圆柱，球体，圆环。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:258
+#: ../../manual/modeling/surfaces/introduction.rst:253
 msgid "NURBS surface primitives."
 msgstr "预置的NURBS曲面。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:261
+#: ../../manual/modeling/surfaces/introduction.rst:256
 msgid ""
 "There are also two preset NURBS surface curves (with only one control "
 "point on each V-row): *NURBS Curve* and *NURBS Circle*."
 msgstr "还有两个预置的NURBS曲面曲线：NURBS曲线和NURBS圆环。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:267
+#: ../../manual/modeling/surfaces/introduction.rst:261
 msgid "NURBS curve primitives."
 msgstr "NURBS曲线基元。"
 
-#: ../../manual/modeling/surfaces/introduction.rst:269
+#: ../../manual/modeling/surfaces/introduction.rst:264
 msgid ""
 "Note how a circle NURBS surface is never filled, unlike its \"real\" "
 "curve counterpart..."
@@ -407,30 +404,12 @@ msgstr "注意这里的曲线和圆环和曲线里的曲线和圆环是不一样
 #~ msgid "Surfaces"
 #~ msgstr "曲面--Q哥媳妇翻译"
 
-# 31c706baf6cf451984bc8c9909d34f48
 #~ msgid ""
-#~ msgstr "像NURBS曲线一样，曲面有两个节点向量,U向和V向，他们的类型可以是：端点，贝塞尔或者循环，像曲线一样，只有开放的曲面（在相关方向上）（译注：比如在U向上，必须是开放曲面才可以设置成端点模式。）才可以应用这些设置。"
+#~ msgstr ""
 
 #~ msgid "Surface Weight 5."
 #~ msgstr "曲面权重5"
 
-#~ msgid ""
-#~ "In (*Surface Weight 5*), a single "
-#~ "control point, labeled ``C``, has had"
-#~ " its *Weight* set to **5.0** while"
-#~ " all others are at their default "
-#~ "of **1. 0**. As you can see, "
-#~ "that control point *pulls* the surface"
-#~ " towards it."
-#~ msgstr "如上图所示，标识C的那个控制点的权重设置成了5，其它控制点为默认值1，像你看到的那样，C点把曲面拉向了他。"
-
-#~ msgid ""
-#~ "To create a sphere with 2D "
-#~ "surfaces, its the same principle as "
-#~ "with a 2D circle - you'll note "
-#~ "that the four different weights needed"
-#~ " for creating a sphere (**1.0**, "
-#~ "**0.707** = ``sqrt(0.5)``, **0.354** = "
-#~ "``sqrt(2)/4``, and **0.25**)."
+#~ msgid "One control point with a weight of 100"
 #~ msgstr ""
 
