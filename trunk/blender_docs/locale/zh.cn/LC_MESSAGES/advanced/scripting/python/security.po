@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 中文手册2016 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 09:40+1000\n"
+"POT-Creation-Date: 2016-05-30 19:11+1000\n"
 "PO-Revision-Date: 2016-05-24 02:34+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,10 +22,11 @@ msgid "Scripting & Security"
 msgstr "脚本与安全--NGENNGT翻译"
 
 #: ../../manual/advanced/scripting/python/security.rst:6
+#, fuzzy
 msgid ""
 "The ability to include Python scripts within blend-files is valuable for "
 "advanced tasks such as rigging, automation and using the game-engine, "
-"however, it poses a security risk since Python doesn't restrict what a "
+"however, it poses a security risk since Python does not restrict what a "
 "script can do."
 msgstr "在blend文件中包含Python脚本对于一些高级任务如：骨骼、自动化和使用游戏引擎，价值不言而喻。不过由于Python并不限制脚本做些什么，这就带来了安全风险。"
 
@@ -93,104 +94,105 @@ msgid "Manual Execution"
 msgstr "手动执行"
 
 #: ../../manual/advanced/scripting/python/security.rst:43
+#, fuzzy
 msgid ""
 "There are other ways scripts in a blend-file may execute that require "
 "user interaction (therefore will run even when auto-execution is off), "
-"but you should be aware that this is the case since it's not necessarily "
-"obvious."
+"but you should be aware that this is the case since it is not necessarily"
+" obvious."
 msgstr "Blend文件中的一些脚本需要用户交互才能执行 (因此在关闭自动执行的情况下也可以运行)，但你要知道这些运行方式你不一定能注意到。"
 
-#: ../../manual/advanced/scripting/python/security.rst:49
+#: ../../manual/advanced/scripting/python/security.rst:48
 msgid "Running a script in the text editor."
 msgstr "运行文本编辑器中的脚本 *(好吧，这很明显!)*."
 
-#: ../../manual/advanced/scripting/python/security.rst:50
+#: ../../manual/advanced/scripting/python/security.rst:49
 msgid ""
 "Rendering with FreeStyle, because FreeStyle uses scripts to control line "
 "styles."
 msgstr "FreeStyle渲染 - *FreeStyle使用脚本控制线条样式*"
 
-#: ../../manual/advanced/scripting/python/security.rst:51
+#: ../../manual/advanced/scripting/python/security.rst:50
 msgid "Running the Game-Engine."
 msgstr "运行游戏引擎"
 
-#: ../../manual/advanced/scripting/python/security.rst:55
+#: ../../manual/advanced/scripting/python/security.rst:54
 msgid "Controlling Script Execution"
 msgstr "控制脚本执行"
 
-#: ../../manual/advanced/scripting/python/security.rst:57
+#: ../../manual/advanced/scripting/python/security.rst:56
 msgid ""
 "Blender provides a number of ways to control whether scripts from a "
 "blend-file are allowed to automatically execute."
 msgstr "Blender提供了很多用于控制是否允许文件中的脚本自动执行的方法。"
 
-#: ../../manual/advanced/scripting/python/security.rst:60
+#: ../../manual/advanced/scripting/python/security.rst:59
 msgid ""
 "First of all, the file-selector has the option **Trusted Source** which "
 "you can use on a case-by-case basis to control auto-execution."
 msgstr "首先，文件选择器中的 **可信任源** 选项，可用于控制单个文件是否自动执行脚本。"
 
-#: ../../manual/advanced/scripting/python/security.rst:63
+#: ../../manual/advanced/scripting/python/security.rst:62
 msgid ""
 "However you may forget to set this, or open a file without going through "
 "the file selector - so you can change the default (described next)."
 msgstr "不过你可能会忘记设置此项，或者不通过文件选择器直接打开文件 - 所以你可以修改默认值（详见下文）。"
 
-#: ../../manual/advanced/scripting/python/security.rst:69
+#: ../../manual/advanced/scripting/python/security.rst:68
 msgid "Setting Defaults"
 msgstr "默认设置"
 
-#: ../../manual/advanced/scripting/python/security.rst:71
+#: ../../manual/advanced/scripting/python/security.rst:70
 msgid ""
 "In the **File** section of the user-preferences, there is the toggle "
 "**Auto-Run Python Scripts**."
 msgstr "在用户设置的 **文件** 标签页，有 **自动运行脚本** 选项。"
 
-#: ../../manual/advanced/scripting/python/security.rst:74
+#: ../../manual/advanced/scripting/python/security.rst:73
 msgid ""
 "This means the **Trusted Source** option in the file-selector will be "
 "enabled by default, and scripts can run when blend-files are loaded "
 "without using the file selector."
 msgstr "这意味着文件选择器的 **可信任源** 选项将默认开启，无需使用文件选择器，载入blend文件后脚本将自动运行。"
 
-#: ../../manual/advanced/scripting/python/security.rst:77
+#: ../../manual/advanced/scripting/python/security.rst:76
 msgid ""
 "Once enabled you have the option to exclude certain directories, a "
 "typical configuration would be to trust all paths except for the download"
 " directory."
 msgstr "启用自动运行脚本后，将出现排除特定路径的选项，此项用于配置信任除下方路径以外的其他所有路径。"
 
-#: ../../manual/advanced/scripting/python/security.rst:86
+#: ../../manual/advanced/scripting/python/security.rst:85
 msgid "Command Line"
 msgstr "命令行"
 
-#: ../../manual/advanced/scripting/python/security.rst:88
+#: ../../manual/advanced/scripting/python/security.rst:87
 msgid ""
 "You may want to perform batch rendering or some other task from the "
 "command line - running Blender without an interface."
 msgstr "你可能会从命令行进行批渲染或其他任务 - 运行Blender而不开启图形界面。"
 
-#: ../../manual/advanced/scripting/python/security.rst:91
+#: ../../manual/advanced/scripting/python/security.rst:90
 msgid ""
 "In this case, the user-preferences are still used but you may want to "
 "override them."
 msgstr "在这种情况下，用户设置仍然适用，不过你可能不想使用这些配置。"
 
-#: ../../manual/advanced/scripting/python/security.rst:93
+#: ../../manual/advanced/scripting/python/security.rst:92
 msgid "Enable with ``-y`` or ``--enable-autoexec``"
 msgstr "使用 ``-y`` or ``--enable-autoexec``  启用"
 
-#: ../../manual/advanced/scripting/python/security.rst:94
+#: ../../manual/advanced/scripting/python/security.rst:93
 msgid "Disable with ``-Y`` or ``--disable-autoexec``"
 msgstr "使用 ``-Y`` or ``--disable-autoexec`` 禁用"
 
-#: ../../manual/advanced/scripting/python/security.rst:96
+#: ../../manual/advanced/scripting/python/security.rst:95
 msgid ""
 "Example - rendering an animation in background mode, allowing drivers and"
 " other scripts to run:"
 msgstr "例 - 后台模式渲染动画，允许运行驱动和其他脚本："
 
-#: ../../manual/advanced/scripting/python/security.rst:104
+#: ../../manual/advanced/scripting/python/security.rst:103
 #, fuzzy
 msgid ""
 "These command line arguments can be used to start a regular Blender "
