@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 09:40+1000\n"
+"POT-Creation-Date: 2016-05-31 18:46+1000\n"
 "PO-Revision-Date: 2016-03-28 22:38+0800\n"
 "Last-Translator: kidux(xueke pei) <blender@vip.qq.com>\n"
 "Language-Team: \n"
@@ -143,71 +143,73 @@ msgstr "链接的物体不可移动，其坐标在源文件中设定。"
 msgid "If you want to modify the object locally you can either:"
 msgstr "如果你想在当前文件中修改这个物体，你可以："
 
-#: ../../manual/data_system/linked_libraries.rst:60
+#: ../../manual/data_system/linked_libraries.rst:59
 msgid "Use :doc:`Dupli-Groups </editors/3dview/transform/duplication/dupligroup>`"
 msgstr ""
 "使用 :doc:`复制组（Dupli-Groups） "
 "</editors/3dview/transform/duplication/dupligroup>`"
 
 #: ../../manual/data_system/linked_libraries.rst:56
+#, fuzzy
 msgid ""
-"Instead of linking to *Objects* directly, it's often more useful to link "
-"in *Groups*, which can be assigned to empties and moved, while "
+"Instead of linking to *Objects* directly, it is often more useful to link"
+" in *Groups*, which can be assigned to empties and moved, while "
 "maintaining the link to the original file."
 msgstr "维护源文件的链接时，比起直接链接 *物体* ，通常 *组* 会更有效，因为它可被添加到空对象以及移动。"
 
-#: ../../manual/data_system/linked_libraries.rst:60
+#: ../../manual/data_system/linked_libraries.rst:59
+#, fuzzy
 msgid ""
-"It's also useful to be able to add/remove objects from the group without "
-"having to manage linking in multiple objects."
+"It is also useful to be able to add/remove objects from the group without"
+" having to manage linking in multiple objects."
 msgstr "不需要管理多个物体的链接就能在组里增删对象。"
 
-#: ../../manual/data_system/linked_libraries.rst:65
+#: ../../manual/data_system/linked_libraries.rst:64
 msgid "Make Objects Local"
 msgstr "使物体局部化"
 
-#: ../../manual/data_system/linked_libraries.rst:63
+#: ../../manual/data_system/linked_libraries.rst:62
 msgid ""
 "Use :menuselection:`Object --> Make Local --> Selected Objects` to make "
 "the position editable."
 msgstr "使用 :menuselection:`Object --> Make Local --> Selected Objects` 操作使位置可编辑。"
 
-#: ../../manual/data_system/linked_libraries.rst:65
+#: ../../manual/data_system/linked_libraries.rst:64
 msgid ""
 "This means that object data (animation, constraints, modifiers...) will "
 "be local to your blend-file. But the object-data will still be linked and"
 " remain immutable."
 msgstr "这个操作意味着这个物体数据（动画，约束，修改器……）将会本地化在你的 ``.blend`` 文件中。但是物体数据任然是链接的以及不可变的。"
 
-#: ../../manual/data_system/linked_libraries.rst:70
+#: ../../manual/data_system/linked_libraries.rst:69
 msgid ""
 "Appending data you already have linked will add objects / groups to the "
 "scene, but will keep them linked (and un-editable)."
 msgstr "如果追加的数据已被链接，物体或组会添加到场景中，且任是不可编辑的链接状态。"
 
-#: ../../manual/data_system/linked_libraries.rst:73
+#: ../../manual/data_system/linked_libraries.rst:72
 msgid "This is done so existing relationships with linked data remain intact."
 msgstr "这样做是为了让现有的链接关系保持不变。"
 
-#: ../../manual/data_system/linked_libraries.rst:79
+#: ../../manual/data_system/linked_libraries.rst:78
 msgid "Proxy Objects"
 msgstr "代理对象"
 
-#: ../../manual/data_system/linked_libraries.rst:81
+#: ../../manual/data_system/linked_libraries.rst:80
 msgid ""
 "Used with rigged models, proxy objects, allow specified bone layers to be"
 " linked back to the source file while the remainder of the object and its"
 " skeleton are edited locally."
 msgstr "与绑定后的模型，代理物体，允许指定的骨头层被链接回源文件，而物体及其骨架的其余部分是在本地编辑。"
 
-#: ../../manual/data_system/linked_libraries.rst:84
+#: ../../manual/data_system/linked_libraries.rst:83
 #, fuzzy
 msgid ""
 ":kbd:`Ctrl-Alt-P` makes the active linked object into a local proxy, "
 "appending \"_proxy\" to its name."
 msgstr ":kbd:`Ctrl-Alt-P` 使主控链接的物体为本地代理，追加  `_proxy` 后缀到名字。"
 
-#: ../../manual/data_system/linked_libraries.rst:86
+#: ../../manual/data_system/linked_libraries.rst:85
 msgid ""
 "Set the *Protected Layers* in the source file using the Skeleton panel of"
 " the Armatures tab. See :ref:`Armature Layers <armature-layers>`. The "
@@ -217,43 +219,45 @@ msgstr ""
 "设置使用使用骨架标签的骨骼面板*保护层*源文件研究。请参阅 :ref:`骨架层 <armature-layers>`. "
 "在保护层中的骨骼将源文件的位置，恢复时引用文件重新加载。"
 
-#: ../../manual/data_system/linked_libraries.rst:93
+#: ../../manual/data_system/linked_libraries.rst:92
 msgid "Known Limitations"
 msgstr "已知的局限"
 
-#: ../../manual/data_system/linked_libraries.rst:95
+#: ../../manual/data_system/linked_libraries.rst:94
+#, fuzzy
 msgid ""
 "For the most part linking data will work as expected, however, there are "
-"some corner-cases which aren't supported."
+"some corner-cases which are not supported."
 msgstr "大部分情况下链接数据能预期工作，但任有一些特殊案例不支持。"
 
-#: ../../manual/data_system/linked_libraries.rst:98
+#: ../../manual/data_system/linked_libraries.rst:97
 msgid "Circular Dependencies"
 msgstr "循环依赖"
 
-#: ../../manual/data_system/linked_libraries.rst:100
-msgid "In general, dependencies shouldn't go in both directions."
+#: ../../manual/data_system/linked_libraries.rst:99
+#, fuzzy
+msgid "In general, dependencies should not go in both directions."
 msgstr "不要做双向依赖。"
 
-#: ../../manual/data_system/linked_libraries.rst:102
+#: ../../manual/data_system/linked_libraries.rst:101
 msgid ""
 "Attempting to link or append data which links back to the current file "
 "will likely result in missing links."
 msgstr "尝试链接或追加的数据是在当前文件中，其操作结果会无效。"
 
-#: ../../manual/data_system/linked_libraries.rst:105
+#: ../../manual/data_system/linked_libraries.rst:104
 msgid "Object Rigid-Body Constraints"
 msgstr "刚体约束"
 
-#: ../../manual/data_system/linked_libraries.rst:107
+#: ../../manual/data_system/linked_libraries.rst:106
 #, fuzzy
 msgid ""
 "When linking objects *directly* into a blend-file, the *Rigid Body* "
-"settings **won't** be linked in since they're associated with their "
+"settings **will not** be linked in since they are associated with their "
 "scenes world."
 msgstr "挡在 ``.blend`` 文件中 **直接** 链接物体时， *刚体* 设置不会被链接除非关联在自己的世界场景中。"
 
-#: ../../manual/data_system/linked_libraries.rst:111
+#: ../../manual/data_system/linked_libraries.rst:110
 msgid ""
 "As an alternative, you could link in the entire scene and set it as a "
 ":ref:`scene-background_set`."

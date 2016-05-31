@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 09:40+1000\n"
+"POT-Creation-Date: 2016-05-31 18:46+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,8 @@ msgstr ""
 msgid ""
 "This single node can be used to emulate depth of field using a "
 "postprocessing method. It can also be used to blur the image in other "
-"ways, not necessarily based on 'depth' by connecting something other than"
-" a Z-buffer. In essence, this node blurs areas of an image based on the "
+"ways, not necessarily based on depth by connecting something other than a"
+" Z-buffer. In essence, this node blurs areas of an image based on the "
 "input z-buffer map/mask."
 msgstr ""
 
@@ -128,8 +128,8 @@ msgstr ""
 #: ../../manual/compositing/types/filter/defocus.rst:71
 msgid ""
 "This is the most important parameter to control the amount of focal blur:"
-" it simulates the aperture *f* of a real lens(' iris) - without modifying"
-" the luminosity of the picture, however! As in a real camera, the "
+" it simulates the aperture *f* of a real len's iris, without modifying "
+"the luminosity of the picture, however! As in a real camera, the "
 "*smaller* this number is, the more open the lens iris is, and the "
 "*shallower* the depth-of-field will be. The default value 128 is assumed "
 "to be infinity: everything is in perfect focus. Half the value will "
@@ -154,7 +154,7 @@ msgid ""
 "amount."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:97
+#: ../../manual/compositing/types/filter/defocus.rst:98
 msgid "BThreshold"
 msgstr ""
 
@@ -167,35 +167,35 @@ msgid ""
 " the differences in distance are very large and the result can look quite"
 " bad. The node tries to prevent this from occurring by testing that the "
 "blur difference between pixels is not too large, the value set here "
-"controls how large that blur difference may be to consider it 'safe.' "
-"This is all probably quite confusing, and fortunately, in general, there "
-"is no need to change the default setting of 1. Only try changing it if "
-"you experience problems with any in-focus object."
+"controls how large that blur difference may be to consider it safe. This "
+"is all probably    quite confusing, and fortunately, in general, there is"
+" no need to change the default setting of 1. Only try changing it if you "
+"experience problems with any in-focus object."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:107
-#: ../../manual/compositing/types/filter/defocus.rst:161
+#: ../../manual/compositing/types/filter/defocus.rst:108
+#: ../../manual/compositing/types/filter/defocus.rst:164
 msgid "Preview"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:100
+#: ../../manual/compositing/types/filter/defocus.rst:101
 msgid ""
 "As already mentioned, processing can take a long time. So to help make "
-"editing parameters somewhat 'interactive', there is a preview mode which "
+"editing parameters somewhat interactive, there is a preview mode which "
 "you can enable with this button. Preview mode will render the result "
 "using a limited amount of (quasi)random samples, which is a *lot* faster "
-"than the 'perfect' mode used otherwise. The sampling mode also tends to "
+"than the perfect mode used otherwise. The sampling mode also tends to "
 "produce grainy, noisy pictures (though the more samples you use, the less"
 " noisy the result). This option is on by default. Play around with the "
 "other parameters until you are happy with the results, and only then "
 "disable the preview mode for the final render."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:112
+#: ../../manual/compositing/types/filter/defocus.rst:113
 msgid "Samples"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:110
+#: ../../manual/compositing/types/filter/defocus.rst:111
 msgid ""
 "Only visible when *Preview* is set. Sets a number of samples to use to "
 "sample the image. The higher, the smoother the image, but also the longer"
@@ -203,11 +203,11 @@ msgid ""
 "sufficient and is also the fastest."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:129
+#: ../../manual/compositing/types/filter/defocus.rst:132
 msgid "No Z-buffer"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:115
+#: ../../manual/compositing/types/filter/defocus.rst:116
 msgid ""
 "Sometimes you might want to have more control to blur the image. For "
 "instance, you may want to only blur one object while leaving everything "
@@ -221,18 +221,23 @@ msgid ""
 "for that frame. It may also be used to obtain a possibly slightly better "
 "DoF blur, by using a fake depth shaded image instead of a Z-buffer. (A "
 "typical method to create the fake depth shaded image is by using a linear"
-" blend texture for all objects in the scene or by using the 'fog/mist' "
-"fake depth shading method.) This also has the advantage that the fake "
+" blend texture for all objects in the scene or by using the \"fog/mist\" "
+"fake depth shading method). This also has the advantage that the fake "
 "depth image can have anti-aliasing, which is not possible with a real "
-"Z-buffer. *No Z-buffer* will be enabled automatically whenever you "
-"connect a node that is not image based (e.g. time node/value node/etc)."
+"Z-buffer."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:139
+#: ../../manual/compositing/types/filter/defocus.rst:131
+msgid ""
+"*No Z-buffer* will be enabled automatically whenever you connect a node "
+"that is not image based (e.g. time node/value node/etc)."
+msgstr ""
+
+#: ../../manual/compositing/types/filter/defocus.rst:142
 msgid "Z Scale"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:132
+#: ../../manual/compositing/types/filter/defocus.rst:135
 msgid ""
 "Only visible when *No Z-buffer* enabled. When *No Z-buffer* is used, the "
 "input is used directly to control the blur radius. And since usually the "
@@ -244,11 +249,11 @@ msgid ""
 "*f-Stop* when you *do* use a Z-buffer)."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:142
+#: ../../manual/compositing/types/filter/defocus.rst:145
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:149
+#: ../../manual/compositing/types/filter/defocus.rst:152
 msgid ""
 "In this `blend-file example "
 "<https://wiki.blender.org/uploads/7/79/Doftest.blend>`__, the ball array "
@@ -258,11 +263,11 @@ msgid ""
 "blurrier."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:156
+#: ../../manual/compositing/types/filter/defocus.rst:159
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:159
+#: ../../manual/compositing/types/filter/defocus.rst:162
 msgid ""
 "In general, use preview mode, change parameters to your liking, only then"
 " disable preview mode for the final render. This node is computer "
@@ -270,44 +275,44 @@ msgid ""
 "it computes each render scan line."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:164
+#: ../../manual/compositing/types/filter/defocus.rst:167
 msgid "Edge Artifacts"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:164
+#: ../../manual/compositing/types/filter/defocus.rst:167
 msgid ""
 "For minimum artifacts, try to setup your scene such that differences in "
 "distances between two objects that may visibly overlap at some point are "
 "not too large."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:184
+#: ../../manual/compositing/types/filter/defocus.rst:187
 msgid "\"Focus Pull\""
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:167
+#: ../../manual/compositing/types/filter/defocus.rst:170
 msgid ""
-"Keep in mind that this is not 'real' DoF, only a post-processing "
+"Keep in mind that this is not real DoF, only a post-processing "
 "simulation. Some things cannot be done which would be no problem for real"
 " DoF at all. A typical example is a scene with some object very close to "
 "the camera, and the camera focusing on some point far behind it. In the "
 "real world, using shallow depth of field, it is not impossible for nearby"
 " objects to become completely invisible, in effect allowing the camera to"
-" see 'behind' it. Hollywood cinematographers use this visual "
-"characteristic to to achieve the popular \"focus pull\" effect, where the"
-" focus shifts from a nearby to a distant object, such that the \"other\" "
-"object all but disappears. Well, this is simply not possible to do with "
-"the current post-processing method in a single pass. If you really want "
-"to achieve this effect, quite satisfactorily, here's how:"
+" see behind it. Hollywood cinematographers use this visual characteristic"
+" to to achieve the popular \"focus pull\" effect, where the focus shifts "
+"from a nearby to a distant object, such that the \"other\" object all but"
+" disappears. Well, this is simply not possible to do with the current "
+"post-processing method in a single pass. If you really want to achieve "
+"this effect, quite satisfactorily, here is how:"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:179
+#: ../../manual/compositing/types/filter/defocus.rst:182
 msgid ""
 "Split up your scene into \"nearby\" and \"far\" objects, and render them "
 "in two passes."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:180
+#: ../../manual/compositing/types/filter/defocus.rst:183
 msgid ""
 "Now, combine the two the two results, each with their own \"defocus\" "
 "nodes driven by the same Time node, but with one of them inverted. (e.g. "
@@ -316,11 +321,11 @@ msgid ""
 "a smooth transition."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:198
+#: ../../manual/compositing/types/filter/defocus.rst:201
 msgid "Aliasing at Low f-Stop Values"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:187
+#: ../../manual/compositing/types/filter/defocus.rst:190
 msgid ""
 "At very low values, less than 5, the node will start to remove any "
 "oversampling and bring the objects at DoFDist very sharply into focus. If"
@@ -329,43 +334,44 @@ msgid ""
 "into this problem:"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:192
+#: ../../manual/compositing/types/filter/defocus.rst:195
 msgid ""
 "Do your own OSA by rendering at twice the intended size and then scaling "
 "down, so that adjacent pixels are blurred together"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:194
+#: ../../manual/compositing/types/filter/defocus.rst:197
 msgid "Use the blur node with a setting of 2 for x and y"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:195
+#: ../../manual/compositing/types/filter/defocus.rst:198
 msgid ""
 "Set DoF Distance off by a little, so that the object in focus is blurred "
 "by the tiniest bit."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:196
+#: ../../manual/compositing/types/filter/defocus.rst:199
 msgid ""
 "Use a higher f-Stop, which will start the blur, and then use the Z socket"
 " to a Map Value to a Blur node to enhance the blur effect."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:198
+#: ../../manual/compositing/types/filter/defocus.rst:201
 msgid "Rearrange the objects in your scene to use a lower-contrast background"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:205
+#: ../../manual/compositing/types/filter/defocus.rst:208
 msgid "No Z-Buffer"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/defocus.rst:201
+#: ../../manual/compositing/types/filter/defocus.rst:204
 msgid ""
 "A final word of warning, since there is no way to detect if an actual "
-"Z-buffer is connected to the node, be VERY careful with the *No Z-Buffer*"
-" switch. If the *Z scale* value happens to be large, and you forget to "
-"set it back to some low value, the values may suddenly be interpreted as "
-"huge blur radius values that will cause processing times to explode."
+"Z-buffer is connected to the node, be **very** careful with the *No "
+"Z-Buffer* switch. If the *Z scale* value happens to be large, and you "
+"forget to set it back to some low value, the values may suddenly be "
+"interpreted as huge blur radius values that will cause processing times "
+"to explode."
 msgstr ""
 
 #~ msgid ""
@@ -381,14 +387,160 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "In this `blend-file example "
-#~ "<https://wiki.blender.org/uploads/7/79/Doftest.blend>`__, the"
-#~ " ball array image is blurred as "
-#~ "if it was taken by a camera "
-#~ "with a f-stop of 2.8 resulting in"
-#~ " a fairly narrow depth of field "
-#~ "centered on 7.5 blender units from "
-#~ "the camera. As the balls recede "
-#~ "into the distance, they get blurrier."
+#~ "This single node can be used to"
+#~ " emulate depth of field using a "
+#~ "postprocessing method. It can also be"
+#~ " used to blur the image in "
+#~ "other ways, not necessarily based on "
+#~ "'depth' by connecting something other "
+#~ "than a Z-buffer. In essence, this "
+#~ "node blurs areas of an image based"
+#~ " on the input z-buffer map/mask."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is the most important parameter "
+#~ "to control the amount of focal "
+#~ "blur: it simulates the aperture *f* "
+#~ "of a real lens(' iris) - without"
+#~ " modifying the luminosity of the "
+#~ "picture, however! As in a real "
+#~ "camera, the *smaller* this number is,"
+#~ " the more open the lens iris "
+#~ "is, and the *shallower* the depth-"
+#~ "of-field will be. The default value"
+#~ " 128 is assumed to be infinity: "
+#~ "everything is in perfect focus. Half "
+#~ "the value will double the amount "
+#~ "of blur. This button is not "
+#~ "available if *No Z-buffer* is enabled."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The defocus node is not perfect: "
+#~ "some artifacts may occur. One such "
+#~ "example is in-focus objects against "
+#~ "a blurred background, which have a "
+#~ "tendency to bleed into the edges "
+#~ "of the sharp object. The worst-"
+#~ "case scenario is an object in-"
+#~ "focus against the very distant world "
+#~ "background: the differences in distance "
+#~ "are very large and the result can"
+#~ " look quite bad. The node tries "
+#~ "to prevent this from occurring by "
+#~ "testing that the blur difference between"
+#~ " pixels is not too large, the "
+#~ "value set here controls how large "
+#~ "that blur difference may be to "
+#~ "consider it 'safe.' This is all "
+#~ "probably quite confusing, and fortunately, "
+#~ "in general, there is no need to"
+#~ " change the default setting of 1. "
+#~ "Only try changing it if you "
+#~ "experience problems with any in-focus"
+#~ " object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As already mentioned, processing can "
+#~ "take a long time. So to help "
+#~ "make editing parameters somewhat "
+#~ "'interactive', there is a preview mode"
+#~ " which you can enable with this "
+#~ "button. Preview mode will render the "
+#~ "result using a limited amount of "
+#~ "(quasi)random samples, which is a *lot*"
+#~ " faster than the 'perfect' mode used"
+#~ " otherwise. The sampling mode also "
+#~ "tends to produce grainy, noisy pictures"
+#~ " (though the more samples you use,"
+#~ " the less noisy the result). This "
+#~ "option is on by default. Play "
+#~ "around with the other parameters until"
+#~ " you are happy with the results, "
+#~ "and only then disable the preview "
+#~ "mode for the final render."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes you might want to have "
+#~ "more control to blur the image. "
+#~ "For instance, you may want to only"
+#~ " blur one object while leaving "
+#~ "everything else alone (or the other "
+#~ "way around), or you want to blur"
+#~ " the whole image uniformly all at "
+#~ "once. The node, therefore, allows you"
+#~ " to use something other than an "
+#~ "actual Z-buffer as the *Z* input. "
+#~ "For instance, you could connect an "
+#~ "image node and use a grayscale "
+#~ "image where the color designates how "
+#~ "much to blur the image at that "
+#~ "point, where white is the maximum "
+#~ "blur and black is no blur. Or, "
+#~ "you could use a Time node to "
+#~ "uniformly blur the image, where the "
+#~ "time value controls the maximum blur "
+#~ "for that frame. It may also be "
+#~ "used to obtain a possibly slightly "
+#~ "better DoF blur, by using a fake"
+#~ " depth shaded image instead of a "
+#~ "Z-buffer. (A typical method to create"
+#~ " the fake depth shaded image is "
+#~ "by using a linear blend texture "
+#~ "for all objects in the scene or"
+#~ " by using the 'fog/mist' fake depth"
+#~ " shading method.) This also has the"
+#~ " advantage that the fake depth image"
+#~ " can have anti-aliasing, which is "
+#~ "not possible with a real Z-buffer. "
+#~ "*No Z-buffer* will be enabled "
+#~ "automatically whenever you connect a "
+#~ "node that is not image based (e.g."
+#~ " time node/value node/etc)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Keep in mind that this is not "
+#~ "'real' DoF, only a post-processing "
+#~ "simulation. Some things cannot be done"
+#~ " which would be no problem for "
+#~ "real DoF at all. A typical example"
+#~ " is a scene with some object "
+#~ "very close to the camera, and the"
+#~ " camera focusing on some point far"
+#~ " behind it. In the real world, "
+#~ "using shallow depth of field, it "
+#~ "is not impossible for nearby objects "
+#~ "to become completely invisible, in "
+#~ "effect allowing the camera to see "
+#~ "'behind' it. Hollywood cinematographers use"
+#~ " this visual characteristic to to "
+#~ "achieve the popular \"focus pull\" "
+#~ "effect, where the focus shifts from "
+#~ "a nearby to a distant object, such"
+#~ " that the \"other\" object all but"
+#~ " disappears. Well, this is simply not"
+#~ " possible to do with the current "
+#~ "post-processing method in a single "
+#~ "pass. If you really want to "
+#~ "achieve this effect, quite satisfactorily, "
+#~ "here's how:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A final word of warning, since "
+#~ "there is no way to detect if "
+#~ "an actual Z-buffer is connected to "
+#~ "the node, be VERY careful with the"
+#~ " *No Z-Buffer* switch. If the *Z "
+#~ "scale* value happens to be large, "
+#~ "and you forget to set it back "
+#~ "to some low value, the values may"
+#~ " suddenly be interpreted as huge blur"
+#~ " radius values that will cause "
+#~ "processing times to explode."
 #~ msgstr ""
 
