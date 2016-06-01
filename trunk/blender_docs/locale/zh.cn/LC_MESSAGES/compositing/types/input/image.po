@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 18:46+1000\n"
+"POT-Creation-Date: 2016-06-01 11:50+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,298 +25,172 @@ msgstr ""
 msgid "Image Node."
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:13
+#: ../../manual/compositing/types/input/image.rst:12
 msgid ""
 "The *Image* node injects any image :doc:`format that is supported by "
-"Blender </render/output/output>`. Besides inputting the actual image, "
-"this node can also input *Alpha* and *Z-Depth* values if the image has "
-"them. If the image is a MultiLayer format, all saved render passes are "
-"input. Use this node to input:"
+"Blender </render/output/output>`."
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:18
-msgid "A single image from a file (such as a ``JPG`` picture)"
+#: ../../manual/compositing/types/input/image.rst:15
+msgid "Input"
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:19
-msgid "Part or all of an animation sequence (such as the 30th to 60th frame)"
+#: ../../manual/compositing/types/input/image.rst:17
+msgid "None."
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:20
-msgid "Part or all of a movie clip (such as an ``AVI`` file)"
+msgid "Options"
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:21
+#: ../../manual/compositing/types/input/image.rst:50
+msgid "Source"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:23
 msgid ""
-"the image that is currently in the UV/Image Editor (and possibly being "
-"painted)"
+"a preloaded image could be loaded by clicking on image file icon to the "
+"left and selecting it from the list."
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:22
-msgid "an image that was loaded in the UV/Image Editor"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:24
+#: ../../manual/compositing/types/input/image.rst:25
 msgid ""
-"Animated image sequences or video files can also be used. See "
-"`Animations`_ below."
+"or by clicking the *Open* button to select a file/s via the :doc:`file-"
+"browser </editors/file_browser/introduction>`."
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:27
-msgid ""
-"To select an image file or generated image from the UV/Image Editor, "
-"click on the small arrow selector button to the left of the name and pick"
-" an existing image (e.g. loaded in the UV editor or elsewhere) or click "
-"on *load new* to select a file from your hard disk via a file-browser."
+msgid "Single Image"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:28
+msgid "Still image or a single frame."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:34
+msgid "Image Sequence"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:30
+msgid "Each frame is stored in a separate file."
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:32
-msgid ""
-"If the image is part of a sequence, manually click the Image Type "
-"selector to the right of the name, and select *Sequence*. Additional "
-"controls will allow you to define how much of the sequence to pull in "
-"(see Animations below). If the file is a video file, these controls will "
-"automatically appear."
+msgid "Frame"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:33
+msgid "A label showing the current frame."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:34
+msgid "options"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:35
+msgid "see: Movie below"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:47
+msgid "Movie"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:37
+msgid "Frames packed into a container"
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:39
-msgid "Image Channels"
+msgid "Frames"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:40
+msgid "The range of frames to be shown."
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:41
-msgid ""
-"When the image is loaded, the available channels will be shown as sockets"
-" on the node. As a minimum, the Image, Alpha, and Z channels are made "
-"available. The picture may or may not have an alpha (transparency) and/or"
-" Z (depth) channel, depending on the format. If the image format does not"
-" support A and/or Z, default values are supplied (1.0 for A, 0.0 for Z)."
+msgid "Start Frame"
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:51
-msgid "Alpha/Transparency Channel"
+#: ../../manual/compositing/types/input/image.rst:42
+msgid "The frame of the global sequence, when the playback should start."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:43
+msgid "Offset"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:44
+msgid "Offsets the first frame of the clip."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:45
+msgid "Cyclic"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:46
+msgid "Start over and repeats after the last frame to create a continuous loop."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:47
+msgid "Auto-Refresh"
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:48
-msgid ""
-"If a transparency channel is detected, the *Alpha* output socket will "
-"supply it."
+msgid "If the file is updated, the compositor re-renders."
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:49
-msgid ""
-"If it does not have an Alpha channel (e.g. ``JPG`` images), Blender will "
-"supply one, setting the whole image to completely opaque (an Alpha of "
-"1.00, which will show in a *Viewer* node as white - if connected to the "
-"*Image* input socket)."
+#: ../../manual/compositing/types/input/image.rst:50
+msgid "Generated"
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:58
-msgid "Z/depth Channel"
+#: ../../manual/compositing/types/input/image.rst:50
+msgid "Images generated in Blender or preloaded."
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:54
-msgid "If a Z (depth) channel is detected, the *Z* output socket will supply it."
+msgid "More options could be set in the properties panel."
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:55
-msgid ""
-"If it does not have a Z channel (e.g. ``JPG`` or ``PNG`` images), Blender"
-" will supply one, setting the whole image to be at the camera (a depth of"
-" 0.00). To view the Z-depth channel, use the Map Value to ColorRamp "
-"noodle given above in the Render Layer input node (see :ref"
-":`render_layers-z_socket_usage` )."
+#: ../../manual/compositing/types/input/image.rst:57
+msgid "Output"
 msgstr ""
 
-#: ../../manual/compositing/types/input/image.rst:60
-msgid "Formats"
+#: ../../manual/compositing/types/input/image.rst:59
+msgid "The first two sockets are the minimum."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:61
+msgid "Color"
 msgstr ""
 
 #: ../../manual/compositing/types/input/image.rst:62
+msgid "Image"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:63
+msgid "Alpha"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:64
+msgid "Separate Alpha value. Default values is 1.0."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:66
+msgid "Z"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:66
+msgid "Z-depth layer. Default values is 0.0."
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:69
+msgid "MultiLayer format"
+msgstr ""
+
+#: ../../manual/compositing/types/input/image.rst:70
 msgid ""
-"Blender supports many image formats. Currently only the OpenEXR image "
-"format stores RGB (color), A (alpha), and Z (depth) buffer information in"
-" a single file, if enabled."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:68
-msgid "Saving/Retrieving Render Passes"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:72
-msgid ""
-"Blender can save the individual Render Layers and specific passes in a "
-"MultiLayer file format, which is an extension of the OpenEXR format. In "
-"this example, we are reading in frames 50 to 100 of a RenderLayer that "
-"was generated some time ago. The passes that were saved were the Image, "
-"Alpha, Z, Specular and AO passes."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:77
-msgid ""
-"To create a MultiLayer image set when initially rendering, simply disable"
-" Do Composite, set your Format to MultiLayer, enable the Render Layer "
-"passes you wish to save over the desired frame range and Animate. Then, "
-"in Blender, enable Compositing Nodes and Do Composite, and use the Image "
-"input node to read in the ``EXR`` file. When you do, you will see each of"
-" the saved passes available as sockets for you to use in your compositing"
-" noodle."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:86
-msgid "Image Size"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:88
-msgid ""
-"Size matters - Pay attention to image resolution and color depth when "
-"mixing and matching images. Aliasing (rough edges), color *flatness*, or "
-"distorted images can all be traced to mixing inappropriate resolutions "
-"and color depths."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:92
-msgid ""
-"The compositor can mix images with any size, and will only perform "
-"operations on pixels where images have an overlap. When nodes receive "
-"inputs with differently sized Images, these rules apply:"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:96
-msgid "The first/top Image input socket defines the output size."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:97
-msgid ""
-"The composite is centered by default, unless a translation has been "
-"assigned to a buffer using a *Translate* node."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:100
-msgid ""
-"So each node in a composite can operate on different sized images as "
-"defined by its inputs. Only the *Composite* output node has a fixed size,"
-" as defined by the *Scene buttons* (Format Panel). The *Viewer* node "
-"always shows the size from its input, but when not linked (or linked to a"
-" value) it shows a small 320x256 pixel image."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:108
-msgid "Animations"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:112
-msgid ""
-"To use image sequences or movies within your composition, press the face "
-"or little film strip button located to the right of the selector. As you "
-"click, a pop-up will offer you four choices:"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:116
-msgid ""
-"Generated - a image generated from the :doc:`UV Editor "
-"</editors/uv_image/index>`"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:117
-msgid "Sequence - a sequence of frames, each frame in a separate file."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:118
-msgid ""
-"Movie - a sequence of frames packed into a single ``.avi`` or ``.mov`` "
-"file"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:119
-msgid "Image - a single frame or still image in a file"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:121
-msgid ""
-"A Movie or Image can be named anything, but a Sequence must have a digit "
-"sequence somewhere in its filename, for example fire0001set.jpg, "
-"fire0002set.jpg, fire0003set.jpg and so on. The number indicates the "
-"frame."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:126
-msgid ""
-"If a Sequence or Movie is selected, an additional set of controls will "
-"appear that allows you to select part or all of the sequence. Use these "
-"controls to specify which frames, out of the original sequence, that you "
-"want to introduce into the animation you are about to render. You can "
-"start at the beginning and only use the beginning, or even pick out a set"
-" of frames from the middle of an existing animation."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:133
-msgid ""
-"The *Frs* number button is the number of frames in the sequence that you "
-"want to show. For example, if you want to show 2 seconds of the "
-"animation, and are running 30 fps, you would put 60 here."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:136
-msgid ""
-"The *SFra* number button sets the start frame of the animation; namely, "
-"at what point in the animation that you are going to render do you want "
-"this sequence to start playing. For example, if you want to introduce "
-"this clip ten seconds into the composite output, you would put 300 here "
-"(at 30 fps)."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:142
-msgid ""
-"The *First* number button sets the first number in the animated sequence "
-"name. For example, if your images were called \"credits-0001.png\", "
-"\"credits-0002.png\" through \"credits-0300.png\" and you wanted to start"
-" picking up with frame 20, you would put 20 here."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:146
-msgid ""
-"To have the movie/sequence start over and repeat when it is done, press "
-"the *Cyclic* button. For example, if you were compositing a fan into a "
-"room, and the fan animation lasted 30 frames, the animation would start "
-"over at frame 31, 61, 91, and so on, continuously looping. As you scrub "
-"from frame to frame, to see the actual video frame used for the current "
-"frame of animation, press the auto button to the right of the *Cyclic* "
-"button."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:155
-msgid "Generated Images"
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:157
-msgid ""
-"`Using the Nodes to modify a painting in progress in the UV/Image window "
-"<https://wiki.blender.org/index.php/File:Manual-Compositing-Node-Image-"
-"Generagedjpg>`__ Blender features :ref:`painting_texture-index` which "
-"works in the UV/Image Editor, that allows you to paint on the fly, and "
-"the image is kept in memory or saved. If sync lock is enabled (the lock "
-"icon in the header), changes are broadcast throughout Blender as soon as "
-"you lift the mouse button. One of the places that the image can go is to "
-"the Image Input node. The example shows a painting session going on in "
-"the right-hand UV/Image Editor window for the painting \"Untitled\". "
-"Create this image via Image?New in the UV/Image Editor. Refer to the "
-"texture paint section of the user manual for more info on using Texture "
-"Paint."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:169
-msgid ""
-"In the left-hand window, the Image input node was used to select that "
-"\"Untitled\" image. Notice that the Image type icon is blank, indicating "
-"that it is pulling in a Generated image. That image is colorized by the "
-"noodle, with the result used as a backdrop in the Node Editor Window."
-msgstr ""
-
-#: ../../manual/compositing/types/input/image.rst:174
-msgid ""
-"Using this setup and the Generated Image type is like painting and post-"
-"processing as you continue painting. Changes to either the painting or "
-"the post-pro noodle are dynamic and real-time."
+"When a MultiLayer file format, like ``EXR``, is loaded, each layer is "
+"made available as a socket."
 msgstr ""
 
 #~ msgid ""
@@ -329,6 +203,42 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
+#~ "The *Image* node injects any image "
+#~ ":doc:`format that is supported by "
+#~ "Blender </render/output/output>`. Besides inputting"
+#~ " the actual image, this node can "
+#~ "also input *Alpha* and *Z-Depth* values"
+#~ " if the image has them. If the"
+#~ " image is a MultiLayer format, all"
+#~ " saved render passes are input. Use"
+#~ " this node to input:"
+#~ msgstr ""
+
+#~ msgid "A single image from a file (such as a ``JPG`` picture)"
+#~ msgstr ""
+
+#~ msgid "Part or all of an animation sequence (such as the 30th to 60th frame)"
+#~ msgstr ""
+
+#~ msgid "Part or all of a movie clip (such as an ``AVI`` file)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the image that is currently in the"
+#~ " UV/Image Editor (and possibly being "
+#~ "painted)"
+#~ msgstr ""
+
+#~ msgid "an image that was loaded in the UV/Image Editor"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Animated image sequences or video files"
+#~ " can also be used. See `Animations`_"
+#~ " below."
+#~ msgstr ""
+
+#~ msgid ""
 #~ "To select an image file or "
 #~ "generated image from the UV/Image "
 #~ "Editor, click on the small arrow "
@@ -337,33 +247,104 @@ msgstr ""
 #~ "(e.g. loaded in the UV editor or"
 #~ " elsewhere) or click on *load new*"
 #~ " to select a file from your "
-#~ "hard disk via a file-browser. "
-#~ "These images can be e.g. previously "
-#~ "rendered images, matte paintings, a "
-#~ "picture of your cat, whatever. Blender"
-#~ " really doesn't care."
+#~ "hard disk via a file-browser."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the image is part of a "
+#~ "sequence, manually click the Image Type"
+#~ " selector to the right of the "
+#~ "name, and select *Sequence*. Additional "
+#~ "controls will allow you to define "
+#~ "how much of the sequence to pull"
+#~ " in (see Animations below). If the"
+#~ " file is a video file, these "
+#~ "controls will automatically appear."
+#~ msgstr ""
+
+#~ msgid "Image Channels"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the image is loaded, the "
+#~ "available channels will be shown as "
+#~ "sockets on the node. As a minimum,"
+#~ " the Image, Alpha, and Z channels "
+#~ "are made available. The picture may "
+#~ "or may not have an alpha "
+#~ "(transparency) and/or Z (depth) channel, "
+#~ "depending on the format. If the "
+#~ "image format does not support A "
+#~ "and/or Z, default values are supplied"
+#~ " (1.0 for A, 0.0 for Z)."
+#~ msgstr ""
+
+#~ msgid "Alpha/Transparency Channel"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a transparency channel is detected,"
+#~ " the *Alpha* output socket will "
+#~ "supply it."
 #~ msgstr ""
 
 #~ msgid ""
 #~ "If it does not have an Alpha "
-#~ "channel (e.g. JPG images), Blender will"
-#~ " supply one, setting the whole image"
-#~ " to completely opaque (an Alpha of"
-#~ " 1.00, which will show in a "
+#~ "channel (e.g. ``JPG`` images), Blender "
+#~ "will supply one, setting the whole "
+#~ "image to completely opaque (an Alpha "
+#~ "of 1.00, which will show in a "
 #~ "*Viewer* node as white - if "
 #~ "connected to the *Image* input socket)."
 #~ msgstr ""
 
+#~ msgid "Z/depth Channel"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a Z (depth) channel is "
+#~ "detected, the *Z* output socket will "
+#~ "supply it."
+#~ msgstr ""
+
 #~ msgid ""
 #~ "If it does not have a Z "
-#~ "channel (e.g. JPG or PNG images), "
-#~ "Blender will supply one, setting the "
-#~ "whole image to be at the camera"
-#~ " (a depth of 0.00). To view the"
-#~ " Z-depth channel, use the Map Value"
-#~ " to ColorRamp noodle given above in"
-#~ " the Render Layer input node (see "
-#~ ":ref:`render_layers-z_socket_usage` )."
+#~ "channel (e.g. ``JPG`` or ``PNG`` "
+#~ "images), Blender will supply one, "
+#~ "setting the whole image to be at"
+#~ " the camera (a depth of 0.00). "
+#~ "To view the Z-depth channel, use "
+#~ "the Map Value to ColorRamp noodle "
+#~ "given above in the Render Layer "
+#~ "input node (see :ref:`render_layers-"
+#~ "z_socket_usage` )."
+#~ msgstr ""
+
+#~ msgid "Formats"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Blender supports many image formats. "
+#~ "Currently only the OpenEXR image format"
+#~ " stores RGB (color), A (alpha), and"
+#~ " Z (depth) buffer information in a"
+#~ " single file, if enabled."
+#~ msgstr ""
+
+#~ msgid "Saving/Retrieving Render Passes"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Blender can save the individual Render"
+#~ " Layers and specific passes in a "
+#~ "MultiLayer file format, which is an "
+#~ "extension of the OpenEXR format. In "
+#~ "this example, we are reading in "
+#~ "frames 50 to 100 of a RenderLayer"
+#~ " that was generated some time ago."
+#~ " The passes that were saved were "
+#~ "the Image, Alpha, Z, Specular and "
+#~ "AO passes."
 #~ msgstr ""
 
 #~ msgid ""
@@ -376,10 +357,131 @@ msgstr ""
 #~ "Then, in Blender, enable Compositing "
 #~ "Nodes and Do Composite, and use "
 #~ "the Image input node to read in"
-#~ " the EXR file. When you do, you"
-#~ " will see each of the saved "
+#~ " the ``EXR`` file. When you do, "
+#~ "you will see each of the saved "
 #~ "passes available as sockets for you "
 #~ "to use in your compositing noodle."
+#~ msgstr ""
+
+#~ msgid "Image Size"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Size matters - Pay attention to "
+#~ "image resolution and color depth when"
+#~ " mixing and matching images. Aliasing "
+#~ "(rough edges), color *flatness*, or "
+#~ "distorted images can all be traced "
+#~ "to mixing inappropriate resolutions and "
+#~ "color depths."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The compositor can mix images with "
+#~ "any size, and will only perform "
+#~ "operations on pixels where images have"
+#~ " an overlap. When nodes receive "
+#~ "inputs with differently sized Images, "
+#~ "these rules apply:"
+#~ msgstr ""
+
+#~ msgid "The first/top Image input socket defines the output size."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The composite is centered by default,"
+#~ " unless a translation has been "
+#~ "assigned to a buffer using a "
+#~ "*Translate* node."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "So each node in a composite can"
+#~ " operate on different sized images as"
+#~ " defined by its inputs. Only the "
+#~ "*Composite* output node has a fixed "
+#~ "size, as defined by the *Scene "
+#~ "buttons* (Format Panel). The *Viewer* "
+#~ "node always shows the size from "
+#~ "its input, but when not linked (or"
+#~ " linked to a value) it shows a"
+#~ " small 320x256 pixel image."
+#~ msgstr ""
+
+#~ msgid "Animations"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To use image sequences or movies "
+#~ "within your composition, press the face"
+#~ " or little film strip button located"
+#~ " to the right of the selector. "
+#~ "As you click, a pop-up will "
+#~ "offer you four choices:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Generated - a image generated from "
+#~ "the :doc:`UV Editor </editors/uv_image/index>`"
+#~ msgstr ""
+
+#~ msgid "Sequence - a sequence of frames, each frame in a separate file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Movie - a sequence of frames "
+#~ "packed into a single ``.avi`` or "
+#~ "``.mov`` file"
+#~ msgstr ""
+
+#~ msgid "Image - a single frame or still image in a file"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A Movie or Image can be named "
+#~ "anything, but a Sequence must have "
+#~ "a digit sequence somewhere in its "
+#~ "filename, for example fire0001set.jpg, "
+#~ "fire0002set.jpg, fire0003set.jpg and so on."
+#~ " The number indicates the frame."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a Sequence or Movie is "
+#~ "selected, an additional set of controls"
+#~ " will appear that allows you to "
+#~ "select part or all of the "
+#~ "sequence. Use these controls to specify"
+#~ " which frames, out of the original"
+#~ " sequence, that you want to introduce"
+#~ " into the animation you are about "
+#~ "to render. You can start at the"
+#~ " beginning and only use the "
+#~ "beginning, or even pick out a set"
+#~ " of frames from the middle of "
+#~ "an existing animation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Frs* number button is the "
+#~ "number of frames in the sequence "
+#~ "that you want to show. For "
+#~ "example, if you want to show 2 "
+#~ "seconds of the animation, and are "
+#~ "running 30 fps, you would put 60"
+#~ " here."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *SFra* number button sets the "
+#~ "start frame of the animation; namely,"
+#~ " at what point in the animation "
+#~ "that you are going to render do"
+#~ " you want this sequence to start "
+#~ "playing. For example, if you want "
+#~ "to introduce this clip ten seconds "
+#~ "into the composite output, you would "
+#~ "put 300 here (at 30 fps)."
 #~ msgstr ""
 
 #~ msgid ""
@@ -389,7 +491,74 @@ msgstr ""
 #~ " were called \"credits-0001.png\", "
 #~ "\"credits-0002.png\" through \"credits-0300.png\" "
 #~ "and you wanted to start picking up"
-#~ " with frame 20, you'd put 20 "
-#~ "here."
+#~ " with frame 20, you would put "
+#~ "20 here."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To have the movie/sequence start over"
+#~ " and repeat when it is done, "
+#~ "press the *Cyclic* button. For example,"
+#~ " if you were compositing a fan "
+#~ "into a room, and the fan animation"
+#~ " lasted 30 frames, the animation "
+#~ "would start over at frame 31, 61,"
+#~ " 91, and so on, continuously looping."
+#~ " As you scrub from frame to "
+#~ "frame, to see the actual video "
+#~ "frame used for the current frame "
+#~ "of animation, press the auto button "
+#~ "to the right of the *Cyclic* "
+#~ "button."
+#~ msgstr ""
+
+#~ msgid "Generated Images"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Using the Nodes to modify a "
+#~ "painting in progress in the UV/Image "
+#~ "window <https://wiki.blender.org/index.php/File:Manual-"
+#~ "Compositing-Node-Image-Generagedjpg>`__ Blender"
+#~ " features :ref:`painting_texture-index` which "
+#~ "works in the UV/Image Editor, that "
+#~ "allows you to paint on the fly,"
+#~ " and the image is kept in "
+#~ "memory or saved. If sync lock is"
+#~ " enabled (the lock icon in the "
+#~ "header), changes are broadcast throughout "
+#~ "Blender as soon as you lift the"
+#~ " mouse button. One of the places "
+#~ "that the image can go is to "
+#~ "the Image Input node. The example "
+#~ "shows a painting session going on "
+#~ "in the right-hand UV/Image Editor "
+#~ "window for the painting \"Untitled\". "
+#~ "Create this image via Image?New in "
+#~ "the UV/Image Editor. Refer to the "
+#~ "texture paint section of the user "
+#~ "manual for more info on using "
+#~ "Texture Paint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the left-hand window, the Image"
+#~ " input node was used to select "
+#~ "that \"Untitled\" image. Notice that the"
+#~ " Image type icon is blank, indicating"
+#~ " that it is pulling in a "
+#~ "Generated image. That image is colorized"
+#~ " by the noodle, with the result "
+#~ "used as a backdrop in the Node "
+#~ "Editor Window."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Using this setup and the Generated "
+#~ "Image type is like painting and "
+#~ "post-processing as you continue painting."
+#~ " Changes to either the painting or"
+#~ " the post-pro noodle are dynamic "
+#~ "and real-time."
 #~ msgstr ""
 
