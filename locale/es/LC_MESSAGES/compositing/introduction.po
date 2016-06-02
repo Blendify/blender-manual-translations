@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-01 11:50+1000\n"
+"POT-Creation-Date: 2016-06-02 15:32+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -245,76 +245,79 @@ msgid ""
 "second pass calculate all nodes."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:114
+#: ../../manual/compositing/introduction.rst:116
 msgid "Viewer Border"
 msgstr ""
 
 #: ../../manual/compositing/introduction.rst:114
 msgid ""
-"This allows you to set a render border for the backdrop. To define the "
-"resolution of the border use :kbd:`Ctrl-B`"
+"This allows to set an area of interest for the backdrop and preview. The "
+"border is started by :kbd:`Ctrl-B` and finished by selection of a "
+"rectangular area. :kbd:`Ctrl-Alt-B` discards the border back to a full "
+"preview. This is only a preview option, final compositing during a render"
+" ignores this border."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:118
+#: ../../manual/compositing/introduction.rst:120
 msgid "Highlight"
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:117
+#: ../../manual/compositing/introduction.rst:119
 msgid "Highlights the nodes that are being calculated."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:121
+#: ../../manual/compositing/introduction.rst:123
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:123
+#: ../../manual/compositing/introduction.rst:125
 msgid "You can do just about anything with images using nodes."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:125
+#: ../../manual/compositing/introduction.rst:127
 msgid ""
 "Raw footage from a foreground actor in front of a blue screen, or a "
 "rendered object doing something, can be layered on top of a background. "
 "Composite both together, and you have composited footage."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:129
+#: ../../manual/compositing/introduction.rst:131
 msgid "You can change the mood of an image:"
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:131
+#: ../../manual/compositing/introduction.rst:133
 msgid "To make an image 'feel' colder, a blue tinge is added."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:132
+#: ../../manual/compositing/introduction.rst:134
 msgid "To convey a flashback or memory, the image may be softened."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:133
+#: ../../manual/compositing/introduction.rst:135
 msgid "To convey hatred and frustration, add a red tinge or enhance the red."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:134
+#: ../../manual/compositing/introduction.rst:136
 msgid "A startling event may be sharpened and contrast-enhanced."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:135
+#: ../../manual/compositing/introduction.rst:137
 msgid ""
 "A happy feeling - you guessed it - add yellow (equal parts red and green,"
 " no blue) for bright and sunny."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:136
+#: ../../manual/compositing/introduction.rst:138
 msgid ""
 "Dust and airborne dirt are often added as a cloud texture over the image "
 "to give a little more realism."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:139
+#: ../../manual/compositing/introduction.rst:141
 msgid "Image Size"
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:141
+#: ../../manual/compositing/introduction.rst:143
 msgid ""
 "It is recommended to pay attention to image resolution and color depth "
 "when mixing and matching images. Aliasing (rough edges), color "
@@ -322,24 +325,24 @@ msgid ""
 " resolutions and color depths."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:145
+#: ../../manual/compositing/introduction.rst:147
 msgid ""
 "The compositor can mix images with any size, and will only perform "
 "operations on pixels where images have an overlap. When nodes receive "
 "inputs with differently sized Images, these rules apply:"
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:149
+#: ../../manual/compositing/introduction.rst:151
 msgid "The first/top Image input socket defines the output size."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:150
+#: ../../manual/compositing/introduction.rst:152
 msgid ""
 "The composite is centered by default, unless a translation has been "
 "assigned to a buffer using a *Translate* node."
 msgstr ""
 
-#: ../../manual/compositing/introduction.rst:153
+#: ../../manual/compositing/introduction.rst:155
 msgid ""
 "So each node in a composite can operate on different sized images as "
 "defined by its inputs. Only the *Composite* output node has a fixed size,"
@@ -348,6 +351,42 @@ msgid ""
 " value) it shows a small 320×256 pixel image."
 msgstr ""
 
+#: ../../manual/compositing/introduction.rst:162
+msgid "Saving your Composite Image"
+msgstr ""
+
+#: ../../manual/compositing/introduction.rst:164
+msgid ""
+"The *Render* button renders a single frame or image. Save your image "
+"using :menuselection:`File --> Save Image` or :kbd:`F3`. The image will "
+"be saved using the image format settings on the Render panel."
+msgstr ""
+
+#: ../../manual/compositing/introduction.rst:168
+msgid ""
+"To save a sequence of images, for example, if you input a movie clip or "
+"used a Time node with each frame in its own file, use the *Animation* "
+"button and its settings. If you might want to later overlay them, be sure"
+" to use an image format that supports an Alpha channel (such as ``PNG``)."
+" If you might want to later arrange them front to back or create a depth "
+"of field effect, use a format that supports a Z-depth channel (such as "
+"``EXR``)."
+msgstr ""
+
+#: ../../manual/compositing/introduction.rst:175
+msgid ""
+"To save a composition as a movie clip (all frames in a single file), use "
+"an ``AVI`` or ``Quicktime`` format, and use the *Animation* button and "
+"its settings."
+msgstr ""
+
 #~ msgid ""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This allows you to set a render"
+#~ " border for the backdrop. To define"
+#~ " the resolution of the border use "
+#~ ":kbd:`Ctrl-B`"
 #~ msgstr ""
 
