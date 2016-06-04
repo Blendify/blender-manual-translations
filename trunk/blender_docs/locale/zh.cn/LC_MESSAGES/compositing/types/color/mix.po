@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 18:46+1000\n"
+"POT-Creation-Date: 2016-06-04 11:53+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,78 +22,111 @@ msgstr ""
 
 #: ../../manual/compositing/types/color/mix.rst:12
 msgid ""
-"This node mixes a base image (threaded to the top socket) together with a"
-" second image (bottom socket) by working on the individual and "
-"corresponding pixels in the two images or surfaces. The way the output "
-"image is produced is selected in the drop-down menu. The size (output "
-"resolution) of the image produced by the Mix Node is the size of the base"
-" image. The alpha and Z channels are mixed as well."
+"This node mixes images by working on the individual and corresponding "
+"pixels of the two input images."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:21
-msgid ":term:`Color Blend Modes` for details on each blending mode."
+#: ../../manual/compositing/types/color/mix.rst:17
+msgid "Input"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:23
-msgid "Color Channels"
-msgstr ""
-
-#: ../../manual/compositing/types/color/mix.rst:25
-msgid ""
-"There are two ways to express the channels that are combined to result in"
-" a color: RGB or HSV. RGB stands for the Red/Green/Blue pixel format, and"
-" HSV stands for the Hue/Saturation/Value pixel format."
-msgstr ""
-
-#: ../../manual/compositing/types/color/mix.rst:33
-msgid "Alpha"
-msgstr ""
-
-#: ../../manual/compositing/types/color/mix.rst:30
-msgid ""
-"Click the *Alpha* button to make the mix node use the Alpha "
-"(transparency) values of the second (bottom) node. If enabled, the "
-"resulting image will have an Alpha channel that reflects both images' "
-"channels. Otherwise, (when not enabled, light green) the output image "
-"will mix the colors by considering what effect the Alpha channel has of "
-"the base (top input socket) image. The Alpha channel of the output image "
-"is not affected."
-msgstr ""
-
-#: ../../manual/compositing/types/color/mix.rst:40
+#: ../../manual/compositing/types/color/mix.rst:19
 msgid "Fac"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:36
+#: ../../manual/compositing/types/color/mix.rst:20
+msgid "Controls the amount of influence the node exerts on the output image."
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:21
+#: ../../manual/compositing/types/color/mix.rst:25
+#: ../../manual/compositing/types/color/mix.rst:50
+msgid "Image"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:22
 msgid ""
-"The amount of mixing of the bottom socket is selected by the Factor input"
-" field *Fac:*. A factor of zero does not use the bottom socket, whereas a"
-" value of 1.0 makes full use. In Mix mode, 0.5 is an even mix between the"
-" two, but in Add mode, 0.5 means that only half of the second socket's "
-"influence will be applied."
+"The base image. The image size and resolution sets the dimensions of the "
+"output image."
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:24
+msgid "The second image"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:28
+msgid "Properties"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:34
+#: ../../manual/compositing/types/color/mix.rst:76
+msgid "Mix"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:31
+msgid "The Blend types could be selected in the drop-down menu."
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:34
+msgid ""
+"Add, Subtract, Multiply, Screen, Divide, Difference, Darken, Lighten, "
+"Overlay, Dodge, Burn, Hue, Saturation, Value, Color, Soft Light, Linear "
+"Light"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:34
+msgid "See :term:`Color Blend Modes` for details on each blending mode."
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:39
+msgid "Use Alpha"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:37
+msgid ""
+"If activated, by clicking on the *Color and Alpha* icon, the Alpha "
+"channel of the second image is used for mixing. When deactivated, the "
+"default, the icon background is a light gray. The alpha channel of the "
+"base image is always used."
 msgstr ""
 
 #: ../../manual/compositing/types/color/mix.rst:43
+msgid "Clamp"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:42
+msgid "Limit the highest color value to not exceed 1."
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:46
+msgid "Output"
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:49
+msgid "Standard image output."
+msgstr ""
+
+#: ../../manual/compositing/types/color/mix.rst:53
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:45
+#: ../../manual/compositing/types/color/mix.rst:55
 msgid ""
 "Below are samples of common mix modes and uses, mixing a color or checker"
 " with a mask."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:50
+#: ../../manual/compositing/types/color/mix.rst:60
 msgid ""
 "Some explanation of the mixing methods above might help you use the Mix "
 "node effectively:"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:54
+#: ../../manual/compositing/types/color/mix.rst:64
 msgid "Add"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:53
+#: ../../manual/compositing/types/color/mix.rst:63
 msgid ""
 "adding blue to blue keeps it blue, but adding blue to red makes purple. "
 "White already has a full amount of blue, so it stays white. Use this to "
@@ -101,61 +134,57 @@ msgid ""
 "colder."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:58
+#: ../../manual/compositing/types/color/mix.rst:68
 msgid "Subtract"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:57
+#: ../../manual/compositing/types/color/mix.rst:67
 msgid ""
 "Taking Blue away from white leaves Red and Green, which combined make "
 "Yellow. Taking Blue away from Purple leaves Red. Use this to desaturate "
 "an image. Taking away yellow makes an image bluer and more depressing."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:61
+#: ../../manual/compositing/types/color/mix.rst:71
 msgid "Multiply"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:61
+#: ../../manual/compositing/types/color/mix.rst:71
 msgid ""
 "Black (0.00) times anything leaves black. Anything times White (1.00) is "
 "itself. Use this to mask out garbage, or to colorize a black-and-white "
 "image."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:64
+#: ../../manual/compositing/types/color/mix.rst:74
 msgid "Hue"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:64
+#: ../../manual/compositing/types/color/mix.rst:74
 msgid ""
 "Shows you how much of a color is in an image, ignoring all colors except "
 "what is selected: makes a monochrome picture (style 'Black & Hue')."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:66
-msgid "Mix"
-msgstr ""
-
-#: ../../manual/compositing/types/color/mix.rst:67
+#: ../../manual/compositing/types/color/mix.rst:77
 msgid "Combines the two images, averaging the two."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:68
+#: ../../manual/compositing/types/color/mix.rst:78
 msgid "Lighten"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:69
+#: ../../manual/compositing/types/color/mix.rst:79
 msgid ""
 "Like bleach makes your whites whiter. Use with a mask to lighten up a "
 "little."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:73
+#: ../../manual/compositing/types/color/mix.rst:83
 msgid "Difference"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:71
+#: ../../manual/compositing/types/color/mix.rst:81
 msgid ""
 "Kinda cute in that it takes out a color. The color needed to turn Yellow "
 "into White is Blue. Use this to compare two verrry similar images to see "
@@ -164,21 +193,21 @@ msgid ""
 "Watermark images`_) you have placed in an image for theft detection."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:77
+#: ../../manual/compositing/types/color/mix.rst:87
 msgid "Darken"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:76
+#: ../../manual/compositing/types/color/mix.rst:86
 msgid ""
 "with the colors set here, is like looking at the world through rose-"
 "colored glasses."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:80
+#: ../../manual/compositing/types/color/mix.rst:90
 msgid "Contrast Enhancement using Mix"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:82
+#: ../../manual/compositing/types/color/mix.rst:92
 msgid ""
 "Here is a small map showing the effects of two other common uses for the "
 "RGB Curve: *Darken* and *Contrast Enhancement*. You can see the effect "
@@ -186,20 +215,20 @@ msgid ""
 "*mixed* equally."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:90
+#: ../../manual/compositing/types/color/mix.rst:100
 msgid ""
 "Example node setup showing \"Darken\", \"Enhance Contrast\" and \"Mix\" "
 "nodes for composition."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:93
+#: ../../manual/compositing/types/color/mix.rst:103
 msgid ""
 "As you can hopefully see, our original magic monkey was overexposed by "
 "too much light. To cure an overexposure, you must both darken the image "
 "and enhance the contrast."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:96
+#: ../../manual/compositing/types/color/mix.rst:106
 msgid ""
 "In the top RGB curve, *Darken*, only the right side of the curve was "
 "lowered; thus, any X input along the bottom results in a geometrically "
@@ -212,11 +241,11 @@ msgid ""
 "much better."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:106
+#: ../../manual/compositing/types/color/mix.rst:116
 msgid "Using Mix to Watermark images"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:108
+#: ../../manual/compositing/types/color/mix.rst:118
 msgid ""
 "In the old days, a pattern was pressed into the paper mush as it dried, "
 "creating a mark that identified who made the paper and where it came "
@@ -229,11 +258,11 @@ msgid ""
 "and to tell if an image has your watermark."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:119
+#: ../../manual/compositing/types/color/mix.rst:129
 msgid "Encoding Your Watermark in an Image"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:121
+#: ../../manual/compositing/types/color/mix.rst:131
 msgid ""
 "First, construct your own personal watermark. You can use your name, a "
 "word, or a shape or image not easily replicated. While neutral gray works"
@@ -249,22 +278,22 @@ msgid ""
 "slightly brighter."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:136
+#: ../../manual/compositing/types/color/mix.rst:146
 msgid "Embedding your mark in an Image using a Mark and Specific Position."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:139
+#: ../../manual/compositing/types/color/mix.rst:149
 msgid ""
 "Of course, if you *want* people to notice your mark, do not scale it so "
 "much, or make it a contrasting color. There are also many other ways, "
 "using other mix settings and fancier rigs. Feel free to experiment!"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:143
+#: ../../manual/compositing/types/color/mix.rst:153
 msgid "Additional uses"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:145
+#: ../../manual/compositing/types/color/mix.rst:155
 msgid ""
 "You can also use this technique, using settings that result in visible "
 "effects, in title sequences to make the words appear to be cast on the "
@@ -272,11 +301,11 @@ msgid ""
 "possessed girl's forearm. yuk."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:151
+#: ../../manual/compositing/types/color/mix.rst:161
 msgid "Decoding an Image for your Watermark"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:153
+#: ../../manual/compositing/types/color/mix.rst:163
 msgid ""
 "When you see an image that you think might be yours, use the node map "
 "below to compare it to your stock image (pre-watermarked original). In "
@@ -285,11 +314,11 @@ msgid ""
 "see how the original mark stands out, clear as a bell:"
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:162
+#: ../../manual/compositing/types/color/mix.rst:172
 msgid "Checking an image for your watermark."
 msgstr ""
 
-#: ../../manual/compositing/types/color/mix.rst:165
+#: ../../manual/compositing/types/color/mix.rst:175
 msgid ""
 "Various image compression algorithms lose some of the original; the "
 "difference shows as noise. Experiment with different compression settings"
@@ -316,19 +345,65 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Various image compression algorithms lose "
-#~ "some of the original; the difference "
-#~ "shows as noise. Experiment with "
-#~ "different compression settings and marks "
-#~ "to see which works best for you"
-#~ " by having the encoding map in "
-#~ "one scene, and the decoding map in"
-#~ " another. Use them while changing "
-#~ "Blender's image format settings, reloading "
-#~ "the watermarked image after saving, to"
-#~ " get an acceptable result. In the "
-#~ "example above, the mark was clearly "
-#~ "visible all the way up to JPEG "
-#~ "compression of 50%."
+#~ "This node mixes a base image "
+#~ "(threaded to the top socket) together"
+#~ " with a second image (bottom socket)"
+#~ " by working on the individual and "
+#~ "corresponding pixels in the two images"
+#~ " or surfaces. The way the output "
+#~ "image is produced is selected in "
+#~ "the drop-down menu. The size "
+#~ "(output resolution) of the image "
+#~ "produced by the Mix Node is the"
+#~ " size of the base image. The "
+#~ "alpha and Z channels are mixed as"
+#~ " well."
+#~ msgstr ""
+
+#~ msgid ":term:`Color Blend Modes` for details on each blending mode."
+#~ msgstr ""
+
+#~ msgid "Color Channels"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are two ways to express the"
+#~ " channels that are combined to result"
+#~ " in a color: RGB or HSV. RGB"
+#~ " stands for the Red/Green/Blue pixel "
+#~ "format, and HSV stands for the "
+#~ "Hue/Saturation/Value pixel format."
+#~ msgstr ""
+
+#~ msgid "Alpha"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click the *Alpha* button to make "
+#~ "the mix node use the Alpha "
+#~ "(transparency) values of the second "
+#~ "(bottom) node. If enabled, the resulting"
+#~ " image will have an Alpha channel "
+#~ "that reflects both images' channels. "
+#~ "Otherwise, (when not enabled, light "
+#~ "green) the output image will mix "
+#~ "the colors by considering what effect"
+#~ " the Alpha channel has of the "
+#~ "base (top input socket) image. The "
+#~ "Alpha channel of the output image "
+#~ "is not affected."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The amount of mixing of the bottom"
+#~ " socket is selected by the Factor "
+#~ "input field *Fac:*. A factor of "
+#~ "zero does not use the bottom "
+#~ "socket, whereas a value of 1.0 "
+#~ "makes full use. In Mix mode, 0.5"
+#~ " is an even mix between the "
+#~ "two, but in Add mode, 0.5 means"
+#~ " that only half of the second "
+#~ "socket's influence will be applied."
 #~ msgstr ""
 
