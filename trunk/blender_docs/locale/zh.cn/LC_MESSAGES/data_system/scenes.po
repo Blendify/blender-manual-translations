@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-31 18:46+1000\n"
+"POT-Creation-Date: 2016-06-11 14:15+1000\n"
 "PO-Revision-Date: 2016-03-28 22:38+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -34,9 +34,10 @@ msgstr ""
 "上的。如果你不熟悉这套系统的时候，最好去阅读下相关的手册知识。"
 
 #: ../../manual/data_system/scenes.rst:13
+#, fuzzy
 msgid ""
-"You can select and create scenes with the *Scene selector* in the Info "
-"window header (the bar at the top of most Blender layouts, see *Screen "
+"You can select and create scenes with the *Scene selector* in the *Info* "
+"editor header (the bar at the top of most Blender layouts, see *Screen "
 "and Scene selectors*)."
 msgstr "你可用信息窗口菜单栏中的 *场景选择器* 选择和创建场景（信息菜单栏一般在 Blender 界面布局中的顶部）。"
 
@@ -91,7 +92,7 @@ msgid ""
 "also true."
 msgstr "此选项会创建一个新的场景使用活动场景的设置和内容。然而，与拷贝设置的区别是，新场景的物体都是链接于旧场景的。因此，新场景中物体的改动都会对旧场景产生相同的改动，因为所使用的对象是如同字面是相同的，反过来也是如此。"
 
-#: ../../manual/data_system/scenes.rst:58
+#: ../../manual/data_system/scenes.rst:56
 msgid "Link Object Data"
 msgstr "链接物体数据"
 
@@ -112,22 +113,17 @@ msgid ""
 "modifications to the object-data (meshes, materials, etc.) will also "
 "affect other scenes. This is because a single instance of the \"object-"
 "data\" is now being shared by all of the objects in all of the scenes, "
-"that link to it."
+"that link to it. This has the effect of making a new independent copy of "
+"the object-data."
 msgstr ""
 "这意味着，可以改变新场景中物体的位置，方向和大小而不影响到其它场景。但是任何对物体数据（网格，材质 "
 "*等*）的修改都会影响到其它场景。这是因为所有的场景都是链接的一份 *单例物体数据* 。"
 
-#: ../../manual/data_system/scenes.rst:58
-msgid ""
-"More information at the :doc:`Window Type </editors/index>` page. This "
-"has the effect of making a new independent copy of the object-data."
-msgstr "更多的信息见文档：doc:`Window Type </editors/index>`，这里有创建一个独立的物体数据拷贝的效果。"
-
-#: ../../manual/data_system/scenes.rst:63
+#: ../../manual/data_system/scenes.rst:61
 msgid "Full Copy"
 msgstr "完整复制"
 
-#: ../../manual/data_system/scenes.rst:61
+#: ../../manual/data_system/scenes.rst:59
 msgid ""
 "Using this option, nothing is shared. This option creates a fully "
 "independent scene with copies of the active scenes contents. Every object"
@@ -135,7 +131,7 @@ msgid ""
 "its object-data is made as well."
 msgstr "此选项会创建一个活动场景的独立拷贝，任何数据都不会共享，对象数据也是如此。"
 
-#: ../../manual/data_system/scenes.rst:67
+#: ../../manual/data_system/scenes.rst:65
 #, fuzzy
 msgid ""
 "To choose between these options, it is useful to understand the "
@@ -145,59 +141,59 @@ msgstr ""
 "在这些选项中选择，有助于理解物体和物体数据之间的不同。详见：doc:`复制 "
 "</editors/3dview/transform/duplication/introduction>`."
 
-#: ../../manual/data_system/scenes.rst:71
+#: ../../manual/data_system/scenes.rst:69
 msgid ""
 "The choices for adding a scene, therefore, determine just how much of "
 "this information will be *copied from* the active scene to the new one, "
 "and how much will be *shared* (linked)."
 msgstr "选择增加场景的方式时，就能明确的知道那些信息会拷贝，那些信息是共享的。"
 
-#: ../../manual/data_system/scenes.rst:76
+#: ../../manual/data_system/scenes.rst:74
 msgid "Removing a Scene"
 msgstr "移除场景"
 
-#: ../../manual/data_system/scenes.rst:78
+#: ../../manual/data_system/scenes.rst:76
 msgid ""
 "You can delete the current scene by clicking the *X* next to the name in "
 "the Info Editor."
 msgstr "在信息编辑器中，点击场景名字旁边的 *X* 按钮就可以把当前场景给删除了。"
 
-#: ../../manual/data_system/scenes.rst:84
+#: ../../manual/data_system/scenes.rst:82
 msgid "Background Set Scene"
 msgstr "设置背景场景"
 
-#: ../../manual/data_system/scenes.rst:86
+#: ../../manual/data_system/scenes.rst:84
 msgid ""
 "You can use a scene as a background, this is typically useful when you "
 "want to focus on animating the foreground for example, without background"
 " elements getting in the way."
 msgstr "可使用一个场景作为背景，例如当你专注于动画的前景，又不想背景元素碍事时，这通常很有用。"
 
-#: ../../manual/data_system/scenes.rst:90
+#: ../../manual/data_system/scenes.rst:88
 msgid ""
 "You can assign a *Background* to your current scene from the *Properties "
 "Editor* *Scene* panel."
 msgstr "你可在 *场景属性编辑器* 面板中制定一个 *背景* 给当前场景。"
 
-#: ../../manual/data_system/scenes.rst:92
+#: ../../manual/data_system/scenes.rst:90
 msgid ""
 "This scene can have its own animation, physics-simulations etc, but you "
 "will have to select it from the *Scene* browser if you want to edit any "
 "of its contents."
 msgstr "这个场景有它自己的动画，物理模拟等等，注意的是编辑时需要在 *场景* 浏览器中选中。"
 
-#: ../../manual/data_system/scenes.rst:95
+#: ../../manual/data_system/scenes.rst:93
 msgid ""
 "This can also be used in combination with `Linking to a Scene`_, where "
 "one blend-file contains the environment, which can be re-used in many "
 "places."
 msgstr "``.blend`` 文件如果也有环境，也可与 `链接到一个场景` 组合使用，这样就可在多处复用。"
 
-#: ../../manual/data_system/scenes.rst:100
+#: ../../manual/data_system/scenes.rst:98
 msgid "Linking to a Scene"
 msgstr "链接到一个场景"
 
-#: ../../manual/data_system/scenes.rst:102
+#: ../../manual/data_system/scenes.rst:100
 #, fuzzy
 msgid ""
 "You can link any object from one scene to another. Just open the scene "
@@ -209,7 +205,7 @@ msgstr ""
 "你可从一场景链接任意物体到另一场景。仅需要打开物体所在的场景，从 3D视图的菜单栏 :menuselection:`Obejct -> Make "
 "Links...` 中选择你想要物体出现的场景。选择的物体就会被添加到那场景中，但任链接到原物体。"
 
-#: ../../manual/data_system/scenes.rst:108
+#: ../../manual/data_system/scenes.rst:106
 #, fuzzy
 msgid ""
 "To make them single user (independent and unlinked) in a given scene go "
@@ -241,4 +237,11 @@ msgstr ""
 
 #~ msgid "Add scene popup menu."
 #~ msgstr "添加场景弹出式菜单。"
+
+#~ msgid ""
+#~ "More information at the :doc:`Window "
+#~ "Type </editors/index>` page. This has "
+#~ "the effect of making a new "
+#~ "independent copy of the object-data."
+#~ msgstr "更多的信息见文档：doc:`Window Type </editors/index>`，这里有创建一个独立的物体数据拷贝的效果。"
 
