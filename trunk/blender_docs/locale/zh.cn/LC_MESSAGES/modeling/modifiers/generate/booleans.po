@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-20 23:22+1000\n"
+"POT-Creation-Date: 2016-06-24 10:20+1000\n"
 "PO-Revision-Date: 2015-12-13 02:10+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,20 +16,26 @@ msgstr ""
 msgid "Boolean Modifier"
 msgstr "布尔修改器--knight翻译"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:7
+#: ../../manual/modeling/modifiers/generate/booleans.rst:6
 msgid ""
 "The Boolean modifier performs operations on meshes that are otherwise too"
-" complex to achieve with as few steps by editing meshes manually, meaning"
-" you can achieve results with little effort to make mesh operations like "
-"Unions, Differences and Intersections."
-msgstr "布尔修改器实现了通过手动编辑网格会复杂得难以实现的操作，意味着你可以利用网面的并、差、交等操作，不费吹灰之力就能达到效果。"
+" complex to achieve with as few steps by editing meshes manually. The "
+"Boolean modifier uses one of three Boolean operations that can be used to"
+" create a single mesh out of two mesh objects:"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/booleans.rst:10
+#, fuzzy
+msgid "Negation"
+msgstr "操作"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:11
-msgid ""
-"The Boolean modifier uses one of three Boolean operations (*Difference* "
-"(negation), *Union* (conjunction), and *Intersect* (disjunction)) to "
-"create a single compound object out of two mesh objects."
-msgstr "布尔修改器用三种布尔操作（*差* (否定)， *并* (合取)， *交* （析取））中的一个，从两个网面物体创建出一个复合体。"
+msgid "Conjunction"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/booleans.rst:12
+msgid "Disjunction"
+msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:18
 #, fuzzy
@@ -38,206 +44,176 @@ msgid ""
 "with the modifier applied to the Sphere and using the cube as target."
 msgstr "图1 —— 修改器作用于球面，立方体作为目标后，立方体与球面的并、交、差操作。（详情，并操作用的是多边形）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:24
+#: ../../manual/modeling/modifiers/generate/booleans.rst:23
 msgid "The Boolean modifier works with open and closed volumes."
 msgstr "布尔修改器适用于开放和封闭的形体。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:25
+#: ../../manual/modeling/modifiers/generate/booleans.rst:24
 msgid "The Boolean modifier doesn't work on edges without faces."
 msgstr "布尔修改器对没有面的边不适用。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:26
+#: ../../manual/modeling/modifiers/generate/booleans.rst:25
 msgid "The target topology determines the new topology of the modified mesh."
 msgstr "目标的拓扑结构决定着修改网面的新的拓扑结构。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:27
+#: ../../manual/modeling/modifiers/generate/booleans.rst:26
 msgid "The face normals are taken into account for the calculations."
 msgstr "计算时，面的法线也考虑在内。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:28
+#: ../../manual/modeling/modifiers/generate/booleans.rst:27
 #, fuzzy
 msgid ""
 "Whether faces are marked for smooth or flat for shading doesn't affect "
 "the calculations of this modifier."
 msgstr "面被标记为光滑着色或平坦着色并不影响该修改器的计算。（见图 28 和 29）"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:29
+#: ../../manual/modeling/modifiers/generate/booleans.rst:28
 msgid ""
 "The line at which this modifier is calculated is delimited by the first "
 "tangential contact between faces of the modified mesh and target."
 msgstr "该修改器算出的线条由修改网面和目标的面的首个切线接触点划定界限。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:33
+#: ../../manual/modeling/modifiers/generate/booleans.rst:31
 msgid "This is a dynamic real-time modifier!"
 msgstr "这是一个动态实时修改器！"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:35
+#: ../../manual/modeling/modifiers/generate/booleans.rst:33
+#, fuzzy
 msgid ""
-"If you have marked your Objects to show the Edges (in Properties Window, "
-"Object context, Display panel, enable *Wire*), you will see the Edge "
-"creation process while you're moving your Objects. Depending on your mesh"
-" topology, you can also enable X-Ray and Transparency and see the "
-"topology being created in real time."
+"If you have marked your Objects to show the Edges (in "
+":menuselection:`Properties Editor --> Object --> Display`, enable "
+"*Wire*), you will see the Edge creation process while you're moving your "
+"Objects. Depending on your mesh topology, you can also enable X-Ray and "
+"Transparency and see the topology being created in real time."
 msgstr ""
 "如果你标记了对象，以显示边（在属性窗口中，物体模式下，显示面板里，启用 "
 "*线框*），你会在移动你的物体时看到边的创建过程。取决于你网状的拓扑，您还可以启用X射线和透明度，查看实时创建出的拓扑。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:42
+#: ../../manual/modeling/modifiers/generate/booleans.rst:40
 msgid "Usage"
 msgstr "用法"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:44
-#, fuzzy
+#: ../../manual/modeling/modifiers/generate/booleans.rst:42
 msgid ""
-"Using the default Blender install, with the desired mesh Object selected,"
-" go to the *Properties Window* which is located at the right of your "
-"Blender Screen, below the Outliner. Click on the Modifiers Context, which"
-" is represented by a wrench - The Boolean modifier. Then, click on the "
-"*Add Modifier* Button and Blender will show you a list of all of the "
-"available Modifiers. The Boolean modifier is located on the third row in "
-"the *Generate* Column."
+"To use the *Boolean Modifier* select the desired mesh Object then add a "
+"*Boolean modifier*. When you add the Boolean modifier for an object, "
+"Blender will need a second object to be the target of the operation. You "
+"can use open or closed meshes, as long as they have available face "
+"normals for the calculations to take effect. You can add one or more "
+"modifiers of this type for an Object but you can only apply one operation"
+" for the Boolean modifier at a time."
 msgstr ""
-"启用默认的Blender界面，选择了网格物体后，进入位于Blender屏幕右侧，大纲下方的 *属性窗口* "
-"。点击修改器上下文，其图标是个扳手（见图2  - 布尔修改器；扳手以蓝色高亮显示）。然后，点击 *添加修改器* "
-"按钮，Blender会展示出所有的修改器列表。布尔修改器位于 *生成* 列的第三行。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:51
-msgid ""
-"You can also click on the *Add Modifier* Button and use :kbd:`B` to add "
-"the Boolean modifier, or use Blender search with the shortcut "
-":kbd:`Spacebar` and type \"Add Modifier\", click on *Add Modifier* and "
-"press :kbd:`B`."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:55
-#, fuzzy
-msgid ""
-"When you add the Boolean modifier for an object, Blender will need a "
-"second object to be the target of the operation."
-msgstr "当您对一个物体添加布尔修改器时，Blender 需要第二个物体才能执行操作。你可以使用开放式或封闭式网面，只要它们有用于计算的面。"
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:58
-msgid ""
-"You can use open or closed meshes, as long as they have available face "
-"normals for the calculations to take effect."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:61
-msgid ""
-"You can add one or more modifiers of this type for an Object but you can "
-"only apply one operation for the Boolean modifier at a time."
-msgstr "您可以对一个物体添加一个或多个该类型的修改器，但是你每次只能应用布尔修改器的一个操作。"
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:66
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:70
+#: ../../manual/modeling/modifiers/generate/booleans.rst:55
 #, fuzzy
 msgid "Boolean Modifier Options."
 msgstr "布尔修改器--knight翻译"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:74
+#: ../../manual/modeling/modifiers/generate/booleans.rst:59
 msgid "Operations"
 msgstr "操作"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:98
+#: ../../manual/modeling/modifiers/generate/booleans.rst:83
 msgid "Operation"
 msgstr "操作"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:77
+#: ../../manual/modeling/modifiers/generate/booleans.rst:62
 msgid "Which boolean operation will be used."
 msgstr "将使用的布尔操作。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:84
+#: ../../manual/modeling/modifiers/generate/booleans.rst:69
 msgid "Difference"
 msgstr "差"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:80
+#: ../../manual/modeling/modifiers/generate/booleans.rst:65
 msgid "The modified mesh is subtracted from the target mesh."
 msgstr "从目标网面减去修改的网面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:82
+#: ../../manual/modeling/modifiers/generate/booleans.rst:67
 msgid ""
 "If the target Mesh has inverted normals, Blender will Intersect the "
 "modified mesh."
 msgstr "如果目标网面的法线是反的，Blender会对修改的网面求交。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:83
+#: ../../manual/modeling/modifiers/generate/booleans.rst:68
 msgid ""
 "If the modified Mesh has inverted normals, Blender will add both meshes "
 "(Union)."
 msgstr "如果修改的网面的法线是反的，Blender将添加两个网面（并）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:84
+#: ../../manual/modeling/modifiers/generate/booleans.rst:69
 msgid ""
 "If both Meshes use inverted normals, Blender will Intersect the target "
 "Mesh."
 msgstr "如果两个网面的法线都是反的，Blender将对目标网面求交。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:91
+#: ../../manual/modeling/modifiers/generate/booleans.rst:76
 msgid "Union"
 msgstr "并"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:87
+#: ../../manual/modeling/modifiers/generate/booleans.rst:72
 msgid "The target mesh is added to the modified mesh."
 msgstr "目标网面添加到修改的网面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:89
+#: ../../manual/modeling/modifiers/generate/booleans.rst:74
 msgid ""
 "If the target Mesh has inverted normals, Blender will Intersect the "
 "target Mesh."
 msgstr "如果目标网面的法线是反的，Blender会对目标网面求交。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:90
+#: ../../manual/modeling/modifiers/generate/booleans.rst:75
 msgid ""
 "If the modified Mesh has inverted normals, Blender will subtract the "
 "target Mesh."
 msgstr "如果修改的网面的法线是反的，Blender会减去目标网面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:91
+#: ../../manual/modeling/modifiers/generate/booleans.rst:76
 msgid ""
 "If both Meshes use inverted normals, Blender will Intersect the modified "
 "Mesh."
 msgstr "如果两个网面的法线都是反的，Blender将对修改的网面求交。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:98
+#: ../../manual/modeling/modifiers/generate/booleans.rst:83
 msgid "Intersect"
 msgstr "交"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:94
+#: ../../manual/modeling/modifiers/generate/booleans.rst:79
 msgid "The target mesh is subtracted from the modified mesh."
 msgstr "修改的网面减去目标网面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:96
+#: ../../manual/modeling/modifiers/generate/booleans.rst:81
 msgid ""
 "If the target Mesh has inverted normals, Blender will subtract the target"
 " Mesh."
 msgstr "如果目标网面的法线是反的，Blender会减去目标网面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:97
+#: ../../manual/modeling/modifiers/generate/booleans.rst:82
 msgid ""
 "If the modified Mesh has inverted normals, Blender will intersect the "
 "target Mesh."
 msgstr "如果修改的网面的法线是反的，Blender会对目标网面求交。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:98
+#: ../../manual/modeling/modifiers/generate/booleans.rst:83
 msgid "If both Meshes use inverted normals, Blender will add both meshes (Union)."
 msgstr "如果两个网面的法线都是反的，Blender会添加两个网面（并）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:102
+#: ../../manual/modeling/modifiers/generate/booleans.rst:87
 msgid "Object"
 msgstr "物体"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:101
+#: ../../manual/modeling/modifiers/generate/booleans.rst:86
 msgid "The name of the target mesh object."
 msgstr "目标网面物体的名字"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:107
+#: ../../manual/modeling/modifiers/generate/booleans.rst:92
 msgid "Materials"
 msgstr "材质"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:109
+#: ../../manual/modeling/modifiers/generate/booleans.rst:94
 msgid ""
 "The Boolean modifier preserves the Materials of the participant Meshes, "
 "including their basic textures and mappings, and the modified mesh will "
@@ -245,7 +221,7 @@ msgid ""
 " first active material)."
 msgstr "布尔修改器保留了参与运算的网面的材质，包括它们的基本纹理和映射方式，修改的网面的材质索引将被分配到新的拓扑结构上（第一个活动状态下的材质）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:113
+#: ../../manual/modeling/modifiers/generate/booleans.rst:98
 #, fuzzy
 msgid ""
 "Below, some examples are shown to exemplify how materials work with the "
@@ -259,23 +235,23 @@ msgid ""
 " the target, and the Cube being the modified mesh."
 msgstr "下面展示了一些例子，例示纹理在布尔修改器下是如何修改的；我们用立方体作为修改的网面，一种材质（白色）的正二十面体作为目标。我们添加四个不同的索引到立方体的一个面，让其他面保持基本的材质。图3显示了布尔修改器如何与材质作用的，图4、5和6显示了应用到修改的网面上三种不同的布尔操作。使用的网面的法线均朝外（正常的网面）。更多信息见它们的标题。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:126
+#: ../../manual/modeling/modifiers/generate/booleans.rst:111
 msgid "Cube with Multi-Materials and Icosphere with basic Material."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:130
+#: ../../manual/modeling/modifiers/generate/booleans.rst:115
 msgid "Union: The first active Material of the Cube is added to the new topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:134
+#: ../../manual/modeling/modifiers/generate/booleans.rst:119
 msgid "Difference: The Icosphere was subtracted from the Cube."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:138
+#: ../../manual/modeling/modifiers/generate/booleans.rst:123
 msgid "Intersect: The resulting Mesh was copied and rotated 180."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:140
+#: ../../manual/modeling/modifiers/generate/booleans.rst:126
 #, fuzzy
 msgid ""
 "The only exception is the difference operation when the normals of the "
@@ -289,21 +265,21 @@ msgid ""
 "below."
 msgstr "唯一的例外是在目标物体和修改的物体的法线都是反的（图7与8）时的差操作。在这种情况下，Blender会以切线上的反向投射纹理，网面的中心接触点作为枢纽，最终网面会是从目标网面减去修改的网面。对于特殊情况下的复杂目标网面，你可能需要重新指定材质，因为Blender会使用可能的投射，这样可能导致次优纹理的分配。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:152
+#: ../../manual/modeling/modifiers/generate/booleans.rst:138
 #, fuzzy
 msgid "Front of the target with the modified mesh materials."
 msgstr "图7 - 目标的前面，带修改的网面材质。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:156
+#: ../../manual/modeling/modifiers/generate/booleans.rst:142
 #, fuzzy
 msgid "Back of the target with the modified mesh materials."
 msgstr "图7 - 目标的前面，带修改的网面材质。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:160
+#: ../../manual/modeling/modifiers/generate/booleans.rst:146
 msgid "UV Mappings"
 msgstr "UV映射"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:162
+#: ../../manual/modeling/modifiers/generate/booleans.rst:148
 msgid ""
 "When you map UV Images to your target, Blender will add a map for each of"
 " the faces of the target. When you apply the Boolean modifier, Blender "
@@ -313,14 +289,14 @@ msgid ""
 "modified mesh."
 msgstr "当你映射UV图到目标上时，Blender将为目标的每个的面附加一张图。当你应用布尔修改器时，Blender将按照已分配给目标的面的拓扑来弄，该UV图将成为修改的网格的操作结果。Blender也将使用相同的图像，该图像源自修改的网面且映射到目标网面的面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:169
+#: ../../manual/modeling/modifiers/generate/booleans.rst:155
 msgid ""
 "Depending on the way you have assigned textures to the faces during the "
 "UV unwrap, and the complexity of your meshes, the boolean operation may "
 "generate imperfect UVs for the new faces."
 msgstr "取决于你在UV展开时赋予纹理给面的方式，以及你网面的复杂性，布尔操作可能会为新的面产生不太好的UV。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:172
+#: ../../manual/modeling/modifiers/generate/booleans.rst:159
 #, fuzzy
 msgid ""
 "Below we have four Images, a UV sphere mapped with a test grid tinted "
@@ -328,45 +304,46 @@ msgid ""
 "a light orange and the other faces using the normal test grid. The first "
 "image shows the operation at the start (difference), and on to the right "
 "of that shows the resulting mesh. And in the bottom row we show the "
-"unwrap in the Blender UV/Image Editor Window."
+"unwrap in the Blender UV/Image Editor."
 msgstr ""
 "下面我们有四幅图，一个UV球体映射，它的一个测试网面着蓝色的，其他面着紫色。立方体的一个面着浅橙色，其他面就用正常的测试网面。图9展示了起始（差）的操作，右边（图10）是最终的网格。在图11和12中，我们显示的是在Blender"
 " UV/图像编辑器窗口中的UV展开。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:181
+#: ../../manual/modeling/modifiers/generate/booleans.rst:168
 #, fuzzy
 msgid "A UV Sphere and a Cube with different UV Maps."
 msgstr "图9 - 一个UV球体和一个有着不同UV图的立方体"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:185
+#: ../../manual/modeling/modifiers/generate/booleans.rst:172
 #, fuzzy
 msgid "Difference operation applied."
 msgstr "图10 - 应用差操作的效果"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:189
+#: ../../manual/modeling/modifiers/generate/booleans.rst:176
 #, fuzzy
 msgid "Faces of the modified mesh mapped."
 msgstr "图11 - 修改的网面映射后的面"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:193
+#: ../../manual/modeling/modifiers/generate/booleans.rst:180
 msgid "New topology mapped and UV faces assigned."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:197
+#: ../../manual/modeling/modifiers/generate/booleans.rst:184
 msgid "Other Modifiers"
 msgstr "其他修改器"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:199
+#: ../../manual/modeling/modifiers/generate/booleans.rst:186
+#, fuzzy
 msgid ""
 "The Boolean modifier calculation is performed using the target modified "
 "mesh topology and dimensions. Other modifiers added to the modified mesh "
-"are bypassed. It means that if a target is using another modifier, like "
-"subsurf, the resulting topology for the modified mesh will take into "
+"are bypassed. This means that if a target is using another modifier, like"
+" subsurf, the resulting topology for the modified mesh will take into "
 "account the subsurf of the target; but for the modified mesh, the basic "
 "topology is used anyway (see examples)."
 msgstr "布尔修改器是用目标网面和修改的网面的拓扑和尺寸执行计算的。其他添加到修改的网面的修改器将被忽视。也就是说，如果目标用的是另一种修改器，比如细分表面修改器，修改的网面的最终拓扑拓将会考虑目标网面的细分表面；但对于修改的网面，仍然用基本的拓扑（见例子）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:205
+#: ../../manual/modeling/modifiers/generate/booleans.rst:192
 msgid ""
 "If you add subsurf to the modified mesh with a Boolean modifier, Blender "
 "will visually add the subsurf for the modified mesh, but not for its "
@@ -378,7 +355,7 @@ msgstr ""
 "如果在修改的网面上添加了细分表面修改器后，又添加了一个布尔修改器，Blender "
 "将形象化地位修改的网面添加细分表面操作，但不会为它计算；它仅考虑其基本的网面拓扑。如果你想对修改的网面添加一个细分表面修改器，你必须在应用布尔操作之前应用细分表面操作到修改的网面上。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:211
+#: ../../manual/modeling/modifiers/generate/booleans.rst:198
 #, fuzzy
 msgid ""
 "The Boolean modifier can be added together with other modifiers in the "
@@ -394,12 +371,12 @@ msgstr ""
 "``\"不能执行布尔操作\"`` （见图13），而且当修改器不能应用到网面上，Blender会提示  "
 "``\"修改器未启用，跳过此操作。\"``。这种情况下，你要么需要移掉一些修改器，要么应用了必要的修改器。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:222
+#: ../../manual/modeling/modifiers/generate/booleans.rst:207
 #, fuzzy
 msgid "Boolean Modifier with error message."
 msgstr "图13 - 布尔修改器，显示着出错信息。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:224
+#: ../../manual/modeling/modifiers/generate/booleans.rst:210
 msgid ""
 "The most common case is when you add or copy a Boolean modifier to use "
 "the modified mesh in conjunction with another target later; Blender will "
@@ -412,7 +389,7 @@ msgid ""
 "operations."
 msgstr "最常见的情形是当你添加或复制一个布尔修改器，用修改的网面配合另一个目标后期使用时，Blender会在栈上随后的布尔修改器提示警告信息，因为你可能对同一个修改的网面创建了并发的布尔操作，这也是多数情况下不可能执行下去的，它取决于你选择的目标。这种情况下，你可以对目标应用栈上第一个布尔修改器，接着用栈上其他布尔修改器完成接下来的操作。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:232
+#: ../../manual/modeling/modifiers/generate/booleans.rst:218
 msgid ""
 "Also, if some other modifiers are placed above this modifier and you "
 "click on Apply, Blender will warn you with the message ``\"Applied "
@@ -423,51 +400,51 @@ msgstr ""
 "此外，如果一些其他的修改器置于此修改器之上，你点击了应用按钮，Blender会警告你 "
 "``\"没有首先应用其他的修改器在，结果可能不如预期\"``。该修改器的最佳使用场合是准备好你待修改的网面和目标网面，然后再使用布尔修改器。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:237
+#: ../../manual/modeling/modifiers/generate/booleans.rst:223
 msgid ""
 "When the Boolean modifier is the first of the stack and is applied, the "
 "other Modifiers will act over the resulting meshes using the resulting "
 "topology and will remain in the modifiers stack."
 msgstr "当布尔修改器是栈上第一个修改器并且应用后，其他修改器将作用于布尔操作后的网面，用布尔操作后的拓扑，并且留在修改器栈上。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:241
+#: ../../manual/modeling/modifiers/generate/booleans.rst:226
 #, fuzzy
 msgid ""
 "Below are two images: one with the subsurf added to the target, and "
 "another with the resulting topology."
 msgstr "下面是两幅图：一个对目标添加了细分表面修改器（图14），另一个用了最终的拓扑（图15）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:247
+#: ../../manual/modeling/modifiers/generate/booleans.rst:232
 msgid "Modifier with Subsurf Target."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:251
+#: ../../manual/modeling/modifiers/generate/booleans.rst:236
 msgid "The Resulting Topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:253
+#: ../../manual/modeling/modifiers/generate/booleans.rst:239
 msgid ""
 "As you can see, the added (not applied) subsurf to the target was taken "
 "into consideration. The topology of the Icosphere with subsurf (Level 2) "
 "was completely transferred to the modified mesh."
 msgstr "正如你所看到的，这里考虑了对目标添加的（还没应用）细分表面修改器。正二十面体（细分级别为2）的拓扑被完全转移到修改的网格上。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:257
+#: ../../manual/modeling/modifiers/generate/booleans.rst:242
 msgid "The target topology determines the resulting topology"
 msgstr "目标拓扑决定着最终的拓扑。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:259
+#: ../../manual/modeling/modifiers/generate/booleans.rst:244
 msgid ""
 "The target topology determines the results of the Boolean modifier "
 "operation. It means that any modifier added to the target which modifies "
 "its topology will affect the resulting mesh of the operation."
 msgstr "目标拓扑确定着布尔修改器操作的结果。这意味着，任何添加到目标并修改其拓扑的修改器会影响操作的最终网面。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:265
+#: ../../manual/modeling/modifiers/generate/booleans.rst:250
 msgid "Concurrent Operations"
 msgstr "并发操作"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:267
+#: ../../manual/modeling/modifiers/generate/booleans.rst:252
 msgid ""
 "For the modified meshes, you can only apply one operation at a time, but "
 "you can use the same target for other modified meshes and use modified "
@@ -478,35 +455,35 @@ msgid ""
 "to each other, you can cause Blender to crash with closed loops!"
 msgstr "对于修改的网面，你每次只能应用一次操作，但对其他修改的网面可以使用同一个目标，或使用修改的网面作为目标提供给其他网面也行。此外，您可以多次复制或添加相同的修改器到修改器栈上，以满足你所需的操作数量。但要注意，如果你选择了并发目标，此目标同时是指向对方的修改的网面，会导致Blender因组成的闭环而崩溃！"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:276
+#: ../../manual/modeling/modifiers/generate/booleans.rst:261
 msgid "Hints"
 msgstr "提示"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:278
+#: ../../manual/modeling/modifiers/generate/booleans.rst:263
 msgid ""
 "Be aware that other modifiers and their stack position could cause this "
 "modifier to fail in certain circumstances."
 msgstr "注意到其他修改器和它们在栈上的位置可能导致该修改器在某些情况下无法工作。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:283
+#: ../../manual/modeling/modifiers/generate/booleans.rst:268
 msgid ""
 "The best way to work with this modifier when you need to make lots of "
 "sequential operations of the same modifier is to define the target at the"
 " time you need to apply the changes to the topology."
 msgstr "用此修改器工作，并且当你需要做同一个修改器的一系列操作时，最佳方法是在你需要应用变化到拓扑上时定义好目标。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:288
+#: ../../manual/modeling/modifiers/generate/booleans.rst:273
 msgid "Face Normals"
 msgstr "面的法线"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:290
+#: ../../manual/modeling/modifiers/generate/booleans.rst:275
 #, fuzzy
 msgid ""
 "When using the Boolean modifier, Blender will use the face normal "
 "directions to calculate the three Boolean operations. The direction of "
 "the normals will define the result of the three available operations. "
 "When one of the participants has inverted normals, you're in fact "
-"multiplying the operation by -1 and inverting the calculation order. You "
+"multiplying the operation by −1 and inverting the calculation order. You "
 "can, at any time, select your modified mesh, enter Edit Mode and flip the"
 " normals to change the behavior of the Boolean modifier. See Tips: Fixing"
 " Mixed Normals below."
@@ -515,14 +492,14 @@ msgstr ""
 " ``-1`` ，并颠倒计算顺序。你任何时候都可以选择你修改的网面，进入编辑模式，翻转法线以改变布尔修改器的行为。见下面 *修复混合法线的建议* "
 "。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:298
+#: ../../manual/modeling/modifiers/generate/booleans.rst:283
 msgid ""
 "Blender also cannot perform any optimal Boolean operation when one or "
 "more of the mesh Normals of the participants that are touching has "
 "outwards/inwards normals mixed."
 msgstr "当参与者的一个或多个网面法线在接触的地方既有向外又有向内混合着的法线时，Blender也不能对布尔操作作优化处理。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:301
+#: ../../manual/modeling/modifiers/generate/booleans.rst:286
 msgid ""
 "This means you can use the normals of the meshes pointed completely "
 "towards the inside or outside of your participants in the operation, but "
@@ -532,44 +509,44 @@ msgid ""
 "made some examples with a cube and an icosphere showing the results."
 msgstr "这意味着操作中，你可以使用完全指向参与者里或外的网面法线，但是你不能对用来计算的拓扑面混用指向里和指向外的法线。在这种情况下，Blender会启用修改器，你可能也会应用修改器，但坏事是没有效果。我们做了一个关于立方体和正二十面体的例子来说明结果。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:307
+#: ../../manual/modeling/modifiers/generate/booleans.rst:292
 #, fuzzy
 msgid ""
 "In the images below, all face normals are pointing outwards (Normal "
 "meshes)."
 msgstr "见图16和17 - 所有面的法线均朝外（正常的网面）"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:313
+#: ../../manual/modeling/modifiers/generate/booleans.rst:298
 #, fuzzy
 msgid "Faces with normals pointing outwards."
 msgstr "图16 - 法线朝外的面"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:317
+#: ../../manual/modeling/modifiers/generate/booleans.rst:302
 #, fuzzy
 msgid "Normal Boolean modifier operation (Difference operation)."
 msgstr "图17 - 正常的布尔修改器操作（差操作）"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:319
+#: ../../manual/modeling/modifiers/generate/booleans.rst:305
 msgid ""
 "In the images below, all  face normals are inverted and using the "
 "intersection operation"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:325
+#: ../../manual/modeling/modifiers/generate/booleans.rst:311
 #, fuzzy
 msgid "Boolean Operation with inverted normals."
 msgstr "将使用的布尔操作。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:329
+#: ../../manual/modeling/modifiers/generate/booleans.rst:315
 #, fuzzy
 msgid "Normal Boolean modifier operation."
 msgstr "图17 - 正常的布尔修改器操作（差操作）"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:331
+#: ../../manual/modeling/modifiers/generate/booleans.rst:318
 #, fuzzy
 msgid ""
-"Now, let's see what happens when the normal directions are mixed for one "
-"of the participants in the Boolean modifier operation. The images below "
+"Now, let us see what happens when the normal directions are mixed for one"
+" of the participants in the Boolean modifier operation. The images below "
 "show face normals mixed, pointed to different directions and the "
 "resulting operation, you can see that the modifier has bad effects when "
 "applied, leaving faces opened:"
@@ -577,16 +554,16 @@ msgstr ""
 "现在，让我们看看布尔修改器操作中的参与者之一混合了不同的法线朝向会发生什么。在图20 - 面的法线混合着，指向不同的方向，图21 - "
 "最终操作，你可以看到应用了修改器后结果很不理想，许多面都没闭合。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:340
+#: ../../manual/modeling/modifiers/generate/booleans.rst:327
 #, fuzzy
 msgid "Face normals mixed, pointed to different directions."
 msgstr "图20 - 不同朝向混合起来的面法线"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:344
+#: ../../manual/modeling/modifiers/generate/booleans.rst:331
 msgid "Resulting operation leaves  faces opened."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:346
+#: ../../manual/modeling/modifiers/generate/booleans.rst:334
 msgid ""
 "As you can see, the normal directions can be pointing to any of the Mesh "
 "sides, but can't be mixed in opposite directions for the faces of the "
@@ -595,23 +572,23 @@ msgid ""
 "no effect when using the Boolean modifier operation."
 msgstr "正如你看到的，法线方向在网面上可朝里朝外，但对于参与的面而言不能混合方向。算法库在操作时不能正确地决定什么是正向，什么是反向，所以结果会很糟糕，或者你使用布尔修改器操作时没有任何效果。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:352
+#: ../../manual/modeling/modifiers/generate/booleans.rst:339
 msgid ""
 "A quick way to fix this is to use Blender's :doc:`Recalculate Normals "
 "</modeling/meshes/editing/normals>` operation in Edit Mode."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:355
+#: ../../manual/modeling/modifiers/generate/booleans.rst:342
 msgid ""
 "If you still have some ugly black gouges you will have to :doc:`Manually "
 "Flip the Normals </modeling/meshes/editing/normals>`."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:360
+#: ../../manual/modeling/modifiers/generate/booleans.rst:347
 msgid "Empty or Duplicated Faces"
 msgstr "空洞的面或重复的面"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:362
+#: ../../manual/modeling/modifiers/generate/booleans.rst:349
 msgid ""
 "This modifier doesn't work when the modified and/or the target mesh uses "
 "empty faces in the topology used for calculations. If the modifier faces "
@@ -627,13 +604,13 @@ msgstr ""
 "当修改的网面和/或目标网面在拓扑中使用空面进行计算时，该修改器无法工作。如果修改器遇到你的空洞面混合着正常面这一种情形时，修改器会尽量尝试连接面，然后应用操作。对于同一位置的两个并发面，修改器会用两个面在目标网面上操作，但是最终的法线会变得混乱。为了避免重复的面，你可以在重新调整法线为内或外之前移除重复的顶点。移除重复的按钮在3D视图里的"
 " *网面工具* 面板，处于编辑模式下。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:371
+#: ../../manual/modeling/modifiers/generate/booleans.rst:358
 msgid ""
 "The best usage scenario for this modifier is when you have clean meshes "
 "with faces pointing clearly to a direction (inwards/outwards)"
 msgstr "该修改器的最佳使用场合是在你对网面作了清理，面都明显地指向一个方向（向内/向外）。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:374
+#: ../../manual/modeling/modifiers/generate/booleans.rst:361
 msgid ""
 "Below we show an example of meshes with open faces mixed with normal "
 "faces being used to create a new topology. In this example, a difference "
@@ -642,57 +619,58 @@ msgid ""
 "possible."
 msgstr "下面显示了一个网面的例子，网面带着张开的面并与正常的面混合来创建新的拓扑。在这个例子中，应用了立方体和正二十面体之间的差，但Blender连接正二十面体的副本到立方网面上，尽可能地尝试应用。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:382
+#: ../../manual/modeling/modifiers/generate/booleans.rst:369
 #, fuzzy
 msgid "Mesh with two empty faces mixed with normal faces."
 msgstr "图 24 - 两个空洞面与正常面的混合得到的网面"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:386
+#: ../../manual/modeling/modifiers/generate/booleans.rst:373
 #, fuzzy
 msgid "Result of a difference operation applied."
 msgstr "图10 - 应用差操作的效果"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:390
+#: ../../manual/modeling/modifiers/generate/booleans.rst:377
 msgid "Open Volumes"
 msgstr "张开的形体"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:392
+#: ../../manual/modeling/modifiers/generate/booleans.rst:379
 #, fuzzy
 msgid ""
 "The Boolean Modifier permits you to use open meshes or non-closed volumes"
 " (not open faces)."
 msgstr "布尔修改器允许您使用张开的网面或非闭合形体 (非张开面)。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:395
+#: ../../manual/modeling/modifiers/generate/booleans.rst:381
 msgid ""
 "When using open meshes or non-closed volumes, the Boolean modifier won't "
 "perform any operation in faces that don't create a new topology filled "
 "with faces using the faces of the target."
 msgstr "当使用张开的网面或非封闭形体，布尔修改器不会对这样的面执行任何操作，这些面不会以目标的面来填充面而创建新的拓扑。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:399
+#: ../../manual/modeling/modifiers/generate/booleans.rst:384
 #, fuzzy
 msgid ""
 "In the images below, is the resulting operation when using two non-closed"
 " volumes with faces forming a new topology."
 msgstr "见图26与27 - 用两个非闭合形体对面变形产生新的拓扑的操作。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:405
+#: ../../manual/modeling/modifiers/generate/booleans.rst:390
 #, fuzzy
 msgid "Non-closed volumes forming a new topology."
 msgstr "图26 - 非闭合形体变形成一个新的拓扑"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:409
+#: ../../manual/modeling/modifiers/generate/booleans.rst:394
 msgid "Resulting operation using two open volumes."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:411
+#: ../../manual/modeling/modifiers/generate/booleans.rst:397
+#, fuzzy
 msgid ""
-"Now, let's see what happens when we use meshes that are partially open, "
+"Now, let us see what happens when we use meshes that are partially open, "
 "incomplete, or meshes that aren't forming a new topology."
 msgstr "现在，让我们看看当我们使用的是半张开的、不完整或不形成新的拓扑的网面时，会发生什么。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:414
+#: ../../manual/modeling/modifiers/generate/booleans.rst:400
 #, fuzzy
 msgid ""
 "As you can see in the images below the faces of one participant in the "
@@ -706,12 +684,12 @@ msgstr ""
 "使用两个不形成新的拓扑结构的张开的形体的最终操作所示。由此产生的边缘变得混乱，以及不足的信息为最终网面创建面。该示例使用光滑着色的UV球面切成两半。如前文所述，着色"
 " (光滑或平坦模式) 并不影响修改器的计算。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:424
+#: ../../manual/modeling/modifiers/generate/booleans.rst:410
 #, fuzzy
 msgid "Open volumes that aren't forming a new topology."
 msgstr "图28 - 张开的形体，不会构成新的拓扑。"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:428
+#: ../../manual/modeling/modifiers/generate/booleans.rst:414
 msgid "Resulting Operation of image on the left"
 msgstr ""
 
@@ -821,15 +799,73 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
+#~ "The Boolean modifier performs operations "
+#~ "on meshes that are otherwise too "
+#~ "complex to achieve with as few "
+#~ "steps by editing meshes manually, "
+#~ "meaning you can achieve results with "
+#~ "little effort to make mesh operations"
+#~ " like Unions, Differences and "
+#~ "Intersections."
+#~ msgstr "布尔修改器实现了通过手动编辑网格会复杂得难以实现的操作，意味着你可以利用网面的并、差、交等操作，不费吹灰之力就能达到效果。"
+
+#~ msgid ""
+#~ "The Boolean modifier uses one of "
+#~ "three Boolean operations (*Difference* "
+#~ "(negation), *Union* (conjunction), and "
+#~ "*Intersect* (disjunction)) to create a "
+#~ "single compound object out of two "
+#~ "mesh objects."
+#~ msgstr "布尔修改器用三种布尔操作（*差* (否定)， *并* (合取)， *交* （析取））中的一个，从两个网面物体创建出一个复合体。"
+
+#~ msgid ""
+#~ "Using the default Blender install, with"
+#~ " the desired mesh Object selected, go"
+#~ " to the *Properties Window* which is"
+#~ " located at the right of your "
+#~ "Blender Screen, below the Outliner. "
+#~ "Click on the Modifiers Context, which"
+#~ " is represented by a wrench - "
+#~ "The Boolean modifier. Then, click on "
+#~ "the *Add Modifier* Button and Blender"
+#~ " will show you a list of all"
+#~ " of the available Modifiers. The "
+#~ "Boolean modifier is located on the "
+#~ "third row in the *Generate* Column."
+#~ msgstr ""
+#~ "启用默认的Blender界面，选择了网格物体后，进入位于Blender屏幕右侧，大纲下方的 *属性窗口* "
+#~ "。点击修改器上下文，其图标是个扳手（见图2  - 布尔修改器；扳手以蓝色高亮显示）。然后，点击 "
+#~ "*添加修改器* 按钮，Blender会展示出所有的修改器列表。布尔修改器位于 *生成* 列的第三行。"
+
+#~ msgid ""
 #~ "You can also click on the *Add "
-#~ "Modifier* Button and use :kbd:`N` to "
+#~ "Modifier* Button and use :kbd:`B` to "
 #~ "add the Boolean modifier, or use "
 #~ "Blender search with the shortcut "
 #~ ":kbd:`Spacebar` and type \"Add Modifier\", "
 #~ "click on *Add Modifier* and press "
-#~ ":kbd:`N`."
+#~ ":kbd:`B`."
 #~ msgstr ""
-#~ "您也可以点击 *添加修改器* 按钮，然后使用 :kbd:`N` 键来添加布尔修改器，或者使用"
-#~ " Blender 搜索（快捷键 :kbd:`Spacebar`），并输入“Add "
-#~ "Modifier”，点击 *Add Modifier* 后按:kbd:`N` 键。"
+
+#~ msgid ""
+#~ "When you add the Boolean modifier "
+#~ "for an object, Blender will need a"
+#~ " second object to be the target "
+#~ "of the operation."
+#~ msgstr "当您对一个物体添加布尔修改器时，Blender 需要第二个物体才能执行操作。你可以使用开放式或封闭式网面，只要它们有用于计算的面。"
+
+#~ msgid ""
+#~ "You can use open or closed meshes,"
+#~ " as long as they have available "
+#~ "face normals for the calculations to "
+#~ "take effect."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can add one or more modifiers"
+#~ " of this type for an Object but"
+#~ " you can only apply one operation "
+#~ "for the Boolean modifier at a "
+#~ "time."
+#~ msgstr "您可以对一个物体添加一个或多个该类型的修改器，但是你每次只能应用布尔修改器的一个操作。"
 
