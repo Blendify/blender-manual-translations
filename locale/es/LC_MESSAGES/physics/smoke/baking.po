@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 09:40+1000\n"
+"POT-Creation-Date: 2016-06-24 10:20+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,29 +22,185 @@ msgstr ""
 msgid "Baking Smoke Simulations"
 msgstr ""
 
-#: ../../manual/physics/smoke/baking.rst:6
+#: ../../manual/physics/smoke/baking.rst:9
+msgid "*Smoke Cache* options."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:12
 msgid ""
 ":term:`Baking` is used to store the outcome of a simulation so it doesn't"
 " need to be recalculated."
 msgstr ""
 
-#: ../../manual/physics/smoke/baking.rst:8
+#: ../../manual/physics/smoke/baking.rst:14
 msgid ""
 "Smoke baking settings are in :menuselection:`Properties --> Physics --> "
-"Smoke --> Smoke Cache`. See :doc:`Baking </physics/baking>` for more "
-"information."
+"Smoke --> Smoke Cache`. Unlike most physics simulations smoke physics has"
+" some settings that are specific to smoke."
 msgstr ""
 
-#: ../../manual/physics/smoke/baking.rst:13
-msgid "*Smoke Cache* options."
+#: ../../manual/physics/smoke/baking.rst:55
+msgid "File Format"
 msgstr ""
 
-#: ../../manual/physics/smoke/baking.rst:17
+#: ../../manual/physics/smoke/baking.rst:18
+msgid "File format that the cache data is to be stored."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:20
+msgid "Point Cache"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:21
+msgid "Blender's own caching format."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:55
+msgid "OpenVDB"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:23
 msgid ""
-"Baking can only been done once your .blend is saved. If your .blend has "
-"not been saved, the *Smoke Cache* panel will be disabled."
+"Advanced and efficient storage method developed by `DreamWorks Animation "
+"<http://www.dreamworksanimation.com/>`_"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:26
+msgid ""
+"The simulation fields can be found in the ``.vdb`` files under the "
+"following names:"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:28
+msgid "\"color\""
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:29
+msgid "\"density\""
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:30
+msgid "\"heat\""
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:31
+msgid "\"heat old\" (the temperate at the previous fame)"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:32
+msgid "\"flame\""
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:33
+msgid "\"fuel\""
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:34
+msgid "\"react\" (reaction coordinates, used for fire)"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:35
+msgid "\"velocity\""
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:36
+msgid "\"shadow\" (the shadows of the volume computed for viewport rendering)"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:37
+msgid "\"texture coordinates\" (used for turbulence)"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:47
+msgid "Compression"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:40
+msgid "Method of data compression."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:42
+msgid "Zip"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:43
+msgid "Efficient but slower compression method."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:44
+msgid "Blosc"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:45
+msgid ""
+"Multi-threaded compression with about the same quality and size as "
+"``Zip``."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:47
+msgid "None"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:47
+msgid "Do not compress the data."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:55
+msgid "Data Depth"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:50
+msgid ""
+"Bit depth for writing all scalar (including vectors), lower values reduce"
+" the file size of the cache."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:52
+msgid "Float (Half)"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:53
+msgid ""
+"Half float (16 bit data). Gives less data with the benefit of smaller "
+"file sizes."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:55
+msgid "Float (Full)"
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:55
+msgid ""
+"Full float (32 bit data). Gives more data at the cost of larger file "
+"sizes."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:59
+msgid ""
+"For other options see the :doc:`General Baking </physics/baking>` docs "
+"for more information."
+msgstr ""
+
+#: ../../manual/physics/smoke/baking.rst:63
+msgid ""
+"Baking can only been done once your blend-file is saved. If your blend-"
+"file has not been saved, the *Smoke Cache* panel will be disabled."
 msgstr ""
 
 #~ msgid "*Smoke Cache* options"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Smoke baking settings are in "
+#~ ":menuselection:`Properties --> Physics --> "
+#~ "Smoke --> Smoke Cache`. See :doc:`Baking"
+#~ " </physics/baking>` for more information."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Baking can only been done once "
+#~ "your .blend is saved. If your "
+#~ ".blend has not been saved, the "
+#~ "*Smoke Cache* panel will be disabled."
 #~ msgstr ""
 

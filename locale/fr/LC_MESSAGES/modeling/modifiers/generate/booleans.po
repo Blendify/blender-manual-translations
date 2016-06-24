@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-20 23:22+1000\n"
+"POT-Creation-Date: 2016-06-24 10:20+1000\n"
 "PO-Revision-Date: 2016-06-04 05:56+0100\n"
 "Last-Translator: dindoun <bruno.sanchiz@free.fr>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
@@ -16,28 +16,26 @@ msgstr ""
 msgid "Boolean Modifier"
 msgstr "Le Modificateur Booléen"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:7
+#: ../../manual/modeling/modifiers/generate/booleans.rst:6
 msgid ""
 "The Boolean modifier performs operations on meshes that are otherwise too"
-" complex to achieve with as few steps by editing meshes manually, meaning"
-" you can achieve results with little effort to make mesh operations like "
-"Unions, Differences and Intersections."
+" complex to achieve with as few steps by editing meshes manually. The "
+"Boolean modifier uses one of three Boolean operations that can be used to"
+" create a single mesh out of two mesh objects:"
 msgstr ""
-"Le Modificateur Booléen effectue des opérations sur des meshs qui sont "
-"sinon trop complexes pour être accomplis en éditant les meshs "
-"manuellement, signifiant que vous pouvez obtenir des résultats avec peu "
-"d'effort pour faire des opérations sur les meshs comme des unions, des "
-"différences et des intersections."
+
+#: ../../manual/modeling/modifiers/generate/booleans.rst:10
+#, fuzzy
+msgid "Negation"
+msgstr "Opération"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:11
-msgid ""
-"The Boolean modifier uses one of three Boolean operations (*Difference* "
-"(negation), *Union* (conjunction), and *Intersect* (disjunction)) to "
-"create a single compound object out of two mesh objects."
+msgid "Conjunction"
 msgstr ""
-"Le Modificateur Booléen utilise l'une des trois opérations (*Différence* "
-"(négation), *Union* (conjonction) et *Intersection* (disjonction)) pour "
-"créer un unique objet composé à partir de deux objets mesh."
+
+#: ../../manual/modeling/modifiers/generate/booleans.rst:12
+msgid "Disjunction"
+msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:18
 msgid ""
@@ -48,23 +46,23 @@ msgstr ""
 "avec le modificateur appliqué à la sphère et utilisant le cube comme "
 "cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:24
+#: ../../manual/modeling/modifiers/generate/booleans.rst:23
 msgid "The Boolean modifier works with open and closed volumes."
 msgstr "Le Modificateur Booléen travaille avec des volumes ouverts ou fermés."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:25
+#: ../../manual/modeling/modifiers/generate/booleans.rst:24
 msgid "The Boolean modifier doesn't work on edges without faces."
 msgstr "Le Modificateur Booléen ne travaille pas sur les arêtes sans faces."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:26
+#: ../../manual/modeling/modifiers/generate/booleans.rst:25
 msgid "The target topology determines the new topology of the modified mesh."
 msgstr "La topologie cible détermine la nouvelle topologie du mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:27
+#: ../../manual/modeling/modifiers/generate/booleans.rst:26
 msgid "The face normals are taken into account for the calculations."
 msgstr "Les normales de face sont prises en compte pour les calculs."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:28
+#: ../../manual/modeling/modifiers/generate/booleans.rst:27
 msgid ""
 "Whether faces are marked for smooth or flat for shading doesn't affect "
 "the calculations of this modifier."
@@ -72,7 +70,7 @@ msgstr ""
 "Que les faces soient marquées comme lissées ou plates pour l'ombrage "
 "n'affecte pas les calculs de ce modificateur."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:29
+#: ../../manual/modeling/modifiers/generate/booleans.rst:28
 msgid ""
 "The line at which this modifier is calculated is delimited by the first "
 "tangential contact between faces of the modified mesh and target."
@@ -80,17 +78,18 @@ msgstr ""
 "La ligne sur laquelle ce modificateur est délimité par le premier contact"
 " tangentiel entre les faces du mesh modifié et de la cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:33
+#: ../../manual/modeling/modifiers/generate/booleans.rst:31
 msgid "This is a dynamic real-time modifier!"
 msgstr "C'est un modificateur dynamique en temps réel!"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:35
+#: ../../manual/modeling/modifiers/generate/booleans.rst:33
+#, fuzzy
 msgid ""
-"If you have marked your Objects to show the Edges (in Properties Window, "
-"Object context, Display panel, enable *Wire*), you will see the Edge "
-"creation process while you're moving your Objects. Depending on your mesh"
-" topology, you can also enable X-Ray and Transparency and see the "
-"topology being created in real time."
+"If you have marked your Objects to show the Edges (in "
+":menuselection:`Properties Editor --> Object --> Display`, enable "
+"*Wire*), you will see the Edge creation process while you're moving your "
+"Objects. Depending on your mesh topology, you can also enable X-Ray and "
+"Transparency and see the topology being created in real time."
 msgstr ""
 "Si vous avez marqué vos objets pour montrer les Arêtes (dans la fenêtre "
 "Window, le Context Objet, le panneau d'Affichage ou Fil de Fer), vous "
@@ -98,91 +97,51 @@ msgstr ""
 "objets. Dépendant de la topologie du mesh, vous pouvez aussi autoriser "
 "Rayons X et Transparence et voir la topologie se créer en temps réel."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:42
+#: ../../manual/modeling/modifiers/generate/booleans.rst:40
 msgid "Usage"
 msgstr "Usage"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:44
+#: ../../manual/modeling/modifiers/generate/booleans.rst:42
 msgid ""
-"Using the default Blender install, with the desired mesh Object selected,"
-" go to the *Properties Window* which is located at the right of your "
-"Blender Screen, below the Outliner. Click on the Modifiers Context, which"
-" is represented by a wrench - The Boolean modifier. Then, click on the "
-"*Add Modifier* Button and Blender will show you a list of all of the "
-"available Modifiers. The Boolean modifier is located on the third row in "
-"the *Generate* Column."
+"To use the *Boolean Modifier* select the desired mesh Object then add a "
+"*Boolean modifier*. When you add the Boolean modifier for an object, "
+"Blender will need a second object to be the target of the operation. You "
+"can use open or closed meshes, as long as they have available face "
+"normals for the calculations to take effect. You can add one or more "
+"modifiers of this type for an Object but you can only apply one operation"
+" for the Boolean modifier at a time."
 msgstr ""
-"En utilisant l'installation par défaut de blender , avec l'objet mesh "
-"désiré sélectionné, aller à la *fenêtre propriétés* lequel est situé à la"
-" droite de votre écran blender, en dessous du outliner. Cliquer sur le "
-"contexte modificateurs , lequel est représenté par une clé à molette. "
-"Alors, cliquer sur le bouton *modificateur ajouter*  et blender va  vous "
-"montrer une liste de tous les modificateurs permis. Le modificateur "
-"booléen est situé sur la troisième ligne dans la colonne *générer* .\""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:51
-msgid ""
-"You can also click on the *Add Modifier* Button and use :kbd:`B` to add "
-"the Boolean modifier, or use Blender search with the shortcut "
-":kbd:`Spacebar` and type \"Add Modifier\", click on *Add Modifier* and "
-"press :kbd:`B`."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:55
-#, fuzzy
-msgid ""
-"When you add the Boolean modifier for an object, Blender will need a "
-"second object to be the target of the operation."
-msgstr ""
-"Quand vous ajoutez le modificateur Booléen pour un objet, Blender aura "
-"besoin d'un second objet pour réussir l'opération. Vous pouvez utiliser "
-"des Meshs ouverts ou fermés, tant qu'ils ont des faces pour le calcul."
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:58
-msgid ""
-"You can use open or closed meshes, as long as they have available face "
-"normals for the calculations to take effect."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:61
-msgid ""
-"You can add one or more modifiers of this type for an Object but you can "
-"only apply one operation for the Boolean modifier at a time."
-msgstr ""
-"Vous pouvez ajouter un ou plusieurs modificateurs de ce type  pour un "
-"objet mais vous ne pouvez appliquer qu'une opération à la fois pour le "
-"modificateur Booléen."
-
-#: ../../manual/modeling/modifiers/generate/booleans.rst:66
 msgid "Options"
 msgstr "Options"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:70
+#: ../../manual/modeling/modifiers/generate/booleans.rst:55
 #, fuzzy
 msgid "Boolean Modifier Options."
 msgstr "Options du Modificateur Booléen"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:74
+#: ../../manual/modeling/modifiers/generate/booleans.rst:59
 msgid "Operations"
 msgstr "Opérations"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:98
+#: ../../manual/modeling/modifiers/generate/booleans.rst:83
 msgid "Operation"
 msgstr "Opération"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:77
+#: ../../manual/modeling/modifiers/generate/booleans.rst:62
 msgid "Which boolean operation will be used."
 msgstr "Quelle opération booléenne doit être appliquée."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:84
+#: ../../manual/modeling/modifiers/generate/booleans.rst:69
 msgid "Difference"
 msgstr "Différence"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:80
+#: ../../manual/modeling/modifiers/generate/booleans.rst:65
 msgid "The modified mesh is subtracted from the target mesh."
 msgstr "Le mesh modifié est soustrait du mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:82
+#: ../../manual/modeling/modifiers/generate/booleans.rst:67
 msgid ""
 "If the target Mesh has inverted normals, Blender will Intersect the "
 "modified mesh."
@@ -190,7 +149,7 @@ msgstr ""
 "Si le mesh cible a des normales inversées, Blender calculera "
 "l'intersection avec le mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:83
+#: ../../manual/modeling/modifiers/generate/booleans.rst:68
 msgid ""
 "If the modified Mesh has inverted normals, Blender will add both meshes "
 "(Union)."
@@ -198,7 +157,7 @@ msgstr ""
 "Si le mesh modifié a des normales inversées, Blender va ajouter les deux "
 "meshs (Union)."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:84
+#: ../../manual/modeling/modifiers/generate/booleans.rst:69
 msgid ""
 "If both Meshes use inverted normals, Blender will Intersect the target "
 "Mesh."
@@ -206,15 +165,15 @@ msgstr ""
 "Si les deux meshs ont des normales inversées, Blender calculera "
 "l'intersection du mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:91
+#: ../../manual/modeling/modifiers/generate/booleans.rst:76
 msgid "Union"
 msgstr "Union"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:87
+#: ../../manual/modeling/modifiers/generate/booleans.rst:72
 msgid "The target mesh is added to the modified mesh."
 msgstr "Le mesh cible est ajouté au mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:89
+#: ../../manual/modeling/modifiers/generate/booleans.rst:74
 msgid ""
 "If the target Mesh has inverted normals, Blender will Intersect the "
 "target Mesh."
@@ -222,7 +181,7 @@ msgstr ""
 "Si le mesh cible a des normales inversées, Blender calculera "
 "l'intersection avec le mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:90
+#: ../../manual/modeling/modifiers/generate/booleans.rst:75
 msgid ""
 "If the modified Mesh has inverted normals, Blender will subtract the "
 "target Mesh."
@@ -230,7 +189,7 @@ msgstr ""
 "Si le mesh modifié a des normales inversées, Blender va soustraire le "
 "mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:91
+#: ../../manual/modeling/modifiers/generate/booleans.rst:76
 msgid ""
 "If both Meshes use inverted normals, Blender will Intersect the modified "
 "Mesh."
@@ -238,15 +197,15 @@ msgstr ""
 "Si les deux meshs ont des normales inversées, Blender calculera "
 "l'intersection avec le mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:98
+#: ../../manual/modeling/modifiers/generate/booleans.rst:83
 msgid "Intersect"
 msgstr "Intersection"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:94
+#: ../../manual/modeling/modifiers/generate/booleans.rst:79
 msgid "The target mesh is subtracted from the modified mesh."
 msgstr "Le mesh cible est soustrait du mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:96
+#: ../../manual/modeling/modifiers/generate/booleans.rst:81
 msgid ""
 "If the target Mesh has inverted normals, Blender will subtract the target"
 " Mesh."
@@ -254,7 +213,7 @@ msgstr ""
 "Si le mesh cible a des normales inversées, Blender va soustraire le mesh "
 "cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:97
+#: ../../manual/modeling/modifiers/generate/booleans.rst:82
 msgid ""
 "If the modified Mesh has inverted normals, Blender will intersect the "
 "target Mesh."
@@ -262,25 +221,25 @@ msgstr ""
 "Si le mesh modifié a des normales inversées, Blender calculera "
 "l'intersection avec le mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:98
+#: ../../manual/modeling/modifiers/generate/booleans.rst:83
 msgid "If both Meshes use inverted normals, Blender will add both meshes (Union)."
 msgstr ""
 "Si les deux meshs ont des normales inversées, Blender va ajouter les deux"
 " meshs (Union)."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:102
+#: ../../manual/modeling/modifiers/generate/booleans.rst:87
 msgid "Object"
 msgstr "Objet"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:101
+#: ../../manual/modeling/modifiers/generate/booleans.rst:86
 msgid "The name of the target mesh object."
 msgstr "Le nom de l'objet mesh cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:107
+#: ../../manual/modeling/modifiers/generate/booleans.rst:92
 msgid "Materials"
 msgstr "Matériaux"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:109
+#: ../../manual/modeling/modifiers/generate/booleans.rst:94
 msgid ""
 "The Boolean modifier preserves the Materials of the participant Meshes, "
 "including their basic textures and mappings, and the modified mesh will "
@@ -292,7 +251,7 @@ msgstr ""
 " premier index actif de matériau assigné à sa nouvelle topologie (le "
 "premier matériau actif)."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:113
+#: ../../manual/modeling/modifiers/generate/booleans.rst:98
 msgid ""
 "Below, some examples are shown to exemplify how materials work with the "
 "Boolean modifier; we took the cube as the modified mesh, and the "
@@ -315,29 +274,29 @@ msgstr ""
 "les meshs ont des normales pointant vers l'extérieur comme cible et le "
 "cube étant le mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:126
+#: ../../manual/modeling/modifiers/generate/booleans.rst:111
 #, fuzzy
 msgid "Cube with Multi-Materials and Icosphere with basic Material."
 msgstr "Cube avec plusieurs Matériaux et Icosphère avec matériau de base"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:130
+#: ../../manual/modeling/modifiers/generate/booleans.rst:115
 #, fuzzy
 msgid "Union: The first active Material of the Cube is added to the new topology."
 msgstr ""
 "Union: le premier matériau actif du Cube est ajouté à la nouvelle "
 "topologie"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:134
+#: ../../manual/modeling/modifiers/generate/booleans.rst:119
 #, fuzzy
 msgid "Difference: The Icosphere was subtracted from the Cube."
 msgstr "Différence: l'icosphère a été soustrait du cube"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:138
+#: ../../manual/modeling/modifiers/generate/booleans.rst:123
 #, fuzzy
 msgid "Intersect: The resulting Mesh was copied and rotated 180."
 msgstr "Intersection: le mesh résultant a été copié et tourné de 180"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:140
+#: ../../manual/modeling/modifiers/generate/booleans.rst:126
 msgid ""
 "The only exception is the difference operation when the normals of the "
 "target and modified mesh are inverted. In this case, Blender will project"
@@ -359,21 +318,21 @@ msgstr ""
 "possible , et cela peut résulter en une attribution de texture non "
 "optimale. Vous pouvez voir cela dans le dernier exemple en dessous."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:152
+#: ../../manual/modeling/modifiers/generate/booleans.rst:138
 #, fuzzy
 msgid "Front of the target with the modified mesh materials."
 msgstr "Le devant de la cible avec les matériaux du mesh modifié"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:156
+#: ../../manual/modeling/modifiers/generate/booleans.rst:142
 #, fuzzy
 msgid "Back of the target with the modified mesh materials."
 msgstr "Arrière de la cible avec les matériaux du mesh modifié"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:160
+#: ../../manual/modeling/modifiers/generate/booleans.rst:146
 msgid "UV Mappings"
 msgstr "UV Mappings"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:162
+#: ../../manual/modeling/modifiers/generate/booleans.rst:148
 msgid ""
 "When you map UV Images to your target, Blender will add a map for each of"
 " the faces of the target. When you apply the Boolean modifier, Blender "
@@ -389,7 +348,7 @@ msgstr ""
 "sur le  mesh modifié. Blender va donc utiliser la même image mappée sur "
 "les  faces de la cible dans le mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:169
+#: ../../manual/modeling/modifiers/generate/booleans.rst:155
 msgid ""
 "Depending on the way you have assigned textures to the faces during the "
 "UV unwrap, and the complexity of your meshes, the boolean operation may "
@@ -399,7 +358,7 @@ msgstr ""
 "l'unwrap uv , et la  complexité de vos meshs, l'opération  booléenne peut"
 " générer des uvs  imparfaits pour les nouvelles faces."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:172
+#: ../../manual/modeling/modifiers/generate/booleans.rst:159
 #, fuzzy
 msgid ""
 "Below we have four Images, a UV sphere mapped with a test grid tinted "
@@ -407,7 +366,7 @@ msgid ""
 "a light orange and the other faces using the normal test grid. The first "
 "image shows the operation at the start (difference), and on to the right "
 "of that shows the resulting mesh. And in the bottom row we show the "
-"unwrap in the Blender UV/Image Editor Window."
+"unwrap in the Blender UV/Image Editor."
 msgstr ""
 "En dessous nous avons quatre images, une sphère uv mappée avec une grille"
 " test teintée en bleu et une autre face teinté en mauve, une face du cube"
@@ -416,36 +375,37 @@ msgstr ""
 "sa droite on montre le mesh résultant. Et dans la ligne du dessous nous "
 "montrons l'unwrap dans la fenêtre blender uv/image editor ."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:181
+#: ../../manual/modeling/modifiers/generate/booleans.rst:168
 #, fuzzy
 msgid "A UV Sphere and a Cube with different UV Maps."
 msgstr "Une Sphère  uv et un Cube avec différents uv maps"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:185
+#: ../../manual/modeling/modifiers/generate/booleans.rst:172
 #, fuzzy
 msgid "Difference operation applied."
 msgstr "Opération Différence appliquée"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:189
+#: ../../manual/modeling/modifiers/generate/booleans.rst:176
 #, fuzzy
 msgid "Faces of the modified mesh mapped."
 msgstr "Faces du mesh modifié mappé"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:193
+#: ../../manual/modeling/modifiers/generate/booleans.rst:180
 #, fuzzy
 msgid "New topology mapped and UV faces assigned."
 msgstr "Nouvelle topologie mappée et faces UV assignées"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:197
+#: ../../manual/modeling/modifiers/generate/booleans.rst:184
 msgid "Other Modifiers"
 msgstr "Autres Modificateurs"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:199
+#: ../../manual/modeling/modifiers/generate/booleans.rst:186
+#, fuzzy
 msgid ""
 "The Boolean modifier calculation is performed using the target modified "
 "mesh topology and dimensions. Other modifiers added to the modified mesh "
-"are bypassed. It means that if a target is using another modifier, like "
-"subsurf, the resulting topology for the modified mesh will take into "
+"are bypassed. This means that if a target is using another modifier, like"
+" subsurf, the resulting topology for the modified mesh will take into "
 "account the subsurf of the target; but for the modified mesh, the basic "
 "topology is used anyway (see examples)."
 msgstr ""
@@ -457,7 +417,7 @@ msgstr ""
 "cible; mais pour le  mesh modifié, la topologie  basique est utilisée de "
 "toutes façons (voir exemples)."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:205
+#: ../../manual/modeling/modifiers/generate/booleans.rst:192
 msgid ""
 "If you add subsurf to the modified mesh with a Boolean modifier, Blender "
 "will visually add the subsurf for the modified mesh, but not for its "
@@ -473,7 +433,7 @@ msgstr ""
 "devez appliquer le subsurf au mesh booléen modifié avant d'appliquer "
 "l'opération booléenne."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:211
+#: ../../manual/modeling/modifiers/generate/booleans.rst:198
 msgid ""
 "The Boolean modifier can be added together with other modifiers in the "
 "modified mesh, but depending on the modifier, the calculations can't be "
@@ -494,12 +454,12 @@ msgstr ""
 "devez soit enlever quelques modificateurs ou appliquer ceux qui doivent "
 "l'être."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:222
+#: ../../manual/modeling/modifiers/generate/booleans.rst:207
 #, fuzzy
 msgid "Boolean Modifier with error message."
 msgstr "Le Modificateur Booléen avec un message d'erreur"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:224
+#: ../../manual/modeling/modifiers/generate/booleans.rst:210
 msgid ""
 "The most common case is when you add or copy a Boolean modifier to use "
 "the modified mesh in conjunction with another target later; Blender will "
@@ -521,7 +481,7 @@ msgstr ""
 "modificateur booléen  de la pile pour la cible et alors utiliser l' autre"
 " modificateur(s) booléen dans la pile pour des opérations subséquentes."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:232
+#: ../../manual/modeling/modifiers/generate/booleans.rst:218
 msgid ""
 "Also, if some other modifiers are placed above this modifier and you "
 "click on Apply, Blender will warn you with the message ``\"Applied "
@@ -536,7 +496,7 @@ msgstr ""
 " pour ce modificateur est de préparer votre mesh modifié et la cible à "
 "travailler avec le modificateur booléen."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:237
+#: ../../manual/modeling/modifiers/generate/booleans.rst:223
 msgid ""
 "When the Boolean modifier is the first of the stack and is applied, the "
 "other Modifiers will act over the resulting meshes using the resulting "
@@ -547,7 +507,7 @@ msgstr ""
 "utilisant la  topologie  résultante et va rester dans la pile des "
 "modificateurs."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:241
+#: ../../manual/modeling/modifiers/generate/booleans.rst:226
 msgid ""
 "Below are two images: one with the subsurf added to the target, and "
 "another with the resulting topology."
@@ -555,17 +515,17 @@ msgstr ""
 "En dessous on a deux images: une avec le subsurf ajouté à la cible, et "
 "une autre avec la  topologie résultante."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:247
+#: ../../manual/modeling/modifiers/generate/booleans.rst:232
 #, fuzzy
 msgid "Modifier with Subsurf Target."
 msgstr "Le Modificateur avec une cible SubSurf"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:251
+#: ../../manual/modeling/modifiers/generate/booleans.rst:236
 #, fuzzy
 msgid "The Resulting Topology."
 msgstr "La topologie résultante"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:253
+#: ../../manual/modeling/modifiers/generate/booleans.rst:239
 msgid ""
 "As you can see, the added (not applied) subsurf to the target was taken "
 "into consideration. The topology of the Icosphere with subsurf (Level 2) "
@@ -575,11 +535,11 @@ msgstr ""
 " pris en considération. La topologie de l'icosphère avec subsurf (niveau "
 "2) fut complètement transferré au mesh modifié."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:257
+#: ../../manual/modeling/modifiers/generate/booleans.rst:242
 msgid "The target topology determines the resulting topology"
 msgstr "La topologie de la cible détermine la topologie résultante"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:259
+#: ../../manual/modeling/modifiers/generate/booleans.rst:244
 msgid ""
 "The target topology determines the results of the Boolean modifier "
 "operation. It means that any modifier added to the target which modifies "
@@ -590,11 +550,11 @@ msgstr ""
 "ajouté à la cible qui modifie sa topologie va affecter le mesh résultant "
 "de l'opération."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:265
+#: ../../manual/modeling/modifiers/generate/booleans.rst:250
 msgid "Concurrent Operations"
 msgstr "Opérations Concurrentes"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:267
+#: ../../manual/modeling/modifiers/generate/booleans.rst:252
 msgid ""
 "For the modified meshes, you can only apply one operation at a time, but "
 "you can use the same target for other modified meshes and use modified "
@@ -614,11 +574,11 @@ msgstr ""
 "modifiés  pointant l'un vers l'autre, vous pouvez amener blender à "
 "crasher à cause de boucles fermées!"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:276
+#: ../../manual/modeling/modifiers/generate/booleans.rst:261
 msgid "Hints"
 msgstr "Conseils"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:278
+#: ../../manual/modeling/modifiers/generate/booleans.rst:263
 msgid ""
 "Be aware that other modifiers and their stack position could cause this "
 "modifier to fail in certain circumstances."
@@ -627,7 +587,7 @@ msgstr ""
 "  pourrait amener ce modificateur à  échouer dans certaines "
 "circonstances."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:283
+#: ../../manual/modeling/modifiers/generate/booleans.rst:268
 msgid ""
 "The best way to work with this modifier when you need to make lots of "
 "sequential operations of the same modifier is to define the target at the"
@@ -638,18 +598,18 @@ msgstr ""
 "est de définir la cible au moment où vous avez besoin d'appliquer les "
 "changements à la topologie."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:288
+#: ../../manual/modeling/modifiers/generate/booleans.rst:273
 msgid "Face Normals"
 msgstr "Normales des Faces"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:290
+#: ../../manual/modeling/modifiers/generate/booleans.rst:275
 #, fuzzy
 msgid ""
 "When using the Boolean modifier, Blender will use the face normal "
 "directions to calculate the three Boolean operations. The direction of "
 "the normals will define the result of the three available operations. "
 "When one of the participants has inverted normals, you're in fact "
-"multiplying the operation by -1 and inverting the calculation order. You "
+"multiplying the operation by −1 and inverting the calculation order. You "
 "can, at any time, select your modified mesh, enter Edit Mode and flip the"
 " normals to change the behavior of the Boolean modifier. See Tips: Fixing"
 " Mixed Normals below."
@@ -663,7 +623,7 @@ msgstr ""
 " the normals to change the behavior of the Boolean modifier. See *Tips "
 "for Fixing Mixed Normals* below."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:298
+#: ../../manual/modeling/modifiers/generate/booleans.rst:283
 msgid ""
 "Blender also cannot perform any optimal Boolean operation when one or "
 "more of the mesh Normals of the participants that are touching has "
@@ -673,7 +633,7 @@ msgstr ""
 " une ou plus des normales du mesh des participants qui se touchent ont "
 "des normales mixées vers l'extérieur/vers l'intérieur."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:301
+#: ../../manual/modeling/modifiers/generate/booleans.rst:286
 msgid ""
 "This means you can use the normals of the meshes pointed completely "
 "towards the inside or outside of your participants in the operation, but "
@@ -691,7 +651,7 @@ msgstr ""
 "effet. Nous avons fait quelques exemples avec un cube et un icosphère "
 "montrant les résultats."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:307
+#: ../../manual/modeling/modifiers/generate/booleans.rst:292
 msgid ""
 "In the images below, all face normals are pointing outwards (Normal "
 "meshes)."
@@ -699,17 +659,17 @@ msgstr ""
 "Dans les images en dessous, toutes les normales des  face pointent vers "
 "l'extérieur (normal meshs)."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:313
+#: ../../manual/modeling/modifiers/generate/booleans.rst:298
 #, fuzzy
 msgid "Faces with normals pointing outwards."
 msgstr "Faces avec normales pointant vers l'extérieur"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:317
+#: ../../manual/modeling/modifiers/generate/booleans.rst:302
 #, fuzzy
 msgid "Normal Boolean modifier operation (Difference operation)."
 msgstr "normal booléen modificateur opération (différence opération)"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:319
+#: ../../manual/modeling/modifiers/generate/booleans.rst:305
 msgid ""
 "In the images below, all  face normals are inverted and using the "
 "intersection operation"
@@ -717,20 +677,21 @@ msgstr ""
 "Dans les images en dessous, toutes les normales des faces sont inversées,"
 " en utilisant l'opération intersection"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:325
+#: ../../manual/modeling/modifiers/generate/booleans.rst:311
 #, fuzzy
 msgid "Boolean Operation with inverted normals."
 msgstr "booléen opération avec inversés normals"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:329
+#: ../../manual/modeling/modifiers/generate/booleans.rst:315
 #, fuzzy
 msgid "Normal Boolean modifier operation."
 msgstr "normal booléen modificateur opération"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:331
+#: ../../manual/modeling/modifiers/generate/booleans.rst:318
+#, fuzzy
 msgid ""
-"Now, let's see what happens when the normal directions are mixed for one "
-"of the participants in the Boolean modifier operation. The images below "
+"Now, let us see what happens when the normal directions are mixed for one"
+" of the participants in the Boolean modifier operation. The images below "
 "show face normals mixed, pointed to different directions and the "
 "resulting operation, you can see that the modifier has bad effects when "
 "applied, leaving faces opened:"
@@ -742,17 +703,17 @@ msgstr ""
 "vous pouvez voir que le modificateur a de mauvais effets une fois "
 "appliqué, laissant des faces ouvertes:"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:340
+#: ../../manual/modeling/modifiers/generate/booleans.rst:327
 #, fuzzy
 msgid "Face normals mixed, pointed to different directions."
 msgstr "face normals mixed, pointu to différent directions"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:344
+#: ../../manual/modeling/modifiers/generate/booleans.rst:331
 #, fuzzy
 msgid "Resulting operation leaves  faces opened."
 msgstr "résultant opération leaves  faces ouvert"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:346
+#: ../../manual/modeling/modifiers/generate/booleans.rst:334
 msgid ""
 "As you can see, the normal directions can be pointing to any of the Mesh "
 "sides, but can't be mixed in opposite directions for the faces of the "
@@ -767,7 +728,7 @@ msgstr ""
 " donc les résultats seront mauvais ou vous n'aurez aucun effet en "
 "utilisant l'opération modificateur  booléen ."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:352
+#: ../../manual/modeling/modifiers/generate/booleans.rst:339
 msgid ""
 "A quick way to fix this is to use Blender's :doc:`Recalculate Normals "
 "</modeling/meshes/editing/normals>` operation in Edit Mode."
@@ -776,7 +737,7 @@ msgstr ""
 " les normales </modeling/meshes/editing/normals>` de blender dans le mode"
 " edit ."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:355
+#: ../../manual/modeling/modifiers/generate/booleans.rst:342
 msgid ""
 "If you still have some ugly black gouges you will have to :doc:`Manually "
 "Flip the Normals </modeling/meshes/editing/normals>`."
@@ -785,11 +746,11 @@ msgstr ""
 ":doc:`inverser manuellement  les normales "
 "</modeling/meshes/editing/normals>`."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:360
+#: ../../manual/modeling/modifiers/generate/booleans.rst:347
 msgid "Empty or Duplicated Faces"
 msgstr "Vide ou Faces Dupliquées"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:362
+#: ../../manual/modeling/modifiers/generate/booleans.rst:349
 msgid ""
 "This modifier doesn't work when the modified and/or the target mesh uses "
 "empty faces in the topology used for calculations. If the modifier faces "
@@ -815,7 +776,7 @@ msgstr ""
 "Le bouton pour enlever les doublons est situé dans  le panneau * outils*"
 "  dans la vue 3D, quand vous êtes en mode edit."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:371
+#: ../../manual/modeling/modifiers/generate/booleans.rst:358
 msgid ""
 "The best usage scenario for this modifier is when you have clean meshes "
 "with faces pointing clearly to a direction (inwards/outwards)"
@@ -824,7 +785,7 @@ msgstr ""
 "avez nettoyé les meshs avec des faces pointant clairement vers une "
 "direction (vers l'intérieur/vers l'extérieur)"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:374
+#: ../../manual/modeling/modifiers/generate/booleans.rst:361
 msgid ""
 "Below we show an example of meshes with open faces mixed with normal "
 "faces being used to create a new topology. In this example, a difference "
@@ -838,21 +799,21 @@ msgstr ""
 "est appliqué, mais blender connecte une copie de l'icosphère au mesh du "
 "cube, essayant d'appliquer ce qui était possible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:382
+#: ../../manual/modeling/modifiers/generate/booleans.rst:369
 #, fuzzy
 msgid "Mesh with two empty faces mixed with normal faces."
 msgstr "mesh avec deux vide faces mixed avec normal faces"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:386
+#: ../../manual/modeling/modifiers/generate/booleans.rst:373
 #, fuzzy
 msgid "Result of a difference operation applied."
 msgstr "Résultat d'une Opération Différence appliquée"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:390
+#: ../../manual/modeling/modifiers/generate/booleans.rst:377
 msgid "Open Volumes"
 msgstr "Volumes Ouverts"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:392
+#: ../../manual/modeling/modifiers/generate/booleans.rst:379
 msgid ""
 "The Boolean Modifier permits you to use open meshes or non-closed volumes"
 " (not open faces)."
@@ -860,7 +821,7 @@ msgstr ""
 "Le modificateur  booléen vous permet d'utiliser des meshs  ouverts ou des"
 " volumes non-fermés (pas de faces ouvertes)."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:395
+#: ../../manual/modeling/modifiers/generate/booleans.rst:381
 msgid ""
 "When using open meshes or non-closed volumes, the Boolean modifier won't "
 "perform any operation in faces that don't create a new topology filled "
@@ -871,7 +832,7 @@ msgstr ""
 "une nouvelle topologie remplis avec des faces utilisant les faces de la "
 "cible."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:399
+#: ../../manual/modeling/modifiers/generate/booleans.rst:384
 msgid ""
 "In the images below, is the resulting operation when using two non-closed"
 " volumes with faces forming a new topology."
@@ -880,26 +841,27 @@ msgstr ""
 "utilise deux volumes non-fermés  avec des faces formant une nouvelle "
 "topologie."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:405
+#: ../../manual/modeling/modifiers/generate/booleans.rst:390
 #, fuzzy
 msgid "Non-closed volumes forming a new topology."
 msgstr "Volumes non-fermés  formant une nouvelle topologie"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:409
+#: ../../manual/modeling/modifiers/generate/booleans.rst:394
 #, fuzzy
 msgid "Resulting operation using two open volumes."
 msgstr "Opération résultante en utilisant deux volumes ouverts"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:411
+#: ../../manual/modeling/modifiers/generate/booleans.rst:397
+#, fuzzy
 msgid ""
-"Now, let's see what happens when we use meshes that are partially open, "
+"Now, let us see what happens when we use meshes that are partially open, "
 "incomplete, or meshes that aren't forming a new topology."
 msgstr ""
 "Maintenant, allons voir ce qui se passe quand nous utilisons des  meshs "
 "qui sont partiellement ouverts, incomplets, ou des meshs qui ne forment "
 "pas une nouvelle topologie."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:414
+#: ../../manual/modeling/modifiers/generate/booleans.rst:400
 msgid ""
 "As you can see in the images below the faces of one participant in the "
 "Boolean operation gives incomplete information to the modifier. The "
@@ -916,30 +878,123 @@ msgstr ""
 "expliqué avant, the shading (lisse/plat) n'affecte pas le calcule du "
 "modificateur."
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:424
+#: ../../manual/modeling/modifiers/generate/booleans.rst:410
 #, fuzzy
 msgid "Open volumes that aren't forming a new topology."
 msgstr "Volumes ouverts qui ne forment pas une nouvelle topologie"
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:428
+#: ../../manual/modeling/modifiers/generate/booleans.rst:414
 msgid "Resulting Operation of image on the left"
 msgstr "Opération résultant de l'image sur la gauche"
 
 #~ msgid ""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Boolean modifier performs operations "
+#~ "on meshes that are otherwise too "
+#~ "complex to achieve with as few "
+#~ "steps by editing meshes manually, "
+#~ "meaning you can achieve results with "
+#~ "little effort to make mesh operations"
+#~ " like Unions, Differences and "
+#~ "Intersections."
+#~ msgstr ""
+#~ "Le Modificateur Booléen effectue des "
+#~ "opérations sur des meshs qui sont "
+#~ "sinon trop complexes pour être accomplis"
+#~ " en éditant les meshs manuellement, "
+#~ "signifiant que vous pouvez obtenir des"
+#~ " résultats avec peu d'effort pour "
+#~ "faire des opérations sur les meshs "
+#~ "comme des unions, des différences et "
+#~ "des intersections."
+
+#~ msgid ""
+#~ "The Boolean modifier uses one of "
+#~ "three Boolean operations (*Difference* "
+#~ "(negation), *Union* (conjunction), and "
+#~ "*Intersect* (disjunction)) to create a "
+#~ "single compound object out of two "
+#~ "mesh objects."
+#~ msgstr ""
+#~ "Le Modificateur Booléen utilise l'une "
+#~ "des trois opérations (*Différence* (négation),"
+#~ " *Union* (conjonction) et *Intersection* "
+#~ "(disjonction)) pour créer un unique "
+#~ "objet composé à partir de deux "
+#~ "objets mesh."
+
+#~ msgid ""
+#~ "Using the default Blender install, with"
+#~ " the desired mesh Object selected, go"
+#~ " to the *Properties Window* which is"
+#~ " located at the right of your "
+#~ "Blender Screen, below the Outliner. "
+#~ "Click on the Modifiers Context, which"
+#~ " is represented by a wrench - "
+#~ "The Boolean modifier. Then, click on "
+#~ "the *Add Modifier* Button and Blender"
+#~ " will show you a list of all"
+#~ " of the available Modifiers. The "
+#~ "Boolean modifier is located on the "
+#~ "third row in the *Generate* Column."
+#~ msgstr ""
+#~ "En utilisant l'installation par défaut "
+#~ "de blender , avec l'objet mesh "
+#~ "désiré sélectionné, aller à la *fenêtre"
+#~ " propriétés* lequel est situé à la"
+#~ " droite de votre écran blender, en"
+#~ " dessous du outliner. Cliquer sur le"
+#~ " contexte modificateurs , lequel est "
+#~ "représenté par une clé à molette. "
+#~ "Alors, cliquer sur le bouton "
+#~ "*modificateur ajouter*  et blender va  "
+#~ "vous montrer une liste de tous les"
+#~ " modificateurs permis. Le modificateur "
+#~ "booléen est situé sur la troisième "
+#~ "ligne dans la colonne *générer* .\""
+
+#~ msgid ""
 #~ "You can also click on the *Add "
-#~ "Modifier* Button and use :kbd:`N` to "
+#~ "Modifier* Button and use :kbd:`B` to "
 #~ "add the Boolean modifier, or use "
 #~ "Blender search with the shortcut "
 #~ ":kbd:`Spacebar` and type \"Add Modifier\", "
 #~ "click on *Add Modifier* and press "
-#~ ":kbd:`N`."
+#~ ":kbd:`B`."
 #~ msgstr ""
-#~ "Vous pouvez donc cliquer sur le "
-#~ "bouton *ajouter modificateur*  et utiliser "
-#~ ":kbd:`e` pour ajouter le modificateur "
-#~ "booléen , ou utiliser la recherche "
-#~ "de blender avec le raccourci :kbd:`barre"
-#~ " d'espace` et taper \"ajouter "
-#~ "modificateur\", cliquer sur *ajouter "
-#~ "modificateur* et appuyer sur :kbd:`e`."
+
+#~ msgid ""
+#~ "When you add the Boolean modifier "
+#~ "for an object, Blender will need a"
+#~ " second object to be the target "
+#~ "of the operation."
+#~ msgstr ""
+#~ "Quand vous ajoutez le modificateur "
+#~ "Booléen pour un objet, Blender aura "
+#~ "besoin d'un second objet pour réussir"
+#~ " l'opération. Vous pouvez utiliser des "
+#~ "Meshs ouverts ou fermés, tant qu'ils "
+#~ "ont des faces pour le calcul."
+
+#~ msgid ""
+#~ "You can use open or closed meshes,"
+#~ " as long as they have available "
+#~ "face normals for the calculations to "
+#~ "take effect."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can add one or more modifiers"
+#~ " of this type for an Object but"
+#~ " you can only apply one operation "
+#~ "for the Boolean modifier at a "
+#~ "time."
+#~ msgstr ""
+#~ "Vous pouvez ajouter un ou plusieurs "
+#~ "modificateurs de ce type  pour un "
+#~ "objet mais vous ne pouvez appliquer "
+#~ "qu'une opération à la fois pour le"
+#~ " modificateur Booléen."
 
