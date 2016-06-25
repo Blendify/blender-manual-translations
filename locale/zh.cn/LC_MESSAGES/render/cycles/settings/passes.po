@@ -3,16 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-22 04:13+0800\n"
+"POT-Creation-Date: 2016-06-25 09:56+1000\n"
 "PO-Revision-Date: 2016-01-07 11:48+0800\n"
 "Last-Translator: kidux(xueke pei) <blender@vip.qq.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.6\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/settings/passes.rst:4
 msgid "Render Layers and Passes"
@@ -25,20 +23,22 @@ msgstr "层"
 #: ../../manual/render/cycles/settings/passes.rst:9
 msgid ""
 "This section covers only the Render Layer settings appropriate for the "
-"Blender Render engine. For the engine-independent settings, see :doc:`this "
-"section </render/post_process/layers>`."
+"Blender Render engine. For the engine-independent settings, see "
+":doc:`this section </render/post_process/layers>`."
 msgstr ""
-"本节只涵盖了渲染引擎的渲染层概念。跟渲染引擎无关的层设置，请参考 :doc:`此章节 </render/post_process/layers>` 。"
+"本节只涵盖了渲染引擎的渲染层概念。跟渲染引擎无关的层设置，请参考 :doc:`此章节 </render/post_process/layers>`"
+" 。"
 
 #: ../../manual/render/cycles/settings/passes.rst:16
 msgid "Exclude"
 msgstr "排除"
 
 #: ../../manual/render/cycles/settings/passes.rst:13
+#, fuzzy
 msgid ""
-"Scene layers are shared between all render layers; however sometimes it's "
-"useful to leave out some object influence for a particular render layer. "
-"That's what this option allows you to do."
+"Scene layers are shared between all render layers; however sometimes it's"
+" useful to leave out some object influence for a particular render layer."
+" That is what this option allows you to do."
 msgstr "场景层可在所有渲染层之间共享，然而有时候需要排除某些物体对于特定渲染层的影响时，可使用排除层的功能来实现。"
 
 #: ../../manual/render/cycles/settings/passes.rst:19
@@ -51,10 +51,10 @@ msgstr "直接漫射光"
 
 #: ../../manual/render/cycles/settings/passes.rst:22
 msgid ""
-"Direct lighting from diffuse BSDFs. We define direct lighting as coming from"
-" lamps, emitting surfaces, the background, or ambient occlusion after a "
-"single reflection or transmission off a surface. BSDF color is not included "
-"in this pass."
+"Direct lighting from diffuse BSDFs. We define direct lighting as coming "
+"from lamps, emitting surfaces, the background, or ambient occlusion after"
+" a single reflection or transmission off a surface. BSDF color is not "
+"included in this pass."
 msgstr ""
 "来自Diffuse "
 "BSDF（漫反射BSDF）的直接光照。我们将直接光照定义为来自场景灯、自发光表面、或是经过一次反射或的从表面透出的背景与环境光遮蔽（即\"AO\"）。此通道不包含BSDF颜色。"
@@ -65,10 +65,10 @@ msgstr "间接漫射光"
 
 #: ../../manual/render/cycles/settings/passes.rst:26
 msgid ""
-"Indirect lighting from diffuse BSDFs. We define indirect lighting as coming "
-"from lamps, emitting surfaces or the background after more than one "
-"reflection or transmission off a surface. BSDF color is not included in this"
-" pass."
+"Indirect lighting from diffuse BSDFs. We define indirect lighting as "
+"coming from lamps, emitting surfaces or the background after more than "
+"one reflection or transmission off a surface. BSDF color is not included "
+"in this pass."
 msgstr ""
 "来自Diffuse "
 "BSDF（漫反射BSDF）的间接光照。我们将直接光照定义为来自场景灯、自发光表面、或是经过一次反射或的从表面透出的背景光。此通道不包含BSDF颜色。"
@@ -79,8 +79,8 @@ msgstr "漫射光颜色"
 
 #: ../../manual/render/cycles/settings/passes.rst:30
 msgid ""
-"Color weights of diffuse BSDFs. These weights are the color input socket for"
-" BSDF nodes, modified by any Mix and Add Shader nodes."
+"Color weights of diffuse BSDFs. These weights are the color input socket "
+"for BSDF nodes, modified by any Mix and Add Shader nodes."
 msgstr ""
 " Diffuse BSDF（漫反射BSDF）的Color weights（色重值）。这些值供BSDF结点的颜色输入接口使用。可通过 "
 "Mix（混合）以及Add（添加）着色器结点进行编辑。"
@@ -124,8 +124,8 @@ msgstr "环境光"
 #: ../../manual/render/cycles/settings/passes.rst:41
 msgid ""
 "Emission from the directly visible background. When the film is set to "
-"transparent, this can be used to get the environment color and composite it "
-"back in."
+"transparent, this can be used to get the environment color and composite "
+"it back in."
 msgstr "从直接可见背景发出的光。"
 
 #: ../../manual/render/cycles/settings/passes.rst:43
@@ -142,9 +142,24 @@ msgstr "环境光遮蔽"
 
 #: ../../manual/render/cycles/settings/passes.rst:46
 msgid ""
-"Ambient occlusion from directly visible surfaces. BSDF color or AO factor is"
-" not included; i.e. it gives a 'normalized' value between 0 and 1."
+"Ambient occlusion from directly visible surfaces. BSDF color or AO factor"
+" is not included; i.e. it gives a 'normalized' value between 0 and 1."
 msgstr "来自直接可见表面的环境光遮蔽。它不含BSDF颜色或AO系数，例如，它提供了“标准化”的值，区间为0到1。"
+
+#: ../../manual/render/cycles/settings/passes.rst:50
+#, fuzzy
+msgid ""
+":doc:`Transparent BSDFs are given special treatment "
+"</render/cycles/settings/light_paths>`. A fully transparent surface is "
+"treated as if there is no surface there at all; a partially transparent "
+"surface is treated as if only part of the light rays can pass through. "
+"This means it is not included in the Transmission passes; for that a "
+"glass BSDF with index of refraction 1.0 can be used."
+msgstr ""
+"注意， :ref:`Transmission BSDF（透明BSDF）需要单独对待 "
+"</render/cycles/settings/light_paths>` "
+"，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分光线能够穿过。也就是说，它并未包含在Transmission（透射）通道中，这样，可以使用折射率设定为1.0的Glass"
+" BSDF（玻璃BSDF）。"
 
 #: ../../manual/render/cycles/settings/passes.rst:58
 msgid "Combining"
@@ -172,9 +187,25 @@ msgstr "包含所有渲染通道的最终合成的渲染通道"
 msgid "Z"
 msgstr "Z深度通道"
 
+#: ../../manual/render/cycles/settings/passes.rst:72
+msgid "Distance in :term:`BU` to any visible surfaces."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/passes.rst:75
+msgid ""
+"The Z pass only uses one sample. When depth values need to be blended in "
+"case of motion blur or :term:`DOF`, use the mist pass."
+msgstr ""
+
 #: ../../manual/render/cycles/settings/passes.rst:80
 msgid "Mist"
 msgstr "雾"
+
+#: ../../manual/render/cycles/settings/passes.rst:79
+msgid ""
+"Distance to visible surfaces, mapped to the 0.0-1.0 range. When enabled, "
+"settings are in :menuselection:`Properties --> World --> Mist Pass`."
+msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:82
 msgid "Normal"
@@ -190,9 +221,9 @@ msgstr "向量通道"
 
 #: ../../manual/render/cycles/settings/passes.rst:85
 msgid ""
-"Motion vectors for the vector blur node. The four components consist of 2D "
-"vectors giving the motion towards the next and previous frame position in "
-"pixel space."
+"Motion vectors for the vector blur node. The four components consist of "
+"2D vectors giving the motion towards the next and previous frame position"
+" in pixel space."
 msgstr "用于向量模糊结点的运动向量通道。其中的四个部分包含了在像素空间内朝向前一帧和后一帧位置的2D向量数据。"
 
 #: ../../manual/render/cycles/settings/passes.rst:87
@@ -219,102 +250,28 @@ msgstr "材质索引通道"
 msgid "Pass index of material."
 msgstr "材质的索引通道。"
 
+#: ../../manual/render/cycles/settings/passes.rst:94
+msgid "The Z, Object Index and Material Index passes are not anti-aliased."
+msgstr ""
+
 #: ../../manual/render/cycles/settings/passes.rst:101
 msgid "Alpha Threshold"
 msgstr "Alpha 阀值"
 
 #: ../../manual/render/cycles/settings/passes.rst:97
 msgid ""
-"Z, Index, normal, UV and vector passes are only affected by surfaces with "
-"alpha transparency equal to or higher than this threshold. With value 0.0 "
-"the first surface hit will always write to these passes, regardless of "
-"transparency. With higher values surfaces that are mostly transparent can be"
-" skipped until an opaque surface is encountered."
+"Z, Index, normal, UV and vector passes are only affected by surfaces with"
+" alpha transparency equal to or higher than this threshold. With value "
+"0.0 the first surface hit will always write to these passes, regardless "
+"of transparency. With higher values surfaces that are mostly transparent "
+"can be skipped until an opaque surface is encountered."
 msgstr ""
 "Z通道、索引通道、法线通道、UV通道以及向量通道在表面的alpha透明值等于或者大于该阀值的时候才受影响。该值为0.0的时候，首次被光线碰到的表面会立即写入这些通道而不管透明度如何。"
 " 如果存在更高的值的透明表面会在遇到不透明的表面的时候跳过写入。"
-
-#: ../../manual/render/cycles/settings/passes.rst:50
-#, fuzzy
-msgid ""
-":doc:`Transparent BSDFs are given special treatment "
-"</render/cycles/settings/light_paths>`. A fully transparent surface is "
-"treated as if there is no surface there at all; a partially transparent "
-"surface is treated as if only part of the light rays can pass through. This "
-"means it is not included in the Transmission passes; for that a glass BSDF "
-"with index of refraction 1.0 can be used."
-msgstr ""
-"注意， :ref:`Transmission BSDF（透明BSDF）需要单独对待 "
-"</render/cycles/settings/light_paths>` "
-"，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分光线能够穿过。也就是说，它并未包含在Transmission（透射）通道中，这样，可以使用折射率设定为1.0的Glass"
-" BSDF（玻璃BSDF）。"
-
-#: ../../manual/render/cycles/settings/passes.rst:72
-msgid "Distance in :term:`BU` to any visible surfaces."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:75
-msgid ""
-"The Z pass only uses one sample. When depth values need to be blended in "
-"case of motion blur or :term:`DOF`, use the mist pass."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:79
-msgid ""
-"Distance to visible surfaces, mapped to the 0.0-1.0 range. When enabled, "
-"settings are in :menuselection:`Properties --> World --> Mist Pass`."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:94
-msgid "The Z, Object Index and Material Index passes are not anti-aliased."
-msgstr ""
 
 #~ msgid "The"
 #~ msgstr "Z向深度。"
 
 #~ msgid ""
-#~ "Mist value between 0.0 and 1.0, using settings from the Mist Pass panel in "
-#~ "world properties."
-#~ msgstr "雾值在0.0和1.0之间，在世界属性的雾通道面板中设置该值。"
-
-#~ msgid ""
-#~ "The Z, Object Index and Material Index passes are not anti-aliased. This is "
-#~ "done intentionally because such values can't really be blended correctly."
-#~ msgstr "Z通道、物体索引通道以及材质索引通道不支持抗锯齿特性。因为这些值无法得出正确的混合结果。"
-
-#~ msgid ""
-#~ "Note that :doc:`transparent BSDFs are given special treatment "
-#~ "</render/cycles/settings/light_paths>` a fully transparent surface is "
-#~ "treated as if there is no surface there at all; a partially transparent "
-#~ "surface is treated as if only part of the light rays can pass through. This "
-#~ "means it is not included in the Transmission passes; for that a glass BSDF "
-#~ "with index of refraction 1.0 can be used."
 #~ msgstr ""
-#~ "注意， :ref:`Transmission BSDF（透明BSDF）需要单独对待 "
-#~ "</render/cycles/settings/light_paths>` "
-#~ "，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分光线能够穿过。也就是说，它并未包含在Transmission（透射）通道中，这样，可以使用折射率设定为1.0的Glass"
-#~ " BSDF（玻璃BSDF）。"
 
-#~ msgid ""
-#~ "Note that :ref:`transparent BSDFs are given special treatment "
-#~ "</render/cycles/light_paths>` a fully transparent surface is treated as if "
-#~ "there is no surface there at all; a partially transparent surface is treated"
-#~ " as if only part of the light rays can pass through. This means it is not "
-#~ "included in the Transmission passes; for that a glass BSDF with index of "
-#~ "refraction 1.0 can be used."
-#~ msgstr ""
-#~ "注意， :ref:`Transmission BSDF（透明BSDF）需要单独对待 </render/cycles/light_paths>` "
-#~ "，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分光线能够穿过。也就是说，它并未包含在Transmission（透射）通道中，这样，可以使用折射率设定为1.0的Glass"
-#~ " BSDF（玻璃BSDF）。"
-
-#~ msgid ""
-#~ "Note that :ref:`transparent BSDFs are given special treatment "
-#~ "</render/cycles/settings/light_paths>` a fully transparent surface is "
-#~ "treated as if there is no surface there at all; a partially transparent "
-#~ "surface is treated as if only part of the light rays can pass through. This "
-#~ "means it is not included in the Transmission passes; for that a glass BSDF "
-#~ "with index of refraction 1.0 can be used."
-#~ msgstr ""
-#~ "注意， :ref:`transparent  BSDF（透明BSDF）需要单独对待 </render/cycles/light_paths>` "
-#~ "，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分光线能够穿过。也就是说，它并未包含在Transmission（透射）通道中，这样，可以使用折射率设定为1.0的Glass"
-#~ " BSDF（玻璃BSDF）。"
