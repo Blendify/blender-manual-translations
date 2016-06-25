@@ -3,13 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-12 01:27+1100\n"
+"POT-Creation-Date: 2016-06-25 09:56+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/settings/passes.rst:4
 msgid "Render Layers and Passes"
@@ -22,8 +23,8 @@ msgstr ""
 #: ../../manual/render/cycles/settings/passes.rst:9
 msgid ""
 "This section covers only the Render Layer settings appropriate for the "
-"Blender Render engine. For the engine-independent settings, see :doc:`this "
-"section </render/post_process/layers>`."
+"Blender Render engine. For the engine-independent settings, see "
+":doc:`this section </render/post_process/layers>`."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:16
@@ -32,9 +33,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:13
 msgid ""
-"Scene layers are shared between all render layers; however sometimes it's "
-"useful to leave out some object influence for a particular render layer. "
-"That's what this option allows you to do."
+"Scene layers are shared between all render layers; however sometimes it's"
+" useful to leave out some object influence for a particular render layer."
+" That is what this option allows you to do."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:19
@@ -47,10 +48,10 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:22
 msgid ""
-"Direct lighting from diffuse BSDFs. We define direct lighting as coming from"
-" lamps, emitting surfaces, the background, or ambient occlusion after a "
-"single reflection or transmission off a surface. BSDF color is not included "
-"in this pass."
+"Direct lighting from diffuse BSDFs. We define direct lighting as coming "
+"from lamps, emitting surfaces, the background, or ambient occlusion after"
+" a single reflection or transmission off a surface. BSDF color is not "
+"included in this pass."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:27
@@ -59,10 +60,10 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:26
 msgid ""
-"Indirect lighting from diffuse BSDFs. We define indirect lighting as coming "
-"from lamps, emitting surfaces or the background after more than one "
-"reflection or transmission off a surface. BSDF color is not included in this"
-" pass."
+"Indirect lighting from diffuse BSDFs. We define indirect lighting as "
+"coming from lamps, emitting surfaces or the background after more than "
+"one reflection or transmission off a surface. BSDF color is not included "
+"in this pass."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:30
@@ -71,8 +72,8 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:30
 msgid ""
-"Color weights of diffuse BSDFs. These weights are the color input socket for"
-" BSDF nodes, modified by any Mix and Add Shader nodes."
+"Color weights of diffuse BSDFs. These weights are the color input socket "
+"for BSDF nodes, modified by any Mix and Add Shader nodes."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:32
@@ -114,8 +115,8 @@ msgstr ""
 #: ../../manual/render/cycles/settings/passes.rst:41
 msgid ""
 "Emission from the directly visible background. When the film is set to "
-"transparent, this can be used to get the environment color and composite it "
-"back in."
+"transparent, this can be used to get the environment color and composite "
+"it back in."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:43
@@ -132,8 +133,18 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:46
 msgid ""
-"Ambient occlusion from directly visible surfaces. BSDF color or AO factor is"
-" not included; i.e. it gives a 'normalized' value between 0 and 1."
+"Ambient occlusion from directly visible surfaces. BSDF color or AO factor"
+" is not included; i.e. it gives a 'normalized' value between 0 and 1."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/passes.rst:50
+msgid ""
+":doc:`Transparent BSDFs are given special treatment "
+"</render/cycles/settings/light_paths>`. A fully transparent surface is "
+"treated as if there is no surface there at all; a partially transparent "
+"surface is treated as if only part of the light rays can pass through. "
+"This means it is not included in the Transmission passes; for that a "
+"glass BSDF with index of refraction 1.0 can be used."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:58
@@ -162,8 +173,24 @@ msgstr ""
 msgid "Z"
 msgstr ""
 
+#: ../../manual/render/cycles/settings/passes.rst:72
+msgid "Distance in :term:`BU` to any visible surfaces."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/passes.rst:75
+msgid ""
+"The Z pass only uses one sample. When depth values need to be blended in "
+"case of motion blur or :term:`DOF`, use the mist pass."
+msgstr ""
+
 #: ../../manual/render/cycles/settings/passes.rst:80
 msgid "Mist"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/passes.rst:79
+msgid ""
+"Distance to visible surfaces, mapped to the 0.0-1.0 range. When enabled, "
+"settings are in :menuselection:`Properties --> World --> Mist Pass`."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:82
@@ -180,9 +207,9 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:85
 msgid ""
-"Motion vectors for the vector blur node. The four components consist of 2D "
-"vectors giving the motion towards the next and previous frame position in "
-"pixel space."
+"Motion vectors for the vector blur node. The four components consist of "
+"2D vectors giving the motion towards the next and previous frame position"
+" in pixel space."
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:87
@@ -209,67 +236,35 @@ msgstr ""
 msgid "Pass index of material."
 msgstr ""
 
+#: ../../manual/render/cycles/settings/passes.rst:94
+msgid "The Z, Object Index and Material Index passes are not anti-aliased."
+msgstr ""
+
 #: ../../manual/render/cycles/settings/passes.rst:101
 msgid "Alpha Threshold"
 msgstr ""
 
 #: ../../manual/render/cycles/settings/passes.rst:97
 msgid ""
-"Z, Index, normal, UV and vector passes are only affected by surfaces with "
-"alpha transparency equal to or higher than this threshold. With value 0.0 "
-"the first surface hit will always write to these passes, regardless of "
-"transparency. With higher values surfaces that are mostly transparent can be"
-" skipped until an opaque surface is encountered."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:50
-msgid ""
-":doc:`Transparent BSDFs are given special treatment "
-"</render/cycles/settings/light_paths>`. A fully transparent surface is "
-"treated as if there is no surface there at all; a partially transparent "
-"surface is treated as if only part of the light rays can pass through. This "
-"means it is not included in the Transmission passes; for that a glass BSDF "
-"with index of refraction 1.0 can be used."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:72
-msgid "Distance in :term:`BU` to any visible surfaces."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:75
-msgid ""
-"The Z pass only uses one sample. When depth values need to be blended in "
-"case of motion blur or :term:`DOF`, use the mist pass."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:79
-msgid ""
-"Distance to visible surfaces, mapped to the 0.0-1.0 range. When enabled, "
-"settings are in :menuselection:`Properties --> World --> Mist Pass`."
-msgstr ""
-
-#: ../../manual/render/cycles/settings/passes.rst:94
-msgid "The Z, Object Index and Material Index passes are not anti-aliased."
+"Z, Index, normal, UV and vector passes are only affected by surfaces with"
+" alpha transparency equal to or higher than this threshold. With value "
+"0.0 the first surface hit will always write to these passes, regardless "
+"of transparency. With higher values surfaces that are mostly transparent "
+"can be skipped until an opaque surface is encountered."
 msgstr ""
 
 #~ msgid ""
-#~ "Note that :doc:`transparent BSDFs are given special treatment "
-#~ "</render/cycles/settings/light_paths>` a fully transparent surface is "
-#~ "treated as if there is no surface there at all; a partially transparent "
-#~ "surface is treated as if only part of the light rays can pass through. This "
-#~ "means it is not included in the Transmission passes; for that a glass BSDF "
-#~ "with index of refraction 1.0 can be used."
 #~ msgstr ""
 
 #~ msgid "The"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Mist value between 0.0 and 1.0, using settings from the Mist Pass panel in "
-#~ "world properties."
+#~ "Scene layers are shared between all "
+#~ "render layers; however sometimes it's "
+#~ "useful to leave out some object "
+#~ "influence for a particular render layer."
+#~ " That's what this option allows you"
+#~ " to do."
 #~ msgstr ""
 
-#~ msgid ""
-#~ "The Z, Object Index and Material Index passes are not anti-aliased. This is "
-#~ "done intentionally because such values can't really be blended correctly."
-#~ msgstr ""
