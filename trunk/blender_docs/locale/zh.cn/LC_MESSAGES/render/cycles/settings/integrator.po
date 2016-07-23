@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-17 15:20+1000\n"
+"POT-Creation-Date: 2016-07-24 04:17+1000\n"
 "PO-Revision-Date: 2015-07-12 21:51+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -457,7 +457,7 @@ msgstr "针对分支路径追踪积分器，该选项指定了每个抗锯齿采
 msgid "The maximum amount of bounces this light will contribute to the scene."
 msgstr "该光线会在场景中反弹的最大次数。"
 
-#: ../../manual/render/cycles/settings/integrator.rst:219
+#: ../../manual/render/cycles/settings/integrator.rst:218
 msgid "Portal"
 msgstr "采光面"
 
@@ -469,44 +469,68 @@ msgid ""
 "itself invisible."
 msgstr "只在面光源的时候起作用。该选项启用后将面光源作为采光面来使用，可以帮助采样环境光以及加快收敛。注意，这个选项会让面光源自身变成不可见的。"
 
+#: ../../manual/render/cycles/settings/integrator.rst:220
+msgid ""
+"In outdoor scenes most rays don't bounce much and just fly off into the "
+"sky."
+msgstr ""
+
 #: ../../manual/render/cycles/settings/integrator.rst:222
+msgid ""
+"In indoor scenes almost all the rays will end up reflecting around up to "
+"the maximum number of bounces. Not only does this often mean more noise, "
+"but also slower rendering (more ray intersection calculations etc.)"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/integrator.rst:224
+msgid ""
+"Light portals will guide the rays to the environment light so you can get"
+" less noise with fewer samples and a shorter render time than if you "
+"didn't use portals."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/integrator.rst:226
+msgid "Every portal adds a render time penalty so use as few as possible."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/integrator.rst:232
 msgid "Volume Render Settings"
 msgstr "体渲染设置"
 
-#: ../../manual/render/cycles/settings/integrator.rst:224
+#: ../../manual/render/cycles/settings/integrator.rst:234
 msgid "The scene has these settings:"
 msgstr "场景中有这些设置："
 
-#: ../../manual/render/cycles/settings/integrator.rst:227
+#: ../../manual/render/cycles/settings/integrator.rst:237
 msgid "Step Size"
 msgstr "步阶尺寸"
 
-#: ../../manual/render/cycles/settings/integrator.rst:227
+#: ../../manual/render/cycles/settings/integrator.rst:237
 msgid ""
 "Distance between volume shader samples when rendering the volume. Lower "
 "values give more accurate and detailed results but also increased render "
 "time."
 msgstr "渲染体材质的时候，体着色器采样间的距离。小数值给出更多精度和细节但是会增加渲染时间。"
 
-#: ../../manual/render/cycles/settings/integrator.rst:231
+#: ../../manual/render/cycles/settings/integrator.rst:241
 msgid "Max Steps"
 msgstr "最大阶数"
 
-#: ../../manual/render/cycles/settings/integrator.rst:230
+#: ../../manual/render/cycles/settings/integrator.rst:240
 msgid ""
 "Maximum number of steps through the volume before giving up, to protect "
 "from extremely long render times with big objects or small step sizes."
 msgstr "体素里放弃穿过前通过的最大步数，为了避免在太大体材质物体里或者太小的步阶尺寸引起的非常长的渲染时间。"
 
-#: ../../manual/render/cycles/settings/integrator.rst:233
+#: ../../manual/render/cycles/settings/integrator.rst:243
 msgid "The world and materials have the following setting:"
 msgstr "世界和材质又有如下的设置："
 
-#: ../../manual/render/cycles/settings/integrator.rst:237
+#: ../../manual/render/cycles/settings/integrator.rst:247
 msgid "Homogeneous Volume"
 msgstr "均质体积"
 
-#: ../../manual/render/cycles/settings/integrator.rst:236
+#: ../../manual/render/cycles/settings/integrator.rst:246
 msgid ""
 "Assume volume has the same density everywhere (not using any textures), "
 "for faster rendering. For example absorption in a glass object would "
@@ -514,11 +538,11 @@ msgid ""
 "small steps to sample the volume shader."
 msgstr "假设体素所有地方都是一样的密度（不使用任何材质），可以加快渲染。比如在玻璃物体中的吸收是没有任何材质的，我们可以避免用小歩长来采样体着色器。"
 
-#: ../../manual/render/cycles/settings/integrator.rst:244
+#: ../../manual/render/cycles/settings/integrator.rst:254
 msgid "Sampling Method"
 msgstr "采样方法"
 
-#: ../../manual/render/cycles/settings/integrator.rst:240
+#: ../../manual/render/cycles/settings/integrator.rst:250
 msgid ""
 "Options are \"Multiple Importance\", \"Distance\" or \"Equiangular\". If "
 "you've got a pretty dense volume that is lit from far away then distance "
@@ -541,16 +565,4 @@ msgstr ""
 
 #~ msgid "Shutter"
 #~ msgstr "快门"
-
-#~ msgid ""
-#~ "A common issue encountered with path-"
-#~ "tracing is the occurrence of "
-#~ "*\"fireflies\"*: improbable samples that "
-#~ "contribute very high values to pixels."
-#~ " This option provides a way to "
-#~ "limit that. However note that as "
-#~ "you clamp out such values, other "
-#~ "bright lights/reflections will be dimmed "
-#~ "as well."
-#~ msgstr ""
 
