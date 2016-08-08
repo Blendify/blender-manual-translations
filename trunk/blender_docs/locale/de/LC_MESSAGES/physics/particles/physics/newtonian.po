@@ -3,13 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-15 16:28+1100\n"
+"POT-Creation-Date: 2016-08-08 19:32-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/physics/particles/physics/newtonian.rst:4
 msgid "Newtonian Physics"
@@ -17,10 +18,11 @@ msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:6
 msgid ""
-"These are the \"normal\" particle physics. Particles start their life with "
-"the specified initial velocities and angular velocities, and move according "
-"to Newtonian forces. The response to environment and to forces is computed "
-"differently, according to any given integrator chosen by the animator."
+"These are the \"normal\" particle physics. Particles start their life "
+"with the specified initial velocities and angular velocities, and move "
+"according to Newtonian forces. The response to environment and to forces "
+"is computed differently, according to any given integrator chosen by the "
+"animator."
 msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:14
@@ -37,9 +39,9 @@ msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:21
 msgid ""
-"Specify the amount of Brownian motion. Brownian motion adds random motion to"
-" the particles based on a Brownian noise field. This is nice to simulate "
-"small, random wind forces."
+"Specify the amount of Brownian motion. Brownian motion adds random motion"
+" to the particles based on a Brownian noise field. This is nice to "
+"simulate small, random wind forces."
 msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:25
@@ -48,8 +50,8 @@ msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:25
 msgid ""
-"A force that reduces particle velocity in relation to it's speed and size "
-"(useful in order to simulate Air-Drag or Water-Drag)."
+"A force that reduces particle velocity in relation to it's speed and size"
+" (useful in order to simulate Air-Drag or Water-Drag)."
 msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:29
@@ -72,7 +74,7 @@ msgstr ""
 msgid "Use the particle size in deflections."
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:37
+#: ../../manual/physics/particles/physics/newtonian.rst:36
 msgid "Die on Hit"
 msgstr ""
 
@@ -80,87 +82,98 @@ msgstr ""
 msgid "Kill particle when it hits a deflector object."
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:40
+#: ../../manual/physics/particles/physics/newtonian.rst:39
+msgid "Collision Group"
+msgstr ""
+
+#: ../../manual/physics/particles/physics/newtonian.rst:39
+msgid ""
+"If set, particles collide with objects from the group, instead of using "
+"objects that are on the same layer."
+msgstr ""
+
+#: ../../manual/physics/particles/physics/newtonian.rst:42
 msgid "Integration"
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:43
+#: ../../manual/physics/particles/physics/newtonian.rst:45
 msgid ""
 "Integrators are a set of mathematical methods available to calculate the "
-"movement of particles. The following guidelines will help to choose a proper"
-" integrator, according to the behavior aimed at by the animator."
-msgstr ""
-
-#: ../../manual/physics/particles/physics/newtonian.rst:54
-msgid "Euler"
-msgstr ""
-
-#: ../../manual/physics/particles/physics/newtonian.rst:48
-msgid ""
-"Also known as \"Forward Euler\". Simplest integrator. Very fast but also "
-"with less exact results. If no dampening is used, particles get more and "
-"more energy over time. For example, bouncing particles will bounce higher "
-"and higher each time. Should not be confused with \"Backward Euler\" (not "
-"implemented) which has the opposite feature, energies decrease over time, "
-"even with no dampening. Use this integrator for short simulations or "
-"simulations with a lot of dampening where speedy calculations is more "
-"important than accuracy."
+"movement of particles. The following guidelines will help to choose a "
+"proper integrator, according to the behavior aimed at by the animator."
 msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:56
+msgid "Euler"
+msgstr ""
+
+#: ../../manual/physics/particles/physics/newtonian.rst:50
+msgid ""
+"Also known as \"Forward Euler\". Simplest integrator. Very fast but also "
+"with less exact results. If no dampening is used, particles get more and "
+"more energy over time. For example, bouncing particles will bounce higher"
+" and higher each time. Should not be confused with \"Backward Euler\" "
+"(not implemented) which has the opposite feature, energies decrease over "
+"time, even with no dampening. Use this integrator for short simulations "
+"or simulations with a lot of dampening where speedy calculations is more "
+"important than accuracy."
+msgstr ""
+
+#: ../../manual/physics/particles/physics/newtonian.rst:58
 msgid "Varlet"
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:57
+#: ../../manual/physics/particles/physics/newtonian.rst:59
 msgid ""
 "Very fast and stable integrator, energy is conserved over time with very "
 "little numerical dissipation."
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:62
+#: ../../manual/physics/particles/physics/newtonian.rst:64
 msgid "Midpoint"
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:59
+#: ../../manual/physics/particles/physics/newtonian.rst:61
 msgid ""
 "Also known as \"2nd order Runge-Kutta\". Slower than Euler but much more "
-"stable. If the acceleration is constant (no drag for example), it is energy "
-"conservative. It should be noted that in example of the bouncing particles, "
-"the particles might bounce higher than they started once in a while, but "
-"this is not a trend. This integrator is a generally good integrator for use "
-"in most cases."
+"stable. If the acceleration is constant (no drag for example), it is "
+"energy conservative. It should be noted that in example of the bouncing "
+"particles, the particles might bounce higher than they started once in a "
+"while, but this is not a trend. This integrator is a generally good "
+"integrator for use in most cases."
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:68
+#: ../../manual/physics/particles/physics/newtonian.rst:70
 msgid "RK4"
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:65
+#: ../../manual/physics/particles/physics/newtonian.rst:67
 msgid ""
-"Short for \"4th order Runge-Kutta\". Similar to Midpoint but slower and in "
-"most cases more accurate. It is energy conservative even if the acceleration"
-" is not constant. Only needed in complex simulations where Midpoint is found"
-" not to be accurate enough."
-msgstr ""
-
-#: ../../manual/physics/particles/physics/newtonian.rst:71
-msgid "Frame Settings"
+"Short for \"4th order Runge-Kutta\". Similar to Midpoint but slower and "
+"in most cases more accurate. It is energy conservative even if the "
+"acceleration is not constant. Only needed in complex simulations where "
+"Midpoint is found not to be accurate enough."
 msgstr ""
 
 #: ../../manual/physics/particles/physics/newtonian.rst:73
+msgid "Frame Settings"
+msgstr ""
+
+#: ../../manual/physics/particles/physics/newtonian.rst:75
 msgid "Timestep"
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:74
+#: ../../manual/physics/particles/physics/newtonian.rst:76
 msgid "The simulation time step per frame."
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:78
+#: ../../manual/physics/particles/physics/newtonian.rst:80
 msgid "Subframes"
 msgstr ""
 
-#: ../../manual/physics/particles/physics/newtonian.rst:76
+#: ../../manual/physics/particles/physics/newtonian.rst:78
 msgid ""
 "Subframes to simulate for improved stability and finer granularity in "
 "simulations. Use higher values for faster moving particles."
 msgstr ""
+
