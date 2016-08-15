@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-25 09:56+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-17 22:38+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../manual/render/cycles/gpu_rendering.rst:5
 msgid "GPU Rendering"
-msgstr ""
+msgstr "Визуализация на GPU"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:8
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:10
 msgid ""
@@ -35,6 +35,15 @@ msgid ""
 "interactivity when using the same graphics card for display and "
 "rendering."
 msgstr ""
+"Визуализация на :abbr:`GPU (Graphics Processing Unit - графический "
+"процессор или видеокарта)` позволяет вам использовать для визуализации "
+"вашу графическую карту вместо центрального процессора. Это может сильно "
+"ускорить визуализацию, поскольку современные видеокарты спроектированы "
+"для выполнения множества однотипных вычислений. С другой стороны, они "
+"также имеют некоторые ограничения по визуализации сложных сцен из-за "
+"меньшего количества доступной памяти, а так же проблемы с отзывчивостью "
+"интерфейса, если одна и та же видеокарта используется как для обычной "
+"работы, так и для визуализации."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:16
 msgid ""
@@ -42,10 +51,13 @@ msgid ""
 " for NVIDIA graphics cards; and *OpenCL*, which supports rendering on AMD"
 " graphics cards."
 msgstr ""
+"Cycles поддерживает два режима визуализации на GPU: *CUDA*, который "
+"предпочтителен для графических карт NVIDIA, и *OpenCL*, который "
+"поддерживает визуализацию на графических картах AMD."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:22
 msgid "Configuration"
-msgstr ""
+msgstr "Конфигурирование"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:24
 msgid ""
@@ -53,10 +65,14 @@ msgid ""
 "System tab, select the Compute Device(s) to use. Next, for each scene, "
 "you can configure to use CPU or GPU rendering in the Render properties."
 msgstr ""
+"Для включения визуализации на GPU, откройте окно *Параметры* и на вкладке"
+" *Система* выберите используемое *Устройство расчёта*. Затем, для каждой "
+"сцены, в панели *Визуализация* вы сможете настроить использование "
+"визуализации на CPU или на GPU."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:30
 msgid "CUDA"
-msgstr ""
+msgstr "CUDA"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:33
 msgid ""
@@ -64,22 +80,31 @@ msgid ""
 "for GPU rendering with *NVIDIA* graphics cards. We support graphics cards"
 " starting from GTX 4xx (computing capability 2.0)."
 msgstr ""
+"NVIDIA :abbr:`CUDA (Compute Unified Device Architecture - архитектура "
+"вычислений на унифицированных устройствах)` поддерживается для "
+"визуализации на GPU на графических картах *NVIDIA*. Мы поддерживаем "
+"графические карты, начиная с серии GTX 4xx (вычислительные возможности "
+"2.0)."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:37
 msgid ""
 "Cycles requires recent NVIDIA drivers to be installed, on all operating "
 "systems."
 msgstr ""
+"Cycles требует установки самых свежих драйверов NVIDIA, для всех "
+"операционных систем."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:39
 msgid ""
 "`List of CUDA cards with shader model <https://developer.nvidia.com/cuda-"
 "gpus>`__"
 msgstr ""
+"`Список карт CUDA с моделью шейдеров <https://developer.nvidia.com/cuda-"
+"gpus>`__ (на английском языке)"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:43
 msgid "OpenCL"
-msgstr ""
+msgstr "OpenCL"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:45
 msgid ""
@@ -89,26 +114,40 @@ msgid ""
 "cards are GCN cards though, you can check if your card is `here "
 "<https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units>`__."
 msgstr ""
+":abbr:`OpenCL (Open Computing Language - открытый язык вычислений)` "
+"поддерживается для визуализации на GPU на графических картах *AMD*. Мы "
+"поддерживаем графические карты только с архитектурой :abbr:`GCN (Graphics"
+" Core Next)` (серия HD 7xxx и выше). Обратите внимание, что не все карты "
+"серии HD 7xxx являются картами с архитектурой GCN, вы можете проверить "
+"вашу карту `здесь "
+"<https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units>`__ "
+"(на английском языке) или `здесь "
+"<https://ru.wikipedia.org/wiki/Список_графических_процессоров_AMD>`__ (на"
+" русском языке)."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:51
 msgid ""
 "Cycles requires recent AMD drivers to be installed, on all operating "
 "systems."
 msgstr ""
+"Cycles требует установки самых свежих драйверов AMD, для всех "
+"операционных систем."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:55
 msgid "Supported Features and Limitations"
-msgstr ""
+msgstr "Поддерживаемые возможности и ограничения"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:57
 msgid ""
 "For an overview of supported features, check the comparison in the "
 ":doc:`Features </render/cycles/features>`."
 msgstr ""
+"Обзор поддерживаемых возможностей и сравнение технологий приведены в "
+"соответсвующем :doc:`разделе </render/cycles/features>`."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:64
 msgid "CUDA limitations:"
-msgstr ""
+msgstr "Ограничения CUDA:"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:61
 msgid ""
@@ -117,14 +156,18 @@ msgid ""
 " 16 bit ``TIFF``, ..) on GTX 4xx/5xx cards. Newer cards do not have this "
 "limit."
 msgstr ""
+"Максимальное количество индивидуальных текстур ограничено 88 "
+"целочисленными текстурами (``PNG``, ``JPEG` и так далее) и 5 текстурами с"
+" плавающей запятой (``OpenEXR``, 16-битный ``TIFF`` и прочие) на картах "
+"серии GTX 4xx/5xx. Более поздние карты не имеют такого ограничения."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:67
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Часто задаваемые вопросы"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:71
 msgid "Why is Blender unresponsive during rendering?"
-msgstr ""
+msgstr "Почему Blender перестаёт отвечать во время визуализации?"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:73
 msgid ""
@@ -135,16 +178,28 @@ msgid ""
 " is a limitation of graphics cards for which no true solution exists, "
 "though we might be able to improve this somewhat in the future."
 msgstr ""
+"Когда графическая карта занята визуализацией, она не может перерисовывать"
+" пользовательский интерфейс, из-за чего Blender перестаёт отвечать. Мы "
+"пытаемся обойти эту проблему, забирая контроль над GPU как можно чаще, но"
+" гарантировать полностью гладкую работу мы не можем, особенно на тяжёлых "
+"сценах. Это ограничение графических карт и для него не существует "
+"стопроцентно работающего решения, хотя мы и постараемся в будущем "
+"улучшить этот момент."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:80
 msgid ""
 "If possible, it is best to install more than one GPU, using one for "
 "display and the other(s) for rendering."
 msgstr ""
+"Если у вас есть возможность, лучше установить более одного GPU и "
+"использовать один из них для отображения, а остальные задействовать для "
+"визуализации."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:85
 msgid "Why does a scene that renders on the CPU not render on the GPU?"
 msgstr ""
+"Почему сцена, которая визуализируется на центральном процессоре, не "
+"визуализируется на видеокарте?"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:87
 msgid ""
@@ -154,34 +209,45 @@ msgid ""
 "of the CPU. Note that, for example, 8k, 4k, 2k and 1k image textures take"
 " up respectively 256MB, 64MB, 16MB and 4MB of memory."
 msgstr ""
+"Для этого существует множество причин, но самая часто встречающаяся - на "
+"вашей видеокарте недостаточно памяти. На текущий момент мы можем "
+"визуализировать только те сцены, которые влезают в память видеокарты, "
+"которая обычно меньше памяти, доступной центральному процессору. Обратите"
+" внимание, что, например, изображения текстур размерами 8k, 4k, 2k и 1k "
+"занимают, соответственно, 256Мб, 64Мб, 16Мб и 4Мб памяти."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:93
 msgid ""
 "We do intend to add a system to support scenes bigger than GPU memory, "
 "but this will not be added soon."
 msgstr ""
+"Мы намерены добавить систему для поддержки сцен больших, чем имеющаяся "
+"память видеокарты, но это будет не скоро."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:98
 msgid "Can multiple GPUs be used for rendering?"
-msgstr ""
+msgstr "Можно ли для визуализации использовать несколько видеокарт?"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:100
 msgid ""
 "Yes, go to :menuselection:`User Preferences --> System --> Compute Device"
 " Panel`, and configure it as you desire."
 msgstr ""
+"Да, перейдите в :menuselection:`Параметры --> Система --> Устройство "
+"расчёта` (:menuselection:`User Preferences --> System --> Compute Device "
+"Panel`) и настройте устройства по своему вкусу."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:104
 msgid "Would multiple GPUs increase available memory?"
-msgstr ""
+msgstr "Могут ли несколько видеокарт увеличить доступную память?"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:106
 msgid "No, each GPU can only access its own memory."
-msgstr ""
+msgstr "Нет, каждая видеокарта имеет доступ только к своей собственной памяти."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:110
 msgid "What renders faster, NVIDIA or AMD, CUDA or OpenCL?"
-msgstr ""
+msgstr "Какой рендер быстрее: NVIDIA или AMD, CUDA или OpenCL?"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:112
 msgid ""
@@ -191,38 +257,51 @@ msgid ""
 " kernels. OpenCL support is still in an early stage and has not been "
 "optimized as much."
 msgstr ""
+"На текущий момент быстрее всех NVIDIA с CUDA. В этом нет никаких "
+"фундаментальных причин - мы не используем никаких специфичных для CUDA "
+"возможностей - однако, как представляется, компиляторы для CUDA более "
+"зрелые и могут лучше поддерживать большие ядра. Поддержка OpenCL всё ещё "
+"находится на очень ранней стадии и так сильно не оптимизирована."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:119
 msgid "Error Messages"
-msgstr ""
+msgstr "Сообщения об ошибках"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:123
 msgid "Unsupported GNU version! gcc 4.7 and up are not supported!"
 msgstr ""
+"Unsupported GNU version! gcc 4.7 and up are not supported! "
+"(Неподдерживаемая версия GNU! gcc 4.7 и старше не поддерживаются!)"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:125
 msgid "On Linux, depending on your GCC version you might get this error."
 msgstr ""
+"На Linux, в зависимости от версии вашего GCC, вы можете получить такую "
+"ошибку."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:127
 msgid ""
 "If so, delete the following line in "
 "``/usr/local/cuda/include/host_config.h``"
 msgstr ""
+"Если это произошло, удалите следующую строку в файле "
+"``/usr/local/cuda/include/host_config.h``"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:135
 msgid "CUDA Error: Invalid kernel image"
-msgstr ""
+msgstr "CUDA Error: Invalid kernel image (Ошибка CUDA: Неверное ядро изображения)"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:137
 msgid ""
 "If you get this error on MS-Windows 64-bit, be sure to use the 64-bit "
 "build of Blender, not the 32-bit version."
 msgstr ""
+"Если вы получили эту ошибку на 64-битной MS-Windows, убедитесь, что вы "
+"используете 64-битную сборку Blender, а не 32-битную."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:142
 msgid "CUDA Error: Out of memory"
-msgstr ""
+msgstr "CUDA Error: Out of memory (Ошибка CUDA: Не хватает памяти)"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:144
 msgid ""
@@ -231,10 +310,16 @@ msgid ""
 "memory, and this is usually smaller than that of the CPU. See above for "
 "more details."
 msgstr ""
+"Обычно эта ошибка означает, что для хранения сцены на видеокарте не "
+"хватает памяти. На текущий момент мы можем визуализовывать только те "
+"сцены, которые влезают в память видеокарты, которая обычно меньше памяти,"
+" доступной центральному процессору. Подробности смотрите выше."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:150
 msgid "The NVIDIA OpenGL driver lost connection with the display driver"
 msgstr ""
+"The NVIDIA OpenGL driver lost connection with the display driver (Драйвер"
+" NVIDIA OpenGL потерял соединение с драйвером дисплея)"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:152
 msgid ""
@@ -245,6 +330,13 @@ msgid ""
 "real solution is to use separate graphics cards for display and "
 "rendering."
 msgstr ""
+"Если видеокарта используется как для обычной работы, так и для "
+"визуализации, MS-Windows имеет ограничение на время, которое видеокарта "
+"может посвятить вычислению визуализации. Если у вас есть особенно тяжёлые"
+" сцены, Cycles может занять слишком много времени видеокарты. Уменьшение "
+"размера плиток в панели .*Производительность* может облегчить эту "
+"проблему, но единственным реальным решением является использование "
+"отдельной видеокарты для визуализации."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:158
 msgid ""
@@ -253,67 +345,23 @@ msgid ""
 "More Here <https://msdn.microsoft.com/en-"
 "us/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__."
 msgstr ""
+"Другим решением может быть увеличение тайм-аута, хотя это и приведёт к "
+"уменьшению отзывчивости пользовательского интерфейса при визуализации "
+"тяжёлых сцен. `Узнать больше можно здесь <https://msdn.microsoft.com/ru-"
+"ru/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__ (на английском"
+" языке)."
 
 #: ../../manual/render/cycles/gpu_rendering.rst:164
 msgid "CUDA error: Unknown error in cuCtxSynchronize()"
 msgstr ""
+"CUDA error: Unknown error in cuCtxSynchronize() (Ошибка CUDA: Неизвестная"
+" ошибка в cuCtxSynchronize())"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:166
 msgid ""
 "An unknown error can have many causes, but one possibility is that it's a"
 " timeout. See the above answer for solutions."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "CUDA:"
-#~ msgstr ""
-
-#~ msgid "OpenCL:"
-#~ msgstr ""
-
-#~ msgid "No support for HDR (float) textures at the moment."
-#~ msgstr ""
-
-#~ msgid "Can I use multiple GPUs for rendering?"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The maximum amount of individual "
-#~ "textures is limited to 88 byte-"
-#~ "image textures (PNG, JPEG, ..) and "
-#~ "5 float-image textures (OpenEXR, 16 "
-#~ "bit TIFF, ..) on GTX 4xx/5xx "
-#~ "cards. Newer cards don't have this "
-#~ "limit."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "While a graphics card is rendering, "
-#~ "it cannot redraw the user interface, "
-#~ "which makes Blender unresponsive. We "
-#~ "attempt to avoid this problem by "
-#~ "giving back control over the GPU "
-#~ "as often as possible, but a "
-#~ "completely smooth interaction can't be "
-#~ "guaranteed, especially on heavy scenes. "
-#~ "This is a limitation of graphics "
-#~ "cards for which no true solution "
-#~ "exists, though we might be able to"
-#~ " improve this somewhat in the future."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Currently NVIDIA with CUDA is rendering"
-#~ " faster. There is no fundamental "
-#~ "reason why this should be so - "
-#~ "we don't use any CUDA - specific"
-#~ " features - but the compiler appears"
-#~ " to be more mature, and can "
-#~ "better support big kernels. OpenCL "
-#~ "support is still in an early stage"
-#~ " and has not been optimized as "
-#~ "much."
-#~ msgstr ""
+"Неизвестная ошибка может иметь множество причин, но наиболее вероятная - "
+"тайм-аут. Решение смотрите в предыдущем ответе."
 
