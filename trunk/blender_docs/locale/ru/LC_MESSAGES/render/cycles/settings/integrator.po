@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-24 04:17+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-16 00:52+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/integrator.rst:4
 msgid "Integrator"
-msgstr ""
+msgstr "Интегратор"
 
 #: ../../manual/render/cycles/settings/integrator.rst:6
 msgid ""
@@ -23,6 +23,11 @@ msgid ""
 "sampling. It works well for various lighting setups, but is not as "
 "suitable for caustics and some other complex lighting situations."
 msgstr ""
+"Интегратор - это алгоритм визуализации, используемый для расчёта "
+"освещения. На текущий момент Cycles поддерживает интегратор с "
+"трассировкой путей и прямым сэмплированием света. Он неплохо работает для"
+" различных настроек освещения, но не очень подходит для каустик и прочего"
+" сложного освещения."
 
 #: ../../manual/render/cycles/settings/integrator.rst:11
 msgid ""
@@ -33,14 +38,20 @@ msgid ""
 "direct light sampling (picking a light source and tracing a ray towards "
 "it) are used."
 msgstr ""
+"Лучи испускаются из камеры в сцену и отражаются от препятствий, пока не "
+"найдут источник света - лампу, излучающий свет объект или фон среды "
+"окружения. Для нахождения ламп и поверхностей, излучающих свет, "
+"используется сэмплирование как непрямого (позволяет лучу следовать за "
+"поверхностью BSDF), так и прямого (выбирает источник света и трассирует "
+"луч в его направлении) света."
 
 #: ../../manual/render/cycles/settings/integrator.rst:19
 msgid "Scene Settings"
-msgstr ""
+msgstr "Настройки сцены"
 
 #: ../../manual/render/cycles/settings/integrator.rst:23
 msgid "Sampling"
-msgstr ""
+msgstr "Сэмплирование"
 
 #: ../../manual/render/cycles/settings/integrator.rst:25
 msgid ""
@@ -51,25 +62,35 @@ msgid ""
 "to compute, but will typically require more samples to clean up the "
 "noise."
 msgstr ""
+"Интегратор может использоваться в двух режимах: трассировка путей и "
+"трассировка путей с расщеплением. *Интегратор с трассировкой путей* "
+"является чистым трассировщиком; при каждом попадании луча в препятствие "
+"он отражается в одном направлении и выбирает один источник света, от "
+"которого будет получено освещение. Благодаря этому каждый отдельный сэмпл"
+" считается быстрее, однако, чтобы избавиться от шума, обычно требуется "
+"довольно много сэмплов."
 
 #: ../../manual/render/cycles/settings/integrator.rst:32
 msgid "Render Samples"
-msgstr ""
+msgstr "Сэмплов визуализации"
 
 #: ../../manual/render/cycles/settings/integrator.rst:32
 msgid ""
 "Number of paths to trace for each pixel in the final render. As more "
 "samples are taken, the solution becomes less noisy and more accurate."
 msgstr ""
+"Количество путей для трассировки по каждому пикселю в окончательной "
+"визуализации. Чем больше сэмплов, тем более точным и менее зашумлённым "
+"будет результат."
 
 #: ../../manual/render/cycles/settings/integrator.rst:35
 msgid "Preview Samples"
-msgstr ""
+msgstr "Сэмплов предпросмотра"
 
 #: ../../manual/render/cycles/settings/integrator.rst:35
 #: ../../manual/render/cycles/settings/integrator.rst:49
 msgid "Number of samples for viewport rendering."
-msgstr ""
+msgstr "Количество сэмплов для визуализации в области просмотра."
 
 #: ../../manual/render/cycles/settings/integrator.rst:37
 msgid ""
@@ -82,99 +103,129 @@ msgid ""
 "samples = 10 AA samples x 25 diffuse samples. The Sampling panel shows "
 "this total number of samples."
 msgstr ""
+"*Интегратор трассировки путей с расщеплением* работает аналогично, однако"
+" на первом препятствии он расщепляет путь трассировки на различные "
+"компоненты поверхности и при затенении будет принимать во внимание все "
+"источники света, а не один. Из-за этого сэмплы считаются медленнее, но с "
+"меньшим количеством шумов, особенно в сценах, в которых преобладает "
+"прямое освещение или освещение с отражением от одной поерхности. Для "
+"получения того же самого количества диффузных сэмплов, как и при "
+"использовании интегратора трассировки путей, количество диффузных сэмплов"
+" следует умножить на количество сэмплов сглаживания, то есть 250 сэмплов "
+"трассировки путей = 10 сэмплов сглаживания x 25 диффузных сэмплов. Панель"
+" *Семплирование* показывает именно это общее количество сэмплов."
 
 #: ../../manual/render/cycles/settings/integrator.rst:46
 msgid "AA Render Samples"
-msgstr ""
+msgstr "Сглаживающих сэмплов визуализации"
 
 #: ../../manual/render/cycles/settings/integrator.rst:47
 msgid ""
 "Number of samples to take for each pixel in the final render. More "
 "samples will improve antialiasing."
 msgstr ""
+"Количество сглаживающих сэмплов, визуализируемых для каждого пикселя в "
+"окончательной визуализации. Большее количество сэмплов даёт лучшее "
+"сглаживание."
 
 #: ../../manual/render/cycles/settings/integrator.rst:49
 msgid "AA Preview Samples"
-msgstr ""
+msgstr "Сглаживающих сэмплов предпросмотра"
 
 #: ../../manual/render/cycles/settings/integrator.rst:51
 msgid "Diffuse Samples"
-msgstr ""
+msgstr "Диффузных сэмплов"
 
 #: ../../manual/render/cycles/settings/integrator.rst:52
 msgid "Number of diffuse bounce samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов диффузных отскоков, визуализируемых для каждого "
+"сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:53
 msgid "Glossy Samples"
-msgstr ""
+msgstr "Сэмплов глянца"
 
 #: ../../manual/render/cycles/settings/integrator.rst:54
 msgid "Number of glossy bounce samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов глянцевых отскоков, визуализируемых для каждого "
+"сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:55
 msgid "Transmission Samples"
-msgstr ""
+msgstr "Сэмплов передачи"
 
 #: ../../manual/render/cycles/settings/integrator.rst:56
 msgid "Number of transmission bounce samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов отскоков передачи, визуализируемых для каждого "
+"сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:57
 msgid "AO Samples"
-msgstr ""
+msgstr "Сэмплов AO"
 
 #: ../../manual/render/cycles/settings/integrator.rst:58
 msgid "Number of ambient occlusion samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов ambient occlusion, визуализируемых для каждого "
+"сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:59
 msgid "Mesh Light Samples"
-msgstr ""
+msgstr "Сэмплов полисеток-ламп"
 
 #: ../../manual/render/cycles/settings/integrator.rst:60
 msgid "Number of mesh light samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов испускаемого света, визуализируемых для каждого "
+"сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:61
 msgid "Subsurface Samples"
-msgstr ""
+msgstr "Сэмплов подповерхностного рассеивания"
 
 #: ../../manual/render/cycles/settings/integrator.rst:62
 msgid "Number of subsurface scattering samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов подповерхностного рассеяния, визуализируемых для "
+"каждого сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:64
 msgid "Volume Samples"
-msgstr ""
+msgstr "Сэмплов объёма"
 
 #: ../../manual/render/cycles/settings/integrator.rst:64
 msgid "Number of volume scattering samples to take for each AA sample."
 msgstr ""
+"Количество сэмплов рассеивания в объёме, визуализируемых для каждого "
+"сглаживающего сэмпла."
 
 #: ../../manual/render/cycles/settings/integrator.rst:66
 msgid "For both integrators the noise pattern can be controlled."
-msgstr ""
+msgstr "Для обеих интеграторов можно настроить шаблон отбора."
 
 #: ../../manual/render/cycles/settings/integrator.rst:70
 msgid "Seed"
-msgstr ""
+msgstr "Вариация"
 
 #: ../../manual/render/cycles/settings/integrator.rst:69
 msgid ""
 "Random number generator seed; each different value gives a different "
 "noise pattern."
 msgstr ""
+"Начальное значение генератора случайных чисел; разные значения дают "
+"различные структуры шума."
 
 #: ../../manual/render/cycles/settings/integrator.rst:75
 msgid "Bounces"
-msgstr ""
+msgstr "Отскоков"
 
 #: ../../manual/render/cycles/settings/integrator.rst:79
 #: ../../manual/render/cycles/settings/integrator.rst:213
 msgid "Max Bounces"
-msgstr ""
+msgstr "Макс. отскоков"
 
 #: ../../manual/render/cycles/settings/integrator.rst:78
 msgid ""
@@ -183,10 +234,15 @@ msgid ""
 "values for faster rendering. Setting it to maximum 0 bounces results in "
 "direct lighting only."
 msgstr ""
+"Максимальное количество отскоков света. Чтобы получить наивысшее "
+"качество, эта настройка должна быть установлена в максимум. Однако на "
+"практике её можно установить и в меньшие значения для ускорения "
+"визуализации. Установка максимума отскоков в 0 даст в результате "
+"освещение только прямыми лучами света."
 
 #: ../../manual/render/cycles/settings/integrator.rst:85
 msgid "Min Bounces"
-msgstr ""
+msgstr "Мин. отскоков"
 
 #: ../../manual/render/cycles/settings/integrator.rst:82
 msgid ""
@@ -196,78 +252,89 @@ msgid ""
 " time considerably. For a low number of bounces, it's strongly "
 "recommended to set this equal to the maximum number of bounces."
 msgstr ""
+"Минимальное количество отскоков света для каждого пути, после которого "
+"интегратор воспользуется русской рулеткой для завершения путей, вносящих "
+"наименьший вклад в изображение. Установка этого параметра в высокие "
+"значения уменьшит количество шума, но так же может значительно увеличить "
+"время визуализации. В случае малого количества отскоков настоятельно "
+"рекомендуется установить его равным максимальному количеству отскоков."
 
 #: ../../manual/render/cycles/settings/integrator.rst:87
 msgid "Diffuse Bounces"
-msgstr ""
+msgstr "Диффузных отскоков"
 
 #: ../../manual/render/cycles/settings/integrator.rst:88
 msgid "Maximum number of diffuse bounces."
-msgstr ""
+msgstr "Максимальное количество диффузных отражённых отскоков."
 
 #: ../../manual/render/cycles/settings/integrator.rst:89
 msgid "Glossy Bounces"
-msgstr ""
+msgstr "Отскоков глянца"
 
 #: ../../manual/render/cycles/settings/integrator.rst:90
 msgid "Maximum number of glossy bounces."
-msgstr ""
+msgstr "Максимальное количество глянцевых отражённых отскоков."
 
 #: ../../manual/render/cycles/settings/integrator.rst:91
 msgid "Transmission Bounces"
-msgstr ""
+msgstr "Отскоков передачи"
 
 #: ../../manual/render/cycles/settings/integrator.rst:92
 msgid "Maximum number of transmission bounces."
-msgstr ""
+msgstr "Максимальное количество отражённых отскоков передачи."
 
 #: ../../manual/render/cycles/settings/integrator.rst:95
 msgid "Volume Bounces"
-msgstr ""
+msgstr "Отскоков объёма"
 
 #: ../../manual/render/cycles/settings/integrator.rst:94
 msgid "Maximum number of volume scattering bounces."
-msgstr ""
+msgstr "Максимальное количество отражённых отскоков объёма."
 
 #: ../../manual/render/cycles/settings/integrator.rst:98
 msgid "Transparency"
-msgstr ""
+msgstr "Прозрачность"
 
 #: ../../manual/render/cycles/settings/integrator.rst:100
 msgid "Transparency Max"
-msgstr ""
+msgstr "Макс. прозрачность"
 
 #: ../../manual/render/cycles/settings/integrator.rst:101
 msgid "Maximum number of transparency bounces."
-msgstr ""
+msgstr "Максимальное количество прозрачных отскоков."
 
 #: ../../manual/render/cycles/settings/integrator.rst:102
 msgid "Transparency Min"
-msgstr ""
+msgstr "Мин. прозрачность"
 
 #: ../../manual/render/cycles/settings/integrator.rst:103
 msgid ""
 "Minimum number of transparency bounces, after which Russian Roulette "
 "termination is used."
 msgstr ""
+"Минимальное количество прозрачных отскоков, после которых для завершения "
+"используется алгоритм «русской рулетки»."
 
 #: ../../manual/render/cycles/settings/integrator.rst:107
 msgid "Transparent Shadows"
-msgstr ""
+msgstr "Прозрачные тени"
 
 #: ../../manual/render/cycles/settings/integrator.rst:105
 msgid ""
 "For direct light sampling, use transparency of surfaces in between to "
 "produce shadows affected by transparency of those surfaces."
 msgstr ""
+"Для выборок прямого освещения, использовать прозрачность поверхностей "
+"между объектом и камерой, чтобы породить тени, зависимые от прозрачности "
+"этих поверхностей."
 
 #: ../../manual/render/cycles/settings/integrator.rst:110
 msgid "Tricks"
-msgstr ""
+msgstr "Хитрости"
 
 #: ../../manual/render/cycles/settings/integrator.rst:116
 msgid "Reflective Caustics"
-msgstr ""
+msgstr "Светоотражающая каустика"
 
 #: ../../manual/render/cycles/settings/integrator.rst:115
 msgid ""
@@ -276,18 +343,22 @@ msgid ""
 "point that there is just too much noise. This option can be unchecked, to"
 " disable reflective caustics."
 msgstr ""
+"Хотя в принципе, при использовании достаточного количества выборок, "
+"трассировка пути поддерживает визуализацию каустик, на практике она может"
+" быть неэффективна, поскольку порождает слишком много шума. Можно снять "
+"галочку с этого параметра, чтобы отключить светоотражающие каустики."
 
 #: ../../manual/render/cycles/settings/integrator.rst:120
 msgid "Refractive Caustics"
-msgstr ""
+msgstr "Рефракционная каустика"
 
 #: ../../manual/render/cycles/settings/integrator.rst:119
 msgid "The same as above, but for refractive caustics."
-msgstr ""
+msgstr "То же самое, что и выше, только для рефракционной каустики."
 
 #: ../../manual/render/cycles/settings/integrator.rst:138
 msgid "Filter Glossy"
-msgstr ""
+msgstr "Фильтр глянца"
 
 #: ../../manual/render/cycles/settings/integrator.rst:125
 msgid ""
@@ -295,6 +366,9 @@ msgid ""
 "after blurry bounces, to reduce noise at the cost of accuracy. 1.0 is a "
 "good starting value to tweak."
 msgstr ""
+"При использовании значений выше 0.0 это приведёт к размытию глянцевых "
+"отражений после размытия отскоков, что уменьшит шум в ущерб точности. "
+"Хорошим стартовым значением для подстройки можно считать значение 1.0."
 
 #: ../../manual/render/cycles/settings/integrator.rst:128
 msgid ""
@@ -305,6 +379,13 @@ msgid ""
 "highlight on a sharp glossy material, which we are seeing through a rough"
 " glossy material. In fact in such a case we practically have a caustic."
 msgstr ""
+"Вероятность нахождения некоторых путей света достаточно низка, хотя при "
+"этом они могут передавать на пиксель очень много света. В результате эти "
+"пути будут найдены только в некоторых точках, что вызовет появление "
+"светлых пятен, «светлячков». Примером такого сложного пути может быть "
+"путь от небольшого источника света, дающего маленький зеркальный блик на "
+"резко глянцевом материале, на который мы смотрим через грубый глянцевый "
+"материал. По факту в этом месте мы имеем дело с каустикой."
 
 #: ../../manual/render/cycles/settings/integrator.rst:135
 msgid ""
@@ -315,10 +396,16 @@ msgid ""
 "but there are also cases where this will lead to a loss of detail in "
 "lighting."
 msgstr ""
+"Используя трассировку пути довольно сложно найти зеркальный блик, но если"
+" мы увеличим шероховатость материала, блик станет больше и мягче и "
+"поэтому его станет легче найти. Часто это размытие будет совсем не "
+"заметно, поскольку мы в любом случае смотрим на блик через размывающий "
+"материал, но в некоторых случаях оно приведёт к потере детализации в "
+"освещении."
 
 #: ../../manual/render/cycles/settings/integrator.rst:156
 msgid "Clamp Direct"
-msgstr ""
+msgstr "Ограничить прямые лучи"
 
 #: ../../manual/render/cycles/settings/integrator.rst:143
 msgid ""
@@ -327,6 +414,11 @@ msgid ""
 "disables clamping altogether. Lower have a greater affect (dimmer "
 "samples) on the resulting image than higher values."
 msgstr ""
+"Этот параметр ограничивает максимальную интенсивность выборки от лучей, "
+"которые ещё не отскочили и не внесли вклад в освещение пикселя. Установка"
+" этого параметра в 0.0 вообще отключает ограничение. Чем меньше значение "
+"параметра, тем большее влияние (ослабления выборок) он даёт на "
+"результирующее изображение."
 
 #: ../../manual/render/cycles/settings/integrator.rst:149
 msgid ""
@@ -336,6 +428,12 @@ msgid ""
 "you clamp out such values, other bright lights/reflections will be dimmed"
 " as well."
 msgstr ""
+"Распространённой проблемой, возникающей при трассировке путей, является "
+"возникновение так называемых *«светлячков»*: неправдоподобных выборок, "
+"которые вносят очень высокий вклад в освещение пикселей. Этот параметр "
+"позволяет нивелировать данную проблему. Однако обратите внимание, что "
+"если вы обрежете такие значения, то так же ослабите другие яркие огни или"
+" отражения."
 
 #: ../../manual/render/cycles/settings/integrator.rst:154
 msgid ""
@@ -344,32 +442,41 @@ msgid ""
 "useful to clamp indirect bounces separately, as they tend to cause more "
 "fireflies than direct bounces. See the *Clamp Indirect* setting."
 msgstr ""
+"Будьте внимательны при использовании этого параметра и найдите баланс "
+"между смягчением светлячков и потерей намеренно ярких частей. Так же "
+"часто бывает полезным отдельно обрезать непрямые лучи, поскольку они, как"
+" правило, вызывают больше светлячков, нежели прямые лучи. Смотрите "
+"описание параметра *Ограничить непрямые лучи*."
 
 #: ../../manual/render/cycles/settings/integrator.rst:160
 msgid "Clamp Indirect"
-msgstr ""
+msgstr "Ограничить непрямые лучи"
 
 #: ../../manual/render/cycles/settings/integrator.rst:159
 msgid ""
 "The same as *Clamp Direct*, but for rays which have bounced multiple "
 "times."
 msgstr ""
+"То же самое, что и *Ограничить прямые лучи*, только для лучей, которые "
+"отскочили несколько раз."
 
 #: ../../manual/render/cycles/settings/integrator.rst:162
 msgid ""
 "See :ref:`Reducing Noise <render-cycles-reducing_noise-clamp_samples>` "
 "for examples of the clamp settings in use."
 msgstr ""
+"Смотрите раздел :ref:`Уменьшение шума <render-cycles-reducing_noise-"
+"clamp_samples>`, чтобы увидеть примеры использования этих параметров."
 
 #: ../../manual/render/cycles/settings/integrator.rst:168
 msgid "Material Settings"
-msgstr ""
+msgstr "Настройки материала"
 
 #: ../../manual/render/cycles/settings/integrator.rst:179
 #: ../../manual/render/cycles/settings/integrator.rst:190
 #: ../../manual/render/cycles/settings/integrator.rst:206
 msgid "Multiple Importance Sample"
-msgstr ""
+msgstr "Множественная выборка по значимости"
 
 #: ../../manual/render/cycles/settings/integrator.rst:171
 msgid ""
@@ -380,16 +487,25 @@ msgid ""
 "especially useful on large objects that emit little light compared to "
 "other light sources."
 msgstr ""
+"По умолчанию, объекты с излучающими материалами используют выборки как с "
+"непрямым, так и прямым освещением, но в некоторых случаях количество шума"
+" удаётся снизить, если для некоторых материалов отключить выборку от "
+"прямого освещения. Это можно сделать, сняв галочку с параметра "
+"*Множественная выборка по значимости*. Особенно большую пользу это "
+"приносит на больших объектах, которые излучают сравнительно мало света, "
+"по сравнению с другими источниками освещения."
 
 #: ../../manual/render/cycles/settings/integrator.rst:177
 msgid ""
 "This option will only have an influence if the material contains an "
 "emission node; it will be automatically disabled otherwise."
 msgstr ""
+"Этот параметр влияет только на материалы, содержащие узел *Излучение*; в "
+"противном случае он будет отключён автоматически."
 
 #: ../../manual/render/cycles/settings/integrator.rst:184
 msgid "World Settings"
-msgstr ""
+msgstr "Настройки окружающей среды"
 
 #: ../../manual/render/cycles/settings/integrator.rst:187
 msgid ""
@@ -400,10 +516,16 @@ msgid ""
 " be sampled as a lamp, with lighter parts automatically given more "
 "samples."
 msgstr ""
+"По умолчанию, освещение от мира вычисляется исключительно с непрямой "
+"выборкой света. Однако для более сложных карт окружений это может дать "
+"слишком много шума, поскольку сэмплирование BSDF не может легко найти "
+"засветки в изображении карты окружения. При включении этого параметра, "
+"фон мира будет сэмплироваться как лампа, и более светлые части "
+"автоматически получат больше сэмплов."
 
 #: ../../manual/render/cycles/settings/integrator.rst:198
 msgid "Map Resolution"
-msgstr ""
+msgstr "Разрешение карты"
 
 #: ../../manual/render/cycles/settings/integrator.rst:193
 msgid ""
@@ -415,10 +537,18 @@ msgid ""
 "parts. Higher resolutions will result in more accurate sampling but take "
 "more setup time and memory."
 msgstr ""
+"Когда включён параметр *Множественная выборка по значимости*, этот "
+"параметр определяет размеры карты значимости (разрешение x разрешение). "
+"Перед началом визуализации генерируется карта значимости, путём "
+"«запекания» чёрно-белого изображения из шейдера мира. Затем она "
+"используется для определения того, какие части фона являются светлыми и "
+"таким образом должны получить больше сэмплов по сравнению с тёмными "
+"частями. Большее разрешение даст большую точность выборки, однако для "
+"настройки потребуется больше времени и памяти."
 
 #: ../../manual/render/cycles/settings/integrator.rst:201
 msgid "Lamp Settings"
-msgstr ""
+msgstr "Настройки лампы"
 
 #: ../../manual/render/cycles/settings/integrator.rst:204
 msgid ""
@@ -427,10 +557,14 @@ msgid ""
 "option will enable indirect light sampling to be used in addition to "
 "reduce noise."
 msgstr ""
+"По умолчанию лампы используют только выборку от прямого освещения. "
+"Однако, при использовании ламп-областей и резких глянцевых отражений "
+"может выдаваться много шума. При использовании этого параметра будет так "
+"же учитываться выборка от непрямого освещения, что должно уменьшить шум."
 
 #: ../../manual/render/cycles/settings/integrator.rst:210
 msgid "Samples"
-msgstr ""
+msgstr "Сэмплы"
 
 #: ../../manual/render/cycles/settings/integrator.rst:209
 msgid ""
@@ -438,14 +572,20 @@ msgid ""
 "direct light samples per AA sample. Point lamps might need only one "
 "sample, while area lamps typically need more."
 msgstr ""
+"Для интегратора с трассировкой путей с расщеплением этот параметр "
+"определяет количество сэмплов прямого освещения на один сэмпл "
+"сглаживания. Для точечных ламп нужен всего один сэмпл, в то время как для"
+" ламп-областей обычно нужно больше."
 
 #: ../../manual/render/cycles/settings/integrator.rst:213
 msgid "The maximum amount of bounces this light will contribute to the scene."
 msgstr ""
+"Максимальное количество отскоков, которые этот источник света может "
+"вносить в сцену."
 
 #: ../../manual/render/cycles/settings/integrator.rst:218
 msgid "Portal"
-msgstr ""
+msgstr "Портал"
 
 #: ../../manual/render/cycles/settings/integrator.rst:216
 msgid ""
@@ -454,12 +594,18 @@ msgid ""
 "therefore improving convergence. Note that this will make the area lamp "
 "itself invisible."
 msgstr ""
+"Применяется только для ламп-областей. Этот параметр даёт лампе-области "
+"функции светового портала, помогая управлять выборкой из фона, и, таким "
+"образом, улучшая сходимость. Обратите внимание, что параметр сделает саму"
+" лампу невидимой."
 
 #: ../../manual/render/cycles/settings/integrator.rst:220
 msgid ""
 "In outdoor scenes most rays don't bounce much and just fly off into the "
 "sky."
 msgstr ""
+"В сценах с открытым пространством большинство лучей испытывают небольшое "
+"количество отскоков и просто улетают в небо."
 
 #: ../../manual/render/cycles/settings/integrator.rst:222
 msgid ""
@@ -467,6 +613,11 @@ msgid ""
 "the maximum number of bounces. Not only does this often mean more noise, "
 "but also slower rendering (more ray intersection calculations etc.)"
 msgstr ""
+"В сценах внутри помещений почти все лучи, в конечном итоге, отражаются до"
+" тех пор, пока не будет достигнуто максимальное количество отскоков. Этот"
+" факт порождает не только большее количество шума, но также сильно "
+"замедляет визуализацию (требуется больше вычислений для определения "
+"пересечений лучей с геометрией и прочих подобных)."
 
 #: ../../manual/render/cycles/settings/integrator.rst:224
 msgid ""
@@ -474,22 +625,28 @@ msgid ""
 " less noise with fewer samples and a shorter render time than if you "
 "didn't use portals."
 msgstr ""
+"Световые порталы помогают направить лучи света в окружающую среду, что "
+"помогает уменьшить уровень шума при использовании меньшего количества "
+"выборок и ускорить визуализацию по сравнению с визуализацией без "
+"использования световых порталов."
 
 #: ../../manual/render/cycles/settings/integrator.rst:226
 msgid "Every portal adds a render time penalty so use as few as possible."
 msgstr ""
+"Каждый портал добавляет штрафное время ко времени визуализации, так что "
+"используйте их минимально необходимое количество."
 
 #: ../../manual/render/cycles/settings/integrator.rst:232
 msgid "Volume Render Settings"
-msgstr ""
+msgstr "Настройки сэмплирования объёма"
 
 #: ../../manual/render/cycles/settings/integrator.rst:234
 msgid "The scene has these settings:"
-msgstr ""
+msgstr "Сцена обладает следующими параметрами:"
 
 #: ../../manual/render/cycles/settings/integrator.rst:237
 msgid "Step Size"
-msgstr ""
+msgstr "Размер шага"
 
 #: ../../manual/render/cycles/settings/integrator.rst:237
 msgid ""
@@ -497,24 +654,30 @@ msgid ""
 "values give more accurate and detailed results but also increased render "
 "time."
 msgstr ""
+"Расстояние между сэмплами в шейдере объёма при визуализации объёма. Чем "
+"меньше значение, тем точнее и детальнее результат, но медленнее "
+"визуализация."
 
 #: ../../manual/render/cycles/settings/integrator.rst:241
 msgid "Max Steps"
-msgstr ""
+msgstr "Макс. шагов"
 
 #: ../../manual/render/cycles/settings/integrator.rst:240
 msgid ""
 "Maximum number of steps through the volume before giving up, to protect "
 "from extremely long render times with big objects or small step sizes."
 msgstr ""
+"Максимальное количество шагов сквозь объём до отказа, для защиты от "
+"экстремально большого времени визуализации больших объектов или при "
+"небольших значениях шага."
 
 #: ../../manual/render/cycles/settings/integrator.rst:243
 msgid "The world and materials have the following setting:"
-msgstr ""
+msgstr "Мир и материалы обладают следующими настройками:"
 
 #: ../../manual/render/cycles/settings/integrator.rst:247
 msgid "Homogeneous Volume"
-msgstr ""
+msgstr "Однородный объём"
 
 #: ../../manual/render/cycles/settings/integrator.rst:246
 msgid ""
@@ -523,10 +686,15 @@ msgid ""
 "typically not have any textures, and by knowing this we can avoid taking "
 "small steps to sample the volume shader."
 msgstr ""
+"Предполагать, что объём имеет одинаковую плотность во всех местах "
+"(текстуры не используются) для ускорения визуализации. Например, "
+"поглощение в стеклянных объектах обычно не использует текстуры и зная это"
+" мы можем избежать использования маленьких шагов для выборки из шейдера "
+"объёма."
 
 #: ../../manual/render/cycles/settings/integrator.rst:254
 msgid "Sampling Method"
-msgstr ""
+msgstr "Сэмплирование объёма"
 
 #: ../../manual/render/cycles/settings/integrator.rst:250
 msgid ""
@@ -536,19 +704,10 @@ msgid ""
 "the volume then equiangular sampling is better. If you have a combination"
 " of both, then the multiple importance sampling will be better."
 msgstr ""
-
-#~ msgid "No Caustics"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Clamp Samples"
-#~ msgstr ""
-
-#~ msgid "Motion Blur"
-#~ msgstr ""
-
-#~ msgid "Shutter"
-#~ msgstr ""
+"Параметр может принимать значения «Множественная значимость», "
+"«Расстояние» или «Равноугольно». Если у вас довольно плотный объём, "
+"который освещается на большую глубину, то выборка по расстоянию, как "
+"правило, более эффективна. Если же у вас внутри или вблизи объёма есть "
+"источник света, то лучше равноугольная выборка. Если у вас комбинация и "
+"того, и другого, то лучше будет множественная выборка по значимости."
 
