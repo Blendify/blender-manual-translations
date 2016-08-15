@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-30 09:40+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-08 00:26+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/materials/displacement.rst:5
 msgid "Displacement"
-msgstr ""
+msgstr "Шейдеры смещения"
 
 #: ../../manual/render/cycles/materials/displacement.rst:9
 #: ../../manual/render/cycles/materials/displacement.rst:44
@@ -22,6 +22,8 @@ msgid ""
 "Implementation not finished yet, marked as an :doc:`experimental feature "
 "</render/cycles/features>`."
 msgstr ""
+"Реализация ещё не завершена, данная возможность помечена как "
+":doc:`экспериментальная </render/cycles/features>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:11
 msgid ""
@@ -29,10 +31,13 @@ msgid ""
 " the displacement shaders. This way, textures can then be used to make "
 "the mesh surface more detailed."
 msgstr ""
+"Форма поверхности и внутренний объём объекта могут быть изменены "
+"шейдерами смещения. Таким образом можно использовать текстуры, чтобы "
+"сделать поверхность полисетки более детализированной."
 
 #: ../../manual/render/cycles/materials/displacement.rst:16
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: ../../manual/render/cycles/materials/displacement.rst:21
 msgid ""
@@ -41,10 +46,15 @@ msgid ""
 "known as bump mapping, or a combination of real and virtual displacement."
 " The displacement type options are:"
 msgstr ""
+"В зависимости от настроек, смещение может быть виртуальным, то есть "
+"изменять только нормали поверхности, создавая видимость смещения, (так же"
+" оно известно как рельефное текстурирование или bump mapping) или быть "
+"комбинацией реального и виртуального смещения. Существует несколько "
+"методов смещения:"
 
 #: ../../manual/render/cycles/materials/displacement.rst:28
 msgid "True Displacement"
-msgstr ""
+msgstr "Истинное смещение"
 
 #: ../../manual/render/cycles/materials/displacement.rst:27
 msgid ""
@@ -52,10 +62,13 @@ msgid ""
 "mesh. This gives the best quality results, if the mesh is finely "
 "subdivided. As a result this method is also the most memory intensive."
 msgstr ""
+"Вершины полисетки перед её визуализацией будут смещены, таким образом "
+"изменяя текущую полисетку. Лучшие результаты получаются, если полисетка "
+"уже сильно подразделена. Как следствие, этот метод активно кушает память."
 
 #: ../../manual/render/cycles/materials/displacement.rst:33
 msgid "Bump Mapping"
-msgstr ""
+msgstr "Наложение рельефа"
 
 #: ../../manual/render/cycles/materials/displacement.rst:31
 msgid ""
@@ -64,24 +77,32 @@ msgid ""
 "displacement, but only an approximation. Surface silhouettes will not be "
 "accurate and there will be no self-shadowing of the displacement."
 msgstr ""
+"При выполнении шейдера поверхности вместо правильных нормалей поверхности"
+" будут использоваться изменённые нормали. Это быстрая альтернатива "
+"истинного смещения, однако это всё ещё просто приближение. Силуэты "
+"поверхности будут неточными и не будет никакого самозатенения смещёнными "
+"частями поверхности."
 
 #: ../../manual/render/cycles/materials/displacement.rst:37
 msgid "Displacement + Bump"
-msgstr ""
+msgstr "Смещение + наложение рельефа"
 
 #: ../../manual/render/cycles/materials/displacement.rst:36
 msgid ""
 "Both methods can be combined, to do displacement on a coarser mesh, and "
 "use bump mapping for the final details."
 msgstr ""
+"Оба метода могут быть скомбинированы, чтобы добавить истинное смещение на"
+" грубую полисетку, а затем использовать рельефное текстурирование для "
+"добавления деталей."
 
 #: ../../manual/render/cycles/materials/displacement.rst:40
 msgid "Subdivision"
-msgstr ""
+msgstr "Подразделение"
 
 #: ../../manual/render/cycles/materials/displacement.rst:48
 msgid "Bump Mapped Displacement."
-msgstr ""
+msgstr "Смещение рельефным текстурированием"
 
 #: ../../manual/render/cycles/materials/displacement.rst:50
 msgid ""
@@ -91,22 +112,19 @@ msgid ""
 "show in *Rendered Shading Mode*). Displacement can also be done manually "
 "by use of the Displacement Modifier."
 msgstr ""
+"При использовании *Истинного смещения* или *Смещения + наложение рельефа*"
+" с включённой галочкой *Использовать подразделение*, вы можете уменьшить "
+"*Уровень нарезания* для подразделения полисетки. Этот параметр влияет "
+"только на визуализацию и никак не проявляет себя в области просмотра "
+"(однако всё же показывается в режиме *С визуализацией*). Так же смещения "
+"можно задать явно при помощи модификатора «Подразделение поверхности»."
 
 #: ../../manual/render/cycles/materials/displacement.rst:60
 msgid ""
 "Subdivision Off - On, Dicing Rate 1.0 - 0.3 - 0.05 (Monkeys look "
 "identical in viewport, no modifiers)."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Bump Mapped Displacement"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Subdivision Off - On, Dicing Rate "
-#~ "1.0 - 0.3 - 0.05 (Monkeys look "
-#~ "identical in viewport, no modifiers)"
-#~ msgstr ""
+"Подразделение выключено - подразделение включено, уровень нарезания 1.0 -"
+" 0.3 - 0.05 (в области просмотра обезьяна выглядит одинаково, как если бы"
+" подразделение было выключено)"
 

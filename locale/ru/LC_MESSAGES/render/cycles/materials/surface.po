@@ -3,10 +3,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 14:31+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2016-05-28 00:35+1000\n"
+"PO-Revision-Date: 2016-07-08 00:35+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/materials/surface.rst:5
 msgid "Surface"
-msgstr ""
+msgstr "Шейдер поверхности"
 
 #: ../../manual/render/cycles/materials/surface.rst:7
 msgid ""
@@ -23,50 +23,67 @@ msgid ""
 "function)` s specify if incoming light is reflected back, refracted into "
 "the mesh, or absorbed."
 msgstr ""
+"Шейдер поверхности определяет взаимодействие света с поверхностью "
+"полисетки. Одна или более :abbr:`BSDF (Bidirectional scattering "
+"distribution function - функция двунаправленного поверхностного "
+"рассеивания отражения)` определяют, что происходит с лучом света: он "
+"отражается назад, преломляется или поглощается."
 
 #: ../../manual/render/cycles/materials/surface.rst:11
 msgid ""
 "Emission defines how light is emitted from the surface, allowing any "
 "surface to become a light source."
 msgstr ""
+"Излучение определяет, сколько света испустится с поверхности, что "
+"позволяет любую поверхность превратить в источник света."
 
 #: ../../manual/render/cycles/materials/surface.rst:16
 msgid "Terminology"
-msgstr ""
+msgstr "Терминология"
 
 #: ../../manual/render/cycles/materials/surface.rst:19
 msgid "BSDF"
-msgstr ""
+msgstr "BSDF"
 
 #: ../../manual/render/cycles/materials/surface.rst:19
 msgid ""
 "stands for bidirectional scattering distribution function. It defines how"
 " light is reflected and refracted at a surface."
 msgstr ""
+"расшифровывается как bidirectional scattering distribution function - "
+"функция двунаправленного поверхностного рассеивания отражения. Она "
+"определяет, как свет отражается от поверхности и преломляется ею."
 
 #: ../../manual/render/cycles/materials/surface.rst:22
 msgid "Reflection"
-msgstr ""
+msgstr "Отражение"
 
 #: ../../manual/render/cycles/materials/surface.rst:22
 msgid ""
 ":abbr:`BSDF (Bidirectional scattering distribution function)` s Reflect "
 "an incoming ray on the same side of the surface."
 msgstr ""
+":abbr:`BSDF (Bidirectional scattering distribution function - функция "
+"двунаправленного поверхностного рассеивания отражения)` отражает падающий"
+" луч обратно в то же полупространство, откуда он пришёл."
 
 #: ../../manual/render/cycles/materials/surface.rst:25
 msgid "Transmission"
-msgstr ""
+msgstr "Передача"
 
 #: ../../manual/render/cycles/materials/surface.rst:25
 msgid ""
 ":abbr:`BSDF (Bidirectional scattering distribution function)` s Transmit "
 "an incoming ray through the surface, leaving on the other side."
 msgstr ""
+":abbr:`BSDF (Bidirectional scattering distribution function - функция "
+"двунаправленного поверхностного рассеивания отражения)` проводит падающий"
+" луч через поверхность, в результате чего он покидает её с другой "
+"стороны."
 
 #: ../../manual/render/cycles/materials/surface.rst:30
 msgid "Refraction"
-msgstr ""
+msgstr "Преломление"
 
 #: ../../manual/render/cycles/materials/surface.rst:28
 msgid ""
@@ -74,10 +91,14 @@ msgid ""
 "type of *Transmission*, Transmitting an incoming ray and changing its "
 "direction as it exits on the other side of the surface."
 msgstr ""
+":abbr:`BSDF (Bidirectional scattering distribution function - функция "
+"двунаправленного поверхностного рассеивания отражения)` типа *Передача* "
+"передаёт падающий луч и изменяет его направление, так что он выходит с "
+"другой стороны поверхности."
 
 #: ../../manual/render/cycles/materials/surface.rst:33
 msgid "BSDF Parameters"
-msgstr ""
+msgstr "Параметры BSDF"
 
 #: ../../manual/render/cycles/materials/surface.rst:35
 msgid ""
@@ -88,6 +109,14 @@ msgid ""
 "possibilities a bit, but we believe overall it is helpful in creating "
 "consistent-looking renders with fewer parameters to tune."
 msgstr ""
+"Основное отличие от рендеров, не основанных на физике процесса, "
+"заключается в том, что отражения прямого освещения от ламп и непрямого "
+"освещения от других поверхностей не независимы, а обрабатываются одной "
+":abbr:`BSDF (Bidirectional scattering distribution function - функция "
+"двунаправленного поверхностного рассеивания отражения)`. Это слегка "
+"ограничивает ваши возможности, но в целом, мы считаем, что эти "
+"ограничения полезны при создании последовательно выглядящих рендеров, "
+"требующих всего лишь нескольких параметров для настройки."
 
 #: ../../manual/render/cycles/materials/surface.rst:41
 msgid ""
@@ -98,43 +127,12 @@ msgid ""
 "0.0..1.0, and as a result gives more linear control and is more easily "
 "textureable. The relation is roughly: *roughness* = 1 - 1/*hardness*"
 msgstr ""
-
-#~ msgid "BSDF stands for bidirectional scattering distribution function."
-#~ msgstr ""
-
-#~ msgid "Reflection BSDF s"
-#~ msgstr ""
-
-#~ msgid "Transmission BSDF s"
-#~ msgstr ""
-
-#~ msgid "Refraction BSDF s are a type of Transmission,"
-#~ msgstr ""
-
-#~ msgid "It defines how light is reflected and refracted at a surface."
-#~ msgstr ""
-
-#~ msgid "Reflect an incoming ray on the same side of the surface."
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "**BSDF** stands for bidirectional scattering distribution function."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For glossy :abbr:`BSDF (Bidirectional "
-#~ "scattering distribution function)` s, "
-#~ "*roughness* parameters control the sharpness"
-#~ " of the reflection, from 0.0 "
-#~ "(perfectly sharp) to 1.0 (very soft)."
-#~ " Compared to *hardness* or *exponent* "
-#~ "parameters, it has the advantage of "
-#~ "being in the range 0.0..1.0, and "
-#~ "as a result gives more linear "
-#~ "control and is more easily textureable."
-#~ " The relation is roughly: *roughness* "
-#~ "= 1 − 1/*hardness*"
-#~ msgstr ""
+"Для глянцевой :abbr:`BSDF (Bidirectional scattering distribution function"
+" - функция двунаправленного поверхностного рассеивания отражения)` "
+"параметр *шероховатость* контролирует резкость отражения, от 0.0 (очень "
+"резкое) до 1.0 (очень мягкое). По сравнению с параметрами *жёсткость* или"
+" *экспонента* он имеет то преимущество, что изменяется в диапазоне от 0.0"
+" до 1.0; в результате мы получаем линейный контроль и более лёгкую "
+"текстурируемость. Соотношение между ними примерно следующее: "
+"*шероховатость* = 1 - 1/*жёсткость*."
 
