@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-17 15:20+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-08 22:51+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/materials/introduction.rst:4
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 #: ../../manual/render/cycles/materials/introduction.rst:6
 msgid ""
@@ -23,24 +23,29 @@ msgid ""
 "mesh, the volume inside the mesh, and displacement of the surface of the "
 "mesh."
 msgstr ""
+"Материалы определяют внешний вид полисеток, кривых и других объектов. Они"
+" состоят из трёх шейдеров, определяющих внешний вид поверхности "
+"полисетки, объём внутри полисетки и смещение поверхности полисетки."
 
 #: ../../manual/render/cycles/materials/introduction.rst:15
 msgid "Surface Shader"
-msgstr ""
+msgstr "Шейдер поверхности"
 
 #: ../../manual/render/cycles/materials/introduction.rst:17
 msgid ""
 "The surface shader defines the light interaction at the surface of the "
 "mesh."
 msgstr ""
+"Шейдер поверхности определяет взаимодействие света с поверхностью "
+"полисетки."
 
 #: ../../manual/render/cycles/materials/introduction.rst:21
 msgid ":doc:`Surface Shader </render/cycles/materials/surface>`."
-msgstr ""
+msgstr ":doc:`Шейдер поверхности </render/cycles/materials/surface>`."
 
 #: ../../manual/render/cycles/materials/introduction.rst:25
 msgid "Volume Shader"
-msgstr ""
+msgstr "Шейдер объёма"
 
 #: ../../manual/render/cycles/materials/introduction.rst:27
 msgid ""
@@ -48,6 +53,9 @@ msgid ""
 "the volume. If no volume shader is specified, it will pass straight "
 "through to the other side of the mesh."
 msgstr ""
+"Если шейдер поверхности не отражает и не поглощает свет, тот проникает в "
+"объём. Если шейдер объёма не определён, свет просто пройдёт сквозь объект"
+" и выйдет с другой стороны полисетки."
 
 #: ../../manual/render/cycles/materials/introduction.rst:30
 msgid ""
@@ -55,6 +63,9 @@ msgid ""
 "passes through the volume of the mesh. Light may be scattered, absorbed, "
 "or emitted at any point in the volume."
 msgstr ""
+"Если же шейдер задан, он описывает взаимодействие со светом, когда тот "
+"проходит сквозь объём полисетки. Свет может быть рассеян, поглощён или "
+"испущен в любой точке объёма."
 
 #: ../../manual/render/cycles/materials/introduction.rst:34
 msgid ""
@@ -63,14 +74,19 @@ msgid ""
 "ice, where you want some of the light to be absorbed as it passes through"
 " the surface, combined with e.g. a glass or glossy shader at the surface."
 msgstr ""
+"Материал может иметь как шейдер поверхности, так и шейдер объёма, либо "
+"только один из них. Одновременное использование шейдеров может быть "
+"полезно для таких материалов, как стекло, вода или лёд, когда вам нужно, "
+"чтобы часть света поглощалась при прохождении сквозь поверхность, а "
+"другая часть отражалась от поверхности шейдером стекла или глянца."
 
 #: ../../manual/render/cycles/materials/introduction.rst:41
 msgid ":doc:`Volume Shader </render/cycles/materials/volume>`."
-msgstr ""
+msgstr ":doc:`Шейдер объёма </render/cycles/materials/volume>`."
 
 #: ../../manual/render/cycles/materials/introduction.rst:45
 msgid "Displacement"
-msgstr ""
+msgstr "Шейдер смещения"
 
 #: ../../manual/render/cycles/materials/introduction.rst:47
 msgid ""
@@ -78,6 +94,9 @@ msgid ""
 "displacement shaders. This way, textures can then be used to make the "
 "mesh surface more detailed."
 msgstr ""
+"Форма поверхности и внутренний объём объекта могут быть изменены "
+"шейдерами смещения. Таким образом можно использовать текстуры, чтобы "
+"сделать поверхность полисетки более детализированной."
 
 #: ../../manual/render/cycles/materials/introduction.rst:50
 msgid ""
@@ -86,14 +105,18 @@ msgid ""
 "which is known as bump mapping, or a combination of real and virtual "
 "displacement."
 msgstr ""
+"В зависимости от настроек, смещение может быть виртуальным, то есть "
+"изменять только нормали поверхности, создавая видимость смещения (так же "
+"оно известно как рельефное текстурирование или bump mapping) или быть "
+"комбинацией реального и виртуального смещения."
 
 #: ../../manual/render/cycles/materials/introduction.rst:56
 msgid ":doc:`Displacement </render/cycles/materials/displacement>`."
-msgstr ""
+msgstr ":doc:`Шейдер смещения </render/cycles/materials/displacement>`."
 
 #: ../../manual/render/cycles/materials/introduction.rst:60
 msgid "Energy Conservation"
-msgstr ""
+msgstr "Сохранение энергии"
 
 #: ../../manual/render/cycles/materials/introduction.rst:62
 msgid ""
@@ -102,6 +125,12 @@ msgid ""
 "used to render it. This makes it easier to achieve realistic results and "
 "balanced lighting, though there are a few things to keep in mind."
 msgstr ""
+"Система материалов знает о том, что визуализация будет выполняться "
+"рендером, уважающем законы физики, чётко отделяя то, как материал "
+"выглядит от того, какие алгоритмы визуализации используются для его "
+"отрисовки. Это упрощает достижение реалистичных результатов и "
+"сбалансированного освещения, хотя и есть несколько вещей, о которых "
+"следует знать."
 
 #: ../../manual/render/cycles/materials/introduction.rst:67
 msgid ""
@@ -112,6 +141,14 @@ msgid ""
 "(Bidirectional scattering distribution function)` s are only mixed "
 "together with the Mix Shader node, this will automatically be true."
 msgstr ""
+"Для того, чтобы материалы корректно работали с глобальным освещением, они"
+" должны, говоря в терминах физики, сохранять энергию. Это значит, что они"
+" не должны отражать больше света, чем получают. Это свойство не всегда "
+"соблюдается, но если компоненты цвета будут в диапазоне от 0.0 до 1.0 и "
+"цвета будут смешиваться с :abbr:`BSDF (Bidirectional scattering "
+"distribution function - функция двунаправленного поверхностного "
+"рассеивания отражения)` только в узле «Смешать шейдеры», оно будет "
+"выполнено автоматически."
 
 #: ../../manual/render/cycles/materials/introduction.rst:74
 msgid ""
@@ -122,30 +159,12 @@ msgid ""
 "turning a :abbr:`BSDF (Bidirectional scattering distribution function)` "
 "into a kind of emitter."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid ":doc:`Surface Shader </render/cycles/materials/surface>`"
-#~ msgstr ""
-
-#~ msgid ":doc:`Volume Shader </render/cycles/materials/volume>`"
-#~ msgstr ""
-
-#~ msgid ":doc:`Displacement </render/cycles/materials/displacement>`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "It is however possible to break "
-#~ "this, with color values higher than "
-#~ "1.0 or using the Add Shader node,"
-#~ " but one must be careful when "
-#~ "doing this to keep materials behaving"
-#~ " predictably under various lighting "
-#~ "conditions. It can result in a "
-#~ "reflection adding light into the system"
-#~ " at each bounce, turning a "
-#~ ":abbr:`BSDF (Bidirectional scattering distribution"
-#~ " function)` into a kind of emitter."
-#~ msgstr ""
+"Однако это правило можно нарушить, если значения компонент цветов будут "
+"больше 1.0 или цвета будут объединяться через узел «Сложить шейдеры». Так"
+" следует делать с осторожностью, чтобы материалы вели себя предсказуемо "
+"при различных условиях освещения. Они могут начать бесконтрольно отражать"
+" свет, с каждым отскоком добавляя его в систему, превратив :abbr:`BSDF "
+"(Bidirectional scattering distribution function - функция "
+"двунаправленного поверхностного рассеивания отражения)` в своего рода "
+"источник света."
 

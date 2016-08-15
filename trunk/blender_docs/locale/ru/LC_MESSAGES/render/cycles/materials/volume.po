@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-17 15:20+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-09 00:38+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/materials/volume.rst:4
 msgid "Volume"
-msgstr ""
+msgstr "Шейдер объёма"
 
 #: ../../manual/render/cycles/materials/volume.rst:6
 msgid ""
@@ -22,6 +22,9 @@ msgid ""
 "absorption in glass, and many other effects that cannot be represented by"
 " surface meshes alone."
 msgstr ""
+"Визуализация объёма может использоваться для отрисовки эффектов огня, "
+"дыма, тумана, поглощения в стекле, а также для многих других, которые не "
+"могут быть реализованы только шейдерами поверхности полисеток."
 
 #: ../../manual/render/cycles/materials/volume.rst:9
 msgid ""
@@ -32,16 +35,25 @@ msgid ""
 "surface and volume shader. The world can also use a volume shader to "
 "create effects such as mist."
 msgstr ""
+"Для настройки объёма необходимо создать полисетку, которая будет "
+"определять границы будущего объёма. В материале вы, как правило, будете "
+"удалять все узлы шейдеров поверхности и вместо них добавлять узлы "
+"шейдеров объёма, чтобы определить затенение внутри объёма. Для таких "
+"эффектов, как поглощение в стекле вы будете использовать оба типа "
+"шейдеров - и поверхности, и объёма. Мир также может использовать шейдер "
+"объёма для создания, например, эффекта тумана."
 
 #: ../../manual/render/cycles/materials/volume.rst:17
 msgid "Volume Shaders"
-msgstr ""
+msgstr "Шейдеры объёма"
 
 #: ../../manual/render/cycles/materials/volume.rst:19
 msgid ""
 "We support three volume shader nodes, that model particular effects as "
 "light passes through the volume and interacts with it."
 msgstr ""
+"Мы поддерживаем три узла шейдеров объёма, которые моделируют различные "
+"эффекты прохождения света через объём и взаимодействия с ним."
 
 #: ../../manual/render/cycles/materials/volume.rst:23
 msgid ""
@@ -51,6 +63,11 @@ msgid ""
 "somewhat similar to the transparent BSDF node, it blocks part of the "
 "light and lets other light pass straight through."
 msgstr ""
+"Шейдер «Поглощение объёма» будет поглощать часть света, проходящего через"
+" объём. Его можно использовать для затенения, например, от чёрного дыма "
+"или цветного стеклянного объекта, либо в сочетании с узлом «Рассеивание "
+"объёма». Этот узел в чём-то похож на узел «Прозрачный BSDF», он блокирует"
+" часть света, а другой части позволяет пройти сквозь объём."
 
 #: ../../manual/render/cycles/materials/volume.rst:28
 msgid ""
@@ -62,20 +79,29 @@ msgid ""
 "let light scatter mostly forward. This can be used to shade white smoke "
 "or clouds for example."
 msgstr ""
+"Шейдер «Рассеивание объёма» позволяет свету рассеиваться в разных "
+"направлениях, как если бы он наталкивался на частицы в объёме. "
+"Анизотропия определяет преимущественное направление рассеивания света. "
+"Значение 0 даст равномерное рассеивание по всем направлениям (то есть, "
+"что-то похожее на узел «Диффузный BSDF»), отрицательные значения заставят"
+" свет рассеиваться преимущественно назад, а положительные - вперёд. Он "
+"может использоваться для затенения от, например, белого дыма или облаков."
 
 #: ../../manual/render/cycles/materials/volume.rst:34
 msgid ""
 "Emission will emit light from the volume. This can be used to shade fire "
 "for example."
 msgstr ""
+"Шейдер «Излучение» будет испускать свет из объёма. Он может "
+"использоваться, например, для моделирования огня."
 
 #: ../../manual/render/cycles/materials/volume.rst:39
 msgid "Volume Shader: Absorption/Absorption + Scatter/Emission."
-msgstr ""
+msgstr "Шейдер объёма: поглощение / поглощение + рассеивание / излучение"
 
 #: ../../manual/render/cycles/materials/volume.rst:43
 msgid "Density"
-msgstr ""
+msgstr "Плотность"
 
 #: ../../manual/render/cycles/materials/volume.rst:45
 msgid ""
@@ -86,6 +112,12 @@ msgid ""
 "smoke and how much (density bigger than 0), and where there is no smoke "
 "(density equals 0)."
 msgstr ""
+"Все шейдеры объёма имеют входной сокет плотности. Плотность определяет, "
+"сколько света провзаимодействует с объёмом, будет поглощено или рассеяно,"
+" а сколько пройдёт мимо. Для таких эффектов, как дым, вы могли бы "
+"определить поле плотности, указывающее, в каком месте объёма и в какой "
+"концентрации присутствует дым (плотность больше нуля), а в какой области "
+"его нет (плотность равна нулю)."
 
 #: ../../manual/render/cycles/materials/volume.rst:51
 msgid ""
@@ -94,14 +126,18 @@ msgid ""
 "higher chance for light to collide with a particle and get absorbed or "
 "scattered, rather than passing straight through."
 msgstr ""
+"В реальной жизни объёмы состоят из частиц и более высокая плотность "
+"означает, что в единице объёма находится больше частиц. Больше частиц "
+"значит более высокий шанс столкновения луча света с частицей, что ведёт к"
+" его поглощению или рассеиванию, вместо прохождения сквозь объём."
 
 #: ../../manual/render/cycles/materials/volume.rst:58
 msgid "Volume Material"
-msgstr ""
+msgstr "Шейдер объёма для материала"
 
 #: ../../manual/render/cycles/materials/volume.rst:61
 msgid "Interaction with the Surface Shader"
-msgstr ""
+msgstr "Взаимодействие с шейдером поверхности"
 
 #: ../../manual/render/cycles/materials/volume.rst:63
 msgid ""
@@ -110,6 +146,11 @@ msgid ""
 "ice, where you want some of the light to be absorbed as it passes through"
 " the surface, combined with e.g. a glass or glossy shader at the surface."
 msgstr ""
+"Материал может иметь как шейдер поверхности, так и шейдер объёма, либо "
+"только один из них. Одновременное использование шейдеров может быть "
+"полезно для таких материалов, как стекло, вода или лёд, когда вам нужно, "
+"чтобы часть света поглощалась при прохождении сквозь поверхность, а "
+"другая часть отражалась от поверхности шейдером стекла или глянца."
 
 #: ../../manual/render/cycles/materials/volume.rst:68
 msgid ""
@@ -120,10 +161,16 @@ msgid ""
 "mesh. Light may be scattered, absorbed, or emitted at any point in the "
 "volume."
 msgstr ""
+"Когда шейдер поверхности не отражает и не поглощает свет, тот входит в "
+"объём. Если шейдер объёма не указан, свет пройдёт насквозь и выйдет с "
+"другой стороны полисетки. Если же шейдер объёма присутствует, то он "
+"описывает взаимодействия света при прохождении последнего сквозь объём "
+"полисетки. Свет может быть рассеян, поглощён или испущен в любой точке "
+"объёма."
 
 #: ../../manual/render/cycles/materials/volume.rst:76
 msgid "Mesh Topology"
-msgstr ""
+msgstr "Топология полисетки"
 
 #: ../../manual/render/cycles/materials/volume.rst:78
 msgid ""
@@ -132,6 +179,11 @@ msgid ""
 "connected to exactly two faces such that there are no holes or T-shaped "
 "faces where three or more faces are connected to an edge."
 msgstr ""
+"Полисетки, используемые для визуализации объёма должны быть замкнутыми и "
+":term:`развёртываемыми <manifold>`. Это значит, что в них не должно быть "
+"дырок. Каждое ребро должно соединять ровно две грани, так, чтобы не "
+"образовывалось дырок или Т-образных соединений граней, когда с ребром "
+"соединено три грани или более."
 
 #: ../../manual/render/cycles/materials/volume.rst:83
 msgid ""
@@ -140,20 +192,29 @@ msgid ""
 " direction, or there is a hole in the mesh, then the renderer is unable "
 "to decide what is the inside or outside of the volume."
 msgstr ""
+"Для получения корректного результата нормали должны указывать наружу "
+"полисетки. Нормали используются для определения того, входит или выходит "
+"луч из объёма и если они указывают в неправильном направлении или в "
+"полисетке присутствуют дыры, то рендер не может определить, где у объёма "
+"внутренняя область, а где наружная."
 
 #: ../../manual/render/cycles/materials/volume.rst:88
 msgid "These rules are the same as for rendering glass refraction correctly."
 msgstr ""
+"Те же самые правила справедливы для корректной визуализации преломления в"
+" стекле."
 
 #: ../../manual/render/cycles/materials/volume.rst:92
 msgid "Volume World"
-msgstr ""
+msgstr "Шейдер объёма для мира"
 
 #: ../../manual/render/cycles/materials/volume.rst:94
 msgid ""
 "A volume shader can also be applied to the entirely world, filling the "
 "entire space."
 msgstr ""
+"Шейдер объёма так же может быть применён ко всему миру, заполняя всё "
+"пространство."
 
 #: ../../manual/render/cycles/materials/volume.rst:96
 msgid ""
@@ -168,24 +229,37 @@ msgid ""
 "The size of this object will determine how much light is scattered or "
 "absorbed."
 msgstr ""
+"В настоящее время он наиболее полезен для визуализации ночного времени "
+"или других тёмных сцен, поскольку шейдер поверхности мира или "
+"лампы-солнца не будет работать при использовании шейдера объёма. Так "
+"происходит потому, что фон окружающей среды предполагается расположенным "
+"бесконечно далеко, что достаточно точно, например, для моделирования "
+"Солнца. Однако для моделирования таких эффектов, как туман или "
+"атмосферное рассеяние, предположение, что объём заполняет всё "
+"пространство, не очень хорошее, поскольку большая часть расстояния между "
+"Солнцем и Землёй - это пустое пространство. Для таких эффектов лучше "
+"создать объект объёма, окружающий сцену. Размер этого объекта будет "
+"определять, сколько света рассеивается или поглощается."
 
 #: ../../manual/render/cycles/materials/volume.rst:107
 msgid "Smoke"
-msgstr ""
+msgstr "Дым"
 
 #: ../../manual/render/cycles/materials/volume.rst:109
 msgid ""
 "Creating a smoke material for cycles can be difficult however the image "
 "below shows a good setup on how to do this."
 msgstr ""
+"Создание материала дыма для Cycles может быть сложным делом, тем не "
+"менее, граф узлов на изображении ниже можно взять за основу."
 
 #: ../../manual/render/cycles/materials/volume.rst:114
 msgid "Smoke and Fire Material."
-msgstr ""
+msgstr "Материал дыма и огня"
 
 #: ../../manual/render/cycles/materials/volume.rst:118
 msgid "Scattering Bounces"
-msgstr ""
+msgstr "Отскоки рассеивания"
 
 #: ../../manual/render/cycles/materials/volume.rst:120
 msgid ""
@@ -196,6 +270,15 @@ msgid ""
 " get when rendering with zero volume bounces is what is known as \"single"
 " scattering\", the effect from more bounces is \"multiple scattering\"."
 msgstr ""
+"Эффекты реального мира, такие как рассеивание света в облаках или "
+"подповерхностное рассеивание требуют большого количества отскоков "
+"рассеивания. Однако честная визуализация таких эффектов сильно медленная "
+"и шумная. При создании типичных сцен для фильма, чтобы держать время "
+"визуализации под контролем, приходиться использовать либо не использовать"
+" отскоки, либо использовать один отскок. Эффект, получаемый при "
+"визуализации без отскоков так же известен как «однократное рассеивание», "
+"соответственно, если отскоков больше - он называется «множественное "
+"рассеивание»."
 
 #: ../../manual/render/cycles/materials/volume.rst:126
 msgid ""
@@ -203,6 +286,10 @@ msgid ""
 "shader is an approximation of such multiple scattering effects that is "
 "significantly more efficient but not as accurate."
 msgstr ""
+"При визуализации материалов вроде кожи или молока шейдер "
+"подповерхностного рассеивания даёт хорошее приближение таких эффектов "
+"множественного рассеивания, да и работает он значительно быстрее, хотя и "
+"проигрывает в точности симуляции."
 
 #: ../../manual/render/cycles/materials/volume.rst:130
 msgid ""
@@ -211,84 +298,35 @@ msgid ""
 "scattering bounces, but in practice one might have to limit the number of"
 " bounces to keep render times acceptable."
 msgstr ""
+"При визуализации таких материалов, как облака или дым, у которых нет "
+"чёткой границы, требуется визуализация объёма. Она выглядит лучше при "
+"использовании большого количества отскоков рассеивания, но на практике их"
+" количество нужно ограничивать, чтобы время визуализации оставалось в "
+"разумных пределах."
 
 #: ../../manual/render/cycles/materials/volume.rst:136
 msgid "Limitations"
-msgstr ""
+msgstr "Ограничения"
 
 #: ../../manual/render/cycles/materials/volume.rst:138
 msgid "Currently we do not support:"
-msgstr ""
+msgstr "На текущий момент мы не поддерживаем:"
 
 #: ../../manual/render/cycles/materials/volume.rst:140
 msgid "Correct ray visibility for volume meshes"
-msgstr ""
+msgstr "Правильную видимость лучей для полисеток с шейдером объёма"
 
 #: ../../manual/render/cycles/materials/volume.rst:142
 msgid "Not available on GPU:"
-msgstr ""
+msgstr "Не доступно при визуализации на GPU:"
 
 #: ../../manual/render/cycles/materials/volume.rst:144
 msgid "Equi Angular/MIS Volume Sampling"
 msgstr ""
+"Равноугольное сэмплирование объёма / сэмплирование объёма с множественной"
+" значимостью"
 
 #: ../../manual/render/cycles/materials/volume.rst:145
 msgid "Volume Multi Light sampling"
-msgstr ""
-
-#~ msgid "Smoke/Fire rendering"
-#~ msgstr ""
-
-#~ msgid "Volume Shader: Absorption / Absorption + Scatter / Emission"
-#~ msgstr ""
-
-#~ msgid "Smoke and Fire Material"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Volume Shader: Absorption / Absorption + Scatter / Emission."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Currently this is most useful for "
-#~ "night time or other dark scenes, "
-#~ "as the world surface shader or sun"
-#~ " lamps will have no effect if a"
-#~ " volume shader is used. This is "
-#~ "because the world background is assumed"
-#~ " to be infinitely far away, which "
-#~ "is accurate enough for the sun for"
-#~ " example. However for modeling effects "
-#~ "such as fog or atmospheric scattering,"
-#~ " it is not a good assumption "
-#~ "that the volume fills the entire "
-#~ "space, as most of the distance "
-#~ "between the sun and the earth is"
-#~ " empty space. For such effects it "
-#~ "is be better to create a volume"
-#~ " object surrounding the scene. The "
-#~ "size of this object will determine "
-#~ "how much light is scattered or "
-#~ "absorbed."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Real world effects such as scattering"
-#~ " in clouds or subsurface scattering "
-#~ "require many scattering bounces. However "
-#~ "unbiased rendering of such effects is"
-#~ " slow and noisy. In typical movie "
-#~ "production scenes only 0 or 1 "
-#~ "bounces might be used to keep "
-#~ "render times under control. The effect"
-#~ " you get when rendering with zero "
-#~ "volume bounces is what is known as"
-#~ " \"single scattering\", the effect from "
-#~ "more bounces is \"multiple scattering\"."
-#~ msgstr ""
-
-#~ msgid "Equi Angular / MIS Volume Sampling"
-#~ msgstr ""
+msgstr "Множественная выборка источников света для объёма"
 
