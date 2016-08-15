@@ -4,16 +4,17 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-12 01:27+1100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-17 22:39+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/lamps.rst:4
 msgid "Lamps"
-msgstr ""
+msgstr "Лампы"
 
 #: ../../manual/render/cycles/lamps.rst:6
 msgid ""
@@ -22,10 +23,14 @@ msgid ""
 "they are not directly visible in the rendered image, and can be more easily "
 "managed as objects of their own type."
 msgstr ""
+"После освещения от фона и объектов с шейдером, эмиссии лампы являются "
+"третьим источником освещения в сцене. Отличие от прошлых двух в том, что "
+"лампы непосредственно не видны на результирующем изображении и ими проще "
+"управлять, поскольку это объекты другого типа."
 
 #: ../../manual/render/cycles/lamps.rst:14
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: ../../manual/render/cycles/lamps.rst:12
 msgid ""
@@ -34,30 +39,40 @@ msgid ""
 "respectively, but they may start working in the future, so it's best not to "
 "enable them to preserve compatibility."
 msgstr ""
+"На текущий момент поддерживаются лампы типов *Точка*, *Прожектор*, "
+"*Область* и *Солнце*. Лампы типа *Полусфера* не поддерживаются и будут "
+"визуализированы как точечная и лампа-солнце соответственно, но поскольку "
+"они в будущем могут начать работать, то лучше их пока не использовать, "
+"чтобы не поиметь проблем с совместимостью."
 
 #: ../../manual/render/cycles/lamps.rst:17
 msgid "Size"
-msgstr ""
+msgstr "Размер"
 
 #: ../../manual/render/cycles/lamps.rst:17
 msgid ""
 "Size of the lamp in Blender Units; increasing this will result in softer "
 "shadows and shading."
 msgstr ""
+"Размер лампы в единицах измерения Blender; увеличение этого параметра "
+"даст более мягкие тени."
 
 #: ../../manual/render/cycles/lamps.rst:21
 msgid "Max Bounces"
-msgstr ""
+msgstr "Макс. отскоков"
 
 #: ../../manual/render/cycles/lamps.rst:20
 msgid ""
 "Maximum number of times light from the lamp is allowed to :term:`bounce`. "
 "Limited by :ref:`scene-wide bounce settings <cycles-bounces>`"
 msgstr ""
+"Определяет максимальное количество разрешённых :term:`отскоков <bounce>` "
+"света от этой лампы. Ограничивается :ref:`настройками количества отскоков"
+" для всей сцены <cycles-bounces>`."
 
 #: ../../manual/render/cycles/lamps.rst:26
 msgid "Cast Shadow"
-msgstr ""
+msgstr "Бросает тени"
 
 #: ../../manual/render/cycles/lamps.rst:24
 msgid ""
@@ -65,10 +80,13 @@ msgid ""
 "in-between. This can speed up rendering by not having to trace rays to the "
 "light source."
 msgstr ""
+"При отключении этого параметра свет от ламп не будет заслоняться "
+"объектами между лампой и камерой. Это может значительно ускорить "
+"визуализацию, поскольку не придётся трассировать лучи к источнику света."
 
 #: ../../manual/render/cycles/lamps.rst:29
 msgid "Point Lamp"
-msgstr ""
+msgstr "Точечная лампа"
 
 #: ../../manual/render/cycles/lamps.rst:31
 msgid ""
@@ -76,10 +94,13 @@ msgid ""
 "larger than zero, they become spherical lamps, which give softer shadows and"
 " shading. The strength of point lamps is specified in Watts."
 msgstr ""
+"Точечные лампы излучают свет равномерно во всех направлениях. Параметр "
+"*Размер* со значением больше нуля даст сферическую лампу, которая даёт "
+"более мягкие тени. Сила точечной лампы указывается в ваттах."
 
 #: ../../manual/render/cycles/lamps.rst:37
 msgid "Spot Lamp"
-msgstr ""
+msgstr "Лампа-прожектор"
 
 #: ../../manual/render/cycles/lamps.rst:39
 msgid ""
@@ -88,20 +109,26 @@ msgid ""
 "size parameter defines the size of the cone, while the blend parameter can "
 "soften the edges of the cone."
 msgstr ""
+"Лампы-прожектора испускают свет в определённом направлении внутри конуса."
+" Параметр *Размер* со значением больше нуля даст более мягкие тени. "
+"Параметр *Размер* в панели *Форма светового пятна* определяет размер "
+"конуса, а параметр *Смешение* определяет размытость границ конуса."
 
 #: ../../manual/render/cycles/lamps.rst:46
 msgid "Area Lamp"
-msgstr ""
+msgstr "Лампа-область"
 
 #: ../../manual/render/cycles/lamps.rst:48
 msgid ""
 "Area lamps emit light from a square or rectangular area with a Lambertian "
 "distribution."
 msgstr ""
+"Лампы-области испускают свет из квадратной или прямоугольной области по "
+"распределению Ламберта."
 
 #: ../../manual/render/cycles/lamps.rst:51
 msgid "Light Portals"
-msgstr ""
+msgstr "Световые порталы"
 
 #: ../../manual/render/cycles/lamps.rst:53
 msgid ""
@@ -110,16 +137,23 @@ msgid ""
 "rendering with portals is usually slower, but as it converges more quickly, "
 "less samples are required."
 msgstr ""
+"Лампы-области также могут функционировать как световые порталы, дополняя "
+"окружающее освещение и значительно уменьшая шум при визуализации "
+"интерьеров. Обратите внимание, что визуализация с порталами обычно "
+"медленнее, однако сходимость у неё выше - она требует меньше сэмплов."
 
 #: ../../manual/render/cycles/lamps.rst:57
 msgid ""
 "Light portals work by enabling the Portal option, and placing areas lamps in"
 " windows, door openings, and any place where light will enter the interior."
 msgstr ""
+"Световые порталы работают после включения параметра *Портал* и помещения "
+"лампы-области в окна, дверные проёмы и любые другие места, откуда свет "
+"поступает во внутренние помещения."
 
 #: ../../manual/render/cycles/lamps.rst:62
 msgid "Sun Lamp"
-msgstr ""
+msgstr "Лампа-солнце"
 
 #: ../../manual/render/cycles/lamps.rst:64
 msgid ""
@@ -127,9 +161,16 @@ msgid ""
 "account; they are always located outside of the scene, infinitely far away, "
 "and will not result in any distance falloff."
 msgstr ""
+"Лампа-солнце излучает свет в указанном направлении. Её позиция не имеет "
+"значения, она всегда располагается за пределами сцены, на бесконечном от "
+"неё удалении; свет от неё не затухает с расстоянием."
 
 #: ../../manual/render/cycles/lamps.rst:68
 msgid ""
 "Because they are not located inside the scene, their strength uses different"
 " units, and should typically be set to lower values than other lights."
 msgstr ""
+"Поскольку она располагается за сценой, для её силы используются другие "
+"единицы измерения, так что обычно эта сила должна быть меньше, нежели у "
+"других типов ламп."
+
