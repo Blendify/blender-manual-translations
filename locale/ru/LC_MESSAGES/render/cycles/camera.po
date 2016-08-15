@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-06-25 14:42+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,35 +14,35 @@ msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:4
 msgid "Camera"
-msgstr ""
+msgstr "Камера"
 
 #: ../../manual/render/cycles/camera.rst:7
 msgid "Perspective"
-msgstr ""
+msgstr "Перспективный объектив"
 
 #: ../../manual/render/cycles/camera.rst:11
 msgid "Lens Size and Angle"
-msgstr ""
+msgstr "Размер и угол объектива"
 
 #: ../../manual/render/cycles/camera.rst:10
 msgid "Control the field of view angle."
-msgstr ""
+msgstr "Контролирует угол зрения камеры."
 
 #: ../../manual/render/cycles/camera.rst:18
 msgid "Orthographic"
-msgstr ""
+msgstr "Ортогональный объектив"
 
 #: ../../manual/render/cycles/camera.rst:22
 msgid "Scale"
-msgstr ""
+msgstr "Масштаб"
 
 #: ../../manual/render/cycles/camera.rst:21
 msgid "Controls the size of objects projected on the image."
-msgstr ""
+msgstr "Контролирует размер объектов, проецируемых на изображение."
 
 #: ../../manual/render/cycles/camera.rst:31
 msgid "Panoramic"
-msgstr ""
+msgstr "Панорамный объектив"
 
 #: ../../manual/render/cycles/camera.rst:33
 msgid ""
@@ -50,10 +50,14 @@ msgid ""
 "these cannot be displayed with OpenGL rendering in the view-port; they "
 "will only work for rendering."
 msgstr ""
+"Cycles поддерживает равнопромежуточные панорамные камеры и панорамные "
+"камеры типа «рыбий глаз». Обратите внимание, что вид из этих камер не "
+"может быть отображён в области просмотра при использовании визуализации "
+"OpenGL; этот тип камер работает только при обычной визуализации."
 
 #: ../../manual/render/cycles/camera.rst:39
 msgid "Equirectangular"
-msgstr ""
+msgstr "Равнопромежуточная проекция"
 
 #: ../../manual/render/cycles/camera.rst:41
 msgid ""
@@ -61,6 +65,9 @@ msgid ""
 " equirectangular projection, always rendering the full 360° over the "
 "X-axis and 180° over the Y-axis."
 msgstr ""
+"Визуализирует панорамный вид сцены из положения камеры с использованием "
+"равнопромежуточной проекции, всегда делая охват в 360 градусов по оси X и"
+" 180 градусов по оси Y."
 
 #: ../../manual/render/cycles/camera.rst:44
 msgid ""
@@ -70,10 +77,17 @@ msgid ""
 "pointing along the positive X-axis. This corresponds to looking at the "
 "center of the image using the default environment texture mapping."
 msgstr ""
+"Эта проекция совместима с текстурой окружающей среды, используемой для "
+"шейдеров окружения, так что она может использоваться для визуализации "
+"карт окружения. Для соответствия умолчательному наложению изображения "
+"поверните камеру на угол (90, 0, -90), либо направьте её вдоль "
+"положительного направления оси X. Это направление соответствует взгляду "
+"из центра изображения с использованием умолчательного режима наложения "
+"изображения."
 
 #: ../../manual/render/cycles/camera.rst:52
 msgid "Fisheye"
-msgstr ""
+msgstr "Проекция рыбий глаз"
 
 #: ../../manual/render/cycles/camera.rst:54
 msgid ""
@@ -83,6 +97,12 @@ msgid ""
 "cameras. It provides a lens focal length and field of view angle, and "
 "will also take the sensor dimensions into account."
 msgstr ""
+"Объективы рыбий глаз обычно являются широкоугольными объективами с "
+"сильным искажением, полезные для создания панорамных изображения для так "
+"называемой купольной проекции, либо для достижения художественного "
+"эффекта. Тип объектива *Равноцельный рыбий глаз* лучше всего имитирует "
+"реальные камеры. Он учитывает фокусное расстояние и угол зрения "
+"объектива, а так же учитывает размеры сенсора."
 
 #: ../../manual/render/cycles/camera.rst:60
 msgid ""
@@ -91,42 +111,49 @@ msgid ""
 "information into account but rather uses the whole sensor. This is a good"
 " lens for full dome projection."
 msgstr ""
+"*Равнопромежуточный рыбий глаз* не соответствует ни одной реальной модели"
+" объектива; он даёт круговой рыбий глаз, который не учитывает размер "
+"сенсора. Это хороший выбор для полной купольной проекции."
 
 #: ../../manual/render/cycles/camera.rst:64
 msgid "Lens"
-msgstr ""
+msgstr "Объектив"
 
 #: ../../manual/render/cycles/camera.rst:65
 msgid "Lens focal length in millimeter."
-msgstr ""
+msgstr "Фокусное расстояние объектива в миллиметрах."
 
 #: ../../manual/render/cycles/camera.rst:68
 msgid "Field of View"
-msgstr ""
+msgstr "Поле зрения"
 
 #: ../../manual/render/cycles/camera.rst:67
 msgid ""
 "Field of view angle, going to 360 and more to capture the whole "
 "environment."
 msgstr ""
+"Угол поля зрения объектива, установите 360 градусов и более, чтобы "
+"захватить всё окружение."
 
 #: ../../manual/render/cycles/camera.rst:71
 msgid "Depth of Field"
-msgstr ""
+msgstr "Глубина резкости"
 
 #: ../../manual/render/cycles/camera.rst:77
 msgid "Focus"
-msgstr ""
+msgstr "Фокус"
 
 #: ../../manual/render/cycles/camera.rst:76
 msgid ""
 "Set an object to be used as a focal point by the camera, causing the "
 "camera to focus on the selected object."
 msgstr ""
+"Устанавливает объект, который будет использоваться в качестве фокусной "
+"точки камеры, заставляя камеру фокусироваться на выбранном объекте."
 
 #: ../../manual/render/cycles/camera.rst:82
 msgid "Distance"
-msgstr ""
+msgstr "Расстояние"
 
 #: ../../manual/render/cycles/camera.rst:80
 msgid ""
@@ -134,10 +161,14 @@ msgid ""
 "3D space set by the distance from the camera. Using the *Limit* Display "
 "option, you are able to view the distance in the 3D space."
 msgstr ""
+"Когда объект для фокуса не используется, камера установит свой фокус на "
+"область в трёхмерном пространстве, определяемую расстоянием от камеры. "
+"Галочка *Ограничения* в панели *Отображение* позволит вам видеть это "
+"расстояние в панели 3D-вида."
 
 #: ../../manual/render/cycles/camera.rst:87
 msgid "High Quality"
-msgstr ""
+msgstr "Высокое качество"
 
 #: ../../manual/render/cycles/camera.rst:85
 msgid ""
@@ -146,21 +177,29 @@ msgid ""
 "depth of field to be closely represented to that of the render and render"
 " preview depth of field."
 msgstr ""
+"Включает высокое качество глубины резкости в *области просмотра*, давая "
+"более точное представление *глубины резкости*. Этот параметр позволяет "
+"глубине резкости в области просмотра более точно соответствовать реальной"
+" глубине резкости, получаемой при полной визуализации и при визуализации "
+"предпросмотра глубины резкости."
 
 #: ../../manual/render/cycles/camera.rst:91
 msgid "F-Stop"
-msgstr ""
+msgstr "F-Stop"
 
 #: ../../manual/render/cycles/camera.rst:90
 msgid ""
 "Viewport depth of field aperture measured in F-Stops. Smaller numbers "
 "will cause more blur in the view-port, OpenGL renders, and sequencer."
 msgstr ""
+"Глубина резкости диафрагмы в области просмотра измеряется в числах "
+"диафрагмы (F-stop'ах). Чем меньше значение, тем более размытой будет "
+"картинка в области просмотра, при визуализации OpenGL и в секвенсоре."
 
 #: ../../manual/render/cycles/camera.rst:96
 #: ../../manual/render/cycles/camera.rst:110
 msgid "Blades"
-msgstr ""
+msgstr "Лепестки"
 
 #: ../../manual/render/cycles/camera.rst:94
 msgid ""
@@ -168,10 +207,14 @@ msgid ""
 "The minimum number of blades needed to enable the bokeh effect is 3 "
 "(triangle). (Only available with High Quality)."
 msgstr ""
+"Количество сторон многоугольника для получения размытых объектов в "
+"области просмотра. Минимальное количество лепестков, необходимых для "
+"включения эффекта боке равно 3 (треугольник). (Доступно только в режиме "
+"*Высокое качество*)."
 
 #: ../../manual/render/cycles/camera.rst:100
 msgid "Aperture"
-msgstr ""
+msgstr "Диафрагма"
 
 #: ../../manual/render/cycles/camera.rst:99
 msgid ""
@@ -179,10 +222,13 @@ msgid ""
 "preview. F-Stop is the focal ratio, where Radius is the the raidus of the"
 " focal point."
 msgstr ""
+"Использует значение *F-Stop* или *Радиуса* для установки диафрагмы для "
+"визуализации и предпросмотра. F-Stop - это светосила, а Радиус - это "
+"радиус фокусной точки."
 
 #: ../../manual/render/cycles/camera.rst:105
 msgid "Size/Number"
-msgstr ""
+msgstr "Размер/Число"
 
 #: ../../manual/render/cycles/camera.rst:103
 msgid ""
@@ -191,6 +237,10 @@ msgid ""
 "large size will result in a strong blur, also allowing the use of the "
 "*bokeh effect*."
 msgstr ""
+"*Размер* радиуса или *Число* F-Stop диафрагмы, используемое для "
+"визуализации и предпросмотра. Использование F-Stop вместе с малым числом "
+"или радиуса вместе с большим размером даст в результате более сильное "
+"размытие и позволит использовать *эффект боке*."
 
 #: ../../manual/render/cycles/camera.rst:108
 msgid ""
@@ -199,20 +249,27 @@ msgid ""
 "minimum amount of blades to enable the bokeh effect is 3, resulting in a "
 "triangle shaped blur."
 msgstr ""
+"Общее количество лепестков в виде многоугольника, используемых для "
+"изменения формы размытых объектов при визуализации и предпросмотре. Для "
+"включения эффекта боке в области просмотра минимальное количество "
+"лепестков должно быть равно 3, дающим в результате размытие по "
+"треугольнику."
 
 #: ../../manual/render/cycles/camera.rst:114
 msgid "Rotation"
-msgstr ""
+msgstr "Вращение"
 
 #: ../../manual/render/cycles/camera.rst:113
 msgid ""
 "Rotate the polygonal blades along the facing axis, and will rotate in a "
 "clockwise, and counter-clockwise fashion."
 msgstr ""
+"Вращение лепестков диафрагмы вдоль поперечной оси будет поворачивать "
+"многоугольник по или против часовой стрелке."
 
 #: ../../manual/render/cycles/camera.rst:120
 msgid "Ratio"
-msgstr ""
+msgstr "Соотношение"
 
 #: ../../manual/render/cycles/camera.rst:117
 msgid ""
@@ -221,14 +278,18 @@ msgid ""
 " a horizontal distortion, and a higher number will cause a vertical "
 "distortion."
 msgstr ""
+"Изменение величины искажения для имитации боке анаморфных объективов. "
+"Установка параметра в значение 1.0 означает отсутствие искажений, "
+"значения меньше 1.0 дадут горизонтальные искажения, а больше 1.0 - "
+"вертикальные искажения."
 
 #: ../../manual/render/cycles/camera.rst:126
 msgid "Clipping"
-msgstr ""
+msgstr "Усечение"
 
 #: ../../manual/render/cycles/camera.rst:135
 msgid "Clip Start and End"
-msgstr ""
+msgstr "Начало и конец усечения"
 
 #: ../../manual/render/cycles/camera.rst:129
 msgid ""
@@ -236,24 +297,11 @@ msgid ""
 "this range still influence the image indirectly, as further light bounces"
 " are not clipped."
 msgstr ""
+"Интервал, в котором объекты непосредственно будут видны, любые объекты за"
+" пределами этого диапазона всё равно косвенно будут влиять на "
+"изображение, поскольку отскоки света не отсекаются."
 
 #: ../../manual/render/cycles/camera.rst:133
 msgid ":ref:`Camera Clipping <camera-clipping>`."
-msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This projection is compatible with the"
-#~ " environment texture as used for "
-#~ "world shaders, so it can be used"
-#~ " to render an environment map. To "
-#~ "match the default mapping, set the "
-#~ "camera object rotation to (90, 0, "
-#~ "−90) or pointing along the positive "
-#~ "X-axis. This corresponds to looking at"
-#~ " the center of the image using "
-#~ "the default environment texture mapping."
-#~ msgstr ""
+msgstr ":ref:`Усечение камеры <camera-clipping>`."
 
