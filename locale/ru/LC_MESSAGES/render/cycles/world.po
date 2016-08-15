@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-17 15:20+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-03 22:27+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,21 +14,23 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:4
 msgid "World"
-msgstr ""
+msgstr "Окружающая среда (мир)"
 
 #: ../../manual/render/cycles/world.rst:8
 msgid "Lighting with an HDR image."
-msgstr ""
+msgstr "Освещение HDR-изображением"
 
 #: ../../manual/render/cycles/world.rst:11
 msgid ""
 "The world environment can emit light, ranging from a single solid color, "
 "physical sky model, to arbitrary textures."
 msgstr ""
+"Окружающий мир может излучать свет, начиная от простого цвета, физической"
+" модели неба и заканчивая произвольными текстурами."
 
 #: ../../manual/render/cycles/world.rst:16
 msgid "Surface Shader"
-msgstr ""
+msgstr "Шейдер поверхности"
 
 #: ../../manual/render/cycles/world.rst:18
 msgid ""
@@ -39,10 +41,16 @@ msgid ""
 "accepted is the Background node with a color input and strength factor "
 "for the intensity of the light."
 msgstr ""
+"Шейдер поверхности определяет испускаемый в сцену свет от окружения. "
+"Поверхность мира визуализируется так, как если бы она была очень далеко "
+"от сцены и, таким образом, не существует взаимодействия между объектами "
+"сцены и окружением, от окружения всего лишь поступает свет. Единственным "
+"принимаемым шейдером является узел «Фон» с входами цвета и силы, "
+"определяющей интенсивность света."
 
 #: ../../manual/render/cycles/world.rst:26
 msgid "Image Based Lighting"
-msgstr ""
+msgstr "Освещение на основе изображения"
 
 #: ../../manual/render/cycles/world.rst:28
 msgid ""
@@ -51,16 +59,23 @@ msgid ""
 " (also known as Lat/Long) for environment maps, and Mirror Ball mapping "
 "for converting photos of mirror balls to environment maps."
 msgstr ""
+"Для освещения на основе изображения используйте узел «Текстура окр. "
+"среды» вместо узла «Изображение-текстура» для корректного проецирования. "
+"Он поддерживает равнопромежуточную проекцию (так же известную, как "
+"широта/долгота) для карт окружения и проекцию «Зеркальный шар» для "
+"преобразования фотографий зеркальных шаров в карты окружения."
 
 #: ../../manual/render/cycles/world.rst:35
 msgid "Volume Shader"
-msgstr ""
+msgstr "Шейдер объёма"
 
 #: ../../manual/render/cycles/world.rst:37
 msgid ""
 "A volume shader can be applied to the entirely world, filling the entire "
 "space."
 msgstr ""
+"Шейдер объёма может быть применён ко всему миру, заполняя всё "
+"пространство."
 
 #: ../../manual/render/cycles/world.rst:39
 msgid ""
@@ -75,10 +90,21 @@ msgid ""
 "The size of this object will determine how much light is scattered or "
 "absorbed."
 msgstr ""
+"В настоящее время он наиболее полезен для визуализации ночного времени "
+"или других тёмных сцен, поскольку шейдер поверхности мира или "
+"лампы-солнца не будет работать при использовании шейдера объёма. Так "
+"происходит потому, что фон окружающей среды предполагается расположенным "
+"бесконечно далеко, что достаточно точно, например, при моделировании "
+"Солнца. Однако для моделирования таких эффектов, как туман или "
+"атмосферное рассеяние, предположение, что объём заполняет всё "
+"пространство, не очень хорошее, поскольку большая часть расстояния между "
+"Солнцем и Землей - это пустое пространство. Для таких эффектов лучше "
+"создать объект объёма, окружающий сцену. Размер этого объекта будет "
+"определять, сколько света рассеивается или поглощается."
 
 #: ../../manual/render/cycles/world.rst:51
 msgid "Ambient Occlusion"
-msgstr ""
+msgstr "Ambient Occlusion"
 
 #: ../../manual/render/cycles/world.rst:53
 msgid ""
@@ -87,20 +113,25 @@ msgid ""
 "physically accurate, but it is useful to emphasize shapes of surfaces, or"
 " as a cheap way to get an effect that looks a bit like indirect lighting."
 msgstr ""
+"Ambient occlusion - это метод освещения, основанный на том, сколько точек"
+" поверхности закрыто ближайшими поверхностями. Эта хитрость хотя и не "
+"является физически достоверной, полезна для подчёркивания формы "
+"поверхностей, так же её можно рассматривать как дешёвый способ получения "
+"эффекта, выглядящего немного похоже на непрямое освещение."
 
 #: ../../manual/render/cycles/world.rst:59
 msgid "Factor"
-msgstr ""
+msgstr "Множитель"
 
 #: ../../manual/render/cycles/world.rst:60
 msgid ""
 "The strength of the ambient occlusion; value 1.0 is like a white world "
 "shader."
-msgstr ""
+msgstr "Сила ambient occlusion; значение 1.0 похоже на шейдер белого мира."
 
 #: ../../manual/render/cycles/world.rst:64
 msgid "Distance"
-msgstr ""
+msgstr "Расстояние"
 
 #: ../../manual/render/cycles/world.rst:62
 msgid ""
@@ -108,6 +139,9 @@ msgid ""
 "nearby features, while longer distances make it also take objects further"
 " away into account."
 msgstr ""
+"Расстояние от точки затенения для трассируемых лучей. При маленьком "
+"расстоянии на затенение влияют только близлежащие объекты, а при большом "
+"принимаются во внимание так же и те, что находятся дальше."
 
 #: ../../manual/render/cycles/world.rst:66
 msgid ""
@@ -116,6 +150,10 @@ msgid ""
 "surfaces will be taken into account, i.e. a half-transparent surface will"
 " only half occlude."
 msgstr ""
+"Освещение от ambient occlusion применяется только к BSDF рассеянного "
+"отражения; на глянцевые BSDF или BSDF передачи влияние не оказывается. "
+"Прозрачность поверхностей также принимается во внимание, то есть "
+"полупрозрачные поверхности будут закрыты только наполовину."
 
 #: ../../manual/render/cycles/world.rst:71
 msgid ""
@@ -123,14 +161,16 @@ msgid ""
 " to use the :doc:`Ambient Occlusion "
 "</render/cycles/nodes/types/shaders/ao>` shader."
 msgstr ""
+"Альтернативный метод использования Ambient Occlusion - на основе шейдера "
+":doc:`Ambient Occlusion </render/cycles/nodes/types/shaders/ao>`."
 
 #: ../../manual/render/cycles/world.rst:76
 msgid "Sampling"
-msgstr ""
+msgstr "Сэмплирование"
 
 #: ../../manual/render/cycles/world.rst:81
 msgid "Multiple Importance Sample"
-msgstr ""
+msgstr "Множественная выборка по значимости"
 
 #: ../../manual/render/cycles/world.rst:79
 msgid ""
@@ -139,10 +179,16 @@ msgid ""
 "good idea to enable this when using an image texture to light the scene, "
 "otherwise noise can take a very long time to converge."
 msgstr ""
+"При включении этого параметра при выборках из фоновой текстуры более "
+"светлым частям будет отдаваться большее предпочтение, что снизит шум при "
+"визуализации. Почти всегда будет хорошей идеей включить этот параметр при"
+" использовании текстуры изображения для освещения сцены, в противном "
+"случае может пройти очень много времени, преже чем удастся избавиться от "
+"шума."
 
 #: ../../manual/render/cycles/world.rst:86
 msgid "Map Resolution"
-msgstr ""
+msgstr "Разрешение карты"
 
 #: ../../manual/render/cycles/world.rst:84
 msgid ""
@@ -150,48 +196,60 @@ msgid ""
 "values may produce less noise when using high-res images, but will take "
 "up more memory and render slightly slower."
 msgstr ""
+"Устанавливает разрешение для карты «Множественная выборка по значимости»."
+" Более высокие значения дают меньший шум при использовании изображений "
+"высокого разрешения, но требуют больше памяти и значительно замедляют "
+"визуализацию."
 
 #: ../../manual/render/cycles/world.rst:88
 msgid ""
 "Below is a comparison between Multiple Importance Sample Off and On - "
 "both images rendered for 25 seconds (Off: 1500 samples, On: 1000 samples)"
 msgstr ""
+"Ниже приводится сравнение при выключенной и включённой множественной "
+"выборке по значимости - оба изображения визуализировались 25 секунд "
+"(выключенная: 1500 сэмплов, включённая: 1000 сэмплов)"
 
 #: ../../manual/render/cycles/world.rst:96
 msgid "Multiple Importance Sample Off."
-msgstr ""
+msgstr "Множественная выборка по значимости выключена"
 
 #: ../../manual/render/cycles/world.rst:100
 msgid "Multiple Importance Sample On."
-msgstr ""
+msgstr "Множественная выборка по значимости включена"
 
 #: ../../manual/render/cycles/world.rst:103
 msgid ""
 "For interior scenes, noise can be significantly reduce by setting up area"
 " lamps as :doc:`light portals </render/cycles/lamps>`."
 msgstr ""
+"При визуализации интерьеров шум можно значительно уменьшить, если "
+"настроить лампы-области как :doc:`световые порталы "
+"</render/cycles/lamps>`."
 
 #: ../../manual/render/cycles/world.rst:111
 msgid "Without Light Portals."
-msgstr ""
+msgstr "Без световых порталов"
 
 #: ../../manual/render/cycles/world.rst:116
 msgid "With Light Portals."
-msgstr ""
+msgstr "Со световыми порталами"
 
 #: ../../manual/render/cycles/world.rst:119
 msgid "Ray Visibility"
-msgstr ""
+msgstr "Видимость лучей"
 
 #: ../../manual/render/cycles/world.rst:121
 msgid ""
 "As with other objects, *Ray Visibility* allows you to control which other"
 " shaders can \"see\" the environment."
 msgstr ""
+"Как и с другими объектами, панель *Видимость лучей* позволяет вам "
+"контролировать, какие шейдеры смогут «увидеть» окружение."
 
 #: ../../manual/render/cycles/world.rst:126
 msgid "Tricks"
-msgstr ""
+msgstr "Хитрости"
 
 #: ../../manual/render/cycles/world.rst:128
 msgid ""
@@ -202,58 +260,24 @@ msgid ""
 "the second the directly visible color. This is useful when using a high-"
 "res image for the background and a low-res image for the actual lighting."
 msgstr ""
+"Иногда может быть полезно иметь разные фоны - один, который виден "
+"непосредственно, и второй, который косвенно освещает объекты. Простым "
+"решением этой проблемы является добавление узла «Смешать шейдеры», с "
+"коэффициентом смешивания, задаваемым сокетом «Луч из камеры» шейдера "
+"«Путь света». Тогда первым входным цветом будет непрямое освещение, а "
+"вторым - непосредственно видимый цвет. Эта конструкция полезна при "
+"использовании для фона изображения с высоким разрешением, а для "
+"фактического освещения - изображения с низким разрешением."
 
 #: ../../manual/render/cycles/world.rst:134
 msgid ""
 "Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the"
 " high-res image will also be visible in reflections."
 msgstr ""
+"Аналогично, добавив сокеты *Луч из камеры* и *Луч глянца*, изображение с "
+"высоким разрешением будет так же видно и в отражениях."
 
 #: ../../manual/render/cycles/world.rst:141
 msgid "Nodes for the trick above."
-msgstr ""
-
-#~ msgid "Lighting with an HDR image"
-#~ msgstr ""
-
-#~ msgid "Multiple Importance Sample Off"
-#~ msgstr ""
-
-#~ msgid "Multiple Importance Sample On"
-#~ msgstr ""
-
-#~ msgid "Without Light Portals"
-#~ msgstr ""
-
-#~ msgid "With Light Portals"
-#~ msgstr ""
-
-#~ msgid "Nodes for the trick above"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Currently this is most useful for "
-#~ "night time or other dark scenes, "
-#~ "as the world surface shader or sun"
-#~ " lamps will have no effect if a"
-#~ " volume shader is used. This is "
-#~ "because the world background is assumed"
-#~ " to be infinitely far away, which "
-#~ "is accurate enough for the sun for"
-#~ " example. However for modeling effects "
-#~ "such as fog or atmospheric scattering,"
-#~ " it is not a good assumption "
-#~ "that the volume fills the entire "
-#~ "space, as most of the distance "
-#~ "between the sun and the earth is"
-#~ " empty space. For such effects it "
-#~ "is be better to create a volume"
-#~ " object surrounding the scene. The "
-#~ "size of this object will determine "
-#~ "how much light is scattered or "
-#~ "absorbed."
-#~ msgstr ""
+msgstr "Дерево узлов для вышеописанной хитрости"
 
