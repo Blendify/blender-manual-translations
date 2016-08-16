@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-17 15:20+1000\n"
+"POT-Creation-Date: 2016-08-16 13:44-0700\n"
 "PO-Revision-Date: 2015-07-15 12:25+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.1.1\n"
 
 #: ../../manual/render/cycles/materials/volume.rst:4
 msgid "Volume"
@@ -70,16 +70,16 @@ msgid ""
 "for example."
 msgstr "散发可以从体发射灯光。这种情况可以模拟火焰效果。"
 
-#: ../../manual/render/cycles/materials/volume.rst:39
+#: ../../manual/render/cycles/materials/volume.rst:38
 #, fuzzy
 msgid "Volume Shader: Absorption/Absorption + Scatter/Emission."
 msgstr "体积着色器：吸收 / 吸附+散射 / 发射"
 
-#: ../../manual/render/cycles/materials/volume.rst:43
+#: ../../manual/render/cycles/materials/volume.rst:42
 msgid "Density"
 msgstr "密度"
 
-#: ../../manual/render/cycles/materials/volume.rst:45
+#: ../../manual/render/cycles/materials/volume.rst:44
 msgid ""
 "All volume shaders have a density input. The density defines how much of "
 "the light will interact with the volume, getting absorbed or scattered, "
@@ -89,7 +89,7 @@ msgid ""
 "(density equals 0)."
 msgstr "所有的体着色器都有一个密度输入。密度定义了光线有多少需要跟体积进行交互，得到吸收或者散色，还有多少会直接穿透。要模拟烟雾的时候你需要指定一个密度场来说明体积的那些地方烟比较多（密度大于0），那些地方是没有烟的（密度等于0）。"
 
-#: ../../manual/render/cycles/materials/volume.rst:51
+#: ../../manual/render/cycles/materials/volume.rst:50
 msgid ""
 "Volumes in real life consist of particles, a higher density means there "
 "are more particles per unit volume. More particles means there is a "
@@ -97,15 +97,15 @@ msgid ""
 "scattered, rather than passing straight through."
 msgstr "体素在真实时间中是混合着粒子的，高密度表示单位体积内有更多的粒子。更多的粒子意味着光线有更高的机会跟一个粒子进行碰撞或者是被吸收或者被反射，部分可能是直接透射出体积。"
 
-#: ../../manual/render/cycles/materials/volume.rst:58
+#: ../../manual/render/cycles/materials/volume.rst:57
 msgid "Volume Material"
 msgstr "体积材质"
 
-#: ../../manual/render/cycles/materials/volume.rst:61
+#: ../../manual/render/cycles/materials/volume.rst:60
 msgid "Interaction with the Surface Shader"
 msgstr "和表面着色器交互"
 
-#: ../../manual/render/cycles/materials/volume.rst:63
+#: ../../manual/render/cycles/materials/volume.rst:62
 msgid ""
 "A material may have both a surface and a volume shader, or only one of "
 "either. Using both may be useful for materials such as glass, water or "
@@ -113,7 +113,7 @@ msgid ""
 " the surface, combined with e.g. a glass or glossy shader at the surface."
 msgstr "一个材质可能会兼有表面和体着色器，或者只有其中一种。玻璃、水或者冰可能会同时用上两种，当需要将光部分吸收和部分穿透表面的时候，在表面上混合玻璃或者光泽着色器。"
 
-#: ../../manual/render/cycles/materials/volume.rst:68
+#: ../../manual/render/cycles/materials/volume.rst:67
 msgid ""
 "When the surface shader does not reflect or absorb light, it enters into "
 "the volume. If no volume shader is specified, it will pass straight "
@@ -123,11 +123,11 @@ msgid ""
 "volume."
 msgstr "当表面着色器没有反射或者吸收光的时候，就进入了完全的体积。如果这时候没有体着色器指定，光就会直接穿到网格的另一面。如果定义了体着色器，光就会更网格包含的体有交互。光线可能会被体积里的任意点散射，吸收或者发射。"
 
-#: ../../manual/render/cycles/materials/volume.rst:76
+#: ../../manual/render/cycles/materials/volume.rst:75
 msgid "Mesh Topology"
 msgstr "网格拓扑"
 
-#: ../../manual/render/cycles/materials/volume.rst:78
+#: ../../manual/render/cycles/materials/volume.rst:77
 #, fuzzy
 msgid ""
 "Meshes used for volume render should be closed and :term:`manifold`. That"
@@ -138,7 +138,7 @@ msgstr ""
 "作为体积渲染的网格需要是封闭以及符合  :term:`流型` "
 "。网格上是不能有洞的。每条边必须严格的保证链接到两个面上，不能有洞和T形的面，也就是说不能有三个或者三个以上的面链接到一条边上。"
 
-#: ../../manual/render/cycles/materials/volume.rst:83
+#: ../../manual/render/cycles/materials/volume.rst:82
 msgid ""
 "Normals must point outside for correct results. The normals are used to "
 "determine if a ray enters or exits a volume, and if they point in a wrong"
@@ -146,26 +146,26 @@ msgid ""
 "to decide what is the inside or outside of the volume."
 msgstr "想要结果正确法线必须全部指向外面。法线是用来探测光束是进入还是穿出体积的，如果法线指向错误的方向，如果网格上有洞的话，渲染器可能根本无法知道体积的内外方向。"
 
-#: ../../manual/render/cycles/materials/volume.rst:88
+#: ../../manual/render/cycles/materials/volume.rst:87
 msgid "These rules are the same as for rendering glass refraction correctly."
 msgstr "要正确渲染玻璃折射也是同样的规则。"
 
-#: ../../manual/render/cycles/materials/volume.rst:92
+#: ../../manual/render/cycles/materials/volume.rst:91
 msgid "Volume World"
 msgstr "世界体积"
 
-#: ../../manual/render/cycles/materials/volume.rst:94
+#: ../../manual/render/cycles/materials/volume.rst:93
 msgid ""
 "A volume shader can also be applied to the entirely world, filling the "
 "entire space."
 msgstr "体光影可以在整个世界中应用，它会填满整个空间。"
 
-#: ../../manual/render/cycles/materials/volume.rst:96
+#: ../../manual/render/cycles/materials/volume.rst:95
 #, fuzzy
 msgid ""
-"Currently this is most useful for night time or other dark scenes, as the"
-" world surface shader or sun lamps will have no effect if a volume shader"
-" is used. This is because the world background is assumed to be "
+"Currently, this is most useful for night time or other dark scenes, as "
+"the world surface shader or sun lamps will have no effect if a volume "
+"shader is used. This is because the world background is assumed to be "
 "infinitely far away, which is accurate enough for the sun for example. "
 "However, for modeling effects such as fog or atmospheric scattering, it "
 "is not a good assumption that the volume fills the entire space, as most "

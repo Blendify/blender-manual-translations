@@ -3,35 +3,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-17 15:20+1000\n"
+"POT-Creation-Date: 2016-08-16 13:44-0700\n"
 "PO-Revision-Date: 2015-07-19 03:13+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.1.1\n"
 
 #: ../../manual/render/cycles/world.rst:4
 msgid "World"
 msgstr "世界"
 
-#: ../../manual/render/cycles/world.rst:8
+#: ../../manual/render/cycles/world.rst:9
 #, fuzzy
 msgid "Lighting with an HDR image."
 msgstr "使用 HDR 图像进行照明"
 
-#: ../../manual/render/cycles/world.rst:11
+#: ../../manual/render/cycles/world.rst:12
 msgid ""
 "The world environment can emit light, ranging from a single solid color, "
 "physical sky model, to arbitrary textures."
 msgstr "世界环境可以提供光照，可以是单一色彩、或是天空模型，也可以是各种贴图。"
 
-#: ../../manual/render/cycles/world.rst:16
+#: ../../manual/render/cycles/world.rst:17
 msgid "Surface Shader"
 msgstr "表面着色器"
 
-#: ../../manual/render/cycles/world.rst:18
+#: ../../manual/render/cycles/world.rst:19
 msgid ""
 "The surface shader defines the light emission from the environment into "
 "the scene. The world surface is rendered as if it is very distant from "
@@ -41,31 +41,33 @@ msgid ""
 "for the intensity of the light."
 msgstr "表面着色器定义了从环境照射到场景中的光照。环境表面的渲染似乎是在场景内容十分遥远的地方，而且这意味着在场景物体与环境背景之间不会产生双向作用，只是光照可以进入而已。唯一支持的着色器就是具有输入接口的Background（背景）结点，以及决定光线密度的强度因数。"
 
-#: ../../manual/render/cycles/world.rst:26
+#: ../../manual/render/cycles/world.rst:27
 msgid "Image Based Lighting"
 msgstr "基于图像照明"
 
-#: ../../manual/render/cycles/world.rst:28
+#: ../../manual/render/cycles/world.rst:29
+#, fuzzy
 msgid ""
 "For image based lighting, use the Environment Texture node rather than "
-"the Image Texture node for correct mapping. This supports Equirectangular"
-" (also known as Lat/Long) for environment maps, and Mirror Ball mapping "
-"for converting photos of mirror balls to environment maps."
+"the Image Texture node for correct mapping. This supports "
+"*Equirectangular* (also known as Lat/Long) for environment maps, and "
+"*Mirror Ball* mapping for converting photos of mirror balls to "
+"environment maps."
 msgstr ""
 "基于图像照明，最好使用做好映射的环境纹理节点而不要去用图像纹理节点。环境贴图是支持等距圆柱投影（Equirectangular ）的(也叫 "
 "经度/纬度)；也支持铬球反射映射，它是从铬球反射的环境图照片转换过来的映射贴图。"
 
-#: ../../manual/render/cycles/world.rst:35
+#: ../../manual/render/cycles/world.rst:36
 msgid "Volume Shader"
 msgstr "体积渲染器"
 
-#: ../../manual/render/cycles/world.rst:37
+#: ../../manual/render/cycles/world.rst:38
 msgid ""
 "A volume shader can be applied to the entirely world, filling the entire "
 "space."
 msgstr "体着色器可以在整个世界中应用，它会填满整个空间。"
 
-#: ../../manual/render/cycles/world.rst:39
+#: ../../manual/render/cycles/world.rst:40
 #, fuzzy
 msgid ""
 "Currently this is most useful for night time or other dark scenes, as the"
@@ -80,11 +82,11 @@ msgid ""
 "absorbed."
 msgstr "这种着色器非常适合夜景和灰暗的场景，如果体着色器被使用，世界表面着色器和太阳光讲失去影响。由于世界背景被设定在无穷远的位置时，对太阳光来说是足够精确的。但是在对雾效和大气散色进行模拟的时候，假设整个空间都被充满的是不太好的，因为在太阳光到地球之间其实有很长一段距离没有东西（无阻碍光线物质）。这些效果最好是创建一个体物体包含整个场景。该物体的大小可以感知光线如何被散射或吸收。"
 
-#: ../../manual/render/cycles/world.rst:51
+#: ../../manual/render/cycles/world.rst:52
 msgid "Ambient Occlusion"
 msgstr "环境光遮蔽"
 
-#: ../../manual/render/cycles/world.rst:53
+#: ../../manual/render/cycles/world.rst:54
 msgid ""
 "Ambient occlusion is a lighting method based on how much a point on a "
 "surface is occluded by nearby surfaces. This is a trick that is not "
@@ -94,28 +96,28 @@ msgstr ""
 "Ambient "
 "occlusion（以下简称\"AO\"）是一种照明方式，表示的是某表面上点被周围表面所遮蔽的程度，这并不是一种物理精确的手段，但却有助于突出表面的阴影效果，或者是作为作为生成一种类似于间接照明的快捷方法。"
 
-#: ../../manual/render/cycles/world.rst:59
+#: ../../manual/render/cycles/world.rst:60
 msgid "Factor"
 msgstr "因数"
 
-#: ../../manual/render/cycles/world.rst:60
+#: ../../manual/render/cycles/world.rst:61
 msgid ""
 "The strength of the ambient occlusion; value 1.0 is like a white world "
 "shader."
 msgstr "此值为AO的强度，值为1.0时，代表是个全白的世界着色器。"
 
-#: ../../manual/render/cycles/world.rst:64
+#: ../../manual/render/cycles/world.rst:65
 msgid "Distance"
 msgstr "距离"
 
-#: ../../manual/render/cycles/world.rst:62
+#: ../../manual/render/cycles/world.rst:63
 msgid ""
 "Distance from shading point to trace rays. A shorter distance emphasizes "
 "nearby features, while longer distances make it also take objects further"
 " away into account."
 msgstr "此值为着色点与追踪光线间的距离。距离较短时，将会突出近处的特征，距离较长时，它将会同时兼顾较远处的物体。"
 
-#: ../../manual/render/cycles/world.rst:66
+#: ../../manual/render/cycles/world.rst:67
 msgid ""
 "Lighting from ambient occlusion is only applied to diffuse reflection "
 "BSDFs; glossy or transmission BSDFs are not affected. Transparency of "
@@ -123,7 +125,7 @@ msgid ""
 " only half occlude."
 msgstr "AO照明方式仅适用于漫反射类BSDF、光泽或透射类BSDF将不受影响。表明的透明度将会一并计算，例如，一个透明度减半的表面，其遮蔽效果强度将会相应减半。"
 
-#: ../../manual/render/cycles/world.rst:71
+#: ../../manual/render/cycles/world.rst:72
 #, fuzzy
 msgid ""
 "An alternative method of using Ambient Occlusion on a per-shader basis is"
@@ -131,15 +133,19 @@ msgid ""
 "</render/cycles/nodes/types/shaders/ao>` shader."
 msgstr "另一种在预着色情况下使用环境遮蔽的方法是使用  :ref:`cycles_shader_ao` 着色器."
 
-#: ../../manual/render/cycles/world.rst:76
-msgid "Sampling"
-msgstr "采样"
+#: ../../manual/render/cycles/world.rst:79
+msgid "World Settings"
+msgstr ""
 
-#: ../../manual/render/cycles/world.rst:81
+#: ../../manual/render/cycles/world.rst:82
+msgid "Surface"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:100
 msgid "Multiple Importance Sample"
 msgstr "多重重要性采样"
 
-#: ../../manual/render/cycles/world.rst:79
+#: ../../manual/render/cycles/world.rst:85
 msgid ""
 "Enabling this will sample the background texture such that lighter parts "
 "are favored, producing less noise in the render. It is almost always a "
@@ -147,20 +153,10 @@ msgid ""
 "otherwise noise can take a very long time to converge."
 msgstr "开启该选项对灯光有用部分的背景纹理会被采样，渲染中会降低噪点。在使用图像文件对场景进行打光的时候，开启该功能是一个明智的选择，否则噪点会需要非常长的计算时间来消除。"
 
-#: ../../manual/render/cycles/world.rst:86
-msgid "Map Resolution"
-msgstr "贴图精度"
-
-#: ../../manual/render/cycles/world.rst:84
+#: ../../manual/render/cycles/world.rst:89
+#, fuzzy
 msgid ""
-"Sets the resolution of the 'Multiple Importance Sample' map. Higher "
-"values may produce less noise when using high-res images, but will take "
-"up more memory and render slightly slower."
-msgstr "设置 ‘多重重要性采样’ 贴图的分辨率。用高分辨率图像的时候比较高的值可以减少噪点，但是会增大内存占用和增加部分渲染时间。"
-
-#: ../../manual/render/cycles/world.rst:88
-msgid ""
-"Below is a comparison between Multiple Importance Sample Off and On - "
+"Below is a comparison between *Multiple Importance Sample* off and on - "
 "both images rendered for 25 seconds (Off: 1500 samples, On: 1000 samples)"
 msgstr "下面是多重重要性采样开启和关闭的两张对比图-两张图都渲染了25秒钟（关闭时的采样是1500,开启时的采样是1000） "
 
@@ -174,37 +170,81 @@ msgstr "多重重要性采样关闭"
 msgid "Multiple Importance Sample On."
 msgstr "多重重要性采样开启"
 
+#: ../../manual/render/cycles/world.rst:105
+msgid "Map Resolution"
+msgstr "贴图精度"
+
 #: ../../manual/render/cycles/world.rst:103
 msgid ""
-"For interior scenes, noise can be significantly reduce by setting up area"
-" lamps as :doc:`light portals </render/cycles/lamps>`."
-msgstr "渲染室内场景时，可以通过设置区域灯光的  :doc:`灯光 portals </render/cycles/lamps>`  来达到显著减少噪点。"
+"Sets the resolution of the 'Multiple Importance Sample' map. Higher "
+"values may produce less noise when using high-res images, but will take "
+"up more memory and render slightly slower."
+msgstr "设置 ‘多重重要性采样’ 贴图的分辨率。用高分辨率图像的时候比较高的值可以减少噪点，但是会增大内存占用和增加部分渲染时间。"
 
-#: ../../manual/render/cycles/world.rst:111
-#, fuzzy
-msgid "Without Light Portals."
-msgstr "不带灯光Portals"
+#: ../../manual/render/cycles/world.rst:108
+msgid "Max Bounces"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:108
+#: ../../manual/render/cycles/world.rst:125
+msgid "TODO."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:112
+msgid ""
+"See :doc:`Reducing Noise </render/cycles/optimizations/reducing_noise>` "
+"for more information on how to reduce noise."
+msgstr ""
 
 #: ../../manual/render/cycles/world.rst:116
+msgid "Volume"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:122
 #, fuzzy
-msgid "With Light Portals."
-msgstr "使用灯光Portals"
+msgid "Sampling Method"
+msgstr "采样"
 
 #: ../../manual/render/cycles/world.rst:119
+msgid ""
+"Options are *Multiple Importance*, *Distance*, or *Equiangular*. If "
+"you've got a pretty dense volume that is lit from far away then distance "
+"sampling is usually more efficient. If you've got a light inside or near "
+"the volume then equiangular sampling is better. If you have a combination"
+" of both, then the multiple importance sampling will be better."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:125
+msgid "Interpolation"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:131
+msgid "Homogeneous Volume"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:128
+msgid ""
+"Assume volume has the same density everywhere (not using any textures), "
+"for faster rendering. For example absorption in a glass object would "
+"typically not have any textures, and by knowing this we can avoid taking "
+"small steps to sample the volume shader."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:134
 msgid "Ray Visibility"
 msgstr "射线可见性"
 
-#: ../../manual/render/cycles/world.rst:121
+#: ../../manual/render/cycles/world.rst:136
 msgid ""
 "As with other objects, *Ray Visibility* allows you to control which other"
 " shaders can \"see\" the environment."
 msgstr "和其他物体一样，*射线可见性* 允许你控制哪些着色器会在环境中被 \"看见\" 。"
 
-#: ../../manual/render/cycles/world.rst:126
+#: ../../manual/render/cycles/world.rst:141
 msgid "Tricks"
 msgstr "技巧"
 
-#: ../../manual/render/cycles/world.rst:128
+#: ../../manual/render/cycles/world.rst:143
 msgid ""
 "Sometimes it may be useful to have a different background that is "
 "directly visible versus one that is indirectly lighting the objects. A "
@@ -217,13 +257,13 @@ msgstr ""
 "Factor（混合因数）设为Is Camera "
 "Ray（摄像机光线），第一个输入接口颜色是预期的间接光颜色，而第二个输入接口决定的是直接可见的颜色。只要是使用高分辨率的图像作为背景，并使用低分辨率的图像作为照明的时候，这是非常管用的。"
 
-#: ../../manual/render/cycles/world.rst:134
+#: ../../manual/render/cycles/world.rst:149
 msgid ""
 "Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the"
 " high-res image will also be visible in reflections."
 msgstr "同样的，添加 Is Camera Ray（摄像机光线）和 *Is Glossy* （反射光线）意味着高分辨率图像会在反射的时候存在影响。"
 
-#: ../../manual/render/cycles/world.rst:141
+#: ../../manual/render/cycles/world.rst:154
 #, fuzzy
 msgid "Nodes for the trick above."
 msgstr "以上情况的节点技巧"
@@ -233,4 +273,19 @@ msgstr "以上情况的节点技巧"
 
 #~ msgid ""
 #~ msgstr "一种替换在每个着色器上使用环境遮蔽的方法是使用 :ref:`cycles_shader_ao` 着色器(*非着色器AO节点还在实现中*)."
+
+#~ msgid ""
+#~ "For interior scenes, noise can be "
+#~ "significantly reduce by setting up area"
+#~ " lamps as :doc:`light portals "
+#~ "</render/cycles/lamps>`."
+#~ msgstr ""
+#~ "渲染室内场景时，可以通过设置区域灯光的  :doc:`灯光 portals "
+#~ "</render/cycles/lamps>`  来达到显著减少噪点。"
+
+#~ msgid "Without Light Portals."
+#~ msgstr "不带灯光Portals"
+
+#~ msgid "With Light Portals."
+#~ msgstr "使用灯光Portals"
 
