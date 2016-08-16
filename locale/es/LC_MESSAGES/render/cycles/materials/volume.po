@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-17 15:20+1000\n"
+"POT-Creation-Date: 2016-08-16 13:44-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.1.1\n"
 
 #: ../../manual/render/cycles/materials/volume.rst:4
 msgid "Volume"
@@ -75,15 +75,15 @@ msgid ""
 "for example."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:39
+#: ../../manual/render/cycles/materials/volume.rst:38
 msgid "Volume Shader: Absorption/Absorption + Scatter/Emission."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:43
+#: ../../manual/render/cycles/materials/volume.rst:42
 msgid "Density"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:45
+#: ../../manual/render/cycles/materials/volume.rst:44
 msgid ""
 "All volume shaders have a density input. The density defines how much of "
 "the light will interact with the volume, getting absorbed or scattered, "
@@ -93,7 +93,7 @@ msgid ""
 "(density equals 0)."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:51
+#: ../../manual/render/cycles/materials/volume.rst:50
 msgid ""
 "Volumes in real life consist of particles, a higher density means there "
 "are more particles per unit volume. More particles means there is a "
@@ -101,15 +101,15 @@ msgid ""
 "scattered, rather than passing straight through."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:58
+#: ../../manual/render/cycles/materials/volume.rst:57
 msgid "Volume Material"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:61
+#: ../../manual/render/cycles/materials/volume.rst:60
 msgid "Interaction with the Surface Shader"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:63
+#: ../../manual/render/cycles/materials/volume.rst:62
 msgid ""
 "A material may have both a surface and a volume shader, or only one of "
 "either. Using both may be useful for materials such as glass, water or "
@@ -117,7 +117,7 @@ msgid ""
 " the surface, combined with e.g. a glass or glossy shader at the surface."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:68
+#: ../../manual/render/cycles/materials/volume.rst:67
 msgid ""
 "When the surface shader does not reflect or absorb light, it enters into "
 "the volume. If no volume shader is specified, it will pass straight "
@@ -127,11 +127,11 @@ msgid ""
 "volume."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:76
+#: ../../manual/render/cycles/materials/volume.rst:75
 msgid "Mesh Topology"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:78
+#: ../../manual/render/cycles/materials/volume.rst:77
 msgid ""
 "Meshes used for volume render should be closed and :term:`manifold`. That"
 " means that there should be no holes in the mesh. Each edge must be "
@@ -139,7 +139,7 @@ msgid ""
 "faces where three or more faces are connected to an edge."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:83
+#: ../../manual/render/cycles/materials/volume.rst:82
 msgid ""
 "Normals must point outside for correct results. The normals are used to "
 "determine if a ray enters or exits a volume, and if they point in a wrong"
@@ -147,25 +147,25 @@ msgid ""
 "to decide what is the inside or outside of the volume."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:88
+#: ../../manual/render/cycles/materials/volume.rst:87
 msgid "These rules are the same as for rendering glass refraction correctly."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:92
+#: ../../manual/render/cycles/materials/volume.rst:91
 msgid "Volume World"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:94
+#: ../../manual/render/cycles/materials/volume.rst:93
 msgid ""
 "A volume shader can also be applied to the entirely world, filling the "
 "entire space."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:96
+#: ../../manual/render/cycles/materials/volume.rst:95
 msgid ""
-"Currently this is most useful for night time or other dark scenes, as the"
-" world surface shader or sun lamps will have no effect if a volume shader"
-" is used. This is because the world background is assumed to be "
+"Currently, this is most useful for night time or other dark scenes, as "
+"the world surface shader or sun lamps will have no effect if a volume "
+"shader is used. This is because the world background is assumed to be "
 "infinitely far away, which is accurate enough for the sun for example. "
 "However, for modeling effects such as fog or atmospheric scattering, it "
 "is not a good assumption that the volume fills the entire space, as most "
@@ -254,6 +254,9 @@ msgstr ""
 #~ msgid "Volume Shader: Absorption / Absorption + Scatter / Emission."
 #~ msgstr ""
 
+#~ msgid "Equi Angular / MIS Volume Sampling"
+#~ msgstr ""
+
 #~ msgid ""
 #~ "Currently this is most useful for "
 #~ "night time or other dark scenes, "
@@ -263,7 +266,7 @@ msgstr ""
 #~ "because the world background is assumed"
 #~ " to be infinitely far away, which "
 #~ "is accurate enough for the sun for"
-#~ " example. However for modeling effects "
+#~ " example. However, for modeling effects "
 #~ "such as fog or atmospheric scattering,"
 #~ " it is not a good assumption "
 #~ "that the volume fills the entire "
@@ -275,23 +278,5 @@ msgstr ""
 #~ "size of this object will determine "
 #~ "how much light is scattered or "
 #~ "absorbed."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Real world effects such as scattering"
-#~ " in clouds or subsurface scattering "
-#~ "require many scattering bounces. However "
-#~ "unbiased rendering of such effects is"
-#~ " slow and noisy. In typical movie "
-#~ "production scenes only 0 or 1 "
-#~ "bounces might be used to keep "
-#~ "render times under control. The effect"
-#~ " you get when rendering with zero "
-#~ "volume bounces is what is known as"
-#~ " \"single scattering\", the effect from "
-#~ "more bounces is \"multiple scattering\"."
-#~ msgstr ""
-
-#~ msgid "Equi Angular / MIS Volume Sampling"
 #~ msgstr ""
 
