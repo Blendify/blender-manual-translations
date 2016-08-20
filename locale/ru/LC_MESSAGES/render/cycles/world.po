@@ -4,13 +4,13 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-16 13:44-0700\n"
-"PO-Revision-Date: 2016-07-03 22:27+0500\n"
+"PO-Revision-Date: 2016-08-18 20:47+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/world.rst:4
 msgid "World"
@@ -53,7 +53,6 @@ msgid "Image Based Lighting"
 msgstr "Освещение на основе изображения"
 
 #: ../../manual/render/cycles/world.rst:29
-#, fuzzy
 msgid ""
 "For image based lighting, use the Environment Texture node rather than "
 "the Image Texture node for correct mapping. This supports "
@@ -63,8 +62,8 @@ msgid ""
 msgstr ""
 "Для освещения на основе изображения используйте узел «Текстура окр. "
 "среды» вместо узла «Изображение-текстура» для корректного проецирования. "
-"Он поддерживает равнопромежуточную проекцию (так же известную, как "
-"широта/долгота) для карт окружения и проекцию «Зеркальный шар» для "
+"Он поддерживает *Равнопромежуточную* проекцию (так же известную, как "
+"широта/долгота) для карт окружения и проекцию *Зеркальный шар* для "
 "преобразования фотографий зеркальных шаров в карты окружения."
 
 #: ../../manual/render/cycles/world.rst:36
@@ -168,11 +167,11 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:79
 msgid "World Settings"
-msgstr ""
+msgstr "Настройки окружающей среды"
 
 #: ../../manual/render/cycles/world.rst:82
 msgid "Surface"
-msgstr ""
+msgstr "Поверхность"
 
 #: ../../manual/render/cycles/world.rst:100
 msgid "Multiple Importance Sample"
@@ -193,14 +192,13 @@ msgstr ""
 "шума."
 
 #: ../../manual/render/cycles/world.rst:89
-#, fuzzy
 msgid ""
 "Below is a comparison between *Multiple Importance Sample* off and on - "
 "both images rendered for 25 seconds (Off: 1500 samples, On: 1000 samples)"
 msgstr ""
-"Ниже приводится сравнение при выключенной и включённой множественной "
-"выборке по значимости - оба изображения визуализировались 25 секунд "
-"(выключенная: 1500 сэмплов, включённая: 1000 сэмплов)"
+"Ниже приводится сравнение при выключенной и включённой *Множественной "
+"выборке по значимости* - оба изображения визуализировались 25 секунд "
+"(выключенная выборка: 1500 сэмплов, включённая выборка: 1000 сэмплов)"
 
 #: ../../manual/render/cycles/world.rst:96
 msgid "Multiple Importance Sample Off."
@@ -227,27 +225,28 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:108
 msgid "Max Bounces"
-msgstr ""
+msgstr "Макс. отскоков"
 
 #: ../../manual/render/cycles/world.rst:108
 #: ../../manual/render/cycles/world.rst:125
 msgid "TODO."
-msgstr ""
+msgstr "Дописать."
 
 #: ../../manual/render/cycles/world.rst:112
 msgid ""
 "See :doc:`Reducing Noise </render/cycles/optimizations/reducing_noise>` "
 "for more information on how to reduce noise."
 msgstr ""
+"Дополнительную информацию по снижению шумов смотрите в разделе "
+":doc:`Уменьшение шума </render/cycles/optimizations/reducing_noise>`."
 
 #: ../../manual/render/cycles/world.rst:116
 msgid "Volume"
-msgstr ""
+msgstr "Объём"
 
 #: ../../manual/render/cycles/world.rst:122
-#, fuzzy
 msgid "Sampling Method"
-msgstr "Сэмплирование"
+msgstr "Сэмплирование объёма"
 
 #: ../../manual/render/cycles/world.rst:119
 msgid ""
@@ -257,14 +256,20 @@ msgid ""
 "the volume then equiangular sampling is better. If you have a combination"
 " of both, then the multiple importance sampling will be better."
 msgstr ""
+"Параметр может принимать значения *Множественная значимость*, "
+"*Расстояние* или *Равноугольно*. Если у вас довольно плотный объём, "
+"который освещается на большую глубину, то выборка по расстоянию, как "
+"правило, более эффективна. Если же у вас внутри или вблизи объёма есть "
+"источник света, то лучше равноугольная выборка. Если у вас комбинация и "
+"того, и другого, то лучше будет множественная выборка по значимости."
 
 #: ../../manual/render/cycles/world.rst:125
 msgid "Interpolation"
-msgstr ""
+msgstr "Сглаживание объёма"
 
 #: ../../manual/render/cycles/world.rst:131
 msgid "Homogeneous Volume"
-msgstr ""
+msgstr "Однородный объём"
 
 #: ../../manual/render/cycles/world.rst:128
 msgid ""
@@ -273,6 +278,11 @@ msgid ""
 "typically not have any textures, and by knowing this we can avoid taking "
 "small steps to sample the volume shader."
 msgstr ""
+"Предполагать, что объём имеет одинаковую плотность во всех местах "
+"(текстуры не используются) для ускорения визуализации. Например, "
+"поглощение в стеклянных объектах обычно не использует текстуры и зная "
+"это, мы можем избежать использования маленьких шагов для выборки из "
+"шейдера объёма."
 
 #: ../../manual/render/cycles/world.rst:134
 msgid "Ray Visibility"
@@ -319,21 +329,4 @@ msgstr ""
 #: ../../manual/render/cycles/world.rst:154
 msgid "Nodes for the trick above."
 msgstr "Дерево узлов для вышеописанной хитрости"
-
-#~ msgid ""
-#~ "For interior scenes, noise can be "
-#~ "significantly reduce by setting up area"
-#~ " lamps as :doc:`light portals "
-#~ "</render/cycles/lamps>`."
-#~ msgstr ""
-#~ "При визуализации интерьеров шум можно "
-#~ "значительно уменьшить, если настроить "
-#~ "лампы-области как :doc:`световые порталы "
-#~ "</render/cycles/lamps>`."
-
-#~ msgid "Without Light Portals."
-#~ msgstr "Без световых порталов"
-
-#~ msgid "With Light Portals."
-#~ msgstr "Со световыми порталами"
 

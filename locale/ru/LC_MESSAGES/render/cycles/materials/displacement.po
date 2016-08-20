@@ -4,13 +4,13 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-16 13:44-0700\n"
-"PO-Revision-Date: 2016-07-08 00:26+0500\n"
+"PO-Revision-Date: 2016-08-19 22:25+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/materials/displacement.rst:5
 msgid "Displacement"
@@ -27,7 +27,6 @@ msgstr ""
 "сделать поверхность полисетки более детализированной."
 
 #: ../../manual/render/cycles/materials/displacement.rst:10
-#, fuzzy
 msgid ""
 "There are two types of displacement meathods that can be used: *True "
 "Displacement* and *Bump Mapping*. Depending on the settings, the "
@@ -35,30 +34,34 @@ msgid ""
 "the impression of displacement, known as bump mapping, or a combination "
 "of real and virtual displacement."
 msgstr ""
-"В зависимости от настроек, смещение может быть виртуальным, то есть "
-"изменять только нормали поверхности, создавая видимость смещения, (так же"
-" оно известно как рельефное текстурирование или bump mapping) или быть "
-"комбинацией реального и виртуального смещения. Существует несколько "
-"методов смещения:"
+"Существует два методов смещения, которые можно использовать в Blender: "
+"*Истинное смещение* и *Наложение рельефа*. В зависимости от настроек, "
+"смещение может быть виртуальным, то есть изменять только нормали "
+"поверхности, создавая видимость смещения, (так же оно известно как "
+"рельефное текстурирование, наложение рельефа или bump mapping) или быть "
+"комбинацией реального и виртуального смещения."
 
+# Mingun: пункт должен называться *Смещение + рельеф*
 #: ../../manual/render/cycles/materials/displacement.rst:17
 msgid ""
 "It is also possible to use both meathod by choosing *Displacement + Bump*"
 " in the :ref:`Material Setttings <cycles-materials-settings-displace>`."
 msgstr ""
+"Также возможно использовать сразу оба метода, выбрав пункт *Везде* "
+"(*Смещение + рельеф*) в :ref:`настройках материала <cycles-materials-"
+"settings-displace>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:24
 msgid "True Displacement"
 msgstr "Истинное смещение"
 
 #: ../../manual/render/cycles/materials/displacement.rst:28
-#, fuzzy
 msgid ""
 "Implementation not finished yet, marked as an :ref:`Experimental Feature "
 "Set <cycles-experimental-features>`"
 msgstr ""
 "Реализация ещё не завершена, данная возможность помечена как "
-":doc:`экспериментальная </render/cycles/features>`."
+":doc:`экспериментальная <cycles-experimental-features>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:31
 msgid ""
@@ -68,33 +71,41 @@ msgid ""
 "the same except the *View* and *Render* settings. These setting get "
 "removed and the following settings are added:"
 msgstr ""
+"При использовании *Истинного смещения* модификатор :doc:`Подразделение "
+"поверхности </modeling/modifiers/generate/subsurf>` изменяет своё "
+"поведение для управления истинным подразделением. Все его параметры, "
+"кроме параметров *Просмотр* и *Визуализация*, остаются такими же. "
+"Указанные же параметры удаляются и взамен них добавляются следующие:"
 
 #: ../../manual/render/cycles/materials/displacement.rst:39
 msgid "Subdivision Surface modifier."
-msgstr ""
+msgstr "Модификатор подразделения поверхности"
 
+# Mingun: в Blender ещё не переведено.
 #: ../../manual/render/cycles/materials/displacement.rst:43
 msgid "Preview"
-msgstr ""
+msgstr "Preview (Предпросмотр)"
 
 #: ../../manual/render/cycles/materials/displacement.rst:46
 #: ../../manual/render/cycles/materials/displacement.rst:64
 msgid "Levels"
-msgstr ""
+msgstr "Уровни"
 
 #: ../../manual/render/cycles/materials/displacement.rst:45
 msgid ""
 "The levels of subdivision to see in the 3D View, this works the same as "
 "the *View* setting on the original *Subdivision Modifier*."
 msgstr ""
+"Уровней подразделения для просмотра в 3D-виде, они работают так же, как и"
+" параметр *Вид* оригинального модификатора *Подразделение поверхности*."
 
 #: ../../manual/render/cycles/materials/displacement.rst:49
 msgid "Render"
-msgstr ""
+msgstr "Визуализация"
 
 #: ../../manual/render/cycles/materials/displacement.rst:60
 msgid "Adaptive"
-msgstr ""
+msgstr "Адаптивно"
 
 #: ../../manual/render/cycles/materials/displacement.rst:51
 msgid ""
@@ -102,10 +113,14 @@ msgid ""
 "objects automatically. This allows nearer object to get more subdivisions"
 " and far objects to get less."
 msgstr ""
+"Использовать OpenSubdiv для автоматического назначения различных уровней "
+"подразделения для близлежащих и отдалённых объектов. С этой галочкой "
+"близлежащие объекты будут подразделены сильнее, а отдалённые объекты - "
+"меньше."
 
 #: ../../manual/render/cycles/materials/displacement.rst:60
 msgid "Dicing Rate"
-msgstr ""
+msgstr "Уровень нарезания"
 
 #: ../../manual/render/cycles/materials/displacement.rst:55
 msgid ""
@@ -113,6 +128,9 @@ msgid ""
 "*Dicing Rate*, this property is used to multiply the :ref:`scene dicing "
 "rate <cycles-subdivision-rate>`."
 msgstr ""
+"При использовании галочки *Адаптивно*, свойство *Уровни* заменится "
+"свойством *Уровень нарезания*. Это свойство используется для умножения "
+":ref:`уровня нарезация сцены <cycles-subdivision-rate>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:60
 msgid ""
@@ -128,125 +146,50 @@ msgid ""
 "The levels of subdivision to see in the final render, this works the same"
 " as the *Render* setting on the original *Subdivision Modifier*."
 msgstr ""
+"Уровни подразделения, видимые на окончательной визуализации, они работают"
+" так же, как и параметр *Визуализация* оригинального модификатора "
+"*Подразделение поверхности*."
 
 #: ../../manual/render/cycles/materials/displacement.rst:68
 msgid "Subdivision Rate 2, Bump, True, Both"
 msgstr ""
+"Уровень нарезания равен 2. Слева направо: Рельеф, Смещение, Смещение + "
+"рельеф"
 
 #: ../../manual/render/cycles/materials/displacement.rst:72
 msgid ""
 "Displacement can also be done manually by use of the :doc:`Displace "
 "Modifier </modeling/modifiers/deform/displace>`."
 msgstr ""
+"Смещение так же может быть настроено вручную через модификатор "
+":doc:`Смещение поверхности </modeling/modifiers/deform/displace>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:77
 msgid "Known limitations"
-msgstr ""
+msgstr "Известные ограничения"
 
 #: ../../manual/render/cycles/materials/displacement.rst:79
 msgid "Missing support for UV subdivision."
-msgstr ""
+msgstr "Отсутствует поддержка подразделения текстурных координат."
 
 #: ../../manual/render/cycles/materials/displacement.rst:80
 msgid "Creases do not match Blender creases currently."
-msgstr ""
+msgstr "В настоящее время сгибы не соответствуют сгибам в Blender."
 
 #: ../../manual/render/cycles/materials/displacement.rst:81
 msgid ""
 "Instanced are currently uninstanced, leading to increased memory usage. "
 "For those it is better to use non-adaptive subdivision still."
 msgstr ""
+"На текущий момент экземпляры не инстанцируются, что приводит к "
+"увеличенному расходу памяти. Так что всё равно лучше использовать "
+"неадаптивное подразделение."
 
 #: ../../manual/render/cycles/materials/displacement.rst:83
 msgid "Multi-view renders can have some inconsistencies between views."
-msgstr ""
+msgstr "При включённом мультивиде могут появляться несогласованности между видами."
 
 #: ../../manual/render/cycles/materials/displacement.rst:84
 msgid "Editing displacement shaders does not update the viewport."
-msgstr ""
-
-#~ msgid "Type"
-#~ msgstr "Тип"
-
-#~ msgid ""
-#~ "Mesh vertices will be displaced before"
-#~ " rendering, modifying the actual mesh. "
-#~ "This gives the best quality results, "
-#~ "if the mesh is finely subdivided. "
-#~ "As a result this method is also"
-#~ " the most memory intensive."
-#~ msgstr ""
-#~ "Вершины полисетки перед её визуализацией "
-#~ "будут смещены, таким образом изменяя "
-#~ "текущую полисетку. Лучшие результаты "
-#~ "получаются, если полисетка уже сильно "
-#~ "подразделена. Как следствие, этот метод "
-#~ "активно кушает память."
-
-#~ msgid "Bump Mapping"
-#~ msgstr "Наложение рельефа"
-
-#~ msgid ""
-#~ "When executing the surface shader, a "
-#~ "modified surface normal is used instead"
-#~ " of the true normal. This is a"
-#~ " quick alternative to true displacement,"
-#~ " but only an approximation. Surface "
-#~ "silhouettes will not be accurate and "
-#~ "there will be no self-shadowing of"
-#~ " the displacement."
-#~ msgstr ""
-#~ "При выполнении шейдера поверхности вместо "
-#~ "правильных нормалей поверхности будут "
-#~ "использоваться изменённые нормали. Это быстрая"
-#~ " альтернатива истинного смещения, однако "
-#~ "это всё ещё просто приближение. Силуэты"
-#~ " поверхности будут неточными и не "
-#~ "будет никакого самозатенения смещёнными "
-#~ "частями поверхности."
-
-#~ msgid "Displacement + Bump"
-#~ msgstr "Смещение + наложение рельефа"
-
-#~ msgid ""
-#~ "Both methods can be combined, to "
-#~ "do displacement on a coarser mesh, "
-#~ "and use bump mapping for the final"
-#~ " details."
-#~ msgstr ""
-#~ "Оба метода могут быть скомбинированы, "
-#~ "чтобы добавить истинное смещение на "
-#~ "грубую полисетку, а затем использовать "
-#~ "рельефное текстурирование для добавления "
-#~ "деталей."
-
-#~ msgid "Subdivision"
-#~ msgstr "Подразделение"
-
-#~ msgid "Bump Mapped Displacement."
-#~ msgstr "Смещение рельефным текстурированием"
-
-#~ msgid ""
-#~ "When using *True Displacement* or "
-#~ "*Displacement + Bump* and enabling *Use"
-#~ " Subdivision* you can reduce the "
-#~ "*Dicing Rate* to subdivide the mesh. "
-#~ "This only affects the render and "
-#~ "does not show in the viewport (but"
-#~ " does show in *Rendered Shading "
-#~ "Mode*). Displacement can also be done"
-#~ " manually by use of the Displacement"
-#~ " Modifier."
-#~ msgstr ""
-#~ "При использовании *Истинного смещения* или "
-#~ "*Смещения + наложение рельефа* с "
-#~ "включённой галочкой *Использовать подразделение*,"
-#~ " вы можете уменьшить *Уровень нарезания*"
-#~ " для подразделения полисетки. Этот параметр"
-#~ " влияет только на визуализацию и "
-#~ "никак не проявляет себя в области "
-#~ "просмотра (однако всё же показывается в"
-#~ " режиме *С визуализацией*). Так же "
-#~ "смещения можно задать явно при помощи"
-#~ " модификатора «Подразделение поверхности»."
+msgstr "При редактировании шейдеров смещения область просмотра не обновляется."
 
