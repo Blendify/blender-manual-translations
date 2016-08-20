@@ -4,13 +4,13 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-16 13:44-0700\n"
-"PO-Revision-Date: 2016-07-17 22:39+0500\n"
+"PO-Revision-Date: 2016-08-17 23:40+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/lamps.rst:4
 msgid "Lamps"
@@ -30,23 +30,20 @@ msgstr ""
 
 #: ../../manual/render/cycles/lamps.rst:12
 msgid "Common Settings"
-msgstr ""
+msgstr "Основные настройки"
 
 #: ../../manual/render/cycles/lamps.rst:16
 msgid "Type"
 msgstr "Тип"
 
 #: ../../manual/render/cycles/lamps.rst:15
-#, fuzzy
 msgid ""
 "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported. *Hemi* "
 "lamps are not supported, and will be rendered as sun lamps."
 msgstr ""
 "На текущий момент поддерживаются лампы типов *Точка*, *Прожектор*, "
 "*Область* и *Солнце*. Лампы типа *Полусфера* не поддерживаются и будут "
-"визуализированы как точечная и лампа-солнце соответственно, но поскольку "
-"они в будущем могут начать работать, то лучше их пока не использовать, "
-"чтобы не поиметь проблем с совместимостью."
+"визуализироваться как лампа-солнце."
 
 #: ../../manual/render/cycles/lamps.rst:21
 msgid "Size"
@@ -61,9 +58,8 @@ msgstr ""
 "даст более мягкие тени."
 
 #: ../../manual/render/cycles/lamps.rst:25
-#, fuzzy
 msgid "Samples"
-msgstr "Лампы"
+msgstr "Сэмплы"
 
 #: ../../manual/render/cycles/lamps.rst:24
 msgid ""
@@ -71,6 +67,10 @@ msgid ""
 "direct light samples per AA sample. Point lamps might need only one "
 "sample, while area lamps typically need more."
 msgstr ""
+"Для интегратора *Трассировка путей с расщеплением* этот параметр "
+"определяет количество прямых выборок света на сэмпл сглаживания. Для "
+"точечных ламп, скорее всего, потребуется только один сэмпл, а вот для "
+"ламп-областей их, как правило, нужно больше."
 
 #: ../../manual/render/cycles/lamps.rst:29
 msgid "Max Bounces"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/lamps.rst:39
 msgid "Multiple Importance Sample"
-msgstr ""
+msgstr "Множественная выборка по значимости"
 
 #: ../../manual/render/cycles/lamps.rst:36
 msgid ""
@@ -110,10 +110,15 @@ msgid ""
 "option will enable indirect light sampling to be used in addition to "
 "reduce noise."
 msgstr ""
+"По умолчанию лампы используют выборку только от прямого освещения. "
+"Однако, при использовании ламп-областей и резких глянцевых отражений "
+"может возникать много шума, так что включение этого параметра позволит "
+"использовать выборку также от непрямого освещения, что должно снизить "
+"шум."
 
 #: ../../manual/render/cycles/lamps.rst:42
 msgid "Lamp Types"
-msgstr ""
+msgstr "Типы ламп"
 
 #: ../../manual/render/cycles/lamps.rst:45
 msgid "Point Lamp"
@@ -159,31 +164,35 @@ msgstr ""
 
 #: ../../manual/render/cycles/lamps.rst:74
 msgid "Shape"
-msgstr ""
+msgstr "Форма"
 
 #: ../../manual/render/cycles/lamps.rst:68
 msgid "Shape of the lamp."
-msgstr ""
+msgstr "Форма лампы."
 
 #: ../../manual/render/cycles/lamps.rst:70
 msgid "Rectangle"
-msgstr ""
+msgstr "Прямоугольник"
 
 #: ../../manual/render/cycles/lamps.rst:71
 msgid ""
 "The shape of the lamp can be represented as a rectangle and changed with "
 "the \"X\" and \"Y\" values."
 msgstr ""
+"Форма лампы представляется прямоугольником, стороны которого изменяются "
+"параметрами *Размер по X* и *Размер по Y*."
 
 #: ../../manual/render/cycles/lamps.rst:74
 msgid "Square"
-msgstr ""
+msgstr "Квадрат"
 
 #: ../../manual/render/cycles/lamps.rst:73
 msgid ""
 "The shape of the lamp can be represented as a square and changed with the"
 " *Size* property."
 msgstr ""
+"Форма лампы представляется квадратом, сторона которого изменяется "
+"параметром *Размер*."
 
 #: ../../manual/render/cycles/lamps.rst:77
 msgid "Light Portals"
@@ -202,7 +211,6 @@ msgstr ""
 "медленнее, однако сходимость у неё выше - она требует меньше сэмплов."
 
 #: ../../manual/render/cycles/lamps.rst:83
-#, fuzzy
 msgid ""
 "Light portals work by enabling the *Portal* option, and placing areas "
 "lamps in windows, door openings, and any place where light will enter the"
@@ -217,6 +225,8 @@ msgid ""
 "In outdoor scenes most rays don't bounce much and just fly off into the "
 "sky and therefore, light portals are not helpful for outdoor scenes."
 msgstr ""
+"В открытых сценах большинство лучей испытывают не много отскоков и просто"
+" улетают в небо, поэтому световые порталы для них бесполезны."
 
 #: ../../manual/render/cycles/lamps.rst:94
 msgid "Sun Lamp"
