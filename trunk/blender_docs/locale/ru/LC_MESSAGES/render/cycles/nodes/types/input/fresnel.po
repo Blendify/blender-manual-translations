@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-06 10:22+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-21 17:00+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +20,11 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:4
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:48
 msgid "Fresnel"
-msgstr ""
+msgstr "Узел «Френель»"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:9
 msgid "Fresnel Node."
-msgstr ""
+msgstr "Узел «Френель»"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:12
 msgid ""
@@ -35,6 +34,11 @@ msgid ""
 "*Mix Shader* node. It is dependent on the angle between the surface "
 "normal and the viewing direction."
 msgstr ""
+"Узел *«Френель»* или узел *«Диэлектрический Френель»* вычисляет, сколько "
+"света отражается от слоя, а сколько проходит через слой, испытывая "
+"преломление. Результирующий вес может использоваться для объединения "
+"шейдеров в узле «Смешать шейдеры». Вес зависит от угла между нормалью к "
+"поверхности и направлением взгляда."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:17
 msgid ""
@@ -43,6 +47,12 @@ msgid ""
 "between a glossy refraction and glossy reflection. At grazing angles more"
 " light will be reflected than refracted as happens in reality."
 msgstr ""
+"Самое распространённое использование – это смешивание двух BSDF с "
+"применением узла в качестве коэффициента смешивания в узле «Смешать "
+"шейдеры». Для простого материала стекла вы бы могли смешать глянцевое "
+"преломление и глянцевое отражение. При больших углах падения свет будет в"
+" основном отражаться, а не преломляться, как это и происходит в "
+"действительности."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:21
 msgid ""
@@ -52,64 +62,50 @@ msgid ""
 " which is refracted through the glossy coating layer would hit the "
 "diffuse base and be reflected off that."
 msgstr ""
+"Для получения двухслойного материала с диффузным основанием и глянцевым "
+"покрытием, вы можете использовать ту же конфигурацию узлов, смешивая "
+"между собой диффузную и глянцевую BSDF. При использовании в качестве "
+"коэффициента смешивания узла *«Френель»* вы говорите, что любой свет, "
+"который преломляется через глянцевый слой покрытия, попадает в диффузное "
+"основание и отражается от него."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:28
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:30
 msgid "IOR"
-msgstr ""
+msgstr "Показатель преломления"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:31
 msgid "Index of refraction (term:`IOR`) of the material being entered."
-msgstr ""
+msgstr "Показатель преломления (term:`IOR`) входного материала."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:34
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:33
 msgid "Todo."
-msgstr ""
+msgstr "*Дописать.*"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:37
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:39
 msgid "This node has no properties."
-msgstr ""
+msgstr "Этот узел не содержит свойств."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:43
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:46
 msgid ""
 "Fresnel weight, indicating the probability with which light will reflect "
 "off the layer rather than passing through."
 msgstr ""
-
-#~ msgid ":term:`IOR`"
-#~ msgstr ""
-
-#~ msgid "Index of refraction of the material being entered."
-#~ msgstr ""
-
-#~ msgid "Output"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For a two-layered material with a"
-#~ " diffuse base and a glossy coating,"
-#~ " you can use the same setup, "
-#~ "mixing between a diffuse and glossy "
-#~ "BSDF. By using the fresnel as the"
-#~ " blending factor you're specifying that "
-#~ "any light which is refracted through "
-#~ "the glossy coating layer would hit "
-#~ "the diffuse base and be reflected "
-#~ "off that."
-#~ msgstr ""
+"Вес Френеля, указывающий на вероятность того, что свет скорее отразится "
+"от слоя, нежели пройдёт сквозь слой."
 
