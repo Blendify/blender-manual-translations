@@ -4,27 +4,26 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-16 13:44-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-21 19:18+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:4
 msgid "Texture Coordinate"
-msgstr ""
+msgstr "Узел «Текстурные координаты»"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:9
 msgid "Texture Coordinate Node."
-msgstr ""
+msgstr "Узел «Текстурные координаты»"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:12
 msgid ""
@@ -32,33 +31,37 @@ msgid ""
 "textures, typically used as inputs for the *Vector* input for texture "
 "nodes."
 msgstr ""
+"Узел *«Текстурные координаты»* широко используется для задания текстурных"
+" координат, обычно используемых для входов *«Вектор»* текстурных узлов."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:17
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:19
 msgid "This node has no inputs."
-msgstr ""
+msgstr "Этот узел не содержит входов."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:23
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:27
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:60
 msgid "Object"
-msgstr ""
+msgstr "Объект"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:26
 msgid ""
 "Specific object to use for object space coordinates. This only affects "
 "the *Object* output."
 msgstr ""
+"Определяет объект, из пространства которого берутся координаты. Влияет "
+"только на выход *«Объект»*."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:47
 msgid "From Dupli"
-msgstr ""
+msgstr "Из дупли"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:32
 msgid ""
@@ -66,6 +69,9 @@ msgid ""
 "from the parent object. This only affects the *Generated* and *UV* "
 "outputs."
 msgstr ""
+"Если материал применяется к дуплиобъекту, использовать текстурные "
+"координаты из родительского объекта. Они применяются только к выходам "
+"*«Сгенерировать»* и *«UV»*."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:37
 msgid ""
@@ -74,6 +80,11 @@ msgid ""
 "</editors/3dview/object/properties/duplication/duplifaces>`. Small "
 "spheres with *From Dupli* enabled, using the UV map of the large sphere."
 msgstr ""
+"Слева направо: сфера с текстурой, наложенной через UV-развёртку. Малые "
+"сферы дублируют грани текстурированной сферы при помощи :doc:`дуплиграней"
+" </editors/3dview/object/properties/duplication/duplifaces>`. Малые сферы"
+" с включённой галочкой *«Из дупли»* используют UV-развёртку большой "
+"сферы."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:44
 msgid ""
@@ -82,14 +93,20 @@ msgid ""
 "</physics/particles/introduction>` or :doc:`duplifaces "
 "</editors/3dview/object/properties/duplication/duplifaces>`."
 msgstr ""
+"Галочка *«Из дупли»* работает с UV-развёрткой только когда дублируемый "
+"объект создаётся на месте граней, либо вместе с :doc:`частицами "
+"</physics/particles/introduction>` или :doc:`дуплигранями "
+"</editors/3dview/object/properties/duplication/duplifaces>`."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:50
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
+# Mingun: какой-то нерусский перевод. Возможно должно быть «Сгенерированные
+# UV».
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:54
 msgid "Generated"
-msgstr ""
+msgstr "Сгенерировать"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:53
 msgid ""
@@ -98,77 +115,65 @@ msgid ""
 "animation. Range from 0.0 to 1. 0 over the bounding box of the undeformed"
 " mesh."
 msgstr ""
+"Автоматически сгенерированные текстурные координаты из позиций вершин "
+"полисетки без применённой деформации; эти координаты следуют за "
+"поверхностью во время анимации. Диапазон от 0.0 до 1. Ноль находится под "
+"ограничительной рамкой недеформированной полисетки."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:56
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:57
 msgid ""
 "Object space normal, for texturing objects with the texture staying fixed"
 " on the object as it transformed."
 msgstr ""
+"Нормаль в пространстве объекта, для текстурирования объектов текстурой, "
+"остающейся на месте при преобразованиях объекта."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:58
 msgid "UV"
-msgstr ""
+msgstr "UV"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:59
 msgid "UV texture coordinates from the active render UV map."
-msgstr ""
+msgstr "Текстурные координаты UV из активной визуализируемой UV-развёртки."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:61
 msgid "Position coordinate in object space."
-msgstr ""
+msgstr "Координаты положения в пространстве объекта."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:62
 msgid "Camera"
-msgstr ""
+msgstr "Камера"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:63
 msgid "Position coordinate in camera space."
-msgstr ""
+msgstr "Координаты положения в пространстве камеры."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:65
 msgid "Window"
-msgstr ""
+msgstr "Окно"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:65
 msgid ""
 "Location of shading point on the screen, ranging from 0.0 to 1. 0 from "
 "the left to right side and bottom to top of the render."
 msgstr ""
+"Положение затеняемой точки на экране, в диапазоне от 0.0 до 1. Точка с "
+"нулевыми координатами находится слева внизу, а координаты увеличиваются "
+"направо-вверх."
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:69
 msgid "Reflection"
-msgstr ""
+msgstr "Отражение"
 
 #: ../../manual/render/cycles/nodes/types/input/texture_coordinate.rst:68
 msgid ""
 "Vector in the direction of a sharp reflection, typically used for "
 "environment maps."
 msgstr ""
-
-#~ msgid "Options"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "From left to right: Sphere with UV"
-#~ " mapped texture. Small spheres duplicated"
-#~ " to the faces of the textured "
-#~ "sphere using :doc:`duplifaces "
-#~ "</editors/3dview/transform/duplication/duplifaces>`. Small "
-#~ "spheres with *From Dupli* enabled, using"
-#~ " the UV map of the large "
-#~ "sphere."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "*From Dupli* only works with the "
-#~ "UV output when the dupli object is"
-#~ " instanced from faces, either with "
-#~ ":doc:`particles </physics/particles/introduction>` or "
-#~ ":doc:`duplifaces "
-#~ "</editors/3dview/transform/duplication/duplifaces>`."
-#~ msgstr ""
+"Вектор в направлении резкого отражения, обычно используется для карт "
+"окружения."
 
