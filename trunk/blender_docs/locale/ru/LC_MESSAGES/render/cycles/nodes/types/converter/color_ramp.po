@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-20 23:22+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-21 12:47+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,69 +19,71 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:7
 msgid "ColorRamp Node"
-msgstr ""
+msgstr "Узел «Градиентная карта»"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:13
 msgid "Color Ramp Node."
-msgstr ""
+msgstr "Узел «Градиентная карта»"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:15
 msgid ""
 "The ColorRamp Node is used for mapping values to colors with the use of a"
 " gradient."
 msgstr ""
+"Узел «Градиентная карта» используется для отображения значений на цвета с"
+" использованием градиента."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:19
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:23
 msgid "Fac"
-msgstr ""
+msgstr "Коэфф."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:22
 msgid "The Factor input is used as an index for the color ramp."
-msgstr ""
+msgstr "Вход «Коэфф.» используется как индекс в градиентной карте."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:26
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:30
 msgid "Color Ramp"
-msgstr ""
+msgstr "Градиент"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:29
 msgid "For controls see :ref:`ui-color_ramp_widget`."
-msgstr ""
+msgstr "Контрол выбора цвета описан в разделе :ref:`ui-color_ramp_widget`."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:33
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:35
 msgid "Image"
-msgstr ""
+msgstr "Изображение"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:36
 msgid "Standard image output."
-msgstr ""
+msgstr "Стандартный выход изображения."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:39
 msgid "Alpha"
-msgstr ""
+msgstr "Альфа"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:38
 msgid "Standard alpha output."
-msgstr ""
+msgstr "Стандартный выход альфа-канала."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:42
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:45
 msgid "Using ColorRamp to create an Alpha Mask"
-msgstr ""
+msgstr "Использование градиентной карты для создания маски альфа-канала"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:47
 msgid ""
@@ -91,10 +92,15 @@ msgid ""
 " a mask, allows some of the background to show through. The example map "
 "below shows how to use the Color Ramp node to do this:"
 msgstr ""
+"Мощной, но часто забываемой возможностью градиентной карты является "
+"создание маски альфа-канала, то есть маски, накладываемой поверх другого "
+"изображения и позволяющей просвечивать через неё нижележащему фону. "
+"Группа узлов на примере ниже показывает, как использовать для этой цели "
+"узел «Градиентная карта»:"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:55
 msgid "Using the ColorRamp node to create an alpha mask."
-msgstr ""
+msgstr "Использование узла «Градиентная карта» для создания маски альфа-канала"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:58
 msgid ""
@@ -104,6 +110,12 @@ msgid ""
 "RGB-to-BW node, buy hey, this works just as well since we are using a BW "
 "image as input.)"
 msgstr ""
+"На приведённом выше примере чёрно-белое изображение спирали с "
+"отсутствующим альфа-каналом подается в узел «Градиентная карта» через "
+"вход «Коэфф.» (с технической точки зрения мы бы должны были преобразовать"
+" изображение в значения при помощи узла «RGB в оттенки серого», но у нас "
+"и так всё отлично работает, поскольку мы уже используем чёрно-белое "
+"изображение)."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:63
 msgid ""
@@ -114,6 +126,14 @@ msgid ""
 "the left end of the spectrum, which we have set to transparent. The "
 "ColorRamp image is fully red and opaque where the image is white (1.00)."
 msgstr ""
+"В узле «Градиентная карта» мы установили абсолютно прозрачный цвет в "
+"левой части спектра и насыщенный красный цвет в правой. Как видно через "
+"просмотрщик, узел «Градиентная карта» выдаёт маску, которая является "
+"полностью прозрачной в тех местах, где на изображении находится чёрный "
+"цвет. Чёрный цвет равен нулю, поэтому «Градиентная карта» использует цвет"
+" из левой части спектра, который мы установили прозрачным. Там же, где на"
+" входном изображении находится белый цвет (1.00), «Градиентная карта» "
+"выдаёт насыщенный красный без прозрачности."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:70
 msgid ""
@@ -123,10 +143,15 @@ msgid ""
 "on a flashing white background to simulate a scary scene with lighting "
 "flashes."
 msgstr ""
+"Проверим, что маска выходного изображения действительно полупрозрачна, "
+"накладывая её сверху на изображение тыквы. Для развлечения мы, при помощи"
+" узла «Альфа сверху», сделали изображение на 0.66 прозрачным, так что в "
+"будущем мы сможем накладывать его на мигающий белый фон для имитации "
+"страшной сцены, освещаемой вспышками."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:77
 msgid "Using ColorRamp to Colorize an Image"
-msgstr ""
+msgstr "Использование градиентной карты для расцвечивания изображения"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:79
 msgid ""
@@ -134,6 +159,9 @@ msgid ""
 "color spectrum. This example compositing map takes a boring BW image and "
 "makes it a flaming swirl!"
 msgstr ""
+"Настоящая сила градиентной карты проявляется в возможности добавления "
+"нескольких цветов на цветовой спектр. В этом примере берётся скучное "
+"чёрно-белое изображение и превращается в пламенную спираль!"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:85
 msgid ""
@@ -144,22 +172,11 @@ msgid ""
 "corresponding color from the spectrum (bluish, yellow, to reddish). Where"
 " the image is fully white, ColorRamp chooses red."
 msgstr ""
-
-#~ msgid "Color Ramp Node"
-#~ msgstr ""
-
-#~ msgid "Using the ColorRamp node to create an alpha mask"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "See :ref:`ui-color_ramp_widget` for editing info."
-#~ msgstr ""
-
-#~ msgid "Input"
-#~ msgstr ""
-
-#~ msgid "Output"
-#~ msgstr ""
+"В этом примере мы отобразили оттенки серого во входном изображении на три"
+" цвета – голубой, жёлтый и красный, все полностью непрозрачные (альфа "
+"каждого равна 1.00). Там, где на изображении чёрный, «Градиентная карта» "
+"подставляет голубой, текущий выбранный цвет. Там, где присутствуют "
+"различные оттенки серого, «Градиентная карта» выбирает соответствующий "
+"цвет из спектра (голубоватый, желтоватый или красноватый). Там же, где на"
+" изображении белый, «Градиентная карта» выбирает красный цвет."
 
