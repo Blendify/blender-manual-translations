@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-25 09:56+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-16 01:24+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +19,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/script.rst:5
 msgid "Script Node"
-msgstr ""
+msgstr "Узел «Скрипт»"
 
 #: ../../manual/render/cycles/osl.rst:1
 msgid ""
@@ -30,6 +29,12 @@ msgid ""
 "and output sockets will be created from the shader parameters on clicking"
 " the update button in the node or the text editor."
 msgstr ""
+"OSL был спроектирован для затенения, основанного на узлах, так что "
+"*каждый* шейдер OSL соответствует *одному* узлу в редакторе узлов. Для "
+"добавления шейдера OSL, добавьте узел скрипта и свяжите его с текстовым "
+"блоком данных или внешним файлом. Входные и выходные сокеты будут созданы"
+" из параметров шейдера после нажатия на кнопку обновления в узле или в "
+"текстовом редакторе."
 
 #: ../../manual/render/cycles/osl.rst:7
 msgid ""
@@ -38,6 +43,10 @@ msgid ""
 "the OSO bytecode is stored in the node itself. This is useful for "
 "distributing a blend-file with everything packed into it."
 msgstr ""
+"Шейдеры OSL могут быть связаны с узлом несколькими различными способами. "
+"При использовании режима *Встроенный* для хранения шейдера OSL будет "
+"использоваться текстовый блок данных, а байт-код OSO будет сохранён в "
+"самом узле. Это полезно для распространения blend-файла без зависимостей."
 
 #: ../../manual/render/cycles/osl.rst:12
 msgid ""
@@ -48,24 +57,33 @@ msgid ""
 "The third option is to specify just the module name, which will be looked"
 " up in the shader search path."
 msgstr ""
+"Режим *Внешний* может использоваться для указания файла .osl на диске, "
+"который будет автоматически скомпилирован в файл .oso и помещён в тот же "
+"каталог. Так же возможно определить путь непосредственно к файлу .oso, "
+"который в таком случае будет использоваться напрямую и должен будет "
+"компилироваться пользователем самостоятельно. Третьим вариантом можно "
+"указать просто имя модуля, который будет искаться по пути поиска "
+"шейдеров."
 
 #: ../../manual/render/cycles/osl.rst:19
 msgid ""
 "The shader search path is located in the same place as the scripts or "
 "configuration path, under:"
 msgstr ""
+"Шейдеры ищутся в том же самом месте, где расположены все остальные "
+"скрипты или другая конфигурация:"
 
 #: ../../manual/render/cycles/osl.rst:23
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../manual/render/cycles/osl.rst:25
 msgid "MS-Windows"
-msgstr ""
+msgstr "MS-Windows"
 
 #: ../../manual/render/cycles/osl.rst:29
 msgid "Mac OSX"
-msgstr ""
+msgstr "Mac OSX"
 
 #: ../../manual/render/cycles/osl.rst:33
 msgid ""
@@ -74,10 +92,15 @@ msgid ""
 "to make changes to the node afterwards as sockets are added or removed, "
 "without having to update the script nodes in all files."
 msgstr ""
+"Для использования в реальной работе, мы предлагаем использовать узел "
+"группы, обёртывающий узлы скрипта и ссылаться на него из других "
+"blend-файлов. Это упростит внесение изменений в узел после добавления или"
+" удаления сокетов, без необходимости в обновлении узлов скриптов во всех "
+"файлах."
 
 #: ../../manual/render/cycles/osl.rst:40
 msgid "Writing Shaders"
-msgstr ""
+msgstr "Написание шейдеров"
 
 #: ../../manual/render/cycles/osl.rst:42
 msgid ""
@@ -85,10 +108,15 @@ msgid ""
 "<https://github.com/imageworks/OpenShadingLanguage/blob/master/src/doc"
 "/osl-languagespec.pdf>`__. Here is a simple example:"
 msgstr ""
+"Более подробную информацию о том, как писать шейдеры, смотрите в "
+"`спецификации OSL "
+"<https://github.com/imageworks/OpenShadingLanguage/blob/master/src/doc"
+"/osl-languagespec.pdf>`__ (на английском языке). Здесь приводится лишь "
+"простой пример:"
 
 #: ../../manual/render/cycles/osl.rst:59
 msgid "Closures"
-msgstr ""
+msgstr "Замыкания"
 
 #: ../../manual/render/cycles/osl.rst:61
 msgid ""
@@ -99,6 +127,12 @@ msgid ""
 "render engine to do optimizations and ensure all shaders can be "
 "importance sampled."
 msgstr ""
+"OSL отличается от, например, RSL или GLSL, в том, что он не имеет "
+"светового цикла. У вас нет доступа к источникам света в сцене, а "
+"материалы должны быть собраны из замыканий, реализованных в самом движке "
+"визуализации. Этот подход более ограничен, однако при этом он позволяет "
+"движку визуализации проводить некоторые оптимизации и гарантировать, что "
+"все шейдеры будут значимы для выборки."
 
 #: ../../manual/render/cycles/osl.rst:67
 msgid ""
@@ -107,142 +141,146 @@ msgid ""
 "parameters, see the :doc:`shader nodes manual "
 "</render/cycles/nodes/types/shaders/index>`."
 msgstr ""
+"Доступные замыкания в Cycles соответствуют узлам шейдера и его сокетам; "
+"дополнительную информацию о том, что они делают и каков смысл каждого "
+"параметра смотрите в :doc:`руководстве по узлам шейдера "
+"</render/cycles/nodes/types/shaders/index>`."
 
 #: ../../manual/render/cycles/osl.rst:73
 msgid "BSDF"
-msgstr ""
+msgstr "BSDF"
 
 #: ../../manual/render/cycles/osl.rst:75
 msgid "``diffuse(N)``"
-msgstr ""
+msgstr "``diffuse(N)``"
 
 #: ../../manual/render/cycles/osl.rst:76
 msgid "``oren_nayar(N, roughness)``"
-msgstr ""
+msgstr "``oren_nayar(N, roughness)``"
 
 #: ../../manual/render/cycles/osl.rst:77
 msgid "``diffuse_ramp(N, colors[8])``"
-msgstr ""
+msgstr "``diffuse_ramp(N, colors[8])``"
 
 #: ../../manual/render/cycles/osl.rst:78
 msgid "``phong_ramp(N, exponent, colors[8])``"
-msgstr ""
+msgstr "``phong_ramp(N, exponent, colors[8])``"
 
 #: ../../manual/render/cycles/osl.rst:79
 msgid "``diffuse_toon(N, size, smooth)``"
-msgstr ""
+msgstr "``diffuse_toon(N, size, smooth)``"
 
 #: ../../manual/render/cycles/osl.rst:80
 msgid "``glossy_toon(N, size, smooth)``"
-msgstr ""
+msgstr "``glossy_toon(N, size, smooth)``"
 
 #: ../../manual/render/cycles/osl.rst:81
 msgid "``translucent(N)``"
-msgstr ""
+msgstr "``translucent(N)``"
 
 #: ../../manual/render/cycles/osl.rst:82
 msgid "``reflection(N)``"
-msgstr ""
+msgstr "``reflection(N)``"
 
 #: ../../manual/render/cycles/osl.rst:83
 msgid "``refraction(N, ior)``"
-msgstr ""
+msgstr "``refraction(N, ior)``"
 
 #: ../../manual/render/cycles/osl.rst:84
 msgid "``transparent()``"
-msgstr ""
+msgstr "``transparent()``"
 
 #: ../../manual/render/cycles/osl.rst:85
 msgid "``microfacet_ggx(N, roughness)``"
-msgstr ""
+msgstr "``microfacet_ggx(N, roughness)``"
 
 #: ../../manual/render/cycles/osl.rst:86
 msgid "``microfacet_ggx_aniso(N, T, ax, ay)``"
-msgstr ""
+msgstr "``microfacet_ggx_aniso(N, T, ax, ay)``"
 
 #: ../../manual/render/cycles/osl.rst:87
 msgid "``microfacet_ggx_refraction(N, roughness, ior)``"
-msgstr ""
+msgstr "``microfacet_ggx_refraction(N, roughness, ior)``"
 
 #: ../../manual/render/cycles/osl.rst:88
 msgid "``microfacet_beckmann(N, roughness)``"
-msgstr ""
+msgstr "``microfacet_beckmann(N, roughness)``"
 
 #: ../../manual/render/cycles/osl.rst:89
 msgid "``microfacet_beckmann_aniso(N, T, ax, ay)``"
-msgstr ""
+msgstr "``microfacet_beckmann_aniso(N, T, ax, ay)``"
 
 #: ../../manual/render/cycles/osl.rst:90
 msgid "``microfacet_beckmann_refraction(N, roughness, ior)``"
-msgstr ""
+msgstr "``microfacet_beckmann_refraction(N, roughness, ior)``"
 
 #: ../../manual/render/cycles/osl.rst:91
 msgid "``ashikhmin_shirley(N, T, ax, ay)``"
-msgstr ""
+msgstr "``ashikhmin_shirley(N, T, ax, ay)``"
 
 #: ../../manual/render/cycles/osl.rst:92
 msgid "``ashikhmin_velvet(N, roughness)``"
-msgstr ""
+msgstr "``ashikhmin_velvet(N, roughness)``"
 
 #: ../../manual/render/cycles/osl.rst:96
 msgid "Hair"
-msgstr ""
+msgstr "Волосы"
 
 #: ../../manual/render/cycles/osl.rst:98
 msgid "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
-msgstr ""
+msgstr "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
 
 #: ../../manual/render/cycles/osl.rst:99
 msgid "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
-msgstr ""
+msgstr "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
 
 #: ../../manual/render/cycles/osl.rst:103
 msgid "BSSRDF"
-msgstr ""
+msgstr "BSSRDF"
 
 #: ../../manual/render/cycles/osl.rst:105
 msgid "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
-msgstr ""
+msgstr "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
 
 #: ../../manual/render/cycles/osl.rst:106
 msgid "``bssrdf_gaussian(N, radius, texture_blur)``"
-msgstr ""
+msgstr "``bssrdf_gaussian(N, radius, texture_blur)``"
 
 #: ../../manual/render/cycles/osl.rst:110
 msgid "Volume"
-msgstr ""
+msgstr "Объём"
 
 #: ../../manual/render/cycles/osl.rst:112
 msgid "``henyey_greenstein(g)``"
-msgstr ""
+msgstr "``henyey_greenstein(g)``"
 
 #: ../../manual/render/cycles/osl.rst:113
 msgid "``absorption()``"
-msgstr ""
+msgstr "``absorption()``"
 
 #: ../../manual/render/cycles/osl.rst:117
 msgid "Other"
-msgstr ""
+msgstr "Другие"
 
 #: ../../manual/render/cycles/osl.rst:119
 msgid "``emission()``"
-msgstr ""
+msgstr "``emission()``"
 
 #: ../../manual/render/cycles/osl.rst:120
 msgid "``ambient_occlusion()``"
-msgstr ""
+msgstr "``ambient_occlusion()``"
 
 #: ../../manual/render/cycles/osl.rst:121
 msgid "``holdout()``"
-msgstr ""
+msgstr "``holdout()``"
 
 #: ../../manual/render/cycles/osl.rst:122
 msgid "``background()``"
-msgstr ""
+msgstr "``background()``"
 
 #: ../../manual/render/cycles/osl.rst:126
 msgid "Attributes"
-msgstr ""
+msgstr "Атрибуты"
 
 #: ../../manual/render/cycles/osl.rst:128
 msgid ""
@@ -250,202 +288,209 @@ msgid ""
 "getattribute() function. UV maps and vertex colors can be retrieved using"
 " their name. Other attributes are listed below:"
 msgstr ""
+"Некоторые атрибуты объектов, частиц и полисеток доступны через встроенную"
+" функцию getattribute(). UV-карты и цвета вершин могут быть получены по "
+"их именам. Другие атрибуты перечислены ниже:"
 
 #: ../../manual/render/cycles/osl.rst:133
 msgid "``geom:generated``"
-msgstr ""
+msgstr "``geom:generated``"
 
 #: ../../manual/render/cycles/osl.rst:134
 msgid "Generated texture coordinates"
-msgstr ""
+msgstr "Сгенерированные текстурные координаты"
 
 #: ../../manual/render/cycles/osl.rst:135
 msgid "``geom:uv``"
-msgstr ""
+msgstr "``geom:uv``"
 
 #: ../../manual/render/cycles/osl.rst:136
 msgid "Default render UV map"
-msgstr ""
+msgstr "UV-развёртка по умолчанию"
 
 #: ../../manual/render/cycles/osl.rst:137
 msgid "``geom:dupli_generated``"
-msgstr ""
+msgstr "``geom:dupli_generated``"
 
 #: ../../manual/render/cycles/osl.rst:138
 msgid "For instances, generated coordinate from duplicator object"
-msgstr ""
+msgstr "Для экземпляров - сгенерированные координаты из дублирующего объекта"
 
 #: ../../manual/render/cycles/osl.rst:139
 msgid "``geom:dupli_uv``"
-msgstr ""
+msgstr "``geom:dupli_uv``"
 
 #: ../../manual/render/cycles/osl.rst:140
 msgid "For instances, UV coordinate from duplicator object"
-msgstr ""
+msgstr "Для экземпляров - UV-координаты из дублирующего объекта"
 
 #: ../../manual/render/cycles/osl.rst:141
 msgid "``geom:trianglevertices``"
-msgstr ""
+msgstr "``geom:trianglevertices``"
 
 #: ../../manual/render/cycles/osl.rst:142
 msgid "3 vertex coordinates of the triangle"
-msgstr ""
+msgstr "Координаты трёх вершин треугольника"
 
 #: ../../manual/render/cycles/osl.rst:143
 msgid "``geom:numpolyvertices``"
-msgstr ""
+msgstr "``geom:numpolyvertices``"
 
 #: ../../manual/render/cycles/osl.rst:144
 msgid "Number of vertices in the polygon (always returns three currently)"
 msgstr ""
+"Количество вершим в многоугольнике (на текущий момент всегда возвращает "
+"три вершины)"
 
 #: ../../manual/render/cycles/osl.rst:145
 msgid "``geom:polyvertices``"
-msgstr ""
+msgstr "``geom:polyvertices``"
 
 #: ../../manual/render/cycles/osl.rst:146
 msgid "Vertex coordinates array of the polygon (always three vertices currently)"
 msgstr ""
+"Массив с координатами вершин многоугольника (на текущий момент в массиве "
+"всегда три вершины)"
 
 #: ../../manual/render/cycles/osl.rst:147
 msgid "``geom:name``"
-msgstr ""
+msgstr "``geom:name``"
 
 #: ../../manual/render/cycles/osl.rst:148
 msgid "Name of the object"
-msgstr ""
+msgstr "Название объекта"
 
 #: ../../manual/render/cycles/osl.rst:149
 msgid "``geom:is_curve``"
-msgstr ""
+msgstr "``geom:is_curve``"
 
 #: ../../manual/render/cycles/osl.rst:150
 msgid "Is object a strand or not"
-msgstr ""
+msgstr "Является ли объект прядью или нет"
 
 #: ../../manual/render/cycles/osl.rst:151
 msgid "``geom:curve_intercept``"
-msgstr ""
+msgstr "``geom:curve_intercept``"
 
 #: ../../manual/render/cycles/osl.rst:152
 msgid "Point along the strand, from root to tip"
-msgstr ""
+msgstr "Точка вдоль пряди от корня до кончика"
 
 #: ../../manual/render/cycles/osl.rst:153
 msgid "``geom:curve_thickness``"
-msgstr ""
+msgstr "``geom:curve_thickness``"
 
 #: ../../manual/render/cycles/osl.rst:154
 msgid "Thickness of the strand"
-msgstr ""
+msgstr "Толщина пряди"
 
 #: ../../manual/render/cycles/osl.rst:155
 msgid "``geom:curve_tangent_normal``"
-msgstr ""
+msgstr "``geom:curve_tangent_normal``"
 
 #: ../../manual/render/cycles/osl.rst:156
 msgid "Tangent Normal of the strand"
-msgstr ""
+msgstr "Касательная нормали пряди"
 
 #: ../../manual/render/cycles/osl.rst:157
 msgid "``path:ray_length``"
-msgstr ""
+msgstr "``path:ray_length``"
 
 #: ../../manual/render/cycles/osl.rst:158
 msgid "Ray distance since last hit"
-msgstr ""
+msgstr "Расстояние, пройденное лучом с момента последнего попадания в препятствие"
 
 #: ../../manual/render/cycles/osl.rst:159
 msgid "``object:location``"
-msgstr ""
+msgstr "``object:location``"
 
 #: ../../manual/render/cycles/osl.rst:160
 msgid "Object location"
-msgstr ""
+msgstr "Местоположение объекта"
 
 #: ../../manual/render/cycles/osl.rst:161
 msgid "``object:index``"
-msgstr ""
+msgstr "``object:index``"
 
 #: ../../manual/render/cycles/osl.rst:162
 msgid "Object index number"
-msgstr ""
+msgstr "Номер индекса объекта"
 
 #: ../../manual/render/cycles/osl.rst:163
 msgid "``object:random``"
-msgstr ""
+msgstr "``object:random``"
 
 #: ../../manual/render/cycles/osl.rst:164
 msgid "Per object random number generated from object index and name"
-msgstr ""
+msgstr "Случайный номер для каждого объекта, генерируемый из его индекса и имени"
 
 #: ../../manual/render/cycles/osl.rst:165
 msgid "``material:index``"
-msgstr ""
+msgstr "``material:index``"
 
 #: ../../manual/render/cycles/osl.rst:166
 msgid "Material index number"
-msgstr ""
+msgstr "Номер индекса материала"
 
 #: ../../manual/render/cycles/osl.rst:167
 msgid "``particle:index``"
-msgstr ""
+msgstr "``particle:index``"
 
 #: ../../manual/render/cycles/osl.rst:168
 msgid "Particle instance number"
-msgstr ""
+msgstr "Номер экземпляра частицы"
 
 #: ../../manual/render/cycles/osl.rst:169
 msgid "``particle:age``"
-msgstr ""
+msgstr "``particle:age``"
 
 #: ../../manual/render/cycles/osl.rst:170
 msgid "Particle age in frames"
-msgstr ""
+msgstr "Возраст частицы, в кадрах"
 
 #: ../../manual/render/cycles/osl.rst:171
 msgid "``particle:lifetime``"
-msgstr ""
+msgstr "``particle:lifetime``"
 
 #: ../../manual/render/cycles/osl.rst:172
 msgid "Total lifespan of particle in frames"
-msgstr ""
+msgstr "Общее время жизни частицы, в кадрах"
 
 #: ../../manual/render/cycles/osl.rst:173
 msgid "``particle:location``"
-msgstr ""
+msgstr "``particle:location``"
 
 #: ../../manual/render/cycles/osl.rst:174
 msgid "Location of the particle"
-msgstr ""
+msgstr "Местоположение частицы"
 
 #: ../../manual/render/cycles/osl.rst:175
 msgid "``particle:size``"
-msgstr ""
+msgstr "``particle:size``"
 
 #: ../../manual/render/cycles/osl.rst:176
 msgid "Size of the particle"
-msgstr ""
+msgstr "Размер частицы"
 
 #: ../../manual/render/cycles/osl.rst:177
 msgid "``particle:velocity``"
-msgstr ""
+msgstr "``particle:velocity``"
 
 #: ../../manual/render/cycles/osl.rst:178
 msgid "Velocity of the particle"
-msgstr ""
+msgstr "Скорость частицы"
 
 #: ../../manual/render/cycles/osl.rst:181
 msgid "``particle:angular_velocity``"
-msgstr ""
+msgstr "``particle:angular_velocity``"
 
 #: ../../manual/render/cycles/osl.rst:180
 msgid "Angular velocity of the particle"
-msgstr ""
+msgstr "Угловая скорость частицы"
 
 #: ../../manual/render/cycles/osl.rst:184
 msgid "Trace"
-msgstr ""
+msgstr "Трассировка"
 
 #: ../../manual/render/cycles/osl.rst:186
 msgid ""
@@ -455,6 +500,11 @@ msgid ""
 "using the ``getmessage(\"trace\", ..)`` function. See the OSL "
 "specification for details on how to use this."
 msgstr ""
+"Мы поддерживаем функцию ``trace(point pos, vector dir, ...)`` для "
+"трассировки лучей из шейдеров OSL. Параметр \"shade\" на текущий момент "
+"не поддерживается, но атрибуты объекта, с которым произошло столкновение "
+"луча, могут быть получены через функцию ``getmessage(\"trace\", ..)``. "
+"Подробности по использованию этого механизма смотрите в спецификации OSL."
 
 #: ../../manual/render/cycles/osl.rst:191
 msgid ""
@@ -463,24 +513,9 @@ msgid ""
 "projected texture that can be blocked by geometry, apply more \"wear\" to"
 " exposed geometry, or make other ambient occlusion-like effects."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Number of vertices in the polygon (always returns 3 currently)"
-#~ msgstr ""
-
-#~ msgid "Vertex coordinates array of the polygon (always 3 vertices currently)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This function can't be used instead "
-#~ "of lighting; the main purpose is "
-#~ "to allow shaders to \"probe\" nearby "
-#~ "geometry, for example to apply a "
-#~ "projected texture that can be blocked"
-#~ " by geometry, apply more \"wear\" to"
-#~ " exposed geometry, or make other "
-#~ "ambient occlusion-like effects."
-#~ msgstr ""
+"Эта функция не может использоваться вместо освещения; основная её цель - "
+"позволить шейдерам «щупать» ближайшую геометрию, например, чтобы "
+"применить проецируемую текстуру, которая может быть заблокирована "
+"геометрией, сделать открытую геометрию более «изношенной» или применить "
+"ещё какие-нибудь эффекты, подобные ambient occlusion."
 
