@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 20:39+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-22 22:49+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,15 +20,17 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:4
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:50
 msgid "Emission"
-msgstr ""
+msgstr "Узел «Излучение»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:10
 msgid "Emission Node."
-msgstr ""
+msgstr "Узел «Излучение»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:12
 msgid "Lambertian emission, to be used for material and lamp surface outputs."
 msgstr ""
+"Излучение по модели Ламберта, используемое для материалов и для вывода "
+"поверхностей ламп."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:14
 msgid ""
@@ -38,6 +39,10 @@ msgid ""
 "similar effect can be found by using the Light Falloff node with the "
 "Smooth parameter."
 msgstr ""
+"По умолчанию Cycles использует физически корректный спад света, в то "
+"время, как рендер Blender использует сглаженный спад света с расстоянием."
+" Подобного эффекта можно достичь использованием узла «Спад света» с "
+"параметром «Гладко»."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:18
 msgid ""
@@ -46,6 +51,10 @@ msgid ""
 "couldn't use a 1W lamp to light a room; you need something stronger like "
 "a 100W lamp."
 msgstr ""
+"Для точечных ламп, ламп-прожекторов и ламп-областей сила определяется в "
+"ваттах. Это означает, что обычно вым следует вводить более высокие "
+"значения, чем для рендера Blender, поскольку вы не сможете осветить "
+"одноваттной лампочкой всю комнату; вам нужна лампа где-то под 100 Вт."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:22
 msgid ""
@@ -55,22 +64,28 @@ msgid ""
 "for example has strength 384.6×10\\ :sup:`24`\\W. Emission shaders on "
 "meshes are also in Watts/m\\ :sup:`2`\\."
 msgstr ""
+"Для лампы-солнца сила указывается в ваттах/метр\\ :sup:`2`\\, поэтому "
+"значения для них должны быть меньше, например 1 Вт/м\\ :sup:`2`\\. Это "
+"разделение может быть неинтуитивным, однако указание силы в ваттах не "
+"было бы удобным; в реальности Солнце излучает с силой 384.6×10\\ "
+":sup:`24`\\Вт. Сила излучения в шейдерах для полисеток также указывается "
+"в ваттах/метр\\ :sup:`2`\\."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:29
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:31
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:32
 msgid "Color of the emitted light."
-msgstr ""
+msgstr "Цвет излучаемого света."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:37
 msgid "Strength"
-msgstr ""
+msgstr "Сила"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:34
 msgid ""
@@ -79,53 +94,36 @@ msgid ""
 "image has the exact same color as the Color input, i.e. make it "
 "'shadeless'."
 msgstr ""
+"Количество излучаемого света. Для точечных ламп и ламп-областей единицами"
+" измерения являются ватты. Для материалов значение 1.0 будет "
+"гарантировать, что объект на изображении будет иметь тот же самый цвет, "
+"что и на входе «Цвет», то есть, он станет однотонным."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:40
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:42
 msgid "This node has no properites."
-msgstr ""
+msgstr "Этот узел не содержит свойств."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:46
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:49
 msgid "Standard shader output."
-msgstr ""
+msgstr "Стандартный выход шейдера."
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:53
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:59
 msgid "Emission shader, with strength at 1.0 ."
-msgstr ""
+msgstr "Шейдер излучения с силой, равной 1.0"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:63
 msgid "Emission shader, with strength at 3.0 ."
-msgstr ""
-
-#~ msgid "Emission shader, with strength at ``1.0``"
-#~ msgstr ""
-
-#~ msgid "Emission shader, with strength at ``3.0``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Color input"
-#~ msgstr ""
-
-#~ msgid "Strength input"
-#~ msgstr ""
-
-#~ msgid "Emission output"
-#~ msgstr ""
-
-#~ msgid "Emission shader."
-#~ msgstr ""
+msgstr "Шейдер излучения с силой, равной 3.0"
 
