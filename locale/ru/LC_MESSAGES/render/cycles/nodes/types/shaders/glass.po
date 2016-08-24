@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 20:39+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-22 23:07+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,11 +19,11 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:4
 msgid "Glass"
-msgstr ""
+msgstr "Узел «BSDF стекла»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:10
 msgid "Glass Node."
-msgstr ""
+msgstr "Узел «BSDF стекла»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:12
 msgid ""
@@ -35,15 +34,23 @@ msgid ""
 "to combine this with a transparent shader for shadows; for :ref:`more "
 "details see here <render-cycles-reducing_noise-glass_and_transp_shadows>`"
 msgstr ""
+"Шейдер стекла объединяет отражения и преломления при больших углах "
+"падения (углах скольжения). Подобно шейдеру «Прозрачный BSDF», только "
+"чистый белый цвет сделает материал прозрачным. Шейдер стекла увеличивает "
+"шум из-за возникающих каустик. Поскольку интегратор с трассировкой путей "
+"Cycles не очень хорошо справляется с каустиками, стоит помочь ему, "
+"совместив этот узел с узлом «Прозрачный BSDF» для визуализации теней; "
+"подробности по использованию этой техники :ref:`смотрите здесь <render-"
+"cycles-reducing_noise-glass_and_transp_shadows>`."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:19
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:22
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:41
 msgid "Distribution"
-msgstr ""
+msgstr "Распределение"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:22
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:39
@@ -52,30 +59,38 @@ msgid ""
 "refractions like clear glass, while *Beckmann* and *GGX* can use the "
 "*Roughness* input for rough glass."
 msgstr ""
+"Используемое распределение микрограней. Распределение *Остро* даст "
+"идеально резкое преломление, как у чистого стекла, тогда как "
+"распределения *Бекман* и *GGX* могут использовать вход *Шероховатость* "
+"для матового стекла."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:24
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:25
 msgid ""
 "Color of the surface, or physically speaking, the probability that light "
 "is transmitted for each wavelength."
 msgstr ""
+"Цвет поверхности, или, говоря языком физики, вероятность (для каждой "
+"длины волны) того, что свет пройдёт через поверхность."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:26
 msgid "Roughness"
-msgstr ""
+msgstr "Шероховатость"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:27
 msgid ""
 "Influences sharpness of the refraction; perfectly sharp at 0.0 and "
 "smoother with higher values."
 msgstr ""
+"Влияние шероховатости на отражение; отражение идеально резкое при "
+"значении 0.0 и сглаженное при более высоких значениях."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:29
 msgid "IOR"
-msgstr ""
+msgstr "Показатель преломления"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:29
 msgid ""
@@ -83,68 +98,48 @@ msgid ""
 "direction. At 1. 0 rays pass straight through like transparent; higher "
 "values give more refraction."
 msgstr ""
+"Показатель преломления (:term:`IOR`) определяет, сколько лучей поменяют "
+"своё направление. При значении 1.0 лучи пройдут сквозь материал, как "
+"будто бы он прозрачный; при более высоких значениях преломление будет "
+"сильнее."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:33
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:32
 msgid ""
 "Normal used for shading; if nothing is connected the default shading "
 "normal is used."
 msgstr ""
+"Используемая для затенения нормаль; если к сокету не привязано никакого "
+"узла, будет использоваться нормаль по-умолчанию."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:36
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:44
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:48
 msgid "BSDF"
-msgstr ""
+msgstr "BSDF"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:47
 msgid "Standard shader output."
-msgstr ""
+msgstr "Стандартный выход шейдера."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:51
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:56
 msgid "Sharp Glass"
-msgstr ""
+msgstr "Блестящее стекло"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glass.rst:57
 msgid "Rough Glass"
-msgstr ""
-
-#~ msgid ":term:`IOR` input"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Color input"
-#~ msgstr ""
-
-#~ msgid "Roughness input"
-#~ msgstr ""
-
-#~ msgid "IOR input"
-#~ msgstr ""
-
-#~ msgid "Normal input"
-#~ msgstr ""
-
-#~ msgid "BSDF output"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Glass :abbr:`BSDF (Bidirectional scattering "
-#~ "distribution function)` shader."
-#~ msgstr ""
+msgstr "Матовое стекло"
 

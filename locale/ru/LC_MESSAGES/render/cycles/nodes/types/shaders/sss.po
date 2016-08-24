@@ -4,27 +4,26 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-16 13:44-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-23 23:14+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:4
 msgid "Subsurface Scattering"
-msgstr ""
+msgstr "Узел «Подп. рассеивание»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:10
 msgid "Subsurface Scattering Node."
-msgstr ""
+msgstr "Узел «Подп. рассеивание»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:12
 msgid ""
@@ -34,6 +33,11 @@ msgid ""
 "bounce around internally before getting absorbed or leaving the surface "
 "at a nearby point."
 msgstr ""
+"Простое многократное подповерхностное рассеивание, предназначено для "
+"материалов типа кожи, воска, мрамора, молока и прочих. Эти материалы "
+"отражают свет не сразу с поверхности, вместо этого он сначала проникает "
+"под поверхность, отскакивает внутри несколько раз, а затем поглощается "
+"или покидает её в ближайшей точке."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:17
 msgid ""
@@ -41,62 +45,75 @@ msgid ""
 "channel. For example, for skin, red colors scatter further, which gives "
 "distinctive red-colored shadows, and a soft appearance."
 msgstr ""
+"Насколько далеко в среднем рассеивается цвет можно настроить для каждого "
+"цветового канала RGB. Например, для кожи красный цвет рассеивается "
+"дальше, благодаря чему она получает отличительные красноватые тени и "
+"мягкий внешний вид."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:23
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:25
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:26
 msgid ""
 "Color of the surface, or physically speaking, the probability that light "
 "is reflected for each wavelength."
 msgstr ""
+"Цвет поверхности, или, говоря языком физики, вероятность (для каждой "
+"длины волны) того, что свет отразится от поверхности."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:27
 msgid "Scale"
-msgstr ""
+msgstr "Масштаб"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:28
 msgid "Global scale factor for the scattering radius."
-msgstr ""
+msgstr "Глобальный масштаб для радиуса рассеивания."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:29
 msgid "Radius"
-msgstr ""
+msgstr "Радиус"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:30
 msgid ""
 "Scattering radius for each RGB color channel, the maximum distance that "
 "light can scatter."
 msgstr ""
+"Радиус рассеивания для каждого цветового канала RGB, то есть максимальное "
+"расстояние, на которое свет проникает при рассеивании."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:32
 msgid "Sharpness"
-msgstr ""
+msgstr "Острогранность"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:32
 msgid ""
 "Used only with *Cubic* falloff. Values increasing from 0 to 1 prevents "
 "softening of sharp edges and reduces unwanted darkening."
 msgstr ""
+"Используется только в сочетании со спадом *Кубический*. Значение в "
+"диапазоне от 0 до 1 предотвращает смягчение острых рёбер и уменьшает "
+"нежелательное затемнение."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:34
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:35
 msgid ""
 "Normal used for shading; if nothing is connected the default shading "
 "normal is used."
 msgstr ""
+"Используемая для затенения нормаль; если к сокету не привязано никакого "
+"узла, будет использоваться нормаль по-умолчанию."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:46
 msgid "Texture Blur"
-msgstr ""
+msgstr "Размытие текстуры"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:37
 msgid ""
@@ -111,32 +128,45 @@ msgid ""
 " a procedural texture on the other hand this option would likely have a "
 "higher value."
 msgstr ""
+"Насколько будет размыта текстура при освещении; смешивает текстуру с "
+"точки входа и точки выхода луча света. Обратите внимание, что правильный "
+"выбор зависит от текстуры. Рассмотрим, к примеру, текстуру, созданную из "
+"фотографии кожи, в этом случае цвета уже будут предварительно размыты и "
+"размытие текстуры можно установить в 0. Даже для вручную созданных "
+"текстур может быть уместно отсутствие размытия, либо же минимальное "
+"размытие, поскольку художник по текстурам, скорее всего, и так уже "
+"смягчил её при рисовании. Обычно мы даже не подозреваем, как выглядит не "
+"размытая текстура кожи, поскольку мы всегда видим её размытой. С другой "
+"стороны, если текстура создана процедурно, этому параметру, скорее всего,"
+" следует задать более высокое значение."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:49
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:65
 msgid "Falloff"
-msgstr ""
+msgstr "Спад"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:52
 msgid "Lighting distance falloff function."
-msgstr ""
+msgstr "Функция спада интенсивности освещения в зависимости от расстояния."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:54
 msgid "Cubic"
-msgstr ""
+msgstr "Кубический"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:55
 msgid ""
 "Is a sharp falloff useful for many simple materials. The function is "
 ":math:`(radius - x)^3`"
 msgstr ""
+"Этот резкий спад полезен для многих простых материалов. Функция спада: "
+":math:`(радиус - x)^3`."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:61
 msgid "Gaussian"
-msgstr ""
+msgstr "Гауссовский"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:57
 msgid ""
@@ -147,83 +177,51 @@ msgid ""
 "maximum falloff distance. To match a given measured variance *v*, set "
 ":math:`radius = sqrt(16 × v)`."
 msgstr ""
+"Даёт более плавный спад по нормальному распределению, который особенно "
+"полезен для более сложных материалов, использующих подобранные данные, "
+"соответствующие одной или нескольким таким функциям Гаусса. Функция спада"
+" – :math:`e^{-8x^2/ радиус^2}`, так что, что радиус примерно "
+"соответствует максимальному расстоянию затухания. Для соответствия "
+"заданной измеренной дисперсии *v*, установите :math:`радиус = sqrt(16 × "
+"v)`."
 
+# Mingun: в Blender не переведено.
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:65
 msgid "Christensen-Burley"
-msgstr ""
+msgstr "Christensen-Burley (Кристенсен-Бурлей)"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:64
 msgid ""
 "Is an approximation to physically based volume scattering. Gives less "
 "blurry results than Cubic and Gaussian functions."
 msgstr ""
+"Это приближение физически корректного рассеивания в объёме. Даёт менее "
+"размытые результаты, нежели *Кубический* или *Гауссовский* спады."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:68
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:72
 msgid "BSSRDF"
-msgstr ""
+msgstr "BSSRDF"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:71
 msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution "
 "function)` shader output."
 msgstr ""
+"Выход шейдера :abbr:`BSSRDF (Bidirectional subsurface scattering "
+"distribution function - функция двунаправленного подповерхностного "
+"рассеивания отражения)`."
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:75
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:79
 msgid "A skin-toned SSS shader with color radius (1.0, 0.8, 0.5)."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Color input"
-#~ msgstr ""
-
-#~ msgid "Scale input"
-#~ msgstr ""
-
-#~ msgid "Radius input"
-#~ msgstr ""
-
-#~ msgid "Sharpness input"
-#~ msgstr ""
-
-#~ msgid "Normal input"
-#~ msgstr ""
-
-#~ msgid "Texture Blur input"
-#~ msgstr ""
-
-#~ msgid "BSSRDF output"
-#~ msgstr ""
-
-#~ msgid "A skin-toned SSS shader with color radius: 1.0, 0.8, 0.5."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Is a sharp falloff useful for many"
-#~ " simple materials. The function is "
-#~ "(*radius* - *x*)\\ :sup:`3`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Gives a smoother falloff following a "
-#~ "normal distribution, which is particularly "
-#~ "useful for more advanced materials that"
-#~ " use measured data that was fitted"
-#~ " to one or more such Gaussian "
-#~ "functions. The function is e\\ "
-#~ ":sup:`-8x^2/ radius^2`\\, such that the "
-#~ "radius roughly matches the maximum "
-#~ "falloff distance. To match a given "
-#~ "measured variance *v*, set *radius* ="
-#~ " sqrt(16 × *v*)."
-#~ msgstr ""
+"Шейдер подповерхностного рассеивания для кожи с цветовыми радиусами (1.0,"
+" 0.8, 0.5)"
 
