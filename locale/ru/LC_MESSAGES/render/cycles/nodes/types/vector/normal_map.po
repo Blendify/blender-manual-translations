@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-25 09:56+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-26 23:29+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +19,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:4
 msgid "Normal Map"
-msgstr ""
+msgstr "Узел «Карта нормалей»"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:6
 msgid ""
@@ -30,34 +29,43 @@ msgid ""
 "the image must match, and the image texture should be set to Non-Color "
 "mode to give correct results."
 msgstr ""
+"Генерирует возмущённые нормали из карты нормалей с RGB-изображения. "
+"Обычно этот узел своим входом цвета совмещается с узлом "
+"«Изображение-текстура», определяющим изображение с картой нормалей. Чтобы"
+" получить правильный результат для карт нормалей в касательном "
+"пространстве, UV-координаты должны соответствовать изображению, а "
+"цветовое пространство узла «Изображение-текстура» должно быть переведено "
+"в режим «Нецветовые данные»."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:14
 msgid "Inputs"
-msgstr ""
+msgstr "Входы"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:15
 msgid "Strength"
-msgstr ""
+msgstr "Сила"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:16
 msgid "Strength of the normal mapping effect."
-msgstr ""
+msgstr "Сила эффекта от карты нормалей."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:19
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:18
 msgid "RGB color that encodes the normal in the specified space."
 msgstr ""
+"Цвета в цветовом пространстве RGB, кодирующие нормаль в указанном "
+"пространстве."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:22
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:27
 msgid "Space"
-msgstr ""
+msgstr "Пространство"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:25
 msgid ""
@@ -67,10 +75,17 @@ msgid ""
 "maps keep sticking to the surface under object transformations, while "
 "World normal maps do not."
 msgstr ""
+"Входные RGB-цвета могут быть в одном из трёх пространств: «Касательном», "
+"«Пространстве объекта» и «Пространстве мира». Карты нормалей в "
+"касательном пространстве наиболее распространены, поскольку они "
+"поддерживают преобразование объекта и деформацию полисетки. Карты "
+"нормалей в пространстве объекта продолжают оставаться привязанными к "
+"поверхности объекта после его трансформации, в то время как карты "
+"нормалей в пространстве мира – нет."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:31
 msgid "UV Map"
-msgstr ""
+msgstr "UV-разметка"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:30
 msgid ""
@@ -78,42 +93,27 @@ msgid ""
 "with an Image Texture node, this UV map should be the same as the UV map "
 "used to map the texture."
 msgstr ""
+"Имя UV-разметки, из которой берутся касательные накладываемых нормалей. "
+"Когда узел соединён с узлом «Изображение-текстура», эта UV-разметка "
+"должна быть такой же, как и та, что используется для наложения текстуры."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:34
 msgid "Outputs"
-msgstr ""
+msgstr "Выходы"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:38
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:37
 msgid "Normal that can be used as an input to BSDF nodes."
-msgstr ""
+msgstr "Нормаль, которая может использоваться в качестве входа для узлов BSDF."
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:41
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/cycles/nodes/types/vector/normal_map.rst:43
 msgid "Todo."
-msgstr ""
-
-#~ msgid "Color Input"
-#~ msgstr ""
-
-#~ msgid "Normal Output"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The input RGB color can be in "
-#~ "one of 3 spaces: Tangent, Object "
-#~ "and World space. Tangent space normal"
-#~ " maps are the most common, as "
-#~ "they support object transformation and "
-#~ "mesh deformations. Object space normal "
-#~ "maps keep sticking to the surface "
-#~ "under object transformations, while World "
-#~ "normal maps do not."
-#~ msgstr ""
+msgstr "*Дописать.*"
 
