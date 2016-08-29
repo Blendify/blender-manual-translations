@@ -4,15 +4,14 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-29 15:31-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-27 21:42+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,39 +19,43 @@ msgstr ""
 
 #: ../../manual/render/cycles/optimizations/settings.rst:4
 msgid "Render Settings"
-msgstr ""
+msgstr "Настройки визуализации"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:7
 msgid "Integrator Panel"
-msgstr ""
+msgstr "Панель интегратора"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:9
 msgid ""
 "See the :doc:`integrator settings </render/cycles/settings/integrator>` "
 "for details."
 msgstr ""
+"Подробности смотрите в разделе с описанием :doc:`настроек интегратора "
+"</render/cycles/settings/integrator>`."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:12
 msgid "Performance Panel"
-msgstr ""
+msgstr "Панель «Производительность»"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:21
 msgid "Threads"
-msgstr ""
+msgstr "Потоки"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:16
 msgid "Auto-detect"
-msgstr ""
+msgstr "Авто"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:16
 msgid ""
 "Automatically chooses the amount threads to match the number of logical "
 "processors on your computer."
 msgstr ""
+"Автоматически выбирать количество потоков, соответствующее числу "
+"логических процессоров вашего компьютера."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:21
 msgid "Fixed"
-msgstr ""
+msgstr "Фикс"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:19
 msgid ""
@@ -61,26 +64,32 @@ msgid ""
 "can set the property to a thread count lower the the amount of logical "
 "processors on your computer."
 msgstr ""
+"Вручную выбрать количество потоков, используемых для визуализации. Это "
+"может быть полезно, например, в случае, если вы хотите использовать "
+"компьютер во время визуализации. Для этого установите количество потоков "
+"в величину, меньшую количества логических процессоров вашего компьютера."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:24
 msgid "Tiles"
-msgstr ""
+msgstr "Плитки"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:26
 msgid "Tile Order"
-msgstr ""
+msgstr "Порядок плиток"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:26
 msgid "Order of rendering tiles. This does not significantly affect performance."
 msgstr ""
+"Порядок визуализации плиток. Не оказывает существенного влияния на "
+"производительность."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:33
 msgid "Tile size X/Y"
-msgstr ""
+msgstr "Размеры по X и Y"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:29
 msgid "The size of the tiles for rendering."
-msgstr ""
+msgstr "Размер визуализируемых плиток."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:31
 msgid ""
@@ -90,10 +99,16 @@ msgid ""
 "</render/cycles/gpu_rendering>` larger tile sizes give better performance"
 " (like 256 x 256)."
 msgstr ""
+"Плитки разных размеров могут визуализироваться с разной скоростью, в "
+"зависимости от того, какое устройство вы используете для визуализации. "
+"Например, при визуализации на центральном процессоре результаты "
+"получаются быстрее с размером плиток «16 X 16», а при :doc:`визуализации "
+"на видеокарте </render/cycles/gpu_rendering>` лучше поднять размеры до "
+"«256 X 256»."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:40
 msgid "Progressive Refine"
-msgstr ""
+msgstr "Прогрессивное уточнение"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:36
 msgid ""
@@ -102,16 +117,23 @@ msgid ""
 "slightly slower than tiled rendering, but time can be saved by manually "
 "stopping the render when the noise level is low enough."
 msgstr ""
+"Вместо визуализации каждой плитки до тех пор, пока не завершится каждая "
+"выборка, прогрессивно уточнять всё изображение. Обратите внимание, что "
+"визуализация при этом становится немного медленнее, но вы можете "
+"сохранить себе время, если остановите её вручную, когда сочтёте, что "
+"уровень шумов приемлимо низок."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:40
 msgid ""
 "For rendering animations it is best to disable this feature, as stopping "
 "a frame early is not possible."
 msgstr ""
+"При визуализации анимаций лучше выключить эту возможность, поскольку "
+"ранняя остановка визуализации кадра невозможнна."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:44
 msgid "Save Buffers"
-msgstr ""
+msgstr "Сохранять буферы"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:43
 msgid ""
@@ -119,66 +141,79 @@ msgid ""
 " them back after rendering has finished. This saves memory usage during "
 "rendering, particularly when using many render layers and passes."
 msgstr ""
+"Сохранять все слои визуализации и проходы на диск в файлы во временном "
+"каталоге, и вычитывать их снова по завершению визуализации. Таким образом"
+" во время визуализации экономится память, особенно если слоёв "
+"визуализации и проходов очень много."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:47
 msgid "Viewport"
-msgstr ""
+msgstr "Область просмотра"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:52
 msgid "Viewport BVH Type"
-msgstr ""
+msgstr "Тип BVH области просмотра"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:49
 msgid "Dynamic BVH"
-msgstr ""
+msgstr "Динамический BVH"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:50
 msgid ""
 "Objects can be transformed, added and deleted interactively, at the cost "
 "of slower renders."
 msgstr ""
+"Объекты могут быть интерактивно преобразованы, добавлены или удалены за "
+"счёт более медленной визуализации."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:52
 msgid "Static BVH"
-msgstr ""
+msgstr "Статический BVH"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:52
 msgid ""
 "Object modifications require a complete :term:`BVH` rebuild which reduces"
 " interactivity but renders faster."
 msgstr ""
+"Изменения объектов требуют полного перестроения :term:`BVH`, что "
+"уменьшает интерактивность, но ускоряет визуализацию."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:55
 msgid "Start Resolution"
-msgstr ""
+msgstr "Нач. разрешение"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:55
 msgid ""
 "Resolution to start rendering preview at, progressively increase it to "
 "the full viewport size."
 msgstr ""
+"Исходное разрешение для начала предпросмотра, постепенно увеличиваемое до"
+" полного разрешения области просмотра"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:58
 msgid "Final Render"
-msgstr ""
+msgstr "Итоговая визуализация"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:61
 msgid "Persistent Images"
-msgstr ""
+msgstr "Не выгружать изображения"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:60
 msgid ""
 "Keep image data in memory after rendering, for faster re-renders at the "
 "cost of extra memory usage when performing other tasks in Blender."
 msgstr ""
+"После визуализации сохранять данные изображения в памяти для ускорения "
+"повторных визуализаций за счёт увеличенного расходя памяти при выполнении"
+" других задач в Blender."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:64
 msgid "Acceleration Structure"
-msgstr ""
+msgstr "Структура ускорения"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:67
 msgid "Use Spatial Splits"
-msgstr ""
+msgstr "Простр. разбивка"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:66
 msgid ""
@@ -186,14 +221,21 @@ msgid ""
 "large and small polygons. The downsides are longer BVH build times and "
 "slightly increased memory usage."
 msgstr ""
+"Пространственная разбивка улучшает производительность визуализации в "
+"сценах со смесью объектов с большими и маленькими полигонами. Недостатком"
+" является увеличенное время построения BVH и немного повышенный расход "
+"памяти."
 
 #: ../../manual/render/cycles/optimizations/settings.rst:72
 msgid "Use Hair BVH"
-msgstr ""
+msgstr "Use Hair BVH (Включить BVH волос)"
 
 #: ../../manual/render/cycles/optimizations/settings.rst:70
 msgid ""
 "Use a special type of :term:`BVH` for rendering hair. Disabling this "
 "option will reduce memory, at the cost of increasing hair render time."
 msgstr ""
+"Использовать специальный тип :term:`BVH`, оптимизированный для "
+"визуализации волос. Отключение этого параметра приведёт к сокращению "
+"расхода памяти за счёт увеличения времени визуализации волос."
 

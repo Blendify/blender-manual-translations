@@ -22,7 +22,6 @@ msgid "Reducing Noise"
 msgstr "Уменьшение шума"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:6
-#, fuzzy
 msgid ""
 "When performing a final render, it is important to reduce noise as much "
 "as possible. Here we will discuss a number of tricks that, while breaking"
@@ -116,7 +115,6 @@ msgstr ""
 " этого пикселя."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:64
-#, fuzzy
 msgid ""
 "The lamp is a known light source, so it will not be too hard to find, but"
 " the glossy highlight(s) that it causes are a different matter. The best "
@@ -199,7 +197,6 @@ msgid "Caustics and Filter Glossy"
 msgstr "Каустики и фильтр глянца"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:123
-#, fuzzy
 msgid ""
 "Caustics are a well-known source of noise, causing fireflies. They happen"
 " because the renderer has difficulty finding specular highlights viewed "
@@ -211,12 +208,11 @@ msgstr ""
 "Каустики - это хорошо известные источники шума, вызывающие светлячки. Они"
 " возникают потому, что рендеру трудно найти блики при рассматривании их "
 "через мягкое глянцевое или диффузное отражение. Существует :ref:`параметр"
-" <render-cycles-integrator-no_caustics>`, целиком отключающий глянцевое "
+" <render-cycles-integrator-no-caustics>`, целиком отключающий глянцевое "
 "отражение после диффузного отражения. Многие движки визуализации обычно "
 "отключают каустики по умолчанию."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:142
-#, fuzzy
 msgid ""
 "However, using No Caustics will result in missing light, and it still "
 "does not cover the case where a sharp glossy reflection is viewed through"
@@ -228,7 +224,7 @@ msgstr ""
 "Однако, использование параметра *Без каустик* ведёт к потере света, кроме"
 " того, он не покрывает случай, когда резкое глянцевое отражение "
 "рассматривается сквозь мягкое глянцевое отражение. Существует параметр "
-":ref:`Фильтр глянца <render-cycles-integrator-filter_glossy>`, "
+":ref:`Фильтр глянца <render-cycles-integrator-filter-glossy>`, "
 "уменьшающий шум в таких случаях за счёт точности. Он размывает резкое "
 "глянцевое отражение, чтобы его было проще найти, увеличивая Шероховатость"
 " шейдера."
@@ -281,7 +277,6 @@ msgid "Sample as Lamp"
 msgstr "Выборка как у лампы"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:178
-#, fuzzy
 msgid ""
 "Materials with emission shaders can be configured to be *sampled as lamp*"
 " (:ref:`render-cycles-integrator-material-settings`). This means that "
@@ -292,7 +287,7 @@ msgid ""
 "brighter light sources for which it is important to find them this way."
 msgstr ""
 "Материалы с шейдерами излучения могут быть сконфигурированы для *выборки "
-"как у лампы* (:ref:`render-cycles-integrator-material_settings`). Это "
+"как у лампы* (:ref:`render-cycles-integrator-material-settings`). Это "
 "значит, что они будут получать лучи, направленные непосредственно к ним, "
 "а не после случайного количества отскоков. При использовании очень ярких "
 "полисеток это может значительно снизить шумы. Однако, если излучение не "
@@ -317,7 +312,6 @@ msgstr ""
 "меньшим шумом при отключении у них выборок как у лампы."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:201
-#, fuzzy
 msgid ""
 "The world background also has a *Sample as Lamp* (:ref:`render-cycles-"
 "integrator-world-settings`) option. This is mostly useful for environment"
@@ -327,7 +321,7 @@ msgid ""
 "take samples away from more important light sources if it is not needed."
 msgstr ""
 "Фон окружающей среды так же имеет параметр *выборка как у лампы* (:ref"
-":`render-cycles-integrator-world_settings`). Он в основном полезен для "
+":`render-cycles-integrator-world-settings`). Он в основном полезен для "
 "карт окружения, на которых имеются небольшие яркие пятна. Если этот "
 "параметр активен, при препроцессировании будут определены яркие пятна и "
 "световые лучи быдут посылаться непосредственно к ним. Опять же, включение"
@@ -417,7 +411,6 @@ msgid "Clamp Fireflies"
 msgstr "Подавление светлячков"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:270
-#, fuzzy
 msgid ""
 "Ideally with all the previous tricks, fireflies would be eliminated, but "
 "they could still happen. For that, the *intensity* that any individual "
@@ -429,7 +422,7 @@ msgstr ""
 "однако они всё ещё могут возникнуть. Чтобы справиться с ними, "
 "*интенсивность* любого светового луча, вносящего вклад в освещение "
 "пикселя, может быть *ограничена* максимальным значением :ref:`настройками"
-" интегратора <render-cycles-integrator-clamp_samples>`."
+" интегратора <render-cycles-integrator-clamp-samples>`."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:274
 msgid ""
