@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-25 09:56+1000\n"
+"POT-Creation-Date: 2016-08-29 23:45+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,11 @@ msgid "Mirror Editing"
 msgstr ""
 
 #: ../../manual/modeling/meshes/editing/basics/mirror.rst:8
-msgid "X-Mirror"
+msgid "Snap to Symmetry"
 msgstr ""
 
 #: ../../manual/modeling/meshes/editing/basics/mirror.rst:10
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:71
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:111
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:50
 msgid "Reference"
 msgstr ""
 
@@ -31,166 +30,69 @@ msgid "Mode:     Edit Mode"
 msgstr ""
 
 #: ../../manual/modeling/meshes/editing/basics/mirror.rst
-msgid "Panel:    :menuselection:`Mesh Options --> X-mirror`"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:17
-msgid ""
-"The *X-mirror* option of the *Mesh Options* panel allows you edit both "
-"\"sides\" of your mesh in a single action. When you transform an element "
-"(vertex, edge or face), if there is its exact X-mirrored counterpart (in "
-"local space), it will be transformed accordingly, through a symmetry "
-"along the local X axis."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:24
-msgid "Topology Mirror"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:26
-msgid ""
-"The *Topology Mirror* option is available in the :menuselection:`3D View "
-"Editor --> Toolshelf Region --> Mesh Options Panel` while in *Edit Mode*"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:31
-msgid "For *Topology Mirror* to work the *X Mirror* option must be enabled."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:34
-msgid ""
-"When using the *X Mirror* option to work on mirrored Mesh Geometry the "
-"vertices that are mirrored must be perfectly placed. If they are not "
-"exactly positioned in their mirror locations then *X Mirror* will not "
-"treat those vertices as mirrored. This can be annoying because often the "
-"out of position vertices are only very slightly out of position."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:39
-msgid ""
-"*Topology Mirror* tries to solve this problem by determining which "
-"vertices are mirrored vertices not only by using their positions but also"
-" by looking at how those vertices are related to others in the Mesh "
-"Geometry. It looks at the overall Mesh Geometry topology to determine if "
-"particular vertices will be treated as mirrored. The effect of this is "
-"that mirrored vertices can be non-symetrical and yet still be treated as "
-"mirrored when *X Mirror* and *Topology Mirror* are both active."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:47
-msgid ""
-"The *Topology Mirror* functionality will work more reliably on Mesh "
-"Geometry which is more detailed. If you use very simple Mesh Geometry "
-"such as a Cube or UV Sphere for example the *Topology Mirror* option will"
-" often not work."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:53
-msgid "Example"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:55
-msgid ""
-"For an example of how to use *Topology Mirror* open up a new Blender "
-"scene, then delete Blender's default cube and add a Monkey Object to the "
-"3D View."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:58
-msgid "Press :kbd:`Tab` to put the Monkey Object into *Edit Mode*."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:59
-msgid ""
-"With the *X Mirror* option disabled move one of the Monkey Object's "
-"vertices slightly."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:60
-msgid "Then Turn *X Mirror* option on again but leave *Topology Mirror* disabled"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:61
-msgid ""
-"If you now move that vertice again *X Mirror* will not work and the "
-"mirrored vertices will not be altered."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:63
-msgid ""
-"If you then enable *Topology Mirror* and move the same vertices again, "
-"then *X Mirror* should still mirror the other vertice, even though they "
-"are not perfectly positioned."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:69
-msgid "Snap to Symmetry"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst
 msgid "Menu:     :menuselection:`Mesh --> Snap to Symmetry`"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:78
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:17
 msgid ""
 "The *Snap to Symmetry* tool works on meshes which are mostly symmetrical "
 "but have vertices which have been moved enough that Blender does not "
 "detect then as mirrored (when x-mirror option is enable for example)."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:82
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:21
 msgid ""
 "This can be caused by accident when editing without x-mirror enabled. "
 "Sometimes models imported from other applications are asymmetrical enough"
 " that mirror fails too."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:86
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:125
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:25
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:64
 msgid "Direction"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:86
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:25
 msgid ""
 "Specify the axis and direction to snap. Can be any of the three axes, and"
 " either positive to negative, or negative to positive."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:88
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:27
 msgid "Threshold"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:89
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:28
 msgid "Specify the search radius to use when finding matching vertices."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:90
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:29
 msgid "Factor"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:91
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:30
 msgid ""
 "Support for blending mirrored locations from one side to the other (0.5 "
 "is an equal mix of both)."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:93
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:32
 msgid "Center"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:93
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:32
 msgid "Snap vertices in the center axis to zero."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:100
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:39
 msgid "Before Snap to Symmetry."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:105
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:44
 msgid "After Snap to Symmetry."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:109
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:48
 msgid "Symmetrize Mesh"
 msgstr ""
 
@@ -198,45 +100,33 @@ msgstr ""
 msgid "Menu:     :menuselection:`Mesh --> Symmetrize`"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:118
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:57
 msgid ""
 "The *Symmetrize* tool is a quick way to make a mesh symmetrical. "
 "*Symmetrize* works by cutting the mesh at the pivot point of the object, "
 "and mirroring over the geometry in the specified axis, and merges the two"
-" halves together (if they are connected)"
+" halves together (if they are connected)."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:124
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:63
 msgid ""
 "Specify the axis and direction of the effect. Can be any of the three "
 "axes, and either positive to negative, or negative to positive."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:132
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:71
 msgid "Mesh before Symmetrize."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:137
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:76
 msgid "Mesh after Symmetrize."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:141
-msgid "Mirroring Geometry"
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:143
+#: ../../manual/modeling/meshes/editing/basics/mirror.rst:80
 msgid ""
 "See :doc:`Mirror </modeling/meshes/editing/deforming/mirror>` for "
 "information on mirroring, which allows you to flip geometry across an "
 "axis."
-msgstr ""
-
-#: ../../manual/modeling/meshes/editing/basics/mirror.rst:148
-msgid ""
-"The conditions for X-mirror to work are quite strict, which can make it "
-"difficult to use. To have an exact mirrored version of a (half) mesh, its"
-" easier and simpler to use the :doc:`Mirror modifier "
-"</modeling/modifiers/generate/mirror>`"
 msgstr ""
 
 #~ msgid "Mirror Modifier"
@@ -269,25 +159,139 @@ msgstr ""
 #~ msgid "Press the kbd:`tab` Key to put the Monkey Object into *Edit Mode*."
 #~ msgstr ""
 
+#~ msgid "X-Mirror"
+#~ msgstr ""
+
+#~ msgid "Panel:    :menuselection:`Mesh Options --> X-mirror`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *X-mirror* option of the *Mesh "
+#~ "Options* panel allows you edit both "
+#~ "\"sides\" of your mesh in a single"
+#~ " action. When you transform an "
+#~ "element (vertex, edge or face), if "
+#~ "there is its exact X-mirrored "
+#~ "counterpart (in local space), it will"
+#~ " be transformed accordingly, through a "
+#~ "symmetry along the local X axis."
+#~ msgstr ""
+
+#~ msgid "Topology Mirror"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Topology Mirror* option is "
+#~ "available in the :menuselection:`3D View "
+#~ "Editor --> Toolshelf Region --> Mesh "
+#~ "Options Panel` while in *Edit Mode*"
+#~ msgstr ""
+
+#~ msgid "For *Topology Mirror* to work the *X Mirror* option must be enabled."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When using the *X Mirror* option "
+#~ "to work on mirrored Mesh Geometry "
+#~ "the vertices that are mirrored must "
+#~ "be perfectly placed. If they are "
+#~ "not exactly positioned in their mirror"
+#~ " locations then *X Mirror* will not"
+#~ " treat those vertices as mirrored. "
+#~ "This can be annoying because often "
+#~ "the out of position vertices are "
+#~ "only very slightly out of position."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Topology Mirror* tries to solve this"
+#~ " problem by determining which vertices "
+#~ "are mirrored vertices not only by "
+#~ "using their positions but also by "
+#~ "looking at how those vertices are "
+#~ "related to others in the Mesh "
+#~ "Geometry. It looks at the overall "
+#~ "Mesh Geometry topology to determine if"
+#~ " particular vertices will be treated "
+#~ "as mirrored. The effect of this is"
+#~ " that mirrored vertices can be "
+#~ "non-symetrical and yet still be "
+#~ "treated as mirrored when *X Mirror* "
+#~ "and *Topology Mirror* are both active."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Topology Mirror* functionality will "
+#~ "work more reliably on Mesh Geometry "
+#~ "which is more detailed. If you use"
+#~ " very simple Mesh Geometry such as"
+#~ " a Cube or UV Sphere for "
+#~ "example the *Topology Mirror* option "
+#~ "will often not work."
+#~ msgstr ""
+
+#~ msgid "Example"
+#~ msgstr ""
+
 #~ msgid ""
 #~ "For an example of how to use "
 #~ "*Topology Mirror* open up a new "
 #~ "Blender scene, then delete Blender's "
 #~ "default cube and add a Monkey "
-#~ "Object to the 3D Viewport."
+#~ "Object to the 3D View."
+#~ msgstr ""
+
+#~ msgid "Press :kbd:`Tab` to put the Monkey Object into *Edit Mode*."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Specify the axis and direction to "
-#~ "snap. Can be any of the 3 "
-#~ "axes, and either positive to negative,"
-#~ " or negative to positive."
+#~ "With the *X Mirror* option disabled "
+#~ "move one of the Monkey Object's "
+#~ "vertices slightly."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Specify the axis and direction of "
-#~ "the effect. Can be any of the "
-#~ "3 axes, and either positive to "
-#~ "negative, or negative to positive."
+#~ "Then Turn *X Mirror* option on "
+#~ "again but leave *Topology Mirror* "
+#~ "disabled"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you now move that vertice again"
+#~ " *X Mirror* will not work and "
+#~ "the mirrored vertices will not be "
+#~ "altered."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you then enable *Topology Mirror* "
+#~ "and move the same vertices again, "
+#~ "then *X Mirror* should still mirror "
+#~ "the other vertice, even though they "
+#~ "are not perfectly positioned."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Symmetrize* tool is a quick "
+#~ "way to make a mesh symmetrical. "
+#~ "*Symmetrize* works by cutting the mesh"
+#~ " at the pivot point of the "
+#~ "object, and mirroring over the geometry"
+#~ " in the specified axis, and merges"
+#~ " the two halves together (if they "
+#~ "are connected)"
+#~ msgstr ""
+
+#~ msgid "Mirroring Geometry"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The conditions for X-mirror to work "
+#~ "are quite strict, which can make "
+#~ "it difficult to use. To have an"
+#~ " exact mirrored version of a (half)"
+#~ " mesh, its easier and simpler to "
+#~ "use the :doc:`Mirror modifier "
+#~ "</modeling/modifiers/generate/mirror>`"
 #~ msgstr ""
 
