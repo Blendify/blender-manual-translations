@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-06 10:22+1000\n"
+"POT-Creation-Date: 2016-08-29 15:07-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,7 +278,7 @@ msgstr ""
 msgid ""
 "Soft Bodies and other physic simulations use a unified system for caching"
 " and baking. See :doc:`Particle Cache "
-"</physics/particles/cache_and_bake>` for reference."
+"</physics/particles/properties/cache>` for reference."
 msgstr ""
 
 #: ../../manual/physics/soft_body/introduction.rst:135
@@ -286,7 +286,7 @@ msgid ""
 "The results of the simulation are automatically cached to disk when the "
 "animation is played, so that the next time it runs, it can play again "
 "quickly by reading in the results from the disk. If you *Bake* the "
-"simulation the cache is protected and you will be asked when you're "
+"simulation the cache is protected and you will be asked when you are "
 "trying to change a setting that will make a recalculating necessary."
 msgstr ""
 
@@ -302,8 +302,8 @@ msgid ""
 "of 250 frames you have the change the *End* frame."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:149
-msgid "Caching:"
+#: ../../manual/physics/soft_body/introduction.rst:150
+msgid "Caching"
 msgstr ""
 
 #: ../../manual/physics/soft_body/introduction.rst:151
@@ -339,35 +339,35 @@ msgid ""
 "operating system has a limit on the path length that is supported."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:162
-msgid "Baking:"
-msgstr ""
-
 #: ../../manual/physics/soft_body/introduction.rst:164
-msgid "The system is protected against changes after baking."
+msgid "Baking"
 msgstr ""
 
 #: ../../manual/physics/soft_body/introduction.rst:165
+msgid "The system is protected against changes after baking."
+msgstr ""
+
+#: ../../manual/physics/soft_body/introduction.rst:166
 msgid ""
 "The *Bake* result is cleared also with :kbd:`Ctrl-B` for all selected "
 "objects or click on *Free Bake* for the current Soft Body system."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:167
+#: ../../manual/physics/soft_body/introduction.rst:168
 msgid "If the mesh changes the simulation is not calculated anew."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:169
+#: ../../manual/physics/soft_body/introduction.rst:170
 msgid ""
 "For renderfarms, it is best to bake all the physics systems, and then "
 "copy the blendcache to the renderfarm as well."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:174
+#: ../../manual/physics/soft_body/introduction.rst:175
 msgid "Interaction in real time"
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:176
+#: ../../manual/physics/soft_body/introduction.rst:177
 msgid ""
 "To work with a Soft Body simulation you will find it handy to use the "
 "Timeline editor. You can change between frames and the simulation will "
@@ -377,30 +377,30 @@ msgid ""
 "Body object."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:183
+#: ../../manual/physics/soft_body/introduction.rst:184
 msgid ""
 "*Continue Physics* does not work while playing the animation with "
 ":kbd:`Alt-A`"
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:185
+#: ../../manual/physics/soft_body/introduction.rst:186
 msgid ""
 "Right. This works only if you start the animation with the *Play* button "
 "of the Timeline editor."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:188
+#: ../../manual/physics/soft_body/introduction.rst:189
 msgid ""
 "You can than select the Soft Body object while running the simulation and"
 " *Apply* the modifier in the *Modifiers* tab of the Properties editor. "
 "This makes the deformation permanent."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:194
+#: ../../manual/physics/soft_body/introduction.rst:195
 msgid "Tips"
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:197
+#: ../../manual/physics/soft_body/introduction.rst:198
 msgid ""
 "Soft Bodies work especially well if the objects have an even vertex "
 "distribution. You need enough vertices for good collisions. You change "
@@ -408,20 +408,20 @@ msgid ""
 "region (see the animation of Fig. :ref:`fig-softbody-intro-cone`)."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:200
+#: ../../manual/physics/soft_body/introduction.rst:202
 msgid ""
 "The calculation of collisions may take a long time. If something is not "
 "visible, why calculate it?"
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:201
+#: ../../manual/physics/soft_body/introduction.rst:203
 msgid ""
 "To speed up the collision calculation it is often useful to collide with "
 "an additional, simpler, invisible, somewhat larger object (see the "
 "example to Fig. :ref:`fig-softbody-intro-cloth`)."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:203
+#: ../../manual/physics/soft_body/introduction.rst:205
 msgid ""
 "Use Soft Bodies only where it makes sense. If you try to cover a body "
 "mesh with a tight piece of cloth and animate solely with Soft Body, you "
@@ -430,7 +430,7 @@ msgid ""
 ":doc:`Collisions </physics/soft_body/collisions>` in detail later."
 msgstr ""
 
-#: ../../manual/physics/soft_body/introduction.rst:208
+#: ../../manual/physics/soft_body/introduction.rst:210
 msgid ""
 "Try and use a *Lattice* or a *Curve Guide* Soft Body instead of the "
 "object itself. This may be magnitudes faster."
@@ -446,35 +446,29 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Image 1a: A softbody cloth uncovering"
-#~ " a text. `Animation "
-#~ "<https://vimeo.com/1865528>`__ - `Blend file "
-#~ "<https://wiki.blender.org/index.php/Media:HiddenTextExample.blend>`__"
+#~ "Soft Bodies and other physic simulations"
+#~ " use a unified system for caching "
+#~ "and baking. See :doc:`Particle Cache "
+#~ "</physics/particles/cache_and_bake>` for reference."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Image 1b: A wind cone. The cone"
-#~ " is a Soft Body, as the "
-#~ "suspension. `Animation <https://vimeo.com/1865817>`__ "
-#~ "- `Blend file "
-#~ "<https://wiki.blender.org/index.php/Media:WindConeExample.blend>`__"
+#~ "The results of the simulation are "
+#~ "automatically cached to disk when the"
+#~ " animation is played, so that the "
+#~ "next time it runs, it can play "
+#~ "again quickly by reading in the "
+#~ "results from the disk. If you "
+#~ "*Bake* the simulation the cache is "
+#~ "protected and you will be asked "
+#~ "when you're trying to change a "
+#~ "setting that will make a recalculating"
+#~ " necessary."
 #~ msgstr ""
 
-#~ msgid ""
-#~ "Soft Bodies work especially well if "
-#~ "the objects have an even vertex "
-#~ "distribution. You need enough vertices "
-#~ "for good collisions. You change the "
-#~ "deformation (the stiffness) if you add"
-#~ " more vertices in a certain region"
-#~ " (see the animation of *Image 1b*)."
+#~ msgid "Caching:"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "To speed up the collision calculation"
-#~ " it is often useful to collide "
-#~ "with an additional, simpler, invisible, "
-#~ "somewhat larger object (see the example"
-#~ " to *Image 1a*)."
+#~ msgid "Baking:"
 #~ msgstr ""
 

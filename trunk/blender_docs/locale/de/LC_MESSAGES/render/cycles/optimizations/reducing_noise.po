@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-15 17:41-0700\n"
+"POT-Creation-Date: 2016-08-29 15:07-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:4
 msgid "Reducing Noise"
@@ -25,10 +25,10 @@ msgstr ""
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:6
 msgid ""
 "When performing a final render, it is important to reduce noise as much "
-"as possible. Here we'll discuss a number of tricks that, while breaking "
-"the laws of physics, are particularly important when rendering animations"
-" within a reasonable time. Click to enlarge the example images to see the"
-" noise differences well."
+"as possible. Here we will discuss a number of tricks that, while breaking"
+" the laws of physics, are particularly important when rendering "
+"animations within a reasonable time. Click to enlarge the example images "
+"to see the noise differences well."
 msgstr ""
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:13
@@ -58,18 +58,18 @@ msgid ""
 " as Lamp)."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:34
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:36
 msgid ""
 "For more details, see the :doc:`Light Paths "
 "</render/cycles/settings/light_paths>` and :doc:`Integrator "
 "</render/cycles/settings/integrator>` documentation."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:40
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:42
 msgid "Where Noise Comes From"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:42
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:44
 msgid ""
 "To understand where noise can come from, take for example this scene. "
 "When we trace a light ray into the specified location, this is what the "
@@ -81,18 +81,18 @@ msgid ""
 "pixel."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:62
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:64
 msgid ""
 "The lamp is a known light source, so it will not be too hard to find, but"
-" the glossy highlight (s) that it causes are a different matter. The best"
-" we can do with path tracing is to distribute light rays randomly over "
-"the hemisphere, hoping to find all the important bright spots. If for "
-"some pixels we miss some bright spot, but we do find it for another, that"
-" results in noise. The more samples we take, the higher the probability "
+" the glossy highlight(s) that it causes are a different matter. The best "
+"we can do with path tracing is to distribute light rays randomly over the"
+" hemisphere, hoping to find all the important bright spots. If for some "
+"pixels we miss some bright spot, but we do find it for another, that "
+"results in noise. The more samples we take, the higher the probability "
 "that we cover all the important sources of light."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:69
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:71
 msgid ""
 "With some tricks we can reduce this noise. If we blur the bright spots, "
 "they become bigger and less intense, making them easier to find and less "
@@ -101,11 +101,11 @@ msgid ""
 "an example of using Filter Glossy and Smooth Light Falloff."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:88
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:90
 msgid "Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:90
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:92
 msgid ""
 "In reality light will bounce a huge number of times due to the speed of "
 "light being very high. In practice more bounces will introduce more "
@@ -116,7 +116,7 @@ msgid ""
 " need the most."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:109
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:111
 msgid ""
 "Also important is to use shader colors that do **not** have components of"
 " value 1.0 or values near that; try to keep the maximum value to 0.8 or "
@@ -128,41 +128,41 @@ msgid ""
 "off each surface."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:119
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:121
 msgid "Caustics and Filter Glossy"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:121
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:123
 msgid ""
 "Caustics are a well-known source of noise, causing fireflies. They happen"
 " because the renderer has difficulty finding specular highlights viewed "
 "through a soft glossy or diffuse reflection. There is a :ref:`No Caustics"
-" <render-cycles-integrator-no_caustics>` option to disable glossy behind "
+" <render-cycles-integrator-no-caustics>` option to disable glossy behind "
 "a diffuse reflection entirely. Many render engines will typically disable"
 " caustics by default."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:140
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:142
 msgid ""
 "However, using No Caustics will result in missing light, and it still "
 "does not cover the case where a sharp glossy reflection is viewed through"
 " a soft glossy reflection. There is a :ref:`Filter Glossy <render-cycles-"
-"integrator-filter_glossy>` option to reduce the noise from such cases at "
+"integrator-filter-glossy>` option to reduce the noise from such cases at "
 "the cost of accuracy. This will blur the sharp glossy reflection to make "
 "it easier to find, by increasing the shader Roughness."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:146
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:148
 msgid ""
 "The above images show default settings, no caustics, and filter glossy "
 "set to 1.0."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:150
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:152
 msgid "Light Falloff"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:152
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:154
 msgid ""
 "In reality light in a vacuum will always fall off at a rate of "
 "1/(distance^2). However, as distance goes to zero, this value goes to "
@@ -172,7 +172,7 @@ msgid ""
 "is a typical recipe for fireflies."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:168
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:170
 msgid ""
 "To reduce this problem, the :doc:`Light Falloff "
 "</render/cycles/nodes/types/color/light_falloff>` node has a *Smooth "
@@ -181,14 +181,14 @@ msgid ""
 "smooth value 1.0."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:174
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:176
 msgid "Sample as Lamp"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:176
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:178
 msgid ""
 "Materials with emission shaders can be configured to be *sampled as lamp*"
-" (:ref:`render-cycles-integrator-material_settings`). This means that "
+" (:ref:`render-cycles-integrator-material-settings`). This means that "
 "they will get rays sent directly towards them, rather than ending up "
 "there based on rays randomly bouncing around. For very bright mesh light "
 "sources, this can reduce noise significantly. However, when the emission "
@@ -196,7 +196,7 @@ msgid ""
 "brighter light sources for which it is important to find them this way."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:184
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:186
 msgid ""
 "The optimal setting here is difficult to guess; it may be a matter of "
 "trial and error, but often it is clear that a somewhat glowing object may"
@@ -206,21 +206,21 @@ msgid ""
 "slightly less noise by disabling Sample as Lamp on them."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:199
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:201
 msgid ""
 "The world background also has a *Sample as Lamp* (:ref:`render-cycles-"
-"integrator-world_settings`) option. This is mostly useful for environment"
+"integrator-world-settings`) option. This is mostly useful for environment"
 " maps that have small bright spots in them, rather than being smooth. "
 "This option will then, in a preprocess, determine the bright spots, and "
 "send light rays directly towards them. Again, enabling this option may "
 "take samples away from more important light sources if it is not needed."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:208
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:210
 msgid "Glass and Transparent Shadows"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:210
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:212
 msgid ""
 "With caustics disabled, glass will miss shadows, and with filter glossy "
 "they might be too soft. We can make a glass shader that will use a Glass "
@@ -231,22 +231,22 @@ msgid ""
 " determine when to use which of the two shaders."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:220
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:222
 msgid "Optimized glass shader."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:223
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:225
 msgid ""
 "Above we can see the node setup used for the glass transparency trick; on"
 " the left the render has too much shadow due to missing caustics, and on "
 "the right the render with the trick."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:237
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:239
 msgid "Window Lights"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:239
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:241
 msgid ""
 "When rendering a daylight indoor scene where most of the light is coming "
 "in through a window or door opening, it is difficult for the integrator "
@@ -258,36 +258,139 @@ msgid ""
 "emission shaders in the material."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:248
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:250
 msgid ""
 "The two renders below have the same render time, with the second render "
 "using a mesh light positioned in the window."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:260
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:262
 msgid ""
 "In newer versions, :doc:`light portals </render/cycles/world>` provide a "
 "better solution."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:266
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:268
 msgid "Clamp Fireflies"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:268
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:270
 msgid ""
 "Ideally with all the previous tricks, fireflies would be eliminated, but "
 "they could still happen. For that, the *intensity* that any individual "
 "light ray sample will contribute to a pixel can be *clamped* to a maximum"
 " value with the integrator :ref:`Clamp setting <render-cycles-integrator-"
-"clamp_samples>`."
+"clamp-samples>`."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:272
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:274
 msgid ""
 "If set too low this can cause missing highlights in the image, which "
 "might be useful to preserve for camera effects such as bloom or glare. To"
 " mitigate this conundrum it's often useful to clamp only indirect "
 "bounces, leaving highlights directly visible to the camera untouched."
 msgstr ""
+
+#~ msgid ""
+#~ "When performing a final render, it "
+#~ "is important to reduce noise as "
+#~ "much as possible. Here we'll discuss "
+#~ "a number of tricks that, while "
+#~ "breaking the laws of physics, are "
+#~ "particularly important when rendering "
+#~ "animations within a reasonable time. "
+#~ "Click to enlarge the example images "
+#~ "to see the noise differences well."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The lamp is a known light source,"
+#~ " so it will not be too hard "
+#~ "to find, but the glossy highlight "
+#~ "(s) that it causes are a different"
+#~ " matter. The best we can do "
+#~ "with path tracing is to distribute "
+#~ "light rays randomly over the hemisphere,"
+#~ " hoping to find all the important "
+#~ "bright spots. If for some pixels "
+#~ "we miss some bright spot, but we"
+#~ " do find it for another, that "
+#~ "results in noise. The more samples "
+#~ "we take, the higher the probability "
+#~ "that we cover all the important "
+#~ "sources of light."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Caustics are a well-known source "
+#~ "of noise, causing fireflies. They happen"
+#~ " because the renderer has difficulty "
+#~ "finding specular highlights viewed through "
+#~ "a soft glossy or diffuse reflection. "
+#~ "There is a :ref:`No Caustics <render-"
+#~ "cycles-integrator-no_caustics>` option to "
+#~ "disable glossy behind a diffuse "
+#~ "reflection entirely. Many render engines "
+#~ "will typically disable caustics by "
+#~ "default."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "However, using No Caustics will result"
+#~ " in missing light, and it still "
+#~ "does not cover the case where a"
+#~ " sharp glossy reflection is viewed "
+#~ "through a soft glossy reflection. There"
+#~ " is a :ref:`Filter Glossy <render-"
+#~ "cycles-integrator-filter_glossy>` option to "
+#~ "reduce the noise from such cases "
+#~ "at the cost of accuracy. This will"
+#~ " blur the sharp glossy reflection to"
+#~ " make it easier to find, by "
+#~ "increasing the shader Roughness."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Materials with emission shaders can be"
+#~ " configured to be *sampled as lamp*"
+#~ " (:ref:`render-cycles-integrator-"
+#~ "material_settings`). This means that they "
+#~ "will get rays sent directly towards "
+#~ "them, rather than ending up there "
+#~ "based on rays randomly bouncing around."
+#~ " For very bright mesh light sources,"
+#~ " this can reduce noise significantly. "
+#~ "However, when the emission is not "
+#~ "particularly bright, this will take "
+#~ "samples away from other brighter light"
+#~ " sources for which it is important"
+#~ " to find them this way."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The world background also has a "
+#~ "*Sample as Lamp* (:ref:`render-cycles-"
+#~ "integrator-world_settings`) option. This is "
+#~ "mostly useful for environment maps that"
+#~ " have small bright spots in them, "
+#~ "rather than being smooth. This option"
+#~ " will then, in a preprocess, "
+#~ "determine the bright spots, and send "
+#~ "light rays directly towards them. Again,"
+#~ " enabling this option may take "
+#~ "samples away from more important light"
+#~ " sources if it is not needed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ideally with all the previous tricks,"
+#~ " fireflies would be eliminated, but "
+#~ "they could still happen. For that, "
+#~ "the *intensity* that any individual "
+#~ "light ray sample will contribute to "
+#~ "a pixel can be *clamped* to a "
+#~ "maximum value with the integrator "
+#~ ":ref:`Clamp setting <render-cycles-"
+#~ "integrator-clamp_samples>`."
+#~ msgstr ""
 
