@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-25 09:56+1000\n"
+"POT-Creation-Date: 2016-08-29 18:25-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,7 +161,7 @@ msgid ""
 "from here."
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:104
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:108
 msgid "Auto Keyframe"
 msgstr ""
 
@@ -176,7 +176,7 @@ msgstr ""
 msgid "Corners can be moved using :kbd:`LMB`."
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:111
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:116
 msgid "Image"
 msgstr ""
 
@@ -496,57 +496,159 @@ msgid "2D Stabilization Panel."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:247
-msgid ""
-"Theres one extra panel which is available in reconstruction mode - 2D "
-"Stabilization Panel."
+msgid "This panel is used to define data used for 2D stabilization of the shot."
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:249
-msgid ""
-"This panel is used to define data used for 2D stabilization of the shot. "
-"Several options are available in this panel."
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:250
+msgid "Anchor Frame"
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:252
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:250
 msgid ""
-"First of all is the list of tracks to be used to compensate for camera "
-"jumps, or location. It works in the following way: it gets tracks from "
-"the list of tracks used for location stabilization and finds the median "
-"point of all these tracks on the first frame. On each frame, the "
-"algorithm makes this point have the same position in screen coordinates "
-"by moving the whole frame. In some cases it is not necessary to fully "
-"compensate camera jumps and *Location Influence* can be used in such "
-"cases."
+"Reference point to anchor stabilization (other frames will be adjusted "
+"relative to the frames position)."
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:259
-msgid ""
-"The camera can also have rotated a bit, adding some tilt to the footage. "
-"There is the *Stabilize Rotation* option to compensate for this tilt. A "
-"single extra track needs to be set for this, and it works in the "
-"following way. On first frame of the movie, this track is connected with "
-"the median point of the tracks from list above and angle between horizon "
-"and this segment is kept constant through the whole footage. The amount "
-"of rotation applied to the footage can be controlled by *Rotation "
-"Influence*."
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:257
+msgid "Stabilization Type"
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:266
-msgid ""
-"If the camera jumps a lot, there will be noticeable black areas near "
-"image boundaries. To get rid of these black holes, there is the "
-"*Autoscale* option, which finds smallest scale factor which, when applied"
-" to the footage, would eliminate all the black holes near the image "
-"boundaries. There is an option to control the maximal scale factor "
-"*Maximal Scale*, and the amount of scale applied to the footage *Scale "
-"Influence*."
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:254
+msgid "Rotation"
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:275
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:254
+msgid "Stabilizes detected rotation around center of frame."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:257
+msgid "Scale"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:257
+msgid "Compensates any scale changes relative to center of rotation."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:270
+msgid "Tracks For Stabilization"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:265
+msgid "Location"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:261
+msgid ""
+"List of tracks to be used to compensate for camera jumps, or location. It"
+" works in the following way: it gets tracks from the list of tracks used "
+"for location stabilization and finds the median point of all these tracks"
+" on the first frame. On each frame, the algorithm makes this point have "
+"the same position in screen coordinates by moving the whole frame."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:270
+msgid "Rotation/Scale"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:268
+msgid ""
+"List of tracks to be used to compensate for camera tilts, it works in the"
+" following way. On first frame of the movie, this track is connected with"
+" the median point of the tracks from list above and angle between horizon"
+" and this segment is kept constant through the whole footage."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:279
+msgid "Autoscale"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:273
+msgid ""
+"Finds smallest scale factor which, when applied to the footage, would "
+"eliminate all the black holes near the image boundaries. Used for when "
+"the camera jumps a lot and has noticeable black areas near image "
+"boundaries."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:279
+msgid "Max"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:278
+msgid "Limits the amount of automatic scaling."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:281
+msgid "Relative Offset X/Y"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:282
+msgid ""
+"Known relative offset of original shot, will be subtracted (e.g. for "
+"panning shot, can be animated)."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:283
+msgid "Expected Rotation"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:284
+msgid ""
+"Rotation present on original shot, will be compensated (e.g. for "
+"deliberate tilting)."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:286
+msgid "Expected Zoom"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:286
+msgid "Explicitly scale resulting frame to compensate zoom of original shot."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:290
+msgid "Influence"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:289
+msgid ""
+"The amount of transformation applied to the footage can be controlled. In"
+" some cases it is not necessary to fully compensate camera jumps."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:299
+msgid "Interpolate"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:293
+msgid "Nearest"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:294
+msgid "No interpolation, uses nearest neighboring pixel."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:295
+msgid "Bilinear"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:296
+msgid "Simple interpolation between adjacent pixels."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:299
+msgid "Bicubic"
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:298
+msgid "Highest quality interpolation."
+msgstr ""
+
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:302
 msgid "Grease Pencil Panel"
 msgstr ""
 
-#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:277
+#: ../../manual/editors/movie_clip_editor/tracking/clip/properties.rst:304
 msgid ""
 "It is a standard grease pencil panel where new grease pencil layers and "
 "frames can be controlled. There is one difference in the behavior of the "
@@ -560,17 +662,67 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "The last thing is custom color, "
-#~ "and the preset for it. This "
-#~ "setting overrides the default marker "
-#~ "color used in the clip editor and"
-#~ " 3D viewport, and it helps to "
-#~ "distinguish different type of features "
-#~ "(for example, features in the background"
-#~ " vs. foreground and so on). Color "
-#~ "also can be used for \"grouping\" "
-#~ "tracks so a whole group of tracks"
-#~ " can be selected by color using "
-#~ "the Select Grouped operator."
+#~ "Theres one extra panel which is "
+#~ "available in reconstruction mode - 2D"
+#~ " Stabilization Panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This panel is used to define data"
+#~ " used for 2D stabilization of the "
+#~ "shot. Several options are available in"
+#~ " this panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First of all is the list of "
+#~ "tracks to be used to compensate "
+#~ "for camera jumps, or location. It "
+#~ "works in the following way: it "
+#~ "gets tracks from the list of "
+#~ "tracks used for location stabilization "
+#~ "and finds the median point of all"
+#~ " these tracks on the first frame. "
+#~ "On each frame, the algorithm makes "
+#~ "this point have the same position "
+#~ "in screen coordinates by moving the "
+#~ "whole frame. In some cases it is"
+#~ " not necessary to fully compensate "
+#~ "camera jumps and *Location Influence* "
+#~ "can be used in such cases."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The camera can also have rotated a"
+#~ " bit, adding some tilt to the "
+#~ "footage. There is the *Stabilize "
+#~ "Rotation* option to compensate for this"
+#~ " tilt. A single extra track needs "
+#~ "to be set for this, and it "
+#~ "works in the following way. On "
+#~ "first frame of the movie, this "
+#~ "track is connected with the median "
+#~ "point of the tracks from list "
+#~ "above and angle between horizon and "
+#~ "this segment is kept constant through"
+#~ " the whole footage. The amount of "
+#~ "rotation applied to the footage can "
+#~ "be controlled by *Rotation Influence*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the camera jumps a lot, there"
+#~ " will be noticeable black areas near"
+#~ " image boundaries. To get rid of "
+#~ "these black holes, there is the "
+#~ "*Autoscale* option, which finds smallest "
+#~ "scale factor which, when applied to "
+#~ "the footage, would eliminate all the "
+#~ "black holes near the image boundaries."
+#~ " There is an option to control "
+#~ "the maximal scale factor *Maximal "
+#~ "Scale*, and the amount of scale "
+#~ "applied to the footage *Scale "
+#~ "Influence*."
 #~ msgstr ""
 
