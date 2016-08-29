@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-16 13:44-0700\n"
+"POT-Creation-Date: 2016-08-29 23:45+0500\n"
 "PO-Revision-Date: 2016-08-25 23:25+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -77,7 +77,7 @@ msgstr ""
 "значения пикселей должны интерпретироваться как *Нецветовые данные*, во "
 "избежания любых нежелательных преобразований цветовых пространств."
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:46
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:51
 msgid "Projection"
 msgstr "Проекция"
 
@@ -106,7 +106,6 @@ msgstr ""
 "нормалям, используя координаты XY, YZ и XYZ в зависимости от стороны "
 "куба."
 
-# Mingun: в Blender ещё не переведено. Перевод: Смешение.
 #: ../../manual/render/cycles/nodes/types/textures/image.rst:40
 msgid "Blend"
 msgstr "Blend (Смешение)"
@@ -124,33 +123,41 @@ msgstr ""
 "модели. Значение 0.0 отключает смешивание; более высокие значения дают "
 "плавный переход."
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:42
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:44
 msgid "Sphere"
 msgstr "Сфера"
 
 #: ../../manual/render/cycles/nodes/types/textures/image.rst:43
-msgid "Maps the image to the sphere using Z axis as central."
-msgstr "Проецирует изображение на сферу, используя ось Z в качестве центральной."
+msgid ""
+"Sphere mapping is the best type for mapping a sphere, and it is perfect "
+"for making planets and similar objects. It is often very useful for "
+"creating organic objects."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:46
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:51
 msgid "Tube"
 msgstr "Цилиндр"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:45
-msgid "Mapa the tube to the sphere using Z axis as central."
-msgstr "Проецирует цилиндр на сферу, используя ось Z в качестве центральной."
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:47
+msgid ""
+"Maps the texture around an object like a label on a bottle. The texture "
+"is therefore more stretched on the cylinder. This mapping is of course "
+"very good for making the label on a bottle, or assigning stickers to "
+"rounded objects. However, this is not a cylindrical mapping so the ends "
+"of the cylinder are undefined."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:54
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:59
 msgid "Extension Type"
 msgstr "Расширение"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:49
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:54
 msgid ""
 "Extension type defines how the image is extrapolated past the original "
 "bounds:"
 msgstr "Определяет, как изображение эктраполируется при выходе за его границы:"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:51
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:56
 msgid ""
 "*Repeat* will repeat the image horizontally and vertically giving tiled-"
 "looking result."
@@ -158,28 +165,28 @@ msgstr ""
 "*Повторять* заставит изображение повторяться по горизонтали и вертикали, "
 "в результате чего результат будет похож на плитку."
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:52
-msgid "*Extend* will extend the image by repeating pixels on it's edges."
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:57
+#, fuzzy
+msgid "*Extend* will extend the image by repeating pixels on its edges."
 msgstr ""
 "*Дополнить* заставит изображение расшириться путём повторения пикселей на"
 " его краях."
 
-# Mingun: неправильный перевод. Должно быть: Обрезать
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:53
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:58
 msgid "*Clip* will set all the extended pixels values to transparent black."
 msgstr ""
 "*Клип* задаст всем «расширенным» пикселям значение прозрачного чёрного "
 "цвета."
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:57
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:62
 msgid "Outputs"
 msgstr "Выходы"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:60
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:65
 msgid "Color"
 msgstr "Цвет"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:60
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:65
 msgid ""
 "RGB color from image. If the image has alpha, the color is premultiplied "
 "with alpha if the Alpha output is used, and unpremultiplied or straight "
@@ -190,19 +197,27 @@ msgstr ""
 "альфу, если же альфа-канала нет, либо выход *Альфа* не используется, цвет"
 " меняться не будет."
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:64
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:69
 msgid "Alpha"
 msgstr "Alpha"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:63
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:68
 msgid "Alpha channel from image."
 msgstr "Альфа-канал из изображения."
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:67
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:72
 msgid "Examples"
 msgstr "Примеры"
 
-#: ../../manual/render/cycles/nodes/types/textures/image.rst:72
+#: ../../manual/render/cycles/nodes/types/textures/image.rst:76
 msgid "Image texture from `GoodTextures.com <http://www.goodtextures.com/>`__."
 msgstr "Изображение текстуры с `GoodTextures.com <http://www.goodtextures.com/>`__"
+
+#~ msgid "Maps the image to the sphere using Z axis as central."
+#~ msgstr ""
+#~ "Проецирует изображение на сферу, используя "
+#~ "ось Z в качестве центральной."
+
+#~ msgid "Mapa the tube to the sphere using Z axis as central."
+#~ msgstr "Проецирует цилиндр на сферу, используя ось Z в качестве центральной."
 

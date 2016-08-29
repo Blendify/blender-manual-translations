@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 09:40+1000\n"
+"POT-Creation-Date: 2016-08-29 23:45+0500\n"
 "PO-Revision-Date: 2016-07-03 20:27+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -36,16 +36,18 @@ msgstr ""
 "сцены."
 
 #: ../../manual/render/cycles/baking.rst:12
+#, fuzzy
 msgid ""
 "The baking happens into the respective active textures of the object "
 "materials. The active texture is the last selected Image Texture node of "
-"the material nodetree. That means the active object (or the selected "
+"the material node tree. That means the active object (or the selected "
 "objects, when not baking 'Selected to Active') needs a material, and that"
 " material needs at least an Image Texture node, with the image to be used"
-" for the baking. Note, the node doesn't need to be connected to any other"
-" node. The active texture is what projection painting and the viewport "
-"use as a criteria to which image to use. This way after the baking is "
-"done you can automatically preview the baked result in the Texture mode."
+" for the baking. Note, the node does not need to be connected to any "
+"other node. The active texture is what projection painting and the "
+"viewport use as a criteria to which image to use. This way after the "
+"baking is done you can automatically preview the baked result in the "
+"Texture mode."
 msgstr ""
 "Запекание происходит в соответствующие активные текстуры материалов "
 "объекта. Активная текстура - это последний выбранный узел "
@@ -60,31 +62,31 @@ msgstr ""
 "произведено, вы сможете автоматически просмотреть запечённый результат в "
 "режиме «Текстура»."
 
-#: ../../manual/render/cycles/baking.rst:21
+#: ../../manual/render/cycles/baking.rst:22
 msgid "Options"
 msgstr "Параметры"
 
-#: ../../manual/render/cycles/baking.rst:25
+#: ../../manual/render/cycles/baking.rst:26
 msgid "Ambient Occlusion Pass."
 msgstr "Тип запекания «Ambient Occlusion»"
 
-#: ../../manual/render/cycles/baking.rst:28
+#: ../../manual/render/cycles/baking.rst:29
 msgid "Bake Mode"
 msgstr "Тип запекания"
 
-#: ../../manual/render/cycles/baking.rst:31
+#: ../../manual/render/cycles/baking.rst:37
 msgid "Combined"
 msgstr "Комбинация"
 
-#: ../../manual/render/cycles/baking.rst:31
+#: ../../manual/render/cycles/baking.rst:32
 msgid "Bakes all materials, textures, and lighting except specularity."
 msgstr "Запекает все материалы, текстуры и освещение, за исключением бликового."
 
-#: ../../manual/render/cycles/baking.rst:35
+#: ../../manual/render/cycles/baking.rst:36
 msgid "Combined Pass Options."
 msgstr "Параметры типа запекания «Комбинация»"
 
-#: ../../manual/render/cycles/baking.rst:37
+#: ../../manual/render/cycles/baking.rst:38
 msgid ""
 "The passes that contribute to the combined pass can be toggled "
 "individually to form the final map."
@@ -92,7 +94,7 @@ msgstr ""
 "Проходы, которые вносят вклад в тип «Комбинация», могут быть включены по "
 "отдельности, чтобы сформировать итоговую карту."
 
-#: ../../manual/render/cycles/baking.rst:40
+#: ../../manual/render/cycles/baking.rst:39
 msgid "Ambient Occlusion"
 msgstr "Ambient Occlusion"
 
@@ -104,23 +106,67 @@ msgstr ""
 "Запекает ambient occlusion, как указано в панелях «Окружающая среда "
 "(мир)». Игнорирует все источники освещения в сцене."
 
-#: ../../manual/render/cycles/baking.rst:43
+#: ../../manual/render/cycles/baking.rst:41
 msgid "Shadow"
 msgstr "Тень"
 
-#: ../../manual/render/cycles/baking.rst:43
+#: ../../manual/render/cycles/baking.rst:42
 msgid "Bakes shadows and lighting."
 msgstr "Запекает тени и освещение."
 
-#: ../../manual/render/cycles/baking.rst:46
+#: ../../manual/render/cycles/baking.rst:60
 msgid "Normals"
 msgstr "Нормали"
 
-#: ../../manual/render/cycles/baking.rst:46
+#: ../../manual/render/cycles/baking.rst:44
 msgid "Bakes normals to an RGB image."
 msgstr "Запекает нормали в цветах RGB."
 
-#: ../../manual/render/cycles/baking.rst:66
+#: ../../manual/render/cycles/baking.rst:48
+#, fuzzy
+msgid "Normal Pass Options."
+msgstr "Параметры типа запекания «Комбинация»"
+
+#: ../../manual/render/cycles/baking.rst:57
+#, fuzzy
+msgid "Normal Space"
+msgstr "Нормали"
+
+#: ../../manual/render/cycles/baking.rst:51
+msgid "Normals can be baked in different spaces:"
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:53
+msgid "Object space"
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:54
+msgid ""
+"Normals in object coordinates, independent of object transformation, but "
+"dependent on deformation."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:57
+msgid "Tangent space"
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:56
+msgid ""
+"Normals in tangent space coordinates, independent of object "
+"transformation and deformation. This is the default, and the right choice"
+" in most cases, since then the normal map can be used for animated "
+"objects too."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:60
+msgid "Normal Swizzle"
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:60
+msgid "Axis to bake into the red, green and blue channel."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:62
 msgid ""
 "For materials the same spaces can be chosen in the image texture options "
 "next to the existing *Normal Map* setting. For correct results, the "
@@ -131,35 +177,35 @@ msgstr ""
 "получения правильных результатов, данная настройка должна совпадать с "
 "настройкой, используемой для запекания."
 
-#: ../../manual/render/cycles/baking.rst:70
+#: ../../manual/render/cycles/baking.rst:65
 msgid "UV"
 msgstr "UV"
 
-#: ../../manual/render/cycles/baking.rst:70
+#: ../../manual/render/cycles/baking.rst:66
 msgid "Bakes colors of materials and textures only, without shading."
 msgstr "Запекает только цвета материалов и текстуры, без затенения."
 
-#: ../../manual/render/cycles/baking.rst:73
+#: ../../manual/render/cycles/baking.rst:67
 msgid "Emit"
 msgstr "Свечение"
 
-#: ../../manual/render/cycles/baking.rst:73
+#: ../../manual/render/cycles/baking.rst:68
 msgid "Bakes Emission, or the Glow color of a material."
 msgstr "Запекает цвета излучения или свечения материала."
 
-#: ../../manual/render/cycles/baking.rst:76
+#: ../../manual/render/cycles/baking.rst:69
 msgid "Environment"
 msgstr "Окр. среда"
 
-#: ../../manual/render/cycles/baking.rst:76
+#: ../../manual/render/cycles/baking.rst:70
 msgid "Bakes the environment as seen from the center of the object."
 msgstr "Запекает окружение в том виде, в котором оно видится из центра объекта."
 
-#: ../../manual/render/cycles/baking.rst:79
+#: ../../manual/render/cycles/baking.rst:76
 msgid "Diffuse / Glossy / Transmission / Subsurface"
 msgstr "Диффуз. / Глянец / Передача / Подпов. рассеяние"
 
-#: ../../manual/render/cycles/baking.rst:79
+#: ../../manual/render/cycles/baking.rst:72
 msgid ""
 "Bakes the diffuse, glossiness, transmission of subsurface pass of a "
 "material."
@@ -167,11 +213,11 @@ msgstr ""
 "Запекает диффузный, глянцевый проходы, проходы передачи и "
 "подповерхностного рассеяния материала."
 
-#: ../../manual/render/cycles/baking.rst:83
+#: ../../manual/render/cycles/baking.rst:76
 msgid "Diffuse Pass Options."
 msgstr "Параметры типа запекания «Диффуз.»"
 
-#: ../../manual/render/cycles/baking.rst:85
+#: ../../manual/render/cycles/baking.rst:78
 msgid ""
 "If only color is selected you get the pass color, which is a property of "
 "the surface and independent of sampling refinement."
@@ -179,7 +225,7 @@ msgstr ""
 "Если нажата только кнопка «Цвет», вы получите цвет прохода, который "
 "является свойством поверхности и не зависит от количества сэмплов."
 
-#: ../../manual/render/cycles/baking.rst:88
+#: ../../manual/render/cycles/baking.rst:81
 msgid ""
 "If color is not selected, you get the direct and/or indirect "
 "contributions in grayscale."
@@ -187,7 +233,7 @@ msgstr ""
 "Если кнопка «Цвет» не нажата, вы получите вклады прямого и/или "
 "отражённого освещения в градациях серого."
 
-#: ../../manual/render/cycles/baking.rst:90
+#: ../../manual/render/cycles/baking.rst:83
 msgid ""
 "If color and either direct or indirect is selected you get the direct "
 "and/or indirect contributions colored."
@@ -195,15 +241,15 @@ msgstr ""
 "Если нажата и кнопка «Цвет», и кнопки «Прямое» или «Отражённое», вы "
 "получите расцвеченный вклад прямого/отражённого освещения."
 
-#: ../../manual/render/cycles/baking.rst:94
+#: ../../manual/render/cycles/baking.rst:87
 msgid "Additional Options"
 msgstr "Дополнительные параметры"
 
-#: ../../manual/render/cycles/baking.rst:97
+#: ../../manual/render/cycles/baking.rst:89
 msgid "Margin"
 msgstr "Отступ"
 
-#: ../../manual/render/cycles/baking.rst:97
+#: ../../manual/render/cycles/baking.rst:90
 msgid ""
 "Baked result is extended this many pixels beyond the border of each UV "
 "\"island,\" to soften seams in the texture."
@@ -211,19 +257,19 @@ msgstr ""
 "Запечённый результат расширяется на указанное количество пикселей за "
 "границы каждого UV-«островка» для сглаживания швов в текстуре."
 
-#: ../../manual/render/cycles/baking.rst:100
+#: ../../manual/render/cycles/baking.rst:91
 msgid "Clear"
 msgstr "Очистить"
 
-#: ../../manual/render/cycles/baking.rst:100
+#: ../../manual/render/cycles/baking.rst:92
 msgid "If selected, clears the image before baking render."
 msgstr "Если галочка отмечена, очищает изображение перед запеканием визуализации."
 
-#: ../../manual/render/cycles/baking.rst:107
+#: ../../manual/render/cycles/baking.rst:98
 msgid "Select to Active"
 msgstr "Выделение к активному"
 
-#: ../../manual/render/cycles/baking.rst:103
+#: ../../manual/render/cycles/baking.rst:94
 msgid ""
 "Bake shading on the surface of selected objects to the active object. The"
 " rays are cast from the lowpoly object inwards towards the highpoly "
@@ -240,11 +286,11 @@ msgstr ""
 "или *Выдавливание клетки* (в зависимости от того, используете ли вы "
 "клетку). Для ещё большего контроля можно использовать *Объект клетки*."
 
-#: ../../manual/render/cycles/baking.rst:111
+#: ../../manual/render/cycles/baking.rst:100
 msgid "Memory Usage"
 msgstr "Использование памяти"
 
-#: ../../manual/render/cycles/baking.rst:113
+#: ../../manual/render/cycles/baking.rst:102
 msgid ""
 "There is a CPU fixed memory footprint for every object used to bake from."
 " In order to avoid crashes due to lack of memory the highpoly objects can"
@@ -261,19 +307,20 @@ msgstr ""
 "расходы, но больше расход памяти во время запекания (и видеопамяти, и "
 "обычной)."
 
-#: ../../manual/render/cycles/baking.rst:123
-#: ../../manual/render/cycles/baking.rst:143
+#: ../../manual/render/cycles/baking.rst:111
+#: ../../manual/render/cycles/baking.rst:129
 msgid "Cage"
 msgstr "Клетка"
 
-#: ../../manual/render/cycles/baking.rst:119
+#: ../../manual/render/cycles/baking.rst:108
+#, fuzzy
 msgid ""
 "Cast rays to active object from a cage. A cage is a ballooned-out version"
 " of the lowpoly mesh created either automatically (by adjusting the ray "
 "distance) or manually (by specifying an object to use). When not using a "
 "cage the rays will conform to the mesh normals. This produces glitches on"
-" the edges, but it's a preferable method when baking into planes to avoid"
-" the need of adding extra loops around the edges."
+" the edges, but it is a preferable method when baking into planes to "
+"avoid the need of adding extra loops around the edges."
 msgstr ""
 "Пускать лучи на активный объект из объекта-клетки. Клетка - это "
 "увеличенная версия низкополигональной полисетки, создаваемая либо "
@@ -284,11 +331,11 @@ msgstr ""
 "плоскости, поскольку он устраняет необходимость добавления "
 "дополнительного пространства вокруг границ."
 
-#: ../../manual/render/cycles/baking.rst:127
+#: ../../manual/render/cycles/baking.rst:114
 msgid "Ray Distance"
 msgstr "Расстояние луча"
 
-#: ../../manual/render/cycles/baking.rst:126
+#: ../../manual/render/cycles/baking.rst:114
 msgid ""
 "Distance to use for the inward ray cast when using selected to active. "
 "Ray distance is only available when not using *Cage*."
@@ -297,11 +344,11 @@ msgstr ""
 "на активный. Параметр «Расстояние луча» доступен только тогда, когда не "
 "используется *Клетка*."
 
-#: ../../manual/render/cycles/baking.rst:133
+#: ../../manual/render/cycles/baking.rst:119
 msgid "Cage Extrusion"
 msgstr "Выдавливание клетки"
 
-#: ../../manual/render/cycles/baking.rst:130
+#: ../../manual/render/cycles/baking.rst:117
 msgid ""
 "Distance to use for the inward ray cast when using *Selected to Active* "
 "and *Cage*. The inward rays are casted from a version of the active "
@@ -316,7 +363,7 @@ msgstr ""
 "«Разделение рёбер» применён к объекту) следует избегать, поскольку оно "
 "приведёт к получению несглаженных нормалей по краям."
 
-#: ../../manual/render/cycles/baking.rst:136
+#: ../../manual/render/cycles/baking.rst:122
 msgid ""
 "Object to use as cage instead of calculating the cage from the active "
 "object with the *Cage Extrusion*."
@@ -325,9 +372,10 @@ msgstr ""
 "рассчитываемого выдавливания от активного объекта при использовании "
 "параметра *Выдавливание клетки*."
 
-#: ../../manual/render/cycles/baking.rst:140
+#: ../../manual/render/cycles/baking.rst:126
+#, fuzzy
 msgid ""
-"When the base mesh extruded doesn't give good results, you can create a "
+"When the base mesh extruded does not give good results, you can create a "
 "copy of the base mesh and modify it to use as a *Cage*. Both meshes need "
 "to have the same :term:`topology` (number of faces and face order)."
 msgstr ""

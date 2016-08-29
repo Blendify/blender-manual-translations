@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-20 23:22+1000\n"
+"POT-Creation-Date: 2016-08-29 23:45+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,83 +33,93 @@ msgstr ""
 
 #: ../../manual/compositing/types/matte/luminance_key.rst:15
 msgid ""
-"For example, this is useful when compositing stock footage of explosions "
-"(very bright) which are normally shot against a solid, dark background."
+"Stock footage of explosions, smoke or debris  are normally shot against a"
+" solid, dark background rather than a green screen. This node can "
+"separate the foreground effect from the background. It can also be used "
+"for sky replacment for over-exposed or gray skies that aren't suitable "
+"for chroma keying."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:20
+#: ../../manual/compositing/types/matte/luminance_key.rst:22
+msgid ""
+"When compositing footage of something that emits light and has a dark "
+"background, like fire, a :doc:`Mix Node </compositing/types/color/mix>` "
+"using a *Screen* or *Add* operator will produce better results."
+msgstr ""
+
+#: ../../manual/compositing/types/matte/luminance_key.rst:28
 msgid "Inputs"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:24
-#: ../../manual/compositing/types/matte/luminance_key.rst:46
+#: ../../manual/compositing/types/matte/luminance_key.rst:32
+#: ../../manual/compositing/types/matte/luminance_key.rst:54
 msgid "Image"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:23
+#: ../../manual/compositing/types/matte/luminance_key.rst:31
 msgid "Standard image input."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:27
+#: ../../manual/compositing/types/matte/luminance_key.rst:35
 msgid "Properties"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:35
+#: ../../manual/compositing/types/matte/luminance_key.rst:43
 msgid "Limit"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:31
+#: ../../manual/compositing/types/matte/luminance_key.rst:39
 msgid "High"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:31
+#: ../../manual/compositing/types/matte/luminance_key.rst:39
 msgid ""
 "Determines the lowest values that are considered foreground. (which is "
 "supposed to be - relatively - light: from this value to 1.0)."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:35
+#: ../../manual/compositing/types/matte/luminance_key.rst:43
 msgid "Low"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:34
+#: ../../manual/compositing/types/matte/luminance_key.rst:42
 msgid ""
 "Determines the highest values that are considered to be background "
 "objects. (which is supposed to be - relatively - dark: from 0.0 to this "
 "value)."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:39
+#: ../../manual/compositing/types/matte/luminance_key.rst:47
 msgid ""
-"It is also possible to have a separation between the two values to allow "
-"for a gradient of transparency between foreground and background objects."
+"Brightness levels between the two values form a gradient of transparency "
+"between foreground and background objects."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:44
+#: ../../manual/compositing/types/matte/luminance_key.rst:52
 msgid "Outputs"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:47
+#: ../../manual/compositing/types/matte/luminance_key.rst:55
 msgid "Image with an alpha channel adjusted for the keyed selection."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:50
+#: ../../manual/compositing/types/matte/luminance_key.rst:58
 msgid "Matte"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:49
+#: ../../manual/compositing/types/matte/luminance_key.rst:57
 msgid "A black and white alpha mask of the key."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:53
+#: ../../manual/compositing/types/matte/luminance_key.rst:61
 msgid "Example"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:58
+#: ../../manual/compositing/types/matte/luminance_key.rst:66
 msgid "Using Luma Key with a twist."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:61
+#: ../../manual/compositing/types/matte/luminance_key.rst:69
 msgid ""
 "For this example the model was shot against a *white* background. Using "
 "the Luminance Key node, we get a matte out where the background is white,"
@@ -121,7 +131,7 @@ msgid ""
 "her white outline is useable as an alpha mask now."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/luminance_key.rst:70
+#: ../../manual/compositing/types/matte/luminance_key.rst:78
 msgid ""
 "Now to mix, we do not really need the *AlphaOver* node; we can just use "
 "the mask as our Factor input. In this kinda weird case, we can use the "
@@ -168,5 +178,19 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Output"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For example, this is useful when "
+#~ "compositing stock footage of explosions "
+#~ "(very bright) which are normally shot"
+#~ " against a solid, dark background."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is also possible to have a "
+#~ "separation between the two values to "
+#~ "allow for a gradient of transparency "
+#~ "between foreground and background objects."
 #~ msgstr ""
 
