@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-29 23:45+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-29 23:02+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/layers.rst:4
 msgid "Render Layers"
-msgstr ""
+msgstr "Слои визуализации"
 
 #: ../../manual/render/blender_render/layers.rst:6
 msgid ""
@@ -22,20 +22,25 @@ msgid ""
 "Blender Render engine. For the engine-independent settings, see "
 ":doc:`this section </render/post_process/layers>`."
 msgstr ""
+"Этот раздел покрывает только настройки Слоя визуализации, применимые к движку "
+"визуализации Blender. Описание настроек, независимых от движка, смотрите в :doc:"
+"`этом разделе </render/post_process/layers>`."
 
 #: ../../manual/render/blender_render/layers.rst:18
 msgid "Light Override"
-msgstr ""
+msgstr "Освещение"
 
 #: ../../manual/render/blender_render/layers.rst:10
 msgid ""
 "Enter the name of a light group, and the scene will be lit with only "
 "those lights."
 msgstr ""
+"Введите имя группы источников освещения и сцена будет освещаться только этими "
+"источниками."
 
 #: ../../manual/render/blender_render/layers.rst:12
 msgid "Examples of where this might be used:"
-msgstr ""
+msgstr "Примеры того, когда это можно использовать:"
 
 #: ../../manual/render/blender_render/layers.rst:14
 msgid ""
@@ -43,14 +48,19 @@ msgid ""
 "the possibility to tweak light intensity and color in the compositor. "
 "i.e. to avoid re-renders."
 msgstr ""
+"Использование нескольких слоёв визуализации с различными группами освещения "
+"даёт возможность подкручивать интенсивность и цвет освещения в композиторе, то "
+"есть избежать повторной визуализации."
 
 #: ../../manual/render/blender_render/layers.rst:17
 msgid "Speed up a draft render by using only a few lights instead of all of them."
 msgstr ""
+"Ускорение черновых визуализаций путём использования только нескольких "
+"источников света из всего их набора."
 
 #: ../../manual/render/blender_render/layers.rst:21
 msgid "Include Options"
-msgstr ""
+msgstr "Параметры включения"
 
 #: ../../manual/render/blender_render/layers.rst:23
 msgid ""
@@ -58,28 +68,36 @@ msgid ""
 "enabled/disabled for the whole layer. This could be used to save render "
 "time and gives control over the passes:"
 msgstr ""
+"Каждый слой визуализации может иметь свой собственный набор возможностей, "
+"которые включаются/отключаются целиком для всего слоя. Их можно использовать "
+"для сокращения времени визуализации и для более детального контроля проходов "
+"визуализации:"
 
 #: ../../manual/render/blender_render/layers.rst:29
 msgid "Zmask"
-msgstr ""
+msgstr "Z-маска"
 
 #: ../../manual/render/blender_render/layers.rst:27
 msgid ""
 "Actives masking with the selected Mask Layers. Only render what is in "
 "*front* of the solid Z values."
 msgstr ""
+"Активирует маскирование выбранными слоями масок. Отрисовываться будут только те "
+"грани, чьи Z-значения расположены *перед* сплошными гранями маски."
 
 #: ../../manual/render/blender_render/layers.rst:29
 msgid "Negate"
-msgstr ""
+msgstr "Негатив"
 
 #: ../../manual/render/blender_render/layers.rst:30
 msgid "Only render what is *behind* the solid Z values."
 msgstr ""
+"Отрисовывать только те грани, чьи Z-значения расположены *за* сплошными гранями "
+"маски."
 
 #: ../../manual/render/blender_render/layers.rst:32
 msgid "All Z"
-msgstr ""
+msgstr "Все Z"
 
 #: ../../manual/render/blender_render/layers.rst:32
 msgid ""
@@ -87,26 +105,30 @@ msgid ""
 "are rendered. When disabled, objects not included in the render have no "
 "(\"infinite\") z value."
 msgstr ""
+"Z-значения вычисляются для всех граней, попадающих в область визуализации, а не "
+"только для тех, которые на самом деле отрисовываются. При отключении этого "
+"параметра, объекты, не включенные в визуализацию, не будут иметь Z-значения "
+"(будут иметь «бесконечные» Z-значения)."
 
 #: ../../manual/render/blender_render/layers.rst:34
 msgid "Solid"
-msgstr ""
+msgstr "Сплошной"
 
 #: ../../manual/render/blender_render/layers.rst:35
 msgid "Solid faces are rendered. All normal meshes are solid faced."
-msgstr ""
+msgstr "Отрисовывать сплошные грани. Все обычные полисетки имеют сплошные грани."
 
 #: ../../manual/render/blender_render/layers.rst:36
 msgid "Halo"
-msgstr ""
+msgstr "Гало"
 
 #: ../../manual/render/blender_render/layers.rst:37
 msgid "Halo materials are rendered."
-msgstr ""
+msgstr "Отрисовывать материалы гало."
 
 #: ../../manual/render/blender_render/layers.rst:39
 msgid "ZTransp"
-msgstr ""
+msgstr "Z-прозрачность"
 
 #: ../../manual/render/blender_render/layers.rst:39
 msgid ""
@@ -114,20 +136,27 @@ msgid ""
 " renders transparent areas with the z-value of what is behind the "
 "transparent area."
 msgstr ""
+"Прозрачность может основываться на уровнях Z-значений или на трассировке лучей. "
+"Если она основана на уровнях Z-значений, включение этого параметра позволит "
+"отрисовывать в прозрачных областях грани с Z-значениями, находящимися за этой "
+"областью."
 
 #: ../../manual/render/blender_render/layers.rst:42
 msgid "Sky"
-msgstr ""
+msgstr "Небо"
 
 #: ../../manual/render/blender_render/layers.rst:42
 msgid ""
 "Turning on Sky renders the sky, as defined in your material world "
 "settings. Otherwise, a black alpha transparent background is rendered."
 msgstr ""
+"Этот параметр включает визуализацию неба, определённого в настройках материала "
+"для окружающей среды. Если же этот параметр отключён, вместо неба будет "
+"отрисовываться полностью прозрачный чёрный фон."
 
 #: ../../manual/render/blender_render/layers.rst:46
 msgid "Edge"
-msgstr ""
+msgstr "Ребро"
 
 #: ../../manual/render/blender_render/layers.rst:45
 msgid ""
@@ -136,42 +165,27 @@ msgid ""
 "settings from the Render tab, and adds an outline to the objects. Edges "
 "also have to be enabled on the Render tab."
 msgstr ""
+"Если на панели «Постобработка» включён параметр «Ребро», объекты на этом слое "
+"визуализации получают контур по границе внешних рёбер. При включении этого "
+"параметра подтянутся настройки из вкладки «Визуализация» и к объектам добавится "
+"контур. Рёбра также должны быть включены на вкладке «Визуализация»."
 
 #: ../../manual/render/blender_render/layers.rst:49
 msgid "Strand"
-msgstr ""
+msgstr "Прядь"
 
 #: ../../manual/render/blender_render/layers.rst:49
 msgid ""
 "Strands are strings of static particles that are colored as part of the "
 "material settings; they look like strands of hair or grass."
 msgstr ""
+"Пряди – это последовательности статических частиц, которые раскрашиваются "
+"настройками материала; они похожи на пряди волос или на траву."
 
 #: ../../manual/render/blender_render/layers.rst:53
 msgid "Freestyle"
-msgstr ""
+msgstr "Freestyle"
 
 #: ../../manual/render/blender_render/layers.rst:52
 msgid "Render the Freestyle strokes on this layer."
-msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Only render what's in front of the solid Z values."
-#~ msgstr ""
-
-#~ msgid "Only render what's Behind the solid Z values."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If Edge is enable in the Output"
-#~ " panel, objects in this Render Layer"
-#~ " are given an outline edge. Turning"
-#~ " on Edge pulls in the Edge "
-#~ "settings from the Output tab, and "
-#~ "adds an outline to the objects. "
-#~ "Edges also have to be enabled on"
-#~ " the Output tab."
-#~ msgstr ""
-
+msgstr "Визуализировать стилизованные штрихи Freestyle на этом слое."
