@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-06 10:22+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-08-28 17:02+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/motion_blur.rst:4
 msgid "Motion Blur"
-msgstr ""
+msgstr "Размытие движения"
 
 #: ../../manual/render/blender_render/motion_blur.rst:6
 msgid ""
@@ -24,14 +24,22 @@ msgid ""
 "direction of motion, both in a movie frame and in a photograph from a "
 "real-world camera."
 msgstr ""
+"По умолчанию, анимации в Blender визуализируются как последовательность "
+"*совершенно неподвижных* изображений. Хотя они отлично подходят для "
+"эффектов остановки движения и провалов во времени, выглядит это "
+"нереалистично, поскольку быстро движущиеся объекты должны быть размыты по"
+" направлению своего движения, как в кадре фильма, так и на фотографии с "
+"реальной камеры."
 
 #: ../../manual/render/blender_render/motion_blur.rst:11
 msgid "Blender has two ways to achieve motion blur:"
 msgstr ""
+"В Blender есть два способа достижения эффекта размытия движущихся "
+"объектов:"
 
 #: ../../manual/render/blender_render/motion_blur.rst:15
 msgid "Sampled Motion Blur"
-msgstr ""
+msgstr "Размытие движения на основе сэмплов"
 
 #: ../../manual/render/blender_render/motion_blur.rst:17
 msgid ""
@@ -39,6 +47,10 @@ msgid ""
 "frames in between it and the next frame, then merge them all together to "
 "obtain an image where moving objects are 'blurred'."
 msgstr ""
+"Blender может отрисовать текущий кадр и некоторое количество "
+"«виртуальных» кадров между ним и следующим кадром, а затем объединить все"
+" эти кадры в один, чтобы получить изображение, в котором движущиеся "
+"объекты «размыты»."
 
 #: ../../manual/render/blender_render/motion_blur.rst:20
 msgid ""
@@ -46,10 +58,12 @@ msgid ""
 "the *Sampled Motion Blur* panel of the render settings. This kind of "
 "motion blur is done during the render."
 msgstr ""
+"Это медленный способ, но он даёт очень хорошие результаты. Его можно "
+"активировать в панели *Размытие при движении* в настройках визуализации."
 
 #: ../../manual/render/blender_render/motion_blur.rst:26
 msgid "Motion Samples"
-msgstr ""
+msgstr "Сэмплов движения"
 
 #: ../../manual/render/blender_render/motion_blur.rst:25
 msgid ""
@@ -57,10 +71,14 @@ msgid ""
 " the smoother the blur effect, but the longer the render, as each virtual"
 " intermediate frame has to be rendered."
 msgstr ""
+"Устанавливает количество дополнительных «виртуальных» кадров для каждого "
+"кадра. Более высокое значение сэмплов даст более мягкое сглаживание, но "
+"увеличит время визуализации, поскольку нужно отрисовать каждый "
+"виртуальный кадр."
 
 #: ../../manual/render/blender_render/motion_blur.rst:32
 msgid "Shutter"
-msgstr ""
+msgstr "Затвор"
 
 #: ../../manual/render/blender_render/motion_blur.rst:29
 msgid ""
@@ -68,6 +86,10 @@ msgid ""
 " the Shutter is set to 0.5, the time in between frames is 41.67 ms, so "
 "the shutter is open for half that, 20.83 ms."
 msgstr ""
+"Время (в кадрах) полного открытия затвора. Если вы отрисовываете сцену в "
+"24 кадра в секунду и *Затвор* установлен в значение 0.5, время между "
+"кадрами будет равняться 41.67 мс, так что затвор будет открыт половину "
+"этого времени – 20.83 мс."
 
 #: ../../manual/render/blender_render/motion_blur.rst:36
 msgid ""
@@ -75,10 +97,13 @@ msgid ""
 "Therefore the blurred object will appear to be slightly ahead of how it "
 "would look without motion blur."
 msgstr ""
+"Дополнительные выборки берутся только из *следующего* кадра, не из "
+"предыдущего. Поэтому размытый объект будет расположен чуть впереди своей "
+"неразмытой версии."
 
 #: ../../manual/render/blender_render/motion_blur.rst:41
 msgid "Vector Blur"
-msgstr ""
+msgstr "Векторное размытие"
 
 #: ../../manual/render/blender_render/motion_blur.rst:43
 msgid ""
@@ -86,6 +111,9 @@ msgid ""
 "sometimes has unwanted side-effects which are sometimes difficult to "
 "avoid."
 msgstr ""
+":doc:`Векторное размытие </compositing/types/filter/vector_blur>` – это "
+"более быстрый способ, но иногда он даёт нежелательные побочные эффекты, "
+"которых довольно трудно избежать."
 
 #: ../../manual/render/blender_render/motion_blur.rst:46
 msgid ""
@@ -95,10 +123,17 @@ msgid ""
 "describes a 2D or 3D direction and magnitude. The compositor uses that "
 "data to blur each pixel in the given direction."
 msgstr ""
+"Векторное размытие выполняется во время композитинга (то есть, после "
+"визуализации), путём отрисовки сцены без размытия и выполнения "
+"дополнительного прохода, сохраняющего информацию о движении каждого "
+"пикселя. Эта информация представляет собой векторную карту, описывающую "
+"направление и скорость движения пикселя в двумерном или трёхмерном "
+"пространстве. Композитор использует эти данные, чтобы размыть каждый "
+"пиксель в заданном направлении."
 
 #: ../../manual/render/blender_render/motion_blur.rst:52
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/blender_render/motion_blur.rst:54
 msgid ""
@@ -106,14 +141,18 @@ msgid ""
 "wide, uniformly moving 1 unit to the right at each frame. The scale "
 "beneath the cube helps in appreciating the movement of 1 Blender unit."
 msgstr ""
+"Чтобы лучше понять эту концепцию, давайте предположим, что мы имеем куб с"
+" длиной стороны в 2 единицы, в кажддом кадре равномерно перемещающийся на"
+" 1 единицу вправо. Шкала под кубом помогает оценить величину смещения на "
+"1 единицу Blender."
 
 #: ../../manual/render/blender_render/motion_blur.rst:64
 msgid "Frame 1 of the moving cube without Motion Blur."
-msgstr ""
+msgstr "Первый кадр движения куба без размытия при движении"
 
 #: ../../manual/render/blender_render/motion_blur.rst:69
 msgid "Frame 2 of the moving cube without Motion Blur."
-msgstr ""
+msgstr "Второй кадр движения куба без размытия при движении"
 
 #: ../../manual/render/blender_render/motion_blur.rst:75
 msgid ""
@@ -121,14 +160,18 @@ msgid ""
 "frames are computed. Shutter is set to 0.5 - thus the image eight samples"
 " are rendered between frame 1 and halfway to frame 2."
 msgstr ""
+"Первый кадр при включённом размытии при движении и восемь вычисленных "
+"«промежуточных» кадров. Затвор установлен в положение 0.5 – таким "
+"образом, между началом первого кадра и половиной пути ко второму кадру "
+"отрисовываются восемь виртуальных кадров изображения."
 
 #: ../../manual/render/blender_render/motion_blur.rst:84
 msgid "The effect of a increased shutter value."
-msgstr ""
+msgstr "Эффект от увеличения значения затвора"
 
 #: ../../manual/render/blender_render/motion_blur.rst:89
 msgid "Even further increased shutter value."
-msgstr ""
+msgstr "Ещё сильнее увеличенное значение затвора"
 
 #: ../../manual/render/blender_render/motion_blur.rst:91
 msgid ""
@@ -138,10 +181,16 @@ msgid ""
 " many *separate* renders as samples are needed, a Motion Blur render "
 "takes that many times more time than a non-Motion Blur one."
 msgstr ""
+"Значения, большие 1, физически невозможны для реальных камер, но могут "
+"использоваться для усиления эффекта. Лучшие результаты, нежели те, что "
+"были показаны, получаются при использовании большего, чем 8, количества "
+"сэмплов, но из-за того, что на каждый сэмпл требуется *отдельная* "
+"отрисовка кадра, визуализация с размытием при движении занимает "
+"значительно больше времени, чем визуализация без него."
 
 #: ../../manual/render/blender_render/motion_blur.rst:98
 msgid "Hints"
-msgstr ""
+msgstr "Подсказки"
 
 #: ../../manual/render/blender_render/motion_blur.rst:100
 msgid ""
@@ -150,22 +199,8 @@ msgid ""
 " are computed differently for each sample and averaged together at the "
 "end."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Image 1. Frame 1 of moving cube without Motion Blur."
-#~ msgstr ""
-
-#~ msgid "Image 2. Frame 2 of moving cube without Motion Blur."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Frame 1 when Sampled Motion Blur "
-#~ "is enabled and 8 'intermediate' frames"
-#~ " are computed. Shutter is set to "
-#~ "0.5 - thus the image 8 samples "
-#~ "are rendered between frame 1 and "
-#~ "halfway to frame 2."
-#~ msgstr ""
+"Размытие при движении может использоваться как дополнительный механизм "
+":doc:`сглаживания </render/blender_render/antialiasing>`, поскольку "
+"артефакты ступенчатости вычисляются независимо для каждого сэмпла и в "
+"конце усредняются."
 
