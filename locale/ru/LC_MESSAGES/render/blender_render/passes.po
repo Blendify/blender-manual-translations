@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-29 23:45+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-02 23:26+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/passes.rst:5
 msgid "Render Passes"
-msgstr ""
+msgstr "Проходы визуализации"
 
 #: ../../manual/render/blender_render/passes.rst:7
 msgid ""
@@ -22,10 +22,14 @@ msgid ""
 "Render Engine must calculate to give you the final image. In each 'pass' "
 "the engine calculates different interactions between objects."
 msgstr ""
+"Проходы визуализации необходимы, поскольку движок визуализации Blender "
+"должен просчитать много различных вещей, прежде чем он выдаст вам "
+"окончательное изображение. В каждом «проходе» движок вычисляет различные "
+"взаимодействия между объектами."
 
 #: ../../manual/render/blender_render/passes.rst:13
 msgid "Render Passes In Detail"
-msgstr ""
+msgstr "Проходы визуализации в подробностях"
 
 #: ../../manual/render/blender_render/passes.rst:15
 msgid ""
@@ -35,6 +39,12 @@ msgid ""
 "calculated in different passes for different reasons, such as calculating"
 " shadows."
 msgstr ""
+"Всё, что вы видите на визуализации, должно быть просчитано для "
+"окончательного изображения. Все взаимодействия между объектами в вашей "
+"сцене, освещение, камеры, фоновые изображения, настройки окружающей среды"
+" и прочие вещи, всё это должно быть рассчитано независимо в отдельных "
+"проходах по разным причинам, например, что-то из этого нужно для расчёта "
+"теней."
 
 #: ../../manual/render/blender_render/passes.rst:21
 msgid ""
@@ -42,16 +52,19 @@ msgid ""
 "it will show the right color for the right part of the image. Various "
 "things that are calculated in a standard render include:"
 msgstr ""
+"В рендере каждый пиксель рассчитывается несколько раз, чтобы убедиться, "
+"что он получит правильный цвет в правильной части изображения. Вот список"
+" вещей, которые рассчитываются стандартным рендером Blender:"
 
 #: ../../manual/render/blender_render/passes.rst:25
 msgid "Where are shadows cast?"
-msgstr ""
+msgstr "Куда падают тени?"
 
 #: ../../manual/render/blender_render/passes.rst:26
 msgid ""
 "How is ambient light in the environment blocked (occluded) by objects in "
 "the scene?"
-msgstr ""
+msgstr "Как фоновый окружающий свет блокируется (заслоняется) объектами в сцене?"
 
 #: ../../manual/render/blender_render/passes.rst:27
 msgid ""
@@ -60,6 +73,10 @@ msgid ""
 "mirrored surfaces, so that when these lines hit an object, the engine "
 "calculates that this is what the camera should see."
 msgstr ""
+"Как свет отражается от зеркальных поверхностей? Например, тени – они "
+"вычисляются по линиям распространения света, которые испускаются из "
+"камеры и отскакивают от отражающих поверхностей, так что когда эти линии "
+"попадают в объект, движок вычисляет, что камера должна видеть тень."
 
 #: ../../manual/render/blender_render/passes.rst:30
 msgid ""
@@ -67,18 +84,27 @@ msgid ""
 "Does it go straight through? Does it bend? If so, at what depth in the "
 "object?"
 msgstr ""
+"Как свет изменяет своё направление (преломление), как он проходит через "
+"прозрачные объекты? Должен ли он проходить прямо через них? Или "
+"отклоняться от своего направления? Если да, то при проникновении в объект"
+" на какую глубину?"
 
 #: ../../manual/render/blender_render/passes.rst:32
 msgid ""
 "What designated objects are in the scene, and what is their outline? "
 "Should the object appear blurred, or should it appear in sharp focus?"
 msgstr ""
+"Каковы характеристики объектов в сцене и каковы их границы? Должен ли "
+"объект выглядеть смазанным, или же находиться в фокусе?"
 
 #: ../../manual/render/blender_render/passes.rst:34
 msgid ""
 "How fast is something moving (velocity)? Should it appear blurred given "
 "our frame rate or is it slow enough to still be focused on properly?"
 msgstr ""
+"Насколько быстро движутся объекты (их скорость)? Надо ли применять "
+"размытие в соответсвии с нашей частотой кадров, или же он движется "
+"достаточно медленно, чтобы этим размытием можно было пренебречь?"
 
 #: ../../manual/render/blender_render/passes.rst:36
 msgid ""
@@ -86,24 +112,32 @@ msgid ""
 "object's surfaces be seen at all, or are they being blocked by another "
 "object's geometry?"
 msgstr ""
+"Насколько далеко от камеры находятся поверхности объекта (Z-глубина)? "
+"Видим ли объект полностью, или его заслоняет геометрия другого объекта?"
 
 #: ../../manual/render/blender_render/passes.rst:38
 msgid ""
 "Does an object have a normal vector (bumpmap)? Do shadows and apparent "
 "geometry need to be calculated for any objects?"
 msgstr ""
+"Содержит ли объект вектора нормалей (карту неровностей)? Для любых ли "
+"объектов нужно рассчитывать тени и видимую геометрию?"
 
 #: ../../manual/render/blender_render/passes.rst:40
 msgid ""
 "Is there any specularity ? Are objects with textures such as metal shiny "
 "at all?"
 msgstr ""
+"Присутствует ли зеркальность поверхности? Существуют ли объекты с "
+"текстурами, блестящими подобно металлу?"
 
 #: ../../manual/render/blender_render/passes.rst:42
 msgid ""
 "The answer to each of the above questions is an image or map, as shown "
 "below:"
 msgstr ""
+"Ответом на каждый вышеперечисленный вопрос будет изображение или карта, "
+"как показано ниже:"
 
 #: ../../manual/render/blender_render/passes.rst:48
 msgid ""
@@ -114,6 +148,11 @@ msgid ""
 "of the layer's outputs appeared as connection points on the right-hand "
 "(output) side of the node."
 msgstr ""
+"Результатом каждого прохода визуализации является изображение или карта. "
+"Для целей данного примера слой визуализации определяет все возможные "
+"выводы. Когда входной узел «Слои визуализации» добавляется на диаграмму "
+"узлов и связывается с определённым слоем визуализации, все выходы слоя "
+"появляются в виде точек присоединения с правой (выходной) стороны узла."
 
 #: ../../manual/render/blender_render/passes.rst:54
 msgid ""
@@ -121,6 +160,10 @@ msgid ""
 " if they are the only pass that is rendered, saved as the render image. "
 "If the pass is enabled, it can be saved in a multilayer OpenEXR format."
 msgstr ""
+"Слои визуализации, выдающие изображения, можно непосредственно "
+"просмотреть в просмотрщике, или, если визуализируется только один проход,"
+" сохранить в виде отрисованного изображения. Если проход включён, он "
+"будет сохранён в многослойном формате OpenEXR."
 
 #: ../../manual/render/blender_render/passes.rst:58
 msgid ""
@@ -135,10 +178,22 @@ msgid ""
 "image. You must then, after making any adjustments, run the map back "
 "through that node to re-scale it back to the original before saving."
 msgstr ""
+"Если выходом прохода визуализации является не изображение, а карта, её "
+"следует преобразовать во что-то, что можно увидеть. Например, карта "
+"Z-глубины является массивом значений, определяющих, как далеко от камеры "
+"находится каждый пиксель; значения в диапазоне +/-3 000 000 единиц "
+"Blender или около того. Такое преобразование или масштабироание делает "
+"промежуточный узел между выходом узла «Слои визуализации» и входом узла "
+"«Просмотрщик» (например, узел «Отобразить значение»). Если вы планируете "
+"работать с картой как с изображением и хотите получить хорошие "
+"результаты, вы должны использовать этот конкретный тип узла перевода. "
+"Затем, после внесения необходимых корректировок, вы должны будете "
+"пропустить карту обратно через аналогичный узел, чтобы перед сохранением "
+"отмасштабировать её значения обратно к оригинальным."
 
 #: ../../manual/render/blender_render/passes.rst:70
 msgid "Selecting Render Passes"
-msgstr ""
+msgstr "Выбор проходов визуализации"
 
 #: ../../manual/render/blender_render/passes.rst:75
 msgid ""
@@ -149,6 +204,12 @@ msgid ""
 "pass. (If you do so, in most cases you can choose whether to *also* "
 "continue to include it in the Combined output.)"
 msgstr ""
+"Проходы визуализации содержат различные выходы, которые способен "
+"генерировать рендер. Все последующие выходы рендера обычно объединяются в"
+" один, известный как *Комбинация*. Но вы также можете выбрать любой из "
+"них для вывода в отдельный проход (если вы сделаете это, в большинстве "
+"случаев вы сможете выбрать, стоит ли *также* включать его в выход "
+"«Комбинация»)."
 
 #: ../../manual/render/blender_render/passes.rst:81
 msgid ""
@@ -161,6 +222,14 @@ msgid ""
 "enabled *Ambient Occlusion* in your World environment settings, the *AO* "
 "pass will be blank, even if you select it here."
 msgstr ""
+"Некоторые из этих выходов должны быть включены и использоваться в вашей "
+"сцене (а не просто быть выбранными в панели «Слои визуализации»), чтобы "
+"они на что-нибудь влияли. Например, если в вашей сцене нет источников "
+"света или эти источники не отбрасывают тени, или на объекты не назначены "
+"материалы, умеющие принимать тени, то проход *Тень* будет пустым; так что"
+" он просто ничего вам не покажет. Если вы не включили *Ambient Occlusion*"
+" в настройках окружающей среды, проход *AO* будет пустым, даже если здесь"
+" вы его выберете."
 
 #: ../../manual/render/blender_render/passes.rst:90
 msgid ""
@@ -168,10 +237,14 @@ msgid ""
 "to render in the Render Layers panel (which we first introduced on "
 ":doc:`the previous page </render/post_process/layers>`):"
 msgstr ""
+"Для сохранения времени визуализации и дискового пространства вы должны "
+"сообщить Blender'у про каждый используемый вами проход на вкладке «Слои "
+"визуализации» (которую мы впервые описали :doc:`на предыдущей странице "
+"</render/post_process/layers>`):"
 
 #: ../../manual/render/blender_render/passes.rst:96
 msgid "Combined"
-msgstr ""
+msgstr "Комбинация"
 
 #: ../../manual/render/blender_render/passes.rst:94
 msgid ""
@@ -180,10 +253,15 @@ msgid ""
 "into a single output, *except* those options which you have indicated "
 "should be omitted from this pass, as indicated with the camera button."
 msgstr ""
+"Этот проход отрисовывает всё, что можно, даже если в этом нет "
+"необходимости («целая энчилада», так сказать). Включает в себя все "
+"нижеописанные параметры, объединённые в один выход, *кроме* тех, для "
+"которых вы явно указали, что их следует исключить из этого прохода "
+"(указывается кнопкой с изображением камеры)."
 
 #: ../../manual/render/blender_render/passes.rst:99
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 #: ../../manual/render/blender_render/passes.rst:99
 msgid ""
@@ -191,18 +269,24 @@ msgid ""
 "Depth-Of-Field (DOF). The depth map is inverse linear *(1/distance)* from"
 " the camera clip start."
 msgstr ""
+"Карта Z-глубины; насколько далеко от камеры отстоит тот или иной пиксель."
+" Используется для эффекта глубины резкости. Карта глубины – это "
+"инвертированные линейные расстояния *(1/расстояние)* от ближней плоскости"
+" отсечения камеры."
 
 #: ../../manual/render/blender_render/passes.rst:101
 msgid "Vector"
-msgstr ""
+msgstr "Вектор"
 
 #: ../../manual/render/blender_render/passes.rst:102
 msgid "The direction and speed things are moving. Used with Vector Blur."
 msgstr ""
+"Направление и скорость движения объектов. Используется для векторного "
+"размытия."
 
 #: ../../manual/render/blender_render/passes.rst:104
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/blender_render/passes.rst:104
 msgid ""
@@ -210,58 +294,64 @@ msgid ""
 "is used to fake detail on an object) or for changing the apparent "
 "direction of light falling on an object."
 msgstr ""
+"Рассчитывает освещение и кажущуюся геометрию для карты высот "
+"(изображение, используемое для поддельной детализации объекта) или для "
+"изменения кажущегося направления света, падающего на объект."
 
 #: ../../manual/render/blender_render/passes.rst:106
 msgid "UV"
-msgstr ""
+msgstr "UV"
 
+# Mingun: непонятно, что за узел UV?
 #: ../../manual/render/blender_render/passes.rst:107
 msgid "Allows texturing after rendering. See UV node."
 msgstr ""
+"Позволяет выполнять текстурирование после визуализации. Смотрите описание"
+" узла UV."
 
 #: ../../manual/render/blender_render/passes.rst:108
 msgid "Mist"
-msgstr ""
+msgstr "Туман"
 
 #: ../../manual/render/blender_render/passes.rst:109
 msgid "Deliver Mist factor pass."
-msgstr ""
+msgstr "Выполняет проход расчёта величины тумана."
 
 #: ../../manual/render/blender_render/passes.rst:110
 msgid "Object Index"
-msgstr ""
+msgstr "Индекс объекта"
 
 #: ../../manual/render/blender_render/passes.rst:111
 msgid "Masks selected objects. See MaskObj node."
-msgstr ""
+msgstr "Маски выбранныых объектов. Смотрите описание узла «Маска»."
 
 #: ../../manual/render/blender_render/passes.rst:112
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: ../../manual/render/blender_render/passes.rst:113
 msgid "The color of materials without shading."
-msgstr ""
+msgstr "Цвет материалов без затенения."
 
 #: ../../manual/render/blender_render/passes.rst:114
 msgid "Diffuse"
-msgstr ""
+msgstr "Диффуз."
 
 #: ../../manual/render/blender_render/passes.rst:115
 msgid "The diffuse shading of materials."
-msgstr ""
+msgstr "Диффузное затенение материала."
 
 #: ../../manual/render/blender_render/passes.rst:116
 msgid "Specular"
-msgstr ""
+msgstr "Блик"
 
 #: ../../manual/render/blender_render/passes.rst:117
 msgid "Specular highlights."
-msgstr ""
+msgstr "Бликовые пятна."
 
 #: ../../manual/render/blender_render/passes.rst:119
 msgid "Shadow"
-msgstr ""
+msgstr "Тень"
 
 #: ../../manual/render/blender_render/passes.rst:119
 msgid ""
@@ -269,70 +359,83 @@ msgid ""
 "negative), and received by materials. To use this pass, mix multiply it "
 "with the Diffuse pass."
 msgstr ""
+"Отбрасывание теней. Убедитесь, что тени отбрасываются от ваших источников"
+" света (положительных или отрицательных) и принимаются материалами. Чтобы"
+" использовать этот проход, перемножьте его с диффузным проходом в узле "
+"«Смесь»."
 
 #: ../../manual/render/blender_render/passes.rst:121
 msgid "Emit"
-msgstr ""
+msgstr "Свечение"
 
 #: ../../manual/render/blender_render/passes.rst:122
 msgid "Emission pass."
-msgstr ""
+msgstr "Проход свечения."
 
 #: ../../manual/render/blender_render/passes.rst:123
 msgid "AO"
-msgstr ""
+msgstr "AO"
 
 #: ../../manual/render/blender_render/passes.rst:124
 msgid ""
 "Ambient Occlusion. Make sure it is turned on in your environment and that"
 " RayTracing is enabled."
 msgstr ""
+"Ambient Occlusion. Убедитесь, что она включена в настройках окружения, а "
+"также, что метод сбора установлен в трассировку лучей."
 
 #: ../../manual/render/blender_render/passes.rst:125
 msgid "Environment"
-msgstr ""
+msgstr "Окр. среда"
 
 #: ../../manual/render/blender_render/passes.rst:126
 msgid "Environment lighting."
-msgstr ""
+msgstr "Освещение от окружения."
 
 #: ../../manual/render/blender_render/passes.rst:127
 msgid "Indirect"
-msgstr ""
+msgstr "Отражённое"
 
 #: ../../manual/render/blender_render/passes.rst:128
 msgid "Indirect lighting pass."
-msgstr ""
+msgstr "Проход освещения непрямым светом."
 
 #: ../../manual/render/blender_render/passes.rst:130
 msgid "Reflection"
-msgstr ""
+msgstr "Отражение"
 
 #: ../../manual/render/blender_render/passes.rst:130
 msgid ""
 "Reflection off mirrors and other reflective surfaces (highly waxed white "
 "floors, for example). Mix Add this pass to Diffuse to use it."
 msgstr ""
+"Отражение от зеркал и других зеркальных поверхностей (чрезвычайно "
+"навощённые белые полы, к примеру). Чтобы использовать этот проход, "
+"добавьте его к диффузному проходу в узле «Смесь»."
 
 #: ../../manual/render/blender_render/passes.rst:134
 msgid "Refraction"
-msgstr ""
+msgstr "Преломление"
 
 #: ../../manual/render/blender_render/passes.rst:133
 msgid ""
 "Refraction of colors through transparent meshes. Mix Add this pass to the"
 " Diffuse pass to use it."
 msgstr ""
+"Преломление цветов через прозрачные полисетки. Чтобы использовать этот "
+"проход, добавьте его к диффузному проходу в узле «Смесь»."
 
 #: ../../manual/render/blender_render/passes.rst:136
 msgid ""
 "When you enable a pass, the appropriate socket on the Render Layers node "
 "shows up like magic, and can be used as shown in the example above."
 msgstr ""
+"При включении прохода, в узле «Слои визуализации» волшебным образом "
+"появится соответствующий выход, что и показано на картинке выше."
 
 #: ../../manual/render/blender_render/passes.rst:141
 msgid "Excluding Render Passes"
-msgstr ""
+msgstr "Исключение проходов визуализации"
 
 #: ../../manual/render/blender_render/passes.rst:143
 msgid ""
@@ -341,6 +444,10 @@ msgid ""
 "they will be provided separately *and also* included in the Combined "
 "pass."
 msgstr ""
+"Как мы уже говорили, выход *Комбинация* представляет собой смесь "
+"нескольких выходов, которые *также* доступны и отдельно. При выборе "
+"одного из этих выходов, они не только будут предоставляться отдельно, *но"
+" также* включаться в комбинированный проход."
 
 #: ../../manual/render/blender_render/passes.rst:147
 msgid ""
@@ -349,10 +456,14 @@ msgid ""
 "They will be made available separately *but not* included in the combined"
 " pass."
 msgstr ""
+"Если вы включите значок камеры, который находится рядом с некоторыми "
+"проходами, конкретный проход будет исключён из комбинированного прохода. "
+"Он по-прежнему будет доступен отдельно, *но не будет* включаться в "
+"комбинированный проход."
 
 #: ../../manual/render/blender_render/passes.rst:153
 msgid "Using Render Passes"
-msgstr ""
+msgstr "Использование проходов визуализации"
 
 #: ../../manual/render/blender_render/passes.rst:155
 msgid ""
@@ -362,36 +473,46 @@ msgid ""
 "on the render times of complicated scenes, by creative and effective use "
 "of this facility. We'll show you a few examples of this in just a moment."
 msgstr ""
+"Основной целью проходов визуализации является предоставление вам "
+"возможности обрабатывать различные выходы разными способами, путём "
+"построения сетей визуализации узлов. Вы можете создать множество "
+"специальных эффектов, а также значительно сэкономить на времени "
+"визуализации сложных сцен, творчески и эффективно используя эту "
+"возможность. Мы мигом покажем вам несколько примеров."
 
 #: ../../manual/render/blender_render/passes.rst:162
 msgid ""
 "Quite a bit of information about the typical uses for some of the passes "
 "is discussed elsewhere:"
 msgstr ""
+"Немного информации о типичных применениях некоторых проходов также "
+"содержится в других местах:"
 
 #: ../../manual/render/blender_render/passes.rst:165
 msgid "Image: Since this is the main product, all of Blender uses it."
 msgstr ""
+"Изображение: поскольку это основной продукт визуализации, всё в Blender "
+"использует его."
 
 #: ../../manual/render/blender_render/passes.rst:166
 msgid "Alpha: See the *AlphaOver* node and all of the *Matte* nodes."
-msgstr ""
+msgstr "Альфа: смотрите узел *«Альфа сверху»* и все узлы группы *«Маска»*."
 
 #: ../../manual/render/blender_render/passes.rst:167
 msgid "Z: See the *Defocus* node."
-msgstr ""
+msgstr "Z: смотрите узел *«Расфокусировка»*."
 
 #: ../../manual/render/blender_render/passes.rst:168
 msgid "Vec: See the *Vector Blur* node."
-msgstr ""
+msgstr "Вектор: смотрите узел *«Векторное размытие»*."
 
 #: ../../manual/render/blender_render/passes.rst:169
 msgid "Normal: See the *Normal* node."
-msgstr ""
+msgstr "Нормаль: смотрите узел *«Норм.»*."
 
 #: ../../manual/render/blender_render/passes.rst:173
 msgid "Recoloring Shadows"
-msgstr ""
+msgstr "Перекрашивание теней"
 
 #: ../../manual/render/blender_render/passes.rst:179
 msgid ""
@@ -407,6 +528,18 @@ msgid ""
 "standing in front of the key light, so her shadow is cast into the scene "
 "on the floor. The ball casts shadows onto the backdrop and floor."
 msgstr ""
+"Давайте пропустим буфер теней через раскрашивающий граф узлов, а затем "
+"восстановим его; все ваши тени станут искусственно окрашенными. Справа "
+"показано множество цепочек этого графа узлов, так что давайте пройдём "
+"через него. Слева расположен входной узел «Слоя визуализации»: он "
+"ссылается на один из слоёв визуализации, которые мы определили для нашей "
+"сцены. В нашей сцене на пьедестале, стоящем перед задником, лежит "
+"зеркальный мяч. Все объекты (кроме мяча) серого цвета. Мы используем "
+"стандартное освещение из четырёх источников света: задняя подсветка идёт "
+"с высоты, две боковых подсветки расположены на уровне земли, и ключевое "
+"освещение поступает с места чуть выше и левее камеры. Сюзанна, геометрия "
+"обезъянки, расположена перед ключевым светом, так что её тень "
+"отбрасывается в сцену на пол. Мяч отбрасывает тень на задник и пол."
 
 #: ../../manual/render/blender_render/passes.rst:191
 msgid ""
@@ -417,6 +550,12 @@ msgid ""
 "image in the left viewer is transparent. We have used the Shadow to cut "
 "out parts of the image."
 msgstr ""
+"Состав выходных каналов узла «Слои визуализации» определяется кнопками, "
+"которые мы выбрали при определении нашего слоя визуализации. Два верхних "
+"просмотрщика показывают выход с изображения с альфа-каналом из выхода "
+"«Тень» и просто изображение с канала «Тень». Там, где тень тёмная, "
+"изображение в левом просмотрщике прозрачное. Мы использовали тень для "
+"вырезания части изображения."
 
 #: ../../manual/render/blender_render/passes.rst:198
 msgid ""
@@ -425,18 +564,23 @@ msgid ""
 " 40, 40×1.75=70). That blue-tinged shadow is shown in the bottom viewer. "
 "Now we have two options: AlphaOver and Mix. For either option:"
 msgstr ""
+"Затем мы пропустили выход «Тень» через узел «RGB-кривые», который "
+"увеличивает синий канал на 75%; так что серая тень с RGB(40, 40, 40) "
+"стала тенью с RGB(40, 40, 40×1.75=70). Эта тень с синим оттенком "
+"показывается в нижнем просмотрщике. Теперь у нас есть два возможных "
+"варианта: узел «Альфа сверху» и узел «Смесь». Для каждого варианта:"
 
 #: ../../manual/render/blender_render/passes.rst:203
 msgid "Use the Shadow map as a Factor."
-msgstr ""
+msgstr "Карта теней используется как коэффициент."
 
 #: ../../manual/render/blender_render/passes.rst:204
 msgid "Feed the Blue Shadow to the Top Socket."
-msgstr ""
+msgstr "Синяя тень скармливается верхнему входу."
 
 #: ../../manual/render/blender_render/passes.rst:205
 msgid "Feed the core or base image to the Bottom Socket."
-msgstr ""
+msgstr "Основное или базовое изображение скармливается нижнему входу."
 
 #: ../../manual/render/blender_render/passes.rst:207
 msgid ""
@@ -444,6 +588,9 @@ msgid ""
 "Suzanne's reflection is not blue; there is a different Render Pass for "
 "that."
 msgstr ""
+"В обоих случаях получается одинаковое изображение: синяя тень. Обратите "
+"внимание, что отражение Сюзанны не синее; для него предусмотрен отдельный"
+" проход визуализации."
 
 #: ../../manual/render/blender_render/passes.rst:210
 msgid ""
@@ -454,11 +601,19 @@ msgid ""
 "*Star Wars Episode One* movie poster, where Anakin Skywalker already "
 "casts the shadow of Darth Vader.)"
 msgstr ""
+"Вы легко можете переключиться на полностью другое изображение; например, "
+"на карту теней из другого слоя визуализации. Вы даже можете взять "
+"изображение совсем из другого проекта и использовать его вместо родного "
+"(с помощью узла «Изображение» из группы «Ввод»), чтобы получить другой "
+"эффект (например, эффект, аналогичный эффекту с постера фильма *Звёздные "
+"войны: эпизод первый*, на котором Энакин Скайуокер уже отбрасывает тень "
+"Дарта Вейдера)."
 
 #: ../../manual/render/blender_render/passes.rst:219
 msgid "Compositing Ambient Occlusion"
-msgstr ""
+msgstr "Композитинг Ambient Occlusion"
 
+# Mingun: описание настройки явно устарело.
 #: ../../manual/render/blender_render/passes.rst:225
 msgid ""
 "AO is a geometry-based dirt shader, making corners darker. It is "
@@ -471,10 +626,21 @@ msgid ""
 "call it out as a separate pass and wish to composite it back into your "
 "image, you will need to enable the Color and Diffuse pass as well."
 msgstr ""
+"АО является основанным на геометрии шейдером грязи, затемняющем углы. Он "
+"включается отдельной настройкой на вкладке окружающей среды и вычисляется"
+" отдельным проходом. Если эта функция включена, она предлагает один из "
+"трёх режимов смешивания: *Добавить*, *Вычесть* или *Оба* и переменную "
+"уровня *Энергии* (которая изменяет интенсивность затенения). Третья "
+"переменная определяет количество получаемого материалом окружающего "
+"света. Если он не получает окружающий свет, настройка Ambient Occlusion "
+"никак не влияет на него. На основе этих переменных Blender вычисляет "
+"проход AO. Если вы включите его отдельным проходом и захотите внедрить "
+"обратно в изображение, вам также нужно будет включить проходы «Цвет» и "
+"«Диффуз.»."
 
 #: ../../manual/render/blender_render/passes.rst:235
 msgid "To configure your setup, consider the example image above."
-msgstr ""
+msgstr "Для настройки графа узлов рассмотрим пример на изображении выше."
 
 #: ../../manual/render/blender_render/passes.rst:237
 msgid ""
@@ -482,10 +648,14 @@ msgid ""
 "Add: directly use the AO pass. If AO mode is Sub: Calculate AO - 1, or if"
 " AO mode is Both: Calculate 2 × AO - 1."
 msgstr ""
+"Во-первых, в зависимости от режима AO выполните одно из следующих "
+"действий: если режим AO – «Добавить»: используйте непосредственно проход "
+"AO. Если режим AO – «Вычесть»: вычислите AO - 1, а если режим AO – «Оба»:"
+" вычислите 2 × AO - 1."
 
 #: ../../manual/render/blender_render/passes.rst:239
 msgid "Multiply the output of Step 1 with the AO energy level."
-msgstr ""
+msgstr "Умножьте выход после первого шага на уровень энергии AO."
 
 #: ../../manual/render/blender_render/passes.rst:240
 msgid ""
@@ -493,14 +663,18 @@ msgid ""
 "have materials which receive different ambience light levels (0.5 is the "
 "default), one would have to create an ambience map based on Object ID."
 msgstr ""
+"Умножьте выход после второго шага на значение окружающего освещения из "
+"материала. Если у вас есть материалы, которые получают различные уровни "
+"окружающего освещения (по умолчанию – 0.5), можно было бы создать карту "
+"окружения на основе ИД объекта."
 
 #: ../../manual/render/blender_render/passes.rst:243
 msgid "Multiply the output of Step 3 with the color pass."
-msgstr ""
+msgstr "Умножьте выход после третьего шага на проход цвета."
 
 #: ../../manual/render/blender_render/passes.rst:244
 msgid "Add the output of Step 4 to the diffuse pass."
-msgstr ""
+msgstr "Добавьте выход после четвёртого шага к диффузному проходу."
 
 #: ../../manual/render/blender_render/passes.rst:246
 msgid ""
@@ -508,10 +682,13 @@ msgid ""
 "refractions are involved they have to be added to the diffuse pass before"
 " adding the converted AO pass."
 msgstr ""
+"Если присутствуют проходы теней, цветного окружающего освещения, "
+"отражённого освещения, отражений и/или преломлений, их следует добавить к"
+" диффузному проходу до добавления преобразованного прохода AO."
 
 #: ../../manual/render/blender_render/passes.rst:251
 msgid "Vector Blurring Shadows"
-msgstr ""
+msgstr "Векторное размытие теней"
 
 #: ../../manual/render/blender_render/passes.rst:257
 msgid ""
@@ -523,6 +700,14 @@ msgid ""
 "corner; the box is blurred, but its shadow is sharply in focus, and thus "
 "the image does not look realistic."
 msgstr ""
+"При использовании векторного размытия вместо размытия движения, "
+"движущиеся объекты будут размыты, но неподвижные (по отношению к камере) "
+"объекты размыты не будут. Тень от движущегося объекта находится на стыке "
+"этих двух вещей. В примере на изображении выше у нас есть куб, движущийся"
+" над плоскостью земли. Если мы просто пропустим комбинированный проход "
+"через «Векторное размытие», вы сможете увидеть результат, который показан"
+" в нижнем правом углу; куб размыт, но его тень – нет, поэтому изображение"
+" не выглядит реалистично."
 
 #: ../../manual/render/blender_render/passes.rst:265
 msgid ""
@@ -536,10 +721,19 @@ msgid ""
 "shadow on a crisp ground plane. We can then mix the vector-blurred object"
 " to provide a realistic-looking image."
 msgstr ""
+"Поэтому нам нужно отделить диффузный проход от прохода тени на полу, "
+"создав слой визуализации «Floor» («Пол»). В этом слое визуализации "
+"включены диффузный проход и проход тени, а отрисовывается только объект "
+"пол (слой 2). В другом слое визуализации («Cube» – «Куб») включены "
+"проходы Z и Вектор, а отрисовывается только куб (на слое 1). Используя "
+"узел «Размытие», мы размываем проход тени, а затем объединяем диффузный "
+"проход и размытую тень перемножением в узле «Смесь»; теперь мы имеем "
+"размытую тень на чёткой плоскости земли. Затем мы можем смешать тень с "
+"размытым по вектору объектом, чтобы получить реалистичное изображение."
 
 #: ../../manual/render/blender_render/passes.rst:275
 msgid "Conclusion"
-msgstr ""
+msgstr "Вывод"
 
 #: ../../manual/render/blender_render/passes.rst:277
 msgid ""
@@ -550,79 +744,11 @@ msgid ""
 " just reconfiguring your render passes to save render time, are all "
 "things which you might wish to manipulate the render engine for."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "How fast is something moving ( velocity )?"
-#~ msgstr ""
-
-#~ msgid "How far away from the camera are objects' surfaces ( Z-depth )?"
-#~ msgstr ""
-
-#~ msgid "Does an object have a normal vector (bumpmap)?"
-#~ msgstr ""
-
-#~ msgid "*Where are* **shadows** *cast?*"
-#~ msgstr ""
-
-#~ msgid "Do shadows and apparent geometry need to be calculated for any objects?"
-#~ msgstr ""
-
-#~ msgid "*How fast is something moving (* **velocity** *)?*"
-#~ msgstr ""
-
-#~ msgid "*How far away from the camera are objects' surfaces (* **Z-depth** *)?*"
-#~ msgstr ""
-
-#~ msgid "*Does an object have a* **normal** *vector (bumpmap)?*"
-#~ msgstr ""
-
-#~ msgid "To configure your noodle, consider the example image above."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Some of these outputs must be "
-#~ "enabled and used within your scene "
-#~ "(and not just selected in the "
-#~ "Render Layer panel) in order to "
-#~ "show anything. For example, if you "
-#~ "do not have any lights in your "
-#~ "scene, or those lights have been "
-#~ "set to not cast shadows, or "
-#~ "objects in the limelight do not "
-#~ "have materials which have been set "
-#~ "to receive shadows, the *Shadow* pass"
-#~ " will be blank; there's simply "
-#~ "nothing to show you. If you have"
-#~ " not enabled *Ambient Occlusion* in "
-#~ "your World environment settings, the "
-#~ "*AO* pass will be blank, even if"
-#~ " you select it here."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This renders everything in the image,"
-#~ " even if it's not necessary. (\"The"
-#~ " whole enchilada,\" so to speak.) "
-#~ "This is all the options below, "
-#~ "blended into a single output, *except*"
-#~ " those options which you've indicated "
-#~ "should be omitted from this pass, "
-#~ "as indicated with the camera button."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Ambient Occlusion. Make sure it's turned"
-#~ " on in your environment and that "
-#~ "RayTracing is enabled."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The resulting image is the same in"
-#~ " either case; a blue shadow. Note "
-#~ "that Suzanne's reflection is not blue;"
-#~ " there's a different Render Pass for"
-#~ " that."
-#~ msgstr ""
+"Манипуляция над проходами визуализации даёт вам почти полный контроль над"
+" окончательным изображением. Можно заставить объекты отбрасывать тени, "
+"которые на самом деле являются не их тенями, выводить объекты из фокуса "
+"или помещать их в фокус, как в настоящей камере, изменять цвета, как в "
+"процессе окончательной пост-обработки, так и в процессе настройки "
+"проходов визуализации, сокращая время на визуализацию, а также множество "
+"других вещей, какие вы только можете пожелать для управления рендером."
 
