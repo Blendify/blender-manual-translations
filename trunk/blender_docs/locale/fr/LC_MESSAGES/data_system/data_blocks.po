@@ -1,69 +1,87 @@
 #
+# phan <phahoatho@gmail.com>, 2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-06 10:22+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-05 09:48+0200\n"
+"Last-Translator: phan <phahoatho@gmail.com>\n"
+"Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../../manual/data_system/data_blocks.rst:4
 msgid "Data-Blocks"
-msgstr ""
+msgstr "Data-Blocks"
 
 #: ../../manual/data_system/data_blocks.rst:6
 msgid ""
-"The base unit for any Blender project is the data-block. Examples of "
-"data-blocks include: meshes, objects, materials, textures, node-trees, "
-"scenes, texts, brushes and even screens."
+"The base unit for any Blender project is the data-block. Examples of data-"
+"blocks include: meshes, objects, materials, textures, node-trees, scenes, "
+"texts, brushes and even screens."
 msgstr ""
+"L'unité de base pour tout projet de Blender est le *data-block*. Exemples de "
+"data-block : *meshes*, objets, *materials*, textures, *node-trees*, scènes, "
+"textes, pinceaux et même écrans."
 
 #: ../../manual/data_system/data_blocks.rst:10
 msgid ""
 "For clarity, bones, sequence strips and vertex groups are **not** data-"
 "blocks, they belong to armature, scene and mesh types respectively."
 msgstr ""
+"Pour plus de clarté, *bones*, *sequence strips* et *vertex groups* ne sont "
+"pas des data-blocks. Ils appartiennenet respectivement à *armature*, scène, "
+"*mesh types*."
 
 #: ../../manual/data_system/data_blocks.rst:13
 msgid "Some common characteristics:"
-msgstr ""
+msgstr "Quelques caractéristiques communes :"
 
 #: ../../manual/data_system/data_blocks.rst:15
+#, fuzzy
 msgid "They are the primary contents of the blend-file."
-msgstr ""
+msgstr "Ils sont du fichier blend."
 
 #: ../../manual/data_system/data_blocks.rst:16
 msgid ""
-"They can link to each other, for reuse and instancing. (child/parent, "
-"object/object-data, with modifiers and constraints too)."
+"They can link to each other, for reuse and instancing. (child/parent, object/"
+"object-data, with modifiers and constraints too)."
 msgstr ""
+"Ils peuvent se lier mutuellement, pour réutilisation et instanciation. "
+"(child/parent, object/object-data, avec aussi modificateurs et contraintes)."
 
 #: ../../manual/data_system/data_blocks.rst:18
 msgid "Their names are unique."
-msgstr ""
+msgstr "Leur nom est unique"
 
 #: ../../manual/data_system/data_blocks.rst:19
 msgid "They can be added/removed/edited/duplicated."
-msgstr ""
+msgstr "Ils peuvent être ajoutés/supprimés/édités/dupliqués."
 
 #: ../../manual/data_system/data_blocks.rst:20
 msgid ""
 "They can be linked between files (only enabled for a limited set of data-"
 "blocks)"
 msgstr ""
+"Ils peuvent être liés entre fichiers (seulement valable pour un ensemble "
+"limité de data-blocks)."
 
 #: ../../manual/data_system/data_blocks.rst:21
 msgid "They can have their own animation data."
-msgstr ""
+msgstr "Ils peuvent avoir leurs propres données d'animation."
 
 #: ../../manual/data_system/data_blocks.rst:22
-msgid "They can have :doc:`Custom Properties </data_system/custom_properties>`."
+msgid ""
+"They can have :doc:`Custom Properties </data_system/custom_properties>`."
 msgstr ""
+"Ils peuvent avoir :doc:`Propriétés personnalisées </data_system/"
+"custom_properties>`."
 
 #: ../../manual/data_system/data_blocks.rst:24
 msgid ""
@@ -77,33 +95,48 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:35
 msgid "Users (Garbage Collection)"
-msgstr ""
+msgstr "Utilisateurs (Garbage Collection)"
 
 #: ../../manual/data_system/data_blocks.rst:37
 msgid ""
-"It is good to be aware of how Blender, handles data-blocks lifetime, when"
-" they are freed and why."
+"It is good to be aware of how Blender, handles data-blocks lifetime, when "
+"they are freed and why."
 msgstr ""
+"C'est bien d'être conscient de la manière dont Blender gère les data-blocks "
+"à vie, quand ils sont libérés et pourquoi."
 
 #: ../../manual/data_system/data_blocks.rst:40
-msgid "Blender follows the general rule where unused data is eventually removed."
+#, fuzzy
+msgid ""
+"Blender follows the general rule where unused data is eventually removed."
 msgstr ""
+"Blender suit les règles générales où les données inutilisées finissent par "
+"être supprimées."
 
 #: ../../manual/data_system/data_blocks.rst:42
 msgid ""
-"Since its common to add and remove a lot of data while working, this has "
-"the advantage of not having to manually manage every single data-block."
+"Since its common to add and remove a lot of data while working, this has the "
+"advantage of not having to manually manage every single data-block."
 msgstr ""
+"Bien qu'il soit fréquent d'ajouter et de supprimer beaucoup de données "
+"pendant le travail, cela a un avantage de ne pas gérer manuellement chaque "
+"data-block individuellement."
 
 #: ../../manual/data_system/data_blocks.rst:45
+#, fuzzy
 msgid "This works by skipping zero user data-blocks when writing blend-files."
 msgstr ""
+"Ceci fonctionne en sautant les data-blocks sans utilisateur lors de "
+"l'enregistrement des fichiers blend."
 
 #: ../../manual/data_system/data_blocks.rst:47
 msgid ""
 "In some cases, you want to save a data-block even when it is unused "
 "(typically for re-usable asset libraries). see `Fake User`_."
 msgstr ""
+"Dans certains cas, vous voulez sauvegarder un data-block même quand il n'est "
+"pas utilisé (typiquement pour des bibliothèques réutilisables). Voir `Fake "
+"User`_."
 
 #: ../../manual/data_system/data_blocks.rst:51
 msgid "Fake User"
@@ -111,29 +144,28 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:53
 msgid ""
-"Since zero user data-blocks are not saved. There are times when you want "
-"to force the data to be kept irrespective of its users."
+"Since zero user data-blocks are not saved. There are times when you want to "
+"force the data to be kept irrespective of its users."
 msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:56
 msgid ""
-"If you are building a blend-file to serve as a library of things that you"
-" intend to link to and from other files, you will need to make sure that "
-"they do not accidentally get deleted from the library file."
+"If you are building a blend-file to serve as a library of things that you "
+"intend to link to and from other files, you will need to make sure that they "
+"do not accidentally get deleted from the library file."
 msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:59
 msgid ""
-"Do this by giving the data-blocks a *Fake User*, by pressing the *F* "
-"button next to the name of the data-block. This prevents the user count "
-"from ever becoming zero: therefore, the data-block will not be deleted. "
-"(since Blender does not keep track of how many other files link to this "
-"one.)"
+"Do this by giving the data-blocks a *Fake User*, by pressing the *F* button "
+"next to the name of the data-block. This prevents the user count from ever "
+"becoming zero: therefore, the data-block will not be deleted. (since Blender "
+"does not keep track of how many other files link to this one.)"
 msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:67
 msgid "Users (Sharing)"
-msgstr ""
+msgstr "Utilisateurs (Partage)"
 
 #: ../../manual/data_system/data_blocks.rst:69
 msgid "Many data-blocks can be shared among other data-blocks,"
@@ -141,76 +173,94 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:71
 msgid "Examples where sharing data is common."
-msgstr ""
+msgstr "Exemples où le partage de données est fréquent :"
 
 #: ../../manual/data_system/data_blocks.rst:73
 msgid "Sharing textures among materials."
-msgstr ""
+msgstr "Partage de textures entre *materials*."
 
 #: ../../manual/data_system/data_blocks.rst:74
 msgid "Sharing meshes between objects (instances)."
-msgstr ""
+msgstr "Partage de meshes entre objets (instances)."
 
 #: ../../manual/data_system/data_blocks.rst:75
 msgid ""
-"Sharing animated actions between objects, for example to make all the "
-"lights dim together."
+"Sharing animated actions between objects, for example to make all the lights "
+"dim together."
 msgstr ""
+"Partage dâctions animées entre objets, par exemple pour faire baisser toutes "
+"les lumières ensemble."
 
 #: ../../manual/data_system/data_blocks.rst:78
 msgid "You can also share data-blocks between files, see."
-msgstr ""
+msgstr "Vous pouvez aussi partager les data-blocks entre fichiers, voir :"
 
 #: ../../manual/data_system/data_blocks.rst:80
 msgid ":doc:`linked libraries </data_system/linked_libraries>`."
-msgstr ""
+msgstr ":doc:`Bibliothèques liées </data_system/linked_libraries>`."
 
 #: ../../manual/data_system/data_blocks.rst:84
 msgid "Removing Data-Blocks"
-msgstr ""
+msgstr "Supression de data-blocks"
 
 #: ../../manual/data_system/data_blocks.rst:86
+#, fuzzy
 msgid ""
 "As covered in `Users (Garbage Collection)`_, data-blocks are typically "
 "removed when they are no longer used."
 msgstr ""
+"Comme couvert dans `Utilisateurs (Garbage Collection)`_, les data-blocks "
+"sont habituellement supprimés quand ils ne sont plus utilisés."
 
 #: ../../manual/data_system/data_blocks.rst:88
 msgid "There are some exceptions to this, however."
-msgstr ""
+msgstr "il y a cependant quelques exceptions à cela :"
 
 #: ../../manual/data_system/data_blocks.rst:90
 msgid ""
-"The following data-blocks can be removed directly: Scene, Text, Group and"
-" Screen."
+"The following data-blocks can be removed directly: Scene, Text, Group and "
+"Screen."
 msgstr ""
+"Les data-blocks suivants peuvent être supprimés directement : Scene, Text, "
+"Group and Screen."
 
 #: ../../manual/data_system/data_blocks.rst:93
 msgid ""
 "Other data-blocks such as groups and actions can be *Unlinked* from the "
 "*Outliner* context menu."
 msgstr ""
+"D'autres data-blocks tels que groups et actions peuvent être *Unlinked* "
+"depuis le menu contextuel de l'Outliner."
 
 #: ../../manual/data_system/data_blocks.rst:97
+#, fuzzy
 msgid ""
 "Some data (images especially) is hard to keep track of, especially since "
 "image views are counted as users."
 msgstr ""
+"Certaines données (les images spécialement) sont difficiles , spécialement"
 
 #: ../../manual/data_system/data_blocks.rst:100
+#, fuzzy
 msgid ""
-"For data-blocks that can be unlinked - hold :kbd:`Shift` while pressing "
-"on the *X* button, This force clears the user-count, so the data-block "
-"will be removed on reloading."
+"For data-blocks that can be unlinked - hold :kbd:`Shift` while pressing on "
+"the *X* button, This force clears the user-count, so the data-block will be "
+"removed on reloading."
 msgstr ""
+"Pour les data-blocks qui peuvent être *unlinked* - maintenez enfoncé :kbd:"
+"`Shift`en pressant sur le bouton *X*. Ceci force à effacer le compte "
+"d'utilisateur, ainsi le data-block sera supprimé au prochain chargement. "
 
 #: ../../manual/data_system/data_blocks.rst:107
 msgid "Data-Block Types"
-msgstr ""
+msgstr "Types de data-blocks"
 
 #: ../../manual/data_system/data_blocks.rst:116
-msgid "For reference, here is a table of data-blocks types stored in blend-files."
+msgid ""
+"For reference, here is a table of data-blocks types stored in blend-files."
 msgstr ""
+"Pour référence, ci-dessous un tableau de types de data-blocks enregistrés "
+"dans les fichiers blend."
 
 #: ../../manual/data_system/data_blocks.rst:119
 msgid "Library Linking, supports bing linked into other blend-files."
@@ -310,15 +360,15 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Stores animation F-Curves."
-msgstr ""
+msgstr "Enregistre les F-Curves d'animation."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used as data-block animation data,"
-msgstr ""
+msgstr "Utilisé comme data-block de données d'animation,"
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "and the Non-Linear-Editor."
-msgstr ""
+msgstr "et l'Éditeur *Non-Linear*."
 
 #: ../../manual/data_system/data_blocks.rst:147
 msgid "Armature"
@@ -326,11 +376,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Skeleton used to deform meshes."
-msgstr ""
+msgstr "*Skeleton* utilisé pour déformer des meshes."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used as object-data & by the Armature Modifier."
-msgstr ""
+msgstr "Utilisé comme object-data & par le Modificateur Armature."
 
 #: ../../manual/data_system/data_blocks.rst:152
 msgid "Brush"
@@ -338,7 +388,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by paint tools."
-msgstr ""
+msgstr "Utilisé par les outils de peinture."
 
 #: ../../manual/data_system/data_blocks.rst:156
 msgid "Camera"
@@ -346,7 +396,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used as object-data."
-msgstr ""
+msgstr "Utilisé comme object-data."
 
 #: ../../manual/data_system/data_blocks.rst:160
 msgid "Curve"
@@ -354,7 +404,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by camera, font & surface objects."
-msgstr ""
+msgstr "Utilisé par la caméra, les fontes & les objets surface."
 
 #: ../../manual/data_system/data_blocks.rst:164
 msgid "Font"
@@ -366,7 +416,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by Font object-data."
-msgstr ""
+msgstr "Utilisé par les object-data de Fonte."
 
 #: ../../manual/data_system/data_blocks.rst:169
 msgid "GreasePencil"
@@ -374,15 +424,15 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "2D/3D sketch data."
-msgstr ""
+msgstr "données d'esquisse 2D/3D."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used as overlay *helper* info, by the"
-msgstr ""
+msgstr "Utilisé comme overlay *helper* info, par les"
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "3D View, Image, Sequencer & MovieClip editors."
-msgstr ""
+msgstr "Vue 3D, les éditeurs Image, Sequencer & MovieClip."
 
 #: ../../manual/data_system/data_blocks.rst:175
 msgid "Group"
@@ -394,7 +444,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by dupli-groups & often library-linking."
-msgstr ""
+msgstr "Utilisé par les *dupli-groups* & souvent les *library-linking*."
 
 #: ../../manual/data_system/data_blocks.rst:180
 msgid "Image"
@@ -406,7 +456,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by textures & shader nodes."
-msgstr ""
+msgstr "Utilisé par les textures & shader nodes."
 
 #: ../../manual/data_system/data_blocks.rst:185
 msgid "Lamp"
@@ -418,11 +468,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Grid based lattice deformation."
-msgstr ""
+msgstr "Déformation de lattice selon une grille."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used as object-data and by the Lattice Modifier."
-msgstr ""
+msgstr "Utilisé comme object-data et par le Modificateur Lattice."
 
 #: ../../manual/data_system/data_blocks.rst:194
 msgid "Library"
@@ -430,11 +480,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "References to external blend-files."
-msgstr ""
+msgstr "référence à des fichiers blend externes."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Access from the outliner's blend-file view."
-msgstr ""
+msgstr "Accès depuis la vue blend-file d'Outliner "
 
 #: ../../manual/data_system/data_blocks.rst:199
 msgid "LineStyle"
@@ -442,7 +492,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by the FreeStyle render-engine."
-msgstr ""
+msgstr "Utilisé par le moteur de rendu FreeStyle."
 
 #: ../../manual/data_system/data_blocks.rst:203
 msgid "Mask"
@@ -454,7 +504,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by compositing nodes & sequencer strip."
-msgstr ""
+msgstr "Utilisé par les compositing nodes & sequencer strip."
 
 #: ../../manual/data_system/data_blocks.rst:208
 msgid "Material"
@@ -466,7 +516,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by objects, meshes & curves."
-msgstr ""
+msgstr "Utilisé par les objets, meshes & curves."
 
 #: ../../manual/data_system/data_blocks.rst:213
 msgid "Mesh"
@@ -482,7 +532,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "An isosurface in 3D space."
-msgstr ""
+msgstr "Un *isosurface* dans l'espace 3D."
 
 #: ../../manual/data_system/data_blocks.rst:223
 msgid "MovieClip"
@@ -494,7 +544,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used in the motion-tracking editor."
-msgstr ""
+msgstr "Utilisé par l'éditeur motion-tracking."
 
 #: ../../manual/data_system/data_blocks.rst:228
 msgid "NodeGroup"
@@ -502,11 +552,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Collections of re-usable nodes."
-msgstr ""
+msgstr "Collection de nodes réutilisables."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used in the node-editor."
-msgstr ""
+msgstr "Utilisé dans le node-editor."
 
 #: ../../manual/data_system/data_blocks.rst:233
 msgid "Object"
@@ -522,7 +572,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by scenes & groups."
-msgstr ""
+msgstr "Utilisé par les scènes et groups."
 
 #: ../../manual/data_system/data_blocks.rst:239
 msgid "Particle"
@@ -530,11 +580,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Particle settings."
-msgstr ""
+msgstr "Réglages de particules."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by particle systems."
-msgstr ""
+msgstr "Utilisé par des systèmes de particules."
 
 #: ../../manual/data_system/data_blocks.rst:244
 msgid "Palette"
@@ -542,11 +592,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Store color presets."
-msgstr ""
+msgstr "Enregistre les préréglages de couleurs."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Access from the paint tools."
-msgstr ""
+msgstr "Accès depuis les outils de peinture."
 
 #: ../../manual/data_system/data_blocks.rst:249
 msgid "Scene"
@@ -558,7 +608,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used as top-level storage for objects & animation."
-msgstr ""
+msgstr "Utilisé comme stockage de haut niveau pour les objets et l'animation."
 
 #: ../../manual/data_system/data_blocks.rst:254
 msgid "Screen"
@@ -566,11 +616,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Screen layout."
-msgstr ""
+msgstr "Disposition d'écran."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by each window, which has its own screen."
-msgstr ""
+msgstr "Utilisé par chaque fenêtre, qui possède son propre écran."
 
 #: ../../manual/data_system/data_blocks.rst:259
 msgid "ShapeKeys"
@@ -582,7 +632,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by mesh, curve and lattice objects."
-msgstr ""
+msgstr "Utilisé par les objets mesh, curve et lattice."
 
 #: ../../manual/data_system/data_blocks.rst:264
 msgid "Sounds"
@@ -590,11 +640,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "References to sound files."
-msgstr ""
+msgstr "Référence à des fichiers audio."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by speaker objects and the game-engine."
-msgstr ""
+msgstr "Utilisé par les objets speaker et le moteur de jeu."
 
 #: ../../manual/data_system/data_blocks.rst:269
 msgid "Speaker"
@@ -602,7 +652,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Sound sources for a 3D scene."
-msgstr ""
+msgstr "Sources audio pour une scène 3D."
 
 #: ../../manual/data_system/data_blocks.rst:274
 msgid "Text"
@@ -610,11 +660,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Text data."
-msgstr ""
+msgstr "Données de texte."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by Python scripts and OSL shaders."
-msgstr ""
+msgstr "Utilisé par les scrips Python et les *OSL shaders*."
 
 #: ../../manual/data_system/data_blocks.rst:279
 msgid "Texture"
@@ -622,11 +672,11 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "2D/3D textures."
-msgstr ""
+msgstr "Textures 2D/3D."
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by materials, world and brushes."
-msgstr ""
+msgstr "Utilisé par *materials*, *world* et pinceaux."
 
 #: ../../manual/data_system/data_blocks.rst:284
 msgid "World"
@@ -634,7 +684,7 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
 msgid "Used by scenes for render environment settings."
-msgstr ""
+msgstr "Utilisé par les scènes pour les réglages de l'environnement de rendu."
 
 #: ../../manual/data_system/data_blocks.rst:288
 msgid "WindowManager"
@@ -643,43 +693,3 @@ msgstr ""
 #: ../../manual/data_system/data_blocks.rst
 msgid "TODO."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "There are some exceptions to this however."
-#~ msgstr ""
-
-#~ msgid "Used by dupli-grous & often library-linking."
-#~ msgstr ""
-
-#~ msgid "They're the primary contents of the ``.blend`` file."
-#~ msgstr ""
-
-#~ msgid "Library Linking, *supports bing linked into other blend files*."
-#~ msgstr ""
-
-#~ msgid "References to external ``.blend`` files."
-#~ msgstr ""
-
-#~ msgid "They can have custom properties."
-#~ msgstr ""
-
-#~ msgid "Library Linking, *supports bing linked into other blend-files*."
-#~ msgstr ""
-
-#~ msgid "Data-blocks view"
-#~ msgstr ""
-
-#~ msgid "They're the primary contents of the blend-file."
-#~ msgstr ""
-
-#~ msgid "Access from the outliner's *Blendfile* view."
-#~ msgstr ""
-
-#~ msgid "3D-View, Image, Sequencer & MovieClip editors."
-#~ msgstr ""
-
-#~ msgid "Stores animation FCurves."
-#~ msgstr ""
-
