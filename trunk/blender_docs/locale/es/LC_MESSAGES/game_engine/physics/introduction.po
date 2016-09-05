@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 15:07-0400\n"
+"POT-Creation-Date: 2016-09-05 17:04-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/introduction.rst:91
 msgid ""
-"`Python Controllers </game_engine/logic/controllers/python>`__ - As "
+"`Python Controllers </game_engine/logic/controllers/python>`__ -- As "
 "always, in the BGE, you can get the most power when you drop into Python "
 "and start toying with the settings directly. For instance, the *Copy "
 "Rotation* mentioned above is not hard -- All you have to do is something "
@@ -290,41 +290,41 @@ msgid ""
 "will put some statistics in the upper-left area of the game window."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:152
+#: ../../manual/game_engine/physics/introduction.rst:154
 msgid ""
 "These can be very informative, but also a bit cryptic. Moguri has "
-"elaborated on their meanings, for us: "
-"https://mogurijin.wordpress.com/2012/01/03/bge-profile-stats-and-what-"
-"they-mean/"
+"elaborated on their meanings, for us: `Moguris blog "
+"<https://mogurijin.wordpress.com/2012/01/03/bge-profile-stats-and-what-"
+"they-mean/>`__."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:158
+#: ../../manual/game_engine/physics/introduction.rst:159
 msgid "Mesh Deformations"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:160
+#: ../../manual/game_engine/physics/introduction.rst:161
 msgid ""
 "As mentioned above, Rigid Body physics do not affect mesh deformations, "
 "nor do they account for them in the physics model. This leaves you with a"
 " few options:"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:165
+#: ../../manual/game_engine/physics/introduction.rst:166
 msgid "Soft Bodies"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:167
+#: ../../manual/game_engine/physics/introduction.rst:168
 msgid ""
 "You can try using a :doc:`Soft Body "
 "</game_engine/physics/types/soft_body>`, but these are fairly hard to "
 "configure well."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:172
+#: ../../manual/game_engine/physics/introduction.rst:173
 msgid "Actions"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:174
+#: ../../manual/game_engine/physics/introduction.rst:175
 msgid ""
 "To use an :doc:`Action Actuator "
 "</game_engine/logic/actuators/types/action>` to do the deformation, you "
@@ -334,7 +334,7 @@ msgid ""
 "physics mesh, so there is not much to configure."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:179
+#: ../../manual/game_engine/physics/introduction.rst:180
 msgid ""
 "To use an Armature as the deformer will require a bit of extra thought "
 "and effort. Basically the Armature will only deform a mesh if the "
@@ -349,12 +349,12 @@ msgid ""
 "previous paragraph."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:189
+#: ../../manual/game_engine/physics/introduction.rst:190
 msgid ""
 "When you deform a display mesh, it does not update the corresponding "
 "physics mesh. You can view this evidently when you enable physics "
-"visualization (`Visualizing Physics`_) - the collision bounds will remain"
-" exactly as when they began. To fix this, you must call "
+"visualization (`Visualizing Physics`_) -- the collision bounds will "
+"remain exactly as when they began. To fix this, you must call "
 "``own.reinstancePhysicsMesh()`` in some form. Currently this only works "
 "on *Triangle Mesh* bounds, not *Convex Hull*. We have prepared a "
 "demonstration file in `Manual-BGE-Physics-DancingSticks.blend "
@@ -367,7 +367,7 @@ msgid ""
 "unadorned, and it will do the right thing."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:203
+#: ../../manual/game_engine/physics/introduction.rst:204
 msgid ""
 "The more complicated case is the :menuselection:`Collision Mesh --> "
 "Armature --> Display Mesh` cluster, which you can see in the front of the"
@@ -385,11 +385,11 @@ msgid ""
 "since it will be getting the mesh data from ``viz``."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:219
+#: ../../manual/game_engine/physics/introduction.rst:220
 msgid "Ragdolls"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:221
+#: ../../manual/game_engine/physics/introduction.rst:222
 msgid ""
 "A third option is to create your items out of many sub-objects, connected"
 " together with Rigid Body Joints or similar. This can be quite a bit more"
@@ -399,39 +399,39 @@ msgid ""
 "<https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Game_Engine/BRIK_ragdolls>`__."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:231
+#: ../../manual/game_engine/physics/introduction.rst:232
 msgid "Digging Deeper"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:233
+#: ../../manual/game_engine/physics/introduction.rst:234
 msgid "Sometimes you will want to look at:"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:235
-msgid "The main Bullet Physics page - http://bulletphysics.org/wordpress/"
-msgstr ""
-
 #: ../../manual/game_engine/physics/introduction.rst:236
-msgid ""
-"The Bullet Wiki - "
-"http://www.bulletphysics.org/mediawiki-1.5.8/index.php?title=Documentation"
+msgid "The `main Bullet Physics page <http://bulletphysics.org/wordpress/>`__"
 msgstr ""
 
 #: ../../manual/game_engine/physics/introduction.rst:237
 msgid ""
-"The Bullet API Docs - "
-"http://www.continuousphysics.com/Bullet/BulletFull/index.html"
+"The `Bullet Wiki "
+"<http://www.bulletphysics.org/mediawiki-1.5.8/index.php?title=Documentation>`__"
 msgstr ""
 
 #: ../../manual/game_engine/physics/introduction.rst:238
-msgid "The Bullet Forums - http://www.bulletphysics.org/Bullet/phpBB3/"
+msgid ""
+"The `Bullet API Docs "
+"<http://www.continuousphysics.com/Bullet/BulletFull/index.html>`__"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:242
+#: ../../manual/game_engine/physics/introduction.rst:239
+msgid "The `Bullet Forums <http://www.bulletphysics.org/Bullet/phpBB3/>`__"
+msgstr ""
+
+#: ../../manual/game_engine/physics/introduction.rst:243
 msgid "Recording to Keyframes"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:244
+#: ../../manual/game_engine/physics/introduction.rst:245
 msgid ""
 "Beyond gaming, sometimes you wish to render a complex scene that involves"
 " collisions, multiple forces, friction between multiple bodies, and air "
@@ -439,7 +439,7 @@ msgid ""
 "realtime physics."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:248
+#: ../../manual/game_engine/physics/introduction.rst:249
 msgid ""
 "Blender provides a way to ''bake'' or ''record'' a physics simulation "
 "into keyframes allowing it then to be played as an action either for "
@@ -450,11 +450,11 @@ msgid ""
 "it was recorded. This may, or not, be desired according to the situation."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:258
+#: ../../manual/game_engine/physics/introduction.rst:259
 msgid "Menu to record Keyframes to the Dopesheet."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:260
+#: ../../manual/game_engine/physics/introduction.rst:261
 msgid ""
 "All you have to do to achieve this effect is go to the Info Editor (the "
 "bar at the top of the window) :menuselection:`Game --> Record Animation`,"
@@ -463,21 +463,21 @@ msgid ""
 " :kbd:`Ctrl-F12` to render it out as an animation."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:266
+#: ../../manual/game_engine/physics/introduction.rst:267
 msgid ""
 "Note that you can also use Game Logic Bricks and scripting. Everything "
 "will be recorded."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:270
+#: ../../manual/game_engine/physics/introduction.rst:271
 msgid "Keyframe Clean-up"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:274
+#: ../../manual/game_engine/physics/introduction.rst:275
 msgid "Resulting recorded animation."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:276
+#: ../../manual/game_engine/physics/introduction.rst:277
 msgid ""
 "*Record Animation* keys redundant data (data that was did not change "
 "relative to the last frame). Pressing :kbd:`O` while in the *DopeSheet* "
@@ -485,23 +485,23 @@ msgid ""
 "removed."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:282
+#: ../../manual/game_engine/physics/introduction.rst:283
 msgid "Cleaned up recording."
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:286
+#: ../../manual/game_engine/physics/introduction.rst:287
 msgid "Exporting"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:289
+#: ../../manual/game_engine/physics/introduction.rst:290
 msgid ".bullet / Bullet compatible engines"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:291
+#: ../../manual/game_engine/physics/introduction.rst:292
 msgid "You can snapshot the physics world at any time with the following code:"
 msgstr ""
 
-#: ../../manual/game_engine/physics/introduction.rst:299
+#: ../../manual/game_engine/physics/introduction.rst:300
 msgid ""
 "This will allow importing into other Bullet-based projects. See the "
 "`Bullet Wiki on Serialization "
@@ -531,88 +531,68 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Physics can be associated with a "
-#~ "material on the material properties tab."
-#~ " These are settings that one would"
-#~ " normally associate with a material, "
-#~ "such has it's friction and they "
-#~ "are meant to be used in "
-#~ "conjunction with the object physics "
-#~ "settings, not replace it."
+#~ "`Python Controllers "
+#~ "</game_engine/logic/controllers/python>`__ - As "
+#~ "always, in the BGE, you can get"
+#~ " the most power when you drop "
+#~ "into Python and start toying with "
+#~ "the settings directly. For instance, the"
+#~ " *Copy Rotation* mentioned above is "
+#~ "not hard -- All you have to "
+#~ "do is something to the effect of"
+#~ " ``own.worldOrientation = "
+#~ "bge.logic.getCurrentScene().objects['TheTargetObject'].worldOrientation``"
 #~ msgstr ""
 
 #~ msgid ""
-#~ ":doc:`Rigid Body Joint "
-#~ "</rigging/constraints/relationship/rigid_body_joint>` - "
-#~ "This is the one Constraint that "
-#~ "you can set up through the UI "
-#~ "that works in the BGE. It has "
-#~ "several options, and can be very "
-#~ "powerful - see ITS page for a "
-#~ "detailed description and demo blend-"
-#~ "file. Do not forget that you can"
-#~ " loop through objects using ``bpy`` "
-#~ "instead of clicking thousands of times"
-#~ " to set up chains of these "
-#~ "Constraints."
+#~ "These can be very informative, but "
+#~ "also a bit cryptic. Moguri has "
+#~ "elaborated on their meanings, for us:"
+#~ " https://mogurijin.wordpress.com/2012/01/03/bge-profile-"
+#~ "stats-and-what-they-mean/"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Rigid Body Joints on the Fly - "
-#~ "You can add/remove them after the "
-#~ "BGE starts by using "
-#~ "``bge.constraints.createConstraint()``. This can be"
-#~ " good either to simply automate their"
-#~ " setup, or to truly make them "
-#~ "dynamic. A simple demo can be "
-#~ "viewed in: `BGE-Physics-"
-#~ "DynamicallyCreateConstraint.blend "
-#~ "<https://wiki.blender.org/index.php/Media:BGE-Physics-"
-#~ "DynamicallyCreateConstraint.blend>`__"
+#~ "When you deform a display mesh, it"
+#~ " does not update the corresponding "
+#~ "physics mesh. You can view this "
+#~ "evidently when you enable physics "
+#~ "visualization (`Visualizing Physics`_) - the"
+#~ " collision bounds will remain exactly "
+#~ "as when they began. To fix this,"
+#~ " you must call ``own.reinstancePhysicsMesh()``"
+#~ " in some form. Currently this only"
+#~ " works on *Triangle Mesh* bounds, not"
+#~ " *Convex Hull*. We have prepared a"
+#~ " demonstration file in `Manual-BGE-"
+#~ "Physics-DancingSticks.blend "
+#~ "<https://wiki.blender.org/index.php/Media:Manual-BGE-"
+#~ "Physics-DancingSticks.blend>`__. Note that we "
+#~ "had to increase the :menuselection:`World "
+#~ "--> Physics --> Physics Steps --> "
+#~ "Substeps` to make the collisions work"
+#~ " well. The more basic case is "
+#~ "the case the Shapekeyed Action, which"
+#~ " you can see in the back area"
+#~ " of the scene. Since it is the"
+#~ " only object involved, you can call"
+#~ " ``reinstancePhysicsMesh()`` unadorned, and it"
+#~ " will do the right thing."
+#~ msgstr ""
+
+#~ msgid "The main Bullet Physics page - http://bulletphysics.org/wordpress/"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "*White* - White lines represent active"
-#~ " bounding meshes at are undergoing "
-#~ "physics calculations, untill such calculations"
-#~ " are so small that the object "
-#~ "is put to rest. This is how "
-#~ "you can see the effects of the "
-#~ "*Collision Bounds*. - *Thick*, or *Many"
-#~ " White Lines* - A compound collision"
-#~ " mesh/meshes."
+#~ "The Bullet Wiki - "
+#~ "http://www.bulletphysics.org/mediawiki-1.5.8/index.php?title=Documentation"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "A shot of `Manual-BGE-Physics-"
-#~ "DancingSticks.blend <https://wiki.blender.org/index.php/Media"
-#~ ":Manual-BGE-Physics-DancingSticks.blend>`__ with"
-#~ " [Game --> Show Framerate and "
-#~ "Profile] enabled"
+#~ "The Bullet API Docs - "
+#~ "http://www.continuousphysics.com/Bullet/BulletFull/index.html"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "To use an Armature as the deformer"
-#~ " will require a bit of extra "
-#~ "thought and effort. Basically the "
-#~ "Armature will only deform a mesh "
-#~ "if the Armature is the parent of"
-#~ " that mesh. But at that point, "
-#~ "your mesh will lose its physics "
-#~ "responsivenes, and only hang in the "
-#~ "air (it's copying the location/rotation "
-#~ "of the Armature). To somewhat fix "
-#~ "this you can then parent the "
-#~ "Armature to a collision mesh (perhaps"
-#~ " a simple box or otherwise very-"
-#~ "low-poly mesh). This \"Deformation "
-#~ "Mesh\" will be the physics "
-#~ "representative, being type: Dynamic or "
-#~ "Rigid Body, but it will be set "
-#~ "to Invisible. Then \"Display Mesh\" will"
-#~ " be the opposite set to *No "
-#~ "Collision*, but visible. This still "
-#~ "leaves the problem mentioned in the "
-#~ "previous paragraph."
+#~ msgid "The Bullet Forums - http://www.bulletphysics.org/Bullet/phpBB3/"
 #~ msgstr ""
 
