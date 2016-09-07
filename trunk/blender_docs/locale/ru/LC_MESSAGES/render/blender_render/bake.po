@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 23:45+0500\n"
+"POT-Creation-Date: 2016-09-07 14:46-0400\n"
 "PO-Revision-Date: 2016-09-02 21:10+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -12,11 +12,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/render/workflows/bake.rst:4
+#: ../../manual/render/blender_render/bake.rst:4
 msgid "Render Baking"
 msgstr "Запекание визуализации"
 
-#: ../../manual/render/workflows/bake.rst:6
+#: ../../manual/render/blender_render/bake.rst:6
 msgid ""
 "Baking, in general, is the act of pre-computing something in order to "
 "speed up some other process later down the line. Rendering from scratch "
@@ -34,7 +34,7 @@ msgstr ""
 "«Визуализация» вся сцена отрисовывается намного быстрее, поскольку не "
 "нужно пересчитывать цвета запечённых объектов."
 
-#: ../../manual/render/workflows/bake.rst:13
+#: ../../manual/render/blender_render/bake.rst:13
 msgid ""
 "Render baking creates 2D bitmap images of a mesh object's rendered "
 "surface. These images can be re-mapped onto the object using the object's"
@@ -54,7 +54,7 @@ msgstr ""
 "запекание, может быть гораздо меньше времени, требуемого на визуализацию "
 "всех её кадров."
 
-#: ../../manual/render/workflows/bake.rst:19
+#: ../../manual/render/blender_render/bake.rst:19
 msgid ""
 "Use Render Bake in intensive light/shadow solutions, such as AO or soft "
 "shadows from area lights. If you bake AO for the main objects, you will "
@@ -65,7 +65,7 @@ msgstr ""
 "для всех основных объектов, вам не придётся включать его при полной "
 "визуализации, что сэкономит вам время отрисовки."
 
-#: ../../manual/render/workflows/bake.rst:23
+#: ../../manual/render/blender_render/bake.rst:23
 msgid ""
 "Use *Full Render* or *Textures* to create an image texture; baked "
 "procedural textures can be used as a starting point for further texture "
@@ -88,37 +88,41 @@ msgstr ""
 "будет выглядеть так же, как высокополигональная, но будет иметь намного "
 "меньше граней/полигонов."
 
-#: ../../manual/render/workflows/bake.rst:33
+#: ../../manual/render/blender_render/bake.rst:33
 msgid "Advantages"
 msgstr "Преимущества"
 
-#: ../../manual/render/workflows/bake.rst:34
-msgid "Can significantly reduce render times"
+#: ../../manual/render/blender_render/bake.rst:34
+#, fuzzy
+msgid "Can significantly reduce render times."
 msgstr "Можно значительно снизить время визуализации."
 
-#: ../../manual/render/workflows/bake.rst:35
-msgid "Texture painting made easier"
+#: ../../manual/render/blender_render/bake.rst:35
+#, fuzzy
+msgid "Texture painting made easier."
 msgstr "Рисование по текстуре становится проще."
 
-#: ../../manual/render/workflows/bake.rst:36
-msgid "Reduced polygon count"
+#: ../../manual/render/blender_render/bake.rst:36
+#, fuzzy
+msgid "Reduced polygon count."
 msgstr "Уменьшение количества полигонов."
 
-#: ../../manual/render/workflows/bake.rst:37
-msgid "Repeated renders are made faster, multiplying the time savings"
+#: ../../manual/render/blender_render/bake.rst:37
+#, fuzzy
+msgid "Repeated renders are made faster, multiplying the time savings."
 msgstr ""
 "Повторяющиеся визуализации выполняются быстрее, что кратно увеличивает "
 "экономию времени."
 
-#: ../../manual/render/workflows/bake.rst:40
+#: ../../manual/render/blender_render/bake.rst:40
 msgid "Disadvantages"
 msgstr "Недостатки"
 
-#: ../../manual/render/workflows/bake.rst:41
+#: ../../manual/render/blender_render/bake.rst:41
 msgid "Object must be UV-unwrapped."
 msgstr "Объект должен иметь UV-развёртку."
 
-#: ../../manual/render/workflows/bake.rst:42
+#: ../../manual/render/blender_render/bake.rst:42
 msgid ""
 "If shadows are baked, lights and object cannot move with respect to each "
 "other."
@@ -126,7 +130,7 @@ msgstr ""
 "Если запекаются тени, источники света и объект не смогут перемещаться "
 "друг относительно друга."
 
-#: ../../manual/render/workflows/bake.rst:43
+#: ../../manual/render/blender_render/bake.rst:43
 msgid ""
 "Large textures (e.g. 4096×4096) can be memory intensive, and be just as "
 "slow as the rendered solution."
@@ -135,7 +139,7 @@ msgstr ""
 " памяти, в результате чего визуализация будет не быстрее прямого решения "
 "«в лоб»."
 
-#: ../../manual/render/workflows/bake.rst:44
+#: ../../manual/render/blender_render/bake.rst:44
 msgid ""
 "Human (labor) time must be spent unwrapping and baking and saving files "
 "and applying the textures to a channel."
@@ -143,29 +147,29 @@ msgstr ""
 "Для создания развёрток, запекания и сохранения файла с последующим "
 "примененим текстур к каналам требуется ручной труд."
 
-#: ../../manual/render/workflows/bake.rst:48
+#: ../../manual/render/blender_render/bake.rst:48
 msgid "Options"
 msgstr "Параметры"
 
-#: ../../manual/render/workflows/bake.rst:51
+#: ../../manual/render/blender_render/bake.rst:51
 msgid "Bake Mode"
 msgstr "Режим запекания"
 
-#: ../../manual/render/workflows/bake.rst:54
+#: ../../manual/render/blender_render/bake.rst:54
 msgid "Full Render"
 msgstr "Полная визуализация"
 
-#: ../../manual/render/workflows/bake.rst:56
+#: ../../manual/render/blender_render/bake.rst:56
 msgid "Bakes all materials, textures, and lighting except specularity and SSS."
 msgstr ""
 "Запекает все материалы, текстуры и освещение, за исключением бликового и "
 "подповерхностного рассеивания."
 
-#: ../../manual/render/workflows/bake.rst:60
+#: ../../manual/render/blender_render/bake.rst:60
 msgid "Ambient Occlusion"
 msgstr "Ambient Occlusion"
 
-#: ../../manual/render/workflows/bake.rst:62
+#: ../../manual/render/blender_render/bake.rst:62
 msgid ""
 "Bakes ambient occlusion as specified in the World panels. Ignores all "
 "lights in the scene."
@@ -173,32 +177,32 @@ msgstr ""
 "Запекает ambient occlusion, как указано в панелях «Окружающая среда "
 "(мир)». Игнорирует все источники освещения в сцене."
 
-#: ../../manual/render/workflows/bake.rst:66
+#: ../../manual/render/blender_render/bake.rst:66
 msgid "Ambient Occlusion."
 msgstr "Ambient Occlusion"
 
-#: ../../manual/render/workflows/bake.rst:70
-#: ../../manual/render/workflows/bake.rst:129
+#: ../../manual/render/blender_render/bake.rst:70
+#: ../../manual/render/blender_render/bake.rst:129
 msgid "Normalized"
 msgstr "С нормализацией"
 
-#: ../../manual/render/workflows/bake.rst:69
+#: ../../manual/render/blender_render/bake.rst:69
 msgid "Normalize without using material's settings."
 msgstr "Нормализация без использования настроек материала."
 
-#: ../../manual/render/workflows/bake.rst:73
+#: ../../manual/render/blender_render/bake.rst:73
 msgid "Shadow"
 msgstr "Тень"
 
-#: ../../manual/render/workflows/bake.rst:75
+#: ../../manual/render/blender_render/bake.rst:75
 msgid "Bakes shadows and lighting."
 msgstr "Запекает тени и освещение."
 
-#: ../../manual/render/workflows/bake.rst:79
+#: ../../manual/render/blender_render/bake.rst:79
 msgid "Normals"
 msgstr "Нормали"
 
-#: ../../manual/render/workflows/bake.rst:81
+#: ../../manual/render/blender_render/bake.rst:81
 msgid ""
 "Bakes tangent and camera-space normals (amongst many others) to an RGB "
 "image."
@@ -206,35 +210,35 @@ msgstr ""
 "Запекает в RGB-изображение нормали в пространствах касательных и камеры "
 "(также доступно множество других пространств)."
 
-#: ../../manual/render/workflows/bake.rst:85
+#: ../../manual/render/blender_render/bake.rst:85
 msgid "Normals."
 msgstr "Нормали"
 
-#: ../../manual/render/workflows/bake.rst:90
+#: ../../manual/render/blender_render/bake.rst:90
 msgid "Normal Space."
 msgstr "Пространство нормалей"
 
-#: ../../manual/render/workflows/bake.rst:104
+#: ../../manual/render/blender_render/bake.rst:104
 msgid "Normal Space"
 msgstr "Пространство нормалей"
 
-#: ../../manual/render/workflows/bake.rst:93
+#: ../../manual/render/blender_render/bake.rst:93
 msgid "Normals can be baked in different spaces:"
 msgstr "Нормали могут быть запечены в различных пространствах:"
 
-#: ../../manual/render/workflows/bake.rst:95
+#: ../../manual/render/blender_render/bake.rst:95
 msgid "Camera space"
 msgstr "Камера"
 
-#: ../../manual/render/workflows/bake.rst:96
+#: ../../manual/render/blender_render/bake.rst:96
 msgid "Default method."
 msgstr "Метод по умолчанию."
 
-#: ../../manual/render/workflows/bake.rst:97
+#: ../../manual/render/blender_render/bake.rst:97
 msgid "World space"
 msgstr "Окружающая среда (мир)"
 
-#: ../../manual/render/workflows/bake.rst:98
+#: ../../manual/render/blender_render/bake.rst:98
 msgid ""
 "Normals in world coordinates, dependent on object transformation and "
 "deformation."
@@ -242,11 +246,11 @@ msgstr ""
 "Нормали в координатах объекта, зависящие от преобразований и деформации "
 "объекта."
 
-#: ../../manual/render/workflows/bake.rst:99
+#: ../../manual/render/blender_render/bake.rst:99
 msgid "Object space"
 msgstr "Объект"
 
-#: ../../manual/render/workflows/bake.rst:100
+#: ../../manual/render/blender_render/bake.rst:100
 msgid ""
 "Normals in object coordinates, independent of object transformation, but "
 "dependent on deformation."
@@ -254,11 +258,11 @@ msgstr ""
 "Нормали в координатах объекта, не зависящие от преобразований объекта, но"
 " зависящие от его деформации."
 
-#: ../../manual/render/workflows/bake.rst:104
+#: ../../manual/render/blender_render/bake.rst:104
 msgid "Tangent space"
 msgstr "Тангенс"
 
-#: ../../manual/render/workflows/bake.rst:102
+#: ../../manual/render/blender_render/bake.rst:102
 msgid ""
 "Normals in tangent space coordinates, independent of object "
 "transformation and deformation. This is the new default, and the right "
@@ -270,7 +274,7 @@ msgstr ""
 "и верный выбор в большинстве случаев, поскольку такая карта нормалей так "
 "же может использоваться для анимированных объектов."
 
-#: ../../manual/render/workflows/bake.rst:106
+#: ../../manual/render/blender_render/bake.rst:106
 msgid ""
 "For materials the same spaces can be chosen as well, in the image texture"
 " options, next to the existing *Normal Map* setting. For correct results,"
@@ -281,19 +285,19 @@ msgstr ""
 "получения правильных результатов, данная настройка должна совпадать с "
 "настройкой, используемой для запекания."
 
-#: ../../manual/render/workflows/bake.rst:112
+#: ../../manual/render/blender_render/bake.rst:112
 msgid "Textures"
 msgstr "Текстуры"
 
-#: ../../manual/render/workflows/bake.rst:114
+#: ../../manual/render/blender_render/bake.rst:114
 msgid "Bakes colors of materials and textures only, without shading."
 msgstr "Запекает только цвета материалов и текстуры, без затенения."
 
-#: ../../manual/render/workflows/bake.rst:118
+#: ../../manual/render/blender_render/bake.rst:118
 msgid "Displacement"
 msgstr "Смещения"
 
-#: ../../manual/render/workflows/bake.rst:120
+#: ../../manual/render/blender_render/bake.rst:120
 msgid ""
 "Similar to baking normal maps, displacement maps can also be baked from a"
 " high-res object to an unwrapped low-res object, using the *Selected to "
@@ -303,15 +307,15 @@ msgstr ""
 "*Выделение к активному* можно запечь карты смещений с "
 "высокополигонального объекта в развёртку для низкополигонального объекта."
 
-#: ../../manual/render/workflows/bake.rst:126
+#: ../../manual/render/blender_render/bake.rst:126
 msgid "Displacement."
 msgstr "Смещения"
 
-#: ../../manual/render/workflows/bake.rst:129
+#: ../../manual/render/blender_render/bake.rst:129
 msgid "Normalize to the distance."
 msgstr "Нормализация на расстояние."
 
-#: ../../manual/render/workflows/bake.rst:131
+#: ../../manual/render/blender_render/bake.rst:131
 msgid ""
 "When using this in conjunction with a subsurf and displacement modifier "
 "within Blender, it is necessary to temporarily add a heavy subsurf "
@@ -337,51 +341,51 @@ msgstr ""
 "также может быть полезен при сохранении карты смещения во внешнем формате"
 " для использования её в сторонних рендерах."
 
-#: ../../manual/render/workflows/bake.rst:143
+#: ../../manual/render/blender_render/bake.rst:143
 msgid "Emission"
 msgstr "Излучение"
 
-#: ../../manual/render/workflows/bake.rst:145
+#: ../../manual/render/blender_render/bake.rst:145
 msgid "Bakes Emit, or the Glow color of a material."
 msgstr "Запекает цвета излучения или свечения материала."
 
-#: ../../manual/render/workflows/bake.rst:149
+#: ../../manual/render/blender_render/bake.rst:149
 msgid "Alpha"
 msgstr "Альфа"
 
-#: ../../manual/render/workflows/bake.rst:151
+#: ../../manual/render/blender_render/bake.rst:151
 msgid "Bakes Alpha values, or transparency of a material."
 msgstr "Запекает альфа-значения (прозрачность) материала."
 
-#: ../../manual/render/workflows/bake.rst:155
+#: ../../manual/render/blender_render/bake.rst:155
 msgid "Mirror Color and Intensity"
 msgstr "Цвета отражения и Интенсивность отражения"
 
-#: ../../manual/render/workflows/bake.rst:157
+#: ../../manual/render/blender_render/bake.rst:157
 msgid "Bakes Mirror color or intensity values."
 msgstr "Запекает цвета отражения или значения интенсивности отражения."
 
-#: ../../manual/render/workflows/bake.rst:161
+#: ../../manual/render/blender_render/bake.rst:161
 msgid "Specular Color and Intensity"
 msgstr "Цвета бликов и Интенсивность бликов"
 
-#: ../../manual/render/workflows/bake.rst:163
+#: ../../manual/render/blender_render/bake.rst:163
 msgid "Bakes specular color or specular intensity values."
 msgstr "Запекает цвета бликов или значения интенсивности бликов."
 
-#: ../../manual/render/workflows/bake.rst:167
+#: ../../manual/render/blender_render/bake.rst:167
 msgid "Full Render."
 msgstr "Полная визуализация"
 
-#: ../../manual/render/workflows/bake.rst:171
+#: ../../manual/render/blender_render/bake.rst:171
 msgid "Additional Options"
 msgstr "Дополнительные параметры"
 
-#: ../../manual/render/workflows/bake.rst:173
+#: ../../manual/render/blender_render/bake.rst:173
 msgid "Clear"
 msgstr "Очистить"
 
-#: ../../manual/render/workflows/bake.rst:174
+#: ../../manual/render/blender_render/bake.rst:174
 msgid ""
 "If selected, clears the image to selected background color (default is "
 "black) before baking render."
@@ -389,11 +393,11 @@ msgstr ""
 "Если параметр включён, очищает изображение выбранным цветом фона (по "
 "умолчанию это чёрный цвет) перед запеканием визуализации."
 
-#: ../../manual/render/workflows/bake.rst:176
+#: ../../manual/render/blender_render/bake.rst:176
 msgid "Margin"
 msgstr "Отступ"
 
-#: ../../manual/render/workflows/bake.rst:176
+#: ../../manual/render/blender_render/bake.rst:176
 msgid ""
 "Baked result is extended this many pixels beyond the border of each UV "
 "\"island,\" to soften seams in the texture."
@@ -401,47 +405,47 @@ msgstr ""
 "Запечённый результат расширяется на указанное количество пикселей за "
 "границы каждого UV-«островка» для сглаживания швов в текстуре."
 
-#: ../../manual/render/workflows/bake.rst:184
+#: ../../manual/render/blender_render/bake.rst:184
 msgid "Split"
 msgstr "Разбиение"
 
-#: ../../manual/render/workflows/bake.rst:179
+#: ../../manual/render/blender_render/bake.rst:179
 msgid "Fixed"
 msgstr "Фикс"
 
-#: ../../manual/render/workflows/bake.rst:180
+#: ../../manual/render/blender_render/bake.rst:180
 msgid "Slit quads predictably (0,1,2) (0,2,3)."
 msgstr "Разбивать квадраты по правилу (0,1,2) (0,2,3)."
 
-#: ../../manual/render/workflows/bake.rst:181
+#: ../../manual/render/blender_render/bake.rst:181
 msgid "Fixed alternate"
 msgstr "Альтернативно фиксированно"
 
-#: ../../manual/render/workflows/bake.rst:182
+#: ../../manual/render/blender_render/bake.rst:182
 msgid "Slit quads predictably (1,2,3) (1,3,0)."
 msgstr "Разбивать квадраты по правилу (1,2,3) (1,3,0)."
 
-#: ../../manual/render/workflows/bake.rst:184
+#: ../../manual/render/blender_render/bake.rst:184
 msgid "Automatic"
 msgstr "Автоматический"
 
-#: ../../manual/render/workflows/bake.rst:184
+#: ../../manual/render/blender_render/bake.rst:184
 msgid "Split quads to give the least distortion while baking."
 msgstr "Разбивать квадраты для минимизации искажений при запекании."
 
-#: ../../manual/render/workflows/bake.rst:197
+#: ../../manual/render/blender_render/bake.rst:197
 msgid "Select to Active"
 msgstr "Выделение к активному"
 
-#: ../../manual/render/workflows/bake.rst:187
+#: ../../manual/render/blender_render/bake.rst:187
 msgid "Enable information from other objects to be baked onto the active object."
 msgstr "Включение запекания информации с других объектов на активный объект."
 
-#: ../../manual/render/workflows/bake.rst:193
+#: ../../manual/render/blender_render/bake.rst:193
 msgid "Distance"
 msgstr "Расстояние"
 
-#: ../../manual/render/workflows/bake.rst:190
+#: ../../manual/render/blender_render/bake.rst:190
 msgid ""
 "Controls how far a point on another object can be away from the point on "
 "the active object. Only needed for *Selected to Active*. A typical use "
@@ -456,21 +460,21 @@ msgstr ""
 "количеством полигонов. Полученную карту нормалей затем можно применить к "
 "низкополигональному объекту, чтобы повысить его видимую детализацию."
 
-#: ../../manual/render/workflows/bake.rst:197
+#: ../../manual/render/blender_render/bake.rst:197
 msgid "Bias"
 msgstr "Погрешность"
 
-#: ../../manual/render/workflows/bake.rst:196
+#: ../../manual/render/blender_render/bake.rst:196
 msgid "Bias towards further away from the object (in Blender units)"
 msgstr ""
 "Отклонение к граням, находящимся в стороне от объектов (в единицах "
 "Blender)."
 
-#: ../../manual/render/workflows/bake.rst:199
+#: ../../manual/render/blender_render/bake.rst:199
 msgid "Mesh Must be Visible in Render"
 msgstr "Полисетки должны быть видимы при визуализации"
 
-#: ../../manual/render/workflows/bake.rst:201
+#: ../../manual/render/blender_render/bake.rst:201
 msgid ""
 "If a mesh is not visible in regular render, for example because it is "
 "disabled for rendering in the Outliner or has the DupliVerts setting "
@@ -480,19 +484,19 @@ msgstr ""
 "она исключена из визуализации в «Структуре проекта», либо к ней применено"
 " дублирование вершин, она не сможет быть запечена."
 
-#: ../../manual/render/workflows/bake.rst:207
+#: ../../manual/render/blender_render/bake.rst:207
 msgid "Workflow"
 msgstr "Рабочий процесс"
 
-#: ../../manual/render/workflows/bake.rst:209
+#: ../../manual/render/blender_render/bake.rst:209
 msgid "In a 3D View editor, select a mesh and enter UV/Face Select mode"
 msgstr "В окне 3D-вида выделите полисетку и войдите в режим выделения UV/граней."
 
-#: ../../manual/render/workflows/bake.rst:210
+#: ../../manual/render/blender_render/bake.rst:210
 msgid ":ref:`Unwrap the mesh object <editors-uv-image-index>`"
 msgstr ":ref:`Создайте развёртку полисетки объекта <editors-uv-image-index>`."
 
-#: ../../manual/render/workflows/bake.rst:211
+#: ../../manual/render/blender_render/bake.rst:211
 msgid ""
 "In a UV/Image Editor, either create a new image or open an existing one. "
 "If your 3D View is in textured display mode, you should now see the image"
@@ -503,7 +507,7 @@ msgstr ""
 "вы должны увидеть изображение, спроецированное на полисетку. Убедитесь, "
 "что выбраны все грани."
 
-#: ../../manual/render/workflows/bake.rst:214
+#: ../../manual/render/blender_render/bake.rst:214
 msgid ""
 "In the Bake panel at the bottom of the *Render menu*, bake your desired "
 "type of image (*Full Render* etcetera.)"
@@ -511,7 +515,7 @@ msgstr ""
 "На панели «Запекание», расположенной на вкладке *«Визуализация»*, "
 "запеките требуемый тип изображения (*Полная визуализация* и так далее)."
 
-#: ../../manual/render/workflows/bake.rst:216
+#: ../../manual/render/blender_render/bake.rst:216
 msgid ""
 "When rendering is complete, Blender replaces the image with the Baked "
 "image."
@@ -519,11 +523,11 @@ msgstr ""
 "Когда визуализация будет завершена, Blender заменит исходное изображение "
 "на запечённое."
 
-#: ../../manual/render/workflows/bake.rst:217
+#: ../../manual/render/blender_render/bake.rst:217
 msgid "Save the image."
 msgstr "Сохраните изображение."
 
-#: ../../manual/render/workflows/bake.rst:218
+#: ../../manual/render/blender_render/bake.rst:218
 msgid ""
 "Apply the image to the mesh as a UV texture. For displacement and normal "
 "maps, refer to :doc:`Bump and Normal Maps "
@@ -537,7 +541,7 @@ msgstr ""
 "Для полного запекания и запекания текстур смотрите раздел :doc:`Текстуры "
 "</render/blender_render/textures/index>`."
 
-#: ../../manual/render/workflows/bake.rst:221
+#: ../../manual/render/blender_render/bake.rst:221
 msgid ""
 "Refine the image using the process described below, or embellish with "
 ":ref:`painting-texture-index` or an external image editor."
