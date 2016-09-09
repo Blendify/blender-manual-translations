@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-09 13:36-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-10 00:29+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,61 +19,69 @@ msgstr ""
 
 #: ../../manual/glossary/index.rst:5
 msgid "Glossary"
-msgstr ""
+msgstr "Словарь"
 
 #: ../../manual/glossary/index.rst:10
 msgid "This page lists definitions for terms used in Blender and this manual."
 msgstr ""
+"На этой странице перечислены определения терминов, используемых в Blender"
+" и настоящем руководстве."
 
 #: ../../manual/glossary/index.rst:13
 msgid "Active"
-msgstr ""
+msgstr "Active (Активный)"
 
 #: ../../manual/glossary/index.rst:15
 msgid ""
 "One of the three :doc:`selection states </editors/3dview/selecting>`. "
 "Only one object or item can be active at any given time."
 msgstr ""
+"Одно из трёх :doc:`состояний выбора </editors/3dview/selecting>`. Только "
+"один объект или элемент может быть активным в любой момент времени."
 
 #: ../../manual/glossary/index.rst:17
 msgid "Action Safe"
-msgstr ""
+msgstr "Action Safe (Зона действия)"
 
 #: ../../manual/glossary/index.rst:19
 msgid ""
 "Area of the screen visible on most devices. Place content inside it to "
 "ensure it does not get cut off."
 msgstr ""
+"Область экрана, видимая на большинстве устройств. Размещайте содержимое "
+"внутри неё, чтобы быть уверенным, что оно не будет обрезано."
 
 #: ../../manual/glossary/index.rst:20
 msgid "Actuator"
-msgstr ""
+msgstr "Actuator (Актуатор)"
 
 #: ../../manual/glossary/index.rst:22
 msgid ""
 "A :term:`logic brick` that acts like a muscle of a lifeform. It can move "
 "the object, or make a sound."
 msgstr ""
+":term:`Логический блок <logic brick>`, который работает подобно мышце "
+"живых существ. Он может переместить объект или произвести звук."
 
 #: ../../manual/glossary/index.rst:23
 msgid "Aliasing"
-msgstr ""
+msgstr "Aliasing (Ступенчатость)"
 
 #: ../../manual/glossary/index.rst:25
 msgid "Rendering artifacts in the form of jagged lines."
-msgstr ""
+msgstr "Артефакты визуализации в виде зазубренных линий."
 
 #: ../../manual/glossary/index.rst:26
 msgid "Alpha Channel"
-msgstr ""
+msgstr "Alpha Channel (Альфа-канал)"
 
 #: ../../manual/glossary/index.rst:28
 msgid "Additional channel in an image for transparency."
-msgstr ""
+msgstr "Дополнительный канал в изображении, представляющий его прозрачность."
 
 #: ../../manual/glossary/index.rst:35 ../../manual/glossary/index.rst:615
 msgid "Straight Alpha"
-msgstr ""
+msgstr "Straight Alpha (Чистый альфа-канал)"
 
 #: ../../manual/glossary/index.rst:31
 msgid ""
@@ -83,16 +91,25 @@ msgid ""
 "formats like PNG, BMP or Targa. So, image textures or output for the web "
 "are usually straight alpha."
 msgstr ""
+"Метод хранения изображения, в котором каналы ``RGBA`` сохраняются в виде "
+"каналов ``(R, G, B, A)``, а альфа-канал не влияет на каналы RGB. Этот тип"
+" альфа-канала используется как программами рисования, такими как "
+"Photoshop или Gimp, так и в распространённых форматах, таких как PNG, BMP"
+" или Targa. Таким образом, изображение текстур или вывод для сети, как "
+"правило, используют чистый альфа-канал."
 
 #: ../../manual/glossary/index.rst:46 ../../manual/glossary/index.rst:523
 msgid "Premultiplied Alpha"
-msgstr ""
+msgstr "Premultiplied Alpha (Альфа-канал с предумножением)"
 
 #: ../../manual/glossary/index.rst:38
 msgid ""
 "Method where RGBA channels are stored as (R × A, G × A, B × A, A), with "
 "the alpha multiplied into the RGB channel."
 msgstr ""
+"Метод хранения изображения, в котором каналы ``RGBA`` сохраняются в виде "
+"каналов ``(R × A, G × A, B × A, A)``, то есть, значение альфа-канала "
+"умножается на соответствующий канал RGB."
 
 #: ../../manual/glossary/index.rst:41
 msgid ""
@@ -102,10 +119,16 @@ msgid ""
 "OpenEXR file format uses this alpha type. So, intermediate files for "
 "rendering and compositing are often stored as premultiplied alpha."
 msgstr ""
+"Это естественный вывод движков визуализации, в которых RGB-каналы "
+"представляют количество света, пришедшего к наблюдателю, а альфа-канал "
+"представляет, сколько было заблокировано света от фона. Этот тип альфы "
+"используется в формате файлов OpenEXR. Таким образом, промежуточные файлы"
+" для визуализации и композитинга часто сохраняются с предварительно "
+"умноженной альфой."
 
 #: ../../manual/glossary/index.rst:61
 msgid "Conversion (Straight/Premultiplied) Alpha"
-msgstr ""
+msgstr "Преобразование между альфа-каналом с предумножением и чистым альфа-каналом"
 
 #: ../../manual/glossary/index.rst:49
 msgid ""
@@ -113,6 +136,10 @@ msgid ""
 "involve data loss, as both alpha types can represent data that the other "
 "cannot though it is often subtle."
 msgstr ""
+"Преобразование между двумя типами альфа-канала является не простой "
+"операцией и может повлечь потерю данных, поскольку каждый тип может "
+"представлять данные, которые не может представить другой тип, хотя часто "
+"эта разница едва различима."
 
 #: ../../manual/glossary/index.rst:52
 msgid ""
@@ -122,6 +149,11 @@ msgid ""
 " this mask is *applied'* and the colors in such areas become black and "
 "are lost."
 msgstr ""
+"Чистый альфа-канал может рассматриваться как RGB-цветное изображение с "
+"отдельной маской альфа-канала. В тех областях, где эта маска полностью "
+"прозрачна, всё равно присутствуют цвета в каналах RGB. При преобразовании"
+" в альфа-канал с предумножением эта маска *применяется*, а цвета в таких "
+"областях становятся чёрными, то есть теряются."
 
 #: ../../manual/glossary/index.rst:57
 msgid ""
@@ -131,18 +163,23 @@ msgid ""
 "letting through all light from objects behind it. On converting to "
 "straight alpha, this effect is lost."
 msgstr ""
+"С другой стороны, альфа-канал с предумножением может представлять "
+"визуализации, которые как излучают свет, так и пропускают свет от фона. "
+"Например, при визуализации прозрачный огонь может испускать свет, но "
+"также позволяет проходить свету от объектов позади него. При "
+"преобразовании в чистый альфа-канал этот эффект потеряется."
 
 #: ../../manual/glossary/index.rst:62
 msgid "Ambient Light"
-msgstr ""
+msgstr "Ambient Light (Окружающий свет)"
 
 #: ../../manual/glossary/index.rst:64
 msgid "The light that comes from the surrounding environment as a whole."
-msgstr ""
+msgstr "Свет, приходящий из окружающей среды со всех сторон."
 
 #: ../../manual/glossary/index.rst:65
 msgid "Ambient Occlusion"
-msgstr ""
+msgstr "Ambient Occlusion"
 
 #: ../../manual/glossary/index.rst:67
 msgid ""
@@ -150,88 +187,103 @@ msgid ""
 " to receive. If a surface point is under a foot or table, it will end up "
 "much darker than the top of someone's head or the tabletop."
 msgstr ""
+"Отношение, показывающее, сколько :term:`света от окружения <ambient "
+"light>` может принять точка поверхности. Если точка поверхности находится"
+" под ногой или столом, она, в конечном итоге, будет намного темнее той, "
+"что расположена на чьей-то макушке или на столешнице."
 
 #: ../../manual/glossary/index.rst:70
 msgid "Animation"
-msgstr ""
+msgstr "Animation (Анимация)"
 
 #: ../../manual/glossary/index.rst:72
 msgid "Simulation of motion."
-msgstr ""
+msgstr "Моделирование движения."
 
 #: ../../manual/glossary/index.rst:73
 msgid "Anti-aliasing"
-msgstr ""
+msgstr "Anti-aliasing (Устранение ступенчатости)"
 
 #: ../../manual/glossary/index.rst:75
 msgid "See :term:`oversampling`."
-msgstr ""
+msgstr "Смотрите :term:`сверхвыборку <oversampling>`."
 
 #: ../../manual/glossary/index.rst:76
 msgid "Armature"
-msgstr ""
+msgstr "Armature (Скелет)"
 
 #: ../../manual/glossary/index.rst:78
 msgid ""
 "An :term:`Object` consisting of :term:`bones <bone>`. Used to :term:`rig`"
 " characters, props, etc."
 msgstr ""
+":term:`Объект <object>`, состоящий из :term:`костей <bone>`. Используется"
+" для :term:`риггинга <rig>` персонажей, свойств и прочих вещей."
 
 #: ../../manual/glossary/index.rst:79
 msgid "Axis"
-msgstr ""
+msgstr "Axis (Ось)"
 
 #: ../../manual/glossary/index.rst:81
 msgid ""
 "A reference line which defines coordinates along one cardinal direction "
 "in n-D space."
 msgstr ""
+"Опорная линия, определяющая координаты вдоль одного главного направления "
+"в n-мерном пространстве."
 
 #: ../../manual/glossary/index.rst:82
 msgid "Axis Angle"
-msgstr ""
+msgstr "Axis Angle (Осевой угол)"
 
 #: ../../manual/glossary/index.rst:84
 msgid ""
 "Rotation method where X, Y, and Z correspond to the axis definition, "
 "while W corresponds to the angle around that axis, in radians."
 msgstr ""
+"Метод вращения, в котором компоненты X, Y и Z определяют ось, а "
+"компонента W соответствует углу поворота вокруг данной оси, в радианах."
 
 #: ../../manual/glossary/index.rst:86
 msgid "Baking"
-msgstr ""
+msgstr "Baking (Запекание)"
 
 #: ../../manual/glossary/index.rst:88
 msgid ""
 "The process of computing and storing the result of a potentially time-"
 "consuming calculation so as to avoid needing to calculate it again."
 msgstr ""
+"Процесс вычисления и сохранения результата потенциально затратных по "
+"времени вычислений, чтобы избежать необходимости в таких вычислениях в "
+"будущем."
 
 #: ../../manual/glossary/index.rst:90
 msgid "Bevel"
-msgstr ""
+msgstr "Bevel (Скос)"
 
 #: ../../manual/glossary/index.rst:92
 msgid "The operation to chamfer or bevel edges of an object."
-msgstr ""
+msgstr "Операция скашивания (делания фасок) рёбер объекта."
 
 #: ../../manual/glossary/index.rst:93
 msgid "BU"
-msgstr ""
+msgstr "BU"
 
 #: ../../manual/glossary/index.rst:94
 msgid "Blender Units"
-msgstr ""
+msgstr "Blender Units (Единицы Blender)"
 
 #: ../../manual/glossary/index.rst:96
 msgid ""
 "Internal units used by Blender, equivalent to meters. Often abbreviated "
 "to \"BU\"."
 msgstr ""
+"Внутренние единицы измерения Blender, эквивалентные метрам. Часто "
+"сокращаются до аббревиатуры «BU»."
 
 #: ../../manual/glossary/index.rst:97
 msgid "Bone"
-msgstr ""
+msgstr "Bone (Кость)"
 
 #: ../../manual/glossary/index.rst:99
 msgid ""
@@ -239,22 +291,27 @@ msgid ""
 ":term:`Tail` and :term:`Roll Angle` which define a set of local axes and "
 "a point of rotation at the :term:`Head`."
 msgstr ""
+"Строительный блок :term:`скелета <armature>`. Состоит из :term:`начала "
+"<head>`, :term:`конца <tail>` и :term:`угла крена <roll angle>`, которые "
+"определяют набор локальныых осей и точку вращения :term:`начала <head>`."
 
 #: ../../manual/glossary/index.rst:101
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean (Логический)"
 
 #: ../../manual/glossary/index.rst:103
 msgid "A type of logic dealing with binary true/false states."
-msgstr ""
+msgstr "Тип логики, имеющий дело с двоичными состояниями да/нет."
 
 #: ../../manual/glossary/index.rst:105
 msgid "See also :doc:`boolean modifier </modeling/modifiers/generate/booleans>`"
 msgstr ""
+"Также смотрите документацию по :doc:`модификатору «Логический» "
+"</modeling/modifiers/generate/booleans>`."
 
 #: ../../manual/glossary/index.rst:106
 msgid "Bounce"
-msgstr ""
+msgstr "Bounce (Отскок)"
 
 #: ../../manual/glossary/index.rst:108
 msgid ""
@@ -262,46 +319,53 @@ msgid ""
 "with a material. See also :doc:`Light Paths "
 "</render/cycles/settings/light_paths>`."
 msgstr ""
+"Относится к отражению или передаче луча света при взаимодействии с "
+"материалом. Смотрите также раздел :doc:`Пути света "
+"</render/cycles/settings/light_paths>`."
 
 #: ../../manual/glossary/index.rst:110
 msgid "Bounding Box"
-msgstr ""
+msgstr "Bounding Box (Ограничительная рамка)"
 
 #: ../../manual/glossary/index.rst:112
 msgid ""
 "The box that encloses the shape of an object. The box is aligned with the"
 " local space of the object."
 msgstr ""
+"Рамка, в которую заключена форма объекта. Эта рамка выравнивается по осям"
+" локального пространства объекта."
 
 #: ../../manual/glossary/index.rst:113
 msgid "Bump Mapping"
-msgstr ""
+msgstr "Bump Mapping (Наложение рельефа)"
 
 #: ../../manual/glossary/index.rst:115
 msgid ""
 "Technique for simulating slight variations in surface height using a "
 "grayscale \"height-map\" texture."
 msgstr ""
+"Метод моделирования небольших перепадов высот поверхности при помощи "
+"чёрно-белой текстуры «карты высот»."
 
 #: ../../manual/glossary/index.rst:116
 msgid "Bézier"
-msgstr ""
+msgstr "Bézier (Безье)"
 
 #: ../../manual/glossary/index.rst:118
 msgid "A computer graphics technique for generating and representing curves."
-msgstr ""
+msgstr "Метод в компьютерной графике для генерации и представления кривых."
 
 #: ../../manual/glossary/index.rst:119
 msgid "BVH"
-msgstr ""
+msgstr "BVH"
 
 #: ../../manual/glossary/index.rst:120
 msgid "Bounding Volume Hierarchy"
-msgstr ""
+msgstr "Bounding Volume Hierarchy (Иерархия ограничивающего объёма)"
 
 #: ../../manual/glossary/index.rst:122
 msgid "A hierarchical structure of geometric objects."
-msgstr ""
+msgstr "Иерархическая структура геометрических объектов."
 
 #: ../../manual/glossary/index.rst:124
 msgid ""
@@ -309,144 +373,162 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Bounding_volume_hierarchy>`__ on "
 "Wikipedia."
 msgstr ""
+"Также смотрите статью `Bounding Volume Hierarchy "
+"<https://en.wikipedia.org/wiki/Bounding_volume_hierarchy>`__ на "
+"англоязычной Википедии."
 
 #: ../../manual/glossary/index.rst:125
 msgid "Caustics"
-msgstr ""
+msgstr "Caustics (Каустика)"
 
 #: ../../manual/glossary/index.rst:127
 msgid ""
 "Bright concentrations of light focused by specularly reflecting or "
 "refracting objects."
 msgstr ""
+"Яркие концентрации света, сфокусированного на зеркально отражающих или "
+"преломляющих объектах."
 
 #: ../../manual/glossary/index.rst:128
 msgid "Child"
-msgstr ""
+msgstr "Child (Потомок)"
 
 #: ../../manual/glossary/index.rst:130
 msgid "An :term:`Object` that is affected by its :term:`Parent`."
-msgstr ""
+msgstr ":term:`Объект <object>`, зависящий от своего :term:`родителя <parent>`."
 
 #: ../../manual/glossary/index.rst:131
 msgid "Clamp"
-msgstr ""
+msgstr "Clamp (С ограничением)"
 
 #: ../../manual/glossary/index.rst:132
 msgid "Clamping"
-msgstr ""
+msgstr "Clamping (Отсечение)"
 
 #: ../../manual/glossary/index.rst:134
 msgid ""
 "Limits a variable to a range. The values over or under the range are set "
 "to the constant values of the ranges minimum or maximum."
 msgstr ""
+"Ограничивает переменную указанным диапазоном. Значения за пределами "
+"диапазона устанавливаются в константные значения минимума или максимума "
+"диапазона."
 
 #: ../../manual/glossary/index.rst:136
 msgid "Blend Modes"
-msgstr ""
+msgstr "Blend Modes (Режимы смешивания)"
 
 #: ../../manual/glossary/index.rst:137
 msgid "Color Blend Modes"
-msgstr ""
+msgstr "Color Blend Modes (Режимы смешивания цветов)"
 
 #: ../../manual/glossary/index.rst:139
 msgid "Methods for blending two colors together."
-msgstr ""
+msgstr "Правила смешивания вместе двух цветов."
 
 #: ../../manual/glossary/index.rst:141
 msgid ""
 "See also `Blend Modes <https://en.wikipedia.org/wiki/Blend_modes>`__ on "
 "Wikipedia."
 msgstr ""
+"Также смотрите статью `Blend Modes "
+"<https://en.wikipedia.org/wiki/Blend_modes>`__ на англоязычной Википедии."
 
 #: ../../manual/glossary/index.rst:142
 msgid "Color Space"
-msgstr ""
+msgstr "Color Space (Цветовое пространство)"
 
 #: ../../manual/glossary/index.rst:144
 msgid "A coordinate system in which a vector represent a color value."
-msgstr ""
+msgstr "Система координат, в которой вектора представляют значения цвета."
 
 #: ../../manual/glossary/index.rst:146
 msgid "RGB"
-msgstr ""
+msgstr "RGB"
 
 #: ../../manual/glossary/index.rst:147
 msgid ""
 "Red-Green-Blue traditional primary colors also broadcast directly to most"
 " computer monitors."
 msgstr ""
+"Красный-Зелёный-Синий (Red-Green-Blue) – традиционные основные цвета, "
+"которые также напрямую поддерживают большинство компьютерных мониторов."
 
 #: ../../manual/glossary/index.rst:155
 msgid "HSV"
-msgstr ""
+msgstr "HSV"
 
 #: ../../manual/glossary/index.rst:149
 msgid ""
 "Three values, often considered as more intuitive (human perception) than "
 "the RGB system."
 msgstr ""
+"Три значения, часто рассматриваемые как более интуитивная (по "
+"человеческому восприятию) система, чем RGB."
 
 #: ../../manual/glossary/index.rst:151
 msgid "Hue"
-msgstr ""
+msgstr "Hue (Тон)"
 
 #: ../../manual/glossary/index.rst:152
 msgid "The Hue of the color."
-msgstr ""
+msgstr "Тон цвета."
 
 #: ../../manual/glossary/index.rst:153
 msgid "Saturation"
-msgstr ""
+msgstr "Saturation (Насыщенность)"
 
 #: ../../manual/glossary/index.rst:154
 msgid ""
 "The quantity of hue in the color (from desaturated -- a shade of gray -- "
 "to saturated -- brighter colors)."
 msgstr ""
+"Количество тона в цвете (от обесцвеченного – оттенки серого – до "
+"насыщенного – яркие цвета)."
 
 #: ../../manual/glossary/index.rst:155
 msgid "Value"
-msgstr ""
+msgstr "Value (Значение)"
 
 #: ../../manual/glossary/index.rst:156
 msgid "The brightness of the color (dark to light)."
-msgstr ""
+msgstr "Яркость цвета (от тёмного к светлому)."
 
 #: ../../manual/glossary/index.rst:160
 msgid "HSL"
-msgstr ""
+msgstr "HSL"
 
 #: ../../manual/glossary/index.rst:158
 msgid "Hue, Saturation"
-msgstr ""
+msgstr "Hue, Saturation (Тон, Насыщенность)"
 
 #: ../../manual/glossary/index.rst:159
 msgid "See HSV."
-msgstr ""
+msgstr "Смотрите HSV."
 
 #: ../../manual/glossary/index.rst:160
 msgid "Luminance"
-msgstr ""
+msgstr "Luminance (Яркость)"
 
 #: ../../manual/glossary/index.rst:161
 msgid "TODO."
-msgstr ""
+msgstr "Дописать."
 
 #: ../../manual/glossary/index.rst:162
 msgid "YUV"
-msgstr ""
+msgstr "YUV"
 
 #: ../../manual/glossary/index.rst:163
 msgid ""
 "Luminance-Chrominance standard used in broadcasting analog PAL (European)"
 " video."
 msgstr ""
+"Стандарт яркости-цветности, используемый в аналоговом широковещательном "
+"PAL-видео (в Европе)."
 
 #: ../../manual/glossary/index.rst:165
 msgid "YCbCr"
-msgstr ""
+msgstr "YCbCr"
 
 #: ../../manual/glossary/index.rst:165
 msgid ""
@@ -454,36 +536,43 @@ msgid ""
 "use, whose standards have been updated for HDTV and commonly referred to "
 "as the HDMI format for component video."
 msgstr ""
+"Компонентное видео Яркость-КаналСинего-КаналКрасного для использования в "
+"цифровом вещании, чьи стандарты были обновлены для HDTV. Обычно его "
+"называют форматом HDMI для компонентного видео."
 
 #: ../../manual/glossary/index.rst:168
 msgid "\\+A"
-msgstr ""
+msgstr "\\+A"
 
 #: ../../manual/glossary/index.rst:168
 msgid "The color space holds an additional :term:`Alpha Channel`."
 msgstr ""
+"Цветовое пространство, хранящее дополнитеьный :term:`альфа-канал <alpha "
+"channel>`."
 
 #: ../../manual/glossary/index.rst:169
 msgid "Concave face"
-msgstr ""
+msgstr "Concave face (Вогнутая грань)"
 
 #: ../../manual/glossary/index.rst:171
 msgid ""
 "Face in which one vert is inside a triangle formed by other vertices of "
 "the face."
 msgstr ""
+"Грань, у которой одна вершина находится внутри треугольника, формируемого"
+" другими вершинами грани."
 
 #: ../../manual/glossary/index.rst:172
 msgid "Constraint"
-msgstr ""
+msgstr "Constraint (Ограничение)"
 
 #: ../../manual/glossary/index.rst:174
 msgid "A way of controlling one :term:`object` with data from another."
-msgstr ""
+msgstr "Способ управления одним :term:`объектом <object>` данными из другого."
 
 #: ../../manual/glossary/index.rst:175
 msgid "Controller"
-msgstr ""
+msgstr "Controller (Контроллер)"
 
 #: ../../manual/glossary/index.rst:177
 msgid ""
@@ -491,40 +580,51 @@ msgid ""
 "decisions to activate muscles (:term:`actuators <actuator>`), either "
 "using simple logic or complex Python scripts."
 msgstr ""
+":term:`Логический блок <logic brick>`, работающий подобно мозгу живых "
+"существ. Принимает решения по активации мышц (:term:`актуаторов "
+"<actuator>`) при помощи простой логики, либо сложного Python-скрипта."
 
 #: ../../manual/glossary/index.rst:180
 msgid "Convex face"
-msgstr ""
+msgstr "Convex face (Выпуклая грань)"
 
 #: ../../manual/glossary/index.rst:182
 msgid ""
 "Face where, if lines were drawn from each vertex to every other vertex, "
 "all lines would remain in the face. Opposite of a :term:`concave face`."
 msgstr ""
+"Грань, в которой, если из каждой вершины провести линии во все остальные,"
+" все они останутся внутри грани. Противоположность :term:`вогнутой грани "
+"<concave face>`."
 
 #: ../../manual/glossary/index.rst:184
 msgid "Coplanar"
-msgstr ""
+msgstr "Coplanar (Компланарный)"
 
 #: ../../manual/glossary/index.rst:186
 msgid ""
 "Refers to any set of elements that are all aligned to the same 2D plane "
 "in 3D space."
 msgstr ""
+"Относится к любому набору элементов, которые лежат в одной плоскости в "
+"трёхмерном пространстве."
 
 #: ../../manual/glossary/index.rst:187
 msgid "Crease"
-msgstr ""
+msgstr "Crease (Складка)"
 
 #: ../../manual/glossary/index.rst:189
 msgid ""
 "Property of an :term:`edge`. Used to define the sharpness of edges in "
 ":term:`subdivision surface` meshes."
 msgstr ""
+"Свойство :term:`ребра <edge>`. Используется для определения резкости "
+"рёбер при :term:`подразделении поверхности <subdivision surface>` "
+"полисетки."
 
 #: ../../manual/glossary/index.rst:190
 msgid "Curve"
-msgstr ""
+msgstr "Curve (Кривая)"
 
 #: ../../manual/glossary/index.rst:192
 msgid ""
@@ -532,14 +632,17 @@ msgid ""
 "Vertices. Available types of curves include :term:`Bézier` and "
 ":term:`NURBS`."
 msgstr ""
+"Тип объекта, определённый в терминах интерполяции линий между "
+"управляющими вершинами. Кривые бывают нескольких доступных типов, среди "
+"которых есть :term:`кривые Безье <Bézier>` и :term:`NURBS`."
 
 #: ../../manual/glossary/index.rst:194
 msgid "DOF"
-msgstr ""
+msgstr "DOF"
 
 #: ../../manual/glossary/index.rst:195
 msgid "Depth Of Field"
-msgstr ""
+msgstr "Depth Of Field (Глубина резкости)"
 
 #: ../../manual/glossary/index.rst:197
 msgid ""
@@ -551,10 +654,18 @@ msgid ""
 " front, as the angle of the light rays change more rapidly; they approach"
 " being parallel with increasing distance."
 msgstr ""
+"Расстояние, на котором любой объект находится в фокусе. Для любых "
+"настроек объектива существует только одно расстояние, на котором объект "
+"находится точно в фокусе, но поскольку фокусировка по обе стороны от "
+"этого расстояния спадает постепенно, регион гдубины резкости размывается "
+"не так сильно, как области за пределом этого региона. Уровень размытия в "
+"регионе больше за точкой фокуса, нежели перед ней, поскольку световые "
+"лучи быстрее меняют свой угол расхождения; чем дальше расстояние от "
+"камеры, тем больше они становятся параллельными."
 
 #: ../../manual/glossary/index.rst:203
 msgid "Diffuse Light"
-msgstr ""
+msgstr "Diffuse Light (Диффузный свет, рассеянный свет)"
 
 #: ../../manual/glossary/index.rst:205
 msgid ""
@@ -564,10 +675,16 @@ msgid ""
 "light source will be brighter, while surfaces facing away from the light "
 "source will be darker."
 msgstr ""
+"Разнонаправленный свет, исходящий от поверхности. Для большинства вещей "
+"рассеянное освещение является основным видимым нами освещением. "
+"Рассеянный свет приходит с конкретного направления или из конкретного "
+"местоположения и создаёт затенение. Поверхности, направленные в сторону "
+"источника света, будет ярче, а поверхности, направленные от источника "
+"света – темнее."
 
 #: ../../manual/glossary/index.rst:210
 msgid "Directional Light"
-msgstr ""
+msgstr "Directional Light (Направленный свет)"
 
 #: ../../manual/glossary/index.rst:212
 msgid ""
@@ -577,10 +694,16 @@ msgid ""
 "location does not matter. A Directional Light illuminates all objects in "
 "the scene, no matter where they are."
 msgstr ""
+"Свет, имеющий конкретное направление, но не имеющий местоположения. "
+"Кажется, что он приходит от бесконечно удалённого источника, вроде "
+"солнца. Поверхности, обращённые к источнику света, сияют ярче, чем "
+"поверхности, повёрнутые к нему спиной, но их местоположение не имеет "
+"значения. Направленный свет освещает все объекты в сцене, независимо от "
+"того, где они находятся."
 
 #: ../../manual/glossary/index.rst:216
 msgid "Displacement Mapping"
-msgstr ""
+msgstr "Displacement Mapping (Карта смещений)"
 
 #: ../../manual/glossary/index.rst:218
 msgid ""
@@ -589,10 +712,15 @@ msgid ""
 " This relies on the mesh having enough geometry to represent details in "
 "the image."
 msgstr ""
+"Метод искажения вершин на основе изображения или текстуры. Подобен "
+":term:`рельефному текстурированию <bump mapping>`, но оперирует "
+"актуальной геометрией полисетки. Метод зависит от полисетки, которая "
+"имеет достаточно детальную геометрию для представления всех деталей на "
+"изображении."
 
 #: ../../manual/glossary/index.rst:221
 msgid "Double Buffer"
-msgstr ""
+msgstr "Double Buffer (Двойная буферизация)"
 
 #: ../../manual/glossary/index.rst:223
 msgid ""
@@ -601,20 +729,26 @@ msgid ""
 "is displayed while drawing occurs on the other buffer. When drawing is "
 "complete, the buffers are switched."
 msgstr ""
+"Метод отрисовки и отображения содержимого на экране. Blender использует "
+"два буфера (изображения) для отрисовки своего интерфейса. Содержимое "
+"одного буфера отображается, пока во второй буфер ведётся отрисовка. Когда"
+" отрисовка завершается, буферы меняются местами."
 
 #: ../../manual/glossary/index.rst:227
 msgid "Edge"
-msgstr ""
+msgstr "Edge (Ребро)"
 
 #: ../../manual/glossary/index.rst:229
 msgid ""
 "Straight segment (line) that connects two :term:`vertices <vertex>`, and "
 "can be part of a :term:`face`."
 msgstr ""
+"Прямой сегмент (линия), соединяющий две :term:`вершины <vertex>`. Может "
+"являться частью :term:`грани <face>`."
 
 #: ../../manual/glossary/index.rst:230
 msgid "Edge Loop"
-msgstr ""
+msgstr "Edge Loop (Петля рёбер)"
 
 #: ../../manual/glossary/index.rst:232
 msgid ""
@@ -622,30 +756,37 @@ msgid ""
 "<quad>`. An edge loop ends at a pole or a boundary. Otherwise, it is "
 "cyclic."
 msgstr ""
+"Цепочка :term:`рёбер <edge>`, принадлежащих последовательным "
+":term:`четырёхугольникам <quad>`. Петля рёбер заканчивается в полюсе, "
+"либо на границе полисетки. В противном случае она циклична."
 
 #: ../../manual/glossary/index.rst:234
 msgid "Edge Ring"
-msgstr ""
+msgstr "Edge Ring (Кольцо рёбер)"
 
 #: ../../manual/glossary/index.rst:236
 msgid ""
 "Path of all :term:`edges <edge>` along a :term:`face loop` that share two"
 " faces belonging to that loop."
 msgstr ""
+"Путь по всем :term:`рёбрам <edge>` вдоль :term:`петли граней <face "
+"loop>`, которые совместно используется двумя гранями этой петли."
 
 #: ../../manual/glossary/index.rst:237
 msgid "Empty"
-msgstr ""
+msgstr "Empty (Пустышка)"
 
 #: ../../manual/glossary/index.rst:239
 msgid ""
 "An :term:`Object` without any :term:`Vertices`, :term:`Edges <Edge>` or "
 ":term:`Faces <Face>`."
 msgstr ""
+":term:`Объект <object>` без :term:`вершин <vertices>`, :term:`рёбер "
+"<edge>` или :term:`граней <face>`."
 
 #: ../../manual/glossary/index.rst:240
 msgid "Environment Map"
-msgstr ""
+msgstr "Environment Map (Карта окружения)"
 
 #: ../../manual/glossary/index.rst:242
 msgid ""
@@ -654,32 +795,40 @@ msgid ""
 "most cases obsoleted by Raytracing, which though slower is easier to use "
 "and more accurate."
 msgstr ""
+"Метод расчёта отражений. Заключается в визуализации изображений в "
+"ключевых позициях и применении их к зеркалу в качестве текстур. В "
+"настоящее время в большинстве случаев вытесняется трассировкой лучей, "
+"которая, хотя и медленнее, проще в использовании и более точная."
 
 #: ../../manual/glossary/index.rst:245
 msgid "Euler"
-msgstr ""
+msgstr "Euler (Эйлер)"
 
 #: ../../manual/glossary/index.rst:246
 msgid "Euler Rotation"
-msgstr ""
+msgstr "Euler Rotation (Вращение Эйлера)"
 
 #: ../../manual/glossary/index.rst:248
 msgid "Rotation method where rotations applied on each X, Y, Z axis component."
 msgstr ""
+"Метод вращения, при котором повороты применяются к каждой из осей X, Y и "
+"Z."
 
 #: ../../manual/glossary/index.rst:249
 msgid "Face"
-msgstr ""
+msgstr "Face (Грань)"
 
 #: ../../manual/glossary/index.rst:251
 msgid ""
 "Mesh element that defines a piece of surface. It consists of three or "
 "more :term:`edges <edge>`."
 msgstr ""
+"Элемент полисетки, определяющий кусочек поверхности. Состоит из трёх или "
+"более :term:`рёбер <edge>`."
 
 #: ../../manual/glossary/index.rst:252
 msgid "Face Loop"
-msgstr ""
+msgstr "Face Loop (Петля граней)"
 
 #: ../../manual/glossary/index.rst:254
 msgid ""
@@ -687,38 +836,46 @@ msgid ""
 ":term:`triangle` or :term:`Ngon` (which do not belong to the loop), or at"
 " a boundary. Otherwise, it is cyclic."
 msgstr ""
+"Цепочка пследовательных :term:`четырёхугольников <quad>`. Петля граней "
+"заканчивается в :term:`треугольнике <triangle>`, :term:`n-угольнике "
+"<ngon>` (которые не принадлежат петле), либо на границе полисетки. В "
+"противном случае она циклична."
 
 #: ../../manual/glossary/index.rst:257
 msgid "Face Normal"
-msgstr ""
+msgstr "Face Normal (Нормаль к грани)"
 
 #: ../../manual/glossary/index.rst:259
 msgid ""
 "The normalized vector perpendicular to the plane that a :term:`face` lies"
 " in. Each face has its own normal."
 msgstr ""
+"Нормализованный вектор, перпендикулярный плоскости, в которой лежит "
+":term:`грань <face>`. Каждая грань имеет собственную нормаль."
 
 #: ../../manual/glossary/index.rst:261
 msgid "F-Curve"
-msgstr ""
+msgstr "F-Curve (F-кривая)"
 
 #: ../../manual/glossary/index.rst:263
 msgid "A curve that holds the animation values of a specific property."
-msgstr ""
+msgstr "Кривая, хранящая значения анимации определённого свойства."
 
 #: ../../manual/glossary/index.rst:264
 msgid "Field of View"
-msgstr ""
+msgstr "Field of View (Поле зрения)"
 
 #: ../../manual/glossary/index.rst:266
 msgid ""
 "The area in which objects are visible to the camera. Also see "
 ":term:`Focal Length <focal length>`"
 msgstr ""
+"Область, в которой объекты видятся камерой. Также смотрите "
+":term:`фокусное расстояние <focal length>`."
 
 #: ../../manual/glossary/index.rst:267
 msgid "Focal Length"
-msgstr ""
+msgstr "Focal Length (Фокусное расстояние)"
 
 #: ../../manual/glossary/index.rst:269
 msgid ""
@@ -726,20 +883,26 @@ msgid ""
 "magnification power of a lens. Also see :term:`Field of View <field of "
 "view>`"
 msgstr ""
+"Расстояние, необходимое линзам для фокусировки однонаправленного света. "
+"Определяет коэффициент увеличения мощности линзы. Также смотрите "
+":term:`поле зрения <field of view>`."
 
 #: ../../manual/glossary/index.rst:271
 msgid "FSAA"
-msgstr ""
+msgstr "FSAA"
 
 #: ../../manual/glossary/index.rst:272
 msgid "Full-Screen Anti-Aliasing"
-msgstr ""
+msgstr "Full-Screen Anti-Aliasing (Полноэкранное сглаживание)"
 
 #: ../../manual/glossary/index.rst:274
 msgid ""
 "A method of :term:`Anti-aliasing` on the graphics card, so the entire "
 "image is displayed smooth. Also known as *Multi-Sampling*."
 msgstr ""
+"Метод :term:`устранения ступенчатости <anti-aliasing>` в графических "
+"картах, приводящий к тому, что всё изображение выглядит смазанным. Также "
+"известен как *множественная выборка*."
 
 #: ../../manual/glossary/index.rst:277
 msgid ""
@@ -747,46 +910,58 @@ msgid ""
 "sampling>`. On many graphics cards, this can also be enabled in the "
 "driver options."
 msgstr ""
+"Может быть включён в :ref:`параметрах Blender <prefs-system-multi-"
+"sampling>`. На многих графических картах он также может быть включён в "
+"настройках драйвера."
 
 #: ../../manual/glossary/index.rst:279
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma (Гамма)"
 
 #: ../../manual/glossary/index.rst:281
 msgid "An operation used to adjust the brightness of an image."
-msgstr ""
+msgstr "Операция, используемая для регулировки яркости изображения."
 
 #: ../../manual/glossary/index.rst:283
 msgid ""
 "See also `Gamma correction "
 "<https://en.wikipedia.org/wiki/Gamma_correction>`__ on Wikipedia."
 msgstr ""
+"Также смотрите статью `Gamma correction "
+"<https://en.wikipedia.org/wiki/Gamma_correction>`__ на англоязычной "
+"Википедии и статью `Гамма-коррекция "
+"<https://ru.wikipedia.org/wiki/Гамма-коррекция>`__ на русскоязычной "
+"Википедии."
 
 #: ../../manual/glossary/index.rst:284
 msgid "Geometric Center"
-msgstr ""
+msgstr "Geometric Center (Геометрический центр)"
 
 #: ../../manual/glossary/index.rst:286
 msgid "The mean average of the positions of all vertices making up the object."
-msgstr ""
+msgstr "Среднее арифметиеское позиций всех вершин, составляющих объект."
 
 #: ../../manual/glossary/index.rst:287
 msgid "Gimbal"
-msgstr ""
+msgstr "Gimbal (Шарнир)"
 
 #: ../../manual/glossary/index.rst:289
 msgid ""
 "A pivoted support that allows the rotation of an object about a single "
 "axis."
-msgstr ""
+msgstr "Поворотный механизм, позволяющий объекту вращаться вокруг одной оси."
 
 #: ../../manual/glossary/index.rst:291
 msgid "See also `Gimbal <https://en.wikipedia.org/wiki/Gimbal>`__ on Wikipedia."
 msgstr ""
+"Также смотрите статью `Gimbal <https://en.wikipedia.org/wiki/Gimbal>`__ "
+"на англоязычной Википедии и статью `Карданов подвес "
+"<https://ru.wikipedia.org/wiki/Карданов_подвес>`__ на русскоязычной "
+"Википедии."
 
 #: ../../manual/glossary/index.rst:292
 msgid "Gimbal Lock"
-msgstr ""
+msgstr "Gimbal Lock (Шарнирный клин)"
 
 #: ../../manual/glossary/index.rst:294
 msgid ""
@@ -794,22 +969,33 @@ msgid ""
 "ability to rotate on an axis (typically associated with :term:`euler "
 "rotation`)."
 msgstr ""
+"Ограничение, когда оси вращения могут стать выровненными, что ведёт к "
+"потери способности вращения на оси (как правило, связано с "
+":term:`вращением Эйлера <euler rotation>`)."
 
 #: ../../manual/glossary/index.rst:297
 msgid ""
 "See also `Gimbal lock <https://en.wikipedia.org/wiki/Gimbal_lock>`__ on "
 "Wikipedia."
 msgstr ""
+"Также смотрите статью `Gimbal lock "
+"<https://en.wikipedia.org/wiki/Gimbal_lock>`__ на англоязычной Википедии "
+"и статью `Складывание рамок "
+"<https://ru.wikipedia.org/wiki/Складывание_рамок>`__ на русскоязычной "
+"Википедии."
 
 #: ../../manual/glossary/index.rst:298
 msgid ""
 "See also `Gimbal lock "
 "<https://blender.stackexchange.com/questions/469>`__ on Stackexchange."
 msgstr ""
+"Также смотрите вопрос `по Gimbal lock "
+"<https://blender.stackexchange.com/questions/469>`__ на Stackexchange (на"
+" английском языке)."
 
 #: ../../manual/glossary/index.rst:299
 msgid "Global Illumination"
-msgstr ""
+msgstr "Global Illumination (Глобальное освещение)"
 
 #: ../../manual/glossary/index.rst:301
 msgid ""
@@ -820,18 +1006,24 @@ msgid ""
 "color bleeding and caustics must be included in a global illumination "
 "simulation."
 msgstr ""
+"Надмножество алгоритмов radiosity и трассировки лучей. Цель глобального "
+"освещения состоит в том, чтобы вычислить все возможные взаимодействия "
+"света в данной сцене, и, таким образом, получить по-настоящему "
+"фотореалистичное изображение. Должны быть учтены все комбинации диффузных"
+" и зеркальных отражений и передач. Эффекты вроде цветового заполнения и "
+"каустик также должны быть включены в моделирование глобального освещения."
 
 #: ../../manual/glossary/index.rst:306
 msgid "Global Space"
-msgstr ""
+msgstr "Global Space (Глобальное пространство)"
 
 #: ../../manual/glossary/index.rst:308
 msgid "See :term:`World Space`."
-msgstr ""
+msgstr "Смотрите :term:`пространство мира <world space>`."
 
 #: ../../manual/glossary/index.rst:309
 msgid "Gouraud Shading"
-msgstr ""
+msgstr "Gouraud Shading (Затенение Гуро)"
 
 #: ../../manual/glossary/index.rst:311
 msgid ""
@@ -839,10 +1031,13 @@ msgid ""
 " computational requirements of calculating lighting for each pixel. The "
 "technique was first presented by Henri Gouraud in 1971."
 msgstr ""
+"Используется для достижения плавного освещения низко-полигональных "
+"поверхностей без вычислительно тяжёлого расчёта освещения для каждого "
+"пикселя. Метод был впервые предложен Анри Гуро в 1971 году."
 
 #: ../../manual/glossary/index.rst:314
 msgid "Head"
-msgstr ""
+msgstr "Head (Начало)"
 
 #: ../../manual/glossary/index.rst:316
 msgid ""
@@ -853,14 +1048,21 @@ msgid ""
 ":term:`Bone` in :term:`Pose Mode`. The larger of the two ends when drawn "
 "as an :term:`Octahedron`."
 msgstr ""
+"Подкомпонент :term:`кости <bone>`. Точка вращения этой :term:`кости "
+"<bone>`. Имеет координаты X, Y и Z, определяемые в :term:`локальном "
+"пространстве <local space>` :term:`скелета <armature>` :term:`объекта "
+"<object>`. Вместе с :term:`концом <tail>` используется для определения "
+":term:`локальной <local space>` оси Y :term:`кости <bone>` в "
+":term:`режиме позы <pose mode>`. Большая из двух оконечностей, когда "
+"отрисовываеся в виде :term:`октаэдра <octahedron>`."
 
 #: ../../manual/glossary/index.rst:320
 msgid "HDRI"
-msgstr ""
+msgstr "HDRI"
 
 #: ../../manual/glossary/index.rst:321
 msgid "High Dynamic Range Image"
-msgstr ""
+msgstr "High Dynamic Range Image (Изображение в высоком динамическом диапазоне)"
 
 #: ../../manual/glossary/index.rst:323
 msgid ""
@@ -869,18 +1071,29 @@ msgid ""
 "represent the wide range of intensity levels found in real scenes, "
 "ranging from direct sunlight to the deepest shadows."
 msgstr ""
+"Набор методов, которые позволяют использовать намного больший "
+"динамический диапазон воздействий, нежели обычные методы цифровой "
+"обработки изображений. Идея состоит в том, чтобы точно представлять "
+"широкий диапазон уровней интенсивностей в реальных сценах, начиная от "
+"отсвещения прямыми солнечными лучами и заканчивая самыми глубокими "
+"тенями."
 
 #: ../../manual/glossary/index.rst:327
 msgid "See also `HDRI <https://en.wikipedia.org/wiki/HDRI>`__ on Wikipedia."
 msgstr ""
+"Также смотрите статью `High Dynamic Range Image "
+"<https://en.wikipedia.org/wiki/High_Dynamic_Range_Imaging>`__ на "
+"англоязычной Википедии и статью `High Dynamic Range Image "
+"<https://ru.wikipedia.org/wiki/High_Dynamic_Range_Imaging>`__ на "
+"русскоязычной Википедии."
 
 #: ../../manual/glossary/index.rst:328
 msgid "IOR"
-msgstr ""
+msgstr "IOR"
 
 #: ../../manual/glossary/index.rst:329
 msgid "Index Of Refraction"
-msgstr ""
+msgstr "Index Of Refraction (Показатель преломления)"
 
 #: ../../manual/glossary/index.rst:331
 msgid ""
@@ -889,20 +1102,27 @@ msgid ""
 "transparent volume to another, it bends. The angle by which the ray is "
 "bent can be determined by the IOR of the materials of both volumes."
 msgstr ""
+"Свойство прозрачных материалов. Когда луч света путешествует через один и"
+" тот же объём, он идёт по прямому пути. Однако, если он переходит из "
+"одного прозрачного объёма в другой, он отклоняется. Угол, на который "
+"отклонился луч, может быть определён из показателей преломлений "
+"материалов обеих объёмов."
 
 #: ../../manual/glossary/index.rst:335
 msgid "Interpolation"
-msgstr ""
+msgstr "Interpolation (Интерполяция)"
 
 #: ../../manual/glossary/index.rst:337
 msgid ""
 "Method of calculating new data between points of known value, like "
 ":term:`keyframes <keyframe>`."
 msgstr ""
+"Метод вычисления новых данных между точками с известными значениями, "
+"например, между :term:`ключевыми кадрами <keyframe>`."
 
 #: ../../manual/glossary/index.rst:338
 msgid "Inverse Kinematics"
-msgstr ""
+msgstr "Inverse Kinematics (Инверсная кинематика)"
 
 #: ../../manual/glossary/index.rst:340
 msgid ""
@@ -914,10 +1134,17 @@ msgid ""
 "the movement. Without IK the hand would come off the model and would move"
 " independently in space."
 msgstr ""
+"Процесс определения движения взаимосвязанных частей тела или модели. При "
+"помощи прямой кинематики на иерархически структурированном объекте вы "
+"можете, к примеру, переместить плечо марионетки. Предплечье, локоть и "
+"кисть автоматически проследуют за этим движением. ИК позволит вам "
+"переместить кисть, а локоть и предплечье проследуют за ней. Без ИК кисть "
+"бы оторвалась от модели и стала бы перемещаться в пространстве независимо"
+" от неё."
 
 #: ../../manual/glossary/index.rst:345
 msgid "Keyframe"
-msgstr ""
+msgstr "Keyframe (Ключевой кадр)"
 
 #: ../../manual/glossary/index.rst:347
 msgid ""
@@ -928,56 +1155,71 @@ msgid ""
 "first and last frames of a simple sequence (keyframes); the computer "
 "fills in the gap."
 msgstr ""
+"Кадр в анимированной последовательности, нарисованный или иным образом "
+"созданный пользователем непосредственно. В классической анимации, когда "
+"все кадры рисуются аниматорами, ведущий художник рисует эти кадры, "
+"оставляя «пропуски» ученикам. В компьютерной анимации аниматор создает "
+"только первый и последний кадры простой последовательности (ключевые "
+"кадры); остальное заполняет компьютер."
 
 #: ../../manual/glossary/index.rst:352
 msgid "Keyframing"
-msgstr ""
+msgstr "Keyframing (Создание ключевых кадров)"
 
 #: ../../manual/glossary/index.rst:354
 msgid "Inserting :term:`Keyframes <Keyframe>` to build an animated sequence."
 msgstr ""
+"Вставка :term:`ключевых кадров <keyframe>` для построения анимированной "
+"последовательности."
 
 #: ../../manual/glossary/index.rst:355
 msgid "Lattice"
-msgstr ""
+msgstr "Lattice (Решётка)"
 
 #: ../../manual/glossary/index.rst:357
 msgid ""
 "A type of object consisting of a non-renderable three-dimensional grid of"
 " vertices."
-msgstr ""
+msgstr "Тип объекта, состоящий из невизуализируемой трёхмерной сетки вершин."
 
 #: ../../manual/glossary/index.rst:359
 msgid "See also :doc:`Lattice Modifier </modeling/modifiers/deform/lattice>`."
 msgstr ""
+"Также смотрите документацию по :doc:`модификатору «Решётка» "
+"</modeling/modifiers/deform/lattice>`."
 
 #: ../../manual/glossary/index.rst:360
 msgid "Layer"
-msgstr ""
+msgstr "Layer (Слой)"
 
 #: ../../manual/glossary/index.rst:362
 msgid ""
 "A device for organizing objects. See also :doc:`Layers "
 "</editors/3dview/object/properties/relations/layers>`."
 msgstr ""
+"Приём для организации объектов. Также смотрите документацию по "
+":doc:`слоям </editors/3dview/object/properties/relations/layers>`."
 
 #: ../../manual/glossary/index.rst:363
 msgid "Local Space"
-msgstr ""
+msgstr "Local Space (Локальное пространство)"
 
 #: ../../manual/glossary/index.rst:365
 msgid ""
 "A 3D coordinate system that originates (for Objects) at the :term:`Object"
 " Center` or (for Bones) at the :term:`Head` of the :term:`Bone`."
 msgstr ""
+"Трёхмерная система координат, в которой центр координат (для объектов) "
+"находится в :term:`центре объекта <object center>` или (для костей) в "
+":term:`начале <head>` :term:`кости <bone>`."
 
 #: ../../manual/glossary/index.rst:368
 msgid "Compare to :term:`World Space`."
-msgstr ""
+msgstr "Также смотрите :term:`Пространство мира <world space>`."
 
 #: ../../manual/glossary/index.rst:369
 msgid "Logic brick"
-msgstr ""
+msgstr "Logic brick (Логический блок)"
 
 #: ../../manual/glossary/index.rst:371
 msgid ""
@@ -985,10 +1227,14 @@ msgid ""
 "A Logic brick can be a :term:`Sensor`, :term:`Controller` or "
 ":term:`Actuator`."
 msgstr ""
+"Графическое представление функционального элемента в редакторе логики "
+"игрового движка Blender. Логический блок может быть :term:`сенсором "
+"<sensor>`, :term:`контроллером <controller>` или :term:`актуатором "
+"<actuator>`."
 
 #: ../../manual/glossary/index.rst:373
 msgid "Manifold"
-msgstr ""
+msgstr "Manifold (Развёртываемое)"
 
 #: ../../manual/glossary/index.rst:375
 msgid ""
@@ -1003,14 +1249,26 @@ msgid ""
 "define two different and non-consecutive surfaces. A manifold mesh will "
 "always define an even number of non-overlapped surfaces."
 msgstr ""
+"Развёртываемые полисетки, также называемые *водонепроницаемыми* "
+"полисетками, определяют **закрытые несамопересекающиеся объёмы** (также "
+"смотрите определение :term:`неразвёртываемых полисеток <non-manifold>`). "
+"Развёртываемая полисетка – это полисетка, состоящая из соединённых между "
+"собой граней, ограничивающих закрытый объём, с нормалями (и, "
+"соответственно, поверхностью), всегда направленными либо наружу, либо "
+"внутрь этого объёма. Если вы пересчитаете эти нормали, они всегда будут "
+"указывать в этом направлении (наружу или вовнутрь объёма). При работе с "
+"незакрытыми объёмами развёртываемые полисетки – это такие полисетки, чьи "
+"нормали всегда определяют две разных и непереходящих друг в друга "
+"поверхности. Развёртываемая полисетка всегда определяет чётное количество"
+" неперекрывающихся поверхностей."
 
 #: ../../manual/glossary/index.rst:385
 msgid "Matte"
-msgstr ""
+msgstr "Matte (Маска)"
 
 #: ../../manual/glossary/index.rst:386
 msgid "Mask"
-msgstr ""
+msgstr "Mask (Маска)"
 
 #: ../../manual/glossary/index.rst:388
 msgid ""
@@ -1018,28 +1276,34 @@ msgid ""
 "is applied as an :term:`Alpha Channel`, or it is used as a mix factor "
 "when applying :term:`Color Blend Modes`."
 msgstr ""
+"Чёрно-белое изображение, используемое для включения или исключения частей"
+" изображения. Маска применяется в виде :term:`альфа-канала <alpha "
+"channel>` или используется как коэффициент смешивания при применении "
+":term:`режимов смешивания цветов <color blend modes>`."
 
 #: ../../manual/glossary/index.rst:391
 msgid "Mesh"
-msgstr ""
+msgstr "Mesh (Полисетка)"
 
 #: ../../manual/glossary/index.rst:393
 msgid ""
 "Type of object consisting of :term:`vertices <vertex>`, :term:`edges "
 "<edge>` and :term:`faces <face>`."
 msgstr ""
+"Тип объекта, состоящий из :term:`вершин <vertex>`, :term:`рёбер <edge>` и"
+" :term:`граней <face>`."
 
 #: ../../manual/glossary/index.rst:394
 msgid "Micropolygons"
-msgstr ""
+msgstr "Micropolygons (Микрополигоны)"
 
 #: ../../manual/glossary/index.rst:396
 msgid "A polygon roughly the size of a pixel or smaller."
-msgstr ""
+msgstr "Полигоны размером с пиксель или даже меньше."
 
 #: ../../manual/glossary/index.rst:397
 msgid "Motion Blur"
-msgstr ""
+msgstr "Motion Blur (Размытие при движении)"
 
 #: ../../manual/glossary/index.rst:399
 msgid ""
@@ -1047,26 +1311,29 @@ msgid ""
 "object appears to be blurred because of our persistence of vision. "
 "Simulating motion blur makes computer animation appear more realistic."
 msgstr ""
+"Явление, возникающее, когда мы воспринимаем быстро движущийся объект. "
+"Объект представляется размытым из-за нашей инерции зрения. Имитация "
+"размытия при движении делает компьютерную анимацию более реалистичной."
 
 #: ../../manual/glossary/index.rst:402
 msgid "Multi-sampling"
-msgstr ""
+msgstr "Multi-sampling (Мультисемплинг, множественная выборка)"
 
 #: ../../manual/glossary/index.rst:404
 msgid "See :term:`FSAA`"
-msgstr ""
+msgstr "Смотрите :term:`FSAA`."
 
 #: ../../manual/glossary/index.rst:405
 msgid "Ngon"
-msgstr ""
+msgstr "Ngon (N-угольник)."
 
 #: ../../manual/glossary/index.rst:407
 msgid "A :term:`face` that contains more than four :term:`vertices <vertex>`."
-msgstr ""
+msgstr ":term:`Грань <face>`, содержащая более четырёх :term:`вершин <vertex>`."
 
 #: ../../manual/glossary/index.rst:408
 msgid "Non-linear animation"
-msgstr ""
+msgstr "Non-linear animation (Нелинейная анимация)"
 
 #: ../../manual/glossary/index.rst:410
 msgid ""
@@ -1074,10 +1341,14 @@ msgid ""
 "not just the individual keys. Nonlinear animation allows you to combine, "
 "mix, and blend different motions to create entirely new animations."
 msgstr ""
+"Метод анимации, позволяющий аниматору редактировать движение целиком, а "
+"не просто индивидуальные ключевые кадры. Нелинейная анимация позволяет "
+"вам объединять, сочетать и смешивать различные движения для создания "
+"совершенно новых анимаций."
 
 #: ../../manual/glossary/index.rst:412
 msgid "Non-manifold"
-msgstr ""
+msgstr "Non-manifold (Неразвёртываемое)"
 
 #: ../../manual/glossary/index.rst:414
 msgid ""
@@ -1094,52 +1365,74 @@ msgid ""
 "an inversion of a connected loop, or by an odd number of surfaces. A non-"
 "manifold mesh will always define an odd number of surfaces."
 msgstr ""
+"Неразвёртываемые полисетки, по существу, определяют геометрию которая не "
+"может существовать в реальном мире. С этим типом геометрии не могут "
+"работать некоторые операции, особенно если для их работы важно знание "
+"объёма объекта (внутренего или внешнего). Такими операциями, к примеру, "
+"являются расчёт преломления, жидкостей, булевы операции, 3D-печать. "
+"Неразвёртываемая полисетка – это полисетка, для которой нормали "
+"непересекающихся поверхностей (состоящих из соединённых граней) не "
+"определяют, внутренний ли тот объём, в который они указывают, или "
+"внешний; они определяют единую поверхность для обеих сторон грани, только"
+" указывают в разные стороны. При работе с незакрытыми объёмами "
+"неразвёртываемая полисетка всегда содержит как минимум один разрыв в "
+"направлениях нормалей, либо через инверсию нормалей граней, соединённых в"
+" кольцо, либо через нечётное количество поверхностей. Неразвёртываемая "
+"полисетка всегда содержит нечётное количество поверхностей."
 
 #: ../../manual/glossary/index.rst:427
 msgid "There are several types of non-manifold geometry:"
-msgstr ""
+msgstr "Существует несколько типов неразвёртываемой геометрии:"
 
 #: ../../manual/glossary/index.rst:429
 msgid ""
 "Some borders and holes (edges with only a single connected face), as "
 "faces have no thickness."
 msgstr ""
+"Некоторые границы и дырки (рёбра с только одной связанной гранью), когда "
+"грани не имеют толщины."
 
 #: ../../manual/glossary/index.rst:430
 msgid "Edges and vertices not belonging to any face (wire)."
-msgstr ""
+msgstr "Рёбра и вершины, не принадлежащие ни к одной грани (каркас)."
 
 #: ../../manual/glossary/index.rst:431
 msgid "Edges connected to three or more faces (interior faces)."
-msgstr ""
+msgstr "Рёбра, соединённые с тремя или более гранями (внутренние грани)."
 
 #: ../../manual/glossary/index.rst:432
 msgid ""
 "Vertices belonging to faces that are not adjoining (e.g. two cones "
 "sharing the vertex at the apex)."
 msgstr ""
+"Вершины, принадлежащие к не соседним граням (к примеру, два конуса имеют "
+"общую вершину на верхушке)."
 
 #: ../../manual/glossary/index.rst:434
 msgid "See also: :ref:`Select Non-Manifold <mesh-select-non-manifold>` tool."
 msgstr ""
+"Также смотрите документацию к инструменту :ref:`Выделить неразвёртываемое"
+" <mesh-select-non-manifold>`."
 
 #: ../../manual/glossary/index.rst:435
 msgid "Normal"
-msgstr ""
+msgstr "Normal (Нормаль)"
 
 #: ../../manual/glossary/index.rst:437
 msgid "The normalized vector perpendicular to a surface."
-msgstr ""
+msgstr "Нормализованный вектор, перпендикулярный к поверхности."
 
 #: ../../manual/glossary/index.rst:439
 msgid ""
 "Normals can be assigned to vertices, faces and modulated across a surface"
 " using :term:`normal mapping`."
 msgstr ""
+"Нормали могут быть назначены вершинам, граням и изменяться вдоль "
+"поверхности при помощи :term:`карт нормалей <normal mapping>`."
 
 #: ../../manual/glossary/index.rst:441
 msgid "Normal mapping"
-msgstr ""
+msgstr "Normal mapping (Карты нормалей)"
 
 #: ../../manual/glossary/index.rst:443
 msgid ""
@@ -1149,20 +1442,27 @@ msgid ""
 "directions X, Y and Z. This allows more detail and control over the "
 "effect."
 msgstr ""
+"Похожи на :term:`карты неровностей <bump mapping>`, но вместо "
+"использования чёрно-белой карты высот, используется цветное изображение, "
+"в котором цвета определяют, в каком направлении должны быть сдвинуты "
+"нормали; три цветовых канала сопоставляются с тремя направлениями – X, Y "
+"и Z. Позволяют передать больше деталей и более тонко управлять эффектом."
 
 #: ../../manual/glossary/index.rst:447
 msgid "NURBS"
-msgstr ""
+msgstr "NURBS"
 
 #: ../../manual/glossary/index.rst:449
 msgid ""
 "A computer graphics technique for generating and representing curves and "
 "surfaces."
 msgstr ""
+"Метод в компьютерной графике для генерации и представления **кривых** и "
+"**поверхностей**."
 
 #: ../../manual/glossary/index.rst:450
 msgid "Object"
-msgstr ""
+msgstr "Object (Объект)"
 
 #: ../../manual/glossary/index.rst:452
 msgid ""
@@ -1170,34 +1470,42 @@ msgid ""
 "Lattice, Empty, Camera, Lamp) and basic 3D transform data (:term:`Object "
 "Center`)."
 msgstr ""
+"Контейнер для типа (полисетка, кривая, поверхность, метасфера, текст, "
+"скелет, решётка, пустышка, камера, лампа) и базовых данных трёхмерного "
+"преобразования (:term:`центр объекта <object center>`)."
 
 #: ../../manual/glossary/index.rst:454
 msgid "Object Center"
-msgstr ""
+msgstr "Object Center (Центр объекта)"
 
 #: ../../manual/glossary/index.rst:455
 msgid "Object Origin"
-msgstr ""
+msgstr "Object Origin (Опорная точка объекта)"
 
 #: ../../manual/glossary/index.rst:457
 msgid ""
 "A reference point used to position, rotate, and scale an :term:`Object` "
 "and to define its :term:`Local Space` coordinates."
 msgstr ""
+"Эталонная точка, используемая для позиционирования, вращения и "
+"масштабирования :term:`объекта <object>`, а также для определения его "
+"координат в :term:`локальном пространстве <local space>`."
 
 #: ../../manual/glossary/index.rst:459
 msgid "Octahedron"
-msgstr ""
+msgstr "Octahedron (Октаэдр)"
 
 #: ../../manual/glossary/index.rst:461
 msgid ""
 "An eight-sided figure commonly used to depict the :term:`Bones <Bone>` of"
 " an :term:`Armature`."
 msgstr ""
+"Восьмигранная фигура, обычно используемая для представления :term:`костей"
+" <bone>` :term:`скелета <armature>`."
 
 #: ../../manual/glossary/index.rst:462
 msgid "OpenGL"
-msgstr ""
+msgstr "OpenGL"
 
 #: ../../manual/glossary/index.rst:464
 msgid ""
@@ -1205,62 +1513,81 @@ msgid ""
 "applications) for drawing 3D graphics, often taking advantage of hardware"
 " acceleration."
 msgstr ""
+"Графическая система, используемая Blender (и многими другими графическими"
+" приложениями) для отрисовки 3D-графики, часто аппаратно ускоренная."
 
 #: ../../manual/glossary/index.rst:467
 msgid "See also `OpenGL <https://en.wikipedia.org/wiki/OpenGL>`__ on Wikipedia."
 msgstr ""
+"Также смотрите статью `OpenGL <https://en.wikipedia.org/wiki/OpenGL>`__ "
+"на англоязычной Википедии и статью `OpenGL "
+"<https://ru.wikipedia.org/wiki/OpenGL>`__ на русскоязычной Википедии."
 
 #: ../../manual/glossary/index.rst:468
 msgid "Oversampling"
-msgstr ""
+msgstr "Oversampling (Сверхвыборка)"
 
 #: ../../manual/glossary/index.rst:470
 msgid ""
 "Is the technique of minimizing :term:`aliasing` when representing a high-"
 "resolution signal at a lower resolution."
 msgstr ""
+"Метод минимизации :term:`ступенчатости <aliasing>` изображения путём "
+"представления сигнала с высоким разрешением в виде сигнала с низким "
+"разрешением."
 
 #: ../../manual/glossary/index.rst:473
 msgid "Also called Anti-Aliasing."
-msgstr ""
+msgstr "Также называется **сглаживание**."
 
 #: ../../manual/glossary/index.rst:474
 msgid "Overscan"
-msgstr ""
+msgstr "Overscan (Вылет развёртки)"
 
 #: ../../manual/glossary/index.rst:476
 msgid ""
 "The term used to describe the situation when not all of a televised image"
 " is present on a viewing screen."
 msgstr ""
+"Термин, используемый для описания ситуации, когда не всё телевизионное "
+"изображение присутствует на экране просмотра."
 
 #: ../../manual/glossary/index.rst:479
 msgid ""
 "See also `Overscan <https://en.wikipedia.org/wiki/Overscan>`__ on "
 "Wikipedia."
 msgstr ""
+"Также смотрите статью `Overscan "
+"<https://en.wikipedia.org/wiki/Overscan>`__ на англоязычной Википедии и "
+"статью `Вылеты развёртки "
+"<https://ru.wikipedia.org/wiki/Вылеты_развёртки>`__ на русскоязычной "
+"Википедии."
 
 #: ../../manual/glossary/index.rst:480
 msgid "Parent"
-msgstr ""
+msgstr "Parent (Родитель)"
 
 #: ../../manual/glossary/index.rst:482
 msgid "An :term:`Object` that affects its :term:`Child` objects."
 msgstr ""
+":term:`Объект <object>`, влияющий на свои :term:`дочерние <Child>` "
+"объекты."
 
 #: ../../manual/glossary/index.rst:483
 msgid "Parenting"
-msgstr ""
+msgstr "Parenting (Установка родителя)"
 
 #: ../../manual/glossary/index.rst:485
 msgid ""
 "Creating a :term:`Parent`-:term:`Child` relationship between two "
 ":term:`objects <Object>`."
 msgstr ""
+"Создание отношения :term:`родитель <parent>`-:term:`потомок <child>` "
+"можду двумя :term:`объектами <object>`."
 
 #: ../../manual/glossary/index.rst:486
 msgid "Particle system"
-msgstr ""
+msgstr "Particle system (Система частиц)"
 
 #: ../../manual/glossary/index.rst:488
 msgid ""
@@ -1271,10 +1598,17 @@ msgid ""
 "visual effects like glowing trails, magic spells. Also used for fur, "
 "grass or hair."
 msgstr ""
+"Метод моделирования некоторых видов нечётких явлений, которые в противном"
+" случае очень трудно было бы воспроизвести при помощи обычных методов "
+"визуализации. Наиболее распространёнными примерами являются огонь, "
+"взрывы, дым, искры, падающие листья, облака, туман, снег, пыль, хвосты "
+"метеоров, звёзды и галактики, либо абстрактные визуальные эффекты, вроде "
+"светящихся следов и магических заклинаний. Также используется для "
+"моделирования меха, травы или волос."
 
 #: ../../manual/glossary/index.rst:493
 msgid "Phong"
-msgstr ""
+msgstr "Phong (Затенение по Фонгу)"
 
 #: ../../manual/glossary/index.rst:495
 msgid ""
@@ -1285,26 +1619,39 @@ msgid ""
 "considered, only local modeling of diffuse and specular, specular color "
 "is the same as light color, ambient is a global constant."
 msgstr ""
+"Модель локального освещения, которая в определённой степени может помочь "
+"добиться реализма трёхмерных объектов путём объединения трёх элементов их"
+" освещения: на каждую точку поверхности влияет диффузная, бликовая "
+"составляющие и составляющая от окружающей среды. Модель содержит "
+"несколько допущений – все источники света являются точками, "
+"рассматривается только геометрия поверхности, моделируются только "
+"локальные диффузное и бликовое отражения, цвет блика считается таким же, "
+"как и цвет источника света, окружающее освещение является глобальной "
+"константой."
 
 #: ../../manual/glossary/index.rst:500
 msgid "Pivot Point"
-msgstr ""
+msgstr "Pivot Point (Точка вращения)"
 
 #: ../../manual/glossary/index.rst:502
 msgid ""
 "The pivot point is the point in space around which all rotations, "
 "scalings and mirror transformations are centered."
 msgstr ""
+"Точка в пространстве, вокруг которой производятся все повороты, и которая"
+" служит центром при масштабировании и отражении объекта."
 
 #: ../../manual/glossary/index.rst:505
 msgid ""
 "See also the :doc:`Pivot Point "
 "</editors/3dview/transform/transform_control/pivot_point/index>` docs."
 msgstr ""
+"Также смотрите документацию по :doc:`точке вращения "
+"</editors/3dview/transform/transform_control/pivot_point/index>`."
 
 #: ../../manual/glossary/index.rst:506
 msgid "Pixel"
-msgstr ""
+msgstr "Pixel (Пиксель)"
 
 #: ../../manual/glossary/index.rst:508
 msgid ""
@@ -1313,20 +1660,27 @@ msgid ""
 "an :term:`alpha channel`, the pixel will contain a corresponding fourth "
 "channel."
 msgstr ""
+"Наименьшая единица информации в двумернм растровом изображении, "
+"представляющая одиночный цвет, состоящий из красного, зелёного и синего "
+"каналов. Если изображение имеет :term:`альфа-канал <alpha channel>`, "
+"пиксель также содержит соотвествующий четвёртый канал."
 
 #: ../../manual/glossary/index.rst:511
 msgid "Pole"
-msgstr ""
+msgstr "Pole (Полюс)"
 
 #: ../../manual/glossary/index.rst:513
 msgid ""
 ":term:`Vertex` where three, five, or more edges meet. A vertex connected "
 "to one, two, or four edges is not a pole."
 msgstr ""
+":term:`Вершина <vertex>`, в которой встречаются три, пять или более "
+"рёбер. Вершина, соединённая с одним, двумя или четырьмя рёбрами полюсом "
+"не является."
 
 #: ../../manual/glossary/index.rst:515
 msgid "Pose Mode"
-msgstr ""
+msgstr "Pose Mode (Режим позы)"
 
 #: ../../manual/glossary/index.rst:517
 msgid ""
@@ -1334,10 +1688,14 @@ msgid ""
 ":term:`constraining <Constraint>` and :term:`parenting` the :term:`bones "
 "<Bone>` of an :term:`armature`."
 msgstr ""
+"Используется для :term:`изменения поз <posing>`, :term:`расстановки "
+"ключевых кадров <keyframing>`, :term:`рисования весов <weight painting>`,"
+" :term:`установки ограничений <constraint>` и :term:`родительства "
+"<parenting>` :term:`костей <bone>` :term:`скелета <armature>`."
 
 #: ../../manual/glossary/index.rst:519
 msgid "Posing"
-msgstr ""
+msgstr "Posing (Изменение позы)"
 
 #: ../../manual/glossary/index.rst:521
 msgid ""
@@ -1345,42 +1703,49 @@ msgid ""
 ":term:`armature` to achieve an aesthetically pleasing pose for a "
 "character."
 msgstr ""
+"Перемещение, вращение и масштабирование :term:`костей <bone>` "
+":term:`скелета <armature>` для достижения эстетически привлекательной "
+"позы для персонажа."
 
 #: ../../manual/glossary/index.rst:525 ../../manual/glossary/index.rst:617
 msgid "See :term:`Alpha Channel`"
-msgstr ""
+msgstr "Смотрите :term:`альфа-канал <alpha channel>`."
 
 #: ../../manual/glossary/index.rst:526
 msgid "Primitive"
-msgstr ""
+msgstr "Primitive (Примитив)"
 
 #: ../../manual/glossary/index.rst:528
 msgid ""
 "A basic object that can be used as a basis for modeling more complicated "
 "objects."
 msgstr ""
+"Базовый объект, который может использоваться в качестве основы для "
+"моделирования более сложных объектов."
 
 #: ../../manual/glossary/index.rst:529
 msgid "Procedural Texture"
-msgstr ""
+msgstr "Procedural Texture (Процедурная текстура)"
 
 #: ../../manual/glossary/index.rst:531
 msgid ""
 "Computer generated (generic) textures. Procedural textures can be "
 "configured via parameters."
 msgstr ""
+"В общем случае – текстура, сгенерированная компьютером. Процедурная "
+"текстура может быть настроена своими параметрами."
 
 #: ../../manual/glossary/index.rst:532
 msgid "Projection"
-msgstr ""
+msgstr "Projection (Проекция)"
 
 #: ../../manual/glossary/index.rst:534
 msgid "In computer graphics, there are two common camera projections used."
-msgstr ""
+msgstr "В компьютерной графике в основном используются два вида проекций."
 
 #: ../../manual/glossary/index.rst:544
 msgid "Perspective"
-msgstr ""
+msgstr "Perspective (Перспективная проекция)"
 
 #: ../../manual/glossary/index.rst:537
 msgid ""
@@ -1393,10 +1758,19 @@ msgid ""
 "the perspective projection of that point. By projecting all points *P* of"
 " the scene you get a perspective view."
 msgstr ""
+"*Перспективная* проекция геометрически конструируется путём взятия "
+"трёхмерной сцены и помещения наблюдателя в точку ``O``. Двумерная "
+"перспектива сцены строится путём помещения плоскости (например, листа "
+"бумаги), на которой будет отрисовано двумерное изображение, перед точкой "
+"``O`` перпендикулярно направлению взгляда. Для каждой точки ``P`` в "
+"трёхменрной сцене рисуется линия ``PO``, соединяющая точки ``O`` и ``P``."
+" Точка пересечения ``S`` этой линии и плоскости является перспективной "
+"проекцией точки ``P``. Путём проецирования всех точек сцены получается "
+"перспективная проекция."
 
 #: ../../manual/glossary/index.rst:552
 msgid "Orthographic"
-msgstr ""
+msgstr "Orthographic (Ортогональная проекция)"
 
 #: ../../manual/glossary/index.rst:547
 msgid ""
@@ -1406,30 +1780,35 @@ msgid ""
 " and the plane is the orthographic projection of the point *P*. By "
 "projecting all points *P* of the scene you get the orthographic view."
 msgstr ""
+"В *ортогональной* проекции у вас есть направление, но нет точки просмотра"
+" ``O``. Линия рисуется через точку ``P`` таким образом, чтобы она была "
+"параллельна направлению взгляда. Точка пересечения ``S`` этой линии и "
+"плоскости даёт ортогональную проекцию точки ``P``. Путём проецирования "
+"всех точек сцены получается ортогональная проекция."
 
 #: ../../manual/glossary/index.rst:553
 msgid "Quad"
-msgstr ""
+msgstr "Quad (Четырёхугольник)"
 
 #: ../../manual/glossary/index.rst:554
 msgid "Quadrilateral"
-msgstr ""
+msgstr "Quadrilateral (Четырёхсторонник)"
 
 #: ../../manual/glossary/index.rst:555
 msgid "Quadrangle"
-msgstr ""
+msgstr "Quadrangle (Четырёхугольник)"
 
 #: ../../manual/glossary/index.rst:557
 msgid ":term:`Face` that contains exactly four :term:`vertices <vertex>`."
-msgstr ""
+msgstr ":term:`Грань <face>`, содержащая ровно четыре :term:`вершины <vertex>`."
 
 #: ../../manual/glossary/index.rst:558
 msgid "Quaternion"
-msgstr ""
+msgstr "Quaternion (Кватернион)"
 
 #: ../../manual/glossary/index.rst:559
 msgid "Quaternion Rotation"
-msgstr ""
+msgstr "Quaternion Rotation (Вращение по кватерниону)"
 
 #: ../../manual/glossary/index.rst:561
 msgid ""
@@ -1437,10 +1816,14 @@ msgid ""
 "W). X, Y, and Z also define an :term:`axis`, and W an angle, but it is "
 "quite different from :term:`Axis Angle`."
 msgstr ""
+"Метод вращения, при котором повороты определяются через 4 значения (X, Y,"
+" Z и W). Значения X, Y и Z также определяют :term:`ось вращения <axis>`, "
+"а значение W – угол, который, тем не менее, довольно сильно отличается от"
+" :term:`осевого угла <axis angle>`."
 
 #: ../../manual/glossary/index.rst:564
 msgid "Radiosity"
-msgstr ""
+msgstr "Radiosity"
 
 #: ../../manual/glossary/index.rst:566
 msgid ""
@@ -1448,6 +1831,10 @@ msgid ""
 " rendering graphics images from three-dimensional models. One of the many"
 " different tools which can simulate diffuse lighting in Blender."
 msgstr ""
+"Метод глобального освещения, вычисляющий шаблоны света и тени для "
+"визуализации графических изображений из трёхмерных моделей. Один из "
+"многих различных инструментов, которые могут моделировать рассеянное "
+"освещение в Blender."
 
 #: ../../manual/glossary/index.rst:570
 #, python-format
@@ -1456,10 +1843,13 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Radiosity_%28computer_graphics%29>`__ on "
 "Wikipedia."
 msgstr ""
+"Также смотрите статью `Radiosity (computer graphics) "
+"<https://en.wikipedia.org/wiki/Radiosity_%28computer_graphics%29>`__ на "
+"англоязычной Википедии."
 
 #: ../../manual/glossary/index.rst:573
 msgid "Raytracing"
-msgstr ""
+msgstr "Raytracing (Трассировка лучей)"
 
 #: ../../manual/glossary/index.rst:575
 msgid ""
@@ -1468,10 +1858,14 @@ msgid ""
 "absorption of the ray whenever it intersects an object in the world. More"
 " accurate than :term:`scanline`, but much slower."
 msgstr ""
+"Метод визуализации, заключающийся в отслеживании путей лучей света, "
+"проходящих через сцену, и вычисления отражений, преломлений или "
+"поглощения этих лучей, когда они пересекаются с объектом. Более точен, "
+"чем :term:`сканирующая линия <scanline>`, но и более медлителен."
 
 #: ../../manual/glossary/index.rst:578
 msgid "Refraction"
-msgstr ""
+msgstr "Refraction (Преломление)"
 
 #: ../../manual/glossary/index.rst:580
 msgid ""
@@ -1481,32 +1875,41 @@ msgid ""
 "changes direction; its wavelength increases or decreases but frequency "
 "remains constant."
 msgstr ""
+"Изменение направления волны в связи с изменением её скорости. Изменение "
+"происходит, когда волна переходит из среды с одним :term:`показателем "
+"преломления <index of refraction>` в среду с другим показателем "
+"преломления. На границе сред волна изменяет своё направление; её длина "
+"увеличивается или уменьшается, но частота остаётся неизменной."
 
 #: ../../manual/glossary/index.rst:584
 msgid "Render"
-msgstr ""
+msgstr "Render (Визуализация)"
 
 #: ../../manual/glossary/index.rst:586
 msgid "The process of computationally generating a 2D image from 3D geometry."
 msgstr ""
+"Процесс вычислительной генерации двумерного изображения из трёхмерной "
+"геометрии."
 
 #: ../../manual/glossary/index.rst:587
 msgid "Rig"
-msgstr ""
+msgstr "Rig (Риг, риггинг)"
 
 #: ../../manual/glossary/index.rst:589
 msgid ""
 "A system of relationships that determine how something moves. The act of "
 "building of such a system."
 msgstr ""
+"Система отношений, определяющая характер движения чего-либо. Также акт "
+"построения такой системы."
 
 #: ../../manual/glossary/index.rst:590
 msgid "Roll"
-msgstr ""
+msgstr "Roll (Крен)"
 
 #: ../../manual/glossary/index.rst:591
 msgid "Roll Angle"
-msgstr ""
+msgstr "Roll Angle (Угол крена)"
 
 #: ../../manual/glossary/index.rst:593
 msgid ""
@@ -1514,10 +1917,13 @@ msgid ""
 "effect on the local Y axis as local Y is determined by the location of "
 "the :term:`Head` and :term:`Tail`."
 msgstr ""
+"Ориентация локальных осей X и Z :term:`кости <bone>`. Для локальной оси Y"
+" не применима, поскольку локальная ось Y определяется положениями "
+":term:`начала <head>` и :term:`конца <tail>` кости."
 
 #: ../../manual/glossary/index.rst:595
 msgid "Scanline"
-msgstr ""
+msgstr "Scanline (Сканирование строк)"
 
 #: ../../manual/glossary/index.rst:597
 msgid ""
@@ -1525,20 +1931,26 @@ msgid ""
 "fewer effects, such as reflections, refractions, motion blur and focal "
 "blur."
 msgstr ""
+"Метод визуализации. Намного быстрее :term:`трасировки лучей "
+"<raytracing>`, но не поддерживает многие эффекты, вроде отражений, "
+"преломлений, размытия при движении и размытия объектов не в фокусе."
 
 #: ../../manual/glossary/index.rst:599
 msgid "Sensor"
-msgstr ""
+msgstr "Sensor (Сенсор)"
 
 #: ../../manual/glossary/index.rst:601
 msgid ""
 "A :term:`logic brick` that acts like a sense of a lifeform. It reacts to "
 "touch, vision, collision etc."
 msgstr ""
+":term:`Логический блок <logic brick>` работающий подобно чувствам живых "
+"организмов. Он реагирует на прикосновения, видение, столкновение и так "
+"далее."
 
 #: ../../manual/glossary/index.rst:602
 msgid "Shading"
-msgstr ""
+msgstr "Shading (Затенение)"
 
 #: ../../manual/glossary/index.rst:604
 msgid ""
@@ -1546,10 +1958,13 @@ msgid ""
 " on its angle to lights and its distance from lights to create a "
 "photorealistic effect."
 msgstr ""
+"Процесс изменения цвета объекта/поверхности в трёхмерной сцене на основе "
+"направления на источник света и расстояния до источника света для "
+"создания фотореалистичного эффекта."
 
 #: ../../manual/glossary/index.rst:606
 msgid "Smoothing"
-msgstr ""
+msgstr "Smoothing (Сглаживание)"
 
 #: ../../manual/glossary/index.rst:608
 msgid ""
@@ -1557,20 +1972,26 @@ msgid ""
 "(faces are rendered flat) or smooth (faces are smoothed by interpolating "
 "the normal on every point of the face)."
 msgstr ""
+"Определяет, как именно затеняются :term:`грани <face>`. Грань может быть "
+"либо плоской (грани визуализируются как плоскости), либо гладкой (грани "
+"сглаживаются путём интерполяции нормалей в каждой точке грани)."
 
 #: ../../manual/glossary/index.rst:611
 msgid "Specular light"
-msgstr ""
+msgstr "Specular light (Зеркальное освещение, бликовое освещение)"
 
 #: ../../manual/glossary/index.rst:613
 msgid ""
 "A light which is reflected precisely, like a mirror. Also used to refer "
 "to highlights on reflective objects."
 msgstr ""
+"Освещение, которое отражается преимущественно в одном направлении, как в "
+"зеркале. Также используется для обозначения бликов на отражающих "
+"объектах."
 
 #: ../../manual/glossary/index.rst:618
 msgid "Subsurface scattering"
-msgstr ""
+msgstr "Subsurface scattering (Подповерхностное рассеивание)"
 
 #: ../../manual/glossary/index.rst:620
 msgid ""
@@ -1581,10 +2002,16 @@ msgid ""
 "skin, and milk are extremely difficult to simulate realistically without "
 "taking subsurface scattering into account."
 msgstr ""
+"Механизм распространения света, когда он проникает под поверхность "
+"полупрозрачного объекта, рассеивается там, взаимодействуя с материалом, и"
+" выходит на поверхность в другой точке. Все неметаллические материалы в "
+"какой-то степени являются полупрозрачными. В частности, материалы вроде "
+"мрамора, кожи или молока очень трудно реалистично имитировать, если не "
+"принимать во внимание подповерхностное рассеивание."
 
 #: ../../manual/glossary/index.rst:625
 msgid "Subdividing"
-msgstr ""
+msgstr "Subdividing (Подразделение)"
 
 #: ../../manual/glossary/index.rst:627
 msgid ""
@@ -1593,24 +2020,30 @@ msgid ""
 "new edges. If new edges cross a new vertex is created at their crossing "
 "point."
 msgstr ""
+"Техника добавления дополнительной геометрии к полисетке. Она создаёт "
+"новые вершины на подразделённых рёбрах, новые рёбра между подразделениями"
+" и новые грани на этих рёбрах. Если новые рёбра пересекаются, на месте их"
+" пересечения создаётся новая вершина."
 
 #: ../../manual/glossary/index.rst:630
 msgid "Subsurf"
-msgstr ""
+msgstr "Subsurf"
 
 #: ../../manual/glossary/index.rst:631
 msgid "Subdivision surface"
-msgstr ""
+msgstr "Subdivision surface (Подразделение поверхности)"
 
 #: ../../manual/glossary/index.rst:633
 msgid ""
 "A method of creating smooth higher poly surfaces which can take a low "
 "polygon mesh as input."
 msgstr ""
+"Метод создания сглаженных высокополигональных поверхностей, на вход "
+"которого поступает низкополигональная полисетка."
 
 #: ../../manual/glossary/index.rst:635
 msgid "Sometimes abbreviated to **Subsurf**."
-msgstr ""
+msgstr "Иногда сокращается до **Subsurf**."
 
 #: ../../manual/glossary/index.rst:637
 #, python-format
@@ -1619,10 +2052,13 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__"
 " on Wikipedia"
 msgstr ""
+"Также смотрите статью `Catmull-Clark subdivision surface "
+"<https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__"
+" на англоязычной Википедии."
 
 #: ../../manual/glossary/index.rst:640
 msgid "Tail"
-msgstr ""
+msgstr "Tail (Конец)"
 
 #: ../../manual/glossary/index.rst:642
 msgid ""
@@ -1632,86 +2068,105 @@ msgid ""
 ":term:`Bone` in :term:`Pose Mode`. The smaller of the two ends when drawn"
 " as an :term:`Octahedron`."
 msgstr ""
+"Подкомпонент :term:`кости <bone>`. Имеет координаты X, Y и Z, "
+"определяемые в :term:`локальном пространстве <local space>` скелета "
+"объекта. Вместе с :term:`началом <head>` используется для определения "
+":term:`локальной <local space>` оси Y :term:`кости <bone>` в "
+":term:`режиме позы <pose mode>`. Меньшая из двух оконечностей, когда "
+"отрисовываеся в виде :term:`октаэдра <octahedron>`."
 
 #: ../../manual/glossary/index.rst:646
 msgid "Tessellation"
-msgstr ""
+msgstr "Tessellation (Тесселяция)"
 
 #: ../../manual/glossary/index.rst:648
 msgid ""
 "The tiling of a plane using one or more geometric shapes usually "
 "resulting in :term:`Micropolygons`."
 msgstr ""
+"Замощение плоскости одной или более геометрическими фигурами, что обычно "
+"происходит при использовании :term:`микрополигонов <micropolygons>`."
 
 #: ../../manual/glossary/index.rst:649
 msgid "Texture"
-msgstr ""
+msgstr "Texture (Текстура)"
 
 #: ../../manual/glossary/index.rst:651
 msgid ""
 "Specifies visual patterns on surfaces and simulates physical surface "
 "structure."
 msgstr ""
+"Определяет визуальные шаблоны поверхностей и имитирует их физическую "
+"структуру."
 
 #: ../../manual/glossary/index.rst:652
 msgid "Texture Space"
-msgstr ""
+msgstr "Texture Space (Текстурное пространство)"
 
 #: ../../manual/glossary/index.rst:654
 msgid ""
 "The bounding box to use when using *Generated* mapping to add a "
 ":term:`Texture` to an image."
 msgstr ""
+"Ограничивающая рамка, используемая с отображением *Сгенерировать* для "
+"добавления :term:`текстуры <texture>` на изображение."
 
 #: ../../manual/glossary/index.rst:655
 msgid "Timecode"
-msgstr ""
+msgstr "Timecode (Временной код, код времени)"
 
 #: ../../manual/glossary/index.rst:657
 msgid ""
 "A coded signal on videotape or film giving information about the frame "
 "number, time of recording, or exposure."
 msgstr ""
+"Кодированный сигнал на видео- или фотоплёнке, хранящий информацию о "
+"номере кадра, времени записи или экспозиции."
 
 #: ../../manual/glossary/index.rst:658
 msgid "Title Safe"
-msgstr ""
+msgstr "Title Safe (Отступы для заголовка)"
 
 #: ../../manual/glossary/index.rst:660
 msgid ""
 "Area of the screen visible on all devices. Place text and graphics inside"
 " this area to make sure they do not get cut off."
 msgstr ""
+"Область экрана, видимая на всех устройствах. Размещайте текст и графику "
+"внутри неё, чтобы быть уверенным, что они не будут обрезаны."
 
 #: ../../manual/glossary/index.rst:662
 msgid "Topology"
-msgstr ""
+msgstr "Topology (Топология)"
 
 #: ../../manual/glossary/index.rst:664
 msgid ""
 "The arrangement of *Vertices*, *Edges*, and *Faces* which define the "
 "shape of a mesh. See :term:`vertex`, :term:`edge`, and :term:`face`."
 msgstr ""
+"Способ упорядочивания *вершин*, *рёбер* и *граней*, определяющий форму "
+"полисетки. Смотрите :term:`вершины <vertex>`, :term:`рёбра <edge>` и "
+":term:`грани <face>`."
 
 #: ../../manual/glossary/index.rst:666
 msgid "Transforms"
-msgstr ""
+msgstr "Transforms (Преобразования)"
 
 #: ../../manual/glossary/index.rst:668
 msgid "The combined idea of location, rotation and scale."
-msgstr ""
+msgstr "Комбинированная идея местоположения, поворота и масштаба."
 
 #: ../../manual/glossary/index.rst:669
 msgid "Triangle"
-msgstr ""
+msgstr "Triangle (Треугольник)"
 
 #: ../../manual/glossary/index.rst:671
 msgid ":term:`Face` with exactly three :term:`vertices <vertex>`."
-msgstr ""
+msgstr ":term:`Грань <face>` с ровно тремя :term:`вершинами <vertex>`."
 
 #: ../../manual/glossary/index.rst:672
 msgid "UV map"
-msgstr ""
+msgstr "UV map (UV-разметка)"
 
 #: ../../manual/glossary/index.rst:674
 msgid ""
@@ -1720,34 +2175,44 @@ msgid ""
 "texture. It is possible and often common practice to map several faces of"
 " the mesh to the same or overlapping areas of the texture."
 msgstr ""
+"Определяет отношения между поверхностью полисетки и двумерной текстурой. "
+"Более подробно, каждая грань полисетки отображается на соответствующую "
+"область текстуры. Также возможно (и это часто практикуется) отображать "
+"несколько граней полисетки на одни и те же или перекрывающиеся области "
+"текстуры."
 
 #: ../../manual/glossary/index.rst:678
 msgid "Vertex"
-msgstr ""
+msgstr "Vertex (Вершина)"
 
 #: ../../manual/glossary/index.rst:679
 msgid "Vertices"
-msgstr ""
+msgstr "Vertices (Вершины)"
 
 #: ../../manual/glossary/index.rst:681
 msgid ""
 "A point in 3D space containing a location. It may also have a defined "
 "color. Vertices are the terminating points of :term:`edges <edge>`."
 msgstr ""
+"Точка в трёхмерном пространстве, содержащая местоположение. Также может "
+"иметь определённый цвет. Вершины являются конечными точками :term:`рёбер "
+"<edge>`."
 
 #: ../../manual/glossary/index.rst:683
 msgid "Vertex Group"
-msgstr ""
+msgstr "Vertex Group (Группа вершин)"
 
 #: ../../manual/glossary/index.rst:685
 msgid ""
 "Collection of :term:`vertices <vertex>`. Vertex groups are useful for "
 "limiting operations to specific areas of a mesh."
 msgstr ""
+"Коллекция :term:`вершин <vertex>`. Группы вершин полезны для ограничения "
+"операций определёнными областями на полисетке."
 
 #: ../../manual/glossary/index.rst:687
 msgid "Voxel"
-msgstr ""
+msgstr "Voxel (Воксель)"
 
 #: ../../manual/glossary/index.rst:689
 msgid ""
@@ -1755,10 +2220,14 @@ msgid ""
 " of the terms \"Volumetric\" and \":term:`Pixel <pixel>`\". Used to store"
 " smoke and fire data from physics simulations."
 msgstr ""
+"Трёхмерный кубический эквивалент двумерного квадратного пикселя. Название"
+" «Воксель» («Voxel») происходит из объединения терминов «объёмный» "
+"(«Volumetric») и :term:`«пиксель» («Pixel») <pixel>`. Используется для "
+"хранения данных огня и дыма при моделировании физики."
 
 #: ../../manual/glossary/index.rst:692
 msgid "Walk Cycle"
-msgstr ""
+msgstr "Walk Cycle (Цикл ходьбы)"
 
 #: ../../manual/glossary/index.rst:694
 msgid ""
@@ -1766,30 +2235,38 @@ msgid ""
 "function animated. Later on in the animation process the character is "
 "placed in an environment and the rest of the functions are animated."
 msgstr ""
+"В анимации цикл ходьбы представляет собой персонажа, имеющего из анимаций"
+" только движение ходьбы. В дальнейшем в процессе анимации персонаж "
+"помещается в окружающую среду и анимируются остальные движения."
 
 #: ../../manual/glossary/index.rst:697
 msgid "Weight Painting"
-msgstr ""
+msgstr "Weight Painting (Рисование весов)"
 
 #: ../../manual/glossary/index.rst:699
 msgid ""
 "Assigning :term:`vertices` to :term:`Vertex Groups <Vertex Group>` with a"
 " weight of 0.0 - 1.0."
 msgstr ""
+"Присваивание :term:`вершинам <vertex>` в :term:`группах вершин <vertex "
+"group>` веса в диапазоне от 0.0 до 1.0."
 
 #: ../../manual/glossary/index.rst:700
 msgid "World Space"
-msgstr ""
+msgstr "World Space (Пространство мира)"
 
 #: ../../manual/glossary/index.rst:702
 msgid ""
 "A 3D coordinate system that originates at a point at the origin of the "
 "world. Compare to :term:`Local Space`."
 msgstr ""
+"Трёхмерная система координат, в котрой точкой отсчёта является точка "
+"отсчёта мира. Смотрите также :term:`локальное пространство <local "
+"space>`."
 
 #: ../../manual/glossary/index.rst:704
 msgid "Z-buffer"
-msgstr ""
+msgstr "Z-buffer (Z-буфер)"
 
 #: ../../manual/glossary/index.rst:706
 msgid ""
@@ -1798,222 +2275,8 @@ msgid ""
 "a positive Z value and points behind have negative values. The Z-Depth "
 "map can be visualized as a grayscale image."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Additional channel in 2D image for transparency."
-#~ msgstr ""
-
-#~ msgid "Light that comes from the surrounding environment as a whole."
-#~ msgstr ""
-
-#~ msgid "Operation to chamfer or bevel edges of an object."
-#~ msgstr ""
-
-#~ msgid "Curve that holds the animation values of a specific property."
-#~ msgstr ""
-
-#~ msgid "An operation used to adjust brightness of an image."
-#~ msgstr ""
-
-#~ msgid "Mean average of the positions of all vertices making up the object."
-#~ msgstr ""
-
-#~ msgid "In computer graphics there are two common camera projections used."
-#~ msgstr ""
-
-#~ msgid "Sub surface scattering"
-#~ msgstr ""
-
-#~ msgid "VBOVertex Buffer Object"
-#~ msgstr ""
-
-#~ msgid "Each of the segments that make up an :term:`armature`."
-#~ msgstr ""
-
-#~ msgid "Kind of object that cannot hold any geometry."
-#~ msgstr ""
-
-#~ msgid "Object center"
-#~ msgstr ""
-
-#~ msgid "Vertex"
-#~ msgstr ""
-
-#~ msgid "QuadQuadrilateral"
-#~ msgstr ""
-
-#~ msgid "Quad"
-#~ msgstr ""
-
-#~ msgid "See also `HDRI <http://en.wikipedia.org/wiki/HDRI>`__ on Wikipedia."
-#~ msgstr ""
-
-#~ msgid "See also `OpenGL <http://en.wikipedia.org/wiki/OpenGL>`__ on Wikipedia."
-#~ msgstr ""
-
-#~ msgid "BUBlender Units"
-#~ msgstr ""
-
-#~ msgid "DOFDepth Of Field"
-#~ msgstr ""
-
-#~ msgid "FSAAFull-Screen Anti-Aliasing"
-#~ msgstr ""
-
-#~ msgid "HDRIHigh Dynamic Range Image"
-#~ msgstr ""
-
-#~ msgid "IORIndex Of Refraction"
-#~ msgstr ""
-
-#~ msgid "Object CenterObject Origin"
-#~ msgstr ""
-
-#~ msgid "QuadQuadrilateralQuadrangle"
-#~ msgstr ""
-
-#~ msgid "RollRoll Angle"
-#~ msgstr ""
-
-#~ msgid "SubsurfSubdivision surface"
-#~ msgstr ""
-
-#~ msgid "VertexVertices"
-#~ msgstr ""
-
-#~ msgid "See also :doc:`/modeling/modifiers/deform/lattice`."
-#~ msgstr ""
-
-#~ msgid "Reference point used by many mesh manipulation tools."
-#~ msgstr ""
-
-#~ msgid "Edges connected to 3 or more faces (interior faces)."
-#~ msgstr ""
-
-#~ msgid "For other common conventions used throughout the manual."
-#~ msgstr ""
-
-#~ msgid "FCurve"
-#~ msgstr ""
-
-#~ msgid "TODO."
-#~ msgstr ""
-
-#~ msgid "BU"
-#~ msgstr ""
-
-#~ msgid "Blender Units"
-#~ msgstr ""
-
-#~ msgid "Clamp"
-#~ msgstr ""
-
-#~ msgid "Clamping"
-#~ msgstr ""
-
-#~ msgid "Color Blend Modes"
-#~ msgstr ""
-
-#~ msgid "See HSV"
-#~ msgstr ""
-
-#~ msgid "TODO"
-#~ msgstr ""
-
-#~ msgid "DOF"
-#~ msgstr ""
-
-#~ msgid "Depth Of Field"
-#~ msgstr ""
-
-#~ msgid "Euler"
-#~ msgstr ""
-
-#~ msgid "Euler Rotation"
-#~ msgstr ""
-
-#~ msgid "FSAA"
-#~ msgstr ""
-
-#~ msgid "Full-Screen Anti-Aliasing"
-#~ msgstr ""
-
-#~ msgid "HDRI"
-#~ msgstr ""
-
-#~ msgid "High Dynamic Range Image"
-#~ msgstr ""
-
-#~ msgid "IOR"
-#~ msgstr ""
-
-#~ msgid "Index Of Refraction"
-#~ msgstr ""
-
-#~ msgid "Object Center"
-#~ msgstr ""
-
-#~ msgid "Object Origin"
-#~ msgstr ""
-
-#~ msgid "Quadrilateral"
-#~ msgstr ""
-
-#~ msgid "Quadrangle"
-#~ msgstr ""
-
-#~ msgid "Quaternion"
-#~ msgstr ""
-
-#~ msgid "Quaternion Rotation"
-#~ msgstr ""
-
-#~ msgid "Roll"
-#~ msgstr ""
-
-#~ msgid "Roll Angle"
-#~ msgstr ""
-
-#~ msgid "Subsurf"
-#~ msgstr ""
-
-#~ msgid "Subdivision surface"
-#~ msgstr ""
-
-#~ msgid "Vertices"
-#~ msgstr ""
-
-#~ msgid "BVHBounding Volume Hierarchy"
-#~ msgstr ""
-
-#~ msgid "ClampClamping"
-#~ msgstr ""
-
-#~ msgid "Blend ModesColor Blend Modes"
-#~ msgstr ""
-
-#~ msgid "EulerEuler Rotation"
-#~ msgstr ""
-
-#~ msgid "QuaternionQuaternion Rotation"
-#~ msgstr ""
-
-#~ msgid "See also: :ref:`Select Non-Manifold <mesh-select-non_manifold>` tool."
-#~ msgstr ""
-
-#~ msgid "Also called **Anti-Aliasing**."
-#~ msgstr ""
-
-#~ msgid ":term:`Face` with exactly 3 :term:`vertices <vertex>`."
-#~ msgstr ""
-
-#~ msgid "Rotation method where rotations applied on each X,Y,Z axis component."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A device for organizing objects. See "
-#~ "also :doc:`Layers </editors/3dview/layers>`."
-#~ msgstr ""
+"Растровое хранилище измеренных расстояний от камеры до точек поверхности."
+" Точки поверхности, расположенные перед камерой, обладают положительными "
+"Z-значениями, а точки, расположенные позади – отрицательными. Карта "
+"Z-глубины может быть отрисована в виде чёрно-белого изображения."
 
