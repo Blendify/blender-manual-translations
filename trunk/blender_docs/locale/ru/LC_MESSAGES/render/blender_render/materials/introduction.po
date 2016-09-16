@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-11 12:04-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-14 22:20+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/introduction.rst:4
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:6
 msgid ""
@@ -26,12 +26,23 @@ msgid ""
 "complicated effects such as transparency, diffraction and sub-surface "
 "scattering. Typical materials might be brass, skin, glass, or linen."
 msgstr ""
+"Материал определяет художественные качества вещества, из которого "
+"изготовлен объект. В своей простейшей форме вы можете использовать "
+"материалы для показа того, из какого вещества изготовлен объект или для "
+"«покраски» объекта в разные цвета. Как правило, вещество представляется "
+"свойствами своей поверхности (цвет, блескучесть, отражательная "
+"способность и тому подобные), но также оно может проявлять и более "
+"сложными эффекты, например прозрачность, дифракцию или подповерхностное "
+"рассеивание. Примерами типичных материалов могут служить латунь, кожа, "
+"стекло или льняное полотно."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:16
 msgid ""
 "Various basic materials (single, multiple material, transparency, vertex "
 "paint)."
 msgstr ""
+"Различные базовые материалы (простой материал, мульти-материал, "
+"прозрачный материал, покраска вершин)"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:19
 msgid ""
@@ -41,6 +52,11 @@ msgid ""
 " of the object may use different materials (see :ref:`bi-multiple-"
 "materials`)."
 msgstr ""
+"Базовый (без текстурирования) материал Blender’а однороден по каждой "
+"грани объекта (хотя различные пиксели граней и могут выглядеть по-разному"
+" из-за эффекта освещения). Тем не менее, разные грани объекта могут "
+"использовать различные материалы (смотрите раздел :ref:`bi-multiple-"
+"materials`)."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:23
 msgid ""
@@ -50,10 +66,15 @@ msgid ""
 "</render/blender_render/textures/index>` chapter describes how to add "
 "textures to materials."
 msgstr ""
+"В Blender’е каждый материал может иметь ассоциированные с собой текстуры "
+"(хотя это и необязательно). Текстуры *описывают* вещество: к примеру, это"
+" *полированная* латунь, вот это – *грязное* стекло, а это – *вышитое* "
+"полотно. Как добавлять текстуры описывается в соответствующей :doc:`главе"
+" </render/blender_render/textures/index>`."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:30
 msgid "How Materials Work"
-msgstr ""
+msgstr "Как материалы работают"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:32
 msgid ""
@@ -62,6 +83,11 @@ msgid ""
 "rendering engine and how material settings control those interactions. A "
 "deep understanding of the engine will help you to get the most from it."
 msgstr ""
+"Прежде чем вы поймёте, как эффективно работать с материалами, вы должны "
+"понять, как в рендере Blender’а взаимодействуют между собой моделируемый "
+"свет и поверхности и как настройки материала управляют этим "
+"взаимодействием. Глубокое понимание рендера поможет вам получить от него "
+"максимальную выгоду."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:37
 msgid ""
@@ -71,6 +97,11 @@ msgid ""
 "in the human eye, except that it receives simulated light, not real "
 "light."
 msgstr ""
+"Визуализируемое изображение, которое создаёт Blender, является проекцией "
+"сцены на воображаемую поверхность, называемую *плоскостью просмотра*. "
+"Плоскость просмотра аналогична плёнке в традиционной камере или палочкам "
+"и колбочкам в человеческом глазе, за исключением того, что она получает "
+"имитируемый, а не реальный, свет."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:43
 msgid ""
@@ -82,6 +113,13 @@ msgid ""
 "the scene, at which point we can determine what light would strike that "
 "point."
 msgstr ""
+"Чтобы визуализовать сцену, сперва мы должны определить, какой свет из "
+"сцены достигает каждой точки на плоскости просмотра. Для ответа на этот "
+"вопрос лучшее, что можно сделать, – проследовать по прямой линии "
+"(моделируемому световому лучу), проходящей через фокальную точку (позицию"
+" камеры) и плоскость просмотра, в обратном направлении, пока мы не "
+"наткнёмся на расположенную в сцене визуализируемую поверхность. В точке "
+"пересечения мы сможем определить, какой свет пришёл в эту точку."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:50
 msgid ""
@@ -89,10 +127,13 @@ msgid ""
 "light would be reflected back along the incident viewing angle "
 "*(Rendering engine basic principle)*."
 msgstr ""
+"Свойства поверхности и угол падения света скажут нам, сколько этого света"
+" отразится обратно вдоль луча просмотра *(основной принцип движка "
+"визуализации)*."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:55
 msgid "Rendering engine basic principle."
-msgstr ""
+msgstr "Основной принцип движка визуализации"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:58
 msgid ""
@@ -102,6 +143,10 @@ msgid ""
 "relationship between the incident light angle and the reflected light "
 "angle."
 msgstr ""
+"В любой точке на поверхности, когда в неё попадает световой луч, имеют "
+"место два основных типа явлений: диффузное и зеркальное отражение. "
+"Диффузное и зеркальное отражения отличаются друг от друга, в основном, "
+"соотношением между углами падающего и отражённого света."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:63
 msgid ""
@@ -109,6 +154,9 @@ msgid ""
 " account the base color (as modified by the diffusion and specular "
 "reflection phenomenon) and the light intensity."
 msgstr ""
+"При затенении (иначе говоря, покраске) объекта во время визуализации "
+"также принимается во внимание базовый цвет (изменённый диффузным и "
+"зеркальным отражениями) и интенсивность света."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:66
 msgid ""
@@ -118,6 +166,12 @@ msgid ""
 " to the rate of reflection of the material (mixing the base color and the"
 " surrounding environment's) and the viewing angle."
 msgstr ""
+"При использовании внутреннего трассировщика лучей могут возникнуть и "
+"другие (более сложные) явления. В отражениях, рассчитываемых "
+"трассировщиком, точка поверхности, в которую попал световой луч, вернёт "
+"цвет своего окружения. В расчёте этого цвета будет учитываться как "
+"отражательная способность материала (смешивающая базовый цвет и цвет "
+"окружающей среды), так и угол просмотра."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:71
 msgid ""
@@ -128,6 +182,12 @@ msgid ""
 "value) of the material and the optional index of refraction of the "
 "material, which will distort the viewing angle."
 msgstr ""
+"С другой стороны, в преломлениях, рассчитываемых трассировщиком, точка "
+"поверхности, в которую попал световой луч, вернёт цвет своего фонового "
+"окружения. Учитываются как степень прозрачности материала (смешивающая "
+"базовый цвет и цвет фона окружающей среды с дополнительной "
+"фильтрацией),так и необязательный показатель преломления материала, "
+"искажающий угол просмотра."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:77
 msgid ""
@@ -135,64 +195,71 @@ msgid ""
 "all these phenomena at the same time during the rendering. The appearance"
 " of the object, when rendered, depends on many inter-related settings:"
 msgstr ""
+"Конечно, затенение объекта, в который попал луч света, в процессе "
+"визуализации рассчитывается с учётом всех этих явлений. Внешний вид "
+"объекта при визуализации зависит от множества взаимосвязанных параметров:"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:81
 msgid "World (Ambient color, Radiosity, Ambient Occlusion)"
-msgstr ""
+msgstr "Окружающая среда (рассеянный цвет, Radiosity, Ambient Occlusion)"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:82
 msgid "Lights"
-msgstr ""
+msgstr "Источники света"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:83
 msgid ""
 "Material settings (including ambient, emission, and every other setting "
 "on every panel in that tab)"
 msgstr ""
+"Настройки материала (включая окружающее освещение, излучение и все "
+"остальные настройки на всех панелях данной вкладки)"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:84
 msgid "Texture(s) and how they are mixed"
-msgstr ""
+msgstr "Текстуры и способ их смешивания"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:85
 msgid "Material Nodes"
-msgstr ""
+msgstr "Узлы материала"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:86
 msgid "Camera"
-msgstr ""
+msgstr "Камера"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:87
 msgid "Viewing angle"
-msgstr ""
+msgstr "Угол обзора"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:88
 msgid "Obstructions and transparent occlusions"
-msgstr ""
+msgstr "Препятствия и прозрачные преграды"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:89
 msgid "Shadows from other opaque/transparent objects"
-msgstr ""
+msgstr "Тени от других (не)прозрачных объектов"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:90
 msgid "Render settings"
-msgstr ""
+msgstr "Параметры визуализации"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:91
 msgid "Object dimensions (SS settings are relevant to dimensions)"
 msgstr ""
+"Размеры объекта (настройки подповерхностного рассеивания зависят от "
+"размеров)"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:92
 msgid "Object shape (refractions, Fresnel effects)"
-msgstr ""
+msgstr "Форма объекта (преломления, эффекты Френеля)"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:96
 msgid "Using Materials"
-msgstr ""
+msgstr "Использование материалов"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:98
 msgid "Check your Render"
-msgstr ""
+msgstr "Проверяйте свою визуализацию"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:100
 msgid ""
@@ -201,6 +268,10 @@ msgid ""
 "engine/shader settings. The appearance might be quite different from that"
 " shown in the texture display in the 3D panel."
 msgstr ""
+"При разработке материалов (а также текстур и настроек освещения) почаще "
+"проверяйте внешний вид визуализированной сцены с настройками вашего "
+"рендера и вашими шейдерами. Он может разительно отличаться от "
+"показываемого в области просмотра текстуры на 3D-панели."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:105
 msgid ""
@@ -210,6 +281,11 @@ msgid ""
 "must choose which method you are going to use for each particular object "
 "in your scene."
 msgstr ""
+"Как было сказано выше, обычно настройки материала определяют свойства "
+"поверхности объекта. В Blender’е материалы можно установить несколькими "
+"способами и, вообще говоря, они не совместимы между собой. Для каждого "
+"конкретного объекта в вашей сцене вы должны выбрать, какой метод вы "
+"хотели бы использовать."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:110
 msgid ""
@@ -217,6 +293,9 @@ msgid ""
 "</render/blender_render/materials/properties/introduction>` in the "
 "various Material panels."
 msgstr ""
+"Во-первых, вы можете настроить различные :doc:`свойства "
+"</render/blender_render/materials/properties/introduction>` на панелях "
+"материала."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:113
 msgid ""
@@ -224,6 +303,9 @@ msgid ""
 "</render/blender_render/materials/nodes/index>`; a graphical nodes editor"
 " is available."
 msgstr ""
+"Во-вторых, вы можете настроить :doc:`узлы "
+"</render/blender_render/materials/nodes/index>` через графический "
+"редактор узлов."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:116
 msgid ""
@@ -237,6 +319,16 @@ msgid ""
 " :doc:`Halo Rendering "
 "</render/blender_render/materials/special_effects/halo>`."
 msgstr ""
+"И наконец, вы можете напрямую установить цвет поверхности объекта, "
+"используя различные специальные эффекты. Строго говоря, это вообще не "
+"материалы, но они включены сюда, поскольку влияют на внешний вид "
+"объектов. К этим эффектам относятся :ref:`рисование вершин <painting-"
+"vertex-index>`, :doc:`визуализация каркаса "
+"</render/blender_render/materials/special_effects/wire>`, "
+":doc:`визуализация объёма "
+"</render/blender_render/materials/special_effects/volume>` и "
+":doc:`визуализация "
+"гало</render/blender_render/materials/special_effects/halo>`."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:123
 msgid ""
@@ -249,25 +341,14 @@ msgid ""
 "Texture, Multitexture or GLSL). So it is recommended to always select the"
 " appropriate system settings before starting the design of materials."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Introduction to Materials"
-#~ msgstr ""
-
-#~ msgid "Object shape (refractions, fresnel effects)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The basic (un-textured) Blender material"
-#~ " is uniform across each face of "
-#~ "an object (although the various pixels"
-#~ " of each face of the object may"
-#~ " appear differently because of lighting "
-#~ "effects). However, different faces of "
-#~ "the object may use different materials"
-#~ " (see :doc:`Multiple Materials "
-#~ "</render/blender_render/materials/multiple_materials>`)."
-#~ msgstr ""
+"Точный эффект от настроек материала может зависеть от ряда системных "
+"настроек. В первую очередь это используемый движок визуализации: рендер "
+"Cycles и рендер Blender (иначе называемый встроенным движком Blender, "
+"Blender Internal или BI) требуют совершенно разных уровней освещённости "
+"для достижения аналогичных результатов, и даже тогда вид объектов может "
+"быть совершенно различным. Кроме того, настройки свойств материала могут "
+"зависеть от используемого способа текстурирования (одиночная текстура, "
+"мультитекстурирование или GLSL). Поэтому перед началом проектирования "
+"материалов рекомендуется всегда сперва выбрать соответствующие системные "
+"настройки."
 
