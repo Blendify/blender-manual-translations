@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-07 14:46-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-17 21:01+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:4
 msgid "Volume Rendering"
-msgstr ""
+msgstr "Визуализация объёма"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:9
 msgid "Activation volume rendering."
-msgstr ""
+msgstr "Активация визуализации объёма"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:12
 msgid ""
@@ -32,10 +32,14 @@ msgid ""
 "physically based model, which represents the various interactions of "
 "light in a volume relatively realistically."
 msgstr ""
+"Визуализация объёма – это метод визуализации освещения, проходящего через"
+" определённую область трёхмерного пространства. Реализация в Blender’е "
+"основывается на физической модели, которая относительно реалистично "
+"представляет различные взаимодействия света с объёмом."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:18
 msgid "Volume rendering."
-msgstr ""
+msgstr "Визуализация объёма"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:20
 msgid ""
@@ -55,20 +59,38 @@ msgid ""
 " This can be a time consuming process since it has to check a lot of "
 "points in space and evaluate the density at each."
 msgstr ""
+"Визуализация объёма отличается от :doc:`визуализации сплошных сред "
+"</render/blender_render/materials/properties/diffuse_shaders>`. При "
+"визуализации объёма свет входит в трёхмерную область пространства "
+"(определяющую объём), которая может быть заполнена маленькими частицами, "
+"например, дымом, туманом или облаками. Фотоны света отскакивают от "
+"различных молекул, испытывая рассеивание или поглощаясь ими до тех пор, "
+"пока свет не пройдёт через объём и не достигнет камеры. Чтобы объём стал "
+"видимым, визуализатор должен выяснить, как далеко свет зашёл в материал, "
+"как он действовал и на что реагировал внутри объёма; объём объекта при "
+"этом должен содержать трёхмерный регион пространства, например закрытую "
+"со всех сторон :term:`развёртываемую <manifold>` полисетку вроде куба, а "
+"не просто ровную поверхность, вроде плоскости. Чтобы получить "
+"изображение, визуализатор должен пройти через этот регион, посмотреть, "
+"сколько в нём «материала» (выяснить его плотность), чтобы понять, как "
+"свет будет поглощаться, рассеиваться или что ещё там с ним будет "
+"происходить. Этот процесс может занять продолжительное время, поскольку "
+"визуализатор должен проверить множество точек пространства и оценить "
+"плотность в каждой из них."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:36
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:370
 msgid "Options"
-msgstr ""
+msgstr "Опции"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:39
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:54
 msgid "Density"
-msgstr ""
+msgstr "Плотность"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:43
 msgid "Constant density vs textured density."
-msgstr ""
+msgstr "Постоянная плотность и плотность из текстуры"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:46
 msgid ""
@@ -80,16 +102,25 @@ msgid ""
 "by controlling the density that one can get the typical 'volumetric' "
 "effects such as clouds or thick smoke."
 msgstr ""
+"Когда свет проходит через объём, с ним происходит множество разных вещей,"
+" которые влияют на его итоговый цвет, когда он достигнет камеры. Эти вещи"
+" представляют собой физические взаимодействия, происходящие в реальном "
+"мире, и большинство из них зависят от плотности объёма, которая может "
+"быть как постоянной по всему объёму, так и определяться текстурой. Путём "
+"регулирования плотности объёма можно достить типичных «объёмных» "
+"эффектов, вроде облаков или густого дыма."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:55
 msgid ""
 "The base density of the material. Other densities from textures are added"
 " on top."
 msgstr ""
+"Базовая потность материала. Другие плотности, доставаемые из текстур, "
+"добавляются поверх этой."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:59
 msgid "Density Scale"
-msgstr ""
+msgstr "Масштаб плотности"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:57
 msgid ""
@@ -97,14 +128,17 @@ msgid ""
 "can be useful for getting consistent results across different scene "
 "scales."
 msgstr ""
+"Глобальный множитель, увеличивающий или уменьшающий кажущуюся плотность. "
+"Может быть полезен для получения одинаковых результатов при разных "
+"масштабах сцены."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:62
 msgid "Shading"
-msgstr ""
+msgstr "Затенение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:66
 msgid "Spot lamp scattering in a constant volume."
-msgstr ""
+msgstr "Лампа-прожектор, рассеиваемая в постоянном объёме"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:69
 msgid ""
@@ -114,14 +148,19 @@ msgid ""
 "makes it possible to see light beams as they travel though a volume and "
 "are scattered towards the eye."
 msgstr ""
+"Когда свет от внешнего источника входит в объём, он не просто проходит "
+"сквозь него. Свет рассеивается на мельчайших частицах внутри объёма, и "
+"только его часть достигает камеры. Это свойство позволяет увидеть "
+"световые лучи, когда свет путешествует по объёму и рассеивается в нём, "
+"прежде, чем достигнуть глаз."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:76
 msgid "Shading options."
-msgstr ""
+msgstr "Параметры затенения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:84
 msgid "Scattering"
-msgstr ""
+msgstr "Рассеивание"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:80
 msgid ""
@@ -132,6 +171,11 @@ msgid ""
 "the 'surface' of the volume, leaving the areas internal to the volume "
 "darker, as the light does not reach it."
 msgstr ""
+"Количество света, рассеиваемого в объёме. Чем больше света рассеивается в"
+" объёме, тем меньшая его часть проникнет в остальные области объёма. "
+"Увеличение этого параметра даёт эффект увеличения плотности объёма, "
+"поскольку свет рассеивается быстрее на его «поверхности», оставляя "
+"внутренние участки темнее, так как свет их не достигает."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:86
 msgid ""
@@ -139,31 +183,33 @@ msgid ""
 "volume, the more easily it penetrates throughout the volume and to the "
 "shadow."
 msgstr ""
+"Обратите внимание на пример ниже, чем меньше света рассеивается в объёме,"
+" тем проще ему проникать сквозь него и тем менее выражены тени."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:94
 msgid "Scattering: 0.5."
-msgstr ""
+msgstr "Рассеивание: 0.5"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:99
 msgid "Scattering: 1.0."
-msgstr ""
+msgstr "Рассеивание: 1.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:104
 msgid "Scattering: 2.0."
-msgstr ""
+msgstr "Рассеивание: 2.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:109
 msgid "Scattering: 5.0."
-msgstr ""
+msgstr "Рассеивание: 5.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:113
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:131
 msgid "Asymmetry"
-msgstr ""
+msgstr "Асимметрия"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:118
 msgid "Isotropic and Anisotropic scattering."
-msgstr ""
+msgstr "Изотропное и анизотропное рассеивание"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:121
 msgid ""
@@ -175,6 +221,14 @@ msgid ""
 "direction, and forward-scattering means it is scattered along the same "
 "direction as the light is traveling."
 msgstr ""
+"По умолчанию, свет рассеивается в объёме равномерно по всем направлениям."
+" Такое рассеивание называется изотропным рассеиванием. В реальной же "
+"жизни разные типы сред рассеивают свет неодинаково в разных направлениях."
+" Такое рассеивание называется анизотропным рассеиванием. Обратное "
+"рассеивание означает, что свет рассеивается преимущественно в "
+"направлении, противоположном тому, откуда он пришёл, тогда как прямое "
+"рассеивание означает, что свет рассеивается преимущественно в направлении"
+" своего пути."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:129
 msgid ""
@@ -182,75 +236,90 @@ msgid ""
 "scattering (1.0). The default value of 0.0 gives Isotropic scattering "
 "(even in all directions)."
 msgstr ""
+"Асимметрия управляет диапазоном рассеивания – от обратного рассеивания "
+"(-1.0) до прямого рассеивания (1.0). Значением по умолчанию является 0.0,"
+" дающее изотропное рассеивание (равномерное во всех направлениях)."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:134
 msgid "Transmission"
-msgstr ""
+msgstr "Пропускаемый свет"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:136
 msgid ""
 "Transmission is a general term for light that is transmitted throughout a"
 " volume."
 msgstr ""
+"Пропускаемый свет – это общее определение для света, проходящего сквозь "
+"объём."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:138
 msgid ""
 "This transmitted light can be the result of various different "
 "interactions, for example:"
 msgstr ""
+"Пропускаемый свет может быть результатом нескольких различных "
+"взаимодействий, например:"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:140
 msgid ""
 "the left over result of incoming light after it has reflected/scattered "
 "out of the volume"
 msgstr ""
+"оставшийся после того, как входящий в объём свет отразился/рассеялся в "
+"нём;"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:141
 msgid ""
 "the left over result of light after being absorbed by the volume (and "
 "converted to heat)"
 msgstr ""
+"оставшийся после того, как входящий в объём свет был поглощён им (и "
+"преобразован в тепловое излучение)."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:143
 msgid ""
 "Here, the transmission color is used to set the end result color that "
 "light becomes after it is transmitted through the volume."
 msgstr ""
+"Здесь цвет пропускаемого света используется для установки конечного "
+"цвета, который свет примет после прохождения сквозь объём."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:148
 msgid "Transmission Color"
-msgstr ""
+msgstr "Цвет пропускаемого света"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:148
 msgid "The resultant color of light that is transmitted through the volume."
-msgstr ""
+msgstr "Результирующий цвет света, когда он пройдёт сквозь объём."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:150
 msgid ""
 "Note in the examples below, as more light is scattered out of the volume,"
 " there is less available to be transmitted through."
 msgstr ""
+"Обратите внимание на пример ниже: чем больше света рассеивается в объёме,"
+" тем меньше проходит через него."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:158
 msgid "Transmission color: Yellow, Scattering: 0.5."
-msgstr ""
+msgstr "Цвет пропускаемого света: жёлтый, рассеивание: 0.5"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:163
 msgid "Transmission color: Yellow, Scattering: 1.0."
-msgstr ""
+msgstr "Цвет пропускаемого света: жёлтый, рассеивание: 1.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:168
 msgid "Transmission color: Yellow, Scattering: 2.0."
-msgstr ""
+msgstr "Цвет пропускаемого света: жёлтый, рассеивание: 2.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:173
 msgid "Transmission color: Yellow, Scattering: 5.0."
-msgstr ""
+msgstr "Цвет пропускаемого света: жёлтый, рассеивание: 5.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:177
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:189
 msgid "Emission"
-msgstr ""
+msgstr "Излучение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:179
 msgid ""
@@ -258,45 +327,54 @@ msgid ""
 "thermal processes, such as fire. This light is generated from the volume "
 "itself and is independent of light coming from external sources."
 msgstr ""
+"Некоторые объёмы могут испускать свет, который в них не входил, "
+"посредством химических или термальных процессов, например, горения. Этот "
+"свет генерируется в самом объёме и не зависит от света, пришедшего из "
+"внешних источников."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:183
 msgid ""
 "Currently, this emitted light does not affect other volumes or surfaces "
 "(similar to surface material type, 'Emit' option)."
 msgstr ""
+"На текущий момент излучаемый свет не влияет на другие объёмы или "
+"поверхности (как это делает параметр «Излучение» для материала "
+"поверхности)."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:186
 msgid "Emission Color"
-msgstr ""
+msgstr "Цвет свечения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:187
 msgid "The color of light that is emitted by the volume."
-msgstr ""
+msgstr "Цвет света, излучаемого объёмом."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:189
 msgid "An intensity multiplier for the emitted color, for scaling up and down."
 msgstr ""
+"Множитель интенсивности излучаемого цвета, позволяющий увеличивать или "
+"уменьшать её."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:196
 msgid "Emission 0.25, Scattering: 0.5."
-msgstr ""
+msgstr "Излучение: 0.25, рассеивание: 0.5"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:201
 msgid "Emission 0.25, Scattering: 1.0."
-msgstr ""
+msgstr "Излучение: 0.25, рассеивание: 1.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:206
 msgid "Emission 0.25, Scattering: 2.0."
-msgstr ""
+msgstr "Излучение: 0.25, рассеивание: 2.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:211
 msgid "Emission 0.25, Scattering: 5.0."
-msgstr ""
+msgstr "Излучение: 0.25, рассеивание: 5.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:215
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:236
 msgid "Reflection"
-msgstr ""
+msgstr "Отражение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:217
 msgid ""
@@ -305,6 +383,10 @@ msgid ""
 "from lamps and been scattered out, it does not affect the color of "
 "transmitted or emitted light and is."
 msgstr ""
+"Параметры *отражения* могут использоваться для подкрашивания или "
+"масштабирования рассеиваемого в объёме света. Они влияют только на свет "
+"от ламп, рассеявшийся в объёме, и не влияют на цвет прошедшего через "
+"объём или излучённого им самим света."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:221
 msgid ""
@@ -312,6 +394,9 @@ msgid ""
 "energy. This means the light scattering out does not affect the remaining"
 " light, that is transmitted throughout the rest of the volume."
 msgstr ""
+"Эти параметры не вполне физически корректны, поскольку не сохраняют "
+"энергию. Это значит, что рассеявшияся свет не повлияет на оставшийся, "
+"который пройдёт дальше сквозь объём."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:225
 msgid ""
@@ -323,22 +408,31 @@ msgid ""
 " volume, you can use the reflection parameters to quickly set an overall "
 "tint."
 msgstr ""
+"Например, говоря физическим языком, если в объёме по направлению к камере"
+" рассеются оранжевые компоненты света, дальше проникать сквозь объём "
+"будет только дополнительная до белого компонента цвета (синяя), в "
+"результате чего объём должен будет принять многоцветный вид, который "
+"может быть трудно использовать. Для того, чтобы упростить установку цвета"
+" объёма, вы можете использовать параметры отражения для быстрой настройки"
+" общего оттенка."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:232
 msgid "Reflection Color"
-msgstr ""
+msgstr "Цвет отражаемого света"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:233
 msgid "The color of light that is scattered out of the volume."
-msgstr ""
+msgstr "Цвет рассеиваемого в объёме света."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:235
 msgid "An intensity multiplier for the reflection, for scaling up and down."
 msgstr ""
+"Множитель интенсивности отражения, позволяющий увеличивать или уменьшать "
+"её."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:239
 msgid "Hints"
-msgstr ""
+msgstr "Подсказки"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:241
 msgid ""
@@ -348,162 +442,182 @@ msgid ""
 "more predictable and usable in a wider range of lighting scenarios. Of "
 "course you can always break the rules too!"
 msgstr ""
+"В идеале, перед использованием настроек отражения, попытайтесь достичь "
+"требуемого результата при помощи остальных настроек объёма и освещения. "
+"Если вы придерживаетесь физической правдоподобности, материал будет "
+"работать правильно и будет более предсказуемым и полезным в более широком"
+" диапазоне сценариев освещения. Конечно, вы всегда можете нарушить эти "
+"правила!"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:252
 msgid "Reflection: Green, Scattering: 0.5."
-msgstr ""
+msgstr "Отражение: зелёный, рассеивание: 0.5"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:257
 msgid "Reflection: Green, Scattering: 1.0."
-msgstr ""
+msgstr "Отражение: зелёный, рассеивание: 1.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:262
 msgid "Reflection: Green, Scattering: 2.0."
-msgstr ""
+msgstr "Отражение: зелёный, рассеивание: 2.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:267
 msgid "Reflection: Green, Scattering: 5.0."
-msgstr ""
+msgstr "Отражение: зелёный, рассеивание: 5.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:274
 msgid "Reflection: Green, Transmission: Yellow, Scattering: 0.5."
-msgstr ""
+msgstr "Отражение: зелёный, пропускаемый цвет: жёлтый, рассеивание: 0.5"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:279
 msgid "Reflection: Green, Transmission: Yellow, Scattering: 1.0."
-msgstr ""
+msgstr "Отражение: зелёный, пропускаемый цвет: жёлтый, рассеивание: 1.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:284
 msgid "Reflection: Green, Transmission: Yellow, Scattering: 2.0."
-msgstr ""
+msgstr "Отражение: зелёный, пропускаемый цвет: жёлтый, рассеивание: 2.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:289
 msgid "Reflection: Green, Transmission: Yellow, Scattering: 5.0."
-msgstr ""
+msgstr "Отражение: зелёный, пропускаемый цвет: жёлтый, рассеивание: 5.0"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:293
 msgid "Lighting"
-msgstr ""
+msgstr "Освещение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:297
 msgid "Lighting options."
-msgstr ""
+msgstr "Параметры освещения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:300
 msgid ""
 "Several shading modes are available, providing a range of options between"
 " fast to render and physically accurate."
 msgstr ""
+"Вам доступны несколько режимов затенения, варьирующихся в диапазоне от "
+"быстрой визуализации до физической точности."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:313
 msgid "Lighting Mode"
-msgstr ""
+msgstr "Режим освещения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:304
 msgid "Shadeless"
-msgstr ""
+msgstr "Без затенения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:305
 msgid "Shadeless is the simplest, useful for thin, wispy mist or steam."
 msgstr ""
+"Режим без затенения является самым простым, полезен для лёгкого тумана "
+"или пара."
 
+# Mingun: должно быть «С тенями».
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:306
 msgid "Shadowed"
-msgstr ""
+msgstr "С затенением"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:307
 msgid "Shadowed is similar, but with shadows of external objects."
 msgstr ""
+"Режим с тенями похож на режим без затенения, но с тенями от внешних "
+"объектов."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:308
 msgid "Shaded"
-msgstr ""
+msgstr "С затенением"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:309
 msgid ""
 "Shaded uses a volumetric single-scattering method, for self-shading the "
 "volume as light penetrates through."
 msgstr ""
+"Режим с затенением использует объёмный метод одиночного рассеивания для "
+"самозатенения объёма проходящим светом."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:310
 msgid "Multiple Scattering"
-msgstr ""
+msgstr "Множественное рассеивание"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:311
 msgid "Allows multiple scatter calculations."
-msgstr ""
+msgstr "Позволяет рассчитыаеть множественное рассеивание."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:313
 msgid "Shaded+Multiple Scattering"
-msgstr ""
+msgstr "Затенение + множественное рассеивание"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:313
 msgid "Combines Shaded and Multiple Scattering functionality."
-msgstr ""
+msgstr "Объединяет функциональность затенения и множественного рассеивания."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:321
 msgid "Shaded Options"
-msgstr ""
+msgstr "Параметры затенения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:316
 msgid "External Shadows"
-msgstr ""
+msgstr "Внешние тени"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:317
 msgid "Receive shadows from sources outside the volume (temporary)."
-msgstr ""
+msgstr "Временное получение теней от источников за пределами объёма."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:318
 msgid "Light Cache"
-msgstr ""
+msgstr "Кэшировать освещение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:319
 msgid ""
 "Pre-calculate the shading information into a voxel grid, speeds up "
 "shading at slightly less accuracy."
 msgstr ""
+"Предварительный расчёт информации о затенении с её сохранением в "
+"воксельную сетку; ускоряет затенение за счёт незначительного снижения "
+"точности."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:321
 msgid "Resolution"
-msgstr ""
+msgstr "Разрешение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:321
 msgid ""
 "Resolution of the voxel grid, low resolutions are faster, high "
 "resolutions use more memory."
 msgstr ""
+"Разрешение воксельной сетки; низкие разрешения быстрее, высокие "
+"разрешения используют больше памяти."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:330
 msgid "Multiple Scattering Options"
-msgstr ""
+msgstr "Параметры множественного рассеивания"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:324
 msgid "Diffusion"
-msgstr ""
+msgstr "Диффузия"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:325
 msgid "Diffusion factor, the strength of the blurring effect."
-msgstr ""
+msgstr "Коэффициент диффузии, сила эффекта размытия."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:326
 msgid "Spread"
-msgstr ""
+msgstr "Распространение"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:327
 msgid "Proportional distance over which the light is diffused."
-msgstr ""
+msgstr "Пропорциональное расстояние, на которое распространяется свет."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:330
 msgid "Intensity"
-msgstr ""
+msgstr "Интенсивность"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:329
 msgid "Multiplier for multiple scattered light energy."
-msgstr ""
+msgstr "Множитель для энергии нескольких рассеянных источников света."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:333
 msgid "Transparency"
-msgstr ""
+msgstr "Прозрачность"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:335
 msgid ""
@@ -511,54 +625,58 @@ msgid ""
 "</render/blender_render/materials/properties/diffuse_shaders>` except you"
 " have less settings. For volume rendering you only have:"
 msgstr ""
+"Настройки прозрачности те же самые, что и при :doc:`визуализации сплошных"
+" сред </render/blender_render/materials/properties/diffuse_shaders>`, за "
+"исключением того, что они содержат меньше параметров для настройки. При "
+"визуализации объёма у вас есть только:"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:339
 msgid "Mask"
-msgstr ""
+msgstr "Маска"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:340
 msgid "Z Transparency"
-msgstr ""
+msgstr "Z-прозрачность"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:341
 msgid "Raytrace"
-msgstr ""
+msgstr "Трассировка лучей"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:345
 msgid "Integration"
-msgstr ""
+msgstr "Интегрирование"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:349
 msgid "Integration options."
-msgstr ""
+msgstr "Параметры интегрирования"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:358
 msgid "Step Calculation Method"
-msgstr ""
+msgstr "Шаг расчёта"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:353
 msgid "Method of calculating the step through the volume."
-msgstr ""
+msgstr "Метод расчёта шагов по объёму."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:355
 msgid "Randomized"
-msgstr ""
+msgstr "Случайно"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:356
 msgid "Randomized method of calculating the step."
-msgstr ""
+msgstr "Метод выбора случайного размера шага."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:358
 msgid "Constant"
-msgstr ""
+msgstr "Постоянно"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:358
 msgid "Constant method of calculating the step."
-msgstr ""
+msgstr "Метод выбора постоянного размера шага."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:362
 msgid "Step Size"
-msgstr ""
+msgstr "Размер шага"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:361
 msgid ""
@@ -566,10 +684,13 @@ msgid ""
 "how noisy the volume is. Higher values result in lower render times and "
 "higher noise."
 msgstr ""
+"Расстояние между последовательными выборками глубины из объёма. Размер "
+"шага определяет, насколько объём будет зашумлён. Более высокие значения "
+"сокращают время визуализации и увеличивают зашумлённость."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:367
 msgid "Depth Cutoff"
-msgstr ""
+msgstr "Глубина отсечения"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:365
 msgid ""
@@ -577,72 +698,83 @@ msgid ""
 "threshold. Higher values will give a speedups in dense volumes at the "
 "expense of accuracy."
 msgstr ""
+"Ранняя приостановка продвижения луча, если передача падает ниже этого "
+"значения яркости. Более высокие значения ускоряют расчёт объёмов плотных "
+"материалов за счёт потери точности."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:374
 msgid "Material volume options."
-msgstr ""
+msgstr "Параметры объёма для материала"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:377
 msgid "Traceable"
-msgstr ""
+msgstr "Трассируемый материал"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:378
 msgid "Allow this material to calculate raytracing."
 msgstr ""
+"Объекты с этим материалом участвуют в вычислениях, использующих "
+"трассировку лучей."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:379
 msgid "Full Oversample"
-msgstr ""
+msgstr "Полная сверхвыборка"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:380
 msgid ""
 "Force this material to render full shading/textures for all anti-aliasing"
 " samples."
 msgstr ""
+"Материал будет визуализироваться с полным затенением/текстурами для всех "
+"сэмплов сглаживания."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:382
 msgid "Use Mist"
-msgstr ""
+msgstr "Туман"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:382
 msgid "Use mist with this material (in world settings)."
-msgstr ""
+msgstr "Использование тумана с этим материалом (из настроек окружающей среды)."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:384
 msgid "Light Group"
-msgstr ""
+msgstr "Группа источников света"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:385
 msgid "Limit lighting of this material to lamps in this group."
-msgstr ""
+msgstr "Использование освещения этого материала только от ламп из этой группы."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:388
 msgid "Exclusive"
-msgstr ""
+msgstr "Исключить"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:387
 msgid ""
 "Material uses this group exclusively. Lamps are excluded from other scene"
 " lighting."
 msgstr ""
+"Материал использует световую группу только для себя; лампы из этой группы"
+" не освещают остальную сцену."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:391
 msgid "Smoke and Fire"
-msgstr ""
+msgstr "Дым и огонь"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:394
 msgid "Create the Material"
-msgstr ""
+msgstr "Создание материала"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:396
 msgid ""
 "The material must be a volumetric material with a Density of 0, and a "
 "high Density Scale."
 msgstr ""
+"Материал должен быть материалом объёма, нулевой плотности и высоким "
+"значением масштаба плотности."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:401
 msgid "The Material Settings."
-msgstr ""
+msgstr "Параметры материала"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:403
 msgid ""
@@ -654,10 +786,17 @@ msgid ""
 "<https://wiki.blender.org/index.php/User:Broken/VolumeRenderingDev>`__ "
 "will affect the smoke, though. We'll cover those later."
 msgstr ""
+"Для корректной визуализации дым требует сложного материала. Выделите "
+"большой куб и перейдите на вкладку материалов. Измените тип материала на "
+"«Объём» и установите его плотность в 0. Если вы установите плотность в "
+"значение, большее нуля, домен куба будет заполнен материалом объёма. На "
+"дым также влияют и `другие настройки "
+"<https://wiki.blender.org/index.php/User:Broken/VolumeRenderingDev>`__, "
+"но их мы рассмотрим позже."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:411
 msgid "Add the Texture"
-msgstr ""
+msgstr "Добавление текстуры"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:413
 msgid ""
@@ -666,10 +805,14 @@ msgid ""
 "</render/blender_render/textures/types/volume/index>`. You must remember "
 "to set the domain object and change the influence."
 msgstr ""
+"Кроме того, дым нуждается в своей собственной текстуре. Вы можете "
+"использовать объёмную текстуру, также известную как :doc:`воксельные "
+"данные </render/blender_render/textures/types/volume/index>`. Вы должны "
+"установить домен объекта и изменить его степень влияния."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:420
 msgid "The texture settings."
-msgstr ""
+msgstr "Параметры текстуры"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:422
 msgid ""
@@ -681,32 +824,45 @@ msgid ""
 "frames. You can choose to color your smoke as well, by turning *Emission "
 "Color* back on."
 msgstr ""
+"Перейдите на вкладку текстур и измените тип текстуры на *Воксельные "
+"данные*. В панели «Воксельные данные» установите объект-домен в домен "
+"нашего куба. В списке он должен называться просто «Cube» (или «Куб», если"
+" вы выбрали перевод названия новых данных), поскольку мы используем куб "
+"из Blender’овской сцены по умолчанию. В панели «Влияние» включите "
+"параметр «Плотность» и оставьте его равным 1.000 (также должен "
+"автоматически включится параметр «Излучение»). Теперь вы можете "
+"визуализовать одиночный кадр. Также вы можете выбрать цвет вашего дыма, "
+"путём включения параметра *«Цвет свечения»*."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:432
 msgid "Finished Result."
-msgstr ""
+msgstr "Готовый результат"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:434
 msgid "To see the smoke more clearly"
-msgstr ""
+msgstr "Чтобы видеть дым более чётко"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:436
 msgid "Under the world tab, chose a very dark color for the horizon."
 msgstr ""
+"На вкладке «Окружающая среда (мир)» выберите для горизонта очень тёмный "
+"цвет."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:440
 msgid "Smoke Simulator with fire texture"
-msgstr ""
+msgstr "Симуляция дыма с текстурой огня"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:442
 msgid ""
 "You can also turn your smoke into fire with another texture! To make "
 "fire, turn up the Emission Value in the Materials panel."
 msgstr ""
+"С помощью другой текстуры вы можете превратить ваш дым в огонь! Для того,"
+" чтобы сделать огонь, увеличьте «Излучение» в панели материала."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:448
 msgid "The Fire material."
-msgstr ""
+msgstr "Материал огня"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:451
 msgid ""
@@ -715,124 +871,16 @@ msgid ""
 "change the influence to emission and emission color. Change the blend to "
 "Multiply."
 msgstr ""
+"Затем добавьте другую текстуру (оставьте старую текстуру включённой, "
+"иначе дым не будет виден). Дайте ей «огненный» градиент – несколько "
+"цветов с альфа-каналом – и включите влияние на излучение и цвет изучения."
+" Измените режим смешивания (параметр «Смешение») на «Умножить»."
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:458
 msgid "The fire texture settings."
-msgstr ""
+msgstr "Параметры текстуры огня"
 
 #: ../../manual/render/blender_render/materials/special_effects/volume.rst:462
 msgid "The fire render."
-msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Activation volume rendering"
-#~ msgstr ""
-
-#~ msgid "Volume rendering"
-#~ msgstr ""
-
-#~ msgid "Constant density vs textured density"
-#~ msgstr ""
-
-#~ msgid "Spot lamp scattering in a constant volume"
-#~ msgstr ""
-
-#~ msgid "Shading options"
-#~ msgstr ""
-
-#~ msgid "Scattering: 0.5"
-#~ msgstr ""
-
-#~ msgid "Scattering: 1.0"
-#~ msgstr ""
-
-#~ msgid "Scattering: 2.0"
-#~ msgstr ""
-
-#~ msgid "Scattering: 5.0"
-#~ msgstr ""
-
-#~ msgid "Isotropic and Anisotropic scattering"
-#~ msgstr ""
-
-#~ msgid "Transmission color: Yellow, Scattering: 0.5"
-#~ msgstr ""
-
-#~ msgid "Transmission color: Yellow, Scattering: 1.0"
-#~ msgstr ""
-
-#~ msgid "Transmission color: Yellow, Scattering: 2.0"
-#~ msgstr ""
-
-#~ msgid "Transmission color: Yellow, Scattering: 5.0"
-#~ msgstr ""
-
-#~ msgid "Emission 0.25, Scattering: 0.5"
-#~ msgstr ""
-
-#~ msgid "Emission 0.25, Scattering: 1.0"
-#~ msgstr ""
-
-#~ msgid "Emission 0.25, Scattering: 2.0"
-#~ msgstr ""
-
-#~ msgid "Emission 0.25, Scattering: 5.0"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Scattering: 0.5"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Scattering: 1.0"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Scattering: 2.0"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Scattering: 5.0"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Transmission: Yellow, Scattering: 0.5"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Transmission: Yellow, Scattering: 1.0"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Transmission: Yellow, Scattering: 2.0"
-#~ msgstr ""
-
-#~ msgid "Reflection: Green, Transmission: Yellow, Scattering: 5.0"
-#~ msgstr ""
-
-#~ msgid "Lighting options"
-#~ msgstr ""
-
-#~ msgid "Integration options"
-#~ msgstr ""
-
-#~ msgid "Material volume options"
-#~ msgstr ""
-
-#~ msgid "The Material Settings"
-#~ msgstr ""
-
-#~ msgid "Finished Result"
-#~ msgstr ""
-
-#~ msgid "Extending the Smoke Simulator: Fire!"
-#~ msgstr ""
-
-#~ msgid "Shaded Options:"
-#~ msgstr ""
-
-#~ msgid "Multiple Scattering Options:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Stop ray marching early if transmission"
-#~ " drops below this luminance - higher"
-#~ " values give speedups in dense "
-#~ "volumes at the expense of accuracy."
-#~ msgstr ""
+msgstr "Визуализация огня"
 
