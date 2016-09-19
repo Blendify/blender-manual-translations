@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-29 23:45+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-15 00:46+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:4
 msgid "Introduction to Nodes"
-msgstr ""
+msgstr "Введение в узлы"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:6
 msgid ""
@@ -25,6 +25,12 @@ msgid ""
 " applied to the mesh, and passes it on to the next node. In this way, "
 "very complex material appearances can be achieved."
 msgstr ""
+"В дополнение к созданию материалов через описание всех их параметров на "
+"всех панелях материалов, Blender позволяет вам создать материал путём "
+"пропускания базового материала через набор узлов. Каждый узел выполняет "
+"некую операцию над материалом, изменяя его внешний вид, когда тот "
+"применится к полисетке, и передаёт его следующему узлу. Этим способом "
+"можно создать очень сложно выглядящие материалы."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:13
 msgid ""
@@ -35,6 +41,12 @@ msgid ""
 "skipped here because in later sections you will see the function expanded"
 " upon. Each section builds off the previous."
 msgstr ""
+"Вы уже должны быть знакомы с базовыми концепциями материала и знать, как "
+"создавать материалы и текстуры через меню материалов. Так же вы должны в "
+"общих чертах понимать доступные в Blender’е системы текстурных координат "
+"(например сгенерированную, UV и прочие). Кроме того, множество аспектов "
+"узлов здесь будут опущены, поскольку они будут детально описаны в "
+"последующих разделах. Каждый последующий раздел базируется на предыдущем."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:19
 msgid ""
@@ -44,6 +56,11 @@ msgid ""
 " complex and fantastic materials can be created since we now have greater"
 " control."
 msgstr ""
+"Первое, что следует сказать, – система узлов не делает меню материалов "
+"«устаревшим». Многие возможности и настройки материалов всё ещё доступны "
+"только через панель материала (к примеру, «Отражение лучей»). Тем не "
+"менее, с появлением узлов стало возможно создавать более сложные и "
+"фантастические материалы, поскольку узлы дают над ними больший контроль."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:24
 msgid ""
@@ -57,10 +74,19 @@ msgid ""
 "control the behavior of each node. This gives you a tremendous amount of "
 "creative control. And, it will very quickly become intuitive."
 msgstr ""
+"На случай, если вы (ещё) не знакомы с концепцией: когда вы создаёте "
+"систему узлов, вы описываете некий конвейер обработки данных, в котором "
+"данные «вытекают из» узлов, описывающих различные *источники*, «протекают"
+" через» узлы, представляющие различные стадии обработки и фильтрации и в "
+"конце «втекают в» узлы, представляющие вывод или назначение. Вы можете "
+"соединять узлы между собой множеством различных способов, также вы можете"
+" крутить «ручки» (параметры) узлов, чтобы добиться от узла нужного "
+"поведения. Этот подход оставляет вам просто невообразимый простор для "
+"творчества. Кроме того, он очень быстро становится интуитивно понятным."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:34
 msgid "Having said all that, let us begin with a normal material."
-msgstr ""
+msgstr "Рассказав вам всё это, давайте начнём с обычного материала."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:36
 msgid ""
@@ -70,28 +96,36 @@ msgid ""
 " getting what we are looking for? What if we want to control the creation"
 " more tightly or add more complexity? Here is where nodes come in."
 msgstr ""
+"Здесь мы видим стандартный материал, мы добавили его на полисетку куба. "
+"Мы могли бы, как делали это в прошлый раз, добавить к этому материалу "
+"цвет и другие параметры, и он, безусловно, выглядел бы хорошо. Но давайте"
+" предположим, что мы просто не получаем то, что хотим? Что, если мы хотим"
+" более чутко управлять созданием материала или сделать его посложнее? Вот"
+" где на сцену выходят узлы."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:42
 msgid ""
 "Making this node map is accomplished by working in a :doc:`Node Editor "
 "</editors/node_editor/interface>`. This section covers:"
 msgstr ""
+"Создание карты узлов осуществляется в :doc:`редакторе узлов "
+"</editors/node_editor/interface>`. В этом разделе будет рассмотрено:"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:46
 msgid "Enabling Material Nodes."
-msgstr ""
+msgstr "Включение узлов материала."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:47
 msgid "The Node Editor, its basic controls, and working with nodes."
-msgstr ""
+msgstr "Редактор узлов, его базовые элементы управления и порядок работы с узлами."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:48
 msgid "The specific types of nodes available for materials."
-msgstr ""
+msgstr "Конкретные типы узлов, доступные для материалов."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:52
 msgid "Accessing The Node Editor"
-msgstr ""
+msgstr "Получение доступа к редактору узлов"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:54
 msgid ""
@@ -99,18 +133,21 @@ msgid ""
 "and make sure that the node editor has the material node button (the "
 "sphere icon) pressed, not the composite or texture node buttons."
 msgstr ""
+"Сперва войдите в :doc:`редактор узлов </editors/node_editor/interface>` и"
+" убедитесь, что в нём нажата кнопка с узлами материалов (иконка сферы), а"
+" не с узлами композитинга или текстуры."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:60
 msgid "Enabling Node Materials in the Material Buttons"
-msgstr ""
+msgstr "Включение узлов материала на вкладке материалов"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:66
 msgid "Material's menu with Nodes enabled."
-msgstr ""
+msgstr "Панель материала с включёнными узлами"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:70
 msgid "Default nodes."
-msgstr ""
+msgstr "Узлы по умолчанию"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:73
 msgid ""
@@ -118,6 +155,9 @@ msgid ""
 "material name in the material panel or the node editor. You will see a "
 "change in the material panel."
 msgstr ""
+"Возьмите базовый материал и нажмите на кнопку «Использовать узлы» рядом с"
+" именем материала на панели материалов, либо отметьте одноимённую галочку"
+" в редакторе узлов. Вы увидите, что панель материалов изменилась."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:76
 msgid ""
@@ -125,11 +165,15 @@ msgid ""
 "to become the node tree. Most of the panels we normally find in the "
 "material menu are now gone."
 msgstr ""
+"Что вы только что сделали – это сказали Blender’у преобразовать выбраный "
+"материал в материал на основе дерева узлов. Большинство панелей, обычно "
+"присутствующих на вкладке материалов, теперь исчезли."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:81
 msgid "Accessing the Compositing screen."
-msgstr ""
+msgstr "Получение доступа к экрану композитинга"
 
+# Mingun: это место в Blender не переведено. Перевод: Композитинг.
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:84
 msgid ""
 "If you switch to the *Compositing* screen with :kbd:`Ctrl-Left`, if you "
@@ -137,20 +181,27 @@ msgid ""
 "of the screen. When you enabled material nodes, a material node and an "
 "output node were automatically added to the node editor."
 msgstr ""
+"Если вы по комбинации :kbd:`Ctrl-Влево` переключитесь на разметку экрана "
+"*Compositing* (*Композитинг*), находясь в разметке по умолчанию, вы "
+"увидите *Редактор узлов* в верхней половине экрана. Когда вы включите "
+"узлы материала, в редактор автоматически добавятся узлы «Материал» и "
+"«Вывод»."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:90
 msgid ""
 "You can also split the 3D View in the default screen in two and change "
 "one into a *Node Editor*."
 msgstr ""
+"Также вы можете разделить окно 3D-вида в умолчательной разметке на два и "
+"изменить тип одного из них на *Редактор узлов*."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:97
 msgid "Material's menu with a first material added to the Node Editor."
-msgstr ""
+msgstr "Панель материала с первым материалом, добавленным в редактор узлов"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:101
 msgid "A first material added to the node setup."
-msgstr ""
+msgstr "Первый материал, добавленный в редактор узлов"
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:104
 msgid ""
@@ -159,6 +210,11 @@ msgid ""
 "already created material or append a material from another blend-file, "
 "and also use the material that you used to create the node tree."
 msgstr ""
+"Важно отметить, что вы можете добавить новый материал (который вы сможете"
+" редактировать и изменять, как и любой другой материал, на панели "
+"материалов), добавить уже созданный материал или присоединить материал из"
+" другого blend-файла, а также использовать тот материал, который вы "
+"использовали для создания дерева узлов."
 
 #: ../../manual/render/blender_render/materials/nodes/introduction.rst:109
 msgid ""
@@ -166,103 +222,7 @@ msgid ""
 "as we did, we can access the properties of this material in the "
 "material's menu."
 msgstr ""
-
-#~ msgid "Input"
-#~ msgstr ""
-
-#~ msgid "Output"
-#~ msgstr ""
-
-#~ msgid "Color"
-#~ msgstr ""
-
-#~ msgid "Vector"
-#~ msgstr ""
-
-#~ msgid "Convertors"
-#~ msgstr ""
-
-#~ msgid "Nodes"
-#~ msgstr ""
-
-#~ msgid "Introduction"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Material's menu with Nodes enabled"
-#~ msgstr ""
-
-#~ msgid "Default nodes"
-#~ msgstr ""
-
-#~ msgid "Accessing the Compositing screen"
-#~ msgstr ""
-
-#~ msgid "Material's menu with a first material added to the Node Editor"
-#~ msgstr ""
-
-#~ msgid "A first material added to the noodle"
-#~ msgstr ""
-
-#~ msgid "Types of Material Nodes"
-#~ msgstr ""
-
-#~ msgid ":doc:`Input </render/blender_render/materials/nodes/types/input>`"
-#~ msgstr ""
-
-#~ msgid "Introduces a material or component to the node map."
-#~ msgstr ""
-
-#~ msgid ":doc:`Output </render/blender_render/materials/nodes/types/output>`"
-#~ msgstr ""
-
-#~ msgid "Displays the result in progress as a small image."
-#~ msgstr ""
-
-#~ msgid ":doc:`Color </render/blender_render/materials/nodes/types/color>`"
-#~ msgstr ""
-
-#~ msgid "Manipulates the colors of the material."
-#~ msgstr ""
-
-#~ msgid ":doc:`Vector </render/blender_render/materials/nodes/types/vector>`"
-#~ msgstr ""
-
-#~ msgid "Change the way light is reflected off the material."
-#~ msgstr ""
-
-#~ msgid "Convert colors to other material colors."
-#~ msgstr ""
-
-#~ msgid "Having said all that, let's begin with a normal material."
-#~ msgstr ""
-
-#~ msgid "The Node Editor window, its basic controls, and working with nodes."
-#~ msgstr ""
-
-#~ msgid "A first material added to the noodle."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Just in case you're not (yet) "
-#~ "familiar with the concepts: when you "
-#~ "create a system of nodes, you're "
-#~ "describing a data-processing pipeline of"
-#~ " sorts, where data \"flows from\" "
-#~ "nodes which describe various *sources,* "
-#~ "\"flows through\" nodes which represent "
-#~ "various processing and filtering stages, "
-#~ "and finally \"flows into\" nodes which"
-#~ " represent outputs or destinations. You "
-#~ "can connect the nodes to one "
-#~ "another in many different ways, and "
-#~ "you can adjust \"knobs, \" or "
-#~ "parameters, that control the behavior of"
-#~ " each node. This gives you a "
-#~ "tremendous amount of creative control. "
-#~ "And, it will very quickly become "
-#~ "intuitive."
-#~ msgstr ""
+"Здесь мы через *Редактор узлов* добавили новый материал – «Material.001» "
+"– и, как мы и говорили, мы можем получить доступ к его свойствам из меню "
+"материалов."
 
