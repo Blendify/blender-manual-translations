@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 15:07-0400\n"
+"POT-Creation-Date: 2016-09-20 12:10-0400\n"
 "PO-Revision-Date: 2015-12-20 11:48+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,11 +12,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:5
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:5
 msgid "Layers"
 msgstr "层"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:7
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:7
 #, fuzzy
 msgid ""
 "Grease Pencil sketches are organized in layers, much like the image "
@@ -24,7 +24,7 @@ msgid ""
 "related to any of the other layer systems in Blender."
 msgstr "蜡笔草图是以层的形式组织的，很像GIMP或者Photoshop里面的图像层。这些层和Blender里面的其他层系统是没有任何关系的。"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:11
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:11
 msgid ""
 "The layers' main purpose is to gather sketches that are related in some "
 "meaningful way (i.e. \"blocking notes\", \"director's comments on "
@@ -35,186 +35,416 @@ msgstr ""
 "层的主要用途就是将很多相似意义的草图集合到一块（比如，*块注解*，*导演对块的评注* 或者 *引导线* "
 "）。由于上述因素，一个层上面的所有笔画（不仅是特殊的改变发生后）是受该层的颜色，透明度以及笔画粗细设置影响的。"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:16
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:16
 #, fuzzy
 msgid ""
 "Layers are managed in the *Grease Pencil Panel* of the *Properties "
 "region* :kbd:`N` shown here."
 msgstr "层管理如上面显示一样在 *属性* 区域 (:kbd:`N`) 的 *蜡笔面板* 。"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:21
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:20
 #, fuzzy
 msgid "Grease Pencil Panel."
 msgstr "蜡笔面板 "
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:23
-msgid ""
-"Use the adjacent controls to Add, Remove or adjust the position of a "
-"layer in the list. Each layer has a visibility icon, and a lock icon to "
-"protect it from further changes. Double click on a layer name to rename "
-"it."
-msgstr "邻接的控制如何添加，移除或者调整列表中的一个层。每个层有一个可见性图标，一个锁定图标来设定是否受修改保护。双击层名字可以重命名该层。"
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:24
+#, fuzzy
+msgid "Grease Pencil Data"
+msgstr "蜡笔面板 "
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:27
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:26
+msgid ""
+"Use the following controls to Add, Remove or adjust the position of a "
+"layer in the list."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:34
+msgid "Source"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:30
+msgid "Scene"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:30
+msgid ""
+"Grease Pencil data is attached to the current scene is used, unless the "
+"active object already has Grease Pencil data (i.e old files)."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:34
+msgid "Object"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:33
+msgid ""
+"Grease Pencil data is attached to the active object are used. This is "
+"required when using pre 2.73 add-ons."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:37
+msgid "Data-Block"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:37
+msgid ""
+"Used to select the Grease Pencil data-block to use for layers. For "
+"controls see :ref:`ui-data-block`."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:47
+#, fuzzy
+msgid "Layer List"
+msgstr "层"
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:40
 msgid ""
 "There is a list of layers attached to each scene and a list of layers "
-"associated with each object. The buttons above the list box control its "
-"contents, showing either the layers associated with the active scene or "
-"the list of layers associated with the active object."
-msgstr "这里有一列层附属于每个场景也有一列层附属于每个物体。底部上有一个列表盒控制它的内容，显示到底草图层是属于当前场景的还是属于当前物体的。"
+"associated with each object."
+msgstr ""
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:32
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:42
+msgid "Lock"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:43
+msgid "Locks the ability to edit the current layers layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:44
+msgid "Hide"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:45
+msgid "Hides the current layer in the drawing region."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:47
+msgid "Unlock Color"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:47
+msgid "Unprotects selected colors from further editing and/or frame changes."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:50
+msgid "Layer List Specials"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:52
+msgid "Duplicate Layer"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:52
+msgid "Creates a copy of the current layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:54
+msgid "Show All"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:55
+msgid "Makes all hidden layers visible"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:57
+msgid "Hide Others"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:57
+msgid "Makes all non selected layers hidden."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:60
+msgid "Lock/Unlock All"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:60
+msgid ""
+"Locks/Unlocks all of the layers. This can be useful to prevent unwanted "
+"editing."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:63
+msgid "Merge Down"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:63
+msgid "Merges the current layer with the layer below it."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:67
 msgid ""
 "By default, most operations occur only on the *active* layer highlighted "
 "in the list."
 msgstr "默认情况下，大多数的操作都只会列表中高亮的在 *主控* 层中完成。"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:36
-msgid "Animating Sketches"
-msgstr "动画草图"
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:71
+msgid "Appearance Settings"
+msgstr ""
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:38
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:73
+msgid "These settings can be used to change how the active layer appears."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:75
+msgid "Opacity"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:76
+msgid "The transparency of the layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:77
+msgid "X-Ray"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:78
+msgid "Makes the lines visible when they pass behind other objects in the scene."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:80
+msgid "Show Points"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:80
+msgid "Draws the start/end points that make up the stroke."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:86
+msgid "Tint"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:83
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:130
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:137
+msgid "Color"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:84
+msgid "The color to tint the layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:86
+msgid "Factor"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:86
+msgid "The amount that the *Tint Color* has on the layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:91
+msgid "Thickness Change"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:89
+msgid "Change in pixels to apply to the stroke in the current layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:91
+msgid "It is also possible to make this be effected by a graphics tablet."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:95
 msgid ""
-"Use the Grease Pencil to do basic pencil tests (i.e. 2D animation in "
-"flipbook style). Sketches are stored on the frame that they were drawn "
-"on, as a separate drawing (only on the layer that they exist on). Each "
-"drawing is visible until the next drawing for that layer is encountered. "
-"The only exception to this is the first drawing for a layer, which will "
-"also be visible before the frame it was drawn on."
-msgstr "使用蜡笔做基础铅笔稿试拍（在小翻页册上做动画的风格）。草图是存储在绘制的当前帧中的，作为一个独立的绘画（只在当前层）。每个绘画在当前层的下一张绘画出现前都是可见的。唯一的例外是一层当中的第一张绘画，一直存在直到有一帧开始绘制了后。"
+"There are also option to control :doc:`Stroke Colors "
+"</interface/grease_pencil/drawing/colors>`."
+msgstr ""
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:45
-msgid "Therefore, it is simple to make a pencil-test/series of animated sketches:"
-msgstr "因此，制作动画草图的铅笔稿试拍/系列帧是非常简单的过程："
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:99
+msgid "Animation"
+msgstr ""
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:47
-msgid "Go to first relevant frame. Draw."
-msgstr "在第一关联帧。绘制。"
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:105
+msgid "Parent"
+msgstr ""
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:48
-msgid "Jump to next relevant frame. Draw some more."
-msgstr "跳到下一个相关的帧。绘制更多的东西。"
-
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:49
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:102
 msgid ""
-"Keep repeating process, and drawing until satisfied. Voila! Animated "
-"sketches."
-msgstr "保持这样的节奏，直到画到满意为止。喔噢！动画的草图。"
+"A :ref:`Object Selector <ui-eye-dropper>` to select the :term:`parent` "
+"object."
+msgstr ""
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:53
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:105
+msgid "Type"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:105
+msgid "TODO."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:107
+msgid "Lock Frame"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:108
+msgid "Locks the current frame displayed by layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:111
+msgid "Delete Frame"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:110
+msgid "Deletes the active frame for the active Grease Pencil Layer."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:114
 msgid "Onion Skinning"
 msgstr "洋葱皮"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:59
-#, fuzzy
-msgid "Grease Pencil Onion Skinning."
-msgstr "蜡笔洋葱皮"
-
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:61
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:116
 #, fuzzy
 msgid ""
 "Onion-skinning, also known as ghosting, helps an animator by displaying "
 "the neighboring frames as a faded trail. Enable the option with the "
 "*Onion Skin* button in the grease pencil properties region (see :ref"
-":`fig-gp-onion` shown above)."
+":`fig-gp-onion` shown below)."
 msgstr "洋葱皮或者叫鬼影，帮助动画制作人员通过较淡的轨迹显示相邻帧。通过在蜡笔属性面板中的 *洋葱皮* 按钮开启该选项（如上图）。"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:65
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:124
 #, fuzzy
-msgid ""
-"Use *Before* and *After* to set the number of ghost frames drawn on "
-"either side of the current frame. When *Use Custom Colors* (Marked *A*) "
-"is enabled, you can also use the *Before* and *After* controls to change "
-"the color of the ghosted frames."
-msgstr ""
-"使用 *之前* 和 *之后* 来设置当前帧的前后帧显示为鬼影的具体帧数。当 *使用定制颜色* （标记为 **A**）启用时，也可以将 *之前* 和"
-" *之后* 的鬼影帧的颜色改变。"
+msgid "Grease Pencil Onion Skinning."
+msgstr "蜡笔洋葱皮"
 
-#: ../../manual/interface/grease_pencil/layers_and_animation.rst:71
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:127
+msgid "Use Custom Colors"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:127
 msgid ""
-"Grease Pencil also has a mode in the :doc:`Dope Sheet "
+"(Marked \"A\") use the *Before* and *After* controls to change the color "
+"of the ghosted frames."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:134
+msgid "Before"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:131
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:138
+msgid "The color of the strokes before the current frame."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:134
+msgid "Before Range"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:133
+msgid ""
+"The maximum number of frame to show before the current frame. 0 will only"
+" show the the previous sketch, and -1 will not show any frames before "
+"current."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:141
+msgid "After"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:141
+msgid "After Range"
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:140
+msgid ""
+"The maximum number of frame to show after the current frame. 0 will only "
+"show the the next sketch, and -1 will not show any frames after current."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:145
+msgid ""
+"Grease Pencil mode in the :doc:`Dope Sheet "
 "</editors/dope_sheet/grease_pencil>` editor."
+msgstr ""
+
+#: ../../manual/interface/grease_pencil/drawing/layers.rst:146
+msgid "Grease Pencil :doc:`Animation </interface/grease_pencil/animating>` page."
 msgstr ""
 
 #~ msgid "Animation of the Sketches"
 #~ msgstr "草图的动画"
 
 #~ msgid ""
-#~ msgstr ""
+#~ msgstr "多个草图也可以通过这些工具从一个屏幕（或者视图）复制到其他的屏幕（或者视图）中。要注意的是关键帧只能粘贴到选择到的多个层上，所以在需要粘贴的区域必须建立层才行。"
 
 #~ msgid "Adjusting Timing of Sketches"
 #~ msgstr "调整草图的时序"
-
-#~ msgid ""
-#~ "It is possible to set a Grease-"
-#~ "Pencil block to be loaded up in"
-#~ " the *DopeSheet* for editing of the"
-#~ " timings of the drawings. This is "
-#~ "especially useful for animators blocking "
-#~ "out shots, where the ability to "
-#~ "re-time blocking is one of the "
-#~ "main purposes of the whole exercise."
-#~ msgstr ""
-#~ "在 *摄影表* "
-#~ "中可以加载蜡笔数据块，并对绘画进行时间上的编辑。动画师把一些镜头抹掉的时候特别有用，一个主要功能是在整个测试中可以重新设置绘制块的时间。"
-
-#~ msgid ""
-#~ "In an *Dope Sheet* editor, change "
-#~ "the mode selector (found beside the "
-#~ "menus) to *Grease Pencil* (by default,"
-#~ " it should be set to *DopeSheet*)."
-#~ msgstr "在一个 *摄影表* 窗口中，将模式选择器（菜单旁可以找到）切换到 *蜡笔* （默认模式是设置为 *摄影表* 的）。"
-
-#~ msgid ""
-#~ "At this point, the *DopeSheet* should"
-#~ " now display a few \"channels\" with"
-#~ " some \"keyframes\" on them. These "
-#~ "\"channels\" are the layers, and the "
-#~ "\"keyframes\" are the frames at which"
-#~ " the layer has a sketch defined. "
-#~ "They can be manipulated like any "
-#~ "other data in the *DopeSheet* can "
-#~ "be."
-#~ msgstr ""
-#~ "这个时候，*摄影表* 里会显示少部分带着一些 *关键帧* 的 *通道* "
-#~ "。*通道* 代表的是层，*关键帧* 代表的是层上面有绘制的草图。他们开源像其他在 *摄影表* "
-#~ "中的数据一样的进行操作。"
-
-#~ msgid ""
-#~ "All the available Grease-Pencil blocks"
-#~ " for the current screen layout will"
-#~ " be shown. The Area/Grease-Pencil "
-#~ "data-blocks are drawn as green "
-#~ "channels, and are named with relevant"
-#~ " info from the views. They are "
-#~ "also labeled with the area (i.e. "
-#~ "\"window\") index (which is currently "
-#~ "not shown anywhere else though)."
-#~ msgstr "当前屏幕布局下所有存在的蜡笔数据块都会被显示。区域/蜡笔数据块是蓝色的通道，命名与视图的信息是相关的。带区域（比如窗口）的标签（当前不在任何地方显示）也给他们标上了。"
 
 #~ msgid "Copying Sketches"
 #~ msgstr "复制草图"
 
 #~ msgid ""
-#~ "It is possible to copy sketches "
-#~ "from a layer/layers to other layers "
-#~ "in the *Action Editor*, using the "
-#~ "\"Copy\"/\"Paste\" buttons in the header. "
-#~ "This works in a similar way as "
-#~ "the copy/paste tools for keyframes in"
-#~ " the *Action Editor*."
-#~ msgstr ""
-#~ "在标题栏中使用 *复制*/*粘贴* 按钮，可以在 *动作编辑器* "
-#~ "中将一个层/多个层的草图复制到其他层。这个功能和复制/粘贴 *动作编辑器* 中的关键帧是一样的用法。"
+#~ "Use the adjacent controls to Add, "
+#~ "Remove or adjust the position of a"
+#~ " layer in the list. Each layer "
+#~ "has a visibility icon, and a lock"
+#~ " icon to protect it from further "
+#~ "changes. Double click on a layer "
+#~ "name to rename it."
+#~ msgstr "邻接的控制如何添加，移除或者调整列表中的一个层。每个层有一个可见性图标，一个锁定图标来设定是否受修改保护。双击层名字可以重命名该层。"
 
 #~ msgid ""
-#~ "Sketches can also be copied from "
-#~ "one screen (or view) to another "
-#~ "using these tools. It is important "
-#~ "to keep in mind that keyframes "
-#~ "will only be pasted into selected "
-#~ "layers, so layers will need to be"
-#~ " created for the destination areas "
-#~ "too."
-#~ msgstr "多个草图也可以通过这些工具从一个屏幕（或者视图）复制到其他的屏幕（或者视图）中。要注意的是关键帧只能粘贴到选择到的多个层上，所以在需要粘贴的区域必须建立层才行。"
+#~ "There is a list of layers attached"
+#~ " to each scene and a list of"
+#~ " layers associated with each object. "
+#~ "The buttons above the list box "
+#~ "control its contents, showing either the"
+#~ " layers associated with the active "
+#~ "scene or the list of layers "
+#~ "associated with the active object."
+#~ msgstr "这里有一列层附属于每个场景也有一列层附属于每个物体。底部上有一个列表盒控制它的内容，显示到底草图层是属于当前场景的还是属于当前物体的。"
+
+#~ msgid "Animating Sketches"
+#~ msgstr "动画草图"
+
+#~ msgid ""
+#~ "Use the Grease Pencil to do basic"
+#~ " pencil tests (i.e. 2D animation in"
+#~ " flipbook style). Sketches are stored "
+#~ "on the frame that they were drawn"
+#~ " on, as a separate drawing (only "
+#~ "on the layer that they exist on)."
+#~ " Each drawing is visible until the"
+#~ " next drawing for that layer is "
+#~ "encountered. The only exception to this"
+#~ " is the first drawing for a "
+#~ "layer, which will also be visible "
+#~ "before the frame it was drawn on."
+#~ msgstr "使用蜡笔做基础铅笔稿试拍（在小翻页册上做动画的风格）。草图是存储在绘制的当前帧中的，作为一个独立的绘画（只在当前层）。每个绘画在当前层的下一张绘画出现前都是可见的。唯一的例外是一层当中的第一张绘画，一直存在直到有一帧开始绘制了后。"
+
+#~ msgid ""
+#~ "Therefore, it is simple to make a"
+#~ " pencil-test/series of animated sketches:"
+#~ msgstr "因此，制作动画草图的铅笔稿试拍/系列帧是非常简单的过程："
+
+#~ msgid "Go to first relevant frame. Draw."
+#~ msgstr "在第一关联帧。绘制。"
+
+#~ msgid "Jump to next relevant frame. Draw some more."
+#~ msgstr "跳到下一个相关的帧。绘制更多的东西。"
+
+#~ msgid ""
+#~ "Keep repeating process, and drawing "
+#~ "until satisfied. Voila! Animated sketches."
+#~ msgstr "保持这样的节奏，直到画到满意为止。喔噢！动画的草图。"
+
+#~ msgid ""
+#~ "Use *Before* and *After* to set "
+#~ "the number of ghost frames drawn "
+#~ "on either side of the current "
+#~ "frame. When *Use Custom Colors* (Marked"
+#~ " *A*) is enabled, you can also "
+#~ "use the *Before* and *After* controls"
+#~ " to change the color of the "
+#~ "ghosted frames."
+#~ msgstr ""
+#~ "使用 *之前* 和 *之后* 来设置当前帧的前后帧显示为鬼影的具体帧数。当 "
+#~ "*使用定制颜色* （标记为 **A**）启用时，也可以将 *之前* 和 *之后*"
+#~ " 的鬼影帧的颜色改变。"
+
+#~ msgid ""
+#~ "Grease Pencil also has a mode in"
+#~ " the :doc:`Dope Sheet "
+#~ "</editors/dope_sheet/grease_pencil>` editor."
+#~ msgstr ""
 
