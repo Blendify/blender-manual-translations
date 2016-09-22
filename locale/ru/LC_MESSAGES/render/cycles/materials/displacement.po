@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-20 15:42-0400\n"
-"PO-Revision-Date: 2016-09-08 23:34+0500\n"
+"PO-Revision-Date: 2016-09-22 22:50+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,6 @@ msgstr ""
 "сделать поверхность полисетки более детализированной."
 
 #: ../../manual/render/cycles/materials/displacement.rst:10
-#, fuzzy
 msgid ""
 "There are two types of displacement methods that can be used: `True "
 "Displacement`_  and `Bump Mapping`_. Depending on the settings, the "
@@ -36,7 +35,7 @@ msgid ""
 "of real and virtual displacement."
 msgstr ""
 "Существует два методов смещения, которые можно использовать в Blender: "
-"*Истинное смещение* и *Наложение рельефа*. В зависимости от настроек, "
+"`Истинное смещение`_ и `Наложение рельефа`_. В зависимости от настроек, "
 "смещение может быть виртуальным, то есть изменять только нормали "
 "поверхности, создавая видимость смещения, (так же оно известно как "
 "рельефное текстурирование, наложение рельефа или bump mapping) или быть "
@@ -60,7 +59,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/materials/displacement.rst:26
 msgid "Bump Mapping"
-msgstr ""
+msgstr "Наложение рельефа"
 
 #: ../../manual/render/cycles/materials/displacement.rst:28
 msgid ""
@@ -69,6 +68,11 @@ msgid ""
 " actually one of the older types displacement methods (see `True "
 "Displacement`_ for a newer method)."
 msgstr ""
+"При использовании типа *Рельеф* создаётся так называемая «карта рельефа»,"
+" используемая для создания поддельного смещения путём игры со светом и "
+"тенью. На самом деле карта рельефа является одним из старейших методов "
+"организации смещения (про новый метод организации смещения смотрите в "
+"разделе `Истинное смещение`_)."
 
 #: ../../manual/render/cycles/materials/displacement.rst:32
 msgid ""
@@ -77,6 +81,10 @@ msgid ""
 "black, gray, or white. These grayscale values are used to tell Blender "
 "two thing: up or down."
 msgstr ""
+"Как правило, картами рельефа являются изображения в оттенках серого с "
+"8-битным цветовым каналом. Это означает, что они содержат всего 256 "
+"различных оттенков чёрного, серого или белого. Значения этих оттенков "
+"сообщают Blender’у ровно две вещи: поверхность смещена вверх или вниз."
 
 #: ../../manual/render/cycles/materials/displacement.rst:36
 #, python-format
@@ -87,6 +95,10 @@ msgid ""
 " To contrast that, when values closer to black, they appear to be pushing"
 " into the surface."
 msgstr ""
+"Когда значения в карте рельефа близки к 50%-ному серому, с поверхностью "
+"мало что происходит. Когда значения близки к белому, начинает проявляться"
+" эффект выпирания поверхности. Ему в противоположность, значения, близкие"
+" чёрному, дают эффект вдавливания поверхности."
 
 #: ../../manual/render/cycles/materials/displacement.rst:40
 msgid ""
@@ -95,6 +107,12 @@ msgid ""
 "drawing, or photo editing application just remember to save the image as "
 "a greyscale to save memory while rendering."
 msgstr ""
+"Карты рельефа замечательно подходят для создания мелких деталей на "
+"поверхности модели, к примеру, мелких пор или морщинок на коже. Карты "
+"рельефа могут создаваться как в пакетах для двумерного рисования, так и в"
+" приложениях для обработки фотографий, просто не забывайте сохранять их в"
+" оттенках серого, чтобу уменьшить использование памяти во время "
+"визуализации."
 
 #: ../../manual/render/cycles/materials/displacement.rst:46
 msgid ""
@@ -102,6 +120,9 @@ msgid ""
 " model at the wrong angle. This means that it is not recommended for "
 "animations."
 msgstr ""
+"Поскольку наложение рельефа является эффектом-обманкой, его очень легко "
+"сломать, просто посмотрев на модель под неправильным углом. Это значит, "
+"что метод не очень подходит для использования совместно с анимацией."
 
 #: ../../manual/render/cycles/materials/displacement.rst:53
 msgid "True Displacement"
@@ -123,6 +144,11 @@ msgid ""
 "finely subdivided. As a result this method is also the most memory "
 "intensive."
 msgstr ""
+"В отличие от наложения рельефа, *истинное смещение* не является "
+"поддельным эффектом. При использовании *истинного смещения* смещается "
+"реальная геометрия модели. Чем сильнее подразделена полисетка, тем более "
+"качественным получается результат визуализации. Тем не менее, не стоит "
+"забывать, что использование памяти также сильно увеличивается."
 
 #: ../../manual/render/cycles/materials/displacement.rst:65
 msgid ""
@@ -132,6 +158,11 @@ msgid ""
 "translate into 3D space well. Instead, you should save the images with "
 "either 16 or 32-bits."
 msgstr ""
+"При использовании истинного смещения в качестве текстуры смещения вам не "
+"хватит обычных карт рельефа. Карты смещения отличаются от карт рельефа в "
+"том, что они не должны быть 8-битными. Конечно, вы можете это сделать, но"
+" тогда в трёхмерном пространстве они не будут выглядеть хорошо. Поэтому "
+"вы должны использовать либо 16-битную, либо 32-битную текстуру."
 
 #: ../../manual/render/cycles/materials/displacement.rst:72
 msgid ""
@@ -139,16 +170,21 @@ msgid ""
 "to use :ref:`Adaptive Subdivision <render-cycles-settings-object-"
 "subdivision>`"
 msgstr ""
+"Для получения подходящего уровня подразделения рекомендуется использовать"
+" :ref:`адаптивное подразделение <render-cycles-settings-object-"
+"subdivision>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:77
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
 msgstr ""
+"Для смещения полисетки также можно использовать модификатор "
+":doc:`Смещение поверхности </modeling/modifiers/deform/displace>`."
 
 #: ../../manual/render/cycles/materials/displacement.rst:81
 msgid "Controls"
-msgstr ""
+msgstr "Элементы управления"
 
 #: ../../manual/render/cycles/materials/displacement.rst:83
 msgid ""
@@ -159,10 +195,19 @@ msgid ""
 "</render/cycles/nodes/types/converter/math>`. In the example below is a "
 "node setup to give the same settings as the *Displace Modifier*."
 msgstr ""
+"Вы можете обнаружить, что при использовании *истинного смещения* "
+"существуют некоторые ограничения, которых нет у модификатора "
+":doc:`Смещение поверхности </modeling/modifiers/deform/displace>`. Однако"
+" это легко можно поправить при помощи узла :doc:`Математика "
+"</render/cycles/nodes/types/converter/math>`. В приведенном ниже примере "
+"дерево узлов моделирует те же самые настройки, что предоставляет "
+"модификатор."
 
 #: ../../manual/render/cycles/materials/displacement.rst:90
 msgid "Math nodes used to add Mid-level and Strength."
 msgstr ""
+"Узлы «Математика», используемые для добавления параметров «Середина» и "
+"«Сила»"
 
 #: ../../manual/render/cycles/materials/displacement.rst:93
 msgid ""
@@ -172,46 +217,9 @@ msgid ""
 "control how strong the displacement effect is. Higher values would give "
 "you larger displacement and lower values give smaller displacement."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Subdivision Surface modifier."
-#~ msgstr "Модификатор подразделения поверхности"
-
-#~ msgid "Preview"
-#~ msgstr "Preview (Предпросмотр)"
-
-#~ msgid "Levels"
-#~ msgstr "Уровни"
-
-#~ msgid "Render"
-#~ msgstr "Визуализация"
-
-#~ msgid "Adaptive"
-#~ msgstr "Адаптивно"
-
-#~ msgid "Dicing Rate"
-#~ msgstr "Уровень нарезания"
-
-#~ msgid "Known limitations"
-#~ msgstr "Известные ограничения"
-
-#~ msgid "Missing support for UV subdivision."
-#~ msgstr "Отсутствует поддержка подразделения текстурных координат."
-
-#~ msgid "Creases do not match Blender creases currently."
-#~ msgstr "В настоящее время сгибы не соответствуют сгибам в Blender."
-
-#~ msgid "Multi-view renders can have some inconsistencies between views."
-#~ msgstr ""
-
-#~ msgid "Editing displacement shaders does not update the viewport."
-#~ msgstr "При редактировании шейдеров смещения область просмотра не обновляется."
-
-#~ msgid "Bump"
-#~ msgstr ""
-
-#~ msgid "TODO."
-#~ msgstr ""
+"В приведённом выше примере узел «Математика» используется дважды. Первый "
+"узел использует оператор «Добавить»: эта операция может использоваться "
+"для управления серединой смещения. Второй узел использует операцию "
+"«Умножение» для управления силой эффекта смещения. Более высокие значения"
+" дадут большее смещение, а более низкие – меньшее смещение."
 
