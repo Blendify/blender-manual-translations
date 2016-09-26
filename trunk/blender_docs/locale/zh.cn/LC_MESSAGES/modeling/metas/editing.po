@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 14:46-0400\n"
+"POT-Creation-Date: 2016-09-26 17:52-0400\n"
 "PO-Revision-Date: 2015-06-09 22:55+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -88,7 +88,7 @@ msgstr "硬度"
 msgid ""
 "In Fig. :ref:`fig-meta-edit-stiffness`, the meta ball labeled \"A\", has "
 "a smaller *Stiffness* value than the one labeled \"B\". As you can see, "
-"the *green ring* radius is different for each of them."
+"the radius (green ring) is different for each of them."
 msgstr "在(刚性)图里，标记为“A”的融球圆球的 Stiffness刚性比标记为“B”的另一个更小。正如您所看到的，两者绿色圆环的半径大小不同。 "
 
 #: ../../manual/modeling/metas/editing.rst:60
@@ -139,28 +139,31 @@ msgstr ""
 " "
 
 #: ../../manual/modeling/metas/editing.rst:91
+#, fuzzy
 msgid ""
 "To hide the current selection, use :kbd:`H`, the *Hide* toggle button in "
-"the *MetaBall tools*, or the :menuselection:`Metaball --> Hide MetaElems "
-"--> Hide Selected` menu option."
+"the *Metaball tools*, or the :menuselection:`Metaball --> Show/Hide --> "
+"Hide Selected` menu option."
 msgstr ""
 "要隐藏当前选中的，可以使用H，也可以使用在MetaBall "
 "tools融球圆球工具中的Hide隐藏切换按钮，或者使用菜单选项Metaball融球圆球 » Hide MetaElems隐藏融球元素 » "
 "Hide Selected隐藏已选中。 "
 
 #: ../../manual/modeling/metas/editing.rst:95
+#, fuzzy
 msgid ""
 "To hide everything but the current selection, press :kbd:`Shift-H` or use"
-" :menuselection:`Metaball --> Hide MetaElems --> Hide Deselected`."
+" :menuselection:`Metaball --> Show/Hide --> Hide Deselected`."
 msgstr ""
 "要隐藏除了当前选中的以外所有物体，可以按下⇧ ShiftH 或者使用菜单Metaball融球圆球 » Hide MetaElems隐藏融球元素 »"
 " Hide Deselected隐藏未选中. "
 
 #: ../../manual/modeling/metas/editing.rst:98
+#, fuzzy
 msgid ""
 "To reveal what was hidden, use :kbd:`Alt-H`, or the relevant option in "
-"the same :menuselection:`Metaball --> Hide MetaElems` menu. You can also "
-"un-toggle the *Hide* button in the (*MetaBall tools* panel)."
+"the same :menuselection:`Metaball --> Show/Hide` menu. You can also un-"
+"toggle the *Hide* button in the (*Metaball tools* panel)."
 msgstr ""
 "要恢复显示已隐藏的，使用AltH，或者同一个Metaball融球圆球 » Hide "
 "MetaElems隐藏融球元素菜单的相关选项，您也可以联动切换Hide隐藏按钮和(MetaBall tools面板)。 "
@@ -198,7 +201,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "To convert the meta, press :kbd:`Alt-C` in *Object Mode*, and select "
-"*mesh*"
+"*Mesh/Text*,"
 msgstr "要转换一个融球，在物体模式按下AltC，然后选择mesh网格物体即可。 "
 
 #: ../../manual/modeling/metas/editing.rst:130
@@ -240,19 +243,20 @@ msgstr "基本融球圆球."
 #: ../../manual/modeling/metas/editing.rst:152
 #, fuzzy
 msgid ""
-"Families of metas are controlled by a *base* *Meta* object which is "
-"identified by an *Object* name **without** a right part. For example, if "
-"we have five metas called \"MetaThing\", \"MetaThing.001\", "
+"Families of metas are controlled by a *base* meta object which is "
+"identified by an object name **without** a right number part. For "
+"example, if we have five metas called \"MetaThing\", \"MetaThing.001\", "
 "\"MetaThing.002\", \"MetaThing.003\" and \"MetaThing.004\", the *base* "
-"*Meta* object would be \"MetaThing\"."
+"meta object would be \"MetaThing\"."
 msgstr ""
 "融球的物体家族是由基本融球来控制的，基本融球是由那个没有右半部分名字的物体来定义的。例如，如果我们有五个融球，名字分别为“MetaThing”, "
 "“MetaThing.001”, “MetaThing.002”, “MetaThing.003” and "
 "“MetaThing.004”,那么基本 融球就是“MetaThing”。 "
 
 #: ../../manual/modeling/metas/editing.rst:158
+#, fuzzy
 msgid ""
-"The *base* *Meta* object determines the basis, the resolution, the "
+"The *base* meta object determines the basis, the resolution, the "
 "threshold, *and* the transformations. It also has the material and "
 "texture area. The *base* meta is effectively the parent of (or perhaps a "
 "better word to use is \"the owner of\") the other metas in the group "
@@ -269,9 +273,7 @@ msgid ""
 msgstr ""
 
 #: ../../manual/modeling/metas/editing.rst:169
-msgid ""
-"Failing to do this will give confusing behavior *(invisible meta "
-"objects)*."
+msgid "Failing to do this will give confusing behavior (invisible meta objects)."
 msgstr ""
 
 #: ../../manual/modeling/metas/editing.rst:173
@@ -293,15 +295,15 @@ msgstr ""
 "(基本融球圆球)图例显示了标记为“B”的基本融球，另外二个融球是子物体。子物体的选取环总是黑色的，而整个组的网格部分是桔黄色的。因为融球被分组了，它们形成一个统一的网格部分，选中同组中的任何一个融球，就等于选中了整个组。例如，在(基本融球圆球)图例里，只有下方的圆球（父物体）被选中，您可以看到包括父物体和所有子物体融球的网格部分都高亮显示了。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:186
+#: ../../manual/modeling/metas/editing.rst:188
 msgid "Scaling the \"base\"."
 msgstr "缩放“基本”."
 
-#: ../../manual/modeling/metas/editing.rst:189
+#: ../../manual/modeling/metas/editing.rst:191
 #, fuzzy
 msgid ""
-"The *base* *Meta* object controls the *polygonalization* (mesh structure)"
-" for the group, and as such, also controls the polygonalization for the "
+"The *base* meta object controls the *polygonalization* (mesh structure) "
+"for the group, and as such, also controls the polygonalization for the "
 "children (non-base) metas. If we transform the *base* meta, the "
 "children's polygonalization changes. However, if we transform the "
 "children, the polygonalization remains unchanged."
@@ -310,19 +312,19 @@ msgstr ""
 "（网格结构），正因为如此，它也能控子物体(非基本)融球的多边形轮廓。如果我们对基本融球进行变换操作，子物体的多边形轮廓会发生改变。然而，如果我们对子物体进行变换操作，多边形轮廓不会发生改变。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:196
+#: ../../manual/modeling/metas/editing.rst:198
 #, fuzzy
 msgid ""
-"This discussion of \"polygonization\" *does not* mean that the various "
+"This discussion of \"polygonization\" does *not* mean that the various "
 "meshes do not deform towards or away from each other (meta objects always"
 " influence one another in the usual way, whether or not they are members "
 "of the same family). Rather, it means that the underlying mesh structure "
 "changes only when the *base* object transforms. For example, if you scale"
-" the *base*, the children's mesh structure changes. In (*Scaling the "
-"\"base\"*), the *base* has been scaled down, which has the effect of "
-"scaling the mesh structure of each of the children. As you can see, the "
-"children's mesh resolution has increased, while the *base* decreased. "
-"*The children did not change size!*"
+" the *base*, the children's mesh structure changes. In Fig. :ref:`fig-"
+"meta-ball-scale`, the *base* has been scaled down, which has the effect "
+"of scaling the mesh structure of each of the children. As you can see, "
+"the children's mesh resolution has increased, while the *base* decreased."
+" The children did *not* change size!"
 msgstr ""
 "上述对“polygonization多边形”的讨论，并不意味着各个网格物体不会向前变形，或者彼此远离（融球在通常情况下总是能相互作用，不论它们是否同一家庭物体的成员）。相对地，这意味着只在当基本物体变换操作时，底层网格物体结构才会发生改变。例如，如果您scale缩放基本物体，子物体网格结构会发生改变。在(缩放“基本”)图例里，基本物体已经被缩小，各个子物体的网格结构也产生了缩放效果。正如您看到的，当基本物体缩小时，子物体解析度增大了。子物体不能改变尺寸！"
 " "
@@ -332,4 +334,9 @@ msgstr ""
 
 #~ msgid "Hints"
 #~ msgstr "提示"
+
+#~ msgid ""
+#~ "Failing to do this will give "
+#~ "confusing behavior *(invisible meta objects)*."
+#~ msgstr ""
 
