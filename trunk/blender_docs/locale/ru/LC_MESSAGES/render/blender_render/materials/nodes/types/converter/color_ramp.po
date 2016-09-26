@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 23:45+0500\n"
+"POT-Creation-Date: 2016-09-26 17:52-0400\n"
 "PO-Revision-Date: 2016-08-21 12:47+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -18,7 +18,8 @@ msgstr ""
 "Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:7
-msgid "ColorRamp Node"
+#, fuzzy
+msgid "Color Ramp Node"
 msgstr "Узел «Градиентная карта»"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:12
@@ -26,9 +27,10 @@ msgid "Color Ramp Node."
 msgstr "Узел «Градиентная карта»"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:14
+#, fuzzy
 msgid ""
-"The ColorRamp Node is used for mapping values to colors with the use of a"
-" gradient."
+"The Color Ramp Node is used for mapping values to colors with the use of "
+"a gradient."
 msgstr ""
 "Узел «Градиентная карта» используется для отображения значений на цвета с"
 " использованием градиента."
@@ -38,8 +40,8 @@ msgid "Inputs"
 msgstr "Входы"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:22
-msgid "Fac"
-msgstr "Коэфф."
+msgid "Factor"
+msgstr ""
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:21
 msgid "The Factor input is used as an index for the color ramp."
@@ -82,15 +84,16 @@ msgid "Examples"
 msgstr "Примеры"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:44
-msgid "Using ColorRamp to create an Alpha Mask"
-msgstr "Использование градиентной карты для создания маски альфа-канала"
+msgid "Creating an Alpha Mask"
+msgstr ""
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:46
+#, fuzzy
 msgid ""
-"A powerful but often overlooked feature of the ColorRamp is to create an "
-"Alpha Mask, or a mask that is overlaid on top of another image, and, like"
-" a mask, allows some of the background to show through. The example map "
-"below shows how to use the Color Ramp node to do this:"
+"A powerful but often overlooked feature of the Color Ramp is to create an"
+" Alpha Mask, or a mask that is overlaid on top of another image, and, "
+"like a mask, allows some of the background to show through. The example "
+"map below shows how to use the Color Ramp node to do this:"
 msgstr ""
 "Мощной, но часто забываемой возможностью градиентной карты является "
 "создание маски альфа-канала, то есть маски, накладываемой поверх другого "
@@ -99,13 +102,15 @@ msgstr ""
 "узел «Градиентная карта»:"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:53
-msgid "Using the ColorRamp node to create an alpha mask."
+#, fuzzy
+msgid "Using the Color Ramp node to create an alpha mask."
 msgstr "Использование узла «Градиентная карта» для создания маски альфа-канала"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:56
+#, fuzzy
 msgid ""
 "In the map above, a black and white swirl image, which is lacking an "
-"alpha channel, is fed into the ColorRamp node as a *Fac* tor. "
+"alpha channel, is fed into the Color Ramp node as a *Factor*. "
 "(Technically, we should have converted the image to a value using the "
 "RGB-to-BW node, buy hey, this works just as well since we are using a BW "
 "image as input.)"
@@ -118,13 +123,14 @@ msgstr ""
 "изображение)."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:61
+#, fuzzy
 msgid ""
-"We have set the ColorRamp node to a purely transparent color on the left "
-"end of the spectrum, and a fully Red color on the right. As seen in the "
-"viewer, the ColorRamp node puts out a mask that is fully transparent "
-"where the image is black. Black is zero, so ColorRamp uses the color at "
-"the left end of the spectrum, which we have set to transparent. The "
-"ColorRamp image is fully red and opaque where the image is white (1.00)."
+"We have set the Color Ramp node to a purely transparent color on the left"
+" end of the spectrum, and a fully Red color on the right. As seen in the "
+"viewer, the Color Ramp node puts out a mask that is fully transparent "
+"where the image is black. Black is zero, so Color Ramp uses the color at "
+"the left end of the spectrum, which we have set to transparent. The Color"
+" Ramp image is fully red and opaque where the image is white (1.00)."
 msgstr ""
 "В узле «Градиентная карта» мы установили абсолютно прозрачный цвет в "
 "левой части спектра и насыщенный красный цвет в правой. Как видно через "
@@ -136,12 +142,13 @@ msgstr ""
 "выдаёт насыщенный красный без прозрачности."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:68
+#, fuzzy
 msgid ""
 "We verify that the output image mask is indeed transparent by overlaying "
-"it on top of a pumpkin image. For fun, we made that AlphaOver output "
-"image 0.66 transparent so that we can, in the future, overlay the image "
-"on a flashing white background to simulate a scary scene with lighting "
-"flashes."
+"it on top of a pumpkin image. For fun, we made that Alpha Over node "
+"output image 0.66 transparent so that we can, in the future, overlay the "
+"image on a flashing white background to simulate a scary scene with "
+"lighting flashes."
 msgstr ""
 "Проверим, что маска выходного изображения действительно полупрозрачна, "
 "накладывая её сверху на изображение тыквы. Для развлечения мы, при помощи"
@@ -150,12 +157,13 @@ msgstr ""
 "страшной сцены, освещаемой вспышками."
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:75
-msgid "Using ColorRamp to Colorize an Image"
-msgstr "Использование градиентной карты для расцвечивания изображения"
+msgid "Colorizing an Image"
+msgstr ""
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:77
+#, fuzzy
 msgid ""
-"The real power of ColorRamp is that multiple colors can be added to the "
+"The real power of Color Ramp is that multiple colors can be added to the "
 "color spectrum. This example compositing map takes a boring BW image and "
 "makes it a flaming swirl!"
 msgstr ""
@@ -164,13 +172,14 @@ msgstr ""
 "чёрно-белое изображение и превращается в пламенную спираль!"
 
 #: ../../manual/compositing/types/converter/color_ramp.rst:82
+#, fuzzy
 msgid ""
 "In this example, we have mapped the shades of gray in the input image to "
 "three colors, blue, yellow, and red, all fully opaque (Alpha of 1.00). "
-"Where the image is black, ColorRamp substitutes blue, the currently "
-"selected color. Where it is some shade of gray, ColorRamp chooses a "
+"Where the image is black, Color Ramp substitutes blue, the currently "
+"selected color. Where it is some shade of gray, Color Ramp chooses a "
 "corresponding color from the spectrum (bluish, yellow, to reddish). Where"
-" the image is fully white, ColorRamp chooses red."
+" the image is fully white, Color Ramp chooses red."
 msgstr ""
 "В этом примере мы отобразили оттенки серого во входном изображении на три"
 " цвета – голубой, жёлтый и красный, все полностью непрозрачные (альфа "
@@ -179,4 +188,16 @@ msgstr ""
 "различные оттенки серого, «Градиентная карта» выбирает соответствующий "
 "цвет из спектра (голубоватый, желтоватый или красноватый). Там же, где на"
 " изображении белый, «Градиентная карта» выбирает красный цвет."
+
+#~ msgid "ColorRamp Node"
+#~ msgstr "Узел «Градиентная карта»"
+
+#~ msgid "Fac"
+#~ msgstr "Коэфф."
+
+#~ msgid "Using ColorRamp to create an Alpha Mask"
+#~ msgstr "Использование градиентной карты для создания маски альфа-канала"
+
+#~ msgid "Using ColorRamp to Colorize an Image"
+#~ msgstr "Использование градиентной карты для расцвечивания изображения"
 
