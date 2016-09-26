@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 23:45+0500\n"
+"POT-Creation-Date: 2016-09-26 17:52-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -320,19 +320,19 @@ msgid ""
 "The Boolean modifier calculation is performed using the target modified "
 "mesh topology and dimensions. Other modifiers added to the modified mesh "
 "are bypassed. This means that if a target is using another modifier, like"
-" subsurf, the resulting topology for the modified mesh will take into "
-"account the subsurf of the target; but for the modified mesh, the basic "
-"topology is used anyway (see examples)."
+" Subdivision Surface, the resulting topology for the modified mesh will "
+"take into account the subdivision of the target; but for the modified "
+"mesh, the basic topology is used anyway (see examples)."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:192
 msgid ""
-"If you add subsurf to the modified mesh with a Boolean modifier, Blender "
-"will visually add the subsurf for the modified mesh, but not for its "
-"calculations; it will only take into account its basic mesh topology. If "
-"you want to have a subsurf added to the modified mesh, you have to apply "
-"the subsurf to the Boolean modified mesh before applying the Boolean "
-"operation."
+"If you add Subdivision Surface to the modified mesh with a Boolean "
+"modifier, Blender will visually add the subdivision for the modified "
+"mesh, but not for its calculations; it will only take into account its "
+"basic mesh topology. If you want to have a Subdivision Surface modifier "
+"added to the modified mesh, you have to apply the Subdivision Surface to "
+"the Boolean modified mesh before applying the Boolean operation."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:198
@@ -382,41 +382,42 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:226
 msgid ""
-"Below are two images: one with the subsurf added to the target, and "
-"another with the resulting topology."
+"Below are two images: one with the Subdivision Surface modifier added to "
+"the target, and another with the resulting topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:232
-msgid "Modifier with Subsurf Target."
+#: ../../manual/modeling/modifiers/generate/booleans.rst:233
+msgid "Modifier with Subdivision Surface Target."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:236
+#: ../../manual/modeling/modifiers/generate/booleans.rst:237
 msgid "The Resulting Topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:239
+#: ../../manual/modeling/modifiers/generate/booleans.rst:240
 msgid ""
-"As you can see, the added (not applied) subsurf to the target was taken "
-"into consideration. The topology of the Icosphere with subsurf (Level 2) "
-"was completely transferred to the modified mesh."
+"As you can see, the added (not applied) Subdivision Surface modifier to "
+"the target was taken into consideration. The topology of the Icosphere "
+"with (Level 2) subdivision was completely transferred to the modified "
+"mesh."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:242
+#: ../../manual/modeling/modifiers/generate/booleans.rst:243
 msgid "The target topology determines the resulting topology"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:244
+#: ../../manual/modeling/modifiers/generate/booleans.rst:245
 msgid ""
 "The target topology determines the results of the Boolean modifier "
 "operation. It means that any modifier added to the target which modifies "
 "its topology will affect the resulting mesh of the operation."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:250
+#: ../../manual/modeling/modifiers/generate/booleans.rst:251
 msgid "Concurrent Operations"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:252
+#: ../../manual/modeling/modifiers/generate/booleans.rst:253
 msgid ""
 "For the modified meshes, you can only apply one operation at a time, but "
 "you can use the same target for other modified meshes and use modified "
@@ -427,28 +428,28 @@ msgid ""
 "to each other, you can cause Blender to crash with closed loops!"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:261
+#: ../../manual/modeling/modifiers/generate/booleans.rst:262
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:263
+#: ../../manual/modeling/modifiers/generate/booleans.rst:264
 msgid ""
 "Be aware that other modifiers and their stack position could cause this "
 "modifier to fail in certain circumstances."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:268
+#: ../../manual/modeling/modifiers/generate/booleans.rst:269
 msgid ""
 "The best way to work with this modifier when you need to make lots of "
 "sequential operations of the same modifier is to define the target at the"
 " time you need to apply the changes to the topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:273
+#: ../../manual/modeling/modifiers/generate/booleans.rst:274
 msgid "Face Normals"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:275
+#: ../../manual/modeling/modifiers/generate/booleans.rst:276
 msgid ""
 "When using the Boolean modifier, Blender will use the face normal "
 "directions to calculate the three Boolean operations. The direction of "
@@ -460,14 +461,14 @@ msgid ""
 " Mixed Normals below."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:283
+#: ../../manual/modeling/modifiers/generate/booleans.rst:284
 msgid ""
 "Blender also cannot perform any optimal Boolean operation when one or "
 "more of the mesh Normals of the participants that are touching has "
 "outwards/inwards normals mixed."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:286
+#: ../../manual/modeling/modifiers/generate/booleans.rst:287
 msgid ""
 "This means you can use the normals of the meshes pointed completely "
 "towards the inside or outside of your participants in the operation, but "
@@ -477,35 +478,35 @@ msgid ""
 "made some examples with a cube and an icosphere showing the results."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:292
+#: ../../manual/modeling/modifiers/generate/booleans.rst:293
 msgid ""
 "In the images below, all face normals are pointing outwards (Normal "
 "meshes)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:298
+#: ../../manual/modeling/modifiers/generate/booleans.rst:299
 msgid "Faces with normals pointing outwards."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:302
+#: ../../manual/modeling/modifiers/generate/booleans.rst:303
 msgid "Normal Boolean modifier operation (Difference operation)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:305
+#: ../../manual/modeling/modifiers/generate/booleans.rst:306
 msgid ""
 "In the images below, all face normals are inverted and using the "
 "intersection operation"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:311
+#: ../../manual/modeling/modifiers/generate/booleans.rst:312
 msgid "Boolean Operation with inverted normals."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:315
+#: ../../manual/modeling/modifiers/generate/booleans.rst:316
 msgid "Normal Boolean modifier operation."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:318
+#: ../../manual/modeling/modifiers/generate/booleans.rst:319
 msgid ""
 "Now, let us see what happens when the normal directions are mixed for one"
 " of the participants in the Boolean modifier operation. The images below "
@@ -514,15 +515,15 @@ msgid ""
 "applied, leaving faces opened:"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:327
+#: ../../manual/modeling/modifiers/generate/booleans.rst:328
 msgid "Face normals mixed, pointed to different directions."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:331
+#: ../../manual/modeling/modifiers/generate/booleans.rst:332
 msgid "Resulting operation leaves faces opened."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:334
+#: ../../manual/modeling/modifiers/generate/booleans.rst:335
 msgid ""
 "As you can see, the normal directions can be pointing to any of the Mesh "
 "sides, but cannot be mixed in opposite directions for the faces of the "
@@ -531,23 +532,23 @@ msgid ""
 "no effect when using the Boolean modifier operation."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:339
+#: ../../manual/modeling/modifiers/generate/booleans.rst:340
 msgid ""
 "A quick way to fix this is to use Blender's :doc:`Recalculate Normals "
 "</modeling/meshes/editing/normals>` operation in Edit Mode."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:342
+#: ../../manual/modeling/modifiers/generate/booleans.rst:343
 msgid ""
 "If you still have some ugly black gouges you will have to :doc:`Manually "
 "Flip the Normals </modeling/meshes/editing/normals>`."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:347
+#: ../../manual/modeling/modifiers/generate/booleans.rst:348
 msgid "Empty or Duplicated Faces"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:349
+#: ../../manual/modeling/modifiers/generate/booleans.rst:350
 msgid ""
 "This modifier does not work when the modified and/or the target mesh uses"
 " empty faces in the topology used for calculations. If the modifier faces"
@@ -561,13 +562,13 @@ msgid ""
 "the *Mesh Tools* Panel in the 3D View, while in Edit Mode."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:358
+#: ../../manual/modeling/modifiers/generate/booleans.rst:359
 msgid ""
 "The best usage scenario for this modifier is when you have clean meshes "
 "with faces pointing clearly to a direction (inwards/outwards)"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:361
+#: ../../manual/modeling/modifiers/generate/booleans.rst:362
 msgid ""
 "Below we show an example of meshes with open faces mixed with normal "
 "faces being used to create a new topology. In this example, a difference "
@@ -576,66 +577,66 @@ msgid ""
 "possible."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:369
+#: ../../manual/modeling/modifiers/generate/booleans.rst:370
 msgid "Mesh with two empty faces mixed with normal faces."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:373
+#: ../../manual/modeling/modifiers/generate/booleans.rst:374
 msgid "Result of a difference operation applied."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:377
+#: ../../manual/modeling/modifiers/generate/booleans.rst:378
 msgid "Open Volumes"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:379
+#: ../../manual/modeling/modifiers/generate/booleans.rst:380
 msgid ""
 "The Boolean Modifier permits you to use open meshes or non-closed volumes"
 " (not open faces)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:381
+#: ../../manual/modeling/modifiers/generate/booleans.rst:382
 msgid ""
 "When using open meshes or non-closed volumes, the Boolean modifier will "
 "not perform any operation in faces that do not create a new topology "
 "filled with faces using the faces of the target."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:384
+#: ../../manual/modeling/modifiers/generate/booleans.rst:385
 msgid ""
 "In the images below, is the resulting operation when using two non-closed"
 " volumes with faces forming a new topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:390
+#: ../../manual/modeling/modifiers/generate/booleans.rst:391
 msgid "Non-closed volumes forming a new topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:394
+#: ../../manual/modeling/modifiers/generate/booleans.rst:395
 msgid "Resulting operation using two open volumes."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:397
+#: ../../manual/modeling/modifiers/generate/booleans.rst:398
 msgid ""
 "Now, let us see what happens when we use meshes that are partially open, "
 "incomplete, or meshes that are not forming a new topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:400
+#: ../../manual/modeling/modifiers/generate/booleans.rst:401
 msgid ""
 "As you can see in the images below the faces of one participant in the "
 "Boolean operation gives incomplete information to the modifier. The "
 "resulting edges get messy and there is not enough information to create "
-"faces for the resulting Mesh. This example uses a smooth shaded UVsphere "
-"cut in half. As explained before, the shading (smooth/flat) does not "
+"faces for the resulting Mesh. This example uses a smooth shaded UV-sphere"
+" cut in half. As explained before, the shading (smooth/flat) does not "
 "affect the calculations of the modifier."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:410
+#: ../../manual/modeling/modifiers/generate/booleans.rst:411
 msgid "Open volumes that are not forming a new topology."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/booleans.rst:414
+#: ../../manual/modeling/modifiers/generate/booleans.rst:415
 msgid "Resulting Operation of image on the left"
 msgstr ""
 
@@ -733,85 +734,50 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Whether faces are marked for smooth "
-#~ "or flat for shading doesn't affect "
-#~ "the calculations of this modifier."
+#~ "The Boolean modifier calculation is "
+#~ "performed using the target modified mesh"
+#~ " topology and dimensions. Other modifiers"
+#~ " added to the modified mesh are "
+#~ "bypassed. This means that if a "
+#~ "target is using another modifier, like"
+#~ " subsurf, the resulting topology for "
+#~ "the modified mesh will take into "
+#~ "account the subsurf of the target; "
+#~ "but for the modified mesh, the "
+#~ "basic topology is used anyway (see "
+#~ "examples)."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "If you have marked your Objects to"
-#~ " show the Edges (in "
-#~ ":menuselection:`Properties Editor --> Object "
-#~ "--> Display`, enable *Wire*), you will"
-#~ " see the Edge creation process while"
-#~ " you're moving your Objects. Depending "
-#~ "on your mesh topology, you can "
-#~ "also enable X-Ray and Transparency and"
-#~ " see the topology being created in"
-#~ " real time."
+#~ "If you add subsurf to the modified"
+#~ " mesh with a Boolean modifier, "
+#~ "Blender will visually add the subsurf"
+#~ " for the modified mesh, but not "
+#~ "for its calculations; it will only "
+#~ "take into account its basic mesh "
+#~ "topology. If you want to have a"
+#~ " subsurf added to the modified mesh,"
+#~ " you have to apply the subsurf "
+#~ "to the Boolean modified mesh before "
+#~ "applying the Boolean operation."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "When using the Boolean modifier, Blender"
-#~ " will use the face normal directions"
-#~ " to calculate the three Boolean "
-#~ "operations. The direction of the normals"
-#~ " will define the result of the "
-#~ "three available operations. When one of"
-#~ " the participants has inverted normals, "
-#~ "you're in fact multiplying the operation"
-#~ " by -1 and inverting the calculation"
-#~ " order. You can, at any time, "
-#~ "select your modified mesh, enter Edit"
-#~ " Mode and flip the normals to "
-#~ "change the behavior of the Boolean "
-#~ "modifier. See Tips: Fixing Mixed Normals"
-#~ " below."
+#~ "Below are two images: one with the"
+#~ " subsurf added to the target, and "
+#~ "another with the resulting topology."
+#~ msgstr ""
+
+#~ msgid "Modifier with Subsurf Target."
 #~ msgstr ""
 
 #~ msgid ""
-#~ "As you can see, the normal "
-#~ "directions can be pointing to any "
-#~ "of the Mesh sides, but cannot be"
-#~ " mixed in opposite directions for the"
-#~ " faces of the participants. The "
-#~ "Library cannot determine properly what's "
-#~ "positive and negative for the operation,"
-#~ " so the results will be bad or"
-#~ " you will have no effect when "
-#~ "using the Boolean modifier operation."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This modifier doesn't work when the "
-#~ "modified and/or the target mesh uses "
-#~ "empty faces in the topology used "
-#~ "for calculations. If the modifier faces"
-#~ " a situation where you have empty "
-#~ "faces mixed with normal faces, the "
-#~ "modifier will try, as much as "
-#~ "possible, to connect the faces and "
-#~ "apply the operation. For situations "
-#~ "where you have two concurrent faces "
-#~ "at the same position, the modifier "
-#~ "will operate on the target mesh "
-#~ "using both faces, but the resulting "
-#~ "normals will get messed. To avoid "
-#~ "duplicated faces, you can remove doubles"
-#~ " for the vertices before recalculating "
-#~ "the normals outside or inside. The "
-#~ "button for remove doubles is located "
-#~ "in the *Mesh Tools* Panel in the"
-#~ " 3D View, while in Edit Mode."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When using open meshes or non-"
-#~ "closed volumes, the Boolean modifier "
-#~ "won't perform any operation in faces "
-#~ "that do not create a new topology"
-#~ " filled with faces using the faces"
-#~ " of the target."
+#~ "As you can see, the added (not "
+#~ "applied) subsurf to the target was "
+#~ "taken into consideration. The topology "
+#~ "of the Icosphere with subsurf (Level "
+#~ "2) was completely transferred to the "
+#~ "modified mesh."
 #~ msgstr ""
 
 #~ msgid ""
@@ -824,7 +790,8 @@ msgstr ""
 #~ "create faces for the resulting Mesh. "
 #~ "This example uses a smooth shaded "
 #~ "UVsphere cut in half. As explained "
-#~ "before, the shading (smooth/flat) doesn't "
-#~ "affect the calculations of the modifier."
+#~ "before, the shading (smooth/flat) does "
+#~ "not affect the calculations of the "
+#~ "modifier."
 #~ msgstr ""
 
