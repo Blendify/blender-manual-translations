@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-27 23:46+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,19 +14,21 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:4
 msgid "Color Ramps"
-msgstr ""
+msgstr "Градиентные карты"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:6
 msgid "Reference"
-msgstr ""
+msgstr "Справка"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst
 msgid "Mode:     All Modes"
-msgstr ""
+msgstr "Режим:    Все режимы"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst
 msgid "Panel:    :menuselection:`Material --> Ramps`"
 msgstr ""
+"Панель:   :menuselection:`Материал --> Градиентная карта` "
+"(:menuselection:`Material --> Ramps`)"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:13
 msgid ""
@@ -38,6 +40,13 @@ msgid ""
 " blends with the 'actual color' (typically from a material or as output "
 "of a texture)."
 msgstr ""
+"Для многих материалов из реальной жизни, например, для кожи или металлов,"
+" цвета диффузного и зеркального отражения могут незначительно отличаться,"
+" из-за получаемого поверхностью количества энергии или из-за угла падения"
+" света. Параметр *Градиентная карта* позволяет вам установить диапазон "
+"цветов для *материала* и определить, как он будет меняться вдоль "
+"поверхности и как смешиваться с «фактическим цветом» (обычно получаемым "
+"из материала или из выхода текстуры)."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:21
 msgid ""
@@ -50,6 +59,15 @@ msgid ""
 "is often used for materials like some types of metallic car paint that "
 "change color based on viewing angle."
 msgstr ""
+"Градиентные карты позволяют вам точно контролировать цветовой градиент "
+"вдоль материала, вместо простого перехода осветлённого цвета из наиболее "
+"освещённой области к затемнённому цвету из наименее освещённой области. "
+"Кроме нескольких параметров для управления градиентом от светлых областей"
+" к областям в тени, градиентные карты также предоставляют вход "
+"«нормалей», определяющий градиент от поверхностей, смотрящих в камеру к "
+"поверхностям, повёрнутым от неё прочь. Часто это используется для "
+"материалов, вроде некоторых видов металлической краски для автомобилей, "
+"меняющих свой цвет в зависимости от угла обзора."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:30
 msgid ""
@@ -58,32 +76,38 @@ msgid ""
 "the mixing options and Alpha values it is possible to create an "
 "additional layer of shading in Blender materials."
 msgstr ""
+"Поскольку Blender выполняет вычисления текстур перед затенением, "
+"*градиентные карты* могут полностью заменить цвета текстуры или "
+"материала. Однако, используя параметры смешивания и значения альфы, в "
+"материалах Blender’а можно создать дополнительный слой затенения."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:37
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:41
 msgid "Ramps Panel."
-msgstr ""
+msgstr "Панель градиентной карты"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:43
 msgid ""
 "For the first part of the color ramp option see :ref:`ui-color-ramp-"
 "widget`."
 msgstr ""
+"Описание первой части параметров градиентной карты смотрите в разделе "
+":ref:`ui-color-ramp-widget`."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:59
 msgid "Input"
-msgstr ""
+msgstr "Ввод"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:46
 msgid "The input menu contains the following options for defining the gradient:"
-msgstr ""
+msgstr "Меню «Ввод» содержит следующие параметры для определения градиента:"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:49
 msgid "Shader"
-msgstr ""
+msgstr "Шейдер"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:49
 msgid ""
@@ -91,10 +115,13 @@ msgid ""
 "Torrance*) defines the color. Here the amount of light does not matter "
 "for color, only the direction of the light."
 msgstr ""
+"Цвет определяет значение, доставаемое из шейдера материала (*Ламберт*, "
+"*Кук-Торренс*). Яркость света не влияет на цвет, только на его "
+"направление."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:52
 msgid "Energy"
-msgstr ""
+msgstr "Энергия"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:52
 msgid ""
@@ -102,10 +129,13 @@ msgid ""
 "account. This makes the material change color when more light shines on "
 "it."
 msgstr ""
+"Как и *Шейдер*, только теперь во внимание принимаются также энергия "
+"лампы, её цвет и расстояние до неё. Благодаря этому материал меняет цвет,"
+" когда на него попадает свет."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:55
 msgid "Normal"
-msgstr ""
+msgstr "Норм."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:55
 msgid ""
@@ -113,10 +143,12 @@ msgid ""
 "Shader*. This is possible with a texture as well, but added for "
 "convenience."
 msgstr ""
+"В *градиентной карте* используется нормаль поверхности относительно "
+"камеры. Это можно было бы сделать и через текстуру, но так удобнее."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:59
 msgid "Result"
-msgstr ""
+msgstr "Результат"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:58
 msgid ""
@@ -125,123 +157,33 @@ msgid ""
 "shading, including 'Toon' style results. Using alpha values here is most "
 "useful for tweaking a finishing touch to a material."
 msgstr ""
+"В то время, как три предыдущих параметра работают для каждой лампы "
+"индивидуально, этот параметр работает только после вычисления затенения. "
+"Таким образом, он позволяет полностью контролировать всё затенение, "
+"включая результаты применения стиля «Toon». Для окончательной подгонки "
+"материала в данном случае наиболее полезны значения альфы."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:62
 msgid "Blend"
-msgstr ""
+msgstr "Смешение"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:62
 msgid ""
 "A list of the various :term:`Color Blend Modes` are available for "
 "blending the ramp shader with the color from *Input*."
 msgstr ""
+"Список различных :term:`режимов смешивания цветов <color blend modes>`, "
+"доступных для смешивания в шейдере градиента с цветом из *Ввода*."
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:66
 msgid "Factor"
-msgstr ""
+msgstr "Множитель"
 
 #: ../../manual/render/blender_render/materials/properties/ramps.rst:65
 msgid ""
 "This slider denotes the overall factor of the ramp shader with the color "
 "from *Input*."
 msgstr ""
-
-#~ msgid "Panel:    Context *Shading* --> sub-context *Material* --> *Ramps*"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Ramps Panel"
-#~ msgstr ""
-
-#~ msgid "Blend pop-up menu"
-#~ msgstr ""
-
-#~ msgid "Interpolation pop-up menu"
-#~ msgstr ""
-
-#~ msgid "button."
-#~ msgstr ""
-
-#~ msgid "box."
-#~ msgstr ""
-
-#~ msgid "Color and alpha values for each marker can be set by clicking the"
-#~ msgstr ""
-
-#~ msgid "Blend pop-up menu."
-#~ msgstr ""
-
-#~ msgid "Colorbands"
-#~ msgstr ""
-
-#~ msgid "Add"
-#~ msgstr ""
-
-#~ msgid "Delete"
-#~ msgstr ""
-
-#~ msgid "Remove the currently selected mark from the colorband."
-#~ msgstr ""
-
-#~ msgid "F"
-#~ msgstr ""
-
-#~ msgid "Flip the colorband."
-#~ msgstr ""
-
-#~ msgid "0"
-#~ msgstr ""
-
-#~ msgid "Pos"
-#~ msgstr ""
-
-#~ msgid "Reordering colors"
-#~ msgstr ""
-
-#~ msgid "Interpolation pop-up menu."
-#~ msgstr ""
-
-#~ msgid "Interpolation"
-#~ msgstr ""
-
-#~ msgid "Ease"
-#~ msgstr ""
-
-#~ msgid "Ease by quadratic equation."
-#~ msgstr ""
-
-#~ msgid "Cardinal"
-#~ msgstr ""
-
-#~ msgid "Cardinal."
-#~ msgstr ""
-
-#~ msgid "Linear"
-#~ msgstr ""
-
-#~ msgid "Linear (default). A smooth, consistent transition between colors."
-#~ msgstr ""
-
-#~ msgid "B-Spline"
-#~ msgstr ""
-
-#~ msgid "B-Spline."
-#~ msgstr ""
-
-#~ msgid "Constant"
-#~ msgstr ""
-
-#~ msgid "Constant."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The value as delivered by the "
-#~ "material's shader (*Lambert*, *CookTorr*) "
-#~ "defines the color. Here the amount "
-#~ "of light does not matter for "
-#~ "color, only the direction of the "
-#~ "light."
-#~ msgstr ""
+"Этот ползунок обозначает общий коэффициент смешивания градиентной карты с"
+" цветом из параметра *Ввод*."
 

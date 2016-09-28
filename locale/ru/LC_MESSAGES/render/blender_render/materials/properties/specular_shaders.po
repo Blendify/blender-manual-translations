@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-27 23:50+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:4
 msgid "Specular Shaders"
-msgstr ""
+msgstr "Шейдеры блика"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:6
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:94
@@ -28,15 +28,17 @@ msgstr ""
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:205
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:237
 msgid "Reference"
-msgstr ""
+msgstr "Справка"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst
 msgid "Mode:     All Modes"
-msgstr ""
+msgstr "Режим:    Все режимы"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst
 msgid "Panel:    :menuselection:`Material --> Specular`"
 msgstr ""
+"Панель:   :menuselection:`Материал --> Блик` (:menuselection:`Material "
+"--> Specular`)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:13
 msgid ""
@@ -49,10 +51,17 @@ msgid ""
 "the incident light angle (with regard to the surface's normal), which "
 "makes the viewing angle very important."
 msgstr ""
+"Зеркальные шейдеры создают яркие пятна на глянцевых поверхностях, "
+"имитируя отражение источников света. В отличие от :doc:`диффузного "
+"затенения </render/blender_render/materials/properties/diffuse_shaders>`,"
+" зеркальное отражение *зависит от направления взгляда*. Согласно закону "
+"Снеллиуса, свет, падающий на зеркальную поверхность, будет отражаться под"
+" углом, повторяющим угол падения (относительно нормали поверхности). По "
+"этой причине угол обзора становится определяющим фактором."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:20
 msgid "Not a Mirror!"
-msgstr ""
+msgstr "Не зеркало!"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:22
 msgid ""
@@ -62,36 +71,42 @@ msgid ""
 "mirror-like reflections you would need to use the internal raytracer. "
 "Please refer to section :doc:`rendering </render/index>` of this manual."
 msgstr ""
+"Важно подчеркнуть, что обсуждаемое здесь явление *зеркального отражения* "
+"– это не то отражение, которое мы видим в зеркале, а те светлые пятна, "
+"которые мы видим на глянцевых поверхностях. Для получения истинно "
+"зеркальных отражений нужно использовать внутренний трассировщик лучей. "
+"Для этого обратитесь к разделу :doc:`Визуализация </render/index>` "
+"данного руководства."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:30
 msgid "Common Options"
-msgstr ""
+msgstr "Общие параметры"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:32
 msgid "Each specular shader share the following common options:"
-msgstr ""
+msgstr "Каждый шейдер блика имеет следующие общие параметры:"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:34
 msgid "Specular Color"
-msgstr ""
+msgstr "Цвет бликов"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:35
 msgid "The color of the specular highlight"
-msgstr ""
+msgstr "Цвет зеркального освещения (блика)."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:36
 msgid "Intensity"
-msgstr ""
+msgstr "Интенсивность"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:37
 msgid ""
 "The intensity, or brightness of the specular highlight. This has a range "
 "of [0-1]."
-msgstr ""
+msgstr "Интенсивность или яркость пятна блика. Задаётся в диапазоне от 0 до 1."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:41
 msgid "Ramp"
-msgstr ""
+msgstr "Градиентная карта"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:39
 msgid ""
@@ -99,6 +114,10 @@ msgid ""
 "how the range will vary over a surface. See :doc:`Ramps "
 "</render/blender_render/materials/properties/ramps>` for details."
 msgstr ""
+"Позволяет задать диапазон цветов блика для *материала* и определить, как "
+"они будут меняться вдоль поверхности. Подробности смотрите в документации"
+" к :doc:`градиентным картам "
+"</render/blender_render/materials/properties/ramps>`."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:43
 msgid ""
@@ -108,14 +127,20 @@ msgid ""
 "different values for various effects (e.g. metals tend to have colored "
 "highlights)."
 msgstr ""
+"В результате, материал имеет по меньшей мере два различных цвета – один "
+"диффузный и один зеркальный. Зеркальный цвет, как правило, "
+"устанавливается в чистый белый (такой же «чистый белый», как отражаемый "
+"источник света), но также он может быть установлен в различные значения "
+"для достижения разнообразных эффектов (к примеру, металлы окрашивают свои"
+" блики)."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:51
 msgid "Technical Details"
-msgstr ""
+msgstr "Технические подробности"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:55
 msgid "Specular Reflection."
-msgstr ""
+msgstr "Бликовое отражение"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:58
 msgid ""
@@ -123,6 +148,10 @@ msgid ""
 "during the same process of light scattering, but are not the same. "
 "Diffusion is actually subsurface scattering at a very small scale."
 msgstr ""
+"В реальности качество диффузного и зеркального отражения, генерируемого в"
+" одном и том же процессе рассеивания света не одинаковое. Фактически, на "
+"очень малых масштабах, диффузное отражение является подповерхностным "
+"рассеиванием."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:62
 msgid ""
@@ -137,6 +166,17 @@ msgid ""
 "of all modern BRDFs (Bi-directional Reflectance Distribution Functions), "
 "or shading models."
 msgstr ""
+"Представьте себе, что поверхность состоит из микроскопических "
+"полупрозрачных отражающих граней. Резкость зеркального отражения "
+"определяется распределением углов этих микрограней по поверхности "
+"объекта. Чем эти грани более глубокие и неровные, тем больше свет "
+"рассеивается при попадании на поверхность. Когда эти грани более плоские "
+"на уровне «макроповерхности», поверхность будет обладать более чётким "
+"отражением, ближе к зеркальному. Это сокращённое объяснение общепринятой "
+"теории зеркальности на основе микрограней, которая является основой всех "
+"современных BRDF (Bi-directional Reflectance Distribution Functions – "
+"двулучевых функций отражательной способности, сокращённо ДФОС) или "
+"моделей затенения."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:73
 msgid ""
@@ -147,12 +187,20 @@ msgid ""
 "surface, hence creating what we perceive as diffuse, and the color of an "
 "object."
 msgstr ""
+"Поскольку эти микрограни являются прозрачными, некоторый попавший в них "
+"свет проникает под поверхность и диффундирует. После этого основная его "
+"часть возвращается назад в примерно ламбертовском распределении, а это "
+"значит, что он рассеивается равномерно во всех направлениях. Также из-за "
+"пигментации поверхности он ослабляется, создавая то, что мы воспринимаем "
+"как диффузный цвет объекта."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:80
 msgid ""
 "Note that at glancing angles, the reflectivity of a surface will always "
 "go to 1."
 msgstr ""
+"Обратите внимание, что при углах, близким к углам скольжения, "
+"зеркальность поверхности всегда будет стремиться к 1."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:82
 msgid ""
@@ -165,18 +213,28 @@ msgid ""
 " its bounce, which follow (more or less!) the same law as the light "
 "reflection."
 msgstr ""
+"Если для вас сложно понять эти взаимоотношения, попробуйте представить "
+"мячик (скажем, сантиметрового размера): если вы будете бросать его в "
+"стену из голых камней (размерами порядка дециметра), он каждый раз будет "
+"отскакивать в различных направлениях и вы очень быстро потеряете его! С "
+"другой стороны, если вы будете бросать его в гладкую бетонную стену "
+"(шероховатость которой, скажем, порядка миллиметра), вы сможете легко "
+"предсказать его отскоки, которые подчиняются (более или менее!) таким же "
+"законам, как и отражение света."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:92
 msgid "Cook-Torrance"
-msgstr ""
+msgstr "Кук-Торренс"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst
 msgid "Panel:    :menuselection:`Material --> Shaders`"
 msgstr ""
+"Панель:   :menuselection:`Материал --> Шейдеры` (:menuselection:`Material"
+" --> Shaders`)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:103
 msgid "Cook-Torrance Shader (Lambert 0.8)."
-msgstr ""
+msgstr "Шейдер Кука-Торренса (Ламберт 0.8)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:106
 msgid ""
@@ -189,6 +247,16 @@ msgid ""
 "synthesized images\" and applied it to the simulation of metal and "
 "plastic."
 msgstr ""
+"Кук-Торренс – это базовый зеркальный шейдер, наиболее полезный для "
+"создания блестящих пластиковых поверхностей. Это немного оптимизированная"
+" версия шейдера Фонга. Роберт Л. Кук (Robert L. Cook, LucasFilm) и Кеннет"
+" Е. Торренс (Kenneth E. Torrance, Корнелльский университет) в своей "
+"работе 1982 года `Модель отражения для компьютерной графики (A "
+"Reflectance Model for Computer Graphics) "
+"<https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.83.7263&rep=rep1&type=pdf>`__"
+" (PDF) описали «новую модель отражения для визуализации изображений, "
+"синтезируемых компьютером» и применили её к моделированию металла и "
+"пластика."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:118
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:149
@@ -196,25 +264,25 @@ msgstr ""
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:222
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:262
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:122
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:153
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:193
 msgid "Hardness"
-msgstr ""
+msgstr "Жёсткость"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:121
 msgid "Size of the specular highlight"
-msgstr ""
+msgstr "Размер зеркального блика."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:125
 msgid "Phong"
-msgstr ""
+msgstr "Фонг"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:136
 msgid "Phong Shader (Lambert 0.8)."
-msgstr ""
+msgstr "Шейдер Фонга (Ламберт 0.8)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:139
 msgid ""
@@ -227,15 +295,25 @@ msgid ""
 "components not only for specular lighting, but also diffuse and ambient "
 "lighting."
 msgstr ""
+"Шейдер Фонга является базовым шейдером, очень похожим на шейдер "
+"Кука-Торренса, но лучше подходящим для кожи и органических поверхностей. "
+"`Буи Туонг Фонг (Bui Tuong Phong) "
+"<https://en.wikipedia.org/wiki/Bui_Tuong_Phong>`__ (1942-1975) был "
+"вьетнамским по происхождению пионером компьютерной графики, разработавшим"
+" первый алгоритм для моделирования явления зеркального освещения. `Его "
+"модель (на английском) "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`__ включала "
+"компоненты не только для зеркального освещения, но также и для диффузного"
+" и окружающего освещения."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:152
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:225
 msgid "Size of the specular highlight."
-msgstr ""
+msgstr "Размер пятна блика."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:155
 msgid "Planet Atmosphere"
-msgstr ""
+msgstr "Атмосфера планеты"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:157
 msgid ""
@@ -244,14 +322,19 @@ msgid ""
 "For its material, use a phong specular shader. Set it to a very low alpha"
 " (.05), zero diffuse, low hardness (5) but high specularity (1)."
 msgstr ""
+"Из-за своей размытости шейдер хорошо подходит для создания атмосферы "
+"вокруг планеты. Добавьте вокруг планеты сферу, немного большую самой "
+"планеты. В её материале используйте зеркальный шейдер Фонга. Установите "
+"ему очень низкую альфу (0.05), нулевую интенсивность диффузного шейдера, "
+"низкую жёсткость (5), но большой блик (1)."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:164
 msgid "Blinn"
-msgstr ""
+msgstr "Блинн"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:175
 msgid "Blinn Shader (Oren-Nayar Int 0.8, Rough 0.5)."
-msgstr ""
+msgstr "Шейдер Блинна (Орен-Наяр, Интенсивность 0.8, Жёсткость 0.5)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:177
 msgid ""
@@ -267,16 +350,33 @@ msgid ""
 "changes in specular intensity with light direction and more accurately "
 "positioned highlights on a surface."
 msgstr ""
+"Блинн – это более «физический» зеркальный шейдер, часто используется "
+"совместно с диффузным шейдером Орена-Наяра. Он может быть более "
+"управляемым, поскольку к вышеупомянутым трём параметрам добавляет "
+"четвёртый – :term:`показатель преломления <index of refraction>`. `Джеймс"
+" Ф. Блинн (Джим Блинн, James F. Blinn) "
+"<https://en.wikipedia.org/wiki/Jim_Blinn>`__ работал в Лаборатории "
+"реактивного движения НАСА и стал широко известен своей работой для "
+"телевизионного документального фильма Карла Сагана *Космос*. Модель, "
+"описанная в его статье 1977 года `Модели отражения света для изображений,"
+" синтезированных компьютером (Models of Light Reflection for Computer "
+"Synthesized Pictures) <https://www.microsoft.com/en-"
+"us/research/publication/models-of-light-reflection-for-computer-"
+"synthesized-pictures/>`__ (PDF), включала изменения в интенсивности блика"
+" от направления света и более точное позиционирование пятна на "
+"поверхности."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:193
 msgid ""
 "Size of the specular highlight. The Blinn shader is capable of much "
 "tighter specular highlights than Phong or CookTorr."
 msgstr ""
+"Размер пятна блика. Шейдер Блинна способен выдавать значительно более "
+"жёсткие блики, нежели шейдеры Фонга или Кука-Торренса."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:200
 msgid "IOR"
-msgstr ""
+msgstr "Показатель преломления"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:196
 msgid ""
@@ -285,60 +385,75 @@ msgid ""
 " that), but to correctly compute specular reflection intensity and "
 "extension via Snell's Law."
 msgstr ""
+"На самом деле этот параметр не используется для вычисления преломления "
+"световых лучей, проходящих через материал (для этого нужен трассировщик "
+"лучей). Он служит для корректного вычисления интенсивности зеркального "
+"отражения и его расширения согласно закону Снеллиуса."
 
+# Mingun: в Blender не переведено, перевод – «Мультяшный»
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:203
 msgid "Toon"
-msgstr ""
+msgstr "Toon"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:214
 msgid "Toon Specular Shader (Toon Diffuse, Int 0.8, Size & Smooth match)."
 msgstr ""
+"Бликовый Toon-шейдер (диффузный Toon-шейдер, интенсивность 0.8, размер и "
+"гладкость совпадают)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:217
 msgid ""
 "The Toon specular shader matches the Toon diffuse shader. It is designed "
 "to produce the sharp, uniform highlights of cartoon cels."
 msgstr ""
+"Зеркальный Toon-шейдер соответствует диффузному Toon-шейдеру. Он "
+"предназначен для получения чётких, единообразных пятен блика мультяшных "
+"клеток."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:224
 msgid "Size"
-msgstr ""
+msgstr "Размер"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:227
 msgid "Smooth"
-msgstr ""
+msgstr "Гладко"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:227
 msgid "Softness of the highlight's edge."
-msgstr ""
+msgstr "Мягкость на границе светового пятна."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:229
 msgid "Alternative Method"
-msgstr ""
+msgstr "Альтернативный метод"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:231
 msgid ""
 "The Toon shader effect can also be accomplished in a more controllable "
 "way using color ramps."
 msgstr ""
+"Эффекта, похожего на Toon-шейдер, можно добиться также при использовании "
+"градиентных карт. В этом случае вы получите даже больший контроль над "
+"получаемым изображением."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:235
 msgid "Ward Isotropic"
-msgstr ""
+msgstr "ВардИзо"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:246
 msgid "Ward isotropic Shader."
-msgstr ""
+msgstr "Изотропный шейдер Варда"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:249
 msgid ""
 "Ward isotropic is a flexible specular shader that can be useful for metal"
 " or plastic."
 msgstr ""
+"ВардИзо – это гибкий зеркальный шейдер, который может быть полезен для "
+"моделирования металла или пластика."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:259
 msgid "Gregory J. Ward"
-msgstr ""
+msgstr "Грегори Дж. Вард (Gregory J. Ward)"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:252
 msgid ""
@@ -352,10 +467,24 @@ msgid ""
 "still called \"Ward Isotropic\" but is actually anisotropic. (`PDF "
 "<https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.69.6812&rep=rep1&type=pdf>`__)"
 msgstr ""
+"разработал сравнительно простую модель, которая подчиняется самым "
+"основным законам физики. В своей статье 1992 года «Измерение и "
+"моделирование анизотропных реакций» («Measuring and modeling anisotropic "
+"reaction»), Вард ввёл двулучевую функцию отражательной способности (ДФОС,"
+" по английски будет Bidirectional Reflectance Distribution Function или "
+"BRDF), которая с тех пор широко используется в компьютерной графике, "
+"поскольку теми несколькими параметрами, которыми она оперирует, очень "
+"просто управлять. Его модель может представлять как изотропные "
+"поверхности (не зависящие от направления света), так и анизотропные "
+"поверхности (зависящие от направления света). В Blender’е зеркальный "
+"шейдер Варда до сих пор называется «Изотропный Вард» («ВардИзо»), хотя на"
+" самом деле он давно анизотропный. `PDF "
+"<https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.69.6812&rep=rep1&type=pdf>`__"
+" с работой (на английском)."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:270
 msgid "Slope"
-msgstr ""
+msgstr "Уклон"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:265
 msgid ""
@@ -365,90 +494,11 @@ msgid ""
 "highlight, though using a different method to that of the other specular "
 "shaders. It is capable of extremely sharp highlights."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "CookTorr Shader (Lambert 0.8)"
-#~ msgstr ""
-
-#~ msgid "Phong Shader (Lambert 0.8)"
-#~ msgstr ""
-
-#~ msgid "Blinn Shader (Oren-Nayar Int 0.8, Rough 0.5)"
-#~ msgstr ""
-
-#~ msgid "Toon Specular Shader (Toon Diffuse, Int 0.8, Size & Smooth match)"
-#~ msgstr ""
-
-#~ msgid "WardIso Shader"
-#~ msgstr ""
-
-#~ msgid "Panel:    Shading/Material Context --> Specular"
-#~ msgstr ""
-
-#~ msgid "Panel:    Shading/Material Context --> Shaders"
-#~ msgstr ""
-
-#~ msgid "CookTorr"
-#~ msgstr ""
-
-#~ msgid "CookTorr Shader (Lambert 0.8)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "CookTorr (Cook-Torrance) is a basic "
-#~ "specular shader that is most useful "
-#~ "for creating shiny plastic surfaces. It"
-#~ " is a slightly optimized version of"
-#~ " Phong. Robert L. Cook (LucasFilm) "
-#~ "and Kenneth E. Torrance (Cornell "
-#~ "University) In their 1982 paper `A "
-#~ "Reflectance Model for Computer Graphics "
-#~ "<https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.83.7263&rep=rep1&type=pdf>`__"
-#~ " (PDF), they described \"a new "
-#~ "reflectance model for rendering computer "
-#~ "synthesized images\" and applied it to"
-#~ " the simulation of metal and plastic."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Blinn is a more 'physical' specular "
-#~ "shader, often used with the Oren-"
-#~ "Nayar diffuse shader. It can be "
-#~ "more controllable because it adds a "
-#~ "fourth option, an :term:`index of "
-#~ "refraction`, to the aforementioned three. "
-#~ "`James F. Blinn "
-#~ "<https://en.wikipedia.org/wiki/Jim_Blinn>`__ worked at "
-#~ "NASA's Jet Propulsion Laboratory and "
-#~ "became widely known for his work "
-#~ "on Carl Sagan's TV documentary *Cosmos*."
-#~ " The model he described in his "
-#~ "1977 paper `Models of Light Reflection"
-#~ " for Computer Synthesized Pictures "
-#~ "<https://research.microsoft.com/pubs/73852/p192-blinn.pdf>`__ "
-#~ "(PDF) included changes in specular "
-#~ "intensity with light direction and more"
-#~ " accurately positioned highlights on a "
-#~ "surface."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The Toon shader effect can also be"
-#~ " accomplished in a more controllable "
-#~ "way using ColorRamps."
-#~ msgstr ""
-
-#~ msgid "WardIso"
-#~ msgstr ""
-
-#~ msgid "WardIso Shader."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "WardIso is a flexible specular shader"
-#~ " that can be useful for metal "
-#~ "or plastic."
-#~ msgstr ""
+"Стандартное отклонение для уклона поверхности. Ранее известное как "
+"`среднее квадратичное "
+"<https://ru.wikipedia.org/wiki/Среднее_квадратическое>`__ (`по английски "
+"будет rms <https://en.wikipedia.org/wiki/Root_mean_square>`__ значение, "
+"этот параметр управляет размером пятна блика, хотя здесь и используется "
+"совершенно другой метод, чем у остальных зеркальных шейдеров. Метод "
+"способен создавать чрезвычайно резкие блики."
 
