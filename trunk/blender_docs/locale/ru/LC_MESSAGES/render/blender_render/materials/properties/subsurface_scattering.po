@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-27 23:51+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:4
 msgid "Subsurface Scattering"
-msgstr ""
+msgstr "Подп. рассеивание"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:6
 msgid ""
@@ -31,6 +31,15 @@ msgid ""
 "fruits, wax, gels (like honey, or Jello) and so on all have subsurface "
 "scattering (SSS), and photo-realism really cannot be achieved without it."
 msgstr ""
+"Многие органические и неорганические материалы не являются полностью "
+"непрозрачными прямо на поверхности, поскольку свет не просто отскакивает "
+"от верхней поверхности. Вместо этого часть света проникает глубоко под "
+"поверхность кожи, рассеивается внутри неё, принимая её внутренний цвет и "
+"выходит на поверхность в другом месте. Кожа человека/животного, кожа "
+"виноградин, помидоров, фруктов, воск, гели (к примеру, мёд или желе) и "
+"прочие материалы обладают подповерхностным рассеиванием (subsurface "
+"scattering – SSS), и достичь фотореализма без него действительно "
+"невозможно."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:14
 msgid ""
@@ -38,10 +47,14 @@ msgid ""
 "one and the same. The difference is in how far light can diffuse beneath "
 "the surface before it is absorbed or transmitted back out."
 msgstr ""
+"Важно понимать, что подповерхностное и диффузное рассеивание – это одно и"
+" то же. Разница заключается в том, насколько далеко свет может диффузно "
+"рассеятся под поверхностью, прежде чем он поглотится или отразится "
+"обратно."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:20
 msgid "How it works"
-msgstr ""
+msgstr "Как оно работает"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:22
 msgid ""
@@ -49,10 +62,13 @@ msgid ""
 "not practical. But it has been shown that it is not necessary to do this,"
 " and that one can use a different approach."
 msgstr ""
+"На самом деле не практично рассчитывать путь светового луча под "
+"поверхностью объекта. Было показано, что в этом нет необходимости и можно"
+" воспользоваться другим подходом."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:26
 msgid "Blender calculates SSS in two steps:"
-msgstr ""
+msgstr "Blender вычисляет подповерхностное рассеивание в два этапа:"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:28
 msgid ""
@@ -62,6 +78,11 @@ msgid ""
 " the type of diffuse Shader, the light color, etc. are taken into "
 "account."
 msgstr ""
+"Сначала вычисляется облучённость (по другому – яркость) поверхности, как "
+"с лицевой стороны объекта, так и с обратной. Примерно то же самое "
+"происходит и при обычной визуализации. Во внимание принимается всё – "
+"Ambient Occlusion, Radiosity, тип диффузного шейдера, цвет источника "
+"света и так далее."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:32
 msgid ""
@@ -73,26 +94,35 @@ msgid ""
 "bit more complicated than simply calculating the average, but do not "
 "bother too much with the math behind it."
 msgstr ""
+"На втором шаге визуализируется окончательное изображение, но теперь "
+"диффузный шейдер заменяется шейдером подповерхностного рассеивания. "
+"Вместо ламп используется вычисленная карта освещённости. Яркость точки "
+"поверхности вычисляется как «средняя» яркость окружающих точек. В "
+"зависимости от ваших настроек, рассматриваться может вся поверхность, и "
+"это немного сложнее, чем просто вычисление среднего значения, однако вам "
+"не стоит слишком беспокоится о лежащей в основе расчёта математике."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:39
 msgid "Instead let us see what SSS does to a distinct light point."
 msgstr ""
+"Вместо этого давайте посмотрим, что подповерхностное рассеивание делает с"
+" чёткими пятнами света."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:46
 msgid "No SSS."
-msgstr ""
+msgstr "Без подповерхностного рассеивания"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:51
 msgid "Small SSS radius."
-msgstr ""
+msgstr "Малый радиус подповерхностного рассеивания"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:56
 msgid "SSS radius enlarged."
-msgstr ""
+msgstr "Увеличенный радиус подповерхностного рассеивания"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:61
 msgid "SSS with very large red radius value."
-msgstr ""
+msgstr "Подповерхностное рассеивание с очень большим радиусом красного"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:64
 msgid ""
@@ -101,16 +131,22 @@ msgid ""
 "colors with the same amount, you may choose different radius values for "
 "each of the RGB colors."
 msgstr ""
+"Если вы включите подповерхностное рассеивание, свет будет распределяться "
+"по большей области. Размер этой области зависит от значения радиуса. "
+"Вместо распространения всех цветов на одинаковое расстояние вы можете "
+"указать различные радиусы для каждого из компонентов RGB."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:69
 msgid ""
 "If you use a very large radius value for a color, its light is evenly "
 "distributed over the whole object."
 msgstr ""
+"Если вы используете очень большое значение радиуса для цвета, он будет "
+"равномерно распределён по всему объекту."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:72
 msgid "Note about scatter radius"
-msgstr ""
+msgstr "Замечание о радиусе рассеивания"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:74
 msgid ""
@@ -121,18 +157,29 @@ msgid ""
 "an unfortunate limitation. A way to lessen this effect is use multiple "
 "passes with different scatter radii, and average them."
 msgstr ""
+"Из-за способа вычисления рассеивания, при использовании больших значений "
+"радиуса, вы можете заметить артефакты на окантовке, которые проявляются в"
+" виде дополнительного цвета, преобладающего над цветом рассеивания. Выше "
+"вы можете видеть голубоватую полосу в освещённой области на последнем "
+"изображении. Это нежелательный побочный эффект. Чтобы уменьшить его, "
+"используйте несколько проходов с различными радиусами рассеивания и "
+"усредните их."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:83
 msgid "Enabling Subsurface Scattering"
-msgstr ""
+msgstr "Включение подповерхностного рассеивания"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:87
 msgid "The SSS Panel. SSS is already enabled."
 msgstr ""
+"Панель подповерхностного рассеивания. Подповерхностное рассеивание уже "
+"включено"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:90
 msgid "Enable SSS by clicking on the *Subsurface Scattering* button."
 msgstr ""
+"Включите подповерхностное рассеивание, отметив галочку *Подп. "
+"рассеивание*."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:91
 msgid ""
@@ -142,6 +189,11 @@ msgid ""
 "The remaining options are not set (because they are mostly dependent on "
 "the size of your object)."
 msgstr ""
+"В выпадающем списке сверху панели находятся различные предустановки. "
+"Добавить новые или удалить старые предустановки можно кнопками *+* и *-*."
+" При выборе предустановки устанавливаются значения *Радиуса*, "
+"*RGB-радиуса* и :term:`показателя преломления <IOR>`. Остальные параметры"
+" не задаются (поскольку они, в основном, зависят от размеров объекта)."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:97
 msgid ""
@@ -149,18 +201,22 @@ msgid ""
 "dependent on the incident light and shadows, you need proper shadow "
 "calculation (which may need ray tracing)."
 msgstr ""
+"Для включения подповерхностного рассеивания необязательно включать "
+"трассировку лучей. Но поскольку оно зависит от падающего света и теней, "
+"вам потребуется их правильное вычисление (которое как раз может "
+"потребовать включения трассировки лучей)."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:103
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:105
 msgid "The numeric sliders control how the light is scattered:"
-msgstr ""
+msgstr "Числовые ползунки регулируют степень рассеивания света:"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:112
 msgid "IOR"
-msgstr ""
+msgstr "Показатель преломления"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:108
 msgid ""
@@ -171,10 +227,17 @@ msgid ""
 "been found to work well for most materials. If you know the exact "
 "material you are trying to simulate, see :ref:`transparency-ior-common`."
 msgstr ""
+"Значение :term:`показателя преломления <index of refraction>` определяет "
+"спад падающего света. Более высокие значения означают более быстрый спад "
+"света. Этот эффект довольно тонкий и он всего лишь чуть-чуть изменяет "
+"функцию распределения. Путём изучения множества различных материалов мы "
+"установили, что в большинстве случаев хорошо работает значение в "
+"диапазоне от 1.3 до 1.5. Если вы точно знаете, какой материал собрались "
+"имитировать, смотрите раздел :ref:`transparency-ior-common`."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:119
 msgid "Scale"
-msgstr ""
+msgstr "Масштаб"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:115
 msgid ""
@@ -184,10 +247,16 @@ msgid ""
 " want to work out what scale value to use in your scene, just use the "
 "formula: (size in Blender units)/(real world size in millimeters)=scale."
 msgstr ""
+"Масштаб объекта в единицах Blender’а, для которого вы хотите включить "
+"эффект рассеивания. Масштаб 1.0 означает, что 1 единица Blender’а "
+"эквивалентна 1 миллиметру, масштаб 0.001 означает, что 1 единица "
+"Blender’а равна 1 метру. Если вы хотите выйти за границы масштаба вашей "
+"сцены, просто используйте формулу: (размер в единицах "
+"Blender’а)/(реальный размер в миллиметрах)=масштаб."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:131
 msgid "Scattering Color (Albedo)"
-msgstr ""
+msgstr "Цвет рассеивания (альбедо)"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:122
 msgid ""
@@ -197,12 +266,19 @@ msgid ""
 " should be the same as the surface color, however, changing this value "
 "has unintuitive results on the scattering effect:"
 msgstr ""
+"Альбедо – вероятность того, что свет «выживет» при рассеивании. Если вы "
+"думаете о рассеивании как о фильтре, это – высота фильтра. Оно умножается"
+" на цвет поверхности. На практике всё это выглядит неинтуитивным. Альбедо"
+" должно быть равным цвету поверхности, однако его изменение влияет на "
+"эффект рассеяния совсем неинтуитивно:"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:128
 msgid ""
 "The darker the color the more light is scattered. A value of 1 will "
 "produce no scattering effect."
 msgstr ""
+"Чем темнее цвет, тем больше света рассеивается. Значение 1 отключит "
+"эффект рассеивания."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:130
 msgid ""
@@ -211,10 +287,15 @@ msgid ""
 "will appear in red and blue. You can compensate the different scattering "
 "by setting a larger radius for the color."
 msgstr ""
+"Так что, если вы установите его в зелёный цвет, освещённые области "
+"объекта будут видны в зелёном цвете, а сам зелёный будет рассеян совсем "
+"немного. Поэтому более тёмные области будут иметь красный и синий "
+"оттенки. Вы можете скомпенсировать различное рассеивание путём установки "
+"большего радиуса для цвета."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:142
 msgid "RGB Radius"
-msgstr ""
+msgstr "RGB-радиус"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:134
 msgid ""
@@ -229,14 +310,25 @@ msgid ""
 "light beneath the surface. You control how far the light spreads to "
 "achieve a specific result."
 msgstr ""
+"На самом деле это не радиус подповерхностного рассеивания, а средняя "
+"длина пути между событиями рассеивания. Когда свет проходит через объект,"
+" он испытывает внутри него отскоки, а затем выходит на поверхность в "
+"какой-то другой точке. Это значение определяет среднюю длину пути, "
+"которую свет пройдёт между двумя отскоками. Чем больше длина пути, тем "
+"дальше свет может рассеяться. Этот механизм является основным источником "
+"воспринимаемого «цвета рассеивания» материала. Материал вроде кожи будет "
+"иметь немного больший радиус красного, нежели зелёного или синего. "
+"Подповерхностное рассеивание есть ни что иное, как диффузия света под "
+"поверхностью. Чтобы достить определённого результата, вы управляете тем, "
+"насколько далеко свет может распространиться."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:148
 msgid "Blend"
-msgstr ""
+msgstr "Смешивание"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:146
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:146
 msgid ""
@@ -244,22 +336,25 @@ msgid ""
 "textures. Note that even with this option set to 0.0, the RGB option "
 "still influences the scattering behavior."
 msgstr ""
+"Контролирует, как сильно RGB-радиус модулирует диффузный цвет и текстуры."
+" Обратите внимание, что даже при установке этого параметра в 0.0, "
+"RGB-радиус всё равно влияет на поведение рассеивания."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:148
 msgid "Texture"
-msgstr ""
+msgstr "Текстура"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:149
 msgid "How much the surface texture is blurred along with the shading."
-msgstr ""
+msgstr "Насколько сильно размывается текстура при затенении."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:158
 msgid "Scattering Weight"
-msgstr ""
+msgstr "Коэфф. рассеивания"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:153
 msgid "Front"
-msgstr ""
+msgstr "Спереди"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:152
 msgid ""
@@ -267,10 +362,13 @@ msgid ""
 "through the front of the object, how much is absorbed or added? (Normally"
 " 1.0 or 100%)."
 msgstr ""
+"Коэффициент для увеличения или уменьшения рассеивания спереди. Указывает "
+"на то, сколько света поглотится или добавится, когда он входит через "
+"переднюю часть объекта (в норме 1.0 или 100%)."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:158
 msgid "Back"
-msgstr ""
+msgstr "Сзади"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:156
 msgid ""
@@ -279,10 +377,14 @@ msgid ""
 "the front of the object. This happens mostly on thin objects, like hands "
 "and ears."
 msgstr ""
+"Коэффициент для увеличения или уменьшения рассеивания сзади. Свет, "
+"попавший на объект сзади, может пройти через весь объект и выйти с его "
+"передней стороны. В основном это случается с тонкими объектами, вроде "
+"кистей рук или ушей."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:166
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:161
 msgid ""
@@ -291,20 +393,27 @@ msgid ""
 "artifacts. It can be set higher to speed up rendering, potentially with "
 "errors."
 msgstr ""
+"Этот параметр определяет, насколько точно алгоритм отбирает образцы "
+"окружающих точек. Оставив его в положении 0.05, вы должны получить "
+"изображение без артефактов. Для ускорения визуализации он может быть "
+"установлен и в более высокое значение, но потенциально это приведёт к "
+"появлению артефактов."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:165
 msgid ""
 "Setting it at 1.0 is a good way to quickly get a preview of the look, "
 "with errors."
 msgstr ""
+"Установка параметра в 1.0 – хороший способ получить быстрый предпросмотр "
+"визуализации ценой большого количества артефактов."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:169
 msgid "Developing your own SSS material"
-msgstr ""
+msgstr "Разработка своего собственного материала с подповерхностным рассеиванием"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:172
 msgid "The Traditional Approach"
-msgstr ""
+msgstr "Традиционный подход"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:174
 msgid ""
@@ -312,6 +421,9 @@ msgid ""
 " a simplified version of the layering approach. See the external links "
 "for more information:"
 msgstr ""
+"Более общий, но менее интуитивный подход состоит в использовании «слоёв»."
+" Это упрощённая версия подхода с использованием слоёв. Дополнительную "
+"информацию смотрите по внешним ссылкам:"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:178
 msgid ""
@@ -319,32 +431,38 @@ msgid ""
 "color of the object. If you want to use different radii for the colors, "
 "do not make it too dark."
 msgstr ""
+"Установите по своему вкусу цвет подповерхностного рассеивания, обычно это"
+" доминирующий цвет объекта. Если вы хотите использовать различные радиусы"
+" для компонент цвета, не делайте сам цвет слишком тёмным."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:180
 msgid ""
 "Set the scale factor. If you want to see much translucency you need small"
 " objects or large scale values."
 msgstr ""
+"Установите коэффициент масштаба. Если вы хотите, чтобы свет глубже "
+"проникал в объекты, вам нужны либо объекты меньшего размера, либо "
+"увеличенное значение масштаба."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:181
 msgid "Set the radius values."
-msgstr ""
+msgstr "Установите значения радиусов."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:182
 msgid "Adjust the brightness with the *Front* and *Back* values."
-msgstr ""
+msgstr "Подстройте яркость, регулируя значения *Спереди* и *Сзади*."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:186
 msgid "A more intuitive approach"
-msgstr ""
+msgstr "Более интуитивный подход"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:188
 msgid "Set the Scattering color to 0.5"
-msgstr ""
+msgstr "Установите цвет рассеивания в 0.5."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:189
 msgid "Set the Front weight to 2.0"
-msgstr ""
+msgstr "Установите коэффициент рассеивания спереди в 2.0."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:190
 msgid ""
@@ -352,44 +470,50 @@ msgid ""
 "scene. If you want to see much translucency you need small objects or "
 "large scale values."
 msgstr ""
+"Установите коэффициент масштаба, руководствуясь относительными размерами "
+"объекта в сцене. Если вы хотите, чтобы свет глубже проникал в объекты, "
+"вам нужны либо объекты меньшего размера, либо увеличенное значение "
+"масштаба."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:192
 msgid "Set the radius values appropriately."
-msgstr ""
+msgstr "Установите соответствующие радиусы."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:196
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:199
 msgid "Skin"
-msgstr ""
+msgstr "Кожа"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst
 msgid ""
 "Increasing SSS scale (`blend-file "
 "<https://wiki.blender.org/index.php/:File:MH-SSS-head-001.blend>`__)."
 msgstr ""
+"Увеличение масштаба подповерхностного рассеивания (`.blend-файл "
+"<https://wiki.blender.org/index.php/:File:MH-SSS-head-001.blend>`__)"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:207
 msgid "Scale: 1."
-msgstr ""
+msgstr "Масштаб: 1"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:212
 msgid "Scale: 2."
-msgstr ""
+msgstr "Масштаб: 2"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:217
 msgid "Scale: 3."
-msgstr ""
+msgstr "Масштаб: 3"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:222
 msgid "Scale: 4."
-msgstr ""
+msgstr "Масштаб: 4"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:227
 msgid "Scale: 5."
-msgstr ""
+msgstr "Масштаб: 5"
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:231
 msgid ""
@@ -397,6 +521,9 @@ msgid ""
 "<https://www.blender.org/development/release-logs/blender-244/subsurface-"
 "scattering/>`__."
 msgstr ""
+"`Примечания к выпуску от разработчиков: подповерхностное рассеивание (на "
+"английском) <https://www.blender.org/development/release-logs/blender-244"
+"/subsurface-scattering/>`__."
 
 #: ../../manual/render/blender_render/materials/properties/subsurface_scattering.rst:233
 msgid ""
@@ -404,82 +531,7 @@ msgid ""
 "<https://bensimonds.com/2010/05/31/three-layer-sss-in-blender-"
 "demystified/>`__."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "The SSS Color Swatch"
-#~ msgstr ""
-
-#~ msgid "Blend :"
-#~ msgstr ""
-
-#~ msgid "Scattering Weight :"
-#~ msgstr ""
-
-#~ msgid "See also"
-#~ msgstr ""
-
-#~ msgid "1"
-#~ msgstr ""
-
-#~ msgid "2"
-#~ msgstr ""
-
-#~ msgid "3"
-#~ msgstr ""
-
-#~ msgid "4"
-#~ msgstr ""
-
-#~ msgid "5"
-#~ msgstr ""
-
-#~ msgid "Instead let's see what SSS does to a distinct light point."
-#~ msgstr ""
-
-#~ msgid "Set the Scattering color to .5"
-#~ msgstr ""
-
-#~ msgid "Set the Front weight to 2."
-#~ msgstr ""
-
-#~ msgid "Image 3a: No SSS."
-#~ msgstr ""
-
-#~ msgid "Image 3b: Small SSS radius."
-#~ msgstr ""
-
-#~ msgid "Image 3c: SSS radius enlarged."
-#~ msgstr ""
-
-#~ msgid "Image 3d: SSS with very large red radius value."
-#~ msgstr ""
-
-#~ msgid "Image 4: The SSS Panel. SSS is already enabled."
-#~ msgstr ""
-
-#~ msgid "scale: 1."
-#~ msgstr ""
-
-#~ msgid "scale: 2."
-#~ msgstr ""
-
-#~ msgid "scale: 3."
-#~ msgstr ""
-
-#~ msgid "scale: 4."
-#~ msgstr ""
-
-#~ msgid "scale: 5."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "*SubSurface Scattering* does not need "
-#~ "ray tracing. But since it is "
-#~ "dependent on the incident light and "
-#~ "shadows, you need proper shadow "
-#~ "calculation (which may need ray "
-#~ "tracing)."
-#~ msgstr ""
+"`Бен Симондс (Ben Simonds): три слоя подповерхностного рассеивания в "
+"разоблачении Blender’а (на английском) <https://bensimonds.com/2010/05/31"
+"/three-layer-sss-in-blender-demystified/>`__."
 

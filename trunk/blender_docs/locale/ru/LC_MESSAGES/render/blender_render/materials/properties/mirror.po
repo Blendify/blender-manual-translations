@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-09-27 23:55+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:4
 msgid "Mirror Reflections"
-msgstr ""
+msgstr "Зеркальные отражения"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:6
 msgid ""
@@ -34,6 +34,17 @@ msgid ""
 "up to another object, and so on, until a non-reflective object is finally"
 " met and gives the whole chain of rays its color."
 msgstr ""
+"Зеркальные отражения вычисляются обеими движками визуализации – "
+"внутренним рендером Blender и рендером Cycles – при помощи трассировки "
+"лучей (в игровом движке отражения не доступны). Трассировка лучей "
+"используется, чтобы материал смог отразить своё окружение, как в зеркале."
+" Принцип отражений с трассировкой лучей очень прост: из камеры "
+"выпускается луч, который путешествует по сцене до тех пор, пока не "
+"упрётся в объект. Если этот объект не обладает зеркальностью, луч берёт "
+"цвет этого объекта. Если объект является зеркальным, луч отскакивает от "
+"него в своей текущей позиции и отправляется обратно в сцену в поисках "
+"другого объекта. Так происходит до тех пор, пока не встретится объект, не"
+" отражающий свет, он и даст цвет всей цепочке лучей."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:16
 msgid ""
@@ -44,6 +55,13 @@ msgid ""
 " ray is set through the *Depth* value: this parameter sets the maximum "
 "number of bounces allowed for a single ray."
 msgstr ""
+"В конечном итоге, первый отражающий объект наследует цвета своего "
+"окружения, пропорционально своему значению *зеркальности*. Очевидно, что "
+"если в сцене будут располагаться одни зеркальные объекты, визуализация "
+"может длиться вечно. Поэтому существует механизм для ограничения "
+"дальности путешествия одного луча, реализованный через установку значения"
+" *глубины*: этот параметр задаёт максимальное количество отскоков, "
+"разрешённых для одного луча."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:24
 msgid ""
@@ -51,6 +69,10 @@ msgid ""
 "ray-traced reflections. This is done in the :menuselection:`Render --> "
 "Shading` panel."
 msgstr ""
+"Если вы хотите использовать отражения с трассировкой лучей, вам следует "
+"включить трассировку лучей в настройках сцены. Это делается на панели "
+":menuselection:`Визуализация --> Затенение` (:menuselection:`Render --> "
+"Shading`)."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:28
 msgid ""
@@ -62,26 +84,33 @@ msgid ""
 "0, mirrored reflectivity will be activated and the reflection will be "
 "tinted the color set in Mirror Color."
 msgstr ""
+"*Цвет зеркала* на панели «Отражение» служит для выбора цвета отражённого "
+"света. Для обычных зеркал, как правило, следует использовать белый цвет. "
+"Тем не менее, некоторые зеркала (например, металлы) окрашивают отражения,"
+" поэтому вы можете поменять цвет, нажав на виджет. Степень зеркальности "
+"отражения определяется значением *зеркальности*. Если она превышает 0, "
+"зеркальные отражения будут активированы, а отражение будет окрашено в "
+"выбранный цвет."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:37
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:41
 msgid "The Mirror Panel."
-msgstr ""
+msgstr "Панель «Отражение»"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:44
 msgid "Enable ray-traced reflections"
-msgstr ""
+msgstr "Включить отражения с трассировкой лучей"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:45
 msgid "Enable or disable ray-traced reflections"
-msgstr ""
+msgstr "Включение или отключение изображений с трассировкой лучей."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:48
 msgid "Reflectivity"
-msgstr ""
+msgstr "Зеркальность"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:47
 msgid ""
@@ -89,14 +118,16 @@ msgid ""
 "you need a perfect mirror, or set it to 0.0 if you do not want any "
 "reflection."
 msgstr ""
+"Установка величины зеркальности объекта. Значение 1.0 даёт идеальное "
+"зеркало, а 0.0 – вообще отключает какие-либо отражения."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:52
 msgid "Picking a mirror color."
-msgstr ""
+msgstr "Выбор цвета зеркала"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:61
 msgid "Mirror Color"
-msgstr ""
+msgstr "Цвет зеркала"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:56
 msgid ""
@@ -108,11 +139,19 @@ msgid ""
 "you have to set the Mirror Color accordingly. To set a mirror color, "
 "simply click the color button in the mirror panel and select a color."
 msgstr ""
+"Цвет зеркального отражения. По умолчанию, почти идеально отражающий "
+"материал, вроде хрома или зеркала, будет отражать точные цвета из своей "
+"окрестности. Но некоторые другие столь же светоотражающие материалы "
+"подкрашивают отражения своим собственным цветом. Так делают, например, "
+"хорошо отполированная медь или золото. Для повторения этого эффекта в "
+"Blender’е вам следует установить соответствующий цвет зеркала. Для "
+"установки цвета просто нажмите на виджет выбора цвета на панели "
+"«Отражение» и выберите нужный цвет."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:65
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:133
 msgid "Fresnel"
-msgstr ""
+msgstr "Френель"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:64
 msgid ""
@@ -122,20 +161,26 @@ msgid ""
 "more reflective a material becomes (this generally occurs on the outline "
 "of objects)."
 msgstr ""
+"Устанавливает силу эффекта Френеля. Эффект Френеля влияет на зеркальность"
+" материала в зависимости от угла между нормалью к поверхности и "
+"направлением взгляда. Как правило, чем больше угол, тем более зеркальным "
+"становится материал (обычно это происходит по контуру объектов)."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:67
 msgid "Blend"
-msgstr ""
+msgstr "Смешение"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:68
 msgid ""
 "A controlling factor to adjust how the blending happens between the "
 "reflective and non-reflective areas."
 msgstr ""
+"Управляющий коэффициент, регулирующий смешивание между отражающими и "
+"неотражающими областями."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:73
 msgid "Depth"
-msgstr ""
+msgstr "Глубина"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:70
 msgid ""
@@ -145,10 +190,15 @@ msgid ""
 "see surrounding reflections in the reflection of the reflected object "
 "(!). In this case, a Depth of 4 or 5 is typically a good value."
 msgstr ""
+"Максимально допустимое количество внутренних отражений света. Если ваша "
+"сцена содержит множество отражающих объектов и/или камера фокусируется на"
+" таком отражающем объекте, вам нужно будет увеличить это значение, если "
+"вы хотите увидеть отражения окружения в отражении отражаемого объекта "
+"(!). В этом случае разумно будет увеличить глубину до 4 или 5."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:77
 msgid "Max Distance"
-msgstr ""
+msgstr "Длина луча"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:76
 msgid ""
@@ -156,10 +206,13 @@ msgid ""
 "units. Reflections further than this range fade out to reduce compute "
 "time."
 msgstr ""
+"Максимальная длина отражённых лучей. Длина отсчитывается от камеры "
+"(Z-глубина) в единицах Blender. Лучи, длиннее этого значения, исчезают "
+"для уменьшения времени вычислений."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:82
 msgid "Fade to"
-msgstr ""
+msgstr "Чем заменить"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:80
 msgid ""
@@ -167,6 +220,9 @@ msgid ""
 "*Material* color can be best for indoor scenes, *Sky* color (World "
 "settings) for outdoor scenes."
 msgstr ""
+"Цвет, который принимают лучи, ни с чем не пересёкшиеся на протяжении "
+"максимальной *длины луча*. Для закрытых сцен подходит цвет *материала*, а"
+" для открытых — цвет *неба* (из настроек окружающей среды)."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:86
 msgid ""
@@ -174,10 +230,13 @@ msgid ""
 "<https://wiki.blender.org/index.php/:File:Manual-2.5-Material-"
 "MonkeyMirror.blend>`__)"
 msgstr ""
+"Сюзанна в Доме веселья (`.blend-файл "
+"<https://wiki.blender.org/index.php/:File:Manual-2.5-Material-"
+"MonkeyMirror.blend>`__)"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:109
 msgid "Gloss"
-msgstr ""
+msgstr "Блеск"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:91
 msgid ""
@@ -190,20 +249,31 @@ msgid ""
 "make a realistic reflection, all the way up to a completely foggy mirror."
 " You can also use this value to mimic depth of field in mirrors."
 msgstr ""
+"Глянцевое покрытие красок очень гладкое и блестящее. Плоское, "
+"низко-блескучее покрытие рассеивает свет и даёт очень размытое отражение."
+" Кроме того, неровная или парафинированная-но-зернистая поверхность "
+"(вроде автомобильной краски) не идеальна, и поэтому её блеск должен быть "
+"чуть ниже 1.0. В примере справа, левое зеркало имеет блеск 0.98, среднее "
+"зеркало – 1.0, а правое – 0.90. Используйте этот параметр для создания "
+"реалистичного отражения, вплоть до совершенно затуманенного зеркала. "
+"Также вы можете использовать это значение для имитации в зеркалах глубины"
+" резкости."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:100
 msgid "Amount"
-msgstr ""
+msgstr "Величина"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:100
 msgid ""
 "The shininess of the reflection. Values < 1.0 give diffuse, blurry "
 "reflections and activate the settings below."
 msgstr ""
+"Блеск отражения. Значения < 1.0 дают диффузные, размытые отражения и "
+"активируют нижеописанные параметры."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:105
 msgid "Threshold"
-msgstr ""
+msgstr "Порог"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:103
 msgid ""
@@ -212,16 +282,23 @@ msgid ""
 "make the adaptive sampler skip more often, however, the reflections could"
 " become noisier."
 msgstr ""
+"Порог для адаптивной выборки. Если выборка вносит менее этого значения (в"
+" процентах), выборка останавливается. Повышение порога заставит "
+"адаптивную выборку чаще пропускать лучи, из-за чего отражения могут стать"
+" более зашумлёнными."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:109
 msgid "Samples"
-msgstr ""
+msgstr "Сэмплы"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:108
 msgid ""
 "Number of cone samples averaged for blurry reflection. More samples will "
 "give a smoother result, but will also increase render time."
 msgstr ""
+"Количество конических выборок для получения размытых отражений. Большее "
+"количество выборок даёт более сглаженный результат за счёт увеличения "
+"времени визуализации."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:113
 msgid ""
@@ -229,10 +306,14 @@ msgid ""
 " 1.0. (`.blend <https://wiki.blender.org/index.php/:File:Manual-2.5"
 "-Material-Mirror-anisotropic-example.blend>`__)"
 msgstr ""
+"Анизотропно отражающие сферы в касательном пространстве. Анизотропия "
+"равна 0.0, 0.75 и 1.0 (`.blend-файл "
+"<https://wiki.blender.org/index.php/:File:Manual-2.5-Material-Mirror-"
+"anisotropic-example.blend>`__)"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:125
 msgid "Anisotropic"
-msgstr ""
+msgstr "Анизотропность"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:118
 msgid ""
@@ -247,16 +328,30 @@ msgid ""
 "and layout the same way, with the auto-generated tangents, or based on "
 "the mesh's UV co-ordinates."
 msgstr ""
+"Форма отражения, от 0.0 (круговое) до 1.0 (полностью вытянутое вдоль "
+"касательной). Если включено *Затенение по касательной*, Blender "
+"автоматически визуализирует смазанные отражения как анизотропные "
+"отражения. Когда включено затенение по касательной, ползунок "
+"*анизотропности* управляет силой таких анизотропных отражений, "
+"изменяющейся в диапазоне от 1.0 (значение по умолчанию – полная "
+"анизотропия) до 0.0 (круговое отражение, даёт тот же самый результат, как"
+" если бы затенение по касательной было выключено). Анизотропные отражения"
+" с трассировкой лучей используют те же самые векторы касательных, которые"
+" используются для затенения материала, так что вы можете изменять их угол"
+" и расположение теми же самыми способами: либо используя автоматически "
+"сгенерированные касательные, либо UV-координаты полисетки."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:130
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:137
 msgid ""
 "Demonstration of Fresnel effect with values equal to (from top to bottom)"
 " 0.0, 2.5 and 5.0."
 msgstr ""
+"Демонстрация эффекта Френеля со значениями, равными (в порядке сверху "
+"вниз) 0.0, 2.5 и 5.0"
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:140
 msgid ""
@@ -271,6 +366,16 @@ msgid ""
 "having a surface sharing reflective and non-reflective properties "
 "according to the viewing angle and the surface normal."
 msgstr ""
+"Давайте проведём небольшой эксперимент, чтобы понять, что на самом деле "
+"делает Френель. После выпадения дождя выйдите на улицу и встаньте над "
+"лужей воды. Вы можете увидеть землю через лужу. Если встать на колени "
+"прямо перед лужей, чтобы ваше лицо оказалось ближе к земле, и снова "
+"взглянуть на отдалённую точку на поверхности лужи, то через поверхность, "
+"расположенную близко к вам, вы сможете увидеть землю, но по мере "
+"перемещения взгляда к противоположному концу лужи земля постепенно будет "
+"исчезать, пока вы не увидите ничего, кроме отражения неба. Это и есть "
+"эффект Френеля: поверхность меняет свои отражательные свойства в "
+"зависимости от угла обзора и нормали к поверхности."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:150
 msgid ""
@@ -278,6 +383,9 @@ msgid ""
 "bottom) 0.0, 2.5 and 5.0*, this behavior is demonstrated for a perfectly "
 "reflective Material (Mirror Reflectivity 1.0)."
 msgstr ""
+"На рисунке *Демонстрация эффекта Френеля со значениями, равными (в "
+"порядке сверху вниз) 0.0, 2.5 и 5.0* это поведение демонстрируется на "
+"примере идеально отражающего материала (зеркальность равна 1.0)."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:154
 msgid ""
@@ -285,60 +393,15 @@ msgid ""
 "could stand for a glossy Material. It is barely noticeable but in the "
 "lower picture, the Material is perfectly reflective around the edges."
 msgstr ""
+"Френель 0.0 означает материал идеального зеркала, в то время как Френель "
+"5.0 означает глянцевый материал. Хотя это и едва заметно, но на нижней "
+"картинке по краям материал имеет идеально отражающие области."
 
 #: ../../manual/render/blender_render/materials/properties/mirror.rst:158
 msgid ""
 "The smoothness of the Fresnel limit can be further controlled using the "
 "*Blend* slider."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "The Mirror Panel"
-#~ msgstr ""
-
-#~ msgid "Picking a mirror color"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The *Color Swatch* in the mirror "
-#~ "panel is the color of the light"
-#~ " reflected back. Usually, for normal "
-#~ "mirrors, use white. However, some "
-#~ "mirrors color the reflection (e.g. "
-#~ "metals), so you can change the "
-#~ "color by clicking on the swatch. "
-#~ "The amount of mirrored reflection is "
-#~ "determined by the *Reflectivity* value. "
-#~ "If set to something greater than "
-#~ "0, mirrored reflectivity will be "
-#~ "activated and the reflection will be "
-#~ "tinted the color set in the "
-#~ "swatch."
-#~ msgstr ""
-
-#~ msgid "Color swatch"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Color of mirrored reflection By default,"
-#~ " an almost perfectly reflective material"
-#~ " like chrome, or a mirror object, "
-#~ "will reflect the exact colors of "
-#~ "its surrounding. But some other equally"
-#~ " reflective materials tint the reflections"
-#~ " with their own color. This is "
-#~ "the case for well-polished copper "
-#~ "and gold, for example. In order to"
-#~ " replicate this within Blender, you "
-#~ "have to set the Mirror Color "
-#~ "accordingly. To set a mirror color, "
-#~ "simply click the color swatch in "
-#~ "the mirror panel and select a "
-#~ "color."
-#~ msgstr ""
-
-#~ msgid "Max Dist"
-#~ msgstr ""
+"Плавность перехода можно дополнительно регулировать с помощью ползунка "
+"*Смешение*."
 
