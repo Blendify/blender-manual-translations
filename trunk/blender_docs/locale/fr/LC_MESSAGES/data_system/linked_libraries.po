@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-11 12:04-0400\n"
-"PO-Revision-Date: 2016-09-12 22:27+0200\n"
+"PO-Revision-Date: 2016-10-01 10:16+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../manual/data_system/linked_libraries.rst:4
 msgid "Append and Link"
-msgstr ""
+msgstr "Append et Link"
 
 #: ../../manual/data_system/linked_libraries.rst:6
 msgid ""
@@ -30,7 +30,7 @@ msgstr ""
 "Ces fonctions vous aident à réutiliser les matériaux, objets et autres :doc:"
 "`data-blocks </data_system/data_blocks>` chargés depuis un fichier blend "
 "source externe. Vous pouvez construire les bibliothèques de contenu commun "
-"et les partager au dessus de multiples fichiers de référence."
+"et les partager entre de multiples fichiers de référence."
 
 #: ../../manual/data_system/linked_libraries.rst:10
 msgid ""
@@ -38,6 +38,9 @@ msgid ""
 "made there will be reflected in the referencing file the next time it is "
 "reloaded."
 msgstr ""
+"*Link* crée une référence aux données dans le fichier source de sorte que "
+"les modifications effectuées dessus seront reportées dans le fichier de "
+"référence au prochain chargement."
 
 #: ../../manual/data_system/linked_libraries.rst:13
 msgid ""
@@ -45,6 +48,10 @@ msgid ""
 "further edits to your local copy of the data, but changes in the external "
 "source file will not be reflected in the referencing file."
 msgstr ""
+"Tandis que *Append* fait une copie complète des données dans votre fichier "
+"blend. Vous pouvez plus tard éditer votre copie des données, mais les "
+"modifications dans le fichier source externe ne seront pas reportées dans le "
+"fichier de référence."
 
 #: ../../manual/data_system/linked_libraries.rst:17
 msgid "Reference"
@@ -84,6 +91,8 @@ msgid ""
 "Available only when linking, see :doc:`relative paths </data_system/files/"
 "relative_paths>`."
 msgstr ""
+"Disponible uniquement pour la liaison, voir :doc:`chemins d'accès relatifs </"
+"data_system/files/relative_paths>`."
 
 #: ../../manual/data_system/linked_libraries.rst:31
 msgid "Select"
@@ -109,7 +118,7 @@ msgstr ""
 
 #: ../../manual/data_system/linked_libraries.rst:37
 msgid "Instance Groups"
-msgstr ""
+msgstr "Groupes d'instances"
 
 #: ../../manual/data_system/linked_libraries.rst:37
 msgid ""
@@ -127,15 +136,14 @@ msgstr ""
 "matériaux par exemple, doivent être liés avant de devenir visibles."
 
 #: ../../manual/data_system/linked_libraries.rst:43
-#, fuzzy
 msgid ""
 "Newly added Group types are available in :menuselection:`Add --> Group "
 "Instances` in 3D View, or for NodeTree groups, the same menu in the Node "
 "Editor."
 msgstr ""
-"Les types de Group nouvellement ajoutés sont disponibles dans :menuselection:"
-"`Add --> Group Instances` dans la Vue 3D, ou pour les groups Nodetree, le "
-"même menu dans l'éditeur de Node."
+"Les types de Groupe nouvellement ajoutés sont disponibles dans :"
+"menuselection:`Add --> Group Instances` dans la Vue 3D, ou pour les groupes "
+"*Nodetree*, le même menu dans l'éditeur de Node."
 
 #: ../../manual/data_system/linked_libraries.rst:46
 msgid ""
@@ -143,12 +151,15 @@ msgid ""
 "linked and appended data-blocks. :kbd:`Ctrl-LMB` on a file name allows you "
 "to redirect a link to another file."
 msgstr ""
+"Regardez dans *Outliner*, avec le mode d'affichage mis sur *blend-file*, "
+"pour voir tous les data-blocks liés et ajoutés. :kbd:`Ctrl-LMB` sur un nom "
+"de fichier vous permet de rediriger un lien vers un autre fichier."
 
 #: ../../manual/data_system/linked_libraries.rst:51
 msgid ""
 "You cannot move a linked object. Its position is defined in its source file."
 msgstr ""
-"Vous ne pouvez pas déplacer  un objet lié. Sa position est définie dans son "
+"Vous ne pouvez pas déplacer un objet lié. Sa position est définie dans son "
 "fichier source."
 
 #: ../../manual/data_system/linked_libraries.rst:53
@@ -164,23 +175,22 @@ msgstr ""
 "dupligroup>`"
 
 #: ../../manual/data_system/linked_libraries.rst:56
-#, fuzzy
 msgid ""
 "Instead of linking to *Objects* directly, it is often more useful to link in "
 "*Groups*, which can be assigned to empties and moved, while maintaining the "
 "link to the original file."
 msgstr ""
 "Au lieu de lier des objets directement, il est souvent plus utile de lier "
-"dans des *Groups*, "
+"dans des *Groupes*, qui peuvent être assignés à des *empties* et déplacés, "
+"tout en maintenant le lien vers le fichier d'origine."
 
 #: ../../manual/data_system/linked_libraries.rst:59
-#, fuzzy
 msgid ""
 "It is also useful to be able to add/remove objects from the group without "
 "having to manage linking in multiple objects."
 msgstr ""
 "il est aussi utile d'avoir la possibilité d'ajouter/supprimer des objets au/"
-"du group sans avoir à gérer le liaison dans de multiples objets."
+"du groupe sans avoir à gérer le liaison dans de multiples objets."
 
 #: ../../manual/data_system/linked_libraries.rst:64
 msgid "Make Objects Local"
@@ -228,25 +238,30 @@ msgid ""
 "linked back to the source file while the remainder of the object and its "
 "skeleton are edited locally."
 msgstr ""
+"Utilisés avec les modèles avec rigs, les objets proxy permettent de lier les "
+"calques de *bones* au fichier source pendant l'édition locale du reste de "
+"l'objet et de son *skeleton*."
 
 #: ../../manual/data_system/linked_libraries.rst:83
 msgid ""
 ":kbd:`Ctrl-Alt-P` makes the active linked object into a local proxy, "
 "appending \"_proxy\" to its name."
 msgstr ""
-":kbd:`Ctrl-Alt-P` l'objet actif lié dans un proxy local, en ajoutant \"_proxy"
-"\" à son nom."
+":kbd:`Ctrl-Alt-P` ajoute \"_proxy\" au nom de l'objet actif lié dans un "
+"proxy local."
 
 #: ../../manual/data_system/linked_libraries.rst:85
-#, fuzzy
 msgid ""
 "Set the *Protected Layers* in the source file using the Skeleton panel of "
 "the Armatures tab. See :ref:`Armature Layers <armature-layers>`. The bones "
 "in protected layers will have their position restored from the source file "
 "when the referencing file is reloaded."
 msgstr ""
-"Les os dans les calques protégés auront leur position restaurée depuis le "
-"fichier source quand le fichier de référencement est rechargé."
+"Définissez les *Protected Layers* dans le fichier source en utilisant le "
+"panneau *Skeleton* de l'onglet *Armatures*. Voir :ref:`Armature Layers "
+"<armature-layers>`. Les os dans les calques protégés auront leur position "
+"restaurée depuis le fichier source quand le fichier de référencement est "
+"rechargé."
 
 #: ../../manual/data_system/linked_libraries.rst:92
 msgid "Known Limitations"
@@ -270,13 +285,12 @@ msgstr ""
 "En général, les dépendances ne devraient pas aller dans les deux directions."
 
 #: ../../manual/data_system/linked_libraries.rst:102
-#, fuzzy
 msgid ""
 "Attempting to link or append data which links back to the current file will "
 "likely result in missing links."
 msgstr ""
 "La tentative de liaison ou d'ajout de données qui relie en retour le fichier "
-"courant va résulter en des liens manquants."
+"courant va résulter probablement en des liens manquants."
 
 #: ../../manual/data_system/linked_libraries.rst:106
 msgid "Object Rigid-Body Constraints"
@@ -287,10 +301,14 @@ msgid ""
 "When linking objects *directly* into a blend-file, the *Rigid Body* settings "
 "**will not** be linked in since they are associated with their scenes world."
 msgstr ""
+"Dans la liaison *directe* d'objets dans un fichier blend, les réglages de "
+"*Rigid Body* *ne seront pas* liés dedans puisqu'ils sont associés au monde "
+"de la scène."
 
 #: ../../manual/data_system/linked_libraries.rst:112
-#, fuzzy
 msgid ""
 "As an alternative, you could link in the entire scene and set it as a :ref:"
 "`Background Set <scene-background-set>`."
-msgstr "Comme alternative, vous pouvez lier dans la scène entière et "
+msgstr ""
+"Comme alternative, vous pouvez lier dans la scène entière et le définir "
+"comme un :ref:`Background Set <scene-background-set>`."
