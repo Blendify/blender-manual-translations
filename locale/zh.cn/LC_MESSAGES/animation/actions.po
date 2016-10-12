@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-07 09:50-0400\n"
+"POT-Creation-Date: 2016-10-12 18:22-0400\n"
 "PO-Revision-Date: 2015-12-19 12:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/animation/actions.rst:4 ../../manual/animation/actions.rst:24
+#: ../../manual/animation/actions.rst:4 ../../manual/animation/actions.rst:25
 msgid "Actions"
 msgstr "动作---小A翻译"
 
@@ -25,10 +25,10 @@ msgstr "动作---小A翻译"
 #, fuzzy
 msgid ""
 "When animating objects and properties in Blender, Actions record and "
-"contain the data."
+"contain the data. As everything else in Blender, Actions are data-blocks."
 msgstr "在Blender中制作动画时，动作数据块将会记录和保存动画相关数据。"
 
-#: ../../manual/animation/actions.rst:10
+#: ../../manual/animation/actions.rst:11
 msgid "Actions."
 msgstr "动作"
 
@@ -41,40 +41,42 @@ msgstr "当你为物体制作动画如改变物体位置时，动画数据会被
 #: ../../manual/animation/actions.rst:16
 msgid ""
 "Each property has a channel which it is recorded to, for example, "
-"Cube.location.x is recorded to Channel X Location."
-msgstr "每一个属性都有一个通道用于储存其值的变化，例如，cube.location.x就是记录到X Location通道。"
+"Cube.location.x is recorded to Channel X Location. The *X location* and "
+"*Y location* properties can be shared across multiple objects, if both "
+"objects have *X location* and *Y location* properties beneath them."
+msgstr ""
 
-#: ../../manual/animation/actions.rst:21
+#: ../../manual/animation/actions.rst:23
 msgid ""
 "Graph Editor. Each Channel has an F-Curve represented by the lines "
 "between the keyframes."
 msgstr "这是曲线编辑器。每一个通道都有一个插值曲线，表示为关键帧之间的彩色线条。"
 
-#: ../../manual/animation/actions.rst:25
+#: ../../manual/animation/actions.rst:26
 msgid "Record and contain animation data."
 msgstr "记录和保存动画数据"
 
-#: ../../manual/animation/actions.rst:26
+#: ../../manual/animation/actions.rst:27
 msgid "Groups"
 msgstr "组"
 
-#: ../../manual/animation/actions.rst:27
+#: ../../manual/animation/actions.rst:28
 msgid "Are groups of channels."
 msgstr "代表一些通道的集"
 
-#: ../../manual/animation/actions.rst:28
+#: ../../manual/animation/actions.rst:29
 msgid "Channels"
 msgstr "通道"
 
-#: ../../manual/animation/actions.rst:29
+#: ../../manual/animation/actions.rst:30
 msgid "Record properties."
 msgstr "记录单一属性"
 
-#: ../../manual/animation/actions.rst:31
+#: ../../manual/animation/actions.rst:32
 msgid "F-Curves"
 msgstr "插值曲线"
 
-#: ../../manual/animation/actions.rst:31
+#: ../../manual/animation/actions.rst:32
 #, fuzzy
 msgid ""
 ":doc:`F-Curve </editors/graph_editor/fcurves/introduction>` are used to "
@@ -85,38 +87,39 @@ msgstr "插值曲线是用来连接关键帧。"
 msgid "Keyframes"
 msgstr "关键帧"
 
-#: ../../manual/animation/actions.rst:34
+#: ../../manual/animation/actions.rst:35
 msgid ""
 ":doc:`Keyframes </animation/keyframes/introduction>` are used to set the "
 "values of properties bind to a point in time."
 msgstr ""
 
-#: ../../manual/animation/actions.rst:41
+#: ../../manual/animation/actions.rst:44
 msgid "Working with Actions"
 msgstr "和动作一起玩耍 "
 
-#: ../../manual/animation/actions.rst:46
+#: ../../manual/animation/actions.rst:49
 msgid "The Action data-block menu."
 msgstr ""
 
-#: ../../manual/animation/actions.rst:49
+#: ../../manual/animation/actions.rst:52
 #, fuzzy
 msgid ""
 "When you first animate an object by adding keyframes, Blender creates an "
 "*Action* to record the data."
 msgstr "当你为某个物体创建第一个动画关键真时，Blender为这类数据创建一个动作数据块以记录它们。"
 
-#: ../../manual/animation/actions.rst:52
+#: ../../manual/animation/actions.rst:55
 #, fuzzy
 msgid ""
-"*Actions* can be managed with the *Action data-block menu* in the "
-":doc:`DopeSheet </editors/dope_sheet/introduction>` *Action Editor* "
-"header, or the properties region of the :doc:`NLA Editor </editors/nla>`."
+"*Actions* can be managed with the *Action data-block menu* in the Dope "
+"Sheet :doc:`Action Editor </editors/dope_sheet/action>` header, or the "
+"properties region of the :doc:`NLA Editor "
+"</editors/nla/properties_modifiers>`."
 msgstr ""
 "动作可以在DopeSheet动作编辑器标题栏中的 :doc:`摄影表 </editors/dopesheet>` 中管理，或者也能在 "
 ":doc:`非线性动作编辑器 </editors/nla>` 的属性区域找到。"
 
-#: ../../manual/animation/actions.rst:56
+#: ../../manual/animation/actions.rst:59
 #, fuzzy
 msgid ""
 "If you are making multiple actions for the same object, press the *F* "
@@ -124,18 +127,18 @@ msgid ""
 " make Blender save the unlinked actions."
 msgstr "如果你要为一个物体创建多组动作，为每个按钮都按下Ｆ案件，者能够给没有用户的动作数据块创建假用户，这样Blender在保存数据时就不会将它们丢弃。"
 
-#: ../../manual/animation/actions.rst:60
+#: ../../manual/animation/actions.rst:63
 #, fuzzy
 msgid ""
 "Objects can only use one *Action* at a time for editing, the :doc:`NLA "
-"Editor </editors/nla>` is used to blend multiple actions together."
+"Editor </editors/nla/index>` is used to blend multiple actions together."
 msgstr "物体只能在一个时候编译一个动作数据块， :doc:`非线性动作编辑器 </editors/nla>` 能将多个动作数据混合在一起。"
 
-#: ../../manual/animation/actions.rst:65
+#: ../../manual/animation/actions.rst:68
 msgid "Bake Action"
 msgstr ""
 
-#: ../../manual/animation/actions.rst:67
+#: ../../manual/animation/actions.rst:70
 msgid "Reference"
 msgstr ""
 
@@ -149,13 +152,13 @@ msgid ""
 "action`"
 msgstr ""
 
-#: ../../manual/animation/actions.rst:74
+#: ../../manual/animation/actions.rst:77
 msgid ""
 "The *Bake Action* tool will apply interpolated frames into individual key"
 " frames."
 msgstr ""
 
-#: ../../manual/animation/actions.rst:76
+#: ../../manual/animation/actions.rst:79
 msgid ""
 "This can be useful for adding deviation to a cyclic action like a "
 ":term:`walk cycle`. This can also useful for keyframe animations created "
@@ -163,7 +166,7 @@ msgid ""
 msgstr ""
 
 #~ msgid ""
-#~ msgstr "在当前帧插入关键帧[I]，删除当前帧的关键帧[ALT]+[I]"
+#~ msgstr ""
 
 #~ msgid "Purple - Property value is controlled with a Driver."
 #~ msgstr "紫色－驱动器控制的属性"
@@ -195,73 +198,14 @@ msgstr ""
 #~ msgid "The keyframes are set values by the user."
 #~ msgstr "关键帧键值遵从用户设置。"
 
-#~ msgid ""
-#~ "The *F-Curve* has different types of "
-#~ "interpolation and also :doc:`F-Curve Modifiers"
-#~ " </editors/graph_editor/fcurves/fmodifiers>`."
-#~ msgstr "插值曲线有多种预设的插值模式，也有 :doc:`曲线修改器 </editors/graph_editor/fmodifiers>` 。"
-
-#~ msgid ""
-#~ "Most the settings for the :doc:`F-Curve"
-#~ " </editors/graph_editor/fcurves/introduction>` are "
-#~ "found in the :doc:`Graph Editor "
-#~ "</editors/graph_editor/introduction>`."
-#~ msgstr ""
-#~ "多数 :doc:`插值曲线 </editors/graph_editor/fcurves>` "
-#~ "的设置都可以在 :doc:`曲线编辑器 </editors/graph_editor/introduction>`"
-#~ " 。里找到。"
-
 #~ msgid "Basic Animation"
 #~ msgstr "基础的动画"
-
-#~ msgid ""
-#~ "These are some common ways to "
-#~ "animate objects. These methods can be"
-#~ " used on different objects, like "
-#~ "armature bones in pose mode."
-#~ msgstr "以下是一些制作动画的常见方法。这些方法可以用在不同的物体类型上，比如姿态模式下的骨骼。"
 
 #~ msgid "Insert Keyframes"
 #~ msgstr "插入关键帧"
 
-#~ msgid ""
-#~ "This example shows you how to "
-#~ "animate a cubes location, rotation, and"
-#~ " scale."
-#~ msgstr "这个例子将展示怎样为一个方块制作位移、旋转和缩放动画。"
-
-#~ msgid ""
-#~ "First, in the *Timeline*, or other "
-#~ "animation editors, set the frame to "
-#~ "1."
-#~ msgstr "首先，在时间线中（或者其他动画编辑器中）将帧设置为1。"
-
-#~ msgid ""
-#~ "With the *Cube* selected in *Object "
-#~ "Mode*, press :kbd:`I` in the 3D "
-#~ "View."
-#~ msgstr "在物体模式下选择方块，在3D窗口按下[I]键。"
-
-#~ msgid ""
-#~ "From the *Insert Keyframe Menu* select"
-#~ " *LocRotScale*. This will record the "
-#~ "location, rotation, and scale, for the"
-#~ " *Cube* on frame 1."
-#~ msgstr "这个操作将会在第一帧记录下该帧时物体的位置、角度和尺寸。"
-
 #~ msgid "Set the frame to 100."
 #~ msgstr "将帧跳转到100。"
-
-#~ msgid ""
-#~ "Use Grab/Move :kbd:`G`, Rotate :kbd:`R`, "
-#~ "Scale :kbd:`S`, to transform the cube."
-#~ msgstr "使用抓取[G]、旋转[R]和缩放[S]来改变物体的摆放。"
-
-#~ msgid ""
-#~ "Press :kbd:`I` in the 3D View. "
-#~ "From the *Insert Keyframe Menu* select"
-#~ " *LocRotScale*."
-#~ msgstr "再次在3D窗口按下[I]，同样在菜单中选择“LocRotScale”。"
 
 #~ msgid "Insert Keyframes."
 #~ msgstr "插入关键帧"
@@ -278,72 +222,17 @@ msgstr ""
 #~ msgid "Timeline Auto Keyframe."
 #~ msgstr "时间线下方的自动关键帧"
 
-#~ msgid ""
-#~ "Auto Keyframe is the red record "
-#~ "button in the *Timeline* header. Auto"
-#~ " Keyframe adds keyframes automatically to"
-#~ " the set frame if the value for"
-#~ " transform type properties changes."
-#~ msgstr "自动关键帧功能是一个在时间线功能区的标题栏中的红色按钮。自动关键帧功能将在物体的任意摆放属性发生变化时自动将对应参数记录关键帧。"
-
-#~ msgid ""
-#~ "See :ref:`Timeline V Keyframe Control "
-#~ "<animation-editors-timeline-autokeyframe>` for"
-#~ " more info."
-#~ msgstr "欲知更多，查看 :ref:`时间线V关键帧控制 <animation-editors-timeline-autokeyframe>` 。"
-
 #~ msgid "Keying Sets"
 #~ msgstr "插帧集"
 
 #~ msgid "Timeline Keying Sets."
 #~ msgstr "时间线关键帧组"
 
-#~ msgid ""
-#~ "Keying Sets are a set of keyframe"
-#~ " channels. They are used to record"
-#~ " multiple properties at the same "
-#~ "time. There are some built-in "
-#~ "keying sets, \"LocRotScale\", and also, "
-#~ "custom keying sets can be made."
-#~ msgstr "关键帧组是一系列关键帧通道，它可以同时记录多个属性的关键帧。现有一些内建的关键帧组，就像“LocRotScale”一样，而且你还可以自行创建关键帧组。"
-
-#~ msgid ""
-#~ "To use the keying set, first "
-#~ "select a keying set from the "
-#~ "*Timeline* header, or the *Keying Sets"
-#~ " Panel*."
-#~ msgstr "要使用关键帧组，先在时间线的标题栏选择一个关键帧组（或者在关键帧组面板里）。"
-
-#~ msgid ""
-#~ "Now when you press :kbd:`I` in the"
-#~ " 3D View, Blender will add keyframes"
-#~ " for all the properties in the "
-#~ "active keying set."
-#~ msgstr "现在在3D窗口里按下[I]键，Blender将会自动为所选关键帧组中的所有属性插入关键帧。"
-
-#~ msgid ""
-#~ "See :doc:`Keying Sets "
-#~ "</animation/keyframes/keying_sets>` for more info."
-#~ msgstr "欲了解更多，请查看 :doc:`键帧组 </animation/keying_sets>` 。"
-
 #~ msgid "Properties"
 #~ msgstr "属性"
 
 #~ msgid "Keyframe properties."
 #~ msgstr "关键帧属性"
-
-#~ msgid ""
-#~ "Keyframes can be used to animate "
-#~ "lots of different properties in Blender."
-#~ " To add keyframes to a property "
-#~ "in the UI, :kbd:`RMB` the property, "
-#~ "then select Insert Single Keyframe, or"
-#~ " Insert Keyframes. Insert Keyframes "
-#~ ":kbd:`I` will add keyframes for the "
-#~ "set of properties."
-#~ msgstr ""
-#~ "在Blender中关键帧可以将非常多不同的属性制成动画。在UI上将属性动画化的方法：在属性上点 :kbd:`RMB` "
-#~ "，选择插入单帧，或者插入关键帧。插入关键帧  :kbd:`I` 可以对属性添加一个关键帧。"
 
 #~ msgid "Properties, Drivers, Keyframes."
 #~ msgstr "属性，驱动器，关键帧。"
@@ -443,4 +332,11 @@ msgstr ""
 
 #~ msgid "Delete Keyframes on current frame :kbd:`Alt-I`"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "Each property has a channel which "
+#~ "it is recorded to, for example, "
+#~ "Cube.location.x is recorded to Channel X"
+#~ " Location."
+#~ msgstr "每一个属性都有一个通道用于储存其值的变化，例如，cube.location.x就是记录到X Location通道。"
 
