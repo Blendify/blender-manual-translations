@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 17:52-0400\n"
+"POT-Creation-Date: 2016-10-12 18:22-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,36 +110,24 @@ msgid "Examples"
 msgstr ""
 
 #: ../../manual/compositing/types/color/z_combine.rst:60
-msgid "Alpha and Z-Combine node."
-msgstr ""
-
-#: ../../manual/compositing/types/color/z_combine.rst:62
-msgid ""
-"This can be obtained by making an Alpha Over of two Z-Combine, one "
-"normal, the other having inverted (reversed?) Z-values as inputs, "
-"obtained using for each of them a *Map Value* node with a *Size* field "
-"set to -1.0:"
-msgstr ""
-
-#: ../../manual/compositing/types/color/z_combine.rst:69
 msgid "Choosing closest pixels."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:72
+#: ../../manual/compositing/types/color/z_combine.rst:63
 msgid ""
-"In the example to the right, render output from two scenes are mixed "
-"using the Z-Offset node, one from a sphere of size 1.30, and the other a "
-"cube of size 1.00. The sphere and square are located at the same place. "
-"The cube is tipped forward, so the corner in the center is closer to the "
-"camera than the sphere surface; so Z-Offset chooses to use the cube's "
-"pixels. But the sphere is slightly larger (a size of 1.30 versus 1.00), "
-"so it does not fit totally inside the cube. At some point, as the cube's "
-"sides recede back away from the camera, the sphere's sides are closer. "
-"When this happens, Z-offset uses the sphere's pixels to form the "
-"resulting picture."
+"In the example above, render output from two scenes are mixed using the "
+"Z-Offset node, one from a sphere of size 1.30, and the other a cube of "
+"size 1.00. The sphere and square are located at the same place. The cube "
+"is tipped forward, so the corner in the center is closer to the camera "
+"than the sphere surface; so Z-Offset chooses to use the cube's pixels. "
+"But the sphere is slightly larger (a size of 1.30 versus 1.00), so it "
+"does not fit totally inside the cube. At some point, as the cube's sides "
+"recede back away from the camera, the sphere's sides are closer. When "
+"this happens, Z-offset uses the sphere's pixels to form the resulting "
+"picture."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:81
+#: ../../manual/compositing/types/color/z_combine.rst:72
 msgid ""
 "This node can be used to combine a foreground with a background matte "
 "painting. Walt Disney pioneered the use of multi-plane mattes, where "
@@ -148,22 +136,22 @@ msgid ""
 "created the illusion of depth as Bambi moved through the forest."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:87
+#: ../../manual/compositing/types/color/z_combine.rst:78
 msgid "Valid Input"
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:89
+#: ../../manual/compositing/types/color/z_combine.rst:80
 msgid ""
 "Z Input Sockets do not accept fixed values; they must get a vector set "
 "(see Map Value node). Image Input Sockets will not accept a color since "
 "it does not have UV coordinates."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:95
+#: ../../manual/compositing/types/color/z_combine.rst:86
 msgid "Mix and Match Images."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:98
+#: ../../manual/compositing/types/color/z_combine.rst:89
 msgid ""
 "The Z-Combine can be used to merge two images as well, using the Z-values"
 " put out by two render layers. Using the Z-values from the sphere and "
@@ -171,11 +159,11 @@ msgid ""
 "the right."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:106
+#: ../../manual/compositing/types/color/z_combine.rst:97
 msgid "Z-Combine in action."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:109
+#: ../../manual/compositing/types/color/z_combine.rst:100
 msgid ""
 "In this node setup a render scene is mixed with a flat image. In the side"
 " view of the scene, the purple cube is 10 units away from the camera, and"
@@ -185,11 +173,11 @@ msgid ""
 "cube on the table."
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:115
+#: ../../manual/compositing/types/color/z_combine.rst:106
 msgid "Invisible Man Effect"
 msgstr ""
 
-#: ../../manual/compositing/types/color/z_combine.rst:117
+#: ../../manual/compositing/types/color/z_combine.rst:108
 msgid ""
 "If a foreground image with a higher Alpha than the background, is then "
 "mixed in the Z-combine with a slightly magnified background, the outline "
@@ -213,13 +201,39 @@ msgstr ""
 #~ msgid ""
 #~ msgstr ""
 
+#~ msgid "Alpha and Z-Combine node."
+#~ msgstr ""
+
 #~ msgid ""
 #~ "This can be obtained by making an"
-#~ " AlphaOver of two Z-Combine, one "
+#~ " Alpha Over of two Z-Combine, one "
 #~ "normal, the other having inverted "
 #~ "(reversed?) Z-values as inputs, obtained "
-#~ "using for each of them a "
-#~ "*MapValue* node with a *Size* field "
+#~ "using for each of them a *Map "
+#~ "Value* node with a *Size* field "
 #~ "set to -1.0:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the example to the right, "
+#~ "render output from two scenes are "
+#~ "mixed using the Z-Offset node, one "
+#~ "from a sphere of size 1.30, and"
+#~ " the other a cube of size 1.00."
+#~ " The sphere and square are located"
+#~ " at the same place. The cube is"
+#~ " tipped forward, so the corner in "
+#~ "the center is closer to the camera"
+#~ " than the sphere surface; so Z-Offset"
+#~ " chooses to use the cube's pixels."
+#~ " But the sphere is slightly larger"
+#~ " (a size of 1.30 versus 1.00), "
+#~ "so it does not fit totally inside"
+#~ " the cube. At some point, as "
+#~ "the cube's sides recede back away "
+#~ "from the camera, the sphere's sides "
+#~ "are closer. When this happens, Z-offset"
+#~ " uses the sphere's pixels to form "
+#~ "the resulting picture."
 #~ msgstr ""
 
