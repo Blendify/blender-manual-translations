@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "POT-Creation-Date: 2016-10-24 21:41-0400\n"
-"PO-Revision-Date: 2016-10-25 14:08-0300\n"
+"PO-Revision-Date: 2016-10-26 00:04-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "Canal alfa"
 
 #: ../../manual/glossary/index.rst:28
 msgid "Additional channel in an image for transparency."
-msgstr "Um canal adicionat dentro de uma imagem para as transparências."
+msgstr "Um canal adicional dentro de uma imagem para as transparências."
 
 #: ../../manual/glossary/index.rst:35
 #: ../../manual/glossary/index.rst:618
@@ -81,7 +81,7 @@ msgstr "Alfa pré-multiplicado"
 
 #: ../../manual/glossary/index.rst:38
 msgid "Method where RGBA channels are stored as (R × A, G × A, B × A, A), with the alpha multiplied into the RGB channel."
-msgstr ""
+msgstr "Um método onde os canais RGBA são guardados no formato (R × A, G × A, B × A, A), com o alfa pré-multiplicado dentro dos canais RGB."
 
 #: ../../manual/glossary/index.rst:41
 msgid "This is the natural output of render engines, with the RGB channels representing the amount of light that comes toward the viewer, and alpha representing how much of the light from the background is blocked. The OpenEXR file format uses this alpha type. So, intermediate files for rendering and compositing are often stored as premultiplied alpha."
@@ -93,11 +93,11 @@ msgstr "Conversão de alfa (de direto para pré-multiplicado)"
 
 #: ../../manual/glossary/index.rst:49
 msgid "Conversion between the two alpha types is not a simple operation and can involve data loss, as both alpha types can represent data that the other cannot though it is often subtle."
-msgstr ""
+msgstr "A conversão entre os dois tipos de transparências alfa não é uma simples operação e pode envolver a perda de dados, pois ambos os tipos de alfa podem representar dados que o outro tipo poderia não representar, ainda que as diferenças sejam sutis."
 
 #: ../../manual/glossary/index.rst:52
 msgid "Straight alpha can be considered to be an RGB color image with a separate alpha mask. In areas where this mask is fully transparent, there can still be colors in the RGB channels. On conversion to premultiplied alpha this mask is *applied'* and the colors in such areas become black and are lost."
-msgstr ""
+msgstr "O alfa direto pode ser considerado como sendo uma imagem em RGB com uma máscara alfa em separado. Nas áreas onde essa máscara é totalmente transparente, ainda assim, poderão existir cores nos canais RGB. Nas conversões para alfa do tipo pré-multiplicado, esta máscara é *aplicada* e as cores presentes nessas áreas se tornarão pretas e serão perdidas."
 
 #: ../../manual/glossary/index.rst:57
 msgid "Premultiplied alpha, on the other hand, can represent renders that are both emitting light and letting through light from the background. For example, a transparent fire render might be emitting light, but also letting through all light from objects behind it. On converting to straight alpha, this effect is lost."
@@ -109,7 +109,7 @@ msgstr "Iluminação ambiente"
 
 #: ../../manual/glossary/index.rst:64
 msgid "The light that comes from the surrounding environment as a whole."
-msgstr ""
+msgstr "A luz que advém a partir do ambiente ao redor como um todo."
 
 #: ../../manual/glossary/index.rst:65
 msgid "Ambient Occlusion"
@@ -141,7 +141,7 @@ msgstr "Armação de ossos"
 
 #: ../../manual/glossary/index.rst:78
 msgid "An :term:`Object` consisting of :term:`bones <bone>`. Used to :term:`rig` characters, props, etc."
-msgstr ""
+msgstr "Um :term:`Objeto` que consiste de :term:`ossos <bone>`. Usado para  :term:`Arranjos` de personagens, cenários, etc..."
 
 #: ../../manual/glossary/index.rst:79
 msgid "Axis"
@@ -157,7 +157,7 @@ msgstr ""
 
 #: ../../manual/glossary/index.rst:84
 msgid "Rotation method where X, Y, and Z correspond to the axis definition, while W corresponds to the angle around that axis, in radians."
-msgstr ""
+msgstr "Um método de rotação onde os eixos X, Y e Z correspondem a definição natural perpendicular de eixos, e onde o eixo W corresponde ao ângulo em torno desse eixo, em radianos."
 
 #: ../../manual/glossary/index.rst:86
 msgid "Baking"
@@ -165,7 +165,7 @@ msgstr "Gerar e gravar"
 
 #: ../../manual/glossary/index.rst:88
 msgid "The process of computing and storing the result of a potentially time-consuming calculation so as to avoid needing to calculate it again."
-msgstr ""
+msgstr "O processo de computar e guardar o resultado de calculações potencialmente dispendiosas em tempo, de maneira que seja possível evitar a necessidade de refazer estes cálculos. "
 
 #: ../../manual/glossary/index.rst:90
 msgid "Bevel"
@@ -185,7 +185,7 @@ msgstr "BU ou (UB) significa Unidades Blender, um tipo de medida referencial."
 
 #: ../../manual/glossary/index.rst:96
 msgid "Internal units used by Blender, equivalent to meters. Often abbreviated to \"BU\"."
-msgstr ""
+msgstr "Unidades internas usadas pelo Blender, equivalentes a metros. Algumas vezes abreviados como \"BUs\"."
 
 #: ../../manual/glossary/index.rst:97
 msgid "Bone"
@@ -193,7 +193,7 @@ msgstr "Osso"
 
 #: ../../manual/glossary/index.rst:99
 msgid "The building block of an :term:`Armature`. Made up of a :term:`Head`, :term:`Tail` and :term:`Roll Angle` which define a set of local axes and a point of rotation at the :term:`Head`."
-msgstr ""
+msgstr "Os blocos de construção de uma :term:`Armação de ossos`. Consistem de uma  a :term:`Cabeça`, uma :term:`Base` e um :term:`Ângulo de rolagem` que define um conjunto de eixos locais e um ponto de rotação localizado na :term:`Cabeça`."
 
 #: ../../manual/glossary/index.rst:101
 msgid "Boolean"
@@ -213,7 +213,7 @@ msgstr ""
 
 #: ../../manual/glossary/index.rst:108
 msgid "Refers to the reflection or transmission of a light ray upon interaction with a material. See also :doc:`Light Paths </render/cycles/settings/light_paths>`."
-msgstr ""
+msgstr "Refere-se á reflexão ou transmissão de raios de luz até que interajam com um material. Veja também  a página sobre :doc:`Caminhos de luz </render/cycles/settings/light_paths>`."
 
 #: ../../manual/glossary/index.rst:110
 msgid "Bounding Box"
@@ -229,7 +229,7 @@ msgstr "Mapa de relevos"
 
 #: ../../manual/glossary/index.rst:115
 msgid "Technique for simulating slight variations in surface height using a grayscale \"height-map\" texture."
-msgstr ""
+msgstr "Uma técnica para a simulação de variações sutis na altura de uma superfície através de uma textura que fornece um \"Mapa de altura\"."
 
 #: ../../manual/glossary/index.rst:116
 msgid "Bézier"
@@ -249,7 +249,7 @@ msgstr "Hierarquia de volume circundante"
 
 #: ../../manual/glossary/index.rst:122
 msgid "A hierarchical structure of geometric objects."
-msgstr ""
+msgstr "UMa estrutura hierárquica de objetos geométricos."
 
 #: ../../manual/glossary/index.rst:124
 msgid "See also `Bounding Volume Hierarchy <https://en.wikipedia.org/wiki/Bounding_volume_hierarchy>`__ on Wikipedia."
@@ -313,7 +313,7 @@ msgstr "RGB"
 
 #: ../../manual/glossary/index.rst:147
 msgid "Red-Green-Blue traditional primary colors also broadcast directly to most computer monitors."
-msgstr "Tradicionalmente as cores vermelh, verde e azul (RGB para Red, Green, e Blue, em Inglês), que são enviadas para a maior parte dos monitores (ecrãs) de computador."
+msgstr "Tradicionalmente as cores vermelho, verde e azul (RGB para Red, Green, e Blue, em Inglês), que são enviadas para a maior parte dos monitores (ecrãs) de computador."
 
 #: ../../manual/glossary/index.rst:155
 msgid "HSV"
@@ -1372,7 +1372,7 @@ msgstr ""
 
 #: ../../manual/glossary/index.rst:690
 msgid "Voxel"
-msgstr ""
+msgstr "Voxel"
 
 #: ../../manual/glossary/index.rst:692
 msgid "A cubicle 3D equivalent to the square 2D pixel. The name is a combination of the terms \"Volumetric\" and \":term:`Pixel <pixel>`\". Used to store smoke and fire data from physics simulations."
@@ -1380,19 +1380,19 @@ msgstr ""
 
 #: ../../manual/glossary/index.rst:695
 msgid "Walk Cycle"
-msgstr ""
+msgstr "Ciclo de caminhada"
 
 #: ../../manual/glossary/index.rst:697
 msgid "In animation, a walk cycle is a character that has just the walking function animated. Later on in the animation process the character is placed in an environment and the rest of the functions are animated."
-msgstr ""
+msgstr "Em animação, os ciclos de caminhada são representados por personagens que possuem somente a função de caminhada animada. Em um processo posterior, o personagem é posicionado em um ambiente e o restante das funções são animadas."
 
 #: ../../manual/glossary/index.rst:700
 msgid "Weight Painting"
-msgstr ""
+msgstr "Pintura de pesos de influência"
 
 #: ../../manual/glossary/index.rst:702
 msgid "Assigning :term:`vertices` to :term:`Vertex Groups <Vertex Group>` with a weight of 0.0 - 1.0."
-msgstr ""
+msgstr "Atribui os :term:`vértices` para os :term:`Grupos de vértices <Vertex Group>` com pesos de influência entre 0.0 - 1.0."
 
 #: ../../manual/glossary/index.rst:703
 msgid "World Space"
