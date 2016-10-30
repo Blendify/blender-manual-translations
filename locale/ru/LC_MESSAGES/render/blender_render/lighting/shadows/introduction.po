@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-14 13:47-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-10-28 21:59+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:4
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:6
 msgid ""
@@ -25,22 +25,30 @@ msgid ""
 "shadows, so to get realistic renders, you will need them. Blender "
 "supports the following kinds of shadows:"
 msgstr ""
+"Источники света не могут существовать без своих половинок: теней. Тени "
+"затемняют части объекта, когда его освещение частично или полностью "
+"блокируется. Тени добавляют в сцену контраст и объём; в реальном мире "
+"почти не существует мест без теней, поэтому, чтобы ваши визуализации были"
+" реалистичнее, вам они также понадобятся. Blender поддерживает следующие "
+"виды теней:"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:12
 msgid "`Lamps: Ray-traced Shadows`_"
-msgstr ""
+msgstr "`Лампы: трассируемые тени`_"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:13
 msgid "`Lamps: Buffered Shadows`_"
-msgstr ""
+msgstr "`Лампы: буферные тени`_"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:14
 msgid ":doc:`Ambient occlusion </render/blender_render/world/ambient_occlusion>`"
-msgstr ""
+msgstr ":doc:`Ambient occlusion </render/blender_render/world/ambient_occlusion>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:15
 msgid ":doc:`Indirect lighting </render/blender_render/world/indirect_lighting>`"
 msgstr ""
+":doc:`Отражённое освещение "
+"</render/blender_render/world/indirect_lighting>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:17
 msgid ""
@@ -50,6 +58,12 @@ msgid ""
 "mentioned here. Also, it is important to mention ambient lighting, since "
 "increasing *Ambient* decreases the effect of a shadow."
 msgstr ""
+"Ambient occlusion, на самом деле, не является *как таковой* тенью от "
+"источника света, а скорее затенением на основе геометрии. Однако она "
+"имитирует эффект предотвращения равномерного освещения объекта и поэтому "
+"упоминается здесь. Кроме того, важно упомянуть окружающее освещение, "
+"поскольку увеличение *освещения от окружения* уменьшает интенсивность "
+"теней."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:23
 msgid ""
@@ -59,32 +73,47 @@ msgid ""
 "arrange your lamps, one lamp may wipe out or override the shadow cast by "
 "another lamp."
 msgstr ""
+"Для достижения различных результатов вы можете использовать комбинацию "
+"трассируемых и буферных теней. Даже при использовании трассируемых теней "
+"различные лампы отбрасывают тени по различным шаблонам и различных "
+"интенсивностей. В зависимости от того, как вы расположили свои лампы, "
+"одна из них может засветить или перекрыть тень от другой."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:29
 msgid ""
 "Shadows is one of those trifectas in Blender, where multiple things have "
 "to be set up in different areas to get results:"
 msgstr ""
+"Тени являются одними из тех трёх вещей в Blender’е, когда для получения "
+"нужных результатов необходимо настроить параметры из различных областей:"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:32
 msgid "The lamp has to cast shadows (ability and direction)."
 msgstr ""
+"Лампа должна отбрасывать тени (иметь эту возможность и светить в нужном "
+"направлении)."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:33
 msgid "An opaque object has to block light on its way (position and layer)."
 msgstr ""
+"Непрозрачные объекты должны блокировать свет на его пути (занимать нужное"
+" положение и слой)."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:34
 msgid ""
 "Another object's material has to receive shadows (*Shadow* and *Receive "
 "Transparent* enabled)."
 msgstr ""
+"Материалы других объектов должны принимать тени (включены параметры "
+"*Получать* и *Учитывать полупрозрачность*)."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:35
 msgid ""
 "The render engine has to calculate shadows (*Shadow* for buffered "
 "shadows, *Shadow* and *Ray* for ray-traced shadows)."
 msgstr ""
+"Движок визуализации должен вычислять тени (параметр *Тень* для буферных "
+"теней, параметры *Тень* и *Луч* для трассируемых теней)."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:38
 msgid ""
@@ -96,6 +125,14 @@ msgid ""
 " to cast shadows share some common options, described in the "
 ":doc:`/render/blender_render/lighting/shadows/shadow_panel`."
 msgstr ""
+"Например, *точечная лампа*, *лампа-область* и *лампа-солнце* могут "
+"отбрасывать трассируемые тени, но не буферные тени. *Лампа-прожектор* "
+"может отбрасывать оба вида теней, в то время как *лампа-полусфера* вообще"
+" не умеет отбрасывать тени. Если *лампа-солнце* светит куда-то в сторону,"
+" сфера над плоскостью не будет отбрасывать на последнюю тень, поскольку "
+"свет не идёт в нужном направлении. Все лампы, способные отбрасывать тени,"
+" разделяют некоторые общие параметры, описанные в разделе "
+":doc:`/render/blender_render/lighting/shadows/shadow_panel`."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:45
 msgid ""
@@ -105,14 +142,20 @@ msgid ""
 "render layers can turn on/off the shadow pass, and their output may or "
 "may not contain shadow information..."
 msgstr ""
+"Для того, чтобы дать вам больше параметров для настройки тени (и ещё "
+"более вас этим запутать), лампы и материалы могут быть настроены, "
+"соответственно, **только** на отбрасывание и получение теней, а не на "
+"освещение и проявление диффузного/бликового отражения. Кроме того, через "
+"слои визуализации можно включать и отключать проходы теней и их выход "
+"может содержать, а может и не содержать информацию о тенях…"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:53
 msgid "Lamps: Ray-traced Shadows"
-msgstr ""
+msgstr "Лампы: трассируемые тени"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:58
 msgid "Ray Shadow enabled for a lamp."
-msgstr ""
+msgstr "Для лампы включены трассируемые тени"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:61
 msgid ""
@@ -120,6 +163,10 @@ msgid ""
 " but at the cost of processing time. This type of shadowing is available "
 "to all lamp types except *Hemi*."
 msgstr ""
+"Трассируемые тени выдают очень точные тени при очень малом расходе "
+"памяти, но за счёт повышенного потребления процессорного времени. Этот "
+"тип создания теней доступен для всех типов ламп, за исключением "
+"*ламп-полусфер*."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:65
 msgid ""
@@ -129,6 +176,11 @@ msgid ""
 "of the final image is hit by a ray light, and which is not. Those that "
 "are not are obviously obscured by a shadow."
 msgstr ""
+"В отличие от буферных теней (`Лампы: буферные тени`_), трассируемые тени "
+"получаются путём равномерного испускания лучей из источника света во всех"
+" направлениях. Затем трассировщик лучей запоминает, в какой пиксель "
+"окончательного изображения попал луч света, а в какой нет. Вот те, в "
+"которые луч света не попал, находятся в тени."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:70
 msgid ""
@@ -137,6 +189,10 @@ msgid ""
 "casts rays from an infinitely distant point, with all rays parallel to "
 "the direction of the *Sun* light."
 msgstr ""
+"Каждый источник света испускает лучи по-своему. Например "
+"*лампа-прожектор* испускает лучи равномерно во всех направлениях в "
+"пределах конуса. *Лампа-солнце* испускает лучи из бесконечно удалённой "
+"точки и все они идут параллельно направлению *лампы-солнца*."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:75
 msgid ""
@@ -145,18 +201,24 @@ msgid ""
 " than buffered shadows but produce sharp shadow borders with very little "
 "memory resource usage."
 msgstr ""
+"Каждый дополнительный источник света с включённой трассировкой лучей, "
+"добавляемый к сцене, увеличивает время её визуализации. Трассируемые тени"
+" требуют больше вычислений, нежели буферные тени, но выдают тени с "
+"чёткими границами при очень малом использовании памяти."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:79
 msgid "To enable ray-traced shadows, three actions are required:"
 msgstr ""
+"Для включения трассируемых теней требуется выполнить следующие три "
+"действия:"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:81
 msgid "Enable *Shadows* globally in the *Render* menu's *Shading* panel."
-msgstr ""
+msgstr "Глобально включить *тени* на панели *Затенение* вкладки *Визуализация*."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:82
 msgid "Enable *Ray tracing* globally from the same panel."
-msgstr ""
+msgstr "Глобально включить *Трассировку лучей* на той же панели."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:83
 msgid ""
@@ -164,6 +226,9 @@ msgid ""
 "the *Light* menu's *Shadow* panel. This panel varies depending on the "
 "type of light."
 msgstr ""
+"Включить трассируемые тени для источника света, используя кнопку "
+"*Трассируемые тени* на панели *Тень* вкладки *Источник света*. Эта панель"
+" немного отличается для каждого типа ламп."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:86
 msgid ""
@@ -171,38 +236,47 @@ msgid ""
 "described in :doc:`Ray-traced Properties "
 "</render/blender_render/lighting/shadows/raytraced_properties>`."
 msgstr ""
+"Все лампы, которые могут отбрасывать трассируемые тени, обладают рядом "
+"общих параметров, описанных в разделе :doc:`Свойства трассируемых теней "
+"</render/blender_render/lighting/shadows/raytraced_properties>`."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:89
 msgid "Ray-traced shadows can be cast by the following types of lamp:"
-msgstr ""
+msgstr "Трассируемые тени могут отбрасываться следующими типами ламп:"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:91
 msgid ":doc:`Point lamp </render/blender_render/lighting/lamps/point>`"
-msgstr ""
+msgstr ":doc:`Точечной лампой </render/blender_render/lighting/lamps/point>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:92
 msgid ":doc:`Spot lamp </render/blender_render/lighting/lamps/spot/introduction>`"
 msgstr ""
+":doc:`Лампой-прожектором "
+"</render/blender_render/lighting/lamps/spot/introduction>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:93
 msgid ":doc:`Area lamp </render/blender_render/lighting/lamps/area/introduction>`"
 msgstr ""
+":doc:`Лампой-областью "
+"</render/blender_render/lighting/lamps/area/introduction>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:94
 msgid ":doc:`Sun lamp </render/blender_render/lighting/lamps/sun/introduction>`"
 msgstr ""
+":doc:`Лампой-солнцем "
+"</render/blender_render/lighting/lamps/sun/introduction>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:98
 msgid "Lamps: Buffered Shadows"
-msgstr ""
+msgstr "Лампы: буферные тени"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:103
 msgid "Buffer Shadow enabled for a Spot lamp."
-msgstr ""
+msgstr "Для лампы-прожектора включены буферные тени"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:108
 msgid "Cast Buffer Shadows enabled for a material."
-msgstr ""
+msgstr "Для материала включено отбрасывание буферных теней"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:111
 msgid ""
@@ -213,6 +287,12 @@ msgid ""
 "to render a complex scene with soft shadows, buffer shadows are a good "
 "choice."
 msgstr ""
+"*Буферные* тени обеспечивают быструю визуализацию теней за счёт их "
+"точности и качества. Также буферные тени требуют больше памяти по "
+"сравнению с трассировки лучей. Использование буферных теней зависит от "
+"ваших потребностей. Если вы визуализируете анимацию или не можете ждать "
+"несколько часов для визуализации сложной сцены с мягкими тенями, буферные"
+" тени будут хорошим выбором."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:117
 msgid ""
@@ -225,28 +305,42 @@ msgid ""
 "spot light's image is then considered to be in shadow. The shadow buffer "
 "stores this image data."
 msgstr ""
+"Для рендера сканирования строк – а встроенный движок Blender’а помимо "
+"прочего, *является* рендером сканирования строк – тени могут быть "
+"вычислены с помощью *теневого буфера*. Эта методика подразумевает "
+"«визуализацию» видимого из точки нахождения лампы «изображения» – с "
+"сохранением в него расстояния до каждой точки, видимой из позиции "
+"источника света. Любая точка в «отрисованном» изображении, находящаяся "
+"дальше любой из точек с изображения источника света считается оказавшейся"
+" в тени. Эти данные изображения хранятся в теневом буфере."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:124
 msgid "To enable buffered shadows these actions are required:"
-msgstr ""
+msgstr "Для включения буферных теней требуется проделать следующее:"
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:126
 msgid ""
 "Enable shadows globally from the *Scene* menu's *Gather* panel by "
 "selecting *Approximate*."
 msgstr ""
+"Глобально включить тени на панели *Сбор* вкладки *Сцена* путём выбора "
+"пункта *Приблизительно*."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:127
 msgid ""
 "Enable shadows for the light using the *Buffer Shadow* button in the "
 "*Lamp* menu's *Shadow* panel."
 msgstr ""
+"Включить тени для источника света, используя кнопку *Теневой буфер* в "
+"панели *Тень* на вкладке *Лампа*."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:128
 msgid ""
 "Make sure the *Cast Buffer Shadows* options is enabled in each *Material*"
 " 's *Shadow* panel."
 msgstr ""
+"Убедиться, что параметр *Отбрасывать буферные тени* включён на панели "
+"*Тень* каждого материала."
 
 #: ../../manual/render/blender_render/lighting/shadows/introduction.rst:130
 msgid ""
@@ -254,33 +348,7 @@ msgid ""
 "</render/blender_render/lighting/lamps/spot/buffered_shadows>` is the "
 "only lamp able to cast buffered shadows."
 msgstr ""
-
-#~ msgid "Ray Shadow enabled for a lamp"
-#~ msgstr ""
-
-#~ msgid "Buffer Shadow enabled for a Spot lamp"
-#~ msgstr ""
-
-#~ msgid "Cast Buffer Shadows enabled for a material"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For example, the simple *Lamp*, *Area*,"
-#~ " and *Sun* light has the ability "
-#~ "to cast ray shadows, but not "
-#~ "buffer shadows. The *Spot* light can "
-#~ "cast both, whereas the *Hemi* light "
-#~ "does not cast any. If a *Sun* "
-#~ "lamp is pointing sideways, it will "
-#~ "not cast a shadow from a sphere"
-#~ " above a plane onto the plane, "
-#~ "since the light is not traveling "
-#~ "that way. All lamps able to cast"
-#~ " shadows share some common options, "
-#~ "described :doc:`here "
-#~ "</render/blender_render/lighting/shadows/properties>`."
-#~ msgstr ""
+"Единственной лампой, способной отбрасывать буферные тени, является "
+":doc:`лампа-прожектор "
+"</render/blender_render/lighting/lamps/spot/buffered_shadows>`."
 

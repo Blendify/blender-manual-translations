@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-14 13:47-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-10-28 23:17+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:4
 msgid "Raytraced Shadows"
-msgstr ""
+msgstr "Трассировка теней"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:9
 msgid "Ray shadowing options for lamps."
-msgstr ""
+msgstr "Параметры трассировки теней для ламп"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:12
 msgid ""
@@ -33,10 +33,21 @@ msgid ""
 ":doc:`own ray-traced shadows page "
 "</render/blender_render/lighting/lamps/area/raytraced_shadows>`."
 msgstr ""
+"Большинство типов ламп (:doc:`точечная лампа "
+"</render/blender_render/lighting/lamps/point>`, :doc:`лампа-прожектор "
+"</render/blender_render/lighting/lamps/spot/introduction>` и "
+":doc:`лампа-солнце "
+"</render/blender_render/lighting/lamps/sun/introduction>`) совместно "
+"используют одни и те же параметры для генерирования трассируемых теней. "
+"Эти параметры описаны ниже. Обратите внимание, что :doc:`лампа-область "
+"</render/blender_render/lighting/lamps/area/introduction>`, хотя и "
+"использует большинство из этих параметров, обладает некоторыми "
+"дополнительными особенностями, описанными в :doc:`соответствующем разделе"
+" </render/blender_render/lighting/lamps/area/raytraced_shadows>`."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:21
 msgid "Ray Shadow"
-msgstr ""
+msgstr "Трассировка теней"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:21
 msgid ""
@@ -44,10 +55,13 @@ msgid ""
 "shadows. When the *Ray Shadow* button is selected, another set of options"
 " is made available, those options being:"
 msgstr ""
+"Кнопка *Трассировка теней* включает генерацию трассируемых теней для "
+"источника света. Когда выбрана кнопка *Трассировка теней*, становятся "
+"доступны другие параметры, которые описаны ниже:"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:37
 msgid "Shadow sample generator type"
-msgstr ""
+msgstr "Тип генератора выборок для расчёта теней"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:24
 msgid ""
@@ -57,10 +71,16 @@ msgid ""
 "traced shadows (for now, mainly two variants of Quasi-Monte Carlo, see "
 "`Quasi-Monte Carlo method`_):"
 msgstr ""
+"Метод генерации выборок теней: адаптивный QMC быстрее, равномерный QMC "
+"даёт меньше шума, но он медленнее. Параметр позволяет вам выбрать "
+"алгоритм, используемый для генерирования выборок, которые послужат для "
+"вычисления трассируемых теней (на текущий момент в основном "
+"поддерживаются две разновидности метода квази-Монте-Карло, смотрите "
+"раздел `Метод квази-Монте-Карло`_):"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:31
 msgid "Constant QMC"
-msgstr ""
+msgstr "Равномерный QMC"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:30
 msgid ""
@@ -69,10 +89,14 @@ msgid ""
 "calculation of shadow value but it is not as fast as using the *Adaptive "
 "QMC* method; however, *Constant QMC* is more accurate."
 msgstr ""
+"*Равномерный QMC* используется для вычисления значений тени очень "
+"единообразным и равномерно распределённым способом. Этот метод выдаёт "
+"очень хороший расчёт для значений теней, но он не настолько быстр, как "
+"*Адаптивный QMC*; однако же более точен."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:37
 msgid "Adaptive QMC"
-msgstr ""
+msgstr "Адаптивный QMC"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:34
 msgid ""
@@ -83,10 +107,16 @@ msgid ""
 "while being not much worse than *Constant QMC* in terms of overall "
 "results."
 msgstr ""
+"*Адаптивный QMC* используется для вычисления значений теней несколько "
+"менее единообразным и распределённым способом. Этот метод выдаёт хороший "
+"расчёт значений теней, но не настолько хороший, как *Равномерный QMC*. "
+"Преимущество использования *адаптивного QMC* в том, что в целом он "
+"гораздо быстрее, и при этом не намного хуже *постоянного QMC* с точки "
+"зрения конечного результата."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:43
 msgid "Samples"
-msgstr ""
+msgstr "Сэмплы"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:40
 msgid ""
@@ -96,10 +126,16 @@ msgid ""
 "real number of samples is actually the square of it, so setting a sample "
 "value of 3 really means 3\\ :sup:`2` = 9 samples will be taken."
 msgstr ""
+"Количество дополнительных выборок (сэмплы x сэмплы). Этот ползунок задаёт"
+" максимальное количество выборок, которые будут использовать методы "
+"*Равномерный QMC* или *Адаптивный QMC* для вычисления тени. Максимальное "
+"значение равно 16: реальное количество выборок на самом деле является "
+"квадратом этого значения, поэтому установка сэмплов в значение 3 на самом"
+" деле значит, что будут задействованы 3\\ :sup:`2` = 9 выборок."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:112
 msgid "Soft Size"
-msgstr ""
+msgstr "Размер мягкого освещения"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:46
 msgid ""
@@ -112,6 +148,15 @@ msgid ""
 "shadows generated will not have a soft edge. The maximum value for *Soft "
 "Size* is 100.0."
 msgstr ""
+"Размер источника света для выборки трассируемых теней. Этот ползунок "
+"определяет размер нечёткой/диффузной области / полутени по краям основной"
+" тени. *Размер мягкого освещения* определяет только ширину мягкой тени, а"
+" не её градации и сглаженность. Если вы хотите получить широкую мягкую "
+"тень с тонкими градациями освещения, необходимо также установить "
+"количество выборок в поле *Сэмплы* в значение, большее 1; в противном "
+"случае это поле не даст никакого видимого эффекта и сгенерированные тени "
+"не будут иметь мягких краёв. Максимальное значение *размера мягкого "
+"освещения* равно 100.0."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:55
 msgid ""
@@ -119,58 +164,66 @@ msgid ""
 "settings showing the effect of various values on the softness of shadow "
 "edges:"
 msgstr ""
+"Ниже приведена таблица визуализаиций с различными настройками параметров "
+"*Размер мягкого освещения* и *Сэмплы*, показывающими влияние различных "
+"значений на мягкость краёв теней:"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:63
 msgid "Soft Size: 1.0, Samples: 2."
-msgstr ""
+msgstr "Размер мягкого освещения: 1.0, Сэмплы: 2"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:68
 msgid "Soft Size: 1.0, Samples: 4."
-msgstr ""
+msgstr "Размер мягкого освещения: 1.0, Сэмплы: 4"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:73
 msgid "Soft Size: 1.0, Samples: 6."
-msgstr ""
+msgstr "Размер мягкого освещения: 1.0, Сэмплы: 6"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:78
 msgid "Soft Size: 2.0, Samples: 2."
-msgstr ""
+msgstr "Размер мягкого освещения: 2.0, Сэмплы: 2"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:83
 msgid "Soft Size: 2.0, Samples: 4."
-msgstr ""
+msgstr "Размер мягкого освещения: 2.0, Сэмплы: 4"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:88
 msgid "Soft Size: 2.0, Samples: 6."
-msgstr ""
+msgstr "Размер мягкого освещения: 2.0, Сэмплы: 6"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:93
 msgid "Soft Size: 3.0, Samples: 2."
-msgstr ""
+msgstr "Размер мягкого освещения: 3.0, Сэмплы: 2"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:98
 msgid "Soft Size: 3.0, Samples: 4."
-msgstr ""
+msgstr "Размер мягкого освещения: 3.0, Сэмплы: 4"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:103
 msgid "Soft Size: 3.0, Samples: 6."
-msgstr ""
+msgstr "Размер мягкого освещения: 3.0, Сэмплы: 6"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:106
 msgid ""
 "Below is an animated version of the above table of images showing the "
 "effects:"
 msgstr ""
+"Ниже расположена анимированная версия изображения из таблицы для "
+"наглядной демонстрации эффекта:"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:110
 msgid ""
 "Animated version renders with different Soft Size and Samples settings "
 "showing the effect of various values on the softness of shadow edges."
 msgstr ""
+"Анимированная версия визуализаций с различными размерами мягкого "
+"освещения и сэмплами, показывающая влияние различных значений на мягкость"
+" краёв теней"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:120
 msgid "Threshold"
-msgstr ""
+msgstr "Порог"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:115
 msgid ""
@@ -180,10 +233,15 @@ msgid ""
 "threshold of how shadowed an area is already. The maximum *Threshold* "
 "value is 1.0."
 msgstr ""
+"Порог для адаптивной выборки. Это поле используется вместе с методом "
+"расчёта теней *Адаптивный QMC*. Значение порога используется для "
+"определения возможности пропуска расчёта выборки тени методом *Адаптивный"
+" QMC* на основе уже затенённой области. Максимальное значение параметра "
+"равно 1.0."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:125
 msgid "Quasi-Monte Carlo method"
-msgstr ""
+msgstr "Метод квази-Монте-Карло"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:127
 msgid ""
@@ -197,10 +255,21 @@ msgid ""
 " gaps in them (places that are not sampled/read). This in turn can cause "
 "problems for certain calculations (such as shadow calculation)."
 msgstr ""
+"Метод Монте-Карло представляет собой метод получения серии выборок/чтения"
+" значений (любого вида значений, например, значений освещения, цвета, "
+"состояний отражения) внутри или вокруг области в произвольном порядке. "
+"Поэтому для определения правильных действий, участвующих в определённых "
+"вычислениях, обычно требуются несколько значений выборок для определения "
+"общей точности этих расчётов. Метод Монте-Карло пытается быть случайным, "
+"насколько это возможно; часто это может привести к тому, что область, с "
+"которой берутся выборки, будет содержать большие нерегулярные дыры "
+"(места, из которых не происходило выборок/чтений). Это, в свою очередь, "
+"может вызвать проблемы с некоторыми вычислениями (например, при "
+"вычислении теней)."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:136
 msgid "The solution to this was the Quasi-Monte Carlo method."
-msgstr ""
+msgstr "Решением является использование метода квази-Монте-Карло."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:138
 msgid ""
@@ -210,40 +279,41 @@ msgid ""
 "area. This has the advantage of sometimes leading to more accurate "
 "calculations based on samples/reading."
 msgstr ""
+"Метод квази-Монте-Карло также является случайным, но пытается убедиться, "
+"что принимаемые им выборки/чтения также имеют лучшее и более равномерное "
+"распределение по всей площади (оставляющее меньшие нерегулярные "
+"промежутки в области выборки). Это преимущество иногда приводит к более "
+"точным расчётам, основанным на выборках/чтениях."
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:145
 msgid ""
 ":doc:`Lamp Light Raytraced Shadows "
 "</render/blender_render/lighting/lamps/point>`"
 msgstr ""
+":doc:`Трассируемые тени от точечной лампы "
+"</render/blender_render/lighting/lamps/point>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:146
 msgid ""
 ":doc:`Spot Light Raytraced Shadows "
 "</render/blender_render/lighting/lamps/spot/introduction>`"
 msgstr ""
+":doc:`Трассируемые тени от лампы-прожектора "
+"</render/blender_render/lighting/lamps/spot/introduction>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:147
 msgid ""
 ":doc:`Area Light Raytraced Shadows "
 "</render/blender_render/lighting/lamps/area/introduction>`"
 msgstr ""
+":doc:`Трассируемые тени от лампы-области "
+"</render/blender_render/lighting/lamps/area/introduction>`"
 
 #: ../../manual/render/blender_render/lighting/shadows/raytraced_properties.rst:148
 msgid ""
 ":doc:`Sun Light Raytraced Shadows "
 "</render/blender_render/lighting/lamps/sun/introduction>`"
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Ray shadowing options for lamps"
-#~ msgstr ""
-
-#~ msgid "What is Quasi-Monte Carlo?"
-#~ msgstr ""
-
-#~ msgid "Lamps Raytraced Shadows"
-#~ msgstr ""
+":doc:`Трассируемые тени от лампы-солнца "
+"</render/blender_render/lighting/lamps/sun/introduction>`"
 

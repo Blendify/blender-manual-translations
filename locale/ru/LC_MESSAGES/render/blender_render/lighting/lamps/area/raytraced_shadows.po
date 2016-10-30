@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-10-20 00:20+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:5
 msgid "Area Raytraced Shadows"
-msgstr ""
+msgstr "Трассировка теней лампы-области"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:10
 msgid "Adaptive QMC settings."
-msgstr ""
+msgstr "Параметры Адаптивного QMC"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:13
 msgid ""
@@ -28,14 +28,19 @@ msgid ""
 "</render/blender_render/lighting/shadows/raytraced_properties>`. However,"
 " there are some specifics with this lamp, which are detailed below:"
 msgstr ""
+"*Лампы-области* могут отбрасывать только трассируемые тени. Параметры "
+"трассируемых теней этого типа ламп в основном совпадают с параметрами "
+"остальных типов ламп и описаны в разделе :doc:`Трассировка теней "
+"</render/blender_render/lighting/shadows/raytraced_properties>`. Однако, "
+"для этого типа ламп есть некоторые особенности, которые описаны ниже:"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:20
 msgid "Shadow Samples"
-msgstr ""
+msgstr "Сэмплы теней"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:28
 msgid "Samples"
-msgstr ""
+msgstr "Сэмплы"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:23
 msgid ""
@@ -46,24 +51,34 @@ msgid ""
 "equivalent to the number of virtual lamps in the area. With QMC sample "
 "generator methods, it behaves similarly to with *Lamp* or *Spot* lamps."
 msgstr ""
+"Параметр выполняет те же функции, что и в случае с другими лампами, но "
+"при использовании *прямоугольных* ламп, возникает два параметра сэмплов: "
+"*Сэмплы по X* и *Сэмплы по Y*, соответствующие двум осям плоскости лампы."
+" Обратите внимание, что при использовании *Равномерного разброса* для "
+"генерирования сэмплов, они более или менее будут эквивалентны количеству "
+"виртуальных ламп в области. При использовании метода генерирования "
+"сэмплов QMC, параметр ведёт себя аналогично параметру *точечной лампы* "
+"или *лампы-прожектора*."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:31
 msgid "Sample Generator Types"
-msgstr ""
+msgstr "Типы генераторов сэмплов"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:35
 msgid "Adaptive QMC / Constant QMC"
-msgstr ""
+msgstr "Адаптивный QMC / Равномерный QMC"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:34
 msgid ""
 "These common setting are described in "
 ":doc:`/render/blender_render/lighting/shadows/shadow_panel`."
 msgstr ""
+"Эти общие параметры описаны в разделе "
+":doc:`/render/blender_render/lighting/shadows/shadow_panel`."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:69
 msgid "Constant Jittered"
-msgstr ""
+msgstr "Равномерный разброс"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:38
 msgid ""
@@ -71,10 +86,14 @@ msgid ""
 " which is more like simulating an array of lights. It has the same "
 "options as the old one: *Umbra*, *Dither* and *Jitter*."
 msgstr ""
+"*Лампа-область* обладает третьим методом генерирования сэмплов, "
+"*Равномерным разбросом*, который больше подходит для имитации массива "
+"источников света. Он обладает теми же параметрами, что и старый метод: "
+"*Умбра*, *Дрожание* (*Dither*) и *Дрожание* (*Jitter*)."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:45
 msgid "Constant Jittered settings."
-msgstr ""
+msgstr "Параметры Равномерного разброса"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:48
 msgid ""
@@ -83,10 +102,13 @@ msgid ""
 "artificially boost the \"soft\" shadow effect, with possible loss in "
 "quality:"
 msgstr ""
+"Следующие три параметра доступны только при использовании *Равномерного "
+"разброса*. Они предназначены для искусственного увеличения эффекта "
+"«мягкости» тени, за счёт возможной потери её качества:"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:55
 msgid "Umbra"
-msgstr ""
+msgstr "Умбра"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:52
 msgid ""
@@ -96,10 +118,16 @@ msgid ""
 "*Samples* values equal to or greater than 2 to see any influence of this "
 "button."
 msgstr ""
+"Подчёркивает интенсивность теней в районе, полностью находящемся в тени. "
+"Световой переход между полностью затенёнными областями и полностью "
+"освещёнными областями выполняется более быстро (то есть, присутствует "
+"более резкий градиент тени). Чтобы этот параметр имел какое-то влияние, "
+"вам нужно установить параметр *Сэмплы* в значение, равное или больше 2."
 
+# Mingun: в Blender перевод не отличим от Jitter
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:62
 msgid "Dither"
-msgstr ""
+msgstr "Дрожание (Dither)"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:58
 msgid ""
@@ -110,10 +138,18 @@ msgid ""
 "medium *Samples* values. It is not useful at all with high *Samples* "
 "values, as the borders will already appear soft."
 msgstr ""
+"Применяет выборки на границах теней, аналогично тому, как работает "
+"сглаживание границ объекта по кнопке *OSA*. Он искусственно смягчает "
+"границы теней; когда количество *сэмплов* очень маленькое, вы можете "
+"ожидать плохие результаты, поэтому его лучше использовать со средним "
+"количеством *сэмплов*. Он не очень полезен при использовании большого "
+"количества *сэмплов*, поскольку границы и так уже будут выглядеть "
+"достаточно мягкими."
 
+# Mingun: в Blender перевод не отличим от Dither
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:69
 msgid "Jitter"
-msgstr ""
+msgstr "Дрожание (Jitter)"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:65
 msgid ""
@@ -122,20 +158,26 @@ msgid ""
 "very useful when you use high *Samples* values where the drawback is that"
 " noise generates quite visible graininess."
 msgstr ""
+"Добавляет шум, разбивающий границы выборок сплошной тени, отодвигая их "
+"друг от друга в псевдо-случайных направлениях. Опять же, этот параметр не"
+" очень полезен при использовании большого количества *сэмплов*, поскольку"
+" его недостатком является создание вполне заметной зернистости от шума."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:72
 msgid "Technical Details"
-msgstr ""
+msgstr "Технические подробности"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:79
 msgid "Principles behind the Area light."
-msgstr ""
+msgstr "Принципы, лежащие за источниками света ламп-областей"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:82
 msgid ""
 "The Fig. :ref:`fig-bi-light-rayshadow-area` picture helps to understand "
 "how the soft shadows are simulated."
 msgstr ""
+"Рисунок :ref:`fig-bi-light-rayshadow-area` поможет понять, как "
+"моделируются мягкие тени."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:85
 msgid ""
@@ -145,6 +187,12 @@ msgid ""
 "illustrates the equivalent case of an *Area* light (*Square* shape), with"
 " *Samples* set at 3 on the *Shadow and Spot* panel."
 msgstr ""
+"Часть «(a)» показывает *лампу-область*, как она определяется в Blender’е."
+" Если её форма образует *Квадрат*, то мягкость тени определяется "
+"количеством *Сэмплов* по каждой стороне фигуры. Например, в части «(b)» "
+"показывается эквивалентный массив источников света *лампы-области* "
+"(квадратной формы), с количеством *сэмплов*, установленных в панели "
+"*Тень*, равным трём."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:90
 msgid ""
@@ -152,6 +200,10 @@ msgid ""
 "in each direction, and with a light \"dupliverted\" at each node for a "
 "total of nine lights."
 msgstr ""
+"В этом случае *лампа-область* рассматривается в виде сетки с разрешением "
+"в три клетки по каждой стороне, в каждой вершине которой продублированы "
+"источники света, так что всего в результате получается девять источников "
+"света."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:93
 msgid ""
@@ -161,10 +213,16 @@ msgid ""
 "the overlay of the shadows produces the soft shadow (it is darker where "
 "the individual shadows overlap, and lighter everywhere else)."
 msgstr ""
+"В случае «(a)», энергия *E* лампы равна *E*/1, а в случае «(b)» энергия "
+"каждого индивидуального псевдо-источника света равна *E*/(количество "
+"источников света). Каждый псевдо-источник отбрасывает слабую тень "
+"(пропорционально своей энергии), поэтому наложение этих теней даёт мягкую"
+" тень (она темнее там, где индивидуальные тени накладываются друг на "
+"друга и светлее во всех остальных местах)."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:101
 msgid "Hints"
-msgstr ""
+msgstr "Подсказки"
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:103
 msgid ""
@@ -179,6 +237,15 @@ msgid ""
 "lighting intensity, you are strongly encouraged to use the *Size* "
 "button(s) instead."
 msgstr ""
+"Вы могли обратить внимание, что параметр *Размер* лампы-области не влияет"
+" на интенсивность освещения сцены. С другой стороны, масштабирвание лампы"
+" по горячей клавише :kbd:`S` в окне 3D-вида может значительно изменить "
+"интенсивность освещения сцены. Это поведение было сделано именно таким, "
+"чтобы можно было точно настроить все параметры освещения, а затем "
+"увеличить (или уменьшить) сцену целиком и не потерять при этом все эти "
+"настройки. Если вы хотите изменить только размеры *лампы-области* без "
+"изменения интенсивности её освещения, вам настоятельно рекомендуется "
+"использовать для этого её параметр *Размер*."
 
 #: ../../manual/render/blender_render/lighting/lamps/area/raytraced_shadows.rst:113
 msgid ""
@@ -188,32 +255,10 @@ msgid ""
 "to simulate slightly softer shadows. However, these results will never be"
 " better than the same lighting with high *Samples* values."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Adaptive QMC settings"
-#~ msgstr ""
-
-#~ msgid "Constant Jittered settings"
-#~ msgstr ""
-
-#~ msgid "Principles behind the Area light"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This have the same role as with"
-#~ " other lamps, but when using a "
-#~ "*Rectangle* *Area* lamp, you have two"
-#~ " samples settings: *Samples X* and "
-#~ "*Samples Y*, for the two axes of"
-#~ " the area plane. Note also that "
-#~ "when using the *Constant Jittered* "
-#~ "sample generator method, this is more"
-#~ " or less equivalent to the number "
-#~ "of virtual lamps in the area. With"
-#~ " QMC sample generator methods, it "
-#~ "behaves similarly to with *Lamp* or "
-#~ "*Spot* lamps."
-#~ msgstr ""
+"Если ваш компьютер при использовании *Равномерного разброса* работает не "
+"очень быстро, вы можете рассмотреть вариант понижения количества "
+"*сэмплов* (например, до 2) и активирования параметров *Умбра*, *Дрожание "
+"(Dither)* и/или *Дрожание (Jitter)* для имитации слегка мягких теней. "
+"Однако полученный результат никогда не будет лучше того, который "
+"достигается тем же освещением с более высоким количеством *сэмплов*."
 
