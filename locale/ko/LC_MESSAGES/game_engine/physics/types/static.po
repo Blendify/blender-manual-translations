@@ -1,0 +1,438 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) : This page is licensed under a CC-BY-SA 4.0 Int. License
+# This file is distributed under the same license as the Blender 2.78 Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender 2.78 Manual 2.78\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-29 11:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../manual/game_engine/physics/types/static.rst:4
+msgid "Static Physics"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:6
+msgid ""
+"Static objects in the :doc:`Blender Game Engine </game_engine/index>` do "
+"not automatically react to physics, including gravity and collisions. "
+"Even if hit by the force of a speeding 18-wheeler truck, it will remain "
+"unresponsive in terms of location, rotation, or deformation."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:11
+msgid ""
+"It will, however, give collision reactions. Objects will bounce off of "
+"Static Objects, and rotational inertia will transfer to objects capable "
+"of rotating (that is, Rigid Body Objects will spin in response, though "
+"Dynamic Objects will not)."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:15
+msgid ""
+"Note that none of this prevents you from transforming the Static Objects "
+"with :doc:`Logic Bricks </game_engine/logic/index>` or Python code. The "
+"visual objects will correctly move and their physics representation will "
+"update in the engine as well."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:19
+msgid ""
+"Another important note is that the default `Collision Bounds`_ is a "
+"Triangle Mesh, meaning it is higher in computational requirements but "
+"also in detail. This in turn means the \"Radius\" option has no effect by"
+" default."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:24
+msgid ""
+"For more documentation, see the :doc:`Top BGE Physics page "
+"</game_engine/physics/index>`."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:28
+#: ../../manual/game_engine/physics/types/static.rst:188
+msgid "Options"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:30
+msgid "bpy Access"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:32
+msgid ""
+"Note that most of these properties are accessible through the non- BGE "
+"scripting API via ``bpy.data.objects[\"ObjectName\"].game``, which is of "
+"type ``bpy.types.GameObjectSetting``. This is useful so you can, for "
+"example, set a range of objects to have gradated values via a for-loop."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:40
+msgid "Actor"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:38
+msgid "Enables detection by Near and Radar Sensors."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:40
+msgid "Default: On."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:41
+msgid "Python property: ``obj.game.use_actor``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:45
+msgid "Ghost"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:43
+msgid "Disables collisions completely, similar to No Collision."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:45
+#: ../../manual/game_engine/physics/types/static.rst:51
+msgid "Default: Off."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:46
+msgid "Python property: ``obj.game.use_ghost``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:52
+msgid "Invisible"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:48
+msgid ""
+"Does not display, the same as setting the object to unrendered (such as "
+"unchecking the \"Camera\" icon in the Outliner)."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:52
+msgid "Python property: ``obj.use_render``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:59
+msgid "Radius"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:55
+msgid ""
+"If you have the \"Collision Bounds: Sphere\" set explicitly (or "
+"implicitly through having the Collision Bounds subpanel unchecked), this "
+"will multiply with the Object's (unapplied) Scale. Note that none of the "
+"other bounds types are affected. Also note that in the 3D View the "
+"display will show this for all types, even though it is only actually "
+"used with Sphere. Python property: ``obj.game.radius``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:64
+msgid "Basic"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:65
+msgid "Radius= 1.5"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:66
+msgid "Unapplied Scale"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:67
+msgid "Applied Scale"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:68
+#: ../../manual/game_engine/physics/types/static.rst:102
+msgid "Collision Bounds"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:70
+msgid "Rolls, radius of 1 BU"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:71
+msgid "Rolls, radius of 1.5 BU (after \"popping\" upward)"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:72
+msgid "Rolls, radius of 1.5 BU"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:73
+msgid "Rolls, radius of 1 BU (!)"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:74
+msgid "Default (which is Sphere)"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:76
+#: ../../manual/game_engine/physics/types/static.rst:77
+#: ../../manual/game_engine/physics/types/static.rst:78
+#: ../../manual/game_engine/physics/types/static.rst:79
+msgid "Slides, extent of 1 BU"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:80
+#: ../../manual/game_engine/physics/types/static.rst:150
+msgid "Box"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:82
+#: ../../manual/game_engine/physics/types/static.rst:83
+#: ../../manual/game_engine/physics/types/static.rst:84
+#: ../../manual/game_engine/physics/types/static.rst:85
+msgid "\"\""
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:86
+#: ../../manual/game_engine/physics/types/static.rst:168
+msgid "Convex Hull"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:88
+#: ../../manual/game_engine/physics/types/static.rst:89
+msgid "Slides, extent of 1 BU (but with more friction than above)"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:90
+msgid "Acts insane"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:91
+msgid "Slides extent of 1.5 BU"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:92
+msgid "Triangle Mesh"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:99
+msgid "Anisotropic Friction"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:95
+msgid ""
+"Isotropic friction is identical at all angles. Anisotropic is "
+"directionally-dependant. Here you can vary the coefficients for the three"
+" axes individually, or disable friction entirely. Python properties: "
+"``obj.game.use_anisotropic_friction`` (boolean) and "
+"``obj.game.friction_coefficients`` (a 3-element array)."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:106
+msgid ""
+"The Static type differs from the others in that it defaults to a Triangle"
+" Mesh bounds, instead of a simple sphere."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:109
+msgid ""
+"The first thing you must understand is the idea of the 3D Bounding Box. "
+"If you run through all the vertices of a mesh and record the lowest and "
+"highest x values, you have found the *x min/max* the complete boundary "
+"for all x values within the mesh. Do this again for y and z, then make a "
+"rectangular prism out of these values, and you have a *Bounding Box*. "
+"This box could be oriented relative globally to the world or locally to "
+"the object's rotation."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:117
+msgid ""
+"Demonstration of a Local Bounding Box (left) and a Global Bounding Box "
+"(right)."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:119
+msgid "The *x extent*, then, is half of the distance between the x min/max."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:121
+msgid ""
+"Throughout all of this you must be cognizant of the Object Origin. For "
+"the Game engine, the default :kbd:`Ctrl-Alt-Shift-C`, :kbd:`3` or "
+":menuselection:`Set Origin --> Origin to Geometry` is unlikely to get the"
+" desired placement of the Collision Bounds that you want. Instead, you "
+"should generally set the origin by looking at the Tool Shelf after you do"
+" the *Set Origin*, and changing the *Center* from *Median Center* to "
+"*Bounds Center*. Blender will remember this change for future :kbd:`Ctrl-"
+"Alt-Shift-C` executions."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:128
+msgid ""
+"All Collision Bounds are centered on this origin. All boxes are oriented "
+"locally, so object rotation matters."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:132
+msgid "Setting the origin to Bounds Center instead of Median Center."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:134
+msgid ""
+"A final introductory comment: When you set the Collision Bounds on an "
+"object, Blender will attempt to display a visualization of the bounds in "
+"the form of a dotted outline. Currently, there is a bug: *The 3D View* "
+"does not display this bounds preview where it actually will be during the"
+" game. To see it, go to :menuselection:`Game --> Show Physics "
+"Visualization` and look for the white (or green, if sleeping) geometry."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:141
+msgid ""
+"Now we can explain the various options for the *Collision Bounds* "
+"settings:"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:144
+msgid "Default"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:144
+msgid ""
+"For Dynamic and Static objects, it is a Triangle Mesh (see below). For "
+"everything else, it is a Sphere (see below)."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:148
+msgid "Capsule"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:147
+msgid ""
+"Which is a cylinder with hemispherical caps, like a pill. Radius of the "
+"hemispheres is the greater of the X or Y extent. Height is the Z bounds"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:151
+msgid "The X, Y, Z bounding box, as defined above."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:154
+msgid "Sphere"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:153
+msgid ""
+"Radius is defined by the object's scale (visible in the N properties "
+"panel) times the physics radius (can be found in :menuselection:`Physics "
+"--> Attributes --> Radius`. Note: This is the only bounds that respects "
+"the Radius option."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:157
+msgid "Cylinder"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:157
+msgid "Radius is the greater of the x or y extent. Height is the z bounds."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:160
+msgid "Cone"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:160
+msgid "Base radius is the greater of the x or y extent. Height is the z bounds."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:163
+msgid "Forms a shrink-wrapped, simplified geometry around the object."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:168
+msgid "A convex hull sketch."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:171
+msgid "Triangle mesh"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:171
+msgid ""
+"Most expensive, but most precise. Collision will happen with all of "
+"triangulated polygons, instead of using a virtual mesh to approximate "
+"that collision."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:185
+msgid "By Hand"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:174
+msgid ""
+"This is not an option in the Physics tab's Collision Bounds settings, but"
+" a different approach, entirely. You create a second mesh, which is "
+"invisible, to be the physics representation. This becomes the parent for "
+"your display object. Then, your display object is set to ghost so it does"
+" not fight with the parent object. This method allows you to strike a "
+"balance between the accuracy of *Triangle Mesh* with the efficiency of "
+"some of the others. See the demo of this in the dune buggy to the right."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:184
+msgid "Another way to create Collision Bounds -- By hand."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:190
+msgid "There are only two options in the Collision Bounds subpanel."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:199
+msgid "Margin"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:193
+msgid ""
+"\"Add extra margin around object for collision detection, small amount "
+"required for stability.\" If you find your objects are getting stuck in "
+"places they should not, try increasing this to, say, 0.06."
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:196
+msgid ""
+"Sometimes 0.06 is the default (such as on the Default Cube), but "
+"sometimes it is not. You have to keep an eye on the setting, or else "
+"learn the symptoms so you can respond when it gives you trouble. If you "
+"are lazy/paranoid/unsure/diligent/bored, you can always run this on the "
+"Python Console to bump all 0.0 margins to 0.06: for ``obj`` in "
+"``bpy.data.objects``: ``obj.game.collision_margin = "
+"obj.game.collision_margin`` or 0.06"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:208
+msgid "Compound"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:202
+msgid ""
+"\"Add children to form compound collision object.\" Basically, if you "
+"have a child object and do not have this enabled, the child's collisions "
+"will not have an effect on that object \"family\" (though it will still "
+"push other objects around). If you do have it checked, the parent's "
+"physics will respond to the child's collision (thus updating the whole "
+"family). Python property: ``obj.game.use_collision_compound``"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:211
+msgid "Create Obstacle"
+msgstr ""
+
+#: ../../manual/game_engine/physics/types/static.rst:213
+msgid "Todo"
+msgstr ""
+
