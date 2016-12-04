@@ -1,172 +1,103 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) : This page is public domain as CC0
-# This file is distributed under the same license as the Blender 2.77 Manual
+# This file is distributed under the same license as the Blender 2.78 Manual
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# Ivan Paulos Tomé <greylica@gmail.com>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 2.77 Manual 2.77\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: Blender 2.78 Manual 2.78\n"
+"Report-Msgid-Bugs-To: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "POT-Creation-Date: 2016-10-12 18:22-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-12-04 19:11-0300\n"
+"Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
+"Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
+"Language: pt_BR\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../manual/animation/techniques/constraints.rst:4
 msgid "Using Constraints in Animation"
-msgstr ""
+msgstr "usando restrições em animações"
 
 #: ../../manual/animation/techniques/constraints.rst:6
-msgid ""
-":doc:`Constraints </rigging/constraints/index>` are a way to control an "
-"object's properties (its location/rotation/scale), using either plain "
-"static values (like the :doc:`\"limit\" ones "
-"</rigging/constraints/transform/limit_location>`), or (an)other "
-"object(s), called \"targets\" (like e.g. the :doc:`\"copy\" ones "
-"</rigging/constraints/transform/copy_location>`)."
-msgstr ""
+msgid ":doc:`Constraints </rigging/constraints/index>` are a way to control an object's properties (its location/rotation/scale), using either plain static values (like the :doc:`\"limit\" ones </rigging/constraints/transform/limit_location>`), or (an)other object(s), called \"targets\" (like e.g. the :doc:`\"copy\" ones </rigging/constraints/transform/copy_location>`)."
+msgstr "As :doc:`Restrições </rigging/constraints/index>` são uma maneira de controlar as propriedades de um objeto (como sua localização, rotação e escala), usando tanto valores planos e estáticos, (Por exemplo como aqueles que são limitadores estáticos como o :doc:`Limitar posicionamento </rigging/constraints/transform/limit_location>`), quanto com os que usam outros objetos referências, ou seja, utilizando \"alvos\"  (Por exemplo como os que fazem cópias de movimentos, como o de :doc:`Copiar posicionamento </rigging/constraints/transform/copy_location>`)."
 
 #: ../../manual/animation/techniques/constraints.rst:12
-msgid ""
-"Even though these constraints might be useful in static projects, their "
-"main usage is obviously in animation. There are two different aspects in "
-"constraints' animation:"
-msgstr ""
+msgid "Even though these constraints might be useful in static projects, their main usage is obviously in animation. There are two different aspects in constraints' animation:"
+msgstr "Mesmo que estas restrições possam ser úteis em projetos estáticos, a sua principal utilização é obviamente em animações. Existe dois aspectos diferentes na animação por restrições:"
 
 #: ../../manual/animation/techniques/constraints.rst:16
-msgid ""
-"You can control an object's animation through the targets used by its "
-"constraints (this is a form of indirect animation)."
-msgstr ""
+msgid "You can control an object's animation through the targets used by its constraints (this is a form of indirect animation)."
+msgstr "Você pode controlar as animações de um objeto através dos alvos usados por suas restrições (esta é uma forma de animação indireta)."
 
 #: ../../manual/animation/techniques/constraints.rst:18
 msgid "You can animate constraints' settings."
-msgstr ""
+msgstr "Você pode animar as definições das restrições."
 
 #: ../../manual/animation/techniques/constraints.rst:22
 msgid "Controlling Animation with Constraints"
-msgstr ""
+msgstr "Controlando as animações com restrições."
 
 #: ../../manual/animation/techniques/constraints.rst:24
-msgid ""
-"This applies only to constraints using target(s). Indeed, these targets "
-"can then control the constraint's owner's properties, and hence, "
-"animating the targets will indirectly animate the owner."
-msgstr ""
+msgid "This applies only to constraints using target(s). Indeed, these targets can then control the constraint's owner's properties, and hence, animating the targets will indirectly animate the owner."
+msgstr "Isto se aplica somente a restrições que utilizam alvo(s). Ainda assim, estes alvos poderão então controlar as propriedades da restrição atribuída a um proprietário, e portanto, animar os alvos irá indiretamente animar o proprietário."
 
 #: ../../manual/animation/techniques/constraints.rst:28
-msgid ""
-"This indirect \"constraint\" animation can be very simple, like for "
-"example with the :doc:`Copy Location constraint "
-"</rigging/constraints/transform/copy_location>`, where the owner object "
-"will simply copy the location of its target (with an optional constant "
-"offset). But you can also have very complex behaviors, like when using "
-"the :doc:`Action constraint </rigging/constraints/relationship/action>`, "
-"which is a sort of :doc:`Animation Driver </animation/drivers/index>` for"
-" actions!"
-msgstr ""
+msgid "This indirect \"constraint\" animation can be very simple, like for example with the :doc:`Copy Location constraint </rigging/constraints/transform/copy_location>`, where the owner object will simply copy the location of its target (with an optional constant offset). But you can also have very complex behaviors, like when using the :doc:`Action constraint </rigging/constraints/relationship/action>`, which is a sort of :doc:`Animation Driver </animation/drivers/index>` for actions!"
+msgstr "Este tipo de animação por \"restrições\" indiretas pode ser bem simples, como por exemplo utilizando a restrição tipo :doc:`Copiar posicionamento </rigging/constraints/transform/copy_location>`, onde o objeto proprietário irá simplesmente copiar a localização de seu alvo (com um deslocamento constante opcional). Mas você pode também criar comportamentos bem complexos, como quando se utiliza a restrição do tipo :doc:`Ação </rigging/constraints/relationship/action>`, que é um tipo de :doc:`Controlador por animação </animation/drivers/index>` para as ações !"
 
 #: ../../manual/animation/techniques/constraints.rst:35
-msgid ""
-"We should also mention the classical :doc:`Child of Constraint "
-"</rigging/constraints/relationship/child_of>`, which creates parent/child"
-" relationship. These relationships indeed imply indirect animation (as "
-"transforming the parent affects by default all its children). But the "
-"*Child Of* constraint is also very important, as it allows you to parent "
-"your objects to bones, and hence use :doc:`Armatures "
-"</rigging/armatures/index>` to animate them!"
-msgstr ""
+msgid "We should also mention the classical :doc:`Child of Constraint </rigging/constraints/relationship/child_of>`, which creates parent/child relationship. These relationships indeed imply indirect animation (as transforming the parent affects by default all its children). But the *Child Of* constraint is also very important, as it allows you to parent your objects to bones, and hence use :doc:`Armatures </rigging/armatures/index>` to animate them!"
+msgstr "Nós também devemos mencionar a restrição clássica  :doc:`Criança de </rigging/constraints/relationship/child_of>`, que cria relacionamentos entre parentes e crianças. Estes relacionamentos sem dúvida implicam em animações diretas (pois as transformações do parente afetarão por padrão todas as suas crianças). Mas a restrição do tipo *Criança de* também é muito importante, pois ela permite a você relacionar o parentesco entre objetos e ossos, e portanto a utilização de  :doc:`Armações </rigging/armatures/index>` para animá-los !"
 
 #: ../../manual/animation/techniques/constraints.rst:41
-msgid ""
-"Back to our simple *Copy Location* example, you can have two different "
-"behaviors of this constraint:"
-msgstr ""
+msgid "Back to our simple *Copy Location* example, you can have two different behaviors of this constraint:"
+msgstr "De volta ao nosso simples exemplo usando *Copiar posicionamento*, você pode ter dois comportamentos diferentes para esta restrição:"
 
 #: ../../manual/animation/techniques/constraints.rst:44
-msgid ""
-"When it is *Offset* button is disabled (the default), the location of the"
-" owner is \"absolutely\" controlled by the constraint's target, which "
-"means nothing (except other constraints below in the stack...) will be "
-"able to control the owner's position. Not even the object's animation "
-"curves."
-msgstr ""
+msgid "When it is *Offset* button is disabled (the default), the location of the owner is \"absolutely\" controlled by the constraint's target, which means nothing (except other constraints below in the stack...) will be able to control the owner's position. Not even the object's animation curves."
+msgstr "Quando a caixa de marcação *deslocamento* está desmarcada (padrão), a localização do proprietário é controlada de maneira \"absoluta\" pelo alvo da restrição, o que não significa efetivamente que nada (com exceção a outras restrições logo abaixo da pilha) será capaz de controlar a posição do proprietário. Nem mesmo as curvas de animação."
 
 #: ../../manual/animation/techniques/constraints.rst:47
-msgid ""
-"However, when the *Offset* button is enabled, the location of the owner "
-"is \"relatively\" controlled by the constraint's target. This means that "
-"location's properties of the owner are offset from the location of the "
-"target. And these owner's location properties can be controlled e.g. by "
-"its *Loc...* curves (or actions, or NLA...)!"
-msgstr ""
+msgid "However, when the *Offset* button is enabled, the location of the owner is \"relatively\" controlled by the constraint's target. This means that location's properties of the owner are offset from the location of the target. And these owner's location properties can be controlled e.g. by its *Loc...* curves (or actions, or NLA...)!"
+msgstr "Contudo, quando  a caixa de marcação *Deslocamento* está habilitada, a localização do proprietário é então \"relativamente\" controlada pelo alvo da restrição. Isto significa que as propriedades de posicionamento (localização) do proprietário serão um deslocamento a partir da localização do alvo. E estas propriedades de posicionamento (localização) do proprietário podem ser controladas também pelas suas curvas de *Localização* presentes nas curvas de função (curvas-f) (ou ações, ou animações não lineares)!"
 
 #: ../../manual/animation/techniques/constraints.rst:55
 msgid "Example"
-msgstr ""
+msgstr "Exemplo"
 
 #: ../../manual/animation/techniques/constraints.rst:57
-msgid ""
-"Let us use the *Copy Location* constraint and its *Offset* button. For "
-"example, you can make your owner (let us call it \"moon\") describe "
-"perfect circles centered on the (0.0, 0.0, 0.0) point (using e.g. "
-"pydriven *LocX*/*LocY* animation curves, see :doc:`Drivers "
-"</animation/drivers/index>`), and then make it copy the location of a "
-"target (called it \"earth\", for example) with the *Offset* button "
-"enabled. Congratulation, you just modeled a satellite in a (simplified) "
-"orbit around its planet. Just do the same thing with its planet around "
-"its star (which you might call \"sun\", what do you think?), and why not,"
-" for the star around its galaxy."
-msgstr ""
+msgid "Let us use the *Copy Location* constraint and its *Offset* button. For example, you can make your owner (let us call it \"moon\") describe perfect circles centered on the (0.0, 0.0, 0.0) point (using e.g. pydriven *LocX*/*LocY* animation curves, see :doc:`Drivers </animation/drivers/index>`), and then make it copy the location of a target (called it \"earth\", for example) with the *Offset* button enabled. Congratulation, you just modeled a satellite in a (simplified) orbit around its planet. Just do the same thing with its planet around its star (which you might call \"sun\", what do you think?), and why not, for the star around its galaxy."
+msgstr "Vamos utilizar a restrição do tipo *Copiar posicionamento* e seu botão de *deslocamento*. Por exemplo, vocẽ pode fazer com que seu proprietário (vamos chamá-lo de \"Lua\"), descreva círculos perfeitos centralizados no ponto (0.0, 0.0, 0.0) (usando por exemplo um controlador Python para *Localização X* e *Localização Y* para as curvas de animação, veja :doc:`Controladores </animation/drivers/index>`), e então fazer com que ele copie a localização de um alvo (podemos chama este segundo alvo de \"Terra\", por exemplo) com o *Deslocamento* habilitado. Parabéns, você acaba de modelar um satélite (simplificado) em uma forma de órbita em torno de seu planeta. Simplesmente faça a mesma coisa com o seu planeta em torno de sua estrela (esse objeto poderia ser nomeado como \"Sol\", o que acha ?), e o mesmo poderia ser usado para a estrela em torno de sua galáxia. ( Por que não ? )"
 
 #: ../../manual/animation/techniques/constraints.rst:65
-msgid ""
-"Here is a small animation of a \"solar\" system created using (among a "
-"few others) the technique described above:"
-msgstr ""
+msgid "Here is a small animation of a \"solar\" system created using (among a few others) the technique described above:"
+msgstr "Aqui então, temos uma pequena animação de um sistema \"solar\" que foi criado usando as técnicas descritas acima (dentre outras):"
 
 #: ../../manual/animation/techniques/constraints.rst:70
-msgid ""
-"Note that this \"solar\" system is not realistic at all (the wrong scale,"
-" the \"earth\" is rotating in the wrong direction around the \"sun\", "
-"...)."
-msgstr ""
+msgid "Note that this \"solar\" system is not realistic at all (the wrong scale, the \"earth\" is rotating in the wrong direction around the \"sun\", ...)."
+msgstr "Note que este sistema \"solar\" não é realístico de maneira alguma (pode ser que a escala esteja errada, e que a \"Terra\" esteja sendo rotacionada na direção errada em torno do \"Sol\"...)."
 
 #: ../../manual/animation/techniques/constraints.rst:73
-msgid ""
-"You can download the blend-file (`download here "
-"<https://wiki.blender.org/index.php/File:ManAnimationTechsUsingConstraintsExSolarSys.blend>`__)"
-" used to create this animation."
-msgstr ""
+msgid "You can download the blend-file (`download here <https://wiki.blender.org/index.php/File:ManAnimationTechsUsingConstraintsExSolarSys.blend>`__) used to create this animation."
+msgstr "Você pode baixar o  (`arquivo Blender <https://wiki.blender.org/index.php/File:ManAnimationTechsUsingConstraintsExSolarSys.blend>`__) usado para criar esta animação."
 
 #: ../../manual/animation/techniques/constraints.rst:78
 msgid "Animating Constraints Influence"
-msgstr ""
+msgstr "Animando a influência das restrições"
 
 #: ../../manual/animation/techniques/constraints.rst:80
-msgid ""
-"More \"classically\", you can also animate a few properties of each "
-"constraint using animation curves:"
-msgstr ""
+msgid "More \"classically\", you can also animate a few properties of each constraint using animation curves:"
+msgstr "De maneira mais \"clássica\", você pode também animar algumas propriedades de cada restrição usando curvas de animação."
 
 #: ../../manual/animation/techniques/constraints.rst:82
-msgid ""
-"You can animate the *Influence* of a constraint. For example, in the "
-"`Example`_ above, it is used to first stick the camera to the \"moon\", "
-"then to the \"earth\", and finally to nothing, using two *Copy Location* "
-"constraints with *Offset* set, and their *Influence* cross-fading "
-"together."
-msgstr ""
+msgid "You can animate the *Influence* of a constraint. For example, in the `Example`_ above, it is used to first stick the camera to the \"moon\", then to the \"earth\", and finally to nothing, using two *Copy Location* constraints with *Offset* set, and their *Influence* cross-fading together."
+msgstr "Você pode animar a *influência* de uma restrição. Por exemplo, dentro da seção  `Exemplo`_ acima, "
 
 #: ../../manual/animation/techniques/constraints.rst:86
-msgid ""
-"More anecdotal, you can also, for some constraints using an armature's "
-"bone as target, animate where along this bone (between root and tip) lays"
-" the real target point (0.0 to 1.0) means influence from the (root or "
-"tip)."
-msgstr ""
+msgid "More anecdotal, you can also, for some constraints using an armature's bone as target, animate where along this bone (between root and tip) lays the real target point (0.0 to 1.0) means influence from the (root or tip)."
+msgstr "Agora de maneira mais \"anedotal\", você poderá também, para algumas restrições que usam ossos de armações como alvos, animar a localização do ponto chamado de \"Meão\" neste osso, onde se situa a posição do ponto alvo real (entre 0.0 e 1.0) o que significa respectivamente a posição de influência no local entre a cabeça e a base."
+
