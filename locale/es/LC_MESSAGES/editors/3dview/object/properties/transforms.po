@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-04 15:23-0500\n"
+"POT-Creation-Date: 2016-12-11 13:19-0500\n"
 "PO-Revision-Date: 2016-08-19 18:38-0300\n"
 "Last-Translator: Yain Rodrigo Vieyra Gatica <yainvieyra@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,8 @@ msgid "Reference"
 msgstr "Referencia"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst
-msgid "Mode:     Edit and Object Modes"
+#, fuzzy
+msgid "Mode:     Object Mode"
 msgstr "Modo:     Modos Edición y Objeto"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst
@@ -100,7 +101,8 @@ msgid "Location"
 msgstr "Location (Posición)"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:44
-msgid "The object's center location in global coordinates."
+#, fuzzy
+msgid "The object's origin location in global coordinates."
 msgstr "La posición del centro del objeto en coordenadas globales."
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:46
@@ -108,12 +110,13 @@ msgid "Rotation"
 msgstr "Rotation (Rotación)"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:46
-msgid "The object's orientation, relative to the global axes and its own center."
+#, fuzzy
+msgid "The object's orientation, relative to the global axes and its own origin."
 msgstr ""
 "La orientación del objeto, relativo a los ejes globales y su propio "
 "centro."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:63
+#: ../../manual/editors/3dview/object/properties/transforms.rst:62
 msgid "Rotation Mode"
 msgstr "Rotation Mode (Modo de rotación)"
 
@@ -140,41 +143,37 @@ msgstr ""
 "permitiéndole ver los ejes XYZ discretos que subyacen a la rotación "
 "Euler, así como también un posible :term:`Gimbal Lock (Bloqueo Cardán)`."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:60
+#: ../../manual/editors/3dview/object/properties/transforms.rst:59
 msgid "Axis Angle"
 msgstr "Axis Angle (Eje y Ángulo)"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:59
 msgid ""
-"The X, Y, and Z coordinates define a point relative to the object origin "
-"through which an imaginary “skewer” passes. The “W” value is the rotation"
-" of this skewer, in radians. Here, the Manipulator’s Z-axis stays aligned"
-" with this skewer."
+"The X, Y, and Z coordinates define a point relative to the object origin."
+" This point and the origin define a axis around the W value defines the "
+"rotation."
 msgstr ""
-"Las coordenadas X, Y y Z definen un punto relativo al origen del objeto a"
-" través del cual pasa un \"eje\" imaginario. El valor \"W\" es la "
-"rotación de este eje, en radianes. Aquí, el eje Z del manipulador "
-"permanece alineado con este eje."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:63
+#: ../../manual/editors/3dview/object/properties/transforms.rst:62
 msgid "Quaternion"
 msgstr "Quaternion (Cuaternión)"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:63
+#: ../../manual/editors/3dview/object/properties/transforms.rst:62
 msgid "X, Y, Z and W correspond to the :term:`Quaternion` components."
 msgstr "X, Y, Z y W corresponden a los componentes :term:`Quaternion (Cuaternión)`"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:68
+#: ../../manual/editors/3dview/object/properties/transforms.rst:67
 msgid "Scale"
 msgstr "Scale (Escala)"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:66
+#: ../../manual/editors/3dview/object/properties/transforms.rst:65
+#, fuzzy
 msgid ""
-"The object's scale, relative to its center, in local coordinates (i.e. "
-"the *Scale X* value represents the scale along the local X-axis). Each "
-"object (cube, sphere, etc.), when created, has a scale of one Blender "
-"unit in each local direction. To make the object bigger or smaller, you "
-"scale it in the desired dimension."
+"The object's relative scale along the local axis (i.e. the *Scale X* "
+"value represents the scale along the local X-axis). Each object (cube, "
+"sphere, etc.), when created, has a scale of one Blender unit in each "
+"local direction. To make the object bigger or smaller, you scale it in "
+"the desired axis."
 msgstr ""
 "La escala del objeto, relativo a su centro, en coordenadas locales (ej. "
 "el valor *Escala X* representa la escala a lo largo del eje local X). "
@@ -182,77 +181,64 @@ msgstr ""
 "de una unidad de Blender en cada dirección local. Para hacer el objeto "
 "más grande o más pequeño, puede escalarlo en la dimensión deseada."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:74
+#: ../../manual/editors/3dview/object/properties/transforms.rst:72
 msgid "Dimensions"
 msgstr "Dimensions (Dimensiones)"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:71
-#, fuzzy
+#: ../../manual/editors/3dview/object/properties/transforms.rst:70
 msgid ""
-"The object's basic dimensions (in Blender units) from one outside edge to"
-" another, as if measured with a ruler. For multi-faceted surfaces, these "
-"fields give the dimensions of the bounding box (aligned with the local "
-"axes -- think of a cardboard box just big enough to hold the object)."
+"The size of the objects bounding box. (aligned with the local axes -- "
+"think of a cardboard box just big enough to hold the object)."
 msgstr ""
-"Las dimensiones básicas del objeto (en unidades de Blender) desde el "
-"extremo de una arista al otro, como si fuera medido con una regla. Para "
-"superficies multi-caras, estos campos dan las dimensiones del *bounding "
-"box* (volumen delimitador) (alineado con los ejes locales - simplemente "
-"piense en una caja de naipes lo suficientemente grande como para cubrir "
-"el objeto)."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:77
+#: ../../manual/editors/3dview/object/properties/transforms.rst:75
 msgid "Transform Properties Locking"
 msgstr "Bloqueo de las Propiedades de Transformación"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:79
+#: ../../manual/editors/3dview/object/properties/transforms.rst:77
 msgid ""
-"The locking feature of the Location, Rotation and Scale fields allows you"
-" to control a transform property solely from the properties region. Once "
-"a lock has been activated any other methods used for transformation are "
-"blocked. For example, if you locked the *Location X* field then you "
-"cannot use the mouse to translate the object along the global X axis. "
-"However, you can still translate it using the *Location X* edit field. "
-"Consider the locking feature as a rigid constraint only changeable from "
+"When the toggle is locked, the corresponding transformation value can not"
+" be changed in any interactive operation. However, the value can still be"
+" changed using non-interactive operations, like editing the corresponding"
+" number button or using Python."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/transforms.rst:81
+msgid ""
+"For example, if you locked the *Location X* property then you cannot use "
+"the 3D manipulator to translate the object along the global X axis. "
+"However, you can still translate it using the *Location X* number button."
+" Consider the locking feature as a rigid constraint only changeable from "
 "the panel."
 msgstr ""
-"La característica de bloqueo de los campos de Posición, Rotación y Escala"
-" le permite controlar una propiedad de Transformación únicamente desde la"
-" región de propiedades. Una vez que el bloqueo ha sido activado, "
-"cualquier otro método usado para la transformación, es bloqueado. Por "
-"ejemplo, si ha bloqueado el campo *Location X* (Posición X), entonces no "
-"podrá usar el ratón para mover el objeto a lo largo del eje global X. Sin"
-" embargo, aún puede moverlo usando el campo de edición *Posición X*. "
-"Considere la característica de bloqueo como una restricción rígida "
-"únicamente editable desde el panel."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:87
+#: ../../manual/editors/3dview/object/properties/transforms.rst:86
 #, fuzzy
 msgid ""
-"To lock a field, click the padlock icon next to the field. The field is "
-"unlocked if the icon appears as \"open padlock\", and it is locked if the"
-" icon appears as \"closed padlock\"."
+"To lock a property, click the padlock icon next to the button. The button"
+" is unlocked if the icon shows a open padlock, and it is locked if the "
+"icon appears as a closed padlock."
 msgstr ""
 "Para bloquear un campo, haga click en el ícono de candado próximo al "
 "campo que desee. El campo está desbloqueado si el ícono aparece como "
 "(|unlock-button|), y es bloqueado si aparece como (|lock-button|)."
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:95
+#: ../../manual/editors/3dview/object/properties/transforms.rst:94
 msgid "Delta Transforms"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:97
+#: ../../manual/editors/3dview/object/properties/transforms.rst:96
 msgid ""
 "Delta Transforms are simply transformations that are applied on top of "
 "the transforms described above. They can be found in the "
 ":menuselection:`Properties Editor --> Object --> Delta Transforms`."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:102
+#: ../../manual/editors/3dview/object/properties/transforms.rst:101
 msgid "Usage"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:104
+#: ../../manual/editors/3dview/object/properties/transforms.rst:103
 msgid ""
 "Delta Transforms are particularly useful in animations. For example, you "
 "can animate an object with the \"normal\" transforms then move them "
@@ -263,10 +249,78 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Delta Transforms are particular useful "
-#~ "in animations. For example, you can "
-#~ "animate an object with the \"normal\""
-#~ " transforms then move them around "
-#~ "with Delta Transforms."
+#~ "The X, Y, and Z coordinates define"
+#~ " a point relative to the object "
+#~ "origin through which an imaginary "
+#~ "“skewer” passes. The “W” value is "
+#~ "the rotation of this skewer, in "
+#~ "radians. Here, the Manipulator’s Z-axis "
+#~ "stays aligned with this skewer."
 #~ msgstr ""
+#~ "Las coordenadas X, Y y Z definen"
+#~ " un punto relativo al origen del "
+#~ "objeto a través del cual pasa un"
+#~ " \"eje\" imaginario. El valor \"W\" "
+#~ "es la rotación de este eje, en "
+#~ "radianes. Aquí, el eje Z del "
+#~ "manipulador permanece alineado con este "
+#~ "eje."
+
+#~ msgid ""
+#~ "The object's basic dimensions (in "
+#~ "Blender units) from one outside edge "
+#~ "to another, as if measured with a"
+#~ " ruler. For multi-faceted surfaces, "
+#~ "these fields give the dimensions of "
+#~ "the bounding box (aligned with the "
+#~ "local axes -- think of a cardboard"
+#~ " box just big enough to hold "
+#~ "the object)."
+#~ msgstr ""
+#~ "Las dimensiones básicas del objeto (en"
+#~ " unidades de Blender) desde el "
+#~ "extremo de una arista al otro, "
+#~ "como si fuera medido con una "
+#~ "regla. Para superficies multi-caras, "
+#~ "estos campos dan las dimensiones del "
+#~ "*bounding box* (volumen delimitador) (alineado"
+#~ " con los ejes locales - simplemente"
+#~ " piense en una caja de naipes "
+#~ "lo suficientemente grande como para "
+#~ "cubrir el objeto)."
+
+#~ msgid ""
+#~ "The locking feature of the Location, "
+#~ "Rotation and Scale fields allows you "
+#~ "to control a transform property solely"
+#~ " from the properties region. Once a"
+#~ " lock has been activated any other"
+#~ " methods used for transformation are "
+#~ "blocked. For example, if you locked "
+#~ "the *Location X* field then you "
+#~ "cannot use the mouse to translate "
+#~ "the object along the global X "
+#~ "axis. However, you can still translate"
+#~ " it using the *Location X* edit "
+#~ "field. Consider the locking feature as"
+#~ " a rigid constraint only changeable "
+#~ "from the panel."
+#~ msgstr ""
+#~ "La característica de bloqueo de los "
+#~ "campos de Posición, Rotación y Escala"
+#~ " le permite controlar una propiedad "
+#~ "de Transformación únicamente desde la "
+#~ "región de propiedades. Una vez que "
+#~ "el bloqueo ha sido activado, cualquier"
+#~ " otro método usado para la "
+#~ "transformación, es bloqueado. Por ejemplo, "
+#~ "si ha bloqueado el campo *Location "
+#~ "X* (Posición X), entonces no podrá "
+#~ "usar el ratón para mover el objeto"
+#~ " a lo largo del eje global X."
+#~ " Sin embargo, aún puede moverlo "
+#~ "usando el campo de edición *Posición "
+#~ "X*. Considere la característica de "
+#~ "bloqueo como una restricción rígida "
+#~ "únicamente editable desde el panel."
 

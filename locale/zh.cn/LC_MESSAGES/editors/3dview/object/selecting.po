@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2016 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 15:42-0400\n"
+"POT-Creation-Date: 2016-12-11 13:19-0500\n"
 "PO-Revision-Date: 2016-04-04 22:11+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,29 +22,28 @@ msgid "Selecting"
 msgstr "选择--幻星孤独翻译"
 
 #: ../../manual/editors/3dview/object/selecting.rst:7
-#, fuzzy
 msgid ""
 "Selection determines which elements will be the target of our actions. "
-"Blender has advanced selection methods. Both in *Object Mode* and in "
-"*Edit Mode*."
-msgstr "选择确定哪些元素将成为我们操作的目标,blender有着先进的选择方法,都在对象模式和编辑模式下."
+"Selections work on the current scene visible objects. Blender has "
+"advanced selection methods. Both in *Object Mode* and in *Edit Mode*."
+msgstr ""
 
-#: ../../manual/editors/3dview/object/selecting.rst:14
+#: ../../manual/editors/3dview/object/selecting.rst:15
 msgid "Selections and the Active Object"
 msgstr "选择主控物体"
 
-#: ../../manual/editors/3dview/object/selecting.rst:16
+#: ../../manual/editors/3dview/object/selecting.rst:17
 msgid "Blender distinguishes between two different states of selection:"
 msgstr "Blender区分它们两者不同的选择状态:"
 
-#: ../../manual/editors/3dview/object/selecting.rst:20
+#: ../../manual/editors/3dview/object/selecting.rst:21
 #, fuzzy
 msgid ""
 "Unselected object in black, selected object in orange, and active object "
 "in yellow."
 msgstr "未选择物体是黑色，选择物体是橙色，主控物体是黄色"
 
-#: ../../manual/editors/3dview/object/selecting.rst:23
+#: ../../manual/editors/3dview/object/selecting.rst:24
 #, fuzzy
 msgid ""
 "In *Object Mode* the last (de)selected item is called the \"Active "
@@ -52,7 +51,7 @@ msgid ""
 "exactly one active object at any time (even when nothing is selected)."
 msgstr "在物体模式中,最后一个被选中的元素称为\"活动对象\",并且轮廓为黄色(其余为橙色).准确地说,在任何的时候都有一个活动对象(即使没有选择)"
 
-#: ../../manual/editors/3dview/object/selecting.rst:27
+#: ../../manual/editors/3dview/object/selecting.rst:28
 msgid ""
 "Many actions in Blender use the active object as a reference (for example"
 " linking operations). If you already have a selection and need to make a "
@@ -73,34 +72,56 @@ msgid "Point Selection"
 msgstr "点选"
 
 #: ../../manual/editors/3dview/object/selecting.rst:37
+#: ../../manual/editors/3dview/object/selecting.rst:65
+#: ../../manual/editors/3dview/object/selecting.rst:112
+#: ../../manual/editors/3dview/object/selecting.rst:143
+#: ../../manual/editors/3dview/object/selecting.rst:178
+#: ../../manual/editors/3dview/object/selecting.rst:232
+#: ../../manual/editors/3dview/object/selecting.rst:269
+#: ../../manual/editors/3dview/object/selecting.rst:290
+msgid "Reference"
+msgstr "参考"
+
+#: ../../manual/editors/3dview/object/selecting.rst
+#, fuzzy
+msgid "Mode:     All Modes"
+msgstr "模式:物体模式"
+
+#: ../../manual/editors/3dview/object/selecting.rst
+#, fuzzy
+msgid "Hotkey:   :kbd:`RMB` and :kbd:`Shift-RMB`"
+msgstr "快捷键:   :kbd:`Shift-L`"
+
+#: ../../manual/editors/3dview/object/selecting.rst:43
 msgid ""
 "The simplest form of object *selection* consists of using :kbd:`RMB` on "
 "it."
 msgstr "在物体上点击RMB可以选择这个物体。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:39
+#: ../../manual/editors/3dview/object/selecting.rst:45
 msgid "To *add to the selection*, use :kbd:`Shift-RMB` on more objects."
 msgstr "如果要同时选中多个物体，先按住SHIFT键然后再用鼠标右键分别选择即可。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:41
+#: ../../manual/editors/3dview/object/selecting.rst:47
+#, fuzzy
 msgid ""
 "If the *objects are overlapping* in the view, you can use :kbd:`Alt-RMB` "
-"to cycle through possible choices."
+"to cycle through possible choices (*Object Mode* only)."
 msgstr "在视图中,如果这个物体重叠了,你使用Alt-RMB反复通过可能的选择."
 
-#: ../../manual/editors/3dview/object/selecting.rst:44
+#: ../../manual/editors/3dview/object/selecting.rst:50
 msgid ""
 "If you want *to add to a selection* this way then the shortcut becomes "
 ":kbd:`Shift-Alt-RMB`."
 msgstr "如果你想增加一个选择,它的快捷键是Shitf-Alt-RMB."
 
-#: ../../manual/editors/3dview/object/selecting.rst:46
+#: ../../manual/editors/3dview/object/selecting.rst:52
 msgid ""
 "To *activate an object* that is already selected, click :kbd:`Shift-RMB` "
 "on it."
 msgstr "要激活一个已选定的物体,请单击Shift-RMB."
 
-#: ../../manual/editors/3dview/object/selecting.rst:48
+#: ../../manual/editors/3dview/object/selecting.rst:54
 #, fuzzy
 msgid ""
 "To *deselect* an active object, click :kbd:`Shift-RMB` one time and "
@@ -111,20 +132,10 @@ msgstr ""
 "要取消一个活动物体,请单击Shift-"
 "RMB一次.如果这个物体不是活动的就单击二次.请注意这个作品如果没有其它物体被鼠标点下.否则,它只是增加了选项.似乎没有解决这个bug."
 
-#: ../../manual/editors/3dview/object/selecting.rst:57
+#: ../../manual/editors/3dview/object/selecting.rst:63
 #, fuzzy
 msgid "Border Select"
 msgstr "刷选"
-
-#: ../../manual/editors/3dview/object/selecting.rst:59
-#: ../../manual/editors/3dview/object/selecting.rst:102
-#: ../../manual/editors/3dview/object/selecting.rst:133
-#: ../../manual/editors/3dview/object/selecting.rst:174
-#: ../../manual/editors/3dview/object/selecting.rst:231
-#: ../../manual/editors/3dview/object/selecting.rst:268
-#: ../../manual/editors/3dview/object/selecting.rst:290
-msgid "Reference"
-msgstr "参考"
 
 #: ../../manual/editors/3dview/object/selecting.rst
 #, fuzzy
@@ -140,33 +151,36 @@ msgstr "菜单：   *选择* --> *框选*"
 msgid "Hotkey:   :kbd:`B`"
 msgstr "快捷键:   :kbd:`B`"
 
-#: ../../manual/editors/3dview/object/selecting.rst:67
+#: ../../manual/editors/3dview/object/selecting.rst:73
+#, fuzzy
 msgid ""
-"With *Border Select* you draw a rectangle while holding down :kbd:`LMB`. "
-"Any object that lies even partially within this rectangle becomes "
-"selected."
+"To activate the tool use the :kbd:`B`. With *Border Select* you draw a "
+"rectangle while holding down :kbd:`LMB`. Any object that lies even "
+"partially within this rectangle becomes selected. If any object that was "
+"last active appears in the selection it will become active."
 msgstr "BKEY激活了边界选择。使用边界选择可以选择一组通过按住LMB画出的方框里的物体。你将选中所有在方框里或者方框边界上的物体。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:70
+#: ../../manual/editors/3dview/object/selecting.rst:78
+#, fuzzy
 msgid ""
 "For deselecting objects, use :kbd:`MMB` or *Border Select* again with "
-"holding :kbd:`Shift`."
+"holding :kbd:`Shift` or :kbd:`Alt`."
 msgstr "取消选定的物体,用MMB或者按B键之后按住Shift键再进行一次选择"
 
-#: ../../manual/editors/3dview/object/selecting.rst:73
+#: ../../manual/editors/3dview/object/selecting.rst:81
 msgid "To cancel the selection use :kbd:`RMB`."
 msgstr "取消选择使用RMB键."
 
-#: ../../manual/editors/3dview/object/selecting.rst:77
+#: ../../manual/editors/3dview/object/selecting.rst:85
 msgid "Example"
 msgstr "例子"
 
-#: ../../manual/editors/3dview/object/selecting.rst:81
+#: ../../manual/editors/3dview/object/selecting.rst:89
 #, fuzzy
 msgid "Border selecting in three steps."
 msgstr "三步完成框选"
 
-#: ../../manual/editors/3dview/object/selecting.rst:84
+#: ../../manual/editors/3dview/object/selecting.rst:92
 msgid ""
 "*Border Select* has been activated in the first image and is indicated by"
 " showing a dotted cross-hair cursor. In the second image, the *selection "
@@ -175,60 +189,20 @@ msgid ""
 "selection is completed by releasing :kbd:`LMB`."
 msgstr "在第一张图片里,边框选择已经激活了,并且已表明出显示一个虚线的十字光标.在第二张图片里,正通过与LMB绘制一个矩形的选择.这个矩形只覆盖两个立方体.最后,在第三张图中,释放LMB后选择完成."
 
-#: ../../manual/editors/3dview/object/selecting.rst:89
+#: ../../manual/editors/3dview/object/selecting.rst:97
 msgid ""
 "Notice in the third image, the bright color of left-most selected cube. "
 "This means it is the \"active object\", the last selected object prior to"
 " using the *Border Select* tool."
 msgstr "请注意第三张图片,选定立方体的左大部分明亮的颜色.这意思就是说它是\"活动物体\",在使用边框选择工具之前最后选定的物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:95
+#: ../../manual/editors/3dview/object/selecting.rst:103
 msgid ""
 "*Border Select* adds to the previous selection, so in order to select "
 "only the contents of the rectangle, deselect all with :kbd:`A` first."
 msgstr "边框选择要添加到之前的选择,所以要合理选择矩形的内容,首先用A清除所有选项."
 
-#: ../../manual/editors/3dview/object/selecting.rst:100
-msgid "Lasso Select"
-msgstr "套索选择"
-
-#: ../../manual/editors/3dview/object/selecting.rst
-msgid "Menu:     no entry in the menu"
-msgstr "菜单： 无菜单"
-
-#: ../../manual/editors/3dview/object/selecting.rst
-msgid "Hotkey:   :kbd:`Ctrl-LMB`"
-msgstr "快捷键:   :kbd:`Ctrl-LMB`"
-
 #: ../../manual/editors/3dview/object/selecting.rst:110
-#, fuzzy
-msgid ""
-"Lasso select is used by drawing a dotted line around the pivot point of "
-"the objects, in *Object Mode*."
-msgstr "在物体模式中,套索选择是通过绘制虚线来圈选物体的点."
-
-#: ../../manual/editors/3dview/object/selecting.rst:115
-msgid "Usage"
-msgstr "用法"
-
-#: ../../manual/editors/3dview/object/selecting.rst:117
-msgid ""
-"While holding :kbd:`Ctrl` down, you simply have to draw around the pivot "
-"point of each object you want to select with :kbd:`LMB`."
-msgstr "同时按住Ctrl键,你仅仅需要圈选你想要用LMB圈选的每个物体的顶点."
-
-#: ../../manual/editors/3dview/object/selecting.rst:120
-msgid ""
-"Lasso select adds to the previous selection. For deselection, use :kbd"
-":`Ctrl-Shift-LMB`."
-msgstr "套索选择增加之前的选择.对于取消选择,用 Ctrl-Shift-LMB."
-
-#: ../../manual/editors/3dview/object/selecting.rst:124
-#, fuzzy
-msgid "Lasso selection example."
-msgstr "使用套索选择示例"
-
-#: ../../manual/editors/3dview/object/selecting.rst:131
 msgid "Circle Select"
 msgstr "刷选"
 
@@ -241,46 +215,84 @@ msgstr "菜单：   *选择* --> *刷选*"
 msgid "Hotkey:   :kbd:`C`"
 msgstr "热键:C（译注：我的电脑是ALT+C，C是圈选）"
 
-#: ../../manual/editors/3dview/object/selecting.rst:141
+#: ../../manual/editors/3dview/object/selecting.rst:120
 #, fuzzy
 msgid ""
-"*Circle Select* is used by moving with dotted circle through objects with"
-" :kbd:`LMB`. You can select any object by touching of circle area. It is "
-"possible to dynamically change the diameter of circle by scrolling "
-":kbd:`MMB` as seen in pictures below. Deselection is under the same "
-"principle - :kbd:`MMB`. To cancel the selection use :kbd:`RMB` or key "
-":kbd:`Esc`."
+"*Circle Select* :kbd:`C` is used by moving with dotted circle through "
+"objects with :kbd:`LMB`. You can select any object by touching of circle "
+"area. It is possible to dynamically change the diameter of circle by "
+"scrolling :kbd:`Wheel` or with :kbd:`NumpadPlus` and :kbd:`NumpadMinus`as"
+" seen in pictures below. Deselection is under the same principle -- "
+":kbd:`MMB`. To cancel the selection use :kbd:`RMB` or key :kbd:`Esc`or "
+":kbd:`Enter`."
 msgstr ""
 "*刷选* 是按住 :kbd:`LMB` 用一个虚线组成的园在物体上面进行选择。只要被圈区域碰到的物体都会被选择到。如下图所示滚动  "
 ":kbd:`MMB` 可以动态的调整整个圈区域的大小。反向选择使用Blender同样的原则： :kbd:`MMB`. 取消选择使用 "
 ":kbd:`RMB` 或者键盘 :kbd:`Esc`,"
 
-#: ../../manual/editors/3dview/object/selecting.rst:152
+#: ../../manual/editors/3dview/object/selecting.rst:132
 #, fuzzy
 msgid "Circle selection."
 msgstr "刷选"
 
-#: ../../manual/editors/3dview/object/selecting.rst:157
+#: ../../manual/editors/3dview/object/selecting.rst:137
 #, fuzzy
 msgid "...with huge circle."
 msgstr "使用巨大的圈进行刷选"
 
+#: ../../manual/editors/3dview/object/selecting.rst:141
+msgid "Lasso Select"
+msgstr "套索选择"
+
+#: ../../manual/editors/3dview/object/selecting.rst
+msgid "Menu:     no entry in the menu"
+msgstr "菜单： 无菜单"
+
+#: ../../manual/editors/3dview/object/selecting.rst
+msgid "Hotkey:   :kbd:`Ctrl-LMB`"
+msgstr "快捷键:   :kbd:`Ctrl-LMB`"
+
+#: ../../manual/editors/3dview/object/selecting.rst:151
+#, fuzzy
+msgid ""
+"Lasso select is used by drawing a dotted line around vertices or the "
+"origin of the objects, in *Object Mode*."
+msgstr "在物体模式中,套索选择是通过绘制虚线来圈选物体的点."
+
+#: ../../manual/editors/3dview/object/selecting.rst:154
+#, fuzzy
+msgid ""
+"While holding :kbd:`Ctrl` down, you simply have to draw around the points"
+" you want to select with :kbd:`LMB`."
+msgstr "同时按住Ctrl键,你仅仅需要圈选你想要用LMB圈选的每个物体的顶点."
+
+#: ../../manual/editors/3dview/object/selecting.rst:157
+msgid ""
+"Lasso select adds to the previous selection. For deselection, use :kbd"
+":`Ctrl-Shift-LMB`."
+msgstr "套索选择增加之前的选择.对于取消选择,用 Ctrl-Shift-LMB."
+
 #: ../../manual/editors/3dview/object/selecting.rst:161
+#, fuzzy
+msgid "Lasso selection example."
+msgstr "使用套索选择示例"
+
+#: ../../manual/editors/3dview/object/selecting.rst:165
 msgid "Menu Selection"
 msgstr "菜单选择"
 
-#: ../../manual/editors/3dview/object/selecting.rst:163
+#: ../../manual/editors/3dview/object/selecting.rst:167
 #, fuzzy
 msgid ""
 "The selection methods described above are the most common. There are also"
 " many more options accessible through the *Select* menu of the 3D View."
 msgstr "以上所说的方法是最常见的.通过3D视图的选择菜单,也有更多的选择可使用."
 
-#: ../../manual/editors/3dview/object/selecting.rst:166
+#: ../../manual/editors/3dview/object/selecting.rst:170
 msgid "Each is more adapted to certain operations."
 msgstr "每一个都更适合某些操作."
 
-#: ../../manual/editors/3dview/object/selecting.rst:172
+#: ../../manual/editors/3dview/object/selecting.rst:176
 msgid "Select Grouped"
 msgstr "按组选择"
 
@@ -298,12 +310,7 @@ msgstr "菜单：   *选择* --> *按组*"
 msgid "Hotkey:   :kbd:`Shift-G`"
 msgstr "快捷键:   :kbd:`Shift-G`"
 
-#: ../../manual/editors/3dview/object/selecting.rst:184
-#, fuzzy
-msgid "Select Grouped menu."
-msgstr "按组选择菜单"
-
-#: ../../manual/editors/3dview/object/selecting.rst:187
+#: ../../manual/editors/3dview/object/selecting.rst:186
 #, fuzzy
 msgid ""
 "There are two ways to organize the objects in relation to one another. "
@@ -313,144 +320,148 @@ msgid ""
 "to select all others."
 msgstr "有两种方法来为物体编组.第一种是父子,第二种是简单分组.我们可以通过这种关系来做方便选择一个父子集或者组里面的物体。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:194
-#: ../../manual/editors/3dview/object/selecting.rst:244
+#: ../../manual/editors/3dview/object/selecting.rst:193
+#: ../../manual/editors/3dview/object/selecting.rst:245
 #: ../../manual/editors/3dview/object/selecting.rst:281
-#: ../../manual/editors/3dview/object/selecting.rst:313
+#: ../../manual/editors/3dview/object/selecting.rst:310
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/editors/3dview/object/selecting.rst:196
+#: ../../manual/editors/3dview/object/selecting.rst:195
 msgid "Children"
 msgstr "子级"
 
-#: ../../manual/editors/3dview/object/selecting.rst:197
-msgid "Selects all children of the active object recursively."
-msgstr "递归选择所有物体的子物体."
+#: ../../manual/editors/3dview/object/selecting.rst:196
+#, fuzzy
+msgid "Selects all hierarchical descendants of the active object."
+msgstr "选择所有物体的直接子级."
 
-#: ../../manual/editors/3dview/object/selecting.rst:198
+#: ../../manual/editors/3dview/object/selecting.rst:197
 msgid "Immediate Children"
 msgstr "直接子级"
 
-#: ../../manual/editors/3dview/object/selecting.rst:199
+#: ../../manual/editors/3dview/object/selecting.rst:198
 msgid "Selects all direct children of the active object."
 msgstr "选择所有物体的直接子级."
 
-#: ../../manual/editors/3dview/object/selecting.rst:200
+#: ../../manual/editors/3dview/object/selecting.rst:199
 msgid "Parent"
 msgstr "父级"
 
-#: ../../manual/editors/3dview/object/selecting.rst:201
+#: ../../manual/editors/3dview/object/selecting.rst:200
 msgid "Selects the parent of this object if it has one."
 msgstr "如果它有一个物体，则选择该物体的父物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:203
+#: ../../manual/editors/3dview/object/selecting.rst:202
 msgid "Siblings"
 msgstr "平级"
 
-#: ../../manual/editors/3dview/object/selecting.rst:203
+#: ../../manual/editors/3dview/object/selecting.rst:202
 msgid ""
 "Select objects that have the same parent as the active object. This can "
 "also be used to select all root level objects (objects with no parents)."
 msgstr "选择具有与活动物体相同的父级的物体,这也可以用来选择所有的根级物体(物体没有父级)."
 
-#: ../../manual/editors/3dview/object/selecting.rst:205
+#: ../../manual/editors/3dview/object/selecting.rst:204
 msgid "Type"
 msgstr "类型（Type）"
 
-#: ../../manual/editors/3dview/object/selecting.rst:206
+#: ../../manual/editors/3dview/object/selecting.rst:205
 msgid "Select objects that are the same type as the active one."
 msgstr "选择具有与活动物体同一类型的物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:207
-#: ../../manual/editors/3dview/object/selecting.rst:320
+#: ../../manual/editors/3dview/object/selecting.rst:206
+#: ../../manual/editors/3dview/object/selecting.rst:317
 msgid "Layer"
 msgstr "层"
 
-#: ../../manual/editors/3dview/object/selecting.rst:208
+#: ../../manual/editors/3dview/object/selecting.rst:207
 msgid "Objects that have at least one shared layer."
 msgstr "至少有一个共用层的物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:210
+#: ../../manual/editors/3dview/object/selecting.rst:211
 msgid "Group"
 msgstr "组（Group）"
 
-#: ../../manual/editors/3dview/object/selecting.rst:210
+#: ../../manual/editors/3dview/object/selecting.rst:209
+#, fuzzy
 msgid ""
 "Objects that are part of a group (rendered green with the default theme) "
 "will be selected if they are in one of the groups that the active object "
-"is in."
+"is in. If the active object belongs to more than one group, a list will "
+"pop up so that we can select which group to select."
 msgstr "如果在活动物体的一个组中，该组的一组（呈现绿色的默认主题）将被选中。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:212
+#: ../../manual/editors/3dview/object/selecting.rst:213
 msgid "Object Hooks"
 msgstr "挂钩 "
 
-#: ../../manual/editors/3dview/object/selecting.rst:213
+#: ../../manual/editors/3dview/object/selecting.rst:214
 msgid "Every hook that belongs to the active object."
 msgstr "属于主控物体的每一个挂钩."
 
-#: ../../manual/editors/3dview/object/selecting.rst:214
+#: ../../manual/editors/3dview/object/selecting.rst:215
 msgid "Pass"
 msgstr "通道"
 
-#: ../../manual/editors/3dview/object/selecting.rst:215
+#: ../../manual/editors/3dview/object/selecting.rst:216
 msgid ""
 "Select objects assigned to the same :ref:`render pass <render-cycles-"
 "passes>`."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/selecting.rst:216
+#: ../../manual/editors/3dview/object/selecting.rst:217
 msgid "Color"
 msgstr "颜色"
 
-#: ../../manual/editors/3dview/object/selecting.rst:217
+#: ../../manual/editors/3dview/object/selecting.rst:218
 #, fuzzy
 msgid ""
 "Select objects with same :ref:`Object Color <objects-display-object-"
 "color>`."
 msgstr "选择具有相同 *物体颜色* 的物体。物体颜色的设置在  *属性* --> *物体* --> *显示* --> *物体颜色*."
 
-#: ../../manual/editors/3dview/object/selecting.rst:218
+#: ../../manual/editors/3dview/object/selecting.rst:219
 msgid "Properties"
 msgstr "属性"
 
-#: ../../manual/editors/3dview/object/selecting.rst:219
+#: ../../manual/editors/3dview/object/selecting.rst:220
 #, fuzzy
 msgid ""
 "Select objects with same :doc:`Game Engine Properties "
 "</game_engine/logic/properties>`."
 msgstr "选择到的物体具有同样的 *游戏引擎* *属性*."
 
-#: ../../manual/editors/3dview/object/selecting.rst:220
+#: ../../manual/editors/3dview/object/selecting.rst:221
 msgid "Keying Set"
 msgstr "插帧集"
 
-#: ../../manual/editors/3dview/object/selecting.rst:221
+#: ../../manual/editors/3dview/object/selecting.rst:222
 #, fuzzy
 msgid ""
 "Select objects included in the active :doc:`Keying Set "
 "</animation/keyframes/keying_sets>`."
 msgstr "选择的物体都包含在主控插帧集中。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:222
+#: ../../manual/editors/3dview/object/selecting.rst:223
 msgid "Lamp Type"
 msgstr "灯光类型"
 
-#: ../../manual/editors/3dview/object/selecting.rst:223
+#: ../../manual/editors/3dview/object/selecting.rst:224
 msgid "Select matching lamp types."
 msgstr "选择匹配的灯光类型。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:226
+#: ../../manual/editors/3dview/object/selecting.rst:227
 msgid "Pass Index"
 msgstr "通道索引"
 
-#: ../../manual/editors/3dview/object/selecting.rst:225
+#: ../../manual/editors/3dview/object/selecting.rst:226
 msgid "Select matching object pass index."
 msgstr "选择符合的物体通道索引"
 
-#: ../../manual/editors/3dview/object/selecting.rst:229
-msgid "Select linked"
+#: ../../manual/editors/3dview/object/selecting.rst:230
+#, fuzzy
+msgid "Select Linked"
 msgstr "选择相连元素"
 
 #: ../../manual/editors/3dview/object/selecting.rst
@@ -462,19 +473,19 @@ msgstr "菜单:     *选择* --> *关联项*"
 msgid "Hotkey:   :kbd:`Shift-L`"
 msgstr "快捷键:   :kbd:`Shift-L`"
 
-#: ../../manual/editors/3dview/object/selecting.rst:239
+#: ../../manual/editors/3dview/object/selecting.rst:240
 #, fuzzy
 msgid ""
 "Selects all objects which share a common data-block with the active "
-"object. *Select linked* uses the active object as a basis to select all "
+"object. *Select Linked* uses the active object as a basis to select all "
 "others."
 msgstr "选择所有物体来共享一个数据块与激活物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:248
+#: ../../manual/editors/3dview/object/selecting.rst:249
 msgid "Object Data"
 msgstr "物体数据"
 
-#: ../../manual/editors/3dview/object/selecting.rst:247
+#: ../../manual/editors/3dview/object/selecting.rst:248
 msgid ""
 "Selects every object that is linked to the same Object Data, i.e. the "
 "data-block that specifies the type (mesh, curve, etc.) and the build "
@@ -482,56 +493,56 @@ msgid ""
 "are in space) of the object."
 msgstr "选择每一个物体,是链接同一物体数据,例如,数据块指定类型(网格,曲线等)和建立(顶点的构成基础,顶点,它们的空间位置)的物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:250
+#: ../../manual/editors/3dview/object/selecting.rst:251
 msgid "Material"
 msgstr "材质模式"
 
-#: ../../manual/editors/3dview/object/selecting.rst:251
+#: ../../manual/editors/3dview/object/selecting.rst:252
 msgid "Selects every object that is linked to the same material data-block."
 msgstr "选择每一物体都是连接在同一材质的数据块."
 
-#: ../../manual/editors/3dview/object/selecting.rst:252
+#: ../../manual/editors/3dview/object/selecting.rst:253
 msgid "Texture"
 msgstr "纹理着色"
 
-#: ../../manual/editors/3dview/object/selecting.rst:253
+#: ../../manual/editors/3dview/object/selecting.rst:254
 msgid "Selects every object that is linked to the same texture data-block."
 msgstr "选择每一物体都是连接在同一纹理的数据块."
 
-#: ../../manual/editors/3dview/object/selecting.rst:254
+#: ../../manual/editors/3dview/object/selecting.rst:255
 msgid "Dupligroup"
 msgstr "组副本"
 
-#: ../../manual/editors/3dview/object/selecting.rst:255
+#: ../../manual/editors/3dview/object/selecting.rst:256
 #, fuzzy
 msgid "Selects all objects that use the same *Group* for duplication."
 msgstr "选择所有物体来使用重复使用的组."
 
-#: ../../manual/editors/3dview/object/selecting.rst:256
+#: ../../manual/editors/3dview/object/selecting.rst:257
 msgid "Particle System"
 msgstr "粒子系统"
 
-#: ../../manual/editors/3dview/object/selecting.rst:257
+#: ../../manual/editors/3dview/object/selecting.rst:258
 #, fuzzy
-msgid "Selects all objects that use the same *Particle System*"
+msgid "Selects all objects that use the same *Particle System*."
 msgstr "选择所有物体来使用同一粒子系统"
 
-#: ../../manual/editors/3dview/object/selecting.rst:258
+#: ../../manual/editors/3dview/object/selecting.rst:259
 msgid "Library"
 msgstr "库（Library）"
 
-#: ../../manual/editors/3dview/object/selecting.rst:259
+#: ../../manual/editors/3dview/object/selecting.rst:260
 #, fuzzy
 msgid ""
 "Selects all objects that are in the same :doc:`Library "
 "</data_system/linked_libraries>`"
 msgstr "选择所有物体来使用同一粒子系统"
 
-#: ../../manual/editors/3dview/object/selecting.rst:263
+#: ../../manual/editors/3dview/object/selecting.rst:264
 msgid "Library (Object Data)"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/selecting.rst:261
+#: ../../manual/editors/3dview/object/selecting.rst:262
 #, fuzzy
 msgid ""
 "Selects all objects that are in the same :doc:`Library "
@@ -541,7 +552,7 @@ msgstr ""
 "<https://wiki.blender.org/index.php/Dev:2.5/Source/Data_system/LibraryBrowser>`__"
 " `库(物体数据)`"
 
-#: ../../manual/editors/3dview/object/selecting.rst:266
+#: ../../manual/editors/3dview/object/selecting.rst:267
 msgid "Select All by Type"
 msgstr "按类型全选"
 
@@ -553,16 +564,18 @@ msgstr ""
 msgid "Hotkey:   None"
 msgstr "热键:没有"
 
-#: ../../manual/editors/3dview/object/selecting.rst:276
+#: ../../manual/editors/3dview/object/selecting.rst:277
+#, fuzzy
 msgid ""
-"With this tool it becomes possible to select every **visible** object of "
-"a certain type in one go."
+"With this tool, it becomes possible to select objects of a certain type "
+"in one go."
 msgstr "有了这个工具,就有可能选择某一类型的每一个可见物体."
 
 #: ../../manual/editors/3dview/object/selecting.rst:283
+#, fuzzy
 msgid ""
-"The types are *Mesh*, *Curve*, *Surface*, *Meta*, *Font*, *Armature*, "
-"*Lattice*, *Empty*, *Camera*, *Lamp*, *Speaker*."
+"The types are Mesh, Curve, Surface, Meta, Font, Armature, Lattice, Empty,"
+" Camera, Lamp, Speaker."
 msgstr "该类型是网格，曲线，面，融球，文本，骨架，晶格，空物体，摄像机，灯光，扬声器。"
 
 #: ../../manual/editors/3dview/object/selecting.rst:288
@@ -578,43 +591,41 @@ msgstr ""
 msgid "All by Layer selection menu."
 msgstr "按层全选的选择菜单"
 
-#: ../../manual/editors/3dview/object/selecting.rst:303
-msgid "Layers are another means to regroup your objects to suit your purpose."
-msgstr "的另外一种方法是,重组你的物体以适应你的需求."
-
-#: ../../manual/editors/3dview/object/selecting.rst:305
+#: ../../manual/editors/3dview/object/selecting.rst:302
+#, fuzzy
 msgid ""
 "This option allows the selection of every single object that belongs to a"
-" given layer, visible or not, in one single command."
+" given layer. Selected objects become visible."
 msgstr "这个选择允许选择每一个单独的物体,在一个单一的命令里属于给定的一个层,可见或者不可见."
 
-#: ../../manual/editors/3dview/object/selecting.rst:315
+#: ../../manual/editors/3dview/object/selecting.rst:312
 msgid "Match"
 msgstr "匹配"
 
-#: ../../manual/editors/3dview/object/selecting.rst:316
+#: ../../manual/editors/3dview/object/selecting.rst:313
 msgid "The match type for selection."
 msgstr "匹配类型选择"
 
-#: ../../manual/editors/3dview/object/selecting.rst:317
+#: ../../manual/editors/3dview/object/selecting.rst:314
+#: ../../manual/editors/3dview/object/selecting.rst:360
 msgid "Extend"
 msgstr "扩展"
 
-#: ../../manual/editors/3dview/object/selecting.rst:318
+#: ../../manual/editors/3dview/object/selecting.rst:315
 msgid ""
 "Enable to add objects to current selection rather than replacing the "
 "current selection."
 msgstr "启用将物体添加到当前选择而不是替换当前选择."
 
-#: ../../manual/editors/3dview/object/selecting.rst:320
+#: ../../manual/editors/3dview/object/selecting.rst:317
 msgid "The layer on which the objects are."
 msgstr "物体所在的层。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:322
+#: ../../manual/editors/3dview/object/selecting.rst:319
 msgid "Selection of Objects"
 msgstr "物体的选择"
 
-#: ../../manual/editors/3dview/object/selecting.rst:324
+#: ../../manual/editors/3dview/object/selecting.rst:321
 #, fuzzy
 msgid ""
 "Rather than using the :menuselection:`Select All by Layer` option, it "
@@ -622,57 +633,51 @@ msgid ""
 ":kbd:`A` on them. This method also allows objects to be deselected."
 msgstr "除了使用 * 选择层的所有 * 选项，可能在需要的层里面按 :kbd:`A` 更有效率。此方法还可以用来全部取消选择物体。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:330
+#: ../../manual/editors/3dview/object/selecting.rst:327
 msgid "Other Menu Options"
 msgstr "其他菜单选项"
 
-#: ../../manual/editors/3dview/object/selecting.rst:332
+#: ../../manual/editors/3dview/object/selecting.rst:329
 msgid "Available options on the first level of the menu are:"
 msgstr "菜单的每一级可用选项:"
 
-#: ../../manual/editors/3dview/object/selecting.rst:339
+#: ../../manual/editors/3dview/object/selecting.rst:335
 #, fuzzy
-msgid "Select Pattern"
-msgstr "模式匹配选择..."
+msgid "(De)select All :kbd:`A`"
+msgstr "选中 / 取消选中全部文件 (:kbd:`A`)"
+
+#: ../../manual/editors/3dview/object/selecting.rst:332
+msgid ""
+"If anything was selected it is first deselected. Otherwise it toggles "
+"between selecting and deselecting every visible object."
+msgstr "如果任何物体已经选择了,它第一项就会被取消.否则在选择和取消选择所有可见物体之间进行切换."
 
 #: ../../manual/editors/3dview/object/selecting.rst:335
-msgid ""
-"Selects all objects whose name matches a given pattern. Supported "
-"wildcards: * matches everything, ? matches any single character, [abc] "
-"matches characters in \"abc\", and [!abc] match any character not in "
-"\"abc\". The matching can be chosen to be case sensitive or not. As an "
-"example *house* matches any name that contains \"house\", while floor* "
-"matches any name starting with \"floor\"."
+#, fuzzy
+msgid "Action"
+msgstr "选项"
+
+#: ../../manual/editors/3dview/object/selecting.rst:336
+msgid "Select, Deselect, Invert, Toggle"
 msgstr ""
-"选择名字和模式匹配的所有物体。支持通配符: * 匹配一切，?匹配任何单个的字符， [abc] 匹配字符在\"abc\" 字串中， [! abc] "
-"匹配任何字符不在\"abc\" 中。可以选择匹配区分大小写。作为一个例子 *房子* 匹配任何包含 \"房子\" 的物体，而 地板* "
-"匹配任何名称开始为 \"地板\" 的名称。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:342
-msgid "Select Camera"
-msgstr "选择摄像机"
-
-#: ../../manual/editors/3dview/object/selecting.rst:342
-msgid "Select the active camera."
-msgstr "选择激活的摄像机"
-
-#: ../../manual/editors/3dview/object/selecting.rst:345
+#: ../../manual/editors/3dview/object/selecting.rst:337
 #, fuzzy
-msgid "Mirror :kbd:`Shift-Ctrl-M`"
-msgstr "镜像 (:kbd:`Shift-Ctrl-M`)"
+msgid "Inverse :kbd:`Ctrl-I`"
+msgstr "反选 (:kbd:`Ctrl-I`)"
 
-#: ../../manual/editors/3dview/object/selecting.rst:345
+#: ../../manual/editors/3dview/object/selecting.rst:338
 #, fuzzy
 msgid ""
-"Select the Mirror objects of the selected object eg. "
-":menuselection:`L.sword --> R.sword`."
-msgstr "选择选定物体的镜像物体.例如  L.sword –> R.sword."
+"Selects all objects that were not selected, while deselecting all those "
+"which were."
+msgstr "选择所有物体,并同时取消已被选择的那些物体."
 
-#: ../../manual/editors/3dview/object/selecting.rst:351
+#: ../../manual/editors/3dview/object/selecting.rst:342
 msgid "Random"
 msgstr "随机"
 
-#: ../../manual/editors/3dview/object/selecting.rst:348
+#: ../../manual/editors/3dview/object/selecting.rst:340
 #, fuzzy
 msgid ""
 "Randomly selects unselected objects based on percentage probability on "
@@ -684,27 +689,57 @@ msgstr ""
 "随机选择使用基于百分比概率的方法来选择当前处于主控状态的图层上的未选定的物体。在 *工具架* "
 "上有选择命令的数值输入框。需要注意：百分比代表的是一个物体被选中的几率是多少，并不代表将要选择的全部物体中有多少百分比要被选中。"
 
-#: ../../manual/editors/3dview/object/selecting.rst:354
+#: ../../manual/editors/3dview/object/selecting.rst:345
 #, fuzzy
-msgid "Inverse :kbd:`Ctrl-I`"
-msgstr "反选 (:kbd:`Ctrl-I`)"
+msgid "Mirror :kbd:`Shift-Ctrl-M`"
+msgstr "镜像 (:kbd:`Shift-Ctrl-M`)"
 
-#: ../../manual/editors/3dview/object/selecting.rst:354
+#: ../../manual/editors/3dview/object/selecting.rst:345
+#, fuzzy
 msgid ""
-"Selects all objects that were not selected while deselecting all those "
-"which were."
-msgstr "选择所有物体,并同时取消已被选择的那些物体."
+"Select the Mirror objects of the selected object, based on their names. "
+"e.g. \"sword.L\" and \"sword.R\"."
+msgstr "选择选定物体的镜像物体.例如  L.sword –> R.sword."
 
-#: ../../manual/editors/3dview/object/selecting.rst:359
+#: ../../manual/editors/3dview/object/selecting.rst:347
+msgid "Select Camera"
+msgstr "选择摄像机"
+
+#: ../../manual/editors/3dview/object/selecting.rst:348
+msgid "Select the active camera."
+msgstr "选择激活的摄像机"
+
+#: ../../manual/editors/3dview/object/selecting.rst:360
 #, fuzzy
-msgid "(De)select All :kbd:`A`"
-msgstr "选中 / 取消选中全部文件 (:kbd:`A`)"
+msgid "Select Pattern"
+msgstr "模式匹配选择..."
+
+#: ../../manual/editors/3dview/object/selecting.rst:350
+#, fuzzy
+msgid ""
+"Selects all objects whose name matches a given pattern. Supported "
+"wildcards: \\* matches everything, ? matches any single character, [abc] "
+"matches characters in \"abc\", and [!abc] match any character not in "
+"\"abc\". As an example \\*house\\* matches any name that contains "
+"\"house\", while floor\\* matches any name starting with \"floor\"."
+msgstr ""
+"选择名字和模式匹配的所有物体。支持通配符: * 匹配一切，?匹配任何单个的字符， [abc] 匹配字符在\"abc\" 字串中， [! abc] "
+"匹配任何字符不在\"abc\" 中。可以选择匹配区分大小写。作为一个例子 *房子* 匹配任何包含 \"房子\" 的物体，而 地板* "
+"匹配任何名称开始为 \"地板\" 的名称。"
+
+#: ../../manual/editors/3dview/object/selecting.rst:356
+msgid "Case Sensitive"
+msgstr ""
 
 #: ../../manual/editors/3dview/object/selecting.rst:357
+msgid "The matching can be chosen to be case sensitive or not."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/selecting.rst:359
 msgid ""
-"If anything was selected it is first deselected. Otherwise it toggles "
-"between selecting and deselecting every visible object."
-msgstr "如果任何物体已经选择了,它第一项就会被取消.否则在选择和取消选择所有可见物体之间进行切换."
+"When *Extend* checkbox is checked the selection is extended instead of "
+"generating a new one."
+msgstr ""
 
 #~ msgid "Mirror (Shift-Ctrl-M)"
 #~ msgstr "镜像(shift-ctrl-M)"
@@ -731,7 +766,7 @@ msgstr "如果任何物体已经选择了,它第一项就会被取消.否则在�
 #~ msgstr "模式：*物体* 模式 "
 
 #~ msgid ""
-#~ msgstr "在工具栏里->按层选择,有以下选项可供选择:"
+#~ msgstr ""
 
 #~ msgid "Menu:     *Select* --> *Select All by Type*"
 #~ msgstr "菜单:     *选择* --> *按类型全选*"
@@ -749,11 +784,22 @@ msgstr "如果任何物体已经选择了,它第一项就会被取消.否则在�
 #~ msgstr "框选"
 
 #~ msgid ""
-#~ "Select objects assigned to the same "
-#~ "render pass. Render passes are set "
-#~ "in :menuselection:`Properties --> Object -->"
-#~ " Relations` and can be used in "
-#~ "the *Node Compositor* :menuselection:`Add -->"
-#~ " Convertor --> ID Mask`."
-#~ msgstr ""
+#~ "Selection determines which elements will "
+#~ "be the target of our actions. "
+#~ "Blender has advanced selection methods. "
+#~ "Both in *Object Mode* and in *Edit"
+#~ " Mode*."
+#~ msgstr "选择确定哪些元素将成为我们操作的目标,blender有着先进的选择方法,都在对象模式和编辑模式下."
+
+#~ msgid "Usage"
+#~ msgstr "用法"
+
+#~ msgid "Select Grouped menu."
+#~ msgstr "按组选择菜单"
+
+#~ msgid "Selects all children of the active object recursively."
+#~ msgstr "递归选择所有物体的子物体."
+
+#~ msgid "Layers are another means to regroup your objects to suit your purpose."
+#~ msgstr "的另外一种方法是,重组你的物体以适应你的需求."
 

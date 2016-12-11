@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-04 15:23-0500\n"
+"POT-Creation-Date: 2016-12-11 13:19-0500\n"
 "PO-Revision-Date: 2015-09-15 01:01+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -38,7 +38,7 @@ msgstr "参考"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst
 #, fuzzy
-msgid "Mode:     Edit and Object Modes"
+msgid "Mode:     Object Mode"
 msgstr "模式：*物体* 和 *编辑* 模式"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst
@@ -90,7 +90,8 @@ msgid "Location"
 msgstr "位移"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:44
-msgid "The object's center location in global coordinates."
+#, fuzzy
+msgid "The object's origin location in global coordinates."
 msgstr "在全局坐标中物体的中心位置。"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:46
@@ -98,10 +99,11 @@ msgid "Rotation"
 msgstr "旋转"
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:46
-msgid "The object's orientation, relative to the global axes and its own center."
+#, fuzzy
+msgid "The object's orientation, relative to the global axes and its own origin."
 msgstr "面向对象的、 相对于全球轴和它自己的中心。"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:63
+#: ../../manual/editors/3dview/object/properties/transforms.rst:62
 #, fuzzy
 msgid "Rotation Mode"
 msgstr "旋转"
@@ -124,100 +126,96 @@ msgid ""
 "as possible :term:`gimbal lock`."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:60
+#: ../../manual/editors/3dview/object/properties/transforms.rst:59
 msgid "Axis Angle"
 msgstr ""
 
 #: ../../manual/editors/3dview/object/properties/transforms.rst:59
 msgid ""
-"The X, Y, and Z coordinates define a point relative to the object origin "
-"through which an imaginary “skewer” passes. The “W” value is the rotation"
-" of this skewer, in radians. Here, the Manipulator’s Z-axis stays aligned"
-" with this skewer."
+"The X, Y, and Z coordinates define a point relative to the object origin."
+" This point and the origin define a axis around the W value defines the "
+"rotation."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:63
+#: ../../manual/editors/3dview/object/properties/transforms.rst:62
 msgid "Quaternion"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:63
+#: ../../manual/editors/3dview/object/properties/transforms.rst:62
 msgid "X, Y, Z and W correspond to the :term:`Quaternion` components."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:68
+#: ../../manual/editors/3dview/object/properties/transforms.rst:67
 msgid "Scale"
 msgstr "缩放"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:66
+#: ../../manual/editors/3dview/object/properties/transforms.rst:65
 #, fuzzy
 msgid ""
-"The object's scale, relative to its center, in local coordinates (i.e. "
-"the *Scale X* value represents the scale along the local X-axis). Each "
-"object (cube, sphere, etc.), when created, has a scale of one Blender "
-"unit in each local direction. To make the object bigger or smaller, you "
-"scale it in the desired dimension."
+"The object's relative scale along the local axis (i.e. the *Scale X* "
+"value represents the scale along the local X-axis). Each object (cube, "
+"sphere, etc.), when created, has a scale of one Blender unit in each "
+"local direction. To make the object bigger or smaller, you scale it in "
+"the desired axis."
 msgstr ""
 "物体的缩放，相对于它的中心，在局部坐标中 (即 * 缩放 X * 值表示本地 x 轴沿规模)。(多维数据集、 "
 "球体等)，每个对象创建时，具有规模的一个搅拌器单位在每个地方的方向。若要使对象更大或更小，您缩放它所需的维度中。"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:74
+#: ../../manual/editors/3dview/object/properties/transforms.rst:72
 msgid "Dimensions"
 msgstr "尺寸"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:71
-#, fuzzy
+#: ../../manual/editors/3dview/object/properties/transforms.rst:70
 msgid ""
-"The object's basic dimensions (in Blender units) from one outside edge to"
-" another, as if measured with a ruler. For multi-faceted surfaces, these "
-"fields give the dimensions of the bounding box (aligned with the local "
-"axes -- think of a cardboard box just big enough to hold the object)."
+"The size of the objects bounding box. (aligned with the local axes -- "
+"think of a cardboard box just big enough to hold the object)."
 msgstr ""
-"对象的基本尺寸 (在Blender单位) 从一个外边缘到另一个，好像有一把尺子来衡量。对于多面曲面，这些字段提供了外框的尺寸 "
-"(与局部的轴对齐已经大到足以容纳该对象的盒子)。"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:77
+#: ../../manual/editors/3dview/object/properties/transforms.rst:75
 msgid "Transform Properties Locking"
 msgstr "转换属性锁定"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:79
-#, fuzzy
+#: ../../manual/editors/3dview/object/properties/transforms.rst:77
 msgid ""
-"The locking feature of the Location, Rotation and Scale fields allows you"
-" to control a transform property solely from the properties region. Once "
-"a lock has been activated any other methods used for transformation are "
-"blocked. For example, if you locked the *Location X* field then you "
-"cannot use the mouse to translate the object along the global X axis. "
-"However, you can still translate it using the *Location X* edit field. "
-"Consider the locking feature as a rigid constraint only changeable from "
+"When the toggle is locked, the corresponding transformation value can not"
+" be changed in any interactive operation. However, the value can still be"
+" changed using non-interactive operations, like editing the corresponding"
+" number button or using Python."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/transforms.rst:81
+msgid ""
+"For example, if you locked the *Location X* property then you cannot use "
+"the 3D manipulator to translate the object along the global X axis. "
+"However, you can still translate it using the *Location X* number button."
+" Consider the locking feature as a rigid constraint only changeable from "
 "the panel."
 msgstr ""
-"位置、旋转和缩放领域的锁定功能可以让您控制一个单独的属性面板的转换属性。一旦一个锁已被激活，用于转换的任何其他方法也会被锁定。例如，如果你锁定了位移X的位置，那么你就不能用鼠标来把这个物体在全局坐标轴下随便移动。然而，您仍然可以使用"
-" *位置* 编辑字段来变换它。考虑锁定功能作为一个刚性约束，只可从面板来修改。"
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:87
+#: ../../manual/editors/3dview/object/properties/transforms.rst:86
 #, fuzzy
 msgid ""
-"To lock a field, click the padlock icon next to the field. The field is "
-"unlocked if the icon appears as \"open padlock\", and it is locked if the"
-" icon appears as \"closed padlock\"."
+"To lock a property, click the padlock icon next to the button. The button"
+" is unlocked if the icon shows a open padlock, and it is locked if the "
+"icon appears as a closed padlock."
 msgstr "若要锁定一个字段，请单击字段旁边的挂锁图标。如果图标显示为如下是解锁 ("
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:95
+#: ../../manual/editors/3dview/object/properties/transforms.rst:94
 msgid "Delta Transforms"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:97
+#: ../../manual/editors/3dview/object/properties/transforms.rst:96
 msgid ""
 "Delta Transforms are simply transformations that are applied on top of "
 "the transforms described above. They can be found in the "
 ":menuselection:`Properties Editor --> Object --> Delta Transforms`."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:102
+#: ../../manual/editors/3dview/object/properties/transforms.rst:101
 msgid "Usage"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/properties/transforms.rst:104
+#: ../../manual/editors/3dview/object/properties/transforms.rst:103
 msgid ""
 "Delta Transforms are particularly useful in animations. For example, you "
 "can animate an object with the \"normal\" transforms then move them "
@@ -246,10 +244,47 @@ msgstr ""
 #~ msgstr "菜单： :menuselection:`物体 --> 变换属性`"
 
 #~ msgid ""
-#~ "Delta Transforms are particular useful "
-#~ "in animations. For example, you can "
-#~ "animate an object with the \"normal\""
-#~ " transforms then move them around "
-#~ "with Delta Transforms."
+#~ "The X, Y, and Z coordinates define"
+#~ " a point relative to the object "
+#~ "origin through which an imaginary "
+#~ "“skewer” passes. The “W” value is "
+#~ "the rotation of this skewer, in "
+#~ "radians. Here, the Manipulator’s Z-axis "
+#~ "stays aligned with this skewer."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "The object's basic dimensions (in "
+#~ "Blender units) from one outside edge "
+#~ "to another, as if measured with a"
+#~ " ruler. For multi-faceted surfaces, "
+#~ "these fields give the dimensions of "
+#~ "the bounding box (aligned with the "
+#~ "local axes -- think of a cardboard"
+#~ " box just big enough to hold "
+#~ "the object)."
+#~ msgstr ""
+#~ "对象的基本尺寸 (在Blender单位) "
+#~ "从一个外边缘到另一个，好像有一把尺子来衡量。对于多面曲面，这些字段提供了外框的尺寸 "
+#~ "(与局部的轴对齐已经大到足以容纳该对象的盒子)。"
+
+#~ msgid ""
+#~ "The locking feature of the Location, "
+#~ "Rotation and Scale fields allows you "
+#~ "to control a transform property solely"
+#~ " from the properties region. Once a"
+#~ " lock has been activated any other"
+#~ " methods used for transformation are "
+#~ "blocked. For example, if you locked "
+#~ "the *Location X* field then you "
+#~ "cannot use the mouse to translate "
+#~ "the object along the global X "
+#~ "axis. However, you can still translate"
+#~ " it using the *Location X* edit "
+#~ "field. Consider the locking feature as"
+#~ " a rigid constraint only changeable "
+#~ "from the panel."
+#~ msgstr ""
+#~ "位置、旋转和缩放领域的锁定功能可以让您控制一个单独的属性面板的转换属性。一旦一个锁已被激活，用于转换的任何其他方法也会被锁定。例如，如果你锁定了位移X的位置，那么你就不能用鼠标来把这个物体在全局坐标轴下随便移动。然而，您仍然可以使用"
+#~ " *位置* 编辑字段来变换它。考虑锁定功能作为一个刚性约束，只可从面板来修改。"
 
