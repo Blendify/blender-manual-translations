@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-04 15:23-0500\n"
+"POT-Creation-Date: 2016-12-15 18:07+0100\n"
 "PO-Revision-Date: 2016-12-03 20:27+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -36,7 +36,6 @@ msgstr ""
 
 #: ../../manual/editors/3dview/object/transform/duplication.rst:13
 #: ../../manual/editors/3dview/object/transform/duplication.rst:60
-#: ../../manual/editors/3dview/object/transform/duplication.rst:130
 msgid "Reference"
 msgstr "Référence"
 
@@ -89,7 +88,7 @@ msgstr ""
 "duplicate-data>`."
 
 #: ../../manual/editors/3dview/object/transform/duplication.rst:37
-#: ../../manual/editors/3dview/object/transform/duplication.rst:86
+#: ../../manual/editors/3dview/object/transform/duplication.rst:93
 msgid "Examples"
 msgstr "Exemples"
 
@@ -181,7 +180,17 @@ msgstr ""
 "autres copies. Référence : :ref:`Duplicate Example <expl-object-link-"
 "duplicate>` pour les discussions ci-dessous."
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:78
+#: ../../manual/editors/3dview/object/transform/duplication.rst:77
+msgid "Linked"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/transform/duplication.rst:77
+msgid ""
+"In the *Duplicate Objects* Operator panel the *Linked* checkbox is "
+"checked unlike with *Dublicate*."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/transform/duplication.rst:81
 #, fuzzy
 msgid ""
 "If you want to make changes to an object in the new linked duplicate "
@@ -195,7 +204,11 @@ msgstr ""
 " dans le panneau *Object Data* de l'éditeur Properties. (Voir :ref:`ui-"
 "data-block`.)"
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:90
+#: ../../manual/editors/3dview/object/transform/duplication.rst:87
+msgid ":ref:`data-system-datablock-make-single-user` for unlinking data-blocks."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/transform/duplication.rst:97
 msgid ""
 "The object ``Cone.001`` was linked duplicated. Though both these cones "
 "are separate objects with unique names, the single mesh named Cone, "
@@ -205,7 +218,7 @@ msgstr ""
 "soient des objets séparés avec des noms uniques, le maillage unique nommé"
 " Cone, surligné dans Outliner, est partagé entre eux deux."
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:95
+#: ../../manual/editors/3dview/object/transform/duplication.rst:102
 msgid ""
 "The left cone is a *Linked Duplicate* of the middle cone (using "
 ":kbd:`Alt-D`)."
@@ -213,7 +226,7 @@ msgstr ""
 "Le cône de gauche est un *Linked Duplicate* du ce du milieu (en utilisant"
 " :kbd:`Alt-D`)."
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:97
+#: ../../manual/editors/3dview/object/transform/duplication.rst:104
 msgid ""
 "As a vertex is moved in *Edit Mode* in one object, the same vertex is "
 "moved in the original cone as well. The mesh data are links, not copies."
@@ -222,7 +235,7 @@ msgstr ""
 "sommet est aussi déplacé dans le cône d'origine. Les données de maillage "
 "sont des liens, pas des copies."
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:99
+#: ../../manual/editors/3dview/object/transform/duplication.rst:106
 msgid ""
 "In contrast, if one of these two cones is rotated or rescaled in object "
 "mode, the other remains unchanged. The transform properties are copied, "
@@ -232,7 +245,7 @@ msgstr ""
 " Object, l'autre demeure inchangé. Les propriétés de transformation sont "
 "copiées, pas liées."
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:101
+#: ../../manual/editors/3dview/object/transform/duplication.rst:108
 msgid ""
 "As in the previous example, the newly created cone has inherited the "
 "material of the original cone. The material properties are linked, not "
@@ -242,7 +255,7 @@ msgstr ""
 "matériau du cône d'origine. Les propriétés de matériau sont liées, pas "
 "copiées."
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:104
+#: ../../manual/editors/3dview/object/transform/duplication.rst:111
 msgid ""
 "A common table has a top and four legs. Model one leg, and then make "
 "linked duplicates three times for each of the remaining legs. If you "
@@ -257,72 +270,83 @@ msgstr ""
 "ensemble de verres, aux roues sur une voiture... partout où il y a une "
 "répétition ou une symétrie.  "
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:112
-msgid "Copying & Linking Objects Between Scenes"
-msgstr "Copie et liaison d'objets entre les scènes"
-
-#: ../../manual/editors/3dview/object/transform/duplication.rst:114
-msgid ""
-"Sometimes you may want to link or copy objects between scenes. This is "
-"possible by first selecting objects you want to link and then using: "
-":menuselection:`Object --> Make Links --> Object to Scene`."
-msgstr ""
-"Parfois il se peut que vous vouliez lier ou copier des objets entre des "
-"scènes. C'est possible en sélectionnant d'abord les objets que vous "
-"voulez lier et ensuite en utilisant : :menuselection:`Object --> Make "
-"Links --> Object to Scene`."
-
 #: ../../manual/editors/3dview/object/transform/duplication.rst:118
-msgid ""
-"This makes the same object exist in two different scenes at once, "
-"including its position and animation data. You can tell this is a *multi-"
-"user* object by the blue color of its center-circle."
-msgstr ""
-"Cela fait que le même objet existe dans deux scènes différentes en même "
-"temps, incluant sa position et les données d'animation. Vous pouvez "
-"parler d'objet *multi-user* par la couleur bleue de son centre-cercle."
-
-#: ../../manual/editors/3dview/object/transform/duplication.rst:121
-msgid ""
-"If you do not want the objects to be shared between the scenes, you can "
-"make them *Single-User* by using: :menuselection:`Object --> Make Single "
-"User --> Object`."
-msgstr ""
-"Si vous ne voulez pas que les objets soient partagés entre les scènes, "
-"vous pouvez les rendre *Single-User* en utilisant : "
-":menuselection:`Object --> Make Single User --> Object`."
-
-#: ../../manual/editors/3dview/object/transform/duplication.rst:124
-msgid ""
-"Further information on working with scenes can be found :doc:`here "
-"</data_system/scenes/introduction>`."
-msgstr ""
-"Plus d'informations sur le travail avec les scènes se trouvent :doc:`ici "
-"</data_system/scenes/introduction>`."
-
-#: ../../manual/editors/3dview/object/transform/duplication.rst:128
 msgid "Linked Library Duplication"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst
-msgid "Menu:     :menuselection:`File --> Link Append`"
-msgstr "Menu :     :menuselection:`File --> Link Append`"
-
-#: ../../manual/editors/3dview/object/transform/duplication.rst
-msgid "Hotkey:   :kbd:`Shift-F1`"
-msgstr "Raccourci :   :kbd:`Shift-F1`"
-
-#: ../../manual/editors/3dview/object/transform/duplication.rst:137
+#: ../../manual/editors/3dview/object/transform/duplication.rst:120
 msgid ""
 ":doc:`Linked Libraries </data_system/linked_libraries>` are also a form "
 "of duplication. Any object or data-block in other blend-files can be "
 "reused in the current file."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/transform/duplication.rst:142
+#: ../../manual/editors/3dview/object/transform/duplication.rst:125
 msgid ""
 "If you want transform properties (i.e. object data-blocks) to be "
 "\"linked\", see the page on :doc:`parenting "
 "</editors/3dview/object/properties/relations/parents>`."
 msgstr ""
+
+#~ msgid "Copying & Linking Objects Between Scenes"
+#~ msgstr "Copie et liaison d'objets entre les scènes"
+
+#~ msgid ""
+#~ "Sometimes you may want to link or"
+#~ " copy objects between scenes. This is"
+#~ " possible by first selecting objects "
+#~ "you want to link and then using:"
+#~ " :menuselection:`Object --> Make Links -->"
+#~ " Object to Scene`."
+#~ msgstr ""
+#~ "Parfois il se peut que vous "
+#~ "vouliez lier ou copier des objets "
+#~ "entre des scènes. C'est possible en "
+#~ "sélectionnant d'abord les objets que "
+#~ "vous voulez lier et ensuite en "
+#~ "utilisant : :menuselection:`Object --> Make"
+#~ " Links --> Object to Scene`."
+
+#~ msgid ""
+#~ "This makes the same object exist "
+#~ "in two different scenes at once, "
+#~ "including its position and animation "
+#~ "data. You can tell this is a "
+#~ "*multi-user* object by the blue "
+#~ "color of its center-circle."
+#~ msgstr ""
+#~ "Cela fait que le même objet existe"
+#~ " dans deux scènes différentes en même"
+#~ " temps, incluant sa position et les"
+#~ " données d'animation. Vous pouvez parler"
+#~ " d'objet *multi-user* par la couleur"
+#~ " bleue de son centre-cercle."
+
+#~ msgid ""
+#~ "If you do not want the objects "
+#~ "to be shared between the scenes, "
+#~ "you can make them *Single-User* by"
+#~ " using: :menuselection:`Object --> Make "
+#~ "Single User --> Object`."
+#~ msgstr ""
+#~ "Si vous ne voulez pas que les "
+#~ "objets soient partagés entre les scènes,"
+#~ " vous pouvez les rendre *Single-User*"
+#~ " en utilisant : :menuselection:`Object -->"
+#~ " Make Single User --> Object`."
+
+#~ msgid ""
+#~ "Further information on working with "
+#~ "scenes can be found :doc:`here "
+#~ "</data_system/scenes/introduction>`."
+#~ msgstr ""
+#~ "Plus d'informations sur le travail avec"
+#~ " les scènes se trouvent :doc:`ici "
+#~ "</data_system/scenes/introduction>`."
+
+#~ msgid "Menu:     :menuselection:`File --> Link Append`"
+#~ msgstr "Menu :     :menuselection:`File --> Link Append`"
+
+#~ msgid "Hotkey:   :kbd:`Shift-F1`"
+#~ msgstr "Raccourci :   :kbd:`Shift-F1`"
 
