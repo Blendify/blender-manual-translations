@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 14:46-0400\n"
+"POT-Creation-Date: 2016-12-17 23:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:5
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:5
 msgid "Parenting Objects"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:7
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:7
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:288
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst
+msgid "Mode:     Object Mode"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst
+msgid "Menu:     :menuselection:`Object --> Parent`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst
+msgid "Hotkey:   :kbd:`Ctrl-P`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:14
 msgid ""
 "When modeling a complex object, such as a watch, you may choose to model "
 "the different parts as separate objects. However, all of the parts may be"
@@ -30,7 +47,7 @@ msgid ""
 "parent also affects the children."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:13
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:20
 msgid ""
 "To parent objects, select at least two objects (select the *Child "
 "Objects* first, and select the *Parent Object* last), and press "
@@ -40,7 +57,7 @@ msgid ""
 " parent relationship is created."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:19
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:26
 msgid ""
 "The last object selected will be the *Active Object* (outlined in light "
 "orange), and will also be the *Parent Object*. If you selected multiple "
@@ -49,14 +66,14 @@ msgid ""
 "\"siblings\")."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:25
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:32
 msgid ""
 "The *Set Parent To* pop-up menu is context sensitive, which means the "
 "number of entries it displays can change depending on what objects are "
 "selected when the :kbd:`Ctrl-P` shortcut is used."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:29
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:36
 msgid ""
 "For non-inverse-mode, press :kbd:`Shift-Ctrl-P` instead. This creates an "
 "alternative parent-child-relationship where child-objects exist entirely "
@@ -64,7 +81,7 @@ msgid ""
 "purposes, for example."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:33
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:40
 msgid ""
 "Moving, rotating or scaling the parent will also usually "
 "move/rotate/scale the child/children. However, moving/rotating/scaling "
@@ -73,68 +90,84 @@ msgid ""
 "from parent to child and not child to parent."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:38
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:45
 msgid ""
 "In general when using :kbd:`Ctrl-P` or :menuselection:`3D View Header -->"
 " Object --> Parent` to parent objects, the *Child Objects* can only have "
 "one *Parent Object*. If a *Child Object* already has a *Parent Object* "
-"and you give it another parent then Blender will automatically remove the"
-" previous parent relationship."
+"and you give it another parent then Blender will remove the previous "
+"parent relationship."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:43
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:50
 msgid "Blender supports many different types of parenting, listed below:"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:45
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:52
 msgid "Object"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:46
-msgid "Armature Deform"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:47
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:53
 msgid "Bone"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:48
-msgid "Curve Deform"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:49
-msgid "Path Constraint"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:50
-msgid "Lattice Deform"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:51
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:54
 msgid "Vertex"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:52
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:55
 msgid "Vertex (Triangle)"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:58
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:59
+msgid "Setups"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:60
+msgid ""
+"Besides parenting the selected objects, it adds a Modifier or Constraint "
+"to the child objects, with the parent as target object or activates a "
+"parent property i.e. *Follow Path*."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:64
+msgid ":doc:`Armature Deform </modeling/modifiers/deform/armature>`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:65
+msgid ":doc:`Curve Deform </modeling/modifiers/deform/curve>`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:66
+msgid ":ref:`Follow Path <curve-path-animation>`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:67
+msgid ":doc:`Path Constraint </rigging/constraints/relationship/follow_path>`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:68
+msgid ":doc:`Lattice Deform </modeling/modifiers/deform/lattice>`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:74
 msgid "Object Parent"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:60
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:76
 msgid ""
 "*Object Parent* is the most general form of parenting that Blender "
 "supports. If will take selected objects and make the last selected object"
 " the *Parent Object*, while all other selected objects will be *Child "
-"Objects*."
+"Objects*. The child objects will inherit the transformations of the "
+"parent. The parent object can be of any type."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:66
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:83
 msgid "Object (Keep Transform) Parent"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:68
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:85
 msgid ""
 "*Object (Keep Transform) Parent* works in a very similar way to *Object "
 "Parent* the major difference is in whether the *Child Objects* will "
@@ -142,13 +175,13 @@ msgid ""
 "*Parent Object*."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:71
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:88
 msgid ""
 "Since explaining this in an easy to understand technical way is hard, "
 "lets instead use an example to demonstrate."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:74
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:91
 msgid ""
 "Assume that we have a scene consisting of three objects, those being two "
 "Empty Objects named \"EmptyA\" and \"EmptyB\", and a Monkey object. Fig. "
@@ -156,11 +189,11 @@ msgid ""
 "parenting relationships active on them."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:82
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:99
 msgid "Scene with no parenting."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:85
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:102
 msgid ""
 "If you select the Monkey object by :kbd:`RMB` click and then :kbd:`Shift-"
 "RMB` click \"EmptyA\" object and press :kbd:`Ctrl-P` and then select "
@@ -170,17 +203,17 @@ msgid ""
 "Monkey object being altered respectively."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:92
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:109
 msgid ""
 "Scale the \"EmptyA\" object, so that the Monkey becomes smaller and moves"
 " to the left a little."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:96
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:113
 msgid "The monkey is the child object of \"EmptyA\"."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:99
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:116
 msgid ""
 "If you select only the Monkey object by :kbd:`RMB` click and then :kbd"
 ":`Shift-RMB` click \"EmptyB\" object and press :kbd:`Ctrl-P` and select "
@@ -190,11 +223,11 @@ msgid ""
 "changed."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:107
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:124
 msgid "The monkey is the child object of \"EmptyB\"."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:110
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:127
 msgid ""
 "This happens because the Monkey object never had its scale altered "
 "directly, the change came about because it was the child of \"EmptyA\" "
@@ -203,7 +236,7 @@ msgid ""
 "\"EmptyB\" has not had its scale altered."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:115
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:132
 msgid ""
 "This is often the required behavior, but it is also sometimes useful that"
 " if you change your *Parent Object* that the *Child Object* keep any "
@@ -214,27 +247,27 @@ msgid ""
 "\"EmptyA\" when it is assigned to the new parent \"EmptyB\";"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:124
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:141
 msgid "The Object (Keep Transform) parent method."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:127
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:144
 msgid ""
 "If you want to follow along with the above description here is the blend-"
 "file used to describe *Object (Keep Transform)* parenting method:"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:131
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:148
 msgid ""
 "`File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend "
 "<https://wiki.blender.org/index.php/File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend>`__."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:136
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:153
 msgid "Bone Parent"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:138
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:155
 msgid ""
 "Bone parenting allows you to make a certain bone in an armature the "
 "Parent Object of another object. This means that when transforming an "
@@ -242,11 +275,11 @@ msgid ""
 "Child Object of moves."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:146
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:163
 msgid "Three pictures of Armatures with four Bones."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:148
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:165
 msgid ""
 "In Fig. :ref:`fig-view3d-parent-bone-parent` with the 2nd bone being the "
 "Bone Parent of the Child Object Cube. The Cube is only transformed if the"
@@ -254,7 +287,7 @@ msgid ""
 "effect on the Cone."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:152
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:169
 msgid ""
 "To use Bone Parenting, you must first select all the Child Objects you "
 "wish to parent to a specific Armature Bone, then :kbd:`Shift-RMB` select "
@@ -264,23 +297,23 @@ msgid ""
 "up menu."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:157
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:174
 msgid ""
 "Now transforming that bone in Pose Mode will result in the Child Objects "
 "also transforming."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:161
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:178
 msgid "Relative Parenting"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:163
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:180
 msgid ""
 "Bone Relative parenting is an option you can toggle for each bone. This "
 "works in the same way as Bone parenting with one difference."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:166
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:183
 msgid ""
 "With Bone parenting if you have parented a bone to some Child Objects and"
 " you select that bone and switch it into Edit Mode and then translate "
@@ -289,13 +322,13 @@ msgid ""
 "the bone in Pose Mode."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:175
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:192
 msgid ""
 "Single Armature Bone which has a Child Object cube parented to it using "
 "Bone parenting."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:177
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:194
 msgid ""
 "In Fig. :ref:`fig-view3d-parent-bone-parent-child` the 1st picture shows "
 "the position of the cube and armature before the bone is moved in Edit "
@@ -304,18 +337,18 @@ msgid ""
 "Notice that the Child Object moves to the new location of the Pose Bone."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:182
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:199
 msgid ""
 "Bone Relative parenting works differently; If you move a Parent Bone in "
 "Edit Mode, when you switch back to Pose Mode, the Child Objects will not "
 "move to the new location of the Pose Bone."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:190
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:207
 msgid "Single Bone with Bone Relative parent to a cube."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:192
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:209
 msgid ""
 "In Fig. :ref:`fig-view3d-parent-bone-parent-relative` the 1st picture "
 "shows the position of the cube and armature before the bone is moved in "
@@ -325,22 +358,24 @@ msgid ""
 "the Pose Bone."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:200
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:217
 msgid "Vertex Parent"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:202
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:219
 msgid ""
-"You can parent an object to a single vertex or a group of three vertices "
-"as well; that way the child/children will move when the parent mesh is "
-"deformed, like a mosquito on a pulsing artery."
+"For objects of type curve, surface, mesh and lattice, there is the "
+"possibility to use one of its vertices or points as the parent of other "
+"objects. You can parent an object to a single vertex or a group of three "
+"vertices as well; that way the child/children will move when the parent "
+"mesh is deformed, like a mosquito on a pulsing artery."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:208
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:227
 msgid "Vertex Parent from Edit Mode"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:210
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:229
 msgid ""
 "In *Object Mode*, select the child/children and then the parent object. "
 ":kbd:`Tab` into *Edit Mode* and on the parent object select either one "
@@ -350,7 +385,7 @@ msgid ""
 ":kbd:`Ctrl-P` and confirm."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:217
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:236
 msgid ""
 "At this point, if a single vertex was selected, a relationship/parenting "
 "line will be drawn from the vertex to the child/children. If three "
@@ -360,68 +395,68 @@ msgid ""
 "vertex/vertices move, the child/children will move as well."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:226
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:245
 msgid "Vertex Parent from Object Mode"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:228
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:247
 msgid ""
 "Vertex parenting can be performed from object mode, This is done like "
 "regular object parenting, Press :kbd:`Ctrl-P` in object mode and select "
 "*Vertex* or *Vertex (Triangle)*."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:232
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:251
 msgid ""
 "The nearest vertices will be used from each object which is typically "
 "what you would want."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:236
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:255
 msgid "Vertex Parent example."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:238
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:257
 msgid ""
 "The small cubes can each be automatically parented to a triad of nearby "
 "vertices on the icosphere using the \"Vertex (Triangle)\" in the set "
 "parent context menu."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:240
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:259
 msgid ""
 "Reshaping the object in edit mode then means each of the cubes follows "
 "their vertex parent separately."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:241
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:260
 msgid ""
 "Re-scaling the parent icosphere in object mode means the child cubes are "
 "also rescaled as expected."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:244
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:263
 msgid ""
 "The parent context menu item means users can rapidly set up a large "
 "number of vertex parent relationships, and avoid the tedious effort of "
 "establishing each parent-child vertex relationship separately."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:250
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:269
 msgid ""
 "It is in fact a sort of \"reversed\" :doc:`hook "
 "</modeling/modifiers/deform/hooks>`"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:254
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:273
 msgid "Options"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:257
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:276
 msgid "Move child"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:259
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:278
 msgid ""
 "You can *move* a child object to its parent by clearing its origin. The "
 "relationship between the parent and child is not affected. Select the "
@@ -430,64 +465,72 @@ msgid ""
 " child object is still parented."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:267
-msgid "Remove relationship/Clear Parent"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:269
-msgid "You can *remove* a parent-child relationship via :kbd:`Alt-P`"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:271
-msgid "The menu contains:"
-msgstr ""
-
-#: ../../manual/editors/3dview/object/relationships/parents.rst:275
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:286
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:302
 msgid "Clear Parent"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:274
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst
+msgid "Hotkey:   :kbd:`Alt-P`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:296
+msgid "You can *remove* a parent-child relationship via :kbd:`Alt-P`"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:298
+msgid "The menu contains:"
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:301
 msgid ""
 "If the parent in the group is selected nothing is done. If a child or "
 "children are selected they are disassociated from the parent, or freed, "
 "and they return to their *original* location, rotation, and size."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:277
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:304
 msgid "Clear and Keep Transformation"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:278
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:305
 msgid ""
 "Frees the children from the parent, and *keeps* the location, rotation, "
 "and size given to them by the parent."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:286
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:316
 msgid "Clear Parent Inverse"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:280
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:307
 msgid ""
 "Places the children with respect to the parent as if they were placed in "
 "the Global reference. This effectively clears the parent's transformation"
-" from the children. For example, if the parent is moved 10 units along "
-"the X axis and *Clear Parent Inverse* is invoked, any selected children "
-"are freed and moved -10 units back along the X axis. The \"Inverse\" only"
-" uses the last transformation; if the parent moved twice, 10 units each "
-"time for a total of 20 units, then the \"Inverse\" will only move the "
-"child back 10 units, not 20."
+" from the children. The hierarchical relationships are not removed, but "
+"the correcting matrix (''parent inverse'') is cleared from the selected "
+"objects."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:289
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:311
+msgid ""
+"For example, if the parent is moved 10 units along the X axis and *Clear "
+"Parent Inverse* is invoked, any selected children are freed and moved -10"
+" units back along the X axis. The \"Inverse\" only uses the last "
+"transformation; if the parent moved twice, 10 units each time for a total"
+" of 20 units, then the \"Inverse\" will only move the child back 10 "
+"units, not 20."
+msgstr ""
+
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:319
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:295
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:325
 msgid "Outliner view."
 msgstr ""
 
-#: ../../manual/editors/3dview/object/relationships/parents.rst:298
+#: ../../manual/editors/3dview/object/properties/relations/parents.rst:328
 msgid ""
 "There is another way to see the parent-child relationship in groups and "
 "that is to use the *Outliner* view of the :doc:`Outliner editor "
@@ -567,7 +610,67 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "`File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend "
-#~ "<https://wiki.blender.org/index.php/File:Parent_-_Object_(Keep_Transform)_(Demo_File).blend>`__"
+#~ "In general when using :kbd:`Ctrl-P` or"
+#~ " :menuselection:`3D View Header --> Object"
+#~ " --> Parent` to parent objects, the"
+#~ " *Child Objects* can only have one"
+#~ " *Parent Object*. If a *Child Object*"
+#~ " already has a *Parent Object* and"
+#~ " you give it another parent then "
+#~ "Blender will automatically remove the "
+#~ "previous parent relationship."
+#~ msgstr ""
+
+#~ msgid "Armature Deform"
+#~ msgstr ""
+
+#~ msgid "Curve Deform"
+#~ msgstr ""
+
+#~ msgid "Path Constraint"
+#~ msgstr ""
+
+#~ msgid "Lattice Deform"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Object Parent* is the most general "
+#~ "form of parenting that Blender supports."
+#~ " If will take selected objects and"
+#~ " make the last selected object the"
+#~ " *Parent Object*, while all other "
+#~ "selected objects will be *Child "
+#~ "Objects*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can parent an object to a "
+#~ "single vertex or a group of three"
+#~ " vertices as well; that way the "
+#~ "child/children will move when the parent"
+#~ " mesh is deformed, like a mosquito"
+#~ " on a pulsing artery."
+#~ msgstr ""
+
+#~ msgid "Remove relationship/Clear Parent"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Places the children with respect to "
+#~ "the parent as if they were placed"
+#~ " in the Global reference. This "
+#~ "effectively clears the parent's transformation"
+#~ " from the children. For example, if"
+#~ " the parent is moved 10 units "
+#~ "along the X axis and *Clear Parent"
+#~ " Inverse* is invoked, any selected "
+#~ "children are freed and moved -10 "
+#~ "units back along the X axis. The"
+#~ " \"Inverse\" only uses the last "
+#~ "transformation; if the parent moved "
+#~ "twice, 10 units each time for a"
+#~ " total of 20 units, then the "
+#~ "\"Inverse\" will only move the child "
+#~ "back 10 units, not 20."
 #~ msgstr ""
 
