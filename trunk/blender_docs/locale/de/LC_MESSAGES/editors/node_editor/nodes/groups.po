@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-28 11:47-0500\n"
+"POT-Creation-Date: 2016-12-28 13:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,51 +18,58 @@ msgstr ""
 
 #: ../../manual/editors/node_editor/nodes/groups.rst:6
 msgid ""
-"Both material and composite nodes can be grouped. Grouping nodes can "
-"simplify the node network layout in the node editor, making your material"
-" or composite node setup easier to work with. Grouping nodes also creates"
-" what are called NodeGroups (inside a blend-file) or NodeTrees (when "
-"appending)."
+"Grouping nodes can simplify a node tree by allowing instancing and hiding"
+" parts of the tree. Both material and composite nodes can be grouped."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:10
+#: ../../manual/editors/node_editor/nodes/groups.rst:9
 msgid ""
-"Conceptually, \"grouping\" allows you to specify a *set* of nodes that "
-"you can treat as though it were \"just one node\". You can then re-use it"
-" one or more times in this or some other blend-file(s)."
+"Conceptually, grouping nodes allows you to specify a *set* of nodes that "
+"you can treat as though it were \"just one node\". Node groups are "
+"similar to functions in programming. You can then re-use it inside, which"
+" are then called \"NodeGroups\", or in other blend-file(s), when "
+"appending called \"NodeTrees\"."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:13
+#: ../../manual/editors/node_editor/nodes/groups.rst:14
 msgid ""
-"As an example:  If you have created a material using nodes that you would"
-" like to use in another blend-file, you could simply append the material "
-"from one blend-file to another. However, what if you would like to create"
-" a new material, and use a branch from an existing material node network?"
-" You could re-create the branch. Or you could append the material to the "
-"new blend-file, then cut and paste the branch that you want into the new "
-"material. Both of these options work, but are not very efficient when "
-"working across different blend-files. A better method of re-use, for "
-"either material node branches or composite node networks, would be to "
-"create groups of nodes."
+"As an example:  If you have created a material that you would like to use"
+" with different inputs e.g. diffuse color: red plastic, green plastic. "
+"You could create different materials with *Make Single User* for each "
+"different color with a copy of the tree part describing the plastic "
+"material. If you like to edit the material you would need to redo the "
+"edit on all materials. A better method of re-use is to create node "
+"groups, exposing only the variable inputs (e.g. diffuse color)."
 msgstr ""
 
 #: ../../manual/editors/node_editor/nodes/groups.rst:20
 msgid ""
-"Once a group has been defined, it becomes an opaque object; a reusable "
-"software component. You can (if you choose) ignore exactly how it is "
-"\"defined\", and simply use it as many times as you like."
+"Also nested node groups are supported. I.e. a node group can be inserted "
+"or created inside another node group."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:25
+#: ../../manual/editors/node_editor/nodes/groups.rst:22
+msgid "Recursion"
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:24
+msgid ""
+"Recursive node groups are prohibited for all the current node systems to "
+"prevent infinite recursion. A node group can never contain itself (or "
+"another group that contains it)."
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:29
 msgid "Make Group"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:27
-#: ../../manual/editors/node_editor/nodes/groups.rst:62
-#: ../../manual/editors/node_editor/nodes/groups.rst:80
-#: ../../manual/editors/node_editor/nodes/groups.rst:94
-#: ../../manual/editors/node_editor/nodes/groups.rst:108
-#: ../../manual/editors/node_editor/nodes/groups.rst:120
+#: ../../manual/editors/node_editor/nodes/groups.rst:31
+#: ../../manual/editors/node_editor/nodes/groups.rst:66
+#: ../../manual/editors/node_editor/nodes/groups.rst:95
+#: ../../manual/editors/node_editor/nodes/groups.rst:109
+#: ../../manual/editors/node_editor/nodes/groups.rst:123
+#: ../../manual/editors/node_editor/nodes/groups.rst:137
+#: ../../manual/editors/node_editor/nodes/groups.rst:149
 msgid "Reference"
 msgstr ""
 
@@ -78,7 +85,7 @@ msgstr ""
 msgid "Hotkey:   :kbd:`Ctrl-G`"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:34
+#: ../../manual/editors/node_editor/nodes/groups.rst:38
 msgid ""
 "To create a node group, in the Node editor, select the nodes you want to "
 "include, then press :kbd:`Ctrl-G`, :menuselection:`Group --> Make Group`."
@@ -93,39 +100,39 @@ msgid ""
 "distinguish between the two types."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:46
+#: ../../manual/editors/node_editor/nodes/groups.rst:50
 msgid "What **not** to include in your groups (all modes of Node editors)"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:48
+#: ../../manual/editors/node_editor/nodes/groups.rst:52
 msgid ""
 "Remember that the essential idea is that a group should be an easily-"
 "reusable, self-contained software component. Material node groups should "
 "**not** include:"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:53
+#: ../../manual/editors/node_editor/nodes/groups.rst:57
 msgid "Input nodes"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:52
+#: ../../manual/editors/node_editor/nodes/groups.rst:56
 msgid ""
 "If you include a source node in your group, you will end up having the "
 "source node appearing *twice*: once inside the group, and once outside "
 "the group in the new material node-network."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:55
+#: ../../manual/editors/node_editor/nodes/groups.rst:59
 msgid "Output node"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:56
+#: ../../manual/editors/node_editor/nodes/groups.rst:60
 msgid ""
 "If you include an output node in the group, there will not be an output "
 "socket available *from* the group!"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:60
+#: ../../manual/editors/node_editor/nodes/groups.rst:64
 msgid "Edit Group"
 msgstr ""
 
@@ -141,7 +148,7 @@ msgstr ""
 msgid "Hotkey:   :kbd:`Tab`"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:70
+#: ../../manual/editors/node_editor/nodes/groups.rst:74
 msgid ""
 "With a group node selected, :kbd:`Tab` expands the node to a frame, and "
 "the individual nodes within it are shown. You can move them around, play "
@@ -152,7 +159,42 @@ msgid ""
 "nodes from the group, you need to ungroup them."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:78
+#: ../../manual/editors/node_editor/nodes/groups.rst:82
+msgid "Interface"
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:85
+msgid "Interactively"
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:87
+msgid ""
+"The Input/Output sockets are part of the regular nodes Group Input/Group "
+"Output."
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:89
+#: ../../manual/editors/node_editor/nodes/groups.rst:103
+#: ../../manual/editors/node_editor/nodes/groups.rst:129
+#: ../../manual/editors/node_editor/nodes/groups.rst:143
+msgid "ToDo."
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:93
+msgid "Panel"
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst
+msgid "Panel:    :menuselection:`Properties region --> Interface`"
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:101
+msgid ""
+"Sockets can be added or removed, descriptive names can be added and the "
+"details of the input data value defined here."
+msgstr ""
+
+#: ../../manual/editors/node_editor/nodes/groups.rst:107
 msgid "Ungroup"
 msgstr ""
 
@@ -164,14 +206,14 @@ msgstr ""
 msgid "Hotkey:   :kbd:`Alt-G`"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:87
+#: ../../manual/editors/node_editor/nodes/groups.rst:116
 msgid ""
 "The :kbd:`Alt-G` command removes the group and places the individual "
 "nodes into your editor workspace. No internal connections are lost, and "
 "now you can thread internal nodes to other nodes in your workspace."
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:92
+#: ../../manual/editors/node_editor/nodes/groups.rst:121
 msgid "Group Insert"
 msgstr ""
 
@@ -179,12 +221,7 @@ msgstr ""
 msgid "Menu:     :menuselection:`Group --> Group Insert`"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:100
-#: ../../manual/editors/node_editor/nodes/groups.rst:114
-msgid "ToDo."
-msgstr ""
-
-#: ../../manual/editors/node_editor/nodes/groups.rst:106
+#: ../../manual/editors/node_editor/nodes/groups.rst:135
 msgid "Adding a Group Instance"
 msgstr ""
 
@@ -192,7 +229,7 @@ msgstr ""
 msgid "Menu:     :menuselection:`Add --> Group`"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:118
+#: ../../manual/editors/node_editor/nodes/groups.rst:147
 msgid "Appending Node Groups"
 msgstr ""
 
@@ -200,7 +237,7 @@ msgstr ""
 msgid "Menu:     :menuselection:`Info Editor --> File --> Link/Append`"
 msgstr ""
 
-#: ../../manual/editors/node_editor/nodes/groups.rst:127
+#: ../../manual/editors/node_editor/nodes/groups.rst:156
 msgid ""
 "Once you have appended a NodeTree to your blend-file, you can make use of"
 " it in the Node editor by pressing :kbd:`Shift-A`, :menuselection:`Add "
@@ -218,32 +255,6 @@ msgstr ""
 #~ msgid "Grouping Nodes"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "To create a node group, in the "
-#~ "node editor, select the nodes you "
-#~ "want to include, then press "
-#~ ":kbd:`Ctrl-G`, :menuselection:`Group --> Make "
-#~ "Group`, :kbd:`Shift-A`. A node group "
-#~ "will have a green title bar. All"
-#~ " of the selected nodes will now "
-#~ "be contained within the group node. "
-#~ "Default naming for the node group "
-#~ "is \"NodeGroup\", \"NodeGroup.001\" etc. There"
-#~ " is a name field in the node"
-#~ " group you can click into to "
-#~ "change the name of the group. "
-#~ "Change the name of the node group"
-#~ " to something meaningful. When appending"
-#~ " node groups from one blend file "
-#~ "to another, Blender does not make "
-#~ "a distinction between material node "
-#~ "groups or composite node groups, so "
-#~ "it is recommended some naming "
-#~ "convention, that will allow you to "
-#~ "easily distinguish between the two "
-#~ "types."
-#~ msgstr ""
-
 #~ msgid "What **not** to include in your groups (all types of Node editors)"
 #~ msgstr ""
 
@@ -254,15 +265,56 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Once you have appended a NodeTree "
-#~ "to your blend-file, you can make"
-#~ " use of it in the node editor"
-#~ " by pressing :kbd:`Shift-A`, :menuselection:`Add"
-#~ " --> Group`, then select the appended"
-#~ " group. The \"control panel\" of the"
-#~ " Group is the individual controls for"
-#~ " the grouped nodes. You can change"
-#~ " them by working with the Group "
-#~ "node like any other node."
+#~ "Both material and composite nodes can"
+#~ " be grouped. Grouping nodes can "
+#~ "simplify the node network layout in "
+#~ "the node editor, making your material"
+#~ " or composite node setup easier to"
+#~ " work with. Grouping nodes also "
+#~ "creates what are called NodeGroups "
+#~ "(inside a blend-file) or NodeTrees "
+#~ "(when appending)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Conceptually, \"grouping\" allows you to "
+#~ "specify a *set* of nodes that you"
+#~ " can treat as though it were "
+#~ "\"just one node\". You can then "
+#~ "re-use it one or more times in"
+#~ " this or some other blend-file(s)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an example:  If you have "
+#~ "created a material using nodes that "
+#~ "you would like to use in another"
+#~ " blend-file, you could simply append"
+#~ " the material from one blend-file "
+#~ "to another. However, what if you "
+#~ "would like to create a new "
+#~ "material, and use a branch from an"
+#~ " existing material node network? You "
+#~ "could re-create the branch. Or you"
+#~ " could append the material to the "
+#~ "new blend-file, then cut and paste"
+#~ " the branch that you want into "
+#~ "the new material. Both of these "
+#~ "options work, but are not very "
+#~ "efficient when working across different "
+#~ "blend-files. A better method of "
+#~ "re-use, for either material node "
+#~ "branches or composite node networks, "
+#~ "would be to create groups of "
+#~ "nodes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once a group has been defined, it"
+#~ " becomes an opaque object; a reusable"
+#~ " software component. You can (if you"
+#~ " choose) ignore exactly how it is "
+#~ "\"defined\", and simply use it as "
+#~ "many times as you like."
 #~ msgstr ""
 
