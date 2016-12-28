@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 11:31-0500\n"
+"POT-Creation-Date: 2016-12-28 13:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,52 +23,61 @@ msgid "Camera"
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:7
+#: ../../manual/render/cycles/camera.rst:68
+msgid "Lens"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:10
+msgid "Type"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:13
 msgid "Perspective"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:10
+#: ../../manual/render/cycles/camera.rst:16
 msgid "Lens Size and Angle"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:10
+#: ../../manual/render/cycles/camera.rst:16
 msgid "Control the field of view angle."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:17
+#: ../../manual/render/cycles/camera.rst:23
 msgid "Orthographic"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:20
+#: ../../manual/render/cycles/camera.rst:26
 msgid "Scale"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:20
+#: ../../manual/render/cycles/camera.rst:26
 msgid "Controls the size of objects projected on the image."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:29
+#: ../../manual/render/cycles/camera.rst:35
 msgid "Panoramic"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:31
+#: ../../manual/render/cycles/camera.rst:37
 msgid ""
 "Cycles supports Equirectangular and Fisheye panoramic cameras. Note that "
 "these cannot be displayed with OpenGL rendering in the view-port; they "
 "will only work for rendering."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:37
+#: ../../manual/render/cycles/camera.rst:43
 msgid "Equirectangular"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:39
+#: ../../manual/render/cycles/camera.rst:45
 msgid ""
 "Render a panoramic view of the scenes from the camera location and use an"
 " equirectangular projection, always rendering the full 360° over the "
 "X-axis and 180° over the Y-axis."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:42
+#: ../../manual/render/cycles/camera.rst:48
 msgid ""
 "This projection is compatible with the environment texture as used for "
 "world shaders, so it can be used to render an environment map. To match "
@@ -77,11 +86,11 @@ msgid ""
 "center of the image using the default environment texture mapping."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:50
+#: ../../manual/render/cycles/camera.rst:56
 msgid "Fisheye"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:52
+#: ../../manual/render/cycles/camera.rst:58
 msgid ""
 "Fisheye lenses are typically wide angle lenses with strong distortion, "
 "useful for creating panoramic images for e.g. dome projection, or as an "
@@ -90,7 +99,7 @@ msgid ""
 "will also take the sensor dimensions into account."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:58
+#: ../../manual/render/cycles/camera.rst:64
 msgid ""
 "The *Fisheye Equidistant* lens does not correspond to any real lens "
 "model; it will give a circular fish-eye that does not take any sensor "
@@ -98,54 +107,77 @@ msgid ""
 " lens for full dome projection."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:62
-msgid "Lens"
-msgstr ""
-
-#: ../../manual/render/cycles/camera.rst:63
+#: ../../manual/render/cycles/camera.rst:69
 msgid "Lens focal length in millimeter."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:66
+#: ../../manual/render/cycles/camera.rst:72
 msgid "Field of View"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:65
+#: ../../manual/render/cycles/camera.rst:71
 msgid ""
 "Field of view angle, going to 360 and more to capture the whole "
 "environment."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:69
-msgid "Depth of Field"
+#: ../../manual/render/cycles/camera.rst:75
+msgid "Clipping"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:74
-msgid "Focus"
-msgstr ""
-
-#: ../../manual/render/cycles/camera.rst:74
-msgid ""
-"Set an object to be used as a focal point by the camera, causing the "
-"camera to focus on the selected object."
+#: ../../manual/render/cycles/camera.rst:85
+msgid "Clip Start and End"
 msgstr ""
 
 #: ../../manual/render/cycles/camera.rst:78
+msgid ""
+"The interval in which objects are directly visible, Any objects outside "
+"this range still influence the image indirectly, as further light bounces"
+" are not clipped."
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:84
+msgid ":ref:`Camera Clipping <camera-clipping>`."
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:88
+msgid "Depth of Field"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:94
+msgid "Focus"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:97
+msgid "Object"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:97
+msgid ""
+"Set an object to be used as a focal point by the camera, causing the "
+"camera to focus on the selected object origin."
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:103
 msgid "Distance"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:77
+#: ../../manual/render/cycles/camera.rst:100
 msgid ""
-"When an object is not used, the camera can be set to focus on an area in "
-"3D space set by the distance from the camera. Using the *Limit* Display "
-"option, you are able to view the distance in the 3D space."
+"When an *Focus* object is not used, the camera can be set to focus on an "
+"area in 3D space set by the distance from the camera. Using the *Limit* "
+"Display option, you are able to view the distance in the 3D space."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:82
+#: ../../manual/render/cycles/camera.rst:106
+msgid "Viewport"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:110
 msgid "High Quality"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:81
+#: ../../manual/render/cycles/camera.rst:109
 msgid ""
 "Enables the High Quality *view-port* depth of field, giving a more "
 "accurate representation of *depth of field*. This allows the view-port "
@@ -153,44 +185,48 @@ msgid ""
 " preview depth of field."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:85
+#: ../../manual/render/cycles/camera.rst:113
 msgid "F-Stop"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:85
+#: ../../manual/render/cycles/camera.rst:113
 msgid ""
 "Viewport depth of field aperture measured in F-Stops. Smaller numbers "
 "will cause more blur in the view-port, OpenGL renders, and sequencer."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:89
-#: ../../manual/render/cycles/camera.rst:100
+#: ../../manual/render/cycles/camera.rst:119
+#: ../../manual/render/cycles/camera.rst:133
 msgid "Blades"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:88
+#: ../../manual/render/cycles/camera.rst:116
 msgid ""
 "The number of polygonal sides to give blurred objects in the view-port. "
 "The minimum number of blades needed to enable the bokeh effect is 3 "
 "(triangle). (Only available with High Quality)."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:92
+#: ../../manual/render/cycles/camera.rst:122
 msgid "Aperture"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:92
+#: ../../manual/render/cycles/camera.rst:125
+msgid "Aperture type"
+msgstr ""
+
+#: ../../manual/render/cycles/camera.rst:125
 msgid ""
 "Use F-Stop or Radius to set the aperture for the render, and render "
-"preview. F-Stop is the focal ratio, where Radius is the the raidus of the"
+"preview. F-Stop is the focal ratio, where Radius is the the radius of the"
 " focal point."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:96
+#: ../../manual/render/cycles/camera.rst:129
 msgid "Size/Number"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:95
+#: ../../manual/render/cycles/camera.rst:128
 msgid ""
 "Aperture radius *size*, or F-Stop *number* used for the render, and "
 "render preview. Using the F-Stop with a low number, or Radius with a "
@@ -198,7 +234,7 @@ msgid ""
 "*bokeh effect*."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:99
+#: ../../manual/render/cycles/camera.rst:132
 msgid ""
 "Total number of polygonal blades used to alter the shape of the blurred "
 "objects in the render, and render preview. As with the view-port, the "
@@ -206,21 +242,21 @@ msgid ""
 "triangle shaped blur."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:103
+#: ../../manual/render/cycles/camera.rst:136
 msgid "Rotation"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:103
+#: ../../manual/render/cycles/camera.rst:136
 msgid ""
 "Rotate the polygonal blades along the facing axis, and will rotate in a "
 "clockwise, and counter-clockwise fashion."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:108
+#: ../../manual/render/cycles/camera.rst:141
 msgid "Ratio"
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:106
+#: ../../manual/render/cycles/camera.rst:139
 msgid ""
 "Change the amount of distortion to simulate the anamorphic bokeh effect. "
 "A setting of 1.0 shows no distortion, where a number below 1.0 will cause"
@@ -228,22 +264,28 @@ msgid ""
 "distortion."
 msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:114
-msgid "Clipping"
-msgstr ""
+#~ msgid ""
+#~ "Set an object to be used as "
+#~ "a focal point by the camera, "
+#~ "causing the camera to focus on the"
+#~ " selected object."
+#~ msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:123
-msgid "Clip Start and End"
-msgstr ""
+#~ msgid ""
+#~ "When an object is not used, the"
+#~ " camera can be set to focus on"
+#~ " an area in 3D space set by "
+#~ "the distance from the camera. Using "
+#~ "the *Limit* Display option, you are "
+#~ "able to view the distance in the"
+#~ " 3D space."
+#~ msgstr ""
 
-#: ../../manual/render/cycles/camera.rst:117
-msgid ""
-"The interval in which objects are directly visible, Any objects outside "
-"this range still influence the image indirectly, as further light bounces"
-" are not clipped."
-msgstr ""
-
-#: ../../manual/render/cycles/camera.rst:121
-msgid ":ref:`Camera Clipping <camera-clipping>`."
-msgstr ""
+#~ msgid ""
+#~ "Use F-Stop or Radius to set the"
+#~ " aperture for the render, and render"
+#~ " preview. F-Stop is the focal ratio,"
+#~ " where Radius is the the raidus "
+#~ "of the focal point."
+#~ msgstr ""
 
