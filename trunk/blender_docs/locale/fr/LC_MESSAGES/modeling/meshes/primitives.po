@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-11 13:19-0500\n"
+"POT-Creation-Date: 2016-12-28 11:47-0500\n"
 "PO-Revision-Date: 2016-10-25 13:32+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -27,8 +27,13 @@ msgid "Reference"
 msgstr "Référence"
 
 #: ../../manual/modeling/meshes/primitives.rst
-msgid "Mode:     Object Mode"
+#, fuzzy
+msgid "Mode:     Object Mode and Edit Mode"
 msgstr "Mode :     Mode Object"
+
+#: ../../manual/modeling/meshes/primitives.rst
+msgid "Panel:    :menuselection:`Tool Shelf --> Create --> Add Primitive/Mesh`"
+msgstr ""
 
 #: ../../manual/modeling/meshes/primitives.rst
 msgid "Menu:     :menuselection:`Add --> Mesh`"
@@ -38,7 +43,7 @@ msgstr "Menu :     :menuselection:`Add --> Mesh`"
 msgid "Hotkey:   :kbd:`Shift-A`"
 msgstr "Raccourci :   :kbd:`Maj-A`"
 
-#: ../../manual/modeling/meshes/primitives.rst:15
+#: ../../manual/modeling/meshes/primitives.rst:16
 msgid ""
 "A common object type used in a 3D scene is a mesh. Blender comes with a "
 "number of \"primitive\" mesh shapes that you can start modeling from."
@@ -47,15 +52,15 @@ msgstr ""
 "Blender fournit un certain nombre de formes de maillage \"primitives\" à "
 "partir desquelles vous pouvez commencez à modéliser."
 
-#: ../../manual/modeling/meshes/primitives.rst:20
+#: ../../manual/modeling/meshes/primitives.rst:21
 msgid "Blender's standard primitives."
 msgstr "Primitives standard de Blender."
 
-#: ../../manual/modeling/meshes/primitives.rst:22
+#: ../../manual/modeling/meshes/primitives.rst:23
 msgid "Note about planar primitives"
 msgstr "note à propos des primitives planes"
 
-#: ../../manual/modeling/meshes/primitives.rst:24
+#: ../../manual/modeling/meshes/primitives.rst:25
 msgid ""
 "You can make a planar mesh three-dimensional by moving one or more of the"
 " vertices out of its plane (applies to *Plane*, *Circle* and *Grid*). A "
@@ -67,11 +72,11 @@ msgstr ""
 " et *Grid*). Un simple cercle est en fait souvent utilisé comme un point "
 "de départ pour créer le plus complexe des maillages."
 
-#: ../../manual/modeling/meshes/primitives.rst:30
+#: ../../manual/modeling/meshes/primitives.rst:31
 msgid "Common Options"
 msgstr "Options communes"
 
-#: ../../manual/modeling/meshes/primitives.rst:32
+#: ../../manual/modeling/meshes/primitives.rst:33
 #, fuzzy
 msgid ""
 "These options can be specified in the Operator panel in the *Tool Shelf*,"
@@ -82,11 +87,11 @@ msgstr ""
 "Shelf*, qui apparaît lors de la création de l'objet. Les options dans "
 "plus d'une primitive sont :"
 
-#: ../../manual/modeling/meshes/primitives.rst:39
+#: ../../manual/modeling/meshes/primitives.rst:40
 msgid "Vertices, Segments, Subdivisions"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:37
+#: ../../manual/modeling/meshes/primitives.rst:38
 msgid ""
 "Since the edges of a mesh are straight specifying a number of vertices "
 "produces polygonal shapes. e.g. six vertices for a hexagon. The higher "
@@ -94,27 +99,30 @@ msgid ""
 "approximated and the shape will appear smoother."
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:44
+#: ../../manual/modeling/meshes/primitives.rst:45
 msgid "Radius, Size"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:42
+#: ../../manual/modeling/meshes/primitives.rst:43
 msgid "Sets the starting size."
 msgstr "Fixe la taille de départ."
 
-#: ../../manual/modeling/meshes/primitives.rst:49
+#: ../../manual/modeling/meshes/primitives.rst:51
 msgid "Generate UVs"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:47
-msgid "ToDo."
-msgstr ""
-
-#: ../../manual/modeling/meshes/primitives.rst:52
-msgid "Plane"
+#: ../../manual/modeling/meshes/primitives.rst:48
+msgid ""
+"Generates a default UV-unwrapping of new geometry. This will be defined "
+"in the first UVLayer (which will get added if needed). (available for "
+"plane, cube, circle, UV-/icosphere, tube and cone)."
 msgstr ""
 
 #: ../../manual/modeling/meshes/primitives.rst:54
+msgid "Plane"
+msgstr ""
+
+#: ../../manual/modeling/meshes/primitives.rst:56
 msgid ""
 "The standard plane is a single quad face, which is composed out of four "
 "vertices, four edges, and one face. It is like a piece of paper lying on "
@@ -128,11 +136,11 @@ msgstr ""
 "qu'il est plat et n'a pas d'épaisseur. Les objets qui peuvent être créés "
 "avec des plans comprennent les sols, les dessus de table ou les miroirs."
 
-#: ../../manual/modeling/meshes/primitives.rst:61
+#: ../../manual/modeling/meshes/primitives.rst:63
 msgid "Cube"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:63
+#: ../../manual/modeling/meshes/primitives.rst:65
 msgid ""
 "A standard cube contains eight vertices, twelve edges, and six faces, and"
 " is a three-dimensional object. Objects that can be created out of cubes "
@@ -142,57 +150,57 @@ msgstr ""
 " un objet tridimensionnel. Les objets qui peuvent être créés avec des "
 "cubes comprennent les dés, les boîtes ou les caisses."
 
-#: ../../manual/modeling/meshes/primitives.rst:69
+#: ../../manual/modeling/meshes/primitives.rst:71
 msgid "Circle"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:71
-#: ../../manual/modeling/meshes/primitives.rst:124
-#: ../../manual/modeling/meshes/primitives.rst:140
+#: ../../manual/modeling/meshes/primitives.rst:73
+#: ../../manual/modeling/meshes/primitives.rst:126
+#: ../../manual/modeling/meshes/primitives.rst:142
 msgid "Vertices"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:72
+#: ../../manual/modeling/meshes/primitives.rst:74
 msgid "The number of vertices that define the circle or polygon."
 msgstr "Le nombre de sommets qui définit le cercle ou polygone."
 
-#: ../../manual/modeling/meshes/primitives.rst:82
+#: ../../manual/modeling/meshes/primitives.rst:84
 msgid "Fill Type"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:74
+#: ../../manual/modeling/meshes/primitives.rst:76
 msgid "Set how the circle will be filled."
 msgstr "Définit comment le cercle sera rempli."
 
-#: ../../manual/modeling/meshes/primitives.rst:76
+#: ../../manual/modeling/meshes/primitives.rst:78
 msgid "Triangle Fan"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:77
+#: ../../manual/modeling/meshes/primitives.rst:79
 msgid "Fill with triangular faces which share a vertex in the middle."
 msgstr "Remplir avec des faces triangulaires qui partagent un sommet au milieu. "
 
-#: ../../manual/modeling/meshes/primitives.rst:78
+#: ../../manual/modeling/meshes/primitives.rst:80
 msgid "N-gon"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:79
+#: ../../manual/modeling/meshes/primitives.rst:81
 msgid "Fill with a single n-gon."
 msgstr "Remplir avec un simple n-gon."
 
-#: ../../manual/modeling/meshes/primitives.rst:82
+#: ../../manual/modeling/meshes/primitives.rst:84
 msgid "Nothing"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:81
+#: ../../manual/modeling/meshes/primitives.rst:83
 msgid "Do not fill. Creates only the outer ring of vertices."
 msgstr "Ne pas remplir. Crée seulement l'anneau externe des sommets."
 
-#: ../../manual/modeling/meshes/primitives.rst:85
+#: ../../manual/modeling/meshes/primitives.rst:87
 msgid "UV Sphere"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:87
+#: ../../manual/modeling/meshes/primitives.rst:89
 msgid ""
 "A standard UV sphere is made out of quad faces and a triangle fan at the "
 "top and bottom. It can be used for texturing."
@@ -200,11 +208,11 @@ msgstr ""
 "Une UV sphere standard est faite de faces quad et un éventail de "
 "triangles en haut et en bas, Elle peut être utilisée pour le texturage."
 
-#: ../../manual/modeling/meshes/primitives.rst:90
+#: ../../manual/modeling/meshes/primitives.rst:92
 msgid "Segments"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:91
+#: ../../manual/modeling/meshes/primitives.rst:93
 msgid ""
 "Number of vertical segments. Like the Earth's meridians, going pole to "
 "pole."
@@ -212,28 +220,28 @@ msgstr ""
 "Nombre de segments verticaux. Comme les méridiens terrestres, allant de "
 "pôle en pôle."
 
-#: ../../manual/modeling/meshes/primitives.rst:98
+#: ../../manual/modeling/meshes/primitives.rst:100
 msgid "Rings"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:93
+#: ../../manual/modeling/meshes/primitives.rst:95
 msgid "Number of horizontal segments. These are like the Earth's parallels."
 msgstr ""
 "Nombre de segments horizontaux, Ceux-ci sont comme les parallèles "
 "terrestres."
 
-#: ../../manual/modeling/meshes/primitives.rst:97
+#: ../../manual/modeling/meshes/primitives.rst:99
 #, fuzzy
 msgid "Rings are the face loops and not the edge loops, which would be one less."
 msgstr ""
 "Les Rings (anneaux) sont des *face loops* et non des *edge loops*, ce qui"
 " serait un moins."
 
-#: ../../manual/modeling/meshes/primitives.rst:101
+#: ../../manual/modeling/meshes/primitives.rst:103
 msgid "Icosphere"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:103
+#: ../../manual/modeling/meshes/primitives.rst:105
 msgid ""
 "An icosphere is a polyhedra sphere made up of triangles. Icospheres are "
 "normally used to achieve a more isotropical layout of vertices than a UV "
@@ -243,11 +251,11 @@ msgstr ""
 "sont normalement utilisées pour obtenir une disposition de sommets plus "
 "isotropicale que celle d'une sphère UV."
 
-#: ../../manual/modeling/meshes/primitives.rst:110
+#: ../../manual/modeling/meshes/primitives.rst:112
 msgid "Subdivisions"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:108
+#: ../../manual/modeling/meshes/primitives.rst:110
 msgid ""
 "How many recursions are used to define the sphere. At level 1 the "
 "Icosphere is an icosahedron, a solid with 20 equilateral triangular "
@@ -259,7 +267,7 @@ msgstr ""
 "équilatéraux. Un niveau supplémentaire de subdivision divise chaque face "
 "triangulaire en quatre triangles."
 
-#: ../../manual/modeling/meshes/primitives.rst:114
+#: ../../manual/modeling/meshes/primitives.rst:116
 msgid ""
 "Subdividing an icosphere rises the vertex count very high even with few "
 "iterations (10 times creates 5,242,880 triangles), Adding such a dense "
@@ -269,17 +277,17 @@ msgstr ""
 "peu d'itérations (10 fois crée 5.242.880 triangles). L'ajout d'un "
 "maillage d'une telle densité est une façon sûre de planter le programme. "
 
-#: ../../manual/modeling/meshes/primitives.rst:120
+#: ../../manual/modeling/meshes/primitives.rst:122
 msgid "Cylinder"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:122
+#: ../../manual/modeling/meshes/primitives.rst:124
 msgid "Objects that can be created out of cylinders include handles or rods."
 msgstr ""
 "Les objets qui peuvent être créés avec des cylindres comprennent des "
 "poignées ou des tiges."
 
-#: ../../manual/modeling/meshes/primitives.rst:125
+#: ../../manual/modeling/meshes/primitives.rst:127
 msgid ""
 "The number of vertical edges between the circles used to define the "
 "cylinder or prism."
@@ -287,21 +295,21 @@ msgstr ""
 "Le nombre d'arêtes verticales entre les cercles utilisé pour définir le "
 "cylindre ou prisme."
 
-#: ../../manual/modeling/meshes/primitives.rst:127
-#: ../../manual/modeling/meshes/primitives.rst:148
+#: ../../manual/modeling/meshes/primitives.rst:129
+#: ../../manual/modeling/meshes/primitives.rst:150
 msgid "Depth"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:127
+#: ../../manual/modeling/meshes/primitives.rst:129
 #, fuzzy
 msgid "Sets the starting height of the cylinder."
 msgstr "Fixe la hauteur de départ pour le cylindre."
 
-#: ../../manual/modeling/meshes/primitives.rst:133
+#: ../../manual/modeling/meshes/primitives.rst:135
 msgid "Cap Fill Type"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:130
+#: ../../manual/modeling/meshes/primitives.rst:132
 msgid ""
 "Similar to circle (see above). When set to none, the created object will "
 "be a tube. Objects that can be created out of tubes include pipes or "
@@ -313,17 +321,17 @@ msgstr ""
 "comprennent les pipes ou les tasses (la différence de base entre un "
 "cylindre et un tube est que le premier a des extrémités fermées)."
 
-#: ../../manual/modeling/meshes/primitives.rst:136
+#: ../../manual/modeling/meshes/primitives.rst:138
 msgid "Cone"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:138
+#: ../../manual/modeling/meshes/primitives.rst:140
 msgid "Objects that can be created out of cones include spikes or pointed hats."
 msgstr ""
 "Les objets qui peuvent être créés avec des cônes comprennent des pointes "
 "ou des chapeaux pointus."
 
-#: ../../manual/modeling/meshes/primitives.rst:141
+#: ../../manual/modeling/meshes/primitives.rst:143
 msgid ""
 "The number of vertical edges between the circles or tip, used to define "
 "the cone or pyramid."
@@ -331,19 +339,19 @@ msgstr ""
 "Le nombre d'arêtes verticales entre les cercles ou extrémité, utilisé "
 "pour définir le cône ou la pyramide."
 
-#: ../../manual/modeling/meshes/primitives.rst:142
+#: ../../manual/modeling/meshes/primitives.rst:144
 msgid "Radius 1"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:143
+#: ../../manual/modeling/meshes/primitives.rst:145
 msgid "Sets the radius of the circular base of the cone."
 msgstr "Fixe le rayon de la base circulaire du cône."
 
-#: ../../manual/modeling/meshes/primitives.rst:145
+#: ../../manual/modeling/meshes/primitives.rst:147
 msgid "Radius 2"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:145
+#: ../../manual/modeling/meshes/primitives.rst:147
 msgid ""
 "Sets the radius of the tip of the cone. which will creates a frustum. A "
 "value of 0 will produce a standard cone shape."
@@ -351,34 +359,34 @@ msgstr ""
 "Fixe le rayon de l'extrémité du cône, qui va créer un cône tronqué. Une "
 "valeur de 0 va produire une forme conique standard."
 
-#: ../../manual/modeling/meshes/primitives.rst:148
+#: ../../manual/modeling/meshes/primitives.rst:150
 #, fuzzy
 msgid "Sets the starting height of the cone."
 msgstr "Fixe la hauteur de départ pour le cône."
 
-#: ../../manual/modeling/meshes/primitives.rst:152
+#: ../../manual/modeling/meshes/primitives.rst:154
 msgid "Base Fill Type"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:151
+#: ../../manual/modeling/meshes/primitives.rst:153
 msgid "Similar to circle (see above)."
 msgstr "Semblable à cercle (voir ci-dessus)."
 
-#: ../../manual/modeling/meshes/primitives.rst:155
+#: ../../manual/modeling/meshes/primitives.rst:157
 msgid "Torus"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:157
+#: ../../manual/modeling/meshes/primitives.rst:159
 msgid ""
 "A doughnut-shaped primitive created by rotating a circle around an axis. "
 "The overall dimensions can be defined by two methods."
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:160
+#: ../../manual/modeling/meshes/primitives.rst:162
 msgid "Operator Presets"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:161
+#: ../../manual/modeling/meshes/primitives.rst:163
 msgid ""
 "Torus preset settings for reuse. These presets are stored as scripts in "
 "the proper presets directory."
@@ -386,11 +394,11 @@ msgstr ""
 "Réglages préétablis de Tore pour réutilisation. Ces préréglages sont "
 "enregistrés comme scripts dans le dossier de préréglages correct. "
 
-#: ../../manual/modeling/meshes/primitives.rst:163
+#: ../../manual/modeling/meshes/primitives.rst:165
 msgid "Major Segments"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:163
+#: ../../manual/modeling/meshes/primitives.rst:165
 msgid ""
 "Number of segments for the main ring of the torus. If you think of a "
 "torus as a \"spin\" operation around an axis, this is how many steps in "
@@ -399,11 +407,11 @@ msgstr ""
 "Nombre de segments pour l'anneau principal du tore. Si vous pensez un "
 "tore comme une opération \"spin\" autour d'un axe, "
 
-#: ../../manual/modeling/meshes/primitives.rst:168
+#: ../../manual/modeling/meshes/primitives.rst:170
 msgid "Minor segments"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:166
+#: ../../manual/modeling/meshes/primitives.rst:168
 msgid ""
 "Number of segments for the minor ring of the torus. This is the number of"
 " vertices of each circular segment."
@@ -411,43 +419,43 @@ msgstr ""
 "Nombre de segments pour l'anneau mineur du tore. C'est le nombre de "
 "sommets de chaque segment circulaire. "
 
-#: ../../manual/modeling/meshes/primitives.rst:171
+#: ../../manual/modeling/meshes/primitives.rst:173
 msgid "Torus Dimensions"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:189
+#: ../../manual/modeling/meshes/primitives.rst:191
 msgid "Add Mode"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:174
+#: ../../manual/modeling/meshes/primitives.rst:176
 msgid "Change the way the torus is defined."
 msgstr "Modifie la manière dont le tore est défini."
 
-#: ../../manual/modeling/meshes/primitives.rst:176
+#: ../../manual/modeling/meshes/primitives.rst:178
 msgid "Major/Minor, Exterior/Interior"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:178
+#: ../../manual/modeling/meshes/primitives.rst:180
 msgid "Major Radius"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:179
+#: ../../manual/modeling/meshes/primitives.rst:181
 msgid "Radius from the origin to the center of the cross sections."
 msgstr "Rayon depuos l'origine au centre des sections transversales."
 
-#: ../../manual/modeling/meshes/primitives.rst:181
+#: ../../manual/modeling/meshes/primitives.rst:183
 msgid "Minor Radius"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:181
+#: ../../manual/modeling/meshes/primitives.rst:183
 msgid "Radius of the torus's cross section."
 msgstr "Rayon de la section transversale du tore."
 
-#: ../../manual/modeling/meshes/primitives.rst:184
+#: ../../manual/modeling/meshes/primitives.rst:186
 msgid "Exterior Radius"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:184
+#: ../../manual/modeling/meshes/primitives.rst:186
 msgid ""
 "If viewed along the major axis, this is the radius from the center to the"
 " outer edge."
@@ -455,47 +463,47 @@ msgstr ""
 "Si le long du grand axe, c'est le rayon depuis le centre de l'arête "
 "externe."
 
-#: ../../manual/modeling/meshes/primitives.rst:189
+#: ../../manual/modeling/meshes/primitives.rst:191
 msgid "Interior Radius"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:187
+#: ../../manual/modeling/meshes/primitives.rst:189
 msgid ""
 "If viewed along the major axis, this is the radius of the hole in the "
 "center."
 msgstr "c'est le rayon du trou au centre."
 
-#: ../../manual/modeling/meshes/primitives.rst:192
+#: ../../manual/modeling/meshes/primitives.rst:194
 msgid "Grid"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:194
+#: ../../manual/modeling/meshes/primitives.rst:196
 msgid ""
 "A regular quadratic grid which is a subdivided plane. Example objects "
 "that can be created out of grids include landscapes and organic surfaces."
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:198
+#: ../../manual/modeling/meshes/primitives.rst:200
 msgid "X Subdivisions"
 msgstr "X"
 
-#: ../../manual/modeling/meshes/primitives.rst:199
+#: ../../manual/modeling/meshes/primitives.rst:201
 msgid "The number of spans in the X axis."
 msgstr "Le nombre de travées dans l'axe X."
 
-#: ../../manual/modeling/meshes/primitives.rst:202
+#: ../../manual/modeling/meshes/primitives.rst:204
 msgid "Y Subdivisions"
 msgstr "Subdivisions Y"
 
-#: ../../manual/modeling/meshes/primitives.rst:201
+#: ../../manual/modeling/meshes/primitives.rst:203
 msgid "The number of spans in the Y axis."
 msgstr "Le nombre de travées dans l'axe Y."
 
-#: ../../manual/modeling/meshes/primitives.rst:205
+#: ../../manual/modeling/meshes/primitives.rst:207
 msgid "Monkey"
 msgstr "Singe"
 
-#: ../../manual/modeling/meshes/primitives.rst:207
+#: ../../manual/modeling/meshes/primitives.rst:209
 msgid ""
 "This is a gift from old NaN to the community and is seen as a "
 "programmer's joke or \"Easter Egg\". It creates a monkey's head once you "
@@ -512,11 +520,11 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Utah_teapot>`__ ou le `Stanford Bunny "
 "<https://en.wikipedia.org/wiki/Stanford_Bunny>`__."
 
-#: ../../manual/modeling/meshes/primitives.rst:214
+#: ../../manual/modeling/meshes/primitives.rst:216
 msgid "Add-ons"
 msgstr ""
 
-#: ../../manual/modeling/meshes/primitives.rst:216
+#: ../../manual/modeling/meshes/primitives.rst:218
 msgid ""
 "In addition to the basic geometric primitives, Blender has a number of "
 "script generated meshes to offer as pre-installed add-ons. These become "
@@ -532,7 +540,7 @@ msgstr ""
 #~ msgstr "Les options incluses dans plus d'une primitive sont :"
 
 #~ msgid ""
-#~ msgstr "Le nombre de "
+#~ msgstr ""
 
 #~ msgid "The radius of the sphere."
 #~ msgstr "Le rayon de la sphère."
@@ -540,21 +548,6 @@ msgstr ""
 #~ msgid "The length of the sides of the grid."
 #~ msgstr "La longueur des côtés de la grille."
 
-#~ msgid ""
-#~ "Since the edges of a mesh are "
-#~ "straight specifying a number of vertices"
-#~ " produces polygonal shapes. i.e. six "
-#~ "vertices for an hexagon. The higher "
-#~ "the vertex count the closer a "
-#~ "circular/spherical shape will be approximated"
-#~ " and the shape will appear smoother."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A regular quadratic grid which is "
-#~ "a subdivided plane. Example objects that"
-#~ " can be created out of grids "
-#~ "include landscapes and other organic "
-#~ "surfaces."
+#~ msgid "ToDo."
 #~ msgstr ""
 
