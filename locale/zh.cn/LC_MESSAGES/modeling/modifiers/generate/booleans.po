@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-07 09:50-0400\n"
+"POT-Creation-Date: 2016-12-28 11:47-0500\n"
 "PO-Revision-Date: 2015-12-13 02:10+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,9 +18,9 @@ msgstr "布尔修改器--knight翻译"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:6
 msgid ""
-"The Boolean modifier performs operations on meshes that are otherwise too"
+"The Boolean Modifier performs operations on meshes that are otherwise too"
 " complex to achieve with as few steps by editing meshes manually. The "
-"Boolean modifier uses one of three Boolean operations that can be used to"
+"Boolean Modifier uses one of three Boolean operations that can be used to"
 " create a single mesh out of two mesh objects:"
 msgstr ""
 
@@ -30,11 +30,11 @@ msgid "Negation"
 msgstr "操作"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:11
-msgid "Conjunction"
+msgid "Disjunction"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:12
-msgid "Disjunction"
+msgid "Conjunction"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:18
@@ -45,12 +45,13 @@ msgid ""
 msgstr "图1 —— 修改器作用于球面，立方体作为目标后，立方体与球面的并、交、差操作。（详情，并操作用的是多边形）。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:23
-msgid "The Boolean modifier works with open and closed volumes."
+#, fuzzy
+msgid "The Boolean Modifier works with open and closed volumes."
 msgstr "布尔修改器适用于开放和封闭的形体。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:24
 #, fuzzy
-msgid "The Boolean modifier does not work on edges without faces."
+msgid "The Boolean Modifier does not work on edges without faces."
 msgstr "布尔修改器对没有面的边不适用。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:25
@@ -97,12 +98,12 @@ msgstr "用法"
 #: ../../manual/modeling/modifiers/generate/booleans.rst:42
 msgid ""
 "To use the *Boolean Modifier* select the desired mesh Object then add a "
-"*Boolean modifier*. When you add the Boolean modifier for an object, "
+"*Boolean Modifier*. When you add the Boolean Modifier for an object, "
 "Blender will need a second object to be the target of the operation. You "
 "can use open or closed meshes, as long as they have available face "
 "normals for the calculations to take effect. You can add one or more "
 "modifiers of this type for an Object but you can only apply one operation"
-" for the Boolean modifier at a time."
+" for the Boolean Modifier at a time."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:51
@@ -223,8 +224,9 @@ msgid "Materials"
 msgstr "材质"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:97
+#, fuzzy
 msgid ""
-"The Boolean modifier preserves the Materials of the participant Meshes, "
+"The Boolean Modifier preserves the Materials of the participant Meshes, "
 "including their basic textures and mappings, and the modified mesh will "
 "receive its first active material index assigned to its new topology (the"
 " first active material)."
@@ -234,11 +236,11 @@ msgstr "布尔修改器保留了参与运算的网面的材质，包括它们的
 #, fuzzy
 msgid ""
 "Below, some examples are shown to exemplify how materials work with the "
-"Boolean modifier; we took the cube as the modified mesh, and the "
+"Boolean Modifier; we took the cube as the modified mesh, and the "
 "icosphere as the target with one material (white). We added four "
 "different indexes to one of the faces of the cube, leaving another basic "
 "material in the other faces. The top left image shows how the Boolean "
-"modifier interacts with the materials. The other three images show the "
+"Modifier interacts with the materials. The other three images show the "
 "three different Boolean operations applied to the modified mesh. In all "
 "the images the meshes have normals pointed outwards with the Icosphere as"
 " the target, and the Cube being the modified mesh."
@@ -289,9 +291,10 @@ msgid "UV Mappings"
 msgstr "UV映射"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:151
+#, fuzzy
 msgid ""
 "When you map UV Images to your target, Blender will add a map for each of"
-" the faces of the target. When you apply the Boolean modifier, Blender "
+" the faces of the target. When you apply the Boolean Modifier, Blender "
 "will follow the UV maps already assigned to the faces of the target "
 "topology that will be the result of the operation on the modified mesh. "
 "Blender will also use the same image mapped to the target faces in the "
@@ -344,7 +347,7 @@ msgstr "其他修改器"
 #: ../../manual/modeling/modifiers/generate/booleans.rst:189
 #, fuzzy
 msgid ""
-"The Boolean modifier calculation is performed using the target modified "
+"The Boolean Modifier calculation is performed using the target modified "
 "mesh topology and dimensions. Other modifiers added to the modified mesh "
 "are bypassed. This means that if a target is using another modifier, like"
 " Subdivision Surface, the resulting topology for the modified mesh will "
@@ -356,7 +359,7 @@ msgstr "布尔修改器是用目标网面和修改的网面的拓扑和尺寸执
 #, fuzzy
 msgid ""
 "If you add Subdivision Surface to the modified mesh with a Boolean "
-"modifier, Blender will visually add the subdivision for the modified "
+"Modifier, Blender will visually add the subdivision for the modified "
 "mesh, but not for its calculations; it will only take into account its "
 "basic mesh topology. If you want to have a Subdivision Surface modifier "
 "added to the modified mesh, you have to apply the Subdivision Surface to "
@@ -368,7 +371,7 @@ msgstr ""
 #: ../../manual/modeling/modifiers/generate/booleans.rst:201
 #, fuzzy
 msgid ""
-"The Boolean modifier can be added together with other modifiers in the "
+"The Boolean Modifier can be added together with other modifiers in the "
 "modified mesh, but depending on the modifier, the calculations cannot be "
 "done and/or the modifier cannot execute. When the modifier cannot "
 "execute, it will show the message ``\"Cannot execute boolean "
@@ -382,32 +385,35 @@ msgstr ""
 "``\"修改器未启用，跳过此操作。\"``。这种情况下，你要么需要移掉一些修改器，要么应用了必要的修改器。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:208
+#, fuzzy
 msgid ""
-"The most common case is when you add or copy a Boolean modifier to use "
+"The most common case is when you add or copy a Boolean Modifier to use "
 "the modified mesh in conjunction with another target later; Blender will "
-"place the warning in the subsequent Boolean modifiers in the stack "
+"place the warning in the subsequent Boolean Modifiers in the stack "
 "depending on the operation, because you may be creating concurrent "
 "Boolean operations for the same modified mesh, which in most cases is "
 "impossible to execute depending on the chosen target. In this case, you "
-"can apply the first Boolean modifier of the stack for the target and then"
-" use the other Boolean modifier(s) in the stack for subsequent "
+"can apply the first Boolean Modifier of the stack for the target and then"
+" use the other Boolean Modifier(s) in the stack for subsequent "
 "operations."
 msgstr "最常见的情形是当你添加或复制一个布尔修改器，用修改的网面配合另一个目标后期使用时，Blender会在栈上随后的布尔修改器提示警告信息，因为你可能对同一个修改的网面创建了并发的布尔操作，这也是多数情况下不可能执行下去的，它取决于你选择的目标。这种情况下，你可以对目标应用栈上第一个布尔修改器，接着用栈上其他布尔修改器完成接下来的操作。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:216
+#, fuzzy
 msgid ""
 "Also, if some other modifiers are placed above this modifier and you "
 "click on Apply, Blender will warn you with the message ``\"Applied "
 "Modifier was not first, results may not be as expected\"``. The best "
 "usage scenario for this modifier is to prepare your modified mesh and "
-"target to work with the Boolean modifier."
+"target to work with the Boolean Modifier."
 msgstr ""
 "此外，如果一些其他的修改器置于此修改器之上，你点击了应用按钮，Blender会警告你 "
 "``\"没有首先应用其他的修改器在，结果可能不如预期\"``。该修改器的最佳使用场合是准备好你待修改的网面和目标网面，然后再使用布尔修改器。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:221
+#, fuzzy
 msgid ""
-"When the Boolean modifier is the first of the stack and is applied, the "
+"When the Boolean Modifier is the first of the stack and is applied, the "
 "other Modifiers will act over the resulting meshes using the resulting "
 "topology and will remain in the modifiers stack."
 msgstr "当布尔修改器是栈上第一个修改器并且应用后，其他修改器将作用于布尔操作后的网面，用布尔操作后的拓扑，并且留在修改器栈上。"
@@ -441,8 +447,9 @@ msgid "The target topology determines the resulting topology"
 msgstr "目标拓扑决定着最终的拓扑。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:243
+#, fuzzy
 msgid ""
-"The target topology determines the results of the Boolean modifier "
+"The target topology determines the results of the Boolean Modifier "
 "operation. It means that any modifier added to the target which modifies "
 "its topology will affect the resulting mesh of the operation."
 msgstr "目标拓扑确定着布尔修改器操作的结果。这意味着，任何添加到目标并修改其拓扑的修改器会影响操作的最终网面。"
@@ -486,13 +493,13 @@ msgstr "面的法线"
 #: ../../manual/modeling/modifiers/generate/booleans.rst:274
 #, fuzzy
 msgid ""
-"When using the Boolean modifier, Blender will use the face normal "
+"When using the Boolean Modifier, Blender will use the face normal "
 "directions to calculate the three Boolean operations. The direction of "
 "the normals will define the result of the three available operations. "
 "When one of the participants has inverted normals, you are in fact "
 "multiplying the operation by -1 and inverting the calculation order. You "
 "can, at any time, select your modified mesh, enter Edit Mode and flip the"
-" normals to change the behavior of the Boolean modifier. See Tips: Fixing"
+" normals to change the behavior of the Boolean Modifier. See Tips: Fixing"
 " Mixed Normals below."
 msgstr ""
 "当使用布尔修改器时，Blender会使用面的法线朝向来计算三种布尔操作。法线的朝向决定着选用三种操作中的哪种。当参与者的法线是反的时，你实际上是在对操作乘上"
@@ -530,7 +537,7 @@ msgstr "图16 - 法线朝外的面"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:301
 #, fuzzy
-msgid "Normal Boolean modifier operation (Difference operation)."
+msgid "Normal Boolean Modifier operation (Difference operation)."
 msgstr "图17 - 正常的布尔修改器操作（差操作）"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:304
@@ -547,14 +554,14 @@ msgstr "将使用的布尔操作。"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:314
 #, fuzzy
-msgid "Normal Boolean modifier operation."
+msgid "Normal Boolean Modifier operation."
 msgstr "图17 - 正常的布尔修改器操作（差操作）"
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:317
 #, fuzzy
 msgid ""
 "Now, let us see what happens when the normal directions are mixed for one"
-" of the participants in the Boolean modifier operation. The images below "
+" of the participants in the Boolean Modifier operation. The images below "
 "show face normals mixed, pointed to different directions and the "
 "resulting operation, you can see that the modifier has bad effects when "
 "applied, leaving faces opened:"
@@ -577,7 +584,7 @@ msgid ""
 "sides, but cannot be mixed in opposite directions for the faces of the "
 "participants. The Library cannot determine properly what is positive and "
 "negative for the operation, so the results will be bad or you will have "
-"no effect when using the Boolean modifier operation."
+"no effect when using the Boolean Modifier operation."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/booleans.rst:338
@@ -652,7 +659,7 @@ msgstr "布尔修改器允许您使用张开的网面或非闭合形体 (非张�
 #: ../../manual/modeling/modifiers/generate/booleans.rst:380
 #, fuzzy
 msgid ""
-"When using open meshes or non-closed volumes, the Boolean modifier will "
+"When using open meshes or non-closed volumes, the Boolean Modifier will "
 "not perform any operation in faces that do not create a new topology "
 "filled with faces using the faces of the target."
 msgstr "当使用张开的网面或非封闭形体，布尔修改器不会对这样的面执行任何操作，这些面不会以目标的面来填充面而创建新的拓扑。"
@@ -816,4 +823,46 @@ msgstr ""
 
 #~ msgid "Boolean Modifier with error message."
 #~ msgstr "图13 - 布尔修改器，显示着出错信息。"
+
+#~ msgid ""
+#~ "The Boolean modifier performs operations "
+#~ "on meshes that are otherwise too "
+#~ "complex to achieve with as few "
+#~ "steps by editing meshes manually. The"
+#~ " Boolean modifier uses one of three"
+#~ " Boolean operations that can be used"
+#~ " to create a single mesh out of"
+#~ " two mesh objects:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To use the *Boolean Modifier* select "
+#~ "the desired mesh Object then add a"
+#~ " *Boolean modifier*. When you add the"
+#~ " Boolean modifier for an object, "
+#~ "Blender will need a second object "
+#~ "to be the target of the operation."
+#~ " You can use open or closed "
+#~ "meshes, as long as they have "
+#~ "available face normals for the "
+#~ "calculations to take effect. You can "
+#~ "add one or more modifiers of this"
+#~ " type for an Object but you can"
+#~ " only apply one operation for the "
+#~ "Boolean modifier at a time."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see, the normal "
+#~ "directions can be pointing to any "
+#~ "of the Mesh sides, but cannot be"
+#~ " mixed in opposite directions for the"
+#~ " faces of the participants. The "
+#~ "Library cannot determine properly what "
+#~ "is positive and negative for the "
+#~ "operation, so the results will be "
+#~ "bad or you will have no effect "
+#~ "when using the Boolean modifier "
+#~ "operation."
+#~ msgstr ""
 

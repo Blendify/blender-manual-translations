@@ -1,20 +1,18 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-#   https://www.blender.org/manual/ru/render/cycles/nodes/types/shaders/glossy.html
+#
+# https://www.blender.org/manual/ru/render/cycles/nodes/types/shaders/glossy.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
-#
+# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
 # Список переводчиков
 # ===================
-#
 # Mingun <alexander_sergey@mail.ru>, 2016.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-07 09:50-0400\n"
+"POT-Creation-Date: 2016-12-28 11:47-0500\n"
 "PO-Revision-Date: 2016-10-17 22:17+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -23,17 +21,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-# Mingun: правильный перевод - «Глянцевая BSDF», поскольку «функция» женского
-# рода.
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:4
 msgid "Glossy Node"
 msgstr "Узел «Глянцевый BSDF»"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:10
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:9
 msgid "Glossy Node."
 msgstr "Узел «Глянцевый BSDF»"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:12
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:11
 msgid ""
 "The *Glossy* :abbr:`BSDF (Bidirectional scattering distribution "
 "function)` node is used to add reflection with microfacet distribution, "
@@ -66,65 +62,107 @@ msgid "Roughness"
 msgstr "Шероховатость"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:21
-msgid ""
-"Influences sharpness of the reflection; perfectly sharp at 0.0 and "
-"smoother with higher values."
+msgid "Input for the surface roughness resulting in sharp to blurry reflections."
 msgstr ""
-"Влияние шероховатости на отражение; отражение идеально резкое при "
-"значении 0.0 и сглаженное при более высоких значениях."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:24
 msgid "Normal"
 msgstr "Норм."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:23
-msgid ""
-"Normal used for shading; if nothing is connected the default shading "
-"normal is used."
+msgid "Normal used for shading."
 msgstr ""
-"Используемая для затенения нормаль; если к сокету не привязано никакого "
-"узла, будет использоваться нормаль по-умолчанию."
 
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:27
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:32
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:39
 msgid "Distribution"
 msgstr "Распределение"
 
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:30
-msgid ""
-"Microfacet distribution to use. *Sharp* results in perfectly sharp "
-"reflections like a mirror, while *Beckmann*, *GGX* and *Ashikhmin-"
-"Shirley* can use the *Roughness* input for blurry reflections."
+msgid "Microfacet distribution to use."
 msgstr ""
-"Используемое распределение микрограней. Распределение *Остро* даст "
-"идеально резкое отражение, как в зеркале, тогда как распределения "
-"*Бекман*, *GGX* и *Ашихмин-Ширли* могут использовать вход *Шероховатость*"
-" для замыливания отражений."
+
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:32
+msgid "Sharp"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:33
+msgid ""
+"Results in perfectly sharp reflections like a mirror. The *Roughness* "
+"value is not used."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:36
+msgid "Multiple-scattering GGX"
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:35
+msgid ""
+"Takes multiple bounce (scattering) events between microfacets into "
+"account. This gives a more energy conserving results, which would else be"
+" visible as excessive darkening."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:38
+msgid "Beckmann, GGX, Ashikhmin-Shirley"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:42
 msgid "Outputs"
 msgstr "Выходы"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:39
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:46
 msgid "BSDF"
 msgstr "BSDF"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:38
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:45
 msgid "Standard shader output."
 msgstr "Стандартный выход шейдера."
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:42
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:49
 msgid "Examples"
 msgstr "Примеры"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:47
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:54
 msgid "Sharp Glossy"
 msgstr "Блестящий глянец"
 
-#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:48
+#: ../../manual/render/cycles/nodes/types/shaders/glossy.rst:55
 msgid "Rough Glossy"
 msgstr "Матовый глянец"
+
+#~ msgid ""
+#~ "Influences sharpness of the reflection; "
+#~ "perfectly sharp at 0.0 and smoother "
+#~ "with higher values."
+#~ msgstr ""
+#~ "Влияние шероховатости на отражение; отражение"
+#~ " идеально резкое при значении 0.0 и"
+#~ " сглаженное при более высоких значениях."
+
+#~ msgid ""
+#~ "Normal used for shading; if nothing "
+#~ "is connected the default shading normal"
+#~ " is used."
+#~ msgstr ""
+#~ "Используемая для затенения нормаль; если "
+#~ "к сокету не привязано никакого узла, "
+#~ "будет использоваться нормаль по-умолчанию."
+
+#~ msgid ""
+#~ "Microfacet distribution to use. *Sharp* "
+#~ "results in perfectly sharp reflections "
+#~ "like a mirror, while *Beckmann*, *GGX*"
+#~ " and *Ashikhmin-Shirley* can use the"
+#~ " *Roughness* input for blurry reflections."
+#~ msgstr ""
+#~ "Используемое распределение микрограней. "
+#~ "Распределение *Остро* даст идеально резкое "
+#~ "отражение, как в зеркале, тогда как "
+#~ "распределения *Бекман*, *GGX* и "
+#~ "*Ашихмин-Ширли* могут использовать вход "
+#~ "*Шероховатость* для замыливания отражений."
 
