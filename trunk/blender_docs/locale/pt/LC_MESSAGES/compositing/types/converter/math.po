@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: 2016-12-30 10:19-0300\n"
+"PO-Revision-Date: 2016-12-31 08:23-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "Este exemplo possui uma entrada de cena fornecida pelo nó de *Camadas d
 
 #: ../../manual/compositing/types/converter/math.rst:67
 msgid "For the minimum function, the node selects those Z values where the corresponding pixel is closer to the camera; so it chooses the Z values for the plane and part of the cube. The background has an infinite Z value, so it is clamped to 1.0 (shown as white). In the maximum example, the Z values of the cube are greater than the plane, so they are chosen for the left side, but the plane (FlyCam) Render layers Z are infinite (mapped to 1.0) for the right side, so they are chosen."
-msgstr ""
+msgstr "Para a função \"mínimo\", o nó seleciona aqueles valores de profundidade Z cujos pixeis correspondentes estão mais próximos da câmera; portanto, ele escolhe os valores Z para o plano e parte do cubo. O plano de fundo possui um valor de Z infinito, portanto será limitado (truncado) em 1.0 (mostrado na cor branca). No exemplo \"máximo\", os valores de profundidade Z do cubo são maiores que os do plano, portanto eles são escolhidos para o lado esquerdo, mas as profundidades Z das camadas de renderização referentes ao o plano (do voo de câmera) são infinitos (mapeados em 1.0) para o lado direito, portanto eles foram escolhidos."
 
 #: ../../manual/compositing/types/converter/math.rst:77
 msgid "Using Sine Function to Pulsate"
@@ -103,19 +103,19 @@ msgstr "Usando a função senoidal para criar pulsos"
 
 #: ../../manual/compositing/types/converter/math.rst:81
 msgid "This example has a *Time* node putting out a linear sequence from 0 to 1 over the course of 101 frames. The green vertical line in the curve widget shows that frame 25 is being put out, or a value of 0.25. That value is multiplied by 2 × pi and converted to 1.0 by the Sine function, since we all know that :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0` Since the sine function can put out values between (-1.0 to 1.0), the *Map Value* node scales that to 0.0 to 1.0 by taking the input (-1 to 1), adding 1 (making 0 to 2), and multiplying the result by one-half (thus scaling the output between 0 to 1). The default *Color Ramp* converts those values to a grayscale. Thus, medium gray corresponds to a 0.0 output by the sine, black to -1.0, and white to 1.0. As you can see, :math:`sin(pi/ 2) = 1.0`. Like having your own visual color calculator! Animating this node setup provides a smooth cyclic sequence through the range of grays."
-msgstr ""
+msgstr "Este exemplo possui um nó do tipo *Tempo* inserindo valores de uma sequência linear que vai de 0 a 1 sobre o curso de 101 quadros. A linha vertical verde dentro do assistente de curvas mostra que o quadro 25 está sendo inserido, ou, um valor de 0.25. Este valor é multiplicado por 2 X Pi e convertido para 1.0 pela função *seno*, devido ao fato de sabermos que :math:`seno(2 × pi/ 4) = seno(pi/ 2) = +1.0` . Devido ao fato da função seno poder resultar em valores entre (-1.0 to 1.0), o nó do tipo *Mapear valor* escalona estes valores para o intervalo entre 0.0 e 1.0 pela tomada dos valores de entrada que estão entre (-1 a 1), adicionando 1 (tornando o intervalo entre 0 e 2), e multiplicando o resultado pela metade de 1 (portanto, escalonando a saída entre 0 e 1). O nó do tipo *Gradiente de cores* converte estes valores para uma escala de cinza. Portanto, os cinzas médios correspondem a saída de 0.0 pelo cálculo do seno, e o preto estará em -1.0, tendo o branco como 1.0. Como você pode ver, :math:`seno(pi/ 2) = 1.0`. Isso é como ter sua própria calculadora visual de cores ! A animação desta configuração de nós fornece uma sequência cíclica através da amplitude das escalas de cinza. "
 
 #: ../../manual/compositing/types/converter/math.rst:93
 msgid "Use this function to vary, for example, the alpha channel of an image to produce a fading in/out effect. Alter the Z channel to move a scene in/out of focus. Alter a color channel value to make a color \"pulse\"."
-msgstr ""
+msgstr "Utilize esta função para variar, por exemplo, o canal alfa de uma imagem para produzir um efeito de aparecimento (*fade in* em Inglês) ou esmaecimento (*fade out*  em Inglês). altere o canal Z para mover a cena para dentro ou para fora do foco. Altere os valores dos canais de cores para criar uma espécie de \"pulso\" de cores. "
 
 #: ../../manual/compositing/types/converter/math.rst:100
 msgid "Brightening/Scaling a Channel"
-msgstr ""
+msgstr "Escalonando ou tornando um canal mais brilhante"
 
 #: ../../manual/compositing/types/converter/math.rst:104
 msgid "This example has a *Math: Multiply* node increasing the luminance channel (Y) of the image to make it brighter. Note that you should use a *Map Value node* with min() and max() enabled to clamp the output to valid values. With this approach, you could use a logarithmic function to make a high-dynamic range image. For this particular example, there is also a *Brighten/Contrast node* that might give simpler control over brightness."
-msgstr ""
+msgstr "Este exemplo tem um nó to tipo matemática usando a função *multiplicar* para aumentar o canal de luminância (Y) da imagem para torná-la mais brilhante. Note que você deverá usar um nó do tipo *Mapear valores* com as opções máximo() e mínimo() habilitadas para limitar a saída para valores válidos. Através desta abordagem, você pode utilizar uma função logarítmica para criar uma imagem de alta amplitude dinâmica (ou seja, uma imagem conhecida como \"HDRI\"). Para este exemplo em particular, também há um nó do tipo \"Brilho e contraste\" que pode fornecer um controle mais simples sobre o brilho."
 
 #: ../../manual/compositing/types/converter/math.rst:113
 msgid "Quantize/Restrict Color Selection"
@@ -195,13 +195,13 @@ msgstr ""
 
 #: ../../manual/compositing/types/converter/math.rst:233
 msgid "The ``JPG`` or ``PNG`` image format will store each of the colors according to their image standard for color depth (e.g. ``JPG`` is 24-bit), but the image will be very very small since reducing color depth and quantizing colors are essentially what the ``JPEG`` compression algorithm accomplishes."
-msgstr ""
+msgstr "Os formatos de imagem em  ``JPG`` ou ``PNG`` irão guardar cada uma das cores de acordo com seus padrões de imagem para a profundidade de cores  (por exemplo, ``JPG`` usa até 24 bits), mas a imagem será bem pequena,  devido ao fato de que a redução da profundidade de cores e a quantização de cores são essencialmente o que o algoritmo de compressão  ``JPEG`` realiza."
 
 #: ../../manual/compositing/types/converter/math.rst:238
 msgid "You do not have to reduce the color depth of each channel evenly. For example, if blue was the dominant color in an image, to preserve image quality, you could reduce Red to 2 values, Green to 4, and let the blue take on :math:`256/(2 × 4)` or 32 values. If using the HSV, you could reduce the Saturation and Value to 2 values (0 or 1.0) by Multiply by 2 and Divide by 2, and restrict the Hue to 64 possible values."
-msgstr ""
+msgstr "Você não tem de reduzir a profundidade de cores de cada um dos canais de maneira uniforme. Por exemplo, caso o azul seja a cor dominante em uma imagem, para preservar a qualidade de imagem, você pode reduzir o vermelho em 2 valores, o verde para 4 e permitir que o azul esteja em toda a escala de :math:`256/(2 × 4)` or 32 valores. Caso esteja utilizando o nó do tipo \"Matiz, saturação e valor\", você pode reduzir o valor e a saturação para apenas dois valores (0 ou 1) multiplicando-os por 2 e dividindo-os por 2, e restringir a matiz para os 64 valores possíveis."
 
 #: ../../manual/compositing/types/converter/math.rst:244
 msgid "You can use this node setup to quantize any channel; alpha, speed (vector), z-values, and so forth."
-msgstr ""
+msgstr "Você pode usar esta configuração de nós para quantizar quaisquer canais, alfa, velocidade (vetor), valores-Z, dentre outros."
 
