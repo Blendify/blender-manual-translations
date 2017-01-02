@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: 2017-01-01 11:57-0300\n"
+"PO-Revision-Date: 2017-01-02 11:12-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgstr "`Duas abordagens para a quantização para seis valores (em Inglês) <ht
 
 #: ../../manual/compositing/types/converter/math.rst:139
 msgid "To accomplish this quantization of an image to 256 possible values, let us use the set {6, 6, 7}. To split up a continuous range of values between 0 and 1 (the full Red spectrum) into six values, we need to construct an algorithm or function that takes any input value but only puts out six possible values, as illustrated by the image to the right. We want to include zero as true black, with five other colors in between. The approach shown produces {0, 0.2, 0.4, 0.6, 0.8, 1}. Dividing 1.0 by 5 equals 0.2, which tells how far apart each quantified value is from the other."
-msgstr ""
+msgstr "Para conseguir esta quantização de uma imagem com 256 valores possíveis, vamos utilizar o conjunto {6, 6, 7}. Para separar um intervalo contínuo de valores entre 0 e 1 (o espectro completo do vermelho) em sei valores, nós precisaremos construir um algoritmo que toma qualquer valor de entrada mas que faz com que os valores de saída sejam apenas seis possíveis, como ilustrado pela imagem a direita. Nós queremos incluir o zero como o preto puro, com cinco outras cores nesse entremeio. A abordagem produz  {0, 0.2, 0.4, 0.6, 0.8, 1}. Dividindo 1.0 por 5 resulta em 0.2, o que expressa a quantidade de separação que cada valor quantificado terá em relação aos outros."
 
 #: ../../manual/compositing/types/converter/math.rst:147
 msgid "So, to get good even shading, we want to take values that are 0.16 or less and map them to 0.0; values between 0.16 and 0.33 get fixed to 0.2; color band values between 0.33 and 0.5 get quantized to 0.4, and so on up to values between 0.83 and 1.0 get mapped to 1.0."
@@ -163,7 +163,7 @@ msgstr "A teoria por detrás desta função é a truncagem escalonada. Suponha q
 
 #: ../../manual/compositing/types/converter/math.rst:183
 msgid "Sometimes using a spreadsheet can help you figure out how to put these nodes together to get the result that you want. Stepping you through the formula for :math:`n = 6` and :math:`x = 0.70`, locate the line on the spreadsheet that has the 8-bit value 179 and R value 0.7. Multiplying by 6 gives 4.2 . Subtracting 1/2 gives 3.7, which rounds up to 4.4 divided by 5 = 0.8. Thus, f(0.7, 6) = 0.8 or an 8-bit value of 204. You can see that this same 8-bit value is output for a range of input values."
-msgstr ""
+msgstr "Algumas vezes, o uso de uma tabela de cálculo pode ajudar você a entender como colocar estes nós em conjunto para obter o resultado que deseja. Caminhando (traçando) a fórmula para  :math:`n = 6` e :math:`x = 0.70`, localize a linha na tabela de cálculo que possui o valor de 8 bits em 179 e o valor para o vermelho em 0.7. A multiplicação por 6 resulta em 4.2. A subtração de sua metade resulta em 3.7, o que arredonda para 4.4, que quando dividido por 5 , resulta em 0.8. Portanto, f(0.7, 6) = 0.8 ou um valor de 8 bits de 204. Você pode pode ver que esse mesmo valor de 8 bits é a saída para um intervalo de valores de entrada."
 
 #: ../../manual/compositing/types/converter/math.rst:192
 msgid "Reality"
@@ -191,7 +191,7 @@ msgstr "Normalmente, uma saída de renderização consiste em uma profundidade d
 
 #: ../../manual/compositing/types/converter/math.rst:227
 msgid "While this example uses the Separate/Combine RGB to create distinct colors, other Separate/Combine nodes can be used as well. If using the YUV values, remember that U and V vary between (-0.5 to +0.5), so you will have to first add on a half to bring the range between 0 and 1, and then after dividing, subtract a half to bring in back into standard range."
-msgstr ""
+msgstr "Enquanto esse exemplo utiliza os nós do tipo \"Combinar RGB\" e \"Separar RGB\" para criar cores distintas, outros nós para \"Separar\" e \"Combinar\" também podem ser usados. Caso esteja utilizando os valores YUV, lembre-se que as grandezas U e V variam no intervalo entre  (-0.5 to +0.5), portanto você deve inicialmente adicionar a metade de 1.0 para posicionar essa grandeza no intervalo entre 0 e 1, e então, após a divisão, subtrair a metade de 1 novamente para reposicioná-la em seu intervalo de amplitude padrão."
 
 #: ../../manual/compositing/types/converter/math.rst:233
 msgid "The ``JPG`` or ``PNG`` image format will store each of the colors according to their image standard for color depth (e.g. ``JPG`` is 24-bit), but the image will be very very small since reducing color depth and quantizing colors are essentially what the ``JPEG`` compression algorithm accomplishes."
@@ -199,7 +199,7 @@ msgstr "Os formatos de imagem em  ``JPG`` ou ``PNG`` irão guardar cada uma das 
 
 #: ../../manual/compositing/types/converter/math.rst:238
 msgid "You do not have to reduce the color depth of each channel evenly. For example, if blue was the dominant color in an image, to preserve image quality, you could reduce Red to 2 values, Green to 4, and let the blue take on :math:`256/(2 × 4)` or 32 values. If using the HSV, you could reduce the Saturation and Value to 2 values (0 or 1.0) by Multiply by 2 and Divide by 2, and restrict the Hue to 64 possible values."
-msgstr "Você não tem de reduzir a profundidade de cores de cada um dos canais de maneira uniforme. Por exemplo, caso o azul seja a cor dominante em uma imagem, para preservar a qualidade de imagem, você pode reduzir o vermelho em 2 valores, o verde para 4 e permitir que o azul esteja em toda a escala de :math:`256/(2 × 4)` or 32 valores. Caso esteja utilizando o nó do tipo \"Matiz, saturação e valor\", você pode reduzir o valor e a saturação para apenas dois valores (0 ou 1) multiplicando-os por 2 e dividindo-os por 2, e restringir a matiz para os 64 valores possíveis."
+msgstr "Você não tem de reduzir a profundidade de cores de cada um dos canais de maneira uniforme. Por exemplo, caso o azul seja a cor dominante em uma imagem, para preservar a qualidade de imagem, você pode reduzir o vermelho em 2 valores, o verde para 4 e permitir que o azul esteja em toda a escala de :math:`256/(2 × 4)` ou 32 valores. Caso esteja utilizando o nó do tipo \"Matiz, saturação e valor\", você pode reduzir o valor e a saturação para apenas dois valores (0 ou 1) multiplicando-os por 2 e dividindo-os por 2, e restringir a matiz para os 64 valores possíveis."
 
 #: ../../manual/compositing/types/converter/math.rst:244
 msgid "You can use this node setup to quantize any channel; alpha, speed (vector), z-values, and so forth."
