@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-07 09:50-0400\n"
-"PO-Revision-Date: 2017-01-05 14:33-0300\n"
+"PO-Revision-Date: 2017-01-08 10:32-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -160,7 +160,7 @@ msgstr "Diferença"
 
 #: ../../manual/compositing/types/color/mix.rst:85
 msgid "Kinda cute in that it takes out a color. The color needed to turn Yellow into White is Blue. Use this to compare two verrry similar images to see what had been done to one to make it the other; sorta like a change log for images. You can use this to see a watermark (see `Watermark images`_) you have placed in an image for theft detection."
-msgstr ""
+msgstr "Este é um nó bacana para a retirada de cores. A cor necessária para tornar o amarelo em branco é o azul. Utilize isto para comparar duas imagens bem similares para ver o que foi feito em uma para torná-la em outra; o resultado seria como um relatório (log) de alterações para imagens. Você pode utilizar este nó para ver a marca d'água (veja `Inserindo marcas d'água em imagens`_) que você colocou em uma imagem para detecção de usurpações."
 
 #: ../../manual/compositing/types/color/mix.rst:91
 msgid "Darken"
@@ -176,19 +176,19 @@ msgstr "Aumento de constraste"
 
 #: ../../manual/compositing/types/color/mix.rst:96
 msgid "Here is a small map showing the effects of two other common uses for the RGB Curve: *Darken* and *Contrast Enhancement*. You can see the effect each curve has independently, and the combined effect when they are *mixed* equally."
-msgstr ""
+msgstr "Aqui está um pequeno mapa mostrando os efeitos de duas outras utilizações comuns para o nó do tipo \"Curvas RGB\": *Escurecer* e *Aumento de contraste*. Você pode ver que os efeitos resultante de cada uma das curvas independentemente, e o efeito combinado quando elas são *misturadas* de maneira equânime."
 
 #: ../../manual/compositing/types/color/mix.rst:103
 msgid "Example node setup showing \"Darken\", \"Enhance Contrast\" and \"Mix\" nodes for composition."
-msgstr ""
+msgstr "Exemplo de configuração de nós mostrando os nós do tipo \"Escurecer\", \"Melhoria de contraste\" e \"Misturar\" para composição."
 
 #: ../../manual/compositing/types/color/mix.rst:106
 msgid "As you can hopefully see, our original magic monkey was overexposed by too much light. To cure an overexposure, you must both darken the image and enhance the contrast."
-msgstr ""
+msgstr "Como você poderá perceber, nosso macaco mágico original foi superexposto por muita luz. Para consertar uma superexposição, você deverá tanto escurecer a imagem quando executar um aumento de contraste."
 
 #: ../../manual/compositing/types/color/mix.rst:109
 msgid "In the top RGB curve, *Darken*, only the right side of the curve was lowered; thus, any X input along the bottom results in a geometrically less Y output. The *Enhance Contrast* RGB (S shaped) curve scales the output such that middle values of X change dramatically; namely, the middle brightness scale is expanded, and thus, whiter whites and blacker blacks are output. To make this curve, simply click on the curve and a new control point is added. Drag the point around to bend the curve as you wish. The Mix node combines these two effects equally, and Suzanne feels much better."
-msgstr ""
+msgstr "Na curva RGB mais acima (*Escurecer*), somente o lado direito da curva teve seus valores reduzidos, portanto, qualquer entrada em X ao longo da base resultará em uma saída geometricamente menor em Y. O *Aumento de contraste* (Com a curva em formato de S) escalona a saída de maneira que os valores medianos de X sejam alterados drasticamente; nomeadamente, a escala do brilho mediano é expandida, e portanto, os brancos se tornam mais brancos e as cores pretas, mais pretas. Para criar esta curva, simplesmente clique na curva e um novo ponto de controle será adicionado. Arraste o ponto um pouco para conformar a curva de acordo com sua vontade. O nó do tipo *Misturar* combina esses dois efeitos de maneira equânime, e a *Suzanne* \"se sentirá bem melhor\"."
 
 #: ../../manual/compositing/types/color/mix.rst:120
 msgid "Watermark images"
@@ -196,23 +196,23 @@ msgstr "Inserindo marcas d'água em imagens"
 
 #: ../../manual/compositing/types/color/mix.rst:122
 msgid "In the old days, a pattern was pressed into the paper mush as it dried, creating a mark that identified who made the paper and where it came from. The mark was barely perceptible except in just the right light. Probably the first form of subliminal advertising. Nowadays, people watermark their images to identify them as personal intellectual property, for subliminal advertising of the author or hosting service, or simply to track their image's proliferation throughout the web. Blender provides a complete set of tools for you to both encode your watermark and to tell if an image has your watermark."
-msgstr ""
+msgstr "Na antiguidade, um padrão era pressionado contra os papéis conforme estes secavam, criando uma marca que identificava quem fez o papel e de onde ele veio. A marca era pouco perceptível, a menos que colocada diante de uma iluminação adequada. Provavelmente a primeira forma de propaganda subliminar. Hoje em dia, as pessoas colocam marcas d'água em duas imagens para identificá-las como sua propriedade intelectual, para propaganda subliminar do autor ou serviço de hospedagem, ou simplesmente para rastrear a proliferação de suas imagens através da internet. O Blender fornece um conjunto completo de ferramentas para que você possa tanto codificar quanto decodificar as suas marcas d'água para informar se uma imagem possui a sua marca d'água."
 
 #: ../../manual/compositing/types/color/mix.rst:133
 msgid "Encoding Your Watermark in an Image"
-msgstr ""
+msgstr "Codificando sua marca d'água em uma imagem"
 
 #: ../../manual/compositing/types/color/mix.rst:135
 msgid "First, construct your own personal watermark. You can use your name, a word, or a shape or image not easily replicated. While neutral gray works best using the encoding method suggested, you are free to use other colors or patterns. It can be a single pixel or a whole gradient; it is up to you. In the example below, we are encoding the watermark in a specific location in the image using the *Translate* node; this helps later because we only have to look at a specific location for the mark. We then use the RGB to BW node to convert the image to numbers that the Map Value node can use to make the image subliminal. In this case, it reduces the mark to one-tenth of its original intensity. The Add node adds the corresponding pixels, make the ones containing the mark ever-so-slightly brighter."
-msgstr ""
+msgstr "Primeiramente, construa a sua marca d'água pessoal. Você pode utilizar seu nome, uma palavra, ou um formato ou imagem não replicável de maneira simples. Ainda que a cor cinza funcione melhor usando o método de codificação sugerido, você é livre para usar outras cores ou padrões. Podem ser usados pixeis únicos ou uma gradiente completa; depende de você. No exemplo abaixo, nós estamos codificando uma marca d'água em uma localização específica usando o nó do tipo *Mover* (nós de distorção); Isto ajudará posteriormente pois é a única maneira de observar uma localização específica para a pesquisa da marca. Nós então utilizaremos o nó do tipo *Cores para preto e branco* para converter a imagem em números que o nó do tipo *Mapear valores* poderá usar para tornar a imagem subliminar. Neste caso, ele reduzirá a marca para um décimo de sua intensidade original. O nó do tipo *Adicionar* adicionará os pixeis correspondentes, e tornará aqueles que conterão a marca indelével, um pouco mais brilhantes."
 
 #: ../../manual/compositing/types/color/mix.rst:149
 msgid "Embedding your mark in an Image using a Mark and Specific Position."
-msgstr ""
+msgstr "Embutindo sua marca em uma imagem usando uma marcação e uma posição específica."
 
 #: ../../manual/compositing/types/color/mix.rst:152
 msgid "Of course, if you *want* people to notice your mark, do not scale it so much, or make it a contrasting color. There are also many other ways, using other mix settings and fancier rigs. Feel free to experiment!"
-msgstr ""
+msgstr "Caso você queira que as pessoas *percebam* claramente a sua marca, não a escalone em demasiado, ou torne-a em uma cor contrastante. Existem também outras maneiras, usando outras definições de mistura e arranjos mais chiques. Sinta-se livre para experimentar !"
 
 #: ../../manual/compositing/types/color/mix.rst:156
 msgid "Additional uses"
@@ -236,5 +236,5 @@ msgstr "Verificando uma imagem para ver sua marca d'água."
 
 #: ../../manual/compositing/types/color/mix.rst:177
 msgid "Various image compression algorithms lose some of the original; the difference shows as noise. Experiment with different compression settings and marks to see which works best for you by having the encoding map in one scene, and the decoding map in another. Use them while changing Blender's image format settings, reloading the watermarked image after saving, to get an acceptable result. In the example above, the mark was clearly visible all the way up to ``JPEG`` compression of 50%."
-msgstr ""
+msgstr "Diversos algoritmos de compressão de imagens perdem informações em relação a imagem original; a diferença é mostrada em formato de ruídos. A experimentação através de diferentes definições de compressão e marcações é uma tarefa necessária para descoberta do que é melhor para você, pois permite um mapa de codificação em uma cena e um mapa de decodificação em outra. Utilize-os para a as alterações de formato de imagens de saída do Blender, recarregando a imagem com a marca d'água após salvá-la, até que obtenha um resultado aceitável. No exemplo acima, a marca está claramente visível mesmo com uma compressão  ``JPEG`` de 50%."
 
