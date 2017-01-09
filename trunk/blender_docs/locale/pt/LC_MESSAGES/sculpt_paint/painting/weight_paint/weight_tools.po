@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-28 11:47-0500\n"
-"PO-Revision-Date: 2017-01-08 18:39-0300\n"
+"PO-Revision-Date: 2017-01-09 21:34-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -284,24 +284,24 @@ msgstr "Opções de limpeza."
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:222
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:402
 msgid "Restrict the tool to a subset. See above `The Subset Option`_ for how subsets are defined."
-msgstr ""
+msgstr "Restringe a ferramenta a um subconjunto. Veja a seção  `Opções para subconjuntos`_ que explica como os subconjuntos são definidos."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:190
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:405
 msgid "Limit"
-msgstr ""
+msgstr "Limitar"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:190
 msgid "This is the minimum weight value that will be kept in the Group. Weights below this value will be removed from the group."
-msgstr ""
+msgstr "Este é o valor mínimo de pesos de influência que será mantido dentro do grupo. Pesos de influência abaixo deste valor serão removidos a partir do grupo."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:196
 msgid "Keep Single"
-msgstr ""
+msgstr "Manter um único"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:193
 msgid "Ensure that the Clean tool will not create completely unreferenced vertices (vertices which are not assigned to any Vertex Group), so each vertex will keep at least one weight, even if it is below the limit value!"
-msgstr ""
+msgstr "Certifica-se que a ferramenta *Limpar* não irá criar vértices sem nenhuma referência (ou seja, vértices que não estão atribuídos a nenhum *Grupo de vértices*), de maneira que cada vértice irá manter ao menos uma referência de pesos, mesmo que esteja abaixo do valor limite !"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:199
 msgid "Levels"
@@ -357,71 +357,71 @@ msgstr "A mesclagem."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:245
 msgid "To understand what the tool really does, let us take a look at a simple example. The selected vertex is connected to four adjacent vertices (marked with a gray circle in the image). All adjacent vertices are unselected. Now the tool calculates the average weight of all connected **and** unselected vertices. In the example this is:"
-msgstr ""
+msgstr "Para entender o que a ferramenta realmente faz, vamos dar uma olhada em um exemplo simples. Os vértices selecionados estão conectados a quatro vértices adjacentes (marcados com um círculo cinza na imagem). Todos os vértices adjacentes estão de-selecionados. Agora, a ferramenta calcula a média dos pesos de influência de todos os vértices conectados **e** de todos os vértices não selecionados. Neste exemplo, isto é:"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:251
 msgid ":math:`(1 + 0 + 0 + 0) / 4 = 0.25`"
-msgstr ""
+msgstr ":math:`(1 + 0 + 0 + 0) / 4 = 0.25`"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:253
 msgid "This value is multiplied by the factor given in the Operator parameters (see below)."
-msgstr ""
+msgstr "O valor é multiplicado pelo fator fornecido dentro dos parâmetros do operador (veja abaixo)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:255
 msgid "If the factor is 0.0 then actually nothing happens at all and the vertex just keeps its value."
-msgstr ""
+msgstr "Caso o fator seja 0.0, então atualmente nada ocorrerá em todos os vértices. Todos os seus valores serão mantidos."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:256
 msgid "If the factor is 1.0 then the calculated average weight is taken (0.25 here)."
-msgstr ""
+msgstr "Caso o fator seja 1.0, então a média dos pesos de influência calculados é tomada (0.25 aqui)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:257
 msgid "Dragging the factor from 0 to 1 gradually changes from the old value to the calculated average."
-msgstr ""
+msgstr "Arrastar o fator entre 0 e 1 gradualmente fará alterações a partir do valor anterior para a média calculada."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:264
 msgid "Now let us see what happens when we select all but one of the neighbors of the selected vertex as well. Again all connected and unselected vertices are marked with a gray circle. When we call the Blend tool now and set the Factor to 1.0, then we see different results for each of the selected vertices:"
-msgstr ""
+msgstr "Agora vamos ver o que ocorre quando nós selecionamos todos menos os vizinhos dos vértices selecionados também. Novamente todos os vértices conectados e não selecionados são marcados com um círculo cinza. Quando chamamos a ferramenta *Mesclar* nesse momento e definimos o fator para 1.0, então vemos que há diferentes resultados para cada um dos vértices selecionados."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:269
 msgid "The topmost and bottommost selected vertices:"
-msgstr ""
+msgstr "Os vértices selecionados mais ao topo e mais á base:"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:271
 msgid "are surrounded by three unselected vertices, with an average weight of :math:`(1 + 0 + 0) / 3 = 0.333` So their color has changed to light green."
-msgstr ""
+msgstr "estão circundados por três vértices não selecionados, com um peso médio de influência de  :math:`(1 + 0 + 0) / 3 = 0.333` . Portando as suas cores foram alteradas para verde claro."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:274
 msgid "The middle vertex:"
-msgstr ""
+msgstr "O vértice do meio:"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:276
 msgid "is connected to one unselected vertex with ``weight = 1``. So the average weight is 1.0 in this case, thus the selected vertex color has changed to red."
-msgstr ""
+msgstr "está conectado a um vértice não selecionado com um  ``peso de influẽncia = 1``. Portanto a média de pesos de influência é de 1.0 neste caso, portanto a cor dos vértices selecionados foi alterada para vermelho."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:279
 msgid "The right vertex:"
-msgstr ""
+msgstr "O vértices á direita:"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:281
 msgid "is surrounded by three unselected vertices with average weight = :math:`(0 + 0 + 0) / 3 = 0.0` So the average weight is 0, thus the selected vertex color has not changed at all (it was already blue before blend was applied)."
-msgstr ""
+msgstr "está circundado por três vértices não selecionados com uma média de pesos de influência de :math:`(0 + 0 + 0) / 3 = 0.0`. Portanto a média dos pesos de influẽncia é 0, e portanto a cor dos vértices selecionados não foi alterada de maneira alguma (anteriormente ela era azul antes da ferramenta de mescla ter sido aplicada)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:290
 msgid "Finally let us look at a practical example (and explain why this tool is named Blend). In this example, the middle edge loop has been selected and it will be used for blending the left side to the right side of the area."
-msgstr ""
+msgstr "Finalmente, vamos observar um exemplo prático (e explicar porque esta ferramenta é chamada de *Mesclar*). Neste exemplo, o anel de arestas no meio foi selecionado e será usado para a mesclagem com a lateral esquerda do lado direito da área."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:294
 msgid "All selected vertices have two unselected adjacent vertices."
-msgstr ""
+msgstr "Todos os vértices selecionados possuem dois vértices adjacentes não selecionados."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:295
 msgid "The average weight of the unselected vertices is :math:`(1 + 0) / 2 = 0.5`"
-msgstr ""
+msgstr "A média de pesos de influência dos vértices não selecionados é de :math:`(1 + 0) / 2 = 0.5`."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:296
 msgid "Thus when the Blend Factor is set to 1.0 then the edge loop turns to green and finally does blend the cold side (right) to the hot side (left)."
-msgstr ""
+msgstr "Portanto, quando o *Fator de mescla* é definido para 1.0, então o anel de arestas se torna verde e finalmente mescla-se com o lado mais frio (direito) do lado mais quente (esquerdo)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:305
 msgid "Blend Options."
@@ -433,7 +433,7 @@ msgstr "Fator"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:308
 msgid "The effective amount of blending. When Factor is set to 0.0 then the Blend tool does not do anything. For Factor > 0 the weights of the affected vertices gradually shift from their original value towards the average weight of all connected **and** unselected vertices (see examples above)."
-msgstr ""
+msgstr "A quantidade efetiva de mesclagem. Quando o fator é definido para 0.0, então a ferramenta de mescla não executa nenhuma operação. Para fatores maiores que 0.0, os pesos dos vértices afetados são gradualmente alterados a partir de seus valores originais em direção á média dos valores de pesos de todos os vértices conectados **e** não conectados (veja os exemplos acima)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:315
 msgid "Transfer Weights"
@@ -441,7 +441,7 @@ msgstr "Transferência de pesos de influência"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:317
 msgid "Copy weights from other objects to the vertex groups of the active Object. By default this tool copies all vertex groups contained in the selected objects to the target object. However, you can change the tool's behavior in the Operator panel (see below)."
-msgstr ""
+msgstr "Copia os pesos a partir de outros objetos para os grupos de vértices do objeto ativo. Por padrão, esta ferramenta copia todos os grupos de vértices contidos dentro dos objetos selecionados para o objeto alvo. Contudo, você pode alterar o comportamento desta ferramenta dentro do painel do operador (veja abaixo)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:323
 msgid "Prepare the Copy"
@@ -449,31 +449,31 @@ msgstr "Preparando cópias"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:335
 msgid "You first select all source objects, and finally the target object (the target object must be the active object)."
-msgstr ""
+msgstr "Você deverá selecionar primeiramente todos os objetos de fonte, e finalmente o objeto alvo (o objeto alvo deverá ser o objeto ativo)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:338
 msgid "It is important that the source objects and the target object are at the same location. If they are placed side by side, then the weight transfer will not work. You can place the objects on different layers, but you have to ensure that all objects are visible when you call the tool."
-msgstr ""
+msgstr "É importante que os objetos de fonte e alvo (destinação) estejam na mesma localização. Caso eles estejam localizados lado a lado, então a transferência de pesos de influência não funcionará. Você pode posicionar os objetos em diferentes camadas, mas certifique-se de que todos os objetos estejam visíveis (que suas camadas estão ativas) quando acionar a ferramenta."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:343
 msgid "Now ensure that the Target Object is in Weight Paint Mode."
-msgstr ""
+msgstr "Agora certifique-se de que o *Objeto alvo* esteja no modo de *Pintura de influẽncia*. "
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:347
 msgid "Call the Tool"
-msgstr ""
+msgstr "Acione a ferramenta"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:349
 msgid "Open the Tool Shelf and locate the Weight Tools panel. From there call the \"Transfer weights\" tool. The tool will initially copy all vertex groups from the source objects. However, the tool also has an Operator panel (which appears at the bottom of the tool shelf). From the Operator panel you can change the parameters to meet your needs. (The available Operator parameters are documented below.)"
-msgstr ""
+msgstr "Abra a *Estante de ferramentas* e localize o painel de *Ferramentas para pesos de influẽncia*. A partir dele, acione a ferramenta \"Transferir pesos\". A ferramenta inicialmente copiará todos os grupos de vértices a partir dos objetos de fonte. Contudo, a ferramenta também possui um *Painel de operador* (que aparece na base da estante de ferramentas). A partir do painel de operador você pode alterar os parâmetros para que atendam as suas necessidades. (Os parâmetros disponíveis para o painel de operador estão documentados logo abaixo nesta página)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:359
 msgid "Operator Panel Confusion"
-msgstr ""
+msgstr "Confusão com o painel de operador"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:361
 msgid "You may notice that the Operator panel (see below) stays available after the weight transfer is done. The panel only disappears when you call another Operator that has its own Operator panel. This can lead to confusion when you use Transfer weights repeatedly after you changed your vertex groups. If you then use the still-visible Operator panel, then Blender will reset your work to its state right before you initially called the Transfer Weights tool."
-msgstr ""
+msgstr "Você poderá notar que o *Painel do operador* (veja abaixo) permanece disponível mesmo após a transferência de pesos ter sido executada. O painel somente desaparecerá quando você acionar outro painel de operador (acionando outra ferramenta) que tenha seu próprio painel. Isto pode levar em certos casos á uma confusão quando as transferências de pesos são feitas de maneira repetitiva após você ter alterado alguns grupos de vértices. caso você utilize o painel que está \"ainda visível\", o Blender irá redefinir o seu trabalho ao estado anterior á transferência de pesos, logo quando você acionou inicialmente a ferramenta *Transferir pesos*."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:370
 msgid "Workaround"
@@ -481,27 +481,27 @@ msgstr "Método de contorno"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:372
 msgid "When you want to call the Transfer Weights tool again after you made some changes to your vertex groups, then always use the \"Transfer Weights\" Button, even if the operator panel is still available. Unless you really want to reset your changes to the initial call of the tool."
-msgstr ""
+msgstr "Quando você quiser acionar a ferramenta *Transferir pesos* novamente logo após ter feito alterações em seus grupos de vértices, então utilize sempre o botão \"Transferir pesos\", mesmo que o painel do operador ainda esteja visível, a menos que você realmente tenha o desejo de redefinir as suas alterações para o momento em que você acionou a ferramenta inicialmente."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:383
 msgid "This tool now uses the generic 'data transfer' one. Please refer to the :doc:`Data Transfer </modeling/modifiers/modify/data_transfer>` docs for options details and explanations."
-msgstr ""
+msgstr "Esta ferramenta agora utiliza a chamada \"transferência genérica\". Por favor, refira-se a documentação presente na página  :doc:`Transferência de dados </modeling/modifiers/modify/data_transfer>` para o detalhamento das opções e explicações."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:388
 msgid "Limit Total"
-msgstr ""
+msgstr "Limitar total"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:390
 msgid "Reduce the number of weight groups per vertex to the specified Limit. The tool removes lowest weights first until the limit is reached."
-msgstr ""
+msgstr "Reduz o número de grupos de pesos por vértices ao limite especificado. A ferramenta remove os pesos de influência mais baixos inicialmente e antes que o limite tenha sido atingido."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:395
 msgid "The tool can only work reasonably when more than one weight group is selected."
-msgstr ""
+msgstr "A ferramenta somente poderá funcionar de maneira razoável quando um ou mais grupos de pesos estiverem selecionados."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:404
 msgid "Maximum number of weights allowed on each vertex."
-msgstr ""
+msgstr "O número máximo de pesos de influência permitidos por cada vértice."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:408
 msgid "Weight Gradient"
@@ -509,27 +509,27 @@ msgstr "Gradiente de pesos de influência"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:413
 msgid "Example of the gradient tool being used with selected vertices."
-msgstr ""
+msgstr "Exemplo da ferramenta de gradiente sendo usada com os vértices selecionados."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:416
 msgid "This is an interactive tool for applying a linear/radial weight gradient; this is useful at times when painting gradual changes in weight becomes difficult."
-msgstr ""
+msgstr "Esta é uma ferramenta interativa para a aplicação de uma gradiente de pesos de influência linear ou radial. Ela é útil em casos onde a pintura de alterações graduais nos pesos de influência se tornam difíceis."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:419
 msgid "The gradient tool can be accessed from the Tool Shelf or as a key shortcut:"
-msgstr ""
+msgstr "A ferramenta de gradiente pode ser acessada a partir da *Estante de ferramentas* ou a partir das seguintes teclas de atalho:"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:421
 msgid "Linear: :kbd:`Alt-LMB` and drag."
-msgstr ""
+msgstr "Linear: :kbd:`Alt-BEM` e arrastar."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:422
 msgid "Radial: :kbd:`Alt-Ctrl-LMB` and drag."
-msgstr ""
+msgstr "Radial: :kbd:`Alt-Ctrl-BEM` e arrastar."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:424
 msgid "The following weight paint options are used to control the gradient:"
-msgstr ""
+msgstr "As seguintes opções para pintura de pesos de influência são usadas para controlar a gradiente:"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:426
 msgid "Weight"
@@ -537,7 +537,7 @@ msgstr "Influência"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:427
 msgid "The gradient starts at the current selected weight value, blending out to nothing."
-msgstr ""
+msgstr "A gradiente é iniciada no valor dos pesos de influência atualmente selecionados, e inicia a sua mesclagem até valores de pesos zerados."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:428
 msgid "Strength"
@@ -545,7 +545,7 @@ msgstr "Força"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:429
 msgid "Lower values can be used so the gradient mixes in with the existing weights (just like with the brush)."
-msgstr ""
+msgstr "Valores mais baixos podem ser usados de maneira que a gradiente seja misturada (mesclada) em conjunto com os pesos previamente existentes (bem como com os pincéis)."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:431
 msgid "Curve"
@@ -553,15 +553,15 @@ msgstr "Curva"
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:431
 msgid "The brush falloff curve applies to the gradient too, so you can use this to adjust the blending."
-msgstr ""
+msgstr "A curva de decaimento do pincel se aplica a gradiente também, portanto você poderá usar isto para ajustar a mesclagem."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:433
 msgid "Blends the weights of selected vertices with unselected vertices."
-msgstr ""
+msgstr "Mescla os pesos de influência dos vértices selecionados juntamente com pesos de influência os vértices não selecionados."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:437
 msgid "This tool only works in vertex select mode."
-msgstr ""
+msgstr "Esta ferramenta somente funciona no modo de seleção de vértices."
 
 #: ../../manual/sculpt_paint/painting/weight_paint/weight_tools.rst:446
 msgid "Type"
