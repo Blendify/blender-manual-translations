@@ -1,104 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) : This page is licensed under a CC-BY-SA 4.0 Int. License
+# This file is distributed under the same license as the Blender 2.78 Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-# phan <phahoatho@gmail.com>, 2016.
-#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Reference Manual 2.76\n"
+"Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 01:08-0500\n"
-"PO-Revision-Date: 2016-12-29 12:10+0100\n"
-"Last-Translator: phan <phahoatho@gmail.com>\n"
-"Language-Team: français <bf-docboard@blender.org>\n"
+"POT-Creation-Date: 2017-01-09 22:52-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../../manual/animation/techniques/object_path.rst:4
 msgid "Moving Objects on a Path"
-msgstr "Déplacement d'objets sur un chemin"
+msgstr ""
 
 #: ../../manual/animation/techniques/object_path.rst:6
 msgid ""
-"To make objects move along a path is a very common animation need. Think of "
-"a complex camera traveling, a train on his rails and most other vehicles can "
-"also use \"invisible\" tracks, the links of a bicycle chain, etc. All these "
-"movements could obviously be done with standard F-Curves, but this would be "
-"a nightmare! It is much easier and intuitive to define a path materializing "
-"the desired movement, and make your object(s) follow it."
+"To make objects move along a path is a very common animation need. Think "
+"of a complex camera traveling, a train on his rails and most other "
+"vehicles can also use \"invisible\" tracks, the links of a bicycle chain,"
+" etc. All these movements could obviously be done with standard F-Curves,"
+" but this would be a nightmare! It is much easier and intuitive to define"
+" a path materializing the desired movement, and make your object(s) "
+"follow it."
 msgstr ""
-"Faire que les objets se déplacent le long d'un chemin est une nécessité en "
-"animation très commune. Pensez à un traveling de caméra complexe, un train "
-"sur ses rails et la plupart des autres véhicules peuvent aussi utiliser des "
-"pistes \"invisibles\", les maillons d'une chaîne de vélo, etc. Tous ces "
-"déplacements pourraient évidemment être effectués avec des F-Curves "
-"standards, mais ce serait un cauchemar ! C'est beaucoup plus facile et "
-"intuitif de définir un chemin matérialisant le déplacement désiré, et le "
-"faire suivre par vos objets."
 
 #: ../../manual/animation/techniques/object_path.rst:14
 msgid ""
-"Blender features you two different constraints to make an object follow a "
-"path, which have different ways to determine/animate the position of their "
-"owner along their path."
+"Blender features you two different constraints to make an object follow a"
+" path, which have different ways to determine/animate the position of "
+"their owner along their path."
 msgstr ""
-"Blender vous fournit deux contraintes différentes pour faire suivre un "
-"chemin à un objet, qui ont deux différentes manières pour déterminer/animer "
-"la position de leur propriétaire le long de leur chemin."
 
 #: ../../manual/animation/techniques/object_path.rst:17
 msgid ""
 "In Blender, any :doc:`curve object </modeling/curves/introduction>` can "
-"become a path. A curve becomes a path when its *Path Animation* button is "
-"enabled in the *Curve* data panel, but you do not even have to bother about "
-"this: once a curve is selected as the target for a \"path\" constraint, it "
-"automatically is enabled."
+"become a path. A curve becomes a path when its *Path Animation* button is"
+" enabled in the *Curve* data panel, but you do not even have to bother "
+"about this: once a curve is selected as the target for a \"path\" "
+"constraint, it automatically is enabled."
 msgstr ""
-"Bans Blender, toute :doc:`objet courbe </modeling/curves/introduction>` peut "
-"devenir un chemin. Une courbe devient un chemin quand son bouton *Path "
-"Animation* est activé dans le panneau de données *Curve*, mais vous n'avez "
-"même pas à vous en soucier : une fois une courbe sélectionnée comme cible "
-"pour une contrainte \"path\", il est automatiquement activé. "
 
 #: ../../manual/animation/techniques/object_path.rst:22
 msgid ""
-"You can also directly add a \"path\" from the :menuselection:`Add --> Curve "
-"--> Path` menu entry (in a 3D View). This will insert in your scene a *three-"
-"dimensional* NURBS curve. This is an important point: by default, Blender's "
-"curves are *2D* and will not move on the Z axis. To turn a standard curve "
-"three-dimensional, enable its *3D* button, in the same *Curve and Surface* "
-"editing panel."
+"You can also directly add a \"path\" from the :menuselection:`Add --> "
+"Curve --> Path` menu entry (in a 3D View). This will insert in your scene"
+" a *three-dimensional* NURBS curve. This is an important point: by "
+"default, Blender's curves are *2D* and will not move on the Z axis. To "
+"turn a standard curve three-dimensional, enable its *3D* button, in the "
+"same *Curve and Surface* editing panel."
 msgstr ""
-"Vous pouvez aussi directement ajouter un \"path\" depuis l'entrée de menu :"
-"menuselection:`Add --> Curve --> Path` (dans une Vue 3D). Ceci va insérer "
-"dans votre scène une courbe NURBS *tridimensionnelle*. C'est un point "
-"important : par défaut, les courbes dans Blender sont en *2D* et ne se "
-"déplacent pas dans l'axe Z. Pour en faire une courbe tridimensionnelle "
-"standard, activez son bouton *3D*, dans le même panneau d'édition *Curve and "
-"Surface*. "
 
 #: ../../manual/animation/techniques/object_path.rst:28
-#, fuzzy
 msgid ""
 "One last curve property that is important for a path is its *direction*, "
-"which is, for three-dimensional ones, materialized by its small arrows. You "
-"can switch it with the :menuselection:`Curve --> Segments --> Switch "
+"which is, for three-dimensional ones, materialized by its small arrows. "
+"You can switch it with the :menuselection:`Curve --> Segments --> Switch "
 "Direction`, :menuselection:`Specials --> Switch Direction`."
 msgstr ""
-"Une dernière propriété de courbe qui est importante pour un chemin est sa "
-"*direction*, qui est, pour les courbes tridimensionnelles, matérialisée par "
-"ses petites flèches. Vous pouvez l'échanger avec :menuselection:`Curve --> "
-"Segments --> Switch Direction`, :kbd:`W 2`."
 
 #: ../../manual/animation/techniques/object_path.rst:33
 msgid ""
-"For more on editing path/curves, see the :doc:`modeling chapter </modeling/"
-"curves/introduction>`."
+"For more on editing path/curves, see the :doc:`modeling chapter "
+"</modeling/curves/introduction>`."
 msgstr ""
-"Pour plus d'informations sur l'édition des chemins/courbes, voir le :doc:"
-"`chapitre Modélisation </modeling/curves/introduction>`."
 
 #: ../../manual/animation/techniques/object_path.rst:35
 msgid "Shapes on Curves"
@@ -106,286 +79,73 @@ msgstr ""
 
 #: ../../manual/animation/techniques/object_path.rst:37
 msgid ""
-"If you would rather like to have your object's *shape* follow a path (like e."
-"g. a sheet of paper inside a printer), you should use the :doc:`Curve "
-"Modifier </modeling/modifiers/deform/curve>`"
+"If you would rather like to have your object's *shape* follow a path "
+"(like e.g. a sheet of paper inside a printer), you should use the "
+":doc:`Curve Modifier </modeling/modifiers/deform/curve>`"
 msgstr ""
-"Si vous aimeriez plutôt que la *forme* de votre objet suive un chemin (comme "
-"p. ex. une feuille de papier dans une imprimante), vous devriez utiliser le :"
-"doc:`Modificateur de courbe </modeling/modifiers/deform/curve>`"
 
 #: ../../manual/animation/techniques/object_path.rst:43
 msgid "Parenting Method"
-msgstr "Méthode de parentage"
+msgstr ""
 
 #: ../../manual/animation/techniques/object_path.rst:45
 msgid ""
-":doc:`Parenting </editors/3dview/object/properties/relations/parents>` menu "
-"choose *Follow Path* or *Path Constraint* for a automatic setup."
+":doc:`Parenting </editors/3dview/object/properties/relations/parents>` "
+"menu choose *Follow Path* or *Path Constraint* for a automatic setup."
 msgstr ""
 
 #: ../../manual/animation/techniques/object_path.rst:50
 msgid "The Follow Path Constraint"
-msgstr "La contrainte *Follow Path*"
+msgstr ""
 
 #: ../../manual/animation/techniques/object_path.rst:52
 msgid ""
-"The *Follow Path* constraint implements the most \"classical\" technique. By "
-"default, the owner object will walk the whole path only once, starting at "
-"frame one, and over 100 frames. You can set a different starting frame in "
-"the *Offset* field of the constraint panel, and change the length (in "
-"frames) of the path using its *Frames* property (*Curve and Surface* panel)."
+"The *Follow Path* constraint implements the most \"classical\" technique."
+" By default, the owner object will walk the whole path only once, "
+"starting at frame one, and over 100 frames. You can set a different "
+"starting frame in the *Offset* field of the constraint panel, and change "
+"the length (in frames) of the path using its *Frames* property (*Curve "
+"and Surface* panel)."
 msgstr ""
-"La contrainte *Follow Path* implémente la technique la plus \"classique\". "
-"Par défaut, l'objet propriétaire va parcourir le chemin entier seulement une "
-"fois, en commençant par la frame 1, et sur 100 frames. Vous pouvez définir "
-"une frame de début différente dans le champ *Offset* du panneau de la "
-"contrainte, et modifier la longueur (en frames) du chemin en utilisant sa "
-"propriété *Frames* (panneau *Curve and Surface*)."
 
 #: ../../manual/animation/techniques/object_path.rst:58
 msgid ""
 "But you can have a much more precise control over your object's movement "
-"along its path by keyframing or defining a *Speed* animation curve for the "
-"path's *Evaluation Time* attribute. This curve maps the current frame to a "
-"position along the path, from (0.0 to 1.0) (start point to end point)."
+"along its path by keyframing or defining a *Speed* animation curve for "
+"the path's *Evaluation Time* attribute. This curve maps the current frame"
+" to a position along the path, from (0.0 to 1.0) (start point to end "
+"point)."
 msgstr ""
-"Mais vous pouvez avoir un contrôle beaucoup plus précis sur le déplacement "
-"de votre objet le long de son chemin en définissant des keyframes ou une "
-"courbe d'animation *Vitesse* pour l'attribut *Evaluation Time* du chemin. "
-"Cette courbe fait correspondre la frame courante à une position le long du "
-"chemin, de (0.0 à 1.0) (du point de début au point de fin)."
 
 #: ../../manual/animation/techniques/object_path.rst:63
 msgid ""
-"For more details and examples, see the :doc:`Follow Path constraint page </"
-"rigging/constraints/relationship/follow_path>`."
+"For more details and examples, see the :doc:`Follow Path constraint page "
+"</rigging/constraints/relationship/follow_path>`."
 msgstr ""
-"Pour plus de détails et d'exemples, voir la :doc:`page de la contrainte "
-"Follow Path </rigging/constraints/relationship/follow_path>`."
 
 #: ../../manual/animation/techniques/object_path.rst:68
 msgid "The Clamp To Constraint"
-msgstr "La contrainte *Clamp To*"
+msgstr ""
 
 #: ../../manual/animation/techniques/object_path.rst:70
 msgid ""
 "Another method of keeping objects on a path is to use the *Clamp To* "
-"constraint, which implements a more advanced technique. To determine where "
-"along the path should lay its owner, its uses the *location of this owner* "
-"along a given axis. So to animate the movement of your owner along its "
-"target path, you have to animate some way (F-Curves or other indirect "
-"animation) its location."
+"constraint, which implements a more advanced technique. To determine "
+"where along the path should lay its owner, its uses the *location of this"
+" owner* along a given axis. So to animate the movement of your owner "
+"along its target path, you have to animate some way (F-Curves or other "
+"indirect animation) its location."
 msgstr ""
-"Une autre méthode pour garder les objets sur un chemin est d'utiliser la "
-"contrainte *Clamp To*, qui implémente une technique plus avancée. Pour "
-"déterminer sur le chemin où devrait se trouver son propriétaire, elle "
-"utilise la *position de ce propriétaire* le long d'un axe donné. Ainsi pour "
-"animer le déplacement de votre propriétaire le long de son chemin cible, "
-"vous devez animer d'une certaine manière (F-curves ou autre animation "
-"indirecte) sa position."
 
 #: ../../manual/animation/techniques/object_path.rst:77
 msgid ""
-"This implies that here, the length of the path have no more any effect -- "
-"and that by default, the object is static somewhere on the path!"
+"This implies that here, the length of the path have no more any effect --"
+" and that by default, the object is static somewhere on the path!"
 msgstr ""
-"Ceci implique qu'ici, la longueur du chemin n'a plus aucun effet -- et ce "
-"par défaut, l'objet est statique quelque part sur le chemin !"
 
 #: ../../manual/animation/techniques/object_path.rst:80
 msgid ""
-"For more details and examples, see the :doc:`Clamp To constraint page </"
-"rigging/constraints/tracking/clamp_to>`."
+"For more details and examples, see the :doc:`Clamp To constraint page "
+"</rigging/constraints/tracking/clamp_to>`."
 msgstr ""
-"Pour plus de détails et d'exemples, voir la :doc:`page de la contrainte "
-"*Clamp To* </rigging/constraints/tracking/clamp_to>`."
 
-#~ msgid ""
-<<<<<<< .mine
-#~ "Older versions of Blender did not have constraints to make an object "
-#~ "follow a path. They used a different method (deprecated, but still "
-#~ "available), based on parenting."
-||||||| .r1072
-#~ "Older versions of Blender did not "
-#~ "have constraints to make an object "
-#~ "follow a path. They used a "
-#~ "different method (deprecated, but still "
-#~ "available), based on parenting."
-=======
->>>>>>> .r1097
-#~ msgstr ""
-<<<<<<< .mine
-#~ "Les versions plus anciennes de Blender ne disposaient pas des contraintes "
-#~ "pour faire qu'un objet suive un chemin. Elles utilisaient une méthode "
-#~ "différente (obsolète, mais encore disponible), basée sur le *parentage*."
-||||||| .r1072
-#~ "Les versions plus anciennes de Blender"
-#~ " ne disposaient pas des contraintes "
-#~ "pour faire qu'un objet suive un "
-#~ "chemin. Elles utilisaient une méthode "
-#~ "différente (obsolète, mais encore disponible),"
-#~ " basée sur le *parentage*."
-=======
->>>>>>> .r1097
-
-<<<<<<< .mine
-#~ msgid ""
-#~ "To use this method, select the object that will follow the path, then :"
-#~ "kbd:`Shift` select the curve, and use :kbd:`Ctrl-P` to bring up the "
-#~ "parenting menu. Choose *Follow Path*. The object will now be animated "
-#~ "along the path."
-#~ msgstr ""
-#~ "Pour utiliser cette méthode, sélectionnez l'objet qui suivra ce chemin, "
-#~ "puis :kbd:`Shift` sélectionnez la courbe, et utilisez :kbd:`Ctrl-P` pour "
-#~ "accéder au menu *parenting*. Choisissez *Follow Path*. L'objet sera dès "
-#~ "lors animé le long de ce chemin."
-
-#~ msgid ""
-#~ "The settings for the path animation are in the *Path Animation* panel of "
-#~ "the Curve tab in the Properties editor."
-#~ msgstr ""
-#~ "Les réglages pour l'animation de chemin sont dans le panneau *Path "
-#~ "Animation* de l'onglet *Curve* dans l'*Éditeur Propriétés*."
-
-||||||| .r1072
-#~ msgid ""
-#~ "To use this method, select the "
-#~ "object that will follow the path, "
-#~ "then :kbd:`Shift` select the curve, and"
-#~ " use :kbd:`Ctrl-P` to bring up the"
-#~ " parenting menu. Choose *Follow Path*. "
-#~ "The object will now be animated "
-#~ "along the path."
-#~ msgstr ""
-#~ "Pour utiliser cette méthode, sélectionnez "
-#~ "l'objet qui suivra ce chemin, puis "
-#~ ":kbd:`Shift` sélectionnez la courbe, et "
-#~ "utilisez :kbd:`Ctrl-P` pour accéder au "
-#~ "menu *parenting*. Choisissez *Follow Path*."
-#~ " L'objet sera dès lors animé le "
-#~ "long de ce chemin."
-
-#~ msgid ""
-#~ "The settings for the path animation "
-#~ "are in the *Path Animation* panel "
-#~ "of the Curve tab in the Properties"
-#~ " editor."
-#~ msgstr ""
-#~ "Les réglages pour l'animation de chemin"
-#~ " sont dans le panneau *Path "
-#~ "Animation* de l'onglet *Curve* dans "
-#~ "l'*Éditeur Propriétés*."
-
-=======
->>>>>>> .r1097
-<<<<<<< .mine
-#~ msgid ""
-#~ "Defines the number of frames it takes for the object to travel the path."
-#~ msgstr ""
-#~ "Définit le nombre de frames nécessaire pour que l'objet parcoure le "
-#~ "chemin."
-
-||||||| .r1072
-#~ msgid ""
-#~ "Defines the number of frames it "
-#~ "takes for the object to travel the"
-#~ " path."
-#~ msgstr ""
-#~ "Définit le nombre de frames nécessaire"
-#~ " pour que l'objet parcoure le chemin."
-
-=======
->>>>>>> .r1097
-<<<<<<< .mine
-#~ msgid ""
-#~ "Defines current frame of the animation. By default, it is linked to the "
-#~ "global frame number, but could be keyframed to give more control over the "
-#~ "path animation."
-#~ msgstr ""
-#~ "Définit la frame courante de l'animation. Par défaut, elle est liée au "
-#~ "nombre global de frames, mais pourrait être définie en keyframe pour "
-#~ "donner plus de contrôle sur l'animation de chemin."
-
-||||||| .r1072
-#~ msgid ""
-#~ "Defines current frame of the animation."
-#~ " By default, it is linked to "
-#~ "the global frame number, but could "
-#~ "be keyframed to give more control "
-#~ "over the path animation."
-#~ msgstr ""
-#~ "Définit la frame courante de "
-#~ "l'animation. Par défaut, elle est liée"
-#~ " au nombre global de frames, mais "
-#~ "pourrait être définie en keyframe pour"
-#~ " donner plus de contrôle sur "
-#~ "l'animation de chemin."
-
-=======
->>>>>>> .r1097
-<<<<<<< .mine
-#~ msgid ""
-#~ "Causes the curve path children to rotate along the curvature of the path."
-||||||| .r1072
-#~ msgid ""
-#~ "Causes the curve path children to "
-#~ "rotate along the curvature of the "
-#~ "path."
-#~ msgstr "Les courbes chemins enfants tournent le long de la courbure du chemin."
-
-#~ msgid "Radius"
-=======
-#~ msgid "Radius"
->>>>>>> .r1097
-#~ msgstr ""
-#~ "Les courbes chemins enfants tournent le long de la courbure du chemin."
-
-<<<<<<< .mine
-#~ msgid ""
-#~ "Causes the curve path child to be scaled by the set curve radius. See :"
-#~ "doc:`Curve Extruding </modeling/curves/editing/extrude>`"
-#~ msgstr ""
-#~ "La courbe chemin enfant est mise à l'échelle par le rayon de courbe "
-#~ "défini. Voir :doc:`Extrusion de courbe </modeling/curves/editing/extrude>`"
-
-||||||| .r1072
-#~ msgid ""
-#~ "Causes the curve path child to be"
-#~ " scaled by the set curve radius. "
-#~ "See :doc:`Curve Extruding "
-#~ "</modeling/curves/editing/extrude>`"
-#~ msgstr ""
-#~ "La courbe chemin enfant est mise à"
-#~ " l'échelle par le rayon de courbe "
-#~ "défini. Voir :doc:`Extrusion de courbe "
-#~ "</modeling/curves/editing/extrude>`"
-
-=======
->>>>>>> .r1097
-<<<<<<< .mine
-#~ msgid ""
-#~ "Causes the animation to be offset by the curve path child's time offset "
-#~ "value, which can be found in its *Relations Extras* section of the "
-#~ "*Object Panel*."
-#~ msgstr ""
-#~ "Cause un décalage de l'animation par la valeur de décalage de temps de la "
-#~ "courbe chemin enfant, qui peut se trouver dans sa section *Relations "
-#~ "Extras* du panneau de l'objet."
-||||||| .r1072
-#~ msgid ""
-#~ "Causes the animation to be offset "
-#~ "by the curve path child's time "
-#~ "offset value, which can be found "
-#~ "in its *Relations Extras* section of "
-#~ "the *Object Panel*."
-#~ msgstr ""
-#~ "Cause un décalage de l'animation par "
-#~ "la valeur de décalage de temps de"
-#~ " la courbe chemin enfant, qui peut"
-#~ " se trouver dans sa section "
-#~ "*Relations Extras* du panneau de "
-#~ "l'objet."
-
-=======
->>>>>>> .r1097
