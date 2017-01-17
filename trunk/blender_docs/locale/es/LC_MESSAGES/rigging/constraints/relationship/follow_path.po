@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 23:16-0500\n"
+"POT-Creation-Date: 2017-01-10 23:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,17 @@ msgid ""
 msgstr ""
 
 #: ../../manual/rigging/constraints/relationship/follow_path.rst:13
+msgid ""
+"It could be used for complex camera traveling, a train on his rails and "
+"most other vehicles can also use \"invisible\" tracks, the links of a "
+"bicycle chain, etc."
+msgstr ""
+
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:17
 msgid "The owner is always evaluated in the global (world) space:"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:15
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:19
 msgid ""
 "Its location (as shown in the *Transform* panel) is used as an offset "
 "from its normal position on the path. E.g. if you have an owner with the "
@@ -43,7 +50,7 @@ msgid ""
 " its target path, clear its location :kbd:`Alt-G`!"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:20
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:24
 msgid ""
 "This location offset is also proportionally affected by the scale of the "
 "target curve. Taking the same (1.0, 1.0, 0.0) offset as above, if the "
@@ -51,7 +58,7 @@ msgid ""
 "along the X axis (and one along the Y one)..."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:24
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:28
 msgid ""
 "When the *Curve Follow* option is enabled, its rotation is also offset to"
 " the one given by the curve (i.e. if you want the Y axis of your object "
@@ -60,36 +67,37 @@ msgid ""
 "your owner's rotation :kbd:`Alt-R` might be useful..."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:29
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:33
 msgid ""
 "The movement of the owner along the target curve/path may be controlled "
 "in two different ways:"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:31
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:35
 msgid ""
 "The most simple is to define the number of frames of the movement, in the"
-" Path Animation panel of the Object Data tab, via the number button "
-"Frames, and its start frame via the constraint's Offset option (by "
-"default, start frame: 1 [= offset of 0)], duration: 100)."
+" :ref:`Path Animation panel <curve-path-animation>` of the Curve tab, via"
+" the number button Frames, and its start frame via the constraint's "
+"Offset option (by default, start frame: 1 [= offset of 0)], duration: "
+"100)."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:35
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:39
 msgid ""
 "The second way, much more precise and powerful, is to define a "
 "*Evaluation Time* interpolation curve for the *Target* path (in the "
-"*Graph Editor*. See the :doc:`animation chapter </animation/index>` to "
-"learn more about F-Curves."
+"*Graph Editor*). See the :doc:`Graph Editor chapter "
+"</editors/graph_editor/fcurves/index>` to learn more about F-Curves."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:38
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:43
 msgid ""
 "If you do not want your owner to move along the path, you can give to the"
 " target curve a flat *Speed* F-Curve (its value will control the position"
 " of the owner along the path)."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:41
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:46
 msgid ""
 "*Follow Path* is another constraint that works well with the :doc:`Locked"
 " Track one </rigging/constraints/tracking/locked_track>`. One example is "
@@ -98,11 +106,11 @@ msgid ""
 "the camera flies along the path."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:46
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:51
 msgid "*Follow Path* and *Clamp To*"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:48
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:53
 msgid ""
 "Do not confuse these two constraints. Both of them constraint the "
 "location of their owner along a curve, but *Follow Path* is an "
@@ -113,99 +121,99 @@ msgid ""
 "location properties' values."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:56
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:61
 msgid ""
 "Note that you also need to keyframe Evaluation Time for the Path. Select "
-"the path, go to the path properties, set the overall frame to the first "
-"frame of the path (e.g. frame 1), set the value of Evaluation time to the"
-" first frame of the path (e.g. 1), right click on Evaluation time, select"
-" create keyframe, set the overall frame to the last frame of the path "
-"(e.g. frame 100), set the value of Evaluation time to the last frame of "
-"the path (e.g. 100), right click on Evaluation time, select create "
-"keyframe."
+"the path, go to the *Path Animation* panel in the curve properties, set "
+"the overall frame to the first frame of the path (e.g. frame 1), set the "
+"value of Evaluation time to the first frame of the path (e.g. 1), right "
+"click on Evaluation time, select create keyframe, set the overall frame "
+"to the last frame of the path (e.g. frame 100), set the value of "
+"Evaluation time to the last frame of the path (e.g. 100), right click on "
+"Evaluation time, select create keyframe."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:68
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:74
 msgid "Options"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:72
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:78
 msgid "Follow Path panel."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:76
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:82
 msgid "Target"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:76
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:82
 msgid ""
 ":ref:`ui-data-id` used to select the constraints target, which *must* be "
 "a curve object, and is not functional (red state) when it has none."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:78
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:84
 msgid "Animate Path"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:79
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:85
 msgid "Adds a F-Curve with options for the start and end frame. ToDo: from above."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:80
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:86
 msgid "Curve Radius"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:81
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:87
 msgid ""
 "Objects scale by the curve radius. See :doc:`Curve Editing "
 "</modeling/curves/properties/geometry>`"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:82
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:88
 msgid "Fixed Position"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:83
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:89
 msgid ""
 "Object will stay locked to a single point somewhere along the length of "
-"the curve regardless of time"
+"the curve regardless of time."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:84
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:90
 msgid "Offset"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:85
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:91
 msgid ""
 "The number of frames to offset from the \"animation\" defined by the path"
 " (by default, from frame 1)."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:97
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:103
 msgid "Follow Curve"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:87
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:93
 msgid ""
 "If this option is not activated, the owner's rotation is not modified by "
 "the curve; otherwise, it is affected depending on the following options:"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:91
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:97
 msgid "Forward"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:91
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:97
 msgid ""
 "The axis of the object that has to be aligned with the forward direction "
 "of the path (i.e. tangent to the curve at the owner's position)."
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:97
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:103
 msgid "Up"
 msgstr ""
 
-#: ../../manual/rigging/constraints/relationship/follow_path.rst:94
+#: ../../manual/rigging/constraints/relationship/follow_path.rst:100
 msgid ""
 "The axis of the object that has to be aligned (as much as possible) with "
 "the world Z axis. In fact, with this option activated, the behavior of "
@@ -218,9 +226,48 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "This constraint uses one target, which"
-#~ " *must* be a curve object, and "
-#~ "is not functional (red state) when "
-#~ "it has none."
+#~ "The most simple is to define the"
+#~ " number of frames of the movement,"
+#~ " in the Path Animation panel of "
+#~ "the Object Data tab, via the "
+#~ "number button Frames, and its start "
+#~ "frame via the constraint's Offset option"
+#~ " (by default, start frame: 1 [= "
+#~ "offset of 0)], duration: 100)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The second way, much more precise "
+#~ "and powerful, is to define a "
+#~ "*Evaluation Time* interpolation curve for "
+#~ "the *Target* path (in the *Graph "
+#~ "Editor*. See the :doc:`animation chapter "
+#~ "</animation/index>` to learn more about "
+#~ "F-Curves."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that you also need to "
+#~ "keyframe Evaluation Time for the Path."
+#~ " Select the path, go to the "
+#~ "path properties, set the overall frame"
+#~ " to the first frame of the path"
+#~ " (e.g. frame 1), set the value "
+#~ "of Evaluation time to the first "
+#~ "frame of the path (e.g. 1), right"
+#~ " click on Evaluation time, select "
+#~ "create keyframe, set the overall frame"
+#~ " to the last frame of the path"
+#~ " (e.g. frame 100), set the value "
+#~ "of Evaluation time to the last "
+#~ "frame of the path (e.g. 100), "
+#~ "right click on Evaluation time, select"
+#~ " create keyframe."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Object will stay locked to a "
+#~ "single point somewhere along the length"
+#~ " of the curve regardless of time"
 #~ msgstr ""
 

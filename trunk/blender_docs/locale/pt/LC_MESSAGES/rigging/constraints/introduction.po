@@ -8,50 +8,155 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"POT-Creation-Date: 2016-05-05 17:14+1000\n"
+"POT-Creation-Date: 2017-01-17 00:07-0500\n"
 "PO-Revision-Date: 2017-01-03 20:56-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Language: pt_BR\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: BRAZIL\n"
+"Generated-By: Babel 2.3.4\n"
 
 #: ../../manual/rigging/constraints/introduction.rst:4
 msgid "Introduction"
 msgstr "Introdução"
 
 #: ../../manual/rigging/constraints/introduction.rst:6
-msgid "Constraints control the behavior of one object with data from another. Constraints can make the eyes of a tennis player track a tennis ball bouncing across the court. Constraints allow the wheels on a bus to all rotate together. Constraints help a dinosaur's legs bend at the knee automatically. Constraints make it easy for a hand to grip the hilt of a sword and the sword to swing with the hand."
-msgstr "As restrições controlam o comportamento de um objeto com dados obtidos a partir de outro. As restrições podem fazer com que os olhos de um jogador de tênis acompanhem uma bola quicando ao longo da quadra. As restrições permitem que as rodas de um ônibus sejam rotacionadas todas juntas. As restrições ajudam a fazer com que as pernas de um dinossauro se incline nos joelhos de maneira automática. E as restrições tornam mais fácil para as mãos agarrarem a empunhadura de uma espada e a espada ser movimentada junto com a mão."
+msgid ""
+"Constraints are a way to control an object's properties (e.g. its "
+"location, rotation, scale), using either plain static values (like the "
+":doc:`\"limit\" ones </rigging/constraints/transform/limit_location>`), "
+"or (an)other object, called \"target\" (like e.g. the :doc:`\"copy\" ones"
+" </rigging/constraints/transform/copy_location>`)."
+msgstr ""
 
 #: ../../manual/rigging/constraints/introduction.rst:12
-msgid "Constraints, in Blender, work with :term:`Objects <Object>` and :term:`Bones <Bone>`."
-msgstr "As restrições, no Blender, funcionam com :term:`Objetos <Objeto>` e :term:`Ossos <Osso>`."
+msgid ""
+"Even though constraints are useful in static projects, their main usage "
+"is obviously in animation."
+msgstr ""
 
-#: ../../manual/rigging/constraints/introduction.rst:16
-msgid ":term:`Object` Constraints."
+#: ../../manual/rigging/constraints/introduction.rst:15
+msgid ""
+"You can control an object's animation through the targets used by its "
+"constraints (this is a form of indirect animation). Indeed, these targets"
+" can then control the constraint's owner's properties, and hence, "
+"animating the targets will indirectly animate the owner."
+msgstr ""
+
+#: ../../manual/rigging/constraints/introduction.rst:19
+msgid ""
+"You can animate constraints' settings. e.g. the *Influence* or when using"
+" an armature's bone as target, animate where along this bone (between "
+"root and tip) lays the real target point."
+msgstr ""
+
+#: ../../manual/rigging/constraints/introduction.rst:24
+msgid ""
+"They can make the eyes of a tennis player track a tennis ball bouncing "
+"across the court, allow the wheels on a bus to all rotate together, help "
+"a dinosaur's legs bend at the knee automatically, and make it easy for a "
+"hand to grip the hilt of a sword and the sword to swing with the hand."
+msgstr ""
+
+#: ../../manual/rigging/constraints/introduction.rst:29
+msgid ""
+"Constraints, in Blender, work with :term:`Objects <Object>` and "
+":term:`Bones <Bone>`. Read about using constraints in rigging in the "
+":doc:`Armatures </rigging/armatures/posing/bone_constraints/index>`"
+msgstr ""
+
+#: ../../manual/rigging/constraints/introduction.rst:34
+#, fuzzy
+msgid "Object Constraints."
 msgstr "Restrições de :term:`objeto`."
 
-#: ../../manual/rigging/constraints/introduction.rst:20
-msgid ":term:`Bone` Constraints."
+#: ../../manual/rigging/constraints/introduction.rst:38
+#, fuzzy
+msgid "Bone Constraints."
 msgstr "Restrições de :term:`ossos`."
 
-#: ../../manual/rigging/constraints/introduction.rst:22
-msgid "Constraints work in combination with each other to form a Constraint Stack."
-msgstr "As restrições funcionam em conjunto entre si para formar uma *Pilha de restrições*."
+#: ../../manual/rigging/constraints/introduction.rst:41
+msgid ""
+"Constraints work in combination with each other to form a Constraint "
+"Stack."
+msgstr ""
+"As restrições funcionam em conjunto entre si para formar uma *Pilha de "
+"restrições*."
 
-#: ../../manual/rigging/constraints/introduction.rst:26
+#: ../../manual/rigging/constraints/introduction.rst:45
 msgid "The Constraint Stack is evaluated from top to bottom."
 msgstr "A pilha de restrições é avaliada de cima para baixo."
 
-#: ../../manual/rigging/constraints/introduction.rst:28
-msgid "Constraints are a fantastic way to add sophistication and complexity to a rig. But be careful not to rush in too quickly, piling up constraint upon constraint until you lose all sense of how they interact with each other."
-msgstr "As restrições são uma maneira fantástica de adicionar sofisticação e complexidade para arranjos de animação, mas seja cuidadoso para não ir com \"muita sede ao pote\", empilhando restrição sobre restrição até que você perca o senso de como elas interagem entre si."
+#: ../../manual/rigging/constraints/introduction.rst:47
+msgid ""
+"Constraints are a fantastic way to add sophistication and complexity to a"
+" rig."
+msgstr ""
 
-#: ../../manual/rigging/constraints/introduction.rst:32
-msgid "Start simply. Get to know a single constraint inside and out. Copy Location is a good first constraint to explore. Take the time to understand every fundamental concept behind it, and the other constraints will make far more sense."
-msgstr "Inicie de maneira simples. Conheça uma a uma das restrições por dentro e por fora. Por exemplo, a restrição do tipo *Copiar posicionamento* é uma boa restrição para explorar inicialmente. Separe parte de seu tempo para entender cada um dos fundamentos conceituais existentes na mesma, e as outras restrições farão muito mais sentido."
+#: ../../manual/rigging/constraints/introduction.rst:50
+#, fuzzy
+msgid ""
+"But be careful not to rush in too quickly, piling up constraint upon "
+"constraint until you lose all sense of how they interact with each other."
+msgstr ""
+"As restrições são uma maneira fantástica de adicionar sofisticação e "
+"complexidade para arranjos de animação, mas seja cuidadoso para não ir "
+"com \"muita sede ao pote\", empilhando restrição sobre restrição até que "
+"você perca o senso de como elas interagem entre si."
+
+#: ../../manual/rigging/constraints/introduction.rst:53
+#, fuzzy
+msgid ""
+"Start simply. Get to know a single constraint inside and out. "
+":doc:`/rigging/constraints/transform/copy_location` is a good first "
+"constraint to explore it also has an animation example. Take the time to "
+"understand every fundamental concept behind it, and the other constraints"
+" will make far more sense."
+msgstr ""
+"Inicie de maneira simples. Conheça uma a uma das restrições por dentro e "
+"por fora. Por exemplo, a restrição do tipo *Copiar posicionamento* é uma "
+"boa restrição para explorar inicialmente. Separe parte de seu tempo para "
+"entender cada um dos fundamentos conceituais existentes na mesma, e as "
+"outras restrições farão muito mais sentido."
+
+#~ msgid ""
+#~ "Constraints control the behavior of one"
+#~ " object with data from another. "
+#~ "Constraints can make the eyes of a"
+#~ " tennis player track a tennis ball"
+#~ " bouncing across the court. Constraints "
+#~ "allow the wheels on a bus to "
+#~ "all rotate together. Constraints help a"
+#~ " dinosaur's legs bend at the knee "
+#~ "automatically. Constraints make it easy "
+#~ "for a hand to grip the hilt "
+#~ "of a sword and the sword to "
+#~ "swing with the hand."
+#~ msgstr ""
+#~ "As restrições controlam o comportamento "
+#~ "de um objeto com dados obtidos a"
+#~ " partir de outro. As restrições podem"
+#~ " fazer com que os olhos de um"
+#~ " jogador de tênis acompanhem uma bola"
+#~ " quicando ao longo da quadra. As "
+#~ "restrições permitem que as rodas de "
+#~ "um ônibus sejam rotacionadas todas "
+#~ "juntas. As restrições ajudam a fazer "
+#~ "com que as pernas de um dinossauro"
+#~ " se incline nos joelhos de maneira"
+#~ " automática. E as restrições tornam "
+#~ "mais fácil para as mãos agarrarem "
+#~ "a empunhadura de uma espada e a"
+#~ " espada ser movimentada junto com a"
+#~ " mão."
+
+#~ msgid ""
+#~ "Constraints, in Blender, work with "
+#~ ":term:`Objects <Object>` and :term:`Bones "
+#~ "<Bone>`."
+#~ msgstr ""
+#~ "As restrições, no Blender, funcionam com"
+#~ " :term:`Objetos <Objeto>` e :term:`Ossos "
+#~ "<Osso>`."
 
