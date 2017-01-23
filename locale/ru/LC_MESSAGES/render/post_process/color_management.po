@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-03 01:08-0500\n"
+"POT-Creation-Date: 2017-01-23 17:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,7 +237,7 @@ msgid "Sequencer"
 msgstr ""
 
 #: ../../manual/render/post_process/color_management.rst:127
-#: ../../manual/render/post_process/color_management.rst:155
+#: ../../manual/render/post_process/color_management.rst:154
 msgid "Color Space"
 msgstr ""
 
@@ -280,29 +280,29 @@ msgstr ""
 #: ../../manual/render/post_process/color_management.rst:146
 msgid ""
 "Image data-blocks will always store float buffers in memory in the scene "
-"linear color space, while a byte buffer in memory and files on disk are "
-"stored in the color space specified with this setting:"
+"linear color space, while a byte buffer in memory and files in a drive "
+"are stored in the color space specified with this setting:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:151
+#: ../../manual/render/post_process/color_management.rst:150
 msgid ""
-"The color space of the image on disk. This depends on the file format, "
-"for example PNG or JPEG images are often stored in sRGB, while OpenEXR "
-"images are stored in a linear color space. Some images such as normal, "
-"bump or stencil maps do not strictly contain 'colors', and on such values"
-" no color space conversion should ever be applied. For such images the "
-"color space should be set to None."
+"The color space of the image file on a drive. This depends on the file "
+"format, for example PNG or JPEG images are often stored in sRGB, while "
+"OpenEXR images are stored in a linear color space. Some images such as "
+"normal, bump or stencil maps do not strictly contain 'colors', and on "
+"such values no color space conversion should ever be applied. For such "
+"images the color space should be set to *None*."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:159
+#: ../../manual/render/post_process/color_management.rst:158
 msgid "Image settings for color management."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:162
+#: ../../manual/render/post_process/color_management.rst:161
 msgid ""
 "By default only renders are displayed and saved with the render view "
 "transformations applied. These are the Render Result and Viewer image "
-"data-blocks, and the files saved directly to disk with the Render "
+"data-blocks, and the files saved directly to a drive with the Render "
 "Animation operator. However, when loading a render saved to an "
 "intermediate OpenEXR file, Blender cannot detect automatically that this "
 "is a render (it could be e.g. an image texture or displacement map). We "
@@ -310,33 +310,33 @@ msgid ""
 "transformations applied, with these two settings:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:172
+#: ../../manual/render/post_process/color_management.rst:171
 msgid "View as Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:172
+#: ../../manual/render/post_process/color_management.rst:171
 msgid ""
 "Display the image data-block (not only renders) with view transform, "
 "exposure, gamma, RGB curves applied. Useful for viewing rendered frames "
 "in linear OpenEXR files the same as when rendering them directly."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:177
+#: ../../manual/render/post_process/color_management.rst:176
 msgid "Save as Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:175
+#: ../../manual/render/post_process/color_management.rst:174
 msgid ""
 "Option in the image save operator to apply the view transform, exposure, "
 "gamma, RGB curves. This is useful for saving linear OpenEXR to e.g. PNG "
 "or JPEG files in display space."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:180
+#: ../../manual/render/post_process/color_management.rst:179
 msgid "OpenColorIO Configuration"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:182
+#: ../../manual/render/post_process/color_management.rst:181
 msgid ""
 "Blender comes with a standard OpenColorIO configuration that contains a "
 "number of useful display devices and view transforms. The reference "
@@ -344,7 +344,7 @@ msgid ""
 "chromaticities and D65 white point."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:187
+#: ../../manual/render/post_process/color_management.rst:186
 msgid ""
 "However, OpenColorIO was also designed to give a consistent user "
 "experience across `multiple applications "
@@ -356,49 +356,49 @@ msgid ""
 "<http://opencolorio.org/>`__."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:194
+#: ../../manual/render/post_process/color_management.rst:193
 msgid "We currently use the following color space roles:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:196
+#: ../../manual/render/post_process/color_management.rst:195
 msgid "scene_linear"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:197
+#: ../../manual/render/post_process/color_management.rst:196
 msgid ""
 "color space used for rendering, compositing, and storing all float "
 "precision images in memory."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:198
+#: ../../manual/render/post_process/color_management.rst:197
 msgid "default_sequencer"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:199
+#: ../../manual/render/post_process/color_management.rst:198
 msgid "default color space for sequencer, *scene_linear* if not specified"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:200
+#: ../../manual/render/post_process/color_management.rst:199
 msgid "default_byte"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:201
+#: ../../manual/render/post_process/color_management.rst:200
 msgid ""
 "default color space for byte precision images and files, *texture_paint* "
 "if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:203
+#: ../../manual/render/post_process/color_management.rst:202
 msgid "default_float"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:203
+#: ../../manual/render/post_process/color_management.rst:202
 msgid ""
 "default color space for float precision images and files, *scene_linear* "
 "if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:205
+#: ../../manual/render/post_process/color_management.rst:204
 msgid ""
 "The standard Blender configuration also includes some support for `ACES "
 "<https://www.oscars.org/science-technology/sci-tech-projects/aces>`__ "
@@ -471,19 +471,44 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Used to control the image brightness "
-#~ "(in stops) applied before color space"
-#~ " conversion."
+#~ "Image data-blocks will always store "
+#~ "float buffers in memory in the "
+#~ "scene linear color space, while a "
+#~ "byte buffer in memory and files on"
+#~ " disk are stored in the color "
+#~ "space specified with this setting:"
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Extra gamma correction applied after "
-#~ "color space conversion. Note that the"
-#~ " default sRGB or Rec709 color space"
-#~ " conversions already include a gamma "
-#~ "correction of approximately 2.2 (except "
-#~ "the Raw and Log views), so this"
-#~ " would be applied in addition to "
-#~ "that."
+#~ "The color space of the image on"
+#~ " disk. This depends on the file "
+#~ "format, for example PNG or JPEG "
+#~ "images are often stored in sRGB, "
+#~ "while OpenEXR images are stored in "
+#~ "a linear color space. Some images "
+#~ "such as normal, bump or stencil "
+#~ "maps do not strictly contain 'colors',"
+#~ " and on such values no color "
+#~ "space conversion should ever be applied."
+#~ " For such images the color space "
+#~ "should be set to None."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default only renders are displayed"
+#~ " and saved with the render view "
+#~ "transformations applied. These are the "
+#~ "Render Result and Viewer image data-"
+#~ "blocks, and the files saved directly "
+#~ "to disk with the Render Animation "
+#~ "operator. However, when loading a render"
+#~ " saved to an intermediate OpenEXR "
+#~ "file, Blender cannot detect automatically "
+#~ "that this is a render (it could"
+#~ " be e.g. an image texture or "
+#~ "displacement map). We need to specify"
+#~ " that this is a render and that"
+#~ " we want the transformations applied, "
+#~ "with these two settings:"
 #~ msgstr ""
 
