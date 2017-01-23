@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-11 13:24-0500\n"
+"POT-Creation-Date: 2017-01-23 17:43-0500\n"
 "PO-Revision-Date: 2015-10-09 07:39+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -79,36 +79,35 @@ msgstr ""
 "this），一个文字数据块（Text "
 "Datablock）会被用来储存OSL着色器，然后.OSO二进制则被储存在节点本身中。这在打包发放一个.Blend文件时非常有用。（所有的东西都含在.Blend文件中）"
 
-#: ../../manual/render/cycles/nodes/osl.rst:40
-#, fuzzy
+#: ../../manual/render/cycles/nodes/osl.rst:39
 msgid ""
-"The *External* mode can be used to specify a ``.osl`` file on disk, and "
-"this will then be automatically compiled into a ``.oso`` file in the same"
-" directory. It is also possible to specify a path to a ``.oso`` file, "
-"which will then be used directly, with compilation done manually by the "
+"The *External* mode can be used to specify a ``.osl`` file from a drive, "
+"and this will then be automatically compiled into a ``.oso`` file in the "
+"same directory. It is also possible to specify a path to a ``.oso`` file,"
+" which will then be used directly, with compilation done manually by the "
 "user. The third option is to specify just the module name, which will be "
 "looked up in the shader search path."
-msgstr "外部模式则可以使用储存于.Blend文件外部，硬盘上某处的一个.osl文件，并基于这个外部文件自动整合并在同一个目录下生成一个.oso文件。在硬盘（文件系统）中直接指定一个.oso文件并使用也是可行的，但代码的整合必须手动完成。第三个方法则是只去写入一个模块的名字，然后会在着色器的搜索地址内自动寻找相应的模块。"
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:46
+#: ../../manual/render/cycles/nodes/osl.rst:45
 msgid ""
 "The shader search path is located in the same place as the scripts or "
 "configuration path, under:"
 msgstr "着色器的搜索地址可以在OSL脚本内所指定的地址下找到，如下："
 
-#: ../../manual/render/cycles/nodes/osl.rst:48
+#: ../../manual/render/cycles/nodes/osl.rst:47
 msgid "Linux"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:50
+#: ../../manual/render/cycles/nodes/osl.rst:49
 msgid "MS-Windows"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:53
+#: ../../manual/render/cycles/nodes/osl.rst:52
 msgid "macOS"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:57
+#: ../../manual/render/cycles/nodes/osl.rst:56
 #, fuzzy
 msgid ""
 "For use in production, we suggest to use a node group to wrap shader "
@@ -117,11 +116,11 @@ msgid ""
 "without having to update the script nodes in all files."
 msgstr "为了制作方便，我们建议“利用节点组包装代码节点”，连接和进其他.blend文件。之后可以更容易更改（增加或删除）节点的插口而不需要更新全部文件里面的代码节点。"
 
-#: ../../manual/render/cycles/nodes/osl.rst:64
+#: ../../manual/render/cycles/nodes/osl.rst:63
 msgid "Writing Shaders"
 msgstr "写着色器"
 
-#: ../../manual/render/cycles/nodes/osl.rst:66
+#: ../../manual/render/cycles/nodes/osl.rst:65
 #, fuzzy
 msgid ""
 "For more details on how to write shaders, see the `OSL specification "
@@ -132,11 +131,11 @@ msgstr ""
 "<https://github.com/imageworks/OpenShadingLanguage/raw/master/src/doc"
 "/osl-languages​​pec.pdf>`__. 这里有一个简单例子："
 
-#: ../../manual/render/cycles/nodes/osl.rst:83
+#: ../../manual/render/cycles/nodes/osl.rst:82
 msgid "Closures"
 msgstr "闭包"
 
-#: ../../manual/render/cycles/nodes/osl.rst:85
+#: ../../manual/render/cycles/nodes/osl.rst:84
 msgid ""
 "OSL is different from, for example, RSL or GLSL, in that it does not have"
 " a light loop. There is no access to lights in the scene, and the "
@@ -148,7 +147,7 @@ msgstr ""
 "OSL 是不同的例如，RSL 或 "
 "GLSL，它没有光的循环。没有访问到场景中的灯光和材料必须由在渲染引擎本身实施的封锁。这是更多限制，但也使得渲染引擎做优化，确保所有着色器可以是重要性采样。"
 
-#: ../../manual/render/cycles/nodes/osl.rst:91
+#: ../../manual/render/cycles/nodes/osl.rst:90
 #, fuzzy
 msgid ""
 "The available closures in Cycles correspond to the shader nodes and their"
@@ -159,370 +158,370 @@ msgstr ""
 "在cycles中可用的闭包对应于着色器节点和卯;他们做了什么和参数的含义的更多详细信息，请参阅 :doc:`着色器节点手册 "
 "</render/cycles/nodes/shaders>`."
 
-#: ../../manual/render/cycles/nodes/osl.rst:97
+#: ../../manual/render/cycles/nodes/osl.rst:96
 msgid "BSDF"
 msgstr "双向散射分布函数"
 
-#: ../../manual/render/cycles/nodes/osl.rst:99
+#: ../../manual/render/cycles/nodes/osl.rst:98
 msgid "``diffuse(N)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:100
+#: ../../manual/render/cycles/nodes/osl.rst:99
 msgid "``oren_nayar(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:101
+#: ../../manual/render/cycles/nodes/osl.rst:100
 msgid "``diffuse_ramp(N, colors[8])``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:102
+#: ../../manual/render/cycles/nodes/osl.rst:101
 msgid "``phong_ramp(N, exponent, colors[8])``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:103
+#: ../../manual/render/cycles/nodes/osl.rst:102
 msgid "``diffuse_toon(N, size, smooth)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:104
+#: ../../manual/render/cycles/nodes/osl.rst:103
 msgid "``glossy_toon(N, size, smooth)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:105
+#: ../../manual/render/cycles/nodes/osl.rst:104
 msgid "``translucent(N)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:106
+#: ../../manual/render/cycles/nodes/osl.rst:105
 msgid "``reflection(N)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:107
+#: ../../manual/render/cycles/nodes/osl.rst:106
 msgid "``refraction(N, ior)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:108
+#: ../../manual/render/cycles/nodes/osl.rst:107
 msgid "``transparent()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:109
+#: ../../manual/render/cycles/nodes/osl.rst:108
 msgid "``microfacet_ggx(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:110
+#: ../../manual/render/cycles/nodes/osl.rst:109
 msgid "``microfacet_ggx_aniso(N, T, ax, ay)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:111
+#: ../../manual/render/cycles/nodes/osl.rst:110
 msgid "``microfacet_ggx_refraction(N, roughness, ior)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:112
+#: ../../manual/render/cycles/nodes/osl.rst:111
 msgid "``microfacet_beckmann(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:113
+#: ../../manual/render/cycles/nodes/osl.rst:112
 msgid "``microfacet_beckmann_aniso(N, T, ax, ay)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:114
+#: ../../manual/render/cycles/nodes/osl.rst:113
 msgid "``microfacet_beckmann_refraction(N, roughness, ior)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:115
+#: ../../manual/render/cycles/nodes/osl.rst:114
 msgid "``ashikhmin_shirley(N, T, ax, ay)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:116
+#: ../../manual/render/cycles/nodes/osl.rst:115
 msgid "``ashikhmin_velvet(N, roughness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:120
+#: ../../manual/render/cycles/nodes/osl.rst:119
 msgid "Hair"
 msgstr "毛发"
 
-#: ../../manual/render/cycles/nodes/osl.rst:122
+#: ../../manual/render/cycles/nodes/osl.rst:121
 msgid "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:123
+#: ../../manual/render/cycles/nodes/osl.rst:122
 msgid "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:127
+#: ../../manual/render/cycles/nodes/osl.rst:126
 msgid "BSSRDF"
 msgstr "双向散射面反射分布函数"
 
-#: ../../manual/render/cycles/nodes/osl.rst:129
+#: ../../manual/render/cycles/nodes/osl.rst:128
 msgid "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:130
+#: ../../manual/render/cycles/nodes/osl.rst:129
 msgid "``bssrdf_gaussian(N, radius, texture_blur)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:134
+#: ../../manual/render/cycles/nodes/osl.rst:133
 msgid "Volume"
 msgstr "体积"
 
-#: ../../manual/render/cycles/nodes/osl.rst:136
+#: ../../manual/render/cycles/nodes/osl.rst:135
 msgid "``henyey_greenstein(g)``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:137
+#: ../../manual/render/cycles/nodes/osl.rst:136
 msgid "``absorption()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:141
+#: ../../manual/render/cycles/nodes/osl.rst:140
 msgid "Other"
 msgstr "其他"
 
-#: ../../manual/render/cycles/nodes/osl.rst:143
+#: ../../manual/render/cycles/nodes/osl.rst:142
 msgid "``emission()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:144
+#: ../../manual/render/cycles/nodes/osl.rst:143
 msgid "``ambient_occlusion()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:145
+#: ../../manual/render/cycles/nodes/osl.rst:144
 msgid "``holdout()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:146
+#: ../../manual/render/cycles/nodes/osl.rst:145
 msgid "``background()``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:150
+#: ../../manual/render/cycles/nodes/osl.rst:149
 msgid "Attributes"
 msgstr "属性"
 
-#: ../../manual/render/cycles/nodes/osl.rst:152
+#: ../../manual/render/cycles/nodes/osl.rst:151
 msgid ""
 "Some object, particle and mesh attributes are available to the built-in "
 "getattribute() function. UV maps and vertex colors can be retrieved using"
 " their name. Other attributes are listed below:"
 msgstr "一些物件，粒子和模型属性也可以在自带的getattribute() 函数取得。 UV贴图和顶点颜色也可以通过他们的名字检索。其他属性如下："
 
-#: ../../manual/render/cycles/nodes/osl.rst:156
+#: ../../manual/render/cycles/nodes/osl.rst:155
 msgid "``geom:generated``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:157
+#: ../../manual/render/cycles/nodes/osl.rst:156
 #, fuzzy
 msgid "Generated texture coordinates."
 msgstr "生产贴图座标"
 
-#: ../../manual/render/cycles/nodes/osl.rst:158
+#: ../../manual/render/cycles/nodes/osl.rst:157
 msgid "``geom:uv``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:159
+#: ../../manual/render/cycles/nodes/osl.rst:158
 #, fuzzy
 msgid "Default render UV map."
 msgstr "默认渲染UV贴图"
 
-#: ../../manual/render/cycles/nodes/osl.rst:160
+#: ../../manual/render/cycles/nodes/osl.rst:159
 msgid "``geom:dupli_generated``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:161
+#: ../../manual/render/cycles/nodes/osl.rst:160
 #, fuzzy
 msgid "For instances, generated coordinate from duplicator object."
 msgstr "例如从其他物件生成坐标"
 
-#: ../../manual/render/cycles/nodes/osl.rst:162
+#: ../../manual/render/cycles/nodes/osl.rst:161
 msgid "``geom:dupli_uv``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:163
+#: ../../manual/render/cycles/nodes/osl.rst:162
 #, fuzzy
 msgid "For instances, UV coordinate from duplicator object."
 msgstr "例如其他物件UV坐标"
 
-#: ../../manual/render/cycles/nodes/osl.rst:164
+#: ../../manual/render/cycles/nodes/osl.rst:163
 msgid "``geom:trianglevertices``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:165
+#: ../../manual/render/cycles/nodes/osl.rst:164
 #, fuzzy
 msgid "3 vertex coordinates of the triangle."
 msgstr "三角形的3顶点坐标"
 
-#: ../../manual/render/cycles/nodes/osl.rst:166
+#: ../../manual/render/cycles/nodes/osl.rst:165
 msgid "``geom:numpolyvertices``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:167
+#: ../../manual/render/cycles/nodes/osl.rst:166
 #, fuzzy
 msgid "Number of vertices in the polygon (always returns three currently)."
 msgstr "多边形的顶点数（经常是回3）"
 
-#: ../../manual/render/cycles/nodes/osl.rst:168
+#: ../../manual/render/cycles/nodes/osl.rst:167
 msgid "``geom:polyvertices``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:169
+#: ../../manual/render/cycles/nodes/osl.rst:168
 #, fuzzy
 msgid "Vertex coordinates array of the polygon (always three vertices currently)."
 msgstr "多边形的顶点数（经常是回3）"
 
-#: ../../manual/render/cycles/nodes/osl.rst:170
+#: ../../manual/render/cycles/nodes/osl.rst:169
 msgid "``geom:name``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:171
+#: ../../manual/render/cycles/nodes/osl.rst:170
 #, fuzzy
 msgid "Name of the object."
 msgstr "物件名字"
 
-#: ../../manual/render/cycles/nodes/osl.rst:172
+#: ../../manual/render/cycles/nodes/osl.rst:171
 msgid "``geom:is_curve``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:173
+#: ../../manual/render/cycles/nodes/osl.rst:172
 #, fuzzy
 msgid "Is object a strand or not."
 msgstr "物件是不是串"
 
-#: ../../manual/render/cycles/nodes/osl.rst:174
+#: ../../manual/render/cycles/nodes/osl.rst:173
 msgid "``geom:curve_intercept``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:175
+#: ../../manual/render/cycles/nodes/osl.rst:174
 #, fuzzy
 msgid "Point along the strand, from root to tip."
 msgstr "从发根至发梢，沿串来看"
 
-#: ../../manual/render/cycles/nodes/osl.rst:176
+#: ../../manual/render/cycles/nodes/osl.rst:175
 msgid "``geom:curve_thickness``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:177
+#: ../../manual/render/cycles/nodes/osl.rst:176
 #, fuzzy
 msgid "Thickness of the strand."
 msgstr "串的厚度"
 
-#: ../../manual/render/cycles/nodes/osl.rst:178
+#: ../../manual/render/cycles/nodes/osl.rst:177
 msgid "``geom:curve_tangent_normal``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:179
+#: ../../manual/render/cycles/nodes/osl.rst:178
 #, fuzzy
 msgid "Tangent Normal of the strand."
 msgstr "切线 法綫"
 
-#: ../../manual/render/cycles/nodes/osl.rst:180
+#: ../../manual/render/cycles/nodes/osl.rst:179
 msgid "``path:ray_length``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:181
+#: ../../manual/render/cycles/nodes/osl.rst:180
 #, fuzzy
 msgid "Ray distance since last hit."
 msgstr "光线到达距离"
 
-#: ../../manual/render/cycles/nodes/osl.rst:182
+#: ../../manual/render/cycles/nodes/osl.rst:181
 msgid "``object:location``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:183
+#: ../../manual/render/cycles/nodes/osl.rst:182
 #, fuzzy
 msgid "Object location."
 msgstr "物件位置"
 
-#: ../../manual/render/cycles/nodes/osl.rst:184
+#: ../../manual/render/cycles/nodes/osl.rst:183
 msgid "``object:index``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:185
+#: ../../manual/render/cycles/nodes/osl.rst:184
 #, fuzzy
 msgid "Object index number."
 msgstr "物件索引号"
 
-#: ../../manual/render/cycles/nodes/osl.rst:186
+#: ../../manual/render/cycles/nodes/osl.rst:185
 msgid "``object:random``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:187
+#: ../../manual/render/cycles/nodes/osl.rst:186
 #, fuzzy
 msgid "Per object random number generated from object index and name."
 msgstr "每个物件的随机数從物件指数和名称"
 
-#: ../../manual/render/cycles/nodes/osl.rst:188
+#: ../../manual/render/cycles/nodes/osl.rst:187
 msgid "``material:index``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:189
+#: ../../manual/render/cycles/nodes/osl.rst:188
 #, fuzzy
 msgid "Material index number."
 msgstr "材质指数"
 
-#: ../../manual/render/cycles/nodes/osl.rst:190
+#: ../../manual/render/cycles/nodes/osl.rst:189
 msgid "``particle:index``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:191
+#: ../../manual/render/cycles/nodes/osl.rst:190
 #, fuzzy
 msgid "Particle instance number."
 msgstr "粒子实例号"
 
-#: ../../manual/render/cycles/nodes/osl.rst:192
+#: ../../manual/render/cycles/nodes/osl.rst:191
 msgid "``particle:age``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:193
+#: ../../manual/render/cycles/nodes/osl.rst:192
 #, fuzzy
 msgid "Particle age in frames."
 msgstr "粒子帧寿命"
 
-#: ../../manual/render/cycles/nodes/osl.rst:194
+#: ../../manual/render/cycles/nodes/osl.rst:193
 msgid "``particle:lifetime``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:195
+#: ../../manual/render/cycles/nodes/osl.rst:194
 #, fuzzy
 msgid "Total lifespan of particle in frames."
 msgstr "粒子在帧的总寿命"
 
-#: ../../manual/render/cycles/nodes/osl.rst:196
+#: ../../manual/render/cycles/nodes/osl.rst:195
 msgid "``particle:location``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:197
+#: ../../manual/render/cycles/nodes/osl.rst:196
 #, fuzzy
 msgid "Location of the particle."
 msgstr "粒子的位置"
 
-#: ../../manual/render/cycles/nodes/osl.rst:198
+#: ../../manual/render/cycles/nodes/osl.rst:197
 msgid "``particle:size``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:199
+#: ../../manual/render/cycles/nodes/osl.rst:198
 #, fuzzy
 msgid "Size of the particle."
 msgstr "粒子的大小"
 
-#: ../../manual/render/cycles/nodes/osl.rst:200
+#: ../../manual/render/cycles/nodes/osl.rst:199
 msgid "``particle:velocity``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:201
+#: ../../manual/render/cycles/nodes/osl.rst:200
 #, fuzzy
 msgid "Velocity of the particle."
 msgstr "粒子的速度"
 
-#: ../../manual/render/cycles/nodes/osl.rst:204
+#: ../../manual/render/cycles/nodes/osl.rst:203
 msgid "``particle:angular_velocity``"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/osl.rst:203
+#: ../../manual/render/cycles/nodes/osl.rst:202
 #, fuzzy
 msgid "Angular velocity of the particle."
 msgstr "粒子的角速度"
 
-#: ../../manual/render/cycles/nodes/osl.rst:207
+#: ../../manual/render/cycles/nodes/osl.rst:206
 msgid "Trace"
 msgstr "跟踪"
 
-#: ../../manual/render/cycles/nodes/osl.rst:209
+#: ../../manual/render/cycles/nodes/osl.rst:208
 msgid ""
 "We support the ``trace(point pos, vector dir, ...)`` function, to trace "
 "rays from the OSL shader. The \"shade\" parameter is not supported "
@@ -533,7 +532,7 @@ msgstr ""
 "我们支持从OSL着色器跟踪（点POS，矢量DIR..)函数去跟踪光线。着色参数目前还是不支持。但是属性可以从已击中的物件中利用``getmessage(\"trace\","
 " ..)``检索函数。请看看OSL规格。"
 
-#: ../../manual/render/cycles/nodes/osl.rst:215
+#: ../../manual/render/cycles/nodes/osl.rst:214
 #, fuzzy
 msgid ""
 "This function cannot be used instead of lighting; the main purpose is to "
@@ -631,4 +630,19 @@ msgstr "此功能不能被用来代替照明，主要目的是允许着色器“
 
 #~ msgid "Mac OSX"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "The *External* mode can be used to"
+#~ " specify a ``.osl`` file on disk, "
+#~ "and this will then be automatically "
+#~ "compiled into a ``.oso`` file in "
+#~ "the same directory. It is also "
+#~ "possible to specify a path to a"
+#~ " ``.oso`` file, which will then be"
+#~ " used directly, with compilation done "
+#~ "manually by the user. The third "
+#~ "option is to specify just the "
+#~ "module name, which will be looked "
+#~ "up in the shader search path."
+#~ msgstr "外部模式则可以使用储存于.Blend文件外部，硬盘上某处的一个.osl文件，并基于这个外部文件自动整合并在同一个目录下生成一个.oso文件。在硬盘（文件系统）中直接指定一个.oso文件并使用也是可行的，但代码的整合必须手动完成。第三个方法则是只去写入一个模块的名字，然后会在着色器的搜索地址内自动寻找相应的模块。"
 
