@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-28 13:16-0500\n"
+"POT-Creation-Date: 2017-02-06 22:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,8 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:17
-msgid "Surface Shader"
+#: ../../manual/render/cycles/world.rst:100
+msgid "Surface"
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:19
@@ -60,7 +61,8 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:36
-msgid "Volume Shader"
+#: ../../manual/render/cycles/world.rst:138
+msgid "Volume"
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:38
@@ -106,6 +108,7 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:64
+#: ../../manual/render/cycles/world.rst:142
 msgid "Distance"
 msgstr ""
 
@@ -132,114 +135,156 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:78
-msgid "World Settings"
+msgid "Mist Pass"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:81
-msgid "Surface"
+#: ../../manual/render/cycles/world.rst:80
+msgid "Shown when the Mist pass is enabled."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:99
-msgid "Multiple Importance Sample"
+#: ../../manual/render/cycles/world.rst:82
+msgid "Start"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:83
+#: ../../manual/render/cycles/world.rst:85
+#: ../../manual/render/cycles/world.rst:87
+msgid "ToDo."
 msgstr ""
 
 #: ../../manual/render/cycles/world.rst:84
+msgid "Depth"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:87
+msgid "Falloff"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:91
+msgid ""
+"A visualization can be activated in the :menuselection:`Camera --> "
+"Display` panel."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:97
+msgid "Settings"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:119
+msgid "Multiple Importance Sample"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:103
 msgid ""
 "Enabling this will sample the background texture such that lighter parts "
-"are favored, producing less noise in the render. It is almost always a "
-"good idea to enable this when using an image texture to light the scene, "
+"are favored, creating an importance map. It will producing less noise in "
+"the render in trade of artifacts (fireflies). It is almost always a good "
+"idea to enable this when using an image texture to light the scene, "
 "otherwise noise can take a very long time to converge."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:88
+#: ../../manual/render/cycles/world.rst:108
 msgid ""
 "Below is a comparison between *Multiple Importance Sample* off and on. "
 "Both images are rendered for 25 seconds (Off: 1500 samples, On: 1000 "
 "samples)."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:95
+#: ../../manual/render/cycles/world.rst:115
 msgid "Multiple Importance Sample Off."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:99
+#: ../../manual/render/cycles/world.rst:119
 msgid "Multiple Importance Sample On."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:104
+#: ../../manual/render/cycles/world.rst:124
 msgid "Map Resolution"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:102
+#: ../../manual/render/cycles/world.rst:122
 msgid ""
-"Sets the resolution of the 'Multiple Importance Sample' map. Higher "
-"values may produce less noise when using high-res images, but will take "
-"up more memory and render slightly slower."
+"Sets the resolution of the importance map. A higher resolution will "
+"better detect small features in the map and give more accurate sampling. "
+"but conversely will take up more memory and render slightly slower. "
+"Higher values also may produce less noise when using high-res images."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:107
+#: ../../manual/render/cycles/world.rst:127
 msgid "Max Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:107
+#: ../../manual/render/cycles/world.rst:127
 msgid ""
 "Maximal number of bounces the background light will contribute to the "
 "render."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:111
+#: ../../manual/render/cycles/world.rst:131
 msgid ""
 "See :doc:`Reducing Noise </render/cycles/optimizations/reducing_noise>` "
 "for more information on how to reduce noise."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:116
-msgid "Volume"
-msgstr ""
-
-#: ../../manual/render/cycles/world.rst:122
+#: ../../manual/render/cycles/world.rst:147
 msgid "Sampling Method"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:119
+#: ../../manual/render/cycles/world.rst:142
 msgid ""
-"Options are *Multiple Importance*, *Distance*, or *Equiangular*. - If you"
-" have got a pretty dense volume that is lit from far away then distance "
-"sampling is usually more efficient. - If you have got a light inside or "
-"near the volume then equiangular sampling is better. - If you have a "
-"combination of both, then the multiple importance sampling will be "
-"better."
+"If you have got a pretty dense volume that is lit from far away then "
+"*Distance* sampling is usually more efficient."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:130
+#: ../../manual/render/cycles/world.rst:144
+msgid "Equiangular"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:145
+msgid ""
+"If you have got a light inside or near the volume then *equiangular* "
+"sampling is better."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:147
+msgid "Multiple Importance"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:147
+msgid ""
+"If you have a combination of both, then the multiple importance sampling "
+"will be better."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:155
 msgid "Interpolation"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:125
-msgid "Interpolation method to use for world volumes."
+#: ../../manual/render/cycles/world.rst:150
+msgid "Interpolation method to use for the volume."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:127
+#: ../../manual/render/cycles/world.rst:152
 msgid "Linear"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:128
+#: ../../manual/render/cycles/world.rst:153
 msgid "Good smoothness and speed."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:130
+#: ../../manual/render/cycles/world.rst:155
 msgid "Cubic"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:130
+#: ../../manual/render/cycles/world.rst:155
 msgid "Smoothed high quality interpolation, but slower."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:136
+#: ../../manual/render/cycles/world.rst:161
 msgid "Homogeneous Volume"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:133
+#: ../../manual/render/cycles/world.rst:158
 msgid ""
 "Assume volume has the same density everywhere (not using any textures), "
 "for faster rendering. For example absorption in a glass object would "
@@ -247,21 +292,21 @@ msgid ""
 "small steps to sample the volume shader."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:139
+#: ../../manual/render/cycles/world.rst:164
 msgid "Ray Visibility"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:141
+#: ../../manual/render/cycles/world.rst:166
 msgid ""
 "As with other objects, *Ray Visibility* allows you to control which other"
 " shaders can \"see\" the environment."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:146
+#: ../../manual/render/cycles/world.rst:171
 msgid "Tricks"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:148
+#: ../../manual/render/cycles/world.rst:173
 msgid ""
 "Sometimes it may be useful to have a different background that is "
 "directly visible versus one that is indirectly lighting the objects. A "
@@ -271,21 +316,64 @@ msgid ""
 "res image for the background and a low-res image for the actual lighting."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:154
+#: ../../manual/render/cycles/world.rst:179
 msgid ""
 "Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the"
 " high-res image will also be visible in reflections."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:159
+#: ../../manual/render/cycles/world.rst:184
 msgid "Nodes for the trick above."
 msgstr ""
 
 #~ msgid ""
-#~ "Maximim number of bounces the background"
-#~ " light will contribute to the render."
 #~ msgstr ""
 
 #~ msgid "Interpolation meathod to use for world volumes."
+#~ msgstr ""
+
+#~ msgid "Surface Shader"
+#~ msgstr ""
+
+#~ msgid "Volume Shader"
+#~ msgstr ""
+
+#~ msgid "World Settings"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enabling this will sample the background"
+#~ " texture such that lighter parts are"
+#~ " favored, producing less noise in the"
+#~ " render. It is almost always a "
+#~ "good idea to enable this when "
+#~ "using an image texture to light "
+#~ "the scene, otherwise noise can take "
+#~ "a very long time to converge."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sets the resolution of the 'Multiple "
+#~ "Importance Sample' map. Higher values "
+#~ "may produce less noise when using "
+#~ "high-res images, but will take up "
+#~ "more memory and render slightly slower."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Options are *Multiple Importance*, *Distance*,"
+#~ " or *Equiangular*. - If you have "
+#~ "got a pretty dense volume that is"
+#~ " lit from far away then distance "
+#~ "sampling is usually more efficient. -"
+#~ " If you have got a light inside"
+#~ " or near the volume then equiangular"
+#~ " sampling is better. - If you "
+#~ "have a combination of both, then "
+#~ "the multiple importance sampling will be"
+#~ " better."
+#~ msgstr ""
+
+#~ msgid "Interpolation method to use for world volumes."
 #~ msgstr ""
 

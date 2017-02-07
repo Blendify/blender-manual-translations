@@ -1,8 +1,8 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
 #
-# https://www.blender.org/manual/ru/render/cycles/nodes/types/shaders/emission.html
 #
+# https://www.blender.org/manual/ru/render/cycles/nodes/types/shaders/emission.html
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
 # https://creativecommons.org/licenses/by-sa/4.0/deed.ru
 # Список переводчиков
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-23 17:43-0500\n"
+"POT-Creation-Date: 2017-02-06 22:19-0500\n"
 "PO-Revision-Date: 2016-10-17 22:17+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -30,16 +30,16 @@ msgid "Emission Node."
 msgstr "Узел «Излучение»"
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:11
+#, fuzzy
 msgid ""
-"The *Emission* :abbr:`BSDF (Bidirectional scattering distribution "
-"function)` node is used to add Lambertian emission. This can for example,"
-" be used for material and lamp surface outputs."
+"The *Emission* node is used to add Lambertian emission shader. This can "
+"for example, be used for material and lamp surface outputs."
 msgstr ""
 "Узел *«Излучение»* используется для добавления излучения по модели "
 "Ламберта. Оно может пригодиться, например, для материалов и для вывода "
 "поверхностей ламп."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:15
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:14
 msgid ""
 "Cycles uses a physically correct light falloff by default, whereas "
 "Blender Internal uses a smoothed falloff with a Distance parameter. A "
@@ -51,7 +51,7 @@ msgstr ""
 " Подобного эффекта можно достичь использованием узла «Спад света» с "
 "параметром «Гладко»."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:19
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:18
 msgid ""
 "Lamp strength for point, spot and area lamps is specified in Watts. This "
 "means you typically need higher values than Blender Internal, as you "
@@ -63,7 +63,7 @@ msgstr ""
 "значения, чем для рендера Blender, поскольку вы не сможете осветить "
 "одноваттной лампочкой всю комнату; вам нужна лампа где-то под 100 Вт."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:23
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:22
 msgid ""
 "Sun lamps are specified in Watts/m\\ :sup:`2`\\, which require much "
 "smaller values like 1 W/m\\ :sup:`2`\\. This can be confusing, but "
@@ -78,23 +78,23 @@ msgstr ""
 ":sup:`24`\\Вт. Сила излучения в шейдерах для полисеток также указывается "
 "в ваттах/метр\\ :sup:`2`\\."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:30
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:29
 msgid "Inputs"
 msgstr "Входы"
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:32
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:31
 msgid "Color"
 msgstr "Цвет"
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:33
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:32
 msgid "Color of the emitted light."
 msgstr "Цвет излучаемого света."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:38
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:37
 msgid "Strength"
 msgstr "Сила"
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:35
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:34
 msgid ""
 "Strength of the emitted light. For point and area lamps, the unit is "
 "Watts. For materials, a value of 1.0 will ensure that the object in the "
@@ -106,15 +106,16 @@ msgstr ""
 "гарантировать, что объект на изображении будет иметь тот же самый цвет, "
 "что и на входе «Цвет», то есть, он станет однотонным."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:41
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:40
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:43
-msgid "This node has no properites."
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:42
+#, fuzzy
+msgid "This node has no properties."
 msgstr "Этот узел не содержит свойств."
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:47
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:46
 msgid "Outputs"
 msgstr "Выходы"
 
@@ -122,9 +123,12 @@ msgstr "Выходы"
 msgid "Emission"
 msgstr "Узел «Излучение»"
 
-#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:50
-msgid "Standard shader output."
-msgstr "Стандартный выход шейдера."
+#: ../../manual/render/cycles/nodes/types/shaders/emission.rst:49
+msgid ""
+"The Emission shader output can both be plugged in the *Surface Input* as "
+"well as the *Volume Input* of the :doc:`Material "
+"</render/cycles/nodes/types/output/material>` output node."
+msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/emission.rst:54
 msgid "Examples"
@@ -139,4 +143,7 @@ msgstr "Шейдер излучения с силой, равной 1.0"
 #, fuzzy
 msgid "Emission shader, with strength at 3.0."
 msgstr "Шейдер излучения с силой, равной 3.0"
+
+#~ msgid "Standard shader output."
+#~ msgstr "Стандартный выход шейдера."
 
