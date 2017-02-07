@@ -1,20 +1,17 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-#   https://www.blender.org/manual/ru/render/cycles/materials/settings.html
+# https://www.blender.org/manual/ru/render/cycles/materials/settings.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
-#
+# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
 # Список переводчиков
 # ===================
-#
 # Mingun <alexander_sergey@mail.ru>, 2016.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 18:25-0400\n"
+"POT-Creation-Date: 2017-02-06 22:19-0500\n"
 "PO-Revision-Date: 2016-08-30 21:55+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -23,23 +20,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/render/cycles/materials/settings.rst:5
+#: ../../manual/render/cycles/materials/settings.rst:4
 msgid "Material Settings"
 msgstr "Настройки материала"
 
-#: ../../manual/render/cycles/materials/settings.rst:10
+#: ../../manual/render/cycles/materials/settings.rst:9
 msgid "Material Settings."
 msgstr "Настройки материала"
 
-#: ../../manual/render/cycles/materials/settings.rst:14
+#: ../../manual/render/cycles/materials/settings.rst:13
 msgid "Surface"
 msgstr "Поверхность"
 
-#: ../../manual/render/cycles/materials/settings.rst:23
+#: ../../manual/render/cycles/materials/settings.rst:22
 msgid "Multiple Importance Sample"
 msgstr "Множественная значимость"
 
-#: ../../manual/render/cycles/materials/settings.rst:17
+#: ../../manual/render/cycles/materials/settings.rst:16
 msgid ""
 "By default objects with emitting materials use both direct and indirect "
 "light sampling methods, but in some cases it may lead to less noise "
@@ -56,7 +53,7 @@ msgstr ""
 "приносит на больших объектах, которые излучают мало света, по сравнению с"
 " другими источниками освещения."
 
-#: ../../manual/render/cycles/materials/settings.rst:22
+#: ../../manual/render/cycles/materials/settings.rst:21
 msgid ""
 "This option will only have an influence if the material contains an "
 "emission node; it will be automatically disabled otherwise."
@@ -64,11 +61,11 @@ msgstr ""
 "Этот параметр влияет только на материалы, содержащие узел *Излучение*; в "
 "противном случае он будет отключён автоматически."
 
-#: ../../manual/render/cycles/materials/settings.rst:28
+#: ../../manual/render/cycles/materials/settings.rst:27
 msgid "Transparent Shadows"
 msgstr "Прозрачные тени"
 
-#: ../../manual/render/cycles/materials/settings.rst:26
+#: ../../manual/render/cycles/materials/settings.rst:25
 msgid ""
 "Use transparent shadows if it contains a :doc:`Transparent BSDF "
 "</render/cycles/nodes/types/shaders/transparent>`, disabling will render "
@@ -78,76 +75,21 @@ msgstr ""
 " BSDF </render/cycles/nodes/types/shaders/transparent>`. при оключённой "
 "галочке визуализация ускорится, но не даст точных теней."
 
-#: ../../manual/render/cycles/materials/settings.rst:31
+#: ../../manual/render/cycles/materials/settings.rst:30
 msgid "Volume"
 msgstr "Объём"
 
-#: ../../manual/render/cycles/materials/settings.rst:37
-msgid "Sampling Method"
-msgstr "Сэмплирование объёма"
-
-#: ../../manual/render/cycles/materials/settings.rst:34
+#: ../../manual/render/cycles/materials/settings.rst:32
 msgid ""
-"Options are *Multiple Importance*, *Distance*, or *Equiangular*. If you "
-"have got a pretty dense volume that is lit from far away then distance "
-"sampling is usually more efficient. If you have got a light inside or "
-"near the volume then equiangular sampling is better. If you have a "
-"combination of both, then the multiple importance sampling will be "
-"better."
+"Similar volume settings as the :ref:`World settings <render-cycles-"
+"integrator-world-settings>` per material."
 msgstr ""
-"Параметр может принимать значения *Множественная значимость*, "
-"*Расстояние* или *Равноугольно*. Если у вас довольно плотный объём, "
-"который освещается на большую глубину, то выборка по расстоянию, как "
-"правило, более эффективна. Если же у вас внутри или вблизи объёма есть "
-"источник света, то лучше равноугольная выборка. Если у вас комбинация и "
-"того, и другого, то лучше будет множественная выборка по значимости."
 
-#: ../../manual/render/cycles/materials/settings.rst:45
-msgid "Interpolation"
-msgstr "Сглаживание объёма"
-
-#: ../../manual/render/cycles/materials/settings.rst:40
-msgid "Controls the type of interpolation to use for smoke simulations."
-msgstr "Управляет типом сглаживания, используемом для моделирования дыма."
-
-#: ../../manual/render/cycles/materials/settings.rst:42
-msgid "Linear"
-msgstr "Линейно"
-
-#: ../../manual/render/cycles/materials/settings.rst:43
-msgid "Good smoothness and speed."
-msgstr "Хорошее сглаживание и скорость."
-
-#: ../../manual/render/cycles/materials/settings.rst:45
-msgid "Cubic"
-msgstr "Кубический"
-
-#: ../../manual/render/cycles/materials/settings.rst:45
-msgid "Smoothed high quality interpolation, but slower."
-msgstr "Сглаженная интерполяция с высоким качеством, но медленнее."
-
-#: ../../manual/render/cycles/materials/settings.rst:51
-msgid "Homogeneous Volume"
-msgstr "Однородный объём"
-
-#: ../../manual/render/cycles/materials/settings.rst:48
-msgid ""
-"Assume volume has the same density everywhere (not using any textures), "
-"for faster rendering. For example absorption in a glass object would "
-"typically not have any textures, and by knowing this we can avoid taking "
-"small steps to sample the volume shader."
-msgstr ""
-"Предполагать, что объём имеет одинаковую плотность во всех местах "
-"(текстуры не используются) для ускорения визуализации. Например, "
-"поглощение в стеклянных объектах обычно не использует текстуры и зная "
-"это, мы можем избежать использования маленьких шагов для выборки из "
-"шейдера объёма."
-
-#: ../../manual/render/cycles/materials/settings.rst:56
+#: ../../manual/render/cycles/materials/settings.rst:38
 msgid "Displacement"
 msgstr "Смещения"
 
-#: ../../manual/render/cycles/materials/settings.rst:60
+#: ../../manual/render/cycles/materials/settings.rst:42
 msgid ""
 "These Options are only available if :ref:`Experimental Feature Set "
 "<cycles-experimental-features>` is turned on."
@@ -155,11 +97,11 @@ msgstr ""
 "Этот параметр доступен только в :ref:`экспериментальном режиме <cycles-"
 "experimental-features>`."
 
-#: ../../manual/render/cycles/materials/settings.rst:77
+#: ../../manual/render/cycles/materials/settings.rst:59
 msgid "Displacement Method"
 msgstr "Метод смещения"
 
-#: ../../manual/render/cycles/materials/settings.rst:64
+#: ../../manual/render/cycles/materials/settings.rst:46
 msgid ""
 "Method used preform :doc:`Displacement "
 "</render/cycles/materials/displacement>` on materials."
@@ -167,11 +109,11 @@ msgstr ""
 "Метод использует предварительно сформированные :doc:`Смещения "
 "</render/cycles/materials/displacement>` для материалов."
 
-#: ../../manual/render/cycles/materials/settings.rst:68
+#: ../../manual/render/cycles/materials/settings.rst:50
 msgid "True Displacement"
 msgstr "Истинно"
 
-#: ../../manual/render/cycles/materials/settings.rst:67
+#: ../../manual/render/cycles/materials/settings.rst:49
 msgid ""
 "Mesh vertices will be displaced before rendering, modifying the actual "
 "mesh. This gives the best quality results, if the mesh is finely "
@@ -182,11 +124,11 @@ msgstr ""
 "уже сильно подразделена. В результате этот метод так же очень сильно "
 "использует память."
 
-#: ../../manual/render/cycles/materials/settings.rst:72
+#: ../../manual/render/cycles/materials/settings.rst:54
 msgid "Bump Mapping"
 msgstr "Рельеф"
 
-#: ../../manual/render/cycles/materials/settings.rst:71
+#: ../../manual/render/cycles/materials/settings.rst:53
 msgid ""
 "When executing the surface shader, a modified surface normal is used "
 "instead of the true normal. This is a quick alternative to true "
@@ -199,11 +141,11 @@ msgstr ""
 "поверхности будут неточными и не будет никакого самозатенения смещёнными "
 "частями поверхности."
 
-#: ../../manual/render/cycles/materials/settings.rst:77
+#: ../../manual/render/cycles/materials/settings.rst:59
 msgid "Displacement + Bump"
 msgstr "Везде"
 
-#: ../../manual/render/cycles/materials/settings.rst:75
+#: ../../manual/render/cycles/materials/settings.rst:57
 msgid ""
 "Both methods can be combined, to do displacement on a coarser mesh, and "
 "use bump mapping for the final detail."
@@ -212,91 +154,91 @@ msgstr ""
 " грубую полисетку, а затем использовать рельефное текстурирование для "
 "добавления деталей."
 
-#: ../../manual/render/cycles/materials/settings.rst:80
+#: ../../manual/render/cycles/materials/settings.rst:62
 msgid "Viewport Settings"
 msgstr "Настройки области просмотра"
 
-#: ../../manual/render/cycles/materials/settings.rst:83
+#: ../../manual/render/cycles/materials/settings.rst:65
 msgid "Viewport Color"
 msgstr "Цвет в области просмотра"
 
-#: ../../manual/render/cycles/materials/settings.rst:85
-#: ../../manual/render/cycles/materials/settings.rst:94
+#: ../../manual/render/cycles/materials/settings.rst:67
+#: ../../manual/render/cycles/materials/settings.rst:76
 msgid "Color"
 msgstr "Цвет"
 
-#: ../../manual/render/cycles/materials/settings.rst:86
-#: ../../manual/render/cycles/materials/settings.rst:88
-#: ../../manual/render/cycles/materials/settings.rst:95
-#: ../../manual/render/cycles/materials/settings.rst:97
+#: ../../manual/render/cycles/materials/settings.rst:68
+#: ../../manual/render/cycles/materials/settings.rst:70
+#: ../../manual/render/cycles/materials/settings.rst:77
+#: ../../manual/render/cycles/materials/settings.rst:79
 msgid "TODO."
 msgstr "Дописать."
 
-#: ../../manual/render/cycles/materials/settings.rst:89
+#: ../../manual/render/cycles/materials/settings.rst:71
 msgid "Alpha"
 msgstr "Альфа"
 
-#: ../../manual/render/cycles/materials/settings.rst:92
+#: ../../manual/render/cycles/materials/settings.rst:74
 msgid "Viewport Specular"
 msgstr "Блики в области просмотра:"
 
-#: ../../manual/render/cycles/materials/settings.rst:97
+#: ../../manual/render/cycles/materials/settings.rst:80
 msgid "Hardness"
 msgstr "Жёсткость"
 
-#: ../../manual/render/cycles/materials/settings.rst:100
+#: ../../manual/render/cycles/materials/settings.rst:83
 msgid "Viewport Alpha"
 msgstr "Альфа-канал в области просмотра"
 
-#: ../../manual/render/cycles/materials/settings.rst:116
+#: ../../manual/render/cycles/materials/settings.rst:100
 msgid "Blend Mode"
 msgstr "Режим смешивания"
 
-#: ../../manual/render/cycles/materials/settings.rst:103
+#: ../../manual/render/cycles/materials/settings.rst:86
 msgid ":term:`Blend modes` for transparent faces."
 msgstr ":term:`Режим смешивания <blend modes>` для прозрачных граней."
 
-#: ../../manual/render/cycles/materials/settings.rst:105
+#: ../../manual/render/cycles/materials/settings.rst:88
 msgid "Opaque"
 msgstr "Непрозрачность"
 
-#: ../../manual/render/cycles/materials/settings.rst:106
+#: ../../manual/render/cycles/materials/settings.rst:89
 msgid "Render color of textured face as color."
 msgstr "Визуализировать текстурированные грани в их цвете."
 
-#: ../../manual/render/cycles/materials/settings.rst:107
+#: ../../manual/render/cycles/materials/settings.rst:90
 msgid "Add"
 msgstr "Добавить"
 
-#: ../../manual/render/cycles/materials/settings.rst:108
+#: ../../manual/render/cycles/materials/settings.rst:91
 msgid "Render transparent and add color of face."
 msgstr "Визуализировать полупрозрачные грани и добавлять цвета граней."
 
-#: ../../manual/render/cycles/materials/settings.rst:109
+#: ../../manual/render/cycles/materials/settings.rst:92
 msgid "Alpha Clip"
 msgstr "Альфа-усечение"
 
-#: ../../manual/render/cycles/materials/settings.rst:110
+#: ../../manual/render/cycles/materials/settings.rst:93
 msgid "Use the image alpha values clipped with no blending (binary alpha)."
 msgstr ""
 "Использовать усечённые альфа-значения изображения без смешивания "
 "(однобитный альфа-канал)."
 
-#: ../../manual/render/cycles/materials/settings.rst:111
+#: ../../manual/render/cycles/materials/settings.rst:94
 msgid "Alpha Blend"
 msgstr "Альфа-смешивание"
 
-#: ../../manual/render/cycles/materials/settings.rst:112
+#: ../../manual/render/cycles/materials/settings.rst:95
 msgid "Render polygon transparent, depending on alpha channel of the texture."
 msgstr ""
 "Визуализировать грань полупрозрачной в зависимости от альфа-канала "
 "текстуры."
 
-#: ../../manual/render/cycles/materials/settings.rst:113
+#: ../../manual/render/cycles/materials/settings.rst:96
 msgid "Alpha Sort"
 msgstr "Альфа-сортировка"
 
-#: ../../manual/render/cycles/materials/settings.rst:114
+#: ../../manual/render/cycles/materials/settings.rst:97
 msgid ""
 "Sort faces for correct alpha drawing (slow, use *Alpha Clip* instead when"
 " possible)."
@@ -304,11 +246,11 @@ msgstr ""
 "Сортировать грани для корректной отрисовки альфа-канала (медленно, при "
 "возможности лучше используйте *Альфа-усечение*)."
 
-#: ../../manual/render/cycles/materials/settings.rst:116
+#: ../../manual/render/cycles/materials/settings.rst:100
 msgid "Alpha Anti-Aliasing"
 msgstr "Альфа-сглаживание"
 
-#: ../../manual/render/cycles/materials/settings.rst:116
+#: ../../manual/render/cycles/materials/settings.rst:99
 msgid ""
 "Use texture alpha ad an anti-aliasing mask, requires multi-sample OpenGL "
 "display."
@@ -316,11 +258,12 @@ msgstr ""
 "Использовать альфа-канал текстуры в качестве маски сглаживания; "
 "необходимо использование OpenGL multi-sample."
 
-#: ../../manual/render/cycles/materials/settings.rst:124
+#: ../../manual/render/cycles/materials/settings.rst:103
+#: ../../manual/render/cycles/materials/settings.rst:109
 msgid "Pass Index"
 msgstr "Индекс прохода"
 
-#: ../../manual/render/cycles/materials/settings.rst:121
+#: ../../manual/render/cycles/materials/settings.rst:106
 msgid ""
 "Index number for the *Material Index* :doc:`render pass "
 "</render/cycles/settings/passes>`. This can be used to give a mask to a "
@@ -331,4 +274,73 @@ msgstr ""
 "*Индекса материала*. Может использоваться для получения маски материала, "
 "которая затем может быть считана в композиторе из узла :doc:`Маска по ID "
 "</compositing/types/converter/id_mask>`."
+
+#~ msgid "Sampling Method"
+#~ msgstr "Сэмплирование объёма"
+
+#~ msgid ""
+#~ "Options are *Multiple Importance*, *Distance*,"
+#~ " or *Equiangular*. If you have got"
+#~ " a pretty dense volume that is "
+#~ "lit from far away then distance "
+#~ "sampling is usually more efficient. If"
+#~ " you have got a light inside or"
+#~ " near the volume then equiangular "
+#~ "sampling is better. If you have a"
+#~ " combination of both, then the "
+#~ "multiple importance sampling will be "
+#~ "better."
+#~ msgstr ""
+#~ "Параметр может принимать значения "
+#~ "*Множественная значимость*, *Расстояние* или "
+#~ "*Равноугольно*. Если у вас довольно "
+#~ "плотный объём, который освещается на "
+#~ "большую глубину, то выборка по "
+#~ "расстоянию, как правило, более эффективна. "
+#~ "Если же у вас внутри или вблизи"
+#~ " объёма есть источник света, то лучше"
+#~ " равноугольная выборка. Если у вас "
+#~ "комбинация и того, и другого, то "
+#~ "лучше будет множественная выборка по "
+#~ "значимости."
+
+#~ msgid "Interpolation"
+#~ msgstr "Сглаживание объёма"
+
+#~ msgid "Controls the type of interpolation to use for smoke simulations."
+#~ msgstr "Управляет типом сглаживания, используемом для моделирования дыма."
+
+#~ msgid "Linear"
+#~ msgstr "Линейно"
+
+#~ msgid "Good smoothness and speed."
+#~ msgstr "Хорошее сглаживание и скорость."
+
+#~ msgid "Cubic"
+#~ msgstr "Кубический"
+
+#~ msgid "Smoothed high quality interpolation, but slower."
+#~ msgstr "Сглаженная интерполяция с высоким качеством, но медленнее."
+
+#~ msgid "Homogeneous Volume"
+#~ msgstr "Однородный объём"
+
+#~ msgid ""
+#~ "Assume volume has the same density "
+#~ "everywhere (not using any textures), for"
+#~ " faster rendering. For example absorption"
+#~ " in a glass object would typically"
+#~ " not have any textures, and by "
+#~ "knowing this we can avoid taking "
+#~ "small steps to sample the volume "
+#~ "shader."
+#~ msgstr ""
+#~ "Предполагать, что объём имеет одинаковую "
+#~ "плотность во всех местах (текстуры не"
+#~ " используются) для ускорения визуализации. "
+#~ "Например, поглощение в стеклянных объектах "
+#~ "обычно не использует текстуры и зная "
+#~ "это, мы можем избежать использования "
+#~ "маленьких шагов для выборки из шейдера"
+#~ " объёма."
 

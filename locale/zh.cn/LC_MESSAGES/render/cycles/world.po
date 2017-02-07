@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-28 13:16-0500\n"
+"POT-Creation-Date: 2017-02-06 22:19-0500\n"
 "PO-Revision-Date: 2015-07-19 03:13+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -28,8 +28,9 @@ msgid ""
 msgstr "世界环境可以提供光照，可以是单一色彩、或是天空模型，也可以是各种贴图。"
 
 #: ../../manual/render/cycles/world.rst:17
-msgid "Surface Shader"
-msgstr "表面着色器"
+#: ../../manual/render/cycles/world.rst:100
+msgid "Surface"
+msgstr ""
 
 #: ../../manual/render/cycles/world.rst:19
 msgid ""
@@ -58,8 +59,9 @@ msgstr ""
 "经度/纬度)；也支持铬球反射映射，它是从铬球反射的环境图照片转换过来的映射贴图。"
 
 #: ../../manual/render/cycles/world.rst:36
-msgid "Volume Shader"
-msgstr "体积渲染器"
+#: ../../manual/render/cycles/world.rst:138
+msgid "Volume"
+msgstr ""
 
 #: ../../manual/render/cycles/world.rst:38
 msgid ""
@@ -107,6 +109,7 @@ msgid ""
 msgstr "此值为AO的强度，值为1.0时，代表是个全白的世界着色器。"
 
 #: ../../manual/render/cycles/world.rst:64
+#: ../../manual/render/cycles/world.rst:142
 msgid "Distance"
 msgstr "距离"
 
@@ -134,26 +137,56 @@ msgid ""
 msgstr "另一种在预着色情况下使用环境遮蔽的方法是使用  :ref:`cycles_shader_ao` 着色器."
 
 #: ../../manual/render/cycles/world.rst:78
-msgid "World Settings"
+msgid "Mist Pass"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:81
-msgid "Surface"
+#: ../../manual/render/cycles/world.rst:80
+msgid "Shown when the Mist pass is enabled."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:99
+#: ../../manual/render/cycles/world.rst:82
+msgid "Start"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:83
+#: ../../manual/render/cycles/world.rst:85
+#: ../../manual/render/cycles/world.rst:87
+msgid "ToDo."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:84
+msgid "Depth"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:87
+msgid "Falloff"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:91
+msgid ""
+"A visualization can be activated in the :menuselection:`Camera --> "
+"Display` panel."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:97
+msgid "Settings"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:119
 msgid "Multiple Importance Sample"
 msgstr "多重重要性采样"
 
-#: ../../manual/render/cycles/world.rst:84
+#: ../../manual/render/cycles/world.rst:103
+#, fuzzy
 msgid ""
 "Enabling this will sample the background texture such that lighter parts "
-"are favored, producing less noise in the render. It is almost always a "
-"good idea to enable this when using an image texture to light the scene, "
+"are favored, creating an importance map. It will producing less noise in "
+"the render in trade of artifacts (fireflies). It is almost always a good "
+"idea to enable this when using an image texture to light the scene, "
 "otherwise noise can take a very long time to converge."
 msgstr "开启该选项对灯光有用部分的背景纹理会被采样，渲染中会降低噪点。在使用图像文件对场景进行打光的时候，开启该功能是一个明智的选择，否则噪点会需要非常长的计算时间来消除。"
 
-#: ../../manual/render/cycles/world.rst:88
+#: ../../manual/render/cycles/world.rst:108
 #, fuzzy
 msgid ""
 "Below is a comparison between *Multiple Importance Sample* off and on. "
@@ -161,91 +194,105 @@ msgid ""
 "samples)."
 msgstr "下面是多重重要性采样开启和关闭的两张对比图-两张图都渲染了25秒钟（关闭时的采样是1500,开启时的采样是1000） "
 
-#: ../../manual/render/cycles/world.rst:95
+#: ../../manual/render/cycles/world.rst:115
 #, fuzzy
 msgid "Multiple Importance Sample Off."
 msgstr "多重重要性采样关闭"
 
-#: ../../manual/render/cycles/world.rst:99
+#: ../../manual/render/cycles/world.rst:119
 #, fuzzy
 msgid "Multiple Importance Sample On."
 msgstr "多重重要性采样开启"
 
-#: ../../manual/render/cycles/world.rst:104
+#: ../../manual/render/cycles/world.rst:124
 msgid "Map Resolution"
 msgstr "贴图精度"
 
-#: ../../manual/render/cycles/world.rst:102
+#: ../../manual/render/cycles/world.rst:122
 msgid ""
-"Sets the resolution of the 'Multiple Importance Sample' map. Higher "
-"values may produce less noise when using high-res images, but will take "
-"up more memory and render slightly slower."
-msgstr "设置 ‘多重重要性采样’ 贴图的分辨率。用高分辨率图像的时候比较高的值可以减少噪点，但是会增大内存占用和增加部分渲染时间。"
+"Sets the resolution of the importance map. A higher resolution will "
+"better detect small features in the map and give more accurate sampling. "
+"but conversely will take up more memory and render slightly slower. "
+"Higher values also may produce less noise when using high-res images."
+msgstr ""
 
-#: ../../manual/render/cycles/world.rst:107
+#: ../../manual/render/cycles/world.rst:127
 msgid "Max Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:107
+#: ../../manual/render/cycles/world.rst:127
 msgid ""
 "Maximal number of bounces the background light will contribute to the "
 "render."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:111
+#: ../../manual/render/cycles/world.rst:131
 msgid ""
 "See :doc:`Reducing Noise </render/cycles/optimizations/reducing_noise>` "
 "for more information on how to reduce noise."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:116
-msgid "Volume"
-msgstr ""
-
-#: ../../manual/render/cycles/world.rst:122
+#: ../../manual/render/cycles/world.rst:147
 #, fuzzy
 msgid "Sampling Method"
 msgstr "采样"
 
-#: ../../manual/render/cycles/world.rst:119
+#: ../../manual/render/cycles/world.rst:142
 msgid ""
-"Options are *Multiple Importance*, *Distance*, or *Equiangular*. - If you"
-" have got a pretty dense volume that is lit from far away then distance "
-"sampling is usually more efficient. - If you have got a light inside or "
-"near the volume then equiangular sampling is better. - If you have a "
-"combination of both, then the multiple importance sampling will be "
-"better."
+"If you have got a pretty dense volume that is lit from far away then "
+"*Distance* sampling is usually more efficient."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:130
+#: ../../manual/render/cycles/world.rst:144
+msgid "Equiangular"
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:145
+msgid ""
+"If you have got a light inside or near the volume then *equiangular* "
+"sampling is better."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:147
+#, fuzzy
+msgid "Multiple Importance"
+msgstr "多重重要性采样"
+
+#: ../../manual/render/cycles/world.rst:147
+msgid ""
+"If you have a combination of both, then the multiple importance sampling "
+"will be better."
+msgstr ""
+
+#: ../../manual/render/cycles/world.rst:155
 msgid "Interpolation"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:125
-msgid "Interpolation method to use for world volumes."
+#: ../../manual/render/cycles/world.rst:150
+msgid "Interpolation method to use for the volume."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:127
+#: ../../manual/render/cycles/world.rst:152
 msgid "Linear"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:128
+#: ../../manual/render/cycles/world.rst:153
 msgid "Good smoothness and speed."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:130
+#: ../../manual/render/cycles/world.rst:155
 msgid "Cubic"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:130
+#: ../../manual/render/cycles/world.rst:155
 msgid "Smoothed high quality interpolation, but slower."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:136
+#: ../../manual/render/cycles/world.rst:161
 msgid "Homogeneous Volume"
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:133
+#: ../../manual/render/cycles/world.rst:158
 msgid ""
 "Assume volume has the same density everywhere (not using any textures), "
 "for faster rendering. For example absorption in a glass object would "
@@ -253,21 +300,21 @@ msgid ""
 "small steps to sample the volume shader."
 msgstr ""
 
-#: ../../manual/render/cycles/world.rst:139
+#: ../../manual/render/cycles/world.rst:164
 msgid "Ray Visibility"
 msgstr "射线可见性"
 
-#: ../../manual/render/cycles/world.rst:141
+#: ../../manual/render/cycles/world.rst:166
 msgid ""
 "As with other objects, *Ray Visibility* allows you to control which other"
 " shaders can \"see\" the environment."
 msgstr "和其他物体一样，*射线可见性* 允许你控制哪些着色器会在环境中被 \"看见\" 。"
 
-#: ../../manual/render/cycles/world.rst:146
+#: ../../manual/render/cycles/world.rst:171
 msgid "Tricks"
 msgstr "技巧"
 
-#: ../../manual/render/cycles/world.rst:148
+#: ../../manual/render/cycles/world.rst:173
 msgid ""
 "Sometimes it may be useful to have a different background that is "
 "directly visible versus one that is indirectly lighting the objects. A "
@@ -280,13 +327,13 @@ msgstr ""
 "Factor（混合因数）设为Is Camera "
 "Ray（摄像机光线），第一个输入接口颜色是预期的间接光颜色，而第二个输入接口决定的是直接可见的颜色。只要是使用高分辨率的图像作为背景，并使用低分辨率的图像作为照明的时候，这是非常管用的。"
 
-#: ../../manual/render/cycles/world.rst:154
+#: ../../manual/render/cycles/world.rst:179
 msgid ""
 "Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the"
 " high-res image will also be visible in reflections."
 msgstr "同样的，添加 Is Camera Ray（摄像机光线）和 *Is Glossy* （反射光线）意味着高分辨率图像会在反射的时候存在影响。"
 
-#: ../../manual/render/cycles/world.rst:159
+#: ../../manual/render/cycles/world.rst:184
 #, fuzzy
 msgid "Nodes for the trick above."
 msgstr "以上情况的节点技巧"
@@ -306,11 +353,40 @@ msgstr "以上情况的节点技巧"
 #~ msgid "TODO."
 #~ msgstr ""
 
-#~ msgid ""
-#~ "Maximim number of bounces the background"
-#~ " light will contribute to the render."
+#~ msgid "Interpolation meathod to use for world volumes."
 #~ msgstr ""
 
-#~ msgid "Interpolation meathod to use for world volumes."
+#~ msgid "Surface Shader"
+#~ msgstr "表面着色器"
+
+#~ msgid "Volume Shader"
+#~ msgstr "体积渲染器"
+
+#~ msgid "World Settings"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sets the resolution of the 'Multiple "
+#~ "Importance Sample' map. Higher values "
+#~ "may produce less noise when using "
+#~ "high-res images, but will take up "
+#~ "more memory and render slightly slower."
+#~ msgstr "设置 ‘多重重要性采样’ 贴图的分辨率。用高分辨率图像的时候比较高的值可以减少噪点，但是会增大内存占用和增加部分渲染时间。"
+
+#~ msgid ""
+#~ "Options are *Multiple Importance*, *Distance*,"
+#~ " or *Equiangular*. - If you have "
+#~ "got a pretty dense volume that is"
+#~ " lit from far away then distance "
+#~ "sampling is usually more efficient. -"
+#~ " If you have got a light inside"
+#~ " or near the volume then equiangular"
+#~ " sampling is better. - If you "
+#~ "have a combination of both, then "
+#~ "the multiple importance sampling will be"
+#~ " better."
+#~ msgstr ""
+
+#~ msgid "Interpolation method to use for world volumes."
 #~ msgstr ""
 
