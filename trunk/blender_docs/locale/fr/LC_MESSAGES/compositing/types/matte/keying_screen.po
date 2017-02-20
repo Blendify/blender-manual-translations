@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 14:46-0400\n"
+"POT-Creation-Date: 2017-02-20 15:39-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,62 +21,111 @@ msgstr ""
 msgid "Keying Screen Node"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:10
+#: ../../manual/compositing/types/matte/keying_screen.rst:9
 msgid "Keying Screen Node."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:12
+#: ../../manual/compositing/types/matte/keying_screen.rst:11
 msgid ""
 "The *Keying Screen* node creates plates for use as a color reference for "
 "keying nodes. It generates gradients from sampled colors on motion "
-"tracking points on movie clips."
+"tracking points on movie clips. It can be used to deal with uneven colors"
+" of green screens."
 msgstr ""
 
 #: ../../manual/compositing/types/matte/keying_screen.rst:17
-msgid "Example"
+msgid "Inputs"
 msgstr ""
 
 #: ../../manual/compositing/types/matte/keying_screen.rst:19
+msgid "This node has no input sockets."
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:23
+msgid "Properties"
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:25
+msgid "Movie Clip"
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:26
+msgid "The selectable clip data-block used as input for the gradient colors."
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:35
+msgid "Tracking Object"
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:28
+msgid ""
+"Tracking Object to generate the gradient. You will probably want to "
+"create new a tracking object in the :ref:`Object <movie-clip-tracking-"
+"properties-object>` panel, because tracks used for gradients can not "
+"actually be used for camera/object tracking. After this tracks might be "
+"placed in places where gradient colors should be sampled. These tracks "
+"could be tracked or moved manually, so gradients would be updating "
+"automatically along the movie. Tracks might have an offset for easier "
+"tracking of feature-less screens."
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:38
+msgid "Outputs"
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:42
+msgid "Screen"
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:41
+msgid "Gradient image output."
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:45
+msgid "Example"
+msgstr ""
+
+#: ../../manual/compositing/types/matte/keying_screen.rst:47
 msgid ""
 "Consider a node setup for green screen removal, using a :doc:`Color Key "
 "</compositing/types/matte/color_key>`:"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:25
+#: ../../manual/compositing/types/matte/keying_screen.rst:53
 msgid "Often, lighting is uneven across the backdrop."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:29
+#: ../../manual/compositing/types/matte/keying_screen.rst:57
 msgid ""
 "Example from the `Mango Open Movie <https://mango.blender.org/>`_, Tears "
 "of Steel."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:31
+#: ../../manual/compositing/types/matte/keying_screen.rst:59
 msgid "That can result in a bad matte."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:35
+#: ../../manual/compositing/types/matte/keying_screen.rst:63
 msgid ""
-"Exanple of a poor mask: Some of the backdrop is opaque, and some parts of"
+"Example of a poor mask: Some of the backdrop is opaque, and some parts of"
 " the gun in the foreground are transparent."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:38
+#: ../../manual/compositing/types/matte/keying_screen.rst:66
 msgid ""
 "If you increase the tolerances on the keying node, it will accept mores "
 "shades of green to mask out. But it may also incorrectly mask out more of"
 " the foreground."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:42
+#: ../../manual/compositing/types/matte/keying_screen.rst:70
 msgid ""
 "Instead of increasing the range of accepted shades to be masked out, the "
 "*Keying Screen* node lets you change what shade of green (or other color)"
 " to use for different parts of the image."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:46
+#: ../../manual/compositing/types/matte/keying_screen.rst:74
 msgid ""
 "Start in the :doc:`Movie Clip Editor "
 "</editors/movie_clip_editor/introduction>`. Open the Properties Region "
@@ -86,7 +135,7 @@ msgid ""
 "markers on the clip to sample different parts of the backdrop."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:54
+#: ../../manual/compositing/types/matte/keying_screen.rst:82
 msgid ""
 "These tracks may be tracked or moved manually, so gradients can be "
 "updated over time. If the marker is not enabled for a frame, it will not "
@@ -94,23 +143,23 @@ msgid ""
 " in the screen shot above)"
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:58
+#: ../../manual/compositing/types/matte/keying_screen.rst:86
 msgid ""
 "Once the tracks are created, add the node to your compositing setup, and "
 "select the tracking object used for the backdrop."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:64
+#: ../../manual/compositing/types/matte/keying_screen.rst:92
 msgid ""
 "Node configuration with *Keying Screen*'s generated gradient plate "
 "connected to the Color input of the Keying node."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:69
+#: ../../manual/compositing/types/matte/keying_screen.rst:97
 msgid "Gradient plate generated by *Keying Screen*."
 msgstr ""
 
-#: ../../manual/compositing/types/matte/keying_screen.rst:71
+#: ../../manual/compositing/types/matte/keying_screen.rst:99
 msgid "The resulting image now has a better matte."
 msgstr ""
 
@@ -118,7 +167,20 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "Example from the `Mango Open Movie "
-#~ "<https://mango.blender.org/>`_, Tears of Steel"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Keying Screen* node creates plates"
+#~ " for use as a color reference "
+#~ "for keying nodes. It generates gradients"
+#~ " from sampled colors on motion "
+#~ "tracking points on movie clips."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Exanple of a poor mask: Some of"
+#~ " the backdrop is opaque, and some "
+#~ "parts of the gun in the foreground"
+#~ " are transparent."
 #~ msgstr ""
 

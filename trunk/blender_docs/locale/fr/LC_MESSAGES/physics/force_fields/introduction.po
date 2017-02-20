@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-13 22:19-0500\n"
+"POT-Creation-Date: 2017-02-20 15:39-0500\n"
 "PO-Revision-Date: 2017-01-30 16:37+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -23,12 +23,12 @@ msgid "Introduction"
 msgstr "Introduction"
 
 #: ../../manual/physics/force_fields/introduction.rst:6
+#, fuzzy
 msgid ""
 "Force Fields offer a way to add extra movement to dynamic systems. "
 ":doc:`Particles </physics/particles/index>`, :doc:`Soft Bodies "
-"</physics/soft_body/index>`, `Rigid Bodies "
-"<https://wiki.blender.org/index.php/User:Sergof/GSoC2012/Documentation>`__"
-" and :doc:`Cloth objects </physics/cloth/index>` can all be affected by "
+"</physics/soft_body/index>`, `Rigid Bodies </physics/rigid_body/index>`, "
+"and :doc:`Cloth objects </physics/cloth/index>` can all be affected by "
 "forces fields. Force Fields automatically affect everything. To remove a "
 "simulation or particle system from their influence, simply turn down the "
 "influence of that type of Force Field in its Field Weights panel."
@@ -53,9 +53,10 @@ msgstr ""
 "mais seuls les objets courbes possèdent les champs *Guide Courbe*"
 
 #: ../../manual/physics/force_fields/introduction.rst:17
+#, fuzzy
 msgid ""
 "Force Fields can also be generated from particles. See :doc:`Particle "
-"Physics </physics/particles/properties/physics/index>`"
+"Physics </physics/particles/emitter/physics/index>`"
 msgstr ""
 "Les champs de force peuvent aussi être générés par des particules. Voir "
 ":doc:`Physique des Particules "
@@ -68,18 +69,14 @@ msgstr ""
 " un effet."
 
 #: ../../manual/physics/force_fields/introduction.rst:21
+#, fuzzy
 msgid ""
 "You may limit the effect on particles to a group of objects (see the "
-":doc:`Particle Physics </physics/particles/properties/physics/index>` "
-"page)."
+":doc:`Particle Physics </physics/particles/emitter/physics/index>` page)."
 msgstr ""
 "Vous pouvez limiter l'effet sur les particules à un groupe d'objets (voir"
 " la page :doc:`Physique des Particules  "
 "</physics/particles/properties/physics/index>`)."
-
-#: ../../manual/physics/force_fields/introduction.rst
-msgid "Force field types"
-msgstr ""
 
 #: ../../manual/physics/force_fields/introduction.rst:39
 msgid "Creating a Force Field"
@@ -165,23 +162,48 @@ msgstr ""
 " décrites ci-dessous. Les champs Guide Courbe et Texture ont des options "
 "très différentes."
 
-#: ../../manual/physics/force_fields/introduction.rst:78
+#: ../../manual/physics/force_fields/introduction.rst:86
 msgid "Shape"
 msgstr "Forme"
 
 #: ../../manual/physics/force_fields/introduction.rst:78
-msgid ""
-"The field is either a *Point*, with omni-directional influence, or a "
-"*Plane*, constant in the XY-plane, changes only in Z direction."
+msgid "The field is either a:"
 msgstr ""
-"Le champ est soit un *Point*, avec une influence omnidirectionnelle, ou "
-"un *Plan*, constant dans le plan XY, et ne change qu'avec la direction Z."
+
+#: ../../manual/physics/force_fields/introduction.rst:80
+msgid "Point"
+msgstr ""
+
+#: ../../manual/physics/force_fields/introduction.rst:81
+msgid "Point with omni-directional influence."
+msgstr ""
+
+#: ../../manual/physics/force_fields/introduction.rst:82
+msgid "Plane"
+msgstr ""
 
 #: ../../manual/physics/force_fields/introduction.rst:83
+msgid "Constant in the XY-plane, changes only in Z direction."
+msgstr ""
+
+#: ../../manual/physics/force_fields/introduction.rst:84
+msgid "Surface"
+msgstr ""
+
+#: ../../manual/physics/force_fields/introduction.rst:85
+#: ../../manual/physics/force_fields/introduction.rst:87
+msgid "ToDo."
+msgstr ""
+
+#: ../../manual/physics/force_fields/introduction.rst:86
+msgid "Every Point"
+msgstr ""
+
+#: ../../manual/physics/force_fields/introduction.rst:91
 msgid "Strength"
 msgstr "Force"
 
-#: ../../manual/physics/force_fields/introduction.rst:81
+#: ../../manual/physics/force_fields/introduction.rst:89
 msgid ""
 "The strength of the field effect. This can be positive or negative to "
 "change the direction that the force operates in. A force field's strength"
@@ -194,53 +216,54 @@ msgstr ""
 "permettant d'agrandir ou réduire la scène, tout en gardant les mêmes "
 "effets."
 
-#: ../../manual/physics/force_fields/introduction.rst:85
+#: ../../manual/physics/force_fields/introduction.rst:93
 msgid "Flow"
 msgstr "Flux"
 
-#: ../../manual/physics/force_fields/introduction.rst:86
+#: ../../manual/physics/force_fields/introduction.rst:94
 msgid "Convert effector force into air flow velocity."
 msgstr "Convertit la force effectrice en une vitesse de flux."
 
-#: ../../manual/physics/force_fields/introduction.rst:87
+#: ../../manual/physics/force_fields/introduction.rst:95
 msgid "Noise"
 msgstr "Bruit"
 
-#: ../../manual/physics/force_fields/introduction.rst:88
+#: ../../manual/physics/force_fields/introduction.rst:96
 msgid "Adds noise to the strength of the force."
 msgstr "Ajoute du bruit à la puissance de la force."
 
-#: ../../manual/physics/force_fields/introduction.rst:89
+#: ../../manual/physics/force_fields/introduction.rst:97
 msgid "Seed"
 msgstr "Graine"
 
-#: ../../manual/physics/force_fields/introduction.rst:90
+#: ../../manual/physics/force_fields/introduction.rst:98
 msgid "Changes the seed of the random noise."
 msgstr "Change la graine du bruit aléatoire."
 
-#: ../../manual/physics/force_fields/introduction.rst:92
+#: ../../manual/physics/force_fields/introduction.rst:100
 msgid "Effect Point"
 msgstr "Point d'application"
 
-#: ../../manual/physics/force_fields/introduction.rst:92
-msgid "You can toggle the field's effect on particle *Location* and *Rotation*"
+#: ../../manual/physics/force_fields/introduction.rst:100
+#, fuzzy
+msgid "You can toggle the field's effect on particle *Location* and *Rotation*."
 msgstr ""
 "Vous pouvez choisir les effets *Position* et *Rotation* du champ sur la "
 "particule. "
 
-#: ../../manual/physics/force_fields/introduction.rst:96
+#: ../../manual/physics/force_fields/introduction.rst:104
 msgid "Collision Absorption"
 msgstr "Absorption à la collision"
 
-#: ../../manual/physics/force_fields/introduction.rst:95
+#: ../../manual/physics/force_fields/introduction.rst:103
 msgid "Force gets absorbed by collision objects."
 msgstr "La force est absorbée par la collision entre objets."
 
-#: ../../manual/physics/force_fields/introduction.rst:99
+#: ../../manual/physics/force_fields/introduction.rst:107
 msgid "Falloff"
 msgstr "Atténuation"
 
-#: ../../manual/physics/force_fields/introduction.rst:101
+#: ../../manual/physics/force_fields/introduction.rst:109
 msgid ""
 "Here you can specify the shape of the force field (if the *Fall-off* "
 "Power is greater than 0)."
@@ -248,21 +271,26 @@ msgstr ""
 "Ici vous pouvez spécifier la forme du champ de force ( si la puissance de"
 " l'atténuation est plus grande que 0)."
 
-#: ../../manual/physics/force_fields/introduction.rst:104
+#: ../../manual/physics/force_fields/introduction.rst:120
+#, fuzzy
+msgid "Falloff Type"
+msgstr "Atténuation"
+
+#: ../../manual/physics/force_fields/introduction.rst:113
 msgid "Sphere"
 msgstr "Sphère"
 
-#: ../../manual/physics/force_fields/introduction.rst:105
+#: ../../manual/physics/force_fields/introduction.rst:114
 msgid "Falloff is uniform in all directions, as in a sphere."
 msgstr ""
 "L'atténuation est uniforme dans toutes les directions, comme dans une "
 "sphère."
 
-#: ../../manual/physics/force_fields/introduction.rst:108
+#: ../../manual/physics/force_fields/introduction.rst:117
 msgid "Tube"
 msgstr "Tube"
 
-#: ../../manual/physics/force_fields/introduction.rst:107
+#: ../../manual/physics/force_fields/introduction.rst:116
 msgid ""
 "Fall off results in a tube shaped force field. The Field's *Radial "
 "falloff* can be adjusted, as well as the *Minimum* and *Maximum* "
@@ -272,11 +300,11 @@ msgstr ""
 "*L'atténuation radiale* du champ peut être ajustée, de même  que les "
 "distances *Minimum* et le *Maximum* du champ."
 
-#: ../../manual/physics/force_fields/introduction.rst:111
+#: ../../manual/physics/force_fields/introduction.rst:120
 msgid "Cone"
 msgstr "Cône"
 
-#: ../../manual/physics/force_fields/introduction.rst:111
+#: ../../manual/physics/force_fields/introduction.rst:120
 msgid ""
 "Fall off results in a cone shaped force field. Additional options are the"
 " same as those of *Tube* options."
@@ -284,11 +312,11 @@ msgstr ""
 "L'atténuation a lieu dans un champ de force conique. Les options "
 "additionnelles sont les mêmes que celles du *Tube*."
 
-#: ../../manual/physics/force_fields/introduction.rst:114
+#: ../../manual/physics/force_fields/introduction.rst:122
 msgid "Z Direction"
 msgstr "Direction Z"
 
-#: ../../manual/physics/force_fields/introduction.rst:114
+#: ../../manual/physics/force_fields/introduction.rst:123
 msgid ""
 "*Fall-off* can be set to apply only in the direction of the positive Z "
 "Axis, negative Z Axis, or both."
@@ -296,11 +324,11 @@ msgstr ""
 "*L'atténuation* peut être choisie pour ne s'appliquer que dans la "
 "direction de l'axe Z positif, de l'axe Z négatif, ou des deux."
 
-#: ../../manual/physics/force_fields/introduction.rst:120
+#: ../../manual/physics/force_fields/introduction.rst:128
 msgid "Power (Power)"
 msgstr "Puissance"
 
-#: ../../manual/physics/force_fields/introduction.rst:117
+#: ../../manual/physics/force_fields/introduction.rst:125
 msgid ""
 "How the power of the force field changes with the distance from the force"
 " field. If *r* is the distance from the center of the object, the force "
@@ -314,11 +342,11 @@ msgstr ""
 "*atténuation* de 2 change le champ de force avec 1/ *r*\\ :sup:`2`\\, qui"
 " est l'atténuation de la force gravitationnelle."
 
-#: ../../manual/physics/force_fields/introduction.rst:123
+#: ../../manual/physics/force_fields/introduction.rst:131
 msgid "Max Distance"
 msgstr "Maximum"
 
-#: ../../manual/physics/force_fields/introduction.rst:123
+#: ../../manual/physics/force_fields/introduction.rst:131
 msgid ""
 "Makes the force field only take effect within a specified maximum radius "
 "(shown by an additional circle around the object)."
@@ -326,11 +354,11 @@ msgstr ""
 "Fais que le champ de force ne prend effet qu'à l'intérieur d'un rayon "
 "maximum spécifié ( montré par un cercle additionnel autour de l'objet)."
 
-#: ../../manual/physics/force_fields/introduction.rst:130
+#: ../../manual/physics/force_fields/introduction.rst:138
 msgid "Min Distance"
 msgstr "Minimum"
 
-#: ../../manual/physics/force_fields/introduction.rst:126
+#: ../../manual/physics/force_fields/introduction.rst:134
 msgid ""
 "The distance from the object center, up to where the force field is "
 "effective with full strength. If you have a *Fall-off* of 0 this "
@@ -348,5 +376,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Force field types"
-#~ msgstr "Types de champ de force."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The field is either a *Point*, "
+#~ "with omni-directional influence, or a"
+#~ " *Plane*, constant in the XY-plane,"
+#~ " changes only in Z direction."
+#~ msgstr ""
+#~ "Le champ est soit un *Point*, avec"
+#~ " une influence omnidirectionnelle, ou un"
+#~ " *Plan*, constant dans le plan XY,"
+#~ " et ne change qu'avec la direction"
+#~ " Z."
 
