@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-28 11:47-0500\n"
+"POT-Creation-Date: 2017-02-27 22:09-0500\n"
 "PO-Revision-Date: 2015-11-15 11:33+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -31,43 +31,77 @@ msgid ""
 msgstr "物体加上了骨架系统之后，可以精确地发生形变，而几何模型不用手工使之动起来。"
 
 #: ../../manual/modeling/modifiers/deform/armature.rst:15
+#, fuzzy
 msgid ""
-"For more details on armatures usage, see :doc:`this chapter "
-"</rigging/introduction>`."
+"For more details on armatures usage, see the :doc:`armature section "
+"</rigging/armatures/index>`."
 msgstr "有关骨架使用的更多细节，移步 :doc:`这一章 </rigging/introduction>` 查看。"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:18
+#: ../../manual/modeling/modifiers/deform/armature.rst:19
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:22
+#: ../../manual/modeling/modifiers/deform/armature.rst:23
 #, fuzzy
 msgid "Armature Modifier."
 msgstr "骨架修改器"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:24
+#: ../../manual/modeling/modifiers/deform/armature.rst:25
 msgid "Object"
 msgstr "物体"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:25
+#: ../../manual/modeling/modifiers/deform/armature.rst:26
 msgid "The name of the armature object used by this modifier."
 msgstr "使用该修改器的骨架物体的名字"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:26
+#: ../../manual/modeling/modifiers/deform/armature.rst:33
 msgid "Preserve Volume"
 msgstr "维持体积"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:27
+#: ../../manual/modeling/modifiers/deform/armature.rst:28
 msgid ""
 "Use quaternions for preserving volume of object during deformation. It "
 "can be better in many situations."
 msgstr "在形变过程中使用四元数来维持物体的体积。很多情况下使用会有较好的效果。"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:37
+#: ../../manual/modeling/modifiers/deform/armature.rst:30
+msgid ""
+"Without *Preserve Volume*, rotations at joints tend to scale down the "
+"neighboring geometry, up to nearly zero at 180 degrees from rest "
+"position. With *Preserve Volume*, the geometry is no longer scaled down, "
+"but there is a \"gap\", a discontinuity when reaching 180 degrees from "
+"rest position."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:41
+msgid "Initial state."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:46
+msgid "100° rotation, Preserve Volume disabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:51
+msgid "180° rotation, Preserve Volume disabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:56
+msgid "100° rotation, Preserve Volume enabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:61
+msgid "179.9° rotation, Preserve Volume enabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:66
+msgid "180.1° rotation, Preserve Volume enabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:78
 msgid "Vertex Group"
 msgstr "顶点组"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:29
+#: ../../manual/modeling/modifiers/deform/armature.rst:69
 #, fuzzy
 msgid ""
 "The name of a vertex group of the object, the weights of which will be "
@@ -75,27 +109,83 @@ msgid ""
 "mixing it with the results from other *Armature* ones."
 msgstr "物体顶点组的名字，与其他骨架的顶点组进行混合时，其权重会用来决定该骨架修改器结果的影响力。"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:32
+#: ../../manual/modeling/modifiers/deform/armature.rst:72
 msgid ""
 "Only meaningful when having at least two of these modifiers on the same "
 "object, with *Multi Modifier* activated."
 msgstr "在同一个物体上，多项修改器（Multi Modifier）已启用，并且使用至少两个这样的修改器才有意义。"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:37
+#: ../../manual/modeling/modifiers/deform/armature.rst:78
 msgid "Invert"
 msgstr "反转"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:36
+#: ../../manual/modeling/modifiers/deform/armature.rst:76
 msgid ""
 "Inverts the influence set by the vertex group defined in previous setting"
 " (i.e. reverses the weight values of this group)."
 msgstr "反转上面设置中顶点组影响力（例如，反转该组的权重）。"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:46
+#: ../../manual/modeling/modifiers/deform/armature.rst:81
+msgid "Bind To"
+msgstr "绑定到"
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:83
+#, fuzzy
+msgid "Methods to bind the armature to the mesh."
+msgstr "绑定骨架到网格的方法"
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:89
+msgid "Vertex Groups"
+msgstr "顶点组"
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:86
+msgid ""
+"When enabled, bones of a given name will deform vertices which belong to "
+":doc:`vertex groups </modeling/meshes/properties/vertex_groups/index>` of"
+" the same name. e.g. a bone named \"forearm\" , will only affect the "
+"vertices in the \"forearm\" vertex group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:90
+msgid ""
+"The influence of one bone on a given vertex is controlled by the weight "
+"of this vertex in the relevant group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:94
+msgid "Bone Envelopes"
+msgstr "骨骼封套"
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:92
+#, fuzzy
+msgid ""
+"When enabled, bones will deform vertices near them (defined by each bones"
+" envelope radius) Enable/Disable bone :ref:`envelopes <armature-bones-"
+"envelope>` defining the deformation (i.e. bones deform vertices in their "
+"neighborhood)."
+msgstr "启用该选项时，骨头会对附近的顶点（由骨封的半径所决定）发生形变。启用或禁用骨封可以查看信息。"
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:102
+msgid "The weights of the arm vertex group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:107
+msgid "The weights of the forearm vertex group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:112
+msgid "The result when posing the armature."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:117
+msgid "The same pose, but using envelopes method rather that vertex groups."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:123
 msgid "Multi Modifier"
 msgstr "多重修改器"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:42
+#: ../../manual/modeling/modifiers/deform/armature.rst:125
 #, fuzzy
 msgid ""
 "Use the same data as a previous modifier (usually also an Armature "
@@ -105,43 +195,14 @@ msgid ""
 "one...)."
 msgstr "使用相同的数据作为前一个修改器（通常也是骨架修改器）的输入。这样的话，你可以对“没变形”的数据，使用几个骨架对同一个物体发生形变。（也就是说，这样避免了用第二个骨架修改器在第一个骨架修改器的结果上发生形变）"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:46
+#: ../../manual/modeling/modifiers/deform/armature.rst:129
 #, fuzzy
 msgid ""
 "The results of the Armature Modifiers are then mixed together, using the "
 "weights of the *Vertex Group* as \"mixing guides\"."
 msgstr "用顶点组的权重作为“混合指导”，骨架修改器的结果最终混在了一起。"
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:57
-msgid "Bind To"
-msgstr "绑定到"
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:49
-msgid "Method to bind the armature to the mesh."
-msgstr "绑定骨架到网格的方法"
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:52
-msgid "Vertex Groups"
-msgstr "顶点组"
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:52
-msgid ""
-"When enabled, bones of a given name will deform vertices which belong to "
-"vertex groups of the same name."
-msgstr "启用该选项时，指定名称的骨头将会对同名顶点组的顶点产生形变。"
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:57
-msgid "Bone Envelopes"
-msgstr "骨骼封套"
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:55
-msgid ""
-"When enabled, bones will deform vertices near them (defined by each bones"
-" envelope radius) Enable/Disable bone envelopes defining the deformation "
-"(i.e. bones deform vertices in their neighborhood)."
-msgstr "启用该选项时，骨头会对附近的顶点（由骨封的半径所决定）发生形变。启用或禁用骨封可以查看信息。"
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:61
+#: ../../manual/modeling/modifiers/deform/armature.rst:135
 #, fuzzy
 msgid ""
 "Armature Modifiers can quickly be added to objects using the parenting "
@@ -153,4 +214,11 @@ msgstr "在主控物体是骨架时使用指父子快捷键（:kbd:`Ctrl-P`）�
 
 #~ msgid "Armature"
 #~ msgstr "骨架"
+
+#~ msgid ""
+#~ "When enabled, bones of a given "
+#~ "name will deform vertices which belong"
+#~ " to vertex groups of the same "
+#~ "name."
+#~ msgstr "启用该选项时，指定名称的骨头将会对同名顶点组的顶点产生形变。"
 

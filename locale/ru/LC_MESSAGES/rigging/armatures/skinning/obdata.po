@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-20 15:39-0500\n"
+"POT-Creation-Date: 2017-02-27 22:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,9 +46,9 @@ msgstr ""
 
 #: ../../manual/rigging/armatures/skinning/obdata.rst:19
 msgid ""
-"The `Envelope`_ process is available for all type of skinnable objects. "
-"It uses the \"proximity\" and \"influence\" of the bones to determine "
-"which part of the object they can deform."
+"The :ref:`armature-bones-envelope` process is available for all type of "
+"skinnable objects. It uses the \"proximity\" and \"influence\" of the "
+"bones to determine which part of the object they can deform."
 msgstr ""
 
 #: ../../manual/rigging/armatures/skinning/obdata.rst:21
@@ -60,19 +60,15 @@ msgid ""
 "value. A much more precise method, but also generally longer to set up."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:27
-msgid "Both methods have some `Common Options`_, and can be mixed together."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:31
+#: ../../manual/rigging/armatures/skinning/obdata.rst:29
 msgid "Parenting to Whole Armatures"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:36
+#: ../../manual/rigging/armatures/skinning/obdata.rst:34
 msgid "Set Parent menu."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:39
+#: ../../manual/rigging/armatures/skinning/obdata.rst:37
 msgid ""
 "But before diving into this, let us talk about the different ways to skin"
 " (parent) an object to a whole armature as with :doc:`object skinning "
@@ -82,7 +78,7 @@ msgid ""
 "several armatures."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:44
+#: ../../manual/rigging/armatures/skinning/obdata.rst:42
 msgid ""
 "For meshes and lattices *only*, you can use the :kbd:`Ctrl-P` parent "
 "shortcut in the 3D Views (after having selected first the \"skin\" "
@@ -93,11 +89,11 @@ msgid ""
 "\"vertex groups\" skinning method:"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:54
+#: ../../manual/rigging/armatures/skinning/obdata.rst:52
 msgid "With Empty Groups"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:53
+#: ../../manual/rigging/armatures/skinning/obdata.rst:51
 msgid ""
 "will create, if they do not already exist, empty groups, one for each "
 "bone in the skinned armature, with these bones' names. Choose this option"
@@ -105,11 +101,11 @@ msgid ""
 "mesh requires."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:66
+#: ../../manual/rigging/armatures/skinning/obdata.rst:64
 msgid "With Envelope Weights"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:57
+#: ../../manual/rigging/armatures/skinning/obdata.rst:55
 msgid ""
 "will create, as with *Name Groups* option, the needed vertex groups. "
 "However, it will also weight them according to the bones' envelope "
@@ -118,7 +114,7 @@ msgid ""
 "bone)."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:64
+#: ../../manual/rigging/armatures/skinning/obdata.rst:62
 msgid ""
 "This means that if you had defined vertex groups using same names as "
 "skinned bones, their content will be completely overridden. You will get "
@@ -126,340 +122,32 @@ msgid ""
 "vertex groups?"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:70
+#: ../../manual/rigging/armatures/skinning/obdata.rst:68
 msgid "With Automatic Weights"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:69
+#: ../../manual/rigging/armatures/skinning/obdata.rst:67
 msgid ""
 "Creates, as with *Envelope Weights* option, the needed vertex groups, "
 "with vertices assigned and weighted using the newer \"bone heat\" "
 "algorithm."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:72
+#: ../../manual/rigging/armatures/skinning/obdata.rst:70
 msgid ""
 "This \"parenting\" method will create an :doc:`Armature Modifier "
 "</modeling/modifiers/deform/armature>` in the skinning object's modifiers"
 " stack. And so, of course, adding an :doc:`Armature Modifier "
 "</modeling/modifiers/deform/armature>` to an object is the second, new "
 "skinning method (which also works for curves/surfaces/texts...). Follow "
-"the above link to read more about this modifier's specific options. Note "
-"that there is a way with new Armature Modifiers to automatically create "
-"vertex groups and weight them; see the `Vertex Groups`_ description "
-"below."
+"the above link to read more about this modifier's specific options."
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:82
-msgid ""
-"A single object can have several Armature Modifiers (with e.g. different "
-"armatures, or different settings...), working on top of each other, "
-"**or** mixing their respective effects (depending whether their "
-"*MultiModifier* option is set, see :ref:`their description <modifier-"
-"armature-multi-modifier>` for more details), and only one \"virtual old "
-"parenting\" one, which will always be at the top of the stack."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:91
-msgid ""
-"Finally that for settings that are present in both the armature's "
-"Armature panel and in the objects' Armature Modifier panel (namely, "
-"Vertex Groups , Envelopes, Quaternion and B-Bone Rest), the modifier ones"
-" always override the armature ones. This means that if, for example, you "
-"only enable the *Envelopes* deformation method of the armature, and then "
-"skin it with an object using an Armature Modifier, where only *Vertex "
-"Groups* is enabled, the object will only be deformed based on its "
-"\"bones\" vertex groups, ignoring completely the bones' envelopes."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:103
-msgid "Common Options"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:105
-msgid ""
-"There are two armature-global skinning options that are common to both "
-"envelopes and vertex groups methods:"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:114
-msgid "Preserve Volume (Armature Modifier)"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:109
-msgid ""
-"This affects the way geometry is deformed, especially at bones' joints, "
-"when rotating them."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:111
-msgid ""
-"Without *Preserve Volume*, rotations at joints tend to scale down the "
-"neighboring geometry, up to nearly zero at 180 degrees from rest "
-"position. With *Preserve Volume*, the geometry is no longer scaled down, "
-"but there is a \"gap\", a discontinuity when reaching 180 degrees from "
-"rest position."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:122
-msgid "Initial state."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:127
-msgid "100- rotation, Preserve Volume disabled."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:132
-msgid "180- rotation, Preserve Volume disabled."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:137
-msgid "100- rotation, Preserve Volume enabled."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:142
-msgid "179.9- rotation, Preserve Volume enabled."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:147
-msgid "180.1- rotation, Preserve Volume enabled."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:151
-msgid "Note that the IcoSphere is deformed using the envelopes method."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:155
-msgid "Bone Deform Options"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:159
-msgid "Bone Deform Options."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:162
-msgid ""
-"The bones also have some deforming options in the Deform panel (*Bone* "
-"tab), that you can therefore define independently for each of them."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:169
-msgid "Deform"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:167
-msgid ""
-"By disabling this setting (enabled by default), you can completely "
-"prevent a bone from deforming the geometry of the skin object."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:172
-msgid "Envelope"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:178
-msgid "Bone influence areas for envelopes method."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:181
-msgid ""
-"Envelopes is the most general skinning method. It works with all "
-"available object types for skinning (meshes, lattices, curves, surfaces "
-"and texts). It is based on proximity between bones and their geometry, "
-"each bone having two different areas of influence, shown in the "
-"*Envelope* visualization:"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:187
-msgid ""
-"The inside area, materialized by the \"solid\" part of the bone, and "
-"controlled by both root and tip radius. Inside this zone, the geometry if"
-" fully affected by the bone."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:189
-msgid ""
-"The outside area, materialized by the lighter part around the bone, and "
-"controlled by the *Distance* setting. Inside this zone, the geometry is "
-"less and less affected by the bone as it goes away by following a "
-"quadratic decay."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:195
-#: ../../manual/rigging/armatures/skinning/obdata.rst:227
-msgid ""
-"The :doc:`editing pages </rigging/armatures/bones/editing/properties>` "
-"for how to edit these properties."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:198
-msgid ""
-"There is also a bone property, *Weight* (Deform panel, in *Edit Mode* "
-"only, defaults is set to 1.0), that controls the global influence of the "
-"bone over the deformed object, when using the envelopes method. It is "
-"only useful for the parts of geometry that are \"shared\", influenced by "
-"more than one bone (generally, at the joints...) - a bone with a high "
-"weight will have more influence on the result than one with a low "
-"weight... Note that when set to 0.0, it has the same effect as disabling "
-"the *Deform* option."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:213
-msgid "Mult"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:208
-msgid ""
-"Short for 'Multiply'. This option controls how the two deforming methods "
-"interact, when they are both enabled. By default, when they are both "
-"active, all vertices belonging to at least one vertex group are only "
-"deformed through the vertex groups method. The other \"orphan\" vertices "
-"being handled by the envelopes one. When you enable this option, the "
-"\"deformation influence\" that this bone would have on a vertex (based "
-"from its envelope settings) is multiplied with this vertex's weight in "
-"the corresponding vertex group. In other words, the vertex groups method "
-"is further \"weighted\" by the envelopes method."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:217
-msgid "Radius"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:216
-msgid "Set the radius for the head and the tail of envelope bones."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:220
-msgid "Curved Bone"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:222
-msgid ""
-"*Curved Bones* (previously known as B-bones) allow you make bones act "
-"like Bézier curve segments, which results in smoother deformations for "
-"longer bones."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:231
+#: ../../manual/rigging/armatures/skinning/obdata.rst:78
 msgid "Vertex Groups"
 msgstr ""
 
-#: ../../manual/rigging/armatures/skinning/obdata.rst:233
-msgid ""
-"Vertex groups skinning method is only available for meshes and lattices. "
-"Which are the only objects having :doc:`vertex groups "
-"</modeling/meshes/properties/vertex_groups/index>`. Its principle is very"
-" simple: each bone only affects vertices belonging to a vertex group "
-"having the same name as the bone. So if you have e.g. a ``forearm`` bone,"
-" it will only affect the ``forearm`` vertex group of its skin object(s)."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:238
-msgid ""
-"The influence of one bone on a given vertex is controlled by the weight "
-"of this vertex in the relevant group. Thus, the :ref:`Weight Paint Mode "
-"<painting-weight-index>`. :kbd:`Ctrl-Tab`, if a mesh is selected is most "
-"useful here, to easily set/adjust the vertices' weights."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:242
-msgid ""
-"However, you have a few goodies when weight-painting a mesh already "
-"parented to (skinning) an armature. For these to work, you must:"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:245
-msgid "Select the armature."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:246
-msgid "Switch to *Pose Mode* :kbd:`Ctrl-Tab`."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:247
-msgid "Select the mesh to weight."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:248
-msgid "Hit again :kbd:`Ctrl-Tab` to switch to *Weight Paint Mode*."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:250
-msgid ""
-"Now, when you select a bone of the armature (which remained in *Pose "
-"Mode*), you automatically activate the corresponding vertex group of the "
-"mesh -- Very handy! Obviously, you can only select one bone at a time in "
-"this mode (so :kbd:`Shift-LMB` clicking does not work)."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:254
-msgid ""
-"This way, you can also apply to the active bone/vertex group one of the "
-"same \"auto-weighting\" methods as available when doing an \"old-"
-"parenting\" to armature :kbd:`Ctrl-P`:"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:257
-msgid "Select the bone (and hence the vertex group) you want."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:258
-msgid ""
-"Hit :kbd:`W`, and in the *Specials* menu that pops up, choose either "
-"*Apply Bone Envelopes to Vertex Groups* or *Apply Bone Heat Weights to "
-"Vertex Groups*. Once again, even though these names are plural, you can "
-"only affect *one* vertex group's weights at a time with these options."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:264
-msgid "To automatically weight multiple bones, you can simply:"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:266
-msgid ":kbd:`Ctrl-Tab` out of Weight Paint Mode"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:267
-msgid ""
-"Select the Armature. It should be in Pose Mode. If it is not, go :kbd"
-":`Ctrl-Tab`"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:268
-msgid "Select multiple bones :kbd:`Shift-LMB` or press :kbd:`A` (once or twice)."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:269
-msgid "Select Mesh again"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:270
-msgid "If not in weight paint already, toggle back into :kbd:`Ctrl-Tab`"
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:271
-msgid ""
-"Use the :kbd:`W` menu to automatic weight. This will weight all the bones"
-" you selected in Pose Mode."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:279
-msgid "The weights of the arm vertex group."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:284
-msgid "The weights of the forearm vertex group."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:289
-msgid "The result when posing the armature."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:294
-msgid "The same pose, but using envelopes method rather that vertex groups."
-msgstr ""
-
-#: ../../manual/rigging/armatures/skinning/obdata.rst:297
+#: ../../manual/rigging/armatures/skinning/obdata.rst:80
 msgid ""
 "Obviously, the same vertex can belong to several groups, and hence be "
 "affected by several bones, with a fine tuning of each bone's influence "
@@ -472,6 +160,10 @@ msgid ""
 "joint is a big job, as you have to carefully find good weights for each "
 "vertex, to have the most realistic behavior, when bending -- and this is "
 "not an easy thing!"
+msgstr ""
+
+#: ../../manual/rigging/armatures/skinning/obdata.rst:92
+msgid ":ref:`weight-painting-bones`."
 msgstr ""
 
 #~ msgid ""
@@ -514,5 +206,362 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Example of vertex groups skinning method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The `Envelope`_ process is available for"
+#~ " all type of skinnable objects. It"
+#~ " uses the \"proximity\" and \"influence\""
+#~ " of the bones to determine which "
+#~ "part of the object they can "
+#~ "deform."
+#~ msgstr ""
+
+#~ msgid "Both methods have some `Common Options`_, and can be mixed together."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This \"parenting\" method will create an"
+#~ " :doc:`Armature Modifier "
+#~ "</modeling/modifiers/deform/armature>` in the "
+#~ "skinning object's modifiers stack. And "
+#~ "so, of course, adding an :doc:`Armature"
+#~ " Modifier </modeling/modifiers/deform/armature>` to "
+#~ "an object is the second, new "
+#~ "skinning method (which also works for"
+#~ " curves/surfaces/texts...). Follow the above "
+#~ "link to read more about this "
+#~ "modifier's specific options. Note that "
+#~ "there is a way with new Armature"
+#~ " Modifiers to automatically create vertex"
+#~ " groups and weight them; see the "
+#~ "`Vertex Groups`_ description below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A single object can have several "
+#~ "Armature Modifiers (with e.g. different "
+#~ "armatures, or different settings...), working"
+#~ " on top of each other, **or** "
+#~ "mixing their respective effects (depending "
+#~ "whether their *MultiModifier* option is "
+#~ "set, see :ref:`their description <modifier-"
+#~ "armature-multi-modifier>` for more "
+#~ "details), and only one \"virtual old "
+#~ "parenting\" one, which will always be"
+#~ " at the top of the stack."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Finally that for settings that are "
+#~ "present in both the armature's Armature"
+#~ " panel and in the objects' Armature"
+#~ " Modifier panel (namely, Vertex Groups "
+#~ ", Envelopes, Quaternion and B-Bone "
+#~ "Rest), the modifier ones always override"
+#~ " the armature ones. This means that"
+#~ " if, for example, you only enable "
+#~ "the *Envelopes* deformation method of "
+#~ "the armature, and then skin it "
+#~ "with an object using an Armature "
+#~ "Modifier, where only *Vertex Groups* is"
+#~ " enabled, the object will only be "
+#~ "deformed based on its \"bones\" vertex"
+#~ " groups, ignoring completely the bones' "
+#~ "envelopes."
+#~ msgstr ""
+
+#~ msgid "Common Options"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are two armature-global skinning"
+#~ " options that are common to both "
+#~ "envelopes and vertex groups methods:"
+#~ msgstr ""
+
+#~ msgid "Preserve Volume (Armature Modifier)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This affects the way geometry is "
+#~ "deformed, especially at bones' joints, "
+#~ "when rotating them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Without *Preserve Volume*, rotations at "
+#~ "joints tend to scale down the "
+#~ "neighboring geometry, up to nearly zero"
+#~ " at 180 degrees from rest position."
+#~ " With *Preserve Volume*, the geometry "
+#~ "is no longer scaled down, but "
+#~ "there is a \"gap\", a discontinuity "
+#~ "when reaching 180 degrees from rest "
+#~ "position."
+#~ msgstr ""
+
+#~ msgid "Initial state."
+#~ msgstr ""
+
+#~ msgid "100- rotation, Preserve Volume disabled."
+#~ msgstr ""
+
+#~ msgid "180- rotation, Preserve Volume disabled."
+#~ msgstr ""
+
+#~ msgid "100- rotation, Preserve Volume enabled."
+#~ msgstr ""
+
+#~ msgid "179.9- rotation, Preserve Volume enabled."
+#~ msgstr ""
+
+#~ msgid "180.1- rotation, Preserve Volume enabled."
+#~ msgstr ""
+
+#~ msgid "Note that the IcoSphere is deformed using the envelopes method."
+#~ msgstr ""
+
+#~ msgid "Bone Deform Options"
+#~ msgstr ""
+
+#~ msgid "Bone Deform Options."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The bones also have some deforming "
+#~ "options in the Deform panel (*Bone* "
+#~ "tab), that you can therefore define "
+#~ "independently for each of them."
+#~ msgstr ""
+
+#~ msgid "Deform"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By disabling this setting (enabled by"
+#~ " default), you can completely prevent "
+#~ "a bone from deforming the geometry "
+#~ "of the skin object."
+#~ msgstr ""
+
+#~ msgid "Envelope"
+#~ msgstr ""
+
+#~ msgid "Bone influence areas for envelopes method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Envelopes is the most general skinning"
+#~ " method. It works with all available"
+#~ " object types for skinning (meshes, "
+#~ "lattices, curves, surfaces and texts). "
+#~ "It is based on proximity between "
+#~ "bones and their geometry, each bone "
+#~ "having two different areas of influence,"
+#~ " shown in the *Envelope* visualization:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The inside area, materialized by the "
+#~ "\"solid\" part of the bone, and "
+#~ "controlled by both root and tip "
+#~ "radius. Inside this zone, the geometry"
+#~ " if fully affected by the bone."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The outside area, materialized by the"
+#~ " lighter part around the bone, and"
+#~ " controlled by the *Distance* setting. "
+#~ "Inside this zone, the geometry is "
+#~ "less and less affected by the bone"
+#~ " as it goes away by following a"
+#~ " quadratic decay."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :doc:`editing pages "
+#~ "</rigging/armatures/bones/editing/properties>` for how "
+#~ "to edit these properties."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There is also a bone property, "
+#~ "*Weight* (Deform panel, in *Edit Mode*"
+#~ " only, defaults is set to 1.0), "
+#~ "that controls the global influence of"
+#~ " the bone over the deformed object,"
+#~ " when using the envelopes method. It"
+#~ " is only useful for the parts "
+#~ "of geometry that are \"shared\", "
+#~ "influenced by more than one bone "
+#~ "(generally, at the joints...) - a "
+#~ "bone with a high weight will have"
+#~ " more influence on the result than"
+#~ " one with a low weight... Note "
+#~ "that when set to 0.0, it has "
+#~ "the same effect as disabling the "
+#~ "*Deform* option."
+#~ msgstr ""
+
+#~ msgid "Mult"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Short for 'Multiply'. This option "
+#~ "controls how the two deforming methods"
+#~ " interact, when they are both "
+#~ "enabled. By default, when they are "
+#~ "both active, all vertices belonging to"
+#~ " at least one vertex group are "
+#~ "only deformed through the vertex groups"
+#~ " method. The other \"orphan\" vertices "
+#~ "being handled by the envelopes one. "
+#~ "When you enable this option, the "
+#~ "\"deformation influence\" that this bone "
+#~ "would have on a vertex (based from"
+#~ " its envelope settings) is multiplied "
+#~ "with this vertex's weight in the "
+#~ "corresponding vertex group. In other "
+#~ "words, the vertex groups method is "
+#~ "further \"weighted\" by the envelopes "
+#~ "method."
+#~ msgstr ""
+
+#~ msgid "Radius"
+#~ msgstr ""
+
+#~ msgid "Set the radius for the head and the tail of envelope bones."
+#~ msgstr ""
+
+#~ msgid "Curved Bone"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*Curved Bones* (previously known as "
+#~ "B-bones) allow you make bones act "
+#~ "like Bézier curve segments, which "
+#~ "results in smoother deformations for "
+#~ "longer bones."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Vertex groups skinning method is only"
+#~ " available for meshes and lattices. "
+#~ "Which are the only objects having "
+#~ ":doc:`vertex groups "
+#~ "</modeling/meshes/properties/vertex_groups/index>`. Its "
+#~ "principle is very simple: each bone "
+#~ "only affects vertices belonging to a "
+#~ "vertex group having the same name "
+#~ "as the bone. So if you have "
+#~ "e.g. a ``forearm`` bone, it will "
+#~ "only affect the ``forearm`` vertex group"
+#~ " of its skin object(s)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The influence of one bone on a "
+#~ "given vertex is controlled by the "
+#~ "weight of this vertex in the "
+#~ "relevant group. Thus, the :ref:`Weight "
+#~ "Paint Mode <painting-weight-index>`. "
+#~ ":kbd:`Ctrl-Tab`, if a mesh is "
+#~ "selected is most useful here, to "
+#~ "easily set/adjust the vertices' weights."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "However, you have a few goodies "
+#~ "when weight-painting a mesh already "
+#~ "parented to (skinning) an armature. For"
+#~ " these to work, you must:"
+#~ msgstr ""
+
+#~ msgid "Select the armature."
+#~ msgstr ""
+
+#~ msgid "Switch to *Pose Mode* :kbd:`Ctrl-Tab`."
+#~ msgstr ""
+
+#~ msgid "Select the mesh to weight."
+#~ msgstr ""
+
+#~ msgid "Hit again :kbd:`Ctrl-Tab` to switch to *Weight Paint Mode*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now, when you select a bone of "
+#~ "the armature (which remained in *Pose"
+#~ " Mode*), you automatically activate the "
+#~ "corresponding vertex group of the mesh"
+#~ " -- Very handy! Obviously, you can"
+#~ " only select one bone at a time"
+#~ " in this mode (so :kbd:`Shift-LMB`"
+#~ " clicking does not work)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This way, you can also apply to"
+#~ " the active bone/vertex group one of"
+#~ " the same \"auto-weighting\" methods "
+#~ "as available when doing an \"old-"
+#~ "parenting\" to armature :kbd:`Ctrl-P`:"
+#~ msgstr ""
+
+#~ msgid "Select the bone (and hence the vertex group) you want."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hit :kbd:`W`, and in the *Specials* "
+#~ "menu that pops up, choose either "
+#~ "*Apply Bone Envelopes to Vertex Groups*"
+#~ " or *Apply Bone Heat Weights to "
+#~ "Vertex Groups*. Once again, even though"
+#~ " these names are plural, you can "
+#~ "only affect *one* vertex group's weights"
+#~ " at a time with these options."
+#~ msgstr ""
+
+#~ msgid "To automatically weight multiple bones, you can simply:"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Ctrl-Tab` out of Weight Paint Mode"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select the Armature. It should be "
+#~ "in Pose Mode. If it is not, "
+#~ "go :kbd:`Ctrl-Tab`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select multiple bones :kbd:`Shift-LMB` "
+#~ "or press :kbd:`A` (once or twice)."
+#~ msgstr ""
+
+#~ msgid "Select Mesh again"
+#~ msgstr ""
+
+#~ msgid "If not in weight paint already, toggle back into :kbd:`Ctrl-Tab`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Use the :kbd:`W` menu to automatic "
+#~ "weight. This will weight all the "
+#~ "bones you selected in Pose Mode."
+#~ msgstr ""
+
+#~ msgid "The weights of the arm vertex group."
+#~ msgstr ""
+
+#~ msgid "The weights of the forearm vertex group."
+#~ msgstr ""
+
+#~ msgid "The result when posing the armature."
+#~ msgstr ""
+
+#~ msgid "The same pose, but using envelopes method rather that vertex groups."
 #~ msgstr ""
 

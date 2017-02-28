@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 13:08-0500\n"
+"POT-Creation-Date: 2017-02-27 22:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,29 +27,127 @@ msgid "The Deform panel."
 msgstr ""
 
 #: ../../manual/rigging/armatures/bones/properties/deform.rst:11
-msgid "In this panel you can set basic properties of the bones."
+msgid "In this panel you can set deformation options for each bone."
 msgstr ""
 
 #: ../../manual/rigging/armatures/bones/properties/deform.rst:13
 msgid ""
-"Turning the Deform option on and off, includes the active bone in the "
-"Automatic Weight Calculation when the Mesh is Parented to the Armature "
-"using the Armature Deform with the \"With Automatic Weights\" option."
+"Turning the Deform option off, prevent a bone from deforming the geometry"
+" at all, overriding any weights that it might have been assigned before; "
+"It mutes its influence."
 msgstr ""
 
 #: ../../manual/rigging/armatures/bones/properties/deform.rst:17
 msgid ""
-"Also it is worth noting that by turning off a bone's deform option, makes"
-" it not influence the mesh at all, overriding any weights that it might "
-"have been assigned before; It mutes its influence."
-msgstr ""
-
-#: ../../manual/rigging/armatures/bones/properties/deform.rst:22
-msgid "Envelope"
+"It also excludes the active bone in the automatic weight calculation when"
+" the mesh is parented to the armature using the *Armature Deform* tool "
+"with the \"With Automatic Weights\" option."
 msgstr ""
 
 #: ../../manual/rigging/armatures/bones/properties/deform.rst:24
-msgid "ToDo."
+msgid "Envelope"
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:30
+msgid "Bone influence areas for envelopes method."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:33
+msgid ""
+"Envelopes is the most general skinning method. It works with all "
+"available object types for skinning (meshes, lattices, curves, surfaces "
+"and texts). It is based on proximity between bones and their geometry, "
+"each bone having two different areas of influence, shown in the "
+"*Envelope* visualization:"
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:39
+msgid ""
+"The inside area, materialized by the \"solid\" part of the bone, and "
+"controlled by both root and tip radius. Inside this zone, the geometry if"
+" fully affected by the bone."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:41
+msgid ""
+"The outside area, materialized by the lighter part around the bone, and "
+"controlled by the *Distance* setting. Inside this zone, the geometry is "
+"less and less affected by the bone as it goes away by following a "
+"quadratic decay."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:47
+msgid ""
+"The :doc:`editing pages </rigging/armatures/bones/editing/transform>` for"
+" how to edit these properties."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:54
+msgid "Distance"
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:50
+msgid ""
+"The Distance defines a volume which is the range within the bone has an "
+"influence on vertices of the deformed object."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:54
+msgid "Single bone with various different envelope sizes."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:62
+msgid "Weight"
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:57
+msgid ""
+"A bone property, that controls the global influence of the bone over the "
+"deformed object, when using the envelopes method."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:60
+msgid ""
+"It is only useful for the parts of geometry that are \"shared\", "
+"influenced by more than one bone (generally, at the joints...) - a bone "
+"with a high weight will have more influence on the result than one with a"
+" low weight... Note that when set to 0.0, it has the same effect as "
+"disabling the *Deform* option."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:71
+msgid "Radius"
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:65
+msgid "Set the radius for the head and the tail of envelope bones."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:69
+msgid "Three Armature Bones all using Envelope Weight."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:71
+msgid ""
+"The 1st with a default radius value, the two others with differing Tail "
+"and Head radius values."
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:81
+msgid "Multiply"
+msgstr ""
+
+#: ../../manual/rigging/armatures/bones/properties/deform.rst:74
+msgid ""
+"This option controls how the two deforming methods interact, when they "
+"are both enabled. By default, when they are both active, all vertices "
+"belonging to at least one vertex group are only deformed through the "
+"vertex groups method. The other \"orphan\" vertices being handled by the "
+"envelopes one. When you enable this option, the \"deformation influence\""
+" that this bone would have on a vertex (based from its envelope settings)"
+" is multiplied with this vertex's weight in the corresponding vertex "
+"group. In other words, the vertex groups method is further \"weighted\" "
+"by the envelopes method."
 msgstr ""
 
 #~ msgid ""
@@ -61,70 +159,10 @@ msgstr ""
 #~ msgid "Segments"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "The *Segments* number button allows you"
-#~ " to set the number of segments, "
-#~ "which the given bone is subdivided "
-#~ "into. Segments are small, rigid linked"
-#~ " child bones that interpolate between "
-#~ "the root and the tip. The higher"
-#~ " this setting, the smoother \"bends\" "
-#~ "the bone, but the heavier the pose"
-#~ " calculations..."
-#~ msgstr ""
-
 #~ msgid "Technical Details"
 #~ msgstr ""
 
-#~ msgid ""
-#~ "When you connect bones to form a"
-#~ " :ref:`chain <armature-bone-chain>`, "
-#~ "Blender calculates a Bézier curve "
-#~ "passing through all the bones' joints,"
-#~ " and bones' segments in the chain "
-#~ "will bend and roll to follow this"
-#~ " invisible curve. There is no direct"
-#~ " access to the curve. It can "
-#~ "only be controlled by some extent "
-#~ "using bone properties."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "However, if the chain has an "
-#~ "influence on objects rather than "
-#~ "geometry, the segments' orientation is "
-#~ "not taken in account (details are "
-#~ "explained in the :doc:`skinning part "
-#~ "</rigging/armatures/skinning/index>`)."
-#~ msgstr ""
-
 #~ msgid "Display"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You can see these segments in "
-#~ "*Object Mode* and in *Pose Mode*, "
-#~ "and only if bones are visualized "
-#~ "as *B-bones* or *Wire*; while in "
-#~ "*Edit Mode* bones are always drawn "
-#~ "as rigid sticks. Note that in the"
-#~ " special case of a single bone, "
-#~ "you cannot see these segments in "
-#~ "*Object Mode*, because they are aligned."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When not visualized as *B-Bone* s, "
-#~ "bones are always shown as rigid "
-#~ "sticks, even though the bone segments"
-#~ " are still present and effective (see"
-#~ " :doc:`skinning to Object Data "
-#~ "</rigging/armatures/skinning/obdata>`). This means "
-#~ "that even in e.g. *Octahedron* "
-#~ "visualization, if some bones in a "
-#~ "chain have several segments, they will"
-#~ " nonetheless smoothly deform their "
-#~ "geometry..."
 #~ msgstr ""
 
 #~ msgid "Example"
@@ -133,63 +171,16 @@ msgstr ""
 #~ msgid "An armature of B-Bones, in Edit Mode."
 #~ msgstr ""
 
-#~ msgid ""
-#~ "The Bézier curve superposed to the "
-#~ "chain, with its handles placed at "
-#~ "bones' joints."
-#~ msgstr ""
-
 #~ msgid "The same armature in Object Mode."
 #~ msgstr ""
 
-#~ msgid ""
-#~ "In Fig. :ref:`fig-rig-bone-intro-"
-#~ "bbone` we connected three bones, each"
-#~ " one made of five segments. These "
-#~ "are *B-bones* but as you see, in"
-#~ " *Edit Mode* they are shown as "
-#~ "rigid elements. Look at Fig. :ref"
-#~ ":`fig-rig-bone-intro-same`, we can"
-#~ " see how the bones' segments smoothly"
-#~ " \"blend\" into each other, even for"
-#~ " roll."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "An armature in Pose Mode, B-Bone "
-#~ "visualization: Bone.003 has one segment, "
-#~ "Bone.004 has four, and Bone.005 has "
-#~ "sixteen."
-#~ msgstr ""
-
 #~ msgid "Usage"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Curve bones are an easy way to "
-#~ "replace long chains of many small "
-#~ "rigid bones. A common use case for"
-#~ " curve bones is to model spine "
-#~ "columns."
 #~ msgstr ""
 
 #~ msgid "Ease"
 #~ msgstr ""
 
 #~ msgid "Ease In, Ease Out"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The *Ease In/Out* number buttons, change"
-#~ " the \"length\" of the :ref:`\"auto\" "
-#~ "<curve-handle-type-auto>` Bézier handle"
-#~ " to control the \"root handle\" and"
-#~ " \"tip handle\" of the bone, "
-#~ "respectively. These values are proportional"
-#~ " to the default length, which of "
-#~ "course automatically varies depending on "
-#~ "bone length, angle with previous/next "
-#~ "bones in the chain, and so on."
 #~ msgstr ""
 
 #~ msgid "Ease In/Out settings example, with a materialized Bézier curve."
@@ -199,5 +190,29 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Bone.004 with In at 2.0, and Out at 0.0."
+#~ msgstr ""
+
+#~ msgid "In this panel you can set basic properties of the bones."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Turning the Deform option on and "
+#~ "off, includes the active bone in "
+#~ "the Automatic Weight Calculation when "
+#~ "the Mesh is Parented to the "
+#~ "Armature using the Armature Deform with"
+#~ " the \"With Automatic Weights\" option."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also it is worth noting that by"
+#~ " turning off a bone's deform option,"
+#~ " makes it not influence the mesh "
+#~ "at all, overriding any weights that "
+#~ "it might have been assigned before; "
+#~ "It mutes its influence."
+#~ msgstr ""
+
+#~ msgid "ToDo."
 #~ msgstr ""
 
