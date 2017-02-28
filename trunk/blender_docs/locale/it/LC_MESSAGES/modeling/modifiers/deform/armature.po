@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-20 15:39-0500\n"
+"POT-Creation-Date: 2017-02-27 22:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,68 +36,155 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/deform/armature.rst:15
 msgid ""
-"For more details on armatures usage, see :doc:`this chapter "
-"</rigging/introduction>`."
+"For more details on armatures usage, see the :doc:`armature section "
+"</rigging/armatures/index>`."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:18
+#: ../../manual/modeling/modifiers/deform/armature.rst:19
 msgid "Options"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:22
+#: ../../manual/modeling/modifiers/deform/armature.rst:23
 msgid "Armature Modifier."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:24
+#: ../../manual/modeling/modifiers/deform/armature.rst:25
 msgid "Object"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:25
+#: ../../manual/modeling/modifiers/deform/armature.rst:26
 msgid "The name of the armature object used by this modifier."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:26
+#: ../../manual/modeling/modifiers/deform/armature.rst:33
 msgid "Preserve Volume"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:27
+#: ../../manual/modeling/modifiers/deform/armature.rst:28
 msgid ""
 "Use quaternions for preserving volume of object during deformation. It "
 "can be better in many situations."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:37
+#: ../../manual/modeling/modifiers/deform/armature.rst:30
+msgid ""
+"Without *Preserve Volume*, rotations at joints tend to scale down the "
+"neighboring geometry, up to nearly zero at 180 degrees from rest "
+"position. With *Preserve Volume*, the geometry is no longer scaled down, "
+"but there is a \"gap\", a discontinuity when reaching 180 degrees from "
+"rest position."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:41
+msgid "Initial state."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:46
+msgid "100° rotation, Preserve Volume disabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:51
+msgid "180° rotation, Preserve Volume disabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:56
+msgid "100° rotation, Preserve Volume enabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:61
+msgid "179.9° rotation, Preserve Volume enabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:66
+msgid "180.1° rotation, Preserve Volume enabled."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:78
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:29
+#: ../../manual/modeling/modifiers/deform/armature.rst:69
 msgid ""
 "The name of a vertex group of the object, the weights of which will be "
 "used to determine the influence of this Armature Modifier's result when "
 "mixing it with the results from other *Armature* ones."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:32
+#: ../../manual/modeling/modifiers/deform/armature.rst:72
 msgid ""
 "Only meaningful when having at least two of these modifiers on the same "
 "object, with *Multi Modifier* activated."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:37
+#: ../../manual/modeling/modifiers/deform/armature.rst:78
 msgid "Invert"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:36
+#: ../../manual/modeling/modifiers/deform/armature.rst:76
 msgid ""
 "Inverts the influence set by the vertex group defined in previous setting"
 " (i.e. reverses the weight values of this group)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:46
+#: ../../manual/modeling/modifiers/deform/armature.rst:81
+msgid "Bind To"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:83
+msgid "Methods to bind the armature to the mesh."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:89
+msgid "Vertex Groups"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:86
+msgid ""
+"When enabled, bones of a given name will deform vertices which belong to "
+":doc:`vertex groups </modeling/meshes/properties/vertex_groups/index>` of"
+" the same name. e.g. a bone named \"forearm\" , will only affect the "
+"vertices in the \"forearm\" vertex group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:90
+msgid ""
+"The influence of one bone on a given vertex is controlled by the weight "
+"of this vertex in the relevant group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:94
+msgid "Bone Envelopes"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:92
+msgid ""
+"When enabled, bones will deform vertices near them (defined by each bones"
+" envelope radius) Enable/Disable bone :ref:`envelopes <armature-bones-"
+"envelope>` defining the deformation (i.e. bones deform vertices in their "
+"neighborhood)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:102
+msgid "The weights of the arm vertex group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:107
+msgid "The weights of the forearm vertex group."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:112
+msgid "The result when posing the armature."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:117
+msgid "The same pose, but using envelopes method rather that vertex groups."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:123
 msgid "Multi Modifier"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:42
+#: ../../manual/modeling/modifiers/deform/armature.rst:125
 msgid ""
 "Use the same data as a previous modifier (usually also an Armature "
 "Modifier) as input. This allows you to use several armatures to deform "
@@ -106,44 +193,38 @@ msgid ""
 "one...)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:46
+#: ../../manual/modeling/modifiers/deform/armature.rst:129
 msgid ""
 "The results of the Armature Modifiers are then mixed together, using the "
 "weights of the *Vertex Group* as \"mixing guides\"."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:57
-msgid "Bind To"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:49
-msgid "Method to bind the armature to the mesh."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:52
-msgid "Vertex Groups"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:52
-msgid ""
-"When enabled, bones of a given name will deform vertices which belong to "
-"vertex groups of the same name."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:57
-msgid "Bone Envelopes"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:55
-msgid ""
-"When enabled, bones will deform vertices near them (defined by each bones"
-" envelope radius) Enable/Disable bone envelopes defining the deformation "
-"(i.e. bones deform vertices in their neighborhood)."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/armature.rst:61
+#: ../../manual/modeling/modifiers/deform/armature.rst:135
 msgid ""
 "Armature Modifiers can quickly be added to objects using the parenting "
 "shortcut :kbd:`Ctrl-P` when the active object is an armature."
 msgstr ""
+
+#~ msgid ""
+#~ "For more details on armatures usage, "
+#~ "see :doc:`this chapter </rigging/introduction>`."
+#~ msgstr ""
+
+#~ msgid "Method to bind the armature to the mesh."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When enabled, bones of a given "
+#~ "name will deform vertices which belong"
+#~ " to vertex groups of the same "
+#~ "name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When enabled, bones will deform vertices"
+#~ " near them (defined by each bones "
+#~ "envelope radius) Enable/Disable bone envelopes"
+#~ " defining the deformation (i.e. bones "
+#~ "deform vertices in their neighborhood)."
+#~ msgstr ""
 
