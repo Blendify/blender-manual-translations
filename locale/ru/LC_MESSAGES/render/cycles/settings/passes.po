@@ -1,18 +1,21 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-# https://www.blender.org/manual/ru/render/cycles/settings/passes.html
+#   https://docs.blender.org/manual/ru/dev/render/cycles/settings/passes.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#
 # Список переводчиков
 # ===================
-# Mingun <alexander_sergey@mail.ru>, 2016.
+#
+# Mingun <alexander_sergey@mail.ru>, 2016 - 2017.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-06 22:19-0500\n"
-"PO-Revision-Date: 2016-09-02 23:44+0500\n"
+"PO-Revision-Date: 2017-02-28 20:28+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,11 +34,13 @@ msgstr "Слои"
 #: ../../manual/render/cycles/settings/passes.rst:9
 #: ../../manual/render/cycles/settings/passes.rst:41
 msgid "Reference"
-msgstr ""
+msgstr "Справка"
 
 #: ../../manual/render/cycles/settings/passes.rst
 msgid "Panel:    :menuselection:`Properties editor --> Scene --> Layer`"
 msgstr ""
+"Панель:    :menuselection:`Редактор свойств --> Слои визуализации --> "
+"Слой` (:menuselection:`Properties editor --> Scene --> Layer`)"
 
 #: ../../manual/render/cycles/settings/passes.rst:14
 msgid ""
@@ -63,17 +68,16 @@ msgstr ""
 "поведения."
 
 #: ../../manual/render/cycles/settings/passes.rst:21
-#, fuzzy
 msgid "Material"
-msgstr "Индекс материала"
+msgstr "Материал"
 
 #: ../../manual/render/cycles/settings/passes.rst:22
 msgid "Overrides all materials in the render layer."
-msgstr ""
+msgstr "Заменяет все материалы на слое визуализации."
 
 #: ../../manual/render/cycles/settings/passes.rst:24
 msgid "Samples"
-msgstr ""
+msgstr "Сэмплы"
 
 #: ../../manual/render/cycles/settings/passes.rst:24
 msgid ""
@@ -81,41 +85,47 @@ msgid ""
 ":ref:`layer samples <render-cycles-integrator-layer-samples>` in the "
 "sampling panel."
 msgstr ""
+"Выборки слоя визуализации, переопределяющие выборки от сцены. Управляются"
+" параметром :ref:`Сэмплы слоёв <render-cycles-integrator-layer-samples>` "
+"панели *Сэмплирование*."
 
 #: ../../manual/render/cycles/settings/passes.rst:26
-#, fuzzy
 msgid "Use Environment"
-msgstr "Окр. среда"
+msgstr "Визуализировать небо"
 
 #: ../../manual/render/cycles/settings/passes.rst:27
 msgid "Disables rendering the *Environment* render pass in the final render."
 msgstr ""
+"Отключает отрисовку прохода *Окружающая среда* в окончательной "
+"визуализации."
 
 #: ../../manual/render/cycles/settings/passes.rst:28
 msgid "Use AO"
-msgstr ""
+msgstr "Включить AO"
 
 #: ../../manual/render/cycles/settings/passes.rst:29
 msgid ""
 "Disables rendering the *Ambient Occlusion* render pass in the final "
 "render."
 msgstr ""
+"Отключает отрисовку прохода *Ambient Occlusion* в окончательной "
+"визуализации."
 
 #: ../../manual/render/cycles/settings/passes.rst:30
 msgid "Use Surfaces"
-msgstr ""
+msgstr "Включить поверхности"
 
 #: ../../manual/render/cycles/settings/passes.rst:31
 msgid "Disables rendering object materials in the final render."
-msgstr ""
+msgstr "Отключает отрисовку материалов объектов в окончательной визуализации."
 
 #: ../../manual/render/cycles/settings/passes.rst:34
 msgid "Use Hair"
-msgstr ""
+msgstr "Включить волосы"
 
 #: ../../manual/render/cycles/settings/passes.rst:33
 msgid "Disables rendering hair strands in the final render."
-msgstr ""
+msgstr "Отключает отрисовку прядей волос в окончательной визуализации."
 
 #: ../../manual/render/cycles/settings/passes.rst:39
 msgid "Passes"
@@ -124,6 +134,8 @@ msgstr "Проходы"
 #: ../../manual/render/cycles/settings/passes.rst
 msgid "Panel:    :menuselection:`Properties editor --> Scene --> Passes`"
 msgstr ""
+"Панель:    :menuselection:`Редактор свойств --> Слои визуализации --> "
+"Проходы` (:menuselection:`Properties editor --> Scene --> Passes`)"
 
 #: ../../manual/render/cycles/settings/passes.rst:46
 msgid ""
@@ -131,6 +143,9 @@ msgid ""
 "indirect light to edit them individually, and also to extract data such "
 "as depth or normals."
 msgstr ""
+"Проходы могут использоваться для разделения отрисованного изображения по "
+"цветам, прямому / непрямому освещению (чтобы затем их можно было "
+"поправить независимо), а также для извлечения глубины сцены или нормалей."
 
 #: ../../manual/render/cycles/settings/passes.rst:51
 msgid "Lighting Passes"
@@ -238,6 +253,8 @@ msgid ""
 "Shadows from lamp objects. Mostly useful for compositing objects with "
 "shadow into existing footage."
 msgstr ""
+"Тени от объектов ламп. В основном используется для вставки объектов с "
+"тенью в существующие кадры."
 
 #: ../../manual/render/cycles/settings/passes.rst:79
 msgid "Ambient Occlusion"
@@ -322,6 +339,11 @@ msgid ""
 "This pass can be used in compositing to add fade out object that are "
 "further away."
 msgstr ""
+"Расстояние до видимых поверхностей, отображённое в диапазон от 0.0 до "
+"1.0. Настройки параметра располагаются на вкладке :ref:`Окружающия среда "
+"(мир) <render-cycles-integrator-world-mist>`. Этот проход может "
+"использоваться в композиторе для постепенного сокрытия объектов, "
+"находящихся далеко от камеры."
 
 #: ../../manual/render/cycles/settings/passes.rst:116
 msgid "Normal"
@@ -401,21 +423,4 @@ msgstr ""
 "поверхность, в которую попал луч, независимо от степени её прозрачности. "
 "Поверхности с прозрачностью выше пороговой будут пропускаться до тех пор,"
 " пока не встретится непрозрачная поверхность."
-
-#~ msgid "Shadows from lamp objects."
-#~ msgstr "Тени от объектов ламп."
-
-#~ msgid ""
-#~ "Distance to visible surfaces, mapped to"
-#~ " the 0.0-1.0 range. When enabled, "
-#~ "settings are in :menuselection:`Properties -->"
-#~ " World --> Mist Pass`."
-#~ msgstr ""
-#~ "Расстояние до видимых поверхностей, "
-#~ "отображённое на диапазон от 0.0 до "
-#~ "1.0. Если включено, настраивается на "
-#~ "панели :menuselection:`Свойства --> Окружающая "
-#~ "среда (мир) --> Проход тумана` "
-#~ "(:menuselection:`Properties --> World --> Mist"
-#~ " Pass`)."
 
