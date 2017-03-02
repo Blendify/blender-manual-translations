@@ -1,18 +1,21 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-# https://www.blender.org/manual/ru/render/cycles/world.html
+#   https://docs.blender.org/manual/ru/dev/render/cycles/world.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#
 # Список переводчиков
 # ===================
-# Mingun <alexander_sergey@mail.ru>, 2016.
+#
+# Mingun <alexander_sergey@mail.ru>, 2016 - 2017.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-06 22:19-0500\n"
-"PO-Revision-Date: 2016-09-08 23:38+0500\n"
+"PO-Revision-Date: 2017-02-23 17:56+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -178,47 +181,47 @@ msgstr ""
 
 #: ../../manual/render/cycles/world.rst:78
 msgid "Mist Pass"
-msgstr ""
+msgstr "Проход тумана"
 
 #: ../../manual/render/cycles/world.rst:80
 msgid "Shown when the Mist pass is enabled."
-msgstr ""
+msgstr "Показывается при включении прохода тумана."
 
 #: ../../manual/render/cycles/world.rst:82
 msgid "Start"
-msgstr ""
+msgstr "Начало"
 
 #: ../../manual/render/cycles/world.rst:83
 #: ../../manual/render/cycles/world.rst:85
 #: ../../manual/render/cycles/world.rst:87
 msgid "ToDo."
-msgstr ""
+msgstr "*Дописать.*"
 
 #: ../../manual/render/cycles/world.rst:84
 msgid "Depth"
-msgstr ""
+msgstr "Глубина"
 
 #: ../../manual/render/cycles/world.rst:87
 msgid "Falloff"
-msgstr ""
+msgstr "Спад"
 
 #: ../../manual/render/cycles/world.rst:91
 msgid ""
 "A visualization can be activated in the :menuselection:`Camera --> "
 "Display` panel."
 msgstr ""
+"Визуализация может быть включена на панели :menuselection:`Камера --> "
+"Отображение` (:menuselection:`Camera --> Display`)."
 
 #: ../../manual/render/cycles/world.rst:97
-#, fuzzy
 msgid "Settings"
-msgstr "Настройки окружающей среды"
+msgstr "Параметры"
 
 #: ../../manual/render/cycles/world.rst:119
 msgid "Multiple Importance Sample"
 msgstr "Множественная выборка по значимости"
 
 #: ../../manual/render/cycles/world.rst:103
-#, fuzzy
 msgid ""
 "Enabling this will sample the background texture such that lighter parts "
 "are favored, creating an importance map. It will producing less noise in "
@@ -228,10 +231,10 @@ msgid ""
 msgstr ""
 "При включении этого параметра при выборках из фоновой текстуры более "
 "светлым частям будет отдаваться большее предпочтение, что снизит шум при "
-"визуализации. Почти всегда будет хорошей идеей включить этот параметр при"
-" использовании текстуры изображения для освещения сцены, в противном "
-"случае может пройти очень много времени, преже чем удастся избавиться от "
-"шума."
+"визуализации (будет появляться меньше светлячков). Почти всегда будет "
+"хорошей идеей включить этот параметр при использовании текстуры "
+"изображения для освещения сцены, в противном случае может пройти очень "
+"много времени, преже чем удастся избавиться от шума."
 
 #: ../../manual/render/cycles/world.rst:108
 msgid ""
@@ -262,13 +265,17 @@ msgid ""
 "but conversely will take up more memory and render slightly slower. "
 "Higher values also may produce less noise when using high-res images."
 msgstr ""
+"Устанавливает разрешение карты важности. Более высокое разрешение карты "
+"позволит лучше учесть мелкие детали и даст более точную выборку ценой "
+"потребления большего количества памяти и незначительного увеличения "
+"времени визуализации. Также, при использовании изображений высокого "
+"разрешения, более высокое разрешение карты будет вносить меньше шума."
 
 #: ../../manual/render/cycles/world.rst:127
 msgid "Max Bounces"
 msgstr "Макс. отскоков"
 
 #: ../../manual/render/cycles/world.rst:127
-#, fuzzy
 msgid ""
 "Maximal number of bounces the background light will contribute to the "
 "render."
@@ -293,36 +300,40 @@ msgid ""
 "If you have got a pretty dense volume that is lit from far away then "
 "*Distance* sampling is usually more efficient."
 msgstr ""
+"Если у вас довольно плотный объём, который освещается на большую глубину,"
+" то выборка по расстоянию, как правило, более эффективна."
 
 #: ../../manual/render/cycles/world.rst:144
 msgid "Equiangular"
-msgstr ""
+msgstr "Равноугольно"
 
 #: ../../manual/render/cycles/world.rst:145
 msgid ""
 "If you have got a light inside or near the volume then *equiangular* "
 "sampling is better."
 msgstr ""
+"Если у вас внутри или вблизи объёма есть источник света, то лучше "
+"равноугольная выборка."
 
 #: ../../manual/render/cycles/world.rst:147
-#, fuzzy
 msgid "Multiple Importance"
-msgstr "Множественная выборка по значимости"
+msgstr "Множественная значимость"
 
 #: ../../manual/render/cycles/world.rst:147
 msgid ""
 "If you have a combination of both, then the multiple importance sampling "
 "will be better."
 msgstr ""
+"Если у вас комбинация и того, и другого, то лучше будет множественная "
+"выборка по значимости."
 
 #: ../../manual/render/cycles/world.rst:155
 msgid "Interpolation"
 msgstr "Сглаживание объёма"
 
 #: ../../manual/render/cycles/world.rst:150
-#, fuzzy
 msgid "Interpolation method to use for the volume."
-msgstr "Метод сглаживания для объёма окружающей среды."
+msgstr "Метод сглаживания (интерполяции) для объёма."
 
 #: ../../manual/render/cycles/world.rst:152
 msgid "Linear"
@@ -402,53 +413,4 @@ msgstr ""
 #: ../../manual/render/cycles/world.rst:184
 msgid "Nodes for the trick above."
 msgstr "Дерево узлов для вышеописанной хитрости"
-
-#~ msgid "TODO."
-#~ msgstr "Дописать."
-
-#~ msgid "Surface Shader"
-#~ msgstr "Шейдер поверхности"
-
-#~ msgid "Volume Shader"
-#~ msgstr "Шейдер объёма"
-
-#~ msgid ""
-#~ "Sets the resolution of the 'Multiple "
-#~ "Importance Sample' map. Higher values "
-#~ "may produce less noise when using "
-#~ "high-res images, but will take up "
-#~ "more memory and render slightly slower."
-#~ msgstr ""
-#~ "Устанавливает разрешение для карты "
-#~ "«Множественная выборка по значимости». Более"
-#~ " высокие значения дают меньший шум "
-#~ "при использовании изображений высокого "
-#~ "разрешения, но требуют больше памяти и"
-#~ " значительно замедляют визуализацию."
-
-#~ msgid ""
-#~ "Options are *Multiple Importance*, *Distance*,"
-#~ " or *Equiangular*. - If you have "
-#~ "got a pretty dense volume that is"
-#~ " lit from far away then distance "
-#~ "sampling is usually more efficient. -"
-#~ " If you have got a light inside"
-#~ " or near the volume then equiangular"
-#~ " sampling is better. - If you "
-#~ "have a combination of both, then "
-#~ "the multiple importance sampling will be"
-#~ " better."
-#~ msgstr ""
-#~ "Параметр может принимать значения "
-#~ "*Множественная значимость*, *Расстояние* или "
-#~ "*Равноугольно*. Если у вас довольно "
-#~ "плотный объём, который освещается на "
-#~ "большую глубину, то выборка по "
-#~ "расстоянию, как правило, более эффективна. "
-#~ "Если же у вас внутри или вблизи"
-#~ " объёма есть источник света, то лучше"
-#~ " равноугольная выборка. Если у вас "
-#~ "комбинация и того, и другого, то "
-#~ "лучше будет множественная выборка по "
-#~ "значимости."
 

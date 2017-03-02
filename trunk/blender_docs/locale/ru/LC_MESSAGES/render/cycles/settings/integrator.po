@@ -1,18 +1,21 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-# https://www.blender.org/manual/ru/render/cycles/settings/integrator.html
+#   https://docs.blender.org/manual/ru/dev/render/cycles/settings/integrator.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#
 # Список переводчиков
 # ===================
-# Mingun <alexander_sergey@mail.ru>, 2016.
+#
+# Mingun <alexander_sergey@mail.ru>, 2016 - 2017.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-06 22:19-0500\n"
-"PO-Revision-Date: 2016-08-18 00:24+0500\n"
+"PO-Revision-Date: 2017-02-28 19:48+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -61,11 +64,14 @@ msgstr "Сэмплирование"
 #: ../../manual/render/cycles/settings/integrator.rst:140
 #: ../../manual/render/cycles/settings/integrator.rst:222
 msgid "Reference"
-msgstr ""
+msgstr "Справка"
 
 #: ../../manual/render/cycles/settings/integrator.rst
 msgid "Panel:    :menuselection:`Properties editor --> Render --> Sampling`"
 msgstr ""
+"Панель:    :menuselection:`Редактор свойств --> Визуализация --> "
+"Сэмплирование` (:menuselection:`Properties editor --> Render --> "
+"Sampling`)"
 
 #: ../../manual/render/cycles/settings/integrator.rst:26
 msgid "Sample Method"
@@ -99,7 +105,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/integrator.rst:36
 msgid "Animate Seed (clock icon)"
-msgstr ""
+msgstr "Вариация анимации (иконка часов)"
 
 #: ../../manual/render/cycles/settings/integrator.rst:34
 msgid ""
@@ -118,7 +124,6 @@ msgid "Clamp Direct"
 msgstr "Ограничить прямые лучи"
 
 #: ../../manual/render/cycles/settings/integrator.rst:41
-#, fuzzy
 msgid ""
 "This option limits the maximum intensity a sample from rays which have "
 "not yet bounced can contribute to a pixel. It reduces noise at the cost "
@@ -127,10 +132,10 @@ msgid ""
 "higher values."
 msgstr ""
 "Этот параметр ограничивает максимальную интенсивность выборки от лучей, "
-"которые ещё не отскочили и не внесли вклад в освещение пикселя. Установка"
-" этого параметра в 0.0 вообще отключает ограничение. Чем меньше значение "
-"параметра, тем большее влияние (ослабления выборок) он даёт на "
-"результирующее изображение."
+"которые ещё не отскочили и не внесли вклад в освещение пикселя. Уменьшает"
+" шум за счёт потери точности. Установка этого параметра в 0.0 вообще "
+"отключает ограничение. Чем меньше значение параметра, тем большее влияние"
+" (ослабления выборок) он даёт на результирующее изображение."
 
 #: ../../manual/render/cycles/settings/integrator.rst:47
 msgid ""
@@ -214,39 +219,41 @@ msgstr ""
 " Pixar (на английском языке)."
 
 #: ../../manual/render/cycles/settings/integrator.rst:80
-#, fuzzy
 msgid "Layer Samples"
-msgstr "Сэмплов объёма"
+msgstr "Сэмплы слоёв"
 
 #: ../../manual/render/cycles/settings/integrator.rst:72
 msgid ""
 "When render layers have per layer number of samples set, this option "
 "specifies how to use them."
 msgstr ""
+"При визуализации слоёв, когда для каждого слоя установлено собственное "
+"количество сэмплов, этот параметр определяет, как именно нужно "
+"использовать эти сэмплы."
 
 #: ../../manual/render/cycles/settings/integrator.rst:74
 msgid "Use"
-msgstr ""
+msgstr "Включить"
 
 #: ../../manual/render/cycles/settings/integrator.rst:75
 msgid "ToDo"
-msgstr ""
+msgstr "*Дописать.*"
 
 #: ../../manual/render/cycles/settings/integrator.rst:76
 msgid "Bounded"
-msgstr ""
+msgstr "С ограничением"
 
 #: ../../manual/render/cycles/settings/integrator.rst:77
 msgid "Bound render layer samples by scene samples."
-msgstr ""
+msgstr "Ограничить послойное количество сэмплов глобальным количеством."
 
 #: ../../manual/render/cycles/settings/integrator.rst:80
 msgid "Ignore"
-msgstr ""
+msgstr "Игнорировать"
 
 #: ../../manual/render/cycles/settings/integrator.rst:79
 msgid "Ignore render layer sample settings."
-msgstr ""
+msgstr "Игнорировать послойные значения сэмплов."
 
 #: ../../manual/render/cycles/settings/integrator.rst:83
 msgid "Path Tracing"
@@ -298,9 +305,13 @@ msgid ""
 "will split the path for different surface components and will take all "
 "lights into account for shading instead of just one."
 msgstr ""
+"Не-прогрессивный *интегратор путей с расщеплением* обеспечивает подробный"
+" контроль над выборками. Он работает аналогично *интегратору трассировки "
+"путей*, однако на первом препятствии он расщепляет путь трассировки на "
+"различные компоненты поверхности и при затенении будет принимать во "
+"внимание все источники света, а не один."
 
 #: ../../manual/render/cycles/settings/integrator.rst:104
-#, fuzzy
 msgid ""
 "This makes each sample slower, but will reduce noise, especially in "
 "scenes dominated by direct or one-bounce lighting. To get the same number"
@@ -308,17 +319,14 @@ msgid ""
 " path tracing samples = 10 AA samples x 25 diffuse samples. The Sampling "
 "panel shows this total number of samples."
 msgstr ""
-"*Интегратор трассировки путей с расщеплением* работает аналогично, однако"
-" на первом препятствии он расщепляет путь трассировки на различные "
-"компоненты поверхности и при затенении будет принимать во внимание все "
-"источники света, а не один. Из-за этого сэмплы считаются медленнее, но с "
-"меньшим количеством шумов, особенно в сценах, в которых преобладает "
-"прямое освещение или освещение с отражением от одной поерхности. Для "
-"получения того же самого количества диффузных сэмплов, как и при "
-"использовании интегратора трассировки путей, количество диффузных сэмплов"
-" следует умножить на количество сэмплов сглаживания, то есть 250 сэмплов "
-"трассировки путей = 10 сэмплов сглаживания x 25 диффузных сэмплов. Панель"
-" *Семплирование* показывает именно это общее количество сэмплов."
+"Из-за этого сэмплы считаются медленнее, но с меньшим количеством шумов, "
+"особенно в сценах, в которых преобладает прямое освещение или освещение с"
+" отражением от одной поверхности. Для получения того же самого количества"
+" диффузных сэмплов, как и при использовании интегратора трассировки "
+"путей, количество диффузных сэмплов следует умножить на количество "
+"сэмплов сглаживания, то есть 250 сэмплов трассировки путей = 10 сэмплов "
+"сглаживания x 25 диффузных сэмплов. Панель *Семплирование* показывает "
+"именно это общее количество сэмплов."
 
 #: ../../manual/render/cycles/settings/integrator.rst:110
 msgid "AA Render Samples"
@@ -409,7 +417,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/integrator.rst:131
 msgid "Sample All Direct Lights"
-msgstr ""
+msgstr "Сэмплировать весь прямой свет"
 
 #: ../../manual/render/cycles/settings/integrator.rst:131
 msgid ""
@@ -418,24 +426,34 @@ msgid ""
 "performance, when using a lot of AA Samples anyway, to clear up the "
 "render."
 msgstr ""
+"Когда этот параметр включён, Cycles при прямых отскоках будет выбирать "
+"все источники света в сцене, вместо выбора одного из них случайным "
+"образом. Отключение этого параметра может повысить производительность. В "
+"любом случае, при использовании большого количества сэмплов сглаживания, "
+"шумов на визуализации будет мало."
 
 #: ../../manual/render/cycles/settings/integrator.rst:135
 msgid "Sample All Indirect Lights"
-msgstr ""
+msgstr "Сэмплировать весь непрямой свет"
 
 #: ../../manual/render/cycles/settings/integrator.rst:134
 msgid ""
 "Similar to direct light, but for indirects lights. This can reduce noise "
 "in scenes with many lights."
 msgstr ""
+"Работает аналогично сэмплированию всего прямого света, только для "
+"непрямых источников освещения. Он может уменьшить шум в сценах с большим "
+"количеством источников света."
 
 #: ../../manual/render/cycles/settings/integrator.rst:138
 msgid "Light Paths"
-msgstr ""
+msgstr "Пути света"
 
 #: ../../manual/render/cycles/settings/integrator.rst
 msgid "Panel:    :menuselection:`Properties editor --> Render --> Light Paths`"
 msgstr ""
+"Панель:    :menuselection:`Редактор свойств --> Визуализация --> Пути "
+"света` (:menuselection:`Properties editor --> Render --> Light Paths`)"
 
 #: ../../manual/render/cycles/settings/integrator.rst:148
 msgid "Bounces"
@@ -548,7 +566,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/settings/integrator.rst:183
 msgid "Caustics & Filter Glossy"
-msgstr ""
+msgstr "Каустики и фильтр глянца"
 
 #: ../../manual/render/cycles/settings/integrator.rst:189
 msgid "Reflective Caustics"
@@ -636,6 +654,8 @@ msgstr "Геометрия"
 #: ../../manual/render/cycles/settings/integrator.rst
 msgid "Panel:    :menuselection:`Properties editor --> Render --> Geometry`"
 msgstr ""
+"Панель:    :menuselection:`Редактор свойств --> Визуализация --> "
+"Геометрия` (:menuselection:`Properties editor --> Render --> Geometry`)"
 
 #: ../../manual/render/cycles/settings/integrator.rst:229
 msgid "Volume Sampling"
@@ -718,10 +738,4 @@ msgstr ""
 "Остановить подразделение при достижении указанного уровня, даже если "
 "уровень нарезания произведёт более тонкую :term:`тесселяцию "
 "<tessellation>`."
-
-#~ msgid "Animate Seed"
-#~ msgstr "Анимировать вариацию"
-
-#~ msgid "Tricks"
-#~ msgstr "Хитрости"
 
