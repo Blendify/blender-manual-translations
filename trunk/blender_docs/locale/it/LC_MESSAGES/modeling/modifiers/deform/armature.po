@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-27 22:09-0500\n"
+"POT-Creation-Date: 2017-03-08 23:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,6 +75,12 @@ msgid ""
 "rest position."
 msgstr ""
 
+#: ../../manual/modeling/modifiers/deform/armature.rst:35
+msgid ""
+"Example of Quaternion option effects. Note that the IcoSphere is deformed"
+" using the envelopes weights."
+msgstr ""
+
 #: ../../manual/modeling/modifiers/deform/armature.rst:41
 msgid "Initial state."
 msgstr ""
@@ -134,57 +140,63 @@ msgstr ""
 msgid "Methods to bind the armature to the mesh."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:89
+#: ../../manual/modeling/modifiers/deform/armature.rst:90
 msgid "Vertex Groups"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/deform/armature.rst:86
 msgid ""
-"When enabled, bones of a given name will deform vertices which belong to "
-":doc:`vertex groups </modeling/meshes/properties/vertex_groups/index>` of"
-" the same name. e.g. a bone named \"forearm\" , will only affect the "
-"vertices in the \"forearm\" vertex group."
+"Meshes and lattices only -- When enabled, bones of a given name will "
+"deform vertices which belong to :doc:`vertex groups "
+"</modeling/meshes/properties/vertex_groups/index>` of the same name. e.g."
+" a bone named \"forearm\" , will only affect the vertices in the "
+"\"forearm\" vertex group."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/deform/armature.rst:90
 msgid ""
 "The influence of one bone on a given vertex is controlled by the weight "
-"of this vertex in the relevant group."
+"of this vertex in the relevant group. A much more precise method than "
+"*Bone Envelopes*, but also generally longer to set up."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:94
+#: ../../manual/modeling/modifiers/deform/armature.rst:96
 msgid "Bone Envelopes"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:92
+#: ../../manual/modeling/modifiers/deform/armature.rst:93
 msgid ""
-"When enabled, bones will deform vertices near them (defined by each bones"
-" envelope radius) Enable/Disable bone :ref:`envelopes <armature-bones-"
-"envelope>` defining the deformation (i.e. bones deform vertices in their "
-"neighborhood)."
+"When enabled, bones will deform vertices or control points near them, "
+"defined by each bones envelope radius and distance. Enable/Disable bone "
+":ref:`envelopes <armature-bones-envelope>` defining the deformation (i.e."
+" bones deform vertices in their neighborhood)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:102
+#: ../../manual/modeling/modifiers/deform/armature.rst:98
+msgid "Example of vertex groups skinning method."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/armature.rst:103
 msgid "The weights of the arm vertex group."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:107
+#: ../../manual/modeling/modifiers/deform/armature.rst:108
 msgid "The weights of the forearm vertex group."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:112
+#: ../../manual/modeling/modifiers/deform/armature.rst:113
 msgid "The result when posing the armature."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:117
+#: ../../manual/modeling/modifiers/deform/armature.rst:118
 msgid "The same pose, but using envelopes method rather that vertex groups."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:123
+#: ../../manual/modeling/modifiers/deform/armature.rst:124
 msgid "Multi Modifier"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:125
+#: ../../manual/modeling/modifiers/deform/armature.rst:126
 msgid ""
 "Use the same data as a previous modifier (usually also an Armature "
 "Modifier) as input. This allows you to use several armatures to deform "
@@ -193,21 +205,19 @@ msgid ""
 "one...)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:129
+#: ../../manual/modeling/modifiers/deform/armature.rst:130
 msgid ""
 "The results of the Armature Modifiers are then mixed together, using the "
 "weights of the *Vertex Group* as \"mixing guides\"."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/armature.rst:135
+#: ../../manual/modeling/modifiers/deform/armature.rst:136
 msgid ""
 "Armature Modifiers can quickly be added to objects using the parenting "
 "shortcut :kbd:`Ctrl-P` when the active object is an armature."
 msgstr ""
 
 #~ msgid ""
-#~ "For more details on armatures usage, "
-#~ "see :doc:`this chapter </rigging/introduction>`."
 #~ msgstr ""
 
 #~ msgid "Method to bind the armature to the mesh."
@@ -216,15 +226,27 @@ msgstr ""
 #~ msgid ""
 #~ "When enabled, bones of a given "
 #~ "name will deform vertices which belong"
-#~ " to vertex groups of the same "
-#~ "name."
+#~ " to :doc:`vertex groups "
+#~ "</modeling/meshes/properties/vertex_groups/index>` of the"
+#~ " same name. e.g. a bone named "
+#~ "\"forearm\" , will only affect the "
+#~ "vertices in the \"forearm\" vertex "
+#~ "group."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The influence of one bone on a "
+#~ "given vertex is controlled by the "
+#~ "weight of this vertex in the "
+#~ "relevant group."
 #~ msgstr ""
 
 #~ msgid ""
 #~ "When enabled, bones will deform vertices"
 #~ " near them (defined by each bones "
-#~ "envelope radius) Enable/Disable bone envelopes"
-#~ " defining the deformation (i.e. bones "
+#~ "envelope radius) Enable/Disable bone "
+#~ ":ref:`envelopes <armature-bones-envelope>` "
+#~ "defining the deformation (i.e. bones "
 #~ "deform vertices in their neighborhood)."
 #~ msgstr ""
 
