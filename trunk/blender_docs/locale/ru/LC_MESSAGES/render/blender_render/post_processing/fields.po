@@ -4,15 +4,20 @@
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
 #   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#
+# Список переводчиков
+# ===================
+#
+# Mingun <alexander_sergey@mail.ru>, 2017.
 
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-29 23:45+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-03-09 23:59+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +26,11 @@ msgstr ""
 #: ../../manual/render/blender_render/post_processing/fields.rst:4
 #: ../../manual/render/blender_render/post_processing/fields.rst:33
 msgid "Fields"
-msgstr ""
+msgstr "Поля"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:8
 msgid "Field Rendering result."
-msgstr ""
+msgstr "Результат визуализации полей"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:11
 msgid ""
@@ -34,6 +39,10 @@ msgid ""
 "do not maintain luminosity for very long, this could produce a noticeable"
 " flickering."
 msgstr ""
+"Телевизионные стандарты устанавливают скорость воспроизведения картинки в"
+" 25 кадров в секунду (PAL) или 30 кадров в секунду (NTSC). Поскольку "
+"люминофоры экрана не могут светиться очень долго, это может привести к "
+"заметному мерцанию."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:16
 msgid ""
@@ -43,6 +52,12 @@ msgid ""
 "frames per second on NTSC. This was originally bound to the frequency of "
 "power lines in Europe (50Hz) and the US (60Hz)."
 msgstr ""
+"Для минимизации этого эффекта телевизор представляет кадры совсем не так,"
+" как компьютер (работающий в «прогрессивном режиме»). Вместо этого он "
+"представляет их в виде полукадров или *полей* с удвоенной частотой, что "
+"есть 50 полукадров в секунду для PAL и 60 полукадров в секунду для NTSC. "
+"Такие числа первоначально были связаны с частотой линий электропередач в "
+"Европе (50 Гц) и США (60 Гц)."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:21
 msgid ""
@@ -50,6 +65,8 @@ msgid ""
 "presents all the even lines of the complete frame and the subsequent "
 "field the odd ones."
 msgstr ""
+"В частности, поля «чередуются» в том смысле, что одно поле представляет "
+"все чётные строки полного кадра, а последующее поле – нечётные."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:24
 msgid ""
@@ -58,10 +75,14 @@ msgid ""
 " it into two half frames does not work. A noticeable jitter of the edges "
 "of moving objects would be present."
 msgstr ""
+"Поскольку между каждым полем существует не пренебрежимая разница во "
+"времени (1/50 или 1/60 секунды), простая визуализация кадра обычным "
+"способом с последующим его разделением на два полукадра не работает. "
+"Будет присутствовать заметное дрожание краёв движущихся объектов."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:30
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:35
 msgid ""
@@ -72,26 +93,33 @@ msgid ""
 " results on a PC screen (Field Rendering result). but will show correctly"
 " on a TV set."
 msgstr ""
+"Включает визуализацию полей. Когда на вкладке *Визуализация* отмечена "
+"галочка *Поля* (панель *Постобработка*), Blender подготавливает каждый "
+"кадр за два прохода. На первом он визуализирует только чётные строки, "
+"затем продвигается во времени на половину временного шага и визуализирует"
+" все нечётные строки. Это странно смотрится на экране компьютера "
+"(смотрите картинку *Результат визуализации полей*), но будет правильно "
+"отображаться на телевизоре."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:41
 msgid "Upper First / Lower First"
-msgstr ""
+msgstr "Сначала верх / Сначала низ"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:42
 msgid "Toggles between rendering the even and odd frames first."
-msgstr ""
+msgstr "Переключение между визуализацией сначала чётных или нечётных полей."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:44
 msgid "Still"
-msgstr ""
+msgstr "Неподвижно"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:44
 msgid "Disables the half-frame time step between fields (*x*)."
-msgstr ""
+msgstr "Отключает полукадровый временной шаг между полями (*x*)."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:46
 msgid "Setting up the correct field order"
-msgstr ""
+msgstr "Установка корректного порядка полей"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:48
 msgid ""
@@ -99,12 +127,17 @@ msgid ""
 "this complies with European PAL standards. Odd fields are scanned first "
 "on NTSC."
 msgstr ""
+"С настройками по умолчанию Blender производит чётные поля до нечётных; "
+"что соответствует стандартам Европейского PAL. Для NTSC первыми должны "
+"идти нечётные поля."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:52
 msgid ""
 "Of course, if you make the wrong selection things are even worse than if "
 "no Field rendering at all was used!"
 msgstr ""
+"Конечно, если вы сделаете неправильный выбор, всё будет выглядеть ещё "
+"хуже, чем если бы визуализация вообще проходила без полей!"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:55
 msgid ""
@@ -116,10 +149,18 @@ msgid ""
 "other one horrible. Doing this simple test will save you *hours* of "
 "wasted rendering time..."
 msgstr ""
+"Если вы действительно запутались, существует простой трюк для определения"
+" правильного порядка полей – визуализируйте краткую тестовую анимацию "
+"движения слева направо белого квадрата по чёрному фону. Подготовьте две "
+"версии анимации: одну с первыми чётными полями, а другую – с первыми "
+"нечётными полями, и просмотрите их на экране телевизора. Анимация с "
+"правильным порядком полей будет выглядеть плавной, в то время как с "
+"неправильным – ужасно. Выполнение этой простой проверки сэкономит вам "
+"*кучу часов* потраченных впустую на визуализацию..."
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:62
 msgid "Fields and Composite Nodes"
-msgstr ""
+msgstr "Поля и узлы композитора"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:64
 msgid ""
@@ -129,10 +170,10 @@ msgid ""
 "animation at double the frame rate without fields and do the interlacing "
 "of the footage afterwards."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Field Rendering setup."
-#~ msgstr ""
+"Узлы в настоящее время ничего не знают о полях. Отчасти это связано с "
+"тем, что в полях отсутствует слишком много информации, необходимой для "
+"выполнения хороших операций, затрагивающих соседние пиксели (размытие, "
+"векторное размытие и тому подобные). Решение состоит в визуализации "
+"анимации с удвоенной частотой кадров без полей с последующим чередованием"
+" кадров."
 
