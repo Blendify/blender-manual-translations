@@ -4,15 +4,20 @@
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
 #   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+#
+# Список переводчиков
+# ===================
+#
+# Mingun <alexander_sergey@mail.ru>, 2017.
 
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-23 17:43-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-03-11 21:38+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +25,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:5
 msgid "Ambient Occlusion"
-msgstr ""
+msgstr "Ambient Occlusion"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:7
 msgid ""
@@ -29,6 +34,10 @@ msgid ""
 "in corners and at mesh intersections, creases, and cracks, where ambient "
 "light is occluded, or blocked."
 msgstr ""
+"Ambient Occlusion – это сложный алгоритм трассировки лучей, который "
+"имитирует мягкие тени от глобального освещения путём фальсификации "
+"темноты, воспринимаемой в углах и на пересечениях полисеток, в сгибах и "
+"трещинах, где окружающий свет закрывается или блокируется."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:11
 msgid ""
@@ -38,6 +47,11 @@ msgid ""
 "proportion of that hemisphere is occluded by other geometry, and shades "
 "the pixel accordingly."
 msgstr ""
+"В реальной жизни нет такого понятия, как АО; АО – это не совсем физически"
+" точный (но в целом симпатичный) трюк визуализации. Его суть заключается "
+"в том, чтобы сделать несколько выборок из полусферы, построенной вокруг "
+"каждой точки грани, посмотреть, какая её часть перекрывается другой "
+"геометрией и соответственно затенить пиксель."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:17
 msgid ""
@@ -46,6 +60,11 @@ msgid ""
 " close together (like small cracks) will be darker than surfaces that do "
 "not have anything in front of them, because of shadows, dirt, etc."
 msgstr ""
+"Он не имеет никакого отношения к освещению; это просто трюк визуализации,"
+" который выглядит красиво потому, что в реальной жизни поверхности, "
+"расположенные близко друг к другу (вроде небольших трещинок), будут "
+"темнее поверхностей, перед которыми ничего нет из-за теней, налипшей "
+"грязи и прочих подобных вещей."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:22
 msgid ""
@@ -54,12 +73,19 @@ msgid ""
 " when you do not have any lights in the scene, and it is why just "
 "switching on AO alone is a very bad way of \"lighting\" a scene."
 msgstr ""
+"Процесс AO, тем не менее, аппроксимирует этот результат; он не имитирует "
+"свет, отражающийся от расположенных вокруг поверхностей или проходящий "
+"сквозь предметы. По этой причине АО работает даже тогда, когда у вас в "
+"сцене нет никакого освещения, и именно поэтому простое включение AO – "
+"очень плохой способ «осветить» сцену."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:27
 msgid ""
 "You must have ray tracing enabled as a *Render* panel option in the "
 "*Shading* section for this to work."
 msgstr ""
+"Чтобы AO заработал, вам необходимо включить трассировку лучей на панели "
+"*Затенение* вкладки *Визуализация*."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:30
 msgid ""
@@ -70,46 +96,56 @@ msgid ""
 "which is a whitish yellow sunny kind of color on a bright-but-not-"
 "harshly-bright day."
 msgstr ""
+"Также у вас должен быть цвет окружения, установленный по вашему желанию. "
+"По умолчанию цвет окружения (мира) является чёрным, имитируя полночь в "
+"подвале во время отключения электроэнергии. Применяя этот цвет в качестве"
+" цвета окружения, вы затемните все цвета. Хорошим цветом для открытых "
+"сцен середины дня является RGB(0.9, 0.9, 0.8), который представляет собой"
+" беловато-жёлтый солнечный цвет в яркий-но-не-ослепительно-яркий день."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:38
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:42
 msgid "The World panel with ambient color sliders highlighted."
-msgstr ""
+msgstr "Панель окружающей среды с подсвеченными ползунками цвета среды"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:46
 msgid "Factor"
-msgstr ""
+msgstr "Множитель"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:46
 msgid "The strength of the AO effect, a multiplier for addition."
-msgstr ""
+msgstr "Сила эффекта AO, множитель для добавления."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:48
 msgid ""
 "Ambient Occlusion is composited during the render. Two blending modes are"
 " available:"
 msgstr ""
+"В процессе визуализации Ambient Occlusion смешивается с основным "
+"изображением. Доступно два режима смешивания:"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:51
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:51
 msgid ""
 "The pixel receives light according to the number of non-obstructed rays. "
 "The scene is lighter. This simulates global illumination."
 msgstr ""
+"Пиксель получает свет соответственно количеству не закрытых лучей. Сцена "
+"становится светлее. Этот режим имитирует глобальное освещение."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:55
 msgid "Multiply"
-msgstr ""
+msgstr "Умножить"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:54
 msgid "Ambient occlusion is multiplied over the shading, making things darker."
-msgstr ""
+msgstr "Ambient Occlusion умножается на затенение, делая объекты темнее."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:59
 msgid ""
@@ -122,6 +158,14 @@ msgid ""
 "lamps, then use AO on top of that, set to *Multiply*, for the additional "
 "details and contact shadows."
 msgstr ""
+"Если выбрано *умножение*, в сцене должны быть другие источники света; в "
+"противном случае сцена будет чёрной, как смоль. В двух других случаях "
+"сцена будет освещена эффектом АО, даже если в ней нет явного источника "
+"света. Хотя многие люди любят использовать AO в качестве быстрого способа"
+" освещения сцены, результаты, которые он даёт, будут приглушёнными и "
+"плоскими, как пасмурный день. В большинстве случаев лучше всего освещать "
+"сцену с помощью стандартных ламп Blender’а, а затем использовать поверх "
+"них AO с режимом *Умножить* для подчёркивания деталей и теней."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:67
 msgid ""
@@ -129,24 +173,29 @@ msgid ""
 "Note that these settings also apply to Environment Lighting and Indirect "
 "Lighting."
 msgstr ""
+"Панель *Сбор* содержит параметры качества отражённого Ambient Occlusion. "
+"Обратите внимание, что эти параметры также применяются к освещению от "
+"окружения и к отражённому освещению."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:70
 msgid ""
 "Ambient occlusion has two main methods of calculation: *Raytrace* and "
 "*Approximate*."
 msgstr ""
+"Для вычисления Ambient Occlusion используется один из двух методов: "
+"*трассировка лучей* или *приближённый* метод."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:75
 msgid "Gather"
-msgstr ""
+msgstr "Сбор"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:78
 msgid "Raytrace"
-msgstr ""
+msgstr "Трассировка лучей"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:82
 msgid "The Ambient Occlusion panel, Raytrace method."
-msgstr ""
+msgstr "Панель «Сбор», метод «Трассировка лучей»"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:85
 msgid ""
@@ -155,10 +204,14 @@ msgid ""
 "time... It is the only option if you want to use the colors of your sky's"
 " texture."
 msgstr ""
+"*Трассировка лучей* даёт более точные, но также и более шумные "
+"результаты. Вы можете получить изображение почти без шумов, но для этого "
+"придётся пожертвовать временем визуализации... Это единственный вариант, "
+"если вы хотите использовать цвета текстуры вашего неба."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:94
 msgid "Attenuation"
-msgstr ""
+msgstr "Затухание"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:90
 msgid ""
@@ -169,46 +222,60 @@ msgid ""
 "that occludes, so render time can be optimized by making this distance as"
 " short as possible for the visual effect that you want."
 msgstr ""
+"Длина лучей определяет, насколько далеко могут находиться другие грани, "
+"всё ещё загораживающие текущую точку. Чем длиннее дистанция, тем большее "
+"влияние будет оказывать на эффект эта дальняя геометрия. Высокое значение"
+" *расстояния* также означает, что визуализатору придётся просматривать "
+"большую область в поисках загораживающей геометрии, так что время "
+"визуализации можно оптимизировать, сделав это расстояние как можно короче"
+" для желаемого визуального эффекта."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:97
 msgid "Sampling"
-msgstr ""
+msgstr "Сэмплинг"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:146
 msgid "Sampling Method"
-msgstr ""
+msgstr "Метод сэмплирования"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:99
 msgid "Constant QMC"
-msgstr ""
+msgstr "Равномерный QMC"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:100
 msgid "The base Quasi-Monte Carlo, gives evenly and randomly distributed rays."
 msgstr ""
+"Базовый метод квази-Монте-Карло, дающий равномерное и случайное "
+"распределение лучей."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:111
 msgid "Adaptive QMC"
-msgstr ""
+msgstr "Адаптивный QMC"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:102
 msgid ""
 "An improved method of QMC, that tries to determine when the sample rate "
 "can be lowered or the sample skipped, based on its two settings:"
 msgstr ""
+"Улучшенный метод квази-Монте-Карло, который пытается определить, когда "
+"можно понизить количество выборок или вообще их пропустить на основе "
+"следующих двух параметров:"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:106
 msgid "Threshold"
-msgstr ""
+msgstr "Порог"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:106
 msgid ""
 "The limit below which the sample is considered fully occluded (\"black\")"
 " or un-occluded (\"white\"), and skipped."
 msgstr ""
+"Предел, ниже которого выборка считается полностью закрытой («чёрной») или"
+" не закрытой («белой») и пропускается."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:111
 msgid "Adapt to Speed"
-msgstr ""
+msgstr "Адаптация к скорости"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:109
 msgid ""
@@ -216,28 +283,35 @@ msgid ""
 "*Vector* render pass, that must also be enabled (see :doc:`render passes "
 "page </render/post_process/layers>`)."
 msgstr ""
+"Коэффициент для уменьшения количества выборок AO для быстро движущихся "
+"пикселей. Поскольку он использует проход визуализации *Вектор*, тот также"
+" должен быть включён (смотрите :doc:`страницу с описанием проходов "
+"визуализации </render/post_process/layers>`)."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:113
 msgid "About QMC"
-msgstr ""
+msgstr "О методе квази-Монте-Карло"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:115
 msgid ""
 "See also the :ref:`raytraced shadows page <render-blender-internal-quasi-"
 "monte-carlo>` for more info about the Quasi-Monte Carlo sampling method."
 msgstr ""
+"Для получения более подробной информации о методе квази-Монте-Карло также"
+" смотрите :ref:`страницу трассировки теней <render-blender-internal-"
+"quasi-monte-carlo>`."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:146
 msgid "Constant Jittered"
-msgstr ""
+msgstr "Равномерный разброс"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:120
 msgid "The historical sample method, more prone to \"bias\" artifacts..."
-msgstr ""
+msgstr "Исторический метод выборок, более подверженный артефактам «погрешности»..."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:146
 msgid "Bias"
-msgstr ""
+msgstr "Погрешность"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:123
 msgid ""
@@ -245,6 +319,10 @@ msgid ""
 "hemisphere will no longer be a real hemisphere: its section will no "
 "longer be a semicircle, but an arc of a circle of: pi - *bias* radians)."
 msgstr ""
+"Угол (в радианах), на который будет уменьшена полусфера (то есть "
+"«полусфера» технически больше не будет настоящей полусферой: её сечение "
+"больше не будет полукругом, а будет дугой окружности: pi - *погрешность* "
+"радиан)."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:127
 msgid ""
@@ -256,20 +334,32 @@ msgid ""
 "with QMC sampling methods, it is much more visible with the *Constant "
 "Jittered* one and anyway, you have no *Bias* option for QMC."
 msgstr ""
+"Настройка погрешности позволяет вам контролировать, насколько гладкими "
+"будут «гладкие» грани при визуализации AO. Поскольку AO рассчитывается по"
+" исходной гранёной полисетке, может случиться так, что свет от AO сделает"
+" грани видимыми даже на объектах с «гладким» затенением. Это связано с "
+"тем, как учитываются лучи АО, и этот учёт можно контролировать с помощью "
+"ползунка *погрешности*. Обратите внимание, что хотя такое может произойти"
+" даже с методами выборки квази-Монте-Карло, эффект гораздо более заметен "
+"с методом *Равномерный разброс*, ну и в любом случае, параметра "
+"*Погрешность* для квази-Монте-Карло нет."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:140
 msgid ""
 "24×24 UV Sphere with Bias: 0.05 (default). Note the facets on the "
 "sphere's surface even though it is set to smooth."
 msgstr ""
+"UV-сфера 24×24 с погрешностью 0.05 (по умолчанию). Обратите внимание на "
+"грани на поверхности сферы: они видны даже при включённом гладком "
+"затенении"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:146
 msgid "Raising the Bias to 0.15 removes the faceted artifacts."
-msgstr ""
+msgstr "Повышение погрешности до 0.15 убирает артефакты гранёности"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:173
 msgid "Samples"
-msgstr ""
+msgstr "Сэмплы"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:149
 msgid ""
@@ -283,26 +373,36 @@ msgid ""
 "pattern of neighboring pixels unless the number of shot rays is big "
 "enough to produce good statistical data."
 msgstr ""
+"Количество лучей, используемых для обнаружения того, что объект заслонён."
+" Более высокое количество выборок даёт более плавные и более точные "
+"результаты за счёт более медленной визуализации. Значение по умолчанию 5 "
+"обычно хорошо подходит для предварительного просмотра. Фактическое "
+"количество испущенных лучей – квадрат этого числа (то есть 5 *сэмплов* на"
+" самом деле значит 25 лучей). Лучи распределяются по полусфере случайным "
+"образом (определяемым описанными выше методами выборки); это приводит к "
+"различиям в шаблоне заслонения соседних пикселей, если количество "
+"испущенных лучей не является достаточно большим для получения хороших "
+"статистических данных."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:162
 msgid "Ambient Occlusion with 3 Samples."
-msgstr ""
+msgstr "Ambient Occlusion с 3 сэмплами"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:167
 msgid "Ambient Occlusion with 6 Samples."
-msgstr ""
+msgstr "Ambient Occlusion с 6 сэмплами"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:172
 msgid "Ambient Occlusion with 12 Samples."
-msgstr ""
+msgstr "Ambient Occlusion с 12 сэмплами"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:176
 msgid "Approximate"
-msgstr ""
+msgstr "Приближённо"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:180
 msgid "The Ambient Occlusion panel, Approximate method."
-msgstr ""
+msgstr "Панель «Сбор», метод «Приближённо»"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:183
 msgid ""
@@ -311,16 +411,23 @@ msgid ""
 "the *Raytrace* method, which implies it might produce some artifacts and "
 "it cannot use the sky's texture as the base color."
 msgstr ""
+"*Приближённый* метод даёт более чистый результат за то же самое время "
+"визуализации, но, как следует из его названия, это всего лишь приближение"
+" метода *трассировки лучей*, что предполагает, что он может давать "
+"некоторые артефакты. Также с этим методом в качестве базового цвета "
+"нельзя использовать текстуру неба."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:188
 msgid ""
 "This method seems to tend to \"over-occlude\" the results. You have two "
 "complementary options to reduce this problem:"
 msgstr ""
+"Этот метод более подвержен «излишней окклюзии» в результатах. У вас есть "
+"два дополнительных варианта решения этой проблемы:"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:193
 msgid "Passes"
-msgstr ""
+msgstr "Проходы"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:192
 msgid ""
@@ -328,10 +435,14 @@ msgid ""
 "Keeping the pre-processing passes high will increase render time but will"
 " also clear some artifacts and over-occlusions."
 msgstr ""
+"Задаёт количество проходов предварительной обработки, принимает значение "
+"в диапазоне (от 0 до 10). Введение проходов предварительной обработки "
+"значительно увеличивает время визуализации, но также устраняет некоторые "
+"артефакты и излишнюю окклюзию."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:198
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:196
 msgid ""
@@ -340,10 +451,15 @@ msgid ""
 "result). The lower, the slower the render, but the more accurate the "
 "results... Ranges between (0.0 to 10.0), defaults to 0.250."
 msgstr ""
+"Это коэффициент допуска погрешности аппроксимации (то есть, максимально "
+"допустимая разница между приближённым и честно посчитанным результатом). "
+"Чем он ниже, тем медленнее визуализация, но тем более точные "
+"результаты... Принимает значение в диапазоне (от 0.0 до 10.0), по "
+"умолчанию установлен в 0.250."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:201
 msgid "Pixel Cache"
-msgstr ""
+msgstr "Кэш пикселей"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:201
 msgid ""
@@ -351,24 +467,29 @@ msgid ""
 "with its neighbors. This further speeds up the render, generally without "
 "visible loss in quality..."
 msgstr ""
+"Если включён, значения рассчитанных пикселей будут сохраняться и "
+"интерполироваться по соседним пикселям. Это дополнительно ускоряет "
+"визуализацию, как правило, без видимой потери качества..."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:205
 msgid "Correction"
-msgstr ""
+msgstr "Коррекция"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:204
 msgid ""
 "A correction factor to reduce over-occlusion. Ranges between (0.0 to 1.0)"
 " correction."
 msgstr ""
+"Поправочный коэффициент для уменьшения излишней окклюзии. Принимает "
+"значения в диапазоне (от 0.0 до 1.0)."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:208
 msgid "Common Settings"
-msgstr ""
+msgstr "Общие параметры"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:221
 msgid "Falloff"
-msgstr ""
+msgstr "Спад"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:211
 msgid ""
@@ -378,10 +499,15 @@ msgid ""
 "when the *Strength* factor is higher than 0.0. It mimics light dispersion"
 " in the atmosphere..."
 msgstr ""
+"При активации этого параметра расстояние до заслоняющих объектов будет "
+"влиять на «глубину» тени. Это значит, что чем дальше будет заслоняющая "
+"геометрия, тем светлее будет её «тень». Этот эффект возникает только при "
+"значении коэффициента *силы*, большем 0.0. Он имитирует рассеяние света в"
+" атмосфере..."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:221
 msgid "Strength"
-msgstr ""
+msgstr "Сила"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:217
 msgid ""
@@ -390,10 +516,15 @@ msgid ""
 "(corresponding to a more foggy/dusty atmosphere). Ranges from (0.0 to "
 "10.0), default is 0.0, which means no falloff."
 msgstr ""
+"Управляет затуханием теней, включённым параметром *Спад*. Более высокие "
+"значения дают более короткую тень, поскольку она спадает быстрее "
+"(соответствует более туманной/пыльной атмосфере). Значения лежат в "
+"диапазоне от (0.0 до 10.0), по умолчанию 0.0, что означает отсутствие "
+"спада."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:224
 msgid "Technical Details"
-msgstr ""
+msgstr "Технические подробности"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:226
 msgid ""
@@ -401,6 +532,9 @@ msgid ""
 "and by counting how many of them actually reach the sky, and how many, on"
 " the other hand, are obstructed by objects."
 msgstr ""
+"Ambient Occlusion рассчитывается путём испускания лучей из каждой видимой"
+" точки и подсчёта количества тех, что фактически достигли неба, и тех, "
+"что, напротив, перекрылись объектами."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:230
 msgid ""
@@ -411,10 +545,15 @@ msgid ""
 "considered \"light\". The ratio between \"shadow\" and \"light\" rays "
 "defines how bright a given pixel is."
 msgstr ""
+"Количество света в точке пропорционально числу лучей, которые "
+"«ускользнули» и достигли неба. Это достигается путём испускания лучей в "
+"полусферу теней. Если луч попадает в другую грань (он заслонён), он "
+"считается «тенью», иначе он считается «светом». Отношение между лучами "
+"«тени» и «света» определяет, насколько ярким является данный пиксель."
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:238
 msgid "Hints"
-msgstr ""
+msgstr "Подсказки"
 
 #: ../../manual/render/blender_render/world/ambient_occlusion.rst:240
 msgid ""
@@ -423,22 +562,9 @@ msgid ""
 "severely depends on octree size, see the :doc:`rendering chapter "
 "</render/index>` for more information."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "*Sampling*"
-#~ msgstr ""
-
-#~ msgid "You have the three standard sampling options:"
-#~ msgstr ""
-
-#~ msgid "The Amb Occ panel, Raytrace method."
-#~ msgstr ""
-
-#~ msgid "Sampling Meathod"
-#~ msgstr ""
-
-#~ msgid "The Amb Occ panel, Approximate method."
-#~ msgstr ""
+"Ambient Occlusion – это метод трассировки лучей (по крайней мере при "
+"использовании метода *Трассировка лучей*), поэтому он может быть очень "
+"медленным. Кроме того, производительность сильно зависит от размера "
+"октодерева, смотрите :doc:`главу по визуализации </render/index>` для "
+"получения дополнительной информации."
 
