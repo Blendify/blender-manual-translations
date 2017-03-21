@@ -4,25 +4,27 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-21 17:15-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-03-21 11:02+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #: ../../manual/physics/fluid/appendix.rst:5
 msgid "Fluid Appendix"
-msgstr ""
+msgstr "流体附录"
 
 #: ../../manual/physics/fluid/appendix.rst:8
 msgid "Hints"
-msgstr ""
+msgstr "提示"
 
 #: ../../manual/physics/fluid/appendix.rst:10
 msgid "Some useful hints about fluid simulation in Blender:"
-msgstr ""
+msgstr "关于Blender的流体模拟一些有用的提示："
 
 #: ../../manual/physics/fluid/appendix.rst:12
 msgid ""
@@ -31,37 +33,52 @@ msgid ""
 "Each set has a ``.gz`` file for each frame of the animation. Each file "
 "contains the simulation result -- so you will need them."
 msgstr ""
+"不要惊讶，在模拟后你会得到一大堆网格（.bobj.gz）文件。一个用来预览，一个"
+"用于最终结果。每一帧动画都有一个.gz生成。每个文件都包含仿真结果 - 所以你"
+"会需要它们。"
 
 #: ../../manual/physics/fluid/appendix.rst:16
 msgid ""
 "Currently these files will not be automatically deleted, so it is a good "
 "idea to e.g. create a dedicated directory to keep simulation results. "
 "Doing a fluid simulation is similar to clicking the *animation* button. "
-"Currently you have to take care of organizing the fluid surface meshes in"
-" some directory by yourself. If you want to stop using the fluid "
+"Currently you have to take care of organizing the fluid surface meshes "
+"in some directory by yourself. If you want to stop using the fluid "
 "simulation, you can simply delete all the ``*fluid*.bobj.gz`` files."
 msgstr ""
+"目前，这些文件将不会被自动删除，所以创建一个专用目录，以保持模拟结果是个"
+"好主意。做一个流体模拟类似于点击动画按钮。目前，你必须要自己对某些目录中"
+"的流体表面网格进行管理。如果你不再想进行流体模拟时，你可以简单地删除所有"
+"的*fluid*.bobj.gz文件。"
 
 #: ../../manual/physics/fluid/appendix.rst:21
 msgid ""
 "Before running a high resolution simulation that might take hours, check "
 "the overall timing first by doing lower resolution runs."
 msgstr ""
+"运行高分辨率模拟之前可能需要花费几个小时，可以通过降低的分辨率来运行，从"
+"而首先检查整个模拟时间。"
 
 #: ../../manual/physics/fluid/appendix.rst:23
 msgid ""
 "Fluid objects must be completely inside the bounding box of the domain "
 "object. If not, baking may not work correctly or at all. Fluid and "
-"obstacle objects can be meshes with complex geometries. Very thin objects"
-" might not appear in the simulation, if the chosen resolution is too "
-"coarse to resolve them (increasing it might solve this problem)."
+"obstacle objects can be meshes with complex geometries. Very thin "
+"objects might not appear in the simulation, if the chosen resolution is "
+"too coarse to resolve them (increasing it might solve this problem)."
 msgstr ""
+"流体对象必须完全处于流体域对象的边界内。如果不是这样，烘焙可能无法正确进"
+"行所有工作，或者完全无法进行。流体和障碍物对象可以是具有复杂几何形状的网"
+"格。非常薄的对象可能不会出现在模拟中，如果选择的分辨率太粗糙而忽略这些过"
+"细的对象的话（增加网格精度可能会解决这个问题）。"
 
 #: ../../manual/physics/fluid/appendix.rst:28
 msgid ""
 "Do not try to do a complicated scene all at once. Blender has a powerful "
 "compositor that you can use to combine multiple animations."
 msgstr ""
+"不要试图马上一次性的完成一个复杂的场景。Blender有一个强大的合成器，你可以"
+"使多个动画结合起来。"
 
 #: ../../manual/physics/fluid/appendix.rst:31
 msgid ""
@@ -76,10 +93,17 @@ msgid ""
 "separate animations, compositing the total for a truly spectacular "
 "result."
 msgstr ""
+"例如，使动画产生出两个独立的流体流动，来保持你的流体域较小，渲染一个 .avi"
+"使用一个流场。然后移动流体域并且使用Alpha通道（在一个单独的B&W.avi?中）渲"
+"染另一个流场的.avi。然后，组合两个.avi使用合成器的add功能（function）。其"
+"三，.avi通常是烟和雾，将它们放在一切之上为好。在雾和喷淋（spray）之上添加"
+"一个雨表（rain sheet），你将制造一场风暴(quite a strom brewing)！然后闪"
+"电，垃圾桶四处乱飞，等，都作为单独的动画，最终合成为一个真正壮观的总结"
+"果。"
 
 #: ../../manual/physics/fluid/appendix.rst:41
 msgid "Limitations & Workarounds"
-msgstr ""
+msgstr "局限性和解决方法"
 
 #: ../../manual/physics/fluid/appendix.rst:43
 msgid ""
@@ -87,12 +111,16 @@ msgid ""
 "(hence, enter *Edit Mode*, select all, and recalculate normals once in a "
 "while)."
 msgstr ""
+"如果设置似乎出问题，确保所有法线是正确的（因此，进入编辑模式 ，全选，并在"
+"一段时间重新计算一次法线）。"
 
 #: ../../manual/physics/fluid/appendix.rst:45
 msgid ""
 "Currently there is a problem with zero gravity simulation. It could be "
 "avoided by simply selecting a very small gravity until this is fixed."
 msgstr ""
+"目前存在零重力仿真的问题。它可以通过简单地设置一个非常小的重力，​​直到这个"
+"问题被修复。"
 
 #: ../../manual/physics/fluid/appendix.rst:47
 msgid ""
@@ -100,6 +128,9 @@ msgid ""
 "inner side (a plane will not work). To use planes, switch to *Shell*, or "
 "extrude the plane."
 msgstr ""
+"如果一个对象被作为体（Volume）初始化，它必须是可封闭和具有内侧的（平面会"
+"出问题）。要使用平面(plane)，转换到壳（Shell） ，或者拉伸平面（extrude "
+"the plane）。"
 
 #: ../../manual/physics/fluid/appendix.rst:49
 msgid ""
@@ -108,6 +139,9 @@ msgid ""
 "memory is swapped to a drive, making everything horribly slow. Reducing "
 "the resolution should help in this case."
 msgstr ""
+"Blender点击烘焙后冻结。按Esc使得它在一段时间后恢复工作-这种情况通常发生在"
+"分辨率太高和内存被转化到硬盘时，这时通常所有的都变得非常慢。降低分辨率"
+"（这里指网格分辨率即网格密度）应有助于缓解这种情况。"
 
 #: ../../manual/physics/fluid/appendix.rst:53
 msgid ""
@@ -118,14 +152,20 @@ msgid ""
 "by a *process*, such as Blender, even if the *machine* has more memory "
 "installed."
 msgstr ""
+"点击烘焙后Blender崩溃-如果分辨率实在是高，超过2GB的被分配会发生这种情况，"
+"导致Blender崩溃。降低分辨率应有助于在这种情况。许多操作系统限制一个进程"
+"（process）可分配的内存 ，如blender, 即使机器安装更多的内存也没用。"
 
 #: ../../manual/physics/fluid/appendix.rst:58
 msgid ""
 "The meshes should be closed, so if some parts of e.g. a fluid object are "
 "not initialized as fluid in the simulation, check that all parts of "
-"connected vertices are closed meshes. Unfortunately, the Suzanne (monkey)"
-" mesh in Blender is not a closed mesh (the eyes are separate)."
+"connected vertices are closed meshes. Unfortunately, the Suzanne "
+"(monkey) mesh in Blender is not a closed mesh (the eyes are separate)."
 msgstr ""
+"网格应该是封闭的，当某些部分的流体对象未在模拟初始化时设为流体，请检查连"
+"接部分的所有网格连接顶点为封闭网格。不幸的是，在Blender中的苏珊（猴）的眼"
+"部不是一个封闭的网格（眼睛是分开）。"
 
 #: ../../manual/physics/fluid/appendix.rst:62
 msgid ""
@@ -133,18 +173,23 @@ msgid ""
 "the \"init has failed\"), make sure you have valid settings for the "
 "domain object, e.g. by resetting them to the defaults."
 msgstr ""
+"如果流体模拟报一个错误信息（如显示了“初始化失败（init has failed）”）退出"
+"时，请确保您有流体域对象（domain）的有效设置，例如通过将其复位为默认值。"
 
 #: ../../manual/physics/fluid/appendix.rst:64
 msgid ""
-"Note that first frame may well take only a few hundred MBs of RAM memory,"
-" but latter ones go over one GB, which may be why your bake fails after "
-"awhile. If so, try to bake one frame at the middle or end at full res so "
-"you will see if it works."
+"Note that first frame may well take only a few hundred MBs of RAM "
+"memory, but latter ones go over one GB, which may be why your bake fails "
+"after awhile. If so, try to bake one frame at the middle or end at full "
+"res so you will see if it works."
 msgstr ""
+"请注意，第一帧可能使用RAM内存只有几百MB，但后期可能超过1GB，这可能是为什"
+"么一段时间后，你的烘焙会失败。如果是的话，尽量在所有结果的中部或尾部先烘"
+"焙一帧，从而你可以看看它是否能正常工作。"
 
 #: ../../manual/physics/fluid/appendix.rst:67
 msgid "Memory used doubles when you set surface subdivision from 1 to 2."
-msgstr ""
+msgstr "内存使用将变成2倍，当你设置曲面细分，从1到2时。"
 
 #: ../../manual/physics/fluid/appendix.rst:68
 msgid ""
@@ -152,21 +197,5 @@ msgid ""
 "increase surface area and complexity. Ordinary fluid simulations "
 "generated particles probably eat less memory."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "See also"
-#~ msgstr ""
-
-#~ msgid "External links"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Using \"generate particles\" will also "
-#~ "add memory requirements, as they "
-#~ "increase surface area and complexity. "
-#~ "Ordinary fluid-sim generated particles "
-#~ "probably eat less memory."
-#~ msgstr ""
-
+"使用“生成粒子（generate particles）”也将增加内存的要求，因为它们增加表面"
+"积和复杂性。普通流体模拟产生的粒子可能吃内存较少。"
