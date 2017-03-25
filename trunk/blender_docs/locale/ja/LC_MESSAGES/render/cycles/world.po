@@ -4,52 +4,61 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-19 14:01-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-03-25 17:33+0900\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../manual/render/cycles/world.rst:4
 msgid "World"
-msgstr ""
+msgstr "World (ワールド)"
 
 #: ../../manual/render/cycles/world.rst:9
 msgid "Lighting with an HDR image."
-msgstr ""
+msgstr "HDR を利用したライティング画像。"
 
 #: ../../manual/render/cycles/world.rst:12
 msgid ""
 "The world environment can emit light, ranging from a single solid color, "
 "physical sky model, to arbitrary textures."
 msgstr ""
+"ワールドの環境は、単一の色から物理的な空のモデル、任意のテクスチャを利用"
+"した物までの多様な光を放射できます。"
 
 #: ../../manual/render/cycles/world.rst:17
 #: ../../manual/render/cycles/world.rst:100
 msgid "Surface"
-msgstr ""
+msgstr "Surface (サーフェス)"
 
 #: ../../manual/render/cycles/world.rst:19
 msgid ""
 "The surface shader defines the light emission from the environment into "
 "the scene. The world surface is rendered as if it is very distant from "
-"the scene, and as such there is no two-way interacting between objects in"
-" the scene and the environment, only light coming in. The only shader "
+"the scene, and as such there is no two-way interacting between objects "
+"in the scene and the environment, only light coming in. The only shader "
 "accepted is the Background node with a color input and strength factor "
 "for the intensity of the light."
 msgstr ""
+"サーフェスシェーダーはその環境からシーンに入射する光について定義します。"
+"ワールドのサーフェスはシーンから、オブジェクト間の双方向の作用が存在せず"
+"ただ光が入ってくるだけと考えられる程、遠く離れた物としてレンダリングされ"
+"ます。シェーダーが受け入れるのは Background ノードにおける Color の入力と"
+"光源の強さを表す Strength の値だけです。"
 
 #: ../../manual/render/cycles/world.rst:27
 msgid "Image Based Lighting"
-msgstr ""
+msgstr "Image Based Lighting (イメージベースドライティング)"
 
 #: ../../manual/render/cycles/world.rst:29
 msgid ""
@@ -59,23 +68,30 @@ msgid ""
 "*Mirror Ball* mapping for converting photos of mirror balls to "
 "environment maps."
 msgstr ""
+"イメージベースドライティングにおいては、正しいマッピングのために Image "
+"Texture ノードの代わりに Environment Texture ノードを利用します。このノー"
+"ドは *Equirectangular* (正距円筒図法) 、およびミラーボール状の画像をマッ"
+"ピングする *Mirror Ball* (ミラーボール) を環境マップとしてサポートしてい"
+"ます。"
 
 #: ../../manual/render/cycles/world.rst:36
 #: ../../manual/render/cycles/world.rst:138
 msgid "Volume"
-msgstr ""
+msgstr "Volume (ボリューム)"
 
 #: ../../manual/render/cycles/world.rst:38
 msgid ""
 "A volume shader can be applied to the entirely world, filling the entire "
 "space."
 msgstr ""
+"ボリュームシェーダーはワールド全体、その空間を完全に満たすように適用でき"
+"ます。"
 
 #: ../../manual/render/cycles/world.rst:40
 msgid ""
-"Currently this is most useful for night time or other dark scenes, as the"
-" world surface shader or sun lamps will have no effect if a volume shader"
-" is used. This is because the world background is assumed to be "
+"Currently this is most useful for night time or other dark scenes, as "
+"the world surface shader or sun lamps will have no effect if a volume "
+"shader is used. This is because the world background is assumed to be "
 "infinitely far away, which is accurate enough for the sun for example. "
 "However, for modeling effects such as fog or atmospheric scattering, it "
 "is not a good assumption that the volume fills the entire space, as most "
@@ -84,95 +100,124 @@ msgid ""
 "The size of this object will determine how much light is scattered or "
 "absorbed."
 msgstr ""
+"現時点では、ボリュームシェーダーを用いた場合にワールドのサーフェスシェー"
+"ダーや Sun ランプが何の影響も与えないため、ボリュームシェーダーは夜や暗い"
+"シーンの表現に最も役立ちます。これはワールドの背景が、例えば太陽を正確に"
+"再現できるように無限遠に存在すると仮定されているためです。しかしながら、"
+"霧や空気中の拡散をモデリングする上では、おなじボリュームが空間全てを満た"
+"しているという仮定は、太陽と地球の間を満たすのがほぼ空の空間であるのと同"
+"様、望ましく有りません。そういった効果のためにはシーンを取り巻く別のボ"
+"リュームオブジェクトを作ったほうが良いでしょう。そのボリュームオブジェク"
+"トの大きさによってどれだけ光が拡散あるいは吸収されるかが決まります。"
 
 #: ../../manual/render/cycles/world.rst:52
 msgid "Ambient Occlusion"
-msgstr ""
+msgstr "Ambient Occlusion (アンビエントオクルージョン)"
 
 #: ../../manual/render/cycles/world.rst:54
 msgid ""
 "Ambient occlusion is a lighting method based on how much a point on a "
 "surface is occluded by nearby surfaces. This is a trick that is not "
-"physically accurate, but it is useful to emphasize shapes of surfaces, or"
-" as a cheap way to get an effect that looks a bit like indirect lighting."
+"physically accurate, but it is useful to emphasize shapes of surfaces, "
+"or as a cheap way to get an effect that looks a bit like indirect "
+"lighting."
 msgstr ""
+"アンビエントオクルージョンはあるサーフェス上のある点が近接しているサー"
+"フェスによってどれだけ遮蔽されているかに基づいたライティング手法の一つで"
+"す。トリックの一つであり物理的に正確ではないのですが、サーフェスの形状を"
+"強調する上で有用であり、間接光のライティングのような見た目を得るための手"
+"軽な方法です。"
 
 #: ../../manual/render/cycles/world.rst:59
 msgid "Factor"
-msgstr ""
+msgstr "Factor (因数)"
 
 #: ../../manual/render/cycles/world.rst:60
 msgid ""
 "The strength of the ambient occlusion; value 1.0 is like a white world "
 "shader."
 msgstr ""
+"アンビエントオクルージョンの強さを表します; 1.0 の値では白色で設定した"
+"ワールドのシェーダーのようになります。"
 
 #: ../../manual/render/cycles/world.rst:64
 #: ../../manual/render/cycles/world.rst:142
 msgid "Distance"
-msgstr ""
+msgstr "Distance (距離)"
 
 #: ../../manual/render/cycles/world.rst:62
 msgid ""
 "Distance from shading point to trace rays. A shorter distance emphasizes "
-"nearby features, while longer distances make it also take objects further"
-" away into account."
+"nearby features, while longer distances make it also take objects "
+"further away into account."
 msgstr ""
+"陰影が現れる点とトレースする光線との距離を定義します。距離が短いほど近距"
+"離に有る形状が強調され、距離が長いほどオブジェクトが遠く離れている物と見"
+"なします。"
 
 #: ../../manual/render/cycles/world.rst:66
 msgid ""
 "Lighting from ambient occlusion is only applied to diffuse reflection "
 "BSDFs; glossy or transmission BSDFs are not affected. Transparency of "
-"surfaces will be taken into account, i.e. a half-transparent surface will"
-" only half occlude."
+"surfaces will be taken into account, i.e. a half-transparent surface "
+"will only half occlude."
 msgstr ""
+"アンビエントオクルージョンによるライティングは BSDF の反射を拡散する際に"
+"のみ適用されます; 光沢もしくは透過する光を扱う BSDF は影響を受けません。"
+"サーフェスの透過性は考慮されます、例えば半透明のサーフェスは半分だけ光線"
+"を遮蔽します。"
 
 #: ../../manual/render/cycles/world.rst:71
 msgid ""
-"An alternative method of using Ambient Occlusion on a per-shader basis is"
-" to use the :doc:`Ambient Occlusion "
-"</render/cycles/nodes/types/shaders/ao>` shader."
+"An alternative method of using Ambient Occlusion on a per-shader basis "
+"is to use the :doc:`Ambient Occlusion </render/cycles/nodes/types/"
+"shaders/ao>` shader."
 msgstr ""
+"シェーダー毎を基本としてアンビエントオクルージョンを利用する別の方法は :"
+"doc:`Ambient Occlusion </render/cycles/nodes/types/shaders/ao>` シェー"
+"ダーを利用することです。"
 
 #: ../../manual/render/cycles/world.rst:78
 msgid "Mist Pass"
-msgstr ""
+msgstr "Mist Pass (ミストパス)"
 
 #: ../../manual/render/cycles/world.rst:80
 msgid "Shown when the Mist pass is enabled."
-msgstr ""
+msgstr "ミストパスが有効化されると表示されます。"
 
 #: ../../manual/render/cycles/world.rst:82
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: ../../manual/render/cycles/world.rst:83
 #: ../../manual/render/cycles/world.rst:85
 #: ../../manual/render/cycles/world.rst:87
 msgid "ToDo."
-msgstr ""
+msgstr "TODO。"
 
 #: ../../manual/render/cycles/world.rst:84
 msgid "Depth"
-msgstr ""
+msgstr "Depth (深度)"
 
 #: ../../manual/render/cycles/world.rst:87
 msgid "Falloff"
-msgstr ""
+msgstr "Falloff (減衰)"
 
 #: ../../manual/render/cycles/world.rst:91
 msgid ""
 "A visualization can be activated in the :menuselection:`Camera --> "
 "Display` panel."
 msgstr ""
+"メニューの表示については :menuselection:`Camera --> Display` パネルで有効"
+"化できます。"
 
 #: ../../manual/render/cycles/world.rst:97
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: ../../manual/render/cycles/world.rst:119
 msgid "Multiple Importance Sample"
-msgstr ""
+msgstr "Multiple Importance Sample (多重重点サンプル)"
 
 #: ../../manual/render/cycles/world.rst:103
 msgid ""
@@ -182,6 +227,12 @@ msgid ""
 "idea to enable this when using an image texture to light the scene, "
 "otherwise noise can take a very long time to converge."
 msgstr ""
+"この項目を有効にすると背景のテクスチャ等レンダリング時の負荷が軽い部分を"
+"サンプリングし、処理重要度のマップを作成します。この機能によって(ホタルの"
+"ような)副生成物と引き換えにレンダリング時にノイズを低減します。シーンを軽"
+"量なものにするためにイメージテクスチャを利用している場合は常にこのオプ"
+"ションを有効にしておくのは良いアイディアでしょう、さもなくばノイズが収束"
+"するのに長い時間を取られてしまいます。"
 
 #: ../../manual/render/cycles/world.rst:108
 msgid ""
@@ -189,18 +240,21 @@ msgid ""
 "Both images are rendered for 25 seconds (Off: 1500 samples, On: 1000 "
 "samples)."
 msgstr ""
+"下図は *Multiple Importance Sample* の有効と無効を比較したものです。いず"
+"れの画像も 25 秒でレンダリングしました (無効時: 1500 サンプル、有効時: "
+"1000サンプル)。"
 
 #: ../../manual/render/cycles/world.rst:115
 msgid "Multiple Importance Sample Off."
-msgstr ""
+msgstr "Multiple Importance Sample 無効。"
 
 #: ../../manual/render/cycles/world.rst:119
 msgid "Multiple Importance Sample On."
-msgstr ""
+msgstr "Multiple Importance Sample 有効。"
 
 #: ../../manual/render/cycles/world.rst:124
 msgid "Map Resolution"
-msgstr ""
+msgstr "Map Resolution (マップ解像度)"
 
 #: ../../manual/render/cycles/world.rst:122
 msgid ""
@@ -209,80 +263,94 @@ msgid ""
 "but conversely will take up more memory and render slightly slower. "
 "Higher values also may produce less noise when using high-res images."
 msgstr ""
+"重点マップの解像度を設定します。高い解像度ではマップ上で細かい形状も検知"
+"しやすくなりより正確なサンプリングを行えます。しかし逆にメモリをより必要"
+"としレンダリングはある程度遅くなります。高解像度の画像を利用している場合"
+"は高い値を設定することでノイズを低減できる場合が有ります。"
 
 #: ../../manual/render/cycles/world.rst:127
 msgid "Max Bounces"
-msgstr ""
+msgstr "Max Bounces (最大バウンス回数)"
 
 #: ../../manual/render/cycles/world.rst:127
 msgid ""
 "Maximal number of bounces the background light will contribute to the "
 "render."
 msgstr ""
+"背景から入射する光線がバウンスする上限回数でありレンダリング結果に影響し"
+"ます。"
 
 #: ../../manual/render/cycles/world.rst:131
 msgid ""
 "See :doc:`Reducing Noise </render/cycles/optimizations/reducing_noise>` "
 "for more information on how to reduce noise."
 msgstr ""
+"ノイズをどのように低減させるかについてのより詳細な情報は :doc:`Reducing "
+"Noise </render/cycles/optimizations/reducing_noise>` を参照下さい。"
 
 #: ../../manual/render/cycles/world.rst:147
 msgid "Sampling Method"
-msgstr ""
+msgstr "サンプリング方式"
 
 #: ../../manual/render/cycles/world.rst:142
 msgid ""
 "If you have got a pretty dense volume that is lit from far away then "
 "*Distance* sampling is usually more efficient."
 msgstr ""
+"密度がかなり大きいボリュームが遠方から照らされる場合は通常 *Distance* サ"
+"ンプリングはより効果を発揮します。"
 
 #: ../../manual/render/cycles/world.rst:144
 msgid "Equiangular"
-msgstr ""
+msgstr "Equiangular (等角)"
 
 #: ../../manual/render/cycles/world.rst:145
 msgid ""
 "If you have got a light inside or near the volume then *equiangular* "
 "sampling is better."
 msgstr ""
+"光源がボリュームの内部もしくは近くに存在する場合 *Equiangular* サンプリン"
+"グの利用がより望ましいでしょう。"
 
 #: ../../manual/render/cycles/world.rst:147
 msgid "Multiple Importance"
-msgstr ""
+msgstr "Multiple Importance (多重重点)"
 
 #: ../../manual/render/cycles/world.rst:147
 msgid ""
 "If you have a combination of both, then the multiple importance sampling "
 "will be better."
 msgstr ""
+"これらの状況が混在している場合は、多重重点サンプリングを利用した方が良い"
+"でしょう。"
 
 #: ../../manual/render/cycles/world.rst:155
 msgid "Interpolation"
-msgstr ""
+msgstr "Interpolation (補間)"
 
 #: ../../manual/render/cycles/world.rst:150
 msgid "Interpolation method to use for the volume."
-msgstr ""
+msgstr "ボリュームに用いる補間方式です。"
 
 #: ../../manual/render/cycles/world.rst:152
 msgid "Linear"
-msgstr ""
+msgstr "Linear (線形)"
 
 #: ../../manual/render/cycles/world.rst:153
 msgid "Good smoothness and speed."
-msgstr ""
+msgstr "滑らかさと速度共に良好な方式です。"
 
 #: ../../manual/render/cycles/world.rst:155
 msgid "Cubic"
-msgstr ""
+msgstr "Cubic (三次元)"
 
 #: ../../manual/render/cycles/world.rst:155
 msgid "Smoothed high quality interpolation, but slower."
-msgstr ""
+msgstr "高品質な滑らかさを実現する補間ですが、処理は遅くなります。"
 
 #: ../../manual/render/cycles/world.rst:161
 msgid "Homogeneous Volume"
-msgstr ""
+msgstr "Homogeneous Volume (均質ボリューム)"
 
 #: ../../manual/render/cycles/world.rst:158
 msgid ""
@@ -291,20 +359,27 @@ msgid ""
 "typically not have any textures, and by knowing this we can avoid taking "
 "small steps to sample the volume shader."
 msgstr ""
+"レンダリングを高速に行うため、ボリュームがいずれの場所でも同じ密度を持っ"
+"ている (テクスチャを利用しない) と仮定します。例えばガラス状オブジェクト"
+"における光の吸収は通常テクスチャを持たないため、このオプションを知ってお"
+"くことでボリュームシェーダーのサンプリングのためのちょっとした段階を避け"
+"る事ができます。"
 
 #: ../../manual/render/cycles/world.rst:164
 msgid "Ray Visibility"
-msgstr ""
+msgstr "Ray Visibility (光線の可視性)"
 
 #: ../../manual/render/cycles/world.rst:166
 msgid ""
-"As with other objects, *Ray Visibility* allows you to control which other"
-" shaders can \"see\" the environment."
+"As with other objects, *Ray Visibility* allows you to control which "
+"other shaders can \"see\" the environment."
 msgstr ""
+"他のオブジェクト同様、*Ray Visibility* によって他のシェーダーがその環境"
+"を *認識* できるかをコントロールできます。"
 
 #: ../../manual/render/cycles/world.rst:171
 msgid "Tricks"
-msgstr ""
+msgstr "便利な小技"
 
 #: ../../manual/render/cycles/world.rst:173
 msgid ""
@@ -315,14 +390,21 @@ msgid ""
 "the second the directly visible color. This is useful when using a high-"
 "res image for the background and a low-res image for the actual lighting."
 msgstr ""
+"直接見える範囲を定義する環境とオブジェクトを間接的に照らす別の環境とを別"
+"に持ちたい場合が有ります。この状況を実現する簡単な方法はミックスする要素"
+"として Is Camera Ray を設定した Mix ノードを用いることです。Mix ノードの"
+"最初の入力には間接光の色を、次の入力には直接見える色を設定します。この設"
+"定は環境背景に高解像度の画像を用いて、ライティングには低解像度の画像を利"
+"用する場合に有用です。"
 
 #: ../../manual/render/cycles/world.rst:179
 msgid ""
-"Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that the"
-" high-res image will also be visible in reflections."
+"Similarly, adding the *Is Camera* and *Is Glossy* rays will mean that "
+"the high-res image will also be visible in reflections."
 msgstr ""
+"同様に、*Is Camera Ray* と *Is Glossy Ray* との加算は反射として高解像度の"
+"画像を視認できるようにする事を意味します。"
 
 #: ../../manual/render/cycles/world.rst:184
 msgid "Nodes for the trick above."
-msgstr ""
-
+msgstr "この小技で用いるノードは上のようになります。"

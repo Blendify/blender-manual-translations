@@ -4,23 +4,25 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-19 14:01-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-03-23 22:07+0900\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:4
 msgid "Texture Editing"
-msgstr ""
+msgstr "テクスチャ編集"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:6
 msgid ""
@@ -29,20 +31,26 @@ msgid ""
 "assigned themselves; rather they must always be assigned by adding an "
 "image texture node to a material."
 msgstr ""
+"3D ビューの描画タイプ、UV マッピングおよびテクスチャペイント操作は "
+"Cycles が有効化されている場合挙動が少々変わります。UV マップは適用された"
+"テクスチャ画像を利用しなくなります;それらテクスチャ画像は Image Texture "
+"ノードによってマテリアルに対して適用されていなければなりません。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:13
 msgid "3D View Draw Types"
-msgstr ""
+msgstr "3D ビューの描画タイプ"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:15
 msgid ""
 "The Texture draw types used for Blender Internal have been replaced by "
 "three others in Cycles:"
 msgstr ""
+"Blender の内蔵レンダラで用いられていた Texture 描画タイプは Cycles では以"
+"下の 3 種類の描画タイプに置き換えられます:"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:19
 msgid "Texture"
-msgstr ""
+msgstr "Texture (テクスチャ)"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:18
 msgid ""
@@ -51,22 +59,31 @@ msgid ""
 "the existing textured solid for Blender Internal. The texture drawn is "
 "the active image texture node for the material."
 msgstr ""
+"この描画モードは個別のテクスチャを編集、描画およびマップするために用いら"
+"れます。ライティングは Solid モード利用時と同じであり、そのためこのモード"
+"は Blender 内蔵レンダラにおける既存の Textured Solid 機能に似ています。描"
+"画されるテクスチャはマテリアルに適用されたアクティブな Image Texture ノー"
+"ドによる物です。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:23
 msgid "Material"
-msgstr ""
+msgstr "Material (マテリアル)"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:22
 msgid ""
 "A simplified version of the entire material is drawn using GLSL shaders. "
-"This uses solid lighting, and also is mostly useful for editing, painting"
-" and mapping textures, but while seeing how they integrate with the "
-"material."
+"This uses solid lighting, and also is mostly useful for editing, "
+"painting and mapping textures, but while seeing how they integrate with "
+"the material."
 msgstr ""
+"GLSL シェーダーを利用して最終的なマテリアルを簡易的に表示する物です。この"
+"モードは Solid モードのライティングを用い、テクスチャの編集、描画および"
+"マッピングにも利用できますが、そのマテリアルにたいして設定した効果が反映"
+"されます。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:28
 msgid "Rendered"
-msgstr ""
+msgstr "Rendered (レンダー結果)"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:26
 msgid ""
@@ -75,14 +92,18 @@ msgid ""
 "rendering, objects still use the viewport rather than render resolution "
 "and visibility."
 msgstr ""
+"この描画モードではレンダーエンジンによる描画が行われ、サンプルを増加させ"
+"ながらレンダー画像全体をインタラクティブに更新していく物です。オフライン"
+"レンダリングと異なり、各オブジェクトはレンダー用に設定した解像度や可視領"
+"域でなくそのビューポート上に存在し続けます。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:32
 msgid "Material draw modes (Texture, Material, Rendered)."
-msgstr ""
+msgstr "マテリアルの描画モード (Texture、Material、Rendered)。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:36
 msgid "Texture Properties"
-msgstr ""
+msgstr "テクスチャのプロパティ"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:43
 msgid ""
@@ -90,6 +111,9 @@ msgid ""
 "that contains all texture nodes from the world, lamps and materials, but "
 "also from e.g. modifiers, brushes and physics fields."
 msgstr ""
+"テクスチャのプロパティにおいては、ワールド、ランプおよびマテリアル、それ"
+"だけでなく例えばモディファイア、ブラシそして Physics に定義された全てのテ"
+"クスチャノードを含むリストから利用するテクスチャを選択可能です。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:47
 msgid ""
@@ -97,18 +121,25 @@ msgid ""
 "others, Blender textures are still used, but this will change in the "
 "future."
 msgstr ""
+"シェーディングノードでは、利用可能なテクスチャは Cycles のテクスチャにな"
+"ります。その他のノードでは Blender のテクスチャが利用できるままになってい"
+"ますが、これは将来変更される可能性が有ります。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:56
 msgid "Painting & UV Editing"
-msgstr ""
+msgstr "ペインティングと UV 編集"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:61
 msgid ""
 "For texture paint mode, the image that is painted on is taken from the "
-"active image texture node. This can be selected in the Node editor or the"
-" texture properties, and it is indicated as blue in the material "
+"active image texture node. This can be selected in the Node editor or "
+"the texture properties, and it is indicated as blue in the material "
 "properties."
 msgstr ""
+"Texture Paint (テクスチャペイント)モードでは、ペイントの対象となる画像は"
+"アクティブな Image Texture ノードから取得された物となります。どのノードを"
+"アクティブにするかは Node エディタもしくはテクスチャプロパティから選択で"
+"き、マテリアルプロパティでは青色で表示されます。"
 
 #: ../../manual/render/cycles/materials/texture_editing.rst:66
 msgid ""
@@ -116,4 +147,6 @@ msgid ""
 "used. Assigning images in the UV/Image editor also affects the active "
 "image texture node."
 msgstr ""
-
+"UV マッピングには、メッシュプロパティで定義したアクティブな UV マップが利"
+"用されます。UV/Image エディタへの画像の設定はアクティブな Image Texture "
+"ノードに影響を与えます。"
