@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) : This page is public domain as CC0
 # This file is distributed under the same license as the Blender Reference
 # Manual package.
@@ -9,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-13 22:19-0500\n"
-"PO-Revision-Date: 2017-03-21 09:30+0800\n"
+"PO-Revision-Date: 2017-03-29 21:51+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +24,7 @@ msgstr "视频输出"
 
 #: ../../manual/render/output/video.rst:7
 msgid "Preparing your work for video"
-msgstr ""
+msgstr "视频制作的准备工作"
 
 #: ../../manual/render/output/video.rst:9
 msgid ""
@@ -33,6 +32,8 @@ msgid ""
 "wonderful animations, encoded with your favorite codecs, and possibly you will "
 "share them on the Internet with the rest of the community."
 msgstr ""
+"一旦你掌握了动画的技巧，您一定会创作出不少精彩的动画，用你最喜欢的编解码器编"
+"码，可能你会在互联网社区上与其他人分享它们。"
 
 #: ../../manual/render/output/video.rst:13
 msgid ""
@@ -41,6 +42,9 @@ msgid ""
 "here are some tips specifically targeted at Video preparation. The first and "
 "principal one is to remember the double-dashed white lines in the camera view!"
 msgstr ""
+"迟早您会沉浸在电视视频制作中不可自拔，甚至可能会因此而烧掉了自己DVD。为了让您的"
+"制作的过程少遭罪，这里有一些专门针对视频制作准备工作的小技巧。首先最基本的一条"
+"是：切记摄像机视图中的白色双虚线！"
 
 #: ../../manual/render/output/video.rst:18
 msgid ""
@@ -52,10 +56,16 @@ msgid ""
 "Everything within the two rectangles may or may not be visible, depending on "
 "the given TV set that your audience watches the video on."
 msgstr ""
+"如果您使用PC渲染，那么整个渲染的图像在*虚线矩形*外*的将显示。\n"
+"对于电视来说，由于电视机阴极射线管中电子束扫描的机理，一些线路和部分线路会丢"
+"失。\n"
+"可以向你保证的是，在摄像机视图中矩形虚线框*内*的内容将被屏幕呈现；\n"
+"在两个矩形框之间的内容则不确定。有可能呈现，也可能不呈现，这很大程度取决于您的"
+"观众所观看的电视屏幕的配置和设置。"
 
 #: ../../manual/render/output/video.rst:29
 msgid "Color Saturation"
-msgstr ""
+msgstr "色彩饱和度"
 
 #: ../../manual/render/output/video.rst:31
 msgid ""
@@ -64,6 +74,9 @@ msgid ""
 "(NTSC), the latter being quite similar to the former. Hence some knowledge of "
 "this is necessary too."
 msgstr ""
+"大部分的录像带和视频并非基于RGB模式而是YCrCB模式。更确切地说，欧洲的"
+"YUV（PAL），美国的YIQ（NTSC制式），后者和前者有细微的差距，因此这块的某些知识还"
+"是有需要了解一下的。"
 
 #: ../../manual/render/output/video.rst:35
 msgid ""
@@ -74,10 +87,16 @@ msgid ""
 "RGB ones takes two steps (the constants *in italics* depend on the system: PAL "
 "or NTSC):"
 msgstr ""
+"YCrCB模式通过亮度或是强度(Y)和两个'Crominance' 信号：红和蓝（Cr和Cb)的信息来表"
+"达传载信号\n"
+"实际上，黑白电视机只显示亮度（明暗），而彩色电视机则通过'Crominance' （及亮度）"
+"将颜色还原。\n"
+"YCrCb的值通过RGB模式二进制反码重建还原需要两步（*斜体* 常数值取决于系统，PAL或"
+"NTSC）。"
 
 #: ../../manual/render/output/video.rst:42
 msgid "First, the Gamma correction (*g* varies: 2.2 for NTSC, 2.8 for PAL):"
-msgstr ""
+msgstr "首先，图像灰度校正（g变化值:NTSC制式下为2.2，PAL制式下为2.8）"
 
 #: ../../manual/render/output/video.rst:44
 msgid "R' = R\\ :sup:`1/g`"
@@ -93,7 +112,7 @@ msgstr "B' = B\\ :sup:`1/g`"
 
 #: ../../manual/render/output/video.rst:48
 msgid "Then, the conversion itself:"
-msgstr ""
+msgstr "然后，转换本身："
 
 #: ../../manual/render/output/video.rst:50
 msgid "Y = 0.299R' + 0.587G' + 0.114B'"
@@ -116,16 +135,11 @@ msgid ""
 "dynamic of colors in video, than what you are used to on monitors. You hence "
 "have to keep in mind that not all colors can be correctly displayed."
 msgstr ""
-
-#: ../../manual/render/output/video.rst:61
-#, python-format
-msgid ""
-"A rule of thumb is to keep the colors as 'grayish' or 'unsaturated' as "
-"possible; this roughly means keeping the dynamics of your colors within 80% of "
-"one another. In other words, the difference between the highest RGB value and "
-"the lowest RGB value should not exceed 0.8 (0 - 1 range) or 200 (0 - 255 "
-"range)."
-msgstr ""
+"然而一张标准的24位RGB图画中，有8位是用于保持每一条通道的带宽下载。考虑到相对于"
+"色差来说，人眼对于亮度的差异更为敏感，而且亮度信号在传输的过程中比两个色度信号"
+"更多。相比起过去常用的显示器来说，这一点增量对视频动态色彩显示的影响微不足"
+"道。\n"
+"因此你要谨记，并不是所有的颜色都能被准确地显示。"
 
 #: ../../manual/render/output/video.rst:67
 msgid ""
@@ -134,14 +148,17 @@ msgid ""
 "(over-saturated) on video, while appearing bright and dynamic on a computer "
 "monitor."
 msgstr ""
+"然而这并非绝对，有些超过0.8仍是可以接受的，但RGB显示颜色包含了颜色对比值，范围"
+"在0至1之间的，视频显示出来的效果相当糟糕（过度饱和），然而在电脑显示屏中则明艳"
+"而生动。"
 
 #: ../../manual/render/output/video.rst:73
 msgid "Encoding Panel"
-msgstr ""
+msgstr "编码面板"
 
 #: ../../manual/render/output/video.rst:77
 msgid "Encoding panel."
-msgstr ""
+msgstr "编码面板"
 
 #: ../../manual/render/output/video.rst:79
 msgid ""
@@ -149,6 +166,8 @@ msgid ""
 "With all of these compression choices, there is a tradeoff between file size, "
 "compatibility across platforms, and playback quality."
 msgstr ""
+"这块用于选择哪款视频编解码器，以及设置压缩的方式。\n"
+"所有的压缩方式，都是会对文件大小、平台兼容性以及播放质量做出折中处理。"
 
 #: ../../manual/render/output/video.rst:83
 msgid ""
@@ -156,51 +175,58 @@ msgid ""
 "you can see some of the output of the encoding process. You will see even more "
 "output if you execute Blender as ``blender -d``."
 msgstr ""
+"当你阅读 :doc:`系统控制 </advanced/command_line/introduction>` 这块文档，你可以"
+"了解更多关于输出的编码过程。如果你使用 ``blender -d`` 执行Blender，可以看到更多"
+"输出。"
 
 #: ../../manual/render/output/video.rst:87
 msgid "Presets"
-msgstr ""
+msgstr "预设"
 
 #: ../../manual/render/output/video.rst:88
 msgid ""
 "You can use the presets, which choose optimum settings for you for that type "
 "of output."
-msgstr ""
+msgstr "您可以使用预设功能——为您的输出类型选择最佳效果"
 
 #: ../../manual/render/output/video.rst:96
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: ../../manual/render/output/video.rst:90
 msgid ""
 "Video container or file type. For a list of all available options see :doc:"
 "`video formats </data_system/files/media/video_formats>`."
 msgstr ""
+"关于视频内容或者文件类型，这儿有一大串可选项用于参考 :doc:`视频格式 </"
+"data_system/files/media/video_formats>`."
 
 #: ../../manual/render/output/video.rst:94
 msgid "Codec"
-msgstr ""
+msgstr "编码器"
 
 #: ../../manual/render/output/video.rst:94
 msgid ""
 "Chooses the method of compression and encoding. For a list of all available "
 "options see :doc:`video formats </data_system/files/media/video_formats>`."
 msgstr ""
+"选择压缩和编码方法。所有选项列表参考 :doc:`视频格式 </data_system/files/media/"
+"video_formats>` 。"
 
 #: ../../manual/render/output/video.rst:96
 msgid "Lossless Output"
-msgstr ""
+msgstr "无损输出"
 
 #: ../../manual/render/output/video.rst:97
 msgid ""
 "Allows the ability to perfectly reconstruct compressed data from compressed "
 "data."
-msgstr ""
+msgstr "具有完美地解压被压缩数据包的能力"
 
 #: ../../manual/render/output/video.rst:100
 #: ../../manual/render/output/video.rst:139
 msgid "Bitrate"
-msgstr ""
+msgstr "比率"
 
 #: ../../manual/render/output/video.rst:99
 msgid ""
@@ -208,10 +234,13 @@ msgid ""
 "(quality), which is the count of binary digits per frame. See also: `FFmpeg -b:"
 "v <https://ffmpeg.org/ffmpeg.html#Description>`__."
 msgstr ""
+"设置平均 `码率 <https://en.wikipedia.org/wiki/Bit_rate>`__ (品质)，该值为每帧二"
+"进制位数。也可以参考 `FFmpeg -b:v <https://ffmpeg.org/ffmpeg."
+"html#Description>`__ 。"
 
 #: ../../manual/render/output/video.rst:106
 msgid "GOP Size"
-msgstr ""
+msgstr "GOP 大小"
 
 #: ../../manual/render/output/video.rst:103
 msgid ""
@@ -225,7 +254,7 @@ msgstr ""
 
 #: ../../manual/render/output/video.rst:110
 msgid "Autosplit Output"
-msgstr ""
+msgstr "自动分割输出"
 
 #: ../../manual/render/output/video.rst:109
 msgid ""
@@ -234,67 +263,76 @@ msgid ""
 "generally leads to a smaller file but needs a higher-powered device to replay "
 "it."
 msgstr ""
+"如果您的视屏过大并且超过2G，将会被自动拆分输出。输出的过程主要通过GOP或关键帧交"
+"错来控制输出文件大小。通常数字越大文件块就越小，但需要一个更高级的设备来重放"
+"它。"
 
 #: ../../manual/render/output/video.rst:123
 msgid "Mux"
-msgstr ""
+msgstr "多路复合:"
 
 #: ../../manual/render/output/video.rst:113
 msgid ""
 "`Multiplexing <http://www.afterdawn.com/glossary/term.cfm/multiplexing>`__ "
 "settings."
 msgstr ""
+"`多路复合 <http://www.afterdawn.com/glossary/term.cfm/multiplexing>`__ 设置。"
 
 #: ../../manual/render/output/video.rst:115
 #: ../../manual/render/output/video.rst:130
 msgid "Rate"
-msgstr ""
+msgstr "比率"
 
 #: ../../manual/render/output/video.rst:116
 msgid "Maximum bit rate of the multiplexed stream."
-msgstr ""
+msgstr "多路复用流式处理中最大的位速率"
 
 #: ../../manual/render/output/video.rst:118
 msgid "Packet Size"
-msgstr ""
+msgstr "包大小"
 
 #: ../../manual/render/output/video.rst:118
 msgid "Reduces data fragmentation or muxer overhead depending on the source."
-msgstr ""
+msgstr "减少数据碎片或复用器开销取决于源。"
 
 #: ../../manual/render/output/video.rst:120
 msgid "Standards"
-msgstr ""
+msgstr "标准"
 
 #: ../../manual/render/output/video.rst:122
 msgid ""
 "Some codecs cannot encode off-the-wall video sizes, so stick to the XY sizes "
 "used in the presets for standard TV sizes."
 msgstr ""
+"一些编解码器不能编码异乎寻常的视频大小，所以要坚持标准电视尺寸预置的XY尺寸。"
 
 #: ../../manual/render/output/video.rst:126
 msgid "The bitrate control also includes a *Minimum* and a *Maximum*."
-msgstr ""
+msgstr "比特率控制还包括 * 最小值 * 和 * 最大值 *。"
 
 #: ../../manual/render/output/video.rst:130
 msgid "Buffer"
-msgstr ""
+msgstr "缓冲区"
 
 #: ../../manual/render/output/video.rst:129
 msgid ""
 "The `decoder bitstream buffer <https://en.wikipedia.org/wiki/"
 "Video_buffering_verifier>`__ size."
 msgstr ""
+"`解码器码流缓冲区<https: en.wikipedia.org/wiki/video_buffering_verifier=\"\">' "
+"__ 尺寸。"
 
 #: ../../manual/render/output/video.rst:135
 msgid "Audio Codec"
-msgstr ""
+msgstr "音频编码器"
 
 #: ../../manual/render/output/video.rst:135
 msgid ""
 "Audio conainer used, For a list of all available options see :doc:`video "
 "formats </data_system/files/media/video_formats>`."
 msgstr ""
+"音频容器的使用，所有可选项的列表请查看︰ doc: 视频格式`video formats </"
+"data_system/files/media/video_formats>`."
 
 #: ../../manual/render/output/video.rst:138
 msgid ""
@@ -302,24 +340,26 @@ msgid ""
 "movie. Higher bitrates are bigger files that stream worse but sound better. "
 "Use powers of 2 for compatibility."
 msgstr ""
+"对于每个编解码器，用户可以控制在电影中的声音比特率(音质)。比特率越高文件越大，"
+"流式传输效果越差但听起来效果却更好。为了兼容性，请使用2的幂值。"
 
 #: ../../manual/render/output/video.rst:143
 msgid "Volume"
-msgstr ""
+msgstr "音量"
 
 #: ../../manual/render/output/video.rst:142
 msgid "Sets the output volume of the audio."
-msgstr ""
+msgstr "设置音频的输出音量"
 
 #: ../../manual/render/output/video.rst:146
 msgid "Tips"
-msgstr ""
+msgstr "提示"
 
 #: ../../manual/render/output/video.rst:148
 msgid ""
 "Choosing which format to use depends on what you are going to do with the "
 "image."
-msgstr ""
+msgstr "选择何种格式取决于接下来您对图像进行何种处理。"
 
 #: ../../manual/render/output/video.rst:150
 msgid ""
@@ -328,6 +368,9 @@ msgid ""
 "XviD open codec. If you want to output your movie with sound that you have "
 "loaded into the VSE, use M-PEG."
 msgstr ""
+"如果您动画处理的影片不准备做任何后期处理或是影视特效，则选择 ``AVI-JPEG`` 或是 "
+"``AVI Codec`` 中的任意一个，并且用XviD方式打开解码。如果您想要输出带声音的影"
+"片，那么您需要加载到VSE中，然后使用 M-PEG方式。"
 
 #: ../../manual/render/output/video.rst:155
 msgid ""
@@ -337,6 +380,10 @@ msgid ""
 "output for post-processing. After post-processing (compositing and/or "
 "sequencing), you should compress the video."
 msgstr ""
+"如果您的影片需要后期处理，则最好选择作为OpenEXR图像框架集进行渲染；\n"
+"如果您仅需要一个文件，那么选择AVI Raw格式，虽然AVI Raw格式的文件比较大，它保留"
+"了精确的输出质量进行后处理。完成后期特效后（影片合成或排序），您需要对视频压缩"
+"处理。"
 
 #: ../../manual/render/output/video.rst:162
 msgid ""
@@ -344,6 +391,8 @@ msgid ""
 "artifacts might throw off what you are trying to accomplish with the post-"
 "processing."
 msgstr ""
+"您不会想要去后期处理一个压缩过的文件，因为压缩后的产物也许将您尽力想实现的后期"
+"效果抛弃了。"
 
 #: ../../manual/render/output/video.rst:165
 msgid ""
@@ -354,18 +403,22 @@ msgid ""
 "`Image Strip </editors/vse/sequencer/strips/image_movie>` in the Video "
 "Sequence Editor. This way, you can easily:"
 msgstr ""
+"注意，您不会想要直接对视频进行渲染的。如果渲染时出现问题，就必须从头开始渲染所"
+"有帧。如果您先渲染一组静态图像（如默认的PNG或更高品质的OpenEXR），您可以把它们"
+"一起在视频序列编辑器上作为 :doc:`图像条</editors/vse/sequencer/strips/"
+"image_movie>`  编辑，这样一来，你就轻松多了。"
 
 #: ../../manual/render/output/video.rst:172
 msgid ""
 "Restart the rendering from the place (the frame) where the problem occurred."
-msgstr ""
+msgstr "从问题出现的那一帧开始重新渲染"
 
 #: ../../manual/render/output/video.rst:173
 msgid "Try out different video options in seconds, rather than minutes or hours."
-msgstr ""
+msgstr "几秒钟就可以查看不同视频选项的预览效果，而不是几分钟或是几小时"
 
 #: ../../manual/render/output/video.rst:174
 msgid ""
 "Enjoy the rest of the features of the VSE, such as adding Image Strips from "
 "previous renders, audio, video clips, etc."
-msgstr ""
+msgstr "享受VSE其它的特色功能，例如在先前的渲染中添加图像条，音频，视频片段等。"
