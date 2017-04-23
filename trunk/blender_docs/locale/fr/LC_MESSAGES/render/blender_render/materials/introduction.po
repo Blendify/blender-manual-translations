@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-12 18:22-0400\n"
-"PO-Revision-Date: 2017-03-19 17:39+0100\n"
+"PO-Revision-Date: 2017-04-23 15:18+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -141,6 +141,11 @@ msgid ""
 "specular reflection are distinguished from each other mainly by the "
 "relationship between the incident light angle and the reflected light angle."
 msgstr ""
+"Deux phénomènes de base prennent place en n'importe point d'une surface "
+"quand un rayon de lumière la frappe : diffusion et réflexion spéculaire. La "
+"diffusion et la réflexion spéculaire se distinguent entre elles "
+"principalement par la relation entre l'angle de la lumière incidente et "
+"l'angle de la lumière réfléchie. "
 
 #: ../../manual/render/blender_render/materials/introduction.rst:63
 msgid ""
@@ -148,6 +153,9 @@ msgid ""
 "account the base color (as modified by the diffusion and specular reflection "
 "phenomenon) and the light intensity."
 msgstr ""
+"L'ombrage (ou coloration) de l'objet durant le rendu va alors prendre en "
+"compte la couleur de base (comme modifiée par les phénomènes de diffusion et "
+"de réflexion spéculaire) et l'intnsité de la lumière."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:66
 msgid ""
@@ -157,6 +165,11 @@ msgid ""
 "reflection of the material (mixing the base color and the surrounding "
 "environment's) and the viewing angle."
 msgstr ""
+"En utilisant le *ray tracer* interne, d'autres phénomènes (plus avancés) "
+"pourraient se produire. Dans les réflexions de lancer de rayon, le point de "
+"surface frappé par un rayon de lumière va retourner la couleur de son "
+"environnement immédiat, selon le taux de réflexion du matériau (mélangeant "
+"la couleur de base et celle de l'environnement immédiat) et l'angle de vue."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:71
 msgid ""
@@ -167,6 +180,12 @@ msgid ""
 "material and the optional index of refraction of the material, which will "
 "distort the viewing angle."
 msgstr ""
+"D'un autre côté, dans les réfraction en lancer de rayon, le point de surface "
+"frappé par un rayon de lumière va retourner la couleur de son environnement "
+"d'arrière-plan, selon le taux de transparence (mélangeant la couleur de base "
+"et celle de l'environnement d'arrière-plan avec sa valeur de filtre "
+"optionnelle) du matériau et l'indice de réfraction optionnelle du matériau, "
+"ce qui va fausser l'angle de vue."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:77
 msgid ""
@@ -174,6 +193,10 @@ msgid ""
 "these phenomena at the same time during the rendering. The appearance of the "
 "object, when rendered, depends on many inter-related settings:"
 msgstr ""
+"Bien sûr, l'ombrage de l'objet frappé par un rayon de lumière sera le "
+"résultat du mélange de tous ces phénomènes en même temps durant le rendu. "
+"L'apparence de l'objet, une fois rendu, dépend de nombreux réglages "
+"étroitement liés :"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:81
 msgid "World (Ambient color, Radiosity, Ambient Occlusion)"
@@ -181,17 +204,19 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/introduction.rst:82
 msgid "Lights"
-msgstr ""
+msgstr "Lumières"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:83
 msgid ""
 "Material settings (including ambient, emission, and every other setting on "
 "every panel in that tab)"
 msgstr ""
+"Réglages de matériau (y compris ambient, emission, et tous les autres "
+"réglages des panneaux de cet onglet)"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:84
 msgid "Texture(s) and how they are mixed"
-msgstr ""
+msgstr "Texture(s) et la manière dont elles sont mélangées"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:85
 msgid "Material Nodes"
@@ -227,11 +252,11 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/introduction.rst:96
 msgid "Using Materials"
-msgstr ""
+msgstr "Utilisation des matériaux"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:98
 msgid "Check your Render"
-msgstr ""
+msgstr "Vérifiez votre rendu"
 
 #: ../../manual/render/blender_render/materials/introduction.rst:100
 msgid ""
@@ -272,7 +297,7 @@ msgid ""
 "Second, you can use :doc:`Nodes </render/blender_render/materials/nodes/"
 "index>`; a graphical nodes editor is available."
 msgstr ""
-"Ensuite vous poivez utiliser les :doc:`Nodes </render/blender_render/"
+"Ensuite vous pouvez utiliser les :doc:`Nodes </render/blender_render/"
 "materials/nodes/index>`; un éditeur graphique de nodes est disponible."
 
 #: ../../manual/render/blender_render/materials/introduction.rst:114
@@ -305,8 +330,8 @@ msgid ""
 "GLSL). So it is recommended to always select the appropriate system settings "
 "before starting the design of materials."
 msgstr ""
-"L'effet exact des réglages de matériau peut être affecté par un cetain "
-"nombre de réglages systèmes. D'abord et avant tout est le moteur de rendu "
+"L'effet exact des réglages de matériau peut être affecté par un certain "
+"nombre de réglages systèmes. D'abord et avant tout, le moteur de rendu "
 "utilisé : Cycles et le Blender *Render Engine* (aussi connu comme Blender "
 "Internal ou BI) requièrent des niveaux d'illumination complètement "
 "différents pour obtenir des résultats similaires, et même alors l'apparence "
