@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: 2017-03-21 21:49+0800\n"
+"PO-Revision-Date: 2017-05-25 23:49+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:4
 msgid "Specular Shaders"
-msgstr ""
+msgstr "高光着色器"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:6
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:94
@@ -30,15 +30,15 @@ msgstr ""
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:205
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:237
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst
 msgid "Mode:     All Modes"
-msgstr ""
+msgstr "模式:     所有模式"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst
 msgid "Panel:    :menuselection:`Material --> Specular`"
-msgstr ""
+msgstr "面板:    :menuselection:`材质 --> 高光`"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:13
 msgid ""
@@ -50,10 +50,14 @@ msgid ""
 "reflected at an angle which mirrors the incident light angle (with regard "
 "to the surface's normal), which makes the viewing angle very important."
 msgstr ""
+"高光着色器用于光泽表面的亮点效果，模拟对光源的反射。与 :doc:`漫射着色 </"
+"render/blender_render/materials/properties/diffuse_shaders>` 不同的是，高"
+"光反射 *依赖观察点* 。根据斯涅尔定律，照射到光泽表面的光线的入射角与反射角"
+"(相对于表面法向)相等，这就使得观察角度非常重要了。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:20
 msgid "Not a Mirror!"
-msgstr ""
+msgstr "不是镜射！"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:22
 msgid ""
@@ -63,36 +67,39 @@ msgid ""
 "mirror-like reflections you would need to use the internal raytracer. "
 "Please refer to section :doc:`rendering </render/index>` of this manual."
 msgstr ""
+"必须强调的是，这里讨论的 *高光反射* 现象不是我们看到的镜子的反射，而是在光"
+"泽表面的高光。要获得真正的类镜面反射，需要使用内置的光线追踪。请参考手册"
+"的 :doc:`渲染 </render/index>` 章节。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:30
 msgid "Common Options"
-msgstr ""
+msgstr "通用选项"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:32
 msgid "Each specular shader share the following common options:"
-msgstr ""
+msgstr "各高光着色器共用以下通用选项："
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:34
 msgid "Specular Color"
-msgstr ""
+msgstr "高光色"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:35
 msgid "The color of the specular highlight"
-msgstr ""
+msgstr "高光的颜色"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:36
 msgid "Intensity"
-msgstr ""
+msgstr "强度"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:37
 msgid ""
 "The intensity, or brightness of the specular highlight. This has a range "
 "of [0-1]."
-msgstr ""
+msgstr "高光反射的强度，或者说亮度，取值范围 [0-1]。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:41
 msgid "Ramp"
-msgstr ""
+msgstr "渐变"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:39
 msgid ""
@@ -100,6 +107,8 @@ msgid ""
 "how the range will vary over a surface. See :doc:`Ramps </render/"
 "blender_render/materials/properties/ramps>` for details."
 msgstr ""
+"用于为 *材质* 设置高光色范围，并定义其在表面的变化方式。具体参见 :doc:"
+"`Ramps </render/blender_render/materials/properties/ramps>` 。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:43
 msgid ""
@@ -109,14 +118,17 @@ msgid ""
 "different values for various effects (e.g. metals tend to have colored "
 "highlights)."
 msgstr ""
+"因此，一个材质至少有两种不同颜色，漫射颜色和高光色。高光色通常设置为纯白"
+"(与光源的 *纯白色* 一样)，不过也可以设置为不同的值，以产生各种效果(例如，"
+"金属往往会有彩色高光)。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:51
 msgid "Technical Details"
-msgstr ""
+msgstr "技术细节"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:55
 msgid "Specular Reflection."
-msgstr ""
+msgstr "高光反射。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:58
 msgid ""
@@ -124,6 +136,8 @@ msgid ""
 "during the same process of light scattering, but are not the same. "
 "Diffusion is actually subsurface scattering at a very small scale."
 msgstr ""
+"现实中，漫射和高光的效果都是光线散射过程中产生的，不过却并非一回事。漫射其"
+"实是小范围的次表面散射。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:62
 msgid ""
@@ -138,6 +152,11 @@ msgid ""
 "modern BRDFs (Bi-directional Reflectance Distribution Functions), or "
 "shading models."
 msgstr ""
+"想象一个由极其细微的半透明的反光面元组成。高光反射的锐度取决于物体表面上面"
+"元的角度分布。这些反光面源越深和越粗糙，光线照射到表面后传播的越多。当这些"
+"面元相较 *宏表面* 更加平整，表面会呈现更加细密的反射，接近镜面。这是对被广"
+"泛接受的反射微面元理论的简明阐释，该理论是所有现代BRDF(双向反射分布函数)或"
+"着色模型的基础。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:73
 msgid ""
@@ -147,12 +166,15 @@ msgid ""
 "all directions. It is also attenuated by the pigmentation in the surface, "
 "hence creating what we perceive as diffuse, and the color of an object."
 msgstr ""
+"由于这些微面元是透明的，一些光线进入表面并发生漫射。多数情况下，返回的光线"
+"大致接近兰伯特漫射，意味着沿各方向均匀传播。光线同时还被表面的色素削弱，因"
+"此产生了我们所看到的漫射现象与物体的颜色。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:80
 msgid ""
 "Note that at glancing angles, the reflectivity of a surface will always "
 "go to 1."
-msgstr ""
+msgstr "注意，在掠射角，表面的反射率始终为1。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:82
 msgid ""
@@ -165,18 +187,22 @@ msgid ""
 "its bounce, which follow (more or less!) the same law as the light "
 "reflection."
 msgstr ""
+"如果对这种关系难以理解，试着想象有一个球(厘米级)：如果将它扔向一面碎石墙"
+"(分米级别的粗糙度)，它将每次都朝不同的方向反弹，你很快就接不住它了！另一方"
+"面，如果将它扔向一面光滑的混凝土墙(毫米级比的粗糙度)，你可以很轻松地预见其"
+"反弹方向，这遵守的定律与光线反射(或多或少)是一样的。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:92
 msgid "Cook-Torrance"
-msgstr ""
+msgstr "库克-托伦斯"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst
 msgid "Panel:    :menuselection:`Material --> Shaders`"
-msgstr ""
+msgstr "面板:    :menuselection:`材质 --> 着色器`"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:103
 msgid "Cook-Torrance Shader (Lambert 0.8)."
-msgstr ""
+msgstr "库克-托伦斯着色器 (兰伯特 0.8)。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:106
 msgid ""
@@ -189,6 +215,12 @@ msgid ""
 "reflectance model for rendering computer synthesized images\" and applied "
 "it to the simulation of metal and plastic."
 msgstr ""
+"库克-托伦斯是一个基础的高光着色器，多用于产生光亮的塑料表面。它是冯着色器"
+"的轻微优化版本。罗伯特 L. 库克 (卢卡斯影业) 和 肯尼思 E. 托伦斯 (康奈尔大"
+"学) 在他们 1982的论文 `计算机图形学的反射模型 <https://citeseerx.ist.psu."
+"edu/viewdoc/download?doi=10.1.1.83.7263&rep=rep1&type=pdf>`__ (PDF)中，描"
+"述了 \"一种用于渲染计算机合成图像的新反射模型\"，并将其用于模拟金属和塑"
+"料。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:118
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:149
@@ -196,25 +228,25 @@ msgstr ""
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:222
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:262
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:122
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:153
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:193
 msgid "Hardness"
-msgstr ""
+msgstr "硬度"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:121
 msgid "Size of the specular highlight"
-msgstr ""
+msgstr "高光亮点尺寸"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:125
 msgid "Phong"
-msgstr ""
+msgstr "冯氏"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:136
 msgid "Phong Shader (Lambert 0.8)."
-msgstr ""
+msgstr "冯氏着色器 (兰伯特 0.8)."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:139
 msgid ""
@@ -226,15 +258,20 @@ msgid ""
 "Phong_reflection_model>`__ included components not only for specular "
 "lighting, but also diffuse and ambient lighting."
 msgstr ""
+"冯氏是一种非常类似库克-托伦斯的着色器，不过更适合皮肤和有机表面。 `裴 祥 "
+"冯 <https://en.wikipedia.org/wiki/Bui_Tuong_Phong>`__ (1942-1975) 是一位出"
+"生于越南的计算机图形学先驱，简历了首个用于模拟高光现象的算法。 `他的模型 "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`__ 不止包含了高光，"
+"还包含了漫射和环境光。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:152
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:225
 msgid "Size of the specular highlight."
-msgstr ""
+msgstr "高光亮点尺寸。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:155
 msgid "Planet Atmosphere"
-msgstr ""
+msgstr "星球大气层"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:157
 msgid ""
@@ -243,14 +280,17 @@ msgid ""
 "For its material, use a phong specular shader. Set it to a very low alpha "
 "(.05), zero diffuse, low hardness (5) but high specularity (1)."
 msgstr ""
+"由于其模糊的特性，该着色器很适合用于星球大气层。在星球周围添加一个稍大的球"
+"体，对其使用冯氏高光着色器。设置一个非常低的alpha(0.05)，0漫射，低硬度"
+"(5)，但是强高光(1)。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:164
 msgid "Blinn"
-msgstr ""
+msgstr "宾氏"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:175
 msgid "Blinn Shader (Oren-Nayar Int 0.8, Rough 0.5)."
-msgstr ""
+msgstr "宾氏着色器 (奥伦-纳亚尔 强度 0.8, 糙度 0.5)。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:177
 msgid ""
@@ -275,7 +315,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:200
 msgid "IOR"
-msgstr ""
+msgstr "IOR"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:196
 msgid ""
@@ -284,14 +324,18 @@ msgid ""
 "that), but to correctly compute specular reflection intensity and "
 "extension via Snell's Law."
 msgstr ""
+"'折射率'. This parameter is not actually used to compute refraction of "
+"light rays through the material (a ray tracer is needed for that), but to "
+"correctly compute specular reflection intensity and extension via Snell's "
+"Law."
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:203
 msgid "Toon"
-msgstr ""
+msgstr "卡通效果"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:214
 msgid "Toon Specular Shader (Toon Diffuse, Int 0.8, Size & Smooth match)."
-msgstr ""
+msgstr "卡通高光着色器 (卡通满色， 强度 0.8，对应的尺寸和平滑)。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:217
 msgid ""
@@ -301,11 +345,11 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:224
 msgid "Size"
-msgstr ""
+msgstr "尺寸"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:227
 msgid "Smooth"
-msgstr ""
+msgstr "平滑"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:227
 msgid "Softness of the highlight's edge."
@@ -323,11 +367,11 @@ msgstr ""
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:235
 msgid "Ward Isotropic"
-msgstr ""
+msgstr "华德各向异性"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:246
 msgid "Ward isotropic Shader."
-msgstr ""
+msgstr "华德各向异性着色器。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:249
 msgid ""
