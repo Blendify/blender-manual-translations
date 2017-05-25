@@ -1,27 +1,24 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-#   https://docs.blender.org/manual/ru/dev/render/cycles/gpu_rendering.html
+# https://docs.blender.org/manual/ru/dev/render/cycles/gpu_rendering.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
-#
+# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
 # Список переводчиков
 # ===================
-#
 # Mingun <alexander_sergey@mail.ru>, 2016 - 2017.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 21:45-0400\n"
+"POT-Creation-Date: 2017-05-24 21:03-0400\n"
 "PO-Revision-Date: 2016-09-27 23:02+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.4.0\n"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:5
 msgid "GPU Rendering"
@@ -113,11 +110,12 @@ msgid "OpenCL"
 msgstr "OpenCL"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:44
+#, fuzzy
 msgid ""
 ":abbr:`OpenCL (Open Computing Language)` is supported for GPU rendering "
 "with *AMD* graphics cards. We only support graphics cards with :abbr:`GCN"
-" (Graphics Core Next)` architecture (HD 7xxx and above). Not all HD 7xxx "
-"cards are GCN cards though, you can check if your card is `here "
+" (Graphics Core Next)` architecture 2.0 and above). To make sure your GPU"
+" is supported checkout `this Wikipedia page "
 "<https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units>`__."
 msgstr ""
 ":abbr:`OpenCL (Open Computing Language - открытый язык вычислений)` "
@@ -131,7 +129,7 @@ msgstr ""
 "<https://ru.wikipedia.org/wiki/Список_графических_процессоров_AMD>`__ (на"
 " русском языке)."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:50
+#: ../../manual/render/cycles/gpu_rendering.rst:51
 msgid ""
 "Cycles requires recent AMD drivers to be installed, on all operating "
 "systems."
@@ -139,11 +137,11 @@ msgstr ""
 "Cycles требует установки самых свежих драйверов AMD, для всех "
 "операционных систем."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:54
+#: ../../manual/render/cycles/gpu_rendering.rst:55
 msgid "Supported Features and Limitations"
 msgstr "Поддерживаемые возможности и ограничения"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:56
+#: ../../manual/render/cycles/gpu_rendering.rst:57
 msgid ""
 "For an overview of supported features, check the comparison in the "
 ":doc:`Features </render/cycles/features>`."
@@ -151,11 +149,11 @@ msgstr ""
 "Обзор поддерживаемых возможностей и сравнение технологий приведены в "
 "соответсвующем :doc:`разделе </render/cycles/features>`."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:63
+#: ../../manual/render/cycles/gpu_rendering.rst:64
 msgid "CUDA limitations:"
 msgstr "Ограничения CUDA:"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:60
+#: ../../manual/render/cycles/gpu_rendering.rst:61
 msgid ""
 "The maximum amount of individual textures is limited to 88 byte-image "
 "textures (``PNG``, ``JPEG``, ..) and 5 float-image textures (``OpenEXR``,"
@@ -167,15 +165,15 @@ msgstr ""
 "с плавающей запятой (``OpenEXR``, 16-битный ``TIFF`` и прочие) на картах "
 "серии GTX 4xx/5xx. Более поздние карты не имеют такого ограничения."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:66
+#: ../../manual/render/cycles/gpu_rendering.rst:67
 msgid "Frequently Asked Questions"
 msgstr "Часто задаваемые вопросы"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:69
+#: ../../manual/render/cycles/gpu_rendering.rst:70
 msgid "Why is Blender unresponsive during rendering?"
 msgstr "Почему Blender перестаёт отвечать во время визуализации?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:71
+#: ../../manual/render/cycles/gpu_rendering.rst:72
 msgid ""
 "While a graphics card is rendering, it cannot redraw the user interface, "
 "which makes Blender unresponsive. We attempt to avoid this problem by "
@@ -257,35 +255,29 @@ msgstr "Какой рендер быстрее: Nvidia или AMD, CUDA или O
 
 #: ../../manual/render/cycles/gpu_rendering.rst:110
 msgid ""
-"Currently Nvidia with CUDA is rendering faster. There is no fundamental "
-"reason why this should be so, because we do not use any CUDA specific "
-"features, but the compiler appears to be more mature, and can better "
-"support big kernels. OpenCL support is still in an early stage and has "
-"not been optimized as much."
+"Currently Nvidia with CUDA is rendering fastest, but this really depends "
+"on the hardware you buy. Currently, CUDA and OpenCL are about the same in"
+" the newest mid range GPUs. However, CUDA is fastest in the respect of "
+"high end GPUs."
 msgstr ""
-"На текущий момент быстрее всех Nvidia с CUDA. В этом нет никаких "
-"фундаментальных причин, поскольку мы не используем никаких специфичных "
-"для CUDA возможностей, однако, как представляется, компиляторы для CUDA "
-"более зрелые и могут лучше поддерживать большие ядра. Поддержка OpenCL "
-"всё ещё находится на очень ранней стадии и так сильно не оптимизирована."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:117
+#: ../../manual/render/cycles/gpu_rendering.rst:116
 msgid "Error Messages"
 msgstr "Сообщения об ошибках"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:121
+#: ../../manual/render/cycles/gpu_rendering.rst:119
 msgid "Unsupported GNU version! gcc 4.7 and up are not supported!"
 msgstr ""
 "Unsupported GNU version! gcc 4.7 and up are not supported! "
 "(Неподдерживаемая версия GNU! gcc 4.7 и старше не поддерживаются!)"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:123
+#: ../../manual/render/cycles/gpu_rendering.rst:121
 msgid "On Linux, depending on your GCC version you might get this error."
 msgstr ""
 "На Linux, в зависимости от версии вашего GCC, вы можете получить такую "
 "ошибку."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:125
+#: ../../manual/render/cycles/gpu_rendering.rst:123
 msgid ""
 "If so, delete the following line in "
 "``/usr/local/cuda/include/host_config.h``"
@@ -293,11 +285,11 @@ msgstr ""
 "Если это произошло, удалите следующую строку в файле "
 "``/usr/local/cuda/include/host_config.h``"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:133
+#: ../../manual/render/cycles/gpu_rendering.rst:131
 msgid "CUDA Error: Invalid kernel image"
 msgstr "CUDA Error: Invalid kernel image (Ошибка CUDA: Неверное ядро изображения)"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:135
+#: ../../manual/render/cycles/gpu_rendering.rst:133
 msgid ""
 "If you get this error on MS-Windows 64-bit, be sure to use the 64-bit "
 "build of Blender, not the 32-bit version."
@@ -305,11 +297,11 @@ msgstr ""
 "Если вы получили эту ошибку на 64-битной MS-Windows, убедитесь, что вы "
 "используете 64-битную сборку Blender, а не 32-битную."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:140
+#: ../../manual/render/cycles/gpu_rendering.rst:138
 msgid "CUDA Error: Kernel compilation failed"
 msgstr "CUDA Error: Kernel compilation failed (Ошибка CUDA: Сбой компиляции ядра)"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:142
+#: ../../manual/render/cycles/gpu_rendering.rst:140
 msgid ""
 "This error may happen if you have a new Nvidia graphics card that is not "
 "yet supported by the Blender version and CUDA toolkit you have installed."
@@ -321,11 +313,11 @@ msgstr ""
 "инструментов CUDA. В этом случае Blender может попытаться динамически "
 "собрать ядро для вашей графической карты и не преуспеть в этом."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:146
+#: ../../manual/render/cycles/gpu_rendering.rst:144
 msgid "In this case you can:"
 msgstr "В таком случае вы можете:"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:148
+#: ../../manual/render/cycles/gpu_rendering.rst:146
 msgid ""
 "Check if the latest Blender version (official or `experimental builds "
 "<https://builder.blender.org/download/experimental/>`_) supports your "
@@ -336,7 +328,7 @@ msgstr ""
 "<https://builder.blender.org/download/experimental/>`_), поддерживающая "
 "вашу графическую карту."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:150
+#: ../../manual/render/cycles/gpu_rendering.rst:148
 msgid ""
 "If you build Blender yourself, try to download and install a newer CUDA "
 "developer toolkit."
@@ -344,7 +336,7 @@ msgstr ""
 "Если вы сами собирали Blender, попробуйте скачать и установить новейший "
 "набор инструментов для разработчика CUDA."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:152
+#: ../../manual/render/cycles/gpu_rendering.rst:150
 msgid ""
 "Normally users do not need to install the CUDA toolkit as Blender comes "
 "with precompiled kernels."
@@ -352,11 +344,11 @@ msgstr ""
 "Обычным пользователям не требуется устанавливать набор инструментов CUDA,"
 " поскольку Blender уже поставляется со скомпилированными ядрами."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:156
+#: ../../manual/render/cycles/gpu_rendering.rst:154
 msgid "CUDA Error: Out of memory"
 msgstr "CUDA Error: Out of memory (Ошибка CUDA: Не хватает памяти)"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:158
+#: ../../manual/render/cycles/gpu_rendering.rst:156
 msgid ""
 "This usually means there is not enough memory to store the scene on the "
 "GPU. We can currently only render scenes that fit in graphics card "
@@ -368,13 +360,13 @@ msgstr ""
 "сцены, которые влезают в память видеокарты, которая обычно меньше памяти,"
 " доступной центральному процессору. Подробности смотрите выше."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:164
+#: ../../manual/render/cycles/gpu_rendering.rst:162
 msgid "The Nvidia OpenGL driver lost connection with the display driver"
 msgstr ""
 "The Nvidia OpenGL driver lost connection with the display driver (Драйвер"
 " Nvidia OpenGL потерял соединение с драйвером дисплея)"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:166
+#: ../../manual/render/cycles/gpu_rendering.rst:164
 msgid ""
 "If a GPU is used for both display and rendering, MS-Windows has a limit "
 "on the time the GPU can do render computations. If you have a "
@@ -391,7 +383,7 @@ msgstr ""
 "проблему, но единственным реальным решением является использование "
 "отдельной видеокарты для визуализации."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:172
+#: ../../manual/render/cycles/gpu_rendering.rst:170
 msgid ""
 "Another solution can be to increase the timeout, although this will make "
 "the user interface less responsive when rendering heavy scenes. `Learn "
@@ -404,17 +396,40 @@ msgstr ""
 "ru/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__ (на английском"
 " языке)."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:178
+#: ../../manual/render/cycles/gpu_rendering.rst:176
 msgid "CUDA error: Unknown error in cuCtxSynchronize()"
 msgstr ""
 "CUDA error: Unknown error in cuCtxSynchronize() (Ошибка CUDA: Неизвестная"
 " ошибка в cuCtxSynchronize())"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:180
+#: ../../manual/render/cycles/gpu_rendering.rst:178
 msgid ""
 "An unknown error can have many causes, but one possibility is that it is "
 "a timeout. See the above answer for solutions."
 msgstr ""
 "Неизвестная ошибка может иметь множество причин, но наиболее вероятная - "
 "тайм-аут. Решение смотрите в предыдущем ответе."
+
+#~ msgid ""
+#~ "Currently Nvidia with CUDA is rendering"
+#~ " faster. There is no fundamental "
+#~ "reason why this should be so, "
+#~ "because we do not use any CUDA "
+#~ "specific features, but the compiler "
+#~ "appears to be more mature, and can"
+#~ " better support big kernels. OpenCL "
+#~ "support is still in an early stage"
+#~ " and has not been optimized as "
+#~ "much."
+#~ msgstr ""
+#~ "На текущий момент быстрее всех Nvidia"
+#~ " с CUDA. В этом нет никаких "
+#~ "фундаментальных причин, поскольку мы не "
+#~ "используем никаких специфичных для CUDA "
+#~ "возможностей, однако, как представляется, "
+#~ "компиляторы для CUDA более зрелые и "
+#~ "могут лучше поддерживать большие ядра. "
+#~ "Поддержка OpenCL всё ещё находится на"
+#~ " очень ранней стадии и так сильно "
+#~ "не оптимизирована."
 

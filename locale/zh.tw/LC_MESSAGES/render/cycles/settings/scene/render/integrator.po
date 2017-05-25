@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 23:16-0400\n"
+"POT-Creation-Date: 2017-05-24 21:03-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.4.0\n"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:4
 msgid "Integrator"
@@ -45,8 +45,8 @@ msgid "Sampling"
 msgstr ""
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:21
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:140
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:222
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:149
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:231
 msgid "Reference"
 msgstr ""
 
@@ -132,19 +132,34 @@ msgid ""
 "times."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:67
-msgid "Pattern"
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:66
+msgid "Light Sampling Threshold"
 msgstr ""
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:60
+msgid ""
+"Probabilistically terminates light samples when the light contribution is"
+" below this threshold (more noise but faster rendering). Zero disables "
+"the test and never ignores lights. This is useful because in large scenes"
+" with many light sources, some might only contribute a small amount to "
+"the final image, and increase render times. Using this setting can "
+"decease the render times needed to calculate the rays which in the end "
+"have very little affect on the image."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:76
+msgid "Pattern"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:69
 msgid "Random sampling pattern used by the integrator."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:63
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:72
 msgid "Sobol"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:63
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:72
 msgid ""
 "Uses a Sobol pattern to decide the random sapling pattern used by the "
 "integrator. See `Sobol sequence "
@@ -152,11 +167,11 @@ msgid ""
 "information."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:67
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:76
 msgid "Correlated Multi-Jitter"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:66
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:75
 msgid ""
 "Uses a Correlated Multi-Jitter pattern to decide the random sapling "
 "pattern used by the integrator. See `this Pixar paper "
@@ -164,45 +179,45 @@ msgid ""
 "for more information."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:80
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:89
 msgid "Layer Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:72
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:81
 msgid ""
 "When render layers have per layer number of samples set, this option "
 "specifies how to use them."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:74
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:83
 msgid "Use"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:75
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:84
 msgid "ToDo"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:76
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:85
 msgid "Bounded"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:77
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:86
 msgid "Bound render layer samples by scene samples."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:80
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:89
 msgid "Ignore"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:79
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:88
 msgid "Ignore render layer sample settings."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:83
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:92
 msgid "Path Tracing"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:85
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:94
 msgid ""
 "The *Path Tracing* integrator is a pure path tracer; at each hit it will "
 "bounce light in one direction and pick one light to receive lighting "
@@ -210,30 +225,30 @@ msgid ""
 "typically require more samples to clean up the noise."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:91
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:100
 msgid "Render Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:91
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:100
 msgid ""
 "Number of paths to trace for each pixel in the final render. As more "
 "samples are taken, the solution becomes less noisy and more accurate."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:95
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:104
 msgid "Preview Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:94
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:113
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:103
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:122
 msgid "Number of samples for viewport rendering."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:98
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:107
 msgid "Branched Path Tracing"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:100
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:109
 msgid ""
 "The non-progressive Branched Path Tracing integrator offers finer control"
 " over sampling. It is similar to *Path Tracing*, but at the first hit it "
@@ -241,7 +256,7 @@ msgid ""
 "lights into account for shading instead of just one."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:104
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:113
 msgid ""
 "This makes each sample slower, but will reduce noise, especially in "
 "scenes dominated by direct or one-bounce lighting. To get the same number"
@@ -250,81 +265,81 @@ msgid ""
 "panel shows this total number of samples."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:110
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:119
 msgid "AA Render Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:111
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:120
 msgid ""
 "Number of samples to take for each pixel in the final render. More "
 "samples will improve antialiasing."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:113
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:122
 msgid "AA Preview Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:115
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:124
 msgid "Diffuse Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:116
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:125
 msgid "Number of diffuse bounce samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:117
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:126
 msgid "Glossy Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:118
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:127
 msgid "Number of glossy bounce samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:119
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:128
 msgid "Transmission Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:120
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:129
 msgid "Number of transmission bounce samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:121
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:130
 msgid "AO Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:122
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:131
 msgid "Number of ambient occlusion samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:123
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:132
 msgid "Mesh Light Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:124
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:133
 msgid "Number of mesh light samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:125
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:134
 msgid "Subsurface Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:126
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:135
 msgid "Number of subsurface scattering samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:128
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:137
 msgid "Volume Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:128
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:137
 msgid "Number of volume scattering samples to take for each AA sample."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:131
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:140
 msgid "Sample All Direct Lights"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:131
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:140
 msgid ""
 "When enabled, Cycles will samples all lights in the scene for direct "
 "bounces, instead of randomly picking one. Disabling this can improve "
@@ -332,17 +347,17 @@ msgid ""
 "render."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:135
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:144
 msgid "Sample All Indirect Lights"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:134
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:143
 msgid ""
 "Similar to direct light, but for indirects lights. This can reduce noise "
 "in scenes with many lights."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:138
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:147
 msgid "Light Paths"
 msgstr ""
 
@@ -350,15 +365,15 @@ msgstr ""
 msgid "Panel:    :menuselection:`Properties editor --> Render --> Light Paths`"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:148
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:157
 msgid "Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:152
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:161
 msgid "Max Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:151
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:160
 msgid ""
 "Maximum number of light bounces. For best quality, this should be set to "
 "the maximum. However, in practice, it may be good to set it to lower "
@@ -366,11 +381,11 @@ msgid ""
 "direct lighting only."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:158
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:167
 msgid "Min Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:155
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:164
 msgid ""
 "Minimum number of light bounces for each path, after which the integrator"
 " uses Russian Roulette to terminate paths that contribute less to the "
@@ -379,79 +394,79 @@ msgid ""
 "recommended to set this equal to the maximum number of bounces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:160
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:169
 msgid "Diffuse Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:161
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:170
 msgid "Maximum number of diffuse bounces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:162
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:171
 msgid "Glossy Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:163
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:172
 msgid "Maximum number of glossy bounces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:164
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:173
 msgid "Transmission Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:165
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:174
 msgid "Maximum number of transmission bounces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:168
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:177
 msgid "Volume Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:167
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:176
 msgid "Maximum number of volume scattering bounces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:171
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:180
 msgid "Transparency"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:173
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:182
 msgid "Transparency Max"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:174
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:183
 msgid "Maximum number of transparency bounces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:175
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:184
 msgid "Transparency Min"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:176
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:185
 msgid ""
 "Minimum number of transparency bounces, after which Russian Roulette "
 "termination is used."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:180
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:189
 msgid "Transparent Shadows"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:178
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:187
 msgid ""
 "For direct light sampling, use transparency of surfaces in between to "
 "produce shadows affected by transparency of those surfaces."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:183
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:192
 msgid "Caustics & Filter Glossy"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:189
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:198
 msgid "Reflective Caustics"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:188
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:197
 msgid ""
 "While in principle path tracing supports rendering of caustics with a "
 "sufficient number of samples, in practice it may be inefficient to the "
@@ -459,26 +474,26 @@ msgid ""
 " disable reflective caustics."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:193
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:202
 msgid "Refractive Caustics"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:192
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:201
 msgid "The same as above, but for refractive caustics."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:211
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:220
 msgid "Filter Glossy"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:198
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:207
 msgid ""
 "When using a value higher than 0.0, this will blur glossy reflections "
 "after blurry bounces, to reduce noise at the cost of accuracy. 1.0 is a "
 "good starting value to tweak."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:201
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:210
 msgid ""
 "Some light paths have a low probability of being found while contributing"
 " much light to the pixel. As a result these light paths will be found in "
@@ -488,7 +503,7 @@ msgid ""
 " glossy material. In fact in such a case we practically have a caustic."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:208
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:217
 msgid ""
 "With path tracing it is difficult to find the specular highlight, but if "
 "we increase the roughness on the material, the highlight gets bigger and "
@@ -498,13 +513,13 @@ msgid ""
 "lighting."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:215
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:224
 msgid ""
 "See :ref:`Reducing Noise <render-cycles-reducing-noise-clamp-samples>` "
 "for examples of the clamp settings in use."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:220
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:229
 msgid "Geometry"
 msgstr ""
 
@@ -512,70 +527,184 @@ msgstr ""
 msgid "Panel:    :menuselection:`Properties editor --> Render --> Geometry`"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:229
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:238
 msgid "Volume Sampling"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:232
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:241
 msgid "Step Size"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:232
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:241
 msgid ""
 "Distance between volume shader samples when rendering the volume. Lower "
 "values give more accurate and detailed results but also increased render "
 "time."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:237
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:246
 msgid "Max Steps"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:235
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:244
 msgid ""
 "Maximum number of steps through the volume before giving up, to protect "
 "from extremely long render times with big objects or small step sizes."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:242
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:251
 msgid "Subdivision Rate"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:244
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:253
 msgid ""
 "These settings are used to control the :ref:`True Displacement <render-"
 "cycles-materials-displacement-true>`."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:248
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:257
 msgid ""
 "These Options are only available if :ref:`Experimental Feature Set "
 "<cycles-experimental-features>` is turned on."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:251
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:260
 msgid "Render"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:252
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:261
 msgid "Size of :term:`micropolygons` in pixels."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:254
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:263
 msgid "Preview"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:254
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:263
 msgid "Size of :term:`micropolygons` in pixels while preview rendering."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:260
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:269
 msgid "Max Subdivisions"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render/integrator.rst:259
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:268
 msgid ""
 "Stop subdividing when this level is reached even if the dice rate would "
 "produce finer :term:`tessellation`."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:274
+msgid "Hair"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:276
+msgid ""
+"These are global settings that apply to all instances of hair systems. "
+"The resolution of the strands is controlled by the step values in "
+"particle settings. Each hair system uses the material identified in the "
+"particle settings in the same way as Blender Internal."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:282
+msgid ""
+"There are also object level hair settings for each particle system which "
+"can be found in the :doc:`Hair Settings "
+"</render/cycles/settings/objects/hair>`."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:286
+msgid "Use Hair"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:286
+msgid "Enables rendering of hair particle systems."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:302
+msgid "Primitive"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:292
+msgid "Triangles"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:290
+msgid "Uses a triangle mesh."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:292
+msgid "Resolution"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:293
+msgid "ToDo."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:294
+msgid "Line Segments"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:295
+msgid "Uses a straight curve primitive."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:302
+msgid "Curve Segments"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:297
+msgid ""
+"Uses a smooth Cardinal curve primitive. These interpolate a path through "
+"the curve keys. However, it renders slower than line segments."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:302
+msgid "Curve Subdivisions"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:301
+msgid ""
+"The interpolated path is subdivided to give points to connect. The "
+"parameter subdivisions sets the number of divisions used."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:311
+msgid "Shape"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:309
+msgid "Thick"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:306
+msgid "Cylindrical segments between two points."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:309
+msgid "Cull back-faces"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:309
+msgid "Excludes strands emitted from the mesh back facing the camera."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:311
+msgid "Ribbons"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:312
+msgid "Are flat planes following the strand direction facing the camera."
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:316
+msgid "Min Pixels"
+msgstr ""
+
+#: ../../manual/render/cycles/settings/scene/render/integrator.rst:314
+msgid ""
+"Strands that are further away will be made wider, which is compensated "
+"with transparency to keep the look similar. This effect is only applied "
+"for camera rays. It works best with ribbon primitives."
 msgstr ""
 

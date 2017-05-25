@@ -4,14 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-21 17:15-0500\n"
+"POT-Creation-Date: 2017-05-24 21:03-0400\n"
 "PO-Revision-Date: 2017-01-08 09:34+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.4.0\n"
 
 #: ../../manual/render/cycles/lamps.rst:4
 msgid "Lamps"
@@ -25,15 +25,19 @@ msgid ""
 "more easily managed as objects of their own type."
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:12
+#: ../../manual/render/cycles/lamps.rst:13
+msgid "Point, Spot, and Area Lamps also have texture coordinates."
+msgstr ""
+
+#: ../../manual/render/cycles/lamps.rst:17
 msgid "Common Settings"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:16
+#: ../../manual/render/cycles/lamps.rst:20
 msgid "Type"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:15
+#: ../../manual/render/cycles/lamps.rst:20
 msgid ""
 "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported. *Hemi* "
 "lamps are not supported, and will be rendered as sun lamps."
@@ -42,11 +46,11 @@ msgstr ""
 "charge. Lampes *Hemi* ne sont pas pris en charge, et seront rendues comme"
 " des lampes *Sun*."
 
-#: ../../manual/render/cycles/lamps.rst:20
+#: ../../manual/render/cycles/lamps.rst:22
 msgid "Size"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:21
+#: ../../manual/render/cycles/lamps.rst:23
 msgid ""
 "Size of the lamp in Blender Units; increasing this will result in softer "
 "shadows and shading."
@@ -54,22 +58,22 @@ msgstr ""
 "Taille de la lampe en unités Blender ; son augmentation résulte en ombres"
 " et nuances plus douces. "
 
-#: ../../manual/render/cycles/lamps.rst:23
+#: ../../manual/render/cycles/lamps.rst:25
 msgid "Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:23
+#: ../../manual/render/cycles/lamps.rst:25
 msgid ""
 "For the branch path tracing integrator, this specifies the number of "
 "direct light samples per AA sample. Point lamps might need only one "
 "sample, while area lamps typically need more."
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:26
+#: ../../manual/render/cycles/lamps.rst:28
 msgid "Max Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:26
+#: ../../manual/render/cycles/lamps.rst:28
 #, fuzzy
 msgid ""
 "Maximum number of times light from the lamp is allowed to :term:`bounce "
@@ -80,11 +84,11 @@ msgstr ""
 "(:term:`bounce`). Limité par :ref:`scene-wide bounce settings <cycles-"
 "bounces>`"
 
-#: ../../manual/render/cycles/lamps.rst:29
+#: ../../manual/render/cycles/lamps.rst:31
 msgid "Cast Shadow"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:29
+#: ../../manual/render/cycles/lamps.rst:31
 msgid ""
 "By disabling this option, light from lamps will not be blocked by objects"
 " in-between. This can speed up rendering by not having to trace rays to "
@@ -94,11 +98,11 @@ msgstr ""
 "par les objets. Cela peut accélérer le rendu du fait de ne pas tracer les"
 " rayons vers la source de lumière."
 
-#: ../../manual/render/cycles/lamps.rst:35
+#: ../../manual/render/cycles/lamps.rst:37
 msgid "Multiple Importance Sample"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:32
+#: ../../manual/render/cycles/lamps.rst:34
 #, fuzzy
 msgid ""
 "By default lamps use only direct light sampling. For area lights and "
@@ -111,15 +115,15 @@ msgstr ""
 "être bruité, et l'activation de cette option va autoriser en plus "
 "l'utilisation de lumière indirecte pour réduire le bruit. "
 
-#: ../../manual/render/cycles/lamps.rst:38
+#: ../../manual/render/cycles/lamps.rst:40
 msgid "Lamp Types"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:41
+#: ../../manual/render/cycles/lamps.rst:43
 msgid "Point Lamp"
 msgstr "Lampe *Point*"
 
-#: ../../manual/render/cycles/lamps.rst:43
+#: ../../manual/render/cycles/lamps.rst:45
 msgid ""
 "Point lamps emit light equally in all directions. By setting the *Size* "
 "larger than zero, they become spherical lamps, which give softer shadows "
@@ -130,11 +134,11 @@ msgstr ""
 "des lampes sphériques, qui donnent des ombres et des nuances plus douces."
 " La puissance des lampes *point* est spécifiée en watts."
 
-#: ../../manual/render/cycles/lamps.rst:49
+#: ../../manual/render/cycles/lamps.rst:51
 msgid "Spot Lamp"
 msgstr "Lampe *Spot*"
 
-#: ../../manual/render/cycles/lamps.rst:51
+#: ../../manual/render/cycles/lamps.rst:53
 #, fuzzy
 msgid ""
 "Spot lamps emit light in a particular direction, inside a cone. By "
@@ -148,11 +152,11 @@ msgstr ""
 "définit la taille du cône, tandis que le paramètre *blend* peut adoucir "
 "les bords du cône."
 
-#: ../../manual/render/cycles/lamps.rst:60
+#: ../../manual/render/cycles/lamps.rst:62
 msgid "Area Lamp"
 msgstr "Lampe *Area*"
 
-#: ../../manual/render/cycles/lamps.rst:62
+#: ../../manual/render/cycles/lamps.rst:64
 msgid ""
 "Area lamps emit light from a square or rectangular area with a Lambertian"
 " distribution."
@@ -160,19 +164,19 @@ msgstr ""
 "Les lampes *Area* (aire) émettent depuis un carré ou une zone "
 "rectangulaire avec une distribution lambertienne."
 
-#: ../../manual/render/cycles/lamps.rst:71
+#: ../../manual/render/cycles/lamps.rst:73
 msgid "Shape"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:65
+#: ../../manual/render/cycles/lamps.rst:67
 msgid "Shape of the lamp."
 msgstr "Forme de la lampe."
 
-#: ../../manual/render/cycles/lamps.rst:67
+#: ../../manual/render/cycles/lamps.rst:69
 msgid "Rectangle"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:68
+#: ../../manual/render/cycles/lamps.rst:70
 #, fuzzy
 msgid ""
 "The shape of the lamp can be represented as a rectangle and changed with "
@@ -181,11 +185,11 @@ msgstr ""
 "La forme de la lampe peut être représentée comme un rectangle et modifiée"
 " les valeurs \"X\" et \"Y\"."
 
-#: ../../manual/render/cycles/lamps.rst:71
+#: ../../manual/render/cycles/lamps.rst:73
 msgid "Square"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:70
+#: ../../manual/render/cycles/lamps.rst:72
 msgid ""
 "The shape of the lamp can be represented as a square and changed with the"
 " *Size* property."
@@ -193,11 +197,11 @@ msgstr ""
 "La forme de la lampe peut être représentée comme un carré et modifiée "
 "avec la propriété *Size*."
 
-#: ../../manual/render/cycles/lamps.rst:76
+#: ../../manual/render/cycles/lamps.rst:78
 msgid "Light Portals"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:78
+#: ../../manual/render/cycles/lamps.rst:80
 msgid ""
 "Area lamps can also function as light portals to help sample the "
 "environment light, and significantly reduce noise in interior scenes. "
@@ -205,14 +209,14 @@ msgid ""
 "more quickly, less samples are required."
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:82
+#: ../../manual/render/cycles/lamps.rst:84
 msgid ""
 "Light portals work by enabling the *Portal* option, and placing areas "
 "lamps in windows, door openings, and any place where light will enter the"
 " interior."
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:85
+#: ../../manual/render/cycles/lamps.rst:87
 msgid ""
 "In outdoor scenes most rays do not bounce much and just fly off into the "
 "sky and therefore, light portals are not helpful for outdoor scenes."
@@ -221,15 +225,15 @@ msgstr ""
 "beaucoup et s'envolent simplement vers le ciel et ainsi les portails de "
 "lumière ne sont pas utiles pour les scènes à l'extérieur."
 
-#: ../../manual/render/cycles/lamps.rst:91
+#: ../../manual/render/cycles/lamps.rst:93
 msgid "White Room model by Jay Hardy."
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:95
+#: ../../manual/render/cycles/lamps.rst:97
 msgid "Sun Lamp"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:97
+#: ../../manual/render/cycles/lamps.rst:99
 msgid ""
 "Sun lamps emit light in a given direction. Their position is not taken "
 "into account; they are always located outside of the scene, infinitely "
@@ -239,7 +243,7 @@ msgstr ""
 "donnée. Leur position ne sont pas prises en compte ; elles sont toujours "
 "localisées en dehors de la scène, infiniment loin, et ne causeront pas "
 
-#: ../../manual/render/cycles/lamps.rst:101
+#: ../../manual/render/cycles/lamps.rst:103
 msgid ""
 "Because they are not located inside the scene, their strength uses "
 "different units, and should typically be set to lower values than other "

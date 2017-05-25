@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-18 14:08-0400\n"
+"POT-Creation-Date: 2017-05-24 21:03-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.4.0\n"
 
 #: ../../manual/render/output/video.rst:4
 msgid "Video Output"
@@ -28,128 +28,116 @@ msgstr ""
 
 #: ../../manual/render/output/video.rst:9
 msgid ""
-"Once you master the trick of animation you will surely start to produce "
-"wonderful animations, encoded with your favorite codecs, and possibly you"
-" will share them on the Internet with the rest of the community."
+"Once you master the art of 3D animation, you will probably want to share "
+"your work with others; either on the internet (YouTube, Vimeo, etc) or "
+"with family and friends (DVD/Bluray) or even possibly for television "
+"broadcast."
 msgstr ""
 
 #: ../../manual/render/output/video.rst:13
 msgid ""
-"Sooner or later you will be struck with the desire to build an animation "
-"for television, or maybe burn your own DVDs. To spare you some "
-"disappointment, here are some tips specifically targeted at Video "
-"preparation. The first and principal one is to remember the double-dashed"
-" white lines in the camera view!"
+"To spare you some disappointment, here are some tips specifically "
+"targeted at video preparation."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:18
+#: ../../manual/render/output/video.rst:17
+msgid "Safe Areas and Overscan"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:19
 msgid ""
-"If you render for PC then the whole rendered image which lies within the "
-"*outer* dashed rectangle will be shown. For television, some lines and "
-"some part of the lines will be lost due to the mechanics of the electron "
-"beam scanning in your TV's cathode ray tube. You are guaranteed that what"
-" is within the *inner* dashed rectangle in camera view will be visible on"
-" the screen. Everything within the two rectangles may or may not be "
-"visible, depending on the given TV set that your audience watches the "
-"video on."
+"For anyone creating motion graphics or simple text overlays, overscan is "
+"an important consideration. Although its origins are rooted in historic "
+"analog TV systems, unfortunately even in 2017, for various reasons it can"
+" still be an issue with modern digital flatscreen TVs."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:29
-msgid "Color Saturation"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:31
+#: ../../manual/render/output/video.rst:25
+#, python-format
 msgid ""
-"Most video tapes and video signals are not based on the RGB model but on "
-"the YCrCb model: more precisely, the YUV in Europe (PAL), and the YIQ in "
-"the USA (NTSC), the latter being quite similar to the former. Hence some "
-"knowledge of this is necessary too."
+"Due to various limitations in analog TV equipment, the displayed image "
+"could sometimes end up shifted horizontally or vary in size, which could "
+"lead to the area beyond the intended visible picture being shown. This "
+"hidden area sometimes contained junk noise, timing signals or closed-"
+"caption/subtitle data. To avoid this being visible to the viewer, the "
+"standard approach for TV manufacturers was to 'overscan' (zoom in) the "
+"displayed picture by a small amount (between 5-10% edge crop) to ensure "
+"that at no time would the hidden areas be visible."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:35
+#: ../../manual/render/output/video.rst:32
 msgid ""
-"The YCrCb model sends information as 'Luminance', or intensity (Y) and "
-"two 'Crominance' signals, red and blue (Cr and Cb). Actually a Black and "
-"White TV set shows only luminance, while color TV sets reconstruct color "
-"from Crominances (and from luminance). Construction of the YCrCb values "
-"from the RGB ones takes two steps (the constants *in italics* depend on "
-"the system: PAL or NTSC):"
+"Although modern digital electronics have eliminated the issue of shifting"
+" image position, unfortunately, some TV manufacturers have included "
+"overscan on their flatscreen TVs. Why? Because for many years it was a "
+"given that the edge of the visible image would rarely be seen, so "
+"broadcasters would sometimes overlay 'hidden' data to the very edge of "
+"the image (e.g. some types of closed captions). Also, legacy analog "
+"recordings might still contain unwanted noise around the edge. To avoid "
+"consumer complaints, overscan is quite often enabled by default. For some"
+" flatscreen TVs, it is not possible to disable"
 msgstr ""
 
 #: ../../manual/render/output/video.rst:42
-msgid "First, the Gamma correction (*g* varies: 2.2 for NTSC, 2.8 for PAL):"
+msgid "Enabling Safe Areas"
 msgstr ""
 
 #: ../../manual/render/output/video.rst:44
-msgid "R' = R\\ :sup:`1/g`"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:45
-msgid "G' = G\\ :sup:`1/g`"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:46
-msgid "B' = B\\ :sup:`1/g`"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:48
-msgid "Then, the conversion itself:"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:50
-msgid "Y = 0.299R' + 0.587G' + 0.114B'"
+msgid ""
+"Blender has configurable safe-area markings which can be made visible by "
+"selecting the scene camera, then in the camera settings by enabling "
+":ref:`Safe Areas <camera-safe-areas>`. Several presets are available. If "
+"you are producing work for a television network or indeed any client, "
+"they may have their own rules and requirements on safe area dimensions --"
+" so consult with them."
 msgstr ""
 
 #: ../../manual/render/output/video.rst:51
-msgid "Cr = *a*\\ :sub:`1` (R' - Y) + *b*\\ :sub:`1` (B' - Y)"
+msgid "Color Reproduction"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:52
-msgid "Cb = *a*\\ :sub:`2` (R' - Y) + *b*\\ :sub:`2` (B' - Y)"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:54
+#: ../../manual/render/output/video.rst:53
 msgid ""
-"Whereas a standard 24 bit RGB picture has 8 bits for each channel, to "
-"keep bandwidth down, and considering that the human eye is more sensitive"
-" to luminance than to chrominance, the luminance signal is sent with more"
-" bits than the two chrominance signals. This bit expansion results in a "
-"smaller dynamic of colors in video, than what you are used to on "
-"monitors. You hence have to keep in mind that not all colors can be "
-"correctly displayed."
+"When exporting to many of the common video formats, the rendered RGB(A) "
+"images go through a conversion process whereby they are translated to the"
+" YCbCr color model. Y corresponds to a grayscale representation of the "
+"image, Cb and Cr contain data for the blue and red channels respectively."
+" Green is encoded into the Y and Cb, Cr channels with some clever math."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:61
-#, python-format
+#: ../../manual/render/output/video.rst:58
 msgid ""
-"A rule of thumb is to keep the colors as 'grayish' or 'unsaturated' as "
-"possible; this roughly means keeping the dynamics of your colors within "
-"80% of one another. In other words, the difference between the highest "
-"RGB value and the lowest RGB value should not exceed 0.8 (0 - 1 range) or"
-" 200 (0 - 255 range)."
+"Importantly, the color components are often stored at a lower resolution "
+"to the Y (grayscale) channel. This can cause blurring/smearing which can "
+"be a problem with small text and some saturated color combinations -- so "
+"it is well worth doing test encodes to make sure that text remains "
+"legible. As with safe areas, a TV network or client might have their own "
+"rules on minimum text size and positioning, so always seek clarification "
+"when unsure."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:67
-msgid ""
-"This is not strict, something more than 0.8 is acceptable, but an RGB "
-"display with color contrast that ranges from 0.0 to 1.0 will appear to be"
-" very ugly (over-saturated) on video, while appearing bright and dynamic "
-"on a computer monitor."
-msgstr ""
-
-#: ../../manual/render/output/video.rst:73
+#: ../../manual/render/output/video.rst:66
 msgid "Encoding Panel"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:77
+#: ../../manual/render/output/video.rst:68
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/render/output/video.rst
+msgid "Panel:    :menuselection:`Properties editor --> Render --> Encoding`"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:75
 msgid "Encoding panel."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:79
+#: ../../manual/render/output/video.rst:77
 msgid ""
-"Here you choose which video codec you want to use, and compression "
-"settings. With all of these compression choices, there is a tradeoff "
-"between file size, compatibility across platforms, and playback quality."
+"Here you choose which video container, codec, and compression settings "
+"you want to use. With all of these compression choices, there is a "
+"tradeoff between file size, compatibility across platforms, and playback "
+"quality."
 msgstr ""
 
 #: ../../manual/render/output/video.rst:83
@@ -170,8 +158,8 @@ msgid ""
 "type of output."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:96
-msgid "Format"
+#: ../../manual/render/output/video.rst:90
+msgid "Container"
 msgstr ""
 
 #: ../../manual/render/output/video.rst:90
@@ -180,200 +168,232 @@ msgid ""
 ":doc:`video formats </data_system/files/media/video_formats>`."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:94
+#: ../../manual/render/output/video.rst:93
+msgid "Autosplit Output"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:93
+msgid ""
+"If your video is huge and exceeds 2Gig, enable Autosplit Output. This "
+"will automatically split the output into multiple files after the first "
+"file is 2Gig."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:97
 msgid "Codec"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:94
+#: ../../manual/render/output/video.rst:96
 msgid ""
 "Chooses the method of compression and encoding. For a list of all "
 "available options see :doc:`video formats "
 "</data_system/files/media/video_formats>`."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:96
-msgid "Lossless Output"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:97
-msgid ""
-"Allows the ability to perfectly reconstruct compressed data from "
-"compressed data."
-msgstr ""
-
-#: ../../manual/render/output/video.rst:100
-#: ../../manual/render/output/video.rst:139
-msgid "Bitrate"
-msgstr ""
-
 #: ../../manual/render/output/video.rst:99
-msgid ""
-"Set the average `bitrate <https://en.wikipedia.org/wiki/Bit_rate>`__ "
-"(quality), which is the count of binary digits per frame. See also: "
-"`FFmpeg -b:v <https://ffmpeg.org/ffmpeg.html#Description>`__."
+msgid "Standards"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:106
-msgid "GOP Size"
+#: ../../manual/render/output/video.rst:101
+msgid ""
+"Some containers and codecs are not compatible with each other, so if you "
+"are getting errors check that your container and codec are compatible. "
+"Like containers and codecs are sometime not compatible with each other "
+"some codecs do not work with arbitrary dimensions. So, try to stick with "
+"common dimensions or research the limitations of the codec you are trying"
+" to use."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:103
-msgid ""
-"The number of pictures per `Group of Pictures "
-"<https://en.wikipedia.org/wiki/Group_of_pictures>`__. Set to 0 for "
-"\"intra_only\", which disables `inter-frame "
-"<https://en.wikipedia.org/wiki/Inter-frame>`__ video. From FFmpeg docs: "
-"\"For streaming at very low bitrate application, use a low frame rate and"
-" a small GOP size. This is especially true for RealVideo where the Linux "
-"player does not seem to be very fast, so it can miss frames\"."
+#: ../../manual/render/output/video.rst:107
+msgid "Output Quality"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:108
+msgid "These are preset `Rates <Rate>`_"
 msgstr ""
 
 #: ../../manual/render/output/video.rst:110
-msgid "Autosplit Output"
+msgid "Encoding Speed"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:109
+#: ../../manual/render/output/video.rst:110
 msgid ""
-"If your video is HUGE and exceeds 2Gig, enable Autosplit Output. The main"
-" control over output filesize is the GOP or keyframe interlace. A higher "
-"number generally leads to a smaller file but needs a higher-powered "
-"device to replay it."
+"Presets to change between a fast encode (bigger file size) and more "
+"compression (smaller file size)"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:123
-msgid "Mux"
+#: ../../manual/render/output/video.rst:114
+msgid "Key Frame Interval"
 msgstr ""
 
 #: ../../manual/render/output/video.rst:113
 msgid ""
-"`Multiplexing "
-"<http://www.afterdawn.com/glossary/term.cfm/multiplexing>`__ settings."
+"The number of pictures per `Group of Pictures "
+"<https://en.wikipedia.org/wiki/Group_of_pictures>`__. Set to 0 for "
+"\"intra_only\", which disables `inter-frame "
+"<https://en.wikipedia.org/wiki/Inter-frame>`__ video. A higher number "
+"generally leads to a smaller file but needs a higher-powered device to "
+"replay it."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:115
-#: ../../manual/render/output/video.rst:130
-msgid "Rate"
+#: ../../manual/render/output/video.rst:121
+msgid "Max B-frames"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:116
-msgid "Maximum bit rate of the multiplexed stream."
+#: ../../manual/render/output/video.rst:117
+msgid "Enables the use of :term:`B‑frames <Frame Types>`."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:118
-msgid "Packet Size"
-msgstr ""
-
-#: ../../manual/render/output/video.rst:118
-msgid "Reduces data fragmentation or muxer overhead depending on the source."
+#: ../../manual/render/output/video.rst:121
+msgid "Interval"
 msgstr ""
 
 #: ../../manual/render/output/video.rst:120
-msgid "Standards"
+msgid "The maximum number of :term:`B‑frames <Frame Types>` between non-B-frames."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:122
+#: ../../manual/render/output/video.rst:124
+#: ../../manual/render/output/video.rst:132
+#: ../../manual/render/output/video.rst:145
+msgid "Rate"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:128
+#: ../../manual/render/output/video.rst:161
+msgid "Bitrate"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:127
 msgid ""
-"Some codecs cannot encode off-the-wall video sizes, so stick to the XY "
-"sizes used in the presets for standard TV sizes."
+"Sets the average `bitrate <https://en.wikipedia.org/wiki/Bit_rate>`__ "
+"(quality), which is the count of binary digits per frame. See also: "
+"`FFmpeg -b:v <https://ffmpeg.org/ffmpeg.html#Description>`__."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:126
-msgid "The bitrate control also includes a *Minimum* and a *Maximum*."
+#: ../../manual/render/output/video.rst:131
+msgid ""
+"Video files can use what is called variable bitrate (VBR). This is used "
+"to give some segments of the video less compressing to frames that need "
+"more data and less to frames with less data. This can be controlled by "
+"the *Minimum* and a *Maximum* values."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:130
+#: ../../manual/render/output/video.rst:136
 msgid "Buffer"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:129
+#: ../../manual/render/output/video.rst:135
 msgid ""
 "The `decoder bitstream buffer "
 "<https://en.wikipedia.org/wiki/Video_buffering_verifier>`__ size."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:135
+#: ../../manual/render/output/video.rst:139
+msgid "Mux"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:141
+msgid ""
+"Multiplexing <http://www.afterdawn.com/glossary/term.cfm/multiplexing>`__"
+" is the process of combining separate video and audio streams into a "
+"single file, similar to packing a video file and .mp3 audio file in a "
+"zip-file."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:146
+msgid "Maximum bit rate of the multiplexed stream."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:149
+msgid "Packet Size"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:148
+msgid "Reduces data fragmentation or muxer overhead depending on the source."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:154
+msgid "Audio"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:157
 msgid "Audio Codec"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:135
+#: ../../manual/render/output/video.rst:157
 msgid ""
-"Audio conainer used, For a list of all available options see :doc:`video "
+"Audio format to use, For a list of all available options see :doc:`video "
 "formats </data_system/files/media/video_formats>`."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:138
+#: ../../manual/render/output/video.rst:160
 msgid ""
 "For each codec, you can control the bitrate (quality) of the sound in the"
 " movie. Higher bitrates are bigger files that stream worse but sound "
 "better. Use powers of 2 for compatibility."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:143
+#: ../../manual/render/output/video.rst:165
 msgid "Volume"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:142
+#: ../../manual/render/output/video.rst:164
 msgid "Sets the output volume of the audio."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:146
+#: ../../manual/render/output/video.rst:168
 msgid "Tips"
 msgstr ""
 
-#: ../../manual/render/output/video.rst:148
-msgid ""
-"Choosing which format to use depends on what you are going to do with the"
-" image."
-msgstr ""
-
-#: ../../manual/render/output/video.rst:150
-msgid ""
-"If you are animating a movie and are not going to do any post-processing "
-"or special effects on it, use either ``AVI-JPEG`` or ``AVI Codec`` and "
-"choose the XviD open codec. If you want to output your movie with sound "
-"that you have loaded into the VSE, use M-PEG."
-msgstr ""
-
-#: ../../manual/render/output/video.rst:155
-msgid ""
-"If you are going to do post-processing on your movie, it is best to use a"
-" frameset rendered as \"OpenEXR\" images; if you only want one file, then"
-" choose \"AVI Raw\". While AVI Raw is huge, it preserves the exact "
-"quality of output for post-processing. After post-processing (compositing"
-" and/or sequencing), you should compress the video."
-msgstr ""
-
-#: ../../manual/render/output/video.rst:162
-msgid ""
-"You do not want to post-process a compressed file because the compression"
-" artifacts might throw off what you are trying to accomplish with the "
-"post-processing."
-msgstr ""
-
-#: ../../manual/render/output/video.rst:165
-msgid ""
-"Note that you might not want to render directly to a video format. If a "
-"problem occurs while rendering, you have to re-render all frames from the"
-" beginning. If you first render out a set of static images (such as the "
-"default PNG, or the higher-quality OpenEXR), you can stitch them together"
-" with an :doc:`Image Strip </editors/vse/sequencer/strips/image_movie>` "
-"in the Video Sequence Editor. This way, you can easily:"
+#: ../../manual/render/output/video.rst:170
+msgid "The choice of video format depends on what you are planning to do."
 msgstr ""
 
 #: ../../manual/render/output/video.rst:172
 msgid ""
-"Restart the rendering from the place (the frame) where the problem "
+"It's not recommended to render directly to a video format in the first "
+"instance. If a problem occurs while rendering, the file might become "
+"unplayable and you will have to re-render all frames from the beginning. "
+"If you first render out a set of static images such as the default PNG "
+"format or the higher-quality OpenEXR (which can retain HDR pixel data), "
+"you can combine them as an :doc:`Image Strip "
+"</editors/vse/sequencer/strips/image_movie>` in the Video Sequence Editor"
+" (VSE). This way, you can easily:"
+msgstr ""
+
+#: ../../manual/render/output/video.rst:180
+msgid ""
+"Restart the rendering from the place (the frame) where any problem "
 "occurred."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:173
-msgid "Try out different video options in seconds, rather than minutes or hours."
+#: ../../manual/render/output/video.rst:181
+msgid ""
+"Try out different video encoding options in seconds, rather than minutes "
+"or hours as encoding is usually much faster than rendering the 3d scene."
 msgstr ""
 
-#: ../../manual/render/output/video.rst:174
+#: ../../manual/render/output/video.rst:183
 msgid ""
-"Enjoy the rest of the features of the VSE, such as adding Image Strips "
-"from previous renders, audio, video clips, etc."
+"Enjoy the rest of the features of the VSE, such as adding :doc:`Image "
+"Strips </editors/vse/sequencer/strips/image_movie>` from previous "
+"renders, audio, video clips, etc."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:189
+msgid ""
+"You shouldn’t post-process a lossy-compressed file as the compression "
+"artifacts may become visible. Lossy compression should be reserved as a "
+"final 'delivery format'."
+msgstr ""
+
+#: ../../manual/render/output/video.rst:192
+msgid ""
+"If you are planning on doing significant post-processing and color "
+"correction, it is best to output a frameset rendered in OpenEXR format. "
+"If you plan to do only minimal changes after rendering and would prefer a"
+" single file, choose lossless H.264 for high quality, or regular H.264 "
+"for lower quality."
 msgstr ""
 
 #~ msgid ""
@@ -405,5 +425,289 @@ msgstr ""
 #~ " you will share them on the "
 #~ "Internet with the rest of the "
 #~ "community."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once you master the trick of "
+#~ "animation you will surely start to "
+#~ "produce wonderful animations, encoded with "
+#~ "your favorite codecs, and possibly you"
+#~ " will share them on the Internet "
+#~ "with the rest of the community."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sooner or later you will be struck"
+#~ " with the desire to build an "
+#~ "animation for television, or maybe burn"
+#~ " your own DVDs. To spare you "
+#~ "some disappointment, here are some tips"
+#~ " specifically targeted at Video "
+#~ "preparation. The first and principal one"
+#~ " is to remember the double-dashed "
+#~ "white lines in the camera view!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you render for PC then the "
+#~ "whole rendered image which lies within"
+#~ " the *outer* dashed rectangle will be"
+#~ " shown. For television, some lines "
+#~ "and some part of the lines will"
+#~ " be lost due to the mechanics "
+#~ "of the electron beam scanning in "
+#~ "your TV's cathode ray tube. You "
+#~ "are guaranteed that what is within "
+#~ "the *inner* dashed rectangle in camera"
+#~ " view will be visible on the "
+#~ "screen. Everything within the two "
+#~ "rectangles may or may not be "
+#~ "visible, depending on the given TV "
+#~ "set that your audience watches the "
+#~ "video on."
+#~ msgstr ""
+
+#~ msgid "Color Saturation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Most video tapes and video signals "
+#~ "are not based on the RGB model "
+#~ "but on the YCrCb model: more "
+#~ "precisely, the YUV in Europe (PAL), "
+#~ "and the YIQ in the USA (NTSC), "
+#~ "the latter being quite similar to "
+#~ "the former. Hence some knowledge of "
+#~ "this is necessary too."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The YCrCb model sends information as "
+#~ "'Luminance', or intensity (Y) and two"
+#~ " 'Crominance' signals, red and blue "
+#~ "(Cr and Cb). Actually a Black and"
+#~ " White TV set shows only luminance,"
+#~ " while color TV sets reconstruct "
+#~ "color from Crominances (and from "
+#~ "luminance). Construction of the YCrCb "
+#~ "values from the RGB ones takes two"
+#~ " steps (the constants *in italics* "
+#~ "depend on the system: PAL or "
+#~ "NTSC):"
+#~ msgstr ""
+
+#~ msgid "First, the Gamma correction (*g* varies: 2.2 for NTSC, 2.8 for PAL):"
+#~ msgstr ""
+
+#~ msgid "R' = R\\ :sup:`1/g`"
+#~ msgstr ""
+
+#~ msgid "G' = G\\ :sup:`1/g`"
+#~ msgstr ""
+
+#~ msgid "B' = B\\ :sup:`1/g`"
+#~ msgstr ""
+
+#~ msgid "Then, the conversion itself:"
+#~ msgstr ""
+
+#~ msgid "Y = 0.299R' + 0.587G' + 0.114B'"
+#~ msgstr ""
+
+#~ msgid "Cr = *a*\\ :sub:`1` (R' - Y) + *b*\\ :sub:`1` (B' - Y)"
+#~ msgstr ""
+
+#~ msgid "Cb = *a*\\ :sub:`2` (R' - Y) + *b*\\ :sub:`2` (B' - Y)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whereas a standard 24 bit RGB "
+#~ "picture has 8 bits for each "
+#~ "channel, to keep bandwidth down, and "
+#~ "considering that the human eye is "
+#~ "more sensitive to luminance than to "
+#~ "chrominance, the luminance signal is "
+#~ "sent with more bits than the two"
+#~ " chrominance signals. This bit expansion"
+#~ " results in a smaller dynamic of "
+#~ "colors in video, than what you are"
+#~ " used to on monitors. You hence "
+#~ "have to keep in mind that not "
+#~ "all colors can be correctly displayed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A rule of thumb is to keep "
+#~ "the colors as 'grayish' or 'unsaturated'"
+#~ " as possible; this roughly means "
+#~ "keeping the dynamics of your colors "
+#~ "within 80% of one another. In "
+#~ "other words, the difference between the"
+#~ " highest RGB value and the lowest "
+#~ "RGB value should not exceed 0.8 (0"
+#~ " - 1 range) or 200 (0 - "
+#~ "255 range)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is not strict, something more "
+#~ "than 0.8 is acceptable, but an RGB"
+#~ " display with color contrast that "
+#~ "ranges from 0.0 to 1.0 will appear"
+#~ " to be very ugly (over-saturated) "
+#~ "on video, while appearing bright and "
+#~ "dynamic on a computer monitor."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here you choose which video codec "
+#~ "you want to use, and compression "
+#~ "settings. With all of these compression"
+#~ " choices, there is a tradeoff between"
+#~ " file size, compatibility across platforms,"
+#~ " and playback quality."
+#~ msgstr ""
+
+#~ msgid "Format"
+#~ msgstr ""
+
+#~ msgid "Lossless Output"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Allows the ability to perfectly "
+#~ "reconstruct compressed data from compressed"
+#~ " data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set the average `bitrate "
+#~ "<https://en.wikipedia.org/wiki/Bit_rate>`__ (quality), "
+#~ "which is the count of binary "
+#~ "digits per frame. See also: `FFmpeg "
+#~ "-b:v <https://ffmpeg.org/ffmpeg.html#Description>`__."
+#~ msgstr ""
+
+#~ msgid "GOP Size"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The number of pictures per `Group "
+#~ "of Pictures "
+#~ "<https://en.wikipedia.org/wiki/Group_of_pictures>`__. Set "
+#~ "to 0 for \"intra_only\", which disables"
+#~ " `inter-frame <https://en.wikipedia.org/wiki/Inter-"
+#~ "frame>`__ video. From FFmpeg docs: \"For"
+#~ " streaming at very low bitrate "
+#~ "application, use a low frame rate "
+#~ "and a small GOP size. This is "
+#~ "especially true for RealVideo where the"
+#~ " Linux player does not seem to "
+#~ "be very fast, so it can miss "
+#~ "frames\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your video is HUGE and exceeds"
+#~ " 2Gig, enable Autosplit Output. The "
+#~ "main control over output filesize is "
+#~ "the GOP or keyframe interlace. A "
+#~ "higher number generally leads to a "
+#~ "smaller file but needs a higher-"
+#~ "powered device to replay it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Multiplexing "
+#~ "<http://www.afterdawn.com/glossary/term.cfm/multiplexing>`__ "
+#~ "settings."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Some codecs cannot encode off-the-"
+#~ "wall video sizes, so stick to the"
+#~ " XY sizes used in the presets "
+#~ "for standard TV sizes."
+#~ msgstr ""
+
+#~ msgid "The bitrate control also includes a *Minimum* and a *Maximum*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Audio conainer used, For a list of"
+#~ " all available options see :doc:`video "
+#~ "formats </data_system/files/media/video_formats>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choosing which format to use depends "
+#~ "on what you are going to do "
+#~ "with the image."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are animating a movie and"
+#~ " are not going to do any "
+#~ "post-processing or special effects on "
+#~ "it, use either ``AVI-JPEG`` or "
+#~ "``AVI Codec`` and choose the XviD "
+#~ "open codec. If you want to output"
+#~ " your movie with sound that you "
+#~ "have loaded into the VSE, use "
+#~ "M-PEG."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are going to do post-"
+#~ "processing on your movie, it is "
+#~ "best to use a frameset rendered as"
+#~ " \"OpenEXR\" images; if you only want"
+#~ " one file, then choose \"AVI Raw\"."
+#~ " While AVI Raw is huge, it "
+#~ "preserves the exact quality of output"
+#~ " for post-processing. After post-"
+#~ "processing (compositing and/or sequencing), "
+#~ "you should compress the video."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You do not want to post-process"
+#~ " a compressed file because the "
+#~ "compression artifacts might throw off "
+#~ "what you are trying to accomplish "
+#~ "with the post-processing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that you might not want to"
+#~ " render directly to a video format."
+#~ " If a problem occurs while rendering,"
+#~ " you have to re-render all "
+#~ "frames from the beginning. If you "
+#~ "first render out a set of static"
+#~ " images (such as the default PNG, "
+#~ "or the higher-quality OpenEXR), you "
+#~ "can stitch them together with an "
+#~ ":doc:`Image Strip "
+#~ "</editors/vse/sequencer/strips/image_movie>` in the "
+#~ "Video Sequence Editor. This way, you "
+#~ "can easily:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Restart the rendering from the place "
+#~ "(the frame) where the problem occurred."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Try out different video options in "
+#~ "seconds, rather than minutes or hours."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enjoy the rest of the features of"
+#~ " the VSE, such as adding Image "
+#~ "Strips from previous renders, audio, "
+#~ "video clips, etc."
 #~ msgstr ""
 
