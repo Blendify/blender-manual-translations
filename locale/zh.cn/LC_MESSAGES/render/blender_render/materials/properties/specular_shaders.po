@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-26 17:52-0400\n"
-"PO-Revision-Date: 2017-05-25 23:49+0800\n"
+"PO-Revision-Date: 2017-05-27 04:56+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,7 +50,7 @@ msgid ""
 "reflected at an angle which mirrors the incident light angle (with regard "
 "to the surface's normal), which makes the viewing angle very important."
 msgstr ""
-"高光着色器用于光泽表面的亮点效果，模拟对光源的反射。与 :doc:`漫射着色 </"
+"高光着色器用于光泽表面的亮斑效果，模拟对光源的反射。与 :doc:`漫射着色 </"
 "render/blender_render/materials/properties/diffuse_shaders>` 不同的是，高"
 "光反射 *依赖观察点* 。根据斯涅尔定律，照射到光泽表面的光线的入射角与反射角"
 "(相对于表面法向)相等，这就使得观察角度非常重要了。"
@@ -238,7 +238,7 @@ msgstr "硬度"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:121
 msgid "Size of the specular highlight"
-msgstr "高光亮点尺寸"
+msgstr "高光亮斑尺寸"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:125
 msgid "Phong"
@@ -267,7 +267,7 @@ msgstr ""
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:152
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:225
 msgid "Size of the specular highlight."
-msgstr "高光亮点尺寸。"
+msgstr "高光亮斑尺寸。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:155
 msgid "Planet Atmosphere"
@@ -306,16 +306,25 @@ msgid ""
 "changes in specular intensity with light direction and more accurately "
 "positioned highlights on a surface."
 msgstr ""
+"宾氏是更加 '物理' 的高光着色器， 经常和奥伦-纳亚尔漫射着色器一起使用。由于"
+"相对前述着色器，它增加了第四个选项 :term:`折射率` ，所以可控性更好。 `詹姆"
+"斯 F. 布林 <https://en.wikipedia.org/wiki/Jim_Blinn>`__ 在NASA的喷气推进实"
+"验室工作，因参与卡尔 萨根的电视纪录片 *宇宙* 而广为人知。 在他1977发表的论"
+"文 `计算机合成图片的光线反射模型 <https://www.microsoft.com/en-us/"
+"research/publication/models-of-light-reflection-for-computer-synthesized-"
+"pictures/>`__ (PDF)描述的模型中，包括了高光强度随光线方向发生变化，以及更"
+"准确地在表面定位高光。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:193
 msgid ""
 "Size of the specular highlight. The Blinn shader is capable of much "
 "tighter specular highlights than Phong or CookTorr."
 msgstr ""
+"高光亮斑尺寸。宾氏着色器可以产生比冯氏和库克-托伦斯更加紧凑的高光亮斑。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:200
 msgid "IOR"
-msgstr "IOR"
+msgstr "IOR 折射率"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:196
 msgid ""
@@ -324,10 +333,8 @@ msgid ""
 "that), but to correctly compute specular reflection intensity and "
 "extension via Snell's Law."
 msgstr ""
-"'折射率'. This parameter is not actually used to compute refraction of "
-"light rays through the material (a ray tracer is needed for that), but to "
-"correctly compute specular reflection intensity and extension via Snell's "
-"Law."
+"'折射率' 。实际上，该参数并非用于计算光线穿透材质的折射(这需要光线追踪"
+"器), 而是用于准确计算高光反射强度和扩展斯涅耳定律。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:203
 msgid "Toon"
@@ -342,6 +349,7 @@ msgid ""
 "The Toon specular shader matches the Toon diffuse shader. It is designed "
 "to produce the sharp, uniform highlights of cartoon cels."
 msgstr ""
+"卡通高光着色器用于搭配卡通漫射着色器使用，旨在产生锐利、均匀的卡通高光。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:224
 msgid "Size"
@@ -353,17 +361,17 @@ msgstr "平滑"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:227
 msgid "Softness of the highlight's edge."
-msgstr ""
+msgstr "亮斑边缘的平滑度。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:229
 msgid "Alternative Method"
-msgstr ""
+msgstr "其他方法"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:231
 msgid ""
 "The Toon shader effect can also be accomplished in a more controllable "
 "way using color ramps."
-msgstr ""
+msgstr "卡通着色效果还可以使用颜色渐变实现，这种做法更加可控。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:235
 msgid "Ward Isotropic"
@@ -377,11 +385,11 @@ msgstr "华德各向异性着色器。"
 msgid ""
 "Ward isotropic is a flexible specular shader that can be useful for metal "
 "or plastic."
-msgstr ""
+msgstr "华德各项异性是一个灵活的高光着色器，可以用于金属或塑料材质。"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:259
 msgid "Gregory J. Ward"
-msgstr ""
+msgstr "格里高利 J. 华德"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:252
 msgid ""
@@ -396,10 +404,18 @@ msgid ""
 "<https://citeseerx.ist.psu.edu/viewdoc/download?"
 "doi=10.1.1.69.6812&rep=rep1&type=pdf>`__)"
 msgstr ""
+"他建立了一个相对简单的模型，该模型遵循大多数基本物理定律。在他1992年的论"
+"文 \"各向异性反应的测量与建模\" 中，华德引入了 双向反射分布函数(BRDF) ，因"
+"其使用的几个参数易于控制，自此之后被广泛应用于计算机图形学。该模型可以同时"
+"表示各项同性表面 (与光线反向无关) 和各向异性表面 (方向相关)。在Blender中，"
+"华德高光着色器仍然叫作 \"华德各向同性\" ，但其实是各项异性。(`PDF "
+"<https://citeseerx.ist.psu.edu/viewdoc/download?"
+"doi=10.1.1.69.6812&rep=rep1&type=pdf>`__)(注：UI菜单英文原文为\"Ward "
+"Isotropic\"，即\"华德各向同性\")"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:270
 msgid "Slope"
-msgstr ""
+msgstr "斜率"
 
 #: ../../manual/render/blender_render/materials/properties/specular_shaders.rst:265
 msgid ""
@@ -409,3 +425,6 @@ msgid ""
 "highlight, though using a different method to that of the other specular "
 "shaders. It is capable of extremely sharp highlights."
 msgstr ""
+"表面坡度的标准偏差。过去也称作 `均方根 <https://en.wikipedia.org/wiki/"
+"Root_mean_square>`__ 或RMS值。尽管与其他高光着色器使用的方法不同，该参数实"
+"际控制的是高光亮斑的尺寸。该参数可以产生极其锐利的亮斑。"
