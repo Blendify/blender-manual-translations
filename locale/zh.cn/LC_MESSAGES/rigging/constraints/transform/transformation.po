@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-08 23:23-0500\n"
-"PO-Revision-Date: 2017-05-29 10:15+0800\n"
+"PO-Revision-Date: 2017-05-30 19:21+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 1.8.13\n"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:6
 msgid "Transformation Constraint"
@@ -29,10 +29,10 @@ msgid ""
 "\"markers\" to define a mapping between input (target) and output (owner) "
 "values."
 msgstr ""
-"此约束是比其他\"变换\"约束更加复杂、强大。它允许你映射目标的变换属性 （即位"
-"置、 旋转或缩放）的一张类型，到其自身在给定范围值的同一或其他类型的变换属"
-"性，（这每个目标和其自身属性是不同的）。你也可以切换轴，并使用没有限制的范"
-"围值，而是作为\"标记\"来定义输入 （目标） 和输出 （自身） 值之间的映射。"
+"此约束比其他\"变换\"约束更加复杂、强大。它允许在给定取值范围内(视目标和约束"
+"对象属性类型有所不同)，将目标的某个变换属性(即位置、旋转或缩放)，映射到约束"
+"对象同一或其他类型的变换属性。你也可以切换轴向，并使用没有限制的范围值，而"
+"是作为\"标记\"来定义输入(目标)和输出(约束对象)值之间的映射。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:15
 msgid ""
@@ -42,13 +42,13 @@ msgid ""
 "Typical uses for this include gears (see note below), and rotation based "
 "on location setups."
 msgstr ""
-"所以，例如你可以使用目标沿 X 轴的位置来控制绕其自身 Z 轴旋转，开始一个单位"
-"沿目标X 轴对应于自身 Z 轴旋转10个单位。这典型的是齿轮 （见下面的说明），和"
-"基于位置设置旋转的典型。"
+"所以，例如你可以使用目标在X 轴的位置来控制绕约束目标的Z轴旋转，规定目标X 轴"
+"的一个BU对应于约束对象Z 轴旋转10个BU。这通常用在齿轮(见下面的说明)，和基于"
+"位置的旋转。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:22
 msgid "Options"
-msgstr "Options选项"
+msgstr "Options 选项"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:26
 msgid "Transformation panel."
@@ -63,11 +63,11 @@ msgid ""
 ":ref:`ui-data-id` used to select the constraints target, and is not "
 "functional (red state) when it has none."
 msgstr ""
-":ref:`ui-data-id` 用于选择约束目标，当它为空时表示不起作用（红色状态）。"
+":ref:`ui-data-id` 用于选择约束目标，当它为空时表示不起作用(红色状态)。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:52
 msgid "Extrapolate"
-msgstr "Extrapolate"
+msgstr "延伸"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:31
 msgid ""
@@ -81,44 +81,44 @@ msgid ""
 "output range (in ordinate), to (1.0 to 2.0). The yellow curve represents "
 "the mapping between input and output."
 msgstr ""
-"默认情况下, *min* 和 *max* 值是输入和输出值的边界;这些范围之外的所有值都被"
-"剪掉。当您启用此按钮时， *min* 和 *max* 值不再是严格的限制，而是\"markers"
-"\"定义输入和相应的输出值之间的比例 （线性） 映射。让我们用两个图举例说明 :"
-"ref:`fig-constraints-transformation-extrapolate` 。在这些图片中的输入的范"
-"围 （在横坐标） 设置为 [1.0，4.0]，和其相应的输出范围 （在纵坐标）为[1.0、 "
-"2.0]。黄色曲线表示输入和输出之间的映射。"
+"默认情况下, *最小值* 和 *最大值* 定义输入和输出值的边界；范围之外的所有值都"
+"被剪掉。启用该选项后， *最小值* 和 *最大值* 不再受严格限制，而是通过\"标记"
+"值\"定义输入和相应的输出值之间的比例(线性)映射。以下面两张图片来距离说明 :"
+"ref:`fig-constraints-transformation-extrapolate` 图片中，输入的范围(横坐标)"
+"设置为 [1.0，4.0]，对应的输出范围(纵坐标)为[1.0、 2.0]。黄色曲线表示输入和"
+"输出之间的映射。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:42
 msgid "The Extrapolate principles."
-msgstr "The Extrapolate principles."
+msgstr "延伸原理。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:47
 msgid ""
 "Extrapolate disabled: the output values are bounded inside the (1.0 to "
 "2.0) range."
-msgstr "Extrapolate 禁用: 输出值都是在边界 (1.0 至 2.0) 范围内。"
+msgstr "禁用延伸: 输出值都被限制在 (1.0 至 2.0) 范围内。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:52
 msgid ""
 "Extrapolate enabled: the output values are \"free\" to proportionally "
 "follow the input ones."
-msgstr "Extrapolate 启用：输出值是“自由”按比例输入的。"
+msgstr "启用延伸：输出值是按输入值等比例得出的 “自由”值。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:55
 msgid "Source"
-msgstr "Source"
+msgstr "源"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:57
 msgid "It contains the input (from target) settings."
-msgstr "它包含输入 （从目标） 的设置。"
+msgstr "包含输入(目标)设置。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:61
 msgid "Map From"
-msgstr "Map From"
+msgstr "源至目标的映射模式"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:60
 msgid "The radio buttons, allow you to select which type of property to use."
-msgstr "单选按钮，允许您选择要使用的属性类型。"
+msgstr "单选按钮，用于选择要使用的属性类型。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:62
 #: ../../manual/rigging/constraints/transform/transformation.rst:82
@@ -149,8 +149,8 @@ msgid ""
 "map to, respectively (from top to bottom), the X, Y and Z output (owner) "
 "axes."
 msgstr ""
-"三个 *Axis Mapping(轴映射)* 选择器允许您选择那一个输入轴映射到，各自的（从"
-"上到下），X，Y和Z输出（自身）轴。"
+"三个 *轴向映射* 选择器用于分别选择映射到X，Y和Z输出(约束对象)轴的轴向(从上"
+"到下)。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:75
 msgid "Destination"
@@ -158,7 +158,7 @@ msgstr "目的"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:77
 msgid "It contains the output (to owner) settings."
-msgstr "它包含输出（到自身）设置。"
+msgstr "包含输出(至约束对象)的设置。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:81
 msgid "Map To"
@@ -168,7 +168,7 @@ msgstr "Map To 映射到"
 msgid ""
 "The three radio buttons allow you to select which type of property to "
 "control."
-msgstr "三个单选按钮允许您选择要控制的属性类型。"
+msgstr "三个单选按钮用于选择要控制的属性类型。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:87
 msgid "To"
@@ -181,9 +181,8 @@ msgid ""
 "min value is higher than its corresponding max value, the constraint "
 "behaves as if it had the same value as the max one."
 msgstr ""
-"独立为每个轴（x，y和Z）的 *最小值（min）* 和 *最大值（max）* 数字按钮控制输"
-"入值范围的上限和下限。请注意，如果一个最小值高于其相应的最大值，约束具有最"
-"大值相同的行为。"
+"*最小值(min)* 和 *最大值(max)* 数字按钮用于分别控制各轴向输出上限和下限。请"
+"注意，如果一个最小值高于其相应的最大值，约束效果等同于上下限相等。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:90
 msgid "Space"
@@ -201,10 +200,9 @@ msgid ""
 "*Offset* button of the :doc:`Copy Location constraint </rigging/"
 "constraints/transform/copy_location>` is enabled...)."
 msgstr ""
-"当变换属性映射到位置 （即 *Location*, *Destination* 按钮处于启用状态），自"
-"身现有位置添加到此约束计算的结果中 （就像当复制位置约束（ :doc:`Copy "
-"Location constraint </rigging/constraints/transform/copy_location>`） 中的 "
-"*Offset （偏移）* 按钮启用时那样......）。"
+"当映射变换属性到位置(即 *目的*, *位置* 按钮处于启用状态)，计算结果会加上约"
+"束现有位置(如同启用 :doc:`复制位置约束 </rigging/constraints/transform/"
+"copy_location>` 中的 *Offset(偏移)* 选项一样.....）。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:98
 msgid ""
@@ -212,7 +210,8 @@ msgid ""
 "owner's existing rotation or scale is overridden by the result of "
 "evaluating this constraint."
 msgstr ""
-"相反，当变换属性映射到旋转或缩放，此约束计算的结果重写自身现有旋转或缩放。"
+"相反，映射变换属性到旋转或缩放，约束计算的结果会覆盖约束对象现有旋转或缩"
+"放。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:100
 msgid ""
@@ -223,8 +222,8 @@ msgid ""
 "will be:"
 msgstr ""
 "当使用目标的旋转变换属性作为输入，无论真正的值是什么，约束将始终\"重置回"
-"\"-180 到 180 范围 (例如如果目标有 绕 X 轴420 旋转，使用 X 输入约束的值将"
-"是："
+"\" (-180, 180)范围 (例如，如果目标绕 X 轴旋转420°，约束实际使用的 \"X\" 输"
+"入值将是："
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:105
 msgid ":math:`((420 + 180) modulo 360) - 180 = 60 - ...`"
@@ -240,8 +239,8 @@ msgid ""
 "input, whatever the real values are, the constraint will always take their "
 "absolute values (i.e. invert negative ones)."
 msgstr ""
-"同样的当使用目标缩放变换属性作为输入，无论真正的值是什么，约束将始终采取其"
-"绝对值 （即反转负的值）。"
+"类似地，当使用目标缩放变换属性作为输入，无论真正的值是什么，约束将始终使用"
+"其绝对值(即对负值取负)。"
 
 #: ../../manual/rigging/constraints/transform/transformation.rst:110
 msgid ""
@@ -249,5 +248,5 @@ msgid ""
 "considered equal to the *max* one. This implies you cannot create "
 "\"reversed\" mappings..."
 msgstr ""
-"当其最小值高于其相应的最大值时，都被认为只有一个最大值。这意味着您不能创建"
-"\"逆转\"映射..."
+"当 *最小值* 高于其相应的 *最大值* 时，两个值都会取为 *最大值* 。这意味着不"
+"能创建\"逆转\"映射..."
