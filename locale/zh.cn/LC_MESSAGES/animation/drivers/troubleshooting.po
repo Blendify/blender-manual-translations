@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-07 09:50-0400\n"
-"PO-Revision-Date: 2017-06-05 16:37+0800\n"
+"PO-Revision-Date: 2017-06-06 10:08+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../manual/animation/drivers/troubleshooting.rst:4
 msgid "Troubleshooting"
-msgstr ""
+msgstr "问题排查"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:6
 msgid "Some common problems people may run into when using drivers."
-msgstr ""
+msgstr "使用驱动器时可能遭遇一些常见问题。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:10
 msgid "Scripted Expression"
-msgstr ""
+msgstr "脚本表达式"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:14
 msgid ":menuselection:`Graph Editor --> Properties --> Drivers`"
-msgstr ""
+msgstr ":menuselection:`曲线编辑器 --> 属性 --> 驱动器`"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:18
 msgid "Info Header."
-msgstr ""
+msgstr "信息标题栏。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:21
 msgid "By default Blender will not autorun Python scripts."
-msgstr ""
+msgstr "Blender默认禁用自动运行Python脚本。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:23
 msgid ""
@@ -49,18 +49,21 @@ msgid ""
 "file as *Trusted Source*, or set *Auto Run Python Scripts* in :"
 "menuselection:`User Preferences --> File --> Auto Execution`."
 msgstr ""
+"如果使用 *脚本表达式* 类型的驱动器，你需要勾选 *可信任源* 打开文件，或者"
+"在 :menuselection:`用户设置 --> 文件 --> 自动执行` 启用 *自动运行Python"
+"脚本* 。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:30
 msgid "File Browser."
-msgstr ""
+msgstr "文件浏览器。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:34
 msgid ":menuselection:`User Preference --> File --> Auto Execution`"
-msgstr ""
+msgstr ":menuselection:`用户设置 --> 文件 --> 自动执行`"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:38
 msgid "Rotational Properties are Radians"
-msgstr ""
+msgstr "旋转属性是弧度制。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:40
 msgid ""
@@ -68,10 +71,12 @@ msgid ""
 "angles, rotation. In the Graph Editor, while working with Drivers, all "
 "angles are Radians."
 msgstr ""
+"Blender的各个用户界面可能会对角度、旋转使用不同的度量单位。在曲线编辑器"
+"中，使用驱动器时，所有的角度都是弧度制。"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:45
 msgid "Intra-armature Bone Drivers Can Misbehave"
-msgstr ""
+msgstr "骨架内部骨骼驱动器会导致失常举动"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:47
 msgid ""
@@ -84,3 +89,8 @@ msgid ""
 "blend-file is currently on a different frame number or because you are "
 "skipping already rendered frames)."
 msgstr ""
+"骨骼驱动器引用同一骨架内的另一骨骼，这是一个 `众所周知的局限 <https://"
+"developer.blender.org/T40301>`__ 。驱动值可能出现计算错误，因为它是基于"
+"调整当前帧 *之前* 的另一骨骼位置计算出来的。在渲染帧存在跳帧时(blend文件"
+"目前位于一个不一样的帧数，或者直接跳过已渲染帧)，这会导致明显的形状瑕"
+"疵。"
