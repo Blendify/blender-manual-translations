@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-28 11:47-0500\n"
-"PO-Revision-Date: 2017-04-09 19:58+0200\n"
+"PO-Revision-Date: 2017-06-05 10:32+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,6 +74,7 @@ msgid "How it works"
 msgstr "Son fonctionnement"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:29
+#, fuzzy
 msgid ""
 "The principle is simple: first you identify an existing texture by object "
 "and name, then you create a new texture with dynamic content and swap the "
@@ -85,8 +86,8 @@ msgstr ""
 "Le principe est simple : d'abord vous identifiez une texture existante par "
 "objet et nom, ensuite vous créez une nouvelle texture avec un contenu "
 "dynamique et échangez les deux textures dans le GPU. Le GE n'est pas averti "
-"de la substitution et continue à afficher l'objet comme toujours, excepté "
-"que vous avez maintenant le contrôle de la texture. À la fin, la nouvelle "
+"de la substitution et continue à afficher l'objet comme toujours, sauf que "
+"vous avez maintenant le contrôle de la texture. À la fin, la nouvelle "
 "texture est supprimée et l'ancienne texture restaurée."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:35
@@ -132,7 +133,8 @@ msgstr ""
 #: ../../manual/game_engine/python_api/videotexture.rst:51
 msgid "You have two ways to define textures that ``bge.texture`` can grab:"
 msgstr ""
-"Vous avez deux façons pour définir les textures que e.texture`` peut saisir :"
+"Vous avez deux façons pour définir les textures que ``bge.texture`` peut "
+"saisir :"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:53
 msgid "Simple UV texture."
@@ -148,7 +150,8 @@ msgid ""
 "fancy texturing features: GLSL, multi-texture, custom shaders, etc."
 msgstr ""
 "Du fait que ``bge.texture`` fonctionne au niveau texture, c'est compatible "
-"avec toutes les fonctions sophistiquées de texturage de BGE :"
+"avec toutes les fonctions sophistiquées de texturage de BGE : GLSL, multi-"
+"texture, custom shaders, etc."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:62
 msgid "First example"
@@ -159,7 +162,7 @@ msgid ""
 "Let us assume that we have a game object with one or more faces assigned to "
 "a material/image on which we want to display a video."
 msgstr ""
-"Supposons que que nous avons un objet de jeu avec une ou plusieurs faces "
+"Supposons que nous avons un objet de jeu avec une ou plusieurs faces "
 "assignées à un matériau/image sur lequel nous voulons afficher une vidéo."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:67
@@ -182,10 +185,12 @@ msgid ""
 "The check on ``video`` attribute is just a trick to make sure we create the "
 "texture only once."
 msgstr ""
+"La coche sur l'attribut ``video`` est simplement une astuce pour nous "
+"assurer que vous avons créé la texture seulement une fois."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:84
 msgid "Find material"
-msgstr ""
+msgstr "Recherche de matériau"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:91
 msgid ""
@@ -196,9 +201,15 @@ msgid ""
 "texture. In case of Blender material, it grabs the material that has an "
 "image texture channel matching the name as first channel."
 msgstr ""
+"``bge.texture.materialID()`` est une fonction pratique pour récupérer le "
+"matériau de l'objet qui utilise ``video.png`` comme texture. Cette méthode "
+"fonctionnera avec un matériau Blender et une texture UV. Dans le cas d'une "
+"texture UV, il prend le matériau interne correspondant aux faces qui sont "
+"assignées à cette texture. Dans le cas d'un matériau Blnder, il prend le "
+"matériau qui a un canal de texture d'image correspondant au nom du premier "
+"canal."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:98
-#, fuzzy
 msgid ""
 "The ``IM`` prefix indicates that we are searching for a texture name but we "
 "can also search for a material by giving the ``MA`` prefix. For example, if "
@@ -548,15 +559,15 @@ msgid "Use the image buffer in Python (does not effect the Texture)::"
 msgstr "Utiliser le tampon d'image dans Python (n'affecte pas la Texture) :"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:293
-#, fuzzy
 msgid "Load image from source for Python processing without download to GPU:"
 msgstr ""
-"Charger l'image depuis la source pour Python sans chargement dans le GPU : "
+"Charger l'image depuis la source pour le traitement avec Python sans "
+"chargement dans le GPU : "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:294
 #, fuzzy
 msgid "Note that we do not even call refresh on the Texture."
-msgstr "Notez que nous n'appelons même pas refresh sur la Texture. "
+msgstr "Notez que nous n'appelons même pas d'actualisation de la Texture. "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:295
 msgid "We could also just create a source object without a Texture object::"
