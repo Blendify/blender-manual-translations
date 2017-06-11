@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-26 14:04-0400\n"
-"PO-Revision-Date: 2017-06-05 13:22+0800\n"
+"PO-Revision-Date: 2017-06-11 13:09+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,21 +24,22 @@ msgid "Actions"
 msgstr "动作"
 
 #: ../../manual/animation/actions.rst:6
-#, fuzzy
 msgid ""
 "When animating objects and properties in Blender, Actions record and contain "
 "the data. As everything else in Blender, Actions are data-blocks."
-msgstr "在Blender中制作动画时，动作数据块将会记录和保存动画相关数据。"
+msgstr ""
+"在Blender中制作动画时，动作数据块将会记录和保存动画相关数据。和Blender中其它概"
+"念类似，动作是以数据块（data-blocks）形式存储的。"
 
 #: ../../manual/animation/actions.rst:11
 msgid "Actions."
-msgstr "动作"
+msgstr "动作。"
 
 #: ../../manual/animation/actions.rst:13
 msgid ""
 "So when you animate an object by changing its location with keyframes, the "
 "animation is saved to the Action."
-msgstr "当你为物体制作动画如改变物体位置时，动画数据会被储存到动作中。"
+msgstr "当你为物体制作动画，如改变物体位置时，动画数据会被储存到动作中。"
 
 #: ../../manual/animation/actions.rst:16
 msgid ""
@@ -47,6 +48,9 @@ msgid ""
 "location* properties can be shared across multiple objects, if all objects "
 "have *X location* and *Y location* properties beneath them."
 msgstr ""
+"每一个属性都有一个对应的通道用于记录，例如， Cube.location.x 记录到X通道位置数"
+"据上。如果多个物体都有*X location*  和 *Y location* 属性，那么这些属性可以在这"
+"些物体间共享。"
 
 #: ../../manual/animation/actions.rst:23
 msgid ""
@@ -56,7 +60,7 @@ msgstr "这是曲线编辑器。每一个通道都有一个插值曲线，表示
 
 #: ../../manual/animation/actions.rst:26
 msgid "Record and contain animation data."
-msgstr "记录和保存动画数据"
+msgstr "记录和保存动画数据。"
 
 #: ../../manual/animation/actions.rst:27
 msgid "Groups"
@@ -64,7 +68,7 @@ msgstr "组"
 
 #: ../../manual/animation/actions.rst:28
 msgid "Are groups of channels."
-msgstr "代表一些通道的集"
+msgstr "代表一些通道的集。"
 
 #: ../../manual/animation/actions.rst:29
 msgid "Channels"
@@ -72,18 +76,19 @@ msgstr "通道"
 
 #: ../../manual/animation/actions.rst:30
 msgid "Record properties."
-msgstr "记录单一属性"
+msgstr "记录单一属性。"
 
 #: ../../manual/animation/actions.rst:32
 msgid "F-Curves"
-msgstr "插值曲线"
+msgstr "函数曲线"
 
 #: ../../manual/animation/actions.rst:32
-#, fuzzy
 msgid ""
 ":doc:`F-Curve </editors/graph_editor/fcurves/introduction>` are used to "
 "interpolate the difference between the keyframes."
-msgstr "插值曲线是用来连接关键帧。"
+msgstr ""
+":doc:`函数曲线 </editors/graph_editor/fcurves/introduction>` 用来对不同关键帧间"
+"的属性进行插帧。"
 
 #: ../../manual/animation/actions.rst:36
 msgid "Keyframes"
@@ -94,82 +99,81 @@ msgid ""
 ":doc:`Keyframes </animation/keyframes/introduction>` are used to set the "
 "values of properties bound to a point in time."
 msgstr ""
+":doc:`关键帧 </animation/keyframes/introduction>` 用来设置属性值以绑定到某个时"
+"间点上。"
 
 #: ../../manual/animation/actions.rst:44
 msgid "Working with Actions"
-msgstr "和动作一起玩耍 "
+msgstr "如何使用动作（actions）"
 
 #: ../../manual/animation/actions.rst:49
 msgid "The Action data-block menu."
-msgstr ""
+msgstr "动作数据块菜单。"
 
 #: ../../manual/animation/actions.rst:52
-#, fuzzy
 msgid ""
 "When you first animate an object by adding keyframes, Blender creates an "
 "*Action* to record the data."
 msgstr ""
-"当你为某个物体创建第一个动画关键真时，Blender为这类数据创建一个动作数据块以记录"
+"当你为某个物体创建第一个动画关键帧时，Blender为这类数据创建一个动作数据块以记录"
 "它们。"
 
 #: ../../manual/animation/actions.rst:55
-#, fuzzy
 msgid ""
 "*Actions* can be managed with the *Action data-block menu* in the Dope Sheet :"
 "doc:`Action Editor </editors/dope_sheet/action>` header, or the properties "
 "region of the :doc:`NLA Editor </editors/nla/properties_modifiers>`."
 msgstr ""
-"动作可以在DopeSheet动作编辑器标题栏中的 :doc:`摄影表 </editors/dopesheet>` 中管"
-"理，或者也能在 :doc:`非线性动作编辑器 </editors/nla>` 的属性区域找到。"
+"动作可以使用动画摄影表的 :doc:`动作编辑器 </editors/dope_sheet/action>` 标题"
+"栏，或者 :doc:`NLA编辑器 </editors/nla/properties_modifiers>` 的属性区域中的 *"
+"动作数据块菜单* 进行管理。"
 
 #: ../../manual/animation/actions.rst:59
-#, fuzzy
 msgid ""
 "If you are making multiple actions for the same object, press the *F* button "
 "for each action, this will give the actions a *Fake User* and will make "
 "Blender save the unlinked actions."
 msgstr ""
-"如果你要为一个物体创建多组动作，为每个按钮都按下Ｆ案件，者能够给没有用户的动作"
+"如果你要为一个物体创建多组动作，在每个动作都按下 *F* 键，这能够给没有用户的动作"
 "数据块创建假用户，这样Blender在保存数据时就不会将它们丢弃。"
 
 #: ../../manual/animation/actions.rst:63
-#, fuzzy
 msgid ""
 "Objects can only use one *Action* at a time for editing. The :doc:`NLA Editor "
 "</editors/nla/index>` is used to blend multiple actions together."
 msgstr ""
-"物体只能在一个时候编译一个动作数据块， :doc:`非线性动作编辑器 </editors/nla>` "
-"能将多个动作数据混合在一起。"
+"物体只能在一个时候编译一个动作数据块。 :doc:`NLA编辑器 </editors/nla/index>` 能"
+"将多个动作数据混合在一起。"
 
 #: ../../manual/animation/actions.rst:68
 msgid "Bake Action"
-msgstr ""
+msgstr "烘焙动作"
 
 #: ../../manual/animation/actions.rst:70
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/animation/actions.rst
 msgid "Mode:     Object and Pose Modes"
-msgstr ""
+msgstr "模式： 物体和姿态模式"
 
 #: ../../manual/animation/actions.rst
 msgid ""
 "Panel:    :menuselection:`Tool Shelf --> Animation --> Animation --> Action: "
 "Bake Action`"
-msgstr ""
+msgstr "嵌板：  :menuselection:`工具栏 --> 动画 --> 动画 --> 动作: 烘焙动作`"
 
 #: ../../manual/animation/actions.rst
 msgid ""
 "Menu:     :menuselection:`3D View --> Object/Pose --> Animation --> Bake "
 "Action...`"
-msgstr ""
+msgstr "菜单：  :menuselection:`3D视图 --> 物体/姿态 --> 动画 --> 烘焙动作...`"
 
 #: ../../manual/animation/actions.rst:78
 msgid ""
 "The *Bake Action* tool will apply interpolated frames into individual key "
 "frames."
-msgstr ""
+msgstr "*烘焙动作* 将插入帧应用到不同的关键帧中。"
 
 #: ../../manual/animation/actions.rst:80
 msgid ""
@@ -177,3 +181,5 @@ msgid ""
 "cycle`. This can also useful for keyframe animations created from drivers or "
 "constraints."
 msgstr ""
+"这可以为循环动作，比如 :term:`行走循环` ，带来变化。这对于通过驱动或约束制作的"
+"关键帧动画也很有用。"
