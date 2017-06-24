@@ -9,112 +9,150 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-07 09:50-0400\n"
+"POT-Creation-Date: 2017-06-24 11:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.4.0\n"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:4
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:5
 msgid "Mapping Node"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:6
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:7
 msgid ""
-"The *Mapping* nodes is used to transform a coordinate; typically used for"
-" modifying texture coordinates."
+"The *Mapping Node* is used to transform an image or procedural texture. "
+"For example, you can use it to move, rotate, or scale textures. If you "
+"have ever down any UV editing in the past than you will likly know that "
+"these can also be accomplished by modifing an object's UVs in the "
+":doc:`UV/Image editor </editors/uv_image/uv_editing/index>`. However, it "
+"is sometimes useful to have easy access to these functions through nodes "
+"rather then having to modify the UVs. One oexample of this might be when "
+"you have several textures which each needs to be transformed indidually "
+"e.g. decals on a object."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:10
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:19
+msgid "Mapping node."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:23
 msgid "Inputs"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:14
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:26
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:49
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:28
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:42
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:66
 msgid "Vector"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:13
-msgid "Vector to be transformed."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:17
-msgid "Properties"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:29
-msgid "Vector type"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:20
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:23
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:25
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:27
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:29
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:39
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:41
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:54
-msgid "Todo."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:22
-msgid "Texture"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:24
-msgid "Point"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:29
-msgid "Normal"
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:26
+msgid ""
+"Vector to be transformed, usually this is inputed from a :doc:`Texture "
+"Coordinate node </render/cycles/nodes/types/input/texture_coordinate>`."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/vector/mapping.rst:31
-msgid "Location"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:32
-msgid "Vector translation."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:33
-msgid "Rotation"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:34
-msgid "Rotation of the vector along XYZ axes."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:36
-msgid "Scale"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:36
-msgid "Scale of the vector."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:38
-msgid "Min"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:42
-msgid "Max"
+msgid "Properties"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
-msgid "Outputs"
+msgid "Vector type"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:34
+msgid "Allows the user to choose which vector type to use."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:36
+msgid "Texture"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:37
+msgid ""
+"This is the most common option that you will use and will be sufficiant "
+"for most cases."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:39
+msgid "Point"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:39
+msgid ""
+"This works similar to *Texture* but the way the math works the *Scale* "
+"values are divided rather then multiplied."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:42
+msgid ""
+"Behaves the same as *Point* mode but changes in *Location* are ignored --"
+" that is, the texture does not move."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
+msgid "Normal"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
+msgid "Transforms a normal vector with unit length."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:47
+msgid "Location"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/vector/mapping.rst:48
-msgid "Transformed vector."
+msgid "Vector translation."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:49
+msgid "Rotation"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:50
+msgid "Rotation of the vector along XYZ axes."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:53
+msgid "Scale"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/vector/mapping.rst:52
+msgid ""
+"Scale of the vector, in *Point* and *Vector* modes, a value of 2.0 will "
+"halve the texture size, while in *Texture* mode the size is double."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:58
+msgid "Min/Max"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:56
+msgid ""
+"Normalizes the *Location*, *Rotation*, and *Scale* values to fit within "
+"the specified XYZ values."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:61
+msgid "Outputs"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:64
+msgid ""
+"Transformed vector, usualy gets connected to some sort of :doc:`Texture "
+"node </render/cycles/nodes/types/textures/index>`."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:69
 msgid "Examples"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:71
+msgid "Todo."
 msgstr ""
 
 #~ msgid "Vector input"
@@ -127,5 +165,26 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Mapping"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Mapping* nodes is used to "
+#~ "transform a coordinate; typically used "
+#~ "for modifying texture coordinates."
+#~ msgstr ""
+
+#~ msgid "Vector to be transformed."
+#~ msgstr ""
+
+#~ msgid "Scale of the vector."
+#~ msgstr ""
+
+#~ msgid "Min"
+#~ msgstr ""
+
+#~ msgid "Max"
+#~ msgstr ""
+
+#~ msgid "Transformed vector."
 #~ msgstr ""
 
