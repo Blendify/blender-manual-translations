@@ -1,20 +1,18 @@
 # Этот файл является частью перевода руководства к Blender'у.
 # Соответствующая страница руководства может быть получена по адресу
-#   https://docs.blender.org/manual/ru/dev/render/cycles/nodes/types/vector/mapping.html
+#
+# https://docs.blender.org/manual/ru/dev/render/cycles/nodes/types/vector/mapping.html
 #
 # Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
-#   https://creativecommons.org/licenses/by-sa/4.0/deed.ru
-#
+# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
 # Список переводчиков
 # ===================
-#
 # Mingun <alexander_sergey@mail.ru>, 2016.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-07 09:50-0400\n"
+"POT-Creation-Date: 2017-06-25 23:58-0400\n"
 "PO-Revision-Date: 2016-10-17 22:24+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -23,104 +21,165 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:4
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:5
 msgid "Mapping Node"
 msgstr "Узел «Отображение»"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:6
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:7
 msgid ""
-"The *Mapping* nodes is used to transform a coordinate; typically used for"
-" modifying texture coordinates."
+"The *Mapping Node* is used to transform an image or procedural texture. "
+"For example, you can use it to move, rotate, or scale textures. If you "
+"have ever down any UV editing in the past than you will likly know that "
+"these can also be accomplished by modifing an object's UVs in the "
+":doc:`UV/Image editor </editors/uv_image/uv_editing/index>`. However, it "
+"is sometimes useful to have easy access to these functions through nodes "
+"rather then having to modify the UVs. One oexample of this might be when "
+"you have several textures which each needs to be transformed indidually "
+"e.g. decals on a object."
 msgstr ""
-"Узел *«Отображение»* используется для преобразования координат; обычно "
-"используется для изменения текстурных координат."
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:10
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:19
+#, fuzzy
+msgid "Mapping node."
+msgstr "Узел «Отображение»"
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:23
 msgid "Inputs"
 msgstr "Входы"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:14
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:26
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:49
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:28
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:42
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:66
 msgid "Vector"
 msgstr "Вектор"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:13
-msgid "Vector to be transformed."
-msgstr "Изменяемый вектор."
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:26
+msgid ""
+"Vector to be transformed, usually this is inputed from a :doc:`Texture "
+"Coordinate node </render/cycles/nodes/types/input/texture_coordinate>`."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:17
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:31
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:29
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
 msgid "Vector type"
 msgstr "Тип вектора"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:20
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:23
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:25
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:27
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:29
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:39
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:41
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:54
-msgid "Todo."
-msgstr "*Дописать.*"
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:34
+msgid "Allows the user to choose which vector type to use."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:22
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:36
 msgid "Texture"
 msgstr "Текстура"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:24
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:37
+msgid ""
+"This is the most common option that you will use and will be sufficiant "
+"for most cases."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:39
 msgid "Point"
 msgstr "Точка"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:29
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:39
+msgid ""
+"This works similar to *Texture* but the way the math works the *Scale* "
+"values are divided rather then multiplied."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:42
+msgid ""
+"Behaves the same as *Point* mode but changes in *Location* are ignored --"
+" that is, the texture does not move."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
 msgid "Normal"
 msgstr "Норм."
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:31
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
+msgid "Transforms a normal vector with unit length."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:47
 msgid "Location"
 msgstr "Расположение"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:32
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:48
 msgid "Vector translation."
 msgstr "Перенос вектора."
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:33
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:49
 msgid "Rotation"
 msgstr "Вращение"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:34
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:50
 msgid "Rotation of the vector along XYZ axes."
 msgstr "Вращение вектора по осям XYZ."
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:36
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:53
 msgid "Scale"
 msgstr "Масштаб"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:36
-msgid "Scale of the vector."
-msgstr "Масштаб вектора."
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:52
+msgid ""
+"Scale of the vector, in *Point* and *Vector* modes, a value of 2.0 will "
+"halve the texture size, while in *Texture* mode the size is double."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:38
-msgid "Min"
-msgstr "Мин."
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:58
+msgid "Min/Max"
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:42
-msgid "Max"
-msgstr "Макс."
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:56
+msgid ""
+"Normalizes the *Location*, *Rotation*, and *Scale* values to fit within "
+"the specified XYZ values."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:45
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:61
 msgid "Outputs"
 msgstr "Выходы"
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:48
-msgid "Transformed vector."
-msgstr "Преобразованный вектор."
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:64
+msgid ""
+"Transformed vector, usualy gets connected to some sort of :doc:`Texture "
+"node </render/cycles/nodes/types/textures/index>`."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:52
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:69
 msgid "Examples"
 msgstr "Примеры"
+
+#: ../../manual/render/cycles/nodes/types/vector/mapping.rst:71
+msgid "Todo."
+msgstr "*Дописать.*"
+
+#~ msgid ""
+#~ "The *Mapping* nodes is used to "
+#~ "transform a coordinate; typically used "
+#~ "for modifying texture coordinates."
+#~ msgstr ""
+#~ "Узел *«Отображение»* используется для "
+#~ "преобразования координат; обычно используется "
+#~ "для изменения текстурных координат."
+
+#~ msgid "Vector to be transformed."
+#~ msgstr "Изменяемый вектор."
+
+#~ msgid "Scale of the vector."
+#~ msgstr "Масштаб вектора."
+
+#~ msgid "Min"
+#~ msgstr "Мин."
+
+#~ msgid "Max"
+#~ msgstr "Макс."
+
+#~ msgid "Transformed vector."
+#~ msgstr "Преобразованный вектор."
 
