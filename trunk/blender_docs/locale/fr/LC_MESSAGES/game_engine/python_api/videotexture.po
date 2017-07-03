@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-28 11:47-0500\n"
-"PO-Revision-Date: 2017-06-05 10:32+0200\n"
+"PO-Revision-Date: 2017-07-03 07:44+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -111,7 +111,6 @@ msgstr ""
 "disposer d'objets avec des textures appliquées de façon appropriée."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:44
-#, fuzzy
 msgid ""
 "Imagine you want to have a television showing live broadcast programs in the "
 "game. You will create a television object and UV-apply a different texture "
@@ -124,8 +123,8 @@ msgstr ""
 "Imaginez que vous voulez avoir une télévision affichant des émissions en "
 "direct dans le jeu. Vous allez créer un objet télévision et appliquer (UV) "
 "une texture différente à la place de l'écran, par exemple ``tv.png``. Ce à "
-"quoi ressemble cette texture n'est pas important , probablement vous "
-"aimeriez le faire en gris foncé pour simuler l'état éteint. Quand la "
+"quoi ressemble cette texture n'est pas important ; probablement vous "
+"aimeriez la rendre en gris foncé pour simuler l'état éteint. Quand la "
 "télévision doit être allumée, vous créez une texture dynamique depuis une "
 "carte de capture vidéo et l'utilisez à la place de ``tv.png``: l'écran TV va "
 "prendre vie."
@@ -278,6 +277,11 @@ msgid ""
 "texture and there is no need to refresh it either: the other ``Texture`` "
 "object will provide the texture for both materials/textures."
 msgstr ""
+"Référence à un autre objet ``Texture`` dont nous voulons réutiliser la "
+"texture. Si nous utilisons cet argument, nous devrions pas créer une source "
+"sur cette texture et il n'est pas nécessaire de le réactualiser non plus ; "
+"l'autre objet ``Texture`` fournira la texture à la fois pour les matériaux/"
+"textures. "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:131
 msgid "Make texture persistent"
@@ -292,6 +296,12 @@ msgid ""
 "deleted at the same time. ``GameLogic`` module object is a handy place to "
 "store persistent objects."
 msgstr ""
+"Notez que nous avons assigné l'objet à un attribut ``GameLogic``, ``video`` "
+"que nous avons créé pour l'occasion. La raison est que l'objet ``Texture`` "
+"doit être persistant à travers les scripts de jeu. une variable locale "
+"serait supprimée à la fin du script et la texture GPU supprimée en même "
+"temps. l'objet du module ``GameLogic`` est un emplacement pratique pour "
+"stocker les objets persistants."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:141
 msgid "Create a source"
@@ -344,6 +354,7 @@ msgid ""
 "Part or whole of the viewport (=rendering of the active camera displayed on "
 "screen)."
 msgstr ""
+"Tout ou partie de la vue (= rendu de la caméra active affichée à l'écran)."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:163
 msgid "``ImageRender``"
@@ -424,6 +435,9 @@ msgid ""
 "[start,stop] (floats). Set the start and stop time of the video playback, "
 "expressed in seconds from beginning. By default the entire video."
 msgstr ""
+"[start,stop] (flottants). Définir les temps de début et de fin de la lecture "
+"vidéo, exprimés en secondes à partir le début de la vidéo. Par début, la "
+"vidéo en entier."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:207
 msgid "``repeat``"
@@ -431,7 +445,7 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:206
 msgid "(integer). Number of video replay, -1 for infinite."
-msgstr ""
+msgstr "(entier). Nombre de lectures vidéo. -1 pour infini."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:211
 msgid "``framerate``"
@@ -439,13 +453,14 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:210
 msgid "(float). Relative frame rate, <1.0 for slow, >1.0 for fast."
-msgstr ""
+msgstr "(flottant). Fréquence d'images relative, <1.0 pour rapide. "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:219
 msgid "``scale``"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:214
+#, fuzzy
 msgid ""
 "(bool). Set to True to activate fast nearest neighbor scaling algorithm. "
 "Texture width and height must be a power of 2. If the video picture size is "
@@ -453,16 +468,26 @@ msgid ""
 "precise but slow ``gluScaleImage()`` function. Best is to rescale the video "
 "offline so that no scaling is necessary at runtime!"
 msgstr ""
+"(booléen). Fixé à *True* pour activer l'algorithme rapide *nearest neighbor "
+"scaling*. La largeur et la hauteur de texture doit être une puissance de 2. "
+"Si la taille d'image de la vidéo n'est pas une puissance de 2, le "
+"redimensionnement est nécessaire. Par défaut ``bge.texture`` utilise la "
+"fonction ``gluScaleImage()`` précise mais lente. Il vaut mieux "
+"redimensionner l vidéo de sorte que aucun dimensionnement ne soit nécessaire "
+"au moment du ! "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:224
 msgid "``flip``"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:222
+#, fuzzy
 msgid ""
 "(bool). Set to True if the image must be vertically flipped. FFmpeg always "
 "delivers the image upside down, so this attribute is set to True by default."
 msgstr ""
+"(booléen). Fixé à *True* si l'image doit être verticalement. FFmpeg délivre "
+"toujours l'image aussi cet attribut est fixé à *True* par défaut."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:230
 msgid "``filter``"
@@ -475,6 +500,10 @@ msgid ""
 "GPU. If an alpha channel is present in the video, it is automatically loaded "
 "and sent to the GPU as well."
 msgstr ""
+"Définir un filtre supplémentaire sur la vidéo avant son envoi vers le GPU. "
+"Assignez à un de objets filtres ``bge.texture``. Par défaut l'image est "
+"envoyée sans modification au GPU. Si un canal alpha est présent dans la "
+"vidéo, il est automatiquement chargé et envoyé de même au GPU."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:232
 msgid ""
@@ -515,8 +544,8 @@ msgid ""
 msgstr ""
 "Si la source vidéo est arrêtée, ``refresh()`` n'a pas d'effet, L'argument de "
 "``refresh()`` est un drapeau qui indique si la texture devrait être "
-"recalculée au prochain rafraîchissement. Pour la lecture vidéo, vous voulez "
-"catégoriquement le mettre à *True*. "
+"recalculée au prochain rafraîchissement. Pour la lecture vidéo, vous voudrez "
+"certainement le mettre à *True*. "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:262
 msgid "Checking video status"
@@ -552,7 +581,7 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:281
 msgid "Here are some possible advanced work flow:"
-msgstr "Ici se trouvent certaines possibilités de flux de travail avancés :"
+msgstr "Voici certaines possibilités de flux de travail avancés :"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:283
 msgid "Use the image buffer in Python (does not effect the Texture)::"
@@ -562,7 +591,7 @@ msgstr "Utiliser le tampon d'image dans Python (n'affecte pas la Texture) :"
 msgid "Load image from source for Python processing without download to GPU:"
 msgstr ""
 "Charger l'image depuis la source pour le traitement avec Python sans "
-"chargement dans le GPU : "
+"chargement vers le GPU : "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:294
 #, fuzzy
@@ -601,6 +630,11 @@ msgid ""
 "file which is the elephant dream teaser. You can replace with another other "
 "file that you want to run the demo."
 msgstr ""
+"Voici une `démo <http://www.graphicall.org/ftp/ben2610/"
+"VideoTextureDemo2video.blend>`__ qui montre l'utilisation de deux vidéos "
+"alternativement sur la même texture. Notez qu'elle nécessite un fichier "
+"vidéo supplémentaire qui est la bande-annonce de *Elephant Dream*. Vous "
+"pouvez le remplacer avec un autre fichier dont vous voulez lancer la démo."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:322
 msgid ""
@@ -616,3 +650,15 @@ msgid ""
 "power of two dimension). If they do not, you get a Python error on the "
 "console."
 msgstr ""
+"Voici une `démo <http://www.graphicall.org/ftp/ben2610/"
+"VideoTextureDemo2videoMix.blend>`__ qui montre l'utilisation de la source "
+"``ImageMix``. ``ImageMix``est une source qui nécessite des sources, qui "
+"peuvent être n'importe quelle autre source ``Texture``, comme "
+"``VideoFFmpeg``, ``ImageFFmpeg`` ou ``ImageRender``. Vous les définissez "
+"avec ``setSource ()`` et leur poids relatif avec ``setWeight()``. Faites "
+"attention le poids est un nombre entre 0 et 255, et que la somme de tous les "
+"poids devrait être 255. ``ImageMix`` fait un mélange de les sources selon "
+"leurs poids. Les sources doivent avoir la même taille d'image (après "
+"réduction des dimensions à la puissance de deux la plus proche). Si cette "
+"condition n'est pas remplie, vous obtendrez une erreur Python sur la "
+"console.   "
