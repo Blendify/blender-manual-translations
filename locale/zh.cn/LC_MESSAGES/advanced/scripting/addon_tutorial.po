@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-05 07:25+0800\n"
-"PO-Revision-Date: 2017-07-05 23:32+0800\n"
+"PO-Revision-Date: 2017-07-06 09:47+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -316,7 +316,7 @@ msgstr "物体将与前文一样移动。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:204
 msgid "*Keep this add-on open in Blender for the next step - Installing.*"
-msgstr ""
+msgstr "*不要关闭文本编辑器，下一步安装需要用到*"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:208
 msgid "Install The Add-on"
@@ -612,6 +612,8 @@ msgid ""
 "default set by the operator, this allows you to have multiple keys accessing the "
 "same operator with different settings."
 msgstr ""
+"值得注意的是，键位映射的 ``total`` 值与operator的默认值不同，这样就可以通过不同按"
+"键组合访问不同设置下operator。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:485
 msgid ""
@@ -620,10 +622,12 @@ msgid ""
 "when assigning keys that they do not conflict with important functionality "
 "within Blender."
 msgstr ""
+"尽管:kbd:`Ctrl-Shift-Space` 不是Blender的默认快捷键，但也很难确保插件之间不会互相"
+"覆盖键位映射。,至少，在指定快捷键时要注意避免与Blender重要功能出现冲突。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:491
 msgid "For API documentation on the functions listed above, see:"
-msgstr ""
+msgstr "上文所用函数的API文档，见："
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:493
 msgid ":class:`blender_api:bpy.types.KeyMaps.new`,"
@@ -643,7 +647,7 @@ msgstr ":class:`blender_api:bpy.types.KeyMapItem`."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:500
 msgid "Bringing it all together"
-msgstr ""
+msgstr "合二为一"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:574
 msgid "In the menu."
@@ -653,7 +657,7 @@ msgstr "菜单选项。"
 msgid ""
 "Run the script (or save it and add it through the Preferences like before) and "
 "it will appear in the menu."
-msgstr ""
+msgstr "运行该脚本(或保存后通过用户设置安装)，操作会出现在菜单选项中。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:581
 msgid "Operator Property."
@@ -663,7 +667,7 @@ msgstr "操作属性。"
 msgid ""
 "After selecting it from the menu, you can choose how many instances of the cube "
 "you want create."
-msgstr ""
+msgstr "从菜单执行操作后，你还可以选择添加的立方体数量。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:588
 msgid ""
@@ -671,6 +675,8 @@ msgid ""
 "While not useful behavior, there's nothing to worry about since add-ons will not "
 "register themselves multiple times when enabled through the user preferences."
 msgstr ""
+"直接运行脚本多次，会添加多个菜单选项。不过这没什么好担心的，因为从用户社区启用插"
+"件是不会出现重复注册的问题的。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:594
 msgid "Conclusions"
@@ -681,18 +687,23 @@ msgid ""
 "Add-ons can encapsulate certain functionality neatly for writing tools to "
 "improve your work-flow or for writing utilities for others to use."
 msgstr ""
+"插件可以整洁地封装特定功能，用于编写工具改善工作流，或者编写功能供其他人使用。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:599
 msgid ""
 "While there are limits to what Python can do within Blender, there is certainly "
 "a lot that can be achieved without having to dive into Blender's C/C++ code."
 msgstr ""
+"尽管Blender中Python可以做的还存在一些限制，不过已经可以实现相当多的功能，使用户免"
+"于钻研Blender的 C/C++ 源码。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:602
 msgid ""
 "The example given in the tutorial is limited, but shows the Blender API used for "
 "common tasks that you can expand on to write your own tools."
 msgstr ""
+"教程里可以给出的范例始终是有限的，不过已经演示了用于常见任务的Blender API，用户可"
+"以借此延伸出自己的工具。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:607
 msgid "Further Reading"
@@ -704,17 +715,21 @@ msgid ""
 "header, if you have specific areas you want to see example code for, this is a "
 "good place to start."
 msgstr ""
+"Blender附带了一些注释过的模板，可以在文本编辑器标题栏找到，如果你需要某个方面的示"
+"例代码，从这里开始是一个不错的选择。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:612
 msgid ""
 "Here are some sites you might like to check on after completing this tutorial."
-msgstr ""
+msgstr "看完上面的教程过后，这里提供了几个你可能用到的网址。"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:614
 msgid ""
 ":ref:`Blender/Python API Overview <blender_api:info_overview>` -- *For more "
 "background details on Blender/Python integration.*"
 msgstr ""
+":ref:`Blender/Python API 概述 <blender_api:info_overview>` -- *关于Blender/Python"
+"整合的更多背景细节。*"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:616
 msgid ""
@@ -722,15 +737,21 @@ msgid ""
 "static/thinkcspy/index.html>`__ -- *Great info for those who are still learning "
 "Python.*"
 msgstr ""
+"`如何像计算机科学家一样思考 <http://interactivepython.org/courselib/static/"
+"thinkcspy/index.html>`__ -- *给哪些仍在学习Python的资料*"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:618
 msgid ""
 "`Blender Development (Wiki) <https://wiki.blender.org/index.php/Dev:Contents>`__ "
 "-- *Blender Development, general information and helpful links.*"
 msgstr ""
+"`Blender开发 (Wiki) <https://wiki.blender.org/index.php/Dev:Contents>`__ -- "
+"*Blender开发、基本信息和有用链接。*"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:620
 msgid ""
 "`Blender Artists (Coding Section) <https://blenderartists.org/forum/forumdisplay."
 "php?47-Coding>`__ -- *forum where people ask Python development questions*"
 msgstr ""
+"`Blender Artists (编程板块) <https://blenderartists.org/forum/forumdisplay.php?"
+"47-Coding>`__ -- *Python开发的问答论坛*"
