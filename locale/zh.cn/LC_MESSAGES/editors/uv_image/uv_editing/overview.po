@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-01 07:39+0800\n"
-"PO-Revision-Date: 2017-07-08 23:25+0800\n"
+"PO-Revision-Date: 2017-07-15 23:50+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,6 +34,10 @@ msgid ""
 "that procedural materials and textures cannot do, and better details "
 "than Vertex Painting can provide."
 msgstr ""
+"*UV* 映射是把二维贴图映射到三维物体最灵活的方法。在此过程中，将三维 (X, "
+"Y & Z) 网格展开为二维 (X & Y ... 或者也叫做, \"U & V\") 图像。图像中的色"
+"彩就这样映射到网格上，显示为网格表面的色彩。使用UV贴图可以做出程序化材质"
+"和贴图无法做到的真实感，可以做出比顶点绘制更好的细节。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:14
 msgid "UVs Explained"
@@ -45,6 +49,8 @@ msgid ""
 "box. The box is a three-dimensional (3D) object, just like the mesh cube "
 "you add to your scene."
 msgstr ""
+"要理解UV映射，最好的类比是裁开纸板箱。箱子是一个三维(3D)物体，就好比场景"
+"里的立方体网格。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:19
 msgid ""
@@ -56,6 +62,9 @@ msgid ""
 "coordinates\" instead of the normal X and Y, which are always used "
 "(along with Z) to refer to the three dimensional space (3D)."
 msgstr ""
+"拿一把剪子沿折线裁开盒子，就可以把它平铺到桌面。俯视桌子上的盒子，把左右"
+"方向称之为U，上下方向称之为V。图像就这样变成了二维(2D)。我们用U和V来代替"
+"常规的X和Y指代“纹理空间坐标”，后者通常(和Z一起)用来表示三维空间(3D)。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:26
 msgid ""
@@ -63,14 +72,16 @@ msgid ""
 "transferred to an (X, Y, Z) location on the box. This is what the "
 "computer does with a 2D image in wrapping it around a 3D object."
 msgstr ""
+"重组盒子之后，UV坐标转换为盒子上的 (X, Y, Z) 坐标。计算机做的其实就是把一"
+"张二维图像包裹到一个3D物体表面。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:33
 msgid "Box being inspected."
-msgstr ""
+msgstr "被检查的盒子。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:37
 msgid "Box mapped flat."
-msgstr ""
+msgstr "平摊开的盒子。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:40
 msgid ""
@@ -82,6 +93,10 @@ msgid ""
 "or shrink those pieces, and then arrange them in some way upon a "
 "photograph that is also lying on that tabletop)."
 msgstr ""
+"在UV展开过程中，需要在UV/图像编辑器中准确告诉Blender如何将物体的表面映射"
+"到一张平摊的二维图像。这一步你可以放手施为(继续上面的类比，想象一下，把展"
+"开的盒子放在桌面，裁成小块，拉伸和/或压缩这些小块，然后就像在桌面上一样已"
+"某种方式在图像中进行排列)。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:48
 msgid "Cartography Example"
@@ -96,18 +111,22 @@ msgid ""
 "compartment aboard the space shuttle. We \"fill in\" spaces toward the "
 "poles, or change the outline of the map in any of several ways:"
 msgstr ""
+"制图者(地图制作人员)和这个问题打了上千年交道。一个制图学(地图制作)的例子"
+"是做一张全世界的投影地图。在制图学里，我们参考地球(一个球体)表面，然后制"
+"作出一张可以折叠到航天飞机仪表盘柜子里的地图。我们用下面几种方法 *填充* "
+"朝向两极的空间，或者改变地图轮廓："
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:61
 msgid "Mercator Projection."
-msgstr ""
+msgstr "墨卡托投影。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:66
 msgid "Mollweide Projection."
-msgstr ""
+msgstr "摩尔威德投影。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:71
 msgid "Albers-equal Projection."
-msgstr ""
+msgstr "Albers等距投影。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:74
 msgid ""
@@ -116,6 +135,8 @@ msgid ""
 "disadvantages. Blender allows the same thing anyway we want to, on the "
 "computer."
 msgstr ""
+"上面都是球面UV映射方法。上百种常用的投影方法都有其优点和缺点。在计算机"
+"中，Blender允许使用我们希望的任意方法。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:78
 msgid ""
@@ -126,6 +147,9 @@ msgid ""
 "states that are closer to the North or the South Pole look smaller on a "
 "flat map than do ones which are close to the Equator.)"
 msgstr ""
+"在更加复杂的模型里(就像上面的全球地图)引出了一个问题，哪些面不能裁开，但"
+"为了摊开而被拉伸。这有助于更简单的UV映射，不过会增加最终映射贴图的变形。"
+"(在一张摊开的地图上，靠近两极的国家或州看起来比靠近赤道的小一些。)"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:87
 msgid "Half-Sphere Example"
@@ -133,19 +157,21 @@ msgstr "半球范例"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:92
 msgid "3D Space (XYZ) versus UV Space (click to enlarge)."
-msgstr ""
+msgstr "3D空间 (XYZ) 与UV空间对照 (单击放大)。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:95
 msgid ""
 "In this image you can easily see that the shape and size of the marked "
 "face in 3D space is different in UV space."
-msgstr ""
+msgstr "在上图中，3D空间和UV空间中的标记面形状和大小不一样。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:98
 msgid ""
 "This difference is caused by the \"stretching\" (technically called "
 "mapping) of the 3D part (XYZ) onto a 2D plane (i.e the UV map)."
 msgstr ""
+"这种差异是3D物件(XYZ)转换为2D平面(UV映射)的\"拉伸\"(技术上称之为映射)导致"
+"的。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:101
 msgid ""
@@ -154,6 +180,8 @@ msgid ""
 "coordinates. (*P* in the image above is an example of how a point on a "
 "3D object might be mapped onto a 2D image.)"
 msgstr ""
+"如果一个三维物体存在UV映射，那么物体上的每一个点的三维坐标都有其对应的UV"
+"坐标。(上图中的 *P* 展示了如何将三维物体上的点映射到二维图像。)"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:107
 msgid "Advantages of UVs"
@@ -172,6 +200,12 @@ msgid ""
 "rugs, stains, and detailed props, artists are able to control every "
 "pixel on the surface using a UV Texture."
 msgstr ""
+"尽管程序纹理 (前面的章节有介绍)很有用—没有重复而且总是 \"适应\" 3D物体—但"
+"对于更加复杂或者自然的物体就有些够用了。例如，使用程序生成头部的皱纹就无"
+"法获得准确的结果。人体头部的皱纹，或者汽车上的划痕并非出现在随机位置，而"
+"是取决于模型的形状和用途。手动绘制的图像，或者从真实世界捕捉的图像可以带"
+"来更多的可控性和真实感。对于细节如书籍封面、挂毯、地毯、污渍和细节道具，"
+"艺术家可以通过UV贴图控制物体表面的每一个像素。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:118
 msgid ""
@@ -182,6 +216,10 @@ msgid ""
 "The operation of generating these UV maps is also called \"unwrap\", "
 "since it is as if the mesh were unfolded onto a 2D plane."
 msgstr ""
+"UV映射描述了贴图的哪一部分关联到模型的哪个多边形。多边形的每一个顶点都被"
+"指定对应一个二维坐标，后者定义了图像的哪一部分被映射至物体。这些二维坐标"
+"被称为UV(与三维中的XYZ形成对比)。生成UV映射的操作也称之为 \"展开\" ，因其"
+"就像把网格展开到一个二维平面上。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:124
 msgid ""
@@ -194,6 +232,11 @@ msgid ""
 "images, created in applications like the Gimp, Photoshop, or your "
 "favorite painting application."
 msgstr ""
+"对于大多数简单的三维模型，Blender提供了简单的自动展开算法。对于更加复杂的"
+"三维模型，常规的立方体、柱体或球体映射通常是不够用的。为了获得均匀和精确"
+"的投影，可以使用缝合线引导UV映射。这可以用于给任意并且复杂的形状(比如人体"
+"头部或者动物)应用贴图。通常这些贴图是使用GIMP、Photoshop或者其他用户喜爱"
+"的绘图软件绘制的图像。"
 
 #: ../../manual/editors/uv_image/uv_editing/overview.rst:131
 msgid "Games"
@@ -205,3 +248,6 @@ msgid ""
 "index>`, or any other game. It is the de facto standard for applying "
 "textures to models; almost any model you find in a game is UV mapped."
 msgstr ""
+"UV映射对于 :doc:`游戏引擎 </game_engine/index>` 或者其他游戏，都是比不可"
+"少的 。这已经是对模型应用贴图的事实标准，几乎游戏里的任何模型都是使用UV映"
+"射的。"
