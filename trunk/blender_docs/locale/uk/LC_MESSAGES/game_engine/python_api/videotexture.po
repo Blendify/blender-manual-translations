@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) : This page is licensed under a CC-BY-SA 4.0 Int. License
-# This file is distributed under the same license as the Blender 2.78 Manual
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Copyright (C) : This page is public domain as CC0
+# This file is distributed under the same license as the Blender Reference
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# urko <urkokul@gmail.com>, 2016, 2017.
 #
-#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: Blender 2.78 Manual 2.78\n"
+msgstr "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-07 23:21-0400\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: urko <urkokul@gmail.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.4.0\n"
+"X-Generator: Poedit 2.0.2\n"
+"Language: uk\n"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:4
 msgid "The VideoTexture module: bge.texture"
@@ -25,14 +26,14 @@ msgstr ""
 #: ../../manual/game_engine/python_api/videotexture.rst:6
 msgid ""
 "The ``bge.texture`` module allows you to manipulate textures during the "
-"game. Several sources for texture are possible: video files, image files,"
-" video capture, memory buffer, camera render or a mix of that. The video "
-"and image files can be loaded from the Internet using a URL instead of a "
-"file name. In addition, you can apply filters on the images before "
-"sending them to the GPU, allowing video effect: blue screen, color band, "
-"gray, normal map. ``bge.texture`` uses FFmpeg to load images and videos. "
-"All the formats and codecs that FFmpeg supports are supported by "
-"``bge.texture``, including but not limited to:"
+"game. Several sources for texture are possible: video files, image files, "
+"video capture, memory buffer, camera render or a mix of that. The video and "
+"image files can be loaded from the Internet using a URL instead of a file "
+"name. In addition, you can apply filters on the images before sending them "
+"to the GPU, allowing video effect: blue screen, color band, gray, normal "
+"map. ``bge.texture`` uses FFmpeg to load images and videos. All the formats "
+"and codecs that FFmpeg supports are supported by ``bge.texture``, including "
+"but not limited to:"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:16
@@ -73,12 +74,12 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:29
 msgid ""
-"The principle is simple: first you identify an existing texture by object"
-" and name, then you create a new texture with dynamic content and swap "
-"the two textures in the GPU. The GE is not aware of the substitution and "
+"The principle is simple: first you identify an existing texture by object "
+"and name, then you create a new texture with dynamic content and swap the "
+"two textures in the GPU. The GE is not aware of the substitution and "
 "continues to display the object as always, except that you are now in "
-"control of the texture. At the end, the new texture is deleted and the "
-"old texture restored."
+"control of the texture. At the end, the new texture is deleted and the old "
+"texture restored."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:35
@@ -93,19 +94,19 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:41
 msgid ""
-"Before you can use the thing ``bge.texture`` module, you must have "
-"objects with textures applied appropriately."
+"Before you can use the thing ``bge.texture`` module, you must have objects "
+"with textures applied appropriately."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:44
 msgid ""
-"Imagine you want to have a television showing live broadcast programs in "
-"the game. You will create a television object and UV-apply a different "
-"texture at the place of the screen, for example ``tv.png``. What this "
-"texture looks like is not important; probably you want to make it dark "
-"gray to simulate power-off state. When the television must be turned on, "
-"you create a dynamic texture from a video capture card and use it instead"
-" of ``tv.png``: the TV screen will come to life."
+"Imagine you want to have a television showing live broadcast programs in the "
+"game. You will create a television object and UV-apply a different texture "
+"at the place of the screen, for example ``tv.png``. What this texture looks "
+"like is not important; probably you want to make it dark gray to simulate "
+"power-off state. When the television must be turned on, you create a dynamic "
+"texture from a video capture card and use it instead of ``tv.png``: the TV "
+"screen will come to life."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:51
@@ -122,8 +123,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:56
 msgid ""
-"Because ``bge.texture`` works at texture level, it is compatible with all"
-" GE fancy texturing features: GLSL, multi-texture, custom shaders, etc."
+"Because ``bge.texture`` works at texture level, it is compatible with all GE "
+"fancy texturing features: GLSL, multi-texture, custom shaders, etc."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:62
@@ -132,23 +133,23 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:64
 msgid ""
-"Let us assume that we have a game object with one or more faces assigned "
-"to a material/image on which we want to display a video."
+"Let us assume that we have a game object with one or more faces assigned to "
+"a material/image on which we want to display a video."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:67
 msgid ""
-"The first step is to create a ``Texture`` object. We will do it in a "
-"script that runs once. It can be at the start of the game, the video is "
-"only played when you refresh the texture; we will come to that later. The"
-" script is normally attached to the object on which we want to display "
-"the video so that we can easily retrieve the object reference::"
+"The first step is to create a ``Texture`` object. We will do it in a script "
+"that runs once. It can be at the start of the game, the video is only played "
+"when you refresh the texture; we will come to that later. The script is "
+"normally attached to the object on which we want to display the video so "
+"that we can easily retrieve the object reference::"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:80
 msgid ""
-"The check on ``video`` attribute is just a trick to make sure we create "
-"the texture only once."
+"The check on ``video`` attribute is just a trick to make sure we create the "
+"texture only once."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:84
@@ -158,19 +159,19 @@ msgstr ""
 #: ../../manual/game_engine/python_api/videotexture.rst:91
 msgid ""
 "``bge.texture.materialID()`` is a handy function to retrieve the object "
-"material that is using ``video.png`` as texture. This method will work "
-"with Blender material and UV texture. In case of UV texture, it grabs the"
-" internal material corresponding to the faces that are assigned to this "
+"material that is using ``video.png`` as texture. This method will work with "
+"Blender material and UV texture. In case of UV texture, it grabs the "
+"internal material corresponding to the faces that are assigned to this "
 "texture. In case of Blender material, it grabs the material that has an "
 "image texture channel matching the name as first channel."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:98
 msgid ""
-"The ``IM`` prefix indicates that we are searching for a texture name but "
-"we can also search for a material by giving the ``MA`` prefix. For "
-"example, if we want to find the material called ``VideoMat`` on this "
-"object, the code becomes::"
+"The ``IM`` prefix indicates that we are searching for a texture name but we "
+"can also search for a material by giving the ``MA`` prefix. For example, if "
+"we want to find the material called ``VideoMat`` on this object, the code "
+"becomes::"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:106
@@ -219,9 +220,9 @@ msgstr ""
 #: ../../manual/game_engine/python_api/videotexture.rst:119
 msgid ""
 "Reference to another ``Texture`` object of which we want to reuse the "
-"texture. If we use this argument, we should not create any source on this"
-" texture and there is no need to refresh it either ; the other "
-"``Texture`` object will provide the texture for both materials/textures."
+"texture. If we use this argument, we should not create any source on this "
+"texture and there is no need to refresh it either: the other ``Texture`` "
+"object will provide the texture for both materials/textures."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:131
@@ -231,11 +232,11 @@ msgstr ""
 #: ../../manual/game_engine/python_api/videotexture.rst:133
 msgid ""
 "Note that we have assigned the object to a ``GameLogic``, ``video`` "
-"attribute that we have created for the occasion. The reason is that the "
+"attribute that we create for the occasion. The reason is that the "
 "``Texture`` object must be persistent across the game scripts. A local "
 "variable would be deleted at the end of the script and the GPU texture "
-"deleted at the same time. ``GameLogic`` module object is a handy place to"
-" store persistent objects."
+"deleted at the same time. ``GameLogic`` module object is a handy place to "
+"store persistent objects."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:141
@@ -244,9 +245,9 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:143
 msgid ""
-"Now we have a ``Texture`` object but it cannot do anything because it "
-"does not have any source. We must create a source object from one of the "
-"possible sources available in ``bge.texture``:"
+"Now we have a ``Texture`` object but it cannot do anything because it does "
+"not have any source. We must create a source object from one of the possible "
+"sources available in ``bge.texture``:"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:149
@@ -281,8 +282,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:160
 msgid ""
-"Part or whole of the viewport (=rendering of the active camera displayed "
-"on screen)."
+"Part or whole of the viewport (=rendering of the active camera displayed on "
+"screen)."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:163
@@ -303,25 +304,24 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:168
 msgid ""
-"In this example we use a simple video file as source. The ``VideoFFmpeg``"
-" constructor takes a file name as argument. To avoid any confusion with "
-"the location of the file, we will use ``GameLogic.expandPath ()`` to "
-"build an absolute file name, assuming the video file is in the same "
-"directory as the blend-file::"
+"In this example we use a simple video file as source. The ``VideoFFmpeg`` "
+"constructor takes a file name as argument. To avoid any confusion with the "
+"location of the file, we will use ``GameLogic.expandPath ()`` to build an "
+"absolute file name, assuming the video file is in the same directory as the "
+"blend-file::"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:178
 msgid ""
-"We create the video source object and assign it to the ``Texture`` object"
-" ``source`` attribute to set the source and make it persistent: as the "
-"``Texture`` object is persistent, the source object will also be "
-"persistent."
+"We create the video source object and assign it to the ``Texture`` object "
+"``source`` attribute to set the source and make it persistent: as the "
+"``Texture`` object is persistent, the source object will also be persistent."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:182
 msgid ""
-"Note that we can change the ``Texture`` source at any time. Suppose we "
-"want to switch between two movies during the game."
+"Note that we can change the ``Texture`` source at any time. Suppose we want "
+"to switch between two movies during the game."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:185
@@ -348,8 +348,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:201
 msgid ""
-"[start,stop] (floats). Set the start and stop time of the video playback,"
-" expressed in seconds from beginning. By default the entire video."
+"[start,stop] (floats). Set the start and stop time of the video playback, "
+"expressed in seconds from beginning. By default the entire video."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:207
@@ -375,10 +375,10 @@ msgstr ""
 #: ../../manual/game_engine/python_api/videotexture.rst:214
 msgid ""
 "(bool). Set to True to activate fast nearest neighbor scaling algorithm. "
-"Texture width and height must be a power of 2. If the video picture size "
-"is not a power of 2, rescaling is required. By default ``bge.texture`` "
-"uses the precise but slow ``gluScaleImage()`` function. Best is to "
-"rescale the video offline so that no scaling is necessary at runtime!"
+"Texture width and height must be a power of 2. If the video picture size is "
+"not a power of 2, rescaling is required. By default ``bge.texture`` uses the "
+"precise but slow ``gluScaleImage()`` function. Best is to rescale the video "
+"offline so that no scaling is necessary at runtime!"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:224
@@ -387,9 +387,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:222
 msgid ""
-"(bool). Set to True if the image must be vertically flipped. FFmpeg "
-"always delivers the image upside down, so this attribute is set to True "
-"by default."
+"(bool). Set to True if the image must be vertically flipped. FFmpeg always "
+"delivers the image upside down, so this attribute is set to True by default."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:230
@@ -398,10 +397,10 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:227
 msgid ""
-"Set additional filter on the video before sending to GPU. Assign to one "
-"of ``bge.texture`` filter object. By default the image is send unchanged "
-"to the GPU. If an alpha channel is present in the video, it is "
-"automatically loaded and sent to the GPU as well."
+"Set additional filter on the video before sending to GPU. Assign to one of "
+"``bge.texture`` filter object. By default the image is send unchanged to the "
+"GPU. If an alpha channel is present in the video, it is automatically loaded "
+"and sent to the GPU as well."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:232
@@ -421,17 +420,17 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:247
 msgid ""
-"Video playback is not a background process: it happens only when we "
-"refresh the texture. So we must have another script that runs on every "
-"frame and calls the ``refresh ()`` method of the ``Texture`` object::"
+"Video playback is not a background process: it happens only when we refresh "
+"the texture. So we must have another script that runs on every frame and "
+"calls the ``refresh ()`` method of the ``Texture`` object::"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:255
 msgid ""
-"If the video source is stopped, ``refresh()`` has no effect. The argument"
-" of ``refresh ()`` is a flag that indicates if the texture should be "
-"recalculated on next refresh. For video playback, you definitively want "
-"to set it to True."
+"If the video source is stopped, ``refresh()`` has no effect. The argument of "
+"``refresh ()`` is a flag that indicates if the texture should be "
+"recalculated on next refresh. For video playback, you definitively want to "
+"set it to True."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:262
@@ -440,8 +439,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:264
 msgid ""
-"Video source classes (such as VideoFFMpeg) have an attribute ``status``. "
-"If video is playing, its value is 2, if it's stopped, it's 3. So in our "
+"Video source classes (such as VideoFFMpeg) have an attribute ``status``. If "
+"video is playing, its value is 2, if it's stopped, it's 3. So in our "
 "example::"
 msgstr ""
 
@@ -451,11 +450,11 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:275
 msgid ""
-"True argument in ``Texture.refresh()`` method simply invalidates the "
-"image buffer after sending it to the GPU so that on next frame, a new "
-"image will be loaded from the source. It has the side effect of making "
-"the image unavailable to Python. You can also do it manually by calling "
-"the ``refresh ()`` method of the source directly."
+"True argument in ``Texture.refresh()`` method simply invalidates the image "
+"buffer after sending it to the GPU so that on next frame, a new image will "
+"be loaded from the source. It has the side effect of making the image "
+"unavailable to Python. You can also do it manually by calling the ``refresh "
+"()`` method of the source directly."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:281
@@ -486,8 +485,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:308
 msgid ""
-"GLSL material can have more than one texture channel, identify the "
-"texture by the texture slot where it is defined, here two::"
+"GLSL material can have more than one texture channel, identify the texture "
+"by the texture slot where it is defined, here two::"
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:315
@@ -496,26 +495,24 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:317
 msgid ""
-"Here is a `demo "
-"<http://www.graphicall.org/ftp/ben2610/VideoTextureDemo2video.blend>`__ "
-"that demonstrates the use of two videos alternatively on the same "
-"texture. Note that it requires an additional video file which is the "
-"*Elephant Dream* teaser. You can replace it with another file that you "
-"want to run the demo."
+"Here is a `demo <http://www.graphicall.org/ftp/ben2610/"
+"VideoTextureDemo2video.blend>`__ that demonstrates the use of two videos "
+"alternatively on the same texture. Note that it requires an additional video "
+"file which is the elephant dream teaser. You can replace with another other "
+"file that you want to run the demo."
 msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:322
 msgid ""
-"Here is a `demo "
-"<http://www.graphicall.org/ftp/ben2610/VideoTextureDemo2videoMix.blend>`__"
-" that demonstrates the use of the ``ImageMix`` source. ``ImageMix`` is a "
-"source that needs sources, which can be any other ``Texture`` source, "
-"like ``VideoFFmpeg``, ``ImageFFmpeg`` or ``ImageRender``. You set them "
-"with ``setSource ()`` and their relative weight with ``setWeight()``. Pay"
-" attention that the weight is a short number between 0 and 255, and that "
-"the sum of all weights should be 255. ``ImageMix`` makes a mix of all the"
-" sources according to their weights. The sources must all have the same "
-"image size (after reduction to the nearest power of two dimension). If "
-"they do not, you will get a Python error on the console."
+"Here is a `demo <http://www.graphicall.org/ftp/ben2610/"
+"VideoTextureDemo2videoMix.blend>`__ that demonstrates the use of the "
+"``ImageMix`` source. ``ImageMix`` is a source that needs sources, which can "
+"be any other ``Texture`` source, like ``VideoFFmpeg``, ``ImageFFmpeg`` or "
+"``ImageRender``. You set them with ``setSource ()`` and their relative "
+"weight with ``setWeight()``. Pay attention that the weight is a short number "
+"between 0 and 255, and that the sum of all weights should be 255. "
+"``ImageMix`` makes a mix of all the sources according to their weights. The "
+"sources must all have the same image size (after reduction to the nearest "
+"power of two dimension). If they do not, you get a Python error on the "
+"console."
 msgstr ""
-
