@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-14 13:47-0400\n"
-"PO-Revision-Date: 2017-07-06 17:22+0800\n"
+"PO-Revision-Date: 2017-07-23 10:49+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,6 +32,10 @@ msgid ""
 "need to do additional mapping or editing. In this fashion, you can use "
 "the UV Texture image to guide additional geometry changes."
 msgstr ""
+"第一步是展开网格。在网格编辑结束，面数足够的情况下，你想要展开UV。如果对"
+"已经展开UV的模型添加面或者细分现有面，Blender会自动为你添加这些新的面，不"
+"过你得做额外的映射或编辑。这种情况下，可以使用UV贴图来引导修改新增的几何"
+"元素。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:14
 msgid ""
@@ -41,10 +45,14 @@ msgid ""
 "uv_editing/layout_management>`, and :doc:`Applying Images to UVs </"
 "editors/uv_image/uv_editing/applying_image>`."
 msgstr ""
+"这一节涵盖了UV映射的技巧。下一节包括 :doc:`编辑UV </editors/uv_image/"
+"uv_editing/layout_editing>`，接下来是 :doc:`管理UV布局 </editors/"
+"uv_image/uv_editing/layout_management>` 的方法和 :doc:`对UV应用图像 </"
+"editors/uv_image/uv_editing/applying_image>`。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:21
 msgid "About UVs"
-msgstr ""
+msgstr "关于UV"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:23
 msgid ""
@@ -52,6 +60,8 @@ msgid ""
 "joining the UVs correspond to edges in the mesh. Each face in the UV map "
 "corresponds to a mesh face."
 msgstr ""
+"UV中的每一点对应网格上的一个顶点。连接UV的线条对应网格上的边。UV上的每个"
+"面对应一个网格面。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:27
 msgid ""
@@ -64,6 +74,10 @@ msgid ""
 "coordinates. These coordinates can be used for rendering or for real-"
 "time OpenGL display as well."
 msgstr ""
+"网格上的每个面都可以有多个UV纹理。每个UV纹理可以指定一个单独的图像。把一"
+"个面展开为UV/图像编辑器的一张UV纹理，网格的每个面都被自动赋予 *四个UV坐"
+"标:* 这些坐标定义了图像或纹理映射至面的方式。它们都是二维坐标，这也是称作"
+"UV的原因，与XYZ坐标加以区别。这些坐标可以用于渲染或实时OpenGL显示。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:35
 msgid ""
@@ -75,18 +89,22 @@ msgid ""
 "in many UV Textures. A face at the hairline of a character might "
 "participate in the facial UV Texture, *and* in the scalp/hair UV Texture."
 msgstr ""
+"在Blender中，可以为一个面关联一个独立的图像。UV坐标定义图像如何映射到面。"
+"然后图像可以用于渲染或实时显示。在3D视图中选择 *面选择* 模式，才能指定图"
+"像或修改活动网格物体对应的UV坐标。这样一个面可以有多张UV贴图。角色前额的"
+"面要用到面部贴图， *同时* 也用到头皮/头发贴图。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:43
 msgid "These are described more fully in the next sections."
-msgstr ""
+msgstr "这些将在下一节详述。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:47
 msgid "Getting Started"
-msgstr ""
+msgstr "入门"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:52
 msgid "UV Editing screen layout."
-msgstr ""
+msgstr "UV编辑屏幕布局。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:55
 msgid ""
@@ -96,6 +114,10 @@ msgid ""
 "Edit Mode in the 3D View editor. This process creates one or more UV "
 "Islands in the :ref:`UV/Image Editor <editors-uv-image-index>`."
 msgstr ""
+"默认情况下，网格是没有UV的。首先你得映射面，然后才能 :doc:`编辑它们 </"
+"editors/uv_image/uv_editing/layout_editing>`。展开模型的过程是在3D视图编"
+"辑器的编辑模式下进行的。该流程会在 :ref:`UV/图像编辑器 <editors-uv-image-"
+"index>` 创建一个或多个UV孤岛。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:60
 msgid ""
@@ -105,16 +127,21 @@ msgid ""
 "you the UV/Image Editor :kbd:`Shift-F10`, and the other area to the 3D "
 "View :kbd:`Shift-F5`."
 msgstr ""
+"开始前，从屏幕顶部的用户设置标题栏选择 :doc:`屏幕布局 </interface/"
+"window_system/screens>` 为 *UV Editing*。屏幕布局变为左侧UV/图像编辑器 :"
+"kbd:`Shift-F10`, 右侧 3D视图 :kbd:`Shift-F5` 。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:65
 msgid ""
 "Enter *Edit Mode*, as all unwrapping is done in Edit Mode. You can be in "
 "vertex, face, or edge selection mode."
 msgstr ""
+"进入 *编辑模式*，因为所有的展开工作都要在编辑模式下。你可以使用顶点、面或"
+"边选择模式。"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:70
 msgid "Workflow"
-msgstr ""
+msgstr "工作流程"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:72
 msgid ""
@@ -123,31 +150,37 @@ msgid ""
 "unwrap. By understanding the meaning behind the options, you will become "
 "more efficient at unwrapping. The process is:"
 msgstr ""
+"展开的过程是很直接的，不过有大量的选项，这些都会造成展开结果的巨大差异。"
+"理解了这些选项背后的含义，可以更高效地展开。流程如下："
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:77
 msgid "Mark Seams if necessary"
-msgstr ""
+msgstr "如有必要，标记缝合线"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:78
 msgid "Select all of the mesh components"
-msgstr ""
+msgstr "选择所有网格元素"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:79
 msgid "Select a UV mapping method from the UV Unwrap menu"
-msgstr ""
+msgstr "从UV展开菜单选择合适的UV映射方法"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:80
 msgid "Adjust the unwrap settings"
-msgstr ""
+msgstr "调整展开设置"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:81
 msgid ""
 "Add a test image to see if there will be any distortion. See :doc:"
 "`Applying Images to UVs </editors/uv_image/uv_editing/applying_image>`"
 msgstr ""
+"添加测试图像，检查畸变。参考 :doc:`应用图像至UV </editors/uv_image/"
+"uv_editing/applying_image>`"
 
 #: ../../manual/editors/uv_image/uv_editing/unwrapping/introduction.rst:83
 msgid ""
 "Adjust UVs in the UV/Image editor. See :doc:`Editing UVs </editors/"
 "uv_image/uv_editing/layout_editing>`"
 msgstr ""
+"在UV/图像编辑器调整UV。参考 :doc:`编辑UV </editors/uv_image/uv_editing/"
+"layout_editing>`"
