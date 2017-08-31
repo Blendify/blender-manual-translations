@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-23 00:13+0800\n"
-"PO-Revision-Date: 2017-08-23 00:22+0800\n"
+"PO-Revision-Date: 2017-08-31 22:48+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -117,62 +117,56 @@ msgid "Normalize Weight"
 msgstr "将权重规格化"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:49
-#, fuzzy
 msgid "Will scale weights value so that they fit tightly into the (0.0 to 1.0) range. (enabled by default)"
-msgstr "缩放权重至适应 (0.0 to 1.0)范围。(自动启用)"
+msgstr "缩放权重至适应 (0.0 to 1.0)范围。(默认启用)"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:51
-#, fuzzy
 msgid ""
 "All this means is that with a pressure tablet, you can directly control the radius and weight of the "
 "created curve, which can affect e.g. the width of an extrusion, or the size of an object through a "
 "*Follow Path* Constraint or *Curve* Modifier!"
 msgstr ""
 "这意味着用户可以使用压力绘图板直接控制转换后曲线的半径和权重，借之影响挤出宽度，或者通过 *跟踪路径* 约束或"
-"者 *曲线* 修改器影响物体尺寸。"
+"者 *曲线* 修改器影响物体尺寸！"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:60
 msgid "Link Strokes"
 msgstr "连接笔触"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:57
-#, fuzzy
 msgid ""
 "Will create a single spline, i.e. curve element. (enabled by default) from all strokes in active grease "
 "pencil layer. This is especially useful if you want to use the curve as a path. All the strokes are "
 "linked in the curve by \"zero weights/radii\" sections."
 msgstr ""
-"从活动蜡笔图层所有笔画，创建单根样条曲线，或者是曲线元素。默认启用。这在用户需要将曲线当做路径使用时尤其有"
-"用。所有笔画之间使用 \"零权重/笔画\" 线段连接。"
+"从活动蜡笔图层所有笔画，创建单根样条曲线，即曲线元素，默认启用。这在用户需要将曲线当做路径使用时尤其有用。"
+"所有笔画之间使用 \"零权重/笔画\" 线段连接。"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:63
 msgid "Timing"
 msgstr "时序"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:65
-#, fuzzy
 msgid ""
 "Grease pencil stores \"dynamic\" data, i.e. how fast strokes are drawn. When converting to curve, this "
 "data can be used to create an *Evaluate Time* F-Curve (in other words, a path animation), that can be "
 "used e.g. to control another object's position along that curve (*Follow Path* constraint, or, through a "
 "driver, *Curve* modifier). So this allows you to reproduce your drawing movements."
 msgstr ""
-"蜡笔保存 *动态* 数据，亦即笔画的绘制速度。当转换为曲线后，该数据可用于创建 *计算时间* 的F曲线(换句话说，路"
-"径动画)，可用在控制其他物体沿曲线的位置(*跟随路径* 约束，或驱动控制的 *曲线* 修改器。)。这样，用户可以再现"
+"蜡笔保存 \"动态\" 数据，亦即笔画的绘制速度。当转换为曲线后，该数据可用于创建 *计算时间* 的F曲线(换句话说，"
+"路径动画)，可用在控制其他物体沿曲线的位置(*跟随路径* 约束，或驱动控制的 *曲线* 修改器)。这样，用户可以再现"
 "绘制动作。"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:74
-#, fuzzy
 msgid ""
 "All those \"timing\" options need *Link Stroke* to be enabled, otherwise they would not make much sense!"
-msgstr "所有\"时序\" 选项都需要启用 *连接笔触* ，否则这些都没有意义。"
+msgstr "所有\"时序\" 选项都需要启用 *连接笔触* ，否则这些都没有意义！"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:91
 msgid "Timing Mode"
 msgstr "时序模式"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:79
-#, fuzzy
 msgid "This control lets you choose how timing data is used."
 msgstr "用于选择如何使用时序数据。"
 
@@ -221,7 +215,7 @@ msgstr "帧范围"
 msgid ""
 "The \"length\" of the created path animation, in frames. In other words, the highest value of *Evaluation "
 "Time*."
-msgstr ""
+msgstr "生成的路径动画 *长度*，单位帧。换句话说，就是 *解算时间* 最大值。"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:95
 msgid "Start Frame"
@@ -229,11 +223,11 @@ msgstr "起始帧"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:96
 msgid "The starting frame of the path animation."
-msgstr ""
+msgstr "路径动画的起始帧"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:97
 msgid "Realtime"
-msgstr ""
+msgstr "实时"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:98
 msgid ""
@@ -248,7 +242,7 @@ msgstr "结束帧"
 msgid ""
 "When *Realtime* is disabled, this defines the end frame of the path animation. This means that the "
 "drawing timing will be scaled up or down to fit into the specified range."
-msgstr ""
+msgstr "当禁用 *实时* 时，用于定义路径动画的结束帧。这意味着绘制时间将缩放至匹配指定范围。"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:106
 msgid "Gap Duration"
@@ -267,11 +261,11 @@ msgstr "示例"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:111
 msgid "Here is a simple \"hand writing\" video created with curves converted from sketch data:"
-msgstr "下面是使用草图数据转换为曲线方法制作的简单 *手写* 视频。"
+msgstr "下面是使用草图数据转换为曲线方法制作的简单 *手写* 视频："
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:119
 msgid "A video can be found at https://www.youtube.com/watch?v=VwWEXrnQAFI"
-msgstr "在 https://www.youtube.com/watch?v=VwWEXrnQAFI 可以找到视频。"
+msgstr "在 https://www.youtube.com/watch?v=VwWEXrnQAFI 可以找到视频"
 
 #: ../../manual/interface/grease_pencil/convert_to_geometry.rst:122
 msgid ""
