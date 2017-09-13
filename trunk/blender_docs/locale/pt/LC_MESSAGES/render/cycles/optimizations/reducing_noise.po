@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-24 21:03-0400\n"
+"POT-Creation-Date: 2017-09-13 14:59+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.5.0\n"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:4
 msgid "Reducing Noise"
@@ -46,7 +46,7 @@ msgid ""
 "to e.g. bidirectional path tracing."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:26
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:25
 msgid ""
 "We do the inverse of what reality does, tracing light rays from the "
 "camera into the scene and onto lights, rather than from the light sources"
@@ -58,33 +58,52 @@ msgid ""
 " as Lamp)."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:36
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:35
 msgid ""
 "For more details, see the :doc:`Light Paths "
 "</render/cycles/settings/scene/render/light_paths>` and :doc:`Integrator "
 "</render/cycles/settings/scene/render/integrator>` documentation."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:42
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:41
 msgid "Where Noise Comes From"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:44
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:43
 msgid ""
-"To understand where noise can come from, take for example this scene. "
-"When we trace a light ray into the specified location, this is what the "
-"diffuse shader \"sees\". To find the light that is reflected from this "
-"surface, we need to find the average color from all these pixels. Note "
-"the glossy highlight on the sphere, and the bright spot the lamp casts on"
-" the nearby wall. These hotspots are 100x brighter than other parts of "
-"the image and will contribute significantly to the lighting of this "
-"pixel."
+"To understand where noise can come from, take for example the scene "
+"below. When we trace a light ray into the location marked by the white "
+"circle on a red dot, the second image below gives an impression of what "
+"the diffuse shader \"sees\"."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:64
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:47
 msgid ""
-"The lamp is a known light source, so it will not be too hard to find, but"
-" the glossy highlight(s) that it causes are a different matter. The best "
+"To find the light that is reflected from this surface, we need to find "
+"the average color from all these pixels. Note the glossy highlight on the"
+" sphere, and the bright spot the lamp casts on the nearby wall. These "
+"hotspots are 100x brighter than other parts of the image and will "
+"contribute significantly to the lighting of this pixel."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:58
+msgid "The Scene."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:63
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:95
+msgid "What the Shader sees."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:68
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:100
+msgid "The detected Highlights."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:71
+msgid ""
+"The lamp is a known light source, so its location is already known, but "
+"the glossy highlight(s) that it causes are a different matter. The best "
 "we can do with path tracing is to distribute light rays randomly over the"
 " hemisphere, hoping to find all the important bright spots. If for some "
 "pixels we miss some bright spot, but we do find it for another, that "
@@ -92,31 +111,50 @@ msgid ""
 "that we cover all the important sources of light."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:71
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:78
 msgid ""
 "With some tricks we can reduce this noise. If we blur the bright spots, "
 "they become bigger and less intense, making them easier to find and less "
 "noisy. This will not give the same exact result, but often it's close "
 "enough when viewed through a diffuse or soft glossy reflection. Below is "
-"an example of using Filter Glossy and Smooth Light Falloff."
+"an example of using :ref:`Filter Glossy <render-cycles-integrator-filter-"
+"glossy>` and :doc:`Light Falloff "
+"</render/cycles/nodes/types/color/light_falloff>`."
 msgstr ""
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:90
+msgid "Using Glossy Filter & Light Falloff."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:104
 msgid "Bounces"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:92
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:106
 msgid ""
 "In reality light will bounce a huge number of times due to the speed of "
 "light being very high. In practice more bounces will introduce more "
 "noise, and it might be good to use something like the Limited Global "
-"Illumination preset that uses *fewer* bounces for different shader types."
-" Diffuse surfaces typically can get away with fewer bounces, while glossy"
-" surfaces need a few more, and transmission shaders such as glass usually"
-" need the most."
+"Illumination preset in the :ref:`Light Paths <render-cycles-integrator-"
+"light-paths>` Section that uses *fewer* bounces for different shader "
+"types. Diffuse surfaces typically can get away with fewer bounces, while "
+"glossy surfaces need a few more, and transmission shaders such as glass "
+"usually need the most."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:111
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:119
+msgid "No bounces."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:124
+msgid "Two bounces at max."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:129
+msgid "Four bounces at max."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:131
 msgid ""
 "Also important is to use shader colors that do **not** have components of"
 " value 1.0 or values near that; try to keep the maximum value to 0.8 or "
@@ -128,11 +166,11 @@ msgid ""
 "off each surface."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:121
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:141
 msgid "Caustics and Filter Glossy"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:123
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:143
 msgid ""
 "Caustics are a well-known source of noise, causing fireflies. They happen"
 " because the renderer has difficulty finding specular highlights viewed "
@@ -142,7 +180,19 @@ msgid ""
 " caustics by default."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:142
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:155
+msgid "Default Settings."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:160
+msgid "Caustics Disabled."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:165
+msgid "Filter Glossy greater than zero."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:167
 msgid ""
 "However, using No Caustics will result in missing light, and it still "
 "does not cover the case where a sharp glossy reflection is viewed through"
@@ -152,17 +202,17 @@ msgid ""
 "it easier to find, by increasing the shader Roughness."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:148
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:173
 msgid ""
 "The above images show default settings, no caustics, and filter glossy "
 "set to 1.0."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:152
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:177
 msgid "Light Falloff"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:154
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:179
 msgid ""
 "In reality light in a vacuum will always fall off at a rate of "
 "1/(distance^2). However, as distance goes to zero, this value goes to "
@@ -172,7 +222,15 @@ msgid ""
 "is a typical recipe for fireflies."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:170
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:191
+msgid "Hard Falloff."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:196
+msgid "Soft Falloff."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:198
 msgid ""
 "To reduce this problem, the :doc:`Light Falloff "
 "</render/cycles/nodes/types/color/light_falloff>` node has a *Smooth "
@@ -181,46 +239,56 @@ msgid ""
 "smooth value 1.0."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:176
-msgid "Sample as Lamp"
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:204
+msgid "Multiple Importance Sampling"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:178
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:206
 msgid ""
-"Materials with emission shaders can be configured to be *sampled as lamp*"
-" (:doc:`/render/cycles/materials/settings`). This means that they will "
-"get rays sent directly towards them, rather than ending up there based on"
-" rays randomly bouncing around. For very bright mesh light sources, this "
-"can reduce noise significantly. However, when the emission is not "
-"particularly bright, this will take samples away from other brighter "
-"light sources for which it is important to find them this way."
+"Materials with emission shaders can be configured to use Multiple "
+"Importance Sampling (:doc:`/render/cycles/materials/settings`). This "
+"means that they will get rays sent directly towards them, rather than "
+"ending up there based on rays randomly bouncing around. For very bright "
+"mesh light sources, this can reduce noise significantly. However, when "
+"the emission is not particularly bright, this will take samples away from"
+" other brighter light sources for which it is important to find them this"
+" way."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:186
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:214
 msgid ""
 "The optimal setting here is difficult to guess; it may be a matter of "
 "trial and error, but often it is clear that a somewhat glowing object may"
 " be only contributing light locally, while a mesh light used as a lamp "
 "would need this option enabled. Here is an example where the emissive "
 "spheres contribute little to the lighting, and the image renders with "
-"slightly less noise by disabling Sample as Lamp on them."
+"slightly less noise by disabling Multiple Importance on them."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:201
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:225
+msgid "Multiple Importance off."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:230
+msgid "Multiple Importance on."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:232
 msgid ""
-"The world background also has a *Sample as Lamp* (:ref:`render-cycles-"
-"integrator-world-settings`) option. This is mostly useful for environment"
-" maps that have small bright spots in them, rather than being smooth. "
-"This option will then, in a preprocess, determine the bright spots, and "
-"send light rays directly towards them. Again, enabling this option may "
-"take samples away from more important light sources if it is not needed."
+"The world background also has a *Multiple Importance* (:ref:`render-"
+"cycles-integrator-world-settings`) option. This is mostly useful for "
+"environment maps that have small bright spots in them, rather than being "
+"smooth. This option will then, in a preprocess, determine the bright "
+"spots, and send light rays directly towards them. Again, enabling this "
+"option may take samples away from more important light sources if it is "
+"not needed."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:210
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:241
 msgid "Glass and Transparent Shadows"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:212
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:243
 msgid ""
 "With caustics disabled, glass will miss shadows, and with filter glossy "
 "they might be too soft. We can make a glass shader that will use a Glass "
@@ -231,22 +299,30 @@ msgid ""
 " determine when to use which of the two shaders."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:222
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:253
 msgid "Optimized glass shader."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:225
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:256
 msgid ""
 "Above we can see the node setup used for the glass transparency trick; on"
 " the left the render has too much shadow due to missing caustics, and on "
 "the right the render with the trick."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:239
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:265
+msgid "Default Glas BSDF."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:270
+msgid "Optimized Glass Shader."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:274
 msgid "Light Portals"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:241
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:276
 msgid ""
 "When rendering a daylight indoor scene where most of the light is coming "
 "in through a window or door opening, it is difficult for the integrator "
@@ -256,11 +332,11 @@ msgid ""
 "match that of the opening that you are trying to fill."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:252
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:287
 msgid "Denoising"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:254
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:289
 msgid ""
 "Even with all the settings described above there will always end up being"
 " some render noise no matter how many samples you use. To fix this there "
@@ -270,26 +346,26 @@ msgid ""
 "Layers* tab of the Properties editor."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:260
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:295
 msgid ""
 "Below is an example render by `The Pixelary "
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
 "tested>`__."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:266
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:302
 msgid "Example render before denoising."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:270
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:306
 msgid "Example render after denoising."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:276
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:312
 msgid "Clamp Fireflies"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:278
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:314
 msgid ""
 "Ideally with all the previous tricks, fireflies would be eliminated, but "
 "they could still happen. For that, the *intensity* that any individual "
@@ -298,12 +374,20 @@ msgid ""
 "clamp-samples>`."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:282
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:318
 msgid ""
 "If set too low this can cause missing highlights in the image, which "
 "might be useful to preserve for camera effects such as bloom or glare. To"
 " mitigate this conundrum it's often useful to clamp only indirect "
 "bounces, leaving highlights directly visible to the camera untouched."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:328
+msgid "No Clamp (0)."
+msgstr ""
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:333
+msgid "With Clamp set to 4."
 msgstr ""
 
 #~ msgid ""
@@ -317,5 +401,122 @@ msgstr ""
 #~ " Paths </render/cycles/settings/light_paths>` and "
 #~ ":doc:`Integrator </render/cycles/settings/integrator>` "
 #~ "documentation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To understand where noise can come "
+#~ "from, take for example this scene. "
+#~ "When we trace a light ray into "
+#~ "the specified location, this is what "
+#~ "the diffuse shader \"sees\". To find "
+#~ "the light that is reflected from "
+#~ "this surface, we need to find the"
+#~ " average color from all these pixels."
+#~ " Note the glossy highlight on the "
+#~ "sphere, and the bright spot the "
+#~ "lamp casts on the nearby wall. "
+#~ "These hotspots are 100x brighter than"
+#~ " other parts of the image and "
+#~ "will contribute significantly to the "
+#~ "lighting of this pixel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The lamp is a known light source,"
+#~ " so it will not be too hard "
+#~ "to find, but the glossy highlight(s) "
+#~ "that it causes are a different "
+#~ "matter. The best we can do with"
+#~ " path tracing is to distribute light"
+#~ " rays randomly over the hemisphere, "
+#~ "hoping to find all the important "
+#~ "bright spots. If for some pixels "
+#~ "we miss some bright spot, but we"
+#~ " do find it for another, that "
+#~ "results in noise. The more samples "
+#~ "we take, the higher the probability "
+#~ "that we cover all the important "
+#~ "sources of light."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With some tricks we can reduce "
+#~ "this noise. If we blur the bright"
+#~ " spots, they become bigger and less"
+#~ " intense, making them easier to find"
+#~ " and less noisy. This will not "
+#~ "give the same exact result, but "
+#~ "often it's close enough when viewed "
+#~ "through a diffuse or soft glossy "
+#~ "reflection. Below is an example of "
+#~ "using Filter Glossy and Smooth Light "
+#~ "Falloff."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In reality light will bounce a "
+#~ "huge number of times due to the"
+#~ " speed of light being very high. "
+#~ "In practice more bounces will introduce"
+#~ " more noise, and it might be "
+#~ "good to use something like the "
+#~ "Limited Global Illumination preset that "
+#~ "uses *fewer* bounces for different "
+#~ "shader types. Diffuse surfaces typically "
+#~ "can get away with fewer bounces, "
+#~ "while glossy surfaces need a few "
+#~ "more, and transmission shaders such as"
+#~ " glass usually need the most."
+#~ msgstr ""
+
+#~ msgid "Sample as Lamp"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Materials with emission shaders can be"
+#~ " configured to be *sampled as lamp*"
+#~ " (:doc:`/render/cycles/materials/settings`). This means"
+#~ " that they will get rays sent "
+#~ "directly towards them, rather than "
+#~ "ending up there based on rays "
+#~ "randomly bouncing around. For very "
+#~ "bright mesh light sources, this can "
+#~ "reduce noise significantly. However, when "
+#~ "the emission is not particularly bright,"
+#~ " this will take samples away from "
+#~ "other brighter light sources for which"
+#~ " it is important to find them "
+#~ "this way."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The optimal setting here is difficult"
+#~ " to guess; it may be a matter"
+#~ " of trial and error, but often "
+#~ "it is clear that a somewhat "
+#~ "glowing object may be only contributing"
+#~ " light locally, while a mesh light"
+#~ " used as a lamp would need this"
+#~ " option enabled. Here is an example"
+#~ " where the emissive spheres contribute "
+#~ "little to the lighting, and the "
+#~ "image renders with slightly less noise"
+#~ " by disabling Sample as Lamp on "
+#~ "them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The world background also has a "
+#~ "*Sample as Lamp* (:ref:`render-cycles-"
+#~ "integrator-world-settings`) option. This is"
+#~ " mostly useful for environment maps "
+#~ "that have small bright spots in "
+#~ "them, rather than being smooth. This "
+#~ "option will then, in a preprocess, "
+#~ "determine the bright spots, and send "
+#~ "light rays directly towards them. Again,"
+#~ " enabling this option may take "
+#~ "samples away from more important light"
+#~ " sources if it is not needed."
 #~ msgstr ""
 
