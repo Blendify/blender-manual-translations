@@ -6,11 +6,10 @@
 # Artem Kuzmenko <mindfreeartist@gmail.com>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: Blender 2.79 Manual 2.79\n"
+msgstr "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-20 14:18+0300\n"
-"PO-Revision-Date: 2017-09-27 18:45+0300\n"
+"PO-Revision-Date: 2017-09-28 11:02+0300\n"
 "Last-Translator: Artem Kuzmenko <mindfreeartist@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,12 +28,12 @@ msgid ""
 "With meshes, everything is built from three basic structures: "
 "*Vertices*, *Edges* and *Faces*."
 msgstr ""
-"У сітках (meshes) все побудовано з трьох базових структур: *Вершини "
-"(Vertices)*, *Ребра (Edges)* та *Полігони (Faces)*."
+"У полігональних сітках (meshes) все побудовано з трьох базових структур: "
+"*Вершини (Vertices)*, *Ребра (Edges)* та *Грані (Faces)*."
 
 #: ../../manual/modeling/meshes/structure.rst:11
 msgid "Example of mesh structure."
-msgstr "Приклад структури сітки."
+msgstr "Приклад структури полігональної сітки."
 
 #: ../../manual/modeling/meshes/structure.rst:17
 msgid "Vertices"
@@ -46,9 +45,9 @@ msgid ""
 "or position in 3D space. The vertices (the plural form of vertex) are "
 "stored in an array of coordinates."
 msgstr ""
-"Найпростішою частиною сітки є вершина (vertex ), яка є єдиною точкою або "
-"положенням у тривимірному просторі. Вершини зберігаються в масиві "
-"координат."
+"Найпростішою частиною полігональної сітки є вершина (vertex ), яка є "
+"єдиною точкою або положенням у тривимірному просторі. Вершини "
+"зберігаються в масиві координат."
 
 #: ../../manual/modeling/meshes/structure.rst:22
 msgid ""
@@ -89,9 +88,9 @@ msgid ""
 "faces."
 msgstr ""
 "Ребро завжди з'єднує дві вершини прямою лінією. Ребра - це \"дроти\", "
-"які ви бачите, коли ви дивитеся на сітку в режимі відображення каркаса "
+"які ви бачите, коли дивитеся на сітку в режимі відображення каркаса "
 "(wireframe view). Вони зазвичай невидимі при візуалізації зображення. "
-"Вони використовуються для побудови граней (faces)."
+"Використовуються для побудови граней (faces)."
 
 #: ../../manual/modeling/meshes/structure.rst:46
 msgid "Faces"
@@ -104,9 +103,8 @@ msgid ""
 "it will simply be transparent or non-existent in the rendered image."
 msgstr ""
 "Грані використовуються для побудови фактичної поверхні об'єкта. Це те, "
-"що ви бачите, коли ви візуалізуєте сітку. Якщо ця область не містить "
-"граней, вона просто буде прозорою або не існуючою у візуалізованому "
-"зображенні."
+"що ви бачите, коли візуалізуєте сітку. Якщо область не містить граней, "
+"вона просто буде прозорою або не існуючою у візуалізованому зображенні."
 
 #: ../../manual/modeling/meshes/structure.rst:53
 msgid ""
@@ -126,15 +124,15 @@ msgid ""
 msgstr ""
 "Трикутники завжди плоскі, тому їх легко прорахувати. З іншого боку, "
 "чотирикутники \"добре деформуються\" і тому є кращими для анімації та "
-"моделювання з підрозбиттям поверхні."
+"моделювання з підрозбиттям поверхні (subdivision modeling)."
 
 #: ../../manual/modeling/meshes/structure.rst:59
 msgid ""
 "While you could build a cube with triangular faces, it would just look "
 "more confusing in *Edit Mode*."
 msgstr ""
-"Хоча ви і можете побудувати куб з трикутними гранями, це просто виглядає "
-"більш заплутаним у *Режимі редагування (Edit Mode)*."
+"Хоча ви і можете побудувати куб з трикутними гранями, але у *Режимі "
+"редагування (Edit Mode)* це просто буде виглядати більш заплутано."
 
 #: ../../manual/modeling/meshes/structure.rst:64
 msgid "Loops"
@@ -142,7 +140,7 @@ msgstr "Петлі (Loops)"
 
 #: ../../manual/modeling/meshes/structure.rst:70
 msgid "Edge and Face Loops."
-msgstr "Петлі Ребер та Граней (Edge and Face Loops)."
+msgstr "Петлі Ребер та Граней (Edge and Face Loops)"
 
 #: ../../manual/modeling/meshes/structure.rst:73
 msgid ""
@@ -212,12 +210,12 @@ msgid ""
 "build models with relatively few vertices that look very natural when "
 "used as subdivision surfaces and deform very well in animation."
 msgstr ""
-"Петлі ребер (Edge Loops) є важливим поняттям, особливо в органічному "
-"(підповерхневому (subsurface)) моделюванні та персонажній анімації. При "
-"правильному використанні, вони дозволяють будувати моделі з відносно "
-"невеликою кількістю вершин, які виглядають дуже природно, коли "
-"використовуються як поверхні підрозділу (subdivision surfaces) та дуже "
-"добре деформуються при анімації."
+"Петлі ребер (Edge Loops) є важливим поняттям, особливо в органічному (з "
+"підрозбиттям поверхні (subdivision surface)) моделюванні та персонажній "
+"анімації. При правильному використанні, вони дозволяють будувати моделі "
+"з відносно невеликою кількістю вершин, які виглядають дуже природно, "
+"коли використовуються як поверхні підрозділу (subdivision surfaces) та "
+"дуже добре деформуються при анімації."
 
 #: ../../manual/modeling/meshes/structure.rst:107
 msgid ""
