@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the Blender 2.78 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# phan <phahoatho@gmail.com>, 2017.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-02 17:35-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-08-18 23:03+0200\n"
+"Last-Translator: phan <phahoatho@gmail.com>\n"
+"Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../../manual/pipeline/alembic.rst:5
 msgid "Alembic"
@@ -24,68 +26,88 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:7
 msgid "From the `Alembic home page <https://www.alembic.io/>`_:"
-msgstr ""
+msgstr "De la `home page d'Alembic <https://www.alembic.io/>`_:"
 
 #: ../../manual/pipeline/alembic.rst:9
+#, fuzzy
 msgid ""
-"Alembic is an open computer graphics interchange framework. Alembic "
-"distills complex, animated scenes into a non-procedural, application-"
-"independent set of baked geometric results. This 'distillation' of scenes"
-" into baked geometry is exactly analogous to the distillation of lighting"
-" and rendering scenes into rendered image data."
+"Alembic is an open computer graphics interchange framework. Alembic distills "
+"complex, animated scenes into a non-procedural, application-independent set "
+"of baked geometric results. This 'distillation' of scenes into baked "
+"geometry is exactly analogous to the distillation of lighting and rendering "
+"scenes into rendered image data."
 msgstr ""
+"Alembic est un système d'échange infographique. Alembic en un ensemble non "
+"procédural, indépendant des applications de résultats géométriques "
+"précalculés. Cette de scènes en géométrie précalculée est exactement "
+"analogue à la de l'éclairage et le rendu de scènes en données d'image "
+"rendues. "
 
 #: ../../manual/pipeline/alembic.rst:14
 msgid ""
-"Alembic is focused on efficiently storing the computed results of complex"
-" procedural geometric constructions. It is very specifically NOT "
-"concerned with storing the complex dependency graph of procedural tools "
-"used to create the computed results. For example, Alembic will "
-"efficiently store the animated vertex positions and animated transforms "
-"that result from an arbitrarily complex animation and simulation process "
-"which could involve enveloping, corrective shapes, volume-preserving "
-"simulations, cloth and flesh simulations, and so on. Alembic will not "
-"attempt to store a representation of the network of computations (rigs, "
-"basically) which are required to produce the final, animated vertex "
-"positions and animated transforms."
+"Alembic is focused on efficiently storing the computed results of complex "
+"procedural geometric constructions. It is very specifically NOT concerned "
+"with storing the complex dependency graph of procedural tools used to create "
+"the computed results. For example, Alembic will efficiently store the "
+"animated vertex positions and animated transforms that result from an "
+"arbitrarily complex animation and simulation process which could involve "
+"enveloping, corrective shapes, volume-preserving simulations, cloth and "
+"flesh simulations, and so on. Alembic will not attempt to store a "
+"representation of the network of computations (rigs, basically) which are "
+"required to produce the final, animated vertex positions and animated "
+"transforms."
 msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:23
 msgid ""
-"TL;DR: Alembic can be used to write an animated mesh to disk, and read it"
-" back quickly & efficiently. This means that a mesh can be animated with "
-"a very CPU-heavy rig, 'baked' to an Alembic file, and loaded into the "
-"shot file for shading and lighting with only moderate CPU usage."
+"TL;DR: Alembic can be used to write an animated mesh to disk, and read it "
+"back quickly & efficiently. This means that a mesh can be animated with a "
+"very CPU-heavy rig, 'baked' to an Alembic file, and loaded into the shot "
+"file for shading and lighting with only moderate CPU usage."
 msgstr ""
+"TL;DR: Alembic peut être utilisé pour écrire un maillage animé sur disque, "
+"et le lire rapidement et efficacement. Ce qui signifie qu'un maillage peut "
+"être animé avec un rig très lourd en charge CPU, \"précalculé\" dans un "
+"fichier Alembic, et chargé dans le fichier pour l'ombrage et l'éclairage "
+"avec seulement un usage CPU modéré."
 
 #: ../../manual/pipeline/alembic.rst:27
 msgid ""
-"Support for the Alembic file format was introduced in `Blender 2.78 "
-"<https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.78>`_."
+"Support for the Alembic file format was introduced in `Blender 2.78 <https://"
+"wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.78>`_."
 msgstr ""
+"Prise en charge du format de fichier Alembic a été introduit dans `Blender "
+"2.78 <https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.78>`_."
 
 #: ../../manual/pipeline/alembic.rst:30
 msgid ""
-"Due to the Open Source nature of the Alembic standard, as well as the C++"
-" library implementing that standard, **Blender can be used in a hybrid "
-"pipeline**. For example, other software, such as Houdini or Maya, can "
-"export files to Alembic, which can then be loaded, shaded, and rendered "
-"in Blender. It is also possible to animate characters (or other models) "
-"in Blender, export to Alembic, and load those files into other software "
-"for further processing."
+"Due to the Open Source nature of the Alembic standard, as well as the C++ "
+"library implementing that standard, **Blender can be used in a hybrid "
+"pipeline**. For example, other software, such as Houdini or Maya, can export "
+"files to Alembic, which can then be loaded, shaded, and rendered in Blender. "
+"It is also possible to animate characters (or other models) in Blender, "
+"export to Alembic, and load those files into other software for further "
+"processing."
 msgstr ""
+"Du fait de la nature Open Source du standard Alembic, aussi bien la "
+"bibliothèque C++ implémentant ce standard, **Blender peut être utilisé dans "
+"un pipeline hybride**. PAr exemple, d'autres logiciels, tels que Houdini ou "
+"Maya, peuvent exporter des fichiers vers Alembic, qui peuvent alors être "
+"chargés, ombrés et rendus dans Blender, C'est aussi possible d'animer des "
+"personnages (ou autres modèles) dans Blender, d'exporter vers ALembic. et de "
+"charger ses fichiers dans d'autres logiciels pour un traitement ultérieur.  "
 
 #: ../../manual/pipeline/alembic.rst:37
 msgid "Exporting to Alembic files"
-msgstr ""
+msgstr "Export vers Alembic"
 
 #: ../../manual/pipeline/alembic.rst:39
 msgid "This section describes the effect of the different export options."
-msgstr ""
+msgstr "Cette section décrit l'effet des différentes options d'export."
 
 #: ../../manual/pipeline/alembic.rst:43
 msgid "Alembic Export options."
-msgstr ""
+msgstr "Options d'export d'Alembic."
 
 #: ../../manual/pipeline/alembic.rst:46
 msgid "Manual Transform"
@@ -97,9 +119,11 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:49
 msgid ""
-"This sets the global scale of the Alembic file. Keep it at the default "
-"value of 1.0 to use Blender's units."
+"This sets the global scale of the Alembic file. Keep it at the default value "
+"of 1.0 to use Blender's units."
 msgstr ""
+"Cette option définit l'échelle globale du fichier Alembic. Gardez-la à sa "
+"valeur par défaut de 1.0 pour utiliser les unités"
 
 #: ../../manual/pipeline/alembic.rst:53
 msgid "Scene Options"
@@ -107,33 +131,47 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:55
 msgid "Start Frame and End Frame"
-msgstr ""
+msgstr "Start Frame et End Frame"
 
 #: ../../manual/pipeline/alembic.rst:56
 msgid ""
 "Sets the frame range to export to Alembic. This defaults to the current "
 "scene frame range."
 msgstr ""
+"Définit l'intervalle de frames à exporter vers Alembic. Par défaut c'est "
+"l'intervalle de frames de la scène courante."
 
 #: ../../manual/pipeline/alembic.rst:65
 msgid "Sub-frame sampling: Transform & Geometry Samples, Shutter Open & Close"
 msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:58
+#, fuzzy
 msgid ""
 "These options control the sub-frame sampling of animations. Transform "
-"Samples sets the number of times per frame at which animated "
-"transformations are sampled and written to Alembic. Geometry Samples sets"
-" the same, but then for animated geometry. Shutter Open & Close define "
-"the interval [open, close) over which those samples are taken. The valid "
-"range is -1 to 1, where -1 indicates the previous frame, 0 indicates the "
-"current frame, and 1 indicates the next frame. For example, if "
-"information for detailed mesh motion blur is desired, some subframes "
-"around the current frame can be written to Alembic by using a sample "
-"count of 5, Shutter Open at -0.25 and Shutter Close at 0.25. This mimicks"
-" a \"180 degree\" shutter, opening 90 degrees before the frame and "
-"closing 90 degrees after the frame."
+"Samples sets the number of times per frame at which animated transformations "
+"are sampled and written to Alembic. Geometry Samples sets the same, but then "
+"for animated geometry. Shutter Open & Close define the interval [open, "
+"close) over which those samples are taken. The valid range is -1 to 1, where "
+"-1 indicates the previous frame, 0 indicates the current frame, and 1 "
+"indicates the next frame. For example, if information for detailed mesh "
+"motion blur is desired, some subframes around the current frame can be "
+"written to Alembic by using a sample count of 5, Shutter Open at -0.25 and "
+"Shutter Close at 0.25. This mimicks a \"180 degree\" shutter, opening 90 "
+"degrees before the frame and closing 90 degrees after the frame."
 msgstr ""
+"Ces options contrôlent l'échantillonnage intra-frame des animations. "
+"*Transform Sample* définit le nombre de fois par seconde auquel les "
+"transformations animées sont échantillées et écrites dans Alembic. *Geometry "
+"Samples* définit de même, mais pour la géométrie animée. Shutter Open & "
+"Close définit l'intervalle [ouvert, fermé) sur lequel ces échantillons sont "
+"prélévé. L'intervalle valide est de -1 à 1, où -1 indique la frame "
+"précédente, 0 indique la frame courante, et 1 indique la frame suivante. Par "
+"exemple, si l'information pour le flou de mouvement détaillé du maillage est "
+"voulu, quelques subframes autour de la frame courante peuvent être écrites "
+"dans Alembic en utilisant un compte d'échantillon de 5, Shutter Open à -0.25 "
+"and Shutter Close à 0.25. Ceci imite un shutter de \"180 degrés\", ouvert de "
+"90 degrés avant la frame et fermant de 90 degrés après la frame."
 
 #: ../../manual/pipeline/alembic.rst:67
 msgid "Selected Objects Only"
@@ -141,9 +179,11 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:68
 msgid ""
-"When enabled, exports only the selected objects. When disabled, all "
-"objects are exported."
+"When enabled, exports only the selected objects. When disabled, all objects "
+"are exported."
 msgstr ""
+"Quand l'option est activée, celle-ci exporte uniquement les objets "
+"sélectionnés. Quand elle est désactivée, tous les objets sont exportés."
 
 #: ../../manual/pipeline/alembic.rst:69
 msgid "Renderable Objects Only"
@@ -152,6 +192,8 @@ msgstr ""
 #: ../../manual/pipeline/alembic.rst:70
 msgid "This is useful to, for example, avoid exporting custom bone shapes."
 msgstr ""
+"C'est utile pour, par exemple, éviter d'exporter les formes d'os "
+"personnalisées."
 
 #: ../../manual/pipeline/alembic.rst:71
 msgid "Visible Layers Only"
@@ -159,7 +201,7 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:72
 msgid "Limits the export to scene layers that are currently visible."
-msgstr ""
+msgstr "Limite l'export aux calques de scène qui sont actuellement visibles."
 
 #: ../../manual/pipeline/alembic.rst:77
 msgid "Flatten Hierarchy"
@@ -167,12 +209,16 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:74
 msgid ""
-"When disabled, parent/child relations between objects are exported too. "
-"Any parent object that is not exported itself, but with children that "
-"*are* exported, is replaced by an Empty. When enabled, parent/child "
-"relations are not exported, and transformations are all written in world "
-"coordinates."
+"When disabled, parent/child relations between objects are exported too. Any "
+"parent object that is not exported itself, but with children that *are* "
+"exported, is replaced by an Empty. When enabled, parent/child relations are "
+"not exported, and transformations are all written in world coordinates."
 msgstr ""
+"Quand l'option est désactivée, les relations parent/enfant entre des objets "
+"sont aussi exportées. Tout objet parent qui n'est pas exporté lui-même, mais "
+"avec des enfants qui *sont* exportés, est remplacé par un Empty. Quand "
+"l'option est activée, les relations parent/enfant ne sont pas exportées, et "
+"les transformations sont toutes écrites en coordonnées de monde.."
 
 #: ../../manual/pipeline/alembic.rst:80
 msgid "Object Options"
@@ -185,9 +231,12 @@ msgstr ""
 #: ../../manual/pipeline/alembic.rst:83
 msgid ""
 "When enabled, UV maps are exported. Although the Alembic standard only "
-"supports a single UV map, Blender exports all UV maps in a way that "
-"should be readable by other software."
+"supports a single UV map, Blender exports all UV maps in a way that should "
+"be readable by other software."
 msgstr ""
+"Quand l'option est activée, les UV maos sont exportées. Bien que le "
+"satandart Alembic ne prend en charge qu'un UV map isolé, Blender exporte "
+"tous es UV maps de manière à ce que "
 
 #: ../../manual/pipeline/alembic.rst:85
 msgid "Pack UV Islands"
@@ -211,6 +260,9 @@ msgid ""
 "When enabled, exports vertex colours. At this moment, this only supports "
 "static vertex colors, and not dynamically animated vertex colors."
 msgstr ""
+"Quand l'option est activée, celle-ci exporte les couleurs de sommets. À ce "
+"moment, ceci ne prend en charge que les couleurs de sommets statiques, et "
+"pas les couleurs de sommets animées dynamiquement."
 
 #: ../../manual/pipeline/alembic.rst:92
 msgid "Face Sets"
@@ -225,6 +277,8 @@ msgid ""
 "When enabled, writes polygonal meshes using the \"SubD\" Alembic schema, "
 "rather than the \"PolyMesh\" schema."
 msgstr ""
+"Quand l'option est activée, celle-ci écrit des maillages polygonaux en "
+"utilisant le schéma \"SubD\" d'Alembic, plutî que le schéma \"PolyMesh\"."
 
 #: ../../manual/pipeline/alembic.rst:97
 msgid "Apply Subsurf"
@@ -236,16 +290,19 @@ msgstr ""
 
 #: ../../manual/pipeline/alembic.rst:100
 msgid "Triangulates the mesh before writing to Alembic."
-msgstr ""
+msgstr "Traingule le maillage avant l'écriture dans Alembic."
 
 #: ../../manual/pipeline/alembic.rst:103
 msgid "Particle Systems"
-msgstr ""
+msgstr "Particle Systems (systèmes de particules)"
 
 #: ../../manual/pipeline/alembic.rst:105
 msgid ""
-"Alembic has no support for Particle Systems, in the same way that it does"
-" not support armatures. Hair is exported as animated zero-width curves. "
+"Alembic has no support for Particle Systems, in the same way that it does "
+"not support armatures. Hair is exported as animated zero-width curves. "
 "Particles are exported as animated points."
 msgstr ""
-
+"Alembic ne prend aucunement en charge les systèmes de particules, de la même "
+"manière que il ne prend pas en charge les armatures. *Hair* est exporté "
+"comme des courbes animées sans largeur. Les particules sont exportées comme "
+"des points animés."
