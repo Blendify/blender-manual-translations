@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender 2016 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-07 14:46-0400\n"
-"PO-Revision-Date: 2017-06-22 19:12+0800\n"
+"PO-Revision-Date: 2017-10-13 11:32+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: ../../manual/editors/logic_editor.rst:4
 msgid "Logic Editor"
@@ -28,6 +28,10 @@ msgid ""
 "the logic bricks conduct the pulses between sensor-controller and controller-"
 "actuator."
 msgstr ""
+"逻辑编辑器提供了为构成游戏的各种角色（即物体）设置和编辑游戏逻辑的主要方法。在"
+"相关3D视图中当前选择的物体的逻辑显示为逻辑块，分别显示为具有三列的表，分别显示"
+"促动器，控制器和触发器。连接逻辑块的链接传导传感器控制器和控制器执行器之间的脉"
+"冲。"
 
 #: ../../manual/editors/logic_editor.rst:13
 msgid ""
@@ -35,32 +39,36 @@ msgid ""
 "a typical editor content in which the major components have been labeled. We "
 "will look at each one individually."
 msgstr ""
+"为了更好地了解逻辑编辑器，下图显示了主要组件标记的典型编辑器内容。我们将分别来"
+"看每一个。"
 
 #: ../../manual/editors/logic_editor.rst:19
 msgid "The different parts of the Logic Editor."
-msgstr ""
+msgstr "逻辑编辑器的不同部分。"
 
 #: ../../manual/editors/logic_editor.rst:21
 msgid ""
 "1) Property Region, 2) Object Name, 3a) Links, 3b) Link socket, 4) Sensor "
 "column, 5) Controller Column, 6) Actuator Column."
 msgstr ""
+"1）属性区域，2）物体名称，3a）连接线，3b）连接槽，4）促进器列，5）控制器列，"
+"6）触发器列。"
 
 #: ../../manual/editors/logic_editor.rst:26
 msgid "Main view"
-msgstr ""
+msgstr "主视图"
 
 #: ../../manual/editors/logic_editor.rst:28
 msgid "Object Name"
-msgstr ""
+msgstr "物体名称"
 
 #: ../../manual/editors/logic_editor.rst:29
 msgid "This box shows the name of the object which owns the logic bricks below."
-msgstr ""
+msgstr "该框显示了拥有以下逻辑块的物体的名称。"
 
 #: ../../manual/editors/logic_editor.rst:45
 msgid "Links"
-msgstr ""
+msgstr "连接线"
 
 #: ../../manual/editors/logic_editor.rst:31
 msgid ""
@@ -71,6 +79,10 @@ msgid ""
 "cannot be linked back to Sensors (however, special actuator and sensor types "
 "are available to provide these connections)."
 msgstr ""
+"连接线（3A）表示物体之间逻辑流的方向。通过 :kbd:`LMB` 从一个连接槽（3B）拖动到"
+"另一个连接槽座来绘制连接线。连接线只能从促进器到控制器，或从控制器到触发器。您"
+"不能将促进器直接连接到触发器; 同样，执行器不能与促进器连接（但是，特殊促进的执"
+"行器和促进器可用于提供这些连接线）。"
 
 #: ../../manual/editors/logic_editor.rst:38
 msgid ""
@@ -79,16 +91,20 @@ msgid ""
 "the left-hand side of Controllers and Actuators). Reception nodes can "
 "likewise receive multiple links."
 msgstr ""
+"发送节点（促进器和控制器右侧的黑圈）可以发送到多个接收节点（控制器和触发器左侧"
+"的白色圆圈）。接收节点同样可以接收多个连接。"
 
 #: ../../manual/editors/logic_editor.rst:43
 msgid ""
 "Links can be created between logic bricks belonging to different objects. To "
 "delete a link between two nodes, :kbd:`LMB` drag between the two nodes."
 msgstr ""
+"可以在属于不同物体的逻辑块之间创建连接先。要删除两个节点 :kbd:`LMB` 之间的连接"
+"线，请在两个节点之间拖动。"
 
 #: ../../manual/editors/logic_editor.rst:48
 msgid "Sensor Column"
-msgstr ""
+msgstr "促动器"
 
 #: ../../manual/editors/logic_editor.rst:50
 msgid ""
@@ -98,10 +114,13 @@ msgid ""
 "layout and available operations in this area, see :doc:`Sensors </game_engine/"
 "logic/sensors/introduction>`."
 msgstr ""
+"此列包含活动物体（和任何其他选定物体）拥有所有促进器的列表。使用“添加促进器”按"
+"钮创建活动物体的新促进器。要进一步深入了解此领域的内容，布局和可用操作，请参"
+"阅 :doc:`促进器 </game_engine/logic/sensors/introduction>`."
 
 #: ../../manual/editors/logic_editor.rst:57
 msgid "Controller Column"
-msgstr ""
+msgstr "控制器"
 
 #: ../../manual/editors/logic_editor.rst:59
 msgid ""
@@ -112,10 +131,14 @@ msgid ""
 "layout, and available operations in this area, see :doc:`Controllers </"
 "game_engine/logic/controllers/introduction>`."
 msgstr ""
+"此列包含活动物体（和任何其他选定物体）拥有的所有控制器的列表。使用“添加控制"
+"器”按钮创建活动物体的新控制器，以及创建活动物体的状态。有关这一领域的内容，布"
+"局和可用操作的更深入的了解，请参阅 :doc:`控制器 </game_engine/logic/"
+"controllers/introduction>`."
 
 #: ../../manual/editors/logic_editor.rst:67
 msgid "Actuator Column"
-msgstr ""
+msgstr "触发器"
 
 #: ../../manual/editors/logic_editor.rst:69
 msgid ""
@@ -125,10 +148,13 @@ msgid ""
 "layout, and available operations in this area, see :doc:`Actuators </"
 "game_engine/logic/actuators/introduction>`."
 msgstr ""
+"此列包含活动物体（和任何其他选定物体）拥有的所有触发器的列表。使用“添加触发"
+"器”按钮创建活动物体的新触发器。要更深入地了解此领域的内容，布局和可用操作，请"
+"参阅 :doc:`触发器 </game_engine/logic/actuators/introduction>`."
 
 #: ../../manual/editors/logic_editor.rst:76
 msgid "Property Region"
-msgstr ""
+msgstr "属性区"
 
 #: ../../manual/editors/logic_editor.rst:78
 msgid ""
@@ -139,3 +165,7 @@ msgid ""
 "layout and available operations in this region, see :doc:`Properties </"
 "game_engine/logic/properties>`."
 msgstr ""
+"游戏属性就像其他编程语言中的变量。它们用于保存和访问与物体相关联的数据。有几种"
+"类型的属性可用。通过单击此区域中的添加游戏属性按钮声明属性。要更深入地了解该区"
+"域的内容，布局和可用操作，请参阅 :doc:`属性区 </game_engine/logic/"
+"properties>`."
