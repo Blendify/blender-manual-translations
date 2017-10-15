@@ -9,19 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 15:07-0400\n"
+"POT-Creation-Date: 2017-10-16 03:38+1100\n"
 "PO-Revision-Date: 2017-04-08 17:09+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: ../../manual/render/blender_render/post_processing/fields.rst:4
-#: ../../manual/render/blender_render/post_processing/fields.rst:33
+#: ../../manual/render/blender_render/post_processing/fields.rst:32
 msgid "Fields"
 msgstr ""
 
@@ -29,146 +27,150 @@ msgstr ""
 msgid "Field Rendering result."
 msgstr ""
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:11
+#: ../../manual/render/blender_render/post_processing/fields.rst:10
 msgid ""
-"The TV standards prescribe that there should be 25 frames per second (PAL) "
-"or 30 frames per second (NTSC). Since the phosphors of the screen do not "
-"maintain luminosity for very long, this could produce a noticeable "
-"flickering."
+"The TV standards prescribe that there should be 25 frames per second "
+"(PAL) or 30 frames per second (NTSC). Since the phosphors of the screen "
+"do not maintain luminosity for very long, this could produce a noticeable"
+" flickering."
 msgstr ""
 "Les standards TV prescrivent qu'il devrait être de 25 images par seconde "
-"(PAL) ou de 30 frames par seconde (NTSC). Puisque les phosphores de l'écran "
-"ne maintiennent pas la luminosité pour très longtemps, ceci peut produire un "
-"scintillement notable."
+"(PAL) ou de 30 frames par seconde (NTSC). Puisque les phosphores de "
+"l'écran ne maintiennent pas la luminosité pour très longtemps, ceci peut "
+"produire un scintillement notable."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:16
+#: ../../manual/render/blender_render/post_processing/fields.rst:15
 msgid ""
 "To minimize this, a TV does not represent frames as a computer does "
-"('progressive' mode), but rather represents half-frames, or *fields* at a "
-"double refresh rate, hence 50 half frames per second on PAL and 60 half "
+"('progressive' mode), but rather represents half-frames, or *fields* at a"
+" double refresh rate, hence 50 half frames per second on PAL and 60 half "
 "frames per second on NTSC. This was originally bound to the frequency of "
 "power lines in Europe (50Hz) and the US (60Hz)."
 msgstr ""
 "Pour minimiser cela, une TV n'affiche pas les frames comme un ordinateur "
-"(mode \"progressif\"), mais affiche plutôt des demi-frames, ou *champs* à "
-"une fréquence de rafraîchissement double, soit 50 demi-frames par seconde en "
-"PAL et 60 demi-frames par seconde en NTSC. C'est lié originellement à la "
-"fréquence de lignes de secteur en Europe (50Hz) et aux USA (60Hz)."
+"(mode \"progressif\"), mais affiche plutôt des demi-frames, ou *champs* à"
+" une fréquence de rafraîchissement double, soit 50 demi-frames par "
+"seconde en PAL et 60 demi-frames par seconde en NTSC. C'est lié "
+"originellement à la fréquence de lignes de secteur en Europe (50Hz) et "
+"aux USA (60Hz)."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:21
+#: ../../manual/render/blender_render/post_processing/fields.rst:20
 #, fuzzy
 msgid ""
 "In particular, fields are \"interlaced\" in the sense that one field "
-"presents all the even lines of the complete frame and the subsequent field "
-"the odd ones."
+"presents all the even lines of the complete frame and the subsequent "
+"field the odd ones."
 msgstr ""
 "En particulier, les champs sont \"interlacés\" dans le sens qu'un champ "
 "présente toutes les lignes paires de la frame complète et le champ "
 "subséquent les lignes impaires."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:24
+#: ../../manual/render/blender_render/post_processing/fields.rst:23
 msgid ""
-"Since there is a non-negligible time difference between each field (1/50 or "
-"1/60 of a second) merely rendering a frame the usual way and splitting it "
-"into two half frames does not work. A noticeable jitter of the edges of "
-"moving objects would be present."
+"Since there is a non-negligible time difference between each field (1/50 "
+"or 1/60 of a second) merely rendering a frame the usual way and splitting"
+" it into two half frames does not work. A noticeable jitter of the edges "
+"of moving objects would be present."
 msgstr ""
 "Puisqu'il y a une différence de temps non négligeable entre chaque champ "
 "(1/50 ou 1/60 de seconde), le rendu simple d'une frame de la manière "
-"habituelle et en sa division en deux demi-frames ne fonctionnent pas ; une "
-"turbulence notable des bords d'objets mouvants serait alors présent."
+"habituelle et en sa division en deux demi-frames ne fonctionnent pas ; "
+"une turbulence notable des bords d'objets mouvants serait alors présent."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:30
+#: ../../manual/render/blender_render/post_processing/fields.rst:29
 msgid "Options"
 msgstr ""
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:35
+#: ../../manual/render/blender_render/post_processing/fields.rst:34
 msgid ""
-"Enable field rendering. When the *Fields* button in the *Render* Panel is "
-"pressed (*Post Processing* section), Blender prepares each frame in two "
+"Enable field rendering. When the *Fields* button in the *Render* Panel is"
+" pressed (*Post Processing* section), Blender prepares each frame in two "
 "passes. On the first it renders only the even lines, then it advances in "
-"time by half a time step and renders all the odd lines. This produces odd "
-"results on a PC screen (Field Rendering result). but will show correctly on "
-"a TV set."
+"time by half a time step and renders all the odd lines. This produces odd"
+" results on a PC screen (Field Rendering result). but will show correctly"
+" on a TV set."
 msgstr ""
 "Active le rendu des champs. Quand le bouton *Fields* dans le panneau "
 "*Render* est pressé (section *Post Processing*), Blender prépare chaque "
-"frame en deux passes. Sur le premier il fait seulement le rendu des lignes "
-"paires, puis il avance en temps de et fait le rendu de toutes les lignes "
-"impaires. Ceci produit  des résultats sur un écran de PC (résultat de rendu "
-"de champ), mais s'affichera correctement sur une TV."
+"frame en deux passes. Sur le premier il fait seulement le rendu des "
+"lignes paires, puis il avance en temps de et fait le rendu de toutes les "
+"lignes impaires. Ceci produit  des résultats sur un écran de PC (résultat"
+" de rendu de champ), mais s'affichera correctement sur une TV."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:41
+#: ../../manual/render/blender_render/post_processing/fields.rst:40
 msgid "Upper First / Lower First"
 msgstr ""
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:42
+#: ../../manual/render/blender_render/post_processing/fields.rst:41
 #, fuzzy
 msgid "Toggles between rendering the even and odd frames first."
 msgstr "Bascule entre le rendu premier des frames paires et impaires."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:44
+#: ../../manual/render/blender_render/post_processing/fields.rst:43
 msgid "Still"
 msgstr ""
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:44
+#: ../../manual/render/blender_render/post_processing/fields.rst:43
 #, fuzzy
 msgid "Disables the half-frame time step between fields (*x*)."
 msgstr "Désactive l'intervalle de temps de demi-frame entre les champs (*x*)."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:46
+#: ../../manual/render/blender_render/post_processing/fields.rst:45
 msgid "Setting up the correct field order"
 msgstr "Établir l'ordre de champ correct"
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:48
+#: ../../manual/render/blender_render/post_processing/fields.rst:47
 msgid ""
 "Blender's default setting is to produce Even fields *before* Odd fields; "
-"this complies with European PAL standards. Odd fields are scanned first on "
-"NTSC."
+"this complies with European PAL standards. Odd fields are scanned first "
+"on NTSC."
 msgstr ""
-"Le réglage par défaut de Blender est de produire les champs pairs *avant* "
-"les champs impairs ; ceci est conforme avec les standards PAL européens. Les "
-"champs impairs sont balayés en premier en NTSC."
+"Le réglage par défaut de Blender est de produire les champs pairs *avant*"
+" les champs impairs ; ceci est conforme avec les standards PAL européens."
+" Les champs impairs sont balayés en premier en NTSC."
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:52
+#: ../../manual/render/blender_render/post_processing/fields.rst:51
 msgid ""
-"Of course, if you make the wrong selection things are even worse than if no "
-"Field rendering at all was used!"
+"Of course, if you make the wrong selection things are even worse than if "
+"no Field rendering at all was used!"
 msgstr ""
-"Bien sûr, si vous faites la mauvaise sélection, les choses sont même pires "
-"que si aucun rendu de champ du tout n'est utilisé !"
+"Bien sûr, si vous faites la mauvaise sélection, les choses sont même "
+"pires que si aucun rendu de champ du tout n'est utilisé !"
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:55
+#: ../../manual/render/blender_render/post_processing/fields.rst:54
 msgid ""
-"If you are really confused, a simple trick to determine the correct field "
-"order is to render a short test animation of a white square moving from left "
-"to right on a black background. Prepare one version with odd field order and "
-"another with even field order, and look at them on a television screen. The "
-"one with the right field order will look smooth and the other one horrible. "
-"Doing this simple test will save you *hours* of wasted rendering time..."
+"If you are really confused, a simple trick to determine the correct field"
+" order is to render a short test animation of a white square moving from "
+"left to right on a black background. Prepare one version with odd field "
+"order and another with even field order, and look at them on a television"
+" screen. The one with the right field order will look smooth and the "
+"other one horrible. Doing this simple test will save you *hours* of "
+"wasted rendering time..."
 msgstr ""
-"Si vous être réellement confus, un truc simple pour déterminer l'ordre de "
-"champ correct est de faire le rendu d'une courte animation test d'un carré "
-"blanc se déplaçant de gauche à droite sur un fond noir. Préparez une version "
-"avec l'ordre de champ impair et une autre avec un ordre de champ pair, et "
-"les examiner sur un écran de télévision. Celle avec le bon ordre de champ "
-"apparaîtra et l'autre horrible. Faire ce simple test vous fera économiser "
-"des *heures* de temps de rendu perdu. "
+"Si vous être réellement confus, un truc simple pour déterminer l'ordre de"
+" champ correct est de faire le rendu d'une courte animation test d'un "
+"carré blanc se déplaçant de gauche à droite sur un fond noir. Préparez "
+"une version avec l'ordre de champ impair et une autre avec un ordre de "
+"champ pair, et les examiner sur un écran de télévision. Celle avec le bon"
+" ordre de champ apparaîtra et l'autre horrible. Faire ce simple test vous"
+" fera économiser des *heures* de temps de rendu perdu. "
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:62
+#: ../../manual/render/blender_render/post_processing/fields.rst:61
 msgid "Fields and Composite Nodes"
 msgstr "Champs et Nodes composites"
 
-#: ../../manual/render/blender_render/post_processing/fields.rst:64
+#: ../../manual/render/blender_render/post_processing/fields.rst:63
+#, fuzzy
 msgid ""
-"Nodes are currently not field-aware. This is partly due to the fact that in "
-"fields, too much information is missing to do good neighborhood operations "
-"(blur, vector blur etc.). The solution is to render your animation at double "
-"the frame rate without fields and do the interlacing of the footage "
-"afterwards."
+"Nodes are currently not field-aware. This is partly due to the fact that "
+"in fields, too much information is missing to do good neighborhood "
+"operations (blur, vector blur, etc.). The solution is to render your "
+"animation at double the frame rate without fields and do the interlacing "
+"of the footage afterwards."
 msgstr ""
-"Les nodes ne sont pas actuellement . C'est en partie dû au fait que dans les "
-"champs, trop d'information manque pour effectuer des opérations de bon "
-"voisinage (blur, vector blur etc.). La solution est de faire le rendu de "
-"votre animation au double de la fréquence de frame sans les champs et faire "
-"après l'interlaçage de la séquence. "
+"Les nodes ne sont pas actuellement . C'est en partie dû au fait que dans "
+"les champs, trop d'information manque pour effectuer des opérations de "
+"bon voisinage (blur, vector blur etc.). La solution est de faire le rendu"
+" de votre animation au double de la fréquence de frame sans les champs et"
+" faire après l'interlaçage de la séquence. "
+
