@@ -4,96 +4,106 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-21 23:16-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-10-19 12:19+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: ../../manual/render/cycles/materials/settings.rst:4
 msgid "Material Settings"
-msgstr ""
+msgstr "材质设置"
 
 #: ../../manual/render/cycles/materials/settings.rst:9
 msgid "Material Settings."
-msgstr ""
+msgstr "材质设置。"
 
 #: ../../manual/render/cycles/materials/settings.rst:13
 msgid "Surface"
-msgstr ""
+msgstr "表面材质"
 
 #: ../../manual/render/cycles/materials/settings.rst:22
 msgid "Multiple Importance Sample"
-msgstr ""
+msgstr "多重重要性采样"
 
 #: ../../manual/render/cycles/materials/settings.rst:16
 msgid ""
 "By default objects with emitting materials use both direct and indirect "
-"light sampling methods, but in some cases it may lead to less noise "
-"overall to disable direct light sampling for some materials. This can be "
-"done by disabling the *Multiple Importance Sample* option. This is "
-"especially useful on large objects that emit little light compared to "
-"other light sources."
+"light sampling methods, but in some cases it may lead to less noise overall "
+"to disable direct light sampling for some materials. This can be done by "
+"disabling the *Multiple Importance Sample* option. This is especially "
+"useful on large objects that emit little light compared to other light "
+"sources."
 msgstr ""
+"默认情况下，带有发射材质的物体使用直接光照和间接光照两种取样方法，但在某些材"
+"质情况下，通过禁用 *多重重要抽样* 选项来取消直接光取样，可以减少因此产生的噪"
+"点。这对于庞大的物体效果特别显著。"
 
 #: ../../manual/render/cycles/materials/settings.rst:21
 msgid ""
 "This option will only have an influence if the material contains an "
 "emission node; it will be automatically disabled otherwise."
-msgstr ""
+msgstr "此选项仅影响包含发射节点的材料，否则该选项不生效。"
 
 #: ../../manual/render/cycles/materials/settings.rst:27
 msgid "Transparent Shadows"
-msgstr ""
+msgstr "透明阴影"
 
 #: ../../manual/render/cycles/materials/settings.rst:25
 msgid ""
-"Use transparent shadows if it contains a :doc:`Transparent BSDF "
-"</render/cycles/nodes/types/shaders/transparent>`, disabling will render "
-"faster but will not give accurate shadows."
+"Use transparent shadows if it contains a :doc:`Transparent BSDF </render/"
+"cycles/nodes/types/shaders/transparent>`, disabling will render faster but "
+"will not give accurate shadows."
 msgstr ""
+"使用透明阴影置换时，若将透明 :doc:`透明BSDF </render/cycles/nodes/types/"
+"shaders/transparent>` 的材质禁用会使渲染速度更快，但效果不精准。"
 
 #: ../../manual/render/cycles/materials/settings.rst:30
 msgid "Volume"
-msgstr ""
+msgstr "体积着色器"
 
 #: ../../manual/render/cycles/materials/settings.rst:32
 msgid ""
 "Similar volume settings as the :ref:`World settings <render-cycles-"
 "integrator-world-settings>` per material."
 msgstr ""
+"每个材质类似的体积设置如下 :ref:`世界设置 <render-cycles-integrator-world-"
+"settings>`。"
 
 #: ../../manual/render/cycles/materials/settings.rst:38
 msgid "Displacement"
-msgstr ""
+msgstr "置换着色器"
 
 #: ../../manual/render/cycles/materials/settings.rst:42
 msgid ""
-"These Options are only available if :ref:`Experimental Feature Set "
-"<cycles-experimental-features>` is turned on."
+"These Options are only available if :ref:`Experimental Feature Set <cycles-"
+"experimental-features>` is turned on."
 msgstr ""
+"此选项只有在试验特征集 :ref:`实验特性组 <cycles-experimental-features>` 可用"
+"时才能开启。"
 
 #: ../../manual/render/cycles/materials/settings.rst:59
 msgid "Displacement Method"
-msgstr ""
+msgstr "置换方法"
 
 #: ../../manual/render/cycles/materials/settings.rst:46
 msgid ""
-"Method used preform :doc:`Displacement "
-"</render/cycles/materials/displacement>` on materials."
-msgstr ""
+"Method used preform :doc:`Displacement </render/cycles/materials/"
+"displacement>` on materials."
+msgstr "方法示例 :doc:`置换 </render/cycles/materials/displacement>` 。"
 
 #: ../../manual/render/cycles/materials/settings.rst:50
 msgid "True Displacement"
-msgstr ""
+msgstr "真实置换"
 
 #: ../../manual/render/cycles/materials/settings.rst:49
 msgid ""
@@ -101,10 +111,12 @@ msgid ""
 "mesh. This gives the best quality results, if the mesh is finely "
 "subdivided. As a result, this method is also the most memory intensive."
 msgstr ""
+"网格顶点在绘制之前会被移位，修改实际网格。如果网格被精细细分，这将提供最好的"
+"质量结果。因此，这种方法也是内存最多的。"
 
 #: ../../manual/render/cycles/materials/settings.rst:54
 msgid "Bump Mapping"
-msgstr ""
+msgstr "凹凸贴图"
 
 #: ../../manual/render/cycles/materials/settings.rst:53
 msgid ""
@@ -113,160 +125,129 @@ msgid ""
 "displacement, but only an approximation. Surface silhouettes will not be "
 "accurate and there will be no self-shadowing of the displacement."
 msgstr ""
+"在执行表面着色器时，使用修改后的表面法线代替真实法线。这是一个快速替代真实位"
+"移，但只是一个近似。表面轮廓将不准确，也不会有自我阴影的位移。"
 
 #: ../../manual/render/cycles/materials/settings.rst:59
 msgid "Displacement + Bump"
-msgstr ""
+msgstr "置换 + 凹凸"
 
 #: ../../manual/render/cycles/materials/settings.rst:57
 msgid ""
-"Both methods can be combined, to do displacement on a coarser mesh, and "
-"use bump mapping for the final detail."
+"Both methods can be combined, to do displacement on a coarser mesh, and use "
+"bump mapping for the final detail."
 msgstr ""
+"这两种方法都可以组合起来，在粗网格上进行位移，并使用凹凸贴图来完成最后的细"
+"节。"
 
 #: ../../manual/render/cycles/materials/settings.rst:62
 msgid "Viewport Settings"
-msgstr ""
+msgstr "视图设置"
 
 #: ../../manual/render/cycles/materials/settings.rst:65
 msgid "Viewport Color"
-msgstr ""
+msgstr "视图-颜色"
 
 #: ../../manual/render/cycles/materials/settings.rst:67
 #: ../../manual/render/cycles/materials/settings.rst:76
 msgid "Color"
-msgstr ""
+msgstr "颜色"
 
 #: ../../manual/render/cycles/materials/settings.rst:68
 #: ../../manual/render/cycles/materials/settings.rst:70
 #: ../../manual/render/cycles/materials/settings.rst:77
 #: ../../manual/render/cycles/materials/settings.rst:79
 msgid "TODO."
-msgstr ""
+msgstr "TODO."
 
 #: ../../manual/render/cycles/materials/settings.rst:71
 msgid "Alpha"
-msgstr ""
+msgstr "透明度"
 
 #: ../../manual/render/cycles/materials/settings.rst:74
 msgid "Viewport Specular"
-msgstr ""
+msgstr "视图-高光"
 
 #: ../../manual/render/cycles/materials/settings.rst:80
 msgid "Hardness"
-msgstr ""
+msgstr "高光硬度"
 
 #: ../../manual/render/cycles/materials/settings.rst:83
 msgid "Viewport Alpha"
-msgstr ""
+msgstr "视图-透明度"
 
 #: ../../manual/render/cycles/materials/settings.rst:100
 msgid "Blend Mode"
-msgstr ""
+msgstr "混合模式"
 
 #: ../../manual/render/cycles/materials/settings.rst:86
 msgid ":term:`Blend modes` for transparent faces."
-msgstr ""
+msgstr "透明面的 :term:`混合模式`。"
 
 #: ../../manual/render/cycles/materials/settings.rst:88
 msgid "Opaque"
-msgstr ""
+msgstr "不透明"
 
 #: ../../manual/render/cycles/materials/settings.rst:89
 msgid "Render color of textured face as color."
-msgstr ""
+msgstr "将纹理面的颜色渲染为颜色。"
 
 #: ../../manual/render/cycles/materials/settings.rst:90
 msgid "Add"
-msgstr ""
+msgstr "添加"
 
 #: ../../manual/render/cycles/materials/settings.rst:91
 msgid "Render transparent and add color of face."
-msgstr ""
+msgstr "渲染面的透明度, 并添加面颜色。"
 
 #: ../../manual/render/cycles/materials/settings.rst:92
 msgid "Alpha Clip"
-msgstr ""
+msgstr "Alpha 剪切"
 
 #: ../../manual/render/cycles/materials/settings.rst:93
 msgid "Use the image alpha values clipped with no blending (binary alpha)."
-msgstr ""
+msgstr "使用无混合剪切图的 Alpha 值 (二进制 Alpha)"
 
 #: ../../manual/render/cycles/materials/settings.rst:94
 msgid "Alpha Blend"
-msgstr ""
+msgstr "Alpha 混合"
 
 #: ../../manual/render/cycles/materials/settings.rst:95
 msgid "Render polygon transparent, depending on alpha channel of the texture."
-msgstr ""
+msgstr "渲染多边形透明度, 视纹理的 Alpha 通道而定。"
 
 #: ../../manual/render/cycles/materials/settings.rst:96
 msgid "Alpha Sort"
-msgstr ""
+msgstr "Alpha 排序"
 
 #: ../../manual/render/cycles/materials/settings.rst:97
 msgid ""
-"Sort faces for correct alpha drawing (slow, use *Alpha Clip* instead when"
-" possible)."
-msgstr ""
+"Sort faces for correct alpha drawing (slow, use *Alpha Clip* instead when "
+"possible)."
+msgstr "执行面排序, 以校准alpha显示 (较慢, 如果有可能, 则使用Alpha剪切代替)"
 
 #: ../../manual/render/cycles/materials/settings.rst:100
 msgid "Alpha Anti-Aliasing"
-msgstr ""
+msgstr "透明抗锯齿"
 
 #: ../../manual/render/cycles/materials/settings.rst:99
 msgid ""
 "Use texture alpha ad an anti-aliasing mask, requires multi-sample OpenGL "
 "display."
-msgstr ""
+msgstr "使用带透明度的抗锯齿纹理遮罩层，需要多样本的OpenGL显示。"
 
 #: ../../manual/render/cycles/materials/settings.rst:103
 #: ../../manual/render/cycles/materials/settings.rst:109
 msgid "Pass Index"
-msgstr ""
+msgstr "通道索引"
 
 #: ../../manual/render/cycles/materials/settings.rst:106
 msgid ""
-"Index number for the *Material Index* :doc:`render pass "
-"</render/cycles/settings/scene/render_layers/passes>`. This can be used "
-"to give a mask to a material and then be read with the :doc:`ID Mask Node"
-" </compositing/types/converter/id_mask>` in the compositor."
+"Index number for the *Material Index* :doc:`render pass </render/cycles/"
+"settings/scene/render_layers/passes>`. This can be used to give a mask to a "
+"material and then be read with the :doc:`ID Mask Node </compositing/types/"
+"converter/id_mask>` in the compositor."
 msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "Sampling Method"
-#~ msgstr ""
-
-#~ msgid "Interpolation"
-#~ msgstr ""
-
-#~ msgid "Controls the type of interpolation to use for smoke simulations."
-#~ msgstr ""
-
-#~ msgid "Linear"
-#~ msgstr ""
-
-#~ msgid "Good smoothness and speed."
-#~ msgstr ""
-
-#~ msgid "Cubic"
-#~ msgstr ""
-
-#~ msgid "Smoothed high quality interpolation, but slower."
-#~ msgstr ""
-
-#~ msgid "Homogeneous Volume"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Index number for the *Material Index*"
-#~ " :doc:`render pass </render/cycles/settings/passes>`."
-#~ " This can be used to give a "
-#~ "mask to a material and then be "
-#~ "read with the :doc:`ID Mask Node "
-#~ "</compositing/types/converter/id_mask>` in the "
-#~ "compositor."
-#~ msgstr ""
-
+"*材质指标* :doc:`render pass </render/cycles/settings/scene/render_layers/"
+"passes>` 指数。可用于为材质提供遮罩，以便在印刷时被识别为 :doc:`遮罩节点ID "
+"</compositing/types/converter/id_mask>` 。"
