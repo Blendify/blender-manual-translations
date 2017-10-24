@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-08 23:31+0800\n"
-"PO-Revision-Date: 2017-07-08 23:34+0800\n"
+"PO-Revision-Date: 2017-10-23 20:05+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,86 +12,87 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: ../../manual/compositing/types/vector/map_value.rst:5
 msgid "Map Value Node"
-msgstr ""
+msgstr "映射值节点"
 
 #: ../../manual/compositing/types/vector/map_value.rst:10
 msgid "Map Value Node."
-msgstr ""
+msgstr "映射值节点。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:12
 msgid "Map Value node is used to scale, offset and clamp values."
-msgstr ""
+msgstr "映射值用于缩放，偏移和限定值。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:16
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
 #: ../../manual/compositing/types/vector/map_value.rst:20
 #: ../../manual/compositing/types/vector/map_value.rst:40
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 #: ../../manual/compositing/types/vector/map_value.rst:19
 msgid "Standard Value input. (value refers to each vector in the set)."
-msgstr ""
+msgstr "标准化值输入。（引用在设置框中的矢量值）。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:23
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: ../../manual/compositing/types/vector/map_value.rst:25
 msgid "Offset"
-msgstr ""
+msgstr "偏移量"
 
 #: ../../manual/compositing/types/vector/map_value.rst:26
 msgid "Factor added to the input value."
-msgstr ""
+msgstr "把偏移因数添加到输入值。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:27
 msgid "Size"
-msgstr ""
+msgstr "尺寸"
 
 #: ../../manual/compositing/types/vector/map_value.rst:28
 msgid "Scales (multiply) the input value."
-msgstr ""
+msgstr "对输入值进行缩放（相乘）。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:29
 msgid "Use Minimum, Maximum"
-msgstr ""
+msgstr "使用最小值，最大值"
 
 #: ../../manual/compositing/types/vector/map_value.rst:30
 msgid "Enable this to activate their related operation."
-msgstr ""
+msgstr "启用此复选框将激活相应的功能。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:33
 msgid "Min, Max"
-msgstr ""
+msgstr "最小值，最大值"
 
 #: ../../manual/compositing/types/vector/map_value.rst:32
 msgid ""
 "Defines a range between minimum and maximum to :term:`clamp` the input "
 "value to."
 msgstr ""
+"在最小值和最大值之间定义一个范围去： :term:`限定` 输入值要指定的范围。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:36
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
 #: ../../manual/compositing/types/vector/map_value.rst:39
 msgid "Standard value output."
-msgstr ""
+msgstr "标准化值输出。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:43
 msgid "Example"
-msgstr ""
+msgstr "范例"
 
 #: ../../manual/compositing/types/vector/map_value.rst:46
 msgid "Z Depth map"
-msgstr ""
+msgstr "Z深度通道"
 
 #: ../../manual/compositing/types/vector/map_value.rst:48
 msgid ""
@@ -100,10 +101,13 @@ msgid ""
 "even 500 depending on the scene) to the range between (0 to 1), suitable "
 "for connecting to a Blur node."
 msgstr ""
+"这在获取Z深度通道时尤其有用，映射值节点将Z通道值（依据场景不同，数值可能"
+"为20,30甚至500）匹配到（0,1）的范围之间，这使得在连接模糊节点时数值更符合"
+"模糊节点的有效值范围。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:55
 msgid "Multiplying values"
-msgstr ""
+msgstr "将值相乘"
 
 #: ../../manual/compositing/types/vector/map_value.rst:57
 msgid ""
@@ -116,7 +120,12 @@ msgid ""
 "1.0), and multiplies that by 150, resulting in an output value between "
 "(-150 to 150) over a 30-frame sequence."
 msgstr ""
+"映射值节点也可对数值进行相乘操作以得到合理的输出值。在如图所示中，时间节"
+"点输出一个范围在0.0到1.0之间的数值，总共是30帧的时间范围。*第一个* 映射值"
+"节点将输入值乘以2，将输出值范围缩放到从0.0到2.0。 *第二个* 映射值节点从输"
+"入值减去1，得到一个从（-1。00到1.0）的数值范围，然后将其乘以150，将30帧时"
+"间范围数值映射到范围在（-150到150）的输出值区间。"
 
 #: ../../manual/compositing/types/vector/map_value.rst:66
 msgid "Using Map Value to multiply."
-msgstr ""
+msgstr "映射值乘法操作。"
