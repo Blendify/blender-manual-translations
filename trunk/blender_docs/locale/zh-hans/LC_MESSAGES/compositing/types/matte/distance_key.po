@@ -9,21 +9,24 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-25 09:56+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-10-24 13:08+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:4
 msgid "Distance Key Node"
-msgstr ""
+msgstr "色距抠像节点"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:10
 msgid "Distance Key Node."
-msgstr ""
+msgstr "色距抠像节点。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:12
 msgid ""
@@ -31,52 +34,56 @@ msgid ""
 "three-dimensional distance between the image pixel color and the key "
 "color in a 3D color space."
 msgstr ""
+"色距抠像节点通过在三维色彩空间中，图像像素颜色和关键颜色定义一个像素alpha"
+"值。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:15
 msgid ""
 "This key works well when trying to single out a specific color in a "
 "background (not necessarily green)."
-msgstr ""
+msgstr "当要在背景中（不限定背景颜色）提取某个单一颜色时是非常有用的。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:19
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:21
 #: ../../manual/compositing/types/matte/distance_key.rst:51
 msgid "Image"
-msgstr ""
+msgstr "图像"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:22
 msgid "Standard image input."
-msgstr ""
+msgstr "标准化图像输入。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:25
 msgid "Key Color"
-msgstr ""
+msgstr "关键色彩"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:24
 msgid "The color that is to be keyed."
-msgstr ""
+msgstr "拾取用于抠像的关键颜色。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:28
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:32
 msgid "Tolerance"
-msgstr ""
+msgstr "容差"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:31
 msgid ""
-"A threshold what the node considers a match between the key color and the"
-" foreground pixel. The tolerance affects how close a pixel needs to be to"
-" the background pixel to be considered an absolute match."
+"A threshold what the node considers a match between the key color and "
+"the foreground pixel. The tolerance affects how close a pixel needs to "
+"be to the background pixel to be considered an absolute match."
 msgstr ""
+"在关键颜色和前景像素颜色之间进行匹配的阈值。这个容差值用于确定当图像上像"
+"素和背景像素相差多少就被认定为颜色是绝对匹配的（即认定为同种颜色）。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:38
 msgid "Falloff"
-msgstr ""
+msgstr "衰减"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:35
 msgid ""
@@ -86,10 +93,13 @@ msgid ""
 "is low, it does not matter how close the pixel color (Image) is to the "
 "Key Color, it is transparent."
 msgstr ""
+"当衰减值高，和关键颜色相近的像素和相距较远的像素（也认为和关键颜色色值比"
+"较接近）相比较变得更加透明。当衰减值低，无论图像像素和关键颜色色值多么相"
+"似，都进行透明处理。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:46
 msgid "Color Space"
-msgstr ""
+msgstr "色彩空间"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:41
 msgid ""
@@ -97,62 +107,24 @@ msgid ""
 "Cr channels are taken into consideration for determining the distance "
 "between the foreground and background pixels."
 msgstr ""
+"在YCbCr色彩空间中，仅有Cb和Cr颜色通道会进行前景色及背景色像素差异的对比。"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:45
 msgid "RGB, YCC"
-msgstr ""
+msgstr "RGB（红绿蓝色彩空间）, YCC色彩空间"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:49
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:52
 msgid "The image with an alpha channel adjusted for the keyed selection"
-msgstr ""
+msgstr "由关键颜色提取出的带有alpha通道的图像"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:56
 msgid "Matte"
-msgstr ""
+msgstr "遮片"
 
 #: ../../manual/compositing/types/matte/distance_key.rst:54
 msgid "A black and white alpha mask of the key."
-msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "TODO - see: https://developer.blender.org/T43469"
-#~ msgstr ""
-
-#~ msgid "Inputs"
-#~ msgstr ""
-
-#~ msgid "There are two inputs to this node,"
-#~ msgstr ""
-
-#~ msgid "The image that is to be keyed."
-#~ msgstr ""
-
-#~ msgid "Options"
-#~ msgstr ""
-
-#~ msgid "Outputs"
-#~ msgstr ""
-
-#~ msgid "The outputs of this node are:"
-#~ msgstr ""
-
-#~ msgid "Input"
-#~ msgstr ""
-
-#~ msgid "Output"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The Distance Key node determines a "
-#~ "pixel's alpha value based on the 3"
-#~ " dimensional distance between the image "
-#~ "pixel color and the key color in"
-#~ " a 3D color space."
-#~ msgstr ""
-
+msgstr "通过操作形成黑白alpha遮罩结果。"
