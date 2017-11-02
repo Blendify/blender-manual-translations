@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-16 03:38+1100\n"
-"PO-Revision-Date: 2017-10-16 23:57+0800\n"
+"PO-Revision-Date: 2017-11-02 11:27+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,23 +29,23 @@ msgstr "运算节点。"
 
 #: ../../manual/compositing/types/converter/math.rst:18
 msgid "The *Math Node* performs math operations."
-msgstr ""
+msgstr "*运算节点* 的功能是执行数学运算。"
 
 #: ../../manual/compositing/types/converter/math.rst:22
 msgid "Inputs"
-msgstr ""
+msgstr "输入"
 
 #: ../../manual/compositing/types/converter/math.rst:25
 #: ../../manual/compositing/types/converter/math.rst:31
 #: ../../manual/compositing/types/converter/math.rst:48
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 #: ../../manual/compositing/types/converter/math.rst:25
 msgid ""
 "First numerical value. The trigonometric functions accept values in "
 "radians."
-msgstr ""
+msgstr "第一个数值。可以输入三角法则定义的弧度数值。"
 
 #: ../../manual/compositing/types/converter/math.rst:28
 msgid ""
@@ -53,14 +53,15 @@ msgid ""
 "accept only one parameter like the trigonometric functions, Round and "
 "Absolute."
 msgstr ""
+"第二个数值。这个数值不仅可输入三角函数值，还可以输入四舍五入及绝对值。"
 
 #: ../../manual/compositing/types/converter/math.rst:34
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: ../../manual/compositing/types/converter/math.rst:37
 msgid "Operation"
-msgstr ""
+msgstr "操作"
 
 #: ../../manual/compositing/types/converter/math.rst:37
 msgid ""
@@ -68,34 +69,37 @@ msgid ""
 "Arccosine, Arctangent, Power, Logarithm, Minimum, Maximum, Round, Less "
 "Than, Greater Than, Modulo, Absolute."
 msgstr ""
+"添加，相减，相乘（软件界面翻译成正片叠底，这个是在图层模式才有的说法），"
+"相除，正弦，反正弦，反余弦，乘幂运算，对数运算，最小值，最大值，四舍五"
+"入，小于，大于，模数，绝对值。"
 
 #: ../../manual/compositing/types/converter/math.rst:41
 msgid "Clamp"
-msgstr ""
+msgstr "限定"
 
 #: ../../manual/compositing/types/converter/math.rst:40
 msgid "Limits the output to the range (0 to 1). See :term:`clamp`."
-msgstr ""
+msgstr "限定输出数值的范围（0到1）。参看  :term:`clamp`。"
 
 #: ../../manual/compositing/types/converter/math.rst:44
 msgid "Outputs"
-msgstr ""
+msgstr "输出"
 
 #: ../../manual/compositing/types/converter/math.rst:47
 msgid "Numerical value output."
-msgstr ""
+msgstr "数值输出。"
 
 #: ../../manual/compositing/types/converter/math.rst:51
 msgid "Examples"
-msgstr ""
+msgstr "范例"
 
 #: ../../manual/compositing/types/converter/math.rst:54
 msgid "Manual Z-Mask"
-msgstr ""
+msgstr "自定义Z深度通道节点设置"
 
 #: ../../manual/compositing/types/converter/math.rst:58
 msgid "Example."
-msgstr ""
+msgstr "范例。"
 
 #: ../../manual/compositing/types/converter/math.rst:60
 msgid ""
@@ -107,6 +111,10 @@ msgid ""
 "0.05, as shown in the Size field) and clamped to be a min/ max of 0.0/ "
 "1.0 respectively."
 msgstr ""
+"此范例场景输入数据由 *渲染层* 节点提供，距离摄影机10BU左右有个矩形物体。"
+"在另一个渲染层节点底部的输入连接端口上连有一个覆盖视图左半部距离摄影机7BU"
+"单位的平面。两个渲染层节点通过映射值节点分离Z缓冲区（Z深度）为20（乘以"
+"0.5，输入框如图所示）并且最小值/最大值的范围限分别限定在 0.0/1.0。"
 
 #: ../../manual/compositing/types/converter/math.rst:68
 msgid ""
@@ -118,10 +126,14 @@ msgid ""
 "for the left side, but the plane (FlyCam) Render layers Z are infinite "
 "(mapped to 1.0) for the right side, so they are chosen."
 msgstr ""
+"“使用最小值”功能是依据靠近摄影机的像素将Z深度值选择出来；也可以选择矩形部"
+"分的平面Z深度值。背景有个初始的Z深度值，值限定为1.0（显示为白色）。在“使"
+"用最大值”范例中，矩形的Z深度值比图像平面要大，因此更靠近左侧，但是图像平"
+"面(FlyCam)渲染层Z值初始在右侧（对应于1.0），因此他们被选择。"
 
 #: ../../manual/compositing/types/converter/math.rst:78
 msgid "Using Sine Function to Pulsate"
-msgstr ""
+msgstr "使用正弦功能得到不断循环的变化数"
 
 #: ../../manual/compositing/types/converter/math.rst:82
 msgid ""
@@ -140,6 +152,16 @@ msgid ""
 "Animating this node setup provides a smooth cyclic sequence through the "
 "range of grays."
 msgstr ""
+"在这个例子中，*时间* 节点，在101帧范围内生成一个从0到1的线性序列。垂直方"
+"向上的绿色曲线控件显示第25帧输出，或者说值为0.25的结果被输出。这个值被正"
+"弦节点进行 2 × pi运算转化为正弦范围内的1.0，如我们所熟知的：`sin(2 × pi/ "
+"4) = sin(pi/ 2) = +1.0` 。因为结果值在（-1.0到1.0）之间，*映射值* 节点通"
+"过将输入（-1，1）限定在0.0到1.0区间内，再加上1（使其数值在0到2f范围内），"
+"将所得结果乘以二分之一（因此缩放值在0到1之间）。默认  *颜色渐变* 节点将这"
+"些数值映射到一个灰度值区间内。 引测，中度灰色和0.0值相匹配，黑色为-1.0，"
+"白色为1.0。我们可以看到， :math:`sin(pi/ 2) = 1.0`。就像是有了用户自己的"
+"可见光颜色计算器一样！这个节点装配通过灰度范围提供了一个平滑周期性的序列"
+"值。"
 
 #: ../../manual/compositing/types/converter/math.rst:94
 msgid ""
@@ -147,10 +169,12 @@ msgid ""
 "produce a fading in/out effect. Alter the Z channel to move a scene in/"
 "out of focus. Alter a color channel value to make a color \"pulse\"."
 msgstr ""
+"将这个功能引申,比如，图片的alpha通道形成渐入/渐出特效。改变Z深度通道的景"
+"深位置。改变颜色通道值使其有规律的进行色彩变化。"
 
 #: ../../manual/compositing/types/converter/math.rst:101
 msgid "Brightening/Scaling a Channel"
-msgstr ""
+msgstr "提亮/缩放通道"
 
 #: ../../manual/compositing/types/converter/math.rst:105
 msgid ""
@@ -162,10 +186,15 @@ msgid ""
 "is also a *Brighten/Contrast node* that might give simpler control over "
 "brightness."
 msgstr ""
+"范例中有一个 *运算: 相乘* 节点增加图像的亮度通道（Y）使其颜色变得更亮。使"
+"用 *映射值* 节点的 “使用最小值” 和 “使用最大值”复选框来限定颜色的输出值在"
+"合理的区间范围之内。用这个方法，用户可以在高动态范围图像（HDRI）上应用对"
+"数函数。在这个特定范例中，使用一个 *亮度/对比度 节点* 对亮度进行简单控"
+"制。"
 
 #: ../../manual/compositing/types/converter/math.rst:114
 msgid "Quantize/Restrict Color Selection"
-msgstr ""
+msgstr "量子化/重限定颜色选取"
 
 #: ../../manual/compositing/types/converter/math.rst:116
 msgid ""
@@ -177,6 +206,10 @@ msgid ""
 "values. The number of possible values of an output is the number of "
 "channel values multiplied by each other, or Q = R × G × B."
 msgstr ""
+"在这个例子中，我们要重新限定颜色输出值为256色。运用这种设置使显示看起来就"
+"像是图像在手机中显示的效果。想实现这个效果，我们要重新将像素的R,G,B值限定"
+"在一个范围中，不如当三个光学三原色混合时，颜色结果值不会超过256种变化。颜"
+"色输出值的变化范围是三个通道值彼此相乘，Q = R × G × B。"
 
 #: ../../manual/compositing/types/converter/math.rst:123
 msgid ""
@@ -190,16 +223,25 @@ msgid ""
 "distribution of colors. To get better image quality with fewer color "
 "values, give possible values to the predominant colors in the image."
 msgstr ""
+"现在有三个颜色通道256个颜色值，我们可以灵活的量化每个颜色通道的取值，因为"
+"有很多种 R × G × B的数学组合结果是256。比如，{R, G, B} = {4, 4, 16}, 然"
+"后 :math:`4 × 4 × 16 = 256`。同理， {6, 6, 7} 给出的结果是252。在{4, 4, "
+"16}和{6, 6, 7}颜色结果的差异是，将其首先设置为(4, 4, 16}产生一个带有少量"
+"红和绿，大量蓝的颜色结果。设置为{6, 6, 7}将产生一个个颜色通道平均分布的颜"
+"色结果。为了用较少的颜色值取得比较好的图像效果，图像中的颜色取值尽量以主"
+"要颜色为主。"
 
 #: ../../manual/compositing/types/converter/math.rst:135
 msgid "Theory"
-msgstr ""
+msgstr "理论"
 
 #: ../../manual/compositing/types/converter/math.rst:137
 msgid ""
 "`Two Approaches to Quantizing to six values <https://wiki.blender.org/"
 "index.php/File:Manual-Compositing-Node-Math_ColorBand>`__."
 msgstr ""
+"量化留个值的两种方法 <https://wiki.blender.org/index.php/File:Manual-"
+"Compositing-Node-Math_ColorBand>`__。"
 
 #: ../../manual/compositing/types/converter/math.rst:140
 msgid ""
@@ -213,6 +255,11 @@ msgid ""
 "Dividing 1.0 by 5 equals 0.2, which tells how far apart each quantified "
 "value is from the other."
 msgstr ""
+"将图像量化到256色，设置三通道颜色值为{6, 6, 7}。切分出一块范围在0到1之间"
+"的连续范围（红色光谱）到六个值，我们需要构建当输入任何一个数值可以输出为"
+"六个数值的运算法则，就像如图所示的那样。将0值和黑色颜色值匹配，其他五个颜"
+"色在中间。如显示那样，这个方法产生{0, 0.2, 0.4, 0.6, 0.8, 1}。1.0被5除得"
+"到的结果是0.2，这个表明了量化值彼此之间的颜色差距离。"
 
 #: ../../manual/compositing/types/converter/math.rst:148
 msgid ""
@@ -221,10 +268,13 @@ msgid ""
 "color band values between 0.33 and 0.5 get quantized to 0.4, and so on "
 "up to values between 0.83 and 1.0 get mapped to 1.0."
 msgstr ""
+"为得到平滑的颜色过渡，我们要讲低于0.16的数值匹配到0.0；在0.16和0.33之间的"
+"数值匹配到0.2；在0.33和0.5之间的数值量化为0.4，在0.83和1.0之间的数值量化"
+"匹配到1.0。"
 
 #: ../../manual/compositing/types/converter/math.rst:154
 msgid "Function f(x)"
-msgstr ""
+msgstr "函数f(x)"
 
 #: ../../manual/compositing/types/converter/math.rst:156
 msgid ""
@@ -232,12 +282,16 @@ msgid ""
 "(add, subtract, multiply, sine, cosine, etc.) that operate on an input "
 "value to provide the desired output value."
 msgstr ""
+"此函数的数学功能由基本的数学操作（加，减，乘，正弦，余弦等等）对输入值进"
+"行运算，输出所需要的输出值。"
 
 #: ../../manual/compositing/types/converter/math.rst:160
 msgid ""
 "`Spreadsheet showing a function <https://wiki.blender.org/index.php/File:"
 "Manual-Compositing-Node-Math_spreadsheet>`__."
 msgstr ""
+"`电子表格表述此函数功能 <https://wiki.blender.org/index.php/File:Manual-"
+"Compositing-Node-Math_spreadsheet>`__。"
 
 #: ../../manual/compositing/types/converter/math.rst:163
 msgid ""
@@ -265,6 +319,21 @@ msgid ""
 "when 0.501 subtracted, rounds up to 0 since the Round() function does "
 "not return a negative number."
 msgstr ""
+"此函数背后的理论是按比例截取数值。比如我们需要一个将数值限定在0到1这个范"
+"围的数学函数，比如0.552，但是输出值为，0.2，0.4等等。我们可以想象到我们将"
+"0到1范围之间的数进行乘方，比如从0此方到6次方，以便于将结果化为整数。因此"
+"将数值进行六次分离，我们要怎样操作呢？答案是对一个数值范围乘以6.运算节点"
+"的第一个数值是在0到6的范围内。为了得到平滑均等的分离效果，使用四舍五入功"
+"能（参看前文），我们可以将任何数值进行加减将整个数值四舍五入到那个数值。"
+"因此，我们将数值减去一半，整个操作就结束了。round()函数功能使数值范围限定"
+"在0到5之间。然后将数值除以5得到在0和1之间的取值范围，然后再将结果和其他颜"
+"色通道进行合并。因此我们得到的函数是 :math:`f(x, n) = round(x × n - "
+"0.5)/ (n - 1)`，“n”代表可能的输出值，“x”代表输入的像素颜色值，函数 :math:"
+"`f(x, n)` 是输出值。有个小问题，那就是数值等于1的时候，公式结果为1.2，这"
+"是个非法值。这是因为四舍五入函数是向上取整，5.5将取整为6。因此，当将此数"
+"值减去0.501时，将结果5.499向上取整为5.在其他光谱范围内，是纯黑色，或者数"
+"值表示为0，当0.501被减去时，向上取整为0，因为四舍五入函数Round()功能不会"
+"返回一个负数结果值。"
 
 #: ../../manual/compositing/types/converter/math.rst:184
 msgid ""
@@ -276,10 +345,15 @@ msgid ""
 "by 5 = 0.8. Thus, f(0.7, 6) = 0.8 or an 8-bit value of 204. You can see "
 "that this same 8-bit value is output for a range of input values."
 msgstr ""
+"有时候通过电子表格可以帮助用户这些节点放在一起计算出想要的结果值。通过公"
+"式 :math:`n = 6` 和 :math:`x = 0.70`，定位到电子表格相应位置，得到8-bit "
+"颜色值179和R值0.7。乘以6得到结果为4.2。减去1/2得到结果为3.7，向上取整为"
+"4。将4除以5得到结果为0.8。因此， f(0.7, 6) = 0.8 或一个8-bit数值204。可以"
+"将一个范围的颜色输入值输出为同一个 8-bit输出值。"
 
 #: ../../manual/compositing/types/converter/math.rst:193
 msgid "Reality"
-msgstr ""
+msgstr "实际应用"
 
 #: ../../manual/compositing/types/converter/math.rst:195
 msgid ""
@@ -294,6 +368,12 @@ msgid ""
 "since the function rounds down, and then dividing by five results in six "
 "values {0.0, 0.2, 0.4, 0.6, 0.8, 1.0}."
 msgstr ""
+"考虑到上述节点设置在Blender的实际应用，将图像的连入分离RGB节点。比如红色"
+"通道，我们将运算节点连入获取每个红色的数值，乘以（比例缩放）其数值为六个"
+"单独部分，偏移0.5个数值，四舍五入到最近的整数值，然后将图像颜色像素除以"
+"5。将变化范围由{0 to 1} 改为 {0 to 6}，减去中间的数值，数值范围变化为"
+"{-0.5 to 5.5}四舍五入到最近的整数，结果为{0, 1, 2, 3, 4, 5}，因为函数向下"
+"取整，被5除后的六个数值分别为{0.0, 0.2, 0.4, 0.6, 0.8, 1.0}。"
 
 #: ../../manual/compositing/types/converter/math.rst:205
 msgid ""
@@ -303,6 +383,9 @@ msgid ""
 "node setup below. To get the 6:6:7, we set the three Multiply Nodes to "
 "{6, 6, 7} and the divide nodes to {5, 5, 6}."
 msgstr ""
+"因为运算节点的四舍五入功能的缘故，输出值是固定范围中阶梯性的结果值。拷贝"
+"这个节点装配到绿色和蓝色通道。得到 6:6:7，我们设置三个进行相乘操作的运算"
+"节点为 {6, 6, 7}，相除运算的节点设置为 {5, 5, 6}。"
 
 #: ../../manual/compositing/types/converter/math.rst:212
 msgid ""
@@ -311,10 +394,13 @@ msgid ""
 "different values that you would have to otherwise set manually, just to "
 "error-proof your work."
 msgstr ""
+"如果将此节点装配放入一个群组节点之中，可以在不同的项目之间简单的重复使用"
+"这个功能。在操作中，考虑到一个运算节点要驱动不同的数值，其他的一些要手动"
+"设置，以避免出现误差。"
 
 #: ../../manual/compositing/types/converter/math.rst:218
 msgid "Summary"
-msgstr ""
+msgstr "总结"
 
 #: ../../manual/compositing/types/converter/math.rst:220
 msgid ""
@@ -325,6 +411,10 @@ msgid ""
 "combined back together, each color can only be one of 256 possible "
 "values."
 msgstr ""
+"正常情况下，一个输出渲染值由32位或24位颜色位深，每个像素的颜色值取值在数"
+"百万色之中的某个值。这个节点装配范例将红，绿，蓝三个颜色通道的取值统一到"
+"一个很小的颜色区间内，当三个颜色通道的数值混合在一起，每种颜色只有256种颜"
+"色其中之一。"
 
 #: ../../manual/compositing/types/converter/math.rst:227
 msgid ""
@@ -335,6 +425,10 @@ msgid ""
 "then after dividing, subtract a half to bring in back into standard "
 "range."
 msgstr ""
+"当这个节点装配使用 分离/合并 RGB节点创建一种具体的颜色。其他的 分离/合并 "
+"节点依然可以继续使用。使用YUV（一种颜色编码方法）值，记住U值和V值的变化范"
+"围在（-0.5，0.5），因此用户可以首先加上1/2使其区间范围在0和1之间，然后进"
+"行除法运算，减去1/2,使其颜色在标准范围区间内。"
 
 #: ../../manual/compositing/types/converter/math.rst:233
 msgid ""
@@ -344,6 +438,9 @@ msgid ""
 "quantizing colors are essentially what the ``JPEG`` compression "
 "algorithm accomplishes."
 msgstr ""
+"``JPG`` 或 ``JPG`` 图像格式依据颜色位深（比如： ``JPG`` 是 24位颜色位深）"
+"存储每个颜色值，但是生成图像体积非常小的原因是依据 ``JPEG`` 压缩算法减少"
+"颜色位深和量化颜色范围。"
 
 #: ../../manual/compositing/types/converter/math.rst:238
 msgid ""
@@ -354,9 +451,15 @@ msgid ""
 "reduce the Saturation and Value to 2 values (0 or 1.0) by Multiply by 2 "
 "and Divide by 2, and restrict the Hue to 64 possible values."
 msgstr ""
+"用户需要均匀的较少颜色的位深，比如，在一幅蓝色为主色调的图片上，保持图像"
+"的品质，需要减少红色通道值2个单位，绿色通道值4个单位，让蓝色颜色值为 :"
+"math:`256/(2 × 4)` 或 值为32。如果使用HSV（一种颜色空间）色彩空间，用户需"
+"要通过乘以2和除以2分别减少饱和度和亮度2个单位（0或1.0），将颜色的色相值重"
+"新限定为64。"
 
 #: ../../manual/compositing/types/converter/math.rst:244
 msgid ""
 "You can use this node setup to quantize any channel; alpha, speed "
 "(vector), z-values, and so forth."
 msgstr ""
+"用户可以使用此节点装配量化任何通道：alpha,速度（矢量），z深度值等等。"
