@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 18:57+0800\n"
+"POT-Creation-Date: 2017-11-09 15:10+1100\n"
 "PO-Revision-Date: 2017-06-01 19:03+0800\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
 "Last-Translator: \n"
+"Language: zh_Hans_CN\n"
 "Language-Team: \n"
-"Language: zh_CN\n"
-"X-Generator: Poedit 1.8.13\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: ../../manual/game_engine/physics/types/static.rst:4
 msgid "Static Physics"
@@ -20,18 +20,18 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:6
 msgid ""
-"Static objects in the :doc:`Blender Game Engine </game_engine/index>` do not "
-"automatically react to physics, including gravity and collisions. Even if hit "
-"by the force of a speeding 18-wheeler truck, it will remain unresponsive in "
-"terms of location, rotation, or deformation."
+"Static objects in the :doc:`Blender Game Engine </game_engine/index>` do "
+"not automatically react to physics, including gravity and collisions. "
+"Even if hit by the force of a speeding 18-wheeler truck, it will remain "
+"unresponsive in terms of location, rotation, or deformation."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:11
 msgid ""
-"It will, however, give collision reactions. Objects will bounce off of Static "
-"Objects, and rotational inertia will transfer to objects capable of rotating "
-"(that is, Rigid Body Objects will spin in response, though Dynamic Objects "
-"will not)."
+"It will, however, give collision reactions. Objects will bounce off of "
+"Static Objects, and rotational inertia will transfer to objects capable "
+"of rotating (that is, Rigid Body Objects will spin in response, though "
+"Dynamic Objects will not)."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:15
@@ -44,15 +44,16 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:19
 msgid ""
-"Another important note is that the default `Collision Bounds`_ is a Triangle "
-"Mesh, meaning it is higher in computational requirements but also in detail. "
-"This in turn means the \"Radius\" option has no effect by default."
+"Another important note is that the default `Collision Bounds`_ is a "
+"Triangle Mesh, meaning it is higher in computational requirements but "
+"also in detail. This in turn means the \"Radius\" option has no effect by"
+" default."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:24
 msgid ""
-"For more documentation, see the :doc:`Top BGE Physics page </game_engine/"
-"physics/index>`."
+"For more documentation, see the :doc:`Top BGE Physics page "
+"</game_engine/physics/index>`."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:28
@@ -67,9 +68,9 @@ msgstr ""
 #: ../../manual/game_engine/physics/types/static.rst:32
 msgid ""
 "Note that most of these properties are accessible through the non- BGE "
-"scripting API via ``bpy.data.objects[\"ObjectName\"].game``, which is of type "
-"``bpy.types.GameObjectSetting``. This is useful so you can, for example, set "
-"a range of objects to have gradated values via a for-loop."
+"scripting API via ``bpy.data.objects[\"ObjectName\"].game``, which is of "
+"type ``bpy.types.GameObjectSetting``. This is useful so you can, for "
+"example, set a range of objects to have gradated values via a for-loop."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:37
@@ -104,11 +105,12 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:45
 msgid ""
-"If you have the \"Collision Bounds: Sphere\" set explicitly (or implicitly "
-"through having the Collision Bounds subpanel unchecked), this will multiply "
-"with the Object's (unapplied) Scale. Note that none of the other bounds types "
-"are affected. Also note that in the 3D View the display will show this for "
-"all types, even though it is only actually used with Sphere."
+"If you have the \"Collision Bounds: Sphere\" set explicitly (or "
+"implicitly through having the Collision Bounds subpanel unchecked), this "
+"will multiply with the Object's (unapplied) Scale. Note that none of the "
+"other bounds types are affected. Also note that in the 3D View the "
+"display will show this for all types, even though it is only actually "
+"used with Sphere."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:54
@@ -199,27 +201,28 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:85
 msgid ""
-"Isotropic friction is identical at all angles. Anisotropic is directionally-"
-"dependant. Here you can vary the coefficients for the three axes "
-"individually, or disable friction entirely. Python properties: ``obj.game."
-"use_anisotropic_friction`` (boolean) and ``obj.game.friction_coefficients`` "
-"(a 3-element array)."
+"Isotropic friction is identical at all angles. Anisotropic is "
+"directionally-dependant. Here you can vary the coefficients for the three"
+" axes individually, or disable friction entirely. Python properties: "
+"``obj.game.use_anisotropic_friction`` (boolean) and "
+"``obj.game.friction_coefficients`` (a 3-element array)."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:96
 msgid ""
-"The Static type differs from the others in that it defaults to a Triangle "
-"Mesh bounds, instead of a simple sphere."
+"The Static type differs from the others in that it defaults to a Triangle"
+" Mesh bounds, instead of a simple sphere."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:99
 msgid ""
-"The first thing you must understand is the idea of the 3D Bounding Box. If "
-"you run through all the vertices of a mesh and record the lowest and highest "
-"x values, you have found the *x min/max* the complete boundary for all x "
-"values within the mesh. Do this again for y and z, then make a rectangular "
-"prism out of these values, and you have a *Bounding Box*. This box could be "
-"oriented relative globally to the world or locally to the object's rotation."
+"The first thing you must understand is the idea of the 3D Bounding Box. "
+"If you run through all the vertices of a mesh and record the lowest and "
+"highest x values, you have found the *x min/max* the complete boundary "
+"for all x values within the mesh. Do this again for y and z, then make a "
+"rectangular prism out of these values, and you have a *Bounding Box*. "
+"This box could be oriented relative globally to the world or locally to "
+"the object's rotation."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:107
@@ -234,13 +237,14 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:111
 msgid ""
-"Throughout all of this you must be cognizant of the Object Origin. For the "
-"Game engine, the default :kbd:`Ctrl-Alt-Shift-C`, :kbd:`3` or :menuselection:"
-"`Set Origin --> Origin to Geometry` is unlikely to get the desired placement "
-"of the Collision Bounds that you want. Instead, you should generally set the "
-"origin by looking at the Tool Shelf after you do the *Set Origin*, and "
-"changing the *Center* from *Median Center* to *Bounds Center*. Blender will "
-"remember this change for future :kbd:`Ctrl-Alt-Shift-C` executions."
+"Throughout all of this you must be cognizant of the Object Origin. For "
+"the Game engine, the default :kbd:`Ctrl-Alt-Shift-C`, :kbd:`3` or "
+":menuselection:`Set Origin --> Origin to Geometry` is unlikely to get the"
+" desired placement of the Collision Bounds that you want. Instead, you "
+"should generally set the origin by looking at the Tool Shelf after you do"
+" the *Set Origin*, and changing the *Center* from *Median Center* to "
+"*Bounds Center*. Blender will remember this change for future :kbd:`Ctrl-"
+"Alt-Shift-C` executions."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:118
@@ -255,17 +259,18 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:124
 msgid ""
-"A final introductory comment: When you set the Collision Bounds on an object, "
-"Blender will attempt to display a visualization of the bounds in the form of "
-"a dotted outline. Currently, there is a bug: *The 3D View* does not display "
-"this bounds preview where it actually will be during the game. To see it, go "
-"to :menuselection:`Game --> Show Physics Visualization` and look for the "
-"white (or green, if sleeping) geometry."
+"A final introductory comment: When you set the Collision Bounds on an "
+"object, Blender will attempt to display a visualization of the bounds in "
+"the form of a dotted outline. Currently, there is a bug: *The 3D View* "
+"does not display this bounds preview where it actually will be during the"
+" game. To see it, go to :menuselection:`Game --> Show Physics "
+"Visualization` and look for the white (or green, if sleeping) geometry."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:131
 msgid ""
-"Now we can explain the various options for the *Collision Bounds* settings:"
+"Now we can explain the various options for the *Collision Bounds* "
+"settings:"
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:134
@@ -285,7 +290,7 @@ msgstr ""
 #: ../../manual/game_engine/physics/types/static.rst:137
 msgid ""
 "Which is a cylinder with hemispherical caps, like a pill. Radius of the "
-"hemispheres is the greater of the X or Y extent. Height is the Z bounds"
+"hemispheres is the greater of the X or Y extent. Height is the Z bounds."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:141
@@ -298,10 +303,10 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:143
 msgid ""
-"Radius is defined by the object's scale (visible in the N properties panel) "
-"times the physics radius (can be found in :menuselection:`Physics --> "
-"Attributes --> Radius`. Note: This is the only bounds that respects the "
-"Radius option."
+"Radius is defined by the object's scale (visible in the N properties "
+"panel) times the physics radius (can be found in :menuselection:`Physics "
+"--> Attributes --> Radius`. Note: This is the only bounds that respects "
+"the Radius option."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:147
@@ -335,8 +340,8 @@ msgstr ""
 #: ../../manual/game_engine/physics/types/static.rst:161
 msgid ""
 "Most expensive, but most precise. Collision will happen with all of "
-"triangulated polygons, instead of using a virtual mesh to approximate that "
-"collision."
+"triangulated polygons, instead of using a virtual mesh to approximate "
+"that collision."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:175
@@ -345,13 +350,13 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:164
 msgid ""
-"This is not an option in the Physics tab's Collision Bounds settings, but a "
-"different approach, entirely. You create a second mesh, which is invisible, "
-"to be the physics representation. This becomes the parent for your display "
-"object. Then, your display object is set to ghost so it does not fight with "
-"the parent object. This method allows you to strike a balance between the "
-"accuracy of *Triangle Mesh* with the efficiency of some of the others. See "
-"the demo of this in the dune buggy to the right."
+"This is not an option in the Physics tab's Collision Bounds settings, but"
+" a different approach, entirely. You create a second mesh, which is "
+"invisible, to be the physics representation. This becomes the parent for "
+"your display object. Then, your display object is set to ghost so it does"
+" not fight with the parent object. This method allows you to strike a "
+"balance between the accuracy of *Triangle Mesh* with the efficiency of "
+"some of the others. See the demo of this in the dune buggy to the right."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:174
@@ -375,12 +380,13 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:186
 msgid ""
-"Sometimes 0.06 is the default (such as on the Default Cube), but sometimes it "
-"is not. You have to keep an eye on the setting, or else learn the symptoms so "
-"you can respond when it gives you trouble. If you are lazy/paranoid/unsure/"
-"diligent/bored, you can always run this on the Python Console to bump all 0.0 "
-"margins to 0.06: for ``obj`` in ``bpy.data.objects``: ``obj.game."
-"collision_margin = obj.game.collision_margin`` or 0.06"
+"Sometimes 0.06 is the default (such as on the Default Cube), but "
+"sometimes it is not. You have to keep an eye on the setting, or else "
+"learn the symptoms so you can respond when it gives you trouble. If you "
+"are lazy/paranoid/unsure/diligent/bored, you can always run this on the "
+"Python Console to bump all 0.0 margins to 0.06: for ``obj`` in "
+"``bpy.data.objects``: ``obj.game.collision_margin = "
+"obj.game.collision_margin`` or 0.06"
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:197
@@ -389,11 +395,12 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:192
 msgid ""
-"\"Add children to form compound collision object.\" Basically, if you have a "
-"child object and do not have this enabled, the child's collisions will not "
-"have an effect on that object \"family\" (though it will still push other "
-"objects around). If you do have it checked, the parent's physics will respond "
-"to the child's collision (thus updating the whole family)."
+"\"Add children to form compound collision object.\" Basically, if you "
+"have a child object and do not have this enabled, the child's collisions "
+"will not have an effect on that object \"family\" (though it will still "
+"push other objects around). If you do have it checked, the parent's "
+"physics will respond to the child's collision (thus updating the whole "
+"family)."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/static.rst:200
@@ -403,3 +410,12 @@ msgstr ""
 #: ../../manual/game_engine/physics/types/static.rst:202
 msgid "Todo"
 msgstr ""
+
+#~ msgid ""
+#~ "Which is a cylinder with hemispherical"
+#~ " caps, like a pill. Radius of "
+#~ "the hemispheres is the greater of "
+#~ "the X or Y extent. Height is "
+#~ "the Z bounds"
+#~ msgstr ""
+

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-13 17:52+1100\n"
+"POT-Creation-Date: 2017-11-09 15:10+1100\n"
 "PO-Revision-Date: 2017-07-20 14:18+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -98,7 +98,7 @@ msgstr ""
 #: ../../manual/pipeline/bam.rst:57
 msgid ""
 "You may also want to give an explicit output directory. The example shows"
-" how to pack a blend with maximum compression for online downloads"
+" how to pack a blend with maximum compression for online downloads."
 msgstr ""
 
 #: ../../manual/pipeline/bam.rst:64
@@ -204,14 +204,14 @@ msgid ""
 "*01_01_A.lighting.blend* with its linked libraries."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:112
+#: ../../manual/pipeline/bam.rst:111
 msgid ""
 "Once we run ``bam pack /scenes/01-opening/01_01_A.lighting.blend`` we "
 "obtain a *01_01_A.lighting.zip* inside of which we find the following "
 "structure."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:127
+#: ../../manual/pipeline/bam.rst:126
 msgid ""
 "Note how all paths have been remapped relative to the placement of "
 "*01_01_A.lighting.blend* in the root of the output. If we run ``bam pack "
@@ -219,7 +219,7 @@ msgid ""
 " will be different."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:144
+#: ../../manual/pipeline/bam.rst:143
 msgid ""
 "In this case no path is remapped, and we simply strip out any file that "
 "is not referenced as a direct or indirect dependency of "
@@ -227,35 +227,35 @@ msgid ""
 "original production tree."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:150
+#: ../../manual/pipeline/bam.rst:149
 msgid "bam remap"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:152
+#: ../../manual/pipeline/bam.rst:151
 msgid "Remap blend file paths::"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:156
+#: ../../manual/pipeline/bam.rst:155
 msgid "This command is a three step process:"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:158
+#: ../../manual/pipeline/bam.rst:157
 msgid ""
 "First run ``bam remap start .`` which stores the current state of your "
 "project (recursively)."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:159
+#: ../../manual/pipeline/bam.rst:158
 msgid "Then re-arrange the files on the filesystem (rename, relocate)."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:160
+#: ../../manual/pipeline/bam.rst:159
 msgid ""
 "Finally run ``bam remap finish`` to apply the changes, updating the "
 "``.blend`` files internal paths."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:174
+#: ../../manual/pipeline/bam.rst:172
 msgid ""
 "Remapping creates a file called ``bam_remap.data`` in the current "
 "directory. You can relocate the entire project to a new location but on "
@@ -263,66 +263,73 @@ msgid ""
 "directory."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:180
+#: ../../manual/pipeline/bam.rst:178
 msgid ""
 "This command depends on files unique contents, take care not to modify "
 "the files once remap is started."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:185
+#: ../../manual/pipeline/bam.rst:183
 msgid "Subcommands"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:188
+#: ../../manual/pipeline/bam.rst:186
 msgid "remap start"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:190
+#: ../../manual/pipeline/bam.rst:188
 msgid "Start remapping the blend files::"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:197 ../../manual/pipeline/bam.rst:212
-#: ../../manual/pipeline/bam.rst:223
+#: ../../manual/pipeline/bam.rst:194 ../../manual/pipeline/bam.rst:209
+#: ../../manual/pipeline/bam.rst:220
 msgid "``-j``, ``--json``"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:196 ../../manual/pipeline/bam.rst:211
-#: ../../manual/pipeline/bam.rst:222
+#: ../../manual/pipeline/bam.rst:193 ../../manual/pipeline/bam.rst:208
+#: ../../manual/pipeline/bam.rst:219
 msgid "Generate JSON output."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:200
+#: ../../manual/pipeline/bam.rst:197
 msgid "remap finish"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:202
+#: ../../manual/pipeline/bam.rst:199
 msgid "Finish remapping the blend files::"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:206
+#: ../../manual/pipeline/bam.rst:203
 msgid "``-r``, ``--force-relative``"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:207
+#: ../../manual/pipeline/bam.rst:204
 msgid "Make all remapped paths relative (even if they were originally absolute)."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:208
+#: ../../manual/pipeline/bam.rst:205
 msgid "``-d``, ``--dry-run``"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:209
+#: ../../manual/pipeline/bam.rst:206
 msgid "Just print output as if the paths are being run."
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:215
+#: ../../manual/pipeline/bam.rst:212
 msgid "remap reset"
 msgstr ""
 
-#: ../../manual/pipeline/bam.rst:217
+#: ../../manual/pipeline/bam.rst:214
 msgid "Cancel path remapping::"
 msgstr ""
 
 #~ msgid "Using Unix shell-style wildcards *(case insensitive)*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You may also want to give an "
+#~ "explicit output directory. The example "
+#~ "shows how to pack a blend with "
+#~ "maximum compression for online downloads"
 #~ msgstr ""
 
