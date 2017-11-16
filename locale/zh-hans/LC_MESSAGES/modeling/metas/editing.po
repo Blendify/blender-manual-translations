@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-13 17:52+1100\n"
+"POT-Creation-Date: 2017-11-16 16:36+1100\n"
 "PO-Revision-Date: 2017-06-04 13:39+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -24,31 +24,43 @@ msgid "Active Element"
 msgstr "活动元素"
 
 #: ../../manual/modeling/metas/editing.rst:9
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/modeling/metas/editing.rst
+msgid "Mode:     Object or Edit Modes"
+msgstr ""
+
+#: ../../manual/modeling/metas/editing.rst
+msgid "Panel:    :menuselection:`Properties editor --> Active Element`"
+msgstr ""
+
+#: ../../manual/modeling/metas/editing.rst:15
 #, fuzzy
 msgid ""
 "When in *Edit Mode*, the *Active Element* panel appears. These settings "
 "apply only to the selected meta element."
 msgstr "在编辑模式下的Active Element 活动元素面板参数设置，仅应用于已选中的融球元素应用。 "
 
-#: ../../manual/modeling/metas/editing.rst:15
+#: ../../manual/modeling/metas/editing.rst:21
 #, fuzzy
 msgid "Active element panel."
 msgstr "活动元素面板."
 
-#: ../../manual/modeling/metas/editing.rst:19
+#: ../../manual/modeling/metas/editing.rst:25
 msgid "Type"
 msgstr ""
 
-#: ../../manual/modeling/metas/editing.rst:21
+#: ../../manual/modeling/metas/editing.rst:27
 #, fuzzy
 msgid "The *Type* menu lets you change the shape of the meta object."
 msgstr "类型 菜单能让您选择所需要的融球形状，如上所示。 "
 
-#: ../../manual/modeling/metas/editing.rst:25
+#: ../../manual/modeling/metas/editing.rst:31
 msgid "Stiffness"
 msgstr "硬度"
 
-#: ../../manual/modeling/metas/editing.rst:27
+#: ../../manual/modeling/metas/editing.rst:33
 msgid ""
 "Together with *Threshold*, *Stiffness* controls the influencing range. "
 "While the threshold is common to all metas in the same object (or even "
@@ -57,7 +69,7 @@ msgstr ""
 "*阈值* 和 *刚性* 一齐控制影响范围。虽然临界值在同一个物体里是应用于所有融球（或者甚至在同一个 `物体家族`_ "
 "里也是这样），而刚性则是分别应用于各个融球。"
 
-#: ../../manual/modeling/metas/editing.rst:32
+#: ../../manual/modeling/metas/editing.rst:38
 msgid ""
 "Scaling the inner green circle changes the *Stiffness* value. Stiffness "
 "defines how much the meta object is filled. This essentially defines how "
@@ -68,7 +80,7 @@ msgstr ""
 "缩放里面的绿色圆环可以改变Stiffness刚性的值。刚性参数限定了融球有多大程度的填充。这本质上决定了这个融球在影响其它融球时的敏感度。较低的刚性，融球会在相距很远的地方就开始变形。较高的刚性，融球则需要彼此靠得更近才能开始合并。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:38
+#: ../../manual/modeling/metas/editing.rst:44
 msgid ""
 "When a *Meta* object comes within \"range\" of another meta, the two will"
 " begin to interact with each other. They do not necessarily need to "
@@ -77,7 +89,7 @@ msgid ""
 "*green ring*"
 msgstr ""
 
-#: ../../manual/modeling/metas/editing.rst:44
+#: ../../manual/modeling/metas/editing.rst:50
 msgid ""
 "The range is from (0.0 to 10.0). But to be visible, the *Stiffness* must "
 "be slightly larger than the *Threshold* value. You can also visually "
@@ -85,11 +97,11 @@ msgid ""
 "activate *Scale* mode with :kbd:`S`."
 msgstr ""
 
-#: ../../manual/modeling/metas/editing.rst:54
+#: ../../manual/modeling/metas/editing.rst:60
 msgid "Stiffness."
 msgstr "硬度"
 
-#: ../../manual/modeling/metas/editing.rst:57
+#: ../../manual/modeling/metas/editing.rst:62
 #, fuzzy
 msgid ""
 "In Fig. :ref:`fig-meta-edit-stiffness`, the meta ball labeled \"A\", has "
@@ -97,15 +109,15 @@ msgid ""
 "the radius (green ring) is different for each of them."
 msgstr "在(刚性)图里，标记为“A”的融球圆球的 Stiffness刚性比标记为“B”的另一个更小。正如您所看到的，两者绿色圆环的半径大小不同。 "
 
-#: ../../manual/modeling/metas/editing.rst:63
+#: ../../manual/modeling/metas/editing.rst:68
 msgid "Negative Influence"
 msgstr "负影响"
 
-#: ../../manual/modeling/metas/editing.rst:70
+#: ../../manual/modeling/metas/editing.rst:75
 msgid "Negative."
 msgstr "负."
 
-#: ../../manual/modeling/metas/editing.rst:73
+#: ../../manual/modeling/metas/editing.rst:77
 #, fuzzy
 msgid ""
 "The opposite effect of a *positive* influence would be a *negative* "
@@ -116,24 +128,25 @@ msgid ""
 "the object is negative."
 msgstr "正影响相反的效果就是negative负影响：物体彼此排斥。(负)图显示的是一个融球圆球和一个融球平面，第一个是负的，第二个是正的。注意：负的融球是不可见的：只有周围的圆环显示出来。这就是Blender表示一个负物体的方式。"
 
-#: ../../manual/modeling/metas/editing.rst:79
+#: ../../manual/modeling/metas/editing.rst:83
 msgid ""
 "Moving the sphere to the plane causes the plane's mesh to \"cave in\" or "
 "collapse inward. If you move the plane away from the sphere, the plane's "
 "mesh will restore itself."
 msgstr "圆球向平面移动会引起平面的网格部分“塌陷”或向内崩溃。如果您移动平面远离圆球，平面的网格部分将会恢复原状。 "
 
-#: ../../manual/modeling/metas/editing.rst:82
+#: ../../manual/modeling/metas/editing.rst:86
+#, fuzzy
 msgid ""
 "To make a meta *negative*, just select the meta in edit mode, and check "
-"*negative* in the *active element* panel."
+"*negative* in the *Active element* panel."
 msgstr "要让融球成为negative负的，只需选中这个融球，在编辑模式active element活动元素面板中，勾选negative负这个选项即可。 "
 
-#: ../../manual/modeling/metas/editing.rst:87
+#: ../../manual/modeling/metas/editing.rst:91
 msgid "Hiding Elements"
 msgstr "隐藏元素"
 
-#: ../../manual/modeling/metas/editing.rst:89
+#: ../../manual/modeling/metas/editing.rst:93
 #, fuzzy
 msgid ""
 "As in :ref:`object-show-hide` in *Object Mode*, you can hide the selected"
@@ -145,26 +158,26 @@ msgstr ""
 "在物体模式下，你可以隐藏已选中的融球，然后就能看到什么被隐藏了。这能非常方便地整理一下您的思路……注意：红色和绿色这二个圆环在编辑模式下总是保持可见的，同样地，选取圆环（在物体模式下）也是这样。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:96
+#: ../../manual/modeling/metas/editing.rst:100
 msgid "Deleting Elements"
 msgstr "删除元素"
 
-#: ../../manual/modeling/metas/editing.rst:98
+#: ../../manual/modeling/metas/editing.rst:102
 msgid ""
 "There is no *Erase* menu for metas, just a confirmation pop-up asking you"
 " if you want to delete the selected metas. Clear and simple!"
 msgstr "没有专门为融球提供的Erase擦除菜单，如果您打算删除已选中的融球，在常用的X或者Del删除命令后，只需在弹出菜单中确认即可。简单明了！ "
 
-#: ../../manual/modeling/metas/editing.rst:104
+#: ../../manual/modeling/metas/editing.rst:108
 msgid "Conversion"
 msgstr "转换"
 
-#: ../../manual/modeling/metas/editing.rst:109
+#: ../../manual/modeling/metas/editing.rst:113
 #, fuzzy
 msgid "Convert Menu."
 msgstr "转换菜单"
 
-#: ../../manual/modeling/metas/editing.rst:112
+#: ../../manual/modeling/metas/editing.rst:115
 msgid ""
 "You can only convert metas to meshes, but here you have the option to "
 "keep the original *Meta* object (i.e. create a new *Mesh* one, instead of"
@@ -174,50 +187,50 @@ msgstr ""
 "您可以把融球转换为网格物体，但在此，您也可以选择保持原始的Meta融球（即：创建一个新的Mesh网格物体，而不是\"真的\"转换……）。注意：用于新网格物体的解析度是Wiresize线框尺寸，而不是Rendersize渲染尺寸。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:118
+#: ../../manual/modeling/metas/editing.rst:121
 #, fuzzy
 msgid ""
 "To convert the meta, press :kbd:`Alt-C` in *Object Mode*, and select "
 "*Mesh/Text*."
 msgstr "要转换一个融球，在物体模式按下AltC，然后选择mesh网格物体即可。 "
 
-#: ../../manual/modeling/metas/editing.rst:122
+#: ../../manual/modeling/metas/editing.rst:125
 msgid "Object Families"
 msgstr "物体家族"
 
-#: ../../manual/modeling/metas/editing.rst:124
+#: ../../manual/modeling/metas/editing.rst:127
 #, fuzzy
 msgid ""
 "*Meta* objects have different behavior in *Object Mode* than other object"
 " types. They can be \"regrouped\" into so-called \"families\"."
 msgstr "在物体模式下，融球 有一个与其它物体类型很不同的情况——它们可以“被重组”为所谓的“物体家族”。 "
 
-#: ../../manual/modeling/metas/editing.rst:127
+#: ../../manual/modeling/metas/editing.rst:130
 msgid ""
 "A \"family\" is a way to regroup several meta objects, producing "
 "something very similar to having several metas inside the same object."
 msgstr "“物体家族”可以用于重组几个融球，产生的效果类似于一个物体里包含有几个融球。 "
 
-#: ../../manual/modeling/metas/editing.rst:130
+#: ../../manual/modeling/metas/editing.rst:133
 #, fuzzy
 msgid ""
 "A family is defined by the left part of an object's name (the one before "
-"the dot). Remember, an object's name is the one in the *OB* field, in "
-"most panels, **not** the *MB* field, which is the meta data-block's "
-"name... For example, the *family* part of \"MetaPlane.001\" is "
-"``MetaPlane``. Each meta object in the same \"family\" is associated with"
-" one another as discussed below."
+"the dot). Remember, an object's name is the one in the *Object name* "
+"field, in most panels, **not** the *Metaball name* field, which is the "
+"meta data-block's name... For example, the *family* part of "
+"\"MetaPlane.001\" is ``MetaPlane``. Each meta object in the same "
+"\"family\" is associated with one another as discussed below."
 msgstr ""
 "物体家族由物体名称的左半部分（点号之前）来定义。记住，融球的数据块名称中，各个物体的名称是在“OB后部”区域， 在大多数面板中，不是在“MB前部”"
 " "
 "区域。例如，物体家族是指“MetaPlane.001”中的“MetaPlane”那部分。在同一个“物体家族”里的每个黏体都彼此相互关联，如下所述。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:141
+#: ../../manual/modeling/metas/editing.rst:144
 msgid "Meta ball base."
 msgstr "基本融球圆球."
 
-#: ../../manual/modeling/metas/editing.rst:144
+#: ../../manual/modeling/metas/editing.rst:146
 #, fuzzy
 msgid ""
 "Families of metas are controlled by a *base* meta object which is "
@@ -230,7 +243,7 @@ msgstr ""
 "“MetaThing.001”, “MetaThing.002”, “MetaThing.003” and "
 "“MetaThing.004”,那么基本 融球就是“MetaThing”。 "
 
-#: ../../manual/modeling/metas/editing.rst:150
+#: ../../manual/modeling/metas/editing.rst:152
 #, fuzzy
 msgid ""
 "The *base* meta object determines the basis, the resolution, the "
@@ -243,21 +256,21 @@ msgstr ""
 "基本融球是决定一切的基础，resolution解析度，threshold刚性，以及transformations变换。它也决定了material材质和texture纹理区域。"
 " 基本 融球是同组成员中其它融球的有效父物体。（或者，用另一个更好的词是“主人”）。（组，即把其它融球看作为被“包括”加入到基本物体内）。 "
 
-#: ../../manual/modeling/metas/editing.rst:158
+#: ../../manual/modeling/metas/editing.rst:160
 msgid ""
 "When working with multiple scenes, take care naming your meta objects so "
 "the *base* is always in the same scene as other metas."
 msgstr ""
 
-#: ../../manual/modeling/metas/editing.rst:161
+#: ../../manual/modeling/metas/editing.rst:163
 msgid "Failing to do this will give confusing behavior (invisible meta objects)."
 msgstr ""
 
-#: ../../manual/modeling/metas/editing.rst:165
+#: ../../manual/modeling/metas/editing.rst:167
 msgid "Examples"
 msgstr "样例"
 
-#: ../../manual/modeling/metas/editing.rst:167
+#: ../../manual/modeling/metas/editing.rst:169
 #, fuzzy
 msgid ""
 "Fig. :ref:`fig-meta-ball-base` shows the *base* meta labeled \"B\". The "
@@ -272,11 +285,11 @@ msgstr ""
 "(基本融球圆球)图例显示了标记为“B”的基本融球，另外二个融球是子物体。子物体的选取环总是黑色的，而整个组的网格部分是桔黄色的。因为融球被分组了，它们形成一个统一的网格部分，选中同组中的任何一个融球，就等于选中了整个组。例如，在(基本融球圆球)图例里，只有下方的圆球（父物体）被选中，您可以看到包括父物体和所有子物体融球的网格部分都高亮显示了。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:180
+#: ../../manual/modeling/metas/editing.rst:182
 msgid "Scaling the \"base\"."
 msgstr "缩放“基本”."
 
-#: ../../manual/modeling/metas/editing.rst:183
+#: ../../manual/modeling/metas/editing.rst:184
 #, fuzzy
 msgid ""
 "The *base* meta object controls the *polygonalization* (mesh structure) "
@@ -289,7 +302,7 @@ msgstr ""
 "（网格结构），正因为如此，它也能控子物体(非基本)融球的多边形轮廓。如果我们对基本融球进行变换操作，子物体的多边形轮廓会发生改变。然而，如果我们对子物体进行变换操作，多边形轮廓不会发生改变。"
 " "
 
-#: ../../manual/modeling/metas/editing.rst:190
+#: ../../manual/modeling/metas/editing.rst:191
 #, fuzzy
 msgid ""
 "This discussion of \"polygonization\" does *not* mean that the various "
