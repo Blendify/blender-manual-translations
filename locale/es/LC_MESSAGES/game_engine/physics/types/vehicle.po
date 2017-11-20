@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-09 15:03+1100\n"
+"POT-Creation-Date: 2017-11-20 11:33+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,11 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:9
 msgid ""
-"The Vehicle Controller is a special :ref:`type of physics object <game-"
-"engine-physics-types>` that the Physics Engine (bullet) recognizes."
+"The Vehicle Controller is a special type of physics object that the "
+"Physics Engine (bullet) recognizes."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:12
+#: ../../manual/game_engine/physics/types/vehicle.rst:11
 msgid ""
 "It is composed of a *rigid body* representing the chassis and a set of "
 "wheels that are set to *no collision*. Emphasizing the distinction "
@@ -40,7 +40,7 @@ msgid ""
 "for the Physics Engine is important."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:17
+#: ../../manual/game_engine/physics/types/vehicle.rst:15
 msgid ""
 "To simulate a vehicle as a true rigid body, on top of also rigid body "
 "wheels, with a real suspension system made with joints, would be far too "
@@ -53,18 +53,18 @@ msgid ""
 "tweakable parameters such as suspension force, damping and compression."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:27
+#: ../../manual/game_engine/physics/types/vehicle.rst:25
 msgid "How It Works"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:29
+#: ../../manual/game_engine/physics/types/vehicle.rst:27
 msgid ""
 "Bullet's approach to a vehicle controller is called a \"Raycast "
 "Vehicle\". Collision detection for the wheels is approximated by ray "
 "casts and the tire friction is an anisotropic friction model."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:33
+#: ../../manual/game_engine/physics/types/vehicle.rst:31
 msgid ""
 "A raycast vehicle works by casting a ray for each wheel. Using the ray's "
 "intersection point, we can calculate the suspension length and hence the "
@@ -73,38 +73,38 @@ msgid ""
 "rays."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:38
+#: ../../manual/game_engine/physics/types/vehicle.rst:36
 msgid ""
 "The friction force is calculated for each wheel where the ray contacts "
 "the ground. This is applied as a sideways and forwards force."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:41
+#: ../../manual/game_engine/physics/types/vehicle.rst:39
 msgid ""
 "You can check Kester Maddock's approach to vehicle simulation `here "
 "<https://docs.google.com/document/d/18edpOwtGgCwNyvakS78jxMajCuezotCU_0iezcwiFQc/edit>`__."
 " It includes some common problems, workarounds and tips and tricks."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:47
+#: ../../manual/game_engine/physics/types/vehicle.rst:45
 msgid "How to Use"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:49
+#: ../../manual/game_engine/physics/types/vehicle.rst:47
 msgid ""
 "Currently the Vehicle Controller can only be used as a constraint via "
 "Python. There are plans to add it to the interface."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:54
+#: ../../manual/game_engine/physics/types/vehicle.rst:52
 msgid "Setup"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:56
+#: ../../manual/game_engine/physics/types/vehicle.rst:54
 msgid "You should have a body acting as the chassis, set it as a 'Rigid Body'."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:58
+#: ../../manual/game_engine/physics/types/vehicle.rst:56
 msgid ""
 "The wheels should be separate objects set to 'No Collision'. The vehicle "
 "controller will calculate the collisions for you as rays so, if you set "
@@ -112,11 +112,11 @@ msgid ""
 "produce weird results."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:64
+#: ../../manual/game_engine/physics/types/vehicle.rst:62
 msgid "Collisions"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:66
+#: ../../manual/game_engine/physics/types/vehicle.rst:64
 msgid ""
 "A cylinder is typically a good collision shape for the wheels. For the "
 "chassis, the shape should be rough, like a box. If the vehicle is very "
@@ -127,45 +127,45 @@ msgid ""
 "connected to the vehicle as a joint."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:76
+#: ../../manual/game_engine/physics/types/vehicle.rst:74
 msgid "Python"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:79
+#: ../../manual/game_engine/physics/types/vehicle.rst:77
 msgid "Assembling the Vehicle"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:81
+#: ../../manual/game_engine/physics/types/vehicle.rst:79
 msgid "The overall steps are:"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:83
+#: ../../manual/game_engine/physics/types/vehicle.rst:81
 msgid "Create a constraint for the vehicle and save its ID for future reference."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:84
+#: ../../manual/game_engine/physics/types/vehicle.rst:82
 msgid "Attach the wheels."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:85
+#: ../../manual/game_engine/physics/types/vehicle.rst:83
 msgid ""
 "Set wheel parameters: influence, stiffness, damping, compression and "
 "friction."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:86
+#: ../../manual/game_engine/physics/types/vehicle.rst:84
 msgid "Init variables."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:88
+#: ../../manual/game_engine/physics/types/vehicle.rst:86
 msgid "You can see an example in the file below."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:92
+#: ../../manual/game_engine/physics/types/vehicle.rst:90
 msgid "Controlling the Vehicle"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:94
+#: ../../manual/game_engine/physics/types/vehicle.rst:92
 msgid ""
 "This is done in two parts and it should be modeled according to the "
 "desired behavior. You should think of your gameplay and research "
@@ -176,19 +176,19 @@ msgid ""
 "such as increase acceleration. Example::"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:107
+#: ../../manual/game_engine/physics/types/vehicle.rst:105
 msgid "The second part is to *compute the movement* according to your functions::"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:117
+#: ../../manual/game_engine/physics/types/vehicle.rst:115
 msgid "Both should be run each frame."
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:121
+#: ../../manual/game_engine/physics/types/vehicle.rst:119
 msgid "Example"
 msgstr ""
 
-#: ../../manual/game_engine/physics/types/vehicle.rst:123
+#: ../../manual/game_engine/physics/types/vehicle.rst:121
 msgid ""
 "`demo_file.zip "
 "<https://dl.dropboxusercontent.com/u/3226675/blender/vehicle_controller_demo.zip>`__"
@@ -252,5 +252,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Init variables"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Vehicle Controller is a special "
+#~ ":ref:`type of physics object <game-"
+#~ "engine-physics-types>` that the Physics "
+#~ "Engine (bullet) recognizes."
 #~ msgstr ""
 
