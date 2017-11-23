@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-24 21:03-0400\n"
+"POT-Creation-Date: 2017-11-23 12:24+1100\n"
 "PO-Revision-Date: 2017-03-24 11:00+0900\n"
 "Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
 "Language: ja\n"
@@ -17,13 +17,21 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.5.1\n"
 
 #: ../../manual/render/cycles/lamps.rst:4
 msgid "Lamps"
 msgstr "Lamps (ランプ)"
 
 #: ../../manual/render/cycles/lamps.rst:6
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/render/cycles/lamps.rst
+msgid "Panel:    :menuselection:`Lamp --> Lamp`"
+msgstr ""
+
+#: ../../manual/render/cycles/lamps.rst:11
 msgid ""
 "Next to lighting from the background and any object with an emission "
 "shader, lamps are another way to add light into the scene. The difference"
@@ -33,19 +41,19 @@ msgstr ""
 "Background シェーダーによる光や Emission シェーダーを適用したオブジェクトに続き、Lamp (ランプ) "
 "はシーンに光源を追加する手法の一つです。その違いは光源がレンダリング画像上に直接見えず、独自のオブジェクトとしてより簡単に操作できる事です。"
 
-#: ../../manual/render/cycles/lamps.rst:13
+#: ../../manual/render/cycles/lamps.rst:18
 msgid "Point, Spot, and Area Lamps also have texture coordinates."
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:17
+#: ../../manual/render/cycles/lamps.rst:22
 msgid "Common Settings"
 msgstr "共通設定"
 
-#: ../../manual/render/cycles/lamps.rst:20
+#: ../../manual/render/cycles/lamps.rst:25
 msgid "Type"
 msgstr "Type (タイプ)"
 
-#: ../../manual/render/cycles/lamps.rst:20
+#: ../../manual/render/cycles/lamps.rst:25
 msgid ""
 "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported. *Hemi* "
 "lamps are not supported, and will be rendered as sun lamps."
@@ -53,21 +61,21 @@ msgstr ""
 "現時点では *Point*、*Spot*、*Area* および *Sun* のランプがサポートされています。*Hemi* "
 "ランプはサポートされておらず、Sun ランプとしてレンダリングされます。"
 
-#: ../../manual/render/cycles/lamps.rst:22
+#: ../../manual/render/cycles/lamps.rst:27
 msgid "Size"
 msgstr "Size (サイズ)"
 
-#: ../../manual/render/cycles/lamps.rst:23
+#: ../../manual/render/cycles/lamps.rst:28
 msgid ""
 "Size of the lamp in Blender Units; increasing this will result in softer "
 "shadows and shading."
 msgstr "Blender Unit で表されるランプの大きさです;この値を大きくすると影と陰影の描画が柔らかな物になります。"
 
-#: ../../manual/render/cycles/lamps.rst:25
+#: ../../manual/render/cycles/lamps.rst:30
 msgid "Samples"
 msgstr "Samples (サンプル量)"
 
-#: ../../manual/render/cycles/lamps.rst:25
+#: ../../manual/render/cycles/lamps.rst:30
 msgid ""
 "For the branch path tracing integrator, this specifies the number of "
 "direct light samples per AA sample. Point lamps might need only one "
@@ -77,11 +85,11 @@ msgstr ""
 "(アンチエイリアス) サンプルに応じた直接光のサンプルの量を定義します。Point ランプは 1 サンプルしか必要としませんが、Area "
 "ランプは通常もっと多くのサンプルを必要とします。"
 
-#: ../../manual/render/cycles/lamps.rst:28
+#: ../../manual/render/cycles/lamps.rst:33
 msgid "Max Bounces"
 msgstr "Max Bounces (最大バウンス回数)"
 
-#: ../../manual/render/cycles/lamps.rst:28
+#: ../../manual/render/cycles/lamps.rst:33
 msgid ""
 "Maximum number of times light from the lamp is allowed to :term:`bounce "
 "<light bounces>`. Limited by :ref:`scene-wide bounce settings <cycles-"
@@ -90,22 +98,22 @@ msgstr ""
 "ランプから放射される光線について :term:`バウンス <light bounces>` が許容される上限回数を表します。:ref"
 ":`scene-wide のバウンス設定 <cycles-bounces>` によって制限されます。"
 
-#: ../../manual/render/cycles/lamps.rst:31
+#: ../../manual/render/cycles/lamps.rst:36
 msgid "Cast Shadow"
 msgstr "Cast Shadow (影のキャスト)"
 
-#: ../../manual/render/cycles/lamps.rst:31
+#: ../../manual/render/cycles/lamps.rst:36
 msgid ""
 "By disabling this option, light from lamps will not be blocked by objects"
 " in-between. This can speed up rendering by not having to trace rays to "
 "the light source."
 msgstr "このオプションを無効化することで、ランプからの光線はオブジェクト間で遮断されなくなります。光源への光線のトレースを行わなくなりレンダリングを高速化できます。"
 
-#: ../../manual/render/cycles/lamps.rst:37
+#: ../../manual/render/cycles/lamps.rst:42
 msgid "Multiple Importance Sample"
 msgstr "Multiple Importance Sample (多重重点サンプル)"
 
-#: ../../manual/render/cycles/lamps.rst:34
+#: ../../manual/render/cycles/lamps.rst:39
 msgid ""
 "By default lamps use only direct light sampling. For area lights and "
 "sharp glossy reflections, however, this can be noisy, and enabling this "
@@ -115,15 +123,15 @@ msgstr ""
 "標準ではランプは直接光のサンプリングのみを利用します。しかしながら、Area "
 "の光源と鮮烈にきらめく反射を対象とすると、その設定ではノイズが強くなり、このオプションを有効化することで間接光のサンプリングを用いてノイズを低減します。"
 
-#: ../../manual/render/cycles/lamps.rst:40
+#: ../../manual/render/cycles/lamps.rst:45
 msgid "Lamp Types"
 msgstr "Lamp の種別"
 
-#: ../../manual/render/cycles/lamps.rst:43
+#: ../../manual/render/cycles/lamps.rst:48
 msgid "Point Lamp"
 msgstr "Point Lamp (ポイントランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:45
+#: ../../manual/render/cycles/lamps.rst:50
 msgid ""
 "Point lamps emit light equally in all directions. By setting the *Size* "
 "larger than zero, they become spherical lamps, which give softer shadows "
@@ -132,11 +140,11 @@ msgstr ""
 "ポイントランプは全方位に対して等しく光を放射します。その *Size* を 0 "
 "より大きい値にすることで、陰影を淡い物にする球状の光源となります。ポイントランプの明るさの強度は Watt (ワット) で表されます。"
 
-#: ../../manual/render/cycles/lamps.rst:51
+#: ../../manual/render/cycles/lamps.rst:56
 msgid "Spot Lamp"
 msgstr "Spot Lamp (スポットランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:53
+#: ../../manual/render/cycles/lamps.rst:58
 msgid ""
 "Spot lamps emit light in a particular direction, inside a cone. By "
 "setting the *Size* larger than zero, they can cast softer shadows and "
@@ -147,49 +155,49 @@ msgstr ""
 "より大きい値にすることで、より柔らかな陰影を投影できます。Size パラメータは円錐の大きさを表し、Blend "
 "パラメータは円錐の境界を曖昧な物にするために利用できます。"
 
-#: ../../manual/render/cycles/lamps.rst:62
+#: ../../manual/render/cycles/lamps.rst:67
 msgid "Area Lamp"
 msgstr "Area Lamp (エリアランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:64
+#: ../../manual/render/cycles/lamps.rst:69
 msgid ""
 "Area lamps emit light from a square or rectangular area with a Lambertian"
 " distribution."
 msgstr "エリアランプは Lambertian 分布に従い正方形もしくは長方形の領域から光を放射します。"
 
-#: ../../manual/render/cycles/lamps.rst:73
+#: ../../manual/render/cycles/lamps.rst:78
 msgid "Shape"
 msgstr "Shape (形状)"
 
-#: ../../manual/render/cycles/lamps.rst:67
+#: ../../manual/render/cycles/lamps.rst:72
 msgid "Shape of the lamp."
 msgstr "ランプの形状を意味します。"
 
-#: ../../manual/render/cycles/lamps.rst:69
+#: ../../manual/render/cycles/lamps.rst:74
 msgid "Rectangle"
 msgstr "Rectangle (長方形)"
 
-#: ../../manual/render/cycles/lamps.rst:70
+#: ../../manual/render/cycles/lamps.rst:75
 msgid ""
 "The shape of the lamp can be represented as a rectangle and changed with "
 "the \"X\" and \"Y\" values."
 msgstr "ランプの形状を長方形として \"X\" および \"Y\" の値を変更できます。"
 
-#: ../../manual/render/cycles/lamps.rst:73
+#: ../../manual/render/cycles/lamps.rst:78
 msgid "Square"
 msgstr "Square (正方形)"
 
-#: ../../manual/render/cycles/lamps.rst:72
+#: ../../manual/render/cycles/lamps.rst:77
 msgid ""
 "The shape of the lamp can be represented as a square and changed with the"
 " *Size* property."
 msgstr "ランプの形状を正方形として \"Size\" プロパティを変更できます。"
 
-#: ../../manual/render/cycles/lamps.rst:78
+#: ../../manual/render/cycles/lamps.rst:83
 msgid "Light Portals"
 msgstr "Light Portals (ライトポータル)"
 
-#: ../../manual/render/cycles/lamps.rst:80
+#: ../../manual/render/cycles/lamps.rst:85
 msgid ""
 "Area lamps can also function as light portals to help sample the "
 "environment light, and significantly reduce noise in interior scenes. "
@@ -197,7 +205,7 @@ msgid ""
 "more quickly, less samples are required."
 msgstr "エリアランプは環境光サンプルを補助するライトポータルとしての機能を持ち、インテリアのシーン上でノイズを大幅に低減させます。ポータルを用いたレンダリングは通常遅い物となりますが、必要とするサンプル量を少なくする程、より高速に終了するようになります。"
 
-#: ../../manual/render/cycles/lamps.rst:84
+#: ../../manual/render/cycles/lamps.rst:89
 msgid ""
 "Light portals work by enabling the *Portal* option, and placing areas "
 "lamps in windows, door openings, and any place where light will enter the"
@@ -206,28 +214,28 @@ msgstr ""
 "ライトポータルは *Portal* "
 "オプションを有効にすることで利用可能となり、そのエリアランプを窓、開いているドア、その他インテリアに光を入れるあらゆる場所に設置します。"
 
-#: ../../manual/render/cycles/lamps.rst:87
+#: ../../manual/render/cycles/lamps.rst:92
 msgid ""
 "In outdoor scenes most rays do not bounce much and just fly off into the "
 "sky and therefore, light portals are not helpful for outdoor scenes."
 msgstr "野外のシーンに置いては光線の大半がバウンスせずに空中に拡散していくだけなので、ライトポータルは野外のシーンにおいては無用です。"
 
-#: ../../manual/render/cycles/lamps.rst:93
+#: ../../manual/render/cycles/lamps.rst:98
 msgid "White Room model by Jay Hardy."
 msgstr "Jay Hardy による白い部屋のモデル。"
 
-#: ../../manual/render/cycles/lamps.rst:97
+#: ../../manual/render/cycles/lamps.rst:102
 msgid "Sun Lamp"
 msgstr "Sun Lamp (サンランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:99
+#: ../../manual/render/cycles/lamps.rst:104
 msgid ""
 "Sun lamps emit light in a given direction. Their position is not taken "
 "into account; they are always located outside of the scene, infinitely "
 "far away, and will not result in any distance falloff."
 msgstr "サンランプは定められた方向に向かって光を放射します。サンランプの位置は考慮されません;サンランプは常にシーンの外部、遥か遠方、に位置して距離による減衰が発生しません。"
 
-#: ../../manual/render/cycles/lamps.rst:103
+#: ../../manual/render/cycles/lamps.rst:108
 msgid ""
 "Because they are not located inside the scene, their strength uses "
 "different units, and should typically be set to lower values than other "

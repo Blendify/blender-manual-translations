@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-09 15:10+1100\n"
+"POT-Creation-Date: 2017-11-23 12:24+1100\n"
 "PO-Revision-Date: 2017-03-22 16:14+0900\n"
 "Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
 "Language: ja\n"
@@ -19,18 +19,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../manual/render/cycles/materials/displacement.rst:5
+#: ../../manual/render/cycles/materials/displacement.rst:4
 msgid "Displacement"
 msgstr "ディスプレイスメント"
 
-#: ../../manual/render/cycles/materials/displacement.rst:7
+#: ../../manual/render/cycles/materials/displacement.rst:6
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/displacement.rst
+msgid "Panel:    :menuselection:`Material --> Settings --> Displacement`"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/displacement.rst:11
 msgid ""
 "The shape of the surface and the volume inside its mesh may be altered by"
 " the displacement shaders. This way, textures can then be used to make "
 "the mesh surface more detailed."
 msgstr "サーフェスの形状とメッシュ内部のボリュームはディスプレイスメントシェーダーによって変化します。この機能を用いて、よりメッシュ表面を詳細に表現するのにテクスチャを利用できます。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:10
+#: ../../manual/render/cycles/materials/displacement.rst:14
 msgid ""
 "There are two types of displacement methods that can be used: `True "
 "Displacement`_  and `Bump Mapping`_. Depending on the settings, the "
@@ -41,25 +49,26 @@ msgstr ""
 "`True ディスプレイスメント`_  と `バンプマッピング`_ の 2 "
 "通りのディスプレイスメントの利用法が存在します。設定次第でディスプレイスメントは、バンプマッピングとして知られる、ディスプレイスメントの程度によってサーフェスの法線のみを変化させる、仮想的なものであったり、実態と仮想のディスプレイスメントを組み合わせて用いることができます。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:17
+#: ../../manual/render/cycles/materials/displacement.rst:21
+#, fuzzy
 msgid ""
 "It is also possible to use the both method by choosing *Displacement + "
-"Bump* in the :ref:`Material Setttings <cycles-materials-settings-"
+"Bump* in the :ref:`Material Settings <cycles-materials-settings-"
 "displace>`."
 msgstr ""
 ":ref:`マテリアルの設定 <cycles-materials-settings-displace>` 内で *Displacement と "
 "Bump* を選択して両方用いる事もできます。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:22
+#: ../../manual/render/cycles/materials/displacement.rst:26
 #, fuzzy
 msgid "Subdivision Rate 2, Bump, True, Both."
 msgstr "Subdivision レート 2 の際の、 Bump、 True、 両者併用"
 
-#: ../../manual/render/cycles/materials/displacement.rst:26
+#: ../../manual/render/cycles/materials/displacement.rst:30
 msgid "Bump Mapping"
 msgstr "バンプマッピング"
 
-#: ../../manual/render/cycles/materials/displacement.rst:28
+#: ../../manual/render/cycles/materials/displacement.rst:32
 msgid ""
 "When using the *Bump* method for displacement a \"bump map\" is used to "
 "create fake displacement by using light and shadow effects. A bump map is"
@@ -70,7 +79,7 @@ msgstr ""
 "を用いて陰影の効果を利用した仮想的なディスプレイスメントを作成します。バンプマップは実際は古いタイプのディスプレイスメントの方式です(新しい方法については"
 " `True ディスプレイスメント`_ を参照して下さい)。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:32
+#: ../../manual/render/cycles/materials/displacement.rst:36
 msgid ""
 "Typically, bump maps are grayscale images with 8-bits of color "
 "information. This means that they only have 256 different shades of "
@@ -81,7 +90,7 @@ msgstr ""
 "段階の陰影を表す黒、灰色あるいは白のみを持っている事を意味します。このグレースケールの値は Blender に2つの情報を伝えます: "
 "変位の方向が上か下かです。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:36
+#: ../../manual/render/cycles/materials/displacement.rst:40
 #, python-format
 msgid ""
 "When values in a bump map are close to 50% gray, there is little to no "
@@ -93,7 +102,7 @@ msgstr ""
 "バンプマップ上での値が 50%g "
 "グレーに近ければ、そのサーフェスに殆ど形をもたせる事は有りません。値がより白に近ければ、サーフェスからその部分が引っぱり出されるように見える効果が有ります。対象的に値が黒に近ければ、サーフェス内部に押し込まれるように見えます。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:40
+#: ../../manual/render/cycles/materials/displacement.rst:44
 msgid ""
 "Bump maps are really great for creating tiny details on a model, for "
 "example, pores or wrinkles on skin. Bump maps can be created in a 2D "
@@ -103,24 +112,24 @@ msgstr ""
 "バンプマップは例えば、肌の毛穴や皺などモデル上に微細なディティールを作る上で非常に役立ちます。バンプマップは画像をグレースケールで保存する事を忘れなければ"
 " 2D ドローイングや写真編集アプリケーションで作成できてレンダリング中のメモリ利用削減にもつながります。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:46
+#: ../../manual/render/cycles/materials/displacement.rst:50
 msgid ""
 "Because bump mapping is a fake effect, it is easily broken when viewing a"
 " model at the wrong angle. This means that it is not recommended for "
 "animations."
 msgstr "バンプマッピングは仮想的な効果ですので、モデルを異なった方向から見た時に容易に破綻します。これはつまりアニメーションにおける利用は推奨されない事を意味します。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:53
+#: ../../manual/render/cycles/materials/displacement.rst:57
 msgid "True Displacement"
 msgstr "True ディスプレイスメント"
 
-#: ../../manual/render/cycles/materials/displacement.rst:57
+#: ../../manual/render/cycles/materials/displacement.rst:61
 msgid ""
 "Implementation not finished yet, marked as an :ref:`Experimental Feature "
 "Set <cycles-experimental-features>`"
 msgstr "完全には実装が完了しておらず、:ref:`実験的実装 <cycles-experimental-features>` とされています。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:59
+#: ../../manual/render/cycles/materials/displacement.rst:63
 msgid ""
 "Different from bump mapping, *True Displacement* is not a fake effect. "
 "When using *True Displacement* the actual mesh geometry will be displaced"
@@ -131,7 +140,7 @@ msgstr ""
 "バンプマッピングと異なり、 *True ディスプレイスメント* は仮想的な効果ではありません。*True ディスプレイスメント* "
 "を利用した場合はレンダーの前に実際にメッシュ構造が置き換えられます。対象となるメッシュが十分に分割されている場合、最も高品質な結果をもたらします。結果として最もメモリを消費します。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:64
+#: ../../manual/render/cycles/materials/displacement.rst:68
 msgid ""
 "When using true displacement you should not just use a bump map as the "
 "displacement texture. Different from bump maps displacement maps should "
@@ -144,7 +153,7 @@ msgstr ""
 " 8 ビット色深度を利用できません。8 ビットで保存されたテクスチャを利用した場合、それらは 3D 空間にうまく変換されません。8 "
 "ビットではなく、マップ画像を 16 もしくは 32 ビットの色深度で保存する必要が有ります。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:71
+#: ../../manual/render/cycles/materials/displacement.rst:75
 msgid ""
 "In order to get the appropriate amount of subdivision it is recommended "
 "to use :ref:`Adaptive Subdivision <render-cycles-settings-object-"
@@ -153,7 +162,7 @@ msgstr ""
 "適切な程度のメッシュ分割を行うために :ref:`Adaptive Subdivision <render-cycles-settings-"
 "object-subdivision>` の利用が推奨されます。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:76
+#: ../../manual/render/cycles/materials/displacement.rst:80
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
@@ -161,11 +170,11 @@ msgstr ""
 ":doc:`Displace モディファイア </modeling/modifiers/deform/displace>` "
 "もまたメッシュを変化させるのに利用できます。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:80
+#: ../../manual/render/cycles/materials/displacement.rst:84
 msgid "Controls"
 msgstr "調整"
 
-#: ../../manual/render/cycles/materials/displacement.rst:82
+#: ../../manual/render/cycles/materials/displacement.rst:86
 msgid ""
 "You may find that there is a limit to using *True Displacement* compared "
 "to using the :doc:`Displace Modifier "
@@ -179,11 +188,11 @@ msgstr ""
 "</render/cycles/nodes/types/converter/math>` を利用することで容易に解消されます。下の例では "
 "*Displace モディファイア* と同様の設定を持たせるノードの設定を示します。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:89
+#: ../../manual/render/cycles/materials/displacement.rst:93
 msgid "Math nodes used to add Mid-level and Strength."
 msgstr "Mid-level と Strength を加算するために Math ノードを用いる。"
 
-#: ../../manual/render/cycles/materials/displacement.rst:91
+#: ../../manual/render/cycles/materials/displacement.rst:95
 msgid ""
 "In the example above a math node is used twice, the first math node uses "
 "the add operator. This operation can be used to control the mid-level of "
