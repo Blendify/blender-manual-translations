@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-09 15:03+1100\n"
+"POT-Creation-Date: 2017-11-23 12:24+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,18 +12,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../manual/render/cycles/materials/displacement.rst:5
+#: ../../manual/render/cycles/materials/displacement.rst:4
 msgid "Displacement"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:7
+#: ../../manual/render/cycles/materials/displacement.rst:6
+msgid "Reference"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/displacement.rst
+msgid "Panel:    :menuselection:`Material --> Settings --> Displacement`"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/displacement.rst:11
 msgid ""
 "The shape of the surface and the volume inside its mesh may be altered by"
 " the displacement shaders. This way, textures can then be used to make "
 "the mesh surface more detailed."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:10
+#: ../../manual/render/cycles/materials/displacement.rst:14
 msgid ""
 "There are two types of displacement methods that can be used: `True "
 "Displacement`_  and `Bump Mapping`_. Depending on the settings, the "
@@ -32,22 +40,22 @@ msgid ""
 "of real and virtual displacement."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:17
+#: ../../manual/render/cycles/materials/displacement.rst:21
 msgid ""
 "It is also possible to use the both method by choosing *Displacement + "
-"Bump* in the :ref:`Material Setttings <cycles-materials-settings-"
+"Bump* in the :ref:`Material Settings <cycles-materials-settings-"
 "displace>`."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:22
+#: ../../manual/render/cycles/materials/displacement.rst:26
 msgid "Subdivision Rate 2, Bump, True, Both."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:26
+#: ../../manual/render/cycles/materials/displacement.rst:30
 msgid "Bump Mapping"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:28
+#: ../../manual/render/cycles/materials/displacement.rst:32
 msgid ""
 "When using the *Bump* method for displacement a \"bump map\" is used to "
 "create fake displacement by using light and shadow effects. A bump map is"
@@ -55,7 +63,7 @@ msgid ""
 "Displacement`_ for a newer method)."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:32
+#: ../../manual/render/cycles/materials/displacement.rst:36
 msgid ""
 "Typically, bump maps are grayscale images with 8-bits of color "
 "information. This means that they only have 256 different shades of "
@@ -63,7 +71,7 @@ msgid ""
 "two thing: up or down."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:36
+#: ../../manual/render/cycles/materials/displacement.rst:40
 #, python-format
 msgid ""
 "When values in a bump map are close to 50% gray, there is little to no "
@@ -73,7 +81,7 @@ msgid ""
 " into the surface."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:40
+#: ../../manual/render/cycles/materials/displacement.rst:44
 msgid ""
 "Bump maps are really great for creating tiny details on a model, for "
 "example, pores or wrinkles on skin. Bump maps can be created in a 2D "
@@ -81,24 +89,24 @@ msgid ""
 "a grayscale to save memory while rendering."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:46
+#: ../../manual/render/cycles/materials/displacement.rst:50
 msgid ""
 "Because bump mapping is a fake effect, it is easily broken when viewing a"
 " model at the wrong angle. This means that it is not recommended for "
 "animations."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:53
+#: ../../manual/render/cycles/materials/displacement.rst:57
 msgid "True Displacement"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:57
+#: ../../manual/render/cycles/materials/displacement.rst:61
 msgid ""
 "Implementation not finished yet, marked as an :ref:`Experimental Feature "
 "Set <cycles-experimental-features>`"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:59
+#: ../../manual/render/cycles/materials/displacement.rst:63
 msgid ""
 "Different from bump mapping, *True Displacement* is not a fake effect. "
 "When using *True Displacement* the actual mesh geometry will be displaced"
@@ -107,7 +115,7 @@ msgid ""
 "intensive."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:64
+#: ../../manual/render/cycles/materials/displacement.rst:68
 msgid ""
 "When using true displacement you should not just use a bump map as the "
 "displacement texture. Different from bump maps displacement maps should "
@@ -116,24 +124,24 @@ msgid ""
 "either 16 or 32-bits."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:71
+#: ../../manual/render/cycles/materials/displacement.rst:75
 msgid ""
 "In order to get the appropriate amount of subdivision it is recommended "
 "to use :ref:`Adaptive Subdivision <render-cycles-settings-object-"
 "subdivision>`"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:76
+#: ../../manual/render/cycles/materials/displacement.rst:80
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:80
+#: ../../manual/render/cycles/materials/displacement.rst:84
 msgid "Controls"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:82
+#: ../../manual/render/cycles/materials/displacement.rst:86
 msgid ""
 "You may find that there is a limit to using *True Displacement* compared "
 "to using the :doc:`Displace Modifier "
@@ -143,11 +151,11 @@ msgid ""
 "node setup to give the same settings as the *Displace Modifier*."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:89
+#: ../../manual/render/cycles/materials/displacement.rst:93
 msgid "Math nodes used to add Mid-level and Strength."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:91
+#: ../../manual/render/cycles/materials/displacement.rst:95
 msgid ""
 "In the example above a math node is used twice, the first math node uses "
 "the add operator. This operation can be used to control the mid-level of "
@@ -228,5 +236,12 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Subdivision Rate 2, Bump, True, Both"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is also possible to use the "
+#~ "both method by choosing *Displacement +"
+#~ " Bump* in the :ref:`Material Setttings "
+#~ "<cycles-materials-settings-displace>`."
 #~ msgstr ""
 

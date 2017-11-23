@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"POT-Creation-Date: 2017-11-09 15:10+1100\n"
+"POT-Creation-Date: 2017-11-23 12:24+1100\n"
 "PO-Revision-Date: 2016-12-02 21:46-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../manual/render/cycles/materials/surface.rst:5
+#: ../../manual/render/cycles/materials/surface.rst:4
 msgid "Surface"
 msgstr "Superfície"
 
-#: ../../manual/render/cycles/materials/surface.rst:7
+#: ../../manual/render/cycles/materials/surface.rst:6
 msgid ""
 "The surface shader defines the light interaction at the surface of the "
 "mesh. One or more :abbr:`BSDF (Bidirectional scattering distribution "
@@ -33,7 +33,7 @@ msgstr ""
 "espalhamento bidirecional)` especificam se a luz advinda de algum ponto é"
 " refletida de volta, refratada na malha, ou absorvida."
 
-#: ../../manual/render/cycles/materials/surface.rst:11
+#: ../../manual/render/cycles/materials/surface.rst:10
 msgid ""
 "Emission defines how light is emitted from the surface, allowing any "
 "surface to become a light source."
@@ -41,17 +41,18 @@ msgstr ""
 "A emissão define como a luz é emitida a partir de uma superfície, "
 "permitindo que quaisquer superfícies se tornem uma fonte de luz."
 
-#: ../../manual/render/cycles/materials/surface.rst:16
+#: ../../manual/render/cycles/materials/surface.rst:15
 msgid "Terminology"
 msgstr "Terminologia."
 
-#: ../../manual/render/cycles/materials/surface.rst:19
+#: ../../manual/render/cycles/materials/surface.rst:18
 msgid "BSDF"
 msgstr "BSDF"
 
-#: ../../manual/render/cycles/materials/surface.rst:19
+#: ../../manual/render/cycles/materials/surface.rst:18
+#, fuzzy
 msgid ""
-"stands for bidirectional scattering distribution function. It defines how"
+"Stands for Bidirectional Scattering Distribution Function. It defines how"
 " light is reflected and refracted at a surface."
 msgstr ""
 "é uma abreviatura para  \"função de distribuição de espalhamento "
@@ -59,54 +60,51 @@ msgstr ""
 "function* (em Inglês). Ela define como as luzes são refletidas e "
 "refratadas em uma superfície."
 
-#: ../../manual/render/cycles/materials/surface.rst:22
+#: ../../manual/render/cycles/materials/surface.rst:20
 msgid "Reflection"
 msgstr "Reflexão"
 
-#: ../../manual/render/cycles/materials/surface.rst:22
+#: ../../manual/render/cycles/materials/surface.rst:21
 #, fuzzy
-msgid ""
-":abbr:`BSDF (Bidirectional scattering distribution function)`\\ s reflect"
-" an incoming ray on the same side of the surface."
+msgid "BSDFs reflect an incoming ray on the same side of the surface."
 msgstr ""
 "A :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` "
 "reflete quaisquer raios projetados nos mesmos lados das superfícies."
 
-#: ../../manual/render/cycles/materials/surface.rst:25
+#: ../../manual/render/cycles/materials/surface.rst:22
 msgid "Transmission"
 msgstr "Transmissão"
 
-#: ../../manual/render/cycles/materials/surface.rst:25
+#: ../../manual/render/cycles/materials/surface.rst:23
 #, fuzzy
 msgid ""
-":abbr:`BSDF (Bidirectional scattering distribution function)`\\ s "
-"transmit an incoming ray through the surface, leaving on the other side."
+"BSDFs transmit an incoming ray through the surface, leaving on the other "
+"side."
 msgstr ""
 "A :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` "
 "transmite quaisquer raios projetados através das superfícies, deixando-as"
 " pelo outro lado."
 
-#: ../../manual/render/cycles/materials/surface.rst:30
+#: ../../manual/render/cycles/materials/surface.rst:27
 msgid "Refraction"
 msgstr "Refração"
 
-#: ../../manual/render/cycles/materials/surface.rst:28
+#: ../../manual/render/cycles/materials/surface.rst:25
 #, fuzzy
 msgid ""
-":abbr:`BSDF (Bidirectional scattering distribution function)`\\ s are a "
-"type of *Transmission*, transmitting an incoming ray and changing its "
-"direction as it exits on the other side of the surface."
+"BSDFs are a type of *Transmission*, transmitting an incoming ray and "
+"changing its direction as it exits on the other side of the surface."
 msgstr ""
 "A :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` e "
 "sua projeção de raios são um tipo de *transmissão*. A função transmite os"
 " raios projetados e altera a sua direção conforme ela sai pelo outro lado"
 " de uma superfície."
 
-#: ../../manual/render/cycles/materials/surface.rst:33
+#: ../../manual/render/cycles/materials/surface.rst:30
 msgid "BSDF Parameters"
 msgstr "Parâmetros BSDF"
 
-#: ../../manual/render/cycles/materials/surface.rst:35
+#: ../../manual/render/cycles/materials/surface.rst:32
 msgid ""
 "A major difference from non-physically based renderers is that direct "
 "light reflection from lamps and indirect light reflection of other "
@@ -126,11 +124,11 @@ msgstr ""
 "de renderizações de aparência consistente sem a necessidade de muitos "
 "parâmetros de ajuste."
 
-#: ../../manual/render/cycles/materials/surface.rst:57
+#: ../../manual/render/cycles/materials/surface.rst:54
 msgid "Roughness"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/surface.rst:42
+#: ../../manual/render/cycles/materials/surface.rst:39
 #, fuzzy
 msgid ""
 "For the glossy :abbr:`BSDF (Bidirectional scattering distribution "
@@ -151,7 +149,7 @@ msgstr ""
 "superfícies mais facilmente texturizáveis. A relação entre ambas é "
 "direta: *rugosidade* = 1 - 1/*dureza* ."
 
-#: ../../manual/render/cycles/materials/surface.rst:51
+#: ../../manual/render/cycles/materials/surface.rst:48
 msgid ""
 "Currently Blender is coded to use an unsquared model. So if you are using"
 " a :term:`Roughness Map` chances are that the result will not be "
