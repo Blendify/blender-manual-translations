@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-29 15:07-0400\n"
-"PO-Revision-Date: 2017-10-05 22:52+0200\n"
+"PO-Revision-Date: 2017-12-10 14:22+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,9 @@ msgid ""
 "height. (0.5, 0.5 creates a centered ellipse; 0.0, 0.0 creates an ellipse "
 "with its center in the lower left)."
 msgstr ""
+"Position du centre de l'ellipse comme une fraction de la largeur ou de la "
+"hauteur totale (0.5, 0.5 crée une ellipse centrée ; 0.0, 0.0 crée un ellipse "
+"avec son centre en bas à gauche)."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:31
 msgid "Width"
@@ -92,8 +95,8 @@ msgid ""
 "Height of the ellipse as a fraction of the total image *width*, not height. "
 "Equal *Width* and *Height* values with produce a circle."
 msgstr ""
-"Hauteur de l'ellipse comme une fraction de la largeur totale de l'image, et "
-"non sa hauteur. Des valeurs égales de *Width (largeur)* et *Height "
+"Hauteur de l'ellipse comme une fraction de la *largeur* totale de l'image, "
+"et non de sa hauteur. Des valeurs égales de *Width (largeur)* et *Height "
 "(hauteur)* vont produire un cercle."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:36
@@ -110,7 +113,7 @@ msgstr ""
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:39
 msgid "Operation to use against the input mask."
-msgstr ""
+msgstr "Opération à utiliser contre le masque d'entrée."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:43
 msgid "Add"
@@ -123,6 +126,10 @@ msgid ""
 "of the input masked are passed through unchanged, or set to black if there "
 "is no input mask."
 msgstr ""
+"Ceci produit l'*union* du masque d'entrée et du masque généré : les zones "
+"couvertes par le masque généré sont fixées à la *Value* spécifiée. D'autres "
+"parties de l'entrée masquée sont passées à travers sans changement, ou "
+"fixées à noir s'il n'y a pas de masque d'entrée.  "
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:45
 msgid "Subtract"
@@ -132,6 +139,7 @@ msgstr ""
 msgid ""
 "Values of the input mask have the specified *Value* subtracted from them."
 msgstr ""
+"Valeurs du masque d'entrée ont la *Value* spécifiée soustraite d'elles."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:49
 msgid "Multiply"
@@ -143,6 +151,10 @@ msgid ""
 "Values of the input mask are multiplied by the specified *Value* for the "
 "area covered by the generated mask. All other areas become black."
 msgstr ""
+"Ceci produit l'*intersection* du masque généré et du masque d'entrée : les "
+"valeurs du masque d'entrée sont multipliées par la *Value* spécifiée pour la "
+"zone couverte par le masque généré. Toutes les autres zones deviennent "
+"noires."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:55
 msgid "Not"
@@ -155,6 +167,10 @@ msgid ""
 "become the specified *Value*. Areas uncovered by the generated mask remain "
 "unchanged."
 msgstr ""
+"Toute zone couverte à la fois par le masque d'entrée et le masque généré "
+"devient noire. Les zones couvertes par le masque généré qui sont noires sur "
+"le masque d'entrée deviennent la *Value* spécifiée. Les zones non couvertes "
+"par le masque généré demeurent inchangées."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:58
 msgid "Outputs"
@@ -165,10 +181,16 @@ msgid ""
 "A generated elliptical mask merged with the input mask. The created mask is "
 "the size of the current scene render dimensions."
 msgstr ""
+"Un masque elliptique généré fusionné avec le masque d'entrée. Le masque créé "
+"est la taille des dimensions de rendu de la scène courante."
 
 #: ../../manual/compositing/types/matte/ellipse_mask.rst:67
+#, fuzzy
 msgid ""
 "For soft edges, pass the output mask through a slight :doc:`blur node </"
 "compositing/types/filter/blur_node>`. For a vignette, pass the output of "
 "this through a heavy blur."
 msgstr ""
+"Pour des bords doux, paaser le masque de sortie via un léger :doc:`node blur "
+"</compositing/types/filter/blur_node>`. Pour une vignette, passer la sortie "
+"de ceci via un flou dense."
