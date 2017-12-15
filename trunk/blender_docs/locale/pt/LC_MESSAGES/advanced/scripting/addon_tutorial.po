@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 22:59+1100\n"
-"PO-Revision-Date: 2017-12-12 10:15-0300\n"
+"PO-Revision-Date: 2017-12-15 00:22-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -267,31 +267,31 @@ msgstr "Como anteriormente, primeiramente iniciaremos com um script, então o de
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:258
 msgid "Now try copy this script into Blender and run it on the default Cube. Make sure you click to move the 3D cursor before running as the duplicate will appear at the cursor's location."
-msgstr ""
+msgstr "Agora, tente copiar este script no Blender e executá-lo no cubo padrão. Certifique-se de ter clicado com o cursor 3D em outra localização antes de executar o script, já que a duplicata irá aparecer na posição do cursor."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:261
 msgid "After running, notice that when you go into *Edit Mode* to change the Cube -- all of the copies change. In Blender, this is known as *Linked-Duplicates*."
-msgstr ""
+msgstr "Após a execução, note que quando você entrar no *Modo de edição* para alterar o cubo -- todas cópias serão duplicadas. No Blender, isto é conhecido como *Duplicatas vinculadas*."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:264
 msgid "Next, we're going to do this in a loop, to make an array of objects between the active object and the cursor. ::"
-msgstr ""
+msgstr "No próximo passo, nós tornaremos este trecho de código em um ciclo repetitivo, para fazer com que uma matriz de objetos entre o objeto ativo e o cursor apareçam::"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:286
 msgid "Try run this script with the active object and the cursor spaced apart to see the result."
-msgstr ""
+msgstr "Tente executar este script com o objeto ativo e o cursor espaçados com bastante distância entre si para ver o resultado."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:288
 msgid "With this script you'll notice we're doing some math with the object location and cursor, this works because both are 3D :class:`blender_api:mathutils. Vector` instances, a convenient class provided by the :mod:`blender_api:mathutils` module which allows vectors to be multiplied by numbers and matrices."
-msgstr ""
+msgstr "Através deste script, você irá notar que nós estamos fazendo alguma matemática usando a localização do objeto e o cursor, isto funciona pois ambos são 3D expostos para instâncias do módulo :class:`blender_api:mathutils. Vector`, uma classe conveniente provida pelo módulo  :mod:`blender_api:mathutils` que permite que vetores sejam multiplicados por números e matrizes."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:293
 msgid "If you are interested in this area, read into :class:`blender_api:mathutils.Vector` -- there are many handy utility functions such as getting the angle between vectors, cross product, dot products as well as more advanced functions in :mod:`blender_api:mathutils.geometry` such as Bézier Spline interpolation and ray-triangle intersection."
-msgstr ""
+msgstr "Caso você esteja interessado nesta área, leia dentro da documentação sobre :class:`blender_api:mathutils.Vector` -- e você descobrirá que existem muitas funções utilitárias que são uma mão na roda como a obtenção de ângulos entre vetores, produtos fatoriais, produtos pontuais, etc, bem como muitas outras funções avançadas dentro do módulo :mod:`blender_api:mathutils.geometry`como a interpolação de Splines Bézier e intersecção entre raios e triângulos."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:298
 msgid "For now we will focus on making this script an add-on, but it's good to know that this 3D math module is available and can help you with more advanced functionality later on."
-msgstr ""
+msgstr "Por enquanto, nós iremos colocar nosso foco em transformar este script em um complemento, mas é bom saber de antemão que este módulo de matemática 3D está disponível e pode ajudar você com funcionalidades mais avançadas posteriormente."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:303
 msgid "Write the Add-on"
@@ -299,19 +299,19 @@ msgstr "Escrevendo o complemento"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:305
 msgid "The first step is to convert the script as-is into an add-on::"
-msgstr ""
+msgstr "O primeiro passo é converter o script no estado em que se encontra em um complemento::"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:348
 msgid "Everything here has been covered in the previous steps, you may want to try run the add-on still and consider what could be done to make it more useful."
-msgstr ""
+msgstr "Todas as coisas aqui foram abordadas nos passos anteriores, e talvez nesse momento você queira tentar a execução do complemento do jeito que está e considerar o que poderia ser feito para torná-lo mais útil."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:351
 msgid "The two of the most obvious missing things are -- having the total fixed at 10, and having to access the operator from space-bar is not very convenient."
-msgstr ""
+msgstr "As duas coisas mais óbvias que estão faltando são -- consertar o total que está fixo no valor de 10, e também, convenhamos que ter acesso ao operador apenas pela barra de espaço não é lá muito conveniente."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:354
 msgid "Both these additions are explained next, with the final script afterwards."
-msgstr ""
+msgstr "Ambas destas adições são explicadas no próximo passo, com o script final mostrado logo em seguida."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:358
 msgid "Operator Property"
@@ -319,31 +319,31 @@ msgstr "Propriedades de operador(es)"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:360
 msgid "There are a variety of property types that are used for tool settings, common property types include: int, float, vector, color, boolean and string."
-msgstr ""
+msgstr "Estas são uma variedade de tipos de propriedades que são usadas para as definições das ferramentas, e os mais comuns tipos de propriedades incluem: int (inteiro), float (flutuante), vector (vetor), color (cor), boolean (booliana) e string (variável texto)."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:363
 msgid "These properties are handled differently to typical Python class attributes because Blender needs to display them in the interface, store their settings in key-maps and keep settings for reuse."
-msgstr ""
+msgstr "Estas propriedades são manipuladas diferentemente m relação aos atributos de classe Python típicos, pois o Blender necessita exibi-los na interface, guardar as suas definições em mapas de teclas e manter estas definições para reutilização."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:367
 msgid "While this is handled in a fairly Pythonic way, be mindful that you are in fact defining tool settings that are loaded into Blender and accessed by other parts of Blender, outside of Python."
-msgstr ""
+msgstr "Mesmo que isso seja manipulado de uma maneira amplamente \"Pythonica\", esteja consciente que de fato o que você está fazendo é definir as configurações de ferramentas que são carregadas no Blender e acessadas por outras partes do Blender, fora do ambiente Python."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:370
 msgid "To get rid of the literal 10 for ``total``, we'll use an operator property. Operator properties are defined via bpy.props module, this is added to the class body::"
-msgstr ""
+msgstr "Para se livrar do 10 literal e imutável para o ``total``, nós iremos utilizar uma propriedade de operador. As propriedades de operadores são definidas através do módulo bpy.props, e isto é adicionado ao corpo da classe::"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:380
 msgid "These properties from :mod:`blender_api:bpy.props` are handled specially by Blender when the class is registered so they display as buttons in the user interface. There are many arguments you can pass to properties to set limits, change the default and display a tool-tip."
-msgstr ""
+msgstr "Estas propriedades obtidas a partir do módulo :mod:`blender_api:bpy.props` são manipuladas de maneira especial pelo Blender quando a classe é registrada, de maneira que sejam exibidos como botões na interface de usuário (utilizador). Existem muitos argumentos que você poderá passar para as propriedades para a definição de limites, alterar o padrão e mostrar uma dica de ferramenta."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:385
 msgid ":mod:`blender_api:bpy.props.IntProperty`"
-msgstr ""
+msgstr ":mod:`blender_api:bpy.props.IntProperty`"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:387
 msgid "This document doesn't go into details about using other property types. However, the link above includes examples of more advanced property usage."
-msgstr ""
+msgstr "Este documento não se aprofunda muito mais nos detalhes sobre a utilização de outros tipos de propriedades. Contudo, a ligação de internet acima inclui exemplos de utilização mais avançada das propriedades."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:392
 msgid "Menu Item"
@@ -351,11 +351,11 @@ msgstr "Item de menu"
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:394
 msgid "Add-ons can add to the user interface of existing panels, headers and menus defined in Python."
-msgstr ""
+msgstr "Os complementos podem adicionar nos painéis existentes na interface de usuário, cabeçalhos e menus definidos através da linguagem de programação Python. "
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:396
 msgid "For this example we'll add to an existing menu."
-msgstr ""
+msgstr "Para este exemplo, nós iremos adicionar para um menu previamente existente."
 
 #: ../../manual/advanced/scripting/addon_tutorial.rst:400
 msgid "Menu Identifier"
