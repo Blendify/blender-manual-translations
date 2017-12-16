@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 22:59+1100\n"
-"PO-Revision-Date: 2017-06-16 21:16+0200\n"
+"PO-Revision-Date: 2017-10-02 23:38+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Les options de simulation de fluide avec le Domaine sélectionné."
 
 #: ../../manual/physics/fluid/baking.rst:13
 msgid "Bake Button"
-msgstr "Bouton Précalcul"
+msgstr "Bouton Bake"
 
 #: ../../manual/physics/fluid/baking.rst:15
 #, fuzzy
@@ -48,12 +48,12 @@ msgstr ""
 #: ../../manual/physics/fluid/baking.rst:24
 #, fuzzy
 msgid "Bake Directory"
-msgstr "Répertoire de précalcul"
+msgstr "Dossier de précalcul"
 
 #: ../../manual/physics/fluid/baking.rst:26
 msgid "Directory and file prefix to store baked surface meshes."
 msgstr ""
-"Le répertoire et le préfixe de fichier pour enregistrer les maillages de "
+"Le dossier et le préfixe de fichier pour enregistrer les maillages de "
 "surface précalculés."
 
 #: ../../manual/physics/fluid/baking.rst:28
@@ -88,8 +88,8 @@ msgid ""
 "can only be one domain in an entire blend-file."
 msgstr ""
 "À cause des possibilités de liens et regroupements entre les différentes "
-"scènes d'un fichier blend. il ne peut y avoir qu'un seul domaine dans la "
-"totalité d'un fichier blend."
+"scènes d'un fichier blend, il ne peut y avoir qu'un seul domaine dans un "
+"fichier blend."
 
 #: ../../manual/physics/fluid/baking.rst:47
 msgid "Selecting a Baked Domain"
@@ -102,16 +102,32 @@ msgid ""
 " to any frame and select :kbd:`RMB` the fluid mesh. Then you can click "
 "the *bake* button again to recompute the fluid flows inside that domain."
 msgstr ""
+<<<<<<< .mine
+"Après avoir précalculé un domaine, il se change en maillage de fluide. Pour "
+"sélectionner à nouveau le domaine afin d'effectuer un nouveau précalcul "
+"après avoir fait des changements, allez à n'importe quelle frame et "
+"sélectionnez  (:kbd:`RMB`) le maillage de fluide (objet domaine). Alors vous "
+"pourrez cliquer de nouveau sur le bouton *bake* pour recalculer les flux de "
+"fluide à l'intérieur du domaine."
+||||||| .r1940
+"Après avoir précalculé un domaine, il se change en maillage de fluide. Pour "
+"sélectionner à nouveau le domaine afin d'effectuer un nouveau précalcul "
+"après avoir fait des changements, allez à n'importe quelle frame et "
+"sélectionnez  (:kbd:`RMB`) le maillage de fluide (objet domaine). Alors vous "
+"pourrez cliquer de nouveau sur le bouton de *bake* pour recalculer les flux "
+"de fluide à l'intérieur du domaine."
+=======
 "Après avoir précalculé un domaine, il se change en maillage de fluide. "
 "Pour sélectionner à nouveau le domaine afin d'effectuer un nouveau "
 "précalcul après avoir fait des changements, allez à n'importe quelle "
 "frame et sélectionnez  (:kbd:`RMB`) le maillage de fluide (objet "
 "domaine). Alors vous pourrez cliquer de nouveau sur le bouton de *bake* "
 "pour recalculer les flux de fluide à l'intérieur du domaine."
+>>>>>>> .r1942
 
 #: ../../manual/physics/fluid/baking.rst:52
 msgid "Baking always starts at Frame #1"
-msgstr "Le précalcul commence toujours à la frame n :sup:`o` 1"
+msgstr "Le précalcul commence toujours à la trame #1"
 
 #: ../../manual/physics/fluid/baking.rst:50
 msgid ""
@@ -121,14 +137,26 @@ msgid ""
 "to be inactive until the frame you desire to start the simulation."
 msgstr ""
 "Le simulateur de fluide ne tient pas compte de réglage *Début* dans le "
+<<<<<<< .mine
+"panneau *Animation*, le fluide sera toujours calculé à partir de la trame 1. "
+"Si vous voulez une simulation qui commence à une autre trame, vous devez "
+"imposer aux objets fluide dans votre domaine à être inactifs jusqu'à la "
+"trame à laquelle vous désirez voir démarrer la simulation."
+||||||| .r1940
+"panneau *Animation*, le fluide sera toujours calculé à partir de la frame 1. "
+"Si vous voulez une simulation qui commence à une autre frame, vous devez "
+"imposer aux objets fluide dans votre domaine à être inactifs jusqu'à la "
+"frame à laquelle vous désirez voir démarrer la simulation."
+=======
 "panneau *Animation*, le fluide sera toujours calculé à partir de la frame"
 " 1. Si vous voulez une simulation qui commence à une autre frame, vous "
 "devez imposer aux objets fluide dans votre domaine à être inactifs "
 "jusqu'à la frame à laquelle vous désirez voir démarrer la simulation."
+>>>>>>> .r1942
 
 #: ../../manual/physics/fluid/baking.rst:57
 msgid "Baking always ends at the *End* Frame set in the *Animation* panel"
-msgstr "Le précalcul fini toujours à la frame de *Fin*  du panneau *Animation*"
+msgstr "Le précalcul finit toujours à la trame de *Fin* du panneau *Animation*"
 
 #: ../../manual/physics/fluid/baking.rst:55
 msgid ""
@@ -136,9 +164,19 @@ msgid ""
 "seconds, then you should (if your start time is 0) set your animation to "
 "end at frame ``4.0 × 25 = 100``"
 msgstr ""
+<<<<<<< .mine
+"Si votre fréquence de trames est de 25 trames par seconde, et que la durée "
+"de fin est 4,0 secondes, alors vous devrez (si votre temps de départ est 0) "
+"mettre la trame de fin de votre animation à ``4.0 × 25 = 100``"
+||||||| .r1940
+"Si votre framerate est de 25 frames par seconde, et que la durée de fin est "
+"4,0 secondes, alors vous devrez (si votre temps de départ est 0) mettre la "
+"frame de fin de votre animation à ``4.0 × 25 = 100``"
+=======
 "Si votre framerate est de 25 frames par seconde, et que la durée de fin "
 "est 4,0 secondes, alors vous devrez (si votre temps de départ est 0) "
 "mettre la frame de fin de votre animation à ``4.0 × 25 = 100``"
+>>>>>>> .r1942
 
 #: ../../manual/physics/fluid/baking.rst:62
 msgid "Freeing the previous baked solutions"
@@ -151,10 +189,22 @@ msgid ""
 "directory (be sure they use different filenames, or they will overwrite "
 "one another)!"
 msgstr ""
+<<<<<<< .mine
+"Détruire le contenu du dossier \"Bake\" est une façon destructrice d'y "
+"parvenir. Soyez prudent si plus d'une simulation utilise le même dossier de "
+"précalcul (assurez-vous qu'ils utilisent des noms différents, sinon ils "
+"s'effaceront les uns les autres) !"
+||||||| .r1940
+"Détruire le contenu du répertoire de \"Précalcul\" est une façon "
+"destructrice de l'obtenir. Soyez prudent si plus d'une simulation utilise le "
+"même répertoire de Précalcul (assurez-vous qu'ils utilisent des noms "
+"différents, sinon ils s'effaceront les uns les autres)!"
+=======
 "Détruire le contenu du répertoire de \"Précalcul\" est une façon "
 "destructrice de l'obtenir. Soyez prudent si plus d'une simulation utilise"
 " le même répertoire de Précalcul (assurez-vous qu'ils utilisent des noms "
 "différents, sinon ils s'effaceront les uns les autres)!"
+>>>>>>> .r1942
 
 #: ../../manual/physics/fluid/baking.rst:68
 msgid "Reusing Bakes"
