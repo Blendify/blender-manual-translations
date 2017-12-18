@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 22:59+1100\n"
-"PO-Revision-Date: 2017-12-16 06:32-0300\n"
+"PO-Revision-Date: 2017-12-18 11:12-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: PORTUGUESE\n"
 "X-Poedit-Country: BRAZIL\n"
-"Generated-By: Babel 2.5.1\n"
 
 #: ../../manual/pipeline/alembic.rst:4
 msgid "Alembic"
@@ -31,7 +30,7 @@ msgstr "Informações obtidas a partir da `página inicial sobre o Alembic <http
 
 #: ../../manual/pipeline/alembic.rst:8
 msgid "Alembic is an open computer graphics interchange framework. Alembic distills complex, animated scenes into a non-procedural, application-independent set of baked geometric results. This 'distillation' of scenes into baked geometry is exactly analogous to the distillation of lighting and rendering scenes into rendered image data."
-msgstr "Alembic (Alambique) é uma estrutura de abstração programática (framework) para intercâmbio de trabalhos de computação gráfica, com código fonte aberto. O formato *Alembic* distila cenas animadas e complexas em uma série de resultados geométricos procedurais gerados e gravados que podem ser usados independente da aplicação envolvida. Esta \"destilação\" de cenas em geometrias geradas e gravadas é exatamente análoga a distilação que é feita nas iluminações e cenas renderizadas para que sejam transformadas em dados de imagem renderizada.   "
+msgstr "Alembic (Alambique) é uma estrutura de abstração programática (framework) para intercâmbio de trabalhos de computação gráfica, com código fonte aberto. O formato *Alembic* distila cenas animadas e complexas em uma série de resultados geométricos procedurais gerados e gravados que podem ser usados independente da aplicação envolvida. Esta \"destilação\" de cenas em geometrias geradas e gravadas é exatamente análoga a destilação que é feita nas iluminações e cenas renderizadas para que sejam transformadas em dados de imagem renderizada.   "
 
 #: ../../manual/pipeline/alembic.rst:13
 msgid "Alembic is focused on efficiently storing the computed results of complex procedural geometric constructions. It is very specifically **not** concerned with storing the complex dependency graph of procedural tools used to create the computed results. For example, Alembic will efficiently store the animated vertex positions and animated transforms that result from an arbitrarily complex animation and simulation process which could involve enveloping, corrective shapes, volume-preserving simulations, cloth and flesh simulations, and so on. Alembic will not attempt to store a representation of the network of computations (rigs, basically) which are required to produce the final, animated vertex positions and animated transforms."
@@ -39,7 +38,7 @@ msgstr "O padrão *Alembic* tem como objetivo armazenar de maneira eficiente os 
 
 #: ../../manual/pipeline/alembic.rst:22
 msgid ":abbr:`TL;DR (Too long; didn't read.)`: Alembic can be used to write an animated mesh to disk, and read it back quickly & efficiently. This means that a mesh can be animated with a very CPU-heavy rig, 'baked' to an Alembic file, and loaded into the shot file for shading and lighting with only moderate CPU usage."
-msgstr ""
+msgstr "O formato Alembic pode ser usado para escrever uma malha animada para o disco, e tornar a fazer a sua leitura novamente de maneira rápida e eficiente. Isto significa que a malha pode se animada com um arranjo cuja computação é intensiva em relação a CPU, e depois \"gerado e gravado\" para um arquivo Alembic, e então, ser carregado no arquivo da tomada de cena para o sombreamento e iluminação usando o processamento via CPU de maneira mais moderada."
 
 #: ../../manual/pipeline/alembic.rst:27
 msgid "Support for the Alembic file format was introduced in `Blender 2.78 <https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.78>`_."
@@ -47,7 +46,7 @@ msgstr "O suporte ao formato de arquivo do tipo Alembic foi introduzido na vers�
 
 #: ../../manual/pipeline/alembic.rst:30
 msgid "Due to the Open Source nature of the Alembic standard, as well as the C++ library implementing that standard, **Blender can be used in a hybrid pipeline**. For example, other software, such as Houdini or Maya, can export files to Alembic, which can then be loaded, shaded, and rendered in Blender. It is also possible to animate characters (or other models) in Blender, export to Alembic, and load those files into other software for further processing."
-msgstr "Devido a natureza de código fonte aberto do padrão Alembic, bem como a implementação de bibliotecas C++ que implementa esses padrões, o **Blender pode ser usado em uma integração de fluxo de trabalho híbrida**. Por exemlo, outros softwares, como Houdini ou Maya, podem exportar arquivos para o formato Alembic, o qual pode ser então carregado, sombreado, e renderizado no Blender. Também é possível animar personagens (ou outros modelos) no Blender, exportar para o formato Alembic, e carregar esses arquivos em outros softwares para processamento posterior."
+msgstr "Devido a natureza de código fonte aberto do padrão Alembic, bem como a implementação de bibliotecas C++ que implementa esses padrões, o **Blender pode ser usado em uma integração de fluxo de trabalho híbrida**. Por exemplo, outros softwares, como Houdini ou Maya, podem exportar arquivos para o formato Alembic, o qual pode ser então carregado, sombreado, e renderizado no Blender. Também é possível animar personagens (ou outros modelos) no Blender, exportar para o formato Alembic, e carregar esses arquivos em outros softwares para processamento posterior."
 
 #: ../../manual/pipeline/alembic.rst:38
 msgid "Exporting to Alembic Files"
@@ -91,7 +90,7 @@ msgstr "Amostragem de sub-quadros: Transformações e amostras de geometria, abe
 
 #: ../../manual/pipeline/alembic.rst:62
 msgid "These options control the sub-frame sampling of animations. Transform Samples sets the number of times per frame at which animated transformations are sampled and written to Alembic. Geometry Samples sets the same, but then for animated geometry. Shutter Open & Close define the interval [open, close] over which those samples are taken. The valid range is -1 to 1, where -1 indicates the previous frame, 0 indicates the current frame, and 1 indicates the next frame. For example, if information for detailed mesh motion blur is desired, some subframes around the current frame can be written to Alembic by using a sample count of 5, Shutter Open at -0.25 and Shutter Close at 0.25. This mimics a \"180 degree\" shutter, opening 90 degrees before the frame and closing 90 degrees after the frame."
-msgstr ""
+msgstr "Estas opções controlam as amostragens de sub-quadros das animações. As amostras de transformações definem o número de vezes por quadro nos quais as transformações animadas são amostradas e escritas para o arquivo de saída Alembic. As amostras de geometria definem o mesmo, mas nesse caso, para as geometrias animadas. A opção de *Abertura e fechamento do obturador* definem o intervalo [aberto, fechado] sobre os quais as amostras são tomadas. A amplitude válida está entre -1 a 1, onde -1 indica o quadro anterior, 0 indica o quadro atual e 1, indica o quadro seguinte. Por exemplo, caso as informações pra um desfoque de movimento de uma malha seja desejável, alguns sub-quadros ao redor do quadro atual podem ser escritos para o formato Alembic pela utilização de uma contagem de amostras de 5, obturador aberto em -0.25 e obturador fechado em 0.25. Isto irá imitar o funcionamento de um obturador de \"180 graus\", aberto em 90 graus antes do quadro atual e fechando 90 graus após o quadro."
 
 #: ../../manual/pipeline/alembic.rst:71
 msgid "Selected Objects Only"
@@ -146,7 +145,7 @@ msgstr "Empacotar ilhas UV"
 #: ../../manual/pipeline/alembic.rst:98
 #: ../../manual/pipeline/alembic.rst:103
 msgid "TODO 2.78/9: figure out & describe what this does."
-msgstr ""
+msgstr "A ser feito a partir da versão 2.78 ou 2.79 e superiores: descobrir e descrever o que esta funcionalidade executa."
 
 #: ../../manual/pipeline/alembic.rst:92
 msgid "Normals"
