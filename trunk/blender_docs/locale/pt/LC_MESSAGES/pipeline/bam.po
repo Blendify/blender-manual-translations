@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-09 15:10+1100\n"
-"PO-Revision-Date: 2017-12-18 11:22-0300\n"
+"PO-Revision-Date: 2017-12-28 17:13-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: PORTUGUESE\n"
 "X-Poedit-Country: BRAZIL\n"
-"Generated-By: Babel 2.5.1\n"
 
 #: ../../manual/pipeline/bam.rst:5
 msgid "BAM Asset Manager"
@@ -27,7 +26,7 @@ msgstr "Gerenciador de recursos BAM"
 
 #: ../../manual/pipeline/bam.rst:7
 msgid "Refactoring linked .blend files is a common practice in a production environment. While some basic operations can be accomplished within Blender, sometimes it is more practical to perform them on the command line or via a script. During the production of Cosmos Laundromat (Gooseberry Open Movie Project) the *BAM Asset Manager* (BAM) was developed. The original scope of BAM included client-server asset management tools going beyond Blender, but it was later refocused on core utilities to perform two operations:"
-msgstr ""
+msgstr "O remanejamento ou remanufatura de arquivos Blender é uma prática comum em um ambiente de produção. Mesmo que algumas operações básicas possam ser feitas usando as funcionalidades do próprio Blender, algumas vezes é mais prático executá-las através da linha de comandos ou através de um script. Durante a produção do curta metragem Cosmos Laundromat (A partir do projeto de filme aberto \"Gooseberry\" (Framboesa, em Português)) o *BAM Asset Manager* (BAM) ou \"Gerenciador de recursos Blender\" foi desenvolvido. O escopo original do BAM incluiu ferramentas de gerenciamento para clientes e servidores que iam além do Blender em si, mas que tiveram seu foco posteriormente alterado para as funcionalidades mais internas (no núcleo do software) para realizar dois tipos de operações principais: "
 
 #: ../../manual/pipeline/bam.rst:15
 msgid "Blend-file packing"
@@ -75,7 +74,7 @@ msgstr "Você pode simplesmente empacotar um arquivo Blender como este para cria
 
 #: ../../manual/pipeline/bam.rst:57
 msgid "You may also want to give an explicit output directory. The example shows how to pack a blend with maximum compression for online downloads."
-msgstr ""
+msgstr "Talvez você queira fornecer um diretório de saída explícito. O exemplo mostra como empacotar um arquivo Blender usando a máxima compressão possível para downloads online."
 
 #: ../../manual/pipeline/bam.rst:64
 msgid "The command provides several options to adapt to different workflows (final distribution, partial extraction, rendering)."
@@ -111,7 +110,7 @@ msgstr "``--exclude=\"*.png\"``"
 
 #: ../../manual/pipeline/bam.rst:75
 msgid "Using Unix shell-style wild-cards *(case insensitive)*."
-msgstr ""
+msgstr "Usando caracteres coringa em estilo de linha de comando Unix (Shell) *(insensível a maiúsculas e minúsculas)*."
 
 #: ../../manual/pipeline/bam.rst:76
 msgid "``--exclude=\"*.txt;*.avi;*.wav\"``"
@@ -139,7 +138,7 @@ msgstr "Suprime o status de saída dos comandos."
 
 #: ../../manual/pipeline/bam.rst:83
 msgid "``-c``, ``--compress`` ``<LEVEL>``"
-msgstr "``-c``, ``--compress`` ``<LEVEL>``"
+msgstr "``-c``, ``--compress`` ``<NÍVEL>``"
 
 #: ../../manual/pipeline/bam.rst:83
 msgid "Compression level for resulting archive. Possible choices: ``default``, ``fast``, ``best``, ``store``."
@@ -147,7 +146,7 @@ msgstr "O nível de compressão para o arquivo resultante. As opções possívei
 
 #: ../../manual/pipeline/bam.rst:86
 msgid "``--repo`` ``<DIR PATH>``"
-msgstr "``--repo`` ``<DIR PATH>``"
+msgstr "``--repo`` ``<CAMINHO DE DIRETÓRIO>``"
 
 #: ../../manual/pipeline/bam.rst:86
 msgid "Specify a \"root\" path from where to pack the selected file. This allows for the creation of a sparse copy of the production tree, without any remapping."
@@ -171,15 +170,15 @@ msgstr "Considere o seguinte esquema de diretórios, e em particular o arquivo *
 
 #: ../../manual/pipeline/bam.rst:111
 msgid "Once we run ``bam pack /scenes/01-opening/01_01_A.lighting.blend`` we obtain a *01_01_A.lighting.zip* inside of which we find the following structure."
-msgstr ""
+msgstr "Uma vez que tenhamos executado ``bam pack /scenes/01-opening/01_01_A.lighting.blend``, nós obteremos um arquivo chamado *01_01_A.lighting.zip* dentro do qual encontraremos a seguinte estrutura:"
 
 #: ../../manual/pipeline/bam.rst:126
 msgid "Note how all paths have been remapped relative to the placement of *01_01_A.lighting.blend* in the root of the output. If we run ``bam pack /scenes/01-opening/01_01_A.lighting.blend --repo ~/agent327``, the output will be different."
-msgstr ""
+msgstr "Note como todos os caminhos foram remapeados em relação ao posicionamento do arquivo *01_01_A.lighting.blend* na raiz da saída. Caso executemos o comando ``bam pack /scenes/01-opening/01_01_A.lighting.blend --repo ~/agent327``, a saída será diferente."
 
 #: ../../manual/pipeline/bam.rst:143
 msgid "In this case no path is remapped, and we simply strip out any file that is not referenced as a direct or indirect dependency of *01_01_A.lighting.blend*. This is effectively a sparse copy of the original production tree."
-msgstr ""
+msgstr "Neste caso, nenhum dos caminhos será remapeado, e nós simplesmente desconsideramos quaisquer dos arquivos que não tenham sido referenciados como dependências diretas ou indiretas do arquivo *01_01_A.lighting.blend*. Isto é, na prática, efetivamente uma cópia esparsa da árvore de produção original."
 
 #: ../../manual/pipeline/bam.rst:149
 msgid "bam remap"
@@ -195,11 +194,11 @@ msgstr "Este comando é um processo que envolve três etapas:"
 
 #: ../../manual/pipeline/bam.rst:157
 msgid "First run ``bam remap start .`` which stores the current state of your project (recursively)."
-msgstr ""
+msgstr "Inicialmente, execute o comando ``bam remap start .``, que guarda o estado atual de seu projeto (recursivamente)."
 
 #: ../../manual/pipeline/bam.rst:158
 msgid "Then re-arrange the files on the filesystem (rename, relocate)."
-msgstr ""
+msgstr "Então, reorganize os arquivos dentro do sistema de arquivos (renomeando ou realocando-os)."
 
 #: ../../manual/pipeline/bam.rst:159
 msgid "Finally run ``bam remap finish`` to apply the changes, updating the ``.blend`` files internal paths."
@@ -207,11 +206,11 @@ msgstr "Finalmente, execute o comando ``bam remap finish`` para aplicar as alter
 
 #: ../../manual/pipeline/bam.rst:172
 msgid "Remapping creates a file called ``bam_remap.data`` in the current directory. You can relocate the entire project to a new location but on executing ``finish``, this file must be accessible from the current directory."
-msgstr ""
+msgstr "O remapeamento cria um arquivo chamado ``bam_remap.data`` no diretório atual. Você pode realocar o projeto como um todo para um novo local mas quando se executa o comando  ``finish``, este arquivo deverá ser acessível a partir do diretório atual."
 
 #: ../../manual/pipeline/bam.rst:178
 msgid "This command depends on files unique contents, take care not to modify the files once remap is started."
-msgstr ""
+msgstr "Este comando depende exclusivamente dos conteúdos dos arquivos, tenha o cuidado de não modificar os arquivos quando o remapeamento tiver sido iniciado."
 
 #: ../../manual/pipeline/bam.rst:183
 msgid "Subcommands"
