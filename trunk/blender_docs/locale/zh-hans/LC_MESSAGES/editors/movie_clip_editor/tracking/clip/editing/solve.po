@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-04 22:59+1100\n"
+"POT-Creation-Date: 2018-01-01 09:30+1100\n"
 "PO-Revision-Date: 2017-12-06 12:30+0800\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
+"Language: zh_Hans_CN\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
-"X-Generator: Poedit 2.0.4\n"
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:4
 msgid "Solve"
@@ -30,42 +29,43 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:11
 msgid ""
-"The *Create Plane Track* operator creates a new plane track. Planar tracking "
-"takes advantage of the fact that there are often planar surfaces in footage, "
-"by attaching markers to points on these flat planes. It can be used to "
-"replace things like billboards and screens on the footage with another image "
-"or video. It also might be used for masking."
+"The *Create Plane Track* operator creates a new plane track. Planar "
+"tracking takes advantage of the fact that there are often planar surfaces"
+" in footage, by attaching markers to points on these flat planes. It can "
+"be used to replace things like billboards and screens on the footage with"
+" another image or video. It also might be used for masking."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:17
 msgid ""
-"This button will create a plane object which is deforming in the same way as "
-"plane defined by all selected point tracks. At least four feature points "
-"tracked across the footage which belongs to the plane one wants to replace "
-"are needed. More tracks will give better estimation of plane motion."
+"This button will create a plane object which is deforming in the same way"
+" as plane defined by all selected point tracks. At least four feature "
+"points tracked across the footage which belongs to the plane one wants to"
+" replace are needed. More tracks will give better estimation of plane "
+"motion."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:22
 msgid ""
-"Feature points used to estimate plane motion could be used from any place on "
-"the plane, meaning it's not necessarily need to be corners. Corners are not "
-"always easy to be tracked, they might be occluded. In this case you can "
-"position tracked features that lay on the same plane far away from the actual "
-"plane which should be replaced."
+"Feature points used to estimate plane motion could be used from any place"
+" on the plane, meaning it's not necessarily need to be corners. Corners "
+"are not always easy to be tracked, they might be occluded. In this case "
+"you can position tracked features that lay on the same plane far away "
+"from the actual plane which should be replaced."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:27
 msgid ""
-"This provides more information about the possible deformation of the marker "
-"in following frames, and such markers can be tracked even if partially "
-"occluded (appear and disappear during the time). It is only required that two "
-"neighbor frames have at least 4 common tracks."
+"This provides more information about the possible deformation of the "
+"marker in following frames, and such markers can be tracked even if "
+"partially occluded (appear and disappear during the time). It is only "
+"required that two neighbor frames have at least four common tracks."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:31
 msgid ""
-"An image can be projected onto the plane with the :doc:`/compositing/types/"
-"distort/plane_track_deform` compositing node."
+"An image can be projected onto the plane with the "
+":doc:`/compositing/types/distort/plane_track_deform` compositing node."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:36
@@ -78,20 +78,21 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:41
 msgid ""
-"Tripod Motion can be used for footage where the camera does not move and only "
-"rotates. Such footage can't be tracked with a generic solver approach, and it "
-"is impossible to determine the actual feature points in space due to a lack "
-"of information. So this solver will solve only the relative camera rotation "
-"and then reproject the feature points into a sphere, with the same distance "
-"between feature and camera for all feature points."
+"Tripod Motion can be used for footage where the camera does not move and "
+"only rotates. Such footage can't be tracked with a generic solver "
+"approach, and it is impossible to determine the actual feature points in "
+"space due to a lack of information. So this solver will solve only the "
+"relative camera rotation and then reproject the feature points into a "
+"sphere, with the same distance between feature and camera for all feature"
+" points."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:49
 msgid ""
 "Please note, that this is special type of camera solver and it behaves "
-"different from regular solver. It means using more tracks doesn't imply more "
-"accurate solution. Having 5-10 tracks on frame is likely what shall be "
-"commonly used for this kind of solver."
+"different from regular solver. It means using more tracks doesn't imply "
+"more accurate solution. Having 5-10 tracks on frame is likely what shall "
+"be commonly used for this kind of solver."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:55
@@ -102,8 +103,8 @@ msgstr ""
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:58
 msgid ""
 "Automatically select keyframes for initial reconstruction. This option "
-"enables complex algorithms which tries to find a keyframe pair with minimal "
-"reconstruction error and best scene scale guess."
+"enables complex algorithms which tries to find a keyframe pair with "
+"minimal reconstruction error and best scene scale guess."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:63
@@ -123,8 +124,9 @@ msgid ""
 "The *Refine* option specifies which parameters should be refined during "
 "solve. Such refining is useful when you are not sure about some camera "
 "intrinsics, and solver should try to find the best parameter for those "
-"intrinsics. But you still have to know approximate initial values -- it will "
-"fail to find correct values if they were set completely incorrectly initially."
+"intrinsics. But you still have to know approximate initial values -- it "
+"will fail to find correct values if they were set completely incorrectly "
+"initially."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:78
@@ -133,9 +135,9 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:80
 msgid ""
-"The *Camera Motion* operator solves the motion of camera using all tracks "
-"placed on the footage and two keyframes specified on this panel. There are "
-"some requirements:"
+"The *Camera Motion* operator solves the motion of camera using all tracks"
+" placed on the footage and two keyframes specified on this panel. There "
+"are some requirements:"
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:83
@@ -150,14 +152,15 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:86
 msgid ""
-"If everything goes smoothly during the solve, the average reprojection error "
-"is reported to the information space and to the Clip editor header. "
-"Reprojection error means the average distance between reconstructed 3D "
-"position of tracks projected back to footage and original position of tracks. "
-"Basically, reprojection error below 0.3 means accurate reprojection, (0.3 - "
-"3.0) means quite nice solving which still can be used. Values above 3 means "
-"some tracks should be tracked more accurately, or that values for focal "
-"length or distortion coefficients were set incorrectly."
+"If everything goes smoothly during the solve, the average reprojection "
+"error is reported to the information space and to the Clip editor header."
+" Reprojection error means the average distance between reconstructed 3D "
+"position of tracks projected back to footage and original position of "
+"tracks. Basically, reprojection error below 0.3 means accurate "
+"reprojection, (0.3 - 3.0) means quite nice solving which still can be "
+"used. Values above 3 means some tracks should be tracked more accurately,"
+" or that values for focal length or distortion coefficients were set "
+"incorrectly."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:98
@@ -166,9 +169,9 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:100
 msgid ""
-"This panel contains a single operator and its settings. This operator cleans "
-"up bad tracks: tracks which are not tracked long enough or which failed to "
-"reconstruct accurately."
+"This panel contains a single operator and its settings. This operator "
+"cleans up bad tracks: tracks which are not tracked long enough or which "
+"failed to reconstruct accurately."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:103
@@ -233,7 +236,8 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:122
 msgid ""
-"Converts the reconstructed points into a point cloud (single mesh). ToDo 2.61."
+"Converts the reconstructed points into a point cloud (single mesh). ToDo "
+"2.61."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:125
@@ -306,11 +310,23 @@ msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:152
 msgid ""
-"Sets the clip currently being edited as the camera background for all visible "
-"3D Views. If there is no visible 3D Views or the Clip Editor is open in full "
-"screen, nothing will happen."
+"Sets the clip currently being edited as the camera background for all "
+"visible 3D Views. If there is no visible 3D Views or the Clip Editor is "
+"open in full screen, nothing will happen."
 msgstr ""
 
 #: ../../manual/editors/movie_clip_editor/tracking/clip/editing/solve.rst:157
 msgid "Setup Tracking Scene"
 msgstr ""
+
+#~ msgid ""
+#~ "This provides more information about the"
+#~ " possible deformation of the marker "
+#~ "in following frames, and such markers"
+#~ " can be tracked even if partially "
+#~ "occluded (appear and disappear during "
+#~ "the time). It is only required "
+#~ "that two neighbor frames have at "
+#~ "least 4 common tracks."
+#~ msgstr ""
+
