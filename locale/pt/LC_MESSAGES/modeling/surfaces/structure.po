@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-11 10:39+1100\n"
-"PO-Revision-Date: 2017-12-28 19:29-0300\n"
+"PO-Revision-Date: 2018-01-09 13:31-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
 "Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"Generated-By: Babel 2.5.1\n"
 
 #: ../../manual/modeling/surfaces/structure.rst:4
 msgid "Structure"
@@ -28,39 +27,39 @@ msgstr "Estrutura"
 
 #: ../../manual/modeling/surfaces/structure.rst:6
 msgid "Many of the concepts from :doc:`curves </modeling/curves/introduction>`, especially :ref:`NURBS <curve-nurbs>` ones, carry directly over to NURBS surfaces, such as control points, *Order*, *Weight*, *Resolution*, etc. Here we will just talk about the differences."
-msgstr ""
+msgstr "Muitos dos conceitos das :doc:`curvas </modeling/curves/introduction>`, especialmente as aplicáveis as :ref:`curvas NURBS <curve-nurbs>`, também se aplicam diretamente as superfícies NURBS, como os conceitos sobre os pontos de controle, *Ordem*, *Pesos de influência*, *Resolução*, etc. Aqui nesta página, nós iremos simplesmente falar sobre as diferenças entre elas."
 
 #: ../../manual/modeling/surfaces/structure.rst:12
 msgid "It is very important to understand the difference between NURBS curves and NURBS surfaces: the first one has one dimension, the latter has two. Blender internally treats NURBS surfaces and NURBS curves completely differently. There are several attributes that separate them but the most important is that a NURBS curve has a single interpolation axis (U) and a NURBS surface has two interpolation axes (U and V)."
-msgstr ""
+msgstr "É muito importante entender a diferença entre as curvas NURBS e as superfícies NURBS: A primeira possui apens uma dimensão, e a segunda possui duas. O Blender trata internamente as superfícies NURBS e as curvas NURBS de maneira completamente diferenciada. Existem muitos atributos que as separam mas o mais importante é que uma curva NURBS possui um único eixo de interpolação (U) e a superfície NURBS possui dois eixos de interpolação (U e V). "
 
 #: ../../manual/modeling/surfaces/structure.rst:18
 msgid "However, you can have \"2D\" surfaces made of curves (using the :doc:`extrusion tools </modeling/curves/properties/geometry>`, or, to a lesser extent, the filling of closed 2D curves). And you can have \"1D\" curves made of surfaces, like a NURBS surface with only one row (either in U or V direction) of control points produces only a curve..."
-msgstr ""
+msgstr "Contudo, você pode ter superfícies \"2D\" compostas de curvas (usando as :doc:`ferramentas de extrusão </modeling/curves/properties/geometry>`, ou, em uma extensão ainda menor, o preenchimento de curvas 2D fechadas). E você pode ter curvas \"1D\" compostas de superfícies, como uma as superfícies NURBS compostas de apenas uma linha (tanto na direção U quanto V) pois os pontos de controle produzem apenas uma curva..."
 
 #: ../../manual/modeling/surfaces/structure.rst:23
 msgid "Visually you can tell which is which by entering *Edit Mode* and looking at the 3D View header: either the header shows *Surface* or *Curve* as one of the menu choices. Also, you can :doc:`extrude </modeling/curves/properties/geometry>` a whole NURBS surface curve to create a surface, but you cannot with a simple NURBS curve."
-msgstr ""
+msgstr "Visualmente, você pode dizer qual é qual entrando no *Modo de edição* e observando no cabeçalho da *Janela de visualização 3D*: ou o cabeçalho apresentará *Superfície* ou *Curva* como o menu para as escolhas de ferramentas. Também é importante notar que, você pode :doc:`executar uma extrusão </modeling/curves/properties/geometry>` em uma das curvas da superfície NURBS como um todo para criar uma nova superfície, mas você não poderá fazer a mesma coisa com uma simples curva NURBS."
 
 #: ../../manual/modeling/surfaces/structure.rst:32
 msgid "Control Points, Rows and Grid"
-msgstr ""
+msgstr "Pontos de controle, Linhas e Grade"
 
 #: ../../manual/modeling/surfaces/structure.rst:34
 msgid "Control points for NURBS surfaces are the same as for NURBS curves. However, their layout is quite constraining. The concept of \"segment\" disappears, replaced by \"rows\" and the overall \"grid\"."
-msgstr ""
+msgstr "Os pontos de controle para as superfícies NURBS são os mesmos disponíveis para as curvas NURBS. Contudo, o seu esquema de funcionamento é bem mais restrito. O conceito de \"segmento\" desaparece, e é substituído pelas \"linhas\" e pela \"grade\" geral."
 
 #: ../../manual/modeling/surfaces/structure.rst:38
 msgid "A \"row\" is a set of control points forming one \"line\" in one interpolation direction (a bit similar to :ref:`edge loops <modeling-mesh-structure-edge-loops>` for meshes). So you have \"U-rows\" and \"V-rows\" in a NURBS surface. The key point is that *all* rows of a given type (U or V) have the *same* number of control points. Each control point belongs to exactly one U-row and one V-row."
-msgstr ""
+msgstr "Uma \"linha\" é um conjunto de pontos de controle que formam uma \"linha\" em uma direção de interpolação (um pouco similar ao conceito de  :ref:`anéis de arestas <modeling-mesh-structure-edge-loops>` para malhas). Portanto você tem \"Linhas-U\" e \"Linhas-V\" em uma superfície NURBS. A ideia principal é que *todas* as linhas de um determinado tipo (U ou V) tenham o *mesmo* número de pontos de controle. Cada um dos pontos de controle pertence a exatamente uma *Linha-U* e uma *Linha-V*."
 
 #: ../../manual/modeling/surfaces/structure.rst:44
 msgid "All this forms a \"grid\", or \"cage\", the shape of which controls the shape of the NURBS surface. A bit like a :doc:`lattice </rigging/lattice>`..."
-msgstr ""
+msgstr "Todas elas formam uma \"grade\", ou \"jaula\", que é o formato que controla a forma da superfície NURBS. Um pouco parecido com uma :doc:`treliça </rigging/lattice>`..."
 
 #: ../../manual/modeling/surfaces/structure.rst:47
 msgid "This is very important to grasp: you cannot add a single control point to a NURBS surface; you have to add a whole U- or V-row at once (in practice, you will usually use the Extrude tool, or perhaps the Duplicate one, to add those...), containing exactly the same number of points as the others. This also means that you will only be able to \"merge\" different pieces of surfaces if at least one of their rows matches together."
-msgstr ""
+msgstr "Isto é bem importante para ser digerido: você não pode adicionar um único ponto de controle para uma superfície NURBS; você deve adicionar uma linha inteira na direção U ou V de uma única vez (na prática, você irá normalmente usar a ferramenta de extrusão, ou talvez a ferramenta de duplicação para adicionar estas linhas...), contendo exatamente o mesmo número de pontos que as outras. Isto também significa que você somente será capaz de \"fundir\" as diferentes partes das superfícies nas quais ao menos uma de suas linhas combinem entre si."
 
 #: ../../manual/modeling/surfaces/structure.rst:57
 msgid "Weight"
@@ -68,23 +67,23 @@ msgstr "Pesos de influência"
 
 #: ../../manual/modeling/surfaces/structure.rst:59
 msgid "Guess what? Yes, it works exactly like :ref:`NURBS Curves <modeling-curve-weight>`! *Weight* specifies how much each control point \"pulls\" on the curve."
-msgstr ""
+msgstr "Imaginou o que ? Sim, isso funciona exatamente da mesma maneira que para as  :ref:`Curvas NURBS <modeling-curve-weight>` ! O *Peso de influência* especifica quanto cada um dos pontos de controle \"puxa\" em direção a curva."
 
 #: ../../manual/modeling/surfaces/structure.rst:62
 msgid "In Fig. :ref:`fig-surface-intro-weight` a single control point, labeled \"C\", has had its *Weight* set to 5.0 while all others are at their default of 1.0. As you can see, that control point *pulls* the surface towards it."
-msgstr ""
+msgstr "Na imagem :ref:`fig-surface-intro-weight`, um único ponto de controle, rotulado como \"C\", teve seu *Peso de influência* definido para 5.0 enquanto todos os outros permanecem em seu padrão de 1.0. Como você pode ver, este ponto de controle *puxa* a superfície em direção a si."
 
 #: ../../manual/modeling/surfaces/structure.rst:70
 msgid "One control point with a weight of 5."
-msgstr ""
+msgstr "Um dos pontos de controle com um peso de influência de 5."
 
 #: ../../manual/modeling/surfaces/structure.rst:72
 msgid "If all the control points have the same *Weight* then each effectively cancels each other out. It is the difference in the weights that cause the surface to move towards or away from a control point."
-msgstr ""
+msgstr "Caso todos os pontos de controle tenham os mesmos *Pesos de influência*, então cada um deles cancelará a saída dos outros. Esta é a diferença nos pesos que fazem com que a superfície se mova para mais próximo ou mais distante de cada ponto de controle."
 
 #: ../../manual/modeling/surfaces/structure.rst:76
 msgid "The *Weight* of any particular control point is visible in the :doc:`/editors/3dview/object/properties/transforms` :kbd:`N`, in the *W* field (and not the *Weight* field...)."
-msgstr ""
+msgstr "O *Peso de influẽncia* de um ponto de controle em particular é visível dentro dos painéis de propriedades de :doc:`/editors/3dview/object/properties/transforms` (aberto com :kbd:`N`), no campo *W* (e não no campo de *Pesos*...)."
 
 #: ../../manual/modeling/surfaces/structure.rst:82
 msgid "Preset Weights"
@@ -92,11 +91,11 @@ msgstr "Predefinições de pesos de influência"
 
 #: ../../manual/modeling/surfaces/structure.rst:84
 msgid "NURBS can create pure shapes such as circles, cylinders, and spheres (note that a Bézier circle is not a pure circle). To create pure circles, globes, or cylinders, you must set to specific values the weights of the control points. Some of which are provided as presets in the *Curve Tools* panel (lower right corner). This is not intuitive, and you should read more on NURBS before trying this."
-msgstr ""
+msgstr "NURBS podem criar formas puras como círculos, cilindros e esferas (note que um círculo Bézier não é um círculo puro). Para criar círculos puros, globos ou cilindros, você deverá definir os pesos de influência para os pontos de controle, valores específicos. Alguns dos quais são providos como predefinições no painel de *Ferramentas de curva* (na lateral inferior direita). Isto não é intuitivo, e você deverá realizar mais leituras sobre as superfícies NURBS antes de tentar fazer isto."
 
 #: ../../manual/modeling/surfaces/structure.rst:90
 msgid "To create a sphere with 2D surfaces, its the same principle as with a 2D circle. You will note that the four different weights needed for creating a sphere (1.0, 0.707 = sqrt(0.5), 0.354 = sqrt(2)/4, and 0.25)."
-msgstr ""
+msgstr "Para criar uma esfera através de superfícies 2D, podem ser usados os mesmos princípios de um círculo 2D. Você irá notar que os quatro pesos de influência diferentes necessários para a criação da esfera são (1.0, 0.707 = sqrt(0.5), 0.354 = sqrt(2)/4, e 0.25), onde **sqrt** é a raiz quadrada. "
 
 #: ../../manual/modeling/surfaces/structure.rst:96
 msgid "A sphere surface."
