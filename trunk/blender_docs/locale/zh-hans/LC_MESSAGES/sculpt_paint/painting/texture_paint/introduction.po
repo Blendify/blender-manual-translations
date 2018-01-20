@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-01 09:30+1100\n"
-"PO-Revision-Date: 2018-01-01 17:36+0800\n"
+"PO-Revision-Date: 2018-01-20 10:50+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -23,8 +23,7 @@ msgstr "简介"
 msgid ""
 "A UV Texture is a picture (image, sequence or movie) that is used to color the surface of a mesh. The UV Texture is mapped to the mesh "
 "through one or more UV maps. There are three ways to establish the image used by the UV Texture:"
-msgstr ""
-"UV纹理是一张用于模型着色的图像（图片、图像序列或者影片），它通过一张或者多张纹理UV贴图映射到模型上的。有三种方法来建立用作UV贴图的图像："
+msgstr "UV纹理是一张用于模型表面着色的图像（图片、图像序列或者影片），它通过一张或者多张纹理UV贴图映射到模型上的。有三种方法来建立UV贴图："
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:12
 msgid ""
@@ -36,44 +35,40 @@ msgstr "在UV/图像编辑器中当前选中的UV纹理上绘制平面图像，�
 msgid ""
 "Paint the mesh in the 3D View, and let Blender use the currently selected UV map to update the UV Texture. (see :ref:`Projection Painting "
 "<painting-texture-index>`)."
-msgstr "在3D视图中直接在网格模型上绘制，让Blender使用当前选中的UV贴图更新UV纹理。（参见 :ref:`Projection Painting <painting-texture-index>`）"
+msgstr "在3D视图中直接在网格模型上绘制，让Blender使用当前选中的UV贴图更新UV纹理。（参见 :ref:`投影绘制 <painting-texture-index>` ）。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:16
-#, fuzzy
 msgid ""
 "Use any image-editing (paint) program to create an image. In the UV/Image Editor, select the UV Texture and load the image. Blender will "
 "then use that texture's UV map to transfer the colors to the faces of the mesh."
 msgstr ""
-"使用任意的图像编辑绘制软件创建UV纹理。在UV/图像编辑器中，选择UV纹理然后载入图像，Blender之后会使用纹理图像中的UV映射将颜色映射到模型的面上。"
+"使用任意的图像编辑绘制软件创建一张图像。在UV/图像编辑器中，选择UV纹理然后载入图像，Blender之后会使用纹理图像中的UV映射将颜色映射到模型的面"
+"上。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:20
-#, fuzzy
 msgid ""
 "Blender features a built-in paint mode called Texture Paint which is designed specifically to help you edit your UV Textures and images "
 "quickly and easily in either the UV/Image or the 3D View Editor. Since a UV Texture is just a special-purpose image, you can also use any "
 "external paint program. For example, GIMP is a full-featured image manipulation program that is also open-source."
 msgstr ""
-"Blender有一种叫纹理绘制内置的绘制模式，它是特别为编辑UV纹理和在UV/图像编辑器窗口或者3D视图窗口简单、快速绘制图形而设计的。由于UV纹理仅仅是一"
-"张特殊用途的图像，你也可以用其它任何外置程序来创建，比如GIMP就是一个全功能的图像处理器，而且它也是开源的。"
+"Blender有内置的绘画模式叫纹理绘制，它是特别为编辑UV纹理和在UV/图像编辑器窗口或或者3D视图窗口简单快速绘制图像而设计的。由于UV纹理仅仅是一张特"
+"殊用途的图像，你也可以用其它任何外部程序来创建，比如GIMP就是一个全功能的图像处理程序，而且它也是开源的。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:30
-#, fuzzy
 msgid "Texture painting in Blender."
-msgstr "在Blender绘制纹理"
+msgstr "在Blender绘制纹理。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:32
 msgid ""
 "Since a mesh can have layers of UV Textures, there may be many images that color the mesh. However, each UV Texture only has one image."
-msgstr "由于一个模型可以有多层UV纹理，可以有多个图像的颜色会覆盖到模型上，但是UV纹理只有一张图。"
+msgstr "由于一个模型可以有多层UV纹理，可能会有许多图像为网格着色，但是每个UV纹理只有一个图像。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:35
-#, fuzzy
 msgid ""
 "Texture Paint works in both a 3D View and the UV/Image Editor. In the 3D View in Texture Paint Mode, you paint directly on the mesh by :ref:"
 "`projecting onto the UVs <painting-texture-index>`."
 msgstr ""
-"在3D视图窗口中和UV/图像编辑器窗口中中都可以绘制纹理。在3D视图窗口切换到绘制模式，可以直接在模型上绘制图像（参考`projecting onto the UVs "
-"<painting_texture-index>`）。"
+"在3D视图窗口中和UV/图像编辑器窗口中中都可以绘制纹理。在绘制模式下的3D视图，可以直接在模型上绘制 :ref:`投影至UV <painting-texture-index>`."
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:41
 msgid "Getting Started"
@@ -84,107 +79,96 @@ msgid ""
 "Once you have unwrapped your model to a UV Map, you can begin the texturing process. You cannot paint on a mesh in Texture Paint Mode "
 "without **first** unwrapping your mesh, **and** doing one of the following steps. Either:"
 msgstr ""
+"一旦你将你的模型展开成UV贴图。你就可以开始纹理处理。你不能在没有 **首先** 展开网格的情况下在纹理绘制模式中绘制网格， **和** 执行以下任一步"
+"骤："
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:48
-#, fuzzy
 msgid "See: :doc:`Applying Image </editors/uv_image/uv/editing/applying_image>`."
-msgstr "参考： :doc:`应用图像 </editors/uv_image/uv_editing/applying_image>`."
+msgstr "参见 : :doc:`应用图像 </editors/uv_image/uv/editing/applying_image>`."
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:50
-#, fuzzy
 msgid "After you have done one of these two things, you can modify the image using the Texture Paint Mode:"
-msgstr "在完成下面两件事中的一件之后，你就可以在纹理绘制模式中修改图片了："
+msgstr "在完成下面两件事中的一件之后，你就可以在纹理绘制模式中修改图像了："
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:56
-#, fuzzy
 msgid "Enabling paint mode."
-msgstr "启用绘制模式"
+msgstr "启用绘制模式。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:58
-#, fuzzy
 msgid "In the 3D View, select Texture Paint Mode from the mode selector in the header, and you can paint directly onto the mesh."
-msgstr "在3D视图窗口中，在窗口标题栏的模式选择器中选择“绘制模式”，之后就可以直接在模型上绘制纹理。"
+msgstr "在3D视图窗口中，在窗口标题栏的模式选择器中选择纹理绘制模式，之后就可以直接在模型上绘制纹理。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:60
-#, fuzzy
 msgid "In the UV/Image Editor, switch the mode from View to Paint (shown to the right)."
-msgstr "在UV/图像编辑器窗口，编辑上下文菜单的“视图”切换至“图像绘制”（译者注：在窗口标题栏）。"
+msgstr "在UV/图像编辑器窗口，将模式从视图切换到绘制（如右图所示）。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:62
-#, fuzzy
 msgid "Square Power of Two"
-msgstr "2的n次方的效率（Square Power of 2）"
+msgstr "2次方"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:64
-#, fuzzy
 msgid ""
 "Texture paint is very fast and responsive when working in the 3D View and when your image is sized as a square where the side lengths are a "
 "power of two, e.g. 256×256, 512×512, 1024×1024, etc."
-msgstr "当图片大小设置为长宽是2的n次方，比如256×256、512×512、1024x1024等等的时候，在3D视图窗口绘制纹理非常快，而且反应及时。"
+msgstr "当图像大小设置为2的n次方，比如256×256、512×512、1024x1024等等的时候，在3D视图窗口绘制纹理反应非常快。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:68
 msgid ""
 "Once you enable Texture Painting, your mouse becomes a brush. To work with the UV layout (for example, to move coordinates) you must go "
 "back to \"View\" mode."
-msgstr "一旦启用了纹理绘制，鼠标就会变成笔刷；要调整UV布局（比如要移动坐标），你必须返回制图模式。"
+msgstr "一旦启用了纹理绘制，鼠标就会变成笔刷；要使用UV布局（例如，移动坐标），您必须返回到“视图”模式。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:71
-#, fuzzy
 msgid "As soon as you enable Texture Painting or switch to Texture Paint Mode, brush settings become available in the Tool Shelf."
-msgstr "只要你启用纹理绘制或者切换到纹理绘制模式，在工具面板中，笔刷设置就可用了（按T键调出工具面板）。"
+msgstr "只要你启用纹理绘制或者切换到纹理绘制模式，在工具架面板中，笔刷设置才可用。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:74
-#, fuzzy
 msgid ""
 "In the UV/Image Editor, you paint on a flat canvas that is wrapped around the mesh using UV coordinates. Any changes made in the UV/Image "
 "Editor show up immediately in the 3D View, and vice versa."
-msgstr ""
-"在UV/图像编辑器窗口，画布上绘制的内容会包裹到模型上，UV/图像编辑器里的任何变化都会在3D视图窗口立即显示出来，反之亦然（在3D视图窗口绘制模式中"
-"绘制的时候，uv纹理也会对应的变化）。"
+msgstr "在UV/图像编辑器窗口，画布上绘制的内容会包裹到模型上，UV/图像编辑器里的任何变化都会在3D视图窗口立即显示出来，反之亦然。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:79
-#, fuzzy
 msgid ""
 "A full complement of brushes and colors can be selected from the Properties region in the UV/Image Editor. Brush changes made in either "
 "panel are immediately reflected in the other panel. However, the modified texture will **not** be saved automatically; you must explicitly "
 "do so by :menuselection:`Image --> Save` in the UV/Image Editor."
 msgstr ""
 "在UV/图像编辑器窗口，笔刷和颜色的全部相关内容可以在属性面板中选取。笔刷的变化在UV/图像编辑器窗口和3D视图窗口的属性面板上都是立即同步反应出来"
-"的。尽管如此，修改过的纹理 **不会** 自动保存；你必须特意地在UV/图像编辑器窗口的点击“图像”菜单-->“保存”来保存改动过的UV图像。"
+"的。尽管如此，修改过的纹理  **不会** 自动保存；你必须通过在UV/图像编辑器窗口点击 :menuselection:`Image --> Save` 来保存改动过的UV图像。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:87
 msgid "Missing Data"
-msgstr ""
+msgstr "丢失数据"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:90
 msgid "Add Simple UVs"
-msgstr ""
+msgstr "添加简单的UVs"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:90
 msgid "The *Add Simple UVs* does a simple cube unwrap followed by a pack operation. It's still recommended to make a custom unwrap."
-msgstr ""
+msgstr "*添加简单的UV* 做一个简单的立方体，然后是一个展开包装操作。但仍然建议手动展开UV。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:94
 msgid "Add Paint Slot"
-msgstr ""
+msgstr "添加纹制槽"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:93
 msgid "ToDo 2.72."
-msgstr ""
+msgstr "ToDo 2.72."
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:97
 msgid "Texture Preview"
 msgstr "纹理预览"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:99
-#, fuzzy
 msgid ""
 "If your texture is already used to color, bump map, displace, alpha-transparent, etc., a surface of a model in your scene (in other "
 "technical words, is mapped to some aspect of a texture via a texture channel using UV as a map input), you can see the effects of your "
 "painting in the context of your scene as you paint."
 msgstr ""
 "如果纹理已经使用的颜色纹理，凹凸贴图，置换，Alpha透明，等等，在场景中模型的表面（用专业技术人员的话说，通过UV映射，对应的将不同的贴图映射到"
-"对应的通道上），就可以看到你的画在场景中的效果。"
+"对应的通道上），就可以在场景中的看到绘制的效果。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:104
 msgid ""
@@ -193,18 +177,21 @@ msgid ""
 "texture being painted is mapped to the \"Normal\" attribute, and is called \"bump mapping\", where the gray-scale image is used to make the "
 "flat surface appear bumpy. See Texture Mapping Output for more information on bump mapping."
 msgstr ""
+"要做到这一点，设置并排区域，3D视图中的一个区域设置为 *纹理* 阴影选项，在第二个UV /图像编辑器区域加载图像。在3D视图以显示UV映射到加载的图像的"
+"物体。在右侧的图像中，被绘制的纹理被映射到“正常”属性，并被称为“凹凸贴图”，其中使用灰度图像使平坦的表面看起来颠簸。有关凹凸贴图的更多信息，请"
+"参见纹理贴图输出。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:114
 msgid "Saving"
 msgstr "保存"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:116
-#, fuzzy
 msgid ""
 "If the header menu item Image has an asterisk next to it, it means that the image has been changed, but not saved. Use the :menuselection:"
 "`Image --> Save Image` option to save your work with a different name or overwrite the original image."
 msgstr ""
-"如果标题栏的图像菜单旁边有一个*号，它代表图像发生了改变，但是还没有保存。使用 *图像* --> *保存图像* 选项来另存你的成果或者覆盖原文件保存。"
+"如果标题栏的图像菜单旁边有一个星号，它代表图像被更改，但是还没有保存。使用 :menuselection:`图像 --> 保存图像` 选项来另存你的成果或者覆盖原文"
+"件保存。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:121
 msgid "UV Textures"
@@ -217,18 +204,16 @@ msgid ""
 msgstr "由于用作UV纹理的图像和其他图像功能不同，你应当把它们放在单独的目录下，区别于其他图像。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:126
-#, fuzzy
 msgid ""
 "The image format for saving is independent of the format for rendering. The format for saving a UV image is selected in the header of the "
 "File browser, and defaults to ``PNG`` (``.png``)."
-msgstr "图片保存的格式和渲染的格式独立于渲染格式（是不一样的）。UV图像保存格式在图片保存窗口的顶部选择，默认为png（.png）。"
+msgstr "保存的图像格式与渲染格式无关。在文件浏览器的标题栏中选择保存UV图像的格式，默认为 ``PNG``  ( ``.png`` ) 。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:130
-#, fuzzy
 msgid ""
 "If Packing is enabled in the File browser's header, or if you manually :menuselection:`Image --> Pack Image`, saving your images to a "
 "separate file is not necessary."
-msgstr "如果在窗口标题栏启用了打包，，或者手动 *图像* --> *打包图像* ，那么单独保存图像是没必要的。"
+msgstr "如果在文件浏览器的窗口标题栏启用了打包，或者手动使用 :menuselection:`图像 --> 打包图像`，则不需要将图像保存到单独的文件中。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:136
 msgid "Using an External Image Editor"
@@ -239,27 +224,22 @@ msgid "If you use an external program to edit your UV Texture, you must:"
 msgstr "如果你使用外部软件编辑uv纹理，你必须："
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:140
-#, fuzzy
 msgid "Run that paint program (GIMP, Photoshop\\ :sup:`®` \\, etc.)."
-msgstr "其他那个软件（GIMP、 Photoshop等等）"
+msgstr "运行该绘画程序 (GIMP, Photoshop\\ :sup:`®` \\, etc.)."
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:141
-#, fuzzy
 msgid "Load the image or create a new one."
-msgstr "载入或创建一个图像"
+msgstr "载入或创建一个新图像。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:142
-#, fuzzy
 msgid "Change the image."
-msgstr "改变图像，并且"
+msgstr "改变图像。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:143
-#, fuzzy
 msgid "And re-save it within that program."
 msgstr "在外部软件中重新保存。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:144
-#, fuzzy
 msgid "Back in Blender, you reload the image in the UV/Image Editor."
 msgstr "返回Blender，在UV/图像编辑器重新载入图像。"
 
@@ -268,33 +248,30 @@ msgid ""
 "You want to use an external program if you have teams of people using different programs that are developing the UV textures, or if you "
 "want to apply any special effects that Texture Paint does not feature, or if you are much more familiar with your favorite paint program."
 msgstr ""
-"如果你的团队成员使用不同的uv纹理制作软件，或者是你想使用一些纹理绘画不具备的特效，或者是你熟悉其他绘画软件的时候，你就需要使用外部软件（来处"
-"理uv纹理）。"
+"如果你的团队成员使用不同的uv纹理制作软件，或者是你想使用一些纹理绘制不具备的特效，或者是你熟悉其他绘画软件的时候，你就需要使用外部软件来处理"
+"uv纹理。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:153
 msgid "Known Limitations"
-msgstr "已知限制"
+msgstr "已知的限制"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:156
 msgid "UV Overlap"
 msgstr "UV重叠"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:158
-#, fuzzy
 msgid "In general overlapping UVs are not supported (as with texture baking)."
 msgstr "通常情况下，重叠的UV是不支持的（比如烘焙贴图）。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:160
-#, fuzzy
 msgid "However, this is only a problem when a single brush stroke paints onto multiple faces that share a texture."
 msgstr "尽管如此，这只是单个笔触多个面上绘制共享纹理的时候会出现的问题。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:164
 msgid "Perspective View & Faces Behind the View"
-msgstr "透视图 · 视图背面"
+msgstr "透视图 &视图背面"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:166
-#, fuzzy
 msgid ""
 "When painting onto a face which is partially behind the view (in perspective mode), the face cannot be painted on. To avoid, this zoom out "
 "or use an Ortho mode viewport."
@@ -302,16 +279,14 @@ msgstr "透视模式下，当绘制的面的一部分在视图的背面时，这
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:171
 msgid "Perspective View & Low Poly"
-msgstr "透视图 · 低面多边体"
+msgstr "透视图&低面多边体"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:173
-#, fuzzy
 msgid ""
 "When painting onto a face in perspective mode onto a low poly object with normals pointing away from the view, painting may fail; to "
 "workaround disable the *Normal* option in the paint panel."
-msgstr "透视模式下，在法线远离视口（译者注：即法线指向屏幕内侧）的低多边形数物体上绘画时可能会失败，解决办法是在绘画面板中禁用“法线”选项。"
+msgstr "透视模式下，在法线远离视口（译者注：即法线指向屏幕内侧）的低多边形数物体上绘制时可能会失败，解决办法是在绘制面板中禁用 *法线* 选项。"
 
 #: ../../manual/sculpt_paint/painting/texture_paint/introduction.rst:176
-#, fuzzy
 msgid "Typically this happens when painting onto the side of a cube (see `Bug report T34665 <https://developer.blender.org/T34665>`__)."
-msgstr "这种典型的情况发生在立方体的侧面绘画的时候*（参加：`漏洞反馈T34665  <https://developer.blender.org/T34665> `）。"
+msgstr "这种典型的情况发生在绘制立方体的侧面的时候（参见 `Bug report T34665 <https://developer.blender.org/T34665>`__ ）。"
