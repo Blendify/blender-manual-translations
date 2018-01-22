@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-01 09:30+1100\n"
-"PO-Revision-Date: 2018-01-01 16:19+0800\n"
+"PO-Revision-Date: 2018-01-22 22:11+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:4
 msgid "Vertex Weights"
@@ -30,12 +30,11 @@ msgstr "参考"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst
 msgid "Mode:     Edit and Weight Paint Modes"
-msgstr "模式：编辑和权重绘制模式"
+msgstr "模式:     编辑和权重绘制模式"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst
 msgid "Panel:    :menuselection:`Properties region --> Vertex Weights`"
-msgstr ""
-"面板:    :menuselection:`Properties region属性区域 --> Vertex Weights顶点权重`"
+msgstr "面板:    :menuselection:`属性栏 --> 顶点权重`"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:15
 msgid "Vertex Weights Panel."
@@ -53,10 +52,10 @@ msgid ""
 "can get (and edit) information about the weight values of each Vertex of a mesh. "
 "That is: to which Vertex Groups the vertex is assigned with which weight value."
 msgstr ""
-"如前所述, 在 :doc:`Vertex Groups </modeling/meshes/properties/vertex_groups/index>` "
-"的每个条目在一个顶点组也包含一个权重值的范围在(0.0 到 1.0)。Blender提供一个 *Vertex "
-"Weights顶点权重* 面板, 从那里你可以得到 (并且编辑) 信息的每个顶点的网格的权重值。那"
-"是: 权重值分配给哪个顶点组的顶点。"
+"如在 :doc:`顶点组 </modeling/meshes/properties/vertex_groups/index>` 所述，顶点组中"
+"的每个条目包含一个介于(0.0 到 1.0)范围的权重值。Blender提供了一个 *顶点权重* 面板, "
+"在这里可以查看(并编辑) 网格中每个顶点的权重值信息。即: 该顶点以多大权重值指定给哪个"
+"顶点组。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:25
 msgid ""
@@ -64,12 +63,12 @@ msgid ""
 "View. It is available in Edit Mode and in Weight Paint Mode (when Vertex Selection "
 "masking is enabled as well)."
 msgstr ""
-"顶点权重面板可以在3D视图的右边属性区域找到。在编辑模式下是可用的并且在权重绘制模式下"
-"（当启用顶点选择掩码时）。"
+"顶点权重面板位于3D视图右侧的属性栏。在编辑模式和权重绘制模式下可以看到该面板(当启用"
+"点选择模式时)。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:31
 msgid "Vertex Group Categories"
-msgstr "顶点组目录"
+msgstr "顶点组分类"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:33
 msgid ""
@@ -77,12 +76,12 @@ msgid ""
 "Technically they all behave the same way. However, we can identify two implicit "
 "categories of Vertex Groups:"
 msgstr ""
-"事实上我们在Blender里对顶点组没有严格的分类。从技术上讲，他们的行为都是一样的。然"
-"而，我们可以确定顶点组的两个隐含目录："
+"事实上，在Blender里对顶点组没有严格的分类。从技术上讲，它们的原理都是一样的。不过，"
+"我们还是可以区分出两类隐性的顶点组分类："
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:39
 msgid "Deform Groups"
-msgstr "变形组"
+msgstr "形变组"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:41
 msgid ""
@@ -90,8 +89,8 @@ msgid ""
 "are used for defining the weight tables of Armature bones. All Deform Groups of an "
 "Object are strictly related to each other via their weight values."
 msgstr ""
-"这些顶点组有时候称作为 *Weight Groups权重组* 或者 *Weight Maps权重贴图*。他们有时候"
-"被用作定义骨架骨骼的权重表。一个物体的所有变形组都和他们的权重值严格相关。"
+"这类顶点组有时也称作为 *权重组* 或者 *权重贴图*，用于定义骨架骨骼的权重表。一个物体"
+"的所有变形组都通过其权重值严格地相互关联。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:45
 msgid ""
@@ -101,9 +100,9 @@ msgid ""
 "provided a filter that allows restricting the Vertex Weight panel to display only "
 "the Deform bones of an Object."
 msgstr ""
-"严格地说, 网格的任何顶点的所有变形权重的总和应该恰好是1.0. 在Blender中, 这个约束有点"
-"放松 (见下文)。然而, 变形组应始终视为相互关联。因此, 我们提供了一个过滤器, 允许限制"
-"顶点重量面板只显示对象的变形骨骼。"
+"严格地说，网格的任何顶点的所有形变权重的总和应该恰好是1.0。在Blender中, 这个约束有所"
+"放宽 (见下文)。然而, 变形组应始终视为相互关联的。因此, 我们提供了一个过滤器，用于限"
+"制面板仅显示物体的形变骨骼。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:53
 msgid "Other Groups"
@@ -115,8 +114,8 @@ msgid ""
 "vertex groups can be found within Shape keys, Modifiers, etc. There is really no "
 "good name for this category, so we kept it simple and named it *Other*."
 msgstr ""
-"所有顶点组的用法都被总结到 *Other其他* 类别。这些顶点组可以在形态键，修改器等找到。"
-"没有其他更好的名字定义这个类别了，所移我们简单地称它为 *Other其他*."
+"所有顶点组的其他用法都归类到 *其他* 类别。这些顶点组可以在形态键，修改器等找到。确实"
+"没有其他更好的名字可以定义这个类别了，所移我们简单地称之为 *其他*。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:62
 msgid "Weight Table"
@@ -128,8 +127,8 @@ msgid ""
 "vertex does not necessarily have to be associated to any vertex groups. In that "
 "case the Vertex Weights Panel is not displayed."
 msgstr ""
-"权重表展示所有和 *active vertex活动顶点* 有关的权重。注意一个顶点并不是必须和其他定"
-"点组有联系。由此顶点权重面板并没有被展示。"
+"权重表展示所有和 *活动顶点* 相关的权重。注意一个顶点不一定要与顶点组关联。这时，顶点"
+"权重面板将隐藏。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:68
 msgid "The active Vertex"
@@ -142,16 +141,16 @@ msgid ""
 "or there is no active vertex selected at the moment, then the Vertex Weights Panel "
 "disappears."
 msgstr ""
-"那里是最近被选择的顶点。这个顶点总是被高亮，以至于你可以在网格中很简单的看见它。如果"
-"活动顶点没有权重，或者此刻这里没有其它活动顶点，然后顶点权重面板消失。"
+"这是指最后一个选中的顶点。这个顶点总是被高亮显示，这样在网格里可以轻易地找到它。如果"
+"活动顶点没有权重，或者没有被选中的活动顶点，这样顶点权重面板将消失。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:75
 msgid "Each row in the Weight table contains four active elements:"
-msgstr "权重表每一行包含4个活动元素:"
+msgstr "权重表的每一行包含4个活动元素:"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:80
 msgid "Change Active Group."
-msgstr "改变活动组。"
+msgstr "修改活动组。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:84
 msgid "Set the Active Group"
@@ -161,21 +160,21 @@ msgstr "设置活动组"
 msgid ""
 "As soon as you select any of the Vertex Group Names in the Weight table, the "
 "referenced Vertex Group becomes the new Active group."
-msgstr "只要你选择了权重表里的任意顶点组，这个被引用的顶点组就成为了新的活动组。"
+msgstr "只要选择了权重表里的任意顶点组，这个被引用的顶点组就成为了新的活动组。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:92
 msgid "Enable display of Weights in Edit Mode."
-msgstr "允许在编辑模式中显示权重。"
+msgstr "启用在编辑模式下显示权重。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:96
 msgid "Display Weights in Edit Mode"
-msgstr "编辑模式中显示权重"
+msgstr "编辑模式下显示权重"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:98
 msgid ""
 "When you are in edit mode, you can make the Weights of the active Group visible on "
 "the mesh:"
-msgstr "当你在编辑模式下，你可以使网格中的活动组权重可见:"
+msgstr "在编辑模式下，可以使网格中的活动组权重可见:"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:100
 msgid ""
@@ -183,8 +182,8 @@ msgid ""
 "*Show Weights* option. Now you can see the weights of the active Vertex Group "
 "displayed on the mesh surface."
 msgstr ""
-"在属性区域中搜索 *网格显示* 面板。并有启用 *显示权重* 选项。现在, 您可以看到在网格表"
-"面上显示的活动顶点组的权重。"
+"在属性栏中找到 *网格显示* 面板，并勾选 *显示权重* 选项。现在，可以在网格表面看到活动"
+"顶点组的权重显示结果。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:107
 msgid "Weights in Edit Mode."
@@ -200,8 +199,8 @@ msgid ""
 "the mesh are available and you have direct visual control over how your Weights "
 "change when you edit the weight values."
 msgstr ""
-"在编辑模式下用顶点组工作非常简单。所有网格编辑选项都是可用的，并且你能直接可视化的控"
-"制你的权重怎么变化，当你编辑权重值的时候。"
+"在编辑模式下操作顶点组工作非常简单。可以使用所有网格编辑选项，并且可以在编辑权重时直"
+"接看到权重的变化。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:120
 msgid "Change Weight Value."
@@ -209,7 +208,7 @@ msgstr "改变权重值。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:124
 msgid "Change a Weight"
-msgstr "一个权重变化"
+msgstr "修改单个权重"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:126
 msgid ""
@@ -219,17 +218,16 @@ msgid ""
 "the right/left arrows displayed around the weight value to change the weight in "
 "steps."
 msgstr ""
-"您可以手动输入新的权重值 (单击数字并编辑值), 也可以通过以下方式更改权重 :kbd:"
-"`LMB` , 同时按住鼠标按钮, 向右或向左拖动可增加/减小权重值。您还可以使用显示在权重值"
-"周围的右/左箭头来一步一步地更改权重。"
+"可以手动输入新的权重值 (单击数字并编辑), 也可以按住 :kbd:`LMB`，并左右拖动鼠标来增"
+"加/减小权重值，还可以使用权重值左/右的箭头来分步修改权重值。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:134
 msgid "Paste weights."
-msgstr "复制权重。"
+msgstr "粘贴权重。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:138
 msgid "Pasting"
-msgstr "复制"
+msgstr "粘贴"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:140
 msgid ""
@@ -237,8 +235,8 @@ msgid ""
 "Vertex to all selected vertices. But note that weights are only pasted to vertices "
 "which already have a weight value in the affected Vertex Group."
 msgstr ""
-":kbd:`LMB` 复制图标允许你将单个顶点的权重值转发给所有被选中的顶点。但是注意权重值不"
-"仅仅复制给受影响的顶点组中已经有权重值的顶点。"
+":kbd:`LMB` 单击右侧的复制图标，将单个顶点的权重值传递给所有被选中的顶点。但是注意权"
+"重值只能复制给相同顶点组中已经有权重值的顶点。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:146
 msgid "Delete weights."
@@ -253,7 +251,8 @@ msgid ""
 ":kbd:`LMB` the Delete Icon will instantly remove the weight from the active vertex. "
 "Thus the entire row disappears when you click on the delete icon."
 msgstr ""
-":kbd:`LMB` 删除图标将会立刻从活动顶点中移除权重值。因此当你点击删除图标时整行消失。"
+":kbd:`LMB` 单击删除图标，将会立刻移除活动顶点的权重值。因此，点击删除图标后该行将消"
+"失。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:157
 msgid "Tools"
@@ -265,7 +264,7 @@ msgstr "顶点权重面板。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:166
 msgid "Normalize"
-msgstr "标准化"
+msgstr "规格化"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:165
 msgid ""
@@ -273,8 +272,8 @@ msgid ""
 "vertex are recalculated such that their relative weight is maintained and the "
 "weight sum is 1.0."
 msgstr ""
-"将活动顶点的权重标准化。活动顶点的权重全部被重新计算，比如他们的相关权重被保留并且权"
-"重总和为1.0。"
+"将活动顶点的权重归一化。重新计算活动顶点的全部权重，维持其相对权重，并且保证权重总和"
+"为1.0。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:170
 msgid "Copy"
@@ -285,12 +284,13 @@ msgid ""
 "Copies all weights defined for the active Vertex to all selected vertices. Thus all "
 "previously defined weights are overwritten."
 msgstr ""
-"复制活动顶点被定义的权重给所有被选中的顶点。因此所有之前被定义的权重都会被覆盖。"
+"将活动顶点已定义的所有权重值复制给所有被选中的顶点。这样，所有之前定义的权重值将被覆"
+"盖。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:172
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:194
 msgid "The filter setting is respected"
-msgstr "滤波器的设置是受重视的"
+msgstr "编辑操作同样受过滤限制"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:174
 msgid ""
@@ -298,8 +298,8 @@ msgid ""
 "Weights Table. So if for example only the *Deform weights* are displayed, then "
 "Normalize and Copy only affect the Deform bones."
 msgstr ""
-"注意这两个功能都仅仅在当下展示在权重表的顶点组使用。因此如果例子只在 *变形权重* 里被"
-"展示，然后标准化和复制只会影响变形骨骼。"
+"注意：这两个工具都只能作用于当前权重表显示的顶点组。因此，比如，目前显示的是 *形变权"
+"重*，那么标准化和复制操作只会影响形变骨骼。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:180
 msgid "Locking"
@@ -311,11 +311,11 @@ msgstr "顶点权重面板被锁定。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:187
 msgid "Whenever a Weight Group is locked, all data changing tools get disabled:"
-msgstr "无论什么时候一个权重组被锁定，所有数据改变功能都会无法使用:"
+msgstr "无论何时锁定一个权重组，所有数据修改工具都将失效:"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:189
 msgid "Normalize the vertex Weights."
-msgstr "标准化顶点权重。"
+msgstr "规格化顶点权重。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:190
 msgid "Copy the Vertex weights."
@@ -323,7 +323,7 @@ msgstr "复制顶点权重。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:191
 msgid "Change the Weight of the active vertices."
-msgstr "改变活动顶点权重。"
+msgstr "修改活动顶点权重。"
 
 #: ../../manual/modeling/meshes/properties/vertex_groups/vertex_weights.rst:192
 msgid "Paste to selected vertices."
@@ -335,8 +335,8 @@ msgid ""
 "groups locked, then you can safely select *Deform* from the Filter row and use all "
 "available tools from the Weight table again."
 msgstr ""
-"例如，如果你使所有的变形权重组解锁和所有其他顶点组锁定, 那么你可以从过滤器行安全地选"
-"择 *Deform* , 并从权重表再次使用所有可用的功能, 。"
+"比如，如果所有的形变权重组处于解锁状态，而其他全部顶点组被锁定，, 那么就可以放心大胆"
+"地选择 *形变* 过滤 ，并使用权重表中的所有相关工具。"
 
 #~ msgid "Function Bar"
 #~ msgstr "功能面板"
