@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-04 07:51+1100\n"
+"POT-Creation-Date: 2018-01-24 22:17+1100\n"
 "PO-Revision-Date: 2017-07-29 19:39+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/compositing/types/converter/math.rst:11
 msgid "Math Node"
@@ -151,12 +151,13 @@ msgid "Using Sine Function to Pulsate"
 msgstr "Використання функції синуса для отримання ефекту пульсації"
 
 #: ../../manual/compositing/types/converter/math.rst:82
+#, fuzzy
 msgid ""
 "This example has a *Time* node putting out a linear sequence from 0 to 1 "
 "over the course of 101 frames. The green vertical line in the curve "
 "widget shows that frame 25 is being put out, or a value of 0.25. That "
 "value is multiplied by 2 × pi and converted to 1.0 by the Sine function, "
-"since we all know that :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0` Since "
+"since we all know that :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0`. Since "
 "the sine function can put out values between (-1.0 to 1.0), the *Map "
 "Value* node scales that to 0.0 to 1.0 by taking the input (-1 to 1), "
 "adding 1 (making 0 to 2), and multiplying the result by one-half (thus "
@@ -388,7 +389,7 @@ msgstr ""
 "спектру число чорний або 0, коли 0.501 віднімається, округлюється до 0, "
 "оскільки функція Round() не повертає від'ємне число."
 
-#: ../../manual/compositing/types/converter/math.rst:184
+#: ../../manual/compositing/types/converter/math.rst:185
 msgid ""
 "Sometimes using a spreadsheet can help you figure out how to put these "
 "nodes together to get the result that you want. Stepping you through the "
@@ -407,11 +408,11 @@ msgstr ""
 "або 8-бітне значення 204. Ви можете бачити, що це саме 8-бітне значення є"
 " виводом для діапазону увідних значень."
 
-#: ../../manual/compositing/types/converter/math.rst:193
+#: ../../manual/compositing/types/converter/math.rst:194
 msgid "Reality"
 msgstr "Реальність"
 
-#: ../../manual/compositing/types/converter/math.rst:195
+#: ../../manual/compositing/types/converter/math.rst:196
 msgid ""
 "To implement this function in Blender, consider the node setup above. "
 "First, feed the image to the Separate RGB node. For the Red channel, we "
@@ -435,7 +436,7 @@ msgstr ""
 " оскільки ця функція округлює до меншого, а потім ділиться на п'ять "
 "результатів у шести значеннях {0.0, 0.2, 0.4, 0.6, 0.8, 1.0}."
 
-#: ../../manual/compositing/types/converter/math.rst:205
+#: ../../manual/compositing/types/converter/math.rst:206
 #, fuzzy
 msgid ""
 "The result is that the output value can only be one of a certain set of "
@@ -451,7 +452,7 @@ msgstr ""
 "установлюємо три вузли «Математика: Множення» -- Math: Multiply як {6, 6,"
 " 7} та ділимо ці вузли у {5, 5, 6}."
 
-#: ../../manual/compositing/types/converter/math.rst:212
+#: ../../manual/compositing/types/converter/math.rst:213
 msgid ""
 "If you make this into a node group, you can easily reuse this setup from "
 "project to project. When you do, consider using a math node to drive the "
@@ -464,11 +465,11 @@ msgstr ""
 "значеннями, щоб ви могли мати і інший набір, просто для виявлення "
 "можливих помилок у роботі."
 
-#: ../../manual/compositing/types/converter/math.rst:218
+#: ../../manual/compositing/types/converter/math.rst:219
 msgid "Summary"
 msgstr "Підсумок"
 
-#: ../../manual/compositing/types/converter/math.rst:220
+#: ../../manual/compositing/types/converter/math.rst:221
 msgid ""
 "Normally, an output render consists of 32- or 24-bit color depth, and "
 "each pixel can be one of the millions of possible colors. This node setup"
@@ -482,7 +483,7 @@ msgstr ""
 "нормалізує їх в одне з кількох значень. Коли усі три канали комбінуються "
 "назад разом, кожен колір може бути тільки одним з можливих 256 значень."
 
-#: ../../manual/compositing/types/converter/math.rst:227
+#: ../../manual/compositing/types/converter/math.rst:228
 msgid ""
 "While this example uses the Separate/Combine RGB to create distinct "
 "colors, other Separate/Combine nodes can be used as well. If using the "
@@ -499,7 +500,7 @@ msgstr ""
 "половину для приведення діапазону до між 0 і 1, а потім після ділення "
 "відніміть половину для привнесення його назад у стандартний діапазон."
 
-#: ../../manual/compositing/types/converter/math.rst:233
+#: ../../manual/compositing/types/converter/math.rst:234
 #, fuzzy
 msgid ""
 "The ``JPG`` or ``PNG`` image format will store each of the colors "
@@ -514,7 +515,7 @@ msgstr ""
 "скорочення глибини кольору та квантування кольорів є базово тим самим, що"
 " робить алгоритм стиснення ``JPEG``."
 
-#: ../../manual/compositing/types/converter/math.rst:238
+#: ../../manual/compositing/types/converter/math.rst:239
 msgid ""
 "You do not have to reduce the color depth of each channel evenly. For "
 "example, if blue was the dominant color in an image, to preserve image "
@@ -532,7 +533,7 @@ msgstr ""
 "Multiply на 2 та Поділивши -- Divide на 2, та вимежувавши Відтінок -- Hue"
 " можливими 64-ма значеннями."
 
-#: ../../manual/compositing/types/converter/math.rst:244
+#: ../../manual/compositing/types/converter/math.rst:245
 msgid ""
 "You can use this node setup to quantize any channel; alpha, speed "
 "(vector), z-values, and so forth."
