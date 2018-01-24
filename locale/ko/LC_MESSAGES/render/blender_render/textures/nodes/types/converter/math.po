@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-04 07:51+1100\n"
+"POT-Creation-Date: 2018-01-24 22:17+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/compositing/types/converter/math.rst:5
 msgid "Math Node"
@@ -128,7 +128,7 @@ msgid ""
 "over the course of 101 frames. The green vertical line in the curve "
 "widget shows that frame 25 is being put out, or a value of 0.25. That "
 "value is multiplied by 2 × pi and converted to 1.0 by the Sine function, "
-"since we all know that :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0` Since "
+"since we all know that :math:`sin(2 × pi/ 4) = sin(pi/ 2) = +1.0`. Since "
 "the sine function can put out values between (-1.0 to 1.0), the *Map "
 "Value* node scales that to 0.0 to 1.0 by taking the input (-1 to 1), "
 "adding 1 (making 0 to 2), and multiplying the result by one-half (thus "
@@ -265,7 +265,7 @@ msgid ""
 "return a negative number."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:178
+#: ../../manual/compositing/types/converter/math.rst:179
 msgid ""
 "Sometimes using a spreadsheet can help you figure out how to put these "
 "nodes together to get the result that you want. Stepping you through the "
@@ -276,11 +276,11 @@ msgid ""
 "that this same 8-bit value is output for a range of input values."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:187
+#: ../../manual/compositing/types/converter/math.rst:188
 msgid "Reality"
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:189
+#: ../../manual/compositing/types/converter/math.rst:190
 msgid ""
 "To implement this function in Blender, consider the node setup above. "
 "First, feed the image to the Separate RGB node. For the Red channel, we "
@@ -294,7 +294,7 @@ msgid ""
 "values {0.0, 0.2, 0.4, 0.6, 0.8, 1.0}."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:199
+#: ../../manual/compositing/types/converter/math.rst:200
 msgid ""
 "The result is that the output value can only be one of a certain set of "
 "values, stair-stepped, because of the rounding function of the math node."
@@ -303,7 +303,7 @@ msgid ""
 "7} and the divide nodes to {5, 5, 6}."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:206
+#: ../../manual/compositing/types/converter/math.rst:207
 msgid ""
 "If you make this into a node group, you can easily reuse this setup from "
 "project to project. When you do, consider using a math node to drive the "
@@ -311,11 +311,11 @@ msgid ""
 "error-proof your work."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:212
+#: ../../manual/compositing/types/converter/math.rst:213
 msgid "Summary"
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:214
+#: ../../manual/compositing/types/converter/math.rst:215
 msgid ""
 "Normally, an output render consists of 32- or 24-bit color depth, and "
 "each pixel can be one of the millions of possible colors. This node setup"
@@ -324,7 +324,7 @@ msgid ""
 "together, each color can only be one of 256 possible values."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:221
+#: ../../manual/compositing/types/converter/math.rst:222
 msgid ""
 "While this example uses the Separate/Combine RGB to create distinct "
 "colors, other Separate/Combine nodes can be used as well. If using the "
@@ -334,7 +334,7 @@ msgid ""
 "range."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:227
+#: ../../manual/compositing/types/converter/math.rst:228
 msgid ""
 "The ``JPG`` or ``PNG`` image format will store each of the colors "
 "according to its image standard for color depth (e.g. ``JPG`` is 24-bit),"
@@ -343,7 +343,7 @@ msgid ""
 " accomplishes."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:232
+#: ../../manual/compositing/types/converter/math.rst:233
 msgid ""
 "You do not have to reduce the color depth of each channel evenly. For "
 "example, if blue was the dominant color in an image, to preserve image "
@@ -353,7 +353,7 @@ msgid ""
 "and Divide by 2, and restrict the Hue to 64 possible values."
 msgstr ""
 
-#: ../../manual/compositing/types/converter/math.rst:238
+#: ../../manual/compositing/types/converter/math.rst:239
 msgid ""
 "You can use this node setup to quantize any channel; alpha, speed "
 "(vector), z-values, and so forth."
@@ -444,5 +444,37 @@ msgstr ""
 #~ " image quality with fewer color "
 #~ "values, give possible values to the "
 #~ "predominant colors in the image."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This example has a *Time* node "
+#~ "putting out a linear sequence from "
+#~ "0 to 1 over the course of "
+#~ "101 frames. The green vertical line "
+#~ "in the curve widget shows that "
+#~ "frame 25 is being put out, or "
+#~ "a value of 0.25. That value is "
+#~ "multiplied by 2 × pi and converted"
+#~ " to 1.0 by the Sine function, "
+#~ "since we all know that :math:`sin(2 "
+#~ "× pi/ 4) = sin(pi/ 2) = "
+#~ "+1.0` Since the sine function can "
+#~ "put out values between (-1.0 to "
+#~ "1.0), the *Map Value* node scales "
+#~ "that to 0.0 to 1.0 by taking "
+#~ "the input (-1 to 1), adding 1 "
+#~ "(making 0 to 2), and multiplying "
+#~ "the result by one-half (thus "
+#~ "scaling the output between 0 to "
+#~ "1). The default *Color Ramp* converts"
+#~ " those values to a grayscale. Thus,"
+#~ " medium gray corresponds to a 0.0 "
+#~ "output by the sine, black to -1.0,"
+#~ " and white to 1.0. As you can"
+#~ " see, :math:`sin(pi/ 2) = 1.0`. Like"
+#~ " having your own visual color "
+#~ "calculator! Animating this node setup "
+#~ "provides a smooth cyclic sequence "
+#~ "through the range of grays."
 #~ msgstr ""
 

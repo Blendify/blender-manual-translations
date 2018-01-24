@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-01 09:30+1100\n"
+"POT-Creation-Date: 2018-01-24 22:17+1100\n"
 "PO-Revision-Date: 2017-12-12 16:31+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/physics/soft_body/collision.rst:5
 msgid "Collision"
@@ -92,16 +92,16 @@ msgid "Examples"
 msgstr "Приклади"
 
 #: ../../manual/physics/soft_body/collision.rst:32
+#, fuzzy
 msgid ""
 "A cube colliding with a plane works pretty well Fig. :ref:`fig-softbody-"
 "collision-plane1`, but a plane falls right through a cube that it is "
 "supposed to collide with Fig. :ref:`fig-softbody-collision-plane2`. Why "
 "is that? Because the default method of calculation only checks to see if "
 "the four vertices of the plane collides with the cube as the plane is "
-"pulled down by gravity. You can activate *CFace* to enable collision "
-"between the face of the plane and the object instead Fig. :ref:`fig-"
-"softbody-collision-plane3`, but this type of calculation takes much "
-"longer."
+"pulled down by gravity. You can activate *Face* to enable collision "
+"between the face of the plane and the object instead, but this type of "
+"calculation takes much longer."
 msgstr ""
 "Кую, що стикається з площиною, працює досить добре на Ілюстрації :ref"
 ":`fig-softbody-collision-plane1`, а от площина, що падає на ілюстрації "
@@ -121,39 +121,23 @@ msgstr ""
 "Давайте ближче подивимося на розрахунок зіткнення, щоб ви могли мати "
 "уявлення, як ми можемо його оптимізувати."
 
-#: ../../manual/physics/soft_body/collision.rst:50
+#: ../../manual/physics/soft_body/collision.rst:48
 msgid "A Soft Body cube colliding with a plane."
 msgstr "М'якотілий куб стикається з площиною."
 
-#: ../../manual/physics/soft_body/collision.rst:56
+#: ../../manual/physics/soft_body/collision.rst:54
 msgid "A Soft Body plane colliding with a cube, so no interaction at all."
 msgstr "М'якотіла площина стикається з кубом без жодної взаємодії."
 
-#: ../../manual/physics/soft_body/collision.rst:62
-msgid "Collision with Face activated."
-msgstr "Це ж зіткнення м'якотілої площини з кубом, але з активованою опцією Face."
-
-#: ../../manual/physics/soft_body/collision.rst:66
-msgid ""
-"An example image can be found at: "
-"https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html#examples"
-msgstr ""
-"Ілюстрація до прикладу може бути знайдена на: "
-"https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html#examples"
-
-#: ../../manual/physics/soft_body/collision.rst:71
+#: ../../manual/physics/soft_body/collision.rst:58
 msgid "Calculating Collisions"
 msgstr "Розрахування зіткнень"
 
-#: ../../manual/physics/soft_body/collision.rst:81
-msgid "Visualization of the collision of a Soft Body vertex with a plane."
-msgstr "Візуалізація зіткнення вершини М'якого тіла з площиною."
-
-#: ../../manual/physics/soft_body/collision.rst:87
+#: ../../manual/physics/soft_body/collision.rst:66
 msgid "Six Soft Body vertices with different speed."
 msgstr "Шість вершин М'якого Тіла з різною швидкістю."
 
-#: ../../manual/physics/soft_body/collision.rst:89
+#: ../../manual/physics/soft_body/collision.rst:68
 msgid ""
 "`Blend file "
 "<https://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__."
@@ -161,7 +145,7 @@ msgstr ""
 "`Blend file "
 "<https://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__."
 
-#: ../../manual/physics/soft_body/collision.rst:93
+#: ../../manual/physics/soft_body/collision.rst:72
 msgid ""
 "An example image can be found at: "
 "https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html"
@@ -171,7 +155,7 @@ msgstr ""
 "https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html"
 "#calculating-collisions"
 
-#: ../../manual/physics/soft_body/collision.rst:96
+#: ../../manual/physics/soft_body/collision.rst:75
 msgid ""
 "Soft Body simulation is by default done on a per vertex basis. If the "
 "vertices of the Soft Body do not collide with the collision object, there"
@@ -181,9 +165,10 @@ msgstr ""
 "вершини М'якого Тіла не стикаються з об'єктом зіткнення, то не буде "
 "жодної взаємодії між цими об'єктами."
 
-#: ../../manual/physics/soft_body/collision.rst:99
+#: ../../manual/physics/soft_body/collision.rst:78
+#, fuzzy
 msgid ""
-"In Fig. :ref:`fig-softbody-collision-vertex` you can see a vertex "
+"In Fig. :ref:`fig-softbody-collision-vertex2` you can see a vertex "
 "colliding with a plane. If a vertex penetrates the zone between *Outer* "
 "and *Inner*, it is repulsed by a force in the direction of the face "
 "normal. The position that a vertex finally ends up in is dependent on the"
@@ -201,7 +186,7 @@ msgstr ""
 "під впливом параметра *Choke* в уставах обчислювача М'якого Тіла -- "
 ":ref:`Soft Body Solver settings <physics-softbody-settings-solver>`."
 
-#: ../../manual/physics/soft_body/collision.rst:106
+#: ../../manual/physics/soft_body/collision.rst:85
 msgid ""
 "Now lets see what happens if we make vertices heavier and let them travel"
 " at a faster speed. In Fig. :ref:`fig-softbody-collision-vertex2` you can"
@@ -222,13 +207,13 @@ msgstr ""
 "вони прориваються до внутрішньої зони. Перші три вершини стикаються "
 "правильно."
 
-#: ../../manual/physics/soft_body/collision.rst:117
+#: ../../manual/physics/soft_body/collision.rst:96
 msgid "Also Edges and Faces can be used for the collision calculation."
 msgstr ""
 "Для розрахування зіткнення можуть також використовуватися Ребра -- Edge "
 "та Грані -- Face."
 
-#: ../../manual/physics/soft_body/collision.rst:120
+#: ../../manual/physics/soft_body/collision.rst:98
 msgid ""
 "You can set up your collision so that edges and even faces are included "
 "in the collision calculation Fig. :ref:`fig-softbody-collision-vertex3`. "
@@ -242,11 +227,11 @@ msgstr ""
 "м'якотілого об'єкта перетинається з об'єктом зіткнення, а зони зіткнення "
 "вже не використовується."
 
-#: ../../manual/physics/soft_body/collision.rst:126
+#: ../../manual/physics/soft_body/collision.rst:104
 msgid "Good Collisions"
 msgstr "Добрі зіткнення"
 
-#: ../../manual/physics/soft_body/collision.rst:128
+#: ../../manual/physics/soft_body/collision.rst:106
 msgid ""
 "If the collision you have set up is not behaving properly, you can try "
 "the following:"
@@ -254,11 +239,11 @@ msgstr ""
 "Якщо зіткнення, яке ви уклали, не поводиться належно, то ви можете "
 "спробувати наступне:"
 
-#: ../../manual/physics/soft_body/collision.rst:130
+#: ../../manual/physics/soft_body/collision.rst:108
 msgid "The best way"
 msgstr "Найкращий спосіб"
 
-#: ../../manual/physics/soft_body/collision.rst:132
+#: ../../manual/physics/soft_body/collision.rst:110
 #, fuzzy
 msgid ""
 "Add *Loop Cuts* to your Soft Body object in strategic areas that you know"
@@ -267,17 +252,17 @@ msgstr ""
 "Додайте петлі ребер -- *Loop Cuts* на об'єкті М'якого Тіла у стратегічних"
 " ділянках, які на вашу думку найімовірніше будуть задіяні у зіткненні."
 
-#: ../../manual/physics/soft_body/collision.rst:135
+#: ../../manual/physics/soft_body/collision.rst:113
 msgid ""
 "The Soft Body object must have more subdivisions than the collision "
 "object."
 msgstr "Об'єкт М'якого Тіла повинен мати більше підподілів, ніж об'єкт зіткнення."
 
-#: ../../manual/physics/soft_body/collision.rst:136
+#: ../../manual/physics/soft_body/collision.rst:114
 msgid "Check the direction of the face normals."
 msgstr "Перевірте напрямок нормалей граней."
 
-#: ../../manual/physics/soft_body/collision.rst:137
+#: ../../manual/physics/soft_body/collision.rst:115
 msgid ""
 "If the collision object has sharp spikes they might penetrate the Soft "
 "Body."
@@ -285,7 +270,7 @@ msgstr ""
 "Якщо об'єкт зіткнення має гострі піки у своїй формі, то вони можуть "
 "пронизувати М'яке Тіло."
 
-#: ../../manual/physics/soft_body/collision.rst:138
+#: ../../manual/physics/soft_body/collision.rst:116
 msgid ""
 "The resolution of the solver must match the speed at which Soft Body "
 "vertices are traveling. Lower the parameter *Error Limit* and carefully "
@@ -295,7 +280,7 @@ msgstr ""
 "мандрують вершини М'якого Тіла. Понизьте параметр *Error Limit* та "
 "обережно підвищіть уставу *Min Step*."
 
-#: ../../manual/physics/soft_body/collision.rst:140
+#: ../../manual/physics/soft_body/collision.rst:118
 msgid ""
 "*Outer* and *Inner* should be large enough, but zones of opposite faces "
 "should not overlap, or you have forces in opposite directions."
@@ -304,11 +289,11 @@ msgstr ""
 "великими, але зони протилежних граней не повинні перекриватися і ви не "
 "маєте мати сили у протилежних напрямках."
 
-#: ../../manual/physics/soft_body/collision.rst:142
+#: ../../manual/physics/soft_body/collision.rst:120
 msgid "If you use strong forces you should use large zones."
 msgstr "Якщо ви вживаєте сильні сили, то ви повинні використовувати великі зони."
 
-#: ../../manual/physics/soft_body/collision.rst:143
+#: ../../manual/physics/soft_body/collision.rst:121
 msgid ""
 "Set *Choke* to a high enough value (all the way up if necessary) if you "
 "have difficulties with repelled vertices."
@@ -316,7 +301,7 @@ msgstr ""
 "Задайте для *Choke* достатньо високе значення (для усієї імітації, якщо "
 "необхідно), якщо ви маєте труднощі з виштовханими вершинами."
 
-#: ../../manual/physics/soft_body/collision.rst:144
+#: ../../manual/physics/soft_body/collision.rst:122
 msgid ""
 "Colliding faces are difficult to control and need long calculation times."
 " Try not to use them."
@@ -324,7 +309,7 @@ msgstr ""
 "Зіткненням граней важко керувати та воно потребує більше часу на "
 "розрахування. Намагайтеся не використовувати грані для зіткнення."
 
-#: ../../manual/physics/soft_body/collision.rst:146
+#: ../../manual/physics/soft_body/collision.rst:124
 msgid ""
 "Often it is better to create a simplified mesh to use as your collision "
 "object, however, this may be difficult if you are using an animated mesh."
@@ -332,15 +317,32 @@ msgstr ""
 "Часто краще створити спрощену сіть для використання як об'єкта зіткнення,"
 " однак, це може бути важко, якщо ви вживаєте для цього анімовану сіть."
 
-#: ../../manual/physics/soft_body/collision.rst:151
+#: ../../manual/physics/soft_body/collision.rst:129
 msgid "Self Collisions"
 msgstr "Само Зіткнення"
 
-#: ../../manual/physics/soft_body/collision.rst:153
+#: ../../manual/physics/soft_body/collision.rst:131
 msgid ""
 "For information on self collision please refer to the :ref:`Self "
 "Collision <physics-softbody-settings-self-collision>` settings."
 msgstr ""
 "Детальніше про само зіткнення дивіться тут -- :ref:`Self Collision "
 "<physics-softbody-settings-self-collision>`."
+
+#~ msgid "Collision with Face activated."
+#~ msgstr ""
+#~ "Це ж зіткнення м'якотілої площини з "
+#~ "кубом, але з активованою опцією Face."
+
+#~ msgid ""
+#~ "An example image can be found at:"
+#~ " "
+#~ "https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html#examples"
+#~ msgstr ""
+#~ "Ілюстрація до прикладу може бути "
+#~ "знайдена на: "
+#~ "https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html#examples"
+
+#~ msgid "Visualization of the collision of a Soft Body vertex with a plane."
+#~ msgstr "Візуалізація зіткнення вершини М'якого тіла з площиною."
 
