@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-30 08:22+1100\n"
-"PO-Revision-Date: 2018-01-30 19:46+0800\n"
+"PO-Revision-Date: 2018-02-10 11:20+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
@@ -26,7 +26,7 @@ msgstr "Alembic"
 
 #: ../../manual/pipeline/alembic.rst:6
 msgid "From the `Alembic home page <https://www.alembic.io/>`__:"
-msgstr ""
+msgstr "以下摘自 `Alembic 主页 <https://www.alembic.io/>`__:"
 
 #: ../../manual/pipeline/alembic.rst:8
 msgid ""
@@ -36,6 +36,9 @@ msgid ""
 "into baked geometry is exactly analogous to the distillation of lighting "
 "and rendering scenes into rendered image data."
 msgstr ""
+"Alembic 是一个开放的计算机图形交换构架。Alembic 把复杂的、动画的场景提取为非"
+"程序化的、与处理软件无关的一套烘焙好的几何体。这种把场景'提取'为烘焙好的几何"
+"体的过程完全类似于把灯光和渲染场景提取成渲染出的图像数据。"
 
 #: ../../manual/pipeline/alembic.rst:13
 msgid ""
@@ -51,6 +54,10 @@ msgid ""
 "required to produce the final, animated vertex positions and animated "
 "transforms."
 msgstr ""
+"Alembic专注于把复杂的程序化的几何体构建的计算结果进行高效的存储。非常明确的"
+"一点是，它 **不** 存储用来创建计算结果的复杂的程序化工具的依存关系。比如说，"
+"Alembic会高效地储存任意的复杂动画和模拟过程（包括包裹变形、形状校正、恒定体"
+"积模拟、布料和肌肉模拟，等等）所产生的动画的顶点位置和动画的变形。"
 
 #: ../../manual/pipeline/alembic.rst:23
 msgid ""
@@ -60,12 +67,18 @@ msgid ""
 "Alembic file, and loaded into the shot file for shading and lighting with "
 "only moderate CPU usage."
 msgstr ""
+":abbr:`TL;DR (Too long; didn't read.)` （简言之）: Alembic可以把动画的mesh写"
+"入硬盘，然后再迅速高效地读取出来。这意味着可以把需要巨大的CPU消耗的绑定动画"
+"的mesh，'烘焙'到 Alembic文件里，然后再加载入镜头文件中进行贴图和灯光设置而只"
+"消耗较小的CPU使用量。"
 
 #: ../../manual/pipeline/alembic.rst:28
 msgid ""
 "Support for the Alembic file format was introduced in `Blender 2.78 "
 "<https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.78>`__."
 msgstr ""
+"对 Alembic 文件格式的支持始于 `Blender 2.78 <https://wiki.blender.org/index."
+"php/Dev:Ref/Release_Notes/2.78>`__."
 
 #: ../../manual/pipeline/alembic.rst:31
 msgid ""
@@ -77,50 +90,55 @@ msgid ""
 "Blender, export to Alembic, and load those files into other software for "
 "further processing."
 msgstr ""
+"由于 Alembic 标准的开放性以及C++库文件的标准化， **Blender可以用于混合的流程"
+"**. 比如说，Houdini或者Maya这样的软件可以把文件输出为 Alembic格式, 然后在"
+"Blender中载入、贴图、渲染. 也可以在Blender中对角色（或者其它模型）赋予动画, "
+"然后输出为 Alembic文件, 继而在其它软件中加载后进一步处理."
 
 #: ../../manual/pipeline/alembic.rst:40
 msgid "Exporting to Alembic Files"
-msgstr ""
+msgstr "输出为 Alembic文件"
 
 #: ../../manual/pipeline/alembic.rst:42
 msgid "This section describes the effect of the different export options."
-msgstr ""
+msgstr "此章节说明不同的输出选项的效果。"
 
 #: ../../manual/pipeline/alembic.rst:47
 msgid "Alembic Export options."
-msgstr ""
+msgstr "Alembic Export options."
 
 #: ../../manual/pipeline/alembic.rst:51
 msgid "Manual Transform"
-msgstr ""
+msgstr "Manual Transform"
 
 #: ../../manual/pipeline/alembic.rst:56
 msgid "Scale"
-msgstr ""
+msgstr "Scale"
 
 #: ../../manual/pipeline/alembic.rst:54
 msgid ""
 "This sets the global scale of the Alembic file. Keep it at the default "
 "value of 1.0 to use Blender's units."
-msgstr ""
+msgstr "设置Alembic文件的全局缩放值。使用缺省值1.0则采用Blender的单位。"
 
 #: ../../manual/pipeline/alembic.rst:59
 msgid "Scene Options"
-msgstr ""
+msgstr "Scene Options"
 
 #: ../../manual/pipeline/alembic.rst:61
 msgid "Start Frame and End Frame"
-msgstr ""
+msgstr "Start Frame and End Frame"
 
 #: ../../manual/pipeline/alembic.rst:62
 msgid ""
 "Sets the frame range to export to Alembic. This defaults to the current "
 "scene frame range."
-msgstr ""
+msgstr "设置输出至 Alembic的帧范围。缺省使用当前场景的帧范围。"
 
 #: ../../manual/pipeline/alembic.rst:71
 msgid "Sub-frame sampling: Transform & Geometry Samples, Shutter Open & Close"
 msgstr ""
+"Sub-frame sampling: Transform & Geometry Samples, Shutter Open & Close"
 
 #: ../../manual/pipeline/alembic.rst:64
 msgid ""
@@ -136,36 +154,43 @@ msgid ""
 "at -0.25 and Shutter Close at 0.25. This mimics a \"180 degree\" shutter, "
 "opening 90 degrees before the frame and closing 90 degrees after the frame."
 msgstr ""
+"这些选项控制动画的次帧采样。 Transform Samples设置对每一帧进行动画变形的采样"
+"并写入Alembic的次数。Geometry Samples的设置与此相同，只是针对的是动画的几何"
+"体。 Shutter Open & Close（快门开、闭）规定了进行采样的 [开、闭] 间隔。有效"
+"范围为-1到1，其中-1指前一帧，1指后一帧。比如说，当需要详细的mesh运动模糊的信"
+"息时，以采样次数5、快门开设置为-0.25、快门闭设置为0.25对当前帧进行次帧采样并"
+"写入Alembic。这就模拟了一个180度的快门，在当前帧前开到90度，而在当前帧后关闭"
+"90度。"
 
 #: ../../manual/pipeline/alembic.rst:73
 msgid "Selected Objects Only"
-msgstr ""
+msgstr "Selected Objects Only"
 
 #: ../../manual/pipeline/alembic.rst:74
 msgid ""
 "When enabled, exports only the selected objects. When disabled, all objects "
 "are exported."
-msgstr ""
+msgstr "选中此项时，只输出被选中的物体。否则输出所有物体。"
 
 #: ../../manual/pipeline/alembic.rst:75
 msgid "Renderable Objects Only"
-msgstr ""
+msgstr "Renderable Objects Only"
 
 #: ../../manual/pipeline/alembic.rst:76
 msgid "This is useful to, for example, avoid exporting custom bone shapes."
-msgstr ""
+msgstr "此选项很有用，比如用来避免输出自定义的骨骼形状。"
 
 #: ../../manual/pipeline/alembic.rst:77
 msgid "Visible Layers Only"
-msgstr ""
+msgstr "Visible Layers Only"
 
 #: ../../manual/pipeline/alembic.rst:78
 msgid "Limits the export to scene layers that are currently visible."
-msgstr ""
+msgstr "输出的物体仅限于当前可见的场景层内。"
 
 #: ../../manual/pipeline/alembic.rst:83
 msgid "Flatten Hierarchy"
-msgstr ""
+msgstr "Flatten Hierarchy"
 
 #: ../../manual/pipeline/alembic.rst:80
 msgid ""
@@ -174,18 +199,21 @@ msgid ""
 "exported, is replaced by an Empty. When enabled, parent/child relations are "
 "not exported, and transformations are all written in world coordinates."
 msgstr ""
+"不选此项时，将输出物体间的父/子关系。如果父物体本身不输出而自物体要被输出，"
+"则父物体以空物体代替。如果选中此项，则不输出父/子关系，所有的变形都按照世界"
+"坐标输出。"
 
 #: ../../manual/pipeline/alembic.rst:88 ../../manual/pipeline/alembic.rst:117
 msgid "Object Options."
-msgstr ""
+msgstr "Object Options."
 
 #: ../../manual/pipeline/alembic.rst:92
 msgid "Object Options"
-msgstr ""
+msgstr "Object Options"
 
 #: ../../manual/pipeline/alembic.rst:95
 msgid "UVs"
-msgstr ""
+msgstr "UVs"
 
 #: ../../manual/pipeline/alembic.rst:95
 msgid ""
@@ -193,59 +221,64 @@ msgid ""
 "supports a single UV map, Blender exports all UV maps in a way that should "
 "be readable by other software."
 msgstr ""
+"选中此项后，将输出UV。虽然Alembic标准只支持单个UV，Blender以可以被其它软件读"
+"取的方式输出所有的UV。"
 
 #: ../../manual/pipeline/alembic.rst:97
 msgid "Pack UV Islands"
-msgstr ""
+msgstr "Pack UV Islands"
 
 #: ../../manual/pipeline/alembic.rst:98 ../../manual/pipeline/alembic.rst:100
 #: ../../manual/pipeline/alembic.rst:105 ../../manual/pipeline/alembic.rst:110
 msgid "TODO 2.78/9: figure out & describe what this does."
-msgstr ""
+msgstr "TODO 2.78/9: 此项待弄清及描述。"
 
 #: ../../manual/pipeline/alembic.rst:99
 msgid "Normals"
-msgstr ""
+msgstr "Normals"
 
 #: ../../manual/pipeline/alembic.rst:102
 msgid "Vertex Colors"
-msgstr ""
+msgstr "Vertex Colors"
 
 #: ../../manual/pipeline/alembic.rst:102
 msgid ""
 "When enabled, exports vertex colors. At this moment, this only supports "
 "static vertex colors, and not dynamically animated vertex colors."
 msgstr ""
+"选中此项时，将输出顶点颜色。此时只支持静态的顶点颜色，而不是动态的带动画的顶"
+"点颜色。"
 
 #: ../../manual/pipeline/alembic.rst:104
 msgid "Face Sets"
-msgstr ""
+msgstr "Face Sets"
 
 #: ../../manual/pipeline/alembic.rst:107
 msgid "Use Subdivision Schema"
-msgstr ""
+msgstr "Use Subdivision Schema"
 
 #: ../../manual/pipeline/alembic.rst:107
 msgid ""
 "When enabled, writes polygonal meshes using the \"SubD\" Alembic schema, "
 "rather than the \"PolyMesh\" schema."
 msgstr ""
+"选中此项，输出多边形mesh时将采用 \"SubD\" 构架而不是 \"PolyMesh\" 构架。"
 
 #: ../../manual/pipeline/alembic.rst:109
 msgid "Apply Subdivision Surface"
-msgstr ""
+msgstr "Apply Subdivision Surface"
 
 #: ../../manual/pipeline/alembic.rst:112
 msgid "Triangulate"
-msgstr ""
+msgstr "Triangulate"
 
 #: ../../manual/pipeline/alembic.rst:112
 msgid "Triangulates the mesh before writing to Alembic."
-msgstr ""
+msgstr "输出Alembic前将mesh三角形化。"
 
 #: ../../manual/pipeline/alembic.rst:121
 msgid "Particle Systems"
-msgstr ""
+msgstr "例子系统"
 
 #: ../../manual/pipeline/alembic.rst:123
 msgid ""
@@ -253,3 +286,5 @@ msgid ""
 "not support armatures. Hair is exported as animated zero-width curves. "
 "Particles are exported as animated points."
 msgstr ""
+"Alembic不支持粒子系统，正如它不支持骨骼。毛发输出为带动画的零宽度曲线。粒子"
+"输出为带动画的点。"
