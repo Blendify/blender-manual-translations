@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-30 08:22+1100\n"
-"PO-Revision-Date: 2018-02-09 23:22+0800\n"
+"PO-Revision-Date: 2018-02-11 23:46+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -212,7 +212,7 @@ msgstr "快捷键:   :kbd:`E`"
 msgid ""
 "Extrudes points by duplicating the selected points, which then can be translated. If the selection is an end point, a new point will be "
 "connected to the selected point, else a new unconnected point is created."
-msgstr "通过复制选定的点来挤出点，然后可以对挤出的点进行变换。 如果选择是一个终点，一个新的点将连接到选定的点，否则会创建一个新的未连接点。"
+msgstr "复制选定点，然后拖拽移动，实现挤出。 如果选择的是端点，挤出的新点将与选中点相连，否则将创建一个断开的点。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:138
 msgid "Mode"
@@ -230,7 +230,7 @@ msgstr "快捷键:   :kbd:`Ctrl-LMB`"
 msgid ""
 "Interactively places new points with :kbd:`Ctrl-LMB` at the cursor position. With the selection it deals in same manner as the *Extrude "
 "Curve and Move* tool."
-msgstr "在光标位置用 :kbd:`Ctrl-LMB` 交互地放置新的点。 它处理选择的方式与 “挤出曲线和移动”工具相同。"
+msgstr "使用 :kbd:`Ctrl-LMB` 在游标所在位置放置新的点，其对待选中项的方式与 *挤出曲线并移动* 工具相同。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:154
 msgid "Add Duplicate"
@@ -242,7 +242,7 @@ msgstr "菜单:        :menuselection:`工具架 --> 工具 --> 曲线工具 -->
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Curve --> Add Duplicate`"
-msgstr "菜单:     :menuselection:`曲线 --> 添加副本`"
+msgstr "菜单:     :menuselection:`曲线 --> 新增副本`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Hotkey:   :kbd:`Shift-D`"
@@ -252,7 +252,9 @@ msgstr "快捷键:   :kbd:`Shift-D`"
 msgid ""
 "This tool duplicates the selected control points, along with the curve segments implicitly selected (if any). If only a handle is "
 "selected, the full point will be duplicated too. The copy is selected and placed in *Grab* mode, so you can move it to another place."
-msgstr "这个命令会复制选定的控制点以及其间的曲线线段(如果有的话），复制完成后，复制体自动处于拖拽模式，你可以直接把它移动到任何位置。"
+msgstr ""
+"该工具用于复制选中的控制点及其间的隐式选中的曲线线段(如果有的话)。如果只选中了一个控制柄，会复制整个控制点。复制完成后，复制体自动处于 *拖"
+"拽* 模式，可以将其移到其他位置。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:171
 msgid "Separate"
@@ -271,8 +273,8 @@ msgid ""
 "Curve objects that are made of multiple distinct curves can be separated into their own objects by selecting the desired segments and "
 "pressing :kbd:`P`. Note, if there is only one curve in a Curve object, *Separate* will create a new Curve object with no control points."
 msgstr ""
-"由多个曲线段组成的曲线物体可以通过按P键把自己分离出来形成一个新的曲线物体，注意，如果曲线物体仅有一条曲线，按  :kbd:`P` 键将会创造一个仅有"
-"一个原点的曲线。"
+"选择目标曲线线段，按下 :kbd:`P` ，将其从多个断开的曲线段组成的曲线物体中分离出来，形成一个新的曲线物体。注意，如果曲线物体仅包含一条曲线，*"
+"分离* 操作将使现有物体成为一个不包含控制点的曲线物体。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:189
 msgid "Make Segment"
@@ -290,7 +292,8 @@ msgstr "快捷键:    :kbd:`F`"
 msgid ""
 "Connects two disconnected control points. The selection must be loose points, or the first/last point of a curve, then press :kbd:`F`. If "
 "the points belong to different curves, these are joined by a segment to become a single curve."
-msgstr "将两个未连接的点相连，选择的必须是孤立点或者曲线的首末点，然后按 :kbd:`F`，如果这两个点分属于不同的曲线，它们被连成一个分段的曲线。"
+msgstr ""
+"连接两个断开的控制点。选中项必须是孤立点，或者曲线的首末点，然后按 :kbd:`F`，如果这两个点分属于不同的曲线，两条曲线将合并为一条曲线。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:207
 msgid "Two curves before."
@@ -298,13 +301,13 @@ msgstr "连接前的两条曲线。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:212
 msgid "Curve after joining."
-msgstr "连接曲线后。"
+msgstr "合并曲线后。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:214
 msgid ""
 "Note that you can only join curves of the same type (i.e. Bézier with Bézier, NURBS with NURBS) Additionally, you can close a curve by "
 "toggling cyclic."
-msgstr "注意：你只能连接相同类型的曲线，即贝塞尔和贝塞尔相连、NURBS和NURBS相连。另外，你可以通过切换循环闭合一个曲线。"
+msgstr "注意：只能连接相同类型的曲线(即贝塞尔与贝塞尔、NURBS与NURBS)。此外，你可以通过切换循环，来闭合曲线。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:221
 msgid "Toggle Cyclic"
@@ -329,9 +332,9 @@ msgid ""
 "NURBS. The only time a handle is adjusted after closing is if the handle is an *Auto* one. Fig. :ref:`fig-curves-editing-open-close` is "
 "the same Bézier curve open and closed."
 msgstr ""
-"这会在开放曲线和闭合曲线（环）之间切换。只有那些至少有一个控制点被选中的曲线才将被关闭/打开。闭合线段的形状取决于贝塞尔曲线的开始和结束控制"
-"柄，和往常一样，对于NURBS曲线，形状取决于相邻控制点。闭合曲线后调整控制柄的唯一机会是：控制柄是*自动*的。\n"
-"图 :ref:`fig-curves-editing-open-close` 是同一个贝塞尔曲线打开和关闭的情况。"
+"该工具用于切换曲线的开放与闭合(环)状态。只有多于一个控制点被选中的曲线才会被闭合/打开。对于贝塞尔曲线，闭合线段的形状取决于开始和结束控制"
+"柄，NURBS曲线则取决于相邻控制点。闭合曲线后，只有当控制柄类型是 *自动* 的，才能调整控制柄。图 :ref:`fig-curves-editing-open-close` 显示的是"
+"同一条贝塞尔曲线的开放与闭合状态。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:238
 msgid ""
@@ -339,16 +342,16 @@ msgid ""
 "the action applies; it still operates only on the starting and last control-points. This means that :kbd:`Alt-C` may actually join two "
 "curves instead of closing a single curve! Remember that when a 2D curve is closed, it creates a renderable flat face."
 msgstr ""
-"这个行为只在曲线的起始控制点和末端控制点生效，删除一个段并不能改变它的行为模式，它仍然只作用于始端和末端控制点，这就意味着按 :kbd:`Alt-C` "
-"可能会创造两条独立封闭的曲线，而不是合成一条大的曲线，需要注意如果在2D模式中行此应用，封闭曲线的同时会创造出一个面。"
+"该动作仅作用于曲线的起始控制点和末端控制点，删除一段并不能改变该操作的应用结果；它仍然仅作用于始端和末端控制点。这就意味着按 :kbd:`Alt-C` "
+"实际上可能会合并两条曲线，而非仅仅一条曲线！记住，闭合2D曲线后，将创建出一个可渲染的面。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:248
 msgid "Open and Closed curves."
-msgstr "开放和封闭曲线。"
+msgstr "开放与闭合曲线。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:252
 msgid "Delete"
-msgstr "删除顶点"
+msgstr "删除"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Curve Tools --> Curves: Delete`"
