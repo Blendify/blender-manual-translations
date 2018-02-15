@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 10:17+0100\n"
+"POT-Creation-Date: 2018-02-16 10:42+1100\n"
 "PO-Revision-Date: 2018-01-07 11:24-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -35,8 +35,8 @@ msgstr "Ferramentas para faces"
 #: ../../manual/modeling/meshes/editing/faces.rst:253
 #: ../../manual/modeling/meshes/editing/faces.rst:274
 #: ../../manual/modeling/meshes/editing/faces.rst:290
-#: ../../manual/modeling/meshes/editing/faces.rst:345
-#: ../../manual/modeling/meshes/editing/faces.rst:358
+#: ../../manual/modeling/meshes/editing/faces.rst:351
+#: ../../manual/modeling/meshes/editing/faces.rst:364
 msgid "Reference"
 msgstr "Referência"
 
@@ -143,7 +143,7 @@ msgstr ""
 "altura total muito baixa)."
 
 #: ../../manual/modeling/meshes/editing/faces.rst:91
-#: ../../manual/modeling/meshes/editing/faces.rst:330
+#: ../../manual/modeling/meshes/editing/faces.rst:331
 msgid "Max Angle"
 msgstr "Ângulo máximo"
 
@@ -474,19 +474,24 @@ msgstr "Atalho:   :kbd:`Alt-J`"
 #: ../../manual/modeling/meshes/editing/faces.rst:297
 msgid ""
 "This tool converts the selected triangles into quads by taking adjacent "
-"tris and removing the shared edge to create a quad, based on a threshold."
-" This tool can be applied on a selection of multiple triangles."
+"triangles and removing the shared edge to create a quad, based on a "
+"threshold. This tool can be applied on a selection of multiple triangles."
 msgstr ""
 
 #: ../../manual/modeling/meshes/editing/faces.rst:301
 msgid ""
-"This same action can be done on a selection of two tris, by selecting "
-"them and using the shortcut :kbd:`F`, to create a face, or by selecting "
-"the shared edge and dissolving it with the shortcut :kbd:`X` "
-":menuselection:`--> Dissolve`."
+"This means you can select the entire mesh and convert triangles that "
+"already form square shapes - to be converted into quads, without having "
+"to concern yourself with individual faces."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:305
+#: ../../manual/modeling/meshes/editing/faces.rst:304
+msgid ""
+"Alternatively you can force this operation selecting a pairs of faces "
+"*(see hint below for other ways of joining)*."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/faces.rst:306
 msgid ""
 "To create a quad, this tool needs at least two adjacent triangles. If you"
 " have an even number of selected triangles, it is also possible not to "
@@ -495,21 +500,21 @@ msgid ""
 "could remain."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:316
+#: ../../manual/modeling/meshes/editing/faces.rst:317
 msgid "Before converting tris to quads."
 msgstr "Antes da conversão de triângulos para quadriláteros."
 
-#: ../../manual/modeling/meshes/editing/faces.rst:321
+#: ../../manual/modeling/meshes/editing/faces.rst:322
 msgid "After converting tris to quads."
 msgstr "Após a conversão de triângulos para quadriláteros."
 
-#: ../../manual/modeling/meshes/editing/faces.rst:323
+#: ../../manual/modeling/meshes/editing/faces.rst:324
 msgid ""
 "All the menu entries and hotkeys use the settings defined in the *Mesh "
 "Tools* panel:"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:326
+#: ../../manual/modeling/meshes/editing/faces.rst:327
 msgid ""
 "This value, between (0 to 180), controls the threshold for this tool to "
 "work on adjacent triangles. With a threshold of 0.0, it will only join "
@@ -519,31 +524,31 @@ msgid ""
 "other edges of the triangles."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:332
+#: ../../manual/modeling/meshes/editing/faces.rst:333
 msgid "Compare UVs"
 msgstr "Comparar UVs"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:333
+#: ../../manual/modeling/meshes/editing/faces.rst:334
 msgid ""
 "When enabled, it will prevent union of triangles that are not also "
 "adjacent in the active UV map."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:334
+#: ../../manual/modeling/meshes/editing/faces.rst:335
 msgid "Compare Vertex Color"
 msgstr "Comparar cores dos vértices"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:335
+#: ../../manual/modeling/meshes/editing/faces.rst:336
 msgid ""
 "When enabled, it will prevent union of triangles that have no matching "
 "vertex color."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:336
+#: ../../manual/modeling/meshes/editing/faces.rst:337
 msgid "Compare Sharp"
 msgstr "Comparar ressaltos"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:337
+#: ../../manual/modeling/meshes/editing/faces.rst:338
 msgid ""
 "When enabled, it will prevent union of triangles that share an edge "
 "marked as sharp."
@@ -553,13 +558,19 @@ msgstr ""
 msgid "Compare Materials"
 msgstr "Comparar materiais"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:339
+#: ../../manual/modeling/meshes/editing/faces.rst:340
 msgid ""
 "When enabled, it will prevent union of triangles that do not have the "
 "same material assigned."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:343
+#: ../../manual/modeling/meshes/editing/faces.rst:344
+msgid ""
+"When isolated groups of faces are selected these can be combined with "
+"Create Face or Dissolve, this is not limited to quads."
+msgstr ""
+
+#: ../../manual/modeling/meshes/editing/faces.rst:349
 msgid "Weld Edges into Faces"
 msgstr "Soldar arestas criando faces"
 
@@ -567,13 +578,13 @@ msgstr "Soldar arestas criando faces"
 msgid "Menu:     :menuselection:`Mesh --> Faces --> Weld Edges into Faces`"
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:351
+#: ../../manual/modeling/meshes/editing/faces.rst:357
 msgid ""
 "A tool to split selected faces by loose wire edges. This can be used in a"
 " similar way to the Knife tool, but the edges are manually setup first."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:356
+#: ../../manual/modeling/meshes/editing/faces.rst:362
 msgid "Rotate Edges"
 msgstr "Rotacionar arestas"
 
@@ -583,60 +594,60 @@ msgstr ""
 "Menu:     :menuselection:`Malha --> Faces --> Rotacionar arestas no "
 "sentido horário`"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:364
+#: ../../manual/modeling/meshes/editing/faces.rst:370
 msgid "This tool functions the same edge rotation in edge mode."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:366
+#: ../../manual/modeling/meshes/editing/faces.rst:372
 msgid ""
 "It works on the shared edge between two faces and rotates that edge if "
 "the edge was selected."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:373
+#: ../../manual/modeling/meshes/editing/faces.rst:379
 msgid "Two Faces Selected."
 msgstr "Duas faces selecionadas."
 
-#: ../../manual/modeling/meshes/editing/faces.rst:378
+#: ../../manual/modeling/meshes/editing/faces.rst:384
 msgid "Full Render."
 msgstr "Renderização completa."
 
-#: ../../manual/modeling/meshes/editing/faces.rst:380
+#: ../../manual/modeling/meshes/editing/faces.rst:386
 msgid ""
 "See :ref:`Rotate Edge <modeling-meshes-editing-edges-rotate>` for more "
 "information."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:384
+#: ../../manual/modeling/meshes/editing/faces.rst:390
 msgid "Rotate & Reverse"
 msgstr "Rotacionar e inverter"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:386
+#: ../../manual/modeling/meshes/editing/faces.rst:392
 msgid "Rotate/Reverse UVs"
 msgstr "Rotacionar / Inverter UVs"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:387
+#: ../../manual/modeling/meshes/editing/faces.rst:393
 msgid "See :ref:`uv-image-rotate-reverse-uvs`."
 msgstr ""
 
-#: ../../manual/modeling/meshes/editing/faces.rst:388
+#: ../../manual/modeling/meshes/editing/faces.rst:394
 msgid "Rotate Colors"
 msgstr "Rotacionar cores"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:389
-#: ../../manual/modeling/meshes/editing/faces.rst:391
+#: ../../manual/modeling/meshes/editing/faces.rst:395
+#: ../../manual/modeling/meshes/editing/faces.rst:397
 msgid "Todo."
 msgstr "A ser feito."
 
-#: ../../manual/modeling/meshes/editing/faces.rst:392
+#: ../../manual/modeling/meshes/editing/faces.rst:398
 msgid "Reverse Colors"
 msgstr "Inverter as cores"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:395
+#: ../../manual/modeling/meshes/editing/faces.rst:401
 msgid "Normals"
 msgstr "Normais"
 
-#: ../../manual/modeling/meshes/editing/faces.rst:397
+#: ../../manual/modeling/meshes/editing/faces.rst:403
 msgid ""
 "See :ref:`Editing Normals <modeling-meshes-editing-normals-editing>` for "
 "more information."
@@ -644,4 +655,24 @@ msgstr ""
 
 #~ msgid "Hotkey:   :kbd:`Alt-Shift-F`"
 #~ msgstr "Atalho:   :kbd:`Alt-Shift-F`"
+
+#~ msgid ""
+#~ "This tool converts the selected "
+#~ "triangles into quads by taking adjacent"
+#~ " tris and removing the shared edge"
+#~ " to create a quad, based on a"
+#~ " threshold. This tool can be applied"
+#~ " on a selection of multiple "
+#~ "triangles."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This same action can be done on"
+#~ " a selection of two tris, by "
+#~ "selecting them and using the shortcut"
+#~ " :kbd:`F`, to create a face, or "
+#~ "by selecting the shared edge and "
+#~ "dissolving it with the shortcut :kbd:`X`"
+#~ " :menuselection:`--> Dissolve`."
+#~ msgstr ""
 
