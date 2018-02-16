@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-11 22:51+0100\n"
-"PO-Revision-Date: 2018-02-13 12:48+0800\n"
+"PO-Revision-Date: 2018-02-15 23:34+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.5\n"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:5
 msgid "Introduction"
@@ -359,7 +359,7 @@ msgstr "工具面板:   :menuselection:`工具架 --> 工具 --> 曲线工具 --
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Curve --> Delete...`"
-msgstr "菜单:   :menuselection:`Curve --> Delete...`曲线 --> 删除`"
+msgstr "菜单:   :menuselection:`曲线 --> 删除...`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Hotkey:   :kbd:`X`, :kbd:`Delete`; :kbd:`Ctrl-X`"
@@ -367,7 +367,7 @@ msgstr "快捷键:   :kbd:`X`, :kbd:`Delete`; :kbd:`Ctrl-X`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:262
 msgid "Options for the *Erase* pop-up menu:"
-msgstr "*擦除* 弹出菜单的选项:"
+msgstr "*删除* 工具的弹出菜单:"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:269
 msgid "Vertices"
@@ -380,24 +380,24 @@ msgid ""
 "when you delete some control point. Of course, when only one point remains, there is no more visible curve, and when all points are "
 "deleted, the curve itself is deleted."
 msgstr ""
-"此选项将删除选定的控制点而不破坏曲线（既一旦中介点被删除，与其相邻的两个点会直接连接起来），注意NURBS曲线阶数不能高于其控制点的数量，所以当"
-"你删除一些控制点时，阶数可能降低，当然，当只有一个点时，没有可见的曲线线段，当所有的控制点都删除时，曲线本身也将被删除。"
+"此该选项将删除选中的控制点，而不破坏曲线((即删除中间的控制点，与其相邻的两个点会直接连接到一起)。注意NURBS曲线阶数不能高于其控制点的数量，"
+"所以删除一些控制点后，阶数可能会降低。当然，当只剩下一个控制点时，没有可见的曲线线段，当所有的控制点都删除时，曲线本身也将被删除。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:271
 msgid "Segment"
-msgstr "删除段数"
+msgstr "段数"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:272
 msgid "Deletes the segment that connects the selected control points and disconnecting them."
-msgstr "删除连接所选控制点的线段来断开他们的连接。"
+msgstr "删除连接所选控制点的线段，并断开曲线。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:275
 msgid "Dissolve Vertices :kbd:`Ctrl-X`"
-msgstr "解散顶点 :kbd:`Ctrl-X`"
+msgstr "融并顶点 :kbd:`Ctrl-X`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:274
 msgid "Deletes the selected control points, while the remaining segment is fitted to the deleted curve by adjusting its handles."
-msgstr "删除所选控制点，而剩余的线段通过调整其控制柄来适应被删除的曲线。"
+msgstr "删除所选控制点，而剩余的线段通过调整其控制柄来适应删除控制点后的曲线。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:282
 msgid "Before deleting."
@@ -421,11 +421,11 @@ msgstr "控制点"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Transform --> Tilt`"
-msgstr "工具面板:    :menuselection:`工具架 --> 工具 --> 变换 --> 倾斜`"
+msgstr "工具面板:    :menuselection:`工具栏 --> 工具 --> 变换 --> 倾斜`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Curve --> Control Points --> Tilt/Clear Tilt`"
-msgstr "菜单:     :menuselection:`曲线 --> 控制点 --> 倾斜/清除倾斜`"
+msgstr "菜单:     :menuselection:`曲线 --> 控制点 --> 倾斜/清空倾斜量`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Hotkey:   :kbd:`Ctrl-T`, :kbd:`Alt-T`"
@@ -439,15 +439,15 @@ msgstr "倾斜 快捷键 :kbd:`Ctrl-T`"
 msgid ""
 "Lets you define the tilt of the selected control points. The tilt will be interpolated from point to point (you can check it with the "
 "normals). The tilt angle is defined interactively first, and then it can be adjusted in the Operator panel *Angle*."
-msgstr "定义所选控制点的倾斜度。 倾斜将从点到点插入（可以用法线检查）。 倾斜角首先交互式定义，然后可以在操作面板*角度*中进行调整。"
+msgstr "用于定义所选控制点的倾斜度。 倾斜是点到点插值的(可以用法线检查)。 倾斜角首先交互式定义，然后可以在操作面板中调整 *角度*。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:320
 msgid "Clear Tilt :kbd:`Alt-T`"
-msgstr "清除倾斜  :kbd:`Alt-T`"
+msgstr "清空倾斜量 :kbd:`Alt-T`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:319
 msgid "Brings the tilt of those selected control points back to 0."
-msgstr "将这些选定的控制点倾斜回到0。"
+msgstr "将选中的控制点的倾斜度归0。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:323
 msgid "Set Handle Type"
@@ -455,7 +455,7 @@ msgstr "贝塞尔曲线控制柄类型"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Curve Tools --> Handles:`"
-msgstr "工具面板:    :menuselection:`工具架 --> 工具 --> 曲线工具 --> 控制柄:`"
+msgstr "面板:    :menuselection:`工具栏 --> 工具 --> 曲线工具 --> 控制柄:`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Curve --> Control Points --> Set Handle Type`"
@@ -471,12 +471,12 @@ msgid ""
 "to *Vector handles* can be used to create curves with sharp corners. Read the :ref:`Bézier curves <curve-bezier-handle-type>` page for "
 "more details."
 msgstr ""
-"控制柄类型是贝塞尔曲线 :ref:`Bézier curves <curve-bezier>` 的一个属性，可以用来改变曲线的特征。 例如，切换到矢量控制柄可用于创建尖角的曲"
-"线。 阅读贝塞尔曲线 :ref:`Bézier curves <curve-bezier-handle-type>` 页面了解更多细节。"
+"控制柄类型是 :ref:`贝塞尔曲线 <curve-bezier>` 的一个属性，可以用来改变曲线的特征。 比如，切换为 *矢量控制柄* 可用于创建尖角的曲线。 阅读 :"
+"ref:`贝塞尔曲线 <curve-bezier-handle-type>` 页面了解更多细节。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:340
 msgid "Toggle Free/Align :kbd:`V T`"
-msgstr "自由切换/对齐 :kbd:`V T`"
+msgstr "切换自由/对齐 :kbd:`V T`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:339
 msgid "Additionally, this shortcut can be used to toggle between Free and Aligned handle types."
@@ -495,8 +495,7 @@ msgid ""
 "This sets the \"goal weight\" of selected control points, which is used when a curve has :doc:`Soft Body </physics/soft_body/index>` "
 "physics, forcing the curve to \"stick\" to their original positions, based on the weight."
 msgstr ""
-"此选项用于设置选中控制点的目标权重，当曲线拥有 :doc:`软体 </physics/soft_body/index>` 的物理性质时，它被用于依据权重值强制曲线贴紧它们的原"
-"始位置。"
+"该选项用于设置选中控制点的目标权重，当曲线拥有 :doc:`软体 </physics/soft_body/index>` 的物理性质时，依据权重值强制曲线\"贴紧\"其原始位置。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:359
 msgid "Smooth"
@@ -504,17 +503,19 @@ msgstr "平滑"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Curve Tools --> Modeling: Smooth`"
-msgstr "面板：    :menuselection:`工具面板 --> 工具 --> 曲线工具 --> 模型平滑`"
+msgstr "面板：    :menuselection:`工具面板 --> 工具 --> 曲线工具 --> 建模: 平滑`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Specials --> Smooth`"
-msgstr "菜单:       :menuselection:`特殊 --> 平滑`"
+msgstr "菜单:       :menuselection:`专用项--> 平滑`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:368
 msgid ""
 "Curve smoothing is available through the specials menu. For Bézier curves, this smoothing operation reduces the distance between the "
 "selected control point/s and their neighbors, while keeping the neighbors anchored. Does not effect control point tangents."
-msgstr "曲线平滑可通过特殊菜单进行。 对于贝塞尔曲线，这种平滑操作减少了所选控制点与其邻居之间的距离，同时保持邻居锚定。 不影响控制点的切线。"
+msgstr ""
+"可通过专用项菜单访问曲线平滑工具。 对于贝塞尔曲线，该平滑操作在保持保持相邻点锚定的情况下，减少所选控制点与其相邻点之间的距离， 不会影响控"
+"制点的切向。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:375
 msgid "Original, unsmoothed Curve."
@@ -554,17 +555,15 @@ msgstr "细分"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Curve Tools --> Modeling: Subdivide`"
-msgstr "菜单:    :menuselection:`工具架 --> 工具 --> 曲线工具 --> 模型细分`"
+msgstr "面板:    :menuselection:`工具栏 --> 工具 --> 曲线工具 --> 建模: 细分`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Curve --> Segments --> Subdivide`"
-msgstr "菜单:     :menuselection:`曲线 --> 线段 --> 细分`"
+msgstr "菜单:     :menuselection:`曲线 --> 段数 --> 细分`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:414
 msgid "Curve subdivision simply subdivides all selected segments by adding one or more control points between the selected segments."
-msgstr ""
-"曲线细分是在选定的段之间增加一个或多个控制点来简单的完成细分，为了控制细分的数量，按W进行一次细分后，立刻按F6调节细分次数（好几个按F6的地方"
-"我的都不管用，不知道为啥）。"
+msgstr "曲线细分是在选定的线段之间增加一个或多个控制点来简单地完成细分。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:419
 msgid "Number of Cuts"
@@ -580,18 +579,18 @@ msgstr "切换方向"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Curve Tools --> Curves: Switch Direction`"
-msgstr "面板：    :menuselection:`工具架 --> 工具  --> 曲线工具 --> 曲线：切换方向`"
+msgstr "面板：    :menuselection:`工具栏 --> 工具 --> 曲线工具 --> 曲线：切换方向`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Menu:     :menuselection:`Curve --> Segments --> Switch Direction`, :menuselection:`Specials --> Switch Direction`"
-msgstr "菜单:    :menuselection:`曲线 --> 段数 --> 切换方向`,    :menuselection:`特殊 --> 切换方向`"
+msgstr "菜单:    :menuselection:`曲线 --> 段数 --> 切换方向`,    :menuselection:`专用项 --> 切换方向`"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:434
 msgid ""
 "This tool will \"reverse\" the direction of any curve with at least one selected element (i.e. the start point will become the end one, "
 "and *vice versa*). This is mainly useful when using a curve as path, or using the bevel and taper options."
 msgstr ""
-"这个命令会反转曲线的方向，但是你需要至少选定曲线上的一个元素之后才能应用此命令。（既曲线的头和尾会调换方向，反之亦然）。当曲线作为路径时经"
+"该命令用于反转曲线的方向，但是需要至少选定曲线上的一个元素之后才能应用此命令(即曲线的头和尾会调换方向，*反之亦然*)。当使用曲线作为路径时经"
 "常会用到它，或者在倒角和锥体化选项中也时常用到。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:442
@@ -603,16 +602,16 @@ msgid ""
 "When in *Edit Mode*, you can hide and reveal elements from the display. You can only show or hide control points, as segments are always "
 "shown, unless all control points of the connected curve are hidden, in which case the curve is fully hidden."
 msgstr ""
-"在 *编辑模式* 中，您可以隐藏和显示来自显示器的元素。 只能显示或隐藏控制点，由于线段总是显示的，所以除非连接曲线上的所有控制点都被隐藏，曲线"
-"才会完全隐藏。"
+"在 *编辑模式* 下，您可以隐藏和显示元素。 只能显示或隐藏控制点，线段则一直处于显示状态，除非与该曲线相连的所有控制点都被隐藏，曲线才会完全隐"
+"藏。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:449
 msgid "See :ref:`object-show-hide` in *Object Mode*. See also the :doc:`/modeling/curves/curve_display` panel."
-msgstr "查看  *物体模式* 中的 :ref:`object-show-hide` . 和面板 :doc:`/modeling/curves/curve_display` ."
+msgstr "参考 *物体模式* 下的 :ref:`object-show-hide` 。还可以参照 :doc:`/modeling/curves/curve_display` 面板。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:456
 msgid "Set Spline Type"
-msgstr "设置样条类型按钮"
+msgstr "设置样条类型"
 
 #: ../../manual/modeling/curves/editing/introduction.rst
 msgid "Panel:    :menuselection:`Tool Shelf --> Tools --> Curve Tools --> Curves: Set Spline type`"
@@ -627,8 +626,8 @@ msgid ""
 "You can convert splines in a curve object between Bézier, NURBS, and Poly curves. Press :kbd:`T` to bring up the Tool Shelf. Clicking on "
 "the *Set Spline Type* button will allow you to select the Spline type (Poly, Bézier or NURBS)."
 msgstr ""
-"你可以在贝塞尔，NURBS，多线段之间任意改变曲线样条类型，按 :kbd:`T` 弹出工具菜单，点击设置样条类型按钮，然后你就可以从中选择了（多线段，贝塞"
-"尔，NURBS）。"
+"可以转换曲线样条类型为贝塞尔，NURBS和多线段。按 :kbd:`T` 显示工具栏，点击 *设置样条类型* 按钮，然后从弹出菜单中选择(多线段，贝塞尔，"
+"NURBS)。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:473
 msgid ""
@@ -636,12 +635,12 @@ msgid ""
 "example, when converting a NURBS to a Bézier, each group of three NURBS control points become a unique Bézier one (center point and two "
 "handles)."
 msgstr ""
-"注意，这不是一个精确的转换，也就是，曲线不会保持相同的形状，也不会保持相同的控制点。例如，当把NURBS曲线转换成贝塞尔曲线时，每三个NURBS控制"
-"点成一组转换成一个独立的贝塞尔控制点（一个中心控制点两个控制手柄）。"
+"注意，这不是一个“精确”的转换，也就是说，Blender不会设法维持曲线形状，也不会保持相同的控制点数量。比如，当把NURBS曲线转换成贝塞尔曲线时，每"
+"三个NURBS控制点成一组转换成一个独立的贝塞尔控制点(一个中心控制点加两个控制柄)。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:479
 msgid ":ref:`object-convert-to`/from Mesh."
-msgstr ":ref:`object-convert-to` /来自网格."
+msgstr "从网格 :ref:`object-convert-to`."
 
 #: ../../manual/modeling/curves/editing/introduction.rst:483
 msgid "Curve Parenting"
@@ -654,7 +653,7 @@ msgstr "快捷键:   :kbd:`Ctrl-P`"
 #: ../../manual/modeling/curves/editing/introduction.rst:491
 msgid ""
 "You can make other selected objects :ref:`children <object-parenting>` of one or three control points :kbd:`Ctrl-P`, as with mesh objects."
-msgstr "你可以让其它被选的物体作为控制点的子物体 :ref:`children <object-parenting>` ，像网格物体那样。"
+msgstr "与网格物体一样，可以让其它选中的物体作为控制点的 :ref:`子物体 <object-parenting>` 。"
 
 #: ../../manual/modeling/curves/editing/introduction.rst:494
 msgid ""
@@ -663,9 +662,9 @@ msgid ""
 "point between the three vertices. An alternative would be to use a :doc:`Child of Constraint </rigging/constraints/relationship/"
 "child_of>`. See also the :doc:`Curve Modifier </modeling/modifiers/deform/curve>`."
 msgstr ""
-"要在编辑曲线时选择一个网格（在视图中），请按 :kbd:`Ctrl-P`。 选择一个或三个控制点，然后在物体上按 :kbd:`Ctrl-RMB` 并使用 :kbd:`Ctrl-P` 创建"
-"一个顶点父项。 选择三个控制点将使子级物体跟随三个顶点之间的中点。 另一种方法是使用 :doc:`子级约束 </rigging/constraints/relationship/"
-"child_of>` 。 另请参阅 :doc:`曲线修改器 </modeling/modifiers/deform/curve>`。"
+"选择一个或三个控制点，然后按 :kbd:`Ctrl-RMB` 选中物体，并使用 :kbd:`Ctrl-P` 创建一个父级顶点。 选择三个控制点将使子级物体跟随三个顶点之间的"
+"中点。还有一种方法是使用 :doc:`子级约束 </rigging/constraints/relationship/child_of>` 。 另外请参考 :doc:`曲线修改器 </modeling/modifiers/"
+"deform/curve>`。"
 
 #~ msgid "Deleting Curve Selected."
 #~ msgstr "删除曲线选中控制点。"
