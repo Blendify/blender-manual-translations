@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 22:17+1100\n"
+"POT-Creation-Date: 2018-02-18 17:50+1100\n"
 "PO-Revision-Date: 2017-12-12 16:31+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -133,29 +133,7 @@ msgstr "М'якотіла площина стикається з кубом бе
 msgid "Calculating Collisions"
 msgstr "Розрахування зіткнень"
 
-#: ../../manual/physics/soft_body/collision.rst:66
-msgid "Six Soft Body vertices with different speed."
-msgstr "Шість вершин М'якого Тіла з різною швидкістю."
-
-#: ../../manual/physics/soft_body/collision.rst:68
-msgid ""
-"`Blend file "
-"<https://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__."
-msgstr ""
-"`Blend file "
-"<https://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__."
-
-#: ../../manual/physics/soft_body/collision.rst:72
-msgid ""
-"An example image can be found at: "
-"https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html"
-"#calculating-collisions"
-msgstr ""
-"Ілюстрація до цього прикладу може бути знайдена на: "
-"https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html"
-"#calculating-collisions"
-
-#: ../../manual/physics/soft_body/collision.rst:75
+#: ../../manual/physics/soft_body/collision.rst:60
 msgid ""
 "Soft Body simulation is by default done on a per vertex basis. If the "
 "vertices of the Soft Body do not collide with the collision object, there"
@@ -165,37 +143,28 @@ msgstr ""
 "вершини М'якого Тіла не стикаються з об'єктом зіткнення, то не буде "
 "жодної взаємодії між цими об'єктами."
 
-#: ../../manual/physics/soft_body/collision.rst:78
+#: ../../manual/physics/soft_body/collision.rst:63
+msgid ""
+"In the video below, you can see a vertex colliding with a plane. If a "
+"vertex penetrates the zone between *Outer* and *Inner*, it is repulsed by"
+" a force in the direction of the face normal. The position that a vertex "
+"finally ends up in is dependent on the forces that act upon it. In the "
+"example gravity and the repulsion force of the face balance out. The "
+"speed at which the vertex is pulled out of the collision zone is "
+"influenced by the *Choke* parameter in the :ref:`Soft Body Solver "
+"settings <physics-softbody-settings-solver>`."
+msgstr ""
+
+#: ../../manual/physics/soft_body/collision.rst:72
 #, fuzzy
 msgid ""
-"In Fig. :ref:`fig-softbody-collision-vertex2` you can see a vertex "
-"colliding with a plane. If a vertex penetrates the zone between *Outer* "
-"and *Inner*, it is repulsed by a force in the direction of the face "
-"normal. The position that a vertex finally ends up in is dependent on the"
-" forces that act upon it. In the example gravity and the repulsion force "
-"of the face balance out. The speed at which the vertex is pulled out of "
-"the collision zone is influenced by the *Choke* parameter in the "
-":ref:`Soft Body Solver settings <physics-softbody-settings-solver>`."
-msgstr ""
-"На Ілюстрації :ref:`fig-softbody-collision-vertex` ви можете бачити "
-"зіткнення вершини з площиною. Якщо вершини проникає у зону між *Outer* та"
-" *Inner*, то вона відштовхується силою у напрямку нормалі грані. Позиція,"
-" в якій у кінці опиняється вершина, залежно від сил, які діють на неї. У "
-"цьому прикладі гравітація та сил відштовхування від грані збалансовані. "
-"Швидкість, з якою вершина виштовхується із зони зіткнення, знаходиться "
-"під впливом параметра *Choke* в уставах обчислювача М'якого Тіла -- "
-":ref:`Soft Body Solver settings <physics-softbody-settings-solver>`."
-
-#: ../../manual/physics/soft_body/collision.rst:85
-msgid ""
 "Now lets see what happens if we make vertices heavier and let them travel"
-" at a faster speed. In Fig. :ref:`fig-softbody-collision-vertex2` you can"
-" see vertices traveling at different speeds. The two on the far right (5 "
-"and 6) are traveling so fast that they pass right through the collision "
-"zone (this is because of the default solver precision, which we can fix "
-"later). You will notice that the fourth vertex also travels quite fast "
-"and because it is heavier it breaches the inner zone. The first three "
-"vertices collide correctly."
+" at a faster speed. In the video above, you can see vertices traveling at"
+" different speeds. The two on the far right (5 and 6) are traveling so "
+"fast that they pass right through the collision zone (this is because of "
+"the default solver precision, which we can fix later). You will notice "
+"that the fourth vertex also travels quite fast and because it is heavier "
+"it breaches the inner zone. The first three vertices collide correctly."
 msgstr ""
 "Тепер, давайте подивімося, що трапиться, якщо ми зробимо вершини важчими "
 "та дозволимо їм мандрувати з більшою швидкістю. На Ілюстрації :ref:`fig-"
@@ -207,13 +176,13 @@ msgstr ""
 "вони прориваються до внутрішньої зони. Перші три вершини стикаються "
 "правильно."
 
-#: ../../manual/physics/soft_body/collision.rst:96
+#: ../../manual/physics/soft_body/collision.rst:83
 msgid "Also Edges and Faces can be used for the collision calculation."
 msgstr ""
 "Для розрахування зіткнення можуть також використовуватися Ребра -- Edge "
 "та Грані -- Face."
 
-#: ../../manual/physics/soft_body/collision.rst:98
+#: ../../manual/physics/soft_body/collision.rst:85
 msgid ""
 "You can set up your collision so that edges and even faces are included "
 "in the collision calculation Fig. :ref:`fig-softbody-collision-vertex3`. "
@@ -227,11 +196,20 @@ msgstr ""
 "м'якотілого об'єкта перетинається з об'єктом зіткнення, а зони зіткнення "
 "вже не використовується."
 
-#: ../../manual/physics/soft_body/collision.rst:104
+#: ../../manual/physics/soft_body/collision.rst:89
+#, fuzzy
+msgid ""
+"Download the `Blend file "
+"<https://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__."
+msgstr ""
+"`Blend file "
+"<https://wiki.blender.org/index.php/Media:CollidingVertices.blend>`__."
+
+#: ../../manual/physics/soft_body/collision.rst:93
 msgid "Good Collisions"
 msgstr "Добрі зіткнення"
 
-#: ../../manual/physics/soft_body/collision.rst:106
+#: ../../manual/physics/soft_body/collision.rst:95
 msgid ""
 "If the collision you have set up is not behaving properly, you can try "
 "the following:"
@@ -239,11 +217,11 @@ msgstr ""
 "Якщо зіткнення, яке ви уклали, не поводиться належно, то ви можете "
 "спробувати наступне:"
 
-#: ../../manual/physics/soft_body/collision.rst:108
+#: ../../manual/physics/soft_body/collision.rst:97
 msgid "The best way"
 msgstr "Найкращий спосіб"
 
-#: ../../manual/physics/soft_body/collision.rst:110
+#: ../../manual/physics/soft_body/collision.rst:99
 #, fuzzy
 msgid ""
 "Add *Loop Cuts* to your Soft Body object in strategic areas that you know"
@@ -252,17 +230,17 @@ msgstr ""
 "Додайте петлі ребер -- *Loop Cuts* на об'єкті М'якого Тіла у стратегічних"
 " ділянках, які на вашу думку найімовірніше будуть задіяні у зіткненні."
 
-#: ../../manual/physics/soft_body/collision.rst:113
+#: ../../manual/physics/soft_body/collision.rst:102
 msgid ""
 "The Soft Body object must have more subdivisions than the collision "
 "object."
 msgstr "Об'єкт М'якого Тіла повинен мати більше підподілів, ніж об'єкт зіткнення."
 
-#: ../../manual/physics/soft_body/collision.rst:114
+#: ../../manual/physics/soft_body/collision.rst:103
 msgid "Check the direction of the face normals."
 msgstr "Перевірте напрямок нормалей граней."
 
-#: ../../manual/physics/soft_body/collision.rst:115
+#: ../../manual/physics/soft_body/collision.rst:104
 msgid ""
 "If the collision object has sharp spikes they might penetrate the Soft "
 "Body."
@@ -270,7 +248,7 @@ msgstr ""
 "Якщо об'єкт зіткнення має гострі піки у своїй формі, то вони можуть "
 "пронизувати М'яке Тіло."
 
-#: ../../manual/physics/soft_body/collision.rst:116
+#: ../../manual/physics/soft_body/collision.rst:105
 msgid ""
 "The resolution of the solver must match the speed at which Soft Body "
 "vertices are traveling. Lower the parameter *Error Limit* and carefully "
@@ -280,7 +258,7 @@ msgstr ""
 "мандрують вершини М'якого Тіла. Понизьте параметр *Error Limit* та "
 "обережно підвищіть уставу *Min Step*."
 
-#: ../../manual/physics/soft_body/collision.rst:118
+#: ../../manual/physics/soft_body/collision.rst:107
 msgid ""
 "*Outer* and *Inner* should be large enough, but zones of opposite faces "
 "should not overlap, or you have forces in opposite directions."
@@ -289,11 +267,11 @@ msgstr ""
 "великими, але зони протилежних граней не повинні перекриватися і ви не "
 "маєте мати сили у протилежних напрямках."
 
-#: ../../manual/physics/soft_body/collision.rst:120
+#: ../../manual/physics/soft_body/collision.rst:109
 msgid "If you use strong forces you should use large zones."
 msgstr "Якщо ви вживаєте сильні сили, то ви повинні використовувати великі зони."
 
-#: ../../manual/physics/soft_body/collision.rst:121
+#: ../../manual/physics/soft_body/collision.rst:110
 msgid ""
 "Set *Choke* to a high enough value (all the way up if necessary) if you "
 "have difficulties with repelled vertices."
@@ -301,7 +279,7 @@ msgstr ""
 "Задайте для *Choke* достатньо високе значення (для усієї імітації, якщо "
 "необхідно), якщо ви маєте труднощі з виштовханими вершинами."
 
-#: ../../manual/physics/soft_body/collision.rst:122
+#: ../../manual/physics/soft_body/collision.rst:111
 msgid ""
 "Colliding faces are difficult to control and need long calculation times."
 " Try not to use them."
@@ -309,7 +287,7 @@ msgstr ""
 "Зіткненням граней важко керувати та воно потребує більше часу на "
 "розрахування. Намагайтеся не використовувати грані для зіткнення."
 
-#: ../../manual/physics/soft_body/collision.rst:124
+#: ../../manual/physics/soft_body/collision.rst:113
 msgid ""
 "Often it is better to create a simplified mesh to use as your collision "
 "object, however, this may be difficult if you are using an animated mesh."
@@ -317,11 +295,11 @@ msgstr ""
 "Часто краще створити спрощену сіть для використання як об'єкта зіткнення,"
 " однак, це може бути важко, якщо ви вживаєте для цього анімовану сіть."
 
-#: ../../manual/physics/soft_body/collision.rst:129
+#: ../../manual/physics/soft_body/collision.rst:118
 msgid "Self Collisions"
 msgstr "Само Зіткнення"
 
-#: ../../manual/physics/soft_body/collision.rst:131
+#: ../../manual/physics/soft_body/collision.rst:120
 msgid ""
 "For information on self collision please refer to the :ref:`Self "
 "Collision <physics-softbody-settings-self-collision>` settings."
@@ -345,4 +323,54 @@ msgstr ""
 
 #~ msgid "Visualization of the collision of a Soft Body vertex with a plane."
 #~ msgstr "Візуалізація зіткнення вершини М'якого тіла з площиною."
+
+#~ msgid "Six Soft Body vertices with different speed."
+#~ msgstr "Шість вершин М'якого Тіла з різною швидкістю."
+
+#~ msgid ""
+#~ "An example image can be found at:"
+#~ " "
+#~ "https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html"
+#~ "#calculating-collisions"
+#~ msgstr ""
+#~ "Ілюстрація до цього прикладу може бути"
+#~ " знайдена на: "
+#~ "https://docs.blender.org/manual/en/dev/physics/soft_body/collision.html"
+#~ "#calculating-collisions"
+
+#~ msgid ""
+#~ "In Fig. :ref:`fig-softbody-collision-"
+#~ "vertex2` you can see a vertex "
+#~ "colliding with a plane. If a "
+#~ "vertex penetrates the zone between "
+#~ "*Outer* and *Inner*, it is repulsed "
+#~ "by a force in the direction of "
+#~ "the face normal. The position that "
+#~ "a vertex finally ends up in is "
+#~ "dependent on the forces that act "
+#~ "upon it. In the example gravity "
+#~ "and the repulsion force of the "
+#~ "face balance out. The speed at "
+#~ "which the vertex is pulled out of"
+#~ " the collision zone is influenced by"
+#~ " the *Choke* parameter in the "
+#~ ":ref:`Soft Body Solver settings <physics-"
+#~ "softbody-settings-solver>`."
+#~ msgstr ""
+#~ "На Ілюстрації :ref:`fig-softbody-collision-"
+#~ "vertex` ви можете бачити зіткнення "
+#~ "вершини з площиною. Якщо вершини "
+#~ "проникає у зону між *Outer* та "
+#~ "*Inner*, то вона відштовхується силою у"
+#~ " напрямку нормалі грані. Позиція, в "
+#~ "якій у кінці опиняється вершина, залежно"
+#~ " від сил, які діють на неї. У"
+#~ " цьому прикладі гравітація та сил "
+#~ "відштовхування від грані збалансовані. "
+#~ "Швидкість, з якою вершина виштовхується "
+#~ "із зони зіткнення, знаходиться під "
+#~ "впливом параметра *Choke* в уставах "
+#~ "обчислювача М'якого Тіла -- :ref:`Soft "
+#~ "Body Solver settings <physics-softbody-"
+#~ "settings-solver>`."
 
