@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-30 08:22+1100\n"
-"PO-Revision-Date: 2018-02-16 17:00+0800\n"
+"PO-Revision-Date: 2018-02-18 12:45+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Bookmarks: -1,0,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: ../../manual/modeling/curves/properties/data.rst:4
@@ -42,7 +42,7 @@ msgstr "曲线形状面板。"
 
 #: ../../manual/modeling/curves/properties/data.rst:23
 msgid "Dimensions"
-msgstr "规格尺寸"
+msgstr "维度"
 
 #: ../../manual/modeling/curves/properties/data.rst:20
 msgid ""
@@ -50,8 +50,8 @@ msgid ""
 "be placed anywhere in 3D space. Curves can also be set to 2D which constrain "
 "the control points to the curve's local XY axis."
 msgstr ""
-"默认情况下，新的曲线被设为3D，这意味着控制点可放在3D空间中的任何地方。曲线还"
-"可以设置为2D，这样会制约控制点只能在曲线的局部x-y轴上。"
+"新添加的曲线默认维度为3D，这意味着其控制点可置于三维空间中的任意位置。还可以"
+"设置曲线为2D，这会将曲线的控制点钳制在其自身x-y轴平面上。"
 
 #: ../../manual/modeling/curves/properties/data.rst:23
 msgid "2D, 3D"
@@ -72,9 +72,10 @@ msgid ""
 "zero (0), then the *Preview U* setting is used for both the 3D View and "
 "render resolution."
 msgstr ""
-"*分辨率* 属性定义了每对控制点之间点的数量。曲线可以通过增减分辨率来加强或减少"
-"平滑度。*预览U* 设置项决定3D视图模式中的分辨率，而 *渲染U* 设置项决定了曲线的"
-"渲染分辨率。如果 *渲染U* 设成0，那么 *预览U* 会用于3D视图和渲染两方面。"
+"*分辨率* 属性定义了每对控制点之间参与运算的点的数量。可以通过增减分辨率来提高"
+"或降低曲线的平滑度。*U向预览* 设置项决定3D视图模式中的分辨率，而 *U向渲染* 设"
+"置项则决定了曲线的渲染分辨率。如果 *U向渲染* 设成0，那么3D视图和渲染均会使用 "
+"*U向预览* 分辨率。"
 
 #: ../../manual/modeling/curves/properties/data.rst:37
 msgid "Curves with a resolution of 3."
@@ -95,9 +96,8 @@ msgid ""
 "can alter how the twist of the curve is calculated by choosing from "
 "*Minimum, Tangent* and *Z-Up* options from the select menu."
 msgstr ""
-"3D曲线的控制点不会限制在曲线自身的XY平面内。这给了曲线一个扭曲，可以影响到曲"
-"线的法线。你可以改变曲线扭曲的计算方式，通过选择选项菜单中的 *最小，切线* 和 "
-"*Z上* 选项。"
+"3D曲线的控制点可以不位于自身XY平面上。这样可以赋予曲线一个扭曲，来影响曲线的"
+"法向。可从菜单中选择曲线扭曲的计算方式为 *最小值，切向* 和 *Z向上*。"
 
 #: ../../manual/modeling/curves/properties/data.rst:55
 msgid "Curves with a twist of Minimum."
@@ -105,7 +105,7 @@ msgstr "最小扭曲的曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:60
 msgid "Curves with a twist of Tangent."
-msgstr "切线扭曲的曲线。"
+msgstr "切向扭曲的曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:79
 msgid "Fill"
@@ -117,8 +117,8 @@ msgid ""
 "for details on Beveling). When set to *Half* (the default) the curve is "
 "displayed as half a cylinder."
 msgstr ""
-"填充决定曲线在被切角时的显示方式，参见下方斜边中的详细信息。当设置为 *一半* "
-"(默认)时，曲线显示为一个圆柱体的一半。"
+"填充决定曲线在倒角时的显示方式(详情参见下文倒角)。当设置为 *一半* (默认)时，"
+"曲线显示为半边柱体。"
 
 #: ../../manual/modeling/curves/properties/data.rst:67
 msgid "Fill Deformed"
@@ -128,7 +128,7 @@ msgstr "填充形变结果"
 msgid ""
 "Fills the curve after applying all modification that might deform the curve "
 "(i.e. shape keys and modifiers)."
-msgstr "在应用了所有可能改变曲线的修改之后填充曲线，即形态键和修改器。"
+msgstr "在应用了所有可能导致曲线变形的修改之后填充曲线(即形态键和修改器)。"
 
 #: ../../manual/modeling/curves/properties/data.rst:74
 msgid "Curves with a fill of Half."
@@ -148,8 +148,8 @@ msgid ""
 "using the Curve Deform Modifier. They control how objects use the curve and "
 "are dealt with in more detail in the appropriate links below."
 msgstr ""
-"这些选项主要用于使用曲线作为路径或使用曲线形变修改器时。他们控制物体如何使用"
-"曲线，更详细地处理在下面相应的链接里。"
+"这几个选项主要用于使用曲线作为路径或使用曲线形变修改器时，用于控制物体如何使"
+"用曲线与如何处理物体，详情参见下文对应链接。"
 
 #: ../../manual/modeling/curves/properties/data.rst:87
 #: ../../manual/modeling/curves/properties/data.rst:141
@@ -158,7 +158,7 @@ msgstr "半径"
 
 #: ../../manual/modeling/curves/properties/data.rst:88
 msgid "Causes the deformed object to be scaled by the set curve radius."
-msgstr "通过设置曲线半径来引起形变的物体发生放缩。"
+msgstr "按照设定的曲线半径来缩放形变物体。"
 
 #: ../../manual/modeling/curves/properties/data.rst:89
 msgid "Stretch"
@@ -168,11 +168,11 @@ msgstr "拉伸"
 msgid ""
 "The *Stretch* curve option allows you to let the mesh object stretch, or "
 "squeeze, over the entire curve."
-msgstr "*拉伸* 曲线选项允许你让网格物体在整个曲线上延伸，或挤压。"
+msgstr "*拉伸* 曲线选项用于使网格物体沿整个曲线上拉伸，或压缩。"
 
 #: ../../manual/modeling/curves/properties/data.rst:92
 msgid "Bounds Clamp"
-msgstr "紧固边框"
+msgstr "边界钳制"
 
 #: ../../manual/modeling/curves/properties/data.rst:92
 msgid "ToDo <2.71."
@@ -194,7 +194,7 @@ msgstr "路径动画"
 msgid ""
 "The *Path Animation* settings can be used to determine how child objects "
 "move along a certain path."
-msgstr "*路径动画* 设置可被用于确定子对象沿着一定的路径移动的方式。"
+msgstr "*路径动画* 设置用于确定子物体沿着特定路径的移动方式。"
 
 #: ../../manual/modeling/curves/properties/data.rst:108
 msgid "Frames"
@@ -204,11 +204,11 @@ msgstr "帧数量"
 msgid ""
 "The number of frames that are needed to traverse the path, defining the "
 "maximum value for the *Evaluation Time* setting."
-msgstr "遍历整条路径所需的帧数量, 为'估算时长'的设置项定义最大值。"
+msgstr "遍历整条路径所需的帧数量, 定义 *估算时刻* 设置的最大值。"
 
 #: ../../manual/modeling/curves/properties/data.rst:113
 msgid "Evaluation Time"
-msgstr "解算时间"
+msgstr "估算时刻"
 
 #: ../../manual/modeling/curves/properties/data.rst:111
 msgid ""
@@ -217,9 +217,8 @@ msgid ""
 "value). By default, it is linked to the global frame number, but could be "
 "keyframed to give more control over the path animation."
 msgstr ""
-"物体沿曲线长度进行'跟随'的预期位置参量 (通过与'路径长度'值相除, 可估算出位"
-"置)。默认的，帧数量与全局帧数量相联系，但可以被设置关键帧来给出更详细的路径动"
-"画的控制。"
+"物体沿曲线长度'跟随'所在的参数化位置(通过与'路径长度'值相除估算得出位置)。该"
+"值默认与全局帧数关联，但可以通过设置关键帧来更好地控制路径动画。"
 
 #: ../../manual/modeling/curves/properties/data.rst:116
 msgid "Follow"
@@ -227,27 +226,27 @@ msgstr "跟随"
 
 #: ../../manual/modeling/curves/properties/data.rst:116
 msgid "Make the curve path children rotate along the curvature of the path."
-msgstr "使曲线路径的子物体沿路径的曲率旋转。"
+msgstr "使曲线路径的子物体沿路径的弯曲旋转。"
 
 #: ../../manual/modeling/curves/properties/data.rst:120
 msgid ""
 "Deprecated, but still available use. A more future-proof method is the :doc:"
 "`/rigging/constraints/relationship/follow_path`."
 msgstr ""
-"废弃的，但仍可使用。一个更加面向未来的方法是 :doc:`/rigging/constraints/"
-"relationship/follow_path`."
+"已废弃，但仍可使用。 :doc:`/rigging/constraints/relationship/follow_path` 是"
+"更加面向未来的方法。"
 
 #: ../../manual/modeling/curves/properties/data.rst:125
 msgid "Active Spline"
-msgstr "激活的样条"
+msgstr "活动样条线"
 
 #: ../../manual/modeling/curves/properties/data.rst:129
 msgid "Curves Active Spline panel."
-msgstr "曲线激活样条面板。"
+msgstr "曲线活动样条线面板。"
 
 #: ../../manual/modeling/curves/properties/data.rst:131
 msgid "The *Active Spline* panel becomes available during *Edit Mode*."
-msgstr "*激活样条* 面板在 *编辑模式* 中可用."
+msgstr "*活动样条线* 面板在 *编辑模式* 下可用。"
 
 #: ../../manual/modeling/curves/properties/data.rst:133
 #: ../../manual/modeling/curves/properties/data.rst:176
@@ -280,8 +279,8 @@ msgid ""
 "Alters how the radius of a beveled curve is calculated. The effects are "
 "easier to see after Shrinking/Fattening a control point :kbd:`Alt-S`."
 msgstr ""
-"改变削角的曲线半径的计算方式。在收缩/变胖 :kbd:`Alt-S` 控制点后效果更容易看出"
-"来."
+"改变倒角曲线半径的计算方式。使用 :kbd:`Alt-S` 法向缩放控制点后更容易观察效"
+"果。"
 
 #: ../../manual/modeling/curves/properties/data.rst:145
 msgid "Smooth"
@@ -289,7 +288,7 @@ msgstr "平滑"
 
 #: ../../manual/modeling/curves/properties/data.rst:144
 msgid "Smooths the normals of the curve."
-msgstr "平滑曲线的法线。"
+msgstr "平滑曲线的法向。"
 
 #: ../../manual/modeling/curves/properties/data.rst:148
 msgid "NURBS Curves"
@@ -297,7 +296,7 @@ msgstr "NURBS 曲线"
 
 #: ../../manual/modeling/curves/properties/data.rst:152
 msgid "NURBS Active Spline panel."
-msgstr "NURBS曲线激活样条面板。"
+msgstr "NURBS曲线活动样条线面板。"
 
 #: ../../manual/modeling/curves/properties/data.rst:193
 msgid "Knots"
@@ -312,13 +311,13 @@ msgid ""
 "Spline panel. Note that, the *Endpoint* and *Bézier* settings only apply to "
 "open NURBS curves."
 msgstr ""
-"NURBS对象的一个特点是 *结矢*. 这是一个数字序列，用于确定控制点对曲线的影响。"
-"但你无法直接编辑的结矢量，可以通过激活样条面板的 *终点* 和 *贝塞尔* 选项来影"
-"响他们。注意，*终点* 和 *贝塞尔* 设置仅适用于开的NURBS曲线。"
+"NURBS对象的特征之一是 *结矢*。这是一组数字序列，用于确定控制点对曲线的影响。"
+"但你无法直接编辑结矢量，可以通过活动样条线面板的 *端点* 和 *贝塞尔* 选项来施"
+"以影响。注意，*端点* 和 *贝塞尔* 设置仅适用于开放的NURBS曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:164
 msgid "Makes the NURBS curve cyclic."
-msgstr "使NURBS曲线成环。"
+msgstr "闭合NURBS曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:171
 #: ../../manual/modeling/curves/properties/data.rst:188
@@ -327,7 +326,7 @@ msgstr "默认的NURBS曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:176
 msgid "A NURBS curve with Cyclic applied."
-msgstr "一个应用了成环的NURBS曲线。"
+msgstr "应用循环的NURBS曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:178
 msgid "Bézier"
@@ -335,7 +334,7 @@ msgstr "贝塞尔"
 
 #: ../../manual/modeling/curves/properties/data.rst:179
 msgid "Makes the NURBS curve act like a Bézier curve."
-msgstr "使NURBS曲线成环的方法和贝塞尔曲线一样。"
+msgstr "使NURBS曲线的呈现方式类似贝塞尔曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:193
 msgid "Endpoint"
@@ -345,15 +344,15 @@ msgstr "端点"
 msgid ""
 "Makes the curve contact the end control points. Cyclic must be disabled for "
 "this option to work."
-msgstr "使曲线接触的结束控制点。为了使用这个选项必须禁用环。"
+msgstr "使曲线经过两端控制点，使该选项生效必须先禁用循环。"
 
 #: ../../manual/modeling/curves/properties/data.rst:193
 msgid "A NURBS curve with Endpoint enabled."
-msgstr "一个启用端点的NURBS曲线。"
+msgstr "启用端点的NURBS曲线。"
 
 #: ../../manual/modeling/curves/properties/data.rst:214
 msgid "Order"
-msgstr "次序"
+msgstr "阶数"
 
 #: ../../manual/modeling/curves/properties/data.rst:198
 msgid ""
@@ -363,9 +362,9 @@ msgid ""
 "valid range of *Order* values is 2-6 depending on the number of control "
 "points present in the curve."
 msgstr ""
-"NURBS曲线的顺序决定了控制点在曲线上的影响域。更高次序值意味着一个单个的控制点"
-"在曲线的相对更大的比例上有更大的影响。*次序* 值的有效范围是2-6，取决于曲线上"
-"存在的控制点的数量。"
+"NURBS曲线的阶数决定了控制点在曲线上的影响域。阶数越高意味着单个控制点在曲线上"
+"影响的相对比例更大。*阶数* 值的有效范围是2-6，取决于曲线上存在的控制点的数"
+"量。"
 
 #: ../../manual/modeling/curves/properties/data.rst:208
 msgid "NURBS curves with orders of 4."
