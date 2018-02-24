@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-27 13:15+1100\n"
-"PO-Revision-Date: 2018-01-17 22:37+0100\n"
+"PO-Revision-Date: 2018-02-24 21:35+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../../manual/modeling/surfaces/editing.rst:53
 msgid "NURBS Control Points Settings"
-msgstr ""
+msgstr "Réglages de points de contrôle NURBS "
 
 #: ../../manual/modeling/surfaces/editing.rst:55
 msgid ""
@@ -227,7 +227,6 @@ msgstr ""
 "ligne entière de bords est sélectionnée, autrement rien ne se passe."
 
 #: ../../manual/modeling/surfaces/editing.rst:93
-#, fuzzy
 msgid ""
 "As for curves, you cannot create a new surface in your object out of "
 "nowhere, by just :kbd:`Ctrl-LMB` -- clicking with nothing selected. However, "
@@ -237,9 +236,9 @@ msgid ""
 "the *Add* menu."
 msgstr ""
 "Comme pour les courbes, vous ne pouvez pas créer une nouvelle surface dans "
-"votre objet à partir de rien, en :kbd:`Ctrl-LMB` -- cliquant simplement sans "
-"rien de sélectionné. Cependant, contrairement aux courbes, il n'y a pas "
-"d'option \"cut\" vous permettant de diviser une surface en plusieurs "
+"votre objet à partir de rien, en :kbd:`Ctrl-LMB` -- cliquant simplement s'il "
+"n'y a rien de sélectionné. Cependant, contrairement aux courbes, il n'y a "
+"pas d'option \"cut\" vous permettant de diviser une surface en plusieurs "
 "parties, aussi vous pouvez seulement créer une nouvelle surface en copiant "
 "(`Duplication`_) une surface existante :kbd:`Maj-D`, ou en ajoutant une "
 "nouvelle avec le menu *Add*. "
@@ -280,17 +279,16 @@ msgid ":kbd:`Shift-R`"
 msgstr ":kbd:`Maj-R`"
 
 #: ../../manual/modeling/surfaces/editing.rst:125
-#, fuzzy
 msgid ""
 "The edge is then extruded using :kbd:`E` as shown in Fig. :ref:`fig-surface-"
 "edit-extruding`. Notice how the mesh has bunched up next to the highlighted "
 "edge. That is because the *new* extruded surface section is bunched up there "
 "as well."
 msgstr ""
-"L'arête est alors extrudée en utilisant :kbd:`E` comme montré dans Fig. :ref:"
-"`fig-surface-edit-extruding`. Notez la manière dont le maillage se ramasse "
-"près de l'arête surlignée. Ceci est dû au fait que la *nouvelle* section de "
-"surface extrudée se ramasse là aussi."
+"L'arête est alors extrudée en utilisant :kbd:`E` comme montré dans la Fig. :"
+"ref:`fig-surface-edit-extruding`. Notez la manière dont le maillage se "
+"ramasse près de l'arête surlignée. Ceci est dû au fait que la *nouvelle* "
+"section de surface extrudée se ramasse là aussi."
 
 #: ../../manual/modeling/surfaces/editing.rst:133
 msgid "Extruding."
@@ -351,10 +349,14 @@ msgid ""
 "corresponding surface's outer edges will join together to form a \"closed\" "
 "surface."
 msgstr ""
+"la propriété cyclique d'une surface sur un axe, utilisez :kbd:`Alt-C` et "
+"choisissez soit *cyclic U* soit *cyclic V* dans le menu déroulant. Les "
+"arêtes extérieures de la surface correspondantes vont s'assembler ensemble "
+"pour former une surface \"fermée\". "
 
 #: ../../manual/modeling/surfaces/editing.rst:160
 msgid "Inner and Outer"
-msgstr ""
+msgstr "Intérieur et extérieur"
 
 #: ../../manual/modeling/surfaces/editing.rst:162
 msgid ""
@@ -397,6 +399,9 @@ msgid ""
 "copy is selected and placed in *Grab* mode, so you can move it to another "
 "place."
 msgstr ""
+"Comme pour les maillages et les courbes, cet outil duplique la sélection. la "
+"copie est sélectionnée et placée en mode *Grab*, ainsi vous pouvez la "
+"déplacer ailleurs."
 
 #: ../../manual/modeling/surfaces/editing.rst:182
 msgid ""
@@ -452,6 +457,8 @@ msgid ""
 "Panel:    :menuselection:`Tool shelf --> Tools --> Surface tools --> Curve: "
 "Delete`"
 msgstr ""
+"Panneau :    :menuselection:`Tool shelf --> Tools --> Surface tools --> "
+"Curve: Delete`"
 
 #: ../../manual/modeling/surfaces/editing.rst
 msgid "Menu:     :menuselection:`Surface --> Delete...`"
@@ -543,7 +550,7 @@ msgstr ""
 
 #: ../../manual/modeling/surfaces/editing.rst:243
 msgid "Joining or Merging Surfaces"
-msgstr ""
+msgstr "Assemblage et fusion de surfaces"
 
 #: ../../manual/modeling/surfaces/editing.rst
 msgid "Menu:     :menuselection:`Surface --> Make Segment`"
@@ -586,6 +593,18 @@ msgid ""
 "object, you must use either border select or circle select. Holding down :"
 "kbd:`Ctrl` while :kbd:`LMB` will not work."
 msgstr ""
+"Cet outil est équivalent à créer des arêtes ou des faces (d'où son "
+"raccourci), et ainsi il fonctionne uniquement en *Mode Édition*. La "
+"sélection doit contenir uniquement des lignes de bord de la même résolution "
+"(avec le même nombre de points de contrôle), sinon Blender essaiera de faire "
+"de son mieux pour deviner ce qui est à fusionner et avec quoi, ou la fusion "
+"échouera (soir silencieusement, ou en que  ``Resolution does not match`` si "
+"des lignes avec un nombre différent de points sont sélectionnées, ou qu'il y "
+"a ``Too few selections to merge`` si vous n'avez sélectionné que des points "
+"sur une seule surface...). Pour sélectionner des points de contrôle de "
+"différentes surfaces, dans le même objet, vous devez utiliser soit *border "
+"select* ou *circle select*. Maintenez :kbd:`Ctrl` pendant :kbd:`LMB` ne va "
+"pas fonctionner."
 
 #: ../../manual/modeling/surfaces/editing.rst:272
 msgid ""
@@ -617,6 +636,10 @@ msgid ""
 "curves, **not** NURBS curves, in *Edit Mode*, ready to be joined. Fig. :ref:"
 "`fig-surface-edit-join-complete` is the result of joining the two curves."
 msgstr ""
+"La Fig. :ref:`fig-surface-edit-join-ready` est u n exemple de deux courbes "
+"de surface NURBS, **pas** de courbes NURBS, en *Mode Édition*, prêtes à être "
+"assemblées. La Fig. :ref:`fig-surface-edit-join-complete` est le résultat de "
+"l'assemblage des deux courbes."
 
 #: ../../manual/modeling/surfaces/editing.rst:294
 msgid "Joining ready."
@@ -643,6 +666,8 @@ msgid ""
 "Menu:     :menuselection:`Surface --> Segments --> Subdivide`, :"
 "menuselection:`Specials --> Subdivide`"
 msgstr ""
+"Menu :     :menuselection:`Surface --> Segments --> Subdivide`, :"
+"menuselection:`Specials --> Subdivide`"
 
 #: ../../manual/modeling/surfaces/editing.rst:313
 msgid ""
@@ -671,13 +696,12 @@ msgid "Spin"
 msgstr ""
 
 #: ../../manual/modeling/surfaces/editing.rst
-#, fuzzy
 msgid ""
 "Panel:    :menuselection:`Tool shelf --> Tools --> Surface tools --> "
 "Modeling: Spin`"
 msgstr ""
 "Panneau :    :menuselection:`Tool shelf --> Tools --> Surface tools --> "
-"Modeling: Subdivide`"
+"Modeling: Spin`"
 
 #: ../../manual/modeling/surfaces/editing.rst
 msgid "Menu:     :menuselection:`Surface --> Spin`"
@@ -689,9 +713,11 @@ msgid ""
 "editing/duplicating/spin>` but with less control and options (in fact, there "
 "is none!)."
 msgstr ""
+"Cet outil est un peu comparable à son :doc:`homologue pour les maillages </"
+"modeling/meshes/editing/duplicating/spin>` mais avec moins de contrôle et "
+"d'options (en fait, il n'en a aucun !)."
 
 #: ../../manual/modeling/surfaces/editing.rst:336
-#, fuzzy
 msgid ""
 "It only works on selected \"surfaces\" made of *one U-row* (and not with one "
 "V-row), so-called \"surface curves\", by \"extruding\" this \"cross section"
@@ -700,9 +726,9 @@ msgid ""
 "surface along the V axis), following exactly the same principle as for the "
 "*NURBS Tube* or *NURBS Donut* primitives."
 msgstr ""
-"Il fonctionne seulement sur les \"surfaces\" sélectionnées faites d'\"une "
+"Il fonctionne uniquement sur les \"surfaces\" sélectionnées faites d'\"une "
 "ligne U\" (et non avec une ligne V), soit-disant \"courbes de surface\", en "
-"\"extrudant\" cette \"section croisée\" dans un   , en ajustant "
+"\"extrudant\" cette \"section croisée\" dans un modèle carré, en ajustant "
 "automatiquement les poids de points de contrôle pour obtenir une extrusion "
 "circulaire parfaite (ceci implique aussi la fermeture de la surface le long "
 "de l'axe V), en suivant le même principe que pour les primitives *NURBS "
@@ -713,19 +739,20 @@ msgid "Switch Direction"
 msgstr ""
 
 #: ../../manual/modeling/surfaces/editing.rst
-#, fuzzy
 msgid ""
 "Panel:    :menuselection:`Tool shelf --> Tools --> Surface tools --> Curve: "
 "Switch Direction`"
 msgstr ""
 "Panneau :    :menuselection:`Tool shelf --> Tools --> Surface tools --> "
-"Curve: Duplicate`"
+"Curve: Switch Direction`"
 
 #: ../../manual/modeling/surfaces/editing.rst
 msgid ""
 "Menu:     :menuselection:`Surface --> Segments --> Switch Direction`, :"
 "menuselection:`Specials --> Switch Direction`"
 msgstr ""
+"Menu :     :menuselection:`Surface --> Segments --> Switch Direction`, :"
+"menuselection:`Specials --> Switch Direction`"
 
 #: ../../manual/modeling/surfaces/editing.rst:354
 msgid ""
