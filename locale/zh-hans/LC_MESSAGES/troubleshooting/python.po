@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-01 09:30+1100\n"
-"PO-Revision-Date: 2018-01-01 17:21+0800\n"
+"PO-Revision-Date: 2018-03-07 01:28+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../../manual/troubleshooting/python.rst:4
 msgid "Python Errors"
@@ -25,7 +25,7 @@ msgstr "Python路径"
 
 #: ../../manual/troubleshooting/python.rst:9
 msgid "Blender will fail to load if the ``PYTHONPATH`` is set incorrectly."
-msgstr ""
+msgstr "如果 \"PYTHONPATH\" 设置不正确, Blender 将无法加载。"
 
 #: ../../manual/troubleshooting/python.rst:11
 msgid ""
@@ -33,18 +33,23 @@ msgid ""
 "Python installation however, it will prevent Blender from opening at all "
 "when set to an incompatible version of Python."
 msgstr ""
+"这对于想要使用自己的Python安装的Python开发人员非常有用，但是，如果设置为"
+"不兼容的Python版本，它将完全阻止Blender打开。"
 
 #: ../../manual/troubleshooting/python.rst:14
 msgid ""
 "To see if this is the cause of an error temporary unset the environment "
 "variable and reload Blender."
 msgstr ""
+"要查看这是否是错误的原因，请暂时取消设置环境变量并重新加载Blender。"
 
 #: ../../manual/troubleshooting/python.rst:16
 msgid ""
 "See `Python's documentation <https://docs.python.org/3/using/cmdline."
 "html#envvar-PYTHONPATH>`__ for details."
 msgstr ""
+"有关详细信息, 请参阅 `Python 文档 <https://docs.python.org/3/using/"
+"cmdline.html#envvar-PYTHONPATH>`__ 。"
 
 #: ../../manual/troubleshooting/python.rst:20
 msgid "Pre-Compiled Libraries"
@@ -56,6 +61,8 @@ msgid ""
 "own pre-compiled libraries. Unlike regular Python scripts, these are not "
 "portable between different platforms."
 msgstr ""
+"虽然不是很常见的做法，但是Python插件可以使用他们自己的预编译库进行分发。"
+"与常规Python脚本不同，这些脚本在不同平台之间不可移植。"
 
 #: ../../manual/troubleshooting/python.rst:25
 msgid ""
@@ -63,16 +70,20 @@ msgid ""
 "installation (attempting to load a library built for a different version "
 "of Python, or loading a 32-bit library on a 64-bit system)."
 msgstr ""
+"该库可能与您的Blender安装不兼容（尝试加载为不同版本的Python构建的库，或在"
+"64位系统上加载32位库）。"
 
 #: ../../manual/troubleshooting/python.rst:29
 msgid ""
 "If the add-on contains ``.pyd`` or ``.so`` files, check that the "
 "distribution is compatible with your operating system."
 msgstr ""
+"如果附加组件包含 “.pyd” 或 “.so” 文件，请检查该分发版本是否与您的操作系统"
+"兼容。"
 
 #: ../../manual/troubleshooting/python.rst:34
 msgid "Platform Specific"
-msgstr ""
+msgstr "平台特定"
 
 #: ../../manual/troubleshooting/python.rst:37
 msgid "MS-Windows"
@@ -80,17 +91,19 @@ msgstr "MS-Windows"
 
 #: ../../manual/troubleshooting/python.rst:40
 msgid "Mixed Python Libraries (DLL's)"
-msgstr ""
+msgstr "混合的Python库（DLL）"
 
 #: ../../manual/troubleshooting/python.rst:42
 msgid ""
 "If Python is raising errors or you have an add-on that just fails when "
 "enabled with an error, e.g: ``... is not a valid Win32 application.``."
 msgstr ""
+"如果Python发生错误，或者您的附加组件在启用错误时失败，例如: ``... 不是有"
+"效的Win32应用程序`` 。"
 
 #: ../../manual/troubleshooting/python.rst:47
 msgid "A Python traceback."
-msgstr ""
+msgstr "Python traceback模块 。"
 
 #: ../../manual/troubleshooting/python.rst:49
 msgid ""
@@ -98,12 +111,14 @@ msgid ""
 "Blender comes with its own bundled Python interpreter, duplicate, "
 "incompatible libraries can cause problems."
 msgstr ""
+"这可能是由于 Python 库中的某些不一致造成的。虽然Blender附带了自己捆绑的 "
+"Python 解释器, 但重复的、不兼容的库可能会导致问题。"
 
 #: ../../manual/troubleshooting/python.rst:52
 msgid ""
 "To find out which Python Library caused the Problem check the error "
 "message."
-msgstr ""
+msgstr "要找出哪个Python库导致问题，请检查错误消息。"
 
 #: ../../manual/troubleshooting/python.rst:54
 msgid ""
@@ -112,6 +127,9 @@ msgid ""
 "trying to import ``_socket``. This corresponds to either a file named "
 "``_socket.py`` or ``_socket.pyd``."
 msgstr ""
+"他的报告通常在 traceback的底部行附近。有了上面的错误，你会发现问题是在尝"
+"试导入  `_socket` 时引起的。这对应于名为 “_socket.py” 或 “_socket.pyd” 的"
+"文件。"
 
 #: ../../manual/troubleshooting/python.rst:58
 msgid ""
@@ -120,3 +138,6 @@ msgid ""
 "search path. (output will show in :doc:`Command Line Window </advanced/"
 "command_line/introduction>`)."
 msgstr ""
+"为了帮助解决这个问题，可以将以下脚本粘贴到文本编辑器中并运行以检查搜索路"
+"径中的重复库。 （输出将显示在 :doc:`Command Line Window </advanced/"
+"command_line/introduction>` 中）。"
