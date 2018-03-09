@@ -8,33 +8,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-13 17:52+1100\n"
+"POT-Creation-Date: 2018-03-09 22:11+0800\n"
 "PO-Revision-Date: 2017-10-14 18:50+0800\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Last-Translator: \n"
+"Language: zh_Hans_CN\n"
 "Language-Team: \n"
-"Language: zh_CN\n"
-"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:5
-msgid "Subsurface Scattering Node"
+#, fuzzy
+msgid "Subsurface Scattering"
 msgstr "次表面散射节点"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:10
-msgid "Subsurface Scattering Node."
-msgstr ""
+#, fuzzy
+msgid "Subsurface Scattering Shader."
+msgstr "次表面散射节点"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:12
 msgid ""
 "The *Subsurface Scattering* node is used to add simple subsurface "
 "multiple scattering, for materials such as skin, wax, marble, milk and "
-"others. For these materials, rather than light being reflect directly "
-"off the surface, it will penetrate the surface and bounce around "
-"internally before getting absorbed or leaving the surface at a nearby "
-"point."
+"others. For these materials, rather than light being reflect directly off"
+" the surface, it will penetrate the surface and bounce around internally "
+"before getting absorbed or leaving the surface at a nearby point."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:17
@@ -103,81 +104,109 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:37
 msgid ""
 "How much of the texture will be blurred along with the lighting, mixing "
-"the texture at the incoming and outgoing points on the surface. Note "
-"that the right choice depends on the texture. Consider for example a "
-"texture created from a photograph of skin, in this case the colors will "
-"already be pre-blurred and texture blur could be set to 0. Even for hand-"
-"painted textures, no blurring or minimal blurring might be appropriate, "
-"as a texture artist would likely paint in softening already. One would "
-"usually not even know what an unblurred skin texture looks like; we "
-"always see it blurred. For a procedural texture on the other hand this "
-"option would likely have a higher value."
+"the texture at the incoming and outgoing points on the surface. Note that"
+" the right choice depends on the texture. Consider for example a texture "
+"created from a photograph of skin, in this case the colors will already "
+"be pre-blurred and texture blur could be set to 0. Even for hand-painted "
+"textures, no blurring or minimal blurring might be appropriate, as a "
+"texture artist would likely paint in softening already. One would usually"
+" not even know what an unblurred skin texture looks like; we always see "
+"it blurred. For a procedural texture on the other hand this option would "
+"likely have a higher value."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:49
 msgid "Properties"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:66
-msgid "Falloff"
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:71
+msgid "Method"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:52
-msgid "Lighting distance falloff function."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:54
-msgid "Cubic"
+msgid "Rendering method to simulate subsurface scattering."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:55
-msgid ""
-"Is a sharp falloff useful for many simple materials. The function is :"
-"math:`(radius - x)^3`."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:61
-msgid "Gaussian"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:57
-msgid ""
-"Gives a smoother falloff following a normal distribution, which is "
-"particularly useful for more advanced materials that use measured data "
-"that was fitted to one or more such Gaussian functions. The function is :"
-"math:`e^{-8x^2/ radius^2}`, such that the radius roughly matches the "
-"maximum falloff distance. To match a given measured variance *v*, set :"
-"math:`radius = sqrt(16 × v)`."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:66
 msgid "Christensen-Burley"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:64
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:55
 msgid ""
 "Is an approximation to physically based volume scattering. Gives less "
 "blurry results than Cubic and Gaussian functions."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:69
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:60
+msgid "Random Walk"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:58
+msgid ""
+"Provides the most accurate results for thin and curved objects. This "
+"comes at the cost of increased render time or noise for more dense media "
+"like skin, but also better geometry detail preservation. Random Walk uses"
+" true volumetric scattering inside the mesh, which means that it works "
+"best for closed meshes. Overlapping faces and holes in the mesh can cause"
+" problems."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:62
+msgid "Cubic"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:63
+msgid ""
+"Is a sharp falloff useful for many simple materials. The function is "
+":math:`(radius - x)^3`."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:71
+msgid "Gaussian"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:65
+msgid ""
+"Gives a smoother falloff following a normal distribution, which is "
+"particularly useful for more advanced materials that use measured data "
+"that was fitted to one or more such Gaussian functions. The function is "
+":math:`e^{-8x^2/ radius^2}`, such that the radius roughly matches the "
+"maximum falloff distance. To match a given measured variance *v*, set "
+":math:`radius = sqrt(16 × v)`."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:74
 msgid "Outputs"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:73
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:78
 msgid "BSSRDF"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:72
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:77
 msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution "
 "function)` shader output."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:76
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:81
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:80
-msgid "A skin-toned SSS shader with color radius (1.0, 0.8, 0.5)."
-msgstr ""
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:85
+#, fuzzy
+msgid "Random Walk subsurface scattering."
+msgstr "次表面散射节点"
+
+#~ msgid "Subsurface Scattering Node."
+#~ msgstr ""
+
+#~ msgid "Falloff"
+#~ msgstr ""
+
+#~ msgid "Lighting distance falloff function."
+#~ msgstr ""
+
+#~ msgid "A skin-toned SSS shader with color radius (1.0, 0.8, 0.5)."
+#~ msgstr ""
+
