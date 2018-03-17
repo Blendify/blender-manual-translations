@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-13 14:59+1000\n"
-"PO-Revision-Date: 1971-01-02 00:00-0000\n"
+"POT-Creation-Date: 2018-03-17 21:53+0100\n"
+"PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.0\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:4
 msgid "Reducing Noise"
@@ -46,7 +46,7 @@ msgid ""
 "to e.g. bidirectional path tracing."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:25
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:26
 msgid ""
 "We do the inverse of what reality does, tracing light rays from the "
 "camera into the scene and onto lights, rather than from the light sources"
@@ -58,18 +58,18 @@ msgid ""
 " as Lamp)."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:35
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:36
 msgid ""
 "For more details, see the :doc:`Light Paths "
 "</render/cycles/settings/scene/render/light_paths>` and :doc:`Integrator "
 "</render/cycles/settings/scene/render/integrator>` documentation."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:41
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:42
 msgid "Where Noise Comes From"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:43
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:44
 msgid ""
 "To understand where noise can come from, take for example the scene "
 "below. When we trace a light ray into the location marked by the white "
@@ -77,7 +77,7 @@ msgid ""
 "the diffuse shader \"sees\"."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:47
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:48
 msgid ""
 "To find the light that is reflected from this surface, we need to find "
 "the average color from all these pixels. Note the glossy highlight on the"
@@ -86,16 +86,16 @@ msgid ""
 "contribute significantly to the lighting of this pixel."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:58
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:59
 msgid "The Scene."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:63
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:64
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:95
 msgid "What the Shader sees."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:68
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:69
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:100
 msgid "The detected Highlights."
 msgstr ""
@@ -176,8 +176,8 @@ msgid ""
 " because the renderer has difficulty finding specular highlights viewed "
 "through a soft glossy or diffuse reflection. There is a :ref:`No Caustics"
 " <render-cycles-integrator-no-caustics>` option to disable glossy behind "
-"a diffuse reflection entirely. Many render engines will typically disable"
-" caustics by default."
+"a diffuse reflection entirely. Many renderers will typically disable "
+"caustics by default."
 msgstr ""
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:155
@@ -303,26 +303,26 @@ msgstr ""
 msgid "Optimized glass shader."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:256
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:255
 msgid ""
 "Above we can see the node setup used for the glass transparency trick; on"
 " the left the render has too much shadow due to missing caustics, and on "
 "the right the render with the trick."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:265
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:264
 msgid "Default Glas BSDF."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:270
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:269
 msgid "Optimized Glass Shader."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:274
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:273
 msgid "Light Portals"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:276
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:275
 msgid ""
 "When rendering a daylight indoor scene where most of the light is coming "
 "in through a window or door opening, it is difficult for the integrator "
@@ -332,11 +332,11 @@ msgid ""
 "match that of the opening that you are trying to fill."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:287
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:286
 msgid "Denoising"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:289
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:288
 msgid ""
 "Even with all the settings described above there will always end up being"
 " some render noise no matter how many samples you use. To fix this there "
@@ -346,26 +346,26 @@ msgid ""
 "Layers* tab of the Properties editor."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:295
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:294
 msgid ""
 "Below is an example render by `The Pixelary "
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
 "tested>`__."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:302
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:301
 msgid "Example render before denoising."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:306
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:305
 msgid "Example render after denoising."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:312
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:311
 msgid "Clamp Fireflies"
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:314
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:313
 msgid ""
 "Ideally with all the previous tricks, fireflies would be eliminated, but "
 "they could still happen. For that, the *intensity* that any individual "
@@ -374,7 +374,7 @@ msgid ""
 "clamp-samples>`."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:318
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:317
 msgid ""
 "If set too low this can cause missing highlights in the image, which "
 "might be useful to preserve for camera effects such as bloom or glare. To"
@@ -382,11 +382,11 @@ msgid ""
 "bounces, leaving highlights directly visible to the camera untouched."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:328
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:327
 msgid "No Clamp (0)."
 msgstr ""
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:333
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:332
 msgid "With Clamp set to 4."
 msgstr ""
 
@@ -512,5 +512,19 @@ msgstr ""
 #~ " enabling this option may take "
 #~ "samples away from more important light"
 #~ " sources if it is not needed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Caustics are a well-known source "
+#~ "of noise, causing fireflies. They happen"
+#~ " because the renderer has difficulty "
+#~ "finding specular highlights viewed through "
+#~ "a soft glossy or diffuse reflection. "
+#~ "There is a :ref:`No Caustics <render-"
+#~ "cycles-integrator-no-caustics>` option "
+#~ "to disable glossy behind a diffuse "
+#~ "reflection entirely. Many render engines "
+#~ "will typically disable caustics by "
+#~ "default."
 #~ msgstr ""
 
