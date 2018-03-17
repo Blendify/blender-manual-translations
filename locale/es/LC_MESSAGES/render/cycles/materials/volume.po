@@ -9,17 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-05 17:35+1100\n"
-"PO-Revision-Date: 1971-01-02 00:00-0000\n"
+"POT-Creation-Date: 2018-03-17 21:53+0100\n"
+"PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/render/cycles/materials/volume.rst:4
-msgid "Volume"
+msgid "Volumes"
 msgstr ""
 
 #: ../../manual/render/cycles/materials/volume.rst:6
@@ -40,50 +40,84 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/cycles/materials/volume.rst:17
-msgid "Volume Shaders"
+msgid "Shading"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:19
-msgid ""
-"Cycles supports three volume shader nodes, that model particular effects "
-"as light passes through the volume and interacts with it:"
+#: ../../manual/render/cycles/materials/volume.rst:20
+msgid "Principled Volume"
 msgstr ""
 
 #: ../../manual/render/cycles/materials/volume.rst:22
 msgid ""
-"Volume Absorption will absorb part of the light as it passes through the "
-"volume. This can be used to shade for example black smoke or colored "
-"glass objects, or mixed with the volume scatter node. This node is "
-"somewhat similar to the transparent BSDF node, it blocks part of the "
-"light and lets other light pass straight through."
+":doc:`Principled Volume "
+"</render/cycles/nodes/types/shaders/volume_principled>` is a physically "
+"based volume shader that can be used to create a wide range of volume "
+"materials. It supports scattering, absorption and emission in one easy to"
+" use node. Fire can be rendered with blackbody emission."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:26
+#: ../../manual/render/cycles/materials/volume.rst:29
+msgid "Smoke and fire rendered with Principled Volume shader."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:33
+msgid "Volume Components"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:35
 msgid ""
-"Volume Scatter lets light scatter in other directions as it hits "
-"particles in the volume. The anisotropy defines in which direction the "
-"light is more likely to scatter. A value of 0 will let light scatter "
-"evenly in all directions (somewhat similar to the diffuse BSDF node), "
-"negative values let light scatter mostly backwards, and positive values "
-"let light scatter mostly forward. This can be used to shade white smoke "
-"or clouds for example."
+"For more control, volume shading components can be manually combined into"
+" a custom shader setup."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:31
+#: ../../manual/render/cycles/materials/volume.rst:37
 msgid ""
-"Emission will emit light from the volume. This can be used to shade fire "
-"for example."
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:36
-msgid "Volume Shader: Absorption/Absorption + Scatter/Emission."
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:40
-msgid "Density"
+":doc:`Volume Absorption "
+"</render/cycles/nodes/types/shaders/volume_absorption>` will absorb part "
+"of the light as it passes through the volume. This can be used to shade "
+"for example black smoke or colored glass objects, or mixed with the "
+"volume scatter node. This node is similar to the transparent BSDF node, "
+"it blocks part of the light and lets other light pass straight through."
 msgstr ""
 
 #: ../../manual/render/cycles/materials/volume.rst:42
+msgid ""
+":doc:`Volume Scatter </render/cycles/nodes/types/shaders/volume_scatter>`"
+" lets light scatter in other directions as it hits particles in the "
+"volume. The anisotropy defines in which direction the light is more "
+"likely to scatter. A value of 0 will let light scatter evenly in all "
+"directions (similar to the diffuse BSDF node), negative values let light "
+"scatter mostly backwards, and positive values let light scatter mostly "
+"forward. This can be used to shade white smoke or clouds for example."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:48
+msgid ""
+":doc:`Emission </render/cycles/nodes/types/shaders/emission>` will emit "
+"light from the volume, for example for fire."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:54
+msgid "Volume Absorption, Scatter and Emission"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:58
+msgid "Attributes"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:60
+msgid ""
+"When rendering smoke and fire, volume attributes are used to define the "
+"shape and shading of the volume. The Principled Volume shader will use "
+"them by default, while custom volume shaders can use the Attribute node "
+"to get attributes such as density, color and temperature."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:66
+msgid "Density"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/volume.rst:68
 msgid ""
 "All volume shaders have a density input. The density defines how much of "
 "the light will interact with the volume, getting absorbed or scattered, "
@@ -93,7 +127,7 @@ msgid ""
 "(density equals 0)."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:48
+#: ../../manual/render/cycles/materials/volume.rst:74
 msgid ""
 "Volumes in real life consist of particles, a higher density means there "
 "are more particles per unit volume. More particles means there is a "
@@ -101,37 +135,11 @@ msgid ""
 "scattered, rather than passing straight through."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:55
-msgid "Volume Material"
+#: ../../manual/render/cycles/materials/volume.rst:81
+msgid "Mesh Volumes"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:58
-msgid "Interaction with the Surface Shader"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:60
-msgid ""
-"A material may have both a surface and a volume shader, or only one of "
-"either. Using both may be useful for materials such as glass, water or "
-"ice, where you want some of the light to be absorbed as it passes through"
-" the surface, combined with e.g. a glass or glossy shader at the surface."
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:65
-msgid ""
-"When the surface shader does not reflect or absorb light, it enters into "
-"the volume. If no volume shader is specified, it will pass straight "
-"through to the other side of the mesh. If it is defined, a volume shader "
-"describes the light interaction as it passes through the volume of the "
-"mesh. Light may be scattered, absorbed, or emitted at any point in the "
-"volume."
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:73
-msgid "Mesh Topology"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:75
+#: ../../manual/render/cycles/materials/volume.rst:83
 msgid ""
 "Meshes used for volume render should be closed and :term:`manifold`. That"
 " means that there should be no holes in the mesh. Each edge must be "
@@ -139,7 +147,7 @@ msgid ""
 "faces where three or more faces are connected to an edge."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:80
+#: ../../manual/render/cycles/materials/volume.rst:89
 msgid ""
 "Normals must point outside for correct results. The normals are used to "
 "determine if a ray enters or exits a volume, and if they point in a wrong"
@@ -147,21 +155,21 @@ msgid ""
 "to decide what is the inside or outside of the volume."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:85
+#: ../../manual/render/cycles/materials/volume.rst:94
 msgid "These rules are the same as for rendering glass refraction correctly."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:89
-msgid "Volume World"
+#: ../../manual/render/cycles/materials/volume.rst:98
+msgid "World Volume"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:91
+#: ../../manual/render/cycles/materials/volume.rst:100
 msgid ""
-"A volume shader can also be applied to the entirely world, filling the "
-"entire space."
+"A volume shader can also be applied to the world, filling the entire "
+"space."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:93
+#: ../../manual/render/cycles/materials/volume.rst:102
 msgid ""
 "Currently, this is most useful for night time or other dark scenes, as "
 "the world surface shader or sun lamps will have no effect if a volume "
@@ -175,42 +183,29 @@ msgid ""
 "absorbed."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:105
-msgid "Smoke"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:107
-msgid ""
-"Creating a smoke material for cycles can be difficult however the image "
-"below shows a good setup on how to do this."
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:112
-msgid "Smoke and Fire Material."
+#: ../../manual/render/cycles/materials/volume.rst:114
+msgid "Multiple Scattering"
 msgstr ""
 
 #: ../../manual/render/cycles/materials/volume.rst:116
-msgid "Scattering Bounces"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:118
 msgid ""
 "Real world effects such as scattering in clouds or subsurface scattering "
 "require many scattering bounces. However, unbiased rendering of such "
-"effects is slow and noisy. In typical movie production scenes only 0 or 1"
-" bounces might be used to keep render times under control. The effect you"
-" get when rendering with zero volume bounces is what is known as \"single"
-" scattering\", the effect from more bounces is \"multiple scattering\"."
+"effects can be noisy, so by default the number of bounces is zero. The "
+"effect you get when rendering with zero volume bounces is what is known "
+"as \"single scattering\", the effect from more bounces is \"multiple "
+"scattering\"."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:124
+#: ../../manual/render/cycles/materials/volume.rst:122
 msgid ""
-"For rendering materials like skin or milk, the subsurface scattering "
-"shader is an approximation of such multiple scattering effects that is "
-"significantly more efficient but not as accurate."
+"For rendering materials like skin or milk that require multiple "
+"scattering, subsurface scattering is more efficient and easier to "
+"control. Particularly the random walk method can accurately render such "
+"materials."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:128
+#: ../../manual/render/cycles/materials/volume.rst:126
 msgid ""
 "For materials such as clouds or smoke that do not have a well defined "
 "surface, volume rendering is required. These look best with many "
@@ -218,28 +213,16 @@ msgid ""
 " bounces to keep render times acceptable."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:134
+#: ../../manual/render/cycles/materials/volume.rst:132
 msgid "Limitations"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:136
-msgid "Currently, the following are not supported:"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:138
-msgid "Correct ray visibility for volume meshes"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:140
+#: ../../manual/render/cycles/materials/volume.rst:134
 msgid "Not available on GPU:"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:142
-msgid "Equiangular/MIS Volume Sampling"
-msgstr ""
-
-#: ../../manual/render/cycles/materials/volume.rst:143
-msgid "Volume Multi Light sampling"
+#: ../../manual/render/cycles/materials/volume.rst:136
+msgid "Multiple importance sampling for efficient lights inside volumes."
 msgstr ""
 
 #~ msgid "Volume Shader: Absorption / Absorption + Scatter / Emission"
@@ -264,5 +247,151 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Equi Angular/MIS Volume Sampling"
+#~ msgstr ""
+
+#~ msgid "Volume"
+#~ msgstr ""
+
+#~ msgid "Volume Shaders"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Cycles supports three volume shader "
+#~ "nodes, that model particular effects as"
+#~ " light passes through the volume and"
+#~ " interacts with it:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Volume Absorption will absorb part of"
+#~ " the light as it passes through "
+#~ "the volume. This can be used to"
+#~ " shade for example black smoke or "
+#~ "colored glass objects, or mixed with "
+#~ "the volume scatter node. This node "
+#~ "is somewhat similar to the transparent"
+#~ " BSDF node, it blocks part of "
+#~ "the light and lets other light "
+#~ "pass straight through."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Volume Scatter lets light scatter in "
+#~ "other directions as it hits particles"
+#~ " in the volume. The anisotropy "
+#~ "defines in which direction the light "
+#~ "is more likely to scatter. A value"
+#~ " of 0 will let light scatter "
+#~ "evenly in all directions (somewhat "
+#~ "similar to the diffuse BSDF node), "
+#~ "negative values let light scatter mostly"
+#~ " backwards, and positive values let "
+#~ "light scatter mostly forward. This can"
+#~ " be used to shade white smoke "
+#~ "or clouds for example."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Emission will emit light from the "
+#~ "volume. This can be used to shade"
+#~ " fire for example."
+#~ msgstr ""
+
+#~ msgid "Volume Shader: Absorption/Absorption + Scatter/Emission."
+#~ msgstr ""
+
+#~ msgid "Volume Material"
+#~ msgstr ""
+
+#~ msgid "Interaction with the Surface Shader"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A material may have both a surface"
+#~ " and a volume shader, or only "
+#~ "one of either. Using both may be"
+#~ " useful for materials such as glass,"
+#~ " water or ice, where you want "
+#~ "some of the light to be absorbed"
+#~ " as it passes through the surface,"
+#~ " combined with e.g. a glass or "
+#~ "glossy shader at the surface."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the surface shader does not "
+#~ "reflect or absorb light, it enters "
+#~ "into the volume. If no volume "
+#~ "shader is specified, it will pass "
+#~ "straight through to the other side "
+#~ "of the mesh. If it is defined, "
+#~ "a volume shader describes the light "
+#~ "interaction as it passes through the "
+#~ "volume of the mesh. Light may be"
+#~ " scattered, absorbed, or emitted at "
+#~ "any point in the volume."
+#~ msgstr ""
+
+#~ msgid "Mesh Topology"
+#~ msgstr ""
+
+#~ msgid "Volume World"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A volume shader can also be "
+#~ "applied to the entirely world, filling"
+#~ " the entire space."
+#~ msgstr ""
+
+#~ msgid "Smoke"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Creating a smoke material for cycles "
+#~ "can be difficult however the image "
+#~ "below shows a good setup on how"
+#~ " to do this."
+#~ msgstr ""
+
+#~ msgid "Smoke and Fire Material."
+#~ msgstr ""
+
+#~ msgid "Scattering Bounces"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Real world effects such as scattering"
+#~ " in clouds or subsurface scattering "
+#~ "require many scattering bounces. However, "
+#~ "unbiased rendering of such effects is"
+#~ " slow and noisy. In typical movie "
+#~ "production scenes only 0 or 1 "
+#~ "bounces might be used to keep "
+#~ "render times under control. The effect"
+#~ " you get when rendering with zero "
+#~ "volume bounces is what is known as"
+#~ " \"single scattering\", the effect from "
+#~ "more bounces is \"multiple scattering\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For rendering materials like skin or "
+#~ "milk, the subsurface scattering shader "
+#~ "is an approximation of such multiple "
+#~ "scattering effects that is significantly "
+#~ "more efficient but not as accurate."
+#~ msgstr ""
+
+#~ msgid "Currently, the following are not supported:"
+#~ msgstr ""
+
+#~ msgid "Correct ray visibility for volume meshes"
+#~ msgstr ""
+
+#~ msgid "Equiangular/MIS Volume Sampling"
+#~ msgstr ""
+
+#~ msgid "Volume Multi Light sampling"
 #~ msgstr ""
 
