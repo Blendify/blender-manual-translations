@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-06 21:41+1100\n"
-"PO-Revision-Date: 2018-01-06 22:25+0800\n"
+"PO-Revision-Date: 2018-03-18 17:58+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:4
 msgid "Alpha Over, Under & Over Drop"
-msgstr ""
+msgstr "Alpha在上,Alpha在下&向下覆盖"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:9
 msgid "Alpha Over Effect."
-msgstr ""
+msgstr "Alpha在上效果。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:11
 msgid ""
@@ -35,6 +35,9 @@ msgid ""
 "transparent; they have an alpha value of 0. If you use a movie strip, "
 "that movie has an alpha value of 1 (completely opaque)."
 msgstr ""
+"使用alpha（透明度通道），该效果将基于主图像的透明区域的结果进行合成。如果"
+"使用场景片段，图像中没有任何实体的区域是透明的;它们的alpha值为0.如果使用"
+"电影片段，该电影的alpha值为1（完全不透明）。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:16
 msgid ""
@@ -46,14 +49,18 @@ msgid ""
 "transparent foreground image areas is ignored and does not change the "
 "color of the background."
 msgstr ""
+"因此，你可以使用 *Alpha在上*  /  *Alpha在下* 效果将CGI场景合成到电影上。"
+"结果就是你的模型就好像它是电影的一部分一样。 :menuselection:`Edit Strip "
+"--> Opacity` 控制前景在背景中的混合程度，在背景上的前景消失。透明图像前景"
+"区域的颜色被忽略，不会改变背景的颜色。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:22
 msgid "Select two strips :kbd:`Shift-RMB`:"
-msgstr ""
+msgstr "选择两个片段 :kbd:`Shift-RMB`:"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:28
 msgid "Alpha Over"
-msgstr ""
+msgstr "Alpha 在上"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:30
 msgid ""
@@ -64,10 +71,14 @@ msgid ""
 "a *Opacity* of 1.0 will completely override the background with the "
 "foreground (except in the transparent areas of this one, of course!)"
 msgstr ""
+"使用 *Alpha在上* 时，片段按所选顺序分层; 所选的第一个片段是背景，第二个片"
+"段则在选择的第一个片段之 *上*。 *不透明度* 控制 *前景* 的透明度，即 *不透"
+"明度* 为0.0; 只会显示背景，而1.0的 *不透明度*  将前景将完全覆盖背景，（当"
+"然除了这个是透明区域情况！）"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:40
 msgid "Alpha Under"
-msgstr ""
+msgstr "Alpha 在下"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:42
 msgid ""
@@ -78,10 +89,14 @@ msgid ""
 "completely transparent), and a *Opacity* of 1.0 will give the same "
 "results as with *Alpha Over*."
 msgstr ""
+"使用 *Alpha在下* 时，这是相反的：所选的第一个片段是前景，第二个片段是背"
+"景。此外，*不透明度* 控制 *背景* 的透明度，即0.0 的 *不透明度* 将仅显示前"
+"景（背景是完全透明的），1.0的 *不透明度* 将给出与 *Alpha在上* 相同的结"
+"果。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:52
 msgid "Alpha Over Drop"
-msgstr ""
+msgstr "Alpha 向下覆盖"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:54
 msgid ""
@@ -89,10 +104,12 @@ msgid ""
 "first strip selected will be the foreground, but as with *Alpha Over*, "
 "the *Opacity* controls the transparency of this foreground."
 msgstr ""
+"*Alpha向下覆盖* 是介于另外两个之间： 与 *Alpha在下* 一样，所选的第一个片"
+"段将成为前景，但与 *Alpha在上* 一样，*不透明度* 控制此前景的透明度。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:62
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:64
 msgid ""
@@ -102,6 +119,10 @@ msgid ""
 "composes the toucan on top of the composited red arrow. The last effect "
 "added is tied to Channel 0 which will be rendered."
 msgstr ""
+"该示例显示Alpha在上效果的分层。最底部的通道是红色的，并且在其上方有一个箭"
+"头。这两个是Alpha在上到通道3. 我最喜欢的toucan是Channel 4，而Channel 5 "
+"alpha则是在合成红色箭头之上合成toucan。添加的最后一个效果与将要渲染的通道"
+"0关联。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:74
 msgid ""
@@ -114,6 +135,11 @@ msgid ""
 "transparent areas of your foreground object when using Alpha Over, "
 "enable *Premultiply*."
 msgstr ""
+"通过单击前景片段属性面板中的Premultiply Alpha按钮，两个片段的Alpha值不会"
+"相乘或相加。在具有平坦不透明（Alpha = 1.0或更大）通道的片段上添加具有可变"
+"Alpha通道的前景片段（某些不透明区域，某些透明区域，其间有些透明区域）时使"
+"用此效果。如果在使用Alpha 向下覆盖时发现前景物体周围有光晕或前景物体的奇"
+"怪透明区域，请启用 *Premultiply*。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:82
 msgid ""
@@ -122,6 +148,9 @@ msgid ""
 "a blend like the Cross does. Of course, all of the Alpha effects respect "
 "the alpha (transparency) channel, whereas Cross does not."
 msgstr ""
+"Alpha 向下覆盖效果与过渡效果十分相似，但将设置为顶部或第二个图像，给予更"
+"多的渐变叠加效果，而不是像过渡那样的混合效果。当然，所有的Alpha效果都遵从"
+"Alpha（透明度）通道，而过渡则不是。"
 
 #: ../../manual/editors/vse/sequencer/strips/effects/alpha_over_under_overdrop.rst:87
 msgid ""
@@ -129,3 +158,5 @@ msgid ""
 "an F-Curve. Creating a Sine wave could have the effect of the foreground "
 "fading in and out."
 msgstr ""
+"应用Alpha的程度以及颜色混合可以通过F曲线进行控制。创建正弦波可能会导致前"
+"景淡入淡出效果。"
