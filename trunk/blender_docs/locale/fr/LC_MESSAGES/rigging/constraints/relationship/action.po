@@ -1,12 +1,12 @@
 #
-# phan <phahoatho@gmail.com>, 2017.
+# phan <phahoatho@gmail.com>, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-13 14:59+1000\n"
-"PO-Revision-Date: 2017-09-18 19:43+0200\n"
+"PO-Revision-Date: 2018-04-03 16:38+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -51,17 +51,16 @@ msgid ""
 "scale) is affected by the action, if the action contains keyframes for other "
 "properties they are ignored, as constraints do not influence those."
 msgstr ""
-"Notez que même si la constrainte accepte le type d'action *Mesh*, seuls les "
-"types *Object*, *Pose* et *Constraint* sont réellement fonctionnellement, "
-"étant donné que les contraintes peuvent uniquement affecter les propriétés "
-"de transformation d'objets et d'os, et pas les formes des maillages. Notez "
+"Notez que même si la contrainte accepte le type d'action *Mesh*, seuls les "
+"types *Object*, *Pose* et *Constraint* sont réellement fonctionnels, étant "
+"donné que les contraintes peuvent uniquement affecter les propriétés de "
+"transformation d'objets et d'os, et pas les formes des maillages. Notez "
 "aussi que seule la transformation d'objet (position, rotation, échelle) est "
-"affectée par l'action, si l'action contient des keyframes pour d'autres "
+"affectée par l'action, si l'action contient des trames clés pour d'autres "
 "propriétés, elles sont ignorées, étant donné que les contraintes ne les "
 "influencent pas.  "
 
 #: ../../manual/rigging/constraints/relationship/action.rst:25
-#, fuzzy
 msgid ""
 "As an example, let us assume you have defined an *Object* action (it can be "
 "assigned to any object, or even no object at all), and have mapped it on "
@@ -73,9 +72,9 @@ msgid ""
 "the linked action, etc."
 msgstr ""
 "Comme exemple, supposons que vous avez défini une action *Object* (elle peut "
-"être assignée à n'importe quel objet, ou même à aucun objet), et l'avez sur "
-"votre propriétaire via une contrainte *Action*, de sorte que le déplacement "
-"de la cible dans l'intervalle (0.0 à 2.0) le long de l'axe X fait "
+"être assignée à n'importe quel objet, ou même à aucun objet), et l'avez "
+"attribuée à votre propriétaire via une contrainte *Action*, de sorte que le "
+"déplacement de la cible dans l'intervalle (0.0 à 2.0) sur l'axe X fait "
 "correspondre le contenu de l'action sur le propriétaire dans l'intervalle de "
 "trames (0 à 100). Ceci signifiera que quand la propriété *X* de la cible est "
 "0.0, le propriétaire sera comme dans la trame 0 de l'action liée ; avec la "
@@ -176,13 +175,16 @@ msgid "Target Range Min/Max"
 msgstr ""
 
 #: ../../manual/rigging/constraints/relationship/action.rst:67
+#, fuzzy
 msgid "The lower and upper bounds of the driving transform property value."
 msgstr ""
+"Les limites inférieure et supérieure de la valeur de propriété de "
+"transformation."
 
 #: ../../manual/rigging/constraints/relationship/action.rst:71
 msgid "Unfortunately, here again we find the constraints limitations:"
 msgstr ""
-"Malheureusement, ici de nouveau nous trouvons des limites à cette "
+"Malheureusement, ici de nouveau nous retrouvons les limitations de la "
 "contrainte :"
 
 #: ../../manual/rigging/constraints/relationship/action.rst:73
@@ -190,12 +192,16 @@ msgid ""
 "When using a rotation property as \"driver\", these values are \"mapped back"
 "\" to the (-180.0 to 180.0) range."
 msgstr ""
+"Quand une propriété de rotation est utilisée comme \"contrôleur\", ces "
+"valeurs sont \"ramenées\" à l'intervalle (-180.0 à 180.0)."
 
 #: ../../manual/rigging/constraints/relationship/action.rst:75
 msgid ""
 "When using a scale property as \"driver\", these values are limited to null "
 "or positive values."
 msgstr ""
+"Quand une propriété dimensionnement est utilisée comme \"contrôleur\", ces "
+"valeurs sont limitées à *null* ou à des valeurs positives. "
 
 #: ../../manual/rigging/constraints/relationship/action.rst:85
 msgid "Action Range Start/End"
@@ -203,7 +209,7 @@ msgstr ""
 
 #: ../../manual/rigging/constraints/relationship/action.rst:78
 msgid "The starting and ending frames of the action to be mapped."
-msgstr "Les frames de début et de fin de l'action à faire correspondre."
+msgstr "Les trames de début et de fin de l'action à faire correspondre."
 
 #: ../../manual/rigging/constraints/relationship/action.rst:82
 msgid "These values must be strictly positive."
@@ -229,10 +235,10 @@ msgid ""
 "(exactly as when the *Offset* button of the :doc:`Copy Location constraint </"
 "rigging/constraints/transform/copy_location>` is enabled...)."
 msgstr ""
-"Quand l'action liée affecte certaines propriétés d'emplacement, "
-"l'emplacement actuel du propriétaire est ajouté au résultat de l'évaluation "
-"de cette contrainte (exactement comme dans le cas où le bouton *Offset* de "
-"la contrainte :doc:`Copy Location </rigging/constraints/transform/"
+"Quand l'action liée affecte certaines propriétés de position, la position "
+"actuelle du propriétaire est ajoutée au résultat de l'évaluation de cette "
+"contrainte (exactement comme dans le cas où le bouton *Offset* de la "
+"contrainte :doc:`Copy Location </rigging/constraints/transform/"
 "copy_location>` est activé...)."
 
 #: ../../manual/rigging/constraints/relationship/action.rst:94
@@ -240,9 +246,9 @@ msgid ""
 "When the linked action affects some scale properties, the owner's existing "
 "scale is multiplied with the result of evaluating this constraint."
 msgstr ""
-"Quand l'action liée affecte certaines propriétés d'échelle, l'échelle "
-"actuelle du propriétaire est multipliée par le résultat de l'évaluation de "
-"cette contrainte ."
+"Quand l'action liée affecte certaines propriétés de dimensionnement, "
+"l'échelle actuelle du propriétaire est multipliée par le résultat de "
+"l'évaluation de cette contrainte."
 
 #: ../../manual/rigging/constraints/relationship/action.rst:96
 msgid ""
@@ -260,8 +266,13 @@ msgid ""
 "action (i.e. it will be \"played\" reversed...), unless you have both sets "
 "reversed, obviously!"
 msgstr ""
+"Contrairement à d'habitude, vous pouvez avoir une valeur *Start* supérieure "
+"à celle de *End*, ou celle de *Min* supérieure à celle de *Max* : ceci va "
+"inverser l'affectation de l'action (càd. elle sera \"jouée\" dans le sens "
+"contraire...), à moins que vous ayez les deux valeurs inversées, évidemment !"
 
 #: ../../manual/rigging/constraints/relationship/action.rst:101
+#, fuzzy
 msgid ""
 "When using a *Constraint* action, it is the constraint *channel's names* "
 "that are used to determine to which constraints of the owner apply the "
@@ -269,6 +280,12 @@ msgid ""
 "keyed *Influence* and/or *Head/Tail* values (the only ones you can key) will "
 "be mapped to the ones of the owner's constraint named \"trackto_empt1\"."
 msgstr ""
+"Quand une action *Constraint* est utilisée, c'est les *noms du canal* e la "
+"contrainte qui sont utilisés pour déterminer à quelles contraintes du "
+"propriétaire l'action va être appliquée. Ex. si vous avez un canal de "
+"contrainte nommé \"trackto_empt1\", ses valeurs *Influence* et/ou *Head/"
+"Tail* (les seules que vous pouvez) seront de la contrainte du propriétaire "
+"nommée \"trackto_empt1\"."
 
 #: ../../manual/rigging/constraints/relationship/action.rst:106
 #, fuzzy
@@ -297,6 +314,6 @@ msgid ""
 "block... just remember that in this situation, there is one pose per frame!"
 msgstr ""
 "Notez aussi que vous pouvez utiliser la :doc:`pose library feature </rigging/"
-"armatures/properties/pose_library>` pour créer/éditer un data-block d'action "
-"*Pose*... Rappelez-vous simplement que dans cette situation, il y a une pose "
-"par trame !"
+"armatures/properties/pose_library>` pour créer/éditer un bloc de données "
+"d'action *Pose*... Rappelez-vous simplement que dans cette situation, il y a "
+"une pose par trame !"
