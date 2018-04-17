@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-01 09:30+1100\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2017-10-16 19:16+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/render/workflows/animations.rst:4
 msgid "Rendering Animations"
@@ -101,15 +101,15 @@ msgstr ""
 #: ../../manual/render/workflows/animations.rst:54
 msgid ""
 "The Frame Sequence is a much more stable approach, where you set your "
-"output format to a still format (such as JPG, PNG or MultiLayer), and "
-"click *Animation* to render your scene out to a set of images, where each"
-" image is a frame in the sequence."
+"output format to a still format (such as JPG, PNG or a multi-layer "
+"format), and click *Animation* to render your scene out to a set of "
+"images, where each image is a frame in the sequence."
 msgstr ""
 
 #: ../../manual/render/workflows/animations.rst:59
 msgid ""
 "Blender creates a file for each frame of the animation. You can then use "
-"Blender's compositor to perform any frame manipulation (post processing)."
+"Blender's compositor to perform any frame manipulation (post-processing)."
 " You can then use Blender's VSE to load that final image sequence, add an"
 " audio track to the animation, and render out to an MPEG format to "
 "complete your movie. The Frame Sequence approach is a little more "
@@ -214,11 +214,20 @@ msgstr ""
 
 #: ../../manual/render/workflows/animations.rst:107
 msgid ""
-"In Blender, now go into the :doc:`Video sequence editor "
+"In Blender, now go into the :doc:`Video Sequence editor "
 "</editors/vse/index>`."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:108
+#: ../../manual/render/workflows/animations.rst:111
+msgid ""
+"The :doc:`VSE </editors/vse/index>` does not support multi-layer EXR "
+"files. To render to a video format you will have to skip the next three "
+"steps and instead use an :doc:`Image Input node "
+"</compositing/types/input/image>` in the :doc:`compositor "
+"</compositing/types/input/image>`"
+msgstr ""
+
+#: ../../manual/render/workflows/animations.rst:116
 msgid ""
 "Choose *Add Image* from the add menu. Select all the frames from your "
 "output folder that you want to include in your animation (press :kbd:`A` "
@@ -226,38 +235,32 @@ msgid ""
 "editor."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:110
+#: ../../manual/render/workflows/animations.rst:118
 msgid ""
 "Now you can edit the strip and add effects or simply leave it like it is."
 " You can add other strips, like an audio strip."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:112
+#: ../../manual/render/workflows/animations.rst:120
 msgid ""
 "Scrub through the animation, checking that you have included all the "
 "frames."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:113
-msgid ""
-"In the Scene Render buttons, in the Post Processing panel, activate "
-"*Sequencer*."
-msgstr ""
-
-#: ../../manual/render/workflows/animations.rst:114
+#: ../../manual/render/workflows/animations.rst:121
 msgid ""
 "In the Output panel, choose the container and codec you want (e.g. ``MPEG"
 " H.264``) and configure them. The video codecs are described on the "
 "previous page: :doc:`Output Options </render/output/output>`."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:116
+#: ../../manual/render/workflows/animations.rst:123
 msgid ""
 "Click the *Animation* render button and Blender will render out the "
 "Sequence editor output into your movie."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:118
+#: ../../manual/render/workflows/animations.rst:125
 msgid ""
 "Why go through all this hassle? Well, first of all, if you render out "
 "single frames, you can stop the render at any time by pressing :kbd:`Esc`"
@@ -267,7 +270,7 @@ msgid ""
 "you left off."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:124
+#: ../../manual/render/workflows/animations.rst:131
 msgid ""
 "You can edit the frames afterwards and post-process them. You can add "
 "neat effects in the Sequence editor. You can render the same sequence "
@@ -276,51 +279,51 @@ msgid ""
 "whatsoever."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:132
+#: ../../manual/render/workflows/animations.rst:139
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:145
+#: ../../manual/render/workflows/animations.rst:152
 msgid ""
 "Your computer accidentally turns off in the middle of rendering your "
 "movie!"
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:135
+#: ../../manual/render/workflows/animations.rst:142
 msgid ""
 "Unless your animation renders in a few minutes, it is best to render the "
 "animation as separate image files. Instead of rendering directly to a "
-"compressed movie file, use a loss-less format (e.g. ``PNG``)."
+"compressed movie file, use a lossless format (e.g. ``PNG``)."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:139
+#: ../../manual/render/workflows/animations.rst:146
 msgid ""
 "This allows you an easy recovery if there is a problem and you have to "
 "re-start the rendering, since the frames you have already rendered will "
 "still be in the output directory."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:142
+#: ../../manual/render/workflows/animations.rst:149
 msgid "Just disable the *Overwrite* option to start rendering where you left off."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:144
+#: ../../manual/render/workflows/animations.rst:151
 msgid ""
 "You can then make a movie out of the separate frames with Blender's "
 "Sequence editor or use 3rd party encoding software."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:154
+#: ../../<generated>:1
 msgid "Animation Preview"
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:148
+#: ../../manual/render/workflows/animations.rst:155
 msgid ""
 "It can be useful to render a subset of the animated sequence, since only "
 "part of an animation may have an error."
 msgstr ""
 
-#: ../../manual/render/workflows/animations.rst:151
+#: ../../manual/render/workflows/animations.rst:158
 msgid ""
 "Using an image format for output, you can use the *Frame Step* option to "
 "render every *N'th* frame. Then disable *Overwrite* and re-render with "
@@ -404,5 +407,52 @@ msgstr ""
 #~ " video codecs are described on the"
 #~ " previous page: :doc:`Output Options "
 #~ "</render/output/output>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Frame Sequence is a much more"
+#~ " stable approach, where you set your"
+#~ " output format to a still format "
+#~ "(such as JPG, PNG or MultiLayer), "
+#~ "and click *Animation* to render your "
+#~ "scene out to a set of images, "
+#~ "where each image is a frame in "
+#~ "the sequence."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Blender creates a file for each "
+#~ "frame of the animation. You can "
+#~ "then use Blender's compositor to perform"
+#~ " any frame manipulation (post processing)."
+#~ " You can then use Blender's VSE "
+#~ "to load that final image sequence, "
+#~ "add an audio track to the "
+#~ "animation, and render out to an "
+#~ "MPEG format to complete your movie. "
+#~ "The Frame Sequence approach is a "
+#~ "little more complicated and takes more"
+#~ " drive space, but gives you more "
+#~ "flexibility."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In Blender, now go into the "
+#~ ":doc:`Video sequence editor </editors/vse/index>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the Scene Render buttons, in "
+#~ "the Post Processing panel, activate "
+#~ "*Sequencer*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unless your animation renders in a "
+#~ "few minutes, it is best to render"
+#~ " the animation as separate image "
+#~ "files. Instead of rendering directly to"
+#~ " a compressed movie file, use a "
+#~ "loss-less format (e.g. ``PNG``)."
 #~ msgstr ""
 

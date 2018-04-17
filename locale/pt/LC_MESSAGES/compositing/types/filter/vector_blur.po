@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 13:02+0200\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2017-12-16 05:47-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -28,10 +28,11 @@ msgid "Vector Blur Node."
 msgstr "O painel do nó tipo \"Desfocagem vetorial\"."
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:12
+#, fuzzy
 msgid ""
-"The Vector Blur node applies a **non** physically based method of "
-"simulating :term:`Motion blur`. It uses the vector speed render pass to "
-"blur the image pixels in 2D."
+"The Vector Blur node is a fast method for simulating :term:`Motion blur` "
+"in compositing. It uses the vector speed render pass to blur the image "
+"pixels in 2D."
 msgstr ""
 "O nó do tipo *Desfocagem vetorial* aplica um método **não** fisicamente "
 "embasado para a simulação de :term:`Desfoque de movimentos`. Ele usa o "
@@ -43,21 +44,21 @@ msgid "Inputs"
 msgstr "Entradas"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:19
-#: ../../manual/compositing/types/filter/vector_blur.rst:54
+#: ../../manual/compositing/types/filter/vector_blur.rst:55
 msgid "Image"
 msgstr "Imagem"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:20
-msgid "Standard image input."
-msgstr "A imagem de entrada padrão."
+msgid "Image input, to be linked to the \"Combined\" render pass."
+msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:21
 msgid "Z"
 msgstr "Z"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:22
-msgid "Standard Z depth."
-msgstr "A profundidade Z padrão."
+msgid "Z depth, to be linked to the \"Depth\" render pass."
+msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:27
 #: ../../manual/compositing/types/filter/vector_blur.rst:48
@@ -142,34 +143,44 @@ msgid "Outputs"
 msgstr "Saídas"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:54
-msgid "Standard image output."
+#, fuzzy
+msgid "Motion blurred image output."
 msgstr "A saída de imagem padrão."
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:58
+#, fuzzy
+msgid "Usage"
+msgstr "Imagem"
+
+#: ../../manual/compositing/types/filter/vector_blur.rst:60
 msgid ""
-"You can make vector blur results in a little smoother by passing the "
-"Speed pass through a blur node (but note that this can make strange "
-"results, so it is only really appropriate for still images with lots of "
-"motion blur)."
+"Even with a correct compositing setup with Image, Z and Speed nodes all "
+"linked to the appropriate passes, there may still be artifacts. The 2D "
+"render passes does not contain 3D information, and so the information "
+"what is behind a moving object or outside the camera view is lost."
 msgstr ""
-"Você pode criar os resultados da desfocagem vetorial um pouco mais "
-"suavizados pela passagem do passo de *Velocidade* através de um nó de "
-"desfocagem (mas note que isto pode criar resultados estranhos, portanto "
-"somente é apropriado para imagens estáticas com grandes quantidades de "
-"desfoque de movimento)."
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:64
-#, fuzzy
-msgid "Does not work when reading from a multilayer OpenEXR sequence set."
+msgid ""
+"Better results can be achieved by rendering the scene into multiple "
+"render layers, applying vector blur to each render layer, and then "
+"compositing the results together. Typically an animated character would "
+"be rendered in a separate render layer than the background set. "
+"Especially if hair or transparency is involved this is important."
 msgstr ""
-"Não funciona quando está definido para a leitura de um conjunto de "
-"sequências de imagens de múltiplas camadas no formato OpenEXR."
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:68
+#: ../../manual/compositing/types/filter/vector_blur.rst:69
+msgid ""
+"For other artifacts it can help to slightly blur the Speed pass or to set"
+" a Maximum Speed limit. This helps to smoothen out the motion, but too "
+"much blurring leads to its own problems."
+msgstr ""
+
+#: ../../manual/compositing/types/filter/vector_blur.rst:74
 msgid "Example"
 msgstr "Exemplo"
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:70
+#: ../../manual/compositing/types/filter/vector_blur.rst:76
 #, fuzzy
 msgid ""
 "The *speed vector* in this example was created by animating the patterned"
@@ -179,13 +190,45 @@ msgstr ""
 "padronizada horizontalmente e usando um quadro no ponto mediano da "
 "sequência."
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:78
+#: ../../manual/compositing/types/filter/vector_blur.rst:84
 msgid "Render result, no post-processing."
 msgstr "O resultado da renderização, sem pós processamento."
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:83
+#: ../../manual/compositing/types/filter/vector_blur.rst:89
 msgid "Composite, with samples set to 32 and a blur of 1.0."
 msgstr ""
 "A composição, com amostras definidas para 32 e um desfoque definido para "
 "1.0."
+
+#~ msgid "Standard image input."
+#~ msgstr "A imagem de entrada padrão."
+
+#~ msgid "Standard Z depth."
+#~ msgstr "A profundidade Z padrão."
+
+#~ msgid ""
+#~ "You can make vector blur results "
+#~ "in a little smoother by passing "
+#~ "the Speed pass through a blur node"
+#~ " (but note that this can make "
+#~ "strange results, so it is only "
+#~ "really appropriate for still images with"
+#~ " lots of motion blur)."
+#~ msgstr ""
+#~ "Você pode criar os resultados da "
+#~ "desfocagem vetorial um pouco mais "
+#~ "suavizados pela passagem do passo de "
+#~ "*Velocidade* através de um nó de "
+#~ "desfocagem (mas note que isto pode "
+#~ "criar resultados estranhos, portanto somente"
+#~ " é apropriado para imagens estáticas "
+#~ "com grandes quantidades de desfoque de"
+#~ " movimento)."
+
+#~ msgid "Does not work when reading from a multilayer OpenEXR sequence set."
+#~ msgstr ""
+#~ "Não funciona quando está definido para"
+#~ " a leitura de um conjunto de "
+#~ "sequências de imagens de múltiplas "
+#~ "camadas no formato OpenEXR."
 

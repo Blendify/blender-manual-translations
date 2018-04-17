@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-24 22:17+1100\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2017-10-06 21:09+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -26,9 +26,10 @@ msgid "Data-Blocks"
 msgstr "Блоки Даних -- Data-Blocks"
 
 #: ../../manual/data_system/data_blocks.rst:8
+#, fuzzy
 msgid ""
 "The base unit for any Blender project is the data-block. Examples of "
-"data-blocks include: meshes, objects, materials, textures, node-trees, "
+"data-blocks include: meshes, objects, materials, textures, node trees, "
 "scenes, texts, brushes, and even screens."
 msgstr ""
 "Базова одиниця будь-якого проекту Blender'а -- блок даних -- data-block. "
@@ -98,15 +99,15 @@ msgstr ""
 "При роботі з більш складними проектами управління блоками даних стає "
 "важливим, особливо при взаємо-пов'язуванні blend-файлів."
 
-#: ../../manual/data_system/data_blocks.rst:31
+#: ../../manual/data_system/data_blocks.rst:30
 msgid "Data-blocks view."
 msgstr "Огляд блоків даних."
 
-#: ../../manual/data_system/data_blocks.rst:35
+#: ../../manual/data_system/data_blocks.rst:34
 msgid "Users (Garbage Collection)"
 msgstr "Користувачі (Колекція Нутрощів) -- Users (Garbage Collection)"
 
-#: ../../manual/data_system/data_blocks.rst:37
+#: ../../manual/data_system/data_blocks.rst:36
 #, fuzzy
 msgid ""
 "It is good to be aware of how Blender handles data-blocks lifetime, when "
@@ -115,13 +116,13 @@ msgstr ""
 "Добре бути обізнаним, як Blender обробляє у реальному часі блоки даних, "
 "коли вони вивільняються та чому."
 
-#: ../../manual/data_system/data_blocks.rst:40
+#: ../../manual/data_system/data_blocks.rst:39
 msgid "Blender follows the general rule where unused data is eventually removed."
 msgstr ""
 "Blender слідує загальному правилу, де невикористовувані дані зрештою "
 "вилучаються."
 
-#: ../../manual/data_system/data_blocks.rst:42
+#: ../../manual/data_system/data_blocks.rst:41
 msgid ""
 "Since it is common to add and remove a lot of data while working, this "
 "has the advantage of not having to manually manage every single data-"
@@ -131,13 +132,13 @@ msgstr ""
 "то це надає перевагу у тому, що не потрібно вручну управляти кожним "
 "невикористаним одиничним блоком даних."
 
-#: ../../manual/data_system/data_blocks.rst:45
+#: ../../manual/data_system/data_blocks.rst:44
 msgid "This works by skipping zero user data-blocks when writing blend-files."
 msgstr ""
 "Це працює через пропускання блоків даних з нульовою кількістю "
 "користувачів при записуванні blend-файлів."
 
-#: ../../manual/data_system/data_blocks.rst:47
+#: ../../manual/data_system/data_blocks.rst:46
 #, fuzzy
 msgid ""
 "In some cases, you want to save a data-block even when it is unused "
@@ -147,11 +148,11 @@ msgstr ""
 "невикористовуваний (типово, для повторного використання бібліотек "
 "активів). дивіться детальніше тут -- `Fake User`_."
 
-#: ../../manual/data_system/data_blocks.rst:54
+#: ../../manual/data_system/data_blocks.rst:53
 msgid "Fake User"
 msgstr "Псевдо Користувач -- Fake User"
 
-#: ../../manual/data_system/data_blocks.rst:56
+#: ../../manual/data_system/data_blocks.rst:55
 msgid ""
 "Since zero user data-blocks are not saved, there are times when you want "
 "to force the data to be kept irrespective of its users."
@@ -160,7 +161,7 @@ msgstr ""
 " моменти, коли вам бажано змусити ці дані зберігатися, незалежно від "
 "наявності для них користувачів."
 
-#: ../../manual/data_system/data_blocks.rst:59
+#: ../../manual/data_system/data_blocks.rst:58
 msgid ""
 "If you are building a blend-file to serve as a library of things that you"
 " intend to link to and from other files, you will need to make sure that "
@@ -171,7 +172,7 @@ msgstr ""
 " переконатися, що вони випадково не будуть видалені з такого файлу "
 "бібліотеки."
 
-#: ../../manual/data_system/data_blocks.rst:62
+#: ../../manual/data_system/data_blocks.rst:61
 #, fuzzy
 msgid ""
 "Do this by giving the data-blocks a *Fake User*, by pressing the *F* "
@@ -186,28 +187,28 @@ msgstr ""
 "звідси, такий блок даних не буде видалено при збереженні (оскільки "
 "Blender не відстежує, скільки інших файлів пов'язані з цим блоком даних)."
 
-#: ../../manual/data_system/data_blocks.rst:68
+#: ../../manual/data_system/data_blocks.rst:67
 msgid "Users (Sharing)"
 msgstr "Користувачі (Суміщення) -- Users (Sharing)"
 
-#: ../../manual/data_system/data_blocks.rst:70
+#: ../../manual/data_system/data_blocks.rst:69
 #, fuzzy
 msgid "Many data-blocks can be shared among other data-blocks."
 msgstr "Багато блоків даних можуть суміщатися з іншими блоками даних,"
 
-#: ../../manual/data_system/data_blocks.rst:72
+#: ../../manual/data_system/data_blocks.rst:71
 msgid "Examples where sharing data is common:"
 msgstr "Приклади, де сумісні дані є поширеними:"
 
-#: ../../manual/data_system/data_blocks.rst:74
+#: ../../manual/data_system/data_blocks.rst:73
 msgid "Sharing textures among materials."
 msgstr "Суміщення текстур матеріалами."
 
-#: ../../manual/data_system/data_blocks.rst:75
+#: ../../manual/data_system/data_blocks.rst:74
 msgid "Sharing meshes between objects (instances)."
 msgstr "Суміщення сітей між об'єктами (примірниками)."
 
-#: ../../manual/data_system/data_blocks.rst:76
+#: ../../manual/data_system/data_blocks.rst:75
 msgid ""
 "Sharing animated actions between objects, for example to make all the "
 "lights dim together."
@@ -215,37 +216,59 @@ msgstr ""
 "Суміщення анімованих дій між об'єктами, наприклад, для зроблення "
 "спільного згасання усіх освітлювачів."
 
-#: ../../manual/data_system/data_blocks.rst:79
+#: ../../manual/data_system/data_blocks.rst:78
 msgid "You can also share data-blocks between files, see:"
 msgstr ""
 "Ви можете також суміщувати блоки даних між файлами, детальніше дивіться "
 "тут:"
 
-#: ../../manual/data_system/data_blocks.rst:81
+#: ../../manual/data_system/data_blocks.rst:80
 msgid ":doc:`linked libraries </data_system/linked_libraries>`."
 msgstr ":doc:`linked libraries </data_system/linked_libraries>`."
 
-#: ../../manual/data_system/data_blocks.rst:88
+#: ../../manual/data_system/data_blocks.rst:87
 msgid "Make Single User"
 msgstr "Зробити Однокористувацьким -- Make Single User"
 
-#: ../../manual/data_system/data_blocks.rst:90
+#: ../../manual/data_system/data_blocks.rst:89
 msgid "Reference"
 msgstr "Орієнтир -- Reference"
 
 #: ../../manual/data_system/data_blocks.rst
-msgid "Mode:     Object Mode"
+msgid "Editor"
+msgstr ""
+
+#: ../../manual/data_system/data_blocks.rst:92
+msgid "3D View"
+msgstr ""
+
+#: ../../manual/data_system/data_blocks.rst
+msgid "Mode"
+msgstr ""
+
+#: ../../manual/data_system/data_blocks.rst:93
+#, fuzzy
+msgid "Object Mode"
 msgstr "Режим:     «Режим Об'єкта» -- Object Mode"
 
 #: ../../manual/data_system/data_blocks.rst
-msgid "Menu:     :menuselection:`Object --> Make Single User`"
+msgid "Menu"
+msgstr ""
+
+#: ../../manual/data_system/data_blocks.rst:94
+#, fuzzy
+msgid ":menuselection:`Object --> Make Single User`"
 msgstr ""
 "Меню:     «Об'єкт > Зробити Однокористувацьким» -- :menuselection:`Object"
 " --> Make Single User`"
 
 #: ../../manual/data_system/data_blocks.rst
-msgid "Hotkey:   :kbd:`U`"
-msgstr "Скорочення:   :kbd:`U`"
+msgid "Hotkey"
+msgstr ""
+
+#: ../../manual/data_system/data_blocks.rst:95
+msgid ":kbd:`U`"
+msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:97
 msgid ""
@@ -257,7 +280,7 @@ msgstr ""
 "об'єкт буде мати свій унікальний блок даних."
 
 #: ../../manual/data_system/data_blocks.rst:102
-#: ../../manual/data_system/data_blocks.rst:178
+#: ../../manual/data_system/data_blocks.rst:177
 msgid "Type"
 msgstr "Тип -- Type"
 
@@ -332,9 +355,10 @@ msgstr ""
 "огляди зображень рахуються як користувачі."
 
 #: ../../manual/data_system/data_blocks.rst:126
+#, fuzzy
 msgid ""
 "For data-blocks that can be unlinked hold :kbd:`Shift`, while pressing on"
-" the *X* button. This force clears the user-count, so the data-block will"
+" the *X* button. This force clears the user count, so the data-block will"
 " be removed on reloading."
 msgstr ""
 "Для блоків даних, що можуть бути відв'язані, утримуйте натисненою "
@@ -346,33 +370,33 @@ msgstr ""
 msgid "Data-Block Types"
 msgstr "Типи блоків даних"
 
-#: ../../manual/data_system/data_blocks.rst:148
+#: ../../manual/data_system/data_blocks.rst:147
 msgid "Data-blocks types with their icon."
 msgstr "Типи блоків даних з їх іконками."
 
-#: ../../manual/data_system/data_blocks.rst:150
+#: ../../manual/data_system/data_blocks.rst:149
 msgid "For reference, here is a table of data-blocks types stored in blend-files."
 msgstr ""
 "Для орієнтира тут є таблиця типів блоків даних, що зберігаються у "
 "blend-файлах."
 
 #: ../../manual/data_system/data_blocks.rst
-#: ../../manual/data_system/data_blocks.rst:179
+#: ../../manual/data_system/data_blocks.rst:178
 msgid "Link"
 msgstr "Пов'язання -- Link"
 
-#: ../../manual/data_system/data_blocks.rst:153
+#: ../../manual/data_system/data_blocks.rst:152
 msgid "Library Linking, supports being linked into other blend-files."
 msgstr ""
 "Пов'язання з Бібліотеки, підтримує пов'язування з даними в інших "
 "blend-файлах."
 
 #: ../../manual/data_system/data_blocks.rst
-#: ../../manual/data_system/data_blocks.rst:180
+#: ../../manual/data_system/data_blocks.rst:179
 msgid "Pack"
 msgstr "Упакування -- Pack"
 
-#: ../../manual/data_system/data_blocks.rst:155
+#: ../../manual/data_system/data_blocks.rst:154
 #, fuzzy
 msgid ""
 "File Packing, supports file contents being packed into the blend-file "
@@ -381,72 +405,72 @@ msgstr ""
 "Упакування Файлу, підтримує упакування вмісту зовнішнього файлу у даний "
 "blend-файл."
 
-#: ../../manual/data_system/data_blocks.rst:181
+#: ../../manual/data_system/data_blocks.rst:180
 msgid "Description"
 msgstr "Опис -- Description"
 
-#: ../../manual/data_system/data_blocks.rst:182
+#: ../../manual/data_system/data_blocks.rst:181
 msgid "Action"
 msgstr "Дія -- Action"
+
+#: ../../manual/data_system/data_blocks.rst:182
+#: ../../manual/data_system/data_blocks.rst:188
+#: ../../manual/data_system/data_blocks.rst:193
+#: ../../manual/data_system/data_blocks.rst:197
+#: ../../manual/data_system/data_blocks.rst:201
+#: ../../manual/data_system/data_blocks.rst:205
+#: ../../manual/data_system/data_blocks.rst:206
+#: ../../manual/data_system/data_blocks.rst:210
+#: ../../manual/data_system/data_blocks.rst:216
+#: ../../manual/data_system/data_blocks.rst:221
+#: ../../manual/data_system/data_blocks.rst:222
+#: ../../manual/data_system/data_blocks.rst:226
+#: ../../manual/data_system/data_blocks.rst:236
+#: ../../manual/data_system/data_blocks.rst:240
+#: ../../manual/data_system/data_blocks.rst:244
+#: ../../manual/data_system/data_blocks.rst:249
+#: ../../manual/data_system/data_blocks.rst:254
+#: ../../manual/data_system/data_blocks.rst:259
+#: ../../manual/data_system/data_blocks.rst:264
+#: ../../manual/data_system/data_blocks.rst:269
+#: ../../manual/data_system/data_blocks.rst:274
+#: ../../manual/data_system/data_blocks.rst:280
+#: ../../manual/data_system/data_blocks.rst:285
+#: ../../manual/data_system/data_blocks.rst:290
+#: ../../manual/data_system/data_blocks.rst:305
+#: ../../manual/data_system/data_blocks.rst:306
+#: ../../manual/data_system/data_blocks.rst:310
+#: ../../manual/data_system/data_blocks.rst:315
+#: ../../manual/data_system/data_blocks.rst:320
+#: ../../manual/data_system/data_blocks.rst:325
+msgid "|tick|"
+msgstr "|tick|"
 
 #: ../../manual/data_system/data_blocks.rst:183
 #: ../../manual/data_system/data_blocks.rst:189
 #: ../../manual/data_system/data_blocks.rst:194
 #: ../../manual/data_system/data_blocks.rst:198
 #: ../../manual/data_system/data_blocks.rst:202
-#: ../../manual/data_system/data_blocks.rst:206
-#: ../../manual/data_system/data_blocks.rst:207
 #: ../../manual/data_system/data_blocks.rst:211
 #: ../../manual/data_system/data_blocks.rst:217
-#: ../../manual/data_system/data_blocks.rst:222
-#: ../../manual/data_system/data_blocks.rst:223
 #: ../../manual/data_system/data_blocks.rst:227
-#: ../../manual/data_system/data_blocks.rst:237
+#: ../../manual/data_system/data_blocks.rst:231
 #: ../../manual/data_system/data_blocks.rst:241
 #: ../../manual/data_system/data_blocks.rst:245
 #: ../../manual/data_system/data_blocks.rst:250
 #: ../../manual/data_system/data_blocks.rst:255
 #: ../../manual/data_system/data_blocks.rst:260
-#: ../../manual/data_system/data_blocks.rst:265
 #: ../../manual/data_system/data_blocks.rst:270
 #: ../../manual/data_system/data_blocks.rst:275
 #: ../../manual/data_system/data_blocks.rst:281
 #: ../../manual/data_system/data_blocks.rst:286
 #: ../../manual/data_system/data_blocks.rst:291
-#: ../../manual/data_system/data_blocks.rst:306
-#: ../../manual/data_system/data_blocks.rst:307
+#: ../../manual/data_system/data_blocks.rst:296
+#: ../../manual/data_system/data_blocks.rst:301
 #: ../../manual/data_system/data_blocks.rst:311
-#: ../../manual/data_system/data_blocks.rst:316
 #: ../../manual/data_system/data_blocks.rst:321
 #: ../../manual/data_system/data_blocks.rst:326
-msgid "|tick|"
-msgstr "|tick|"
-
-#: ../../manual/data_system/data_blocks.rst:184
-#: ../../manual/data_system/data_blocks.rst:190
-#: ../../manual/data_system/data_blocks.rst:195
-#: ../../manual/data_system/data_blocks.rst:199
-#: ../../manual/data_system/data_blocks.rst:203
-#: ../../manual/data_system/data_blocks.rst:212
-#: ../../manual/data_system/data_blocks.rst:218
-#: ../../manual/data_system/data_blocks.rst:228
-#: ../../manual/data_system/data_blocks.rst:232
-#: ../../manual/data_system/data_blocks.rst:242
-#: ../../manual/data_system/data_blocks.rst:246
-#: ../../manual/data_system/data_blocks.rst:251
-#: ../../manual/data_system/data_blocks.rst:256
-#: ../../manual/data_system/data_blocks.rst:261
-#: ../../manual/data_system/data_blocks.rst:271
-#: ../../manual/data_system/data_blocks.rst:276
-#: ../../manual/data_system/data_blocks.rst:282
-#: ../../manual/data_system/data_blocks.rst:287
-#: ../../manual/data_system/data_blocks.rst:292
-#: ../../manual/data_system/data_blocks.rst:297
-#: ../../manual/data_system/data_blocks.rst:302
-#: ../../manual/data_system/data_blocks.rst:312
-#: ../../manual/data_system/data_blocks.rst:322
-#: ../../manual/data_system/data_blocks.rst:327
-#: ../../manual/data_system/data_blocks.rst:331
+#: ../../manual/data_system/data_blocks.rst:330
 msgid "|none|"
 msgstr ""
 
@@ -462,7 +486,7 @@ msgstr "Використовується як блок даних анімаці
 msgid "and the Non-Linear-Editor."
 msgstr "і Редактором Не-Лінійної Анімації."
 
-#: ../../manual/data_system/data_blocks.rst:188
+#: ../../manual/data_system/data_blocks.rst:187
 msgid "Armature"
 msgstr "Арматура -- Armature"
 
@@ -474,7 +498,7 @@ msgstr "Скелет, що використовується для деформ�
 msgid "Used as object data & by the Armature Modifier."
 msgstr "Використовується як дані об'єкта та модифікатором «Арматура» -- Armature."
 
-#: ../../manual/data_system/data_blocks.rst:193
+#: ../../manual/data_system/data_blocks.rst:192
 msgid "Brush"
 msgstr "Пензель -- Brush"
 
@@ -482,7 +506,7 @@ msgstr "Пензель -- Brush"
 msgid "Used by paint tools."
 msgstr "Використовується інструментами малювання."
 
-#: ../../manual/data_system/data_blocks.rst:197
+#: ../../manual/data_system/data_blocks.rst:196
 msgid "Camera"
 msgstr "Камера -- Camera"
 
@@ -490,7 +514,7 @@ msgstr "Камера -- Camera"
 msgid "Used as object data."
 msgstr "Використовується як дані об'єкта."
 
-#: ../../manual/data_system/data_blocks.rst:201
+#: ../../manual/data_system/data_blocks.rst:200
 msgid "Curve"
 msgstr "Крива -- Curve"
 
@@ -498,7 +522,7 @@ msgstr "Крива -- Curve"
 msgid "Used by camera, font & surface objects."
 msgstr "Використовується об'єктами типу камера, шрифт та поверхня."
 
-#: ../../manual/data_system/data_blocks.rst:205
+#: ../../manual/data_system/data_blocks.rst:204
 msgid "Font"
 msgstr "Шрифт -- Font"
 
@@ -510,7 +534,7 @@ msgstr "Посилання на файли шрифтів."
 msgid "Used by Font object-data."
 msgstr "Використовується даними об'єкта, які належать до типу Шрифт."
 
-#: ../../manual/data_system/data_blocks.rst:210
+#: ../../manual/data_system/data_blocks.rst:209
 msgid "GreasePencil"
 msgstr "Нарисний Олівець -- GreasePencil"
 
@@ -528,7 +552,7 @@ msgstr ""
 "редакторами 3D Огляду -- 3D View, Зображень -- Image, Відеорядів -- "
 "Sequencer та Відеокліпів -- Movie Clip."
 
-#: ../../manual/data_system/data_blocks.rst:216
+#: ../../manual/data_system/data_blocks.rst:215
 msgid "Group"
 msgstr "Група -- Group"
 
@@ -537,10 +561,11 @@ msgid "Reference object's."
 msgstr "Посилання на об'єкт."
 
 #: ../../manual/data_system/data_blocks.rst
-msgid "Used by dupli-groups & often library-linking."
+#, fuzzy
+msgid "Used by dupli-groups & often library linking."
 msgstr "Використовується дублі-групами та часто пов'язуванням з бібліотек."
 
-#: ../../manual/data_system/data_blocks.rst:221
+#: ../../manual/data_system/data_blocks.rst:220
 msgid "Image"
 msgstr "Зображення -- Image"
 
@@ -552,7 +577,7 @@ msgstr "Файли зображень."
 msgid "Used by textures & shader nodes."
 msgstr "Використовується текстурами та вузлами відтінювача, шейдера."
 
-#: ../../manual/data_system/data_blocks.rst:226
+#: ../../manual/data_system/data_blocks.rst:225
 msgid "Lamp"
 msgstr "Лампа -- Lamp"
 
@@ -560,17 +585,17 @@ msgstr "Лампа -- Lamp"
 msgid "Used as object-data."
 msgstr "Використовується як дані об'єкта."
 
-#: ../../manual/data_system/data_blocks.rst:230
+#: ../../manual/data_system/data_blocks.rst:229
 msgid "Lattice"
 msgstr "Решітка -- Lattice"
 
-#: ../../manual/data_system/data_blocks.rst:231
-#: ../../manual/data_system/data_blocks.rst:236
-#: ../../manual/data_system/data_blocks.rst:266
-#: ../../manual/data_system/data_blocks.rst:296
-#: ../../manual/data_system/data_blocks.rst:301
-#: ../../manual/data_system/data_blocks.rst:317
-#: ../../manual/data_system/data_blocks.rst:330
+#: ../../manual/data_system/data_blocks.rst:230
+#: ../../manual/data_system/data_blocks.rst:235
+#: ../../manual/data_system/data_blocks.rst:265
+#: ../../manual/data_system/data_blocks.rst:295
+#: ../../manual/data_system/data_blocks.rst:300
+#: ../../manual/data_system/data_blocks.rst:316
+#: ../../manual/data_system/data_blocks.rst:329
 msgid "|cross|"
 msgstr "|cross|"
 
@@ -582,7 +607,7 @@ msgstr "Ґратка для решітчастого деформування."
 msgid "Used as object data and by the Lattice Modifier."
 msgstr "Використовується як дані об'єкта та модифікатором «Решітка» -- Lattice."
 
-#: ../../manual/data_system/data_blocks.rst:235
+#: ../../manual/data_system/data_blocks.rst:234
 msgid "Library"
 msgstr "Бібліотека -- Library"
 
@@ -594,15 +619,16 @@ msgstr "Посилання на зовнішні blend-файли."
 msgid "Access from the Outliner's blend-file view."
 msgstr "Доступ до blend-файлу з огляду Структуратора -- Outliner."
 
-#: ../../manual/data_system/data_blocks.rst:240
+#: ../../manual/data_system/data_blocks.rst:239
 msgid "LineStyle"
 msgstr "Стиль Лінії -- LineStyle"
 
 #: ../../manual/data_system/data_blocks.rst
-msgid "Used by the FreeStyle render-engine."
+#, fuzzy
+msgid "Used by the FreeStyle renderer."
 msgstr "Використовується рушієм рендерингу FreeStyle."
 
-#: ../../manual/data_system/data_blocks.rst:244
+#: ../../manual/data_system/data_blocks.rst:243
 msgid "Mask"
 msgstr "Маска -- Mask"
 
@@ -614,7 +640,7 @@ msgstr "Анімовані криві 2D маски."
 msgid "Used by compositing nodes & sequencer strip."
 msgstr "Використовується вузлами компонування та смужками відеорядника."
 
-#: ../../manual/data_system/data_blocks.rst:249
+#: ../../manual/data_system/data_blocks.rst:248
 msgid "Material"
 msgstr "Матеріал -- Material"
 
@@ -626,7 +652,7 @@ msgstr "Задає властивості відтінення та тексту
 msgid "Used by objects, meshes & curves."
 msgstr "Використовується об'єктами, сітями та кривими."
 
-#: ../../manual/data_system/data_blocks.rst:254
+#: ../../manual/data_system/data_blocks.rst:253
 msgid "Mesh"
 msgstr "Сіть -- Mesh"
 
@@ -634,7 +660,7 @@ msgstr "Сіть -- Mesh"
 msgid "Geometry vertices/edges/faces."
 msgstr "Вершини/ребра/грані геометрії."
 
-#: ../../manual/data_system/data_blocks.rst:259
+#: ../../manual/data_system/data_blocks.rst:258
 msgid "MetaBall"
 msgstr "Метакуля -- MetaBall"
 
@@ -642,7 +668,7 @@ msgstr "Метакуля -- MetaBall"
 msgid "An isosurface in 3D space."
 msgstr "Ізоповерхня у 3D просторі."
 
-#: ../../manual/data_system/data_blocks.rst:264
+#: ../../manual/data_system/data_blocks.rst:263
 msgid "MovieClip"
 msgstr "Відеокліп -- MovieClip"
 
@@ -651,10 +677,11 @@ msgid "Reference to an image sequence or video file."
 msgstr "Посилання на файли відеоряду зображень або відео."
 
 #: ../../manual/data_system/data_blocks.rst
-msgid "Used in the motion-tracking editor."
-msgstr "Використовується Редактором Відеокліпів для простеження руху."
+#, fuzzy
+msgid "Used in the Movie Clip editor."
+msgstr "Використовується Редактором Вузлів -- Node Editor."
 
-#: ../../manual/data_system/data_blocks.rst:269
+#: ../../manual/data_system/data_blocks.rst:268
 msgid "NodeGroup"
 msgstr "Група Вузлів -- NodeGroup"
 
@@ -666,7 +693,7 @@ msgstr "Колекції повторно використовуваних ву�
 msgid "Used in the Node Editor."
 msgstr "Використовується Редактором Вузлів -- Node Editor."
 
-#: ../../manual/data_system/data_blocks.rst:274
+#: ../../manual/data_system/data_blocks.rst:273
 msgid "Object"
 msgstr "Об'єкт -- Object"
 
@@ -682,7 +709,7 @@ msgstr "масштабом, обертом."
 msgid "Used by scenes & groups."
 msgstr "Використовується сценами та групами."
 
-#: ../../manual/data_system/data_blocks.rst:280
+#: ../../manual/data_system/data_blocks.rst:279
 msgid "Particle"
 msgstr "Частинка -- Particle"
 
@@ -694,7 +721,7 @@ msgstr "Устави частинки."
 msgid "Used by particle systems."
 msgstr "Використовується системами частинок."
 
-#: ../../manual/data_system/data_blocks.rst:285
+#: ../../manual/data_system/data_blocks.rst:284
 msgid "Palette"
 msgstr "Палітра -- Palette"
 
@@ -706,7 +733,7 @@ msgstr "Зберігає передустави кольорів."
 msgid "Access from the paint tools."
 msgstr "Доступ від інструментів малювання."
 
-#: ../../manual/data_system/data_blocks.rst:290
+#: ../../manual/data_system/data_blocks.rst:289
 msgid "Scene"
 msgstr "Сцена -- Scene"
 
@@ -718,7 +745,7 @@ msgstr "Первісно зберігає усі показувані та ан�
 msgid "Used as top-level storage for objects & animation."
 msgstr "Використовується як верхньо-рівневе сховище для об'єктів та анімації."
 
-#: ../../manual/data_system/data_blocks.rst:295
+#: ../../manual/data_system/data_blocks.rst:294
 msgid "Screen"
 msgstr "Екран -- Screen"
 
@@ -730,7 +757,7 @@ msgstr "Розстава екрану."
 msgid "Used by each window, which has its own screen."
 msgstr "Використовується кожним вікном, яке має свій власний екран."
 
-#: ../../manual/data_system/data_blocks.rst:300
+#: ../../manual/data_system/data_blocks.rst:299
 msgid "ShapeKeys"
 msgstr "Ключі Форм -- ShapeKeys"
 
@@ -742,7 +769,7 @@ msgstr "Сховище форм геометрії, яке може бути а�
 msgid "Used by mesh, curve, and lattice objects."
 msgstr "Використовується об'єктами сіті, кривої та решітки."
 
-#: ../../manual/data_system/data_blocks.rst:305
+#: ../../manual/data_system/data_blocks.rst:304
 msgid "Sounds"
 msgstr "Звуки -- Sounds"
 
@@ -754,7 +781,7 @@ msgstr "Посилання на звукові файли."
 msgid "Used by speaker objects and the Game Engine."
 msgstr "Використовується об'єктами гучномовцями та ігровим рушієм -- Game Engine."
 
-#: ../../manual/data_system/data_blocks.rst:310
+#: ../../manual/data_system/data_blocks.rst:309
 msgid "Speaker"
 msgstr "Гучномовець -- Speaker"
 
@@ -762,7 +789,7 @@ msgstr "Гучномовець -- Speaker"
 msgid "Sound sources for a 3D scene."
 msgstr "Джерела звуків для 3D сцени."
 
-#: ../../manual/data_system/data_blocks.rst:315
+#: ../../manual/data_system/data_blocks.rst:314
 msgid "Text"
 msgstr "Текст -- Text"
 
@@ -774,7 +801,7 @@ msgstr "Текстові дані."
 msgid "Used by Python scripts and OSL shaders."
 msgstr "Використовується скриптами Python та OSL відтінювачами, шейдерами."
 
-#: ../../manual/data_system/data_blocks.rst:320
+#: ../../manual/data_system/data_blocks.rst:319
 msgid "Texture"
 msgstr "Текстура -- Texture"
 
@@ -786,7 +813,7 @@ msgstr "2D/3D текстури."
 msgid "Used by materials, world and brushes."
 msgstr "Використовується матеріалами, світом та пензлями."
 
-#: ../../manual/data_system/data_blocks.rst:325
+#: ../../manual/data_system/data_blocks.rst:324
 msgid "World"
 msgstr "Світ -- World"
 
@@ -794,7 +821,7 @@ msgstr "Світ -- World"
 msgid "Used by scenes for render environment settings."
 msgstr "Використовується сценами для устав рендерингу середовища."
 
-#: ../../manual/data_system/data_blocks.rst:329
+#: ../../manual/data_system/data_blocks.rst:328
 msgid "WindowManager"
 msgstr "Менеджер Вікон -- WindowManager"
 
@@ -805,4 +832,10 @@ msgid ""
 msgstr ""
 "Загальний менеджер для усього інтерфейсу користувача Blender'а; включає "
 "сцени, систему повідомлень, оператори та розкладки клавіш."
+
+#~ msgid "Hotkey:   :kbd:`U`"
+#~ msgstr "Скорочення:   :kbd:`U`"
+
+#~ msgid "Used in the motion-tracking editor."
+#~ msgstr "Використовується Редактором Відеокліпів для простеження руху."
 

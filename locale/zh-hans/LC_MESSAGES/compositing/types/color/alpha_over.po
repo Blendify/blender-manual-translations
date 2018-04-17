@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-12 12:52+1100\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2017-11-10 11:09+0800\n"
 "Last-Translator: \n"
 "Language: zh_Hans_CN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:6
 msgid "Alpha Over Node"
@@ -23,8 +23,9 @@ msgid "Alpha Over Node."
 msgstr "Alpha上叠节点。"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:13
+#, fuzzy
 msgid ""
-"The *Alpha Over Node* is used to layer images on top of one another. "
+"The *Alpha Over* node is used to layer images on top of one another. "
 "Alpha Over does not work on the colors of an image."
 msgstr "*Alpha上叠节点* 将一幅图像覆盖在另一幅图像之上。此节点不对图像的颜色进行处理。"
 
@@ -89,11 +90,12 @@ msgid "Strange Halos or Outlines"
 msgstr "奇特的光环或轮廓"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:48
+#, fuzzy
 msgid ""
-"This section clarifies the functionality of premultiplied-alpha button. "
-"An alpha channel has a value of between 0 and 1. To make an image "
-"transparent (to composite it over another one), the RGB pixel values are "
-"multiplied by the alpha values (making the image transparent (0) where "
+"This section clarifies the functionality of the premultiplied alpha "
+"button. An alpha channel has a value of between 0 and 1. To make an image"
+" transparent (to composite it over another one), the RGB pixel values are"
+" multiplied by the alpha values (making the image transparent (0) where "
 "the alpha is black (0), and opaque (1) where it is white (1))."
 msgstr "这部分介绍预乘alpha参数的功能。一个alpha通道的取值范围在0和1之间。若要使一幅图像透明（合成中置于另一幅图像之上），RGB像素值将和alpha值（图像透明的部分alpha值为0，呈黑色显示，不透明的部分alpha值为1，呈白色显示）进行相乘操作。"
 
@@ -107,15 +109,17 @@ msgid ""
 msgstr "合成中，图像A覆盖在图像B之上，图像A的alpha和图像A颜色值相乘，使得图像A除了不透明部分其余变得透明。图像A的alpha反转继续和图像B相乘，结果使得图像B变为透明，图像A是不透明的，反之亦然。然后将最终两者的合成结果进行相加操作。"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:61
+#, fuzzy
 msgid ""
-"A pre-multiplied alpha is, when the image (RGB) pixels are already "
+"A premultiplied alpha is, when the image (RGB) pixels are already "
 "multiplied by the alpha channel, therefore, the above compositing "
 "operation does not work too well, and *Convert Premultiplied* has to be "
-"enabled. This is only an issue in semi-transparent area and edges "
-"usually. The issue normally occurs in a node setup, in which two images "
+"enabled. This is only an issue in semitransparent area and edges usually."
+" The issue normally occurs in a node setup, in which two images "
 "previously combined with alpha, then are combined again with yet another "
-"image. The previously combined image was already multiplied (pre-"
-"multiplied) and needs to be converted as such (hence, *Convert PreMul*)."
+"image. The previously combined image was already multiplied "
+"(premultiplied) and needs to be converted as such (hence, *Convert "
+"PreMul*)."
 msgstr ""
 "预乘alpha的含义是，图像（RGB）像素已经和图像的alpha通道数据进行相乘操作，因此，以上的图像合成操作结果可能不会很好，*转换叠加* "
 "处于被启用状态。通常会在图像的边界或半透明区域出现一些小问题。往往这种情况是在节点流程装配的时候出现的比较多，先前的两幅图像的alpha已经合并了，现在又进行了二次合并。先前的图像已经进行了预乘操作，需要进行转化才会使结果正确（这就是*转换叠加*"
@@ -143,11 +147,13 @@ msgid ""
 msgstr "此范例中，一个立方体图像叠放在悬崖边的背景上。当前景图像和背景图像合并alpha时结果大于1.00时，要使用预乘参数；否则，你将看到一个非预期的光环效果。结果图像是对两幅图像进行合成后的样子。"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:91
-msgid "Assembling a composite Image using Alpha Over."
+#, fuzzy
+msgid "Assembling a composite image using Alpha Over."
 msgstr "使用Alpha上叠节点合成图像。"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:96
-msgid "Animated See-Through/Sheer SFX using Alpha Over on Frame 11."
+#, fuzzy
+msgid "Animated see-through/sheer SFX using Alpha Over on frame 11."
 msgstr "使用Alpha上叠节点在第11帧实现 穿透/透明 动画特效。"
 
 #: ../../manual/compositing/types/color/alpha_over.rst:98

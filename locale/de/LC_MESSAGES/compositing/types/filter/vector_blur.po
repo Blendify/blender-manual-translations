@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 13:02+0200\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,9 +27,9 @@ msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:12
 msgid ""
-"The Vector Blur node applies a **non** physically based method of "
-"simulating :term:`Motion blur`. It uses the vector speed render pass to "
-"blur the image pixels in 2D."
+"The Vector Blur node is a fast method for simulating :term:`Motion blur` "
+"in compositing. It uses the vector speed render pass to blur the image "
+"pixels in 2D."
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:17
@@ -37,12 +37,12 @@ msgid "Inputs"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:19
-#: ../../manual/compositing/types/filter/vector_blur.rst:54
+#: ../../manual/compositing/types/filter/vector_blur.rst:55
 msgid "Image"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:20
-msgid "Standard image input."
+msgid "Image input, to be linked to the \"Combined\" render pass."
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:21
@@ -50,7 +50,7 @@ msgid "Z"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:22
-msgid "Standard Z depth."
+msgid "Z depth, to be linked to the \"Depth\" render pass."
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:27
@@ -120,36 +120,52 @@ msgid "Outputs"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:54
-msgid "Standard image output."
+msgid "Motion blurred image output."
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:58
+msgid "Usage"
+msgstr ""
+
+#: ../../manual/compositing/types/filter/vector_blur.rst:60
 msgid ""
-"You can make vector blur results in a little smoother by passing the "
-"Speed pass through a blur node (but note that this can make strange "
-"results, so it is only really appropriate for still images with lots of "
-"motion blur)."
+"Even with a correct compositing setup with Image, Z and Speed nodes all "
+"linked to the appropriate passes, there may still be artifacts. The 2D "
+"render passes does not contain 3D information, and so the information "
+"what is behind a moving object or outside the camera view is lost."
 msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:64
-msgid "Does not work when reading from a multilayer OpenEXR sequence set."
+msgid ""
+"Better results can be achieved by rendering the scene into multiple "
+"render layers, applying vector blur to each render layer, and then "
+"compositing the results together. Typically an animated character would "
+"be rendered in a separate render layer than the background set. "
+"Especially if hair or transparency is involved this is important."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:68
+#: ../../manual/compositing/types/filter/vector_blur.rst:69
+msgid ""
+"For other artifacts it can help to slightly blur the Speed pass or to set"
+" a Maximum Speed limit. This helps to smoothen out the motion, but too "
+"much blurring leads to its own problems."
+msgstr ""
+
+#: ../../manual/compositing/types/filter/vector_blur.rst:74
 msgid "Example"
 msgstr ""
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:70
+#: ../../manual/compositing/types/filter/vector_blur.rst:76
 msgid ""
 "The *speed vector* in this example was created by animating the patterned"
 " sphere horizontally and using a frame at the mid-point of the sequence."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:78
+#: ../../manual/compositing/types/filter/vector_blur.rst:84
 msgid "Render result, no post-processing."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:83
+#: ../../manual/compositing/types/filter/vector_blur.rst:89
 msgid "Composite, with samples set to 32 and a blur of 1.0."
 msgstr ""
 
@@ -200,5 +216,35 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Does not work when reading from a multilayer OpenEXR sequence set"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Vector Blur node applies a "
+#~ "**non** physically based method of "
+#~ "simulating :term:`Motion blur`. It uses "
+#~ "the vector speed render pass to "
+#~ "blur the image pixels in 2D."
+#~ msgstr ""
+
+#~ msgid "Standard image input."
+#~ msgstr ""
+
+#~ msgid "Standard Z depth."
+#~ msgstr ""
+
+#~ msgid "Standard image output."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can make vector blur results "
+#~ "in a little smoother by passing "
+#~ "the Speed pass through a blur node"
+#~ " (but note that this can make "
+#~ "strange results, so it is only "
+#~ "really appropriate for still images with"
+#~ " lots of motion blur)."
+#~ msgstr ""
+
+#~ msgid "Does not work when reading from a multilayer OpenEXR sequence set."
 #~ msgstr ""
 
