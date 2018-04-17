@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-30 08:22+1100\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2018-01-03 23:42-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -75,12 +75,13 @@ msgstr ""
 "produção das posições finais dos vértices e suas transformações animadas."
 
 #: ../../manual/pipeline/alembic.rst:23
+#, fuzzy
 msgid ""
 ":abbr:`TL;DR (Too long; didn't read.)`: Alembic can be used to write an "
 "animated mesh to disk, and read it back quickly & efficiently. This means"
-" that a mesh can be animated with a very CPU-heavy rig, 'baked' to an "
-"Alembic file, and loaded into the shot file for shading and lighting with"
-" only moderate CPU usage."
+" that a mesh can be animated with a very CPU-intensive rig, 'baked' to an"
+" Alembic file, and loaded into the shot file for shading and lighting "
+"with only moderate CPU usage."
 msgstr ""
 "O formato Alembic pode ser usado para escrever uma malha animada para o "
 "disco, e tornar a fazer a sua leitura novamente de maneira rápida e "
@@ -126,13 +127,13 @@ msgstr "Exportando para arquivos Alembic"
 msgid "This section describes the effect of the different export options."
 msgstr "Esta seção descreve o efeito das diferentes opções de exportação."
 
-#: ../../manual/pipeline/alembic.rst:47
-msgid "Alembic Export options."
-msgstr "As opções de exportação para o formato Alembic."
-
-#: ../../manual/pipeline/alembic.rst:51
+#: ../../manual/pipeline/alembic.rst:46
 msgid "Manual Transform"
 msgstr "Transformações manuais"
+
+#: ../../manual/pipeline/alembic.rst:51
+msgid "Alembic Export options."
+msgstr "As opções de exportação para o formato Alembic."
 
 #: ../../manual/pipeline/alembic.rst:56
 msgid "Scale"
@@ -229,7 +230,7 @@ msgstr "Somente as camadas visíveis"
 msgid "Limits the export to scene layers that are currently visible."
 msgstr "Limita a exportação para as camadas de cena que estão atualmente visíveis."
 
-#: ../../manual/pipeline/alembic.rst:83
+#: ../../manual/pipeline/alembic.rst:84
 msgid "Flatten Hierarchy"
 msgstr "Achatar a hierarquia"
 
@@ -248,13 +249,13 @@ msgstr ""
 " serão exportadas, e as transformações serão todas escritas em "
 "coordenadas do ambiente. "
 
-#: ../../manual/pipeline/alembic.rst:88 ../../manual/pipeline/alembic.rst:117
-#, fuzzy
-msgid "Object Options."
+#: ../../manual/pipeline/alembic.rst:87
+msgid "Object Options"
 msgstr "Opções de objeto(s)"
 
 #: ../../manual/pipeline/alembic.rst:92
-msgid "Object Options"
+#, fuzzy
+msgid "Object options."
 msgstr "Opções de objeto(s)"
 
 #: ../../manual/pipeline/alembic.rst:95
@@ -272,26 +273,31 @@ msgstr ""
 "Blender exporta todos os mapas UV de uma maneira que eles sejam passíveis"
 " de ser lidos por outros softwares."
 
-#: ../../manual/pipeline/alembic.rst:97
+#: ../../manual/pipeline/alembic.rst:100
 msgid "Pack UV Islands"
 msgstr "Empacotar ilhas UV"
 
-#: ../../manual/pipeline/alembic.rst:98 ../../manual/pipeline/alembic.rst:100
-#: ../../manual/pipeline/alembic.rst:105 ../../manual/pipeline/alembic.rst:110
-msgid "TODO 2.78/9: figure out & describe what this does."
+#: ../../manual/pipeline/alembic.rst:98
+msgid ""
+"Generates an optimized UV layout with non-overlapping islands that tries "
+"to efficiently fill the texture space. See the :ref:`pack islands "
+"operator <editors-uv_image-editing-layout-pack_islands>` that works with "
+"the same principle for more information."
 msgstr ""
-"A ser feito a partir da versão 2.78 ou 2.79 e superiores: descobrir e "
-"descrever o que esta funcionalidade executa."
 
-#: ../../manual/pipeline/alembic.rst:99
+#: ../../manual/pipeline/alembic.rst:102
 msgid "Normals"
 msgstr "Normais"
 
-#: ../../manual/pipeline/alembic.rst:102
+#: ../../manual/pipeline/alembic.rst:103
+msgid "When enabled, an object's :term:`normals <normal>` are exported."
+msgstr ""
+
+#: ../../manual/pipeline/alembic.rst:105
 msgid "Vertex Colors"
 msgstr "Cores dos vértices"
 
-#: ../../manual/pipeline/alembic.rst:102
+#: ../../manual/pipeline/alembic.rst:105
 msgid ""
 "When enabled, exports vertex colors. At this moment, this only supports "
 "static vertex colors, and not dynamically animated vertex colors."
@@ -300,39 +306,58 @@ msgstr ""
 " esta opção suporta somente cores de vértices estáticas, e não as cores "
 "de vértices dinamicamente animadas."
 
-#: ../../manual/pipeline/alembic.rst:104
+#: ../../manual/pipeline/alembic.rst:107
 msgid "Face Sets"
 msgstr "Conjuntos de faces"
 
-#: ../../manual/pipeline/alembic.rst:107
+#: ../../manual/pipeline/alembic.rst:108
+msgid ""
+"Exports the material names per face. The material data is not exported "
+"but only material names."
+msgstr ""
+
+#: ../../manual/pipeline/alembic.rst:110
 msgid "Use Subdivision Schema"
 msgstr "Usar esquema de subdivisão"
 
-#: ../../manual/pipeline/alembic.rst:107
+#: ../../manual/pipeline/alembic.rst:110
 msgid ""
-"When enabled, writes polygonal meshes using the \"SubD\" Alembic schema, "
-"rather than the \"PolyMesh\" schema."
+"Writes polygonal meshes using the \"SubD\" Alembic schema, rather than "
+"the \"PolyMesh\" schema. This tells the program opening the file to apply"
+" its form of a non-destructive subdivision."
 msgstr ""
-"Quando habilitado, escreve malhas poligonais usando o esquema  \"SubD\" "
-"do formato Alembic, ao invés do esquema \"PolyMesh\"."
 
-#: ../../manual/pipeline/alembic.rst:109
+#: ../../manual/pipeline/alembic.rst:113
 msgid "Apply Subdivision Surface"
 msgstr "Aplicar subdivisão de superfície"
 
-#: ../../manual/pipeline/alembic.rst:112
+#: ../../manual/pipeline/alembic.rst:113
+msgid ""
+"Applies any :doc:`Subdivision surface modifiers "
+"</modeling/modifiers/generate/subsurf>` before writing to Alembic."
+msgstr ""
+
+#: ../../manual/pipeline/alembic.rst:119
 msgid "Triangulate"
 msgstr "Triangular"
 
-#: ../../manual/pipeline/alembic.rst:112
-msgid "Triangulates the mesh before writing to Alembic."
-msgstr "Triangula a malha antes de escreve para a saída em formato Alembic."
+#: ../../manual/pipeline/alembic.rst:116
+msgid ""
+"Triangulates the mesh before writing to Alembic. For more detail on the "
+"specific option see the :doc:`Triangulate Modifier "
+"</modeling/modifiers/generate/triangulate>`."
+msgstr ""
 
-#: ../../manual/pipeline/alembic.rst:121
+#: ../../manual/pipeline/alembic.rst:122
 msgid "Particle Systems"
 msgstr "Sistemas de partículas"
 
-#: ../../manual/pipeline/alembic.rst:123
+#: ../../manual/pipeline/alembic.rst:127
+#, fuzzy
+msgid "Particle Systems options."
+msgstr "Sistemas de partículas"
+
+#: ../../manual/pipeline/alembic.rst:129
 msgid ""
 "Alembic has no support for Particle Systems, in the same way that it does"
 " not support armatures. Hair is exported as animated zero-width curves. "
@@ -342,4 +367,24 @@ msgstr ""
 "mesma maneira que não possui suporte a armações de ossos. Os cabelos são "
 "exportados como curvas animada sem nenhuma largura. As partículas são "
 "exportadas como pontos animados."
+
+#~ msgid "TODO 2.78/9: figure out & describe what this does."
+#~ msgstr ""
+#~ "A ser feito a partir da versão "
+#~ "2.78 ou 2.79 e superiores: descobrir "
+#~ "e descrever o que esta funcionalidade"
+#~ " executa."
+
+#~ msgid ""
+#~ "When enabled, writes polygonal meshes "
+#~ "using the \"SubD\" Alembic schema, "
+#~ "rather than the \"PolyMesh\" schema."
+#~ msgstr ""
+#~ "Quando habilitado, escreve malhas poligonais"
+#~ " usando o esquema  \"SubD\" do "
+#~ "formato Alembic, ao invés do esquema "
+#~ "\"PolyMesh\"."
+
+#~ msgid "Triangulates the mesh before writing to Alembic."
+#~ msgstr "Triangula a malha antes de escreve para a saída em formato Alembic."
 

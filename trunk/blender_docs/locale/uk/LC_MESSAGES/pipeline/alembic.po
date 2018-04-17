@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-30 08:22+1100\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2017-12-12 21:01+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -71,12 +71,13 @@ msgstr ""
 "вершин та фінальних анімованих трансформацій."
 
 #: ../../manual/pipeline/alembic.rst:23
+#, fuzzy
 msgid ""
 ":abbr:`TL;DR (Too long; didn't read.)`: Alembic can be used to write an "
 "animated mesh to disk, and read it back quickly & efficiently. This means"
-" that a mesh can be animated with a very CPU-heavy rig, 'baked' to an "
-"Alembic file, and loaded into the shot file for shading and lighting with"
-" only moderate CPU usage."
+" that a mesh can be animated with a very CPU-intensive rig, 'baked' to an"
+" Alembic file, and loaded into the shot file for shading and lighting "
+"with only moderate CPU usage."
 msgstr ""
 ":abbr:`TL;DR (Too long; didn't read -- Надто довго; не зчитує.)`: Alembic"
 " може використовуватися для запису анімованої сіті на диск та зчитування "
@@ -122,13 +123,13 @@ msgstr "Експорт у файли Alembic"
 msgid "This section describes the effect of the different export options."
 msgstr "Цей підрозділ описує вплив різних варіантів експорту."
 
-#: ../../manual/pipeline/alembic.rst:47
-msgid "Alembic Export options."
-msgstr "Опції експорту в Alembic."
-
-#: ../../manual/pipeline/alembic.rst:51
+#: ../../manual/pipeline/alembic.rst:46
 msgid "Manual Transform"
 msgstr "Ручна Трансформація -- Manual Transform"
+
+#: ../../manual/pipeline/alembic.rst:51
+msgid "Alembic Export options."
+msgstr "Опції експорту в Alembic."
 
 #: ../../manual/pipeline/alembic.rst:56
 msgid "Scale"
@@ -223,7 +224,7 @@ msgstr "Лише Видимі Шари -- Visible Layers Only"
 msgid "Limits the export to scene layers that are currently visible."
 msgstr "Лімітує експорт шарів сцени лише тими, які поточно видимими."
 
-#: ../../manual/pipeline/alembic.rst:83
+#: ../../manual/pipeline/alembic.rst:84
 msgid "Flatten Hierarchy"
 msgstr "Випрямлена Ієрархія -- Flatten Hierarchy"
 
@@ -242,13 +243,13 @@ msgstr ""
 "експортуються, а будь-які трансформації записуються повністю у "
 "координатах світу."
 
-#: ../../manual/pipeline/alembic.rst:88 ../../manual/pipeline/alembic.rst:117
-#, fuzzy
-msgid "Object Options."
+#: ../../manual/pipeline/alembic.rst:87
+msgid "Object Options"
 msgstr "Опції Об'єкта -- Object Options"
 
 #: ../../manual/pipeline/alembic.rst:92
-msgid "Object Options"
+#, fuzzy
+msgid "Object options."
 msgstr "Опції Об'єкта -- Object Options"
 
 #: ../../manual/pipeline/alembic.rst:95
@@ -265,24 +266,31 @@ msgstr ""
 "підтримує тільки одиничну карту UV, Blender експортує усі карти UV у "
 "спосіб, що повинен бути читаним іншою програмою."
 
-#: ../../manual/pipeline/alembic.rst:97
+#: ../../manual/pipeline/alembic.rst:100
 msgid "Pack UV Islands"
 msgstr "Упакувати Острови UV -- Pack UV Islands"
 
-#: ../../manual/pipeline/alembic.rst:98 ../../manual/pipeline/alembic.rst:100
-#: ../../manual/pipeline/alembic.rst:105 ../../manual/pipeline/alembic.rst:110
-msgid "TODO 2.78/9: figure out & describe what this does."
-msgstr "TODO 2.78/9: figure out & describe what this does."
+#: ../../manual/pipeline/alembic.rst:98
+msgid ""
+"Generates an optimized UV layout with non-overlapping islands that tries "
+"to efficiently fill the texture space. See the :ref:`pack islands "
+"operator <editors-uv_image-editing-layout-pack_islands>` that works with "
+"the same principle for more information."
+msgstr ""
 
-#: ../../manual/pipeline/alembic.rst:99
+#: ../../manual/pipeline/alembic.rst:102
 msgid "Normals"
 msgstr "Нормалі -- Normals"
 
-#: ../../manual/pipeline/alembic.rst:102
+#: ../../manual/pipeline/alembic.rst:103
+msgid "When enabled, an object's :term:`normals <normal>` are exported."
+msgstr ""
+
+#: ../../manual/pipeline/alembic.rst:105
 msgid "Vertex Colors"
 msgstr "Кольори Вершин -- Vertex Colors"
 
-#: ../../manual/pipeline/alembic.rst:102
+#: ../../manual/pipeline/alembic.rst:105
 msgid ""
 "When enabled, exports vertex colors. At this moment, this only supports "
 "static vertex colors, and not dynamically animated vertex colors."
@@ -291,39 +299,58 @@ msgstr ""
 "тільки статичні кольори вершин та не підтримує динамічно анімовані "
 "кольори вершин."
 
-#: ../../manual/pipeline/alembic.rst:104
+#: ../../manual/pipeline/alembic.rst:107
 msgid "Face Sets"
 msgstr "Набори Граней -- Face Sets"
 
-#: ../../manual/pipeline/alembic.rst:107
+#: ../../manual/pipeline/alembic.rst:108
+msgid ""
+"Exports the material names per face. The material data is not exported "
+"but only material names."
+msgstr ""
+
+#: ../../manual/pipeline/alembic.rst:110
 msgid "Use Subdivision Schema"
 msgstr "Вжити Схему Підподілення -- Use Subdivision Schema"
 
-#: ../../manual/pipeline/alembic.rst:107
+#: ../../manual/pipeline/alembic.rst:110
 msgid ""
-"When enabled, writes polygonal meshes using the \"SubD\" Alembic schema, "
-"rather than the \"PolyMesh\" schema."
+"Writes polygonal meshes using the \"SubD\" Alembic schema, rather than "
+"the \"PolyMesh\" schema. This tells the program opening the file to apply"
+" its form of a non-destructive subdivision."
 msgstr ""
-"При увімкненні, записує полігональні сіті використовуючи схему \"SubD\" "
-"Alembic'а, а не схему \"PolyMesh\"."
 
-#: ../../manual/pipeline/alembic.rst:109
+#: ../../manual/pipeline/alembic.rst:113
 msgid "Apply Subdivision Surface"
 msgstr "Застосувати Підподілення Поверхні -- Apply Subdivision Surface"
 
-#: ../../manual/pipeline/alembic.rst:112
+#: ../../manual/pipeline/alembic.rst:113
+msgid ""
+"Applies any :doc:`Subdivision surface modifiers "
+"</modeling/modifiers/generate/subsurf>` before writing to Alembic."
+msgstr ""
+
+#: ../../manual/pipeline/alembic.rst:119
 msgid "Triangulate"
 msgstr "Трибічникування -- Triangulate"
 
-#: ../../manual/pipeline/alembic.rst:112
-msgid "Triangulates the mesh before writing to Alembic."
-msgstr "Переводить склад сіті у трибічники (тріангулює, трибічникує її)."
+#: ../../manual/pipeline/alembic.rst:116
+msgid ""
+"Triangulates the mesh before writing to Alembic. For more detail on the "
+"specific option see the :doc:`Triangulate Modifier "
+"</modeling/modifiers/generate/triangulate>`."
+msgstr ""
 
-#: ../../manual/pipeline/alembic.rst:121
+#: ../../manual/pipeline/alembic.rst:122
 msgid "Particle Systems"
 msgstr "Системи Частинок -- Particle Systems"
 
-#: ../../manual/pipeline/alembic.rst:123
+#: ../../manual/pipeline/alembic.rst:127
+#, fuzzy
+msgid "Particle Systems options."
+msgstr "Системи Частинок -- Particle Systems"
+
+#: ../../manual/pipeline/alembic.rst:129
 msgid ""
 "Alembic has no support for Particle Systems, in the same way that it does"
 " not support armatures. Hair is exported as animated zero-width curves. "
@@ -332,4 +359,19 @@ msgstr ""
 "Alembic не має підтримки для Систем Частинок, і так само він не підтримує"
 " арматури. Волосинки експортуються як анімовані криві з нульовою шириною."
 " Частинки експортуються як анімовані точки."
+
+#~ msgid "TODO 2.78/9: figure out & describe what this does."
+#~ msgstr "TODO 2.78/9: figure out & describe what this does."
+
+#~ msgid ""
+#~ "When enabled, writes polygonal meshes "
+#~ "using the \"SubD\" Alembic schema, "
+#~ "rather than the \"PolyMesh\" schema."
+#~ msgstr ""
+#~ "При увімкненні, записує полігональні сіті "
+#~ "використовуючи схему \"SubD\" Alembic'а, а "
+#~ "не схему \"PolyMesh\"."
+
+#~ msgid "Triangulates the mesh before writing to Alembic."
+#~ msgstr "Переводить склад сіті у трибічники (тріангулює, трибічникує її)."
 

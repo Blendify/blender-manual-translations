@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 13:02+0200\n"
+"POT-Creation-Date: 2018-04-17 01:30+0200\n"
 "PO-Revision-Date: 2017-08-05 15:49+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -29,10 +29,11 @@ msgid "Vector Blur Node."
 msgstr "Вузол «Векторний Розмив» -- Vector Blur Node."
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:12
+#, fuzzy
 msgid ""
-"The Vector Blur node applies a **non** physically based method of "
-"simulating :term:`Motion blur`. It uses the vector speed render pass to "
-"blur the image pixels in 2D."
+"The Vector Blur node is a fast method for simulating :term:`Motion blur` "
+"in compositing. It uses the vector speed render pass to blur the image "
+"pixels in 2D."
 msgstr ""
 "Вузол «Векторний Розмив» -- Vector Blur node застосовує **не** фізично "
 "базований метод імітування «розмиву рухом» -- :term:`Motion blur`. Він "
@@ -44,21 +45,21 @@ msgid "Inputs"
 msgstr "Уводи -- Inputs"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:19
-#: ../../manual/compositing/types/filter/vector_blur.rst:54
+#: ../../manual/compositing/types/filter/vector_blur.rst:55
 msgid "Image"
 msgstr "Зображення -- Image"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:20
-msgid "Standard image input."
-msgstr "Стандартний увід зображення."
+msgid "Image input, to be linked to the \"Combined\" render pass."
+msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:21
 msgid "Z"
 msgstr "Z"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:22
-msgid "Standard Z depth."
-msgstr "Стандартна Z-глибина."
+msgid "Z depth, to be linked to the \"Depth\" render pass."
+msgstr ""
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:27
 #: ../../manual/compositing/types/filter/vector_blur.rst:48
@@ -143,43 +144,54 @@ msgid "Outputs"
 msgstr "Виводи -- Outputs"
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:54
-msgid "Standard image output."
+#, fuzzy
+msgid "Motion blurred image output."
 msgstr "Стандартний вивід зображення."
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:58
+#, fuzzy
+msgid "Usage"
+msgstr "Зображення -- Image"
+
+#: ../../manual/compositing/types/filter/vector_blur.rst:60
 msgid ""
-"You can make vector blur results in a little smoother by passing the "
-"Speed pass through a blur node (but note that this can make strange "
-"results, so it is only really appropriate for still images with lots of "
-"motion blur)."
+"Even with a correct compositing setup with Image, Z and Speed nodes all "
+"linked to the appropriate passes, there may still be artifacts. The 2D "
+"render passes does not contain 3D information, and so the information "
+"what is behind a moving object or outside the camera view is lost."
 msgstr ""
-"Ви можете робити результати векторного розмиву трохи плавніше, "
-"пропустивши прохід «Швидкість» -- Speed через вузол «Розмив» -- Blur (але"
-" зауважте, що це може давати дивні результати, а тому це дійсно підходить"
-" тільки для нерухомих зображень з великою кількістю розмиву рухом)."
 
 #: ../../manual/compositing/types/filter/vector_blur.rst:64
-#, fuzzy
-msgid "Does not work when reading from a multilayer OpenEXR sequence set."
+msgid ""
+"Better results can be achieved by rendering the scene into multiple "
+"render layers, applying vector blur to each render layer, and then "
+"compositing the results together. Typically an animated character would "
+"be rendered in a separate render layer than the background set. "
+"Especially if hair or transparency is involved this is important."
 msgstr ""
-"Не працює при читанні з набору послідовності у багатошаровому форматі "
-"OpenEXR"
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:68
+#: ../../manual/compositing/types/filter/vector_blur.rst:69
+msgid ""
+"For other artifacts it can help to slightly blur the Speed pass or to set"
+" a Maximum Speed limit. This helps to smoothen out the motion, but too "
+"much blurring leads to its own problems."
+msgstr ""
+
+#: ../../manual/compositing/types/filter/vector_blur.rst:74
 msgid "Example"
 msgstr "Приклад"
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:70
+#: ../../manual/compositing/types/filter/vector_blur.rst:76
 msgid ""
 "The *speed vector* in this example was created by animating the patterned"
 " sphere horizontally and using a frame at the mid-point of the sequence."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:78
+#: ../../manual/compositing/types/filter/vector_blur.rst:84
 msgid "Render result, no post-processing."
 msgstr ""
 
-#: ../../manual/compositing/types/filter/vector_blur.rst:83
+#: ../../manual/compositing/types/filter/vector_blur.rst:89
 msgid "Composite, with samples set to 32 and a blur of 1.0."
 msgstr ""
 
@@ -193,4 +205,33 @@ msgstr ""
 #~ "frame at the mid-point of the "
 #~ "sequence."
 #~ msgstr ""
+
+#~ msgid "Standard image input."
+#~ msgstr "Стандартний увід зображення."
+
+#~ msgid "Standard Z depth."
+#~ msgstr "Стандартна Z-глибина."
+
+#~ msgid ""
+#~ "You can make vector blur results "
+#~ "in a little smoother by passing "
+#~ "the Speed pass through a blur node"
+#~ " (but note that this can make "
+#~ "strange results, so it is only "
+#~ "really appropriate for still images with"
+#~ " lots of motion blur)."
+#~ msgstr ""
+#~ "Ви можете робити результати векторного "
+#~ "розмиву трохи плавніше, пропустивши прохід "
+#~ "«Швидкість» -- Speed через вузол "
+#~ "«Розмив» -- Blur (але зауважте, що "
+#~ "це може давати дивні результати, а "
+#~ "тому це дійсно підходить тільки для "
+#~ "нерухомих зображень з великою кількістю "
+#~ "розмиву рухом)."
+
+#~ msgid "Does not work when reading from a multilayer OpenEXR sequence set."
+#~ msgstr ""
+#~ "Не працює при читанні з набору "
+#~ "послідовності у багатошаровому форматі OpenEXR"
 
