@@ -6,34 +6,33 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 2.78 Manual 2.78\n"
-"Report-Msgid-Bugs-To: Ivan Paulos Tomé <greylica@gmail.com>\n"
+"Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2016-12-02 21:46-0300\n"
-"Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
+"PO-Revision-Date: 2018-05-05 20:06-0300\n"
+"Last-Translator: Eduardo Schilling<elschilling@gmail.com>\n"
+"Language-Team: portuguese\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+"Language: pt\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../manual/render/cycles/materials/surface.rst:4
-#, fuzzy
 msgid "Surfaces"
-msgstr "Superfície"
+msgstr "Superfícies"
 
 #: ../../manual/render/cycles/materials/surface.rst:6
-#, fuzzy
 msgid ""
 "The surface shader defines the light interaction at the surface of the "
 "mesh. One or more :abbr:`BSDF (Bidirectional scattering distribution "
 "function)`\\ 's specify if incoming light is reflected back, refracted "
 "into the mesh, or absorbed."
 msgstr ""
-"O sombreador de superfície define a interação das luzes na superfície das"
-" malhas. Um ou mais sombreadores :abbr:`BSDF (Função de distribuição de "
-"espalhamento bidirecional)` especificam se a luz advinda de algum ponto é"
-" refletida de volta, refratada na malha, ou absorvida."
+"O sombreador de superfície define a interação das luzes na superfície da "
+"malha. Um ou mais sombreadores :abbr:`BSDF (Função de distribuição de "
+"espalhamento bidirecional)` especificam se a luz que chega é refletida "
+"de volta, refratada na malha, ou absorvida."
 
 #: ../../manual/render/cycles/materials/surface.rst:10
 msgid ""
@@ -41,125 +40,113 @@ msgid ""
 "surface to become a light source."
 msgstr ""
 "A emissão define como a luz é emitida a partir de uma superfície, "
-"permitindo que quaisquer superfícies se tornem uma fonte de luz."
+"permitindo que qualquer superfície se torne uma fonte de luz."
 
 #: ../../manual/render/cycles/materials/surface.rst:15
 msgid "Terminology"
-msgstr "Terminologia."
+msgstr "Terminologia"
 
 #: ../../manual/render/cycles/materials/surface.rst:18
 msgid "BSDF"
 msgstr "BSDF"
 
 #: ../../manual/render/cycles/materials/surface.rst:18
-#, fuzzy
 msgid ""
-"Stands for Bidirectional Scattering Distribution Function. It defines how"
-" light is reflected and refracted at a surface."
+"Stands for Bidirectional Scattering Distribution Function. It defines "
+"how light is reflected and refracted at a surface."
 msgstr ""
-"é uma abreviatura para  \"função de distribuição de espalhamento "
-"bidirecional\" que significa  *bidirectional scattering distribution "
-"function* (em Inglês). Ela define como as luzes são refletidas e "
-"refratadas em uma superfície."
+"Significa \"função de distribuição de espalhamento bidirecional\". Ela "
+"define como as luzes são refletidas e refratadas em uma superfície."
 
 #: ../../manual/render/cycles/materials/surface.rst:20
 msgid "Reflection"
 msgstr "Reflexão"
 
 #: ../../manual/render/cycles/materials/surface.rst:21
-#, fuzzy
 msgid "BSDFs reflect an incoming ray on the same side of the surface."
-msgstr ""
-"A :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` "
-"reflete quaisquer raios projetados nos mesmos lados das superfícies."
+msgstr "BSDFs refletem um raio que chega no mesmo lado da superfície."
 
 #: ../../manual/render/cycles/materials/surface.rst:22
 msgid "Transmission"
 msgstr "Transmissão"
 
 #: ../../manual/render/cycles/materials/surface.rst:23
-#, fuzzy
 msgid ""
 "BSDFs transmit an incoming ray through the surface, leaving on the other "
 "side."
 msgstr ""
-"A :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` "
-"transmite quaisquer raios projetados através das superfícies, deixando-as"
-" pelo outro lado."
+"BSDFs transmitem raios que chegam através das superfícies, saindo no "
+"outro lado."
 
 #: ../../manual/render/cycles/materials/surface.rst:27
 msgid "Refraction"
 msgstr "Refração"
 
 #: ../../manual/render/cycles/materials/surface.rst:25
-#, fuzzy
 msgid ""
 "BSDFs are a type of *Transmission*, transmitting an incoming ray and "
 "changing its direction as it exits on the other side of the surface."
 msgstr ""
-"A :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` e "
-"sua projeção de raios são um tipo de *transmissão*. A função transmite os"
-" raios projetados e altera a sua direção conforme ela sai pelo outro lado"
-" de uma superfície."
+"BSDFs são um tipo de *Transmissão*, transmitindo um raio que chega e "
+"mudando a sua direção conforme ela sai no outro lado da superfície."
 
 #: ../../manual/render/cycles/materials/surface.rst:30
 msgid "BSDF Parameters"
 msgstr "Parâmetros BSDF"
 
 #: ../../manual/render/cycles/materials/surface.rst:32
-#, fuzzy
 msgid ""
 "A major difference from non-physically-based renderers is that direct "
 "light reflection from lamps and indirect light reflection of other "
-"surfaces are not decoupled, but rather handled using a single :abbr:`BSDF"
-" (Bidirectional scattering distribution function)`. This limits the "
+"surfaces are not decoupled, but rather handled using a single :abbr:"
+"`BSDF (Bidirectional scattering distribution function)`. This limits the "
 "possibilities a bit, but we believe overall it is helpful in creating "
 "consistent-looking renders with fewer parameters to tune."
 msgstr ""
-"A maior diferença entre os renderizadores não físicos (por *traçadores de"
-" raios*, por *escaneamento de linhas* ou *ajustados*) e o método que usa "
-"a  :abbr:`BSDF (Função de distribuição de espalhamento bidirecional)` é "
-"que a reflexão direta das luzes que advém das lâmpadas e a reflexão "
-"indireta de luzes de outras superfícies não são processos especificamente"
-" separados, mas usam apenas uma única :abbr:`BSDF (Função de distribuição"
-" de espalhamento bidirecional)`. Isto limita um pouco algumas "
-"possibilidades, mas acreditamos que em geral, isto é útil para a criação "
-"de renderizações de aparência consistente sem a necessidade de muitos "
-"parâmetros de ajuste."
+"A maior diferença dos renderizadores não físicos é que a reflexão direta "
+"das luzes que advém das lâmpadas e a reflexão indireta de luzes de "
+"outras superfícies não estão desassociados, mas usam apenas uma única :"
+"abbr:`BSDF (Função de distribuição de espalhamento bidirecional)`. Isso "
+"limita um pouco as possibilidades, mas acreditamos que em geral é útil "
+"para a criação de renderizações de aparência consistente com poucos "
+"parâmetros para ajustar."
 
 #: ../../<generated>:1
 msgid "Roughness"
-msgstr ""
+msgstr "Rugosidade"
 
 #: ../../manual/render/cycles/materials/surface.rst:39
-#, fuzzy
 msgid ""
 "For the glossy :abbr:`BSDF (Bidirectional scattering distribution "
 "function)`\\ s, the *roughness* parameter controls the sharpness of the "
 "reflection, from 0.0 (perfectly sharp) to 1.0 (very soft). Compared to "
-"*hardness* or *exponent* parameters, it has the advantage of being in the"
-" range 0.0 to 1.0, and as a result gives more linear control and is more "
-"easily textureable. The relation is roughly: *roughness* = 1 - "
-"1/*hardness*"
+"*hardness* or *exponent* parameters, it has the advantage of being in "
+"the range 0.0 to 1.0, and as a result gives more linear control and is "
+"more easily textureable. The relation is roughly: *roughness* = 1 - 1/"
+"*hardness*"
 msgstr ""
-"Para os polimentos (em geral, vidros, etc...) a :abbr:`BSDF (Função de "
-"distribuição de espalhamento bidirecional)` possui um parâmetro de "
-"*rugosidade* que controla a nitidez da reflexão, cuja amplitude varia "
-"entre 0.0 (perfeitamente nítida) para 1.0 (bastante suavizada, como vidro"
-" jateado). Comparados aos parâmetros de ajuste de *dureza* ou "
-"*exponente*, ela possui a vantagem de estar dentro da amplitude de 0.0 a "
-"1.0, e como resultado, oferece um controle mais linear, tornando as "
-"superfícies mais facilmente texturizáveis. A relação entre ambas é "
-"direta: *rugosidade* = 1 - 1/*dureza* ."
+"Para o :abbr:`BSDF (Função de distribuição de espalhamento "
+"bidirecional)` de Polimento, o parâmetro *rugosidade* controla a nitidez "
+"da reflexão, de 0.0 (perfeitamente nítida) para 1.0 (muito suave). "
+"Comparado a parâmetros de *dureza* ou *exponente*, ela possui a vantagem "
+"de estar dentro da faixa de 0.0 a 1.0, e como resultado, oferece um "
+"controle mais linear e é mais facilmente texturizável. A relação é "
+"aproximadamente: *rugosidade* = 1 - 1/*dureza*."
 
 #: ../../manual/render/cycles/materials/surface.rst:48
 msgid ""
-"Currently Blender is coded to use an unsquared model. So if you are using"
-" a :term:`Roughness Map` chances are that the result will not be "
+"Currently Blender is coded to use an unsquared model. So if you are "
+"using a :term:`Roughness Map` chances are that the result will not be "
 "accurate. To fix this, you can square the texture by connecting the "
-"texture to a :doc:`Math node </render/cycles/nodes/types/converter/math>`"
-" and either setting it to *Multiply* and inputing the texture in both "
-"input sockets, or using the *Power* function and setting the second input"
-" to 2."
+"texture to a :doc:`Math node </render/cycles/nodes/types/converter/"
+"math>` and either setting it to *Multiply* and inputing the texture in "
+"both input sockets, or using the *Power* function and setting the second "
+"input to 2."
 msgstr ""
-
+"Atualmente o Blender é programado para usar um modela não-quadrado. "
+"Então se você está usando um :term:`Roughness Map` há chances de o "
+"resultado não ser preciso. Para arrumar isso, você pode calcular o "
+"quadrado da textura conectando-a a um :doc:`nó Matemática </render/"
+"cycles/nodes/types/converter/math>` e tanto definindo-o como "
+"*Multiplicar* e conectando a textura em ambas entradas, ou usando a "
+"função *Potência* e definindo a segunda entrada com o valor 2."
