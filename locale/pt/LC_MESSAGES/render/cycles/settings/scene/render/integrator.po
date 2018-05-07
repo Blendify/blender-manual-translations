@@ -6,18 +6,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 2.77 Manual 2.77\n"
+"Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2017-12-31 23:15-0300\n"
-"Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"Language: pt_BR\n"
-"Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"PO-Revision-Date: 2018-05-06 21:31-0300\n"
+"Last-Translator: Eduardo Schilling<elschilling@gmail.com>\n"
+"Language: pt\n"
+"Language-Team: portuguese\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:4
 msgid "Integrator"
@@ -30,16 +30,20 @@ msgid ""
 "sampling. It works well for various lighting setups, but is not as "
 "suitable for caustics and some other complex lighting situations."
 msgstr ""
+"O integrador é o algoritmo de renderização usado para calcular a "
+"iluminação. Cycles atualmente suporta integrador de traçado de caminho com "
+"amostragem de luz direta. Isso funciona bem para várias configurações de "
+"luz, mas não é  adequado para cáustica e algumas outras situações "
+"complexas de iluminação."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:11
 msgid ""
-"Rays are traced from the camera into the scene, bouncing around until "
-"they find a light source such as a lamp, an object emitting light, or the"
-" world background. To find lamps and surfaces emitting light, both "
-"indirect light sampling (letting the ray follow the surface BSDF) and "
-"direct light sampling (picking a light source and tracing a ray towards "
-"it) are used."
-msgstr ""
+"Rays are traced from the camera into the scene, bouncing around until they "
+"find a light source such as a lamp, an object emitting light, or the world "
+"background. To find lamps and surfaces emitting light, both indirect light "
+"sampling (letting the ray follow the surface BSDF) and direct light "
+"sampling (picking a light source and tracing a ray towards it) are used."
+msgstr "Raios são traçados a partir da câmera até"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:19
 msgid "Sampling"
@@ -52,22 +56,23 @@ msgstr "Referência"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst
 msgid "Panel"
-msgstr ""
+msgstr "Painel"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:24
-#, fuzzy
 msgid ":menuselection:`Render --> Sampling`"
-msgstr "Painel:    :menuselection:`Renderizar --> Amostragem`"
+msgstr ":menuselection:`Renderizar --> Amostragem`"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:26
 msgid "Sample Method"
-msgstr "Método de amostragem"
+msgstr "Método de Amostragem"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:27
 msgid ""
 "There are two integrator modes that can be used: *Path Tracing* and "
 "*Branched Path Tracing*."
 msgstr ""
+"Existem dois modos de integrador que podem ser usados: *Traçador de "
+"Caminho* e *Traçador de Caminhos em Ramificações*."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:28
 msgid "Square Samples"
@@ -75,7 +80,7 @@ msgstr "Amostras elevadas ao quadrado"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:29
 msgid "Square the amount samples."
-msgstr "Quantidade de amostras elevado ao quadrado."
+msgstr "Eleva ao quadrado a quantidade de amostra."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:36
 msgid "Seed"
@@ -84,8 +89,7 @@ msgstr "Semente"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:31
 msgid "Seed value for integrator to get different noise patterns."
 msgstr ""
-"Valor de semente para que o integrador obtenha diferentes padrões de "
-"ruído."
+"Valor de semente do integrador para obter diferentes padrões de ruído."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:36
 msgid "Animate Seed (clock icon)"
@@ -95,9 +99,13 @@ msgstr "Animar semente (ícone de relógio)"
 msgid ""
 "This button which can be found on the right side of the *Seed* value can "
 "be used to give different seed values. It is a good idea to enable this "
-"when making animation because in the real world each frame has a "
-"different noise pattern."
+"when making animation because in the real world each frame has a different "
+"noise pattern."
 msgstr ""
+"Esse botão que pode ser encontrado no lado direito do valor *Semente* pode "
+"ser usado para atribuir diferentes valores de semente. É uma boa ideia "
+"habilitar essa opção ao fazer animações porquê no mundo real cada quadro "
+"possui um padrão de ruído diferente."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:54
 msgid "Clamp Direct"
@@ -105,21 +113,31 @@ msgstr "Truncar diretamente"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:41
 msgid ""
-"This option limits the maximum intensity a sample from rays which have "
-"not yet bounced can contribute to a pixel. It reduces noise at the cost "
-"of accuracy. Setting this option to 0.0 disables clamping altogether. "
-"Lower have a greater affect (dimmer samples) on the resulting image than "
-"higher values."
+"This option limits the maximum intensity a sample from rays which have not "
+"yet bounced can contribute to a pixel. It reduces noise at the cost of "
+"accuracy. Setting this option to 0.0 disables clamping altogether. Lower "
+"have a greater affect (dimmer samples) on the resulting image than higher "
+"values."
 msgstr ""
+"Essa opção limita a intensidade máxima que uma amostra que ainda não "
+"rebateu pode contribuir para um pixel. Ela reduz ruído às custas de "
+"precisão. Definir essa opção para 0.0 desabilita o truncamento "
+"completamente. Valores baixos têm efeito maior (amostras obscuras) que "
+"valores altos na imagem final."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:47
 msgid ""
 "A common issue encountered with *Path Tracing* is the occurrence of "
 "\"fireflies\": improbable samples that contribute very high values to "
 "pixels. This option provides a way to limit that. However, note that as "
-"you clamp out such values, other bright lights/reflections will be dimmed"
-" as well."
+"you clamp out such values, other bright lights/reflections will be dimmed "
+"as well."
 msgstr ""
+"Um problema frequente encontrado com *Traçador de Caminho* é a ocorrência "
+"de pontos de luz (fireflies): amostras improváveis que contribuem com "
+"valores muito altos para pixeis. Essa opção fornece uma maneira de limitar "
+"isso. Porém, note que ao truncar esses valores, outras luzes/reflexões "
+"serão obscurecidas também."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:52
 msgid ""
@@ -128,6 +146,11 @@ msgid ""
 "useful to clamp indirect bounces separately, as they tend to cause more "
 "fireflies than direct bounces. See the *Clamp Indirect* setting."
 msgstr ""
+"Deve-se tomar cuidado ao usar essa configuração para encontrar um balanço "
+"entre mitigar os pontos de luz e perder intencionalmente partes brilhosas. "
+"É frequentemente útil truncar rebatimentos indiretos separadamente, já que "
+"eles tendem a causar mais pontos de luz que rebatimentos diretos. Veja a "
+"opção *Truncar indiretamente*"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:57
 msgid "Clamp Indirect"
@@ -135,9 +158,10 @@ msgstr "Truncar indiretamente"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:57
 msgid ""
-"The same as *Clamp Direct*, but for rays which have bounced multiple "
-"times."
+"The same as *Clamp Direct*, but for rays which have bounced multiple times."
 msgstr ""
+"O mesmo que *Truncar Diretamente*, mas para raios que foram rebatidos "
+"múltiplas vezes."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:66
 msgid "Light Sampling Threshold"
@@ -145,14 +169,22 @@ msgstr "Ajuste de amostragem de iluminação"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:60
 msgid ""
-"Probabilistically terminates light samples when the light contribution is"
-" below this threshold (more noise but faster rendering). Zero disables "
-"the test and never ignores lights. This is useful because in large scenes"
-" with many light sources, some might only contribute a small amount to "
-"the final image, and increase render times. Using this setting can "
-"decrease the render times needed to calculate the rays which in the end "
-"have very little affect on the image."
+"Probabilistically terminates light samples when the light contribution is "
+"below this threshold (more noise but faster rendering). Zero disables the "
+"test and never ignores lights. This is useful because in large scenes with "
+"many light sources, some might only contribute a small amount to the final "
+"image, and increase render times. Using this setting can decrease the "
+"render times needed to calculate the rays which in the end have very "
+"little affect on the image."
 msgstr ""
+"Termina probabilisticamente amostras de luz quando a  contribuição de luz "
+"é menor que o valor desse ajuste (mais ruído mas renderização mais "
+"rápida). Zero desabilita o teste e nunca ignora luzes. Isso é útil porquê "
+"em cenas grandes com muitas fontes de luz, algumas podem contribuir com "
+"uma quantidade pequena na imagem final, e aumentar o tempo de "
+"renderização. Usando essa opção pode diminuir o tempo de renderização "
+"necessário para calcular os raios que no final têm efeito muito pequeno na "
+"imagem."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:77
 msgid "Pattern"
@@ -169,10 +201,12 @@ msgstr "Sobol"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:72
 msgid ""
 "Uses a Sobol pattern to decide the random sampling pattern used by the "
-"integrator. See `Sobol sequence "
-"<https://en.wikipedia.org/wiki/Sobol_sequence>`__ on Wikipedia for more "
-"information."
+"integrator. See `Sobol sequence <https://en.wikipedia.org/wiki/"
+"Sobol_sequence>`__ on Wikipedia for more information."
 msgstr ""
+"Usa um padrão Sobol para decidir o padrão de amostragem usado pelo "
+"integrador. Veja`Sequência Sobol <https://en.wikipedia.org/wiki/"
+"Sobol_sequence>`__ no Wikipedia para mais informações."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:77
 msgid "Correlated Multi-Jitter"
@@ -181,10 +215,13 @@ msgstr "Tremulação múltipla correlacionada"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:75
 msgid ""
 "Uses a Correlated Multi-Jitter pattern to decide the random sampling "
-"pattern used by the integrator. See `this Pixar paper "
-"<http://graphics.pixar.com/library/MultiJitteredSampling/paper.pdf>`__ "
-"for more information."
+"pattern used by the integrator. See `this Pixar paper <http://graphics."
+"pixar.com/library/MultiJitteredSampling/paper.pdf>`__ for more information."
 msgstr ""
+"Usa um padrão de Tremulação múltipla correlacionada para decidir o padrão "
+"de amostragem aleatória usado pelo integrado. Veja `esse artigo da "
+"Pixar<http://graphics.pixar.com/library/MultiJitteredSampling/paper."
+"pdf>`__ para mais informações."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:90
 msgid "Layer Samples"
@@ -195,6 +232,8 @@ msgid ""
 "When render layers have per layer number of samples set, this option "
 "specifies how to use them."
 msgstr ""
+"Quando camadas de renderização possuem número de amostras por camada "
+"definido, essa opção especifica como usá-las."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:84
 msgid "Use"
@@ -203,6 +242,8 @@ msgstr "Utilizar"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:85
 msgid "The render layer samples will override the set scene samples."
 msgstr ""
+"As amostras das camadas de renderização irão sobrepor as definições de "
+"amostras da cena."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:86
 msgid "Bounded"
@@ -210,7 +251,7 @@ msgstr "Envolto"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:87
 msgid "Bound render layer samples by scene samples."
-msgstr ""
+msgstr "Vincula as amostras das camadas de renderização às amostras da cena."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:90
 msgid "Ignore"
@@ -227,10 +268,14 @@ msgstr "Traçador de caminhos"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:95
 msgid ""
 "The *Path Tracing* integrator is a pure path tracer; at each hit it will "
-"bounce light in one direction and pick one light to receive lighting "
-"from. This makes each individual sample faster to compute, but will "
-"typically require more samples to clean up the noise."
+"bounce light in one direction and pick one light to receive lighting from. "
+"This makes each individual sample faster to compute, but will typically "
+"require more samples to clean up the noise."
 msgstr ""
+"O integrador do *Traçador de caminhos* é um traçador de caminhos puro; "
+"para cada encontro irá rebater luz em uma direção e irá pegar uma luz para "
+"receber luz dela. Isso acelera o cálculo de cada amostra, mas irá "
+"tipicamente exigir mais amostras para limpar o ruído."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:101
 msgid "Render Samples"
@@ -241,6 +286,9 @@ msgid ""
 "Number of paths to trace for each pixel in the final render. As more "
 "samples are taken, the solution becomes less noisy and more accurate."
 msgstr ""
+"Número de caminhos para traçar para cada pixel na renderização final. A "
+"medida que mais amostras são tomadas, a solução torna-se menos ruidosa e "
+"mais precisa."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:105
 msgid "Preview Samples"
@@ -257,20 +305,31 @@ msgstr "Traçador de caminhos em ramificações"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:110
 msgid ""
-"The non-progressive Branched Path Tracing integrator offers finer control"
-" over sampling. It is similar to *Path Tracing*, but at the first hit it "
+"The non-progressive Branched Path Tracing integrator offers finer control "
+"over sampling. It is similar to *Path Tracing*, but at the first hit it "
 "will split the path for different surface components and will take all "
 "lights into account for shading instead of just one."
 msgstr ""
+"O integrador de Traçador de caminhos em ramificações não progressivo "
+"oferece um controle fino sobre o sampleamento. Isso é similar ao *Traçador "
+"de Caminho*, mas ao primeiro encontro ele irá dividir o caminho para "
+"diferentes componentes de superfície e irá levar em conta todas a luzes "
+"para sombreamento ao invés de apenas uma."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:114
 msgid ""
-"This makes each sample slower, but will reduce noise, especially in "
-"scenes dominated by direct or one-bounce lighting. To get the same number"
-" of diffuse samples as in the path tracing integrator, note that e.g. 250"
-" path tracing samples = 10 AA samples x 25 diffuse samples. The Sampling "
-"panel shows this total number of samples."
+"This makes each sample slower, but will reduce noise, especially in scenes "
+"dominated by direct or one-bounce lighting. To get the same number of "
+"diffuse samples as in the path tracing integrator, note that e.g. 250 path "
+"tracing samples = 10 AA samples x 25 diffuse samples. The Sampling panel "
+"shows this total number of samples."
 msgstr ""
+"Isso torna cada amostra mais lenta, mas irá reduzir o ruído, especialmente "
+"em cenas dominadas por iluminação direta ou de um rebatimento. Para obter "
+"o mesmo número de amostras difusas como no integrador de traçador de "
+"caminho, note que por ex. 250 amostras de traçador de caminho = 10 AA "
+"amostras x 25 amostras difusas. O painel de Amostras mostra esse número "
+"total de amostras."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:120
 msgid "AA Render Samples"
@@ -278,9 +337,11 @@ msgstr "Amostras para renderização de antisserrilhamento"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:121
 msgid ""
-"Number of samples to take for each pixel in the final render. More "
-"samples will improve anti-aliasing."
+"Number of samples to take for each pixel in the final render. More samples "
+"will improve anti-aliasing."
 msgstr ""
+"Números de amostras para considerar para cada pixel na renderização final. "
+"Mais amostras irão melhorar o antisserrilhamento."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:123
 msgid "AA Preview Samples"
@@ -293,8 +354,8 @@ msgstr "Amostras difusas"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:126
 msgid "Number of diffuse bounce samples to take for each AA sample."
 msgstr ""
-"Número de amostras de rebatimento difuso para renderizar para cada "
-"amostra de antisserrilhamento."
+"Número de amostras de rebatimento difuso para renderizar para cada amostra "
+"de antisserrilhamento."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:127
 msgid "Glossy Samples"
@@ -313,8 +374,8 @@ msgstr "Amostras de transmissão"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:130
 msgid "Number of transmission bounce samples to take for each AA sample."
 msgstr ""
-"Número de amostras de rebatimento de transmissão para renderizar para "
-"cada amostra de antisserrilhamento."
+"Número de amostras de rebatimento de transmissão para renderizar para cada "
+"amostra de antisserrilhamento."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:131
 msgid "AO Samples"
@@ -333,8 +394,8 @@ msgstr "Amostras de malha de luz"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:134
 msgid "Number of mesh light samples to take for each AA sample."
 msgstr ""
-"Número de amostras de emissão de luz para renderizar para cada amostra de"
-" antisserrilhamento."
+"Número de amostras de emissão de luz para renderizar para cada amostra de "
+"antisserrilhamento."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:135
 msgid "Subsurface Samples"
@@ -343,8 +404,8 @@ msgstr "Amostras de sub-superfície"
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:136
 msgid "Number of subsurface scattering samples to take for each AA sample."
 msgstr ""
-"Número de amostras de espalhamento de sub-superfície para renderizar para"
-" cada amostra de antisserrilhamento."
+"Número de amostras de espalhamento de sub-superfície para renderizar para "
+"cada amostra de antisserrilhamento."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:138
 msgid "Volume Samples"
@@ -364,9 +425,12 @@ msgstr "Amostrar todas as luzes diretas"
 msgid ""
 "When enabled, Cycles will samples all lights in the scene for direct "
 "bounces, instead of randomly picking one. Disabling this can improve "
-"performance, when using a lot of AA Samples anyway, to clear up the "
-"render."
+"performance, when using a lot of AA Samples anyway, to clear up the render."
 msgstr ""
+"Quando habilitado, Cycles irá amostrar todas as luzes na cena para "
+"rebatimentos diretos, ao invés de escolher uma randomicamente. Desabilitar "
+"isso pode melhorar a performance, quando usando muitas amostras de "
+"antisserilhamento de qualquer forma, para limpar a imagem."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:145
 msgid "Sample All Indirect Lights"
@@ -377,15 +441,16 @@ msgid ""
 "Similar to direct light, but for indirects lights. This can reduce noise "
 "in scenes with many lights."
 msgstr ""
+"Parecido à luz direta, mas para luzes indiretas. Isso pode reduzir o ruído "
+"nas cenas com muitas luzes."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:150
 msgid "Light Paths"
 msgstr "Caminhos de luz"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:155
-#, fuzzy
 msgid ":menuselection:`Render --> Light Paths`"
-msgstr "Painel:    :menuselection:`Renderizar --> Caminhos de luz`"
+msgstr ":menuselection:`Renderizar --> Caminhos de luz`"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:161
 msgid "Bounces"
@@ -402,6 +467,10 @@ msgid ""
 "values for faster rendering. Setting it to maximum 0 bounces results in "
 "direct lighting only."
 msgstr ""
+"Número máximo de rebatimentos de luz. Para melhor qualidade, isso deve ser "
+"definido para o máximo. Entretanto, na prática, pode ser bom definir para "
+"um valor mais baixo para renderização mais rápida. Definir para máximo de "
+"0 rebatimentos resulta em iluminação direta apenas."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:171
 msgid "Min Bounces"
@@ -409,12 +478,18 @@ msgstr "Mínimo de rebatimentos"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:168
 msgid ""
-"Minimum number of light bounces for each path, after which the integrator"
-" uses Russian Roulette to terminate paths that contribute less to the "
-"image. Setting this higher gives less noise, but may also increase render"
-" time considerably. For a low number of bounces, it is strongly "
-"recommended to set this equal to the maximum number of bounces."
+"Minimum number of light bounces for each path, after which the integrator "
+"uses Russian Roulette to terminate paths that contribute less to the "
+"image. Setting this higher gives less noise, but may also increase render "
+"time considerably. For a low number of bounces, it is strongly recommended "
+"to set this equal to the maximum number of bounces."
 msgstr ""
+"Número mínimo de rebatimentos de luz para cada caminhos, depois do qual o "
+"integrador usa Roleta Russa para terminar caminhos que contribuem menos "
+"para a imagem. Definir um valor alto resulta em menos ruído, mas pode "
+"também aumentar o tempo de renderização consideravelmente. Para um número "
+"baixo de rebatimentos, é altamente recomendável definir esse valor igual "
+"ao número máximo de rebatimentos."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:173
 msgid "Diffuse Bounces"
@@ -422,7 +497,7 @@ msgstr "Rebatimentos difusos"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:174
 msgid "Maximum number of diffuse bounces."
-msgstr "Número máximo de rebatimentos para cores difusas."
+msgstr "Número máximo de rebatimentos difusos."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:175
 msgid "Glossy Bounces"
@@ -430,7 +505,7 @@ msgstr "Rebatimentos de polimento"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:176
 msgid "Maximum number of glossy bounces."
-msgstr "Número máximo de rebatimentos para polimento."
+msgstr "Número máximo de rebatimentos de polimento."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:177
 msgid "Transmission Bounces"
@@ -438,7 +513,7 @@ msgstr "Rebatimentos para transmissão"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:178
 msgid "Maximum number of transmission bounces."
-msgstr "Número máximo de rebatimentos para transmissão."
+msgstr "Número máximo de rebatimentos de transmissão."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:181
 msgid "Volume Bounces"
@@ -446,7 +521,7 @@ msgstr "Rebatimentos de volume"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:180
 msgid "Maximum number of volume scattering bounces."
-msgstr "Número máximo de eventos de rebatimento de espalhamento volumétrico."
+msgstr "Número máximo de rebatimentos de espalhamento volumétrico."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:184
 msgid "Transparency"
@@ -458,7 +533,7 @@ msgstr "Transparência máxima"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:187
 msgid "Maximum number of transparency bounces."
-msgstr "Número máximo de rebatimentos para transparência."
+msgstr "Número máximo de rebatimentos de transparência."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:188
 msgid "Transparency Min"
@@ -469,6 +544,8 @@ msgid ""
 "Minimum number of transparency bounces, after which Russian Roulette "
 "termination is used."
 msgstr ""
+"Número mínimo de rebatimentos de transparência, depois do qual terminação "
+"em Roleta Russa é usada."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:193
 msgid "Transparent Shadows"
@@ -479,10 +556,12 @@ msgid ""
 "For direct light sampling, use transparency of surfaces in between to "
 "produce shadows affected by transparency of those surfaces."
 msgstr ""
+"Para amostragem de luz direta, usa a transparência entre superfícies para "
+"produzir sombras afetadas pela  transparência dessas superfícies."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:196
 msgid "Caustics & Filter Glossy"
-msgstr ""
+msgstr "Cáustica & Filtro de polimento"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:202
 msgid "Reflective Caustics"
@@ -492,9 +571,13 @@ msgstr "Cáustica reflexiva"
 msgid ""
 "While in principle path tracing supports rendering of caustics with a "
 "sufficient number of samples, in practice it may be inefficient to the "
-"point that there is just too much noise. This option can be unchecked, to"
-" disable reflective caustics."
+"point that there is just too much noise. This option can be unchecked, to "
+"disable reflective caustics."
 msgstr ""
+"Enquanto em princípio o traçador de caminho suporta a renderização de "
+"cáustica com um número suficiente de amostras, na prática pode ser "
+"ineficiente pois gera muito ruído. Essa opção pode ser desabilitada, para "
+"desativar cáustica reflexiva."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:206
 msgid "Refractive Caustics"
@@ -502,7 +585,7 @@ msgstr "Cáustica refrativa"
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:205
 msgid "The same as above, but for refractive caustics."
-msgstr ""
+msgstr "O mesmo que acima, mas para cáustica refratária."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:223
 msgid "Filter Glossy"
@@ -514,32 +597,49 @@ msgid ""
 "after blurry bounces, to reduce noise at the cost of accuracy. 1.0 is a "
 "good starting value to tweak."
 msgstr ""
+"Quando usando um valor maior que 0.0, isso irá borrar as reflexões polidas "
+"depois de rebatimentos borrados, para reduzir ruído à custa de precisão. "
+"1.0 é um bom valor de partida para ajustar."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:214
 msgid ""
-"Some light paths have a low probability of being found while contributing"
-" much light to the pixel. As a result these light paths will be found in "
+"Some light paths have a low probability of being found while contributing "
+"much light to the pixel. As a result these light paths will be found in "
 "some pixels and not in others, causing fireflies. An example of such a "
 "difficult path might be a small light that is causing a small specular "
-"highlight on a sharp glossy material, which we are seeing through a rough"
-" glossy material. In fact in such a case we practically have a caustic."
+"highlight on a sharp glossy material, which we are seeing through a rough "
+"glossy material. In fact in such a case we practically have a caustic."
 msgstr ""
+"Alguns caminhos de luz tem baixa probabilidade de serem encontrados "
+"enquanto contribuem muito para a luz do pixel. Como resultado esses "
+"caminhos de luz serão encontrados em alguns pixeis e não em outros, "
+"causando pontos de luz( fireflies). Um exemplo de tal caminho difícil pode "
+"ser uma luz pequena que está causando um destaque especular em um material "
+"com polimento nítido, que estamos vendo através de um material polido "
+"rugoso. De fato em um caso como esse nós praticamente temos cáustica."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:220
 msgid ""
 "With path tracing it is difficult to find the specular highlight, but if "
 "we increase the roughness on the material, the highlight gets bigger and "
 "softer, and so easier to find. Often this blurring will hardly be "
-"noticeable, because we are seeing it through a blurry material anyway, "
-"but there are also cases where this will lead to a loss of detail in "
-"lighting."
+"noticeable, because we are seeing it through a blurry material anyway, but "
+"there are also cases where this will lead to a loss of detail in lighting."
 msgstr ""
+"Com traçador de caminho é difícil encontrar o destaque especular, mas se "
+"nós aumentarmos a rugosidade do material, o destaque torna-se maior e mais "
+"suave, então é mais fácil encontrá-lo. Frequentemente esse borramento será "
+"dificilmente percebido, porquê estamos vendo ele através de um material "
+"borrado de qualquer forma, mas há casos também onde isso levará a perda de "
+"detalhe na iluminação."
 
 #: ../../manual/render/cycles/settings/scene/render/integrator.rst:227
 msgid ""
-"See :ref:`Reducing Noise <render-cycles-reducing-noise-clamp-samples>` "
-"for examples of the clamp settings in use."
+"See :ref:`Reducing Noise <render-cycles-reducing-noise-clamp-samples>` for "
+"examples of the clamp settings in use."
 msgstr ""
+"Veja :ref:`Reduzindo Ruído <render-cycles-reducing-noise-clamp-samples>` "
+"para exemplos de configurações de truncamento em uso."
 
 #~ msgid "Geometry"
 #~ msgstr "Geometria"
@@ -554,41 +654,19 @@ msgstr ""
 #~ msgstr "Tamanho dos passos"
 
 #~ msgid ""
-#~ "Distance between volume shader samples "
-#~ "when rendering the volume. Lower values"
-#~ " give more accurate and detailed "
-#~ "results but also increased render time."
+#~ "Distance between volume shader samples when rendering the volume. Lower "
+#~ "values give more accurate and detailed results but also increased "
+#~ "render time."
 #~ msgstr ""
-#~ "Distância entre as amostras de "
-#~ "sombreamento dos volumes durante sua "
-#~ "renderização. Valores mais baixos fornecem "
-#~ "precisão e resultados detalhados, mas "
-#~ "também aumentam o tempo de renderização."
+#~ "Distância entre as amostras de sombreamento dos volumes durante sua "
+#~ "renderização. Valores mais baixos fornecem precisão e resultados "
+#~ "detalhados, mas também aumentam o tempo de renderização."
 
 #~ msgid "Max Steps"
 #~ msgstr "Máximo de passos"
 
-#~ msgid ""
-#~ "Maximum number of steps through the "
-#~ "volume before giving up, to protect "
-#~ "from extremely long render times with"
-#~ " big objects or small step sizes."
-#~ msgstr ""
-
 #~ msgid "Subdivision Rate"
 #~ msgstr "Taxa de subdivisão"
-
-#~ msgid ""
-#~ "These settings are used to control "
-#~ "the :ref:`True Displacement <render-cycles-"
-#~ "materials-displacement-true>`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "These Options are only available if "
-#~ ":ref:`Experimental Feature Set <cycles-"
-#~ "experimental-features>` is turned on."
-#~ msgstr ""
 
 #~ msgid "Render"
 #~ msgstr "Renderizar"
@@ -599,38 +677,11 @@ msgstr ""
 #~ msgid "Preview"
 #~ msgstr "Previsão"
 
-#~ msgid "Size of :term:`micropolygons` in pixels while preview rendering."
-#~ msgstr ""
-
 #~ msgid "Max Subdivisions"
 #~ msgstr "Máximo de subdivisões"
 
-#~ msgid ""
-#~ "Stop subdividing when this level is "
-#~ "reached even if the dice rate "
-#~ "would produce finer :term:`tessellation`."
-#~ msgstr ""
-
 #~ msgid "Hair"
 #~ msgstr "Cabelo"
-
-#~ msgid ""
-#~ "These are global settings that apply "
-#~ "to all instances of hair systems. "
-#~ "The resolution of the strands is "
-#~ "controlled by the step values in "
-#~ "particle settings. Each hair system uses"
-#~ " the material identified in the "
-#~ "particle settings in the same way "
-#~ "as Blender Internal."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There are also object level hair "
-#~ "settings for each particle system which"
-#~ " can be found in the :doc:`Hair "
-#~ "Settings </render/cycles/settings/objects/hair>`."
-#~ msgstr ""
 
 #~ msgid "Use Hair"
 #~ msgstr "Usar cabelo"
@@ -656,28 +707,11 @@ msgstr ""
 #~ msgid "Line Segments"
 #~ msgstr "Segmentos de linha"
 
-#~ msgid "Uses a straight curve primitive."
-#~ msgstr ""
-
 #~ msgid "Curve Segments"
 #~ msgstr "Segmentos de curva"
 
-#~ msgid ""
-#~ "Uses a smooth Cardinal curve primitive."
-#~ " These interpolate a path through the"
-#~ " curve keys. However, it renders "
-#~ "slower than line segments."
-#~ msgstr ""
-
 #~ msgid "Curve Subdivisions"
 #~ msgstr "Subdivisões de curvas"
-
-#~ msgid ""
-#~ "The interpolated path is subdivided to"
-#~ " give points to connect. The "
-#~ "parameter subdivisions sets the number "
-#~ "of divisions used."
-#~ msgstr ""
 
 #~ msgid "Shape"
 #~ msgstr "Formato"
@@ -685,30 +719,11 @@ msgstr ""
 #~ msgid "Thick"
 #~ msgstr "Espessura"
 
-#~ msgid "Cylindrical segments between two points."
-#~ msgstr ""
-
 #~ msgid "Cull back-faces"
 #~ msgstr "Abate das faces posteriores"
-
-#~ msgid "Excludes strands emitted from the mesh backfacing the camera."
-#~ msgstr ""
 
 #~ msgid "Ribbons"
 #~ msgstr "Tiras"
 
-#~ msgid "Are flat planes following the strand direction facing the camera."
-#~ msgstr ""
-
 #~ msgid "Min Pixels"
 #~ msgstr "Pixeis mínimo"
-
-#~ msgid ""
-#~ "Strands that are further away will "
-#~ "be made wider, which is compensated "
-#~ "with transparency to keep the look "
-#~ "similar. This effect is only applied "
-#~ "for camera rays. It works best "
-#~ "with ribbon primitives."
-#~ msgstr ""
-
