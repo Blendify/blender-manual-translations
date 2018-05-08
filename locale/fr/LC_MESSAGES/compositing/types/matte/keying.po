@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-01-01 17:48+0100\n"
+"PO-Revision-Date: 2018-03-19 22:03+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -138,11 +138,10 @@ msgstr ""
 #: ../../manual/compositing/types/matte/keying.rst:48
 #, fuzzy
 msgid ""
-"Controls how much color bleed from the key color is removed from the "
-"input image: 0 means no despilling, 1 means all possible spilling will be"
-" removed. The underlying implementation is the same as adjusting the "
-"*Unspill* amount of the :doc:`Color Spill Node "
-"</compositing/types/matte/color_spill>`."
+"Controls how much color bleed from the key color is removed from the input "
+"image: 0 means no despilling, 1 means all possible spilling will be removed. "
+"The underlying implementation is the same as adjusting the *Unspill* amount "
+"of the :doc:`Color Spill Node </compositing/types/matte/color_spill>`."
 msgstr ""
 "Contrôle   de la couleur clé est supprimé de l'image d'entrée : 0 "
 "signifie pas de despilling, 1 signifie tout le spilling possible sera "
@@ -158,8 +157,8 @@ msgstr ""
 msgid ""
 "This controls how the color channels are compared when computing spill, "
 "affecting the hue and shade of the corrected colors. It is similar to "
-"setting the *Limiting Channel* in the :doc:`Color Spill Node "
-"</compositing/types/matte/color_spill>`."
+"setting the *Limiting Channel* in the :doc:`Color Spill Node </compositing/"
+"types/matte/color_spill>`."
 msgstr ""
 "Ceci contrôle la manière dont les canaux de couleur sont comparés lors du"
 " calcul du spill, affectant le ton et la nuance des couleurs corrigées. "
@@ -185,10 +184,20 @@ msgid ""
 "current pixel: if the difference between pixel colors is higher than this"
 " threshold then the point will be considered an edge."
 msgstr ""
+<<<<<<< .mine
+"Définit le seuil utilisé pour vérifier si les pixels dans le rayon sont les "
+"mêmes que le pixel courant : si la différence entre les couleurs de pixels "
+"est supérieure à ce seuil alors le point sera considéré comme un bord."
+||||||| .r2573
+"Définit le seuil utilisé pour vérifier si les pixels dans le rayon sont les "
+"mêmes que le pixel courant : si la différence entre les couleurs de pixels "
+"est plus supérieure à ce seuil alors le point sera considéré comme un bord."
+=======
 "Définit le seuil utilisé pour vérifier si les pixels dans le rayon sont "
 "les mêmes que le pixel courant : si la différence entre les couleurs de "
 "pixels est plus supérieure à ce seuil alors le point sera considéré comme"
 " un bord."
+>>>>>>> .r2576
 
 #: ../../manual/compositing/types/matte/keying.rst:68
 msgid "Clip Black"
@@ -226,7 +235,6 @@ msgid "Clip White"
 msgstr ""
 
 #: ../../manual/compositing/types/matte/keying.rst:71
-#, fuzzy
 msgid ""
 "This sets the threshold for what becomes fully opaque in the output "
 "(white in the matte). It should be set as high as possible. Colors close "
@@ -234,9 +242,22 @@ msgid ""
 "adjusting the *Screen Balance*. Particularly problematic parts can fixed "
 "with a *Core Matte* instead of a low *Clip White*."
 msgstr ""
+<<<<<<< .mine
+"Ceci définit le seuil pour ce qui devient complètement opaque dans la sortie "
+"(blanc dans le matte). Il devrait être défini aussi élevé que possible. Les "
+"couleurs proches du vert dans l'avant-plan peuvent requérir la réduction de "
+"cette valeur et/ou l'ajustement de *Screen Balance*. Les parties "
+"particulièrement problématiques peuvent être corrigées par un *Core Matte* à "
+"la place d'un *Clip White* bas."
+||||||| .r2573
+"Ceci définit le seuil pour ce qui devient complètement opaque dans la sortie "
+"(dans le matte). Il devrait être défini aussi haut que possible. Les "
+"couleurs proches du vert dans l'avant-plan peuvent re"
+=======
 "Ceci définit le seuil pour ce qui devient complètement opaque dans la "
 "sortie (dans le matte). Il devrait être défini aussi haut que possible. "
 "Les couleurs proches du vert dans l'avant-plan peuvent re"
+>>>>>>> .r2576
 
 #: ../../manual/compositing/types/matte/keying.rst:80
 msgid "Dilate/Erode"
@@ -324,16 +345,22 @@ msgid "Edges"
 msgstr ""
 
 #: ../../manual/compositing/types/matte/keying.rst:100
-#, fuzzy
 msgid ""
 "Shows what edges were detected on the matte. Useful for adjusting the "
 "*Edge Kernel Radius* and *Edge Kernel Tolerance*."
 msgstr ""
+<<<<<<< .mine
+"Affiche les bords qui ont été détectés sur le matte. Utile pour ajuster les "
+"*Edge Kernel Radius* et *Edge Kernel Tolerance*."
+||||||| .r2573
+"Affiche quels bords ont été détectés sur le matte. Utile pour ajuster les "
+"*Edge Kernel Radius* et *Edge Kernel Tolerance*."
+=======
 "Affiche quels bords ont été détectés sur le matte. Utile pour ajuster les"
 " *Edge Kernel Radius* et *Edge Kernel Tolerance*."
+>>>>>>> .r2576
 
 #: ../../manual/compositing/types/matte/keying.rst:105
-#, fuzzy
 msgid ""
 "If there are problems with the edges of the matte, it may help to start "
 "with adjusting the *Edge Kernel* parameters before adjusting feathering. "
@@ -342,12 +369,27 @@ msgid ""
 "a :doc:`Viewer Node </compositing/types/output/viewer>` to the *Edges* "
 "output."
 msgstr ""
+<<<<<<< .mine
+"S'il y a des problèmes avec les bords du matte, il peut aider à ajuster les "
+"paramètres de *Edge Kernel* avant d'ajuster . Les bords détectés ne sont pas "
+"soumis aux seuils de *Clip Black* / *Clip White* pour préserver les fins "
+"détails des bords. Vous pouvez vérifier la détection des bords en connectant "
+"un :doc:`Node Viewer </compositing/types/output/viewer>` à la sortie "
+"*Edges*. "
+||||||| .r2573
+"Si il y a des problèmes avec les bords du matte, il peut aider d'ajuster les "
+"paramètres de *Edge Kernel* avant d'ajuster . Les bords détectés ne sont pas "
+"seuils de *Clip Black* / *Clip White* pour préserver de hauts détails des "
+"bords. Vous pouvez vérifier la détection des bords en connectant un :doc:"
+"`Node Viewer </compositing/types/output/viewer>` à la sortie *Edges*. "
+=======
 "Si il y a des problèmes avec les bords du matte, il peut aider d'ajuster "
 "les paramètres de *Edge Kernel* avant d'ajuster . Les bords détectés ne "
 "sont pas seuils de *Clip Black* / *Clip White* pour préserver de hauts "
 "détails des bords. Vous pouvez vérifier la détection des bords en "
 "connectant un :doc:`Node Viewer </compositing/types/output/viewer>` à la "
 "sortie *Edges*. "
+>>>>>>> .r2576
 
 #: ../../manual/compositing/types/matte/keying.rst:111
 msgid ""

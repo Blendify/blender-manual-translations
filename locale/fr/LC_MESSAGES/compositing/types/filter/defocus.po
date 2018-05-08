@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-02-05 22:40+0100\n"
+"PO-Revision-Date: 2018-04-11 18:10+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,6 +65,8 @@ msgid ""
 "Z-buffer input, but could also be a (grayscale) image used as a mask, or "
 "a single value input."
 msgstr ""
+"Tampon Z, mais pourrait être une image (en tons de gris) utilisée comme un "
+"masque, ou une entrée de valeur simple."
 
 #: ../../manual/compositing/types/filter/defocus.rst:29
 msgid "Properties"
@@ -76,7 +78,7 @@ msgstr ""
 
 #: ../../manual/compositing/types/filter/defocus.rst:32
 msgid "The number of iris blades of the virtual camera's diaphragm."
-msgstr ""
+msgstr "Le nombre de lames de l'iris du diaphragme virtuel de la caméra."
 
 #: ../../manual/compositing/types/filter/defocus.rst:34
 msgid ""
@@ -84,6 +86,9 @@ msgid ""
 "blades), Pentagon (5 blades), Hexagon (6 blades), Heptagon (7 blades) or "
 "Octagon (8 blades)."
 msgstr ""
+"Disk (pour émuler un cercle parfait) ou Triangle (3 lames), Square (4 "
+"lames), Pentagon (5 lames), Hexagon (6 lames), Heptagon (7 lames) ou Octagon "
+"(8 lames)."
 
 #: ../../manual/compositing/types/filter/defocus.rst:38
 msgid "Angle"
@@ -146,21 +151,22 @@ msgid "Threshold"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/defocus.rst:53
-#, fuzzy
 msgid ""
 "Some artifacts, like edge bleed, may occur, if the blur difference "
 "between pixels is large. This value controls how large that blur "
 "difference considered to be safe."
 msgstr ""
 "Certains artefacts, comme *edge bleed*, peuvent se produire, si la "
-"différence de flou entre pixels est grande. Cette valeur contrôle la "
-"différence de flou considérée . "
+"différence de flou entre pixels est importante. Cette valeur contrôle "
+"l'importance de la différence de flou considérée comme sans risque. "
 
 #: ../../manual/compositing/types/filter/defocus.rst:58
 msgid ""
 "Only change this value, if there is an occurring problem with an in-focus"
 " object."
 msgstr ""
+"Modifiez seulement cette valeur, s'il y a un problème rencontré avec un "
+"objet dans le focus."
 
 #: ../../manual/compositing/types/filter/defocus.rst:61
 #: ../../manual/compositing/types/filter/defocus.rst:142
@@ -191,11 +197,14 @@ msgid "No Z-buffer"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/defocus.rst:66
+#, fuzzy
 msgid ""
 "Should be activate for a non Z-buffer in the Z input. No Z-buffer will be"
 " enabled automatically whenever a node that is not image based is "
 "connected to the Z input."
 msgstr ""
+"Devrait être activé pour un dans l'entrée Z. *No Z-buffer* sera activé "
+"automatiquement un node qui n'est pas basé sur est connecté à l'entrée Z."
 
 #: ../../manual/compositing/types/filter/defocus.rst:73
 msgid "Z Scale"
@@ -230,10 +239,15 @@ msgid ""
 " from the camera. As the balls recede into the distance, they get "
 "blurrier."
 msgstr ""
+"Dans ce `fichier blend exemple <https://wiki.blender.org/uploads/7/79/"
+"Doftest.blend>`__, l'image est floutée comme si elle a été prise par un "
+"appareil photo avec un f-stop de 2.8 produisant un champ de profondeur assez "
+"étroit centré sur 7.5 unités Blender depuis la caméra. les balles la "
+"distance, elles deviennent plus floues. "
 
 #: ../../manual/compositing/types/filter/defocus.rst:95
 msgid "No Z-Buffer Examples"
-msgstr ""
+msgstr "Exemples de No Z-Buffer"
 
 #: ../../manual/compositing/types/filter/defocus.rst:97
 msgid ""
@@ -261,22 +275,28 @@ msgid ""
 "input has to be scaled, because usually the value of a texture is only in"
 " the numeric range 0.0 to 1.0."
 msgstr ""
+"Le paramètre *No Z-buffer*, devient alors le principal contrôle de flou. "
+"L'entrée doit être mise à l'échelle, car habituellement la valeur d'une "
+"texture est seulement dans l'intervalle numérique de 0.0 à 1.0."
 
 #: ../../manual/compositing/types/filter/defocus.rst:117
 msgid "Camera Settings"
-msgstr ""
+msgstr "Réglages de caméra"
 
 #: ../../manual/compositing/types/filter/defocus.rst:121
 msgid "Distance setting in the Camera Depth of Field panel."
-msgstr ""
+msgstr "Réglage de distance dans *Camera Depth* du panneau *Field*."
 
 #: ../../manual/compositing/types/filter/defocus.rst:123
 msgid ""
 "The *Defocus* node uses the actual camera data in your scene if supplied "
 "by a *Render Layer* node."
 msgstr ""
+"Le node *Defocus* utilise les données de caméra actuelles dans votre scène "
+"s'il est approvisionné par un node *Render Layer*."
 
 #: ../../manual/compositing/types/filter/defocus.rst:125
+#, fuzzy
 msgid ""
 "To set the point of focus, the camera now has a *Distance* parameter, "
 "which is shorthand for Depth of Field Distance. Use this camera parameter"
@@ -284,6 +304,12 @@ msgid ""
 "away from the camera are in focus). Set *Distance* in the main *Camera* "
 "edit panel; the button is right below the *Depth of Field*."
 msgstr ""
+"Pour définir le point de focus, la caméra a maintenant un paramètre "
+"*Distance*, qui est un abréviatif pour *Depth of Field Distance*. Utilisez "
+"ce paramètre de caméra pour définir le plan focal de la caméra (objets de "
+"*Field Distance* loin de la caméra sont dans le focus). Définissez "
+"*Distance* dans le panneau d'édition *Camera* principal ; le bouton est "
+"juste au dessous de *Depth of Field*."
 
 #: ../../manual/compositing/types/filter/defocus.rst:132
 msgid ""
@@ -297,7 +323,7 @@ msgstr ""
 
 #: ../../manual/compositing/types/filter/defocus.rst:137
 msgid "Hints"
-msgstr ""
+msgstr "Astuces"
 
 #: ../../manual/compositing/types/filter/defocus.rst:140
 msgid ""
@@ -306,6 +332,10 @@ msgid ""
 "intensive, so watch your console window, and it will give you status as "
 "it computes each render scan line."
 msgstr ""
+"En général, utilisez le mode *Preview*, modifiez les paramètres selon votre "
+"convenance, seulement alors désactivez le mode *Preview* pour le rendu "
+"final. Ce node est informatiquement intense, aussi regardez votre console, "
+"et il va vous donner pendant qu'il calcule chaque ligne de balayage du rendu."
 
 #: ../../manual/compositing/types/filter/defocus.rst:145
 msgid "Edge Artifacts"
@@ -346,8 +376,11 @@ msgid ""
 "Split up your scene into \"nearby\" and \"far\" objects, and render them "
 "in two passes."
 msgstr ""
+"Divisez votre scène en objets \"nearby\" and \"far\", et faites le rendu en "
+"deux passes. "
 
 #: ../../manual/compositing/types/filter/defocus.rst:161
+#, fuzzy
 msgid ""
 "Now, combine the two results, each with their own \"defocus\" nodes "
 "driven by the same Time node, but with one of them inverted. (e.g. using "
@@ -355,12 +388,18 @@ msgid ""
 " the defocus on the other decreases at the same rate, creating a smooth "
 "transition."
 msgstr ""
+"Maintenant, combinez les deux résultats, chacun avec leurs propres nodes "
+"\"defocus\" pilotés par le même node *Time*, mais avec un d'eux inversé. "
+"(ex. utilisant un node \"Map Value\" avec une Taille de -1). Comme le "
+"defocus d'un augmente, le defocus sur l'autre diminue au même rythme, créant "
+"une transition lisse."
 
 #: ../../manual/compositing/types/filter/defocus.rst:178
 msgid "Aliasing at Low f-Stop Values"
 msgstr ""
 
 #: ../../manual/compositing/types/filter/defocus.rst:167
+#, fuzzy
 msgid ""
 "At very low values, less than 5, the node will start to remove any "
 "oversampling and bring the objects at DoF Distance very sharply into "
@@ -368,12 +407,20 @@ msgid ""
 "to visible stair-stepping (aliasing) which OSA is designed to avoid. If "
 "you run into this problem:"
 msgstr ""
+"Aux valeurs très basses, moins de 5, le node va commencer à supprimer tout "
+"suréchantillonnage et mettre les objets à DoF Distance très vivement dans le "
+"focus. Si l'objet est contre un arrière-plan contrasté, ceci va conduire à "
+"un effet de marches d'escalier visible (aliasing) dont l'OSA est conçu pour "
+"éviter. Si vous dans ce problème :"
 
 #: ../../manual/compositing/types/filter/defocus.rst:172
 msgid ""
 "Do your own OSA by rendering at twice the intended size and then scaling "
 "down, so that adjacent pixels are blurred together."
 msgstr ""
+"Faites votre propre OSA en faisant le rendu à deux fois la taille prévue et "
+"en le réduisant ensuite, de sorte que les pixels adjacents sont floutés "
+"ensemble."
 
 #: ../../manual/compositing/types/filter/defocus.rst:174
 msgid "Use the blur node with a setting of 2 for X and Y."
@@ -386,10 +433,13 @@ msgid ""
 msgstr ""
 
 #: ../../manual/compositing/types/filter/defocus.rst:176
+#, fuzzy
 msgid ""
 "Use a higher f-Stop, which will start the blur, and then use the Z socket"
 " to a Map Value to a Blur node to enhance the blur effect."
 msgstr ""
+"Utilisez un f-stop plus élevé, qui va lancer le flou, et puis utilisez la "
+"prise Z un node *Blur* pour améliorer l'effet de flou. "
 
 #: ../../manual/compositing/types/filter/defocus.rst:178
 msgid "Rearrange the objects in your scene to use a lower-contrast background."
