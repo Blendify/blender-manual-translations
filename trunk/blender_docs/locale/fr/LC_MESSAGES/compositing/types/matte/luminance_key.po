@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-01-01 17:46+0100\n"
+"PO-Revision-Date: 2018-04-11 13:24+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -44,11 +44,16 @@ msgid ""
 msgstr ""
 
 #: ../../manual/compositing/types/matte/luminance_key.rst:23
+#, fuzzy
 msgid ""
 "When compositing footage of something that emits light and has a dark "
 "background, like fire, a :doc:`Mix Node </compositing/types/color/mix>` "
 "using a *Screen* or *Add* operator will produce better results."
 msgstr ""
+"Combinaison séquence de quelque chose qui émet de la lumière et possède un "
+"arrière-plan sombre, comme du feu, un :doc:`Mix Node </compositing/types/"
+"color/mix>` utilisant un opérateur *Screen* ou *Add* va produire de "
+"meilleurs résultats. "
 
 #: ../../manual/compositing/types/matte/luminance_key.rst:29
 msgid "Inputs"
@@ -127,7 +132,6 @@ msgid "Example"
 msgstr "Exemple"
 
 #: ../../manual/compositing/types/matte/luminance_key.rst:64
-#, fuzzy
 msgid ""
 "For this example the model was shot against a *white* background. Using "
 "the Luminance Key node, we get a matte out where the background is white,"
@@ -138,6 +142,25 @@ msgid ""
 " gets in black, it spits out white, and vice versa. The reversed mask is "
 "shown; her white outline is usable as an alpha mask now."
 msgstr ""
+<<<<<<< .mine
+"Pour cet exemple, le modèle a été pris contre un arrière-plan *blanc*. En "
+"utilisant le node *Luminance Key*, nous obtenons un *matte* où l'arrière-"
+"plan est blanc, et le modèle est noir ; l'opposé de ce que nous voulons. Si "
+"nous avons voulu utiliser le matte, nous devons inverser le noir et le "
+"blanc. Comme le faire ? Le node *Color Ramp* à la rescousse -- nous fixons "
+"la couleur de gauche à Blanc Alpha 1.0, et la couleur de droite à Noir Alpha "
+"0.0. Ainsi, et vice versa. Le masque inversé est affiché ; son contour blanc "
+"est utilisable maintenant comme un masque alpha.  "
+||||||| .r2573
+"Pour cet exemple, le modèle a été pris contre un arrière-plan *blanc*. En "
+"utilisant le node *Luminance Key*, nous obtenons un *matte* où l'arrière-"
+"plan est blanc, et le modèle est noir ; l'opposé de cela est ce que nous "
+"voulons. Si nous avons voulu utiliser le matte, nous devons inverser le noir "
+"et le blanc. Comme le faire ? Le node *Color Ramp* à la rescousse -- nous "
+"fixons la couleur de gauche à Blanc Alpha 1.0, et la couleur de droite à "
+"Noir Alpha 0.0. Ainsi, et vice versa. Le masque inversé est affiché ; son "
+"contour blanc est utilisable maintenant comme un masque alpha.  "
+=======
 "Pour cet exemple, le modèle a été pris contre un arrière-plan *blanc*. En"
 " utilisant le node *Luminance Key*, nous obtenons un *matte* où l"
 "'arrière-plan est blanc, et le modèle est noir ; l'opposé de cela est ce "
@@ -147,10 +170,11 @@ msgstr ""
 "couleur de droite à Noir Alpha 0.0. Ainsi, et vice versa. Le masque "
 "inversé est affiché ; son contour blanc est utilisable maintenant comme "
 "un masque alpha.  "
+>>>>>>> .r2576
 
 #: ../../manual/compositing/types/matte/luminance_key.rst:75
 msgid "Using Luma Key with a twist."
-msgstr ""
+msgstr "Utilisation de *Luma Key* avec une torsion."
 
 #: ../../manual/compositing/types/matte/luminance_key.rst:77
 #, fuzzy
@@ -165,9 +189,35 @@ msgid ""
 "will be used where the Luminance Key node has spit out Black. Voilà, our "
 "model is teleported from Atlanta to aboard a cruise ship docked in Miami."
 msgstr ""
+<<<<<<< .mine
+"Maintenant pour le mélange, nous n'avons pas vraiment besoin du node *Alpha "
+"Over* ; nous pouvons simplement utiliser le masque comme notre entrée "
+||||||| .r2573
+"Maintenant pour mélanger, nous n'avons pas vraiment besoin du node *Alpha "
+"Over* ; nous pouvons simplement utiliser le masque comme notre entrée "
+=======
 "Maintenant pour mélanger, nous n'avons pas vraiment besoin du node *Alpha"
 " Over* ; nous pouvons simplement utiliser le masque comme notre entrée "
+>>>>>>> .r2576
 "Factor, Dans ce cas très étrange, nous pouvons utiliser directement le "
+<<<<<<< .mine
+"matte ; nous intervertissons simplement les nodes input, Comme vous pouvez "
+"voir, puisque le matte est blanc (1.0) où nous ne voulons pas utiliser "
+"l'image modèle, nous alimentons la prise du bas avec la photo d'arrière-plan "
+"(rappelez-vous que le node mix utilise le node du haut où le facteur est à "
+"0.0, et la prise du bas où le facteur est à 1.0). Alimenter notre photo "
+"originale dans la prise du haut signifie qu'elle sera utilisée où le node "
+"*Luminance Key* a craché du Noir. Voilà, notre modèle est téléporté depuis "
+"Atlanta à bord du bateau de croisière mouillé à Miami."
+||||||| .r2573
+"matte ; nous intervertissons simplement les nodes inout, Comme vous pouvez "
+"voir, puisque le matte est blanc (1.0) où nous ne voulons pas utiliser "
+"l'imge modèle, nous alimentons l'image d'arrière-plan à la prise du bas "
+"(rappelez-vous que le node mix utilise le node du haut où le facteur est à "
+"0.0,et la prise du bas où le facteur est à 1.0).  signifie qu'elle sera "
+"utilisée où le node *Luminance Key* a craché du Noir. Voilà, notre modèle "
+"est téléporté d'Atlanta à bord du bateau de croisière mouillé à Miami."
+=======
 "matte ; nous intervertissons simplement les nodes inout, Comme vous "
 "pouvez voir, puisque le matte est blanc (1.0) où nous ne voulons pas "
 "utiliser l'imge modèle, nous alimentons l'image d'arrière-plan à la prise"
@@ -189,3 +239,4 @@ msgstr ""
 #~ "for chroma keying."
 #~ msgstr ""
 
+>>>>>>> .r2576
