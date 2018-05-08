@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-04-30 22:37+0200\n"
+"PO-Revision-Date: 2018-05-02 21:23+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Référence"
 
 #: ../../manual/modeling/meshes/editing/edges.rst
 msgid "Mode"
-msgstr "Mode "
+msgstr "Mode"
 
 #: ../../manual/modeling/meshes/editing/edges.rst:9
 #: ../../manual/modeling/meshes/editing/edges.rst:20
@@ -46,7 +46,7 @@ msgstr "Mode Édition"
 
 #: ../../manual/modeling/meshes/editing/edges.rst
 msgid "Menu"
-msgstr "Menu "
+msgstr "Menu"
 
 #: ../../manual/modeling/meshes/editing/edges.rst:10
 msgid ":menuselection:`Mesh --> Edges`"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst
 msgid "Hotkey"
-msgstr "Raccourci "
+msgstr "Raccourci"
 
 #: ../../manual/modeling/meshes/editing/edges.rst:11
 msgid ":kbd:`Ctrl-E`"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst
 msgid "Panel"
-msgstr "Panneau "
+msgstr "Panneau"
 
 #: ../../manual/modeling/meshes/editing/edges.rst:21
 msgid ""
@@ -128,6 +128,10 @@ msgid ""
 "`UV Mapping section <editors-uv-image-index>` for more details. These "
 "operators set or unset this flag for selected edges."
 msgstr ""
+"Les joints sont une manière de créer des séparations, \"îles\", dans des UV "
+"maps. Voir la :ref:`section UV Mapping <editors-uv-image-index>` pour plus "
+"de détails. Ces opérateurs met ou démet cet indicateur pour les arêtes "
+"sélectionnées. "
 
 #: ../../manual/modeling/meshes/editing/edges.rst:51
 msgid "Mark Sharp and Clear Sharp"
@@ -146,6 +150,10 @@ msgid ""
 "As seams, it is a property of edges, and these operators set or unset it for "
 "selected ones."
 msgstr ""
+"l'indicateur *Sharp* est utilisé par le :doc:`Modificateur Edge Split </"
+"modeling/modifiers/generate/edge_split>`, qui fait partie des techniques de "
+"lissage. Comme les joints, c'est une propriété d'arête, et ces opérateurs le "
+"met ou le démet pour celles sélectionnées. "
 
 #: ../../manual/modeling/meshes/editing/edges.rst:67
 msgid "Adjust Bevel Weight"
@@ -163,6 +171,12 @@ msgid ""
 "transform tools), where by moving the mouse (or typing a value with the "
 "keyboard) you can set the (average) bevel weight of selected edges."
 msgstr ""
+"Cette propriété d'arête,  une valeur entre (0.0 à 1.0), est utilisée par le :"
+"doc:`Modificateur Bevel </modeling/modifiers/generate/bevel>` pour contrôler "
+"l'intensité du biseau des arêtes. Cet opérateur entre dans un mode "
+"interactif (un peu comme les outils de transformation), où en déplaçant la "
+"souris (ou en tapant une valeur au clavier) vous pouvez définir le poids "
+"(moyen) du biseau des arêtes sélectionnées."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:86
 msgid "Edge Crease"
@@ -187,6 +201,14 @@ msgid ""
 "crease value, if present. To clear the crease edge property, enter a value "
 "of -1."
 msgstr ""
+"Cette propriété d'arête, une valeur entre (0.0 à 1.0), est utilisée par le :"
+"doc:`Modificteur Subdivision Surface </modeling/modifiers/generate/subsurf>` "
+"pour contrôler des arêtes dans le maillage subdivisé. Cet opérateur entre "
+"dans un mode interactif (un peu comme les outils de transformation), où en "
+"déplaçant la souris (ou en tapant une valeur au clavier) vous pouvez définir "
+"la valeur (moyenne) de pliage des arêtes sélectionnées. Une valeur négative "
+"va soustraire de la valeur de pliage réel, si présente. Pour effacer la "
+"propriété d'arête de pliage, entrez une valeur de -1. "
 
 #: ../../manual/modeling/meshes/editing/edges.rst:109
 msgid "Edge Slide"
@@ -467,6 +489,10 @@ msgid ""
 "will be created, and the selected edges are duplicated to form the border of "
 "the hole."
 msgstr ""
+"*Edge Split* est similaire à l'outil *Rip*. Quand deux ou plusieurs arêtes "
+"intérieures se touchant, ou un *border edge est sélectionné quand *Edge "
+"Split* est utilisé, un trou sera créé, et les arêtes sélectionnées sont "
+"dupliquées pour former le bord du trou. "
 
 #: ../../manual/modeling/meshes/editing/edges.rst:276
 msgid "Selected edges."
@@ -486,7 +512,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst:296
 msgid "*Bridge Edge Loops* connects multiple edge loops with faces."
-msgstr ""
+msgstr "*Bridge Edge Loops* connecte de nombreux edge loops aux faces."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:303
 msgid "Connect Loops"
@@ -505,8 +531,11 @@ msgid "Closed Loop"
 msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst:302
+#, fuzzy
 msgid "Tries to connect to a circular loop (where start and end is merged)."
 msgstr ""
+"Essaie de connecter à un loop circulaire (où le début et la fin sont "
+"fusionnés)."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:303
 msgid "Loop pairs"
@@ -514,7 +543,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst:304
 msgid "Connects each even count of loops individually."
-msgstr ""
+msgstr "Connecte chaque nombre pair de loops un par un."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:305
 msgid "Merge"
@@ -522,7 +551,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst:306
 msgid "Merges edge loops rather than creating a new face."
-msgstr ""
+msgstr "Fusionne (merge) les *edge loops* plutôt que créer une nouvelle face."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:307
 msgid "Merge Factor"
@@ -540,7 +569,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst:310
 msgid "Determines which vertices in both loops are connected to each other."
-msgstr "Détermines les sommets de chaque loop à connecter ensemble."
+msgstr "Détermine les sommets de chaque loop à connecter ensemble."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:311
 msgid "Number of Cuts"
@@ -575,8 +604,9 @@ msgid "Profile Factor"
 msgstr ""
 
 #: ../../manual/modeling/meshes/editing/edges.rst:318
+#, fuzzy
 msgid "How much intermediary new edges are shrunk/expanded."
-msgstr ""
+msgstr "La quantité de nouvelles arêtes intermédiaires "
 
 #: ../../manual/modeling/meshes/editing/edges.rst:323
 msgid "Profile Shape"
@@ -638,9 +668,8 @@ msgstr ""
 "loops et les connecter en une fois."
 
 #: ../../manual/modeling/meshes/editing/edges.rst:384
-#, fuzzy
 msgid "Example of the subdivision option and surface blending with UV's."
-msgstr "Exemple de l'option subdivision et avec des UV."
+msgstr "Exemple de l'option subdivision et assemblage de surface avec des UV."
 
 #~ msgid "Mode:     Edit Mode"
 #~ msgstr "Mode:     Mode Édition"
