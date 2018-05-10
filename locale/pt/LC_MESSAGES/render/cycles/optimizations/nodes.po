@@ -4,37 +4,41 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 2.77 Manual 2.77\n"
+"Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 1971-01-02 00:00+0000\n"
-"Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"Language: pt_BR\n"
-"Language-Team: Ivan Paulos Tomé <greylica@gmail.com>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"PO-Revision-Date: 2018-05-10 13:19-0300\n"
+"Last-Translator: Eduardo Schilling<elschilling@gmail.com>\n"
+"Language: pt\n"
+"Language-Team: portuguese\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:4
 msgid "Shader Nodes"
-msgstr ""
+msgstr "Nós Sombreadores"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:6
 msgid ""
-"Cycles applies a number of shader node optimizations both at compile time"
-" and run-time. By exploiting them it is possible to design complicated "
-"\"Uber Shader\" style node groups that incur minimal render time overhead"
-" for unused features."
+"Cycles applies a number of shader node optimizations both at compile "
+"time and run-time. By exploiting them it is possible to design "
+"complicated \"Uber Shader\" style node groups that incur minimal render "
+"time overhead for unused features."
 msgstr ""
+"Cycles aplica uma variedade de otimizações de nós de sombreadores tanto "
+"no tempo de compilação como na execução. Ao explorar eles é possível "
+"desenhar de grupos de nós com estilo de \"Super Sombreadores\" que levam "
+"à mínimas sobrecargas ao tempo de renderização para funcionalidades não "
+"usadas."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:12
 msgid "Node Optimizations"
-msgstr ""
+msgstr "Otimizações de Nós"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:14
 msgid ""
@@ -42,18 +46,26 @@ msgid ""
 "expands all node groups, as if using the Ungroup tool, and discards UI "
 "only features like frames and reroute nodes."
 msgstr ""
+"Como primeiro passo ao preparar um nó sombreador para execução, o Cycles "
+"expande todos grupos de nós, como se estivesse usando a ferramenta "
+"Desagrupar, e descarta funcionalidades apenas da Interface do Usuário "
+"como quadros e nós de redirecionamento."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:18
 msgid ""
 "After that, it applies some obvious transformations For example, it can "
 "(the list is not exhaustive):"
 msgstr ""
+"Depois disso, ele aplica algumas transformações óbvias. Por exemplo, ele "
+"pode (a lista não é exaustiva):"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:21
 msgid ""
-"Replace the following nodes with the constant result of their evaluation,"
-" if all their inputs are determined to be constant:"
+"Replace the following nodes with the constant result of their "
+"evaluation, if all their inputs are determined to be constant:"
 msgstr ""
+"Substituir os seguintes nós com o resultado constante da sua avaliação, "
+"se todas as entradas forem determinadas para ser constantes."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:24
 msgid ""
@@ -61,6 +73,9 @@ msgid ""
 "Contrast, Invert, Separate/Combine RGB/XYZ/HSV, Blackbody, RGB Curves, "
 "Vector Curves, Color Ramps."
 msgstr ""
+"RGB, Valor, Misturar RGB, Matemática, Matemática Vetorial, RGB para PB, "
+"Brilho e Contraste, Inverter, Separar/Combinar RGB/XYZ/HSV, Corpo Negro, "
+"Curvas RGB, Curvas Vetoriais, Rampas de Cor."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:27
 msgid ""
@@ -69,47 +84,67 @@ msgid ""
 "multiplication, division or dot/cross product with a known constant 0 or "
 "1 input, and replace with the appropriate input link or constant result."
 msgstr ""
+"Detecta nós Misturar RGB, Matemática e Matemática Vetorial que tornam-se "
+"no-op (sem Truncamento) ou avalia eles para 0 como resultado da adição, "
+"subtração, multiplicação, divisão ou produto escalar/vetorial com uma "
+"entrada constante de 0 ou 1, e substitui com a ligação de entrada "
+"apropriada ou resultado constante."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:31
 msgid ""
-"Eliminate Mix RGB Mix (without Clamp) and Mix Shader nodes when Factor is"
-" known to be 0 or 1 by replacing with the appropriate input value or "
+"Eliminate Mix RGB Mix (without Clamp) and Mix Shader nodes when Factor "
+"is known to be 0 or 1 by replacing with the appropriate input value or "
 "link."
 msgstr ""
+"Elimina nós Misturar RGB (sem Truncamento) e Misturar Sombreador quando "
+"o Fator é conhecido por ser 0 ou 1 substituindo com o valor de entrada "
+"ou ligação apropriados."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:33
 msgid ""
 "Eliminate no-op Mix RGB (except Burn, Dodge, Lighten, or enabled Clamp), "
 "Invert, RGB Curves and Vector Curves nodes with known zero Factor."
 msgstr ""
+"Elimina nós no-op Misturar RGB (exceto Queimar, Esquivar, Clarear, ou "
+"Truncamento ativado), Inverter, Curvas RGB e Curvas Vetoriais com fator "
+"zero conhecidos."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:35
 msgid ""
 "Eliminate Emission and Background shader nodes that do not emit any "
 "light, and Add Shader nodes with one or both input arguments missing."
 msgstr ""
+"Elimina nós sombreadores Emissão e Plano de Fundo que não emitem nenhuma "
+"luz, e nós Sombreador Adicionar com um ou ambos argumentos de entrada "
+"faltando."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:37
 msgid ""
 "Eliminate Bump with constant Height input, using its Normal input or "
 "Geometry Normal instead."
 msgstr ""
+"Elimina Relevo com entrada de Altura constante, usando ao invés sua "
+"entrada Normal ou Normal da Geometria."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:38
 msgid ""
 "Combine multiple copies of the same node with the same inputs into only "
 "one instance."
 msgstr ""
+"Combina múltiplas cópias do mesmo nó com as mesmas entradas em apenas "
+"uma instância."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:40
 msgid ""
 "Finally, any nodes that end up not connected either directly or "
 "indirectly to the output node are removed."
 msgstr ""
+"Finalmente, quaisquer nós que terminam não conectados tanto direta ou "
+"indiretamente ao nó de saída são removidos."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:44
 msgid "Run-Time Optimizations"
-msgstr ""
+msgstr "Otimizações em Tempo de Execução"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:46
 msgid ""
@@ -117,6 +152,10 @@ msgid ""
 "nodes. If Factor evaluates to 0 or 1, any nodes that are only reachable "
 "via the unused branch of the mix are not evaluated."
 msgstr ""
+"Quando executando sombreadores, uma otimização especial é aplicada aos "
+"nós Misturar Sombreador. Se o Fator é avaliado para 0 ou 1, quaisquer "
+"nós que são alcançados apenas pela ramificação não usada da mistura não "
+"são avaliados."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:49
 msgid ""
@@ -124,10 +163,13 @@ msgid ""
 "materials in one shader with vertex color, texture, or other input used "
 "as a switch."
 msgstr ""
+"Isso pode diminuir substancialmente o custo de combinar múltiplos "
+"materiais em um sombreado com cor de vértices, textura, ou outra entrada "
+"usada como comutador."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:54
 msgid "Open Shading Language"
-msgstr ""
+msgstr "Linguagem de Sombreamento Aberto"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:56
 msgid ""
@@ -136,6 +178,11 @@ msgid ""
 "OSL runtime. In the process it applies its own extensive set of "
 "optimizations, both at compile time and run-time."
 msgstr ""
+"Se a Linguagem de Sombreamento Aberto é escolhida como a renderizadora "
+"de fundo, nós sombreadores são traduzidos para código LSA  e então "
+"compilados e executados pelo tempo de execução LSA. No processo ele "
+"aplica seu próprio conjunto extensivo de otimizações, tanto no tempo de "
+"compilação como de execução."
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:60
 msgid ""
@@ -146,28 +193,10 @@ msgid ""
 "generally not be used for passing information forward in the graph; "
 "explicitly passing information through sockets should be preferred."
 msgstr ""
-
-#~ msgid ""
-#~ "Cycles applies a number of shader "
-#~ "node optimizations both at compile time"
-#~ " and runtime. By exploiting them it"
-#~ " is possible to design complicated "
-#~ "\"Uber Shader\" style node groups that"
-#~ " incur minimal render time overhead "
-#~ "for unused features."
-#~ msgstr ""
-
-#~ msgid "Runtime Optimizations"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If Open Shading Language is chosen "
-#~ "as the rendering back-end, node "
-#~ "shaders are translated to OSL code "
-#~ "and then compiled and executed by "
-#~ "the OSL runtime. In the process it"
-#~ " applies its own extensive set of "
-#~ "optimizations, both at compile time and"
-#~ " runtime."
-#~ msgstr ""
-
+"A Linguagem de Sombreamento Aberto pode otimizar nós de Script se suas "
+"saídas não são usadas ou constantes, mesmo se seus sombreadores LSA "
+"tiverem efeitos colaterais como traçador depurador e passagem de "
+"mensagem, que podem ser confusos. Por essa razão passagem de mensagem "
+"com ``setmessage`` e ``getmessage`` geralmente não devem ser usados para "
+"passar informações a frente no gráfico; preferencialmente deve-se passar "
+"informação explicitamente através de soquetes."
