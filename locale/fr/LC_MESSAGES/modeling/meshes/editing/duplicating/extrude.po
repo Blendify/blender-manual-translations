@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-05-06 11:35+0200\n"
+"PO-Revision-Date: 2018-05-14 22:21+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,6 @@ msgstr ""
 "de telles choses comme des branches d'arbres."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:27
-#, fuzzy
 msgid ""
 "The axis on which vertices and edges are extruded along can be set "
 "interactively. Faces are extruded by default along their averaged normal. "
@@ -60,8 +59,8 @@ msgid ""
 msgstr ""
 "L'axe sur lequel les sommets et les arêtes sont extrudés peut être défini "
 "interactivement. Les faces sont extrudées par défaut le long de leur normale "
-"moyennée. L'extrusion peut être limitée à un axe en spécifiant un axe ; "
-"voir  :doc:`/editors/3dview/object/editing/transform/control/precision/"
+"moyenne. L'extrusion peut être limitée à un seul axe en spécifiant un tel "
+"axe ; voir :doc:`/editors/3dview/object/editing/transform/control/precision/"
 "axis_locking`."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:32
@@ -70,7 +69,7 @@ msgid ""
 "itself."
 msgstr ""
 "Les outils d'extrusion se distinguent sur la manière dont la nouvelle "
-"géométrie est connectée à lui-même."
+"géométrie est connectée à elle-même."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:36
 msgid "Extrude Region"
@@ -124,7 +123,7 @@ msgid ""
 "moved unchanged with the extrusion."
 msgstr ""
 "Seule la *border loop* est extrudée. La région interne de la sélection est "
-"déplacée inchangée avec l'extrusion."
+"déplacée sans changement avec l'extrusion."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:54
 msgid "Selected face."
@@ -136,7 +135,7 @@ msgstr "Pendant l'extrusion."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:64
 msgid "Set to Z axis."
-msgstr "Définir à l'axe Z."
+msgstr "Fixer à l'axe Z."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:68
 msgid "Details"
@@ -151,25 +150,23 @@ msgstr ""
 "*Extrude* sont clairement élaborées comme discuté ci-dessous :"
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:73
-#, fuzzy
 msgid ""
 "First, the algorithm determines the outside edge loop of the extrude; that "
 "is, which among the selected edges will be changed into faces. By default "
 "(see below), the algorithm considers edges belonging to two or more selected "
 "faces as internal, and hence not part of the loop."
 msgstr ""
-"D'abord, l'algorithme détermine l'edge-loop externe de l'extrusion ; c'est, "
-"qui parmi les arêtes sélectionnées seront modifiées en faces. Par défaut "
-"(voir ci-dessous), l'algorithme considère les arêtes appartenant à deux ou "
-"plus de faces sélectionnées comme interne, et ainsi parie de la boucle."
+"D'abord, l'algorithme détermine l'*edge loop* externe de l'extrusion ; c'est-"
+"à-dire quelles arêtes parmi celles sélectionnées seront modifiées en faces. "
+"Par défaut (voir ci-dessous), l'algorithme considère les arêtes appartenant "
+"à deux ou plus de faces sélectionnées comme internes, et par conséquent ne "
+"faisant pas partie de la *loop*."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:76
-#, fuzzy
 msgid "The edges in the edge loop are then changed into faces."
 msgstr "Les arêtes dans l'edge-loop sont alors changées en faces."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:77
-#, fuzzy
 msgid ""
 "If the edges in the edge loop belong to only one face in the complete mesh, "
 "then all of the selected faces are duplicated and linked to the newly "
@@ -206,7 +203,6 @@ msgstr ""
 "est dupliqué, sans aucun lien à l'original."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:86
-#, fuzzy
 msgid ""
 "Edges not belonging to selected faces, which form an \"open\" edge loop, are "
 "duplicated and a new face is created between the new edge and the original "
@@ -214,16 +210,16 @@ msgid ""
 msgstr ""
 "Les arêtes n'appartenant pas aux faces sélectionnées, qui forment une edge-"
 "loop \"ouverte\", sont dupliquées et une nouvelle face est créée entre la "
-"nouvelle arête et l'original."
+"nouvelle arête et l'originale."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:88
-#, fuzzy
 msgid ""
 "Single selected vertices which do not belong to selected edges are "
 "duplicated and a new edge is created between the two."
 msgstr ""
-"Les sommets sélectionnés qui n'appartiennent pas aux arêtes sélectionnées "
-"sont dupliquées et une nouvelle arête est créée entre les deux."
+"Les sommets isolés sélectionnés qui n'appartiennent pas aux arêtes "
+"sélectionnées sont dupliqués et une nouvelle arête est créée entre les deux "
+"sommets."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:93
 msgid "Extrude Individual"
@@ -252,6 +248,12 @@ msgid ""
 "\"internal\" edges (i.e. edges between two selected faces) are no longer "
 "deleted (the original faces are)."
 msgstr ""
+"*Extrude Individual* vous permet d'extruder une sélection de plusieurs faces "
+"individuelles, plutôt que constitutives d'une région. Les faces sont "
+"extrudées le long de leur propre normale, plutôt que leur moyenne. Ceci a "
+"plusieurs conséquences : d'abord, les arêtes \"internes\" (càd. les arêtes "
+"entre deux faces sélectionnées) ne sont plus supprimées (les faces d'origine "
+"le sont)."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:113
 msgid "Selection of multiple faces."
@@ -267,7 +269,7 @@ msgstr "Extrusion utilisant Extrude Individual."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:127
 msgid "Extrude Edges and Vertices Only"
-msgstr ""
+msgstr "Extrude Edges et Vertices Only"
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:132
 msgid "Edit Mode, Vertex and Edge"
@@ -289,17 +291,18 @@ msgid ""
 "extrude to form a face."
 msgstr ""
 "Si des sommets sont sélectionnés pendant une extrusion, mais qu'ils ne "
-"forment pas une arête ou une face, ils vont extruder comme prévu, en formant "
-"une arête :term:`non-manifold`. De façon comparable, si les arêtes sont "
-"sélectionnées sans former une face, elles vont extruder pour former une face."
+"forment pas une arête ou une face, ils vont être extrudés comme prévu, en "
+"formant une arête :term:`non-manifold`. De façon semblable, si des arêtes "
+"sont sélectionnées sans former une face, elles vont être extrudées pour "
+"former une face."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:141
 msgid ""
 "When a selection of vertices forms an edge or face, it will extrude as if "
 "the edge was selected. Likewise for edges that form a face."
 msgstr ""
-"Quand une sélection de sommets forme une arête ou u ne face, elle va "
-"extruder comme si l'arête a été sélectionnée. De même pour les arêtes qui "
+"Quand une sélection de sommets forme une arête ou une face, elle va être "
+"extrudée comme si l'arête a été sélectionnée. De même pour les arêtes qui "
 "forment une face."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:144
@@ -308,9 +311,9 @@ msgid ""
 "respectively, use :kbd:`Alt-E` to access the Extrude *Edges Only* and "
 "*Vertices Only*."
 msgstr ""
-"Pour forcer une sélection de sommets ou d'arêtes comme un sommet ou une "
-"arête, respectivement, utilisez :kbd:`Alt-E` pour accéder à l'Extrusion "
-"*Edges Only* et *Vertices Only*."
+"Pour forcer une sélection de sommets ou d'arêtes à une extrusion en tant que "
+"sommet ou arête, respectivement, utilisez :kbd:`Alt-E` pour accéder aux "
+"options Extrusion *Edges Only* et *Vertices Only*."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:152
 msgid "Vertex selected."
@@ -346,7 +349,7 @@ msgid ""
 msgstr ""
 "Cet outil doit être appelé depuis :doc:`/interface/controls/templates/"
 "operator_search`. Si la sélection n'est pas multiple, elle est extrudée le "
-"nombre spécifié de fois, sinon elle se comporte comme le :doc:`/modeling/"
+"nombre spécifié de fois, sinon elle se comporte comme :doc:`/modeling/"
 "modifiers/generate/array`. L'extrusion est alignée sur l'axe Z de la vue."
 
 #: ../../manual/modeling/meshes/editing/duplicating/extrude.rst:184
