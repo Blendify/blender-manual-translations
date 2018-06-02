@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-05-06 20:10+0200\n"
+"PO-Revision-Date: 2018-05-26 20:24+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:5
 msgid "Cast Modifier"
-msgstr "Modificateur Cast"
+msgstr "Le modificateur Cast"
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:7
 msgid ""
@@ -30,7 +30,7 @@ msgid ""
 "of a few predefined shapes (sphere, cylinder, cuboid)."
 msgstr ""
 "Ce modificateur change la forme d'un maillage, d'une courbe, d'une surface "
-"ou d'un treillis en n'importe laquelle des quelques formes prédéfinies "
+"ou d'un treillis en n'importe laquelle parmi quelques formes prédéfinies "
 "(sphère, cylindre, cuboïde)."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:10
@@ -41,9 +41,9 @@ msgid ""
 "to casting to a sphere."
 msgstr ""
 "Il est équivalent à l'outil *Sphere* en *Mode Édition* :menuselection:`Mesh "
-"--> Transform --> To Sphere`, :kbd:`Maj-Alt-S` et autres programmes "
-"appellent \"Spherify\" ou \"Spherize\", mais, comme évoqué ci-dessus, il "
-"n'est pas limité à"
+"--> Transform --> To Sphere`, :kbd:`Maj-Alt-S` et à ce que d'autres "
+"programmes appellent \"Spherify\" ou \"Spherize\", mais, comme évoqué ci-"
+"dessus, il n'est pas limité à un moulage en une sphère."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:17
 msgid ""
@@ -52,7 +52,7 @@ msgid ""
 "nicer or even to fix shading artifacts."
 msgstr ""
 "Le :doc:`Modificateur Smooth </modeling/modifiers/deform/smooth>` est un bon "
-"compagnon pour *Cast*, puisque la forme de cast nécessite parfois un lissage "
+"compagnon pour *Cast*, puisque la forme moulée nécessite parfois un lissage "
 "pour paraître plus joli ou même corriger des artefacts d'ombrage."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:22
@@ -64,7 +64,7 @@ msgstr ""
 "Pour des raisons de performance, ce modificateur fonctionne uniquement avec "
 "les coordonnées locales. Si l'objet modifié paraît faux, vous auriez besoin "
 "d'appliquer sa rotation :kbd:`Ctrl-A`, en particulier pendant le moulage "
-"(casting) d'un cylindre."
+"(casting) en un cylindre."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:28
 msgid "Options"
@@ -114,11 +114,11 @@ msgid ""
 "has no effect), 1.0 casts to the target shape. Values below 0.0 or above 1.0 "
 "exaggerate the deformation, sometimes in interesting ways."
 msgstr ""
-"Le facteur pour contrôler entre les positions de sommets   . C'est une "
-"interpolation linéaire : 0.0 donne les coordonnées d'origine (càd. "
-"modificateur n'a aucun d'effet), 1.0 la forme cible. Les valeurs au dessous "
-"0.0 ou au dessus de 1.0 exagèrent la déformation, parfois de manières "
-"intéressants."
+"Le facteur pour contrôler le mélange entre les positions de sommets "
+"d'origine et ceux du moule. C'est une interpolation linéaire : 0.0 donne les "
+"coordonnées d'origine (càd. que le modificateur n'a aucun d'effet), 1.0 la "
+"forme cible. Les valeurs en dessous 0.0 ou au dessus de 1.0 exagèrent la "
+"déformation, parfois de manière intéressante."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:49
 msgid "Radius"
@@ -129,8 +129,8 @@ msgid ""
 "If non-zero, this radius defines a sphere of influence. Vertices outside it "
 "are not affected by the modifier."
 msgstr ""
-"Si non nul, ce rayon définit une sphère d'influence. Les sommets au delà ne "
-"sont pas affectés par le modificateur."
+"Si non nul, ce rayon définit une sphère d'influence. Les sommets en dehors "
+"de la sphère ne sont pas affectés par le modificateur."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:52
 msgid "Size"
@@ -141,8 +141,8 @@ msgid ""
 "Alternative size for the projected shape. If zero, it is defined by the "
 "initial shape and the control object, if any."
 msgstr ""
-"Taille alternative pour la forme projetée. Si non nul, il est défini par la "
-"forme initiale et l'objet de contrôle, s'il y en a."
+"Taille alternative pour la forme projetée. Si non nulle, elle est définie "
+"par la forme initiale et l'objet de contrôle, s'il y en a."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:55
 msgid "From radius"
@@ -151,7 +151,7 @@ msgstr ""
 #: ../../manual/modeling/modifiers/deform/cast.rst:55
 msgid "If activated, calculate *Size* from *Radius*, for smoother results."
 msgstr ""
-"Si l'option est activée, calculez *Size* à partir du *Radius*, pour des "
+"Si l'option est activée, calculer *Size* à partir du *Radius*, pour des "
 "résultats plus lisses. "
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:58
@@ -163,8 +163,8 @@ msgid ""
 "A vertex group name, to restrict the effect to the vertices in it only. This "
 "allows for selective, real-time casting, by painting vertex weights."
 msgstr ""
-"Le nom d'un groupe de sommets, pour restreindre l'effet des sommets "
-"seulement. Ceci permet pour le moulage sélectif en temps réel, en peignant "
+"Le nom d'un groupe de sommets, pour restreindre l'effet aux sommets de ce "
+"groupe seulement. Ceci permet un moulage sélectif en temps réel, en peignant "
 "les poids de sommet."
 
 #: ../../manual/modeling/modifiers/deform/cast.rst:68
