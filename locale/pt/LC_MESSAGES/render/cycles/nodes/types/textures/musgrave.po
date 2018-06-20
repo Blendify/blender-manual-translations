@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-06-19 21:38-0400\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,10 +32,12 @@ msgid ""
 "texture."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:16
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:14
 msgid ""
-"The *Musgrave Texture* often needs some adjustments (multiplication and "
-"addition) in order to see more detail."
+"Musgrave is a type of *Fractal Noise*. Simple *Perlin Noise* is generated"
+" multiple times with different scaling, and the results are combined in "
+"different ways depending on the Musgrave type. This results in a detailed"
+" texture with self-similar appearance at different scales, like fractals."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:21
@@ -48,7 +50,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:24
 msgid ""
-"Texture coordinate to sample texture at; defaults to Generated texture "
+"Texture coordinate to sample texture at; defaults to *Generated* texture "
 "coordinates if the socket is left unconnected."
 msgstr ""
 
@@ -60,103 +62,235 @@ msgstr ""
 msgid "Overall texture scale."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:28
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:29
 msgid "Detail"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:29
-msgid "Amount of noise detail."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:30
-msgid "Dimension"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:31
 msgid ""
-"The highest fractal dimension, specified as the highest scale for the "
-"steps of the intensity."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:32
-msgid "Lacunarity"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:33
-msgid "The space of the lacunarity, specified as a frequency factor."
+"Controls how many instances of base noise texture are combined. Each "
+"extra instance is scaled and brings more small details."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:34
-msgid "Offset"
+msgid "Dimension"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:35
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:32
 msgid ""
-"The offset of the fractal, specified between black-and-white values "
-"(Intensity)."
+"Controls the intensity of the different instances of base noise. Setting "
+"it to zero will use the same intensities for all noise instances. Larger "
+"values will reduce the intensity of finer (larger-scaled) instances, "
+"making smaller details less visible."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:38
-msgid "Gain"
+msgid "Lacunarity"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:37
-msgid "A multiplier for the gain input."
+msgid ""
+"Controls the scale of the different instances of base noise. This is a "
+"factor for scaling each further instance, relative to the previous one, "
+"i.e. the scales grow exponentially. When setting it to 1 all instances "
+"have the same scale."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:41
-msgid "Properties"
+msgid "Offset"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:45
-msgid "Type"
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:41
+msgid ""
+"This value is added to each noise instance, determines the level where "
+"least fine noise will appear. It only has an effect for *Hybrid "
+"Multifractal*, *Ridged Multifractal* and *Hetero Terrain*."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:46
+msgid "Gain"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:44
 msgid ""
-"Multifractal, Ridged Multifractal, Hybrid Multifractal, fBM, Hetero "
-"Terrain."
+"An extra multiplier to change the intensity of finer noise instances. It "
+"only has an effect for *Hybrid Multifractal* and *Ridged Multifractal*."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:48
-msgid "Outputs"
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:49
+msgid "Properties"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:50
-msgid "Color"
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:69
+msgid "Type"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:51
-msgid "Texture color output."
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:52
+msgid ""
+"Specifies different methods to combine the multiple noise instances. "
+"Originally, the algorithms for generating procedural terrain."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:54
-msgid "Factor"
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:56
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:111
+msgid "fBM (fractal Brownian Motion)"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:53
-msgid "Texture intensity output."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:57
-msgid "Examples"
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:56
+msgid ""
+"Produces a non-natural homogeneous and isotropic result. Uses a additive "
+"cascade, the values are simply added together."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:59
-msgid "Remapped Musgrave texture such that most values are visible."
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:116
+msgid "Multifractal"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:59
+msgid ""
+"The result is more uneven (varies with location), more similar to the "
+"real terrain. Uses a multiplicative cascade."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:62
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:121
+msgid "Hybrid Multifractal"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:62
+msgid ""
+"Creates peaks and valleys with different roughnesses, like real mountains"
+" rise out of flat plains. Combines the additive cascade with the "
+"multiplicative cascade."
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:65
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:131
+msgid "Ridged Multifractal"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:65
+msgid ""
+"Creates sharp peaks. Calculates the absolute value of noise, creating "
+"\"canyons\", and then flips the surface upside down."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:69
+msgid "Hetero Terrain (Heterogeneous Terrain)"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:68
+msgid ""
+"Similar to *Hybrid Multifractal* creates heterogeneous terrain, but with "
+"the likeness of a river channels."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:72
+msgid "Outputs"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:75
+msgid "Color"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:75
+msgid ""
+"Texture color output. It is grayscale, all three RGB components are equal"
+" to the value of the *Factor* output."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:78
+msgid "Factor"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:78
+msgid "Texture intensity output."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:82
+msgid ""
+"The *Musgrave Texture* often needs some adjustments (e.g. by "
+"multiplication and addition) in order to avoid clipping and see more "
+"detail."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:87
+msgid "Examples"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:89
+msgid "Remapped Musgrave texture such that most values are visible."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:95
 msgid "Nodes for the image to the right."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:70
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:100
 msgid "Musgrave texture."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:104
+msgid "Musgrave Types"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:106
+msgid "Different Musgrave types with a same parameters."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:126
+msgid "Heterogeneous Terrain"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/textures/musgrave.rst:137
+msgid ":doc:`Displacement </render/cycles/materials/displacement>`"
 msgstr ""
 
 #~ msgid ""
 #~ "The offset of the fractal, specified "
 #~ "between black and white values "
 #~ "(Intensity)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Musgrave Texture* often needs some"
+#~ " adjustments (multiplication and addition) "
+#~ "in order to see more detail."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Texture coordinate to sample texture at;"
+#~ " defaults to Generated texture coordinates"
+#~ " if the socket is left unconnected."
+#~ msgstr ""
+
+#~ msgid "Amount of noise detail."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The highest fractal dimension, specified "
+#~ "as the highest scale for the steps"
+#~ " of the intensity."
+#~ msgstr ""
+
+#~ msgid "The space of the lacunarity, specified as a frequency factor."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The offset of the fractal, specified "
+#~ "between black-and-white values "
+#~ "(Intensity)."
+#~ msgstr ""
+
+#~ msgid "A multiplier for the gain input."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Multifractal, Ridged Multifractal, Hybrid "
+#~ "Multifractal, fBM, Hetero Terrain."
+#~ msgstr ""
+
+#~ msgid "Texture color output."
 #~ msgstr ""
 
