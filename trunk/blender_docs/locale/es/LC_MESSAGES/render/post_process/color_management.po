@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-06-19 21:38-0400\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,21 +218,22 @@ msgid ""
 "dark or light areas."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:115
+#: ../../manual/render/post_process/color_management.rst:116
 msgid "Exposure"
 msgstr ""
 
 #: ../../manual/render/post_process/color_management.rst:116
 msgid ""
 "Used to control the image brightness (in stops) applied before color "
-"space conversion. :math:`2^(stops) × value`"
+"space conversion. It is calculated as follows: :math:`output\\_value = "
+"render\\_value × 2^{(exposure)}`"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:119
+#: ../../manual/render/post_process/color_management.rst:120
 msgid "Gamma"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:118
+#: ../../manual/render/post_process/color_management.rst:119
 msgid ""
 "Extra gamma correction applied after color space conversion. Note that "
 "the default sRGB or Rec709 color space conversions already include a "
@@ -240,37 +241,37 @@ msgid ""
 " so this would be applied in addition to that."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:122
+#: ../../manual/render/post_process/color_management.rst:123
 msgid "Look"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:122
+#: ../../manual/render/post_process/color_management.rst:123
 msgid ""
 "Choose an artistic effect from a set of measured film response data which"
 " roughly emulates the look of certain film types. Applied before color "
 "space conversion."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:127
+#: ../../manual/render/post_process/color_management.rst:128
 msgid "Use Curves"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:125
+#: ../../manual/render/post_process/color_management.rst:126
 msgid ""
 "Adjust RGB Curves to control image colors before color space conversion. "
 "Read more about using the :ref:`ui-curve-widget`."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:130
+#: ../../manual/render/post_process/color_management.rst:131
 msgid "Sequencer"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:136
-#: ../../manual/render/post_process/color_management.rst:163
+#: ../../manual/render/post_process/color_management.rst:137
+#: ../../manual/render/post_process/color_management.rst:164
 msgid "Color Space"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:133
+#: ../../manual/render/post_process/color_management.rst:134
 msgid ""
 "The color space that the Sequencer operates in. By default, the Sequencer"
 " operates in sRGB space, but it can also be set to work in Linear space "
@@ -279,11 +280,11 @@ msgid ""
 "other operations."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:139
+#: ../../manual/render/post_process/color_management.rst:140
 msgid "Image Files"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:141
+#: ../../manual/render/post_process/color_management.rst:142
 msgid ""
 "When loading and saving media formats it is important to have color "
 "management in mind. File formats such as PNG or JPEG will typically store"
@@ -295,7 +296,7 @@ msgid ""
 "intermediate files in production."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:148
+#: ../../manual/render/post_process/color_management.rst:149
 msgid ""
 "When working with image files, the default color space is usually the "
 "right one. If this is not the case, the color space of the image file can"
@@ -306,14 +307,14 @@ msgid ""
 "*Non-Color Data*."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:155
+#: ../../manual/render/post_process/color_management.rst:156
 msgid ""
 "Image data-blocks will always store float buffers in memory in the scene "
 "linear color space, while a byte buffer in memory and files in a drive "
 "are stored in the color space specified with this setting:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:159
+#: ../../manual/render/post_process/color_management.rst:160
 msgid ""
 "The color space of the image file on a drive. This depends on the file "
 "format, for example, PNG or JPEG images are often stored in sRGB, while "
@@ -323,11 +324,11 @@ msgid ""
 "images, the color space should be set to *None*."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:167
+#: ../../manual/render/post_process/color_management.rst:168
 msgid "Image settings for color management."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:169
+#: ../../manual/render/post_process/color_management.rst:170
 msgid ""
 "By default only renders are displayed and saved with the render view "
 "transformations applied. These are the Render Result and Viewer image "
@@ -339,33 +340,33 @@ msgid ""
 "transformations applied, with these two settings:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:179
+#: ../../manual/render/post_process/color_management.rst:180
 msgid "View as Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:179
+#: ../../manual/render/post_process/color_management.rst:180
 msgid ""
 "Display the image data-block (not only renders) with view transform, "
 "exposure, gamma, RGB curves applied. Useful for viewing rendered frames "
 "in linear OpenEXR files the same as when rendering them directly."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:184
+#: ../../manual/render/post_process/color_management.rst:185
 msgid "Save as Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:182
+#: ../../manual/render/post_process/color_management.rst:183
 msgid ""
 "Option in the image save operator to apply the view transform, exposure, "
 "gamma, RGB curves. This is useful for saving linear OpenEXR to e.g. PNG "
 "or JPEG files in display space."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:187
+#: ../../manual/render/post_process/color_management.rst:188
 msgid "OpenColorIO Configuration"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:189
+#: ../../manual/render/post_process/color_management.rst:190
 msgid ""
 "Blender comes with a standard OpenColorIO configuration that contains a "
 "number of useful display devices and view transforms. The reference "
@@ -373,7 +374,7 @@ msgid ""
 "chromaticities and D65 white point."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:194
+#: ../../manual/render/post_process/color_management.rst:195
 msgid ""
 "However, OpenColorIO was also designed to give a consistent user "
 "experience across `multiple applications "
@@ -385,49 +386,49 @@ msgid ""
 "<http://opencolorio.org/>`__."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:201
+#: ../../manual/render/post_process/color_management.rst:202
 msgid "We currently use the following color space rules:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:203
+#: ../../manual/render/post_process/color_management.rst:204
 msgid "scene_linear"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:204
+#: ../../manual/render/post_process/color_management.rst:205
 msgid ""
 "Color space used for rendering, compositing, and storing all float "
 "precision images in memory."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:205
+#: ../../manual/render/post_process/color_management.rst:206
 msgid "default_sequencer"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:206
+#: ../../manual/render/post_process/color_management.rst:207
 msgid "Default color space for the Sequencer, *scene_linear* if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:207
+#: ../../manual/render/post_process/color_management.rst:208
 msgid "default_byte"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:208
+#: ../../manual/render/post_process/color_management.rst:209
 msgid ""
 "Default color space for byte precision images and files, *texture_paint* "
 "if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:210
+#: ../../manual/render/post_process/color_management.rst:211
 msgid "default_float"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:210
+#: ../../manual/render/post_process/color_management.rst:211
 msgid ""
 "Default color space for float precision images and files, *scene_linear* "
 "if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:212
+#: ../../manual/render/post_process/color_management.rst:213
 msgid ""
 "The standard Blender configuration also includes some support for `ACES "
 "<https://www.oscars.org/science-technology/sci-tech-projects/aces>`__ "
@@ -566,5 +567,11 @@ msgstr ""
 #~ " usually done by crushing the blacks"
 #~ " and decreasing the contrast of the"
 #~ " image."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Used to control the image brightness "
+#~ "(in stops) applied before color space"
+#~ " conversion. :math:`2^(stops) × value`"
 #~ msgstr ""
 

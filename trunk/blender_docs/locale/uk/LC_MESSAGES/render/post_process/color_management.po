@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-06-19 21:38-0400\n"
 "PO-Revision-Date: 2018-01-25 00:01+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -290,24 +290,26 @@ msgstr ""
 "працює подібно до Raw, але дає більш «плоский» вигляд зображення без дуже"
 " темних чи дуже світлих областей."
 
-#: ../../manual/render/post_process/color_management.rst:115
+#: ../../manual/render/post_process/color_management.rst:116
 msgid "Exposure"
 msgstr "Експозиція -- Exposure"
 
 #: ../../manual/render/post_process/color_management.rst:116
+#, fuzzy
 msgid ""
 "Used to control the image brightness (in stops) applied before color "
-"space conversion. :math:`2^(stops) × value`"
+"space conversion. It is calculated as follows: :math:`output\\_value = "
+"render\\_value × 2^{(exposure)}`"
 msgstr ""
 "Використовується для керування яскравістю зображення (у стопах), "
 "застосовуваного перед перетворенням колірного простору. :math:`2^(stops) "
 "× value`"
 
-#: ../../manual/render/post_process/color_management.rst:119
+#: ../../manual/render/post_process/color_management.rst:120
 msgid "Gamma"
 msgstr "Гамма -- Gamma"
 
-#: ../../manual/render/post_process/color_management.rst:118
+#: ../../manual/render/post_process/color_management.rst:119
 msgid ""
 "Extra gamma correction applied after color space conversion. Note that "
 "the default sRGB or Rec709 color space conversions already include a "
@@ -321,11 +323,11 @@ msgstr ""
 "*Raw* та *Log*), а тому зміна цієї устави буде застосована поверх цієї їх"
 " корекції."
 
-#: ../../manual/render/post_process/color_management.rst:122
+#: ../../manual/render/post_process/color_management.rst:123
 msgid "Look"
 msgstr "Вигляд -- Look"
 
-#: ../../manual/render/post_process/color_management.rst:122
+#: ../../manual/render/post_process/color_management.rst:123
 msgid ""
 "Choose an artistic effect from a set of measured film response data which"
 " roughly emulates the look of certain film types. Applied before color "
@@ -335,11 +337,11 @@ msgstr ""
 "які грубо імітують вигляд зображення з певних типів плівки. "
 "Застосовується перед перетворенням колірного простору."
 
-#: ../../manual/render/post_process/color_management.rst:127
+#: ../../manual/render/post_process/color_management.rst:128
 msgid "Use Curves"
 msgstr "Вжити Криві -- Use Curves"
 
-#: ../../manual/render/post_process/color_management.rst:125
+#: ../../manual/render/post_process/color_management.rst:126
 msgid ""
 "Adjust RGB Curves to control image colors before color space conversion. "
 "Read more about using the :ref:`ui-curve-widget`."
@@ -348,16 +350,16 @@ msgstr ""
 "перед конвертуванням колірного простору. Читайте детальніше про це тут --"
 " :ref:`ui-curve-widget`."
 
-#: ../../manual/render/post_process/color_management.rst:130
+#: ../../manual/render/post_process/color_management.rst:131
 msgid "Sequencer"
 msgstr "Відеорядник -- Sequencer"
 
-#: ../../manual/render/post_process/color_management.rst:136
-#: ../../manual/render/post_process/color_management.rst:163
+#: ../../manual/render/post_process/color_management.rst:137
+#: ../../manual/render/post_process/color_management.rst:164
 msgid "Color Space"
 msgstr "Колірний Простір -- Color Space"
 
-#: ../../manual/render/post_process/color_management.rst:133
+#: ../../manual/render/post_process/color_management.rst:134
 msgid ""
 "The color space that the Sequencer operates in. By default, the Sequencer"
 " operates in sRGB space, but it can also be set to work in Linear space "
@@ -371,11 +373,11 @@ msgstr ""
 "колірному просторі. Різні колірні простори будуть давати різні результати"
 " для корекції кольору, переходів та інших операцій."
 
-#: ../../manual/render/post_process/color_management.rst:139
+#: ../../manual/render/post_process/color_management.rst:140
 msgid "Image Files"
 msgstr "Файли Зображень -- Image Files"
 
-#: ../../manual/render/post_process/color_management.rst:141
+#: ../../manual/render/post_process/color_management.rst:142
 msgid ""
 "When loading and saving media formats it is important to have color "
 "management in mind. File formats such as PNG or JPEG will typically store"
@@ -396,7 +398,7 @@ msgstr ""
 "зберігають лінеарні колірні простори та як такі, корисні як проміжні "
 "файли у виробництві."
 
-#: ../../manual/render/post_process/color_management.rst:148
+#: ../../manual/render/post_process/color_management.rst:149
 msgid ""
 "When working with image files, the default color space is usually the "
 "right one. If this is not the case, the color space of the image file can"
@@ -414,7 +416,7 @@ msgstr ""
 "дані, кодовані як кольори. У таких випадках, вони повинні бути позначені "
 "опцією *Non-Color Data*."
 
-#: ../../manual/render/post_process/color_management.rst:155
+#: ../../manual/render/post_process/color_management.rst:156
 msgid ""
 "Image data-blocks will always store float buffers in memory in the scene "
 "linear color space, while a byte buffer in memory and files in a drive "
@@ -425,7 +427,7 @@ msgstr ""
 " файли на диску зберігаються у колірному просторі, визначеному такою "
 "уставою:"
 
-#: ../../manual/render/post_process/color_management.rst:159
+#: ../../manual/render/post_process/color_management.rst:160
 msgid ""
 "The color space of the image file on a drive. This depends on the file "
 "format, for example, PNG or JPEG images are often stored in sRGB, while "
@@ -442,11 +444,11 @@ msgstr ""
 " жодне конвертування колірного простору. Для таких зображень колірний "
 "простір повинен бути установлений на *None*."
 
-#: ../../manual/render/post_process/color_management.rst:167
+#: ../../manual/render/post_process/color_management.rst:168
 msgid "Image settings for color management."
 msgstr "Устави зображення для управління кольором."
 
-#: ../../manual/render/post_process/color_management.rst:169
+#: ../../manual/render/post_process/color_management.rst:170
 msgid ""
 "By default only renders are displayed and saved with the render view "
 "transformations applied. These are the Render Result and Viewer image "
@@ -467,11 +469,11 @@ msgstr ""
 "те, що ми хочемо, щоб застосовувалися трансформації, за допомогою таких "
 "двох устав:"
 
-#: ../../manual/render/post_process/color_management.rst:179
+#: ../../manual/render/post_process/color_management.rst:180
 msgid "View as Render"
 msgstr "Огляд як Зображ -- View as Render"
 
-#: ../../manual/render/post_process/color_management.rst:179
+#: ../../manual/render/post_process/color_management.rst:180
 msgid ""
 "Display the image data-block (not only renders) with view transform, "
 "exposure, gamma, RGB curves applied. Useful for viewing rendered frames "
@@ -482,11 +484,11 @@ msgstr ""
 "перегляду рендерених кадрів у лінеарних файлах OpenEXR так само, як при "
 "рендерингу їх безпосередньо."
 
-#: ../../manual/render/post_process/color_management.rst:184
+#: ../../manual/render/post_process/color_management.rst:185
 msgid "Save as Render"
 msgstr "Зберегти Як Зображ -- Save As Render"
 
-#: ../../manual/render/post_process/color_management.rst:182
+#: ../../manual/render/post_process/color_management.rst:183
 msgid ""
 "Option in the image save operator to apply the view transform, exposure, "
 "gamma, RGB curves. This is useful for saving linear OpenEXR to e.g. PNG "
@@ -496,11 +498,11 @@ msgstr ""
 "огляду, експозиції, гамми, кривих RGB. Це корисно для збереження "
 "лінеарних OpenEXR у, наприклад, файли PNG чи JPEG у просторі показу."
 
-#: ../../manual/render/post_process/color_management.rst:187
+#: ../../manual/render/post_process/color_management.rst:188
 msgid "OpenColorIO Configuration"
 msgstr "Конфігурація OpenColorIO"
 
-#: ../../manual/render/post_process/color_management.rst:189
+#: ../../manual/render/post_process/color_management.rst:190
 msgid ""
 "Blender comes with a standard OpenColorIO configuration that contains a "
 "number of useful display devices and view transforms. The reference "
@@ -513,7 +515,7 @@ msgstr ""
 ":term:`color space` є лінеарний колірних простір з хроматичностями Rec. "
 "709 та точкою білого D65."
 
-#: ../../manual/render/post_process/color_management.rst:194
+#: ../../manual/render/post_process/color_management.rst:195
 msgid ""
 "However, OpenColorIO was also designed to give a consistent user "
 "experience across `multiple applications "
@@ -533,15 +535,15 @@ msgstr ""
 "укласти таких хід роботи, можна знайти тут -- `OpenColorIO website "
 "<http://opencolorio.org/>`__."
 
-#: ../../manual/render/post_process/color_management.rst:201
+#: ../../manual/render/post_process/color_management.rst:202
 msgid "We currently use the following color space rules:"
 msgstr "Ми поточно використовуємо наступні правила колірного простору:"
 
-#: ../../manual/render/post_process/color_management.rst:203
+#: ../../manual/render/post_process/color_management.rst:204
 msgid "scene_linear"
 msgstr "scene_linear"
 
-#: ../../manual/render/post_process/color_management.rst:204
+#: ../../manual/render/post_process/color_management.rst:205
 msgid ""
 "Color space used for rendering, compositing, and storing all float "
 "precision images in memory."
@@ -549,21 +551,21 @@ msgstr ""
 "Колірний простір, використовуваний для рендерингу, компонування та "
 "збереження усіх зображень з дійсночисловою точністю у пам'яті."
 
-#: ../../manual/render/post_process/color_management.rst:205
+#: ../../manual/render/post_process/color_management.rst:206
 msgid "default_sequencer"
 msgstr "default_sequencer"
 
-#: ../../manual/render/post_process/color_management.rst:206
+#: ../../manual/render/post_process/color_management.rst:207
 msgid "Default color space for the Sequencer, *scene_linear* if not specified."
 msgstr ""
 "Стандартний колірний простір для Відеорядника, *scene_linear* -- якщо не "
 "вказано."
 
-#: ../../manual/render/post_process/color_management.rst:207
+#: ../../manual/render/post_process/color_management.rst:208
 msgid "default_byte"
 msgstr "default_byte"
 
-#: ../../manual/render/post_process/color_management.rst:208
+#: ../../manual/render/post_process/color_management.rst:209
 msgid ""
 "Default color space for byte precision images and files, *texture_paint* "
 "if not specified."
@@ -571,11 +573,11 @@ msgstr ""
 "Стандартний колірний простір для зображень та файлів з байтовою точністю,"
 " *texture_paint* -- якщо не вказано."
 
-#: ../../manual/render/post_process/color_management.rst:210
+#: ../../manual/render/post_process/color_management.rst:211
 msgid "default_float"
 msgstr "default_float"
 
-#: ../../manual/render/post_process/color_management.rst:210
+#: ../../manual/render/post_process/color_management.rst:211
 msgid ""
 "Default color space for float precision images and files, *scene_linear* "
 "if not specified."
@@ -583,7 +585,7 @@ msgstr ""
 "Стандартний колірний простір для зображень та файлів з дійсночисловою "
 "точністю, *scene_linear* -- якщо не вказано."
 
-#: ../../manual/render/post_process/color_management.rst:212
+#: ../../manual/render/post_process/color_management.rst:213
 msgid ""
 "The standard Blender configuration also includes some support for `ACES "
 "<https://www.oscars.org/science-technology/sci-tech-projects/aces>`__ "
