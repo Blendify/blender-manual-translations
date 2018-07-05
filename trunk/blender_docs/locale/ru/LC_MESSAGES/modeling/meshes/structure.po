@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-07-05 13:47-0400\n"
 "PO-Revision-Date: 2017-04-08 12:22+0300\n"
 "Last-Translator: Alexandr Polyakov <alvlapo@gmail.com>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/modeling/meshes/structure.rst:4
 msgid "Structure"
@@ -36,15 +36,15 @@ msgstr ""
 "Структура любой полисетки состоит из: *Вершин* (Vertices), *Рёбер* "
 "(Edges), *Граней* (Faces)."
 
-#: ../../manual/modeling/meshes/structure.rst:11
+#: ../../manual/modeling/meshes/structure.rst:12
 msgid "Example of mesh structure."
 msgstr "Пример структуры полисетки."
 
-#: ../../manual/modeling/meshes/structure.rst:17
+#: ../../manual/modeling/meshes/structure.rst:18
 msgid "Vertices"
 msgstr "Вершины (Vertices)"
 
-#: ../../manual/modeling/meshes/structure.rst:19
+#: ../../manual/modeling/meshes/structure.rst:20
 msgid ""
 "The most elementary part of a mesh is the vertex which is a single point "
 "or position in 3D space. The vertices (the plural form of vertex) are "
@@ -54,38 +54,28 @@ msgstr ""
 " координатой положения в трехмерном пространстве. Вершины хранятся в "
 "массиве с координатами."
 
-#: ../../manual/modeling/meshes/structure.rst:22
+#: ../../manual/modeling/meshes/structure.rst:23
+#, fuzzy
 msgid ""
 "It is usually invisible in rendering and in *Object Mode*. Do not mistake"
-" the origin point of an object for a vertex. It looks similar, but it is "
-"bigger and you cannot select it."
+" the :doc:`Origin Point </editors/3dview/object/origin>` of an object for"
+" a vertex. It looks similar, but it is bigger and you cannot select it."
 msgstr ""
 "Они обычно не отображаются при визуализации и в *Объектном режиме* "
 "(Object Mode). Не перепутайте опорную точку (origin point) объекта с "
 "вершиной. Они выглядят похоже, но опорная точка крупнее и её невозможно "
 "выделить."
 
-#: ../../manual/modeling/meshes/structure.rst:28
-msgid "Vertex example."
-msgstr "Пример с вершинами."
-
-#: ../../manual/modeling/meshes/structure.rst:30
-msgid "The origin is labeled as \"A\"; \"B\" and \"C\" are vertices."
+#: ../../manual/modeling/meshes/structure.rst:29
+#, fuzzy
+msgid "The vertex is labeled as \"A\", and \"B\" are object origin."
 msgstr "Опорная точка с меткой \"А\"; \"В\" и \"С\" - вершины."
 
-#: ../../manual/modeling/meshes/structure.rst:32
-msgid ""
-"In the image above, the vertex labeled \"C\" is a new vertex added to the"
-" cube with a new edge added between \"B\" and \"C\"."
-msgstr ""
-"На изображении выше, вершина с меткой \"С\" - новая вершина, добавленная "
-"к полисетки куба с новым ребром между \"В\" и \"С\"."
-
-#: ../../manual/modeling/meshes/structure.rst:37
+#: ../../manual/modeling/meshes/structure.rst:33
 msgid "Edges"
 msgstr "Ребра (Edges)"
 
-#: ../../manual/modeling/meshes/structure.rst:39
+#: ../../manual/modeling/meshes/structure.rst:35
 msgid ""
 "An edge always connects two vertices by a straight line. The edges are "
 "the \"wires\" you see when you look at a mesh in wireframe view. They are"
@@ -97,11 +87,11 @@ msgstr ""
 "режиме. Они обычно не видны при визуализации. Ребра участвуют в "
 "построении граней."
 
-#: ../../manual/modeling/meshes/structure.rst:45
+#: ../../manual/modeling/meshes/structure.rst:41
 msgid "Faces"
 msgstr "Грани (Faces)"
 
-#: ../../manual/modeling/meshes/structure.rst:47
+#: ../../manual/modeling/meshes/structure.rst:43
 msgid ""
 "Faces are used to build the actual surface of the object. They are what "
 "you see when you render the mesh. If this area does not contain a face, "
@@ -111,7 +101,7 @@ msgstr ""
 " визуализации полисетки. Если область не содержит грани, то она будет "
 "прозрачной или отсутствовать на изображении при визуализации."
 
-#: ../../manual/modeling/meshes/structure.rst:52
+#: ../../manual/modeling/meshes/structure.rst:48
 #, fuzzy
 msgid ""
 "A face is defined as the area between either three (triangles), four "
@@ -122,7 +112,7 @@ msgstr ""
 "или большим числом (N-угольник) вершин с рёбрами на каждой стороне. Часто"
 " такие грани называют сокращенно *tris, quads & n-gons*."
 
-#: ../../manual/modeling/meshes/structure.rst:55
+#: ../../manual/modeling/meshes/structure.rst:51
 msgid ""
 "Triangles are always flat and therefore easy to calculate. On the other "
 "hand, quadrangles \"deform well\" and are therefore preferred for "
@@ -133,7 +123,7 @@ msgstr ""
 " для анимации и при технике моделирования подразделением (subdivision "
 "modeling)."
 
-#: ../../manual/modeling/meshes/structure.rst:58
+#: ../../manual/modeling/meshes/structure.rst:54
 msgid ""
 "While you could build a cube with triangular faces, it would just look "
 "more confusing in *Edit Mode*."
@@ -141,29 +131,27 @@ msgstr ""
 "Несомненно, вы можете создать куб из треугольных граней, но он будет "
 "выглядеть запутанно в *Режиме редактирования*"
 
-#: ../../manual/modeling/meshes/structure.rst:63
+#: ../../manual/modeling/meshes/structure.rst:59
 msgid "Loops"
 msgstr "Петли (Loops)"
 
-#: ../../manual/modeling/meshes/structure.rst:69
+#: ../../manual/modeling/meshes/structure.rst:65
 #, fuzzy
 msgid "Edge and face loops."
 msgstr "Петли из рёбер и граней."
 
-#: ../../manual/modeling/meshes/structure.rst:71
+#: ../../manual/modeling/meshes/structure.rst:67
 #, fuzzy
 msgid ""
 "*Edge* and *face* loops are sets of faces or edges that form continuous "
-"\"loops\" as shown in Fig. :ref:`fig-mesh-topo-loop`. The top row (1 - 4)"
-" shows a solid view, the bottom row (5 - 8) a wireframe view of the same "
-"loops."
+"\"loops\" as shown in Fig. :ref:`fig-mesh-topo-loop`."
 msgstr ""
 "*Ребра* и *Петли из граней* являются набором рёбер или граней образующих "
 "замкнутые \"петли\" (loops) как на рисунке :ref:`fig-mesh-topo-loop`. "
 "Верхний ряд (1 - 4) представлен с сплошным тонированием, нижний ряд (5 - "
 "8) представлен в каркасном отображении с теми же петлями выделений."
 
-#: ../../manual/modeling/meshes/structure.rst:77
+#: ../../manual/modeling/meshes/structure.rst:72
 #, fuzzy
 msgid ""
 "Note that loops (2 and 4) do not go around the whole model. Loops stop at"
@@ -179,7 +167,7 @@ msgstr ""
 " рёбер. Соответственно вершина, соединенная одним, двумя или четырьмя "
 "рёбрами не является полюсом."
 
-#: ../../manual/modeling/meshes/structure.rst:82
+#: ../../manual/modeling/meshes/structure.rst:77
 msgid ""
 "In the image above, loops that do not end in poles are cyclic (1 and 3). "
 "They start and end at the same vertex and divide the model into two "
@@ -198,11 +186,11 @@ msgstr ""
 "смотрите: :doc:`Продвинутое выделение "
 "</modeling/meshes/selecting/advanced>`."
 
-#: ../../manual/modeling/meshes/structure.rst:93
+#: ../../manual/modeling/meshes/structure.rst:88
 msgid "Edge Loops"
 msgstr "Петли ребер (Edge Loops)"
 
-#: ../../manual/modeling/meshes/structure.rst:95
+#: ../../manual/modeling/meshes/structure.rst:90
 #, fuzzy
 msgid ""
 "Loops (1 and 2) in Fig. :ref:`fig-mesh-topo-loop` are edge loops. They "
@@ -215,7 +203,7 @@ msgstr ""
 "не принадлежат к петле и располагаются по обеим сторонам петли (за "
 "исключением начальной и конечной точек в случае с полюсами)."
 
-#: ../../manual/modeling/meshes/structure.rst:99
+#: ../../manual/modeling/meshes/structure.rst:94
 #, fuzzy
 msgid ""
 "Edge loops are an important concept especially in organic (subsurface) "
@@ -229,7 +217,7 @@ msgstr ""
 "вершин, которые выглядят очень естественно при использовании поверхностей"
 " для подразделения (subdivision) и очень хорошо деформируются в анимации."
 
-#: ../../manual/modeling/meshes/structure.rst:104
+#: ../../manual/modeling/meshes/structure.rst:99
 msgid ""
 "Take Fig. :ref:`fig-mesh-topo-loop` in organic modeling as an example: "
 "the edge loops follow the natural contours and deformation lines of the "
@@ -242,7 +230,7 @@ msgstr ""
 "которые деформируются, когда персонаж двигается, например, на плечах или "
 "коленях."
 
-#: ../../manual/modeling/meshes/structure.rst:108
+#: ../../manual/modeling/meshes/structure.rst:103
 #, fuzzy
 msgid ""
 "Further details on working with edge loops can be found in :ref:`Edge "
@@ -251,11 +239,11 @@ msgstr ""
 "Более подробная информация о работе с петлями рёбер представлена в "
 ":ref:`Выделение петлёй рёбер <modeling-meshes-selecting-edge-loops>`."
 
-#: ../../manual/modeling/meshes/structure.rst:113
+#: ../../manual/modeling/meshes/structure.rst:108
 msgid "Face Loops"
 msgstr "Петли граней (Face Loops)"
 
-#: ../../manual/modeling/meshes/structure.rst:115
+#: ../../manual/modeling/meshes/structure.rst:110
 #, fuzzy
 msgid ""
 "These are a logical extension of edge loops in that they consist of the "
@@ -269,7 +257,7 @@ msgstr ""
 "что у не замкнутой петли (4) грань, примыкающая к полюсам не включена в "
 "петлю граней (Face Loop)."
 
-#: ../../manual/modeling/meshes/structure.rst:120
+#: ../../manual/modeling/meshes/structure.rst:115
 #, fuzzy
 msgid ""
 "Further details on working with face loops can be found in :ref:`Face "
@@ -277,4 +265,18 @@ msgid ""
 msgstr ""
 "Более подробная информация о работе с петлями граней представлена в "
 ":ref:`Выделение петлёй граней <modeling-meshes-selecting-edge-loops>`."
+
+#~ msgid "Vertex example."
+#~ msgstr "Пример с вершинами."
+
+#~ msgid ""
+#~ "In the image above, the vertex "
+#~ "labeled \"C\" is a new vertex "
+#~ "added to the cube with a new "
+#~ "edge added between \"B\" and \"C\"."
+#~ msgstr ""
+#~ "На изображении выше, вершина с меткой"
+#~ " \"С\" - новая вершина, добавленная к"
+#~ " полисетки куба с новым ребром между"
+#~ " \"В\" и \"С\"."
 
