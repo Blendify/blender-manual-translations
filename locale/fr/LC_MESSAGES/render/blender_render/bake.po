@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-04-25 18:29+0200\n"
+"PO-Revision-Date: 2018-05-18 22:57+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,12 +29,12 @@ msgid ""
 "Then, when you press Render, the entire scene is rendered much faster, since "
 "the colors of those objects do not have to be recomputed."
 msgstr ""
-"Le précalcul, en général, à pour objectif d'accélérer d'autres processus "
-"plus tard. Le rendu à partir de zéro prend beaucoup de temps suivant les "
-"options choisies. Aussi, Blender vous permet de précalculer certains parties "
-"du rendu en avance, pour des objets sélectionnés. Puis,quand vous pressez "
-"sur *Render*, la scène entière est rendue beaucoup plus rapidement. puisque "
-"les couleurs et ces objets ne doivent pas être recompilés."
+"Le précalcul, en général, a pour objectif d'accélérer ultérieurement "
+"d'autres processus. Le rendu à partir de zéro prend beaucoup de temps selon "
+"les options choisies. Aussi, Blender vous permet de précalculer certains "
+"parties du rendu en avance, pour des objets sélectionnés. Puis,quand vous "
+"pressez sur *Render*, la scène entière est rendue beaucoup plus rapidement, "
+"puisque les couleurs de ces objets ne doivent pas être recalculées."
 
 #: ../../manual/render/blender_render/bake.rst:13
 msgid ""
@@ -46,23 +46,29 @@ msgid ""
 "time spent baking can be much less than time spent rendering out each frame "
 "of a long animation."
 msgstr ""
-"Le précalcul de rendu crée des images bitmap 2D d'une surface rendue d'objet "
-"maillage. Ces images peuvent être remappées sur l'objet en utilisant les "
-"coordonnées UV de l'objet. Le précalcul est effectué pour chaque maillage, "
-"et peut seulement si ce maillage a été . Alors que cela prend du temps pour "
-"la configuration et l'exécution, il économise du temps de rendu. Si vous "
-"faites le rendu d'une longue animation, le temps pris par le précalcul peut "
-"être beaucoup moins long que celui du rendu de chaque trame d'une longue "
-"animation."
+"Le précalcul de rendu crée des images bitmap 2D d'une surface rendue d'un "
+"objet maillage. Ces images peuvent être remappées sur l'objet en utilisant "
+"les coordonnées UV de l'objet. Le précalcul est effectué pour chaque "
+"maillage séparément, et peut seulement être effectué si ce maillage a été . "
+"Bien que cela prenne du temps pour la configuration et l'exécution, il "
+"économise au final du temps de rendu. Si vous faites le rendu d'une longue "
+"animation, le temps pris par le précalcul peut être beaucoup moins long que "
+"celui du rendu de chaque trame d'une longue animation."
 
 #: ../../manual/render/blender_render/bake.rst:19
+#, fuzzy
 msgid ""
 "Use Render Bake in intensive light/shadow solutions, such as AO or soft "
 "shadows from area lights. If you bake AO for the main objects, you will not "
 "have to enable it for the full render, saving render time."
 msgstr ""
+"Utilisez le précalcul (*bake*) de rendu dans les solutions de lumière/ombre, "
+"telles que les ombres AD ou lisses des lumières *Area*. Si vous précalculez "
+"AO pour les objets principaux, vous n'aurez pas à l'activer pour le rendu "
+"complet, économisant ainsi du temps de rendu. "
 
 #: ../../manual/render/blender_render/bake.rst:23
+#, fuzzy
 msgid ""
 "Use *Full Render* or *Textures* to create an image texture; baked procedural "
 "textures can be used as a starting point for further texture painting. Use "
@@ -72,6 +78,13 @@ msgid ""
 "similarly unwrapped low resolution mesh. The low resolution mesh will look "
 "just like the high resolution, but will have much fewer faces/polygons."
 msgstr ""
+"Utilisez *Full Render* ou *Textures* pour créer une texture image ; les "
+"textures procédurales précalculées peuvent être utilisées comme maillage de "
+"départ. Pour ce faire, UV unwrap un maillage finement sculpté de haute "
+"résolution et précalculez ses normales. Enregistrez cette de normales, et "
+"(réglages de texture) le UV d'un maillage de basse résolution semblablement "
+"unwrapped. Le maillage de faible résolution va ressembler à celui de haute "
+"résolution, mais aura beaucoup moins de faces/polygones."
 
 #: ../../manual/render/blender_render/bake.rst:34
 msgid "Advantages"
@@ -87,7 +100,7 @@ msgstr "Peinture de texture rendue plus facile."
 
 #: ../../manual/render/blender_render/bake.rst:37
 msgid "Reduced polygon count."
-msgstr "Nombre de polygone réduit."
+msgstr "Nombre de polygones réduits."
 
 #: ../../manual/render/blender_render/bake.rst:38
 msgid "Repeated renders are made faster, multiplying the time savings."
@@ -100,9 +113,8 @@ msgid "Disadvantages"
 msgstr "Désavantages"
 
 #: ../../manual/render/blender_render/bake.rst:43
-#, fuzzy
 msgid "Object must be UV-unwrapped."
-msgstr "L'objet doit être."
+msgstr "L'objet doit être UV-unwrapped."
 
 #: ../../manual/render/blender_render/bake.rst:44
 msgid ""
@@ -118,7 +130,7 @@ msgid ""
 "as the rendered solution."
 msgstr ""
 "Les grandes textures (ex. 4096x4096) peuvent être consommatrices de mémoire, "
-"et peuvent être tout simplement aussi lentes que la solution rendue."
+"et être tout simplement aussi lentes que la solution rendue."
 
 #: ../../manual/render/blender_render/bake.rst:46
 msgid ""
@@ -141,8 +153,8 @@ msgstr ""
 #: ../../manual/render/blender_render/bake.rst:58
 msgid "Bakes all materials, textures, and lighting except specularity and SSS."
 msgstr ""
-"Précalcule tous les matériaux, extures, et l'éclairage à l'exception de la "
-"spécularité et SSS."
+"Précalcule tous les matériaux, textures, et l'éclairage à l'exception de la "
+"spécularité et la SSS."
 
 #: ../../manual/render/blender_render/bake.rst:62
 msgid "Ambient Occlusion"
@@ -167,7 +179,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/bake.rst:71
 msgid "Normalize without using material's settings."
-msgstr "Normalise sans utilisation des réglages de matériaux."
+msgstr "Normalise sans utilisation des réglages de matériau."
 
 #: ../../manual/render/blender_render/bake.rst:75
 msgid "Shadow"
@@ -182,9 +194,12 @@ msgid "Normals"
 msgstr ""
 
 #: ../../manual/render/blender_render/bake.rst:83
+#, fuzzy
 msgid ""
 "Bakes tangent and camera-space normals (among many others) to an RGB image."
 msgstr ""
+"Précalcule les normales aux tangentes et dans l'espace caméra (parmi "
+"beaucoup d'autres) à une image RVB."
 
 #: ../../manual/render/blender_render/bake.rst:87
 msgid "Normals."
@@ -204,7 +219,7 @@ msgstr ""
 
 #: ../../manual/render/blender_render/bake.rst:93
 msgid "Default method."
-msgstr "Méthodes par défaut."
+msgstr "Méthode par défaut."
 
 #: ../../manual/render/blender_render/bake.rst:94
 msgid "World space"
@@ -215,7 +230,7 @@ msgid ""
 "Normals in world coordinates, dependent on object transformation and "
 "deformation."
 msgstr ""
-"Normales en coordonnées World, dépendantes de la transformation et "
+"Normales en coordonnées World, dépendantes de la transformation et la "
 "déformation d'objet. "
 
 #: ../../manual/render/blender_render/bake.rst:96
@@ -228,7 +243,7 @@ msgid ""
 "dependent on deformation."
 msgstr ""
 "Les normales dans les coordonnées d'objet, indépendantes de la "
-"transformation d'objet, mais dépendant de la déformation."
+"transformation d'objet, mais dépendantes de la déformation."
 
 #: ../../manual/render/blender_render/bake.rst:101
 msgid "Tangent space"
@@ -253,8 +268,9 @@ msgid ""
 "setting here should match the setting used for baking."
 msgstr ""
 "Pour les matériaux les mêmes espaces peuvent aussi être choisis, dans les "
-"options de texture d'image, près du réglage *Normal map* existant, les "
-"réglages ici devraient correspondre au réglage utilisé pour le précalcul. "
+"options de texture d'image, près du réglage *Normal map* existant. Pour des "
+"résultats corrects, les réglages ici devraient correspondre au réglage "
+"utilisé pour le précalcul. "
 
 #: ../../manual/render/blender_render/bake.rst:109
 msgid "Textures"
@@ -263,7 +279,7 @@ msgstr ""
 #: ../../manual/render/blender_render/bake.rst:111
 msgid "Bakes colors of materials and textures only, without shading."
 msgstr ""
-"Précalcule uniquement les couleurs de matériaux et les textures, sans les "
+"Précalcule uniquement les couleurs de matériaux et des textures, sans les "
 "ombres."
 
 #: ../../manual/render/blender_render/bake.rst:115
@@ -271,15 +287,14 @@ msgid "Displacement"
 msgstr "Déplacement"
 
 #: ../../manual/render/blender_render/bake.rst:117
-#, fuzzy
 msgid ""
 "Similar to baking normal maps, displacement maps can also be baked from a "
 "high-res object to an unwrapped low-res object, using the *Selected to "
 "Active* option."
 msgstr ""
 "Similaire au précalcul de *normal maps*, les *displacement maps* peuvent "
-"aussi être précalculés depuis un objet de haute résolution à un objet de "
-"basse résolution, en utilisant l'option *Selected to Active*."
+"aussi être précalculés à partir d'un objet de haute résolution vers un objet "
+"de basse résolution, en utilisant l'option *Selected to Active*."
 
 #: ../../manual/render/blender_render/bake.rst:123
 msgid "Displacement."
@@ -362,12 +377,11 @@ msgid "Margin"
 msgstr ""
 
 #: ../../manual/render/blender_render/bake.rst:171
-#, fuzzy
 msgid ""
 "Baked result is extended this many pixels beyond the border of each UV "
 "\"island\", to soften seams in the texture."
 msgstr ""
-"le résultat précalculé est étendu d'un grand nombre de pixels au delà du "
+"le résultat précalculé est étendu de ce grand nombre de pixels au delà du "
 "bord de chaque \"île\" UV, pour adoucir les coutures dans la texture."
 
 #: ../../manual/render/blender_render/bake.rst:179
@@ -459,7 +473,7 @@ msgstr ""
 #: ../../manual/render/blender_render/bake.rst:203
 msgid "In a 3D View editor, select a mesh and enter UV/Face Select mode."
 msgstr ""
-"Dans l'éditeur Vue 3D, sélectionnez un maillage et entrez le mode de "
+"Dans l'éditeur Vue 3D, sélectionnez un maillage et entrez dans le mode de "
 "sélection UV/Face."
 
 #: ../../manual/render/blender_render/bake.rst:204
