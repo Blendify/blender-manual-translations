@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-19 21:38-0400\n"
-"PO-Revision-Date: 2018-06-22 21:19+0200\n"
+"PO-Revision-Date: 2018-07-15 10:09+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -416,15 +416,15 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:184
 msgid "We can do the following::"
-msgstr "Nous pouvons faire ce qui suit::"
+msgstr "Nous pouvons faire ce qui suit ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:189
 msgid "And then assign (and reassign) the source during the game::"
-msgstr "Et ensuite assigner (et réassigner) la source durant le jeu::"
+msgstr "Et ensuite assigner (et réassigner) la source durant le jeu ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:195
 msgid "Setup the Source"
-msgstr "Installation de la source"
+msgstr "Configuration de la source"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:197
 msgid ""
@@ -443,9 +443,9 @@ msgid ""
 "[start,stop] (floats). Set the start and stop time of the video playback, "
 "expressed in seconds from beginning. By default the entire video."
 msgstr ""
-"[start,stop] (flottants). Définissez les heures de début et de fin de la "
-"lecture vidéo, exprimés en secondes depuis le début de la vidéo. Par début, "
-"la vidéo en entier."
+"[start,stop] (flottants). Définissez les temps de début et de fin de la "
+"lecture vidéo, exprimés en secondes depuis le début de la vidéo. Par défaut, "
+"la vidéo complète."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:206
 msgid "``repeat``"
@@ -461,7 +461,8 @@ msgstr ""
 
 #: ../../manual/game_engine/python_api/videotexture.rst:209
 msgid "(float). Relative frame rate, <1.0 for slow, >1.0 for fast."
-msgstr "(flottant). Fréquence d'images relative, <1.0 pour rapide. "
+msgstr ""
+"(flottant). Fréquence de trames relative, <1.0 pour lent, >1.0 pour rapide. "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:218
 msgid "``scale``"
@@ -475,7 +476,7 @@ msgid ""
 "precise but slow ``gluScaleImage()`` function. Best is to rescale the video "
 "offline so that no scaling is necessary at run-time!"
 msgstr ""
-"(booléen). Fixé à *True* pour activer l'algorithme rapide d emise à "
+"(booléen). Fixé à *True* pour activer l'algorithme rapide de mise à "
 "l'échelle *nearest-neighbor (le plus proche voisin)*. La largeur et la "
 "hauteur de texture doivent être des puissances de 2. Si la taille d'image "
 "vidéo n'est pas une puissance de 2, la remise à l'échelle est nécessaire. "
@@ -492,9 +493,9 @@ msgid ""
 "(bool). Set to True if the image must be vertically flipped. FFmpeg always "
 "delivers the image upside down, so this attribute is set to True by default."
 msgstr ""
-"(booléen). Fixé à *True* si l'image doit être inversée verticalement. FFmpeg "
-"délivre toujours l'image retournée aussi cet attribut est fixé à *True* par "
-"défaut."
+"(booléen). Fixé à *True* si l'image doit être retournée verticalement. "
+"FFmpeg livre toujours l'image retournée, aussi cet attribut est fixé à "
+"*True* par défaut."
 
 #: ../../manual/game_engine/python_api/videotexture.rst:229
 msgid "``filter``"
@@ -529,7 +530,7 @@ msgstr "Lecture de la vidéo"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:241
 msgid "We are now ready to play the video::"
-msgstr "Nous sommes maintenant prêts à lire la vidéo :"
+msgstr "Nous sommes maintenant prêts à lire la vidéo ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:245
 msgid ""
@@ -563,9 +564,9 @@ msgid ""
 "video is playing, its value is 2, if it's stopped, it's 3. So in our "
 "example::"
 msgstr ""
-"Les classes de source vidéo (telle que VideoFFMpeg) ont  un attribut "
+"Les classes de source vidéo (telle que VideoFFMpeg) ont un attribut "
 "``status``. Si la lecture vidéo est en cours, sa valeur est 2, si elle est "
-"arrêtée, c'est 3. Aussi dans notre exemple :"
+"arrêtée, c'est 3. Aussi dans notre exemple ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:270
 msgid "Advanced Workflow"
@@ -582,7 +583,7 @@ msgstr ""
 "L'argument *True* dans la méthode ``Texture.refresh()`` invalide simplement "
 "le tampon d'image après son envoi vers le GPU de sorte que sur la trame "
 "suivante, une nouvelle image sera chargée depuis la source. Il a l'effet "
-"indésirable de rendre l'image indisponible à Python. Vous pouvez aussi le "
+"indésirable de rendre l'image indisponible pour Python. Vous pouvez aussi le "
 "faire manuellement en appelant directement la méthode ``refresh()`` de la "
 "source."
 
@@ -592,7 +593,7 @@ msgstr "Voici certaines possibilités de flux de travail avancés :"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:279
 msgid "Use the image buffer in Python (does not effect the Texture)::"
-msgstr "Utiliser le tampon d'image dans Python (n'affecte pas la Texture) :"
+msgstr "Utiliser le tampon d'image dans Python (n'affecte pas la Texture) ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:288
 msgid "Load image from source for Python processing without download to GPU:"
@@ -606,15 +607,15 @@ msgstr "Notez que nous n'appelons même pas d'actualisation de la Texture. "
 
 #: ../../manual/game_engine/python_api/videotexture.rst:290
 msgid "We could also just create a source object without a Texture object::"
-msgstr "Vous pourrions aussi créer un objet source sans objet Texture :"
+msgstr "Vous pourrions aussi créer un objet source sans objet Texture ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:296
 msgid ""
 "If you have more than one material on the mesh and you want to modify a "
 "texture of one particular material, get its ID::"
 msgstr ""
-"Si vous avez plus d'un matériau sur le mesh et que vous voulez modifier une "
-"texture d'un matériau particulier, récupérez son ID :"
+"Si vous avez plus d'un matériau sur le maillage et que vous voulez modifier "
+"une texture d'un matériau particulier, récupérez son ID ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:301
 msgid ""
@@ -622,7 +623,7 @@ msgid ""
 "by the texture slot where it is defined, here two::"
 msgstr ""
 "Le matériau GLSL peut avoir plus d'un canal de texture, identifiez la "
-"texture par le slot de texture où elle est définie, ici deux :"
+"texture par le slot de texture où elle est définie, en voici deux ::"
 
 #: ../../manual/game_engine/python_api/videotexture.rst:308
 msgid "Advanced Demos"
