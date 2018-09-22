@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 18:32-0400\n"
+"POT-Creation-Date: 2018-09-22 18:54-0400\n"
 "PO-Revision-Date: 2017-12-01 07:27+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -39,19 +39,14 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:17
-#, fuzzy
-msgid "Keyed Physics settings."
-msgstr "Устави фізики «Ключовано» -- Keyed."
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:19
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:15
 #, fuzzy
 msgid ""
-"The paths of keyed particles are determined from the emitter to another "
-"particle system's particles. This allows creation of chains of systems "
-"with keyed physics to create long strands or groovy moving particles. "
-"Basically the particles have no dynamics but are interpolated from one "
-"system to the next at draw-time."
+"The path of Keyed particles is determined between particles of any two "
+"(or more) particle systems. This allows the creation of a chains of "
+"systems to create long strands or groovy moving particles. Basically the "
+"particles have no dynamics but are interpolated from one system to the "
+"next at draw-time."
 msgstr ""
 "Частинкові шляхи ключованих частинок визначаються від емітера до частинок"
 " іншої системи частинок. Це дозволяє створювати ланцюги систем з "
@@ -59,7 +54,7 @@ msgstr ""
 "частинок. Базово ці частинки не мають жодної динаміки, а інтерполюються "
 "від однієї систему до до іншої за час рисування."
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:24
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:19
 #, fuzzy
 msgid ""
 "To setup *Keyed* particles you need at least two particle systems in the "
@@ -68,57 +63,69 @@ msgstr ""
 "Для укладу Ключованих частинок вам необхідно мати принаймні дві системи "
 "частинок."
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:28
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:23
 msgid "Options"
 msgstr "Опції"
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:36
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:28
+#, fuzzy
+msgid "Keyed Physics settings."
+msgstr "Устави фізики «Ключовано» -- Keyed."
+
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:30
 msgid "Loops"
 msgstr "Петлі -- Loops"
 
 #: ../../manual/physics/particles/emitter/physics/keyed.rst:31
+#, fuzzy
 msgid ""
-"Sets the number of times the keys are looped. Disabled if *Use Timing* is"
-" enabled."
+"Sets the number of times the entire *Keys* list is repeated. Disabled if "
+"*Use Timing* is enabled."
 msgstr ""
 "Задає кількість зациклення ключів. Вимикається, якщо вмикається опція "
 "*Use Timing*."
 
 #: ../../manual/physics/particles/emitter/physics/keyed.rst:39
+msgid "Use Timing"
+msgstr "Вжити Часування -- Use Timing"
+
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:33
+msgid ""
+"Enabling this option allows you to specify the timing for each key "
+"independently, using the *Time* and *Duration* options. By default, the "
+"*Use Timing* option is deactivated, and the particles will pass through "
+"all keys for a time equal to its lifetime. A shorter lifetime means "
+"faster movement. The lifetime will be split equally between the keys, "
+"this may lead to varying particle speeds between the targets."
+msgstr ""
+
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:42
 msgid "Keys"
 msgstr "Ключі -- Keys"
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:45
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:44
 msgid "Key Targets"
 msgstr "Цілі ключів"
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:42
-msgid ""
-"You have to enter the name of the object which bears the target system "
-"and if there are multiple particle systems the number of the system."
-msgstr ""
-"Ви повинні увести ім'я об'єкта, який несе цільову систему, і, якщо на "
-"ньому є кілька систем частинок, задати номер потрібної з них."
-
 #: ../../manual/physics/particles/emitter/physics/keyed.rst:45
-msgid "Click the :kbd:`Plus` to add a key, then select the object."
-msgstr "Клацніть :kbd:`Plus` для додання ключа, а далі виберіть об'єкт."
+msgid "The :ref:`list view <ui-list-view>` of keys (target particle systems)."
+msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:47
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:46
 msgid "Object"
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:48
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:47
 msgid ""
 "The name of a target object for the selected key. If empty it uses the "
 "current particle system."
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:49
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:48
 msgid "System"
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:50
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:49
 msgid "Index of particle system on the target object."
 msgstr ""
 
@@ -126,81 +133,22 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:52
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:54
-msgid "(Todo)"
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:51
+msgid ""
+"The time (frame number) at which the particles will be at the position of"
+" the selected system. Note also that the *Start* frame of the Keyed "
+"system adds an offset to this time."
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:54
+#: ../../<generated>:1
 msgid "Duration"
 msgstr ""
 
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:56
+#: ../../manual/physics/particles/emitter/physics/keyed.rst:54
 msgid ""
-"If you use only one keyed system the particles will travel in their "
-"lifetime from the emitter to the target. A shorter lifetime means faster "
-"movement. If you have more than one keyed system in a chain, the lifetime"
-" will be split equally. This may lead to varying particle speeds between "
-"the targets."
+"How long (in frames) the particles stay on this system before they start "
+"moving to the next one."
 msgstr ""
-"Якщо ви використовуєте тільки одну ключовану систему, то її частинки "
-"будуть подорожувати під час їх часу життя від емітера до цілі. Коротший "
-"час життя означає швидше переміщення. Якщо ви маєте більш ніж одну "
-"ключовану систему у ланцюгу, то час життя буде розподілено однаково. Це "
-"може призвести до варіювання швидкостей частинок між цілями."
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:63
-msgid "Timing"
-msgstr "Часування -- Timing"
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:70
-msgid "Use Timing"
-msgstr "Вжити Часування -- Use Timing"
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:68
-msgid ""
-"Timing works together with the Time slider for the other keyed systems in"
-" a chain. The Time slider allows to define a fraction of particle "
-"lifetime for particle movement."
-msgstr ""
-"Часування працює разом з повзунком «Час» -- Time для інших ключованих "
-"систем у ланцюгу. Повзунок Time дозволяє визначати частку часу життя "
-"частинок для їх переміщення."
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:73
-msgid "Example"
-msgstr "Приклад"
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:75
-#, fuzzy
-msgid ""
-"Let us assume that you have two keyed systems in a chain and a third "
-"system as target. The particle lifetime of the first system shall be 50 "
-"keys. The particles will travel in 25 frames from the first keyed system "
-"to the second, and in further 25 frames from the second system to the "
-"target. If you use the Timed button for the first system, the Time slider"
-" appears in the second system's panel. Its default value is 0.5, so the "
-"time is equally split between the systems. If you set Time to 1, the "
-"movement from the first system to the second will get all the lifetime "
-"(the particles will die at the second system)."
-msgstr ""
-"Припустімо, що ви маєте дві ключовані системи у ланцюгу та третю систему "
-"як ціль. Час життя частинок першої системи становить 50 кадрів. Частинки "
-"будуть подорожувати 25 кадрів від першої ключованої системи до другої та "
-"наступні 25 кадрів від другої системи до цілі. Якщо ви увімкнули Use "
-"Timing для першої системи, то повзунок Time з'явиться на панелі для "
-"другої системи. Його стандартне значення - 0.5, а тому час рівномірно "
-"розподілиться між цими двома системами. Якщо ви задасте Time як 1, то рух"
-" від першої системи до другої буде тривати увесь час життя (частинки не "
-"помруть на другій системі)."
-
-#: ../../manual/physics/particles/emitter/physics/keyed.rst:85
-msgid ""
-"If you set Time to 0 the particles will start at the second system and "
-"travel to the target."
-msgstr ""
-"Якщо ви задасте Time як 0, то частинки будуть починатися на другій "
-"системі та подорожуватимуть до цілі."
 
 #~ msgid "Type:     Keyed"
 #~ msgstr "Тип:     «Ключовано» -- Keyed"
@@ -230,4 +178,111 @@ msgstr ""
 #~ "*First*, або з іншою звичайною фізикою."
 #~ " Ця друга система є ціллю для "
 #~ "першої ключованої системи."
+
+#~ msgid ""
+#~ "You have to enter the name of "
+#~ "the object which bears the target "
+#~ "system and if there are multiple "
+#~ "particle systems the number of the "
+#~ "system."
+#~ msgstr ""
+#~ "Ви повинні увести ім'я об'єкта, який "
+#~ "несе цільову систему, і, якщо на "
+#~ "ньому є кілька систем частинок, задати"
+#~ " номер потрібної з них."
+
+#~ msgid "Click the :kbd:`Plus` to add a key, then select the object."
+#~ msgstr "Клацніть :kbd:`Plus` для додання ключа, а далі виберіть об'єкт."
+
+#~ msgid "(Todo)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you use only one keyed system"
+#~ " the particles will travel in their"
+#~ " lifetime from the emitter to the "
+#~ "target. A shorter lifetime means faster"
+#~ " movement. If you have more than "
+#~ "one keyed system in a chain, the"
+#~ " lifetime will be split equally. This"
+#~ " may lead to varying particle speeds"
+#~ " between the targets."
+#~ msgstr ""
+#~ "Якщо ви використовуєте тільки одну "
+#~ "ключовану систему, то її частинки будуть"
+#~ " подорожувати під час їх часу життя"
+#~ " від емітера до цілі. Коротший час"
+#~ " життя означає швидше переміщення. Якщо "
+#~ "ви маєте більш ніж одну ключовану "
+#~ "систему у ланцюгу, то час життя "
+#~ "буде розподілено однаково. Це може "
+#~ "призвести до варіювання швидкостей частинок"
+#~ " між цілями."
+
+#~ msgid "Timing"
+#~ msgstr "Часування -- Timing"
+
+#~ msgid ""
+#~ "Timing works together with the Time "
+#~ "slider for the other keyed systems "
+#~ "in a chain. The Time slider allows"
+#~ " to define a fraction of particle "
+#~ "lifetime for particle movement."
+#~ msgstr ""
+#~ "Часування працює разом з повзунком «Час»"
+#~ " -- Time для інших ключованих систем"
+#~ " у ланцюгу. Повзунок Time дозволяє "
+#~ "визначати частку часу життя частинок для"
+#~ " їх переміщення."
+
+#~ msgid "Example"
+#~ msgstr "Приклад"
+
+#~ msgid ""
+#~ "Let us assume that you have two"
+#~ " keyed systems in a chain and a"
+#~ " third system as target. The particle"
+#~ " lifetime of the first system shall"
+#~ " be 50 keys. The particles will "
+#~ "travel in 25 frames from the first"
+#~ " keyed system to the second, and "
+#~ "in further 25 frames from the "
+#~ "second system to the target. If "
+#~ "you use the Timed button for the"
+#~ " first system, the Time slider "
+#~ "appears in the second system's panel."
+#~ " Its default value is 0.5, so "
+#~ "the time is equally split between "
+#~ "the systems. If you set Time to"
+#~ " 1, the movement from the first "
+#~ "system to the second will get all"
+#~ " the lifetime (the particles will die"
+#~ " at the second system)."
+#~ msgstr ""
+#~ "Припустімо, що ви маєте дві ключовані"
+#~ " системи у ланцюгу та третю систему"
+#~ " як ціль. Час життя частинок першої"
+#~ " системи становить 50 кадрів. Частинки "
+#~ "будуть подорожувати 25 кадрів від першої"
+#~ " ключованої системи до другої та "
+#~ "наступні 25 кадрів від другої системи"
+#~ " до цілі. Якщо ви увімкнули Use "
+#~ "Timing для першої системи, то повзунок"
+#~ " Time з'явиться на панелі для другої"
+#~ " системи. Його стандартне значення - "
+#~ "0.5, а тому час рівномірно розподілиться"
+#~ " між цими двома системами. Якщо ви"
+#~ " задасте Time як 1, то рух від"
+#~ " першої системи до другої буде "
+#~ "тривати увесь час життя (частинки не "
+#~ "помруть на другій системі)."
+
+#~ msgid ""
+#~ "If you set Time to 0 the "
+#~ "particles will start at the second "
+#~ "system and travel to the target."
+#~ msgstr ""
+#~ "Якщо ви задасте Time як 0, то "
+#~ "частинки будуть починатися на другій "
+#~ "системі та подорожуватимуть до цілі."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-22 11:06+0800\n"
+"POT-Creation-Date: 2018-09-22 18:54-0400\n"
 "PO-Revision-Date: 2017-10-14 18:44+0800\n"
 "Last-Translator: \n"
 "Language: zh_Hans_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/render/cycles/nodes/types/input/particle_info.rst:7
 msgid "Particle Info Node"
@@ -29,93 +29,101 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/input/particle_info.rst:14
 msgid ""
-"The *Particle Info* node is for objects instanced from a :doc:`Particle "
-"System </physics/particles/index>`. This node gives access to the data of"
-" the particle that spawned the instance."
+"The *Particle Info* node can be used in the material node tree for "
+"objects that are used as the Dupli Objects, when you use *Object* or "
+"*Group* :doc:`Render mode </physics/particles/emitter/render>` of a "
+"Particle System."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:19
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:17
+msgid ""
+"This node gives access to the data of the particle that spawned the "
+"object instance. It can be useful to give some variation to a single "
+"material assigned to multiple instances of Dupli Object."
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:22
 msgid ""
 "This node currently only supports parent particles. Info from child "
 "particles is not available."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:25
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:28
 msgid "Inputs"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:27
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:30
 msgid "This node has no inputs."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:31
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:34
 msgid "Properties"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:33
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:36
 msgid "This node has no properties."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:37
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:40
 msgid "Outputs"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:39
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:42
 msgid "Index"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:40
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:43
 msgid "Index number of the particle (from 0 to number of particles)."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:42
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:45
 msgid "Random"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:42
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:45
 msgid ""
 "A random per-particle value in the range from 0 to 1. It can for example "
 "be used in combination with a color ramp, to randomize the particle "
 "color."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:44
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:47
 msgid "Age"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:45
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:48
 msgid "Age of the particle in frames."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:46
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:49
 msgid "Lifetime"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:47
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:50
 msgid "Total lifespan of the particle in frames."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:48
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:51
 msgid "Location"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:49
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:52
 msgid "Location of the particle."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:50
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:53
 msgid "Size"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:51
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:54
 msgid "Size of the particle."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:52
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:55
 msgid "Velocity"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:53
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:56
 msgid "Velocity of the particle."
 msgstr ""
 
@@ -123,7 +131,15 @@ msgstr ""
 msgid "Angular Velocity"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:55
+#: ../../manual/render/cycles/nodes/types/input/particle_info.rst:58
 msgid "Angular velocity of the particle."
 msgstr ""
+
+#~ msgid ""
+#~ "The *Particle Info* node is for "
+#~ "objects instanced from a :doc:`Particle "
+#~ "System </physics/particles/index>`. This node "
+#~ "gives access to the data of the"
+#~ " particle that spawned the instance."
+#~ msgstr ""
 

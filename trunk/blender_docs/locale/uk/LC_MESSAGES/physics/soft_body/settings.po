@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-09-22 18:54-0400\n"
 "PO-Revision-Date: 2017-12-12 16:53+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -13,44 +13,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/physics/soft_body/settings.rst:5
 msgid "Settings"
 msgstr "Устави -- Settings"
 
-#: ../../manual/physics/soft_body/settings.rst:7
-#: ../../manual/physics/soft_body/settings.rst:16
+#: ../../manual/physics/soft_body/settings.rst:8
 msgid "Soft Body"
 msgstr "М'яке Тіло -- Soft Body"
 
-#: ../../manual/physics/soft_body/settings.rst:8
-msgid "This creates the Soft Body Modifier on the selected object."
-msgstr "Створює модифікатор Soft Body на виділеному об'єкті."
-
-#: ../../manual/physics/soft_body/settings.rst:9
-msgid "Render"
-msgstr "Зображ, Рендер -- Render"
-
 #: ../../manual/physics/soft_body/settings.rst:10
-msgid "Enable soft body during render."
-msgstr "Вмикає фізику м'якого тіла у ході рендера, зображу."
-
-#: ../../manual/physics/soft_body/settings.rst:13
-msgid "Display"
-msgstr "Показ -- Display"
-
-#: ../../manual/physics/soft_body/settings.rst:12
-#, fuzzy
-msgid "Display soft body in real-time."
-msgstr "Показує фізику м'якого тіла у реальному часі."
-
-#: ../../manual/physics/soft_body/settings.rst:18
-#: ../../manual/physics/soft_body/settings.rst:49
-#: ../../manual/physics/soft_body/settings.rst:62
-#: ../../manual/physics/soft_body/settings.rst:114
-#: ../../manual/physics/soft_body/settings.rst:194
-#: ../../manual/physics/soft_body/settings.rst:247
+#: ../../manual/physics/soft_body/settings.rst:42
+#: ../../manual/physics/soft_body/settings.rst:57
+#: ../../manual/physics/soft_body/settings.rst:93
+#: ../../manual/physics/soft_body/settings.rst:166
+#: ../../manual/physics/soft_body/settings.rst:220
 msgid "Reference"
 msgstr "Орієнтир -- Reference"
 
@@ -58,7 +36,7 @@ msgstr "Орієнтир -- Reference"
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/physics/soft_body/settings.rst:21
+#: ../../manual/physics/soft_body/settings.rst:13
 #, fuzzy
 msgid ":menuselection:`Physics --> Soft Body`"
 msgstr "Панель:    «Фізика > М'яке Тіло» -- :menuselection:`Physics --> Soft Body`"
@@ -67,21 +45,23 @@ msgstr "Панель:    «Фізика > М'яке Тіло» -- :menuselection
 msgid "Object"
 msgstr "Об'єкт -- Object"
 
-#: ../../manual/physics/soft_body/settings.rst:27
+#: ../../manual/physics/soft_body/settings.rst:18
 msgid "Friction"
 msgstr "Тертя -- Friction"
 
-#: ../../manual/physics/soft_body/settings.rst:28
+#: ../../manual/physics/soft_body/settings.rst:17
 msgid ""
 "The friction of the surrounding medium. Generally friction dampens a "
-"movement."
-msgstr "Тертя навколишнього середовища. Загалом, тертя гасить, гальмує рух."
+"movement. The larger the friction, the more viscous is the medium. "
+"Friction always appears when a vertex moves relative to its surround "
+"medium."
+msgstr ""
 
-#: ../../manual/physics/soft_body/settings.rst:31
+#: ../../manual/physics/soft_body/settings.rst:22
 msgid "Mass"
 msgstr "Маса -- Mass"
 
-#: ../../manual/physics/soft_body/settings.rst:30
+#: ../../manual/physics/soft_body/settings.rst:21
 #, fuzzy
 msgid ""
 "Mass value for vertices. Larger mass slows down acceleration, except for "
@@ -93,36 +73,39 @@ msgstr ""
 "Більша маса означає більшу інерцію, а тому гальмування М'якого Тіла є "
 "більш важким."
 
-#: ../../manual/physics/soft_body/settings.rst:35
-msgid "Mass: Vertex Group"
+#: ../../manual/physics/soft_body/settings.rst:25
+#, fuzzy
+msgid "Mass Vertex Group"
 msgstr "Маса: Група Вершин -- Mass: Vertex Group"
 
-#: ../../manual/physics/soft_body/settings.rst:34
-msgid "Use a specified vertex group for mass values."
+#: ../../manual/physics/soft_body/settings.rst:25
+#, fuzzy
+msgid "You can paint weights and use a specified vertex group for mass values."
 msgstr "Використовує вказану групу вершин для значень маси."
 
-#: ../../manual/physics/soft_body/settings.rst:38
+#: ../../manual/physics/soft_body/settings.rst:33
 msgid "Simulation"
 msgstr "Імітація -- Simulation"
 
-#: ../../manual/physics/soft_body/settings.rst:40
+#: ../../manual/physics/soft_body/settings.rst:33
 msgid "Speed"
 msgstr "Швидкість -- Speed"
 
-#: ../../manual/physics/soft_body/settings.rst:41
-#, fuzzy
+#: ../../manual/physics/soft_body/settings.rst:29
 msgid ""
 "You can control the internal timing of the soft body system with this "
-"value."
+"value. It sets the correlation between frame rate and tempo of the "
+"simulation. A free falling body should cover a distance of about five "
+"meters after one second. You can adjust the scale of your scene and "
+"simulation with this correlation. If you render with 25 frames per second"
+" and 1 meter shall be 1 BU, you have to set *Speed* to 1.3."
 msgstr ""
-"Ви можете керувати внутрішнім часуванням системи М'якого Тіла за "
-"допомогою цього значення."
 
-#: ../../manual/physics/soft_body/settings.rst:44
+#: ../../manual/physics/soft_body/settings.rst:37
 msgid "Collision Group"
 msgstr "Група Зіткнення -- Collision Group"
 
-#: ../../manual/physics/soft_body/settings.rst:43
+#: ../../manual/physics/soft_body/settings.rst:36
 #, fuzzy
 msgid ""
 "If set, soft body collides with objects from the group, instead of using "
@@ -132,105 +115,100 @@ msgstr ""
 "замість використання для цього об'єктів, що знаходяться з ними на одному "
 "і тому ж шарі."
 
-#: ../../manual/physics/soft_body/settings.rst:47
+#: ../../manual/physics/soft_body/settings.rst:40
 msgid "Soft Body Cache"
 msgstr "Кеш М'якого Тіла -- Soft Body Cache"
 
-#: ../../manual/physics/soft_body/settings.rst:52
+#: ../../manual/physics/soft_body/settings.rst:45
 #, fuzzy
 msgid ":menuselection:`Physics --> Soft Body Cache`"
 msgstr ""
 "Панель:    «Фізика > Кеш М'якого Тіла» -- :menuselection:`Physics --> "
 "Soft Body Cache`"
 
-#: ../../manual/physics/soft_body/settings.rst:56
-msgid "Caching and cache options are documented :doc:`Here </physics/baking>`."
+#: ../../manual/physics/soft_body/settings.rst:47
+msgid ""
+"Soft Body physics simulations use a unified system for caching and "
+"baking. See :doc:`Particle Cache </physics/particles/emitter/cache>` and "
+":doc:`General Baking </physics/baking>` documentation for reference."
 msgstr ""
-"Кешування та його опції розглядаються тут -- :doc:`Here "
-"</physics/baking>`."
 
-#: ../../manual/physics/soft_body/settings.rst:60
+#: ../../manual/physics/soft_body/settings.rst:55
 msgid "Soft Body Goal"
 msgstr "Ціль М'якого Тіла -- Soft Body Goal"
 
-#: ../../manual/physics/soft_body/settings.rst:65
+#: ../../manual/physics/soft_body/settings.rst:60
 #, fuzzy
 msgid ":menuselection:`Physics --> Soft Body Goal`"
 msgstr ""
 "Панель:    «Фізика > Ціль М'якого Тіла» -- :menuselection:`Physics --> "
 "Soft Body Goal`"
 
-#: ../../manual/physics/soft_body/settings.rst:74
+#: ../../manual/physics/soft_body/settings.rst:67
 msgid "Use Goal"
 msgstr "Вжити Ціль -- Use Goal"
 
-#: ../../manual/physics/soft_body/settings.rst:68
-#, fuzzy
+#: ../../manual/physics/soft_body/settings.rst:63
 msgid ""
-"Soft Body Goal acts like a pin on a chosen set of vertices; controlling "
-"how much of an effect soft body has on them. Enabling this tells Blender "
-"to use the position / animated position of a vertex in the simulation. "
-"Animating the vertices can be done in all the usual ways before the soft "
-"body simulation is applied. The *goal* is the desired end-position for "
-"vertices. How a soft body tries to achieve this goal can be defined using"
-" stiffness forces and damping."
+"Enabling this tells Blender to use the motion from animations (F-curves, "
+"armatures, parents, lattices, etc.) in the simulation. The \"goal\" is "
+"the desired end position for vertices based on this animation."
 msgstr ""
-"Ціль М'якого Тіла діє як шпилька на обраному наборі вершин; керує тим, "
-"наскільки м'яке тіло впливає на них. Увімкнення цього каже Blender'у "
-"використовувати позицію / анімовану позицію вершини в імітації. "
-"Анімування вершин може бути зроблене всіма звичайними способами, перед "
-"тим як застосується імітація М'якого Тіла. Ціль -- *goal* -- це бажана "
-"кінцева позиція для вершин. Як м'яке тіло намагається досягти цієї цілі "
-"може бути визначено за допомогою сил тугості та згасання."
 
-#: ../../manual/physics/soft_body/settings.rst:77
+#: ../../manual/physics/soft_body/settings.rst:67
+msgid ""
+"See :ref:`exterior forces <physics-softbody-forces-exterior-goal>` for "
+"details."
+msgstr ""
+
+#: ../../manual/physics/soft_body/settings.rst:76
 msgid "Goal Strength"
 msgstr "Сила Цілі -- Goal Strength"
 
-#: ../../manual/physics/soft_body/settings.rst:84
+#: ../../manual/physics/soft_body/settings.rst:71
 msgid "Default"
 msgstr "Стандартно -- Default"
 
-#: ../../manual/physics/soft_body/settings.rst:80
-#, fuzzy
+#: ../../manual/physics/soft_body/settings.rst:71
 msgid ""
-"A *Goal* value of 1.0 means no soft body simulation, the vertex stays at "
-"its original (animated) position. When setting *Goal* to 0.0, the object "
-"is only influenced by physical laws. By setting goal values between 0.0 "
-"and 1.0, you can blend between having the object affected only by the "
-"animation system, and having the object affected only by the soft body "
-"effect."
+"Goal weight/strength for all vertices when no *Vertex Group* is assigned."
+" If you use a vertex group the weight of a vertex defines its goal."
 msgstr ""
-"Значення *Goal Strength* як 1.0 означає, що відсутня жодна імітація "
-"М'якого Тіла, вершина залишається в її оригінальній (анімованій) позиції."
-" При заданні *Goal Strength* як 0.0 на об'єкт впливають тільки фізичні "
-"закони. Задаючи значення *Goal Strength* між 0.0 та 1.0, ви можете "
-"змішувати вплив на об'єкт між системою анімації та імітацією м'якого "
-"тіла."
 
-#: ../../manual/physics/soft_body/settings.rst:91
-msgid "Minimum / Maximum"
+#: ../../manual/physics/soft_body/settings.rst:74
+#, fuzzy
+msgid "Minimum/Maximum"
 msgstr "Мінімум -- Minimum / Максимум -- Maximum"
 
-#: ../../manual/physics/soft_body/settings.rst:87
+#: ../../manual/physics/soft_body/settings.rst:74
 msgid ""
-"When you paint the values in vertex groups (using *Weight Paint Mode*), "
-"you can use the *G Min* and *G Max* to fine-tune (clamp) the weight "
-"values. The lowest vertex weight (blue) will become *G Min*, the highest "
-"value (red) becomes *G Max* (please note that the blue-red color scale "
-"may be altered by User Preferences)."
+"When you use a vertex group, you can use the *Minimum* and *Maximum* to "
+"fine-tune (clamp) the weight values. The lowest vertex weight will become"
+" *Minimum*, the highest value becomes *Maximum*."
 msgstr ""
 
-#: ../../manual/physics/soft_body/settings.rst:94
+#: ../../manual/physics/soft_body/settings.rst:76
+msgid "Vertex Group"
+msgstr "Група Вершин -- Vertex Group"
+
+#: ../../manual/physics/soft_body/settings.rst:77
+msgid ""
+"Use a vertex group to allow per-vertex goal weights (multiplied by the "
+"*Default* goal)."
+msgstr ""
+"Використання групи вершин дозволяє задавати по-вершинні вагомості цілі "
+"(множиться на значення устави *Default* для цілі)."
+
+#: ../../manual/physics/soft_body/settings.rst:86
 msgid "Goal Settings"
 msgstr "Устави Цілі -- Goal Settings"
 
-#: ../../manual/physics/soft_body/settings.rst:98
-#: ../../manual/physics/soft_body/settings.rst:232
+#: ../../manual/physics/soft_body/settings.rst:81
+#: ../../manual/physics/soft_body/settings.rst:205
 msgid "Stiffness"
 msgstr "Тугість -- Stiffness"
 
-#: ../../manual/physics/soft_body/settings.rst:97
+#: ../../manual/physics/soft_body/settings.rst:80
 msgid ""
 "The spring stiffness for *Goal*. A low value creates very weak springs "
 "(more flexible \"attachment\" to the goal), a high value creates a strong"
@@ -240,66 +218,53 @@ msgstr ""
 "пружини (більш гнучко «прикріплені» до цілі), вищі значення створюють "
 "сильну пружність (туге «прикріплення» до цілі)."
 
-#: ../../manual/physics/soft_body/settings.rst:102
+#: ../../manual/physics/soft_body/settings.rst:86
 msgid "Damping"
 msgstr "Згасання -- Damping"
 
-#: ../../manual/physics/soft_body/settings.rst:101
+#: ../../manual/physics/soft_body/settings.rst:84
+#, fuzzy
 msgid ""
-"The friction for *Goal*. Higher values dampen the effect of the goal on "
-"the soft body."
+"The friction coefficient for *Goal*. Higher values give damping of the "
+"spring effect (little jiggle), and the movement will soon come to an end."
 msgstr "Тертя для цілі *Goal*. Вищі значення гасять ефект цілі на м'якому тілі."
 
-#: ../../manual/physics/soft_body/settings.rst:105
-msgid "Vertex Group"
-msgstr "Група Вершин -- Vertex Group"
-
-#: ../../manual/physics/soft_body/settings.rst:107
-msgid ""
-"Use a vertex group to allow per-vertex goal weights (multiplied by the "
-"*Default* goal)."
-msgstr ""
-"Використання групи вершин дозволяє задавати по-вершинні вагомості цілі "
-"(множиться на значення устави *Default* для цілі)."
-
-#: ../../manual/physics/soft_body/settings.rst:112
+#: ../../manual/physics/soft_body/settings.rst:91
 msgid "Soft Body Edges"
 msgstr "Ребра М'якого Тіла -- Soft Body Edges"
 
-#: ../../manual/physics/soft_body/settings.rst:117
+#: ../../manual/physics/soft_body/settings.rst:96
 #, fuzzy
 msgid ":menuselection:`Physics --> Soft Body Edges`"
 msgstr ""
 "Панель:    «Фізика > Ребра М'якого Тіла» -- :menuselection:`Physics --> "
 "Soft Body Edges`"
 
-#: ../../manual/physics/soft_body/settings.rst:121
+#: ../../manual/physics/soft_body/settings.rst:100
 msgid "Use Edges"
 msgstr "Вжити Ребра -- Use Edges"
 
-#: ../../manual/physics/soft_body/settings.rst:120
+#: ../../manual/physics/soft_body/settings.rst:99
 msgid ""
-"The edges in a Mesh Object can act as springs as well, like threads in "
-"fabric."
+"Allow the edges in a mesh object to act like springs. See :doc:`interior "
+"forces </physics/soft_body/forces/interior>`."
 msgstr ""
-"Ребра у сітьовому Mesh об'єкті можуть діяти як пружини, подібно до ниток "
-"у тканині."
 
-#: ../../manual/physics/soft_body/settings.rst:124
+#: ../../manual/physics/soft_body/settings.rst:126
 msgid "Springs"
 msgstr "Пружини -- Springs"
 
-#: ../../manual/physics/soft_body/settings.rst:128
+#: ../../manual/physics/soft_body/settings.rst:109
 msgid "Pull"
 msgstr "Виштовх -- Pull"
 
-#: ../../manual/physics/soft_body/settings.rst:127
+#: ../../manual/physics/soft_body/settings.rst:104
+#, fuzzy
 msgid ""
-"The spring stiffness for edges (how much the edges are stretched). A low "
-"value means very weak springs (a very elastic material), a high value is "
-"a strong spring (a stiffer material) that resists being pulled apart. 0.5"
-" is latex, 0.9 is like a sweater, 0.999 is a highly-starched napkin or "
-"leather."
+"The spring stiffness for edges (how much the edges are allowed to "
+"stretch). A low value means very weak springs (a very elastic material), "
+"a high value is a strong spring (a stiffer material) that resists being "
+"pulled apart."
 msgstr ""
 "Тугість пружин для ребер (наскільки ребра розтягуються). Низькі значення "
 "створюють дуже слабкі пружини (дуже еластичний матеріал), вищі значення "
@@ -307,14 +272,22 @@ msgstr ""
 " -- латекс, 0.9 -- як светр, 0.999 -- високо розтягувана пелюшка або "
 "шкіра."
 
-#: ../../manual/physics/soft_body/settings.rst:131
+#: ../../manual/physics/soft_body/settings.rst:108
+msgid ""
+"A value of 0.5 is latex, 0.9 is like a sweater, 0.999 is a highly-"
+"starched napkin or leather. The soft body simulation tends to get "
+"unstable if you use a value of 0.999, so you should lower this value a "
+"bit if that happens."
+msgstr ""
+
+#: ../../manual/physics/soft_body/settings.rst:112
 msgid "Push"
 msgstr "Уштовх -- Push"
 
-#: ../../manual/physics/soft_body/settings.rst:131
+#: ../../manual/physics/soft_body/settings.rst:112
 #, fuzzy
 msgid ""
-"How much the soft body resist being scrunched together, like a "
+"How much the soft body resists being scrunched together, like a "
 "compression spring. Low values for fabric, high values for inflated "
 "objects and stiff material."
 msgstr ""
@@ -322,48 +295,52 @@ msgstr ""
 "значення для тканин, високі значення для надутих об'єктів та тугого "
 "матеріалу."
 
-#: ../../manual/physics/soft_body/settings.rst:133
+#: ../../manual/physics/soft_body/settings.rst:114
 msgid "Damp"
 msgstr "Згасання -- Damp"
 
-#: ../../manual/physics/soft_body/settings.rst:134
+#: ../../manual/physics/soft_body/settings.rst:115
+#, fuzzy
 msgid ""
-"The friction for edge springs. High values (max of 50) dampen the edge "
-"stiffness effect and calm down the cloth."
+"The friction for edge springs. High values (max of 50) dampen the "
+"*Push*/*Pull* effect and calm down the cloth."
 msgstr ""
 "Тертя для пружин ребер. Високі значення (макс -- 50) дає згасання ефекту "
 "пружності ребер та заспокоює фізику тканин."
 
-#: ../../manual/physics/soft_body/settings.rst:135
+#: ../../manual/physics/soft_body/settings.rst:117
 msgid "Plasticity"
 msgstr "Пластичність -- Plasticity"
 
-#: ../../manual/physics/soft_body/settings.rst:136
-msgid "Permanent deformation of the object."
-msgstr "Постійне деформування об'єкта."
+#: ../../manual/physics/soft_body/settings.rst:117
+msgid ""
+"Permanent deformation of the object after a collision. The vertices take "
+"a new position without applying the modifier."
+msgstr ""
 
-#: ../../manual/physics/soft_body/settings.rst:138
+#: ../../manual/physics/soft_body/settings.rst:120
 msgid "Bending"
 msgstr "Згинання -- Bending"
 
-#: ../../manual/physics/soft_body/settings.rst:138
+#: ../../manual/physics/soft_body/settings.rst:120
+#, fuzzy
 msgid ""
-"This option creates virtual connections between a vertex and the one "
-"after the next. This includes diagonal edges. Damping applies also to "
-"these connections."
+"This option creates virtual connections between a vertex and the vertices"
+" connected to its neighbors. This includes diagonal edges. Damping also "
+"applies to these connections."
 msgstr ""
 "Ця опція створює віртуальні з'єднання між попередньою та наступною "
 "вершиною, одна за одною. Це включає діагональні ребра також. Згасання "
 "застосовується також до цих з'єднань."
 
-#: ../../manual/physics/soft_body/settings.rst:143
+#: ../../manual/physics/soft_body/settings.rst:123
 msgid "Length"
 msgstr "Довжина -- Length"
 
-#: ../../manual/physics/soft_body/settings.rst:141
-#, python-format
+#: ../../manual/physics/soft_body/settings.rst:123
+#, fuzzy, python-format
 msgid ""
-"The edges can shrink or been blown up. This value is given in percent, 0 "
+"The edges can shrink or be blown up. This value is given in percent, 0 "
 "disables this function. 100% means no change, the body keeps 100% of his "
 "size."
 msgstr ""
@@ -371,15 +348,20 @@ msgstr ""
 "відсотках, 0 вимикає цю функцію. 100% означає ніякі зміни, тіло зберігає "
 "100% свого розміру."
 
-#: ../../manual/physics/soft_body/settings.rst:146
+#: ../../manual/physics/soft_body/settings.rst:126
+#, fuzzy
+msgid "Use a specified vertex group for spring strength values."
+msgstr "Використовує вказану групу вершин для значень маси."
+
+#: ../../manual/physics/soft_body/settings.rst:133
 msgid "Stiff Quads"
 msgstr "Тугість 4-бічників -- Stiff Quads"
 
-#: ../../manual/physics/soft_body/settings.rst:149
+#: ../../manual/physics/soft_body/settings.rst:130
 msgid "Use Stiff Quads"
 msgstr "Вжити Тугість 4-бічників -- Use Stiff Quads"
 
-#: ../../manual/physics/soft_body/settings.rst:149
+#: ../../manual/physics/soft_body/settings.rst:130
 msgid ""
 "For quad faces, the diagonal edges are used as springs. This stops quad "
 "faces to collapse completely on collisions (what they would do "
@@ -389,93 +371,75 @@ msgstr ""
 " зупиняє повне згортання чотирибічних граней при зіткненнях (що стається "
 "в іншому випадку)."
 
-#: ../../manual/physics/soft_body/settings.rst:153
+#: ../../manual/physics/soft_body/settings.rst:133
 msgid "Shear"
 msgstr "Косування -- Shear"
 
-#: ../../manual/physics/soft_body/settings.rst:152
-msgid "Stiffness of the virtual springs for quad faces."
+#: ../../manual/physics/soft_body/settings.rst:133
+#, fuzzy
+msgid "Stiffness of the virtual springs created for quad faces."
 msgstr "Тугість віртуальних пружин для 4-бічних граней."
 
-#: ../../manual/physics/soft_body/settings.rst:156
+#: ../../manual/physics/soft_body/settings.rst:147
 msgid "Aerodynamics"
 msgstr "Аеродинаміка -- Aerodynamics"
 
-#: ../../manual/physics/soft_body/settings.rst:169
+#: ../../manual/physics/soft_body/settings.rst:138
+msgid ""
+"Force from surrounding media. See :ref:`exterior forces <physics-"
+"softbody-forces-exterior-aerodynamics>` for details."
+msgstr ""
+
+#: ../../manual/physics/soft_body/settings.rst:144
 msgid "Type"
 msgstr "Тип"
 
-#: ../../manual/physics/soft_body/settings.rst:166
+#: ../../manual/physics/soft_body/settings.rst:142
 msgid "Simple"
 msgstr "Просто -- Simple"
 
-#: ../../manual/physics/soft_body/settings.rst:160
-#, fuzzy
-msgid ""
-"If you turn on *Aero* the force is not confined to the vertices, but has "
-"an effect also on the edges. The angle and the relative speed between "
-"medium and edge is used to calculate the force on the edge. This force "
-"results that vertices with little connecting edges (front of a plane) "
-"fall faster than vertices with more connecting edges (middle of a plane)."
-" If all vertices have the same amount of edges in a direction they fall "
-"with equal speed. An edge moving in its own direction feels no force, and"
-" an edge moving perpendicular to its own direction feels maximum force "
-"(think of a straw moving through air). Try it with a *Factor* of 30 at "
-"first."
+#: ../../manual/physics/soft_body/settings.rst:143
+msgid "Edges receive a drag force from the surrounding media."
 msgstr ""
-"Якщо ви вмикаєте *Aero*, то сила не обмежується вершинами, але має ефект "
-"також на ребра. Кут та відносна швидкість між середовищем та ребром "
-"використовується для розрахунку сили на ребрі. Ця сила призводить до "
-"того, що вершини з мало з'єднаними ребрами (перед площини) падають "
-"швидше, ніж вершини з більш з'єднаними ребрами (середина площини). Якщо "
-"усі вершини мають однакову кількість ребер у напрямку падіння, то вони "
-"падають з однаковою швидкістю. Ребро, що рухається у своєму напрямку, не "
-"відчуває сили, а ребро, що рухається перпендикулярно своєму напрямку, "
-"відчуває максимум сили (уявляйте соломину, що рухається крізь повітря). "
-"Спершу, пробуйте це зі значенням *Factor* як 30."
 
-#: ../../manual/physics/soft_body/settings.rst:169
+#: ../../manual/physics/soft_body/settings.rst:144
 msgid "Lift Force"
 msgstr "Підйомна Сила -- Lift Force"
 
-#: ../../manual/physics/soft_body/settings.rst:169
-msgid ""
-"Use an aerodynamic model that is closer to physical laws and looks more "
-"interesting. Disable for a more muted simulation."
+#: ../../manual/physics/soft_body/settings.rst:145
+msgid "Edges receive a lift force when passing through the surrounding media."
 msgstr ""
-"Використовує аеродинамічну модель, що є ближчою до фізичних законів та "
-"виглядає більш цікаво. Вимикайте для більш приглушеної імітації."
 
-#: ../../manual/physics/soft_body/settings.rst:173
+#: ../../manual/physics/soft_body/settings.rst:147
 msgid "Factor"
 msgstr "Фактор -- Factor"
 
-#: ../../manual/physics/soft_body/settings.rst:172
-msgid "How much aerodynamic effect to use."
-msgstr "Наскільки використовується аеродинамічний ефект."
+#: ../../manual/physics/soft_body/settings.rst:147
+msgid "How much aerodynamic force to use. Try a value of 30 at first."
+msgstr ""
 
-#: ../../manual/physics/soft_body/settings.rst:176
+#: ../../manual/physics/soft_body/settings.rst:159
 msgid "Collision"
 msgstr "Зіткнення -- Collision"
 
-#: ../../manual/physics/soft_body/settings.rst:178
+#: ../../manual/physics/soft_body/settings.rst:150
 msgid "Edge"
 msgstr "Ребро -- Edge"
 
-#: ../../manual/physics/soft_body/settings.rst:179
+#: ../../manual/physics/soft_body/settings.rst:151
 #, fuzzy
 msgid "Checks for edges of the soft body mesh colliding."
 msgstr "Перевіряє ребра при зіткненні сіті м'якого тіла."
 
-#: ../../manual/physics/soft_body/settings.rst:187
+#: ../../manual/physics/soft_body/settings.rst:159
 msgid "Face"
 msgstr "Грань -- Face"
 
-#: ../../manual/physics/soft_body/settings.rst:181
+#: ../../manual/physics/soft_body/settings.rst:153
 #, fuzzy
 msgid ""
 "Checks for any portion of the face of the soft body mesh colliding "
-"(computationally intensive!). While *CFace* enabled is great, and solves "
+"(computationally intensive!). While *Face* enabled is great, and solves "
 "lots of collision errors, there does not seem to be any dampening "
 "settings for it, so parts of the soft body object near a collision mesh "
 "tend to \"jitter\" as they bounce off and fall back, even when there is "
@@ -492,29 +456,29 @@ msgstr ""
 "може бути керованим, але значення згасання Відхиляння на об'єкті "
 "зіткнення, здається, не впливає на зіткнення граней."
 
-#: ../../manual/physics/soft_body/settings.rst:192
+#: ../../manual/physics/soft_body/settings.rst:164
 msgid "Soft Body Self Collision"
 msgstr "Само Зіткнення М'якого Тіла -- Soft Body Self Collision"
 
-#: ../../manual/physics/soft_body/settings.rst:197
+#: ../../manual/physics/soft_body/settings.rst:169
 #, fuzzy
 msgid ":menuselection:`Physics --> Soft Body Self Collision`"
 msgstr ""
 "Панель:    «Фізика > Само Зіткнення М'якого Тіла» -- "
 ":menuselection:`Physics --> Soft Body Self Collision`"
 
-#: ../../manual/physics/soft_body/settings.rst:201
+#: ../../manual/physics/soft_body/settings.rst:173
 #, fuzzy
 msgid "*Self-Collision* is working only if you have activated *Use Edges*."
 msgstr ""
 "Само зіткнення -- *Self Collision* працює тільки, якщо активована опція "
 "*Use Edges* (увімкнена панель Soft Body Edges)."
 
-#: ../../manual/physics/soft_body/settings.rst:208
+#: ../../manual/physics/soft_body/settings.rst:180
 msgid "Self Collision"
 msgstr "Само Зіткнення -- Self Collision"
 
-#: ../../manual/physics/soft_body/settings.rst:204
+#: ../../manual/physics/soft_body/settings.rst:176
 #, fuzzy
 msgid ""
 "When enabled, allows you to control how Blender will prevent the soft "
@@ -530,25 +494,25 @@ msgstr ""
 "коригувати розмір цих куль. Зазвичай, це працює досить добре зі "
 "стандартно заданими опціями."
 
-#: ../../manual/physics/soft_body/settings.rst:219
+#: ../../manual/physics/soft_body/settings.rst:191
 msgid "Collision Type"
 msgstr "Тип Зіткнення -- Collision Type"
 
-#: ../../manual/physics/soft_body/settings.rst:211
+#: ../../manual/physics/soft_body/settings.rst:183
 msgid "Manual"
 msgstr "Вручну -- Manual"
 
-#: ../../manual/physics/soft_body/settings.rst:212
+#: ../../manual/physics/soft_body/settings.rst:184
 msgid "The *Ball Size* directly sets the ball size (in BU)."
 msgstr ""
 "Розмір кулі *Ball: Size* прямо задається фактичним розміром кулі (в "
 "Одиницях Blender'а)."
 
-#: ../../manual/physics/soft_body/settings.rst:214
+#: ../../manual/physics/soft_body/settings.rst:186
 msgid "Average"
 msgstr "Усереднено -- Average"
 
-#: ../../manual/physics/soft_body/settings.rst:214
+#: ../../manual/physics/soft_body/settings.rst:186
 msgid ""
 "The average length of all edges attached to the vertex is calculated and "
 "then multiplied with the *Ball Size* setting. Works well with evenly "
@@ -558,11 +522,11 @@ msgstr ""
 "далі множиться на значення *Ball: Size*. Працює добре при рівномірно "
 "розподілених у поверхні вершинах."
 
-#: ../../manual/physics/soft_body/settings.rst:216
+#: ../../manual/physics/soft_body/settings.rst:188
 msgid "Minimal/Maximal"
 msgstr "Мінімально -- Minimal / Максимально -- Maximal"
 
-#: ../../manual/physics/soft_body/settings.rst:217
+#: ../../manual/physics/soft_body/settings.rst:189
 msgid ""
 "The ball size is as large as the smallest/largest spring length of the "
 "vertex multiplied with the *Ball Size*."
@@ -570,19 +534,19 @@ msgstr ""
 "Розмір кулі є настільки більшим, наскільки найменшою/найбільшою є довжина"
 " пружини вершини, помножена на *Ball: Size*."
 
-#: ../../manual/physics/soft_body/settings.rst:219
+#: ../../manual/physics/soft_body/settings.rst:191
 msgid "Average Min Max"
 msgstr "Усереднено Мін Макс -- Average Min Max"
 
-#: ../../manual/physics/soft_body/settings.rst:219
+#: ../../manual/physics/soft_body/settings.rst:191
 msgid "Size = ((Min + Max)/2) × *Ball Size*."
 msgstr "Розмір = ((Min + Max)/2) × *Ball: Size*."
 
-#: ../../manual/physics/soft_body/settings.rst:230
+#: ../../manual/physics/soft_body/settings.rst:202
 msgid "Size"
 msgstr "Розмір -- Size"
 
-#: ../../manual/physics/soft_body/settings.rst:222
+#: ../../manual/physics/soft_body/settings.rst:194
 msgid ""
 "Fraction of the length of attached edges. The edge length is computed "
 "based on the algorithm you choose. You know how when someone stands too "
@@ -610,15 +574,17 @@ msgstr ""
 " надто близько і звідси ймовірно перетинатися, оскільки не буде достатньо"
 " часу для їх уповільнення."
 
-#: ../../manual/physics/soft_body/settings.rst:233
-msgid "How elastic that ball of personal space is."
-msgstr "Наскільки еластичним є особистий простір кулі."
+#: ../../manual/physics/soft_body/settings.rst:205
+msgid ""
+"How elastic that ball of personal space is. A high stiffness means that "
+"the vertex reacts immediately to another vertex enters their space."
+msgstr ""
 
-#: ../../manual/physics/soft_body/settings.rst:236
+#: ../../manual/physics/soft_body/settings.rst:209
 msgid "Dampening"
 msgstr "Гасіння -- Dampening"
 
-#: ../../manual/physics/soft_body/settings.rst:235
+#: ../../manual/physics/soft_body/settings.rst:208
 msgid ""
 "How the vertex reacts. A low value just slows down the vertex as it gets "
 "too close. A high value repulses it."
@@ -626,7 +592,7 @@ msgstr ""
 "Як вершина реагує. Низьке значення просто уповільнює вершину при її "
 "наближенні надто близько. Високе значення дає її відштовхування."
 
-#: ../../manual/physics/soft_body/settings.rst:238
+#: ../../manual/physics/soft_body/settings.rst:211
 msgid ""
 "Collisions with other objects are set in the (other) :doc:`Collision "
 "panel </physics/collision>`. To collide with another object they have to "
@@ -637,35 +603,33 @@ msgstr ""
 "об'єктом м'яке тіло має знаходитися принаймні на одному спільному з ним "
 "шарі сцени."
 
-#: ../../manual/physics/soft_body/settings.rst:245
+#: ../../manual/physics/soft_body/settings.rst:218
 msgid "Soft Body Solver"
 msgstr "Обчислювач М'якого Тіла -- Soft Body Solver"
 
-#: ../../manual/physics/soft_body/settings.rst:250
+#: ../../manual/physics/soft_body/settings.rst:223
 #, fuzzy
 msgid ":menuselection:`Physics --> Soft Body Solver`"
 msgstr ""
 "Панель:    «Фізика > Обчислювач М'якого Тіла» -- :menuselection:`Physics "
 "--> Soft Body Solver`"
 
-#: ../../manual/physics/soft_body/settings.rst:252
-msgid "These settings determine the accurateness of the simulation."
+#: ../../manual/physics/soft_body/settings.rst:225
+#, fuzzy
+msgid ""
+"The settings in the *Soft Body Solver* panel determine the accuracy of "
+"the simulation."
 msgstr "Ці устави визначають точність імітації."
 
-#: ../../manual/physics/soft_body/settings.rst:256
-#, fuzzy
-msgid "Soft Body Solver settings."
-msgstr "Устави Обчислювача М'якого Тіла."
-
-#: ../../manual/physics/soft_body/settings.rst:260
+#: ../../manual/physics/soft_body/settings.rst:236
 msgid "Step Size"
 msgstr "Розмір Кроку -- Step Size"
 
-#: ../../manual/physics/soft_body/settings.rst:262
+#: ../../manual/physics/soft_body/settings.rst:228
 msgid "Min Step"
 msgstr "Мін Крок -- Min Step"
 
-#: ../../manual/physics/soft_body/settings.rst:263
+#: ../../manual/physics/soft_body/settings.rst:229
 #, fuzzy
 msgid ""
 "Minimum simulation steps per frame. Increase this value, if the soft body"
@@ -674,11 +638,11 @@ msgstr ""
 "Мінімум кроків імітації за кадр. Збільште це значення, якщо М'яке Тіло "
 "пропускає швидко рухомі об'єкти зіткнення."
 
-#: ../../manual/physics/soft_body/settings.rst:266
+#: ../../manual/physics/soft_body/settings.rst:232
 msgid "Max Step"
 msgstr "Макс Крок -- Max Step"
 
-#: ../../manual/physics/soft_body/settings.rst:265
+#: ../../manual/physics/soft_body/settings.rst:231
 msgid ""
 "Maximum simulation steps per frame. Normally the number of simulation "
 "steps is set dynamically (with the *Error Limit*) but you have probably a"
@@ -688,27 +652,29 @@ msgstr ""
 "задається динамічно (за допомогою устави *Error Limit*), але ви можливо "
 "маєте вагому причину для зміни цього."
 
-#: ../../manual/physics/soft_body/settings.rst:270
+#: ../../manual/physics/soft_body/settings.rst:236
 msgid "Auto-Step"
 msgstr "Авто-Крок -- Auto-Step"
 
-#: ../../manual/physics/soft_body/settings.rst:269
+#: ../../manual/physics/soft_body/settings.rst:235
+#, fuzzy
 msgid ""
-"helps the Solver figure out how much work it needs to do based on how "
-"fast things are moving."
+"Use velocities for automatic step sizes. Helps the Solver figure out how "
+"much work it needs to do based on how fast things are moving."
 msgstr ""
 "Допомагає Обчислювачу з'ясувати, скільки потрібно роботи на основі того, "
 "як швидко рухаються об'єкти."
 
-#: ../../manual/physics/soft_body/settings.rst:273
+#: ../../manual/physics/soft_body/settings.rst:244
 msgid "Error Limit"
 msgstr "Ліміт Помилки -- Error Limit"
 
-#: ../../manual/physics/soft_body/settings.rst:275
+#: ../../manual/physics/soft_body/settings.rst:239
+#, fuzzy
 msgid ""
 "Rules the overall quality of the solution delivered. Default 0.1. The "
 "most critical setting that says how precise the solver should check for "
-"collisions. Start with a value that is 1/2 the average edge length. If "
+"collisions. Start with a value that is half the average edge length. If "
 "there are visible errors, jitter, or over-exaggerated responses, decrease"
 " the value. The solver keeps track of how \"bad\" it is doing and the "
 "*Error Limit* causes the solver to do some \"adaptive step sizing\"."
@@ -721,15 +687,22 @@ msgstr ""
 "наскільки «погано» він працює, а *Error Limit* змушує обчислювач робити "
 "деякі «адаптивні зміни розміру кроку»."
 
-#: ../../manual/physics/soft_body/settings.rst:284
+#: ../../manual/physics/soft_body/settings.rst:254
 msgid "Helpers"
 msgstr "Помічники -- Helpers"
 
-#: ../../manual/physics/soft_body/settings.rst:286
+#: ../../manual/physics/soft_body/settings.rst:247
+msgid ""
+"These settings allow you to control how Blender will react (deform) the "
+"soft body once it either gets close to or actually intersects (cuts into)"
+" another collision object on the same layer."
+msgstr ""
+
+#: ../../manual/physics/soft_body/settings.rst:250
 msgid "Choke"
 msgstr "Душення -- Choke"
 
-#: ../../manual/physics/soft_body/settings.rst:287
+#: ../../manual/physics/soft_body/settings.rst:251
 msgid ""
 "Calms down (reduces the exit velocity of) a vertex or edge once it "
 "penetrates a collision mesh."
@@ -737,37 +710,38 @@ msgstr ""
 "Затискає у бік зменшення (скорочує скорість виходу) вершину або ребро, "
 "коли вони проникають у сіть об'єкта зіткнення."
 
-#: ../../manual/physics/soft_body/settings.rst:290
+#: ../../manual/physics/soft_body/settings.rst:254
 msgid "Fuzzy"
 msgstr "Розпливчато -- Fuzzy"
 
-#: ../../manual/physics/soft_body/settings.rst:289
+#: ../../manual/physics/soft_body/settings.rst:253
+#, fuzzy
 msgid ""
 "Fuzziness while on collision, high values make collision handling faster "
-"but less stable."
+"but less stable. Simulation is faster, but less accurate."
 msgstr ""
 "Розпливчатість при зіткненні, високі значення дають обробку зіткнення "
 "швидше, але менш стабільно."
 
-#: ../../manual/physics/soft_body/settings.rst:293
+#: ../../manual/physics/soft_body/settings.rst:260
 msgid "Diagnostics"
 msgstr "Діагностика -- Diagnostics"
 
-#: ../../manual/physics/soft_body/settings.rst:295
+#: ../../manual/physics/soft_body/settings.rst:257
 msgid "Print Performance to Console"
 msgstr "Вивести Продуктивність на Консоль -- Print Performance to Console"
 
-#: ../../manual/physics/soft_body/settings.rst:296
+#: ../../manual/physics/soft_body/settings.rst:258
 msgid "Prints on the console how the solver is doing."
 msgstr "Виводить на консоль відомості, як працює обчислювач."
 
-#: ../../<generated>:1
+#: ../../manual/physics/soft_body/settings.rst:260
 msgid "Estimate Matrix"
 msgstr "Матриця Припущення -- Estimate Matrix"
 
-#: ../../manual/physics/soft_body/settings.rst:298
-msgid "Estimate matrix... split to COM, ROT, SCALE"
-msgstr "Матриця припущення... розділяється на COM, ROT, SCALE"
+#: ../../manual/physics/soft_body/settings.rst:260
+msgid "Estimate matrix, split to ``COM``, ``ROT``, ``SCALE``."
+msgstr ""
 
 #~ msgid ""
 #~ "When you paint the values in "
@@ -793,4 +767,183 @@ msgstr "Матриця припущення... розділяється на COM
 #~ " колірна шкала синій-червоний може бути "
 #~ "змінена в Уподобаннях Користувача -- "
 #~ "User Preferences)."
+
+#~ msgid "This creates the Soft Body Modifier on the selected object."
+#~ msgstr "Створює модифікатор Soft Body на виділеному об'єкті."
+
+#~ msgid "Render"
+#~ msgstr "Зображ, Рендер -- Render"
+
+#~ msgid "Enable soft body during render."
+#~ msgstr "Вмикає фізику м'якого тіла у ході рендера, зображу."
+
+#~ msgid "Display"
+#~ msgstr "Показ -- Display"
+
+#~ msgid "Display soft body in real-time."
+#~ msgstr "Показує фізику м'якого тіла у реальному часі."
+
+#~ msgid ""
+#~ "The friction of the surrounding medium."
+#~ " Generally friction dampens a movement."
+#~ msgstr "Тертя навколишнього середовища. Загалом, тертя гасить, гальмує рух."
+
+#~ msgid ""
+#~ "You can control the internal timing "
+#~ "of the soft body system with this"
+#~ " value."
+#~ msgstr ""
+#~ "Ви можете керувати внутрішнім часуванням "
+#~ "системи М'якого Тіла за допомогою цього"
+#~ " значення."
+
+#~ msgid "Caching and cache options are documented :doc:`Here </physics/baking>`."
+#~ msgstr ""
+#~ "Кешування та його опції розглядаються "
+#~ "тут -- :doc:`Here </physics/baking>`."
+
+#~ msgid ""
+#~ "Soft Body Goal acts like a pin "
+#~ "on a chosen set of vertices; "
+#~ "controlling how much of an effect "
+#~ "soft body has on them. Enabling "
+#~ "this tells Blender to use the "
+#~ "position / animated position of a "
+#~ "vertex in the simulation. Animating the"
+#~ " vertices can be done in all "
+#~ "the usual ways before the soft "
+#~ "body simulation is applied. The *goal*"
+#~ " is the desired end-position for "
+#~ "vertices. How a soft body tries to"
+#~ " achieve this goal can be defined "
+#~ "using stiffness forces and damping."
+#~ msgstr ""
+#~ "Ціль М'якого Тіла діє як шпилька "
+#~ "на обраному наборі вершин; керує тим,"
+#~ " наскільки м'яке тіло впливає на них."
+#~ " Увімкнення цього каже Blender'у "
+#~ "використовувати позицію / анімовану позицію"
+#~ " вершини в імітації. Анімування вершин "
+#~ "може бути зроблене всіма звичайними "
+#~ "способами, перед тим як застосується "
+#~ "імітація М'якого Тіла. Ціль -- *goal*"
+#~ " -- це бажана кінцева позиція для "
+#~ "вершин. Як м'яке тіло намагається "
+#~ "досягти цієї цілі може бути визначено"
+#~ " за допомогою сил тугості та "
+#~ "згасання."
+
+#~ msgid ""
+#~ "A *Goal* value of 1.0 means no "
+#~ "soft body simulation, the vertex stays"
+#~ " at its original (animated) position. "
+#~ "When setting *Goal* to 0.0, the "
+#~ "object is only influenced by physical"
+#~ " laws. By setting goal values between"
+#~ " 0.0 and 1.0, you can blend "
+#~ "between having the object affected only"
+#~ " by the animation system, and having"
+#~ " the object affected only by the "
+#~ "soft body effect."
+#~ msgstr ""
+#~ "Значення *Goal Strength* як 1.0 означає,"
+#~ " що відсутня жодна імітація М'якого "
+#~ "Тіла, вершина залишається в її "
+#~ "оригінальній (анімованій) позиції. При заданні"
+#~ " *Goal Strength* як 0.0 на об'єкт "
+#~ "впливають тільки фізичні закони. Задаючи "
+#~ "значення *Goal Strength* між 0.0 та "
+#~ "1.0, ви можете змішувати вплив на "
+#~ "об'єкт між системою анімації та "
+#~ "імітацією м'якого тіла."
+
+#~ msgid ""
+#~ "When you paint the values in "
+#~ "vertex groups (using *Weight Paint "
+#~ "Mode*), you can use the *G Min*"
+#~ " and *G Max* to fine-tune "
+#~ "(clamp) the weight values. The lowest"
+#~ " vertex weight (blue) will become *G"
+#~ " Min*, the highest value (red) "
+#~ "becomes *G Max* (please note that "
+#~ "the blue-red color scale may be"
+#~ " altered by User Preferences)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The edges in a Mesh Object can "
+#~ "act as springs as well, like "
+#~ "threads in fabric."
+#~ msgstr ""
+#~ "Ребра у сітьовому Mesh об'єкті можуть"
+#~ " діяти як пружини, подібно до ниток"
+#~ " у тканині."
+
+#~ msgid "Permanent deformation of the object."
+#~ msgstr "Постійне деформування об'єкта."
+
+#~ msgid ""
+#~ "If you turn on *Aero* the force"
+#~ " is not confined to the vertices, "
+#~ "but has an effect also on the "
+#~ "edges. The angle and the relative "
+#~ "speed between medium and edge is "
+#~ "used to calculate the force on the"
+#~ " edge. This force results that "
+#~ "vertices with little connecting edges "
+#~ "(front of a plane) fall faster "
+#~ "than vertices with more connecting edges"
+#~ " (middle of a plane). If all "
+#~ "vertices have the same amount of "
+#~ "edges in a direction they fall "
+#~ "with equal speed. An edge moving "
+#~ "in its own direction feels no "
+#~ "force, and an edge moving perpendicular"
+#~ " to its own direction feels maximum"
+#~ " force (think of a straw moving "
+#~ "through air). Try it with a "
+#~ "*Factor* of 30 at first."
+#~ msgstr ""
+#~ "Якщо ви вмикаєте *Aero*, то сила "
+#~ "не обмежується вершинами, але має ефект"
+#~ " також на ребра. Кут та відносна "
+#~ "швидкість між середовищем та ребром "
+#~ "використовується для розрахунку сили на "
+#~ "ребрі. Ця сила призводить до того, "
+#~ "що вершини з мало з'єднаними ребрами "
+#~ "(перед площини) падають швидше, ніж "
+#~ "вершини з більш з'єднаними ребрами "
+#~ "(середина площини). Якщо усі вершини "
+#~ "мають однакову кількість ребер у "
+#~ "напрямку падіння, то вони падають з "
+#~ "однаковою швидкістю. Ребро, що рухається "
+#~ "у своєму напрямку, не відчуває сили, "
+#~ "а ребро, що рухається перпендикулярно "
+#~ "своєму напрямку, відчуває максимум сили "
+#~ "(уявляйте соломину, що рухається крізь "
+#~ "повітря). Спершу, пробуйте це зі "
+#~ "значенням *Factor* як 30."
+
+#~ msgid ""
+#~ "Use an aerodynamic model that is "
+#~ "closer to physical laws and looks "
+#~ "more interesting. Disable for a more "
+#~ "muted simulation."
+#~ msgstr ""
+#~ "Використовує аеродинамічну модель, що є "
+#~ "ближчою до фізичних законів та виглядає"
+#~ " більш цікаво. Вимикайте для більш "
+#~ "приглушеної імітації."
+
+#~ msgid "How much aerodynamic effect to use."
+#~ msgstr "Наскільки використовується аеродинамічний ефект."
+
+#~ msgid "How elastic that ball of personal space is."
+#~ msgstr "Наскільки еластичним є особистий простір кулі."
+
+#~ msgid "Soft Body Solver settings."
+#~ msgstr "Устави Обчислювача М'якого Тіла."
+
+#~ msgid "Estimate matrix... split to COM, ROT, SCALE"
+#~ msgstr "Матриця припущення... розділяється на COM, ROT, SCALE"
 
