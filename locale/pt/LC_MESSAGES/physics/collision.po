@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-09-22 18:54-0400\n"
 "PO-Revision-Date: 2017-12-28 12:02-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/physics/collision.rst:6
 msgid "Collisions"
@@ -145,7 +145,7 @@ msgstr "Matar partículas"
 msgid "Deletes Particles upon impact."
 msgstr "Apaga as partículas nos impactos com a malha."
 
-#: ../../manual/physics/collision.rst:48 ../../manual/physics/collision.rst:81
+#: ../../manual/physics/collision.rst:48 ../../manual/physics/collision.rst:88
 msgid "Damping Factor"
 msgstr "Fator de amortecimento"
 
@@ -183,28 +183,35 @@ msgstr "Uma variação aleatória da fricção."
 msgid "Soft Body and Cloth"
 msgstr "Corpo macio e tecido"
 
-#: ../../manual/physics/collision.rst:67
+#: ../../manual/physics/collision.rst:62
+msgid ""
+"A padding distance is added to the inside and outside of each face, to "
+"help to prevent intersections. The soft body will come to rest at this "
+"distance away from the face of the colliding object."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:65
+msgid "Outer"
+msgstr "Parte externa"
+
+#: ../../manual/physics/collision.rst:66
+msgid "Size of the outer collision zone."
+msgstr "O tamanho da área de colisão externa."
+
+#: ../../manual/physics/collision.rst:68
+msgid "Inner"
+msgstr "Parte interna"
+
+#: ../../manual/physics/collision.rst:68
+msgid "Size of the inner collision zone (padding distance)."
+msgstr "O tamanho da área de colisão interna (distância de ancoramento)."
+
+#: ../../manual/physics/collision.rst:75
 #, fuzzy
 msgid "A soft body vertex colliding with a plane."
 msgstr "Exemplo de um vértice de corpo macio colidindo com um plano."
 
-#: ../../manual/physics/collision.rst:69
-msgid "Outer"
-msgstr "Parte externa"
-
-#: ../../manual/physics/collision.rst:70
-msgid "Size of the outer collision zone."
-msgstr "O tamanho da área de colisão externa."
-
-#: ../../manual/physics/collision.rst:72
-msgid "Inner"
-msgstr "Parte interna"
-
-#: ../../manual/physics/collision.rst:72
-msgid "Size of the inner collision zone (padding distance)."
-msgstr "O tamanho da área de colisão interna (distância de ancoramento)."
-
-#: ../../manual/physics/collision.rst:74
+#: ../../manual/physics/collision.rst:77
 msgid ""
 "Outside and inside is defined by the face normal, depicted as blue arrow "
 "in Fig. :ref:`fig-collision-soft-plane`."
@@ -213,15 +220,23 @@ msgstr ""
 "das faces, denotadas como setas azuis na imagem de exemplo :ref:`fig-"
 "collision-soft-plane`."
 
-#: ../../manual/physics/collision.rst:78
+#: ../../manual/physics/collision.rst:81
 msgid "Soft Body Damping"
 msgstr "Amortecimento de corpo macio"
 
-#: ../../manual/physics/collision.rst:81
-msgid "Damping during a collision."
-msgstr "Amortecimento durante as colisões."
+#: ../../manual/physics/collision.rst:84
+msgid "Damping during a collision. The amount of bounce that surfaces will have."
+msgstr ""
 
-#: ../../manual/physics/collision.rst:83
+#: ../../manual/physics/collision.rst:87
+msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:88
+msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:90
 #, fuzzy
 msgid ""
 "*Soft body* collisions are difficult to get perfect. If one of the "
@@ -233,15 +248,15 @@ msgstr ""
 "Veja também a seção sobre :doc:`Corpos macios </physics/soft_body/index>`"
 " neste manual."
 
-#: ../../manual/physics/collision.rst:88
+#: ../../manual/physics/collision.rst:95
 msgid "Force Field"
 msgstr "Campos de força"
 
-#: ../../manual/physics/collision.rst:95
+#: ../../manual/physics/collision.rst:102
 msgid "Absorption"
 msgstr "Absorção"
 
-#: ../../manual/physics/collision.rst:91
+#: ../../manual/physics/collision.rst:98
 msgid ""
 "A deflector can also deflect effectors. You can specify some "
 "collision/deflector objects which deflect a specific portion of the "
@@ -261,16 +276,16 @@ msgstr ""
 "aproximado de 50%. Um exemplo desse modelo matemático (aproximado) seria "
 ":math:`100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)`."
 
-#: ../../manual/physics/collision.rst:98
+#: ../../manual/physics/collision.rst:105
 msgid "Examples"
 msgstr "Exemplos"
 
-#: ../../manual/physics/collision.rst:102
+#: ../../manual/physics/collision.rst:109
 #, fuzzy
 msgid "Deflected particles."
 msgstr "Exemplo de partículas deflexionadas."
 
-#: ../../manual/physics/collision.rst:104
+#: ../../manual/physics/collision.rst:111
 msgid ""
 "Here is a *Meta* object, dupliverted to a particle system emitting "
 "downwards, and deflected by a mesh cube."
@@ -279,11 +294,11 @@ msgstr ""
 " um sistema de partículas que emite as partículas para baixo, e "
 "deflexionado pela malha de um cubo."
 
-#: ../../manual/physics/collision.rst:108
+#: ../../manual/physics/collision.rst:115
 msgid "Hints"
 msgstr "Dicas"
 
-#: ../../manual/physics/collision.rst:110
+#: ../../manual/physics/collision.rst:117
 msgid ""
 "Make sure that the normals of the mesh surface are facing towards the "
 "particles/points for correct deflection."
@@ -292,7 +307,7 @@ msgstr ""
 "(faceando) na direção das partículas ou pontos de calculações para que a "
 "deflexão funcione de maneira apropriada."
 
-#: ../../manual/physics/collision.rst:111
+#: ../../manual/physics/collision.rst:118
 msgid ""
 "Hair particles react directly to force fields, so if you use a force "
 "field with a short range you do not need necessarily collision."
@@ -301,7 +316,7 @@ msgstr ""
 "força, portanto, caso você utilize um campo de força definido para um "
 "curto alcance você não precisará necessariamente de colisões."
 
-#: ../../manual/physics/collision.rst:113
+#: ../../manual/physics/collision.rst:120
 msgid ""
 "Hair particles avoid their emitting mesh if you edit them in *Particle "
 "Edit Mode*. So you can at least model the hair with collision."
@@ -319,4 +334,7 @@ msgstr ""
 #~ "encontrada em "
 #~ "https://docs.blender.org/manual/en/dev/_images/physics_soft-"
 #~ "body_collision_vertex-plane1.gif"
+
+#~ msgid "Damping during a collision."
+#~ msgstr "Amortecimento durante as colisões."
 

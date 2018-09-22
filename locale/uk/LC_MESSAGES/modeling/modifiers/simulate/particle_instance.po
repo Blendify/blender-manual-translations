@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 18:32-0400\n"
+"POT-Creation-Date: 2018-09-22 18:54-0400\n"
 "PO-Revision-Date: 2018-04-05 16:17+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -21,24 +21,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:7
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:5
 msgid "Particle Instance Modifier"
 msgstr "Модифікатор «Примірник Частинок» -- Particle Instance Modifier"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:9
-#, fuzzy
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:7
 msgid ""
-"When a *Particle Instance* modifier is added to an object, that object "
-"will be used as a particle shape on an object which has a particle system"
-" associated with it. This means that to use this modifier you must also "
-"have another object which has a particle system on it."
+"When a *Particle Instance* modifier is added to an object, the mesh of "
+"this object will be duplicated at the location of the particles of the "
+"selected *Particle System*. This means that to use this modifier you must"
+" have at least one other object that has a :doc:`Particles System "
+"</physics/particles/index>` on it."
 msgstr ""
-"Коли модифікатор Particle Instance додається на об'єкт, то цей об'єкт "
-"буде використовуватися як форма частинок на асоційованому з ним об'єкті, "
-"який має систему частинок. Це означає, що для використання цього "
-"модифікатора ви повинні також мати інший об'єкт, який має систему "
-"частинок на собі, інакше модифікатор Particle Instance нічого не "
-"робитиме."
 
 #: ../../manual/modeling/modifiers/simulate/particle_instance.rst:13
 msgid ""
@@ -59,169 +53,190 @@ msgstr "Опції"
 msgid "Particle Instance Modifier."
 msgstr "Модифікатор «Примірник Частинок» -- Particle Instance."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:30
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:28
 msgid "Object"
 msgstr "Об'єкт -- Object"
 
 #: ../../manual/modeling/modifiers/simulate/particle_instance.rst:29
-msgid ""
-"The name of an object which has a particle system associated with it. "
-"This indicates that when the object named in this field emits particles, "
-"those particles will have the mesh shape of the current *Particle "
-"Instance* modifier's mesh."
+msgid "The name of an object which has a particle system associated with it."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:36
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:34
 msgid "Particle System"
 msgstr "Система Частинок -- Particle System"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:33
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:31
 msgid ""
 "The *Particle System* field is used to select which particle system to "
 "apply the *Particle Instance* modifier to, when the mesh which has the "
 "particle system on it has more than one of these."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:39
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:37
 msgid "Create From"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:44
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:40
 msgid "Normal"
 msgstr "Звичайно -- Normal"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:42
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:40
 msgid ""
-"When selected, the *Normal* button tells the Particle Instance Modifier "
-"to draw instances of itself wherever normal particle types are emitted "
-"from the underlying particle system. So if the current modifier is a "
-"sphere shape, when normal particles are emitted they will be spheres."
+"When selected, the modifier will use the regular (parents) particles to "
+"duplicate the mesh of the modified object."
 msgstr ""
-"При увімкненні кнопка *Normal* повідомляє модифікатору Particle Instance "
-"рисувати примірники самостійно там, де емітуються частинки звичайних "
-"типів з підлежачої системи частинок. А тому, якщо поточний модифікатор є "
-"сферичної форми, то звичайні частинки будуть також сферами."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:49
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:43
 msgid "Children"
 msgstr "Нащадки -- Children"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:47
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:43
 msgid ""
-"When selected, the *Children* button tells the modifier to draw instances"
-" of itself wherever children/child particles are emitted/used on the "
-"underlying particle system. So if the current modifier is a sphere shape,"
-" when children/child particles are emitted they will be spheres."
+"When selected, the modifier will use the :doc:`children "
+"</physics/particles/emitter/children>` particles to duplicate the mesh of"
+" the object being modified."
 msgstr ""
-"При увімкненні кнопка *Children* повідомляє модифікатору рисувати "
-"примірники самостійно там, де емітуються нащадки/нащадкові частинки на "
-"підлежачій системі частинок. А тому, якщо поточний модифікатор передбачає"
-" сферичну форму, то нащадки/нащадкові частинки емітуються сферами."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:53
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:51
 msgid "Size"
 msgstr "Розмір -- Size"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:52
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:46
+#, fuzzy
 msgid ""
-"Scale the instanced objects by the particle size attribute. When this is "
+"Scale the instanced mesh by the particle size attribute. When this is "
 "disabled, all the copies appear the same size as the origin."
 msgstr ""
 "Масштаб примірникових об'єктів на основі атрибуту розмір частинок. При "
 "вимкненні, усі копії будуть на вигляд такого ж розміру як і оригінал."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:56
-msgid "Space"
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:49
+msgid ""
+"See the particle system's :doc:`Render "
+"</physics/particles/emitter/render>` and :doc:`Children "
+"</physics/particles/emitter/children>` panels for particle's size "
+"options."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:56
-msgid "World, Local"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:57
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:59
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:61
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:106
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:115
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:117
-msgid "(Todo)"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:58
-msgid "Amount"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:62
-msgid "Offset"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:65
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:54
 msgid "Show Particles When"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:71
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:57
 msgid "Unborn"
 msgstr "Ненароджене -- Unborn"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:68
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:57
 msgid ""
-"When selected, the *Unborn* button tells the modifier to draw instances "
-"of itself wherever unborn particles will be emitted/used on the "
-"underlying particle system. So if the current Particle Instance Modifier "
-"is a sphere shape, when unborn particles are present they will be "
-"spheres."
+"When selected, the modifier will use the unborn particles to duplicate "
+"the mesh of the modified object."
 msgstr ""
-"При увімкненні кнопка *Unborn* повідомляє модифікатору рисувати "
-"примірники самостійно там, де емітуються ненароджені частинки на "
-"підлежачій системі частинок. А тому, якщо поточний модифікатор є "
-"сферичної форми, то ненароджені частинки будуть також сферами."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:77
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:60
 msgid "Alive"
 msgstr "Живе -- Alive"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:74
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:60
 msgid ""
-"When selected, the *Alive* button tells the modifier to draw instances of"
-" itself wherever alive particles will be emitted/used on the underlying "
-"particle system. So if the current Particle Instance Modifier is a sphere"
-" shape, when alive particles are present they will be spheres."
+"When selected, the modifier will use the alive particles to duplicate the"
+" mesh of the object being modified."
 msgstr ""
-"При увімкненні кнопка *Alive* повідомляє модифікатору рисувати примірники"
-" самостійно там, де емітуються живі частинки на підлежачій системі "
-"частинок. А тому, якщо поточний модифікатор є сферичної форми, то "
-"ненароджені частинки будуть також сферами."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:84
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:65
 msgid "Dead"
 msgstr "Мертве -- Dead"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:80
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:63
 msgid ""
-"When selected, the *Dead* button tells the modifier to draw instances of "
-"itself wherever dead particles will occur on the underlying particle "
-"system. So if the current Particle Instance Modifier is a sphere shape, "
-"when dead particles are present they will be spheres."
+"When selected, the modifier will use the dead particles to duplicate the "
+"mesh of the modified object."
 msgstr ""
-"При увімкненні кнопка *Dead* повідомляє модифікатору рисувати примірники "
-"самостійно там, де з'являються мертві частинки на підлежачій системі "
-"частинок. А тому, якщо поточний модифікатор є сферичної форми, то "
-"частинки, що вмирають, будуть також сферами."
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:68
+msgid "Further Options"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:72
+msgid "Space"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:72
+msgid "World, Local"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:72
+msgid ""
+"Use :term:`World Space`, or :term:`Local Space` of the object (that the "
+"particle system is assigned to)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:81
+msgid "Amount"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:75
+msgid ""
+"The percentage of particles to be used. Allows you to randomly skip "
+"particles to adjust the amount of particles."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:81
+msgid "Offset"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:79
+msgid ""
+"Specifies the \"offset\" which of the particles will be skipped. Allows "
+"you to avoid overlapping of the used particles, when the same particle "
+"system is used in multiple modifier instances."
+msgstr ""
 
 #: ../../manual/modeling/modifiers/simulate/particle_instance.rst:87
+msgid "Rotation Axis"
+msgstr "Вісь Обертання -- Rotation Axis"
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:84
+msgid "Specify which pole axis to use for the rotation."
+msgstr "Визначає, яка вісь полюса використовується для обертання."
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:86
+msgid "X, Y, Z"
+msgstr "X, Y, Z"
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:90
 msgid "Using Paths"
 msgstr "Використання шляхів"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:93
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:92
+msgid ""
+"By default, the instances are placed depending on the particles position "
+"in the current frame. By enabling this option, you can select the "
+"position along the particles path regardless of the current frame."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:95
+msgid ""
+"You can adjust the particles path (using the *Path* visualization type) "
+"on the :doc:`Render </physics/particles/emitter/render>` panel of the "
+"Particles System tab."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:100
+msgid ""
+"The particles system must be :doc:`baked </physics/baking>`, except Hair "
+"and Keyed physics."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:104
 msgid "Create Along Paths"
 msgstr "Створювати Уздовж Шляхів -- Create Along Paths"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:92
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:103
 #, fuzzy
 msgid ""
 "This option tries to make the underlying mesh object of the modifier "
-"deform its mesh shape in such a way as to try and match the path traveled"
-" by the particles/hair strands of the system associated with it."
+"deform its mesh shape in such a way as to try and match the path the "
+"particles moves along (or hair strands) of the system associated with it."
 msgstr ""
 "Ця опція намагається зробити, щоб підлежачий сітьовий об'єкт модифікатора"
 " деформував форму своєї сіті у такий спосіб, щоб спробувати та узгодити "
@@ -231,78 +246,85 @@ msgstr ""
 "(від 1-ї до 4-ї) (цільова система частинок), коли вона досягає точки 4 "
 "шляху, то частинка вмирає та завершує свою подорож."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:97
-msgid "Rotation Axis"
-msgstr "Вісь Обертання -- Rotation Axis"
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:96
-msgid "Specify which pole axis to use for the rotation."
-msgstr "Визначає, яка вісь полюса використовується для обертання."
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:98
-msgid "X, Y, Z"
-msgstr "X, Y, Z"
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:100
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:107
 msgid "Keep Shape"
 msgstr "Утримати Форму -- Keep Shape"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:100
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:107
+#, fuzzy
 msgid ""
-"Enabling this prevents the object from being deformed. It instead simply "
-"aligns to the end of the path at the object's center."
+"Enabling this prevents the object from being deformed and places it on "
+"the path according to the *Position* value."
 msgstr ""
 "Вмикання цього запобігати об'єкт від деформування. Це натомість просто "
 "вирівнює кінець шляху у центрі об'єкта."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:103
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:110
 msgid "Position"
 msgstr "Позиція -- Position"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:103
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:110
 msgid ""
-"Specify what percentage of the path the object fills. You could create a "
-"growing effect by animating this value over time."
+"Specify what percentage of the path the object fills, or position on the "
+"path if the *Keep Shape* option is enabled."
 msgstr ""
-"Визначає, який відсоток шляху об'єкт заповнює. You could create a growing"
-" effect by animating this value over time."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:105
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:112
 #, fuzzy
 msgid "Rotation"
 msgstr "Створення"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:109
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:113
+msgid "Specifies the rotation around the path."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:116
 msgid "Random"
 msgstr "Випадково -- Random"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:108
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:115
 #, fuzzy
 msgid "Scales the Position/Rotation value of each instance a random value."
 msgstr "Масштабує значення позиції кожного примірника на випадкове значення."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:112
-msgid "Layers"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:114
-msgid "Index Layer"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:118
-msgid "Value Layer"
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:119
+msgid "Custom Data Layers"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/simulate/particle_instance.rst:121
-msgid "Examples"
+msgid ""
+"These fields allows you to select vertex color layers, which will be "
+"filled with colors based on the particles information. These vertex color"
+" layers can be used, for example, in a shader to add variance to a "
+"material."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:125
+msgid "Index Layer"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/simulate/particle_instance.rst:126
+msgid "A vertex color layer for values based on the particles index."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:129
+msgid "Value Layer"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:128
+msgid "A vertex color layer for random per-particle values."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:132
+msgid "Examples"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:137
 #, fuzzy
 msgid "Particle Instance modifier example."
 msgstr "Модифікатор «Примірник Частинок» -- Particle Instance."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:128
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:139
 #, fuzzy
 msgid ""
 "The render above shows a single plane mesh object assigned to two "
@@ -321,12 +343,12 @@ msgstr ""
 "кубі. `Example Blend file "
 "<https://wiki.blender.org/index.php/Media:Manual_-_Modifiers_-_Particle_Instance_Modifiers_-_Split_Plane.blend>`__."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:138
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:149
 #, fuzzy
 msgid "Create Along Path example."
 msgstr "Створювати Уздовж Шляхів -- Create Along Paths"
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:140
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:151
 msgid ""
 "In this example, a single *Keyed* particle travels through four points "
 "(green planes), on an elliptical path. The *Particle Instance* modifier "
@@ -334,7 +356,7 @@ msgid ""
 "particle system."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:144
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:155
 #, fuzzy
 msgid ""
 "When the *Create Along Paths* is activated, instead of the cylinder "
@@ -355,29 +377,24 @@ msgstr ""
 "кількістю поперечних поділів уздовж довжини циліндра, що показує вплив "
 "цього на деформування циліндра уздовж шлях частинки."
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:152
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:163
 msgid ""
-"The Particle Instance modifier *Create Along Paths* button works for hair"
-" (strand) particles as well as with keyed particles. In this case the "
-"mesh of the Particle Instance modifier will follow the length and profile"
-" of the hair strands paths."
+"The Particle Instance modifier *Create Along Paths* works for hair "
+"(strand) particles as well as with keyed particles. In this case the mesh"
+" of the Particle Instance modifier will follow the length and profile of "
+"the hair strands paths."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:158
+#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:169
 #, fuzzy
 msgid ""
 "Strands when they are generated instantly die when created so for the "
-"*Create Along Paths* button to be of any use, you must also have the "
-"*Dead* button activated. Otherwise the path a mesh has taken will not be "
-"visible!"
+"*Create Along Paths* checkbox to be of any use, you must also have the "
+"*Dead* checkbox activated."
 msgstr ""
 "Пасма при генеруванні миттєво вмирають при створенні, а тому щоб вжити "
 "кнопку *Path* ви повинні також увімкнути стяг *Dead*. Інакше шлях, що "
 "сіть має взяти, не буде видимим!"
-
-#: ../../manual/modeling/modifiers/simulate/particle_instance.rst:164
-msgid ":doc:`Particles </physics/particles/index>`"
-msgstr "Частинки -- :doc:`Particles </physics/particles/index>`"
 
 #~ msgid ""
 #~ "Particle system on left has no "
@@ -719,4 +736,155 @@ msgstr "Частинки -- :doc:`Particles </physics/particles/index>`"
 #~ " уздовж профілю волосся. `Example Blend "
 #~ "file "
 #~ "<https://wiki.blender.org/index.php/Media:Manual_-_Particle_Instance_Modifier_-_Strand_Mesh_Deform.blend>`__."
+
+#~ msgid ""
+#~ "When a *Particle Instance* modifier is"
+#~ " added to an object, that object "
+#~ "will be used as a particle shape"
+#~ " on an object which has a "
+#~ "particle system associated with it. This"
+#~ " means that to use this modifier "
+#~ "you must also have another object "
+#~ "which has a particle system on it."
+#~ msgstr ""
+#~ "Коли модифікатор Particle Instance додається"
+#~ " на об'єкт, то цей об'єкт буде "
+#~ "використовуватися як форма частинок на "
+#~ "асоційованому з ним об'єкті, який має"
+#~ " систему частинок. Це означає, що для"
+#~ " використання цього модифікатора ви повинні"
+#~ " також мати інший об'єкт, який має"
+#~ " систему частинок на собі, інакше "
+#~ "модифікатор Particle Instance нічого не "
+#~ "робитиме."
+
+#~ msgid ""
+#~ "The name of an object which has"
+#~ " a particle system associated with "
+#~ "it. This indicates that when the "
+#~ "object named in this field emits "
+#~ "particles, those particles will have the"
+#~ " mesh shape of the current *Particle"
+#~ " Instance* modifier's mesh."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When selected, the *Normal* button tells"
+#~ " the Particle Instance Modifier to "
+#~ "draw instances of itself wherever normal"
+#~ " particle types are emitted from the"
+#~ " underlying particle system. So if "
+#~ "the current modifier is a sphere "
+#~ "shape, when normal particles are emitted"
+#~ " they will be spheres."
+#~ msgstr ""
+#~ "При увімкненні кнопка *Normal* повідомляє "
+#~ "модифікатору Particle Instance рисувати "
+#~ "примірники самостійно там, де емітуються "
+#~ "частинки звичайних типів з підлежачої "
+#~ "системи частинок. А тому, якщо поточний"
+#~ " модифікатор є сферичної форми, то "
+#~ "звичайні частинки будуть також сферами."
+
+#~ msgid ""
+#~ "When selected, the *Children* button "
+#~ "tells the modifier to draw instances "
+#~ "of itself wherever children/child particles"
+#~ " are emitted/used on the underlying "
+#~ "particle system. So if the current "
+#~ "modifier is a sphere shape, when "
+#~ "children/child particles are emitted they "
+#~ "will be spheres."
+#~ msgstr ""
+#~ "При увімкненні кнопка *Children* повідомляє"
+#~ " модифікатору рисувати примірники самостійно "
+#~ "там, де емітуються нащадки/нащадкові частинки"
+#~ " на підлежачій системі частинок. А "
+#~ "тому, якщо поточний модифікатор передбачає "
+#~ "сферичну форму, то нащадки/нащадкові частинки"
+#~ " емітуються сферами."
+
+#~ msgid "(Todo)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When selected, the *Unborn* button tells"
+#~ " the modifier to draw instances of"
+#~ " itself wherever unborn particles will "
+#~ "be emitted/used on the underlying "
+#~ "particle system. So if the current "
+#~ "Particle Instance Modifier is a sphere"
+#~ " shape, when unborn particles are "
+#~ "present they will be spheres."
+#~ msgstr ""
+#~ "При увімкненні кнопка *Unborn* повідомляє "
+#~ "модифікатору рисувати примірники самостійно "
+#~ "там, де емітуються ненароджені частинки "
+#~ "на підлежачій системі частинок. А тому,"
+#~ " якщо поточний модифікатор є сферичної "
+#~ "форми, то ненароджені частинки будуть "
+#~ "також сферами."
+
+#~ msgid ""
+#~ "When selected, the *Alive* button tells"
+#~ " the modifier to draw instances of"
+#~ " itself wherever alive particles will "
+#~ "be emitted/used on the underlying "
+#~ "particle system. So if the current "
+#~ "Particle Instance Modifier is a sphere"
+#~ " shape, when alive particles are "
+#~ "present they will be spheres."
+#~ msgstr ""
+#~ "При увімкненні кнопка *Alive* повідомляє "
+#~ "модифікатору рисувати примірники самостійно "
+#~ "там, де емітуються живі частинки на "
+#~ "підлежачій системі частинок. А тому, "
+#~ "якщо поточний модифікатор є сферичної "
+#~ "форми, то ненароджені частинки будуть "
+#~ "також сферами."
+
+#~ msgid ""
+#~ "When selected, the *Dead* button tells"
+#~ " the modifier to draw instances of"
+#~ " itself wherever dead particles will "
+#~ "occur on the underlying particle system."
+#~ " So if the current Particle Instance"
+#~ " Modifier is a sphere shape, when "
+#~ "dead particles are present they will "
+#~ "be spheres."
+#~ msgstr ""
+#~ "При увімкненні кнопка *Dead* повідомляє "
+#~ "модифікатору рисувати примірники самостійно "
+#~ "там, де з'являються мертві частинки на"
+#~ " підлежачій системі частинок. А тому, "
+#~ "якщо поточний модифікатор є сферичної "
+#~ "форми, то частинки, що вмирають, будуть"
+#~ " також сферами."
+
+#~ msgid ""
+#~ "Specify what percentage of the path "
+#~ "the object fills. You could create "
+#~ "a growing effect by animating this "
+#~ "value over time."
+#~ msgstr ""
+#~ "Визначає, який відсоток шляху об'єкт "
+#~ "заповнює. You could create a growing "
+#~ "effect by animating this value over "
+#~ "time."
+
+#~ msgid "Layers"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Particle Instance modifier *Create "
+#~ "Along Paths* button works for hair "
+#~ "(strand) particles as well as with "
+#~ "keyed particles. In this case the "
+#~ "mesh of the Particle Instance modifier"
+#~ " will follow the length and profile"
+#~ " of the hair strands paths."
+#~ msgstr ""
+
+#~ msgid ":doc:`Particles </physics/particles/index>`"
+#~ msgstr "Частинки -- :doc:`Particles </physics/particles/index>`"
 

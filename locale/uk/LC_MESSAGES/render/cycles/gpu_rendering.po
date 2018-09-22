@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 21:38-0400\n"
+"POT-Creation-Date: 2018-09-22 18:54-0400\n"
 "PO-Revision-Date: 2018-01-17 09:13+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:4
 msgid "GPU Rendering"
@@ -270,22 +270,58 @@ msgstr ""
 "Непідтримувана версія GNU! gcc 4.7 та вище не підтримуються!"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:120
-msgid "On Linux, depending on your GCC version you might get this error."
+#, fuzzy
+msgid ""
+"On Linux, depending on your GCC version you might get this error. There "
+"are two possible solutions:"
 msgstr "На Linux залежно від вашої версії GCC ви можете отримувати цю помилку."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:122
+#: ../../manual/render/cycles/gpu_rendering.rst:133
+msgid "Use an alternate compiler"
+msgstr ""
+
+#: ../../manual/render/cycles/gpu_rendering.rst:123
 msgid ""
-"If so, delete the following line in "
+"If you have an older GCC installed that is compatible with the installed "
+"CUDA toolkit version, then you can use it instead of the default "
+"compiler. This is done by setting the ``CYCLES_CUDA_EXTRA_CFLAGS`` "
+"environment variable when starting Blender."
+msgstr ""
+
+#: ../../manual/render/cycles/gpu_rendering.rst:127
+msgid "Launch Blender from the command line as follows:"
+msgstr ""
+
+#: ../../manual/render/cycles/gpu_rendering.rst:133
+msgid "(Substitute the name or path of the compatible GCC compiler)."
+msgstr ""
+
+#: ../../manual/render/cycles/gpu_rendering.rst:141
+msgid "Remove compatibility checks"
+msgstr ""
+
+#: ../../manual/render/cycles/gpu_rendering.rst:136
+#, fuzzy
+msgid ""
+"If the above is unsuccessful, delete the following line in "
 "``/usr/local/cuda/include/host_config.h``"
 msgstr ""
 "Якщо це так, то видаліть такий рядок у файлі "
 "``/usr/local/cuda/include/host_config.h``"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:130
+#: ../../manual/render/cycles/gpu_rendering.rst:143
+msgid ""
+"This will allow Cycles to successfully compile the CUDA rendering kernel "
+"the first time it attempts to use your GPU for rendering. Once the kernel"
+" is built successfully, you can launch Blender as you normally would and "
+"the CUDA kernel will still be used for rendering."
+msgstr ""
+
+#: ../../manual/render/cycles/gpu_rendering.rst:149
 msgid "CUDA Error: Invalid kernel image"
 msgstr "CUDA Error: Invalid kernel image -- Помилка CUDA: Хибне зображення ядра"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:132
+#: ../../manual/render/cycles/gpu_rendering.rst:151
 msgid ""
 "If you get this error on MS-Windows 64-bit, be sure to use the 64-bit "
 "build of Blender, not the 32-bit version."
@@ -293,13 +329,13 @@ msgstr ""
 "Якщо ви отримали цю помилку на MS-Windows 64-bit, то переконайтеся, що ви"
 " використовуйте 64-бітну збірку Blender'а, а не 32-бітну."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:137
+#: ../../manual/render/cycles/gpu_rendering.rst:156
 msgid "CUDA Error: Kernel compilation failed"
 msgstr ""
 "CUDA Error: Kernel compilation failed -- Помилка CUDA: Збій компіляції "
 "ядра"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:139
+#: ../../manual/render/cycles/gpu_rendering.rst:158
 msgid ""
 "This error may happen if you have a new Nvidia graphics card that is not "
 "yet supported by the Blender version and CUDA toolkit you have installed."
@@ -311,11 +347,11 @@ msgstr ""
 "інструментів CUDA. У цьому випадку Blender може намагатися динамічно "
 "будувати ядро для вашої відеокарти та дати збій."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:143
+#: ../../manual/render/cycles/gpu_rendering.rst:162
 msgid "In this case you can:"
 msgstr "У такому випадку ви можете:"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:145
+#: ../../manual/render/cycles/gpu_rendering.rst:164
 msgid ""
 "Check if the latest Blender version (official or `experimental builds "
 "<https://builder.blender.org/download/experimental/>`__) supports your "
@@ -325,7 +361,7 @@ msgstr ""
 "builds <https://builder.blender.org/download/experimental/>`__) підтримує"
 " вашу відеокарту."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:148
+#: ../../manual/render/cycles/gpu_rendering.rst:167
 msgid ""
 "If you build Blender yourself, try to download and install a newer CUDA "
 "developer toolkit."
@@ -333,7 +369,7 @@ msgstr ""
 "Якщо ви вибудовуєте Blender самостійно, то спробуйте звантажити та "
 "інсталювати найновіший набір інструментів CUDA для розробника."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:150
+#: ../../manual/render/cycles/gpu_rendering.rst:169
 msgid ""
 "Normally users do not need to install the CUDA toolkit as Blender comes "
 "with precompiled kernels."
@@ -341,11 +377,11 @@ msgstr ""
 "Зазвичай, користувачам не потрібно інсталювати набір інструментів CUDA, "
 "оскільки Blender поставляється з попередньо компільованими ядрами."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:154
+#: ../../manual/render/cycles/gpu_rendering.rst:173
 msgid "CUDA Error: Out of memory"
 msgstr "CUDA Error: Out of memory -- Помилка CUDA: Недостатньо пам'яті"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:156
+#: ../../manual/render/cycles/gpu_rendering.rst:175
 msgid ""
 "This usually means there is not enough memory to store the scene on the "
 "GPU. We can currently only render scenes that fit in graphics card "
@@ -357,13 +393,13 @@ msgstr ""
 "відеокарти, і він зазвичай менший, ніж можливий для рендерингу на CPU. "
 "Детальніше про це дивіться вище."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:162
+#: ../../manual/render/cycles/gpu_rendering.rst:181
 msgid "The Nvidia OpenGL driver lost connection with the display driver"
 msgstr ""
 "The Nvidia OpenGL driver lost connection with the display driver -- "
 "Драйвер OpenGL Nvidia втратив зв'язок з драйвером дисплею"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:164
+#: ../../manual/render/cycles/gpu_rendering.rst:183
 msgid ""
 "If a GPU is used for both display and rendering, MS-Windows has a limit "
 "on the time the GPU can do render computations. If you have a "
@@ -379,7 +415,7 @@ msgstr ""
 "Performance може полегшити цю проблему, але єдине реальне рішення -- "
 "використати окремі відеокарти для показу та рендерингу."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:170
+#: ../../manual/render/cycles/gpu_rendering.rst:189
 #, fuzzy
 msgid ""
 "Another solution can be to increase the time-out, although this will make"
@@ -392,13 +428,13 @@ msgstr ""
 " сцен. Детальніше тут -- `Learn More Here <https://msdn.microsoft.com/en-"
 "us/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:176
+#: ../../manual/render/cycles/gpu_rendering.rst:195
 msgid "CUDA error: Unknown error in cuCtxSynchronize()"
 msgstr ""
 "CUDA error: Unknown error in cuCtxSynchronize() -- Помилка CUDA: Невідома"
 " помилка в cuCtxSynchronize()"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:178
+#: ../../manual/render/cycles/gpu_rendering.rst:197
 #, fuzzy
 msgid ""
 "An unknown error can have many causes, but one possibility is that it is "
