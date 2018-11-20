@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-05-25 22:42+0200\n"
+"PO-Revision-Date: 2018-11-20 22:03+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../manual/physics/fluid/types/domain.rst:7
 msgid "Fluid Domain"
@@ -45,15 +45,14 @@ msgstr ""
 
 #: ../../manual/physics/fluid/types/domain.rst
 msgid "Type"
-msgstr ""
+msgstr "Type "
 
 #: ../../manual/physics/fluid/types/domain.rst:16
 #: ../../manual/physics/fluid/types/domain.rst:150
 #: ../../manual/physics/fluid/types/domain.rst:270
 #: ../../manual/physics/fluid/types/domain.rst:315
-#, fuzzy
 msgid "Domain"
-msgstr "Le Domaine du Fluide"
+msgstr "Domain"
 
 #: ../../manual/physics/fluid/types/domain.rst:18
 msgid ""
@@ -183,6 +182,12 @@ msgid ""
 "(therefore, a non-cubic domain will need less memory than a cubic one, "
 "resolutions being the same)."
 msgstr ""
+"Assurez-vous de définir une résolution adaptée à la taille du domaine dans "
+"le monde réel (voir la *Taille du monde réel* dans le `Fluid World`_).Si le "
+"domaine n'est pas cubique, la résolution sera prise le côté le plus long. "
+"Les résolutions sur les autres côtés seront réduites selon leur longueur "
+"(par conséquent un domaine non cubique nécessitera moins de mémoire qu'un "
+"domaine cubique, les résolutions étant les mêmes). "
 
 #: ../../manual/physics/fluid/types/domain.rst:85
 msgid "Preview resolution"
@@ -264,7 +269,7 @@ msgstr "Début"
 
 #: ../../manual/physics/fluid/types/domain.rst:105
 msgid "It is the simulation start time (in seconds)."
-msgstr "C'est l'heure de début de la simulation (en secondes)."
+msgstr "C'est le temps de début de la simulation (en secondes)."
 
 #: ../../manual/physics/fluid/types/domain.rst:107
 msgid ""
@@ -283,7 +288,7 @@ msgid ""
 "here."
 msgstr ""
 "Par exemple, si vous voulez que le fluide s'écoule depuis déjà 4 secondes "
-"avant la première frame réelle, vous devrez entrer 4.0 ici."
+"avant la première trame réelle, vous devrez entrer 4.0 ici."
 
 #: ../../manual/physics/fluid/types/domain.rst:113
 msgid "End"
@@ -311,6 +316,7 @@ msgstr ""
 "`Render --> Dimensions`."
 
 #: ../../manual/physics/fluid/types/domain.rst:121
+#, fuzzy
 msgid ""
 "This means, for example, that if you have Blender set to make 250 frames at "
 "25 fps, the fluid will look like it had already been flowing for 3 seconds "
@@ -322,6 +328,15 @@ msgid ""
 "of animation. Having these controls in effect gives you a \"speed control\" "
 "over the simulation."
 msgstr ""
+"Ce qui signifie, par exemple, que si vous avez défini Blender pour 250 "
+"trames à 25 fps, le fluide ressemblera à ce qu'il a déjà été pendant 3 "
+"secondes au début de la simulation, *mais* sera lue en vitesse réduite (un "
+"dixième de la vitesse normale), puisque la simulation de fluide d'une "
+"seconde 10 secondes de vidéo. Pour corriger cela, modifiez le temps de fin à "
+"13.0 (3.0 + 10.0) pour faire correspondre les 250 trames à 25 fps. À "
+"présent, la simulation sera en temps réel, puisque vous avez défini 19 "
+"secondes de déplacement de fluide pour simuler 10 secondes d'animation. Ces "
+"contrôles vous donnent un *contrôle de vitesse* sur la simulation."
 
 #: ../../manual/physics/fluid/types/domain.rst:132
 msgid "Generate Speed Vectors"
@@ -411,10 +426,19 @@ msgid ""
 "`-3`, unit m\\ :sup:`2`.s\\ :sup:`-1`). The table below gives some examples "
 "of fluids together with their dynamic and kinematic viscosities."
 msgstr ""
+"Pour une entrée manuelle, veuillez noter que la viscosité normale du monde "
+"réel (la viscosité soi-disant dynamique) est mesurée en unité pascal-seconde "
+"(Pa.s), ou en poise (P, équivalent à 0.1 Pa.s, du français Jean-Louis "
+"Poiseuille, qui a découvert les lois sur \"le flux laminaire des fluides "
+"visqueux\")), et en centipoise(cP, équivalent à 0.001 Pa.s). Blender, d'un "
+"autre côté, utilise la viscosité cinématique (qui est la viscosité dynamique "
+"en Pa.s, divisée par la densité en kg.m\\ :sup:`-3`, unit m\\ :sup:`2`.s\\ :"
+"sup:`-1`). La table ci-dessous fournit quelques exemples de fluides avec "
+"leurs viscosités dynamique et cinématique."
 
 #: ../../manual/physics/fluid/types/domain.rst:169
 msgid "Blender viscosity unit conversion."
-msgstr ""
+msgstr "Conversion d'unité de viscosité dans Blender."
 
 #: ../../manual/physics/fluid/types/domain.rst:173
 msgid "Fluid"
@@ -523,7 +547,7 @@ msgstr ""
 "l'entrée devra être 1.002 fois 10 exposant moins six (1.002x10\\ :sup:`-6` "
 "en notation scientifique). Le verre chauffé et le fer fondu sont des "
 "fluides, mais très épais ; il faudra entrer quelque chose comme 1.0x10\\ :"
-"sup:`0` (= 1.0) car sa viscosité cinématique (indiquant une valeur de "
+"sup:`0` (= 1.0) pour sa viscosité cinématique (indiquant une valeur de "
 "1.0x10\\ :sup:`6`\\ cP)."
 
 #: ../../manual/physics/fluid/types/domain.rst:204
@@ -652,10 +676,9 @@ msgid "Free Slip"
 msgstr "Glissement Libre"
 
 #: ../../manual/physics/fluid/types/domain.rst:288
-#, fuzzy
 msgid "Fluid will move on the object (0 normal direction of speed)."
 msgstr ""
-"Le Fluide va se déplacer sur l'objet (vitesse nulle sur la direction "
+"Le Fluide va se déplacer sur l'objet (vitesse nulle dans la direction "
 "normale). "
 
 #: ../../manual/physics/fluid/types/domain.rst:289
@@ -685,6 +708,8 @@ msgid ""
 "Enable the possibility to remove the \"air bubble\" around submerged "
 "collision object."
 msgstr ""
+"Activer la possibilité de supprimer l'\"air bubble\" autour de l'objet de "
+"collision submergé. "
 
 #: ../../manual/physics/fluid/types/domain.rst:307
 msgid "Surface"
