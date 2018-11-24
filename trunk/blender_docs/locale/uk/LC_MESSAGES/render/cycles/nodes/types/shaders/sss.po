@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-11-23 23:09-0500\n"
 "PO-Revision-Date: 2018-01-20 05:52+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:5
 #, fuzzy
@@ -81,23 +81,25 @@ msgstr "Масштаб -- Scale"
 msgid "Global scale factor for the scattering radius."
 msgstr "Фактор глобального масштабу для радіуса розсіювання."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:29
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:33
 msgid "Radius"
 msgstr "Радіус -- Radius"
 
 #: ../../manual/render/cycles/nodes/types/shaders/sss.rst:30
 msgid ""
-"Scattering radius for each RGB color channel, the maximum distance that "
-"light can scatter."
+"Average distance that light scatters below the surface. Higher radius "
+"gives a softer appearance, as light bleeds into shadows and through the "
+"object. The scattering distance is specified separately for the RGB "
+"channels, to render materials such as skin where red light scatters "
+"deeper. The X, Y and Z values are mapped to the R, G and B values, "
+"respectively."
 msgstr ""
-"Радіус розсіювання для кожного колірного каналу RGB, максимальна "
-"відстань, на якій світло може розсіюватися."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:32
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:36
 msgid "Sharpness"
 msgstr "Різкість -- Sharpness"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:32
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:36
 msgid ""
 "Used only with *Cubic* falloff. Values increasing from 0 to 1 prevents "
 "softening of sharp edges and reduces unwanted darkening."
@@ -105,11 +107,11 @@ msgstr ""
 "Використовується тільки для спаду типу *Cubic*. Зростання значення від 0 "
 "до 1 запобігає розм'якшенню різких країв та скорочує небажане потемніння."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:34
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:38
 msgid "Normal"
 msgstr "Нормаль -- Normal"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:35
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:39
 msgid ""
 "Normal used for shading; if nothing is connected the default shading "
 "normal is used."
@@ -117,11 +119,11 @@ msgstr ""
 "Нормаль, використовувана для відтінення; якщо нічого до цього уводу не "
 "під'єднано, то використовується стандартна нормаль відтінення."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:46
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:50
 msgid "Texture Blur"
 msgstr "Розмив Текстури -- Texture Blur"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:37
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:41
 msgid ""
 "How much of the texture will be blurred along with the lighting, mixing "
 "the texture at the incoming and outgoing points on the surface. Note that"
@@ -146,23 +148,23 @@ msgstr ""
 "процедурної текстури, з іншого боку, ця устава, швидше за все, матиме "
 "вище значення."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:49
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:53
 msgid "Properties"
 msgstr "Властивості -- Properties"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:73
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:77
 msgid "Method"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:52
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:56
 msgid "Rendering method to simulate subsurface scattering."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:55
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:59
 msgid "Christensen-Burley"
 msgstr "Крістенсен-Берлі -- Christensen-Burley"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:55
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:59
 #, fuzzy
 msgid ""
 "Is an approximation to physically-based volume scattering. Gives less "
@@ -171,11 +173,11 @@ msgstr ""
 "Це наближення до фізично базованого розсіювання об'ємом. Дає менш розмиті"
 " результати, ніж функції Cubic та Gaussian."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:62
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:66
 msgid "Random Walk"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:58
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:62
 msgid ""
 "Provides the most accurate results for thin and curved objects. This "
 "comes at the cost of increased render time or noise for more dense media "
@@ -185,11 +187,11 @@ msgid ""
 " problems."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:64
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:68
 msgid "Cubic"
 msgstr "Кубічно -- Cubic"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:65
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:69
 msgid ""
 "Is a sharp falloff useful for many simple materials. The function is "
 ":math:`(radius - x)^3`."
@@ -197,11 +199,11 @@ msgstr ""
 "Це різкий спад, корисний для багатьох простих матеріалів. Його функція --"
 " :math:`(radius - x)^3`."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:73
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:77
 msgid "Gaussian"
 msgstr "Гаусове -- Gaussian"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:67
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:71
 msgid ""
 "Gives a smoother falloff following a normal distribution, which is "
 "particularly useful for more advanced materials that use measured data "
@@ -217,15 +219,15 @@ msgstr ""
 "максимальному спаду з відстанню. Для узгодження заданого виміряного "
 "відхилення *v*, задавайте :math:`radius = sqrt(16 × v)`."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:76
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:80
 msgid "Outputs"
 msgstr "Виводи -- Outputs"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:80
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:84
 msgid "BSSRDF"
 msgstr "BSSRDF"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:79
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:83
 msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution "
 "function)` shader output."
@@ -234,11 +236,11 @@ msgstr ""
 "відбиття -- :abbr:`BSSRDF (Bidirectional subsurface scattering "
 "distribution function)`."
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:83
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:87
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:87
+#: ../../manual/render/cycles/nodes/types/shaders/sss.rst:91
 #, fuzzy
 msgid "Random Walk subsurface scattering."
 msgstr "Вузол «Підповерхневе Розсіювання» -- Subsurface Scattering Node."
@@ -254,4 +256,13 @@ msgstr "Вузол «Підповерхневе Розсіювання» -- Subs
 #~ "Тонувальний з виглядом шкіри відтінювач "
 #~ "Subsurface Scattering з Радіусом кольору "
 #~ "(1.0, 0.8, 0.5)."
+
+#~ msgid ""
+#~ "Scattering radius for each RGB color "
+#~ "channel, the maximum distance that light"
+#~ " can scatter."
+#~ msgstr ""
+#~ "Радіус розсіювання для кожного колірного "
+#~ "каналу RGB, максимальна відстань, на "
+#~ "якій світло може розсіюватися."
 
