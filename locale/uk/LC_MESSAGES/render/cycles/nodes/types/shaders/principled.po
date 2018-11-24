@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-05 13:47-0400\n"
+"POT-Creation-Date: 2018-11-23 23:09-0500\n"
 "PO-Revision-Date: 2018-01-20 05:49+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -96,40 +96,46 @@ msgid ""
 "for the Subsurface Radius."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:40
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:44
 msgid "Subsurface Radius"
 msgstr "Радіус Підповерхні -- Subsurface Radius"
 
 #: ../../manual/render/cycles/nodes/types/shaders/principled.rst:41
-msgid "Average scattering distance for RGB channels."
-msgstr "Усереднена відстань розсіювання для каналів RGB."
+msgid ""
+"Average distance that light scatters below the surface. Higher radius "
+"gives a softer appearance, as light bleeds into shadows and through the "
+"object. The scattering distance is specified separately for the RGB "
+"channels, to render materials such as skin where red light scatters "
+"deeper. The X, Y and Z values are mapped to the R, G and B values, "
+"respectively."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:42
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:46
 msgid "Subsurface Color"
 msgstr "Колір Підповерхні -- Subsurface Color"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:43
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:47
 msgid "Subsurface scattering base color."
 msgstr "Базовий колір підповерхневого розсіювання."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:45
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:50
 msgid "Metallic"
 msgstr "Металік -- Metallic"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:45
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:49
 msgid ""
-"Mix between dielectric (diffuse and specular with possible transparency) "
-"and metallic (fully specular with complex Fresnel)."
+"Blends between a non-metallic and metallic material model. A value of 1.0"
+" gives a fully specular reflection tinted with the base color, without "
+"diffuse reflection or transmission. At 0.0 the material consists of a "
+"diffuse or transmissive base layer, with a specular reflection layer on "
+"top."
 msgstr ""
-"Суміш між діелектричним -- dielectric (розсіяння -- diffuse та блікування"
-" -- specular з можливою прозорістю -- transparency) та металічним -- "
-"metallic (повне блікування -- specular зі складним Fresnel)."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:63
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:68
 msgid "Specular"
 msgstr "Блікування -- Specular"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:48
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:53
 #, python-format
 msgid ""
 "Amount of dielectric specular reflection. Specifies facing (along normal)"
@@ -138,7 +144,7 @@ msgstr ""
 "Величина діелектричного блікового відбиття. Визначає лицьову (уздовж "
 "нормалі) відбиваність у більш поширеному діапазоні 0 - 8%."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:53
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:58
 #, fuzzy
 msgid ""
 "To compute this value for a realistic material with a known index of "
@@ -150,23 +156,23 @@ msgstr ""
 "формули Френеля -- Fresnel: :math:`specular = sqr((ior - 1)/(ior + 1)) / "
 "0.08`"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:57
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:62
 msgid "For example:"
 msgstr "Наприклад:"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:59
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:64
 msgid "water: ior = 1.33, specular = 0.25"
 msgstr "вода: ior = 1.33, specular = 0.25"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:60
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:65
 msgid "glass: ior = 1.5, specular = 0.5"
 msgstr "скло: ior = 1.5, specular = 0.5"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:61
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:66
 msgid "diamond: ior = 2.417, specular = 2.15"
 msgstr "діамант: ior = 2.417, specular = 2.15"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:63
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:68
 #, python-format
 msgid ""
 "Since materials with reflectivity above 8% do exist, the field allows "
@@ -175,11 +181,11 @@ msgstr ""
 "Оскільки існують матеріали з відбиваністю вище 8%, то це поле дозволяє "
 "значення більше 1."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:68
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:73
 msgid "Specular Tint"
 msgstr "Підбарвлення Блиску -- Specular Tint"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:66
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:71
 msgid ""
 "Tints the facing specular reflection using the base color, while glancing"
 " reflection remains white."
@@ -187,7 +193,7 @@ msgstr ""
 "Підбарвлення лицевого блікового відбиття використовують базовий колір, "
 "тоді як глянцеве відбиття залишається білим."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:68
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:73
 msgid ""
 "Normal dielectrics have colorless reflection, so this parameter is not "
 "technically physically correct and is provided for faking the appearance "
@@ -197,11 +203,11 @@ msgstr ""
 "технічно фізично коректний та призначений для підроблення вигляду "
 "матеріалів зі складною структурою поверхні."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:75
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:80
 msgid "Roughness"
 msgstr "Шорсткість -- Roughness"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:71
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:76
 msgid ""
 "Specifies microfacet roughness of the surface for diffuse and specular "
 "reflection."
@@ -209,7 +215,7 @@ msgstr ""
 "Визначає дріброграневу шорсткість поверхні для розсіяного -- diffuse та "
 "блікового -- specular відбиття."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:75
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:80
 msgid ""
 "When converting from the older *Glossy BSDF* node, use the square root of"
 " the original value."
@@ -217,23 +223,26 @@ msgstr ""
 "При конвертуванні зі старішого вузла *Glossy BSDF* використовуйте "
 "квадратний корінь оригінального значення."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:77
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:83
 msgid "Anisotropic"
 msgstr "Анізотропія -- Anisotropic"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:78
-msgid "Amount of anisotropy for specular reflection."
-msgstr "Величина анізотропії для блікового відбиття."
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:83
+msgid ""
+"Amount of anisotropy for specular reflection. Higher values give "
+"elongated highlights along the tangent direction; negative values give "
+"highlights shaped perpendicular to the tangent direction."
+msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:85
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:91
 msgid "Anisotropic Rotation"
 msgstr "Анізотропне Обертання -- Anisotropic Rotation"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:80
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:86
 msgid "Rotates the direction of anisotropy, with 1.0 going full circle."
 msgstr "Обертає напрямок анізотропії, значення 1.0 дає повний оберт."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:84
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:90
 msgid ""
 "Compared to the *Anisotropic BSDF* node, the direction of highlight "
 "elongation is rotated by 90°. Add 0.25 to the value to correct."
@@ -241,11 +250,11 @@ msgstr ""
 "У порівнянні з вузлом *Anisotropic BSDF* напрямок подовження підсвітки "
 "обертається на 90°. Додавайте 0.25 до цього значення для коректності."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:88
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:94
 msgid "Sheen"
 msgstr "Блиск -- Sheen"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:88
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:94
 msgid ""
 "Amount of soft velvet like reflection near edges, for simulating "
 "materials such as cloth."
@@ -253,21 +262,21 @@ msgstr ""
 "Величина м'якого оксамиту, подібно до відбиття біля країв, для імітування"
 " матеріалів, таких як тканина."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:90
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:96
 msgid "Sheen Tint"
 msgstr "Підбарвлення Блиску -- Sheen Tint"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:91
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:97
 msgid "Mix between white and using base color for sheen reflection."
 msgstr ""
 "Суміш між білим та використовуваним базовим кольором для блискового "
 "відбиття."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:93
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:99
 msgid "Clearcoat"
 msgstr "Чистове покриття -- Clearcoat"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:93
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:99
 msgid ""
 "Extra white specular layer on top of others. This is useful for materials"
 " like car paint and the like."
@@ -275,28 +284,28 @@ msgstr ""
 "Додатковий шар білого блікування поверх інших шарів. Це корисно для "
 "матеріалів, як фарба для автівок тощо."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:95
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:101
 msgid "Clearcoat Roughness:"
 msgstr "Шорсткість Чистового покриття -- Clearcoat Roughness:"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:96
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:102
 #, fuzzy
 msgid "Roughness of clearcoat specular."
 msgstr "Шорсткість блікування чистового покриття."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:97
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:103
 msgid "IOR"
 msgstr "Показник Заломлення -- IOR"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:98
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:104
 msgid "Index of refraction for transmission."
 msgstr "Показник заломлення -- index of refraction для пропускання світла."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:99
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:105
 msgid "Transmission"
 msgstr "Пропускання -- Transmission"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:100
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:106
 msgid ""
 "Mix between fully opaque surface at zero and fully glass like "
 "transmission at one."
@@ -304,57 +313,57 @@ msgstr ""
 "Суміш між повністю безпрозорою поверхнею при значенні 0 та повним склом, "
 "як при пропусканні, при значенні 1."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:101
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:107
 msgid "Transmission Roughness"
 msgstr "Шорсткість Пропускання -- Transmission Roughness"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:102
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:108
 msgid "With **GGX** distribution controls roughness used for transmitted light."
 msgstr ""
 "При розподілі типу **GGX** керує шорсткістю, що використовується для "
 "пропущеного світла."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:103
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:109
 msgid "Normal"
 msgstr "Нормаль -- Normal"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:104
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:110
 msgid "Controls the normals of the base layers."
 msgstr "Керує нормалями базових шарів."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:105
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:111
 msgid "Clearcoat Normal"
 msgstr "Нормаль Чистового покриття -- Clearcoat Normal"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:106
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:112
 msgid "Controls the normals of the *Clearcoat* layer."
 msgstr "Керує нормалями шару *Clearcoat*."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:109
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:115
 msgid "Tangent"
 msgstr "Дотично -- Tangent"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:108
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:114
 msgid "Controls the tangent for the *Anisotropic* layer."
 msgstr "Керує дотичною для шару *Anisotropic*."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:112
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:118
 msgid "Properties"
 msgstr "Властивості -- Properties"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:123
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:129
 msgid "Distribution"
 msgstr "Розподіл -- Distribution"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:115
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:121
 msgid "Microfacet distribution to use."
 msgstr "Використовуваний розподіл дрібних граней."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:118
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:124
 msgid "GGX"
 msgstr "GGX"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:118
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:124
 msgid ""
 "A method that is faster than *Multiple-scattering GGX* but is less "
 "physically accurate. Selecting it enables the *Transmission Roughness* "
@@ -363,11 +372,11 @@ msgstr ""
 "Метод, що є швидшим, ніж *Multiple-scattering GGX*, але і менш фізично "
 "точним. Його вибір робить доступним увід *Transmission Roughness*."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:123
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:129
 msgid "Multiple-scattering GGX"
 msgstr "Багато Розсіювання GGX -- Multiple-scattering GGX"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:121
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:127
 msgid ""
 "Takes multiple bounce (scattering) events between microfacets into "
 "account. This gives a more energy conserving results, which would "
@@ -377,30 +386,30 @@ msgstr ""
 "дрібногранями. Це дає більш енергоощадні результати, які в іншому випадку"
 " будуть видимі як надмірне потемніння."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:138
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:144
 #, fuzzy
 msgid "Subsurface Method"
 msgstr "Колір Підповерхні -- Subsurface Color"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:126
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:132
 msgid "Rendering method to simulate subsurface scattering."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:129
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:135
 msgid "Christensen-Burley"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:129
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:135
 msgid ""
 "Is an approximation to physically-based volume scattering. Gives less "
 "blurry results than Cubic and Gaussian functions."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:138
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:144
 msgid "Random Walk"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:132
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:138
 msgid ""
 "Provides the most accurate results for thin and curved objects. This "
 "comes at the cost of increased render time or noise for more dense media "
@@ -410,23 +419,23 @@ msgid ""
 " problems."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:141
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:147
 msgid "Outputs"
 msgstr "Виводи -- Outputs"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:145
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:151
 msgid "BSDF"
 msgstr "BSDF"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:144
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:150
 msgid "Standard shader output."
 msgstr "Стандартний вивід відтінювача."
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:148
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:154
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:150
+#: ../../manual/render/cycles/nodes/types/shaders/principled.rst:156
 #, fuzzy
 msgid ""
 "Below are some examples of how all the Principled BSDF's parameters "
@@ -447,4 +456,23 @@ msgstr ""
 #~ "Суміш між розсіянням -- diffuse та "
 #~ "підповерхневим розсіюванням -- subsurface "
 #~ "scattering."
+
+#~ msgid "Average scattering distance for RGB channels."
+#~ msgstr "Усереднена відстань розсіювання для каналів RGB."
+
+#~ msgid ""
+#~ "Mix between dielectric (diffuse and "
+#~ "specular with possible transparency) and "
+#~ "metallic (fully specular with complex "
+#~ "Fresnel)."
+#~ msgstr ""
+#~ "Суміш між діелектричним -- dielectric "
+#~ "(розсіяння -- diffuse та блікування --"
+#~ " specular з можливою прозорістю -- "
+#~ "transparency) та металічним -- metallic "
+#~ "(повне блікування -- specular зі "
+#~ "складним Fresnel)."
+
+#~ msgid "Amount of anisotropy for specular reflection."
+#~ msgstr "Величина анізотропії для блікового відбиття."
 

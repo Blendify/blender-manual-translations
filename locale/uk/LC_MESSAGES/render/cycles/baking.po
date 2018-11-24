@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-11-23 23:09-0500\n"
 "PO-Revision-Date: 2018-01-17 08:53+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/render/cycles/baking.rst:5
 msgid "Render Baking"
@@ -34,13 +34,92 @@ msgstr "Панель:    «Зображ > Запікання» -- :menuselection
 
 #: ../../manual/render/cycles/baking.rst:12
 msgid ""
-"Refer to the Blender Render page for :doc:`general baking guidelines "
-"</render/blender_render/bake>`."
+"Baking, in general, is the act of pre-computing something in order to "
+"speed up some other process later down the line. Rendering from scratch "
+"takes a lot of time depending on the options you choose. Therefore, "
+"Blender allows you to \"bake\" some parts of the render ahead of time, "
+"for select objects. Then, when you press Render, the entire scene is "
+"rendered much faster, since the colors of those objects do not have to be"
+" recomputed."
 msgstr ""
-"Про основи запікання у Blender'і зверніться до сторінки -- :doc:`general "
-"baking guidelines </render/blender_render/bake>`."
 
-#: ../../manual/render/cycles/baking.rst:14
+#: ../../manual/render/cycles/baking.rst:19
+msgid ""
+"Render baking creates 2D bitmap images of a mesh object's rendered "
+"surface. These images can be re-mapped onto the object using the object's"
+" UV coordinates. Baking is done for each individual mesh, and can only be"
+" done if that mesh has been UV-unwrapped. While it takes time to set up "
+"and perform, it saves render time. If you are rendering a long animation,"
+" the time spent baking can be much less than time spent rendering out "
+"each frame of a long animation."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:25
+msgid ""
+"Use Render Bake in intensive light/shadow solutions, such as AO or soft "
+"shadows from area lights. If you bake AO for the main objects, you will "
+"not have to enable it for the full render, saving render time."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:29
+msgid ""
+"Use *Full Render* or *Textures* to create an image texture; baked "
+"procedural textures can be used as a starting point for further texture "
+"painting. Use *Normals* to make a low resolution mesh look like a high "
+"resolution mesh. To do that, UV unwrap a high resolution, finely sculpted"
+" mesh and bake its normals. Save that normal map, and *Mapping* (texture "
+"settings) the UV of a similarly unwrapped low resolution mesh. The low "
+"resolution mesh will look just like the high resolution, but will have "
+"much fewer faces/polygons."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:40
+msgid "Advantages"
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:41
+msgid "Can significantly reduce render times."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:42
+msgid "Texture painting made easier."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:43
+msgid "Reduced polygon count."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:44
+msgid "Repeated renders are made faster, multiplying the time savings."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:48
+msgid "Disadvantages"
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:49
+msgid "Object must be UV-unwrapped."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:50
+msgid ""
+"If shadows are baked, lights and object cannot move with respect to each "
+"other."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:51
+msgid ""
+"Large textures (e.g. 4096×4096) can be memory intensive, and be just as "
+"slow as the rendered solution."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:52
+msgid ""
+"Human (labor) time must be spent unwrapping and baking and saving files "
+"and applying the textures to a channel."
+msgstr ""
+
+#: ../../manual/render/cycles/baking.rst:54
 msgid ""
 "Cycles uses the render settings (samples, bounces, ...) for baking. This "
 "way the quality of the baked textures should match the result you get "
@@ -50,7 +129,7 @@ msgstr ""
 "...) для запікання. Таким чином, якість запечених текстур повинна "
 "відповідати результату, що ви отримуєте з рендереної сцени."
 
-#: ../../manual/render/cycles/baking.rst:17
+#: ../../manual/render/cycles/baking.rst:57
 msgid ""
 "The baking happens into the respective active textures of the object "
 "materials. The active texture is the last selected Image Texture node of "
@@ -77,32 +156,32 @@ msgstr ""
 "можете автоматично попередньо переглядати результат у режимі показу 3D "
 "Огляду «Текстура» -- Texture."
 
-#: ../../manual/render/cycles/baking.rst:27
+#: ../../manual/render/cycles/baking.rst:67
 msgid "Options"
 msgstr "Опції"
 
-#: ../../manual/render/cycles/baking.rst:31
+#: ../../manual/render/cycles/baking.rst:71
 msgid "Ambient Occlusion Pass."
 msgstr "Прохід «Загорода Оточення» -- Ambient Occlusion."
 
-#: ../../manual/render/cycles/baking.rst:35
+#: ../../manual/render/cycles/baking.rst:75
 msgid "Bake Mode"
 msgstr "Режим Запікання -- Bake Mode"
 
-#: ../../manual/render/cycles/baking.rst:43
+#: ../../manual/render/cycles/baking.rst:83
 msgid "Combined"
 msgstr "Комбіновано -- Combined"
 
-#: ../../manual/render/cycles/baking.rst:38
+#: ../../manual/render/cycles/baking.rst:78
 msgid "Bakes all materials, textures, and lighting except specularity."
 msgstr "Запікає усі матеріали, текстури та освітлення, за винятком бліковості."
 
-#: ../../manual/render/cycles/baking.rst:42
+#: ../../manual/render/cycles/baking.rst:82
 #, fuzzy
 msgid "Combined Pass options."
 msgstr "Опції проходу Combined."
 
-#: ../../manual/render/cycles/baking.rst:44
+#: ../../manual/render/cycles/baking.rst:84
 msgid ""
 "The passes that contribute to the combined pass can be toggled "
 "individually to form the final map."
@@ -110,11 +189,11 @@ msgstr ""
 "Ці проходи, що беруть участь у комбінованому проході, можуть вмикатися та"
 " вимикатися окремо для формування фінальної карти."
 
-#: ../../manual/render/cycles/baking.rst:45
+#: ../../manual/render/cycles/baking.rst:90
 msgid "Ambient Occlusion"
 msgstr "Загорода Оточення -- Ambient Occlusion"
 
-#: ../../manual/render/cycles/baking.rst:46
+#: ../../manual/render/cycles/baking.rst:86
 msgid ""
 "Bakes ambient occlusion as specified in the World panels. Ignores all "
 "lights in the scene."
@@ -122,40 +201,45 @@ msgstr ""
 "Запікає загороду оточення, як вона визначена на панелях вкладки «Світ» --"
 " World. Ігнорує усі освітлювачі у сцені."
 
-#: ../../manual/render/cycles/baking.rst:47
+#: ../../manual/render/cycles/baking.rst:90
+#, fuzzy
+msgid "Ambient Occlusion."
+msgstr "Загорода Оточення -- Ambient Occlusion"
+
+#: ../../manual/render/cycles/baking.rst:92
 msgid "Shadow"
 msgstr "Тінь -- Shadow"
 
-#: ../../manual/render/cycles/baking.rst:48
+#: ../../manual/render/cycles/baking.rst:93
 msgid "Bakes shadows and lighting."
 msgstr "Запікає тіні та освітлення."
 
-#: ../../manual/render/cycles/baking.rst:70
+#: ../../manual/render/cycles/baking.rst:120
 msgid "Normals"
 msgstr "Нормалі -- Normals"
 
-#: ../../manual/render/cycles/baking.rst:50
+#: ../../manual/render/cycles/baking.rst:95
 msgid "Bakes normals to an RGB image."
 msgstr "Запікає нормалі у зображення RGB."
 
-#: ../../manual/render/cycles/baking.rst:54
+#: ../../manual/render/cycles/baking.rst:99
 #, fuzzy
 msgid "Normal Pass options."
 msgstr "Опції проходу Normal."
 
-#: ../../manual/render/cycles/baking.rst:63
+#: ../../manual/render/cycles/baking.rst:108
 msgid "Normal Space"
 msgstr "Простір Нормалей -- Normal Space"
 
-#: ../../manual/render/cycles/baking.rst:57
+#: ../../manual/render/cycles/baking.rst:102
 msgid "Normals can be baked in different spaces:"
 msgstr "Нормалі можуть бути запечені у різних просторах:"
 
-#: ../../manual/render/cycles/baking.rst:59
+#: ../../manual/render/cycles/baking.rst:104
 msgid "Object space"
 msgstr "Простір Об'єкта -- Object space"
 
-#: ../../manual/render/cycles/baking.rst:60
+#: ../../manual/render/cycles/baking.rst:105
 msgid ""
 "Normals in object coordinates, independent of object transformation, but "
 "dependent on deformation."
@@ -163,11 +247,11 @@ msgstr ""
 "Нормалі у координатах об'єкта, незалежно від трансформацій об'єкта, але "
 "залежно від його деформацій."
 
-#: ../../manual/render/cycles/baking.rst:63
+#: ../../manual/render/cycles/baking.rst:108
 msgid "Tangent space"
 msgstr "Простір, дотичний до об'єкта -- Tangent space"
 
-#: ../../manual/render/cycles/baking.rst:62
+#: ../../manual/render/cycles/baking.rst:107
 msgid ""
 "Normals in tangent space coordinates, independent of object "
 "transformation and deformation. This is the default, and the right choice"
@@ -179,15 +263,20 @@ msgstr ""
 "випадків, оскільки далі така карта нормалей може використовуватися також "
 "для анімованих об'єктів."
 
-#: ../../manual/render/cycles/baking.rst:66
+#: ../../manual/render/cycles/baking.rst:112
 msgid "Normal Swizzle"
 msgstr "Нормаль: Помісь -- Normal Swizzle"
 
-#: ../../manual/render/cycles/baking.rst:66
+#: ../../manual/render/cycles/baking.rst:111
 msgid "Axis to bake into the red, green and blue channel."
 msgstr "Вісь для запікання у червоний, зелений та синій канали."
 
-#: ../../manual/render/cycles/baking.rst:68
+#: ../../manual/render/cycles/baking.rst:116
+#, fuzzy
+msgid "Normals."
+msgstr "Нормалі -- Normals"
+
+#: ../../manual/render/cycles/baking.rst:118
 msgid ""
 "For materials the same spaces can be chosen in the image texture options "
 "next to the existing *Normal Map* setting. For correct results, the "
@@ -198,37 +287,37 @@ msgstr ""
 "коректних результатів ця устава для текстури повинна відповідати уставі, "
 "що використовується для запікання."
 
-#: ../../manual/render/cycles/baking.rst:72
+#: ../../manual/render/cycles/baking.rst:122
 msgid "UV"
 msgstr "UV"
 
-#: ../../manual/render/cycles/baking.rst:73
+#: ../../manual/render/cycles/baking.rst:123
 msgid "Bakes colors of materials and textures only, without shading."
 msgstr "Запікає тільки кольори матеріалів та текстур без відтінення."
 
-#: ../../manual/render/cycles/baking.rst:74
+#: ../../manual/render/cycles/baking.rst:124
 msgid "Emit"
 msgstr "Емітування -- Emit"
 
-#: ../../manual/render/cycles/baking.rst:75
+#: ../../manual/render/cycles/baking.rst:125
 msgid "Bakes Emission, or the Glow color of a material."
 msgstr "Запікає колір емітування -- Emit або колір сяяння -- Glow матеріалу."
 
-#: ../../manual/render/cycles/baking.rst:76
+#: ../../manual/render/cycles/baking.rst:126
 msgid "Environment"
 msgstr "Середовище -- Environment"
 
-#: ../../manual/render/cycles/baking.rst:77
+#: ../../manual/render/cycles/baking.rst:127
 msgid "Bakes the environment as seen from the center of the object."
 msgstr "Запікає середовище, так, як воно видно з центру активного об'єкта."
 
-#: ../../manual/render/cycles/baking.rst:89
+#: ../../manual/render/cycles/baking.rst:139
 msgid "Diffuse, Glossy, Transmission, Subsurface"
 msgstr ""
 "Розсіяння -- Diffuse, Глянець -- Glossy, Пропускання -- Transmission, "
 "Підповерхня -- Subsurface"
 
-#: ../../manual/render/cycles/baking.rst:79
+#: ../../manual/render/cycles/baking.rst:129
 msgid ""
 "Bakes the diffuse, glossiness, transmission of subsurface pass of a "
 "material."
@@ -236,12 +325,12 @@ msgstr ""
 "Запікає для матеріалу проходи розсіяння, глянсуватості, пропускання та "
 "підповерхневого розсіювання, відповідно."
 
-#: ../../manual/render/cycles/baking.rst:83
+#: ../../manual/render/cycles/baking.rst:133
 #, fuzzy
 msgid "Diffuse Pass options."
 msgstr "Опції проходу Diffuse."
 
-#: ../../manual/render/cycles/baking.rst:85
+#: ../../manual/render/cycles/baking.rst:135
 msgid ""
 "If only color is selected you get the pass color, which is a property of "
 "the surface and independent of sampling refinement."
@@ -249,7 +338,7 @@ msgstr ""
 "Якщо увімкнено тут тільки Color, то ви отримаєте колір проходу, який є "
 "властивістю поверхні й не залежить від деталей відбору вибірок."
 
-#: ../../manual/render/cycles/baking.rst:87
+#: ../../manual/render/cycles/baking.rst:137
 #, fuzzy
 msgid ""
 "If color is not selected, you get the direct and/or indirect "
@@ -258,7 +347,7 @@ msgstr ""
 "Якщо тут, навпаки, вимкнено тільки Color, то внески прямого -- Direct та "
 "побічного -- Indirect освітлення ви отримаєте у градації сірого."
 
-#: ../../manual/render/cycles/baking.rst:88
+#: ../../manual/render/cycles/baking.rst:138
 msgid ""
 "If color and either direct or indirect are selected, you get the direct "
 "and/or indirect contributions colored."
@@ -266,15 +355,15 @@ msgstr ""
 "Якщо увімкнено Color та Direct та/або Indirect, то ви отримаєте внески "
 "освітлення Direct та/або Indirect забарвленими."
 
-#: ../../manual/render/cycles/baking.rst:92
+#: ../../manual/render/cycles/baking.rst:142
 msgid "Additional Options"
 msgstr "Додаткові опції"
 
-#: ../../manual/render/cycles/baking.rst:94
+#: ../../manual/render/cycles/baking.rst:144
 msgid "Margin"
 msgstr "Припуск -- Margin"
 
-#: ../../manual/render/cycles/baking.rst:95
+#: ../../manual/render/cycles/baking.rst:145
 #, fuzzy
 msgid ""
 "Baked result is extended this many pixels beyond the border of each UV "
@@ -283,19 +372,19 @@ msgstr ""
 "Запечений результат розширюється на цю кількість пікселів поза границею "
 "кожного «острова» UV для пом'якшення швів у текстурі."
 
-#: ../../manual/render/cycles/baking.rst:96
+#: ../../manual/render/cycles/baking.rst:146
 msgid "Clear"
 msgstr "Зчищення -- Clear"
 
-#: ../../manual/render/cycles/baking.rst:97
+#: ../../manual/render/cycles/baking.rst:147
 msgid "If selected, clears the image before baking render."
 msgstr "Якщо увімкнено, то зчищає зображення перед запіканням рендера."
 
-#: ../../manual/render/cycles/baking.rst:103
+#: ../../manual/render/cycles/baking.rst:153
 msgid "Select to Active"
 msgstr "Виділене на Активне -- Select to Active"
 
-#: ../../manual/render/cycles/baking.rst:99
+#: ../../manual/render/cycles/baking.rst:149
 #, fuzzy
 msgid ""
 "Bake shading on the surface of selected objects to the active object. The"
@@ -314,11 +403,11 @@ msgstr ""
 "більшого контролю ви навіть можете використовувати об'єкт остова *Cage "
 "Object*."
 
-#: ../../manual/render/cycles/baking.rst:105
+#: ../../manual/render/cycles/baking.rst:155
 msgid "Memory Usage"
 msgstr "Використання пам'яті"
 
-#: ../../manual/render/cycles/baking.rst:107
+#: ../../manual/render/cycles/baking.rst:157
 #, fuzzy
 msgid ""
 "There is a CPU fixed memory footprint for every object used to bake from."
@@ -336,11 +425,11 @@ msgstr ""
 "але і більше пам'яті, яка буде займатися у ході запікання (незалежно від "
 "того, за допомогою GPU чи CPU воно здійснюється)."
 
-#: ../../<generated>:1 ../../manual/render/cycles/baking.rst:116
+#: ../../<generated>:1 ../../manual/render/cycles/baking.rst:166
 msgid "Cage"
 msgstr "Остов -- Cage"
 
-#: ../../manual/render/cycles/baking.rst:113
+#: ../../manual/render/cycles/baking.rst:163
 #, fuzzy
 msgid ""
 "Cast rays to active object from a cage. A cage is a ballooned-out version"
@@ -359,11 +448,11 @@ msgstr ""
 "площини, щоб уникнути необхідності додання додаткових петель навколо "
 "ребер."
 
-#: ../../manual/render/cycles/baking.rst:119
+#: ../../manual/render/cycles/baking.rst:169
 msgid "Ray Distance"
 msgstr "Відстань Променя -- Ray Distance"
 
-#: ../../manual/render/cycles/baking.rst:119
+#: ../../manual/render/cycles/baking.rst:169
 msgid ""
 "Distance to use for the inward ray cast when using selected to active. "
 "Ray distance is only available when not using *Cage*."
@@ -372,11 +461,11 @@ msgstr ""
 " опції Selected to Active. Устава Ray Distance доступна тільки тоді, коли"
 " не використовується опція *Cage*."
 
-#: ../../manual/render/cycles/baking.rst:124
+#: ../../manual/render/cycles/baking.rst:174
 msgid "Cage Extrusion"
 msgstr "Остов: Видавлення -- Cage Extrusion"
 
-#: ../../manual/render/cycles/baking.rst:122
+#: ../../manual/render/cycles/baking.rst:172
 msgid ""
 "Distance to use for the inward ray cast when using *Selected to Active* "
 "and *Cage*. The inward rays are casted from a version of the active "
@@ -391,7 +480,7 @@ msgstr ""
 "Edge Split) повинні уникатися, оскільки вони призводитимуть до "
 "не-згладжених нормалей навколо ребер."
 
-#: ../../manual/render/cycles/baking.rst:127
+#: ../../manual/render/cycles/baking.rst:177
 msgid ""
 "Object to use as cage instead of calculating the cage from the active "
 "object with the *Cage Extrusion*."
@@ -399,7 +488,7 @@ msgstr ""
 "Об'єкт, що використовується як остов, замість розрахування остову з "
 "активного об'єкта за допомогою *Cage: Extrusion*."
 
-#: ../../manual/render/cycles/baking.rst:131
+#: ../../manual/render/cycles/baking.rst:181
 msgid ""
 "When the base mesh extruded does not give good results, you can create a "
 "copy of the base mesh and modify it to use as a *Cage*. Both meshes need "
@@ -409,4 +498,13 @@ msgstr ""
 " копію базової сіті та модифікувати її для використання як остова *Cage*."
 " Обидві сіті повинні мати однакову топологію -- :term:`topology` "
 "(кількість граней та порядок граней)."
+
+#~ msgid ""
+#~ "Refer to the Blender Render page "
+#~ "for :doc:`general baking guidelines "
+#~ "</render/blender_render/bake>`."
+#~ msgstr ""
+#~ "Про основи запікання у Blender'і "
+#~ "зверніться до сторінки -- :doc:`general "
+#~ "baking guidelines </render/blender_render/bake>`."
 

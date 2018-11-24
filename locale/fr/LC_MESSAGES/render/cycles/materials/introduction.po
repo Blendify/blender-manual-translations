@@ -1,169 +1,416 @@
 #
 # phan <phahoatho@gmail.com>, 2017, 2018.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2018-11-23 23:09-0500\n"
 "PO-Revision-Date: 2018-05-10 16:07+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"Generated-By: Babel 2.6.0\n"
 
-#: ../../manual/render/cycles/materials/introduction.rst:4
+#: ../../manual/render/cycles/materials/introduction.rst:5
 msgid "Introduction"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:6
+#: ../../manual/render/cycles/materials/introduction.rst:7
 msgid ""
-"Materials define the appearance of meshes, curves and other objects. They "
-"consist of three shaders, defining the appearance of the surface of the "
-"mesh, the volume inside the mesh, and displacement of the surface of the "
-"mesh."
+"A material defines the artistic qualities of the substance that an object"
+" is made of. In its simplest form, you can use materials to show the "
+"substance an object is made of, or to \"paint\" the object with different"
+" colors. Usually, the substance is represented by its surface qualities "
+"(color, shininess, reflectance, etc.) but it can also exhibit more "
+"complicated effects such as transparency, diffraction and subsurface "
+"scattering. Typical materials might be brass, skin, glass, or linen."
 msgstr ""
-"Les matériaux définissent l'apparence des maillages, des courbes et d'autres "
-"objets. Ils consistent en trois *shaders*, définnissant l'apparence de la "
-"surface du maillage,le volume à l'intérieur du maillage, et le "
-"*displacement* de la surface du maillage."
 
-#: ../../manual/render/cycles/materials/introduction.rst:15
+#: ../../manual/render/cycles/materials/introduction.rst:14
+msgid ""
+"Materials can also contain displacement information to described how the "
+"material raises and lowers the surface of the material."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:20
+msgid ""
+"Various basic materials (single, multiple material, transparency, vertex "
+"paint)."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:22
+msgid ""
+"The basic (un-textured) Blender material is uniform across each face of "
+"an object (although the various pixels of each face of the object may "
+"appear differently because of lighting effects). However, different faces"
+" of the object may use different materials (see :ref:`bi-multiple-"
+"materials`)."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:26
+msgid ""
+"In Blender, materials can (optionally) have associated textures. Textures"
+" *describe* the substance: e.g. *polished* brass, *dirty* glass or "
+"*embroidered* linen. The :doc:`Textures "
+"</editors/uv_image/uv/textures/index>` chapter describes how to add "
+"textures to materials."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:33
+msgid "How Materials Work"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:35
+msgid ""
+"Before you can understand how to design effectively with materials, you "
+"must understand how simulated light and surfaces interact in Blender's "
+"rendering engine and how material settings control those interactions. A "
+"deep understanding of the engine will help you to get the most from it."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:40
+msgid ""
+"The rendered image you create with Blender is a projection of the scene "
+"onto an imaginary surface called the *viewing plane*. The viewing plane "
+"is analogous to the film in a traditional camera, or the rods and cones "
+"in the human eye, except that it receives simulated light, not real "
+"light."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:46
+msgid ""
+"To render an image of a scene we must first determine what light from the"
+" scene is arriving at each point on the viewing plane. The best way to "
+"answer this question is to follow a straight line (the simulated light "
+"ray) backwards through that point on the viewing plane and the focal "
+"point (the location of the camera) until it hits a renderable surface in "
+"the scene, at which point we can determine what light would strike that "
+"point."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:53
+msgid ""
+"The surface properties and incident light angle tells how much of that "
+"light would be reflected back along the incident viewing angle "
+"*(Rendering engine basic principle)*."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:59
+msgid "Rendering engine basic principle."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:61
+msgid ""
+"Two basic types of phenomena take place at any point on a surface when a "
+"light ray strikes it: diffusion and specular reflection. Diffusion and "
+"specular reflection are distinguished from each other mainly by the "
+"relationship between the incident light angle and the reflected light "
+"angle."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:66
+msgid ""
+"The shading (or coloring) of the object during render will then take into"
+" account the base color (as modified by the diffusion and specular "
+"reflection phenomenon) and the light intensity."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:69
+msgid ""
+"Using the internal ray tracer, other (more advanced) phenomena could "
+"occur. In ray-traced reflections, the point of a surface struck by a "
+"light ray will return the color of its surrounding environment, according"
+" to the rate of reflection of the material (mixing the base color and the"
+" surrounding environment's) and the viewing angle."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:74
+msgid ""
+"On the other hand, in ray-traced refractions, the point of a surface "
+"struck by a light ray will return the color of its background "
+"environment, according to the rate of transparency (mixing the base color"
+" and the background environment's along with its optional filtering "
+"value) of the material and the optional index of refraction of the "
+"material, which will distort the viewing angle."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:80
+msgid ""
+"Of course, shading of the object hit by a light ray will be about mixing "
+"all these phenomena at the same time during the rendering. The appearance"
+" of the object, when rendered, depends on many interrelated settings:"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:84
+msgid "World (Ambient color, Radiosity, Ambient Occlusion)"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:85
+msgid "Lights"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:86
+msgid ""
+"Material settings (including ambient, emission, and every other setting "
+"on every panel in that tab)"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:87
+msgid "Texture(s) and how they are mixed"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:88
+msgid "Material Nodes"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:89
+msgid "Camera"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:90
+msgid "Viewing angle"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:91
+msgid "Obstructions and transparent occlusions"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:92
+msgid "Shadows from other opaque/transparent objects"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:93
+msgid "Render settings"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:94
+msgid "Object dimensions (SS settings are relevant to dimensions)"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:95
+msgid "Object shape (refractions, Fresnel effects)"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:99
+msgid "Using Materials"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:101
+msgid "Check your Render"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:103
+msgid ""
+"When designing materials (and textures and lighting), frequently check "
+"the rendered appearance of your scene, using your chosen render "
+"engine/shader settings. The appearance might be quite different from that"
+" shown in the texture display in the 3D panel."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:107
+msgid ""
+"As stated above, the material settings usually determine the surface "
+"properties of the object. There are several ways in which materials can "
+"be set up in Blender. Generally speaking, these are not compatible. You "
+"must choose which method you are going to use for each particular object "
+"in your scene:"
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:112
+msgid ""
+"First, you can set the :doc:`Properties "
+"</render/blender_render/materials/properties/introduction>` in the "
+"various Material panels."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:114
+msgid ""
+"Second, you can use :doc:`Nodes "
+"</render/blender_render/materials/nodes/index>`; a graphical nodes editor"
+" is available."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:116
+msgid ""
+"Last, you can directly set the color of object surfaces using various "
+"special effects. Strictly speaking, these are not materials at all, but "
+"they are included here because they affect the appearance of your "
+"objects. These include :ref:`Vertex Painting <painting-vertex-index>`, "
+":doc:`Wire Rendering "
+"</render/blender_render/materials/special_effects/wire>`, :doc:`Volume "
+"Rendering </render/blender_render/materials/special_effects/volume>`, and"
+" :doc:`Halo Rendering "
+"</render/blender_render/materials/special_effects/halo>`."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:123
+msgid ""
+"The exact effect of Material settings can be affected by a number of "
+"system settings. First and foremost is the renderer used: Cycles and the "
+"Blender Renderer (aka Blender Internal or BI) require quite different "
+"illumination levels to achieve similar results, and even then the "
+"appearance of objects can be quite different. Also, the material "
+"properties settings can be affected by the texture method used (single-"
+"texture, multi-texture or GLSL). So it is recommended to always select "
+"the appropriate system settings before starting the design of materials."
+msgstr ""
+
+#: ../../manual/render/cycles/materials/introduction.rst:137
 msgid "Surface Shader"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:17
+#: ../../manual/render/cycles/materials/introduction.rst:139
 msgid ""
-"The surface shader defines the light interaction at the surface of the mesh."
+"The surface shader defines the light interaction at the surface of the "
+"mesh."
 msgstr ""
-"Le *surface shader* définit la légère interaction à  la surface du maillage. "
+"Le *surface shader* définit la légère interaction à  la surface du "
+"maillage. "
 
-#: ../../manual/render/cycles/materials/introduction.rst:21
+#: ../../manual/render/cycles/materials/introduction.rst:143
 msgid ":doc:`Surface Shader </render/cycles/materials/surface>`."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:25
+#: ../../manual/render/cycles/materials/introduction.rst:147
 msgid "Volume Shader"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:27
+#: ../../manual/render/cycles/materials/introduction.rst:149
 msgid ""
-"When the surface shader does not reflect or absorb light, it enters into the "
-"volume. If no volume shader is specified, it will pass straight through to "
-"the other side of the mesh."
+"When the surface shader does not reflect or absorb light, it enters into "
+"the volume. If no volume shader is specified, it will pass straight "
+"through to the other side of the mesh."
 msgstr ""
 "Quand le *surface shader* ne reflète pas ou absorbe la lumière, il entre "
-"dans le volume. Si aucun *surface shader* n'est spécifié, il va traverser "
-"tout droit jusqu'à l'autre côté du maillage."
+"dans le volume. Si aucun *surface shader* n'est spécifié, il va traverser"
+" tout droit jusqu'à l'autre côté du maillage."
 
-#: ../../manual/render/cycles/materials/introduction.rst:30
+#: ../../manual/render/cycles/materials/introduction.rst:152
 msgid ""
 "If it is defined, a volume shader describes the light interaction as it "
-"passes through the volume of the mesh. Light may be scattered, absorbed, or "
-"emitted at any point in the volume."
+"passes through the volume of the mesh. Light may be scattered, absorbed, "
+"or emitted at any point in the volume."
 msgstr ""
-"S'il est défini, un *surface shader* décrit l'interaction de la lumière au "
-"moment de sa traversée du volume du maillage. La lumière peut être "
+"S'il est défini, un *surface shader* décrit l'interaction de la lumière "
+"au moment de sa traversée du volume du maillage. La lumière peut être "
 "dispersée, absorbée, ou émise en n'importe quel point du volume."
 
-#: ../../manual/render/cycles/materials/introduction.rst:34
+#: ../../manual/render/cycles/materials/introduction.rst:156
 msgid ""
 "A material may have both a surface and a volume shader, or only one of "
-"either. Using both may be useful for materials such as glass, water or ice, "
-"where you want some of the light to be absorbed as it passes through the "
-"surface, combined with e.g. a glass or glossy shader at the surface."
+"either. Using both may be useful for materials such as glass, water or "
+"ice, where you want some of the light to be absorbed as it passes through"
+" the surface, combined with e.g. a glass or glossy shader at the surface."
 msgstr ""
 "Un matériau peut avoir à la fois une surface et un *surface shader*, ou "
 "seulement l'un des deux. L'utilisation les deux peut être utile pour des "
-"matériaux tels que le verre, l'eau ou la glace, pour lesquels vous voulez "
-"qu'une partie de la lumière soit absorbée au moment de son passage à travers "
-"la surface, associé à par ex. un shader de type *glass* ou *glossy* sur la "
-"surface."
+"matériaux tels que le verre, l'eau ou la glace, pour lesquels vous voulez"
+" qu'une partie de la lumière soit absorbée au moment de son passage à "
+"travers la surface, associé à par ex. un shader de type *glass* ou "
+"*glossy* sur la surface."
 
-#: ../../manual/render/cycles/materials/introduction.rst:41
+#: ../../manual/render/cycles/materials/introduction.rst:163
 msgid ":doc:`Volume Shader </render/cycles/materials/volume>`."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:45
+#: ../../manual/render/cycles/materials/introduction.rst:167
 msgid "Displacement"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:47
+#: ../../manual/render/cycles/materials/introduction.rst:169
 msgid ""
 "The shape of the surface and the volume inside it may be altered by "
-"displacement shaders. This way, textures can then be used to make the mesh "
-"surface more detailed."
+"displacement shaders. This way, textures can then be used to make the "
+"mesh surface more detailed."
 msgstr ""
-"La forme de la surface et le volume à l'intérieur peuvent être altérés par "
-"des *displacement shaders*. De cette manière les textures peuvent alors être "
-"utilisés pour rendre la surface du maillage plus détaillée."
+"La forme de la surface et le volume à l'intérieur peuvent être altérés "
+"par des *displacement shaders*. De cette manière les textures peuvent "
+"alors être utilisés pour rendre la surface du maillage plus détaillée."
 
-#: ../../manual/render/cycles/materials/introduction.rst:50
+#: ../../manual/render/cycles/materials/introduction.rst:172
 msgid ""
-"Depending on the settings, the displacement may be virtual, only modifying "
-"the surface normals to give the impression of displacement, which is known "
-"as bump mapping, or a combination of real and virtual displacement."
+"Depending on the settings, the displacement may be virtual, only "
+"modifying the surface normals to give the impression of displacement, "
+"which is known as bump mapping, or a combination of real and virtual "
+"displacement."
 msgstr ""
-"Selon les réglages, le *displacement* peut être virtuel, modifiant seulement "
-"les normales de surface pour donner l'impression de déplacement, qui est "
-"connu comme *bump mapping*, ou une combinaison de déplacement réel et "
-"virtuel."
+"Selon les réglages, le *displacement* peut être virtuel, modifiant "
+"seulement les normales de surface pour donner l'impression de "
+"déplacement, qui est connu comme *bump mapping*, ou une combinaison de "
+"déplacement réel et virtuel."
 
-#: ../../manual/render/cycles/materials/introduction.rst:56
+#: ../../manual/render/cycles/materials/introduction.rst:178
 msgid ":doc:`Displacement </render/cycles/materials/displacement>`."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:60
+#: ../../manual/render/cycles/materials/introduction.rst:182
 msgid "Energy Conservation"
 msgstr "Conservation de l'énergie"
 
-#: ../../manual/render/cycles/materials/introduction.rst:62
+#: ../../manual/render/cycles/materials/introduction.rst:184
 msgid ""
 "The material system is built with physically-based rendering in mind, "
 "cleanly separating how a material looks and which rendering algorithm is "
 "used to render it. This makes it easier to achieve realistic results and "
 "balanced lighting, though there are a few things to keep in mind."
 msgstr ""
-"Le système de matériaux est construit avec un rendu basé sur la physique à "
-"l'esprit, en dissociant clairement l'apparence d'un matériau et l'algorithme "
-"utilisé pour le rendu. Ceci rend plus facile à obtenir des résultats "
-"photoréalistes et un éclairage équilibré, bien qu'il y ait plusieurs points "
-"à garder à l'esprit."
+"Le système de matériaux est construit avec un rendu basé sur la physique "
+"à l'esprit, en dissociant clairement l'apparence d'un matériau et "
+"l'algorithme utilisé pour le rendu. Ceci rend plus facile à obtenir des "
+"résultats photoréalistes et un éclairage équilibré, bien qu'il y ait "
+"plusieurs points à garder à l'esprit."
 
-#: ../../manual/render/cycles/materials/introduction.rst:67
+#: ../../manual/render/cycles/materials/introduction.rst:189
 msgid ""
-"In order for materials to work well with global illumination, they should "
-"be, speaking in terms of physics, energy conserving. That means they cannot "
-"reflect more light than comes in. This property is not strictly enforced, "
-"but if colors are in the range 0.0 to 1.0, and :abbr:`BSDF (Bidirectional "
-"scattering distribution function)`\\ s are only mixed together with the Mix "
-"Shader node, this will automatically be true."
+"In order for materials to work well with global illumination, they should"
+" be, speaking in terms of physics, energy conserving. That means they "
+"cannot reflect more light than comes in. This property is not strictly "
+"enforced, but if colors are in the range 0.0 to 1.0, and :abbr:`BSDF "
+"(Bidirectional scattering distribution function)`\\ s are only mixed "
+"together with the Mix Shader node, this will automatically be true."
 msgstr ""
-"Pour que les matériaux fonctionnent bien avec une illumination globale, il "
-"devraient, en termes de physique, conserver l'énergie. Cela signifie qu'ils "
-"ne peuvent pas réfléchir plus de lumière qu'il en arrive. Cette propriété "
-"n'est pas strictement respectée, mais si les couleurs sont dans l'intervalle "
-"0.0 à 1.0, et que les :abbr:`BSDF (Bidirectional scattering distribution "
-"function)` sont seulement mélangées ensemble avec le *node Mix Shader*, ceci "
-"va être automatiquement vrai."
+"Pour que les matériaux fonctionnent bien avec une illumination globale, "
+"il devraient, en termes de physique, conserver l'énergie. Cela signifie "
+"qu'ils ne peuvent pas réfléchir plus de lumière qu'il en arrive. Cette "
+"propriété n'est pas strictement respectée, mais si les couleurs sont dans"
+" l'intervalle 0.0 à 1.0, et que les :abbr:`BSDF (Bidirectional scattering"
+" distribution function)` sont seulement mélangées ensemble avec le *node "
+"Mix Shader*, ceci va être automatiquement vrai."
 
-#: ../../manual/render/cycles/materials/introduction.rst:74
+#: ../../manual/render/cycles/materials/introduction.rst:196
 msgid ""
-"It is however, possible to break this, with color values higher than 1.0 or "
-"using the Add Shader node, but one must be careful when doing this to keep "
-"materials behaving predictably under various lighting conditions. It can "
-"result in a reflection adding light into the system at each bounce, turning "
-"a :abbr:`BSDF (Bidirectional scattering distribution function)` into a kind "
-"of emitter."
+"It is however, possible to break this, with color values higher than 1.0 "
+"or using the Add Shader node, but one must be careful when doing this to "
+"keep materials behaving predictably under various lighting conditions. It"
+" can result in a reflection adding light into the system at each bounce, "
+"turning a :abbr:`BSDF (Bidirectional scattering distribution function)` "
+"into a kind of emitter."
 msgstr ""
-"Il est cependant possible de casser cela, avec des valeurs de couleurs plus "
-"élevées que 1.0 ou en utilisant le *Add Shader node*. Mais nous devons faire "
-"attention en faisant cela à faire en sorte que les matériaux se comportent "
-"de manière prédictible dans des conditions d'éclairage variées. Il peut "
-"résulter dans une réflexion un ajout de lumière dans le système à chaque "
-"rebond, transformant un :abbr:`BSDF (Bidirectional scattering distribution "
-"function)` en une sorte d'émetteur."
+"Il est cependant possible de casser cela, avec des valeurs de couleurs "
+"plus élevées que 1.0 ou en utilisant le *Add Shader node*. Mais nous "
+"devons faire attention en faisant cela à faire en sorte que les matériaux"
+" se comportent de manière prédictible dans des conditions d'éclairage "
+"variées. Il peut résulter dans une réflexion un ajout de lumière dans le "
+"système à chaque rebond, transformant un :abbr:`BSDF (Bidirectional "
+"scattering distribution function)` en une sorte d'émetteur."
+
+#~ msgid ""
+#~ "Materials define the appearance of "
+#~ "meshes, curves and other objects. They"
+#~ " consist of three shaders, defining "
+#~ "the appearance of the surface of "
+#~ "the mesh, the volume inside the "
+#~ "mesh, and displacement of the surface"
+#~ " of the mesh."
+#~ msgstr ""
+#~ "Les matériaux définissent l'apparence des "
+#~ "maillages, des courbes et d'autres "
+#~ "objets. Ils consistent en trois "
+#~ "*shaders*, définnissant l'apparence de la "
+#~ "surface du maillage,le volume à "
+#~ "l'intérieur du maillage, et le "
+#~ "*displacement* de la surface du "
+#~ "maillage."
+
