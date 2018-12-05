@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-23 23:09-0500\n"
-"PO-Revision-Date: 2018-12-05 01:13+0900\n"
+"PO-Revision-Date: 2018-12-05 22:50+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,11 +37,215 @@ msgstr "일단은 사용설명서 제작법을 알아야 해요. 아직 모른�
 
 #: ../../manual/about/contribute/translations/contribute.rst:22
 msgid "Installing"
-msgstr "준비하기"
+msgstr "설치하기"
 
-#: ../../manual/about/contribute/translations/contribute.rst:25
+#: ../../manual/about/contribute/translations/contribute.rst:22
 msgid "Language Files"
 msgstr "언어 파일"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Generate a new set of files for a target language"
+msgstr "새로운 언어의 번역 파일 묶음(a new set of files) 생성하기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "If the language you want to translate has not been started by someone else already and you wish to create a set of new files for the desired language, say 'fr' (French), then you must first use the environment you've created, as guided in :ref:`Getting Started <about-getting-started>`, in particular :doc:`/about/contribute/install/index` and :doc:`/about/contribute/build/index` sections."
+msgstr "만약 기여자님이 번역하고 싶은 언어를 번역하기 시작한 사람이 아직 없어서 그 언어의 번역 파일 묶음이 준비되어 있지 않다면, 직접 만들어야겠죠(한국어는 이미 이렇게 만들어져 있어서 사실 우리는 이 내용을 읽지 않아도 돼요). 예를 들어 'fr' (프랑스어) 언어 파일 묶음을 새로 생성하고 싶다면, 그 전에 일단 기초적인 준비를 하는 게 좋아요. :doc:`/about/contribute/install/index` 랑 :doc:`/about/contribute/build/index` 에서 나열된 준비 과정을 거친 다음에 할 수 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "This will give you a foundation environment for:"
+msgstr "준비가 끝났다면 이런 것들을 할 수 있게 돼요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Creating a new set of translation language from English source"
+msgstr "영어 원본으로부터 새 언어의 번역 파일 묶음 만들기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Perform 'make' command to turn translated texts in 'po' files into html documents for testing locally"
+msgstr "PO 번역 파일을 'make' 명령어를 통해서 HTML파일로 빌드해서 미리 스스로 확인해보기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Update changes in English texts which have been added by other contributors"
+msgstr "영어 원본 글을 다른 사용자들과 협업하면서 직접 수정하기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "You might consider translating UI of the software into the target language first before approaching the manual translation, in which case, refer to the `Process/Translate Blender <https://wiki.blender.org/wiki/Process/Translate_Blender>`__"
+msgstr "만약 블렌더 사용설명서뿐만 아니라 블렌더 프로그램의 화면(UI)도 번역할 생각이 있다면 `Process/Translate Blender <https://wiki.blender.org/wiki/Process/Translate_Blender>`__ 을 읽어보세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "When checkout the repository for UI for an existing language, you can use the following example:"
+msgstr "블렌더 프로그램의 화면(UI)을 번역하기로 마음먹었고, 번역하고 싶은 언어의 저장소를 확인하고 싶다면 이 명령어를 쓰면 돼요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "then editing the ``.po`` file of your language in the ``po`` subdirectory. This will isolate you from other past branches."
+msgstr "그 다음에 ``po`` 라는 하위 폴더에 들어있는 자기 언어의 ``.po`` 파일들을 번역하세요. 그러면 이제 새 브랜치에(branch)에 있게 되죠."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "In case the language doesn't already exists, copy the file ``blender.pot`` to a file of your language, such as:"
+msgstr "만약 언어가 미리 준비되어 있지 않다면, ``blender.pot`` 파일을 자기 언어 폴더로 옮기세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Read the following section for the use of file ``change_placeholders.sh`` to replace placeholders with your personal details."
+msgstr "``change_placeholders.sh`` 을 사용해서 기여자님에 대한 정보를 대체(replace)하는 방법은 아래에 더 자세하게 나와 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Commit the changes you've made above:"
+msgstr "내가 작업한 파일들을 업로드하려면 이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Remove the current structure"
+msgstr "현재 structure를 삭제하려면 이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Checkout only the ``po`` directory to simplify the part you really are interested in, by:"
+msgstr "번역 파일만 작업할 거라면, ``po`` 폴더만 checkout할 수도 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "and starting to use any text editor of your choice, which support PO file format, such as kate/kwrite on Linux, or using something allows you to create the language highlight, such as `Notepad++ <https://notepad-plus-plus.org/>`_ on Windows."
+msgstr "그리고 나서 PO 파일 편집기를 사용하면 돼요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Creating a new set of translation files for a target language"
+msgstr "번역 파일 묶음을 생성할 준비하기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "In this section, we will be examining the process to create a new set of files for a target language. Below examples shows the process to create a new set of files for French, language code ``fr``, on Linux platform. Other platforms might vary slightly but should mainly the same."
+msgstr "이 챕터에서는 아직 없는 새로운 언어의 번역 파일 묶음을 생성하는 방법을 알아볼 거예요. 여기서도 언어 코드 ``fr`` 프랑스어가 예시에요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Goto ``https://developer.blender.org`` to create an account for yourself and become a developer/translator for the Blender organization."
+msgstr "``https://developer.blender.org`` 사이트에서 회원가입하세요. 여기에 회원가입 한다는 건 오픈소스 블렌더 프로젝트 개발자로 이름을 올린다는 뜻이에요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Login the account and create a task with ``todo`` type, addressing **Aaron Carlisle (Blendify)** in the **Subscribers** field, requesting for a committer right in order to transfer changes to the central repository of the translation team."
+msgstr "로그인하고 ``todo`` 분류의 게시글을 써 주세요. **Subscribers** 입력상자에 **Aaron Carlisle (Blendify)** 를 써 넣고, 번역에 기여하고 싶다고 말하면서 번역 팀의 저장소를 사용할 권한을 달라고 하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Open an instance of the terminal application, such as 'gnome-terminal' emulator."
+msgstr "터미널(terminal) 프로그램을 실행하세요. 우리는 'gnome-terminal'이라는 프로그램을 추천해요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Change the current working directory to the directory of ``blender_docs``, where the instance of ``Makefile`` resides."
+msgstr "터미널에서 폴더 ``blender_docs`` 를 찾아가세요. 그 폴더에 들어있는 ``Makefile`` 파일을 사용해야 하니까요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Perform the following commands at the prompt:"
+msgstr "그리고 나서 아래에 나열된 명령어를 따라하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Trying the make process to create html files in English"
+msgstr "영어 원본 파일로 영어 HTML 파일 빌드(build)해보기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "To ensure the previous instance of ``build`` directory is removed, if any exists"
+msgstr "먼저 빌드(build)됐던 HTML 파일들을 지우고 시작하려면 이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "To convert all the ``rst`` files into ``pot`` translation files."
+msgstr "모든 RST 원본 파일들로부터 각자의 POT 번역 파일을 만들고 싶다면 이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "To create ``html`` files."
+msgstr "HTML 파일을 만들려면 이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "After this, you can actually view the create html files locally following the prompted instruction, such as:"
+msgstr "그러고 나면 HTML 파일들이 준비되어 있어요. 이 명령어를 실행하거나 blender_docs/build/html/index.html 파일을 열어보면 빌드(build)된 미리보기 사용설명서를 볼 수 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Creating the language entry in html menu"
+msgstr "새 언어를 사용설명서에 수록하기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Create an entry for the language in the html menu by opening file ``./resources/theme/js/version_switch.js`` (assuming you are at the ``blender_docs`` subdirectory)."
+msgstr "``blender_docs/resources/theme/js/version_switch.js`` 파일을 아무 텍스트 편집기로 열어보세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Find the table for the languages in ``var all_langs = {..};``."
+msgstr "``var all_langs = {..};`` 이라는 문자열을 검색해서 찾아가세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Enter the entry: ``\"fr\": \"Fran&ccedil;ais\",``, (``\"fr\": \"François\"``). Notice in this table the Unicode character instances in either hex codes ``&#x..;`` (with ``x`` after the prefix ``&#`` ) or decimal ``&#..;`` (with no ``x`` after the prefix ``&#`` ). Take note also the ASCII sort order of entries and place yours in the correct index place. You can come to `Unicode Character Search <https://www.fileformat.info/info/unicode/char/search.htm>`__ to enter the characters and find the appropriate html hex/decimal codes."
+msgstr "``\"fr\": \"Fran&ccedil;ais\"`` (HTML 사용설명서에서는 ``\"fr\": \"François\"`` 라고 보일 거예요)라는 새로운 언어 코드와 이름을 입력하세요. 이름은 유니코드상의 ``&#x..;`` (x가 있음)으로 시작하는 hex(16진법)코드나 ``&#..;`` (x가 없음)으로 시작하는 decimal(10진법) 코드로 입력해야 해요. ASCII 코드와 유니코드 순서대로 그 언어가 들어갈 곳을 잘 찾아서 넣어주세요. `Unicode Character Search <https://www.fileformat.info/info/unicode/char/search.htm>`__ 에서 언어 이름을 유니코드로 바꿀 수 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "To find out about changes in the local repository"
+msgstr "내 컴퓨터 동기화 저장소의 변경사항을 확인하려면 이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Perform"
+msgstr "이 명령어를 실행하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "enter your password."
+msgstr "블렌더 개발자 사이트의 아이디랑 비밀번호를 입력해야 돼요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "to bring your local repository up to the most recent version of changes, including the one you have just done."
+msgstr "이 명령어를 쓰면 서버에 있는 최신 파일들을 받을 수 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Setting the local configuration file"
+msgstr "내 컴퓨터에 configuration 파일 만들어 두기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Open a text editor to enter the following texts, change the language code to whatever the language you will be translating:"
+msgstr "텍스트 편집기로 이 텍스트를 입력해서 언어 코드를 자기가 번역하려는 걸로 바꾸세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Save this file as ``conf.py`` in the ``blender_docs`` directory, where ``Makefile`` resides."
+msgstr "그리고 나서 ``blender_docs`` 폴더에 ``conf.py`` 라는 이름의 파일로 저장하세요. 이 폴더에는 중요한 ``Makefile`` 이 같이 들어 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Tells ``svn`` to ignore this file when performing operations by executing this shell command:"
+msgstr "이 명령어로 ``svn`` 이 새로 만든 ``conf.py`` 를 무시하도록 설정해주세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Generating the set of files for the target language"
+msgstr "번역 파일 묶음 생성하기"
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Check out the current translation repository using the command:"
+msgstr "이 명령어로 번역파일들의 저장소를 checkout하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "this will download all language sets available in the repository into the ``locale`` directory of your HDD. You can go to the ``locale`` directory to see the hidden subdirectory ``.svn`` within it, together with directories of languages. You'll need to add your own set of files for the language you're trying to translating to."
+msgstr "그러면 서버 저장소에 있는 모든 언어들의 번역 파일이 자기 컴퓨터의 ``locale`` 폴더로 다운로드될 거예요. 그 ``locale`` 폴더 안에는 언어 폴더들 말고도 숨김 폴더 ``.svn`` 이 같이 들어있어요. 새 언어를 번역하기 위해서는 바로 여기에 번역 파일 묶음을 만들어 두어야 해요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "from the ``blender_docs`` directory to generate a set of files for ``fr`` language. These files are still in English only, with all ``msgstr`` entries blank."
+msgstr "``blender_docs`` 폴더(directory)에서 실행해야 돼요. 이걸 하면 ``fr`` 언어의 번역 파일 묶음이 만들어져요. 그 파일들은 아직 영어로 되어 있고, 각 파일 속의 ``msgstr`` (번역문을 쓰는 곳)칸은 다 비어 있는 상태죠."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "to submit new set of files to the central repository."
+msgstr "그러면 번역을 마친 글을 서버 저장소로 업로드할 수 있어요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "You don't need all other languages being there, so remove the locale directory for the time being."
+msgstr "사실 다른 언어의 번역 파일들은 필요없잖아요? 그러니까 locale 폴더는 지워도 돼요. 이 명령어를 쓰세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "We will download this new set of language as guided in the next section."
+msgstr "여기까지 나열된 방법을 따라서 만든 새 언어의 번역 파일 세트는 다음 챕터에서 따로 다운받을 거예요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "It is recommended you make two environment variables for these directories, in the ``.bashrc``"
+msgstr "``.bashrc`` 에서 2개의 환경 변수(environment variable)를 만들기를 권장해요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "to make it more convenient for changing or scripting batch/shell commands for the process of translation and reviewing results."
+msgstr "이걸 하고 나면, 번역하고 결과를 보기 위해서 명령어를 쓰는 과정이 좀 더 간편해져요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "Newly generated files will contain some placeholders for authors and revision dates etc. If you find the job of replacing them repetitive, make use of the script ``change_placeholders.sh`` in the subdirectory ``~/blender_docs/toos_maintenance``, make a copy of that to your local ``bin`` directory and replace all values that were mentioned in the file with your specific details, then after each change to a file, you would do following commands"
+msgstr "새로 번역된 파일들은 기여자님(author), 개정본 날짜(revision date)를 담고 있는 placeholder들을 가지고 있어요. 하나하나 교체하는 게 번거롭다면 ``blender_docs/toos_maintenance`` 폴더에 있는 ``change_placeholders.sh`` 스크립트를 사용하고, 그 복제본을 컴퓨터의 bin 폴더에 만들어서 파일 속의 바꾸고 싶은 정보를 교체하세요. 그리고 나서 나중에 파일을 변경할 때마다, 이 명령어를 사용하세요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:22
+msgid "to update the file with the your personal details, revision date and time, plus generating the html files for your language, which you can view using your Internet browser."
+msgstr "그렇게 하면 파일 속 기여자님에 대한 정보, 개정본(revision) 버전, 날짜가 변경될 거예요. 이 명령어는 번역 파일을 읽고서 HTML 미리보기 파일도 빌드(build)해줘요."
+
+#: ../../manual/about/contribute/translations/contribute.rst:25
+msgid "Check out translation files for an exising language"
+msgstr "번역 파일을 받아서 확인해보기"
 
 #: ../../manual/about/contribute/translations/contribute.rst:27
 msgid "From the directory containing your checkout of the manual run::"
@@ -72,7 +276,7 @@ msgid "To make edit the PO files you will need to install a PO editor. We recomm
 msgstr "번역을 담당하는 PO 파일들을 수정하려면, PO 편집기를 사용해야 해요. PO 편집기는 여러 가지가 나와는데, 그 중에서 `Poedit <https://poedit.net/>`__ 이 우리가 추천하는 프로그램이에요."
 
 #: ../../manual/about/contribute/translations/contribute.rst:58
-msgid "For Linux users you will have to check with your distribution's software center for a version of Poedit. This editor is only a recommendation. Experience shows the side effects of altering original text could potentially creating havocs for your PO files, especially when updates are required. This is extremely important as the Blender's documentation is in the process of updating for the next release. It is recommended to use Kate or KWrite instead. Other platforms can use some text editor supporting the syntax highlighting for PO files, or allowing you to create a custom one (such as Notepad++ on Windows)."
+msgid "For Linux users, you will have to check with your distribution's software center for a version of Poedit. This editor is only a recommendation. There are others, such as Kate and Kwrite, that could offer syntax highlighting and basic tools for text editing, i.e. letter case transposes. Other platforms can use some text editors supporting the syntax highlighting for PO files, or allowing you to create a custom one (such as Notepad++ on Windows)."
 msgstr "Linux 사용자는 배포판의 소프트웨어 센터에서 Poedit 버전을 확인해야 해요. 이 편집기는 단지 권장사항일 뿐이죠. 경험에 따르면 원본 텍스트를 변경하면 부작용이 발생하여 PO 파일의 havocs가 잠재적으로 생성될 수 있으며 특히 업데이트할 때 그 현상이 두드러졌어요. 이건 블렌더의 문서가 다음 배포를 위해 업데이트되는 과정에 있기 때문에 꼭 알아두어야 해요. 그러니까 리눅스에서는 대신 Kate 또는 KWrite를 사용하는 것이 좋아요. 다른 플랫폼에서는 PO 파일에 대한 구문 강조를 지원하는 텍스트 편집기를 아무거나 사용해도 괜찮아요."
 
 #: ../../manual/about/contribute/translations/contribute.rst:69
