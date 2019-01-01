@@ -4,67 +4,77 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-23 23:09-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-01-01 18:55+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.2\n"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:4
 msgid "Reflection Planes"
-msgstr ""
+msgstr "反射平面"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:6
 msgid ""
 "These special types of Probe object is suited to smooth planar surfaces. "
 "They basically capture the whole scene with a flipped camera."
 msgstr ""
+"这一类型的探头物体适用于平整的平面。基本来说它们就是用翻转的相机捕捉整个"
+"场景。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:9
 msgid ""
 "Using reflection planes is really heavy on the render time because the "
-"scene needs to be rendered as many times as there is Reflection Planes in"
-" the view."
+"scene needs to be rendered as many times as there is Reflection Planes "
+"in the view."
 msgstr ""
+"使用平面反射传给渲染带来负担，因为视图中有多少反射平面，就要渲染多少次场"
+"景。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:12
 msgid ""
-"Unless Screen Space Reflection is enabled, Reflection Planes only work on"
-" specular surfaces that have there roughness around 0."
-msgstr ""
+"Unless Screen Space Reflection is enabled, Reflection Planes only work "
+"on specular surfaces that have there roughness around 0."
+msgstr "除非启用屏幕空间反射，反射平面仅作用于粗糙度接近0的高光表面。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:15
 msgid ""
 "If Screen Space Reflection is enabled, Reflection Planes will serves as "
 "support buffers. This accelerate the tracing process and complete the "
 "missing data from the view space. This also make reflection more correct "
-"for the affected surface that have medium roughness and disturbed normals"
-" (i.e. normal maps)."
+"for the affected surface that have medium roughness and disturbed "
+"normals (i.e. normal maps)."
 msgstr ""
+"如果启用屏幕空间反射，反射平面将充当缓冲。这将加速追踪过程，并从视图空间"
+"补全丢失数据。这也使得中等粗糙度与法线受干扰(比如法线贴图)的表面的反射更"
+"加准确。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:22
 msgid ""
 "Subsurface Scattering, Screen Space Reflections and Volumetrics are not "
 "supported inside Reflection Plane's reflection."
-msgstr ""
+msgstr "平面反射内部不支持次表面散射、屏幕空间反射和体积度量。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:27
 msgid "Placement"
-msgstr ""
+msgstr "放置"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:29
 msgid ""
 "If Backface Culling is not enabled, snapping the Reflection Plane to the "
 "planar surface will effectively capture the underneath of the surface."
 msgstr ""
+"如果禁用背面剔除，将反射平面吸附到平面表面，可以有效地捕捉平面下方。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:32
 msgid ""
@@ -73,23 +83,25 @@ msgid ""
 "inside a collection and use this collection as Visibility Collection "
 "(inverted) inside the Reflection Plane's probe settings."
 msgstr ""
+"手动将反射平面移至表面上方，使表面不位于捕捉内部。另外，还可以将地板物体"
+"放到一个集合里，使用该集合作为反射平面设置中的可见性集合(反转)。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:36
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:73
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst
 msgid "Panel"
-msgstr ""
+msgstr "面板"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:39
 msgid ":menuselection:`Object Data --> Probe`"
-msgstr ""
+msgstr ":menuselection:`物体数据 --> 探头`"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:47
 msgid "Distance"
-msgstr ""
+msgstr "距离"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:42
 msgid ""
@@ -97,6 +109,8 @@ msgid ""
 "influence zone is defined by the Distance parameter and object scaling. "
 "It is a bit different, depending on the probe type."
 msgstr ""
+"探头物体仅影响其邻近表面的光照，其作用区域由距离参数与物体定义。各探头类"
+"型间有细微差别。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:46
 msgid ""
@@ -104,10 +118,12 @@ msgid ""
 "plane. Only surfaces whose normals are aligned with the Reflection Plane "
 "will receive the captured reflection."
 msgstr ""
+"对于反射平面而言，影响距离就是其与平面的距离。只有与反射平面法向一致的表"
+"面才能接收到捕捉的反射。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:51
 msgid "Falloff"
-msgstr ""
+msgstr "衰减"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:50
 msgid ""
@@ -115,65 +131,72 @@ msgid ""
 "probe fades linearly. Also defines how much shading normals needs to be "
 "aligned with the plane to receive reflections."
 msgstr ""
+"影响距离的百分比，探头的影响沿其线性衰减。同时也定义了着色法向须与接收反"
+"射的平面的一致程度。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:54
 msgid "Clipping Offset"
-msgstr ""
+msgstr "裁减偏移"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:54
 msgid ""
 "Define how much below the plane the near clip is when capturing the "
 "scene. Increasing this can fix reflection contact problems."
 msgstr ""
+"定义当捕捉屏幕时平面须与裁切的靠近程度。调高该值可以解决反射接触问题。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:68
 msgid "Visibility Collection"
-msgstr ""
+msgstr "可见性集合"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:57
 msgid ""
 "Sometimes, it is useful to limit which objects appear in the light "
-"probe's captured lighting. For instance, an object that is too close to a"
-" capture point might be better excluded. This is what the visibility "
-"collection does. Only objects that are in this collection will be visible"
-" when this probes will capture the scene."
+"probe's captured lighting. For instance, an object that is too close to "
+"a capture point might be better excluded. This is what the visibility "
+"collection does. Only objects that are in this collection will be "
+"visible when this probes will capture the scene."
 msgstr ""
+"有时，限制探头捕捉光照时出现物体很有用。比如，当一个物体距离捕捉点过近"
+"时，最好将其剔除。这就是可见性集合的用处。只有在该集合内的物体才会在探头"
+"捕捉场景时可见。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:62
 msgid ""
 "There is also an option to invert this behavior and effectively hide the "
 "objects inside this collection."
-msgstr ""
+msgstr "另有一个选项可以反转该行为, 并有效地隐藏此集合中的物体。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:66
 msgid ""
 "This is only a filtering option. This means that if an object is not "
 "visible at render time it won't be visible in during the probe render."
 msgstr ""
+"这仅仅是一个过滤选项。如果一个物体在渲染时不可见，它在探头渲染器中也是不"
+"可见的。"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:71
 msgid "Viewport Display"
-msgstr ""
+msgstr "视图显示"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:76
 msgid ":menuselection:`Object Data --> Viewport Display`"
-msgstr ""
+msgstr ":menuselection:`物体数据 --> 视图显示`"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:79
 msgid "Arrow Size"
-msgstr ""
+msgstr "箭头大小"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:79
 msgid "Size of the arrow showing the reflection plane normal."
-msgstr ""
+msgstr "指示反射平面法向的箭头大小"
 
 #: ../../<generated>:1
 msgid "Show Data"
-msgstr ""
+msgstr "显示数据"
 
 #: ../../manual/render/eevee/lightprobes/reflection_planes.rst:82
 msgid ""
-"Show the captured reflected image onto a fully reflective plane in the 3D"
-" View."
-msgstr ""
-
+"Show the captured reflected image onto a fully reflective plane in the "
+"3D View."
+msgstr "在3D视图中，全反射平面显示捕捉到的反射图像。"

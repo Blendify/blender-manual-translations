@@ -4,63 +4,70 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-23 23:09-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-01-01 15:10+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
 
 #: ../../manual/render/eevee/materials/introduction.rst:4
 msgid "Introduction"
-msgstr ""
+msgstr "简介"
 
 #: ../../manual/render/eevee/materials/introduction.rst:6
 msgid ""
-"Eevee's materials system uses the same node based approach as "
-":doc:`Cycles </render/cycles/materials/index>`."
+"Eevee's materials system uses the same node based approach as :doc:"
+"`Cycles </render/cycles/materials/index>`."
 msgstr ""
+"Eevee的材质系统使用基于相同节点的方法，例如 :doc:`Cycles </render/"
+"cycles/materials/index>`."
 
 #: ../../manual/render/eevee/materials/introduction.rst:10
 msgid "Nodes Support"
-msgstr ""
+msgstr "节点支持"
 
 #: ../../manual/render/eevee/materials/introduction.rst:12
 msgid ""
 "Due to realtime constraints, not all Cycles features are available in "
 "Eevee. See :doc:`/render/eevee/materials/nodes_support`."
 msgstr ""
+"由于实时的限制，并非所有Cycles功能都支持。详情 :doc:`/render/eevee/"
+"materials/nodes_support`."
 
 #: ../../manual/render/eevee/materials/introduction.rst:17
 msgid "Performance"
-msgstr ""
+msgstr "性能"
 
 #: ../../manual/render/eevee/materials/introduction.rst:19
 msgid ""
 "Performance is highly dependent on the number of BSDF nodes present in "
 "the node tree."
-msgstr ""
+msgstr "性能高度依赖于节点树（网络）中存在的BSDF节点的数量。"
 
 #: ../../manual/render/eevee/materials/introduction.rst:23
 msgid ""
 "Prefer using the Principled BSDF instead of multiple BSDF nodes because "
 "Eevee is optimized for it."
 msgstr ""
+"首选使用Principled BSDF而不是多个BSDF节点，因为Eevee已针对它进行了优化。"
 
 #: ../../manual/render/eevee/materials/introduction.rst:27
 msgid "Limitations"
-msgstr ""
+msgstr "限制"
 
 #: ../../manual/render/eevee/materials/introduction.rst:34
 msgid "Refraction"
-msgstr ""
+msgstr "折射"
 
 #: ../../manual/render/eevee/materials/introduction.rst:30
 msgid ""
@@ -71,10 +78,13 @@ msgid ""
 "for relatively thin objects using Refraction Depth. Using Screen Space "
 "refraction will refract what is visible in."
 msgstr ""
+"折射是通过采样相同的反射探针所使用的光泽BSDF，但使用折射的视图方向，而不"
+"是反射的视图方向。只有第一个折射事件被模型化正确。利用折射深度，可以近似"
+"对相对较薄的物体使用第二个折射事件。使用屏幕空间折射将折射可见的内容。"
 
 #: ../../manual/render/eevee/materials/introduction.rst:44
 msgid "Bump"
-msgstr ""
+msgstr "凹凸"
 
 #: ../../manual/render/eevee/materials/introduction.rst:37
 msgid ""
@@ -82,16 +92,20 @@ msgid ""
 "the same for each block of 2x2 pixels. This means the bump output value "
 "will appear pixelated. It is recommended to use Normal mapping instead."
 msgstr ""
+"到目前为止，凹凸贴图支持使用OpenGL，对于每个2x2像素的块，它们是相同的。 "
+"这意味着凹凸输出值将出现像素化。 建议使用法线贴图。"
 
 #: ../../manual/render/eevee/materials/introduction.rst:43
 msgid ""
 "If you absolutely need to render using Bump nodes, render at twice the "
 "target resolution and downscale the final output."
 msgstr ""
+"如果你非要使用Bump节点进行渲染，请以目标两倍的分辨率渲染输出，然后再缩"
+"小。"
 
 #: ../../<generated>:1
 msgid "Volumes Objects"
-msgstr ""
+msgstr "体积物体"
 
 #: ../../manual/render/eevee/materials/introduction.rst:47
 msgid ""
@@ -99,4 +113,5 @@ msgid ""
 "The shape of the volume must be adjusted using procedural texturing "
 "inside the shader."
 msgstr ""
-
+"物体体积材质将影响物体的整个边界框。 体积的形状必须使用材质内部的程序纹"
+"理来调整。"
