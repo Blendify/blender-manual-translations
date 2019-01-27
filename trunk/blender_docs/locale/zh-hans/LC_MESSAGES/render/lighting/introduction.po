@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 22:59+1100\n"
-"PO-Revision-Date: 2017-12-06 12:39+0800\n"
+"PO-Revision-Date: 2019-01-27 19:47+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:4
 msgid "Introduction"
@@ -26,34 +26,38 @@ msgid ""
 "yield poor results without a proper lighting scheme, while a simple model can "
 "become very realistic if skillfully lit."
 msgstr ""
+"灯光在渲染中是一个非常重要的主题, 和建模，材质，纹理一样重要. 最准确的模型和纹"
+"理场景没有一个适当的灯光方案都将会产生糟糕的结果,相反一个简单的模型设置合适的灯"
+"光将会产生很逼真的效果。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:13
 msgid "Viewing Restrictions"
-msgstr ""
+msgstr "查看限制"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:15
 msgid "The color of an object and the lighting of your scene is affected by:"
-msgstr ""
+msgstr "物体的颜色和场景的灯光受以下的影响:"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:17
 msgid "Your ability to see different colors (partial color blindness is common)."
-msgstr ""
+msgstr "你能够看到不同的颜色(部分色盲的人是很常见的)。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:18
 msgid ""
 "The medium in which you are viewing the image (e.g. an LCD panel versus "
 "printed glossy paper)."
-msgstr ""
+msgstr "你正在查看图像的媒介 (例如LCD显示器面板与打印纸)。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:19
 msgid "The quality of the image (e.g. a ``jpeg`` at 0.4 compression versus 1.0)."
-msgstr ""
+msgstr "图像的品质(例如一个JPEG 0.4压缩比到 1.0压缩比)."
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:20
 msgid ""
 "The environment in which you are viewing the image (e.g. a CRT monitor with "
 "glare versus in a dark room, or in a sunshiny blue room)."
 msgstr ""
+"查看图像的环境(例如一个 CRT 显示器在一个暗的房间或一个阳光充足的房间的显示)."
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:22
 msgid ""
@@ -62,44 +66,57 @@ msgid ""
 "manipulation techniques using Blender :doc:`Composite Nodes </compositing/"
 "introduction>`."
 msgstr ""
+"你的大脑的感知颜色和强度相对于周围的物体和世界背景颜色，可以使用Blender 的合成"
+"节点（ :doc:`Composite Nodes </compositing/introduction>`）的色彩处理技术来改"
+"变。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:29
 msgid "Global Influences"
-msgstr ""
+msgstr "全局影响"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:31
 msgid "In Blender, the elements under your control which affect lighting are:"
-msgstr ""
+msgstr "在 Blender, 以下的控制要素会影响光照效果:"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:33
 msgid ""
 "The color of the world :doc:`ambient light </render/blender_render/world/"
 "ambient_light>`."
 msgstr ""
+"世界环境光（ :doc:`ambient light </render/blender_render/world/"
+"ambient_light>`）的颜色。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:34
 msgid ""
 "The use of :doc:`Ambient Occlusion </render/blender_render/world/"
 "ambient_occlusion>` as a way to cast that ambient light onto the object."
 msgstr ""
+"使用AO（ :doc:`Ambient Occlusion </render/blender_render/world/"
+"ambient_occlusion>`  ）作为一种计算环境光投射到物体上的一种方法。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:36
 msgid ""
 "The degree to which the ambient light colors the :doc:`material </render/"
 "blender_render/materials/index>` of the object."
 msgstr ""
+"物体上的材质（ :doc:`material </render/blender_render/materials/index>` ）环境"
+"光颜色的程度。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:38
 msgid ""
 "The use of :doc:`Indirect lighting </render/blender_render/world/"
 "indirect_lighting>`, where the color of one object radiates onto another."
 msgstr ""
+"采用间接照明( :doc:`Indirect lighting </render/blender_render/world/"
+"indirect_lighting>` )，其中一个物体的颜色辐射到另一个物体上。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:40
 msgid ""
 "The :doc:`lamps </render/blender_render/lighting/lamps/introduction>` in your "
 "scene."
 msgstr ""
+"你场景中的灯光 （ :doc:`lamps </render/blender_render/lighting/lamps/"
+"introduction>` ）"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:42
 msgid ""
@@ -114,10 +131,17 @@ msgid ""
 "since it does not try to simulate the real behavior of light, assuming many "
 "simplifying hypotheses."
 msgstr ""
+"光在现实世界的反弹物理特性是由AO（Ambient Occlusion）模拟的（世界设置）, 缓冲阴"
+"影buffer shadows (这是物体投射的近似阴影), 光线追踪（ray tracing ） (追踪来自光"
+"源的光子路径). 此外，在Blender可以使用间接照明( :doc:`Indirect lighting </"
+"render/blender_render/world/indirect_lighting>` )。光线追踪，AO，间接照明是计算"
+"机密集型的过程。Blender使用其内部的扫描线渲染器可以执行得更快，这是确实一个很好"
+"的扫描线渲染器。这种渲染引擎的速度要快得多，因为它并不试图模拟光的真实行为，假"
+"设许多简化的假设。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:54
 msgid "Lighting Settings"
-msgstr ""
+msgstr "灯光设置"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:56
 msgid ""
@@ -125,28 +149,31 @@ msgid ""
 "adding light from lamps in your scene. The main things under your control are "
 "the:"
 msgstr ""
+"只有在考虑了上述全局影响之后，才开始在场景中添加灯光。下面是你掌控的主要内容："
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:60
 msgid "Type of light used (*Sun*, *Spot*, *Lamp*, *Hemi*, etc.)."
-msgstr ""
+msgstr "灯光的类型（*阳光*，*点光*，*半球光*  等）。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:61
 msgid "Color of the light."
-msgstr ""
+msgstr "灯光的颜色。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:62
 msgid "Position of the light and its direction."
-msgstr ""
+msgstr "灯光的位置和方向。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:63
 msgid "Settings for the light, including energy and falloff."
-msgstr ""
+msgstr "灯光的设置，包括亮度（energy） 和衰减（falloff）。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:65
 msgid ""
 "Then you are back to how that material's :doc:`shader </render/blender_render/"
 "materials/properties/diffuse_shaders>` reacts to the light."
 msgstr ""
+"然后你将返回到材质 :doc:`着色器 </render/blender_render/materials/properties/"
+"diffuse_shaders>` 看其是怎么影响灯光。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:68
 msgid ""
@@ -156,10 +183,13 @@ msgid ""
 "strong and weak points. We will also describe many lighting rigs, including "
 "the ever-popular three-point light method."
 msgstr ""
+"这一章试图解决以上所述问题，包括灯光设备如何协同工作一起照亮场景的。在这章我们"
+"将分析Blender中的不同灯光类型和它们和它们的行为；我们将讨论他们的长处和短处。我"
+"们也讨论灯光设备。包括最流行的3点打光法。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:76
 msgid "Lighting in the Workflow"
-msgstr ""
+msgstr "照明工作流"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:78
 msgid ""
@@ -170,14 +200,18 @@ msgid ""
 "bad lighting that is causing you grief. All of the example images in this "
 "section do not use any material setting at all on the ball, cube or background."
 msgstr ""
+"在本用户手册中，我们将照明置于材质之前; 你应该在指定给你网格材质前设置灯光。因"
+"为材质着色器对光有反应，没有适当的灯光 ，材质着色器将看起来是不正确的，坏的照明"
+"引起你的不快，你将最终会一直忙在着色器。在这部分的例子球，立方体或者背景将不使"
+"用任何的材质。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:88
 msgid "Overriding Materials to Reset Lighting"
-msgstr ""
+msgstr "覆盖材质以重置照明"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:92
 msgid "Material field in the Render Layers panel."
-msgstr ""
+msgstr "渲染层面板中的材质字段。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:94
 msgid ""
@@ -186,6 +220,9 @@ msgid ""
 "-- no *Vertex Color*, no *Face Texture*, no *Shadeless*, just plain old middle "
 "gray with RGB(0.8, 0.8, 0.8). Name this \"Gray\"."
 msgstr ""
+"如果你已经开始指定材质，正在处理灯光照明，我们建议你创建一个默认的，通用的灰色"
+"的物质——没有 *顶点的颜色*，没有 *面纹理* 没有 *阴影*，只是普通的中灰色RGB值为"
+"（0.8,0.8，0.8）。命名叫 “Gray”。"
 
 #: ../../manual/render/blender_render/lighting/introduction.rst:100
 msgid ""
@@ -195,3 +232,6 @@ msgid ""
 "now go about adjusting the lighting. Just empty this field to get back to your "
 "original materials."
 msgstr ""
+"接下来到 *Render Layer* 选项卡. 在 *Layer* 面板, 在 *Material* 区域选择你新建"
+"的 “Gray” 材质。这将覆盖你以前创建的任何材质，并用这个材质颜色渲染。使用这个材"
+"质你现在可以校正灯光。你只需清空这个材质就可以返回到原始材质。"
