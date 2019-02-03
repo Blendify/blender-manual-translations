@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
-"PO-Revision-Date: 2018-04-30 23:40+0800\n"
+"POT-Creation-Date: 2019-02-03 12:59+0800\n"
+"PO-Revision-Date: 2019-02-03 19:35+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -12,79 +12,258 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
-"X-Generator: Poedit 2.0.7\n"
+"Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../../manual/troubleshooting/gpu.rst:4
 msgid "Graphics Hardware"
 msgstr "图形硬件的故障排除"
 
 #: ../../manual/troubleshooting/gpu.rst:6
-msgid "Blender makes use of OpenGL, which is typically hardware accelerated."
-msgstr "Blender 使用的是 OpenGL，这是非常典型的一种硬件加速技术。"
-
-#: ../../manual/troubleshooting/gpu.rst:8
 msgid ""
-"This means issues with the graphics card hardware and drivers can impact on "
-"Blender's behavior. This page lists some known issues using Blender on "
-"different graphics hardware and how to troubleshoot them."
+"Blender uses of OpenGL for the 3D viewport and user interface. The graphics card "
+"(GPU) and driver have a big impact on Blender's behavior and performance."
 msgstr ""
-"这意味着图形卡硬件或者驱动会影响到Blender的行为。本页列举了Blender在使用不同图形"
-"硬件的时候引起的许多问题，并且告知如何排除这些故障。"
+"Blender使用OpenGL渲染3D视图与用户界面。显卡(GPU) 及其驱动对Blender的功能和性能影响"
+"很大。"
 
-#: ../../manual/troubleshooting/gpu.rst:13
-msgid "Performance"
-msgstr "性能"
-
-#: ../../manual/troubleshooting/gpu.rst:15
+#: ../../manual/troubleshooting/gpu.rst:9
 msgid ""
-"When the entire interface is very slow and unresponsive (*even* with the "
-"default startup scene), this is likely a problem with the OpenGL configuration."
+"This pages lists possible solutions for graphics glitches, problems with Eevee and "
+"Cycles, and crashes related to your GPU."
 msgstr ""
-"当整个界面非常缓慢且没有响应 ( *即使是默认的启动场景* )，这可能是 OpenGL 配置有"
-"问题。"
 
-#: ../../manual/troubleshooting/gpu.rst:18
+#: ../../manual/troubleshooting/gpu.rst:14
+msgid "Drivers"
+msgstr "驱动"
+
+#: ../../manual/troubleshooting/gpu.rst:16
 msgid ""
-"Unfortunately, in this situation, you may have to do some of your own tests to "
-"find the cause. Below are some common causes and possible solutions."
+"Upgrading to the latest graphics drivers often solves problems. Newer drivers have "
+"bug fixes that help Blender function correctly."
 msgstr ""
-"不幸的是在这种情况，你可能要做一些你自己的测试来找出原因，这里是一些常见的原因和"
-"可能的解决办法。"
 
-#: ../../manual/troubleshooting/gpu.rst:22
-msgid "Upgrade your OpenGL Driver"
-msgstr "升级你的 OpenGL 驱动程序"
+#: ../../manual/troubleshooting/gpu.rst:21
+msgid "Windows"
+msgstr "Windows"
 
-#: ../../manual/troubleshooting/gpu.rst:22
+#: ../../manual/troubleshooting/gpu.rst:23
 msgid ""
-"If you are experiencing any strange graphics problems with Blender, it is "
-"always good to double check if you are using the latest drivers."
+"On Windows drivers are provided by the graphics card manufacturer (Intel, AMD and "
+"NVIDIA). Windows update automatically installs graphics drivers, or your computer "
+"manufacturer may provide its own version of the graphics drivers. However these "
+"are not always the latest version or may have been corrupted in some way."
 msgstr ""
-"如果你在使用Blender时遇到任何奇怪的图形问题，请仔细检查你是否使用最新的驱动程"
-"序。"
 
-#: ../../manual/troubleshooting/gpu.rst:24
-msgid "Disable Anti-Aliasing :term:`FSAA, Multisampling <FSAA>`"
-msgstr "禁用抗锯齿 :term:`FSAA, 多重采样 <FSAA>`"
-
-#: ../../manual/troubleshooting/gpu.rst:25
+#: ../../manual/troubleshooting/gpu.rst:28
 msgid ""
-"See :ref:`Invalid Selection, Disable Anti-Aliasing <troubleshooting-3dview-"
-"invalid-selection>`."
+"To ensure you have the latest version, go to the graphics card manufacturer's "
+"website and download the latest drivers from there. It can help to uninstall the "
+"previous drivers first and perform a clean installation."
 msgstr ""
-"请参见 :ref:`无效的选择、禁用抗锯齿 <troubleshooting-3dview-invalid-"
-"selection>`。"
 
-#: ../../<generated>:1
-msgid "Change the *Window Draw Method*"
-msgstr "更改 *窗口绘制方法*"
+#: ../../manual/troubleshooting/gpu.rst:34
+msgid "Linux"
+msgstr "Linux"
 
-#: ../../manual/troubleshooting/gpu.rst:27
+#: ../../manual/troubleshooting/gpu.rst:36
 msgid ""
-"This is set in the :ref:`system preferences <prefs-system-window-draw>`. It is "
-"selected automatically, however, when experiencing problems it's worth checking "
-"if changing this resolves interface drawing problems."
+"On Linux, graphics drivers are usually installed as a package by your Linux "
+"distribution. Installing the latest drivers is typically done by upgrading "
+"packages or the distribution as a whole. Some distributions provide multiple "
+"packages for multiple drivers versions, giving you the choice to install newer "
+"versions."
 msgstr ""
-"这是在 :ref:`用户设置 <prefs-system-window-draw>` 中的窗口绘制方法设置。它默认是"
-"选择自动的，但是，在遇到问题时，应该检查是否改变设置可以解决界面绘制问题。"
+
+#: ../../manual/troubleshooting/gpu.rst:41
+msgid ""
+"For NVIDIA there are open source (Nouveau) and closed source (by NVIDIA) graphics "
+"drivers. Blender functions best with the closed source drivers as they are more "
+"optimized and complete. Linux graphics drivers can be downloaded from NVIDIA's "
+"website, however in most cases the ones from your Linux distribution are fine and "
+"make things easier. Manually downloading drivers is mostly useful to get the very "
+"latest version, for example for a GPU that was only recently released."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:48
+msgid ""
+"For AMD the drivers are open source, except for the OpenCL support which is "
+"available as part of Pro drivers. Installing packages through your Linux "
+"distribution is usually best. AMD also provides graphics drivers for download on "
+"their website if you need the latest version."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:54
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../manual/troubleshooting/gpu.rst:56
+msgid ""
+"On macOS graphics drivers are built into the operating system and the only way to "
+"get newer drivers is to upgrade macOS as a whole to the latest version."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:61
+msgid "Laptops"
+msgstr "笔记本"
+
+#: ../../manual/troubleshooting/gpu.rst:63
+msgid ""
+"Laptops often have two GPUs for power saving purposes. One slower onboard GPU "
+"(typically Intel) and one faster dedicated GPU for better performance (AMD or "
+"NVIDIA)."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:66
+msgid ""
+"For best performance the dedicated GPU should be used for Blender. Which GPU to "
+"use for which application can be configured in your graphics driver settings."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:69
+msgid ""
+"If there is a graphics glitch specific to the onboard GPU, then using the "
+"dedicated GPU can also help avoid that."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:73
+msgid "Common Problems"
+msgstr "常见问题"
+
+#: ../../manual/troubleshooting/gpu.rst:76
+msgid "Unsupported Graphics Driver Error"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:78
+msgid ""
+"This means your graphics card and driver do not have the minimum required OpenGL "
+"3.3 version needed by Blender."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:80
+msgid ""
+"Installing the latest driver can help upgrade the OpenGL version, though some "
+"graphics cards are simply too old to run the latest Blender. Using Blender 2.79 or "
+"earlier is the only option then."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:86
+msgid "Crash on Startup"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:88
+msgid ""
+"Try running Blender from the :doc:`command line </advanced/command_line/index>`, "
+"to see if any helpful error messages are printed."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:91
+msgid ""
+"On Windows, graphics drivers can sometimes get corrupted. In this case it can help "
+"to uninstall all graphics drivers (there may be multiple from Intel, AMD and "
+"NVIDIA) and perform a clean installation with drivers from the manufacturer's "
+"website."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:97
+msgid "Poor Performance"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:99
+msgid "Update your graphics drivers (see above)."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:100
+msgid "On laptops, make sure you are using a dedicated GPU (see above)."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:101
+msgid ""
+"Try lowering quality settings in :menuselection:`Preferences --> System --> "
+"OpenGL`."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:102
+msgid "Try undoing settings in your graphics drivers, if you made any changes there."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:106
+msgid "Render Errors"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:108
+msgid ""
+"See :doc:`Eevee </render/eevee/limitations>` and :doc:`Cycles </render/cycles/"
+"gpu_rendering>` documentation respectively."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:113
+msgid "Wrong Selection in 3D Viewport"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:115
+msgid ""
+"See :ref:`Invalid Selection, Disable Anti-Aliasing <troubleshooting-3dview-invalid-"
+"selection>`."
+msgstr ""
+"请参见 :ref:`无效的选择、禁用抗锯齿 <troubleshooting-3dview-invalid-selection>`。"
+
+#: ../../manual/troubleshooting/gpu.rst:119
+msgid "Information"
+msgstr "信息"
+
+#: ../../manual/troubleshooting/gpu.rst:121
+msgid ""
+"To find out which graphics card and driver Blender is using, use :menuselection:"
+"`Help --> Save System Info` inside Blender. The OpenGL section will have "
+"information about your graphics card, vendor and driver version."
+msgstr ""
+
+#~ msgid "Blender makes use of OpenGL, which is typically hardware accelerated."
+#~ msgstr "Blender 使用的是 OpenGL，这是非常典型的一种硬件加速技术。"
+
+#~ msgid ""
+#~ "This means issues with the graphics card hardware and drivers can impact on "
+#~ "Blender's behavior. This page lists some known issues using Blender on "
+#~ "different graphics hardware and how to troubleshoot them."
+#~ msgstr ""
+#~ "这意味着图形卡硬件或者驱动会影响到Blender的行为。本页列举了Blender在使用不同图形"
+#~ "硬件的时候引起的许多问题，并且告知如何排除这些故障。"
+
+#~ msgid ""
+#~ "When the entire interface is very slow and unresponsive (*even* with the "
+#~ "default startup scene), this is likely a problem with the OpenGL configuration."
+#~ msgstr ""
+#~ "当整个界面非常缓慢且没有响应 ( *即使是默认的启动场景* )，这可能是 OpenGL 配置有"
+#~ "问题。"
+
+#~ msgid ""
+#~ "Unfortunately, in this situation, you may have to do some of your own tests to "
+#~ "find the cause. Below are some common causes and possible solutions."
+#~ msgstr ""
+#~ "不幸的是在这种情况，你可能要做一些你自己的测试来找出原因，这里是一些常见的原因和"
+#~ "可能的解决办法。"
+
+#~ msgid "Upgrade your OpenGL Driver"
+#~ msgstr "升级你的 OpenGL 驱动程序"
+
+#~ msgid ""
+#~ "If you are experiencing any strange graphics problems with Blender, it is "
+#~ "always good to double check if you are using the latest drivers."
+#~ msgstr ""
+#~ "如果你在使用Blender时遇到任何奇怪的图形问题，请仔细检查你是否使用最新的驱动程"
+#~ "序。"
+
+#~ msgid "Disable Anti-Aliasing :term:`FSAA, Multisampling <FSAA>`"
+#~ msgstr "禁用抗锯齿 :term:`FSAA, 多重采样 <FSAA>`"
+
+#~ msgid "Change the *Window Draw Method*"
+#~ msgstr "更改 *窗口绘制方法*"
+
+#~ msgid ""
+#~ "This is set in the :ref:`system preferences <prefs-system-window-draw>`. It is "
+#~ "selected automatically, however, when experiencing problems it's worth checking "
+#~ "if changing this resolves interface drawing problems."
+#~ msgstr ""
+#~ "这是在 :ref:`用户设置 <prefs-system-window-draw>` 中的窗口绘制方法设置。它默认是"
+#~ "选择自动的，但是，在遇到问题时，应该检查是否改变设置可以解决界面绘制问题。"
