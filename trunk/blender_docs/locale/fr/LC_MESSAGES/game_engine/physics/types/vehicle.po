@@ -3,24 +3,26 @@
 # This file is distributed under the same license as the Blender 2.79 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# phan <phahoatho@gmail.com>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-19 21:38-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-09-10 23:33+0200\n"
+"Last-Translator: phan <phahoatho@gmail.com>\n"
+"Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:4
 msgid "Vehicle Controller Physics"
-msgstr ""
+msgstr "Physique du cintreur Vehicle"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:7
 msgid "Introduction"
@@ -28,41 +30,51 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:9
 msgid ""
-"The Vehicle Controller is a special type of physics object that the "
-"Physics Engine (bullet) recognizes."
+"The Vehicle Controller is a special type of physics object that the Physics "
+"Engine (bullet) recognizes."
 msgstr ""
+"Le *Contrôleur Vehicle* est un type spécial d'objet de physique que le "
+"Moteur de physique (bullet) reconnaît."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:11
+#, fuzzy
 msgid ""
 "It is composed of a *rigid body* representing the chassis and a set of "
-"wheels that are set to *no collision*. Emphasizing the distinction "
-"between a Game Engine, Logical or Render object and its representation "
-"for the Physics Engine is important."
+"wheels that are set to *no collision*. Emphasizing the distinction between a "
+"Game Engine, Logical or Render object and its representation for the Physics "
+"Engine is important."
 msgstr ""
+"Il est composé d'un *corps rigide* représentant le châssis et un ensemble de "
+"roues qui sont définis à *no collision*. Souligner la distinction entre un "
+"objet du Moteur de jeu, Logique ou de rendu et sa représentation pour le "
+"Moteur de physique est important."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:15
 msgid ""
 "To simulate a vehicle as a true rigid body, on top of also rigid body "
 "wheels, with a real suspension system made with joints, would be far too "
-"complicated and unstable. Cars and other vehicles are complicated "
-"mechanical devices and most often we do not want to simulate that, only "
-"that it 'acts as expected'. The Vehicle Controller exists to provide a "
-"dedicated way of simulating a vehicle behavior without having to simulate"
-" all the physics that would actually happen in the real world. It "
-"abstracts the complexity away by providing a simple interface with "
-"tweakable parameters such as suspension force, damping and compression."
+"complicated and unstable. Cars and other vehicles are complicated mechanical "
+"devices and most often we do not want to simulate that, only that it 'acts "
+"as expected'. The Vehicle Controller exists to provide a dedicated way of "
+"simulating a vehicle behavior without having to simulate all the physics "
+"that would actually happen in the real world. It abstracts the complexity "
+"away by providing a simple interface with tweakable parameters such as "
+"suspension force, damping and compression."
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:26
 msgid "How It Works"
-msgstr ""
+msgstr "Comment ça marche"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:28
 msgid ""
-"Bullet's approach to a vehicle controller is called a \"Raycast "
-"Vehicle\". Collision detection for the wheels is approximated by ray "
-"casts and the tire friction is an anisotropic friction model."
+"Bullet's approach to a vehicle controller is called a \"Raycast Vehicle\". "
+"Collision detection for the wheels is approximated by ray casts and the tire "
+"friction is an anisotropic friction model."
 msgstr ""
+"L'approche de Bullet d'un *contrôleur Vehicule* est appelée \"Raycast Vehicle"
+"\". La détection de collision pour les roues est approximée par lancer de "
+"rayons et la friction des pneus est d'un modèle de friction anisotropique.  "
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:32
 msgid ""
@@ -72,45 +84,65 @@ msgid ""
 "hitting the ground. In effect, the vehicle chassis 'floats' along on the "
 "rays."
 msgstr ""
+"Un *Raycast Vehicle* fonctionne en lançant un rayon pour chaque roue. En "
+"utilisant le point d'intersection du rayon, nous pouvons calculer la force "
+"de la longueur de la suspension la force de de suspension qui est alors "
+"appliquée au châssis, l'empêchant de toucher le sol. En effet, le châssis du "
+"véhicule \"flotte\" sur les rayons. "
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:37
 msgid ""
-"The friction force is calculated for each wheel where the ray contacts "
-"the ground. This is applied as a sideways and forwards force."
+"The friction force is calculated for each wheel where the ray contacts the "
+"ground. This is applied as a sideways and forwards force."
 msgstr ""
+"La force de frictzion est calculée pour chaque roue à l'endroit où le rayon "
+"touche le sol. Ceci est appliqué comme une force latérale et vers l'avant"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:40
 msgid ""
-"You can check Kester Maddock's approach to vehicle simulation `here "
-"<https://docs.google.com/document/d/18edpOwtGgCwNyvakS78jxMajCuezotCU_0iezcwiFQc/edit>`__."
-" It includes some common problems, workarounds and tips and tricks."
+"You can check Kester Maddock's approach to vehicle simulation `here <https://"
+"docs.google.com/document/d/18edpOwtGgCwNyvakS78jxMajCuezotCU_0iezcwiFQc/"
+"edit>`__. It includes some common problems, workarounds and tips and tricks."
 msgstr ""
+"Vous pouvez consulter l'approche de Maddock en simulation de véhicule `ici "
+"<https://docs.google.com/document/"
+"d/18edpOwtGgCwNyvakS78jxMajCuezotCU_0iezcwiFQc/edit>`__. Il comprend "
+"certains problèmes habituels, des solutions, des conseils et des astuces."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:46
 msgid "How to Use"
-msgstr ""
+msgstr "Mode d'utilisation"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:48
 msgid ""
 "Currently the Vehicle Controller can only be used as a constraint via "
 "Python. There are plans to add it to the interface."
 msgstr ""
+"Actuellement le *contrôle Vehicle* peut être utilisé comme une contrainte "
+"via Python. Il y a des projets pour l'ajouter à l'interface."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:53
 msgid "Setup"
-msgstr ""
+msgstr "Installation"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:55
 msgid "You should have a body acting as the chassis, set it as a 'Rigid Body'."
 msgstr ""
+"Vous devriez avoir un corps jouant le rôle de châssis, définissez-le comme "
+"un \"Rigid Body (corps rigide)\"."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:57
+#, fuzzy
 msgid ""
 "The wheels should be separate objects set to 'No Collision'. The vehicle "
-"controller will calculate the collisions for you as rays so, if you set "
-"it to something else, it will calculate it twice in different ways and "
-"produce weird results."
+"controller will calculate the collisions for you as rays so, if you set it "
+"to something else, it will calculate it twice in different ways and produce "
+"weird results."
 msgstr ""
+"Les roues devraient être des objets distincts définis à \"No Collision\". Le "
+"*contrôleur Vehicle* va calculer les collisions pour vous , si vous le "
+"définissez à quelque chose d'autre, il va le calculer deux fois de "
+"différentes manières et produire des résultats bizarres. "
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:63
 msgid "Collisions"
@@ -120,12 +152,19 @@ msgstr ""
 msgid ""
 "A cylinder is typically a good collision shape for the wheels. For the "
 "chassis, the shape should be rough, like a box. If the vehicle is very "
-"complicated, you should split it into simpler objects and parent those "
-"(with their collision shapes) to the vehicle controller so that they will"
-" follow it. If your vehicle even has moving bits (weapons, wrecking "
-"balls, trolleys, etc.) they should also be simulated separately and "
-"connected to the vehicle as a joint."
+"complicated, you should split it into simpler objects and parent those (with "
+"their collision shapes) to the vehicle controller so that they will follow "
+"it. If your vehicle even has moving bits (weapons, wrecking balls, trolleys, "
+"etc.) they should also be simulated separately and connected to the vehicle "
+"as a joint."
 msgstr ""
+"Un cylindre est typiquement une excellente forme de collision pour les "
+"roues. Pour le châssis, la forme devrait être , comme une boîte (box), Si le "
+"véhicule est très compliqué, vous devriez le diviser en objets plus simples "
+"et les parenter (avec leur forme de collision) au *contrôleur Vehicle* afin "
+"qu'ils le suivent. Si votre véhicule a même des petits morceaux en mouvement "
+"(armes, boules de démolition, chariot, etc.) ils devraient aussi être "
+"simulés séparément et connectés au véhicule en tant que jointures."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:75
 msgid "Python"
@@ -133,71 +172,84 @@ msgstr ""
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:78
 msgid "Assembling the Vehicle"
-msgstr ""
+msgstr "Assemblage du véhicule"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:80
 msgid "The overall steps are:"
-msgstr ""
+msgstr "Les étapes principales sont :"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:82
-msgid "Create a constraint for the vehicle and save its ID for future reference."
+msgid ""
+"Create a constraint for the vehicle and save its ID for future reference."
 msgstr ""
+"Créer une contrainte pour le véhicule et enregistrer son ID pour référence "
+"ultérieure."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:83
 msgid "Attach the wheels."
-msgstr ""
+msgstr "Attacher les roues."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:84
 msgid ""
 "Set wheel parameters: influence, stiffness, damping, compression and "
 "friction."
 msgstr ""
+"Définir les paramètres des roues : influence, dureté, damping, compression "
+"et friction."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:85
 msgid "Init variables."
-msgstr ""
+msgstr "Initialisation des variables."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:87
 msgid "You can see an example in the file below."
-msgstr ""
+msgstr "Vous pouvez voir un exemple dans le fichier ci-dessous."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:91
 msgid "Controlling the Vehicle"
-msgstr ""
+msgstr "Contrôle du véhicule."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:93
 msgid ""
-"This is done in two parts and it should be modeled according to the "
-"desired behavior. You should think of your gameplay and research "
-"appropriate functions for the input. For instance, can the vehicle "
-"reverse? jump? drift? does it turn slowly? How much time does it take to "
-"brake or get to full speed? The first part is *response to keys*. "
-"Whenever the player presses a key, you should set a value accordingly, "
-"such as increase acceleration. Example::"
+"This is done in two parts and it should be modeled according to the desired "
+"behavior. You should think of your gameplay and research appropriate "
+"functions for the input. For instance, can the vehicle reverse? jump? drift? "
+"does it turn slowly? How much time does it take to brake or get to full "
+"speed? The first part is *response to keys*. Whenever the player presses a "
+"key, you should set a value accordingly, such as increase acceleration. "
+"Example::"
 msgstr ""
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:106
-msgid "The second part is to *compute the movement* according to your functions::"
+msgid ""
+"The second part is to *compute the movement* according to your functions::"
 msgstr ""
+"La seconde partie est de *compute the movement (calculer le mouvement)* "
+"selon vos fonctions ::"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:116
 msgid "Both should be run each frame."
-msgstr ""
+msgstr "Les deux devraient être lancés à chaque trame. "
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:120
 msgid "Example"
-msgstr ""
+msgstr "Exemple"
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:122
 msgid ""
-"The following demo file has a minimal drivable car and was taken from the"
-" book: \"Game Development with Blender\" by Dalai Felinto and Mike Pan."
+"The following demo file has a minimal drivable car and was taken from the "
+"book: \"Game Development with Blender\" by Dalai Felinto and Mike Pan."
 msgstr ""
+"Le fichier de démo suivant a une voiture minimale en état de marche et a été "
+"pris du livre : \"Game Development with Blender\" par Dalai Felinto et Mike "
+"Pan."
 
 #: ../../manual/game_engine/physics/types/vehicle.rst:125
 msgid ""
-"`vehicle_controller_demo.zip "
-"<http://download.blender.org/documentation/GE/vehicle_controller_demo.zip>`__"
-" (last update 9 September 2014, tested with Blender 2.71)"
+"`vehicle_controller_demo.zip <http://download.blender.org/documentation/GE/"
+"vehicle_controller_demo.zip>`__ (last update 9 September 2014, tested with "
+"Blender 2.71)"
 msgstr ""
-
+"`vehicle_controller_demo.zip <http://download.blender.org/documentation/GE/"
+"vehicle_controller_demo.zip>`__ (dernière mise à jour le 9 Septembre 2014, "
+"testé avec Blender 2.71)"
