@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-22 11:06+0800\n"
-"PO-Revision-Date: 2019-02-21 20:34+0800\n"
+"PO-Revision-Date: 2019-02-27 22:57+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -49,13 +49,13 @@ msgstr "源物体"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:29
 msgid "Mesh object to copy data from."
-msgstr "需要复制数据的模型物体"
+msgstr "复制数据的网格物体。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:31
 msgid ""
 "If the button to the right of the field is unset, source and destination geometries are considered in global space when generating the mapping, otherwise "
 "they are evaluated in local space (i.e. as if both object's origins were at the same place)."
-msgstr "如果未设置字段右侧的按钮，则在生成映射时会在全局空间中考虑源和目标几何体，否则将在局部空间中对它们进行求值（即，好像两个物体的原点位于同一位置）。"
+msgstr "如果未设置字段右侧的按钮，则在生成映射时会在全局空间中考虑来源与目标几何体，否则将在局部空间中对它们进行求值（即，好像两个物体的原点位于同一位置）。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:41
 msgid "Max Distance"
@@ -69,7 +69,7 @@ msgstr "当启用右侧“蓝色线的手和凸起”图标按钮时，这是源
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:40
 msgid "This allows to transfer a small sub-detailed mesh onto a more complete one (e.g. from a \"hand\" mesh towards a \"full body\" one)."
-msgstr "这样可以转移一个小的细分的模型到更复杂的模型上（比如 将手部模型转移到整体模型上）。"
+msgstr "这样可以将一个小的细分的模型传递到更复杂的模型上（比如 将手部模型传递到整体模型上）。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:46
 msgid "Ray Radius"
@@ -87,7 +87,7 @@ msgstr "混合节点"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:49
 msgid "Controls how destination data are affected:"
-msgstr "控制目标数据影响的程度"
+msgstr "控制目标数据影响的程度："
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:51
 msgid "All"
@@ -95,7 +95,7 @@ msgstr "全部"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:52
 msgid "Replaces everything in destination (note that *Mix Factor* is still used)."
-msgstr "替换目标物体所有（注意混合因子 仍然是被使用的）"
+msgstr "替换目标物体所有(注意: 仍然使用 *混合系数* )"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:55
 msgid "Above Threshold"
@@ -105,7 +105,7 @@ msgstr "上限阈值"
 msgid ""
 "Only replaces destination value if it's above given threshold *Mix Factor*. How that threshold is interpreted depends on data type, note that for boolean "
 "values this option fakes a logical AND."
-msgstr "如果超过给定阈值 *最大系数*，则仅替换目标值。 如何解释该阈值取决于数据类型，请注意，对于布尔值，此选项充当逻辑与。"
+msgstr "如果超过给定阈值 *混合系数*，则仅替换目标值。 如何解释该阈值取决于数据类型，请注意，对于布尔值，此选项充当逻辑与。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:59
 msgid "Below Threshold"
@@ -125,7 +125,7 @@ msgstr "混合，添加，相减， 相乘"
 msgid ""
 "Apply that operation, using mix factor to control how much of source or destination value to use. Only available for a few types (vertex groups, vertex "
 "colors)."
-msgstr "应用那个操作，使用混合系数来控制源物体或目标物体数值使用的程度。只是对一些类别可用（顶点组，顶点颜色）。"
+msgstr "应用那个操作，使用混合系数来控制源物体或目标物体数值使用的程度。仅适用于几种元素类型(顶点组，顶点颜色)。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:66
 msgid "Mix Factor"
@@ -151,15 +151,15 @@ msgstr "生成数据层"
 msgid ""
 "This modifier cannot generate needed data layers itself. Once the set of source data to transfer is selected, this button shall be used to generate matching "
 "destination layers."
-msgstr "这个修改器不能自动生成所需数据层。一旦需要转移的数据源被选定，使用这个按钮生成匹配的目标层。"
+msgstr "这个修改器不能自动生成所需数据层。一旦需要传递的数据源被选定，使用这个按钮生成匹配的目标层。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:78
 msgid "Selection of Data to Transfer"
-msgstr "选取转移数据"
+msgstr "传递数据选取"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:80
 msgid "To keep the size of the modifier reasonable, the kind of items to be affected must be selected first (vertices, edges, face corners and/or faces)."
-msgstr "为了保持修改器大小的合理，需要转移数据的物体必须先选择（顶点，边， 面，角和/或 面）"
+msgstr "为了保持修改器大小的合理，需要传递数据的物体必须先选择（顶点，边， 面，角和/或 面）"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:85
 msgid "Mapping Type"
@@ -167,7 +167,7 @@ msgstr "映射类型"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:84
 msgid "How is generated the mapping between those source and destination items. Each type has its own options, see `Geometry Mapping`_ below for details."
-msgstr "源物体和目标物体如何生成贴图。每种映射类型都有自己的选项。详情见下文 `几何映射`_ 。"
+msgstr "源物体和目标物体之间如何映射。每种映射类型都有自身对应的选项。详情见下文 `几何映射`_ 。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:88
 msgid "Data Types"
@@ -175,7 +175,7 @@ msgstr "数据类型"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:88
 msgid "The left column of toggle buttons, to select which data types to transfer."
-msgstr "左列的勾选按钮用于选择需要转移数据类型"
+msgstr "左侧的复选框用于选择需要传递的数据类型。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:94
 msgid "Multi-layers Data Types Options"
@@ -187,12 +187,12 @@ msgid ""
 "and how to affect destination (either by matching names, matching order/position, or, if a single source is selected, by specifying manually destination "
 "layer)."
 msgstr ""
-"这些情况下（顶点组，顶点颜色，UVs）,可以选择源数据层来转移（一般是所有要不就是特定的一种），以及目标物体的效果程度（可以是匹配名字，匹配次序/位置，或者，如果"
-"单一的数据源被选中，通过手动指定目标层）"
+"这些情况下（顶点组，顶点颜色，UVs）,可以选择源数据层来传递(一般是所有要不就是特定的一种)，以及目标物体的效果程度（可以是匹配名字，匹配次序/位置，或者，如果单"
+"一的数据源被选中，通过手动指定目标层）"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:101
 msgid "Islands Handling Refinement"
-msgstr "Uv块处理精简"
+msgstr "UV孤岛处理精简"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:97
 msgid ""
@@ -200,8 +200,8 @@ msgid ""
 "it at 0.0 means no island handling at all. Typically, small values like 0.02 are enough to get good results, but if you are mapping from a very high-poly "
 "source towards a very low-poly destination, you may have to raise it quite significantly."
 msgstr ""
-"此设置仅影响当前的UV转移。 它允许避免给定的目标面从不同的源UV岛获得UV坐标。 保持在0.0意味着根本没有岛屿处理。 通常情况下，像0.02这样的小值足以获得良好的结"
-"果，但是如果要从非常高的多边形源映射到非常低的多边形目标，则可能必须非常多地增大它."
+"此设置仅影响当前的UV传递，用于避免给定的目标面从不同的源UV孤岛获得UV坐标。 维持数值为0.0意味着不处理孤岛。 通常情况下，像0.02这样的小值足以获得良好的结果，但"
+"是如果要从非常高的多边形源映射到非常低的多边形目标，则可能必须非常多地增大它."
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:104
 msgid "Usage"
@@ -235,7 +235,7 @@ msgstr "拓扑"
 msgid ""
 "The simplest option, expects both meshes to have identical number of items, and match them by order (indices). Useful e.g. between meshes that were "
 "identical copies, and got deformed differently."
-msgstr "最简单的选项，期望两个物体有相同数量，并且按索引匹配他们。有用的，比如两个物体是完全一样的复制，不同的变形。"
+msgstr "最简单的选项，期望两个物体有相同数量，并且按索引匹配他们。对于两个相同网格经不同变形后的副本很管用。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:160
 msgid "One-To-One Mappings"
@@ -243,7 +243,7 @@ msgstr "一对一映射"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:124
 msgid "Those always select only one source item for each destination one, often based on shortest distance."
-msgstr "这种只要对目标物体选择一个源物体就好，一般是基于最短距离。"
+msgstr "仅为目标网格元素选择一个源网格元素，通常基于最短距离。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:133 ../../manual/modeling/modifiers/modify/data_transfer.rst:172
 msgid "Vertices"
@@ -255,7 +255,7 @@ msgstr "最近的点"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:128
 msgid "Uses source's nearest vertex."
-msgstr "使用源网格最近的顶点数据。"
+msgstr "使用源物体最近的顶点数据。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:130
 msgid "Nearest Edge Vertex"
@@ -263,7 +263,7 @@ msgstr "最近的边顶点"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:131
 msgid "Uses source's nearest vertex of source's nearest edge."
-msgstr "使用源网格最近边的顶点数据。"
+msgstr "使用源物体最近边的顶点数据。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:133
 msgid "Nearest Face Vertex"
@@ -271,7 +271,7 @@ msgstr "最近的面顶点"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:133
 msgid "Uses source's nearest vertex of source's nearest face."
-msgstr "使用源网格最近面的顶点数据。"
+msgstr "使用源物体最近面的顶点数据。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:141 ../../manual/modeling/modifiers/modify/data_transfer.rst:178
 msgid "Edges"
@@ -283,7 +283,7 @@ msgstr "最近的顶点"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:137
 msgid "Uses source's edge which vertices are nearest from destination edge's vertices."
-msgstr "使用源网格中距离目标边最近的顶点所在边的数据。"
+msgstr "使用源物体中距离目标边最近的顶点所在边的数据。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:138
 msgid "Nearest Edge"
@@ -291,7 +291,7 @@ msgstr "最近的边"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:139
 msgid "Uses source's nearest edge (using edge's midpoints)."
-msgstr "用源网格中距离目标边最近的边线数据(使用边线的中点计算)。"
+msgstr "用源物体中距离目标边最近的边线数据(使用边线的中点计算)。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:141
 msgid "Nearest Face Edge"
@@ -299,11 +299,11 @@ msgstr "最近的面边"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:141
 msgid "Uses source's nearest edge of source's nearest face (using edge's midpoints)."
-msgstr "用源网格中距离目标边最近的面的边线数据(使用边线的中点计算)。"
+msgstr "用源物体中距离目标边最近的面的边线数据(使用边线的中点计算)。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:154 ../../manual/modeling/modifiers/modify/data_transfer.rst:188
 msgid "Face Corners"
-msgstr "面角"
+msgstr "面拐"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:144 ../../manual/modeling/modifiers/modify/data_transfer.rst:181
 msgid ""
@@ -357,15 +357,15 @@ msgstr "使用与目标法向最匹配的来源面数据。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:193
 msgid "Interpolated Mappings"
-msgstr "映射"
+msgstr "插值映射"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:163
 msgid "Those use several source items for each destination one, interpolating their data during the transfer."
-msgstr "这些需要对每个目标体使用多个源物体部分，在转移同时interpolate数据"
+msgstr "为每个目标网格元素使用多个源网格元素，在传递的同时进行数据插值。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:166
 msgid "Nearest Edge Interpolated"
-msgstr "最近边"
+msgstr "最近边插值"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:167
 msgid "Uses nearest point on nearest source's edge, interpolates data from both source edge's vertices."
@@ -373,30 +373,30 @@ msgstr "使用最近来源边的最近点数据，对来源边的两个顶点数
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:168 ../../manual/modeling/modifiers/modify/data_transfer.rst:184
 msgid "Nearest Face Interpolated"
-msgstr "最近面"
+msgstr "最近面插值"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:169
 msgid "Uses nearest point on nearest source's face, interpolates data from all that source face's vertices."
-msgstr "使用最近来源面的最近点数据，对来源面的顶点数据插值。"
+msgstr "使用最近来源面的最近点数据，对来源面的所有顶点数据插值。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:172 ../../manual/modeling/modifiers/modify/data_transfer.rst:188
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:193
 msgid "Projected Face Interpolated"
-msgstr "投影面"
+msgstr "投影面插值"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:171
 msgid "Uses point of face on source hit by projection of destination vertex along its own normal, interpolates data from all that source face's vertices."
-msgstr "使用目标顶点沿自身法向投影到来源面的点数据，对该来源面的顶点数据插值。"
+msgstr "使用目标顶点沿自身法向投影到来源面的点数据，对该来源面的所有顶点数据插值。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:178
 msgid "Projected Edge Interpolated"
-msgstr "投影边"
+msgstr "投影边插值"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:176
 msgid ""
 "This is a sampling process. Several rays are cast from along the destination's edge (interpolating both edge's vertex normals), and if enough of them hit a "
 "source's edge, all hit source edges' data are interpolated into destination one."
-msgstr "这是一个采样的过程。沿目标边(对边的两个顶点都进行插值)发射多条射线，如果足以击中来源边，则将所有被击中的来源边数据插值到目标。"
+msgstr "这是一个采样的过程。沿目标边(对边的两个顶点法向都进行插值)发射多条射线，如果足以击中来源边，则将所有被击中的来源边数据插值到目标。"
 
 #: ../../manual/modeling/modifiers/modify/data_transfer.rst:185
 msgid "Uses nearest point of nearest source's face, interpolates data from all that source face's corners."
