@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
-"PO-Revision-Date: 2019-01-01 21:44+0800\n"
+"POT-Creation-Date: 2019-02-27 21:32+0800\n"
+"PO-Revision-Date: 2019-02-27 22:00+0800\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: zh_CN\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:4
 msgid "Indirect Lighting Cache"
@@ -26,48 +26,39 @@ msgstr "间接照明缓存"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:6
 msgid ""
-"While not strictly correct, all lighting that is not coming straight out "
-"from a lamp object is considered indirect lighting in Eevee. That means "
-"distant HDRI lighting (or World) is considered as indirect lighting. "
-"Mesh objects using an Emission node is also considered as indirect "
-"lighting."
+"While not strictly correct, all lighting that is not coming straight out from a lamp object is considered "
+"as indirect lighting in Eevee. That means distant HDRI lighting (or World) is considered as indirect "
+"lighting. Mesh objects using an Emission node are also considered as indirect lighting."
 msgstr ""
-"虽然不完全正确，但在Eevee中，所有不是直接从灯光物体发出的照明都被认为是间"
-"接照明。这意味着遥远的HDRI照明（或世界）被认为是间接照明。使用"
-"Emission（发射）节点的网格物体也被认为是间接照明。"
+"虽然不完全正确，但在Eevee中，所有不是直接从灯光物体发出的照明都被认为是间接照明。这意味着远方的HDRI照明(或世"
+"界)被认为是间接照明。使用Emission（发射）节点的网格物体也被认为是间接照明。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:11
 msgid ""
-"In Eevee, indirect lighting is separated into two component: Diffuse and "
-"Specular. Both have different needs and representation. For efficiency, "
-"the indirect lighting data is precomputed on demand into a static "
+"In Eevee, indirect lighting is separated into two component: Diffuse and Specular. Both have different "
+"needs and representation. For efficiency, the indirect lighting data is precomputed on demand into a static "
 "lighting cache."
 msgstr ""
-"在Eevee中，间接照明分为两个部分：漫反射和高光反射。两者都有不同的需求和代"
-"表性。为了提高效率，间接照明数据根据需要预先计算到静态照明缓存中。"
+"在Eevee中，间接照明分为两个部分：漫反射和高光反射。两者都有不同的需求和代表性。为了提高效率，间接照明数据根"
+"据需要预先计算到静态照明缓存中。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:15
-#, fuzzy
 msgid ""
-"As of now the light cache is static and needs to be computed before "
-"rendering. It cannot be updated per frame (unless via scripting). This "
-"limitation is being worked on and will be removed in future versions."
+"As of now the light cache is static and needs to be computed before rendering. It cannot be updated per "
+"frame (unless via scripting). This limitation is being worked on and will be removed in future versions."
 msgstr ""
-"到目前为止，光缓存是静态的，需要在渲染之前计算。它不能被每帧更新（除非通"
-"过脚本）。这个限制正在被解决中，并会在将来的版本中移除。"
+"到目前为止，光缓存是静态的，需要在渲染之前计算。它不能被每帧更新（除非通过脚本）。这个限制正在被解决中，并会"
+"在将来的版本中移除。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:19
 msgid ""
-"Only view independent lighting can be baked. This is why Reflection "
-"Planes are not stored inside the light cache."
-msgstr ""
-"只能查看独立照明。这就是为什么Reflection Planes（反光板)不存储在光缓存中"
-"的原因。"
+"Only view independent lighting can be baked. This is why Reflection Planes are not stored inside the light "
+"cache."
+msgstr "只能查看独立照明。这就是为什么Reflection Planes（反光板)不存储在光缓存中的原因。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:21
 msgid ""
-"The visibility and collections used during the baking process are the "
-"ones in the current Active View Layer."
+"The visibility and collections used during the baking process are the ones in the current Active View Layer."
 msgstr "烘焙过程中使用的是当前活动视图层中的可见物体和集合。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:25
@@ -75,15 +66,13 @@ msgid "Light Bounce"
 msgstr "光反弹"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:27
-#, fuzzy
 msgid ""
-"To enable light bounces through large environment, the light baking "
-"process can be run multiple times while injecting previous bake result "
-"into the a bake. Total baking time is more or less multiplied by the "
-"number of bounce."
+"To enable light bounces through large environment, the light baking process can be run multiple times while "
+"injecting previous bake result into the bake. Total baking time is more or less multiplied by the number of "
+"bounce."
 msgstr ""
-"为了使光线在大环境中反弹, 光烘焙过程可以运行多次, 同时将以前的烘焙结果注"
-"入烘焙。整体烘培时间或多或少会因为反弹次数而倍增。"
+"为了使光线在大环境中反弹, 光烘焙过程可以运行多次, 同时将以前的烘焙结果注入烘焙。整体烘培时间或多或少会因为反"
+"弹次数而倍增。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:31
 msgid "Light bounces only concerns diffuse lighting."
@@ -102,7 +91,6 @@ msgid "Panel"
 msgstr "面板"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:40
-#, fuzzy
 msgid ":menuselection:`Render --> Indirect Lighting`"
 msgstr ":menuselection:`渲染 --> 间接光照明`"
 
@@ -112,8 +100,7 @@ msgstr "自动烘焙"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:43
 msgid ""
-"Enabling this option will trigger baking when a probe is changed. Useful "
-"when positioning probes objects."
+"Enabling this option will trigger baking when a probe is changed. Useful when positioning probes objects."
 msgstr "启用此选项将在更改探针时触发烘焙。定位探针物体时很有用。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:46
@@ -125,28 +112,22 @@ msgid "Number of bounce to compute when baking the diffuse irradiance."
 msgstr "烘焙漫反射辐照度时计算的反弹次数。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:49
-#, fuzzy
 msgid "Cubemap Size"
 msgstr "立方体贴图尺寸"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:49
-#, fuzzy
 msgid "Size of the reflection cubemaps."
 msgstr "立方体反射贴图的尺寸。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:53
-#, fuzzy
 msgid "Diffuse Occlusion Size"
 msgstr "漫反射遮蔽尺寸"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:52
 msgid ""
-"Each irradiance sample also store a shadow map that is used to minimize "
-"indirect light leaking. This parameter define the size of this shadow "
-"map."
-msgstr ""
-"每个辐照度样本还存储一个阴影图, 用于最大限度地减少间接光线泄漏。此参数定"
-"义此阴影贴图的大小。"
+"Each irradiance sample also store a shadow map that is used to minimize indirect light leaking. This "
+"parameter define the size of this shadow map."
+msgstr "每个辐照度样本还存储一个阴影图, 用于最大限度地减少间接光线泄漏。此参数定义此阴影贴图的大小。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:58
 msgid "Irradiance Smoothing"
@@ -154,46 +135,33 @@ msgstr "辐照度平滑"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:56
 msgid ""
-"Smoother irradiance interpolation but introduce light bleeding. The "
-"irradiance visibility term can make the lighting not interpolate "
-"smoothly on some surfaces. This relax the weights so that the "
-"interpolation."
-msgstr ""
-"平滑辐照度插值，但引入光出血。辐照度能见度项可以使照明不在某些表面上平滑"
-"地插值。这减轻插值了权重。"
+"Smoother irradiance interpolation but introduce light bleeding. The irradiance visibility term can make the "
+"lighting not interpolate smoothly on some surfaces. This relax the weights so that the interpolation."
+msgstr "平滑辐照度插值，但引入光出血。辐照度能见度项可以使照明不在某些表面上平滑地插值。这减轻插值了权重。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:61
 msgid "Clamp Glossy"
 msgstr "钳制光泽"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:61
-#, fuzzy
 msgid ""
-"Clamp pixel intensity to reduce noise inside glossy reflections from "
-"reflection cubemaps (0 to disabled)."
-msgstr "钳制像素强度，以减少反射立方体内光泽反射的噪点（0是禁用）。"
+"Clamp pixel intensity to reduce noise inside glossy reflections from reflection cubemaps (0 to disabled)."
+msgstr "钳制像素强度，以减少反射立方体内光泽反射的噪点（0为禁用）。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:64
 msgid "Filter Quality"
 msgstr "过滤质量"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:64
-#, fuzzy
-msgid ""
-"Take more samples during cubemap filtering to remove artifacts. For now, "
-"only have effect on cubemaps"
-msgstr ""
-"在立方体贴图过滤期间增大采样以删除瑕疵。从现在开始，只对立方体贴图有效"
+msgid "Take more samples during cubemap filtering to remove artifacts. For now, only have effect on cubemaps"
+msgstr "在立方体贴图过滤期间增大采样以删除瑕疵。目前只对立方体贴图有效"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:67
 msgid "Cubemap Display"
 msgstr "立方体贴图显示"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:67
-#, fuzzy
-msgid ""
-"Display the Reflection Cubemaps present in the cache directly in the 3D "
-"View."
+msgid "Display the Reflection Cubemaps present in the cache directly in the 3D View."
 msgstr "在3D视图中直接显示缓存中存在的反射立方体贴图。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:70
@@ -201,14 +169,11 @@ msgid "Irradiance Display"
 msgstr "辐照度显示"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:70
-#, fuzzy
 msgid "Display the Irradiance Samples present in the cache in the 3D View."
 msgstr "在3D视图中显示在缓存中存在的辐照度样本。"
 
 #: ../../manual/render/eevee/indirect_lighting.rst:74
 msgid ""
-"Cache data display only works in the viewport and only if the viewport "
-"uses the world lighting in lookdev mode of in rendered mode."
-msgstr ""
-"缓存数据显示仅在视口中工作, 并且仅在视图在渲染模式下的外观开发模式下使用"
-"世界照明。"
+"Cache data display only works in the viewport and only if the viewport uses the world lighting in lookdev "
+"mode of in rendered mode."
+msgstr "缓存数据显示仅在视口中工作, 并且仅在视图在渲染模式下的外观开发模式下使用世界照明。"
