@@ -1,28 +1,29 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) : This page is licensed under a CC-BY-SA 4.0 Int. License
-# This file is distributed under the same license as the Blender 2.80 Manual
+# Copyright (C) : BlenderCN.org [mail: blender@vip.qq.com],with kidux help
+# [alipay: yuzukyo@gmail.com]
+# This file is distributed under the same license as the Blender 2.77 Manual
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 2.80 Manual 2.80\n"
+"Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2016-10-10 16:37+0800\n"
+"PO-Revision-Date: 2016-03-07 19:33+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.3.4\n"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:4
+#: ../../render/blender_render/textures/introduction.rst:5
+#, fuzzy
 msgid "Introduction"
-msgstr ""
+msgstr "纹理简介--诺德翻译"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:6
+#: ../../render/blender_render/textures/introduction.rst:7
 msgid ""
 "In CGI, texture mapping is a method to add detail to surfaces by "
 "projecting images and patterns onto those surfaces. The projected images "
@@ -30,19 +31,20 @@ msgid ""
 "reflection, transparency, and even fake 3-dimensional depth. Most often, "
 "the images and patterns are projected during render time, but texture "
 "mapping is also used to sculpt, paint and deform objects."
-msgstr ""
+msgstr "在计算机合成图像中，纹理映射是一种将纹理和花纹添加到物体表面上的途径。添加这些纹理和花纹可以提升模型的精细度。这些纹理和花纹不仅可携带颜色信息，也可携带高光，反射，透明信息。甚至还能做出虚假的三维深度。一般情况下，只有在渲染步骤中，这些纹理和贴图才发挥作用。但纹理映射也可用于雕刻（作为笔刷），扭曲物体以及绘画。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:15
+#: ../../render/blender_render/textures/introduction.rst:16
 msgid ""
 "Texture processing for :doc:`Combined Textures "
-"</editors/uv_image/uv/textures/nodes/introduction>` in the Compositor."
+"</render/blender_render/textures/nodes/introduction>` in the Compositor."
 msgstr ""
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:20
+#: ../../render/blender_render/textures/introduction.rst:21
 msgid "Material Textures"
-msgstr ""
+msgstr "材质纹理"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:22
+#: ../../render/blender_render/textures/introduction.rst:23
+#, fuzzy
 msgid ""
 "The material settings that we've seen so far produce smooth, *uniform* "
 "objects, but such objects are not particularly true to reality, where "
@@ -50,70 +52,304 @@ msgid ""
 "this unrealistic uniformity, Blender allows the user to apply *textures* "
 "which can modify the reflectivity, specularity, roughness and other "
 "surface qualities of a material."
-msgstr ""
+msgstr "稍有常识就能看出，如我们只赋予物体材质，物体会呈现出极端光滑和统一的状态，假如五毛特效，一点不真实。特别光滑统一的材质会使物体看上去很神经，且与周围环境格格不入。为了让物体看上去正常，Blender允许使用者给物体添加贴图，借此改变物体的高光，反射，粗糙程度等等表面材质数值。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:32
-msgid "Textures layer on base material."
-msgstr ""
+#: ../../render/blender_render/textures/introduction.rst:33
+#, fuzzy
+msgid "Textures Layer on base Material."
+msgstr "基于材质的纹理层"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:34
+#: ../../render/blender_render/textures/introduction.rst:36
 msgid ""
 "Textures are like additional layers on top of the base material. Textures"
 " affect one or more aspects of the object's net coloring. The net color "
 "you see is a sort of layering of effects, as shown in this example image."
 " The layers, if you will, are:"
-msgstr ""
+msgstr "纹理就像材质层外部的追加补充层级，它会影响物体颜色的一个或多个方向，而物体的颜色是数个效果层叠加得出的效果。参考上方的示意图，这些所谓的层的布局是："
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:39
+#: ../../render/blender_render/textures/introduction.rst:41
+#, fuzzy
 msgid "Your object, lit with *ambient* light based on your world settings."
-msgstr ""
+msgstr "物体自身，由世界设定的 **环境** 光照亮。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:40
+#: ../../render/blender_render/textures/introduction.rst:42
+#, fuzzy
 msgid ""
 "Your base *material*, which colors the whole surface in a uniform color "
 "that reacts to light, giving different shades of the diffuse, specular, "
 "and mirror colors based on the way light passes through and into the "
 "surface of the object."
 msgstr ""
+"基本材质，根据光源的照射，用同一颜色着色物体的表面，基于穿过并进入物体表面的光路，给予物体像 “漫反射”，“高光” “镜面反射” "
+"这样不同的光影效果。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:43
+#: ../../render/blender_render/textures/introduction.rst:45
+#, fuzzy
 msgid "A *primary texture* layer that overlays a purple marble coloring."
-msgstr ""
+msgstr "一个  **初级纹理** 层，附有紫色的大理石纹理。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:44
+#: ../../render/blender_render/textures/introduction.rst:46
+#, fuzzy
 msgid ""
 "A *second cloud texture* that makes the surface transparent in a "
 "misty/foggy sort of way by affecting the Alpha value."
-msgstr ""
+msgstr "一个 **二级云雾纹理** ，通过影响Alpha值来给表面做出模糊（雾状）的通透感。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:46
+#: ../../render/blender_render/textures/introduction.rst:48
+#, fuzzy
 msgid ""
 "These two textures are *mixed* with the base material to provide the net "
 "effect: a cube of purplish-brown fog."
-msgstr ""
+msgstr "用这俩纹理和基本材质 **混合 ，这样咱就得到了一坨棕紫色的雾。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:51
-msgid "Some metal textures."
-msgstr ""
+#: ../../render/blender_render/textures/introduction.rst:53
+#, fuzzy
+msgid "Some Metal Textures."
+msgstr "一些金属材质"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:53
+#: ../../render/blender_render/textures/introduction.rst:55
+#, fuzzy
 msgid ""
 "This notion of using *more than one* texture, to achieve a combined "
 "effect, is one of the \"hidden secrets\" of creating realistic-looking "
 "objects. If you carefully \"look at the light\" while examining any real-"
-"world object, you will observe that the final appearance of that object "
-"is best described as the combination, in different ways and in different "
+"life object, you will observe that the final appearance of that object is"
+" best described as the combination, in different ways and in different "
 "amounts, of several distinct underlying visual characteristics. These "
 "characteristics might be more (or less) strongly apparent at different "
 "angles, under different lighting conditions, and so forth. Blender allows"
 " you to achieve this in many ways."
-msgstr ""
+msgstr "制作出超真实材质的“葵花宝典”（诀窍诀窍），就是使用多个纹理混合做出混合效果。当你认真审视真实物体的时候观察光感，你就会发现物体的材质是一个混合状态。物体包含了不同程度的显性和隐性特征，而观察的角度光照不同，观察到的特征也就不同。我们碉堡的Blender可以用很多方式来实现这种构造。你可用本章节提到的办法，往材质上糊一堆纹理，或者用一堆繁杂的纹理节点做到同样的效果。选择是多样的，只要你开心。"
 
-#: ../../manual/editors/uv_image/uv/textures/introduction.rst:62
+#: ../../render/blender_render/textures/introduction.rst:64
 msgid ""
 "You can use \"a stack of texture layers\" as described in :doc:`this "
-"section </editors/uv_image/uv/textures/texture_panel>`, or you can also "
-"use arbitrarily complex networks of \"texture nodes\" as discussed "
-":doc:`here </editors/uv_image/uv/textures/nodes/introduction>`."
+"section </render/blender_render/textures/texture_panel>`, or you can also"
+" use arbitrarily-complex networks of \"texture nodes\" as discussed "
+":doc:`here </render/blender_render/textures/nodes/introduction>`."
 msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Description"
+#~ msgstr "描述"
+
+#~ msgid "Textures Layer on base Material"
+#~ msgstr "基于材质的纹理层"
+
+#~ msgid "Panel:    Shading/World Context --> Preview"
+#~ msgstr "Panel:    Shading/World Context --> Preview"
+
+#~ msgid "In Blender, *Texture* s can be:"
+#~ msgstr "在Blender里，纹理可用于以下方面："
+
+#~ msgid "applied to a *Material*"
+#~ msgstr "应用给 *材质*"
+
+#~ msgid ""
+#~ "applied to a :doc:`light "
+#~ "</render/blender_render/lighting/lights/textures>`, that "
+#~ "coming from lamp"
+#~ msgstr "应用给 :doc:`光源 </render/blender_render/lighting/lights/textures>` （光来自于灯）"
+
+#~ msgid ""
+#~ "applied to the :doc:`World Background "
+#~ "</render/blender_render/world/background>`"
+#~ msgstr "应用给 :doc:`世界背景 </render/blender_render/world/background>`"
+
+#~ msgid ""
+#~ "applied to a *Brush*, see for "
+#~ "example: - :ref:`painting-sculping-index` "
+#~ "- :ref:`painting-texture-index`"
+#~ msgstr ""
+#~ "适用于*刷*，请例如： - :ref:`painting_sculping-index` -"
+#~ " :ref:`painting_texture-index`"
+
+#~ msgid "associated with *Modifiers*, see: - Particles textures - Ocean textures"
+#~ msgstr "与一些 *修改器* 相关，比如说粒子纹理，海洋纹理。"
+
+#~ msgid "Materials Textures fall into three primary categories:"
+#~ msgstr "材质纹理可以分为以下三大部分："
+
+#~ msgid "Procedural Textures"
+#~ msgstr "程序纹理"
+
+#~ msgid ""
+#~ "Textures generated by a mathematical "
+#~ "formula. For example, *Wood*, *Clouds*, "
+#~ "and *Distorted Noise*"
+#~ msgstr "用数学公式生成的纹理，比如说木质，云雾，扭曲躁波。"
+
+#~ msgid "Images or Movies"
+#~ msgstr "图像或影片"
+
+#~ msgid ""
+#~ "Photos and films projected onto objects."
+#~ " For example, a flat map of "
+#~ "Earth mapped to a sphere."
+#~ msgstr "在物体上映射图片或影片，比如将一张平面的地图映射到球面上。"
+
+#~ msgid "Environment Maps"
+#~ msgstr "环境纹理"
+
+#~ msgid ""
+#~ "Textures used to create the impression"
+#~ " of reflections and refractions. For "
+#~ "example, an image of a street "
+#~ "reflected in a car window."
+#~ msgstr "一种用来创造反射感和折射感的纹理，例如：车窗玻璃中映出的街道的图像。"
+
+#~ msgid "Data or Modifiers Textures"
+#~ msgstr "数据或修改器纹理"
+
+#~ msgid ""
+#~ "Textures obtained from raw data or "
+#~ "obtained by a certain modifier in "
+#~ "the scene. For example:"
+#~ msgstr "从原始数据或场景里确定的修改器中获得的纹理，例如："
+
+#~ msgid "volumetric materials use Voxel Data textures, or Point Density textures"
+#~ msgstr "使用三维像素纹理的体积材质，或是点密度纹理。"
+
+#~ msgid "textures can be obtained from an Ocean Modifier"
+#~ msgstr "可从海洋修改器中获取的纹理。"
+
+#~ msgid ""
+#~ "`CRL "
+#~ "<https://wiki.blender.org/index.php/User:Chrisryanleggett>`__ "
+#~ "02:25, 26 May 2014 (UTC)(Sign)"
+#~ msgstr ""
+#~ "`CRL "
+#~ "<http://wiki.blender.org/index.php/User:Chrisryanleggett>`__ "
+#~ "02:25, 26 May 2014 (UTC)(Sign)"
+
+#~ msgid "World Textures"
+#~ msgstr "世界纹理"
+
+#~ msgid "Reference"
+#~ msgstr "参考"
+
+#~ msgid "Mode:     All Modes"
+#~ msgstr "模式： 所有模式"
+
+#~ msgid "Panel:    :menuselection:`World --> Preview`"
+#~ msgstr ""
+
+#~ msgid "Hotkey:"
+#~ msgstr "热键"
+
+#~ msgid ""
+#~ "The world buttons let you set up"
+#~ " the shading of your scene in "
+#~ "general. It can provide ambient color,"
+#~ " and special effects such as mist,"
+#~ " but a very common use of a "
+#~ "*World* is to shade a background "
+#~ "color."
+#~ msgstr "世界选项栏是用来设置场景的全局着色器的，它能够提供环境色，以及像雾这种特效。但更常见的用法是，为场景添加一张背景图。"
+
+#~ msgid "HoR, HoG, HoB"
+#~ msgstr "HoR, HoG, HoB"
+
+#~ msgid "The RGB color at the horizon"
+#~ msgstr "场景视平线上的RGB颜色。"
+
+#~ msgid "ZeR, ZeG, ZeB"
+#~ msgstr ""
+
+#~ msgid "The RGB color at the zenith (overhead)"
+#~ msgstr "场景极点（天顶）上的RGB颜色。"
+
+#~ msgid ""
+#~ "These colors are interpreted differently, "
+#~ "according to the Buttons in the "
+#~ ":menuselection:`Preview --> Background colors` "
+#~ "panel:"
+#~ msgstr "选择预览面板下方的选项按键，可以切换不同的颜色显示方式："
+
+#~ msgid "None Enabled"
+#~ msgstr "无勾选"
+
+#~ msgid ""
+#~ "If none of these three buttons is"
+#~ " checked, your background will just "
+#~ "be plain flat color (using the "
+#~ "horizon one)."
+#~ msgstr "如果没有选项被勾选，你的背景将会被附上平面图像（以视平线为基准）。"
+
+#~ msgid "Blend"
+#~ msgstr "混合天空"
+
+#~ msgid ""
+#~ "The background color is blended from "
+#~ "horizon to zenith. If only this "
+#~ "button is pressed, the gradient runs "
+#~ "from the bottom to the top of "
+#~ "the rendered image regardless of the "
+#~ "camera orientation."
+#~ msgstr "勾选这个选项后，背景的颜色将显示为视平线颜色和天顶色的混合。如果只有这个选项被勾选，颜色将会从底部向顶部渐变。这个变化与摄像机的角度无关。"
+
+#~ msgid "Real"
+#~ msgstr "真实天空"
+
+#~ msgid ""
+#~ "If this option is added, the "
+#~ "gradient produced has two transitions, "
+#~ "from nadir (same color as zenith) "
+#~ "to horizon to zenith; the blending "
+#~ "is also dependent on the camera "
+#~ "orientation, which makes it more "
+#~ "realistic. The horizon color is exactly"
+#~ " at the horizon (on the XY "
+#~ "plane), and the zenith color is "
+#~ "used for points vertically above and "
+#~ "below the camera."
+#~ msgstr "勾选这个选项后，背景颜色将产生两个渐变。从最低点（颜色和天顶色一样）到视平线，再到天顶色；这个混色也受摄像机角度的影响。这样可以使背景看上去更真实。视平线色这时就位于视平线上（在x-y平面上，根据摄像机确定），而天顶色（以及最低点）此时正好位于摄像机的垂直上下方。"
+
+#~ msgid "Paper"
+#~ msgstr "墙纸天空"
+
+#~ msgid ""
+#~ "If this option is added, the "
+#~ "gradient keeps its characteristics, but "
+#~ "it is clipped in the image (it "
+#~ "stays on a horizontal plane (parallel"
+#~ " to XY plane): what ever the "
+#~ "angle of the camera may be, the"
+#~ " horizon is always at the middle "
+#~ "of the image)."
+#~ msgstr "勾选这个选项后，背景颜色渐变和前一种没有什么区别，唯一的区别是此时的视平线色不会根据摄像机的角度移动（平行于x-y平面）。不管摄像机是什么角度的，视平线色始终在画面中央。"
+
+#~ msgid "`CRL <https://wiki.blender.org/index.php/User:Chrisryanleggett>`__"
+#~ msgstr ""
+#~ "`CRL "
+#~ "<http://wiki.blender.org/index.php/User:Chrisryanleggett>`__ "
+#~ "02:31, 26 May 2014 (UTC)(Sign)"
+
+#~ msgid "Brush Textures"
+#~ msgstr "笔刷纹理"
+
+#~ msgid ""
+#~ "Image textures can be loaded into "
+#~ "Blender. These images can then be "
+#~ "applied to a mesh model that has"
+#~ " been unwrapped and assigned an image"
+#~ " of user defined size."
+#~ msgstr "Blender可以加载复数的图像纹理，这些图像在打开，指定尺寸后可以涂抹在网格模型上。"
+
+#~ msgid "Applied Brush texture in different painting modes."
+#~ msgstr "在三种绘制模式下应用笔刷纹理"
+
+#~ msgid "Brush textures can be used to :ref:`painting-texture-index` textures."
+#~ msgstr "刷纹理可用于  :ref:`painting_texture-index`  纹理。"
+
+#~ msgid "Brush textures can be used to :ref:`painting-vertex-index` vertices."
+#~ msgstr "刷纹理可用于 :ref:`painting_vertex-index` 顶点。"
+
+#~ msgid ""
+#~ "Brush textures can also be used in"
+#~ " :ref:`painting-sculping-index` to create"
+#~ " topology."
+#~ msgstr "刷纹理也可以使用  :ref:`painting_sculping-index` 创建拓扑。"
 
