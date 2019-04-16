@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the Blender 2.77 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-# phan <phahoatho@gmail.com>, 2017.
+# phan <phahoatho@gmail.com>, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-01 09:30+1100\n"
-"PO-Revision-Date: 2017-12-27 12:51+0100\n"
+"PO-Revision-Date: 2018-08-21 19:30+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:4
 msgid "Displacement Maps"
@@ -57,13 +57,18 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:20
+#, fuzzy
 msgid ""
 "If a texture provides only normal information (e.g. *Stucci*), vertices move "
 "according to the texture's normal data. The normal displacement is "
 "controlled by the *Normal* slider."
 msgstr ""
+"Si une texture offre seulement une information normale (ex. *Stucci*), les "
+"sommets se déplacent selon les données de normale de la texture. Le "
+"déplacement de normale est contrôlé par le curseur *Normal*."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:23
+#, fuzzy
 msgid ""
 "If a texture provides only intensity information (e.g. *Magic*, derived from "
 "color), vertices move along the directions of their normals (a vertex has no "
@@ -72,8 +77,15 @@ msgid ""
 "opposite direction. The amount of displacement is controlled with the "
 "*Displace* slider."
 msgstr ""
+"Si une texture offre seulement une information d'intensité (ex. *Magic*, "
+"dérivé de color), les sommets se déplacent sur les directions de leur "
+"normale (un sommet n'a pas lui-même de normale, c'est le vecteur résultant "
+"des faces adjacentes). Des pixels blancs se déplacent au dehors dans la "
+"direction de la normale, les pixels noirs se déplacent dans la direction "
+"opposée. La quantité de déplacement est contrôlée par le curseur *Displace*."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:29
+#, fuzzy
 msgid ""
 "The two modes are not exclusive. Many texture types provide both information "
 "(*Clouds*, *Wood*, *Marble*, *Image*). The amount of each type can be mixed "
@@ -82,6 +94,12 @@ msgid ""
 "displacement gives a more aggregated surface, since the vertices are "
 "displaced in multiple directions."
 msgstr ""
+"Les deux modes ne sont pas exclusifs. De nombreux types de texture "
+"fournissent à la fois de . Lde chaque type peut être mélangé en utilisant "
+"les curseurs respectives. Le déplacement d'intensité donne une surface plus "
+"lisse, plus continue, car les sommets sont déplacés seulement , Le "
+"déplacement des normales donne une surface plus agrégé, car les sommets sont "
+"déplacés dans différentes directions."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:37
 msgid ""
@@ -92,6 +110,12 @@ msgid ""
 "displacement depth is not changed, and thus the relative depth appears "
 "smaller."
 msgstr ""
+"La profondeur du déplacement est mise à l'échelle avec de l'objet, mais pas "
+"avec la taille relative des données. Ce qui signifie si vous doublez la "
+"taille d'un objet en *Mode Édition*, la profondeur du déplacement est aussi "
+"doublée, aussi le déplacement relatif apparaît de même. Si vous mettez à "
+"l'échelle dans *Mode Édition*, la profondeur du déplacement n'est pas "
+"changée, et donc la profondeur relative apparaît plus petite."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:46
 msgid "Hints"
@@ -134,10 +158,13 @@ msgstr ""
 "*Displacement* fonctionne mieux des normales lisses."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:61
+#, fuzzy
 msgid ""
 "Manually ( *Edit Mode* ) :doc:`subdivided </modeling/meshes/editing/"
 "subdividing/subdivide>` meshes"
 msgstr ""
+"Manuellement (*Mode Édition*) :doc:`subdivided </modeling/meshes/editing/"
+"subdividing/subdivide>` maillages."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:59
 msgid ""
@@ -171,18 +198,19 @@ msgid ""
 "Control render faces with U/V *Surface Resolution*. Higher numbers give more "
 "faces. (Note normal errors)."
 msgstr ""
+"Contrôler les faces de rendu avec U/V *Surface Resolution*. Des nombres plus "
+"grands donnent plus de faces (Notez les erreurs de normales)."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:71
 msgid "Closed NURBS Surfaces"
 msgstr "Surfaces NURBS fermées"
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:72
-#, fuzzy
 msgid ""
 "Control with *Surface Resolution* controls. (Note the normal errors, and how "
 "implicit seam shows)."
 msgstr ""
-"Contrôler avec les contrôles *Surface Resolution* (notez les erreurs des "
+"Contrôler avec les contrôles de *Surface Resolution* (notez les erreurs des "
 "normales, et comment un raccord implicite s'affiche)."
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:75
@@ -195,9 +223,8 @@ msgstr ""
 
 #: ../../manual/render/blender_render/textures/properties/influence/displacement.rst:74
 msgid ""
-"Control with *Surface Resolution* controls. Higher gives more render "
-"faces (note that the large flat surfaces have few render faces to "
-"displace)."
+"Control with *Surface Resolution* controls. Higher gives more render faces "
+"(note that the large flat surfaces have few render faces to displace)."
 msgstr ""
 "Contrôler avec les contrôles *Surface Resolution*. donne plus de faces de "
 "rendu (notez que les grandes surfaces planes ont peu de faces de rendu à "
