@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the Blender 2.77 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-# phan <phahoatho@gmail.com>, 2017, 2018.
+# phan <phahoatho@gmail.com>, 2017, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-06 22:19-0500\n"
-"PO-Revision-Date: 2018-12-01 20:23+0100\n"
+"PO-Revision-Date: 2019-04-16 19:56+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,8 +36,11 @@ msgid ""
 "node. It is dependent on the angle between the surface normal and the "
 "viewing direction."
 msgstr ""
-"Le node *Fresnel* ou *Dielectric Fresnel* calcule quelle quantité de lumière "
-"est réfléchie hors du calque, où le reste sera réfléchie à travers le calque."
+"Le node *Fresnel* ou *Dielectric Fresnel* calcule la quantité de lumière qui "
+"est réfléchie hors de la couche, où le reste sera réfractée à travers la "
+"couche. Le poids produit peut être utilisé pour les shaders avec le node "
+"*Mix Shader*. Il dépend de l'angle entre la normale de la surface et la "
+"direction de vue."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:17
 msgid ""
@@ -46,7 +49,7 @@ msgid ""
 "between a glossy refraction and glossy reflection. At grazing angles more "
 "light will be reflected than refracted as happens in reality."
 msgstr ""
-"l'utilisation la plus fréquente est de mélanger entre deux BSDF qui "
+"l'utilisation la plus habituelle est de mélanger entre deux BSDF qui "
 "l'utilisent comme un facteur d'assemblage dans un node *mix shader*. Pour un "
 "matériau de verre simple, vous mélangeriez entre une réfraction brillante et "
 "une réflexion brillante. Aux angles rasants, plus de lumière sera réfléchie "
@@ -62,10 +65,10 @@ msgid ""
 msgstr ""
 "Pour un matériau à deux couches avec une base diffuse et un revêtement "
 "brillant, vous pouvez utiliser la même configuration, en mélangeant un BSDF "
-"diffus et un autre brillant. En utilisant le Fresnel comme facteur de "
+"*diffuse* et un autre *glossy*. En utilisant le Fresnel comme facteur de "
 "mélange vous spécifiez que n'importe quelle lumière qui est réfractée par la "
-"couche du revêtement brillant frapperait la base diffuse et sera réfléchie "
-"par cela."
+"couche *glossy* du revêtement frapperait la base diffuse et serait réfléchie "
+"par celle-ci."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:28
 msgid "Inputs"
@@ -86,7 +89,9 @@ msgstr ""
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:33
 msgid ""
 "Input meant for plugging in bump or normal maps which will affect the output."
-msgstr "input secousse ou des *normal maps* qui vont affecter la sortie."
+msgstr ""
+"Entrée conçue pour brancher des *bump maps* ou des *normal maps* qui vont "
+"affecter la sortie."
 
 #: ../../manual/render/cycles/nodes/types/input/fresnel.rst:37
 msgid "Properties"
@@ -110,4 +115,4 @@ msgid ""
 "the layer rather than passing through."
 msgstr ""
 "Poids Fresnel, indiquant la probabilité avec laquelle la lumière va être "
-"réfléchie par le calque plutôt que de passer à travers. "
+"réfléchie par la couche plutôt que  passer à travers. "
