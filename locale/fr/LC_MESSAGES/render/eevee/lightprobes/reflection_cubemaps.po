@@ -3,48 +3,59 @@
 # This file is distributed under the same license as the Blender 2.80 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# phan <phahoatho@gmail.com>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-23 23:09-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-04-27 17:42+0200\n"
+"Last-Translator: phan <phahoatho@gmail.com>\n"
+"Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:4
 msgid "Reflection Cubemaps"
 msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:6
+#, fuzzy
 msgid ""
-"Specular Indirect Lighting is stored into an array of cubemaps. These are"
-" defined by the Reflection Cubemap objects. They specify where to sample "
-"the scene's lighting and where to apply it."
+"Specular Indirect Lighting is stored into an array of cubemaps. These are "
+"defined by the Reflection Cubemap objects. They specify where to sample the "
+"scene's lighting and where to apply it."
 msgstr ""
+"L'éclairage indirecte spéculaire est enregistré dans une collection de "
+"*cubemaps*. Celles-ci sont définies par les objets *Reflection Cubemap*. Ils "
+"spécifient où échantillonner l'éclairage de la scène et où l'appliquer."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:11
 msgid ":doc:`Indirect Lighting </render/eevee/indirect_lighting>`."
-msgstr ""
+msgstr ":doc:`Éclairage indirect </render/eevee/indirect_lighting>`."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:13
 msgid ""
-"*Screen Space Reflection* are much more precise than reflection cubemaps."
-" If enabled, they are applied in priority and we only use cubemaps as "
-"fall back if a ray misses."
+"*Screen Space Reflection* are much more precise than reflection cubemaps. If "
+"enabled, they are applied in priority and we only use cubemaps as fall back "
+"if a ray misses."
 msgstr ""
+"*Screen Space Reflection* sont beaucoup plus précis que les *reflection "
+"cubemaps*. Si l'option est activée, ils sont appliqués en priorité et nous "
+"n'utiliserons que les *cubemaps* comme rechange si un rayon manque."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:16
 msgid ""
 "If *Ambient Occlusion* is enabled, it will be applied in a physically "
 "plausible manner to specular indirect lighting."
 msgstr ""
+"Si *Ambient Occlusion* est activé, il sera appliqué d'une manière "
+"physiquement crédible à l'éclairage indirect spéculaire."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:20
 msgid ""
@@ -52,6 +63,9 @@ msgid ""
 "occur on the negative Z hemisphere. Those are more visible on higher "
 "roughness values."
 msgstr ""
+"Les sondes cubiques sont encodées en *tetrahedral maps*. Certaines "
+"distorsions peuvent se produire sur l'hémisphère Z négatif. Celles-ci sont "
+"plus visibles sur des valeurs *roughness* plus élevées."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:25
 msgid "Blending"
@@ -59,23 +73,29 @@ msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:27
 msgid ""
-"The lighting values from a Reflection Cubemap will fade outwards until "
-"the volume bounds are reached. They will fade into the world's lighting "
-"or another Reflection Cubemap's lighting. If multiple Reflection Cubemap "
+"The lighting values from a Reflection Cubemap will fade outwards until the "
+"volume bounds are reached. They will fade into the world's lighting or "
+"another Reflection Cubemap's lighting. If multiple Reflection Cubemap "
 "overlaps, smaller (in volume) ones will always have more priority. If an "
-"object is not inside any Reflection Cubemap influence, or if the indirect"
-" lighting has not been baked, the world's cubemap will be used to shade "
-"it."
+"object is not inside any Reflection Cubemap influence, or if the indirect "
+"lighting has not been baked, the world's cubemap will be used to shade it."
 msgstr ""
+"Les valeurs d'éclairage d'un *Reflection Cubemap* vont diminuer jusqu'à ce "
+"que les limites du volume soient atteintes. Elles vont disparaître dans "
+"l'éclairage de world ou un autre éclairage de *Reflection Cubemap*. Si "
+"plusieurs *Reflection Cubemaps* se recouvrent, les plus petits (en volume) "
+"vont toujours avoir une plus haute priorité. Si un objet ne se trouve pas "
+"dans une influence de *Reflection Cubemap*, ou si l'éclairage indirect n'a "
+"pas été précalculé, le *cubemap* de world sera utilisé pour l'ombrer."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:33
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:73
 msgid "Reference"
-msgstr ""
+msgstr "Référence"
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst
 msgid "Panel"
-msgstr ""
+msgstr "Panneau"
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:36
 msgid ":menuselection:`Object Data --> Probe`"
@@ -88,15 +108,20 @@ msgstr ""
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:39
 msgid ""
 "A probe object only influences the lighting of nearby surfaces. This "
-"influence zone is defined by the Distance parameter and object scaling. "
-"It is a bit different, depending on the probe type."
+"influence zone is defined by the Distance parameter and object scaling. It "
+"is a bit different, depending on the probe type."
 msgstr ""
+"Un objet *probe* n'influence que l'éclairage des surfaces voisines. Cette "
+"zone d'influence est définie par le paramètre *Distance* et la mise à "
+"l'échelle d'objet. C'est un peu différent selon le type de *probe*. "
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:43
 msgid ""
-"For Reflection Cubemaps the influence volume can either be a box or a "
-"sphere centered on the probe's origin."
+"For Reflection Cubemaps the influence volume can either be a box or a sphere "
+"centered on the probe's origin."
 msgstr ""
+"Pour les *Reflection Cubemaps* le volume d'influence peut être une boîte ou "
+"une sphère centrée sur l'origine de la sonde. "
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:46
 msgid "Falloff"
@@ -104,9 +129,11 @@ msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:46
 msgid ""
-"Percentage of the influence distance during which the influence of a "
-"probe fades linearly."
+"Percentage of the influence distance during which the influence of a probe "
+"fades linearly."
 msgstr ""
+"Pourcentage de la distance d'influence le long de laquelle l'influence d'une "
+"sonde s'atténue linéairement."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:51
 msgid "Intensity"
@@ -114,10 +141,13 @@ msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:49
 msgid ""
-"Intensity factor of the recorded lighting. Making this parameter anything"
-" other than 1.0 is not physically correct. Use it for tweaking or "
-"artistic purpose."
+"Intensity factor of the recorded lighting. Making this parameter anything "
+"other than 1.0 is not physically correct. Use it for tweaking or artistic "
+"purpose."
 msgstr ""
+"Facteur d'intensité de l'éclairage enregistré. En fixant ce paramètre à "
+"autre que 1.0 n'est pas physiquement correct. Utilisez-le pour un ajustement "
+"ou un objectif artistique."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:54
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:92
@@ -125,33 +155,46 @@ msgid "Clipping"
 msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:54
+#, fuzzy
 msgid "Define the near and far clip distances when capturing the scene."
 msgstr ""
+"Définir les distances de coupe de près et de loin lors de la capture de la "
+"scène. "
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:68
 msgid "Visibility Collection"
-msgstr ""
+msgstr "Collection de visibilité"
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:57
 msgid ""
-"Sometimes, it is useful to limit which objects appear in the light "
-"probe's captured lighting. For instance, an object that is too close to a"
-" capture point might be better excluded. This is what the visibility "
-"collection does. Only objects that are in this collection will be visible"
-" when this probes will capture the scene."
+"Sometimes, it is useful to limit which objects appear in the light probe's "
+"captured lighting. For instance, an object that is too close to a capture "
+"point might be better excluded. This is what the visibility collection does. "
+"Only objects that are in this collection will be visible when this probes "
+"will capture the scene."
 msgstr ""
+"Parfois, c'est utile de limiter quels objets apparaissent dans l'éclairage "
+"capturé de la sonde de lumière. Par exemple, un objet qui est trop proche "
+"d'un point de capture pourrait être mieux exclue. C'est ce que fait la "
+"collection de visibilité. Seuls les objets qui sont dans cette collection "
+"seront visibles quand cette sonde va capturer la scène."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:62
 msgid ""
 "There is also an option to invert this behavior and effectively hide the "
 "objects inside this collection."
 msgstr ""
+"Il existe également une option pour inverser ce comportement et cacher "
+"effectivement les objets dans cette collection."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:66
 msgid ""
-"This is only a filtering option. This means that if an object is not "
-"visible at render time it won't be visible in during the probe render."
+"This is only a filtering option. This means that if an object is not visible "
+"at render time it won't be visible in during the probe render."
 msgstr ""
+"Ce n'est qu'une option de filtrage. Ce qui signifie que si un objet n'est "
+"pas visible au temps de rendu, il ne sera pas visible pendant le rendu de la "
+"sonde. "
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:71
 msgid "Custom Parallax"
@@ -163,13 +206,19 @@ msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:78
 msgid ""
-"By default, the influence volume is also the parallax volume. The "
-"parallax volume is a volume on which is projected the recorded lighting. "
-"It should roughly fit it surrounding. In some cases it may be better to "
-"adjust the parallax volume without touching the influence parameters. In "
-"this case, just enable the *Custom Parallax* and change the shape and "
-"distance of the parallax volume independently."
+"By default, the influence volume is also the parallax volume. The parallax "
+"volume is a volume on which is projected the recorded lighting. It should "
+"roughly fit it surrounding. In some cases it may be better to adjust the "
+"parallax volume without touching the influence parameters. In this case, "
+"just enable the *Custom Parallax* and change the shape and distance of the "
+"parallax volume independently."
 msgstr ""
+"Par défaut, le volume d'influence est également le volume de parallaxe. Le "
+"volume de parallaxe est un volume sur lequel est projeté l'éclairage "
+"enregistré. Il devrait correspondre grossièrement à son environnement. Dans "
+"certains cas il d'ajuster le e volume de parallaxe sans toucher aux "
+"paramètres d'influence. Dans ce cas, activez simplement le *Custom Parallax* "
+"et changez indépendamment la forme et la distance du volume de parallaxe."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:86
 msgid "Viewport Display"
@@ -184,10 +233,12 @@ msgid ""
 "Show the influence bounds in the 3D View. The inner sphere is where the "
 "falloff starts."
 msgstr ""
+"Montrer les limites de l'influence dans la Vue 3D. La sphère intérieure est "
+"là où l'atténuation démarre."
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:92
 msgid "Show the clipping distance in the 3D View."
-msgstr ""
+msgstr "Montrer la distance de coupe dans la Vue 3D."
 
 #: ../../<generated>:1
 msgid "Parallax"
@@ -195,5 +246,4 @@ msgstr ""
 
 #: ../../manual/render/eevee/lightprobes/reflection_cubemaps.rst:95
 msgid "Show the *Custom Parallax* shape in the 3D View."
-msgstr ""
-
+msgstr "Montrer la forme *Custom Parallax* dans la Vue 3D."
