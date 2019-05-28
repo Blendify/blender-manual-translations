@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 21:38-0400\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: 2017-12-11 08:31-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/animation/drivers/drivers_panel.rst:4
 msgid "Drivers Panel"
@@ -100,7 +100,7 @@ msgid "Removes the driver from the property."
 msgstr "Remove o controlador a partir da propriedade."
 
 #: ../../manual/animation/drivers/drivers_panel.rst:46
-#: ../../manual/animation/drivers/drivers_panel.rst:110
+#: ../../manual/animation/drivers/drivers_panel.rst:149
 msgid "Type"
 msgstr "Tipo"
 
@@ -134,8 +134,9 @@ msgid "Scripted Expression"
 msgstr "Expressão em formato de script"
 
 #: ../../manual/animation/drivers/drivers_panel.rst:41
+#, fuzzy
 msgid ""
-"Uses a Scripted Expression. See Expression. You must write a Python "
+"Uses a Scripted Expression. See `Expression`_. You can write a Python "
 "expression which performs your own calculations on the Driver Variables."
 msgstr ""
 "Usa uma expressão em formato de script. Veja na seção \"Expressão\". Você"
@@ -160,26 +161,40 @@ msgstr "Valor máximo"
 msgid "Uses the highest value from the referenced Driver Variables."
 msgstr "Usa o valor mais alto a partir das variáveis de controlador referenciadas."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:50
+#: ../../manual/animation/drivers/drivers_panel.rst:48
+msgid "Show Debug Info"
+msgstr "Mostrar informações de depuração"
+
+#: ../../manual/animation/drivers/drivers_panel.rst:49
+msgid "Shows the *Driver Value*."
+msgstr "Mostra o *Valor do controlador*."
+
+#: ../../manual/animation/drivers/drivers_panel.rst:52
+msgid "Driver Value"
+msgstr "Valor do controlador"
+
+#: ../../manual/animation/drivers/drivers_panel.rst:51
+msgid "The output value of the driver script."
+msgstr "O valor de saída do script do controlador."
+
+#: ../../manual/animation/drivers/drivers_panel.rst:55
+#: ../../manual/animation/drivers/drivers_panel.rst:59
 msgid "Expression"
 msgstr "Expressão"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:49
+#: ../../manual/animation/drivers/drivers_panel.rst:58
 msgid ""
-"Scripted Expression. Here you can add variables, real numbers, math "
-"operators, math functions, Python properties, driver functions. See "
-"Driver Expression below for some examples."
+"Here you can add variables, real numbers, math operators, math functions,"
+" Python properties, driver functions. See Driver Expression below for "
+"some examples. For performance optimization it is best to use the `Simple"
+" Expressions`_ subset as much as possible."
 msgstr ""
-"Uma expressão em formato de script. Aqui você pode adicionar variáveis, "
-"números reais, operadores matemáticos, funções matemáticas, propriedades "
-"Python e funções de controladores. Veja a seção \"Expressão\" para alguns"
-" exemplos de expressão de controladores."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:53
+#: ../../manual/animation/drivers/drivers_panel.rst:64
 msgid "Use Self"
 msgstr "Usar nomes próprios"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:53
+#: ../../manual/animation/drivers/drivers_panel.rst:62
 msgid ""
 "This allows for drivers to references their own data using the variable "
 "``self``. Useful for objects, bones, to avoid having to create a variable"
@@ -190,37 +205,101 @@ msgstr ""
 "criação de variáveis que apontam para si mesmas através de seus próprios "
 "nomes."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:55
-msgid "Show Debug Info"
-msgstr "Mostrar informações de depuração"
+#: ../../manual/animation/drivers/drivers_panel.rst:67
+#, fuzzy
+msgid "Simple Expressions"
+msgstr "Expressão em formato de script"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:56
-msgid "Shows the *Driver Value*."
-msgstr "Mostra o *Valor do controlador*."
+#: ../../manual/animation/drivers/drivers_panel.rst:69
+msgid ""
+"Blender can evaluate a useful subset of Python driver expressions "
+"directly, which significantly improves performance, especially on multi-"
+"core systems. To take advantage of this, the driver expression must only "
+"use the following features:"
+msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:59
-msgid "Driver Value"
-msgstr "Valor do controlador"
+#: ../../manual/animation/drivers/drivers_panel.rst:73
+#, fuzzy
+msgid "Variable Names"
+msgstr "Tipo de variável"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:58
-msgid "The output value of the driver script."
-msgstr "O valor de saída do script do controlador."
+#: ../../manual/animation/drivers/drivers_panel.rst:74
+msgid "Use only ASCII characters."
+msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:62
+#: ../../manual/animation/drivers/drivers_panel.rst:75
+msgid "Literals"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:76
+msgid "Floating point and decimal integer."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:77
+msgid "Globals"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:78
+msgid "``frame``"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:79
+msgid "Constants"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:80
+msgid "``pi``, ``True``, ``False``"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:83
+msgid "Operators"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:82
+msgid ""
+"``+``, ``-``, ``*``, ``/``, ``==``, ``!=``, ``<``, ``<=``, ``>``, ``>=``,"
+" ``and``, ``or``, ``not``, conditional operator/ ternary if"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:89
+msgid "Functions"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:86
+msgid ""
+"``min``, ``max``, ``radians``, ``degrees``, ``abs``, ``fabs``, ``floor``,"
+" ``ceil``, ``trunc``, ``int``, ``sin``, ``cos``, ``tan``, ``asin``, "
+"``acos``, ``atan``, ``atan2``, ``exp``, ``log``, ``sqrt``, ``pow``, "
+"``fmod``"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:91
+msgid ""
+"Simple expressions are evaluated even when Python script execution is "
+"disabled."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:93
+msgid ""
+"When an expression outside of this subset is used, Blender displays a "
+"\"Slow Python expression\" warning."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:97
 msgid "Driver Variables"
 msgstr "Variáveis de controlador"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:68
+#: ../../manual/animation/drivers/drivers_panel.rst:103
 #, fuzzy
 msgid "Transform channel setup."
 msgstr "Definição de canais de transformação."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:72
+#: ../../manual/animation/drivers/drivers_panel.rst:107
 #, fuzzy
 msgid "Distance setup."
 msgstr "Definição de distância"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:74
+#: ../../manual/animation/drivers/drivers_panel.rst:109
 msgid ""
 "Variable are references to properties or delta transformations which are "
 "a reference to two properties."
@@ -228,29 +307,29 @@ msgstr ""
 "As variáveis são referências a propriedades ou transformações delta "
 "(adicionais) as quais são uma referência para duas propriedades."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:76
+#: ../../manual/animation/drivers/drivers_panel.rst:111
 msgid "Add Variable"
 msgstr "Adicionar variável"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:77
+#: ../../manual/animation/drivers/drivers_panel.rst:112
 msgid "Adds a new Driver Variable."
 msgstr "Adiciona uma nova variável de controlador."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:78
+#: ../../manual/animation/drivers/drivers_panel.rst:113
 msgid "Copy/Paste"
 msgstr "Copiar e colar"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:79
+#: ../../manual/animation/drivers/drivers_panel.rst:114
 msgid ""
 "Uses the copy of the current variable stack so it can be pasted onto "
 "another object's variable stack."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:82
+#: ../../manual/animation/drivers/drivers_panel.rst:117
 msgid "Name"
 msgstr "Nome"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:81
+#: ../../manual/animation/drivers/drivers_panel.rst:116
 msgid ""
 "Name to use for scripted expressions/functions. No spaces or dots are "
 "allowed and must start with a letter."
@@ -259,19 +338,19 @@ msgstr ""
 "Nenhum caractere do tipo espaço ou ponto é permitido e este nome deve "
 "iniciar com uma letra."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:118
+#: ../../manual/animation/drivers/drivers_panel.rst:157
 msgid "Variable Type"
 msgstr "Tipo de variável"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:85
+#: ../../manual/animation/drivers/drivers_panel.rst:120
 msgid "The type of variable to use."
 msgstr "O tipo de variável a ser utilizada."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:100
+#: ../../manual/animation/drivers/drivers_panel.rst:135
 msgid "Single Property"
 msgstr "Propriedade única"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:88
+#: ../../manual/animation/drivers/drivers_panel.rst:123
 #, fuzzy
 msgid ""
 "Use the value from some RNA property. For example, the Ambient shading "
@@ -286,34 +365,34 @@ msgstr ""
 "identificação (ID-block), e então copie e cole alguma propriedade RNA "
 "usando :kbd:`Ctrl-V`. Veja também :doc:`/data_system/custom_properties`."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:95
+#: ../../manual/animation/drivers/drivers_panel.rst:130
 msgid "ID Type"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:96
+#: ../../manual/animation/drivers/drivers_panel.rst:131
 #, fuzzy
 msgid "The ID-block type. For example: Key, Image, Object, Material."
 msgstr ""
 "O tipo de bloco de identificação (ID-Block). Exemplo: Chaves, Imagens, "
 "Objetos, Materiais."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:97
-#: ../../manual/animation/drivers/drivers_panel.rst:105
+#: ../../manual/animation/drivers/drivers_panel.rst:132
+#: ../../manual/animation/drivers/drivers_panel.rst:140
 msgid "ID"
 msgstr "Identificador"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:98
+#: ../../manual/animation/drivers/drivers_panel.rst:133
 #, fuzzy
 msgid "The ID of the ID-block type. For example: \"Material.001\"."
 msgstr ""
 "O identificador do tipo de bloco de identificação (ID-Block). Exemplo:  "
 "\"Material.001\"."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:100
+#: ../../manual/animation/drivers/drivers_panel.rst:135
 msgid "RNA Path"
 msgstr "Caminho RNA"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:100
+#: ../../manual/animation/drivers/drivers_panel.rst:135
 #, fuzzy
 msgid ""
 "The RNA ID name of the property. For example: 'ambient' from material "
@@ -322,24 +401,24 @@ msgstr ""
 "O nome do identificador RNA da propriedade. Exemplo: \"ambient\" a partir"
 " do sombreamento de materiais."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:113
+#: ../../manual/animation/drivers/drivers_panel.rst:152
 msgid "Transform Channel"
 msgstr "Canal de transformação"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:103
+#: ../../manual/animation/drivers/drivers_panel.rst:138
 msgid "Use one of the Transform channels from an object or bone."
 msgstr "Utiliza um dos canais de transformação a partir de um objeto ou osso."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:106
+#: ../../manual/animation/drivers/drivers_panel.rst:141
 #, fuzzy
 msgid "ID of the object. For example: Cube, Armature, Camera."
 msgstr "O identificador do objeto. Exemplo: Cubo, Armação, Câmera."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:108
+#: ../../manual/animation/drivers/drivers_panel.rst:143
 msgid "Bone"
 msgstr "Osso"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:108
+#: ../../manual/animation/drivers/drivers_panel.rst:143
 #, fuzzy
 msgid ""
 "ID of the Armature bone. For example: \"Bone\", \"Bone.002\", \"Arm.r\". "
@@ -348,57 +427,64 @@ msgstr ""
 "Identificador (ID) do osso dentro da armação. Exemplo: \"Osso\", "
 "\"Osso.002\", \"Braço.r\". Esta opção é para ser usada com armações."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:111
+#: ../../manual/animation/drivers/drivers_panel.rst:146
 #, fuzzy
 msgid "For example, X Location, X Rotation, X Scale."
 msgstr "Exemplo, Localização em X, Localização em Y e Escalonamento em X."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:113
+#: ../../manual/animation/drivers/drivers_panel.rst:148
+msgid ""
+"The *Average Scale* option retrieves the combined scale value, computed "
+"as the cubic root of the total change in volume. Unlike *X/Y/Z Scale*, "
+"this value can be negative if the object is flipped by negative scaling."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:152
 msgid "Space"
 msgstr "Espaço"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:113
+#: ../../manual/animation/drivers/drivers_panel.rst:152
 msgid "World Space, Transform Space, Local Space."
 msgstr "Espaço do ambiente, espaço de transformações ou espaço local."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:115
+#: ../../manual/animation/drivers/drivers_panel.rst:154
 msgid "Rotational Difference"
 msgstr "Diferença rotacional"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:116
+#: ../../manual/animation/drivers/drivers_panel.rst:155
 msgid "Use the rotational difference between two objects or bones."
 msgstr "Usa a diferença rotacional entre dois objetos ou ossos."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:118
+#: ../../manual/animation/drivers/drivers_panel.rst:157
 msgid "Distance"
 msgstr "Distância"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:118
+#: ../../manual/animation/drivers/drivers_panel.rst:157
 msgid "Use the distance between two objects or bones."
 msgstr "Usa a distância entre dois objetos ou ossos."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:122
+#: ../../manual/animation/drivers/drivers_panel.rst:161
 msgid "Value"
 msgstr "Valor"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:121
+#: ../../manual/animation/drivers/drivers_panel.rst:160
 msgid "Shows the value of the variable."
 msgstr "Mostra o valor da variável."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:125
+#: ../../manual/animation/drivers/drivers_panel.rst:164
 msgid "Example"
 msgstr "Exemplo"
 
-#: ../../manual/animation/drivers/drivers_panel.rst:131
+#: ../../manual/animation/drivers/drivers_panel.rst:170
 #, fuzzy
 msgid "Setup of a single property."
 msgstr "Definição de uma única propriedade."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:135
+#: ../../manual/animation/drivers/drivers_panel.rst:174
 msgid ":ref:`Extending Blender with Python <scripting-index>`."
 msgstr ":ref:`Estendendo o Blender com Python <scripting-index>`."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:137
+#: ../../manual/animation/drivers/drivers_panel.rst:176
 msgid ""
 "`Python <https://www.python.org>`__ and its `documentation "
 "<https://docs.python.org/>`__."
@@ -406,7 +492,7 @@ msgstr ""
 "`Python <https://www.python.org>`__ e sua `documentação "
 "<https://docs.python.org/>`__."
 
-#: ../../manual/animation/drivers/drivers_panel.rst:138
+#: ../../manual/animation/drivers/drivers_panel.rst:177
 msgid "`functions.wolfram.com <http://functions.wolfram.com/>`__."
 msgstr "`functions.wolfram.com <http://functions.wolfram.com/>`__."
 
@@ -421,4 +507,19 @@ msgstr "`functions.wolfram.com <http://functions.wolfram.com/>`__."
 
 #~ msgid "ID-Type"
 #~ msgstr "Tipo de identificador"
+
+#~ msgid ""
+#~ "Scripted Expression. Here you can add"
+#~ " variables, real numbers, math operators,"
+#~ " math functions, Python properties, driver"
+#~ " functions. See Driver Expression below "
+#~ "for some examples."
+#~ msgstr ""
+#~ "Uma expressão em formato de script. "
+#~ "Aqui você pode adicionar variáveis, "
+#~ "números reais, operadores matemáticos, funções"
+#~ " matemáticas, propriedades Python e funções"
+#~ " de controladores. Veja a seção "
+#~ "\"Expressão\" para alguns exemplos de "
+#~ "expressão de controladores."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: 2018-05-10 00:42-0300\n"
 "Last-Translator: Eduardo Schilling<elschilling@gmail.com>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:4
 msgid "GPU Rendering"
@@ -75,18 +75,15 @@ msgid "CUDA"
 msgstr "CUDA"
 
 #: ../../manual/render/cycles/gpu_rendering.rst:31
-#, fuzzy
 msgid ""
 "Nvidia :abbr:`CUDA (Compute Unified Device Architecture)` is supported "
 "for GPU rendering with *Nvidia* graphics cards. We support graphics cards"
-" starting from GTX 6xx (computing capability from 3.0 to 6.1)."
+" with compute capability 3.0 and higher. See the `list of Nvidia graphics"
+" cards <https://developer.nvidia.com/cuda-gpus>`__ with compute "
+"capabilities."
 msgstr ""
-"Nvidia :abbr:`CUDA (Arquitetura de Dispositivo Unificado de Computação, "
-"Compute Unified Device Architecture)` é suportado para renderização GPU "
-"com placas gráficas *Nvidia*. Nós suportamos placas gráficas começando a "
-"partir de GTX 4xx (capacidade de computação 2.0)."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:35
+#: ../../manual/render/cycles/gpu_rendering.rst:36
 msgid ""
 "Cycles requires recent Nvidia drivers to be installed, on all operating "
 "systems."
@@ -94,19 +91,11 @@ msgstr ""
 "Cycles requer drivers recentes Nvidia instalados, em todos sistemas "
 "operacionais."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:37
-msgid ""
-"`List of CUDA cards with shader model <https://developer.nvidia.com/cuda-"
-"gpus>`__."
-msgstr ""
-"`Lista de placas CUDA com modelo de sombreadores "
-"<https://developer.nvidia.com/cuda-gpus>`__."
-
-#: ../../manual/render/cycles/gpu_rendering.rst:41
+#: ../../manual/render/cycles/gpu_rendering.rst:40
 msgid "OpenCL"
 msgstr "OpenCL"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:43
+#: ../../manual/render/cycles/gpu_rendering.rst:42
 msgid ""
 ":abbr:`OpenCL (Open Computing Language)` is supported for GPU rendering "
 "with *AMD* graphics cards. (We only support graphics cards with "
@@ -121,7 +110,7 @@ msgstr ""
 "GPU é suportada verifique `essa página Wikipedia "
 "<https://en.wikipedia.org/wiki/List_of_AMD_graphics_processing_units>`__."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:50
+#: ../../manual/render/cycles/gpu_rendering.rst:49
 msgid ""
 "Cycles requires recent AMD drivers to be installed, on all operating "
 "systems."
@@ -129,11 +118,11 @@ msgstr ""
 "Cycles requer drivers recentes AMD instalados, em todos sistemas "
 "operacionais."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:54
+#: ../../manual/render/cycles/gpu_rendering.rst:53
 msgid "Supported Features and Limitations"
 msgstr "Funcionalidades Suportadas e Limitações."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:56
+#: ../../manual/render/cycles/gpu_rendering.rst:55
 msgid ""
 "For an overview of supported features, check the comparison in the "
 ":doc:`Features </render/cycles/features>`."
@@ -141,15 +130,15 @@ msgstr ""
 "Para uma visão geral de funcionalidade suportadas, verifique a comparação"
 " em :doc:`Funcionalidades </render/cycles/features>`."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:61
+#: ../../manual/render/cycles/gpu_rendering.rst:60
 msgid "Frequently Asked Questions"
 msgstr "Perguntas Frequentes"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:64
+#: ../../manual/render/cycles/gpu_rendering.rst:63
 msgid "Why is Blender unresponsive during rendering?"
 msgstr "Porquê o Blender não responde durante a renderização?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:66
+#: ../../manual/render/cycles/gpu_rendering.rst:65
 msgid ""
 "While a graphics card is rendering, it cannot redraw the user interface, "
 "which makes Blender unresponsive. We attempt to avoid this problem by "
@@ -166,7 +155,7 @@ msgstr ""
 "não há uma solução verdadeira, apesar de que poderemos ser capazes de "
 "melhorar isso de alguma forma no futuro."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:72
+#: ../../manual/render/cycles/gpu_rendering.rst:71
 msgid ""
 "If possible, it is best to install more than one GPU, using one for "
 "display and the other(s) for rendering."
@@ -174,11 +163,11 @@ msgstr ""
 "Se possível, é melhor instalar mais de uma GPU, usando uma para a "
 "visualização e outra(s) para renderização."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:77
+#: ../../manual/render/cycles/gpu_rendering.rst:76
 msgid "Why does a scene that renders on the CPU not render on the GPU?"
 msgstr "Por que uma cena que renderiza na CPU não renderiza na GPU?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:79
+#: ../../manual/render/cycles/gpu_rendering.rst:78
 msgid ""
 "There maybe be multiple causes, but the most common is that there is not "
 "enough memory on your graphics card. We can currently only render scenes "
@@ -192,7 +181,7 @@ msgstr ""
 "que a do CPU. Note que, por exemplo, texturas de imagem 8k, 4k, 2k e  1k "
 "ocupam respectivamente 256MB, 64MB, 16MB e 4MB de memória."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:85
+#: ../../manual/render/cycles/gpu_rendering.rst:84
 msgid ""
 "We do intend to add a system to support scenes bigger than GPU memory, "
 "but this will not be added soon."
@@ -200,11 +189,11 @@ msgstr ""
 "Nós pretendemos adicionar um sistema para suportar cenas maiores que a "
 "memória GPU, mas isso não será adicionado logo."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:90
+#: ../../manual/render/cycles/gpu_rendering.rst:89
 msgid "Can multiple GPUs be used for rendering?"
 msgstr "Múltiplas GPUs podem ser usadas para renderização?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:92
+#: ../../manual/render/cycles/gpu_rendering.rst:91
 msgid ""
 "Yes, go to :menuselection:`User Preferences --> System --> Compute Device"
 " Panel`, and configure it as you desire."
@@ -212,19 +201,19 @@ msgstr ""
 "Sim, vá até :menuselection:`Preferências de Usuário --> Sistema --> "
 "Dispositivo de computação para o Cycles`, e configure como quiser."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:96
+#: ../../manual/render/cycles/gpu_rendering.rst:95
 msgid "Would multiple GPUs increase available memory?"
 msgstr "Múltiplas GPUs aumentam a memória disponível?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:98
+#: ../../manual/render/cycles/gpu_rendering.rst:97
 msgid "No, each GPU can only access its own memory."
 msgstr "Não, cada GPU só pode acessar sua própria memória."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:102
+#: ../../manual/render/cycles/gpu_rendering.rst:101
 msgid "What renders faster, Nvidia or AMD, CUDA or OpenCL?"
 msgstr "O que renderiza mais rápido, Nvidia ou AMD, CUDA ou OpenCL?"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:104
+#: ../../manual/render/cycles/gpu_rendering.rst:103
 msgid ""
 "Currently Nvidia with CUDA is rendering fastest, but this really depends "
 "on the hardware you buy. Currently, CUDA and OpenCL are about the same in"
@@ -236,26 +225,26 @@ msgstr ""
 "OpenCL são quase o mesmo nas novas GPUs intermediárias. Entretanto CUDA é"
 " mais rápido no que diz respeito a GPUs de alto desempenho."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:110
+#: ../../manual/render/cycles/gpu_rendering.rst:109
 msgid "Error Messages"
 msgstr "Mensagens de erro"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:113
+#: ../../manual/render/cycles/gpu_rendering.rst:112
 msgid "Unsupported GNU version! gcc 4.7 and up are not supported!"
 msgstr "Versão GPU não suportada! gcc 4.7 e acima não são suportadas!"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:115
+#: ../../manual/render/cycles/gpu_rendering.rst:114
 #, fuzzy
 msgid ""
 "On Linux, depending on your GCC version you might get this error. There "
 "are two possible solutions:"
 msgstr "No Linux, dependendo da versão do seu GCC você pode obter esse erro."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:128
+#: ../../manual/render/cycles/gpu_rendering.rst:127
 msgid "Use an alternate compiler"
 msgstr ""
 
-#: ../../manual/render/cycles/gpu_rendering.rst:118
+#: ../../manual/render/cycles/gpu_rendering.rst:117
 msgid ""
 "If you have an older GCC installed that is compatible with the installed "
 "CUDA toolkit version, then you can use it instead of the default "
@@ -263,19 +252,19 @@ msgid ""
 "environment variable when starting Blender."
 msgstr ""
 
-#: ../../manual/render/cycles/gpu_rendering.rst:122
+#: ../../manual/render/cycles/gpu_rendering.rst:121
 msgid "Launch Blender from the command line as follows:"
 msgstr ""
 
-#: ../../manual/render/cycles/gpu_rendering.rst:128
+#: ../../manual/render/cycles/gpu_rendering.rst:127
 msgid "(Substitute the name or path of the compatible GCC compiler)."
 msgstr ""
 
-#: ../../manual/render/cycles/gpu_rendering.rst:136
+#: ../../manual/render/cycles/gpu_rendering.rst:135
 msgid "Remove compatibility checks"
 msgstr ""
 
-#: ../../manual/render/cycles/gpu_rendering.rst:131
+#: ../../manual/render/cycles/gpu_rendering.rst:130
 #, fuzzy
 msgid ""
 "If the above is unsuccessful, delete the following line in "
@@ -284,7 +273,7 @@ msgstr ""
 "Caso ocorra, delete a seguinte linha em "
 "``/usr/local/cuda/include/host_config.h``"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:138
+#: ../../manual/render/cycles/gpu_rendering.rst:137
 msgid ""
 "This will allow Cycles to successfully compile the CUDA rendering kernel "
 "the first time it attempts to use your GPU for rendering. Once the kernel"
@@ -292,11 +281,11 @@ msgid ""
 "the CUDA kernel will still be used for rendering."
 msgstr ""
 
-#: ../../manual/render/cycles/gpu_rendering.rst:144
+#: ../../manual/render/cycles/gpu_rendering.rst:143
 msgid "CUDA Error: Invalid kernel image"
 msgstr "Erro CUDA: imagem kernel inválida"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:146
+#: ../../manual/render/cycles/gpu_rendering.rst:145
 msgid ""
 "If you get this error on MS-Windows 64-bit, be sure to use the 64-bit "
 "build of Blender, not the 32-bit version."
@@ -304,11 +293,11 @@ msgstr ""
 "Se você obter esse erro no MS-Windows 64-bit, certifique-se de usar a "
 "versão 64-bit do Blender, não a versão 32-bit."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:151
+#: ../../manual/render/cycles/gpu_rendering.rst:150
 msgid "CUDA Error: Kernel compilation failed"
 msgstr "Erro CUDA: Compilação do Kernel falhou"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:153
+#: ../../manual/render/cycles/gpu_rendering.rst:152
 msgid ""
 "This error may happen if you have a new Nvidia graphics card that is not "
 "yet supported by the Blender version and CUDA toolkit you have installed."
@@ -320,11 +309,11 @@ msgstr ""
 "que você tem instalado. Nesse caso o Blender pode dinamicamente tentar "
 "construir um kernel para a sua placa gráfica e falhar."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:157
+#: ../../manual/render/cycles/gpu_rendering.rst:156
 msgid "In this case you can:"
 msgstr "Neste caso você pode:"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:159
+#: ../../manual/render/cycles/gpu_rendering.rst:158
 msgid ""
 "Check if the latest Blender version (official or `experimental builds "
 "<https://builder.blender.org/download/experimental/>`__) supports your "
@@ -334,7 +323,7 @@ msgstr ""
 "<https://builder.blender.org/download/experimental/>`__) suporta sua "
 "placa gráfica."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:162
+#: ../../manual/render/cycles/gpu_rendering.rst:161
 msgid ""
 "If you build Blender yourself, try to download and install a newer CUDA "
 "developer toolkit."
@@ -342,7 +331,7 @@ msgstr ""
 "Se você compilar o Blender você mesmo, tente baixar e instalar uma nova "
 "versão de desenvolvedor do kit de ferramentas CUDA."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:164
+#: ../../manual/render/cycles/gpu_rendering.rst:163
 msgid ""
 "Normally users do not need to install the CUDA toolkit as Blender comes "
 "with precompiled kernels."
@@ -350,11 +339,11 @@ msgstr ""
 "Normalmente usuários não precisam instalar o kit de ferramentas CUDA já "
 "que o Blender vem com os kerneis pré compilados."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:168
+#: ../../manual/render/cycles/gpu_rendering.rst:167
 msgid "CUDA Error: Out of memory"
 msgstr "Erro CUDA: Sem memória"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:170
+#: ../../manual/render/cycles/gpu_rendering.rst:169
 msgid ""
 "This usually means there is not enough memory to store the scene on the "
 "GPU. We can currently only render scenes that fit in graphics card "
@@ -366,11 +355,11 @@ msgstr ""
 "memória da placa gráfica, e ela é geralmente menor que a do CPU. Veja "
 "acima para mais detalhes."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:176
+#: ../../manual/render/cycles/gpu_rendering.rst:175
 msgid "The Nvidia OpenGL driver lost connection with the display driver"
 msgstr "O driver Nvidia OpenGL perdeu a conexão com o driver de visualização"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:178
+#: ../../manual/render/cycles/gpu_rendering.rst:177
 msgid ""
 "If a GPU is used for both display and rendering, MS-Windows has a limit "
 "on the time the GPU can do render computations. If you have a "
@@ -386,7 +375,7 @@ msgstr ""
 "aliviar essa questão, mas a única solução real é usar uma placa gráfica "
 "separada para visualização e renderização."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:184
+#: ../../manual/render/cycles/gpu_rendering.rst:183
 msgid ""
 "Another solution can be to increase the time-out, although this will make"
 " the user interface less responsive when rendering heavy scenes. `Learn "
@@ -398,11 +387,11 @@ msgstr ""
 "pesadas.`Aprenda Mais Aqui <https://msdn.microsoft.com/en-"
 "us/Library/Windows/Hardware/ff570087%28v=vs.85%29.aspx>`__."
 
-#: ../../manual/render/cycles/gpu_rendering.rst:190
+#: ../../manual/render/cycles/gpu_rendering.rst:189
 msgid "CUDA error: Unknown error in cuCtxSynchronize()"
 msgstr "Erro CUDA: Erro desconhecido em cuCtxSynchronize()"
 
-#: ../../manual/render/cycles/gpu_rendering.rst:192
+#: ../../manual/render/cycles/gpu_rendering.rst:191
 msgid ""
 "An unknown error can have many causes, but one possibility is that it is "
 "a time-out. See the above answer for solutions."
@@ -429,4 +418,28 @@ msgstr ""
 #~ "(``OpenEXR``, 16 bit ``TIFF``, ..) em"
 #~ " placas GTX 4xx/5xx. Placas mais "
 #~ "novas não tem esse limite."
+
+#~ msgid ""
+#~ "Nvidia :abbr:`CUDA (Compute Unified Device "
+#~ "Architecture)` is supported for GPU "
+#~ "rendering with *Nvidia* graphics cards. "
+#~ "We support graphics cards starting from"
+#~ " GTX 6xx (computing capability from "
+#~ "3.0 to 6.1)."
+#~ msgstr ""
+#~ "Nvidia :abbr:`CUDA (Arquitetura de Dispositivo"
+#~ " Unificado de Computação, Compute Unified"
+#~ " Device Architecture)` é suportado para "
+#~ "renderização GPU com placas gráficas "
+#~ "*Nvidia*. Nós suportamos placas gráficas "
+#~ "começando a partir de GTX 4xx "
+#~ "(capacidade de computação 2.0)."
+
+#~ msgid ""
+#~ "`List of CUDA cards with shader "
+#~ "model <https://developer.nvidia.com/cuda-gpus>`__."
+#~ msgstr ""
+#~ "`Lista de placas CUDA com modelo "
+#~ "de sombreadores <https://developer.nvidia.com/cuda-"
+#~ "gpus>`__."
 

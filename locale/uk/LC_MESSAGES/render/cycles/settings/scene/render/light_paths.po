@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: 2018-01-22 06:32+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/cycles/settings/scene/render/light_paths.rst:4
 msgid "Light Paths"
@@ -96,11 +96,11 @@ msgstr ""
 "Вузол Light Path може використовуватися для визначення типу променя, для "
 "якого буде обчислюватися відтінення."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:34
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:35
 msgid "Bounce Control"
 msgstr "Керування Відскоками -- Bounce Control"
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:36
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:37
 msgid ""
 "The maximum number of light bounces can be controlled manually. While "
 "ideally this should be infinite, in practice a smaller number of bounces "
@@ -115,11 +115,12 @@ msgstr ""
 "(diffuse) відбиття, глянцевого (glossy) відбиття та пропускання "
 "(transmission) можуть також керуватися індивідуально."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:43
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:44
+#, fuzzy
 msgid ""
 "Light paths are terminated probabilistically when specifying a minimum "
-"number of light bounces lower than the maximum. In that case paths longer"
-" than minimum will be randomly stopped when they are expected to "
+"number of light bounces lower than the maximum. In that case, paths "
+"longer than minimum will be randomly stopped when they are expected to "
 "contribute less light to the image. This will still converge to the same "
 "image, but renders faster while possibly being noisier."
 msgstr ""
@@ -129,7 +130,7 @@ msgstr ""
 "привнесуть менше світла у зображення. Це все ще зведеться у таке ж "
 "зображення, але рендери будуть швидшими, хоча можуть бути й шумнішими."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:48
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:49
 msgid ""
 "A common source of noise is caustics, which are diffuse bounces followed "
 "by a glossy bounce (assuming we start from the camera). An option is "
@@ -140,11 +141,11 @@ msgstr ""
 "(припускаючи, що ми стартуємо від камери). Доступний варіант їх повного "
 "вимкнення."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:55
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:56
 msgid "Transparency"
 msgstr "Прозорість -- Transparency"
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:57
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:58
 msgid ""
 "The transparent :abbr:`BSDF (Bidirectional scattering distribution "
 "function)` shader is given special treatment. When a ray passes through "
@@ -157,7 +158,7 @@ msgstr ""
 "всередині немає жодної геометрії. Тип променя не змінюється при "
 "проходженні крізь Transparent BSDF."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:62
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:63
 msgid ""
 "Alpha pass output is also different for the transparent BSDF. Other "
 "transmission BSDFs are considered opaque, because they change the light "
@@ -169,7 +170,7 @@ msgstr ""
 "світла. Таким чином, вони не можуть використовуватися для компонування з "
 "Alpha Over compositing, хоча воно можливе з Transparent BSDF."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:67
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:68
 msgid ""
 "The maximum number of transparent bounces is controlled separately from "
 "other bounces. It is also possible to use probabilistic termination of "
@@ -180,10 +181,11 @@ msgstr ""
 "відскоків. Також можливо використовувати ймовірнісне завершення відскоків"
 " прозорості, яке може допомогти рендерити багато рівнів прозорості."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:71
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:72
+#, fuzzy
 msgid ""
-"Note that while semantically the ray passes through as if no geometry was"
-" hit, rendering performance is affected as each transparency step "
+"Note that, while semantically the ray passes through as if no geometry "
+"was hit, rendering performance is affected as each transparency step "
 "requires executing the shader and tracing a ray."
 msgstr ""
 "Зауважте, що хоча семантично промінь проходить крізь, ніби без "
@@ -191,7 +193,7 @@ msgstr ""
 "оскільки кожен крок прозорості вимагає виконання цього відтінювача та "
 "простеження променя."
 
-#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:76
+#: ../../manual/render/cycles/settings/scene/render/light_paths.rst:77
 msgid "The object :ref:`ray visibility <cycles-ray-visibility>` settings."
 msgstr ""
 "Устави видимості променя -- :ref:`ray visibility <cycles-ray-visibility>`"

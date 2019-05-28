@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/lighting/introduction.rst:4
 msgid "Introduction"
@@ -75,35 +75,29 @@ msgid "In Blender, the elements under your control which affect lighting are:"
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:33
-msgid ""
-"The color of the world :doc:`ambient light "
-"</render/blender_render/world/ambient_light>`."
+msgid "The color of the world :doc:`ambient light </render/cycles/world>`."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:34
 msgid ""
-"The use of :doc:`Ambient Occlusion "
-"</render/blender_render/world/ambient_occlusion>` as a way to cast that "
-"ambient light onto the object."
+"The use of :ref:`Ambient Occlusion <render-cycles-integrator-world-ao>` "
+"as a way to cast that ambient light onto the object."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:36
 msgid ""
 "The degree to which the ambient light colors the :doc:`material "
-"</render/blender_render/materials/index>` of the object."
+"</render/cycles/materials/index>` of the object."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:38
 msgid ""
-"The use of :doc:`Indirect lighting "
-"</render/blender_render/world/indirect_lighting>`, where the color of one"
-" object radiates onto another."
+"The use of :doc:`Indirect lighting </render/eevee/indirect_lighting>`, "
+"where the color of one object radiates onto another."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:40
-msgid ""
-"The :doc:`lamps </render/blender_render/lighting/lamps/introduction>` in "
-"your scene."
+msgid "The :doc:`lamps </render/lighting/lamp_panel>` in your scene."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:42
@@ -112,13 +106,12 @@ msgid ""
 "Ambient Occlusion (a world setting), buffer shadows (which approximate "
 "shadows being cast by objects), ray tracing (which traces the path of "
 "photons from a light source). Also, within Blender you can use "
-":doc:`Indirect lighting "
-"</render/blender_render/world/indirect_lighting>`. Ray tracing, ambient "
-"occlusion, and indirect lighting are computationally intensive processes."
-" Blender can perform much faster rendering with its internal scan line "
-"renderer, which is a very good scan line renderer indeed. This kind of "
-"rendering engine is much faster since it does not try to simulate the "
-"real behavior of light, assuming many simplifying hypotheses."
+":doc:`Indirect lighting </render/eevee/indirect_lighting>`. Ray tracing, "
+"ambient occlusion, and indirect lighting are computationally intensive "
+"processes. Blender can perform much faster rendering with its internal "
+"scan line renderer, which is a very good scan line renderer indeed. This "
+"kind of rendering engine is much faster since it does not try to simulate"
+" the real behavior of light, assuming many simplifying hypotheses."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:54
@@ -149,26 +142,22 @@ msgid "Settings for the light, including energy and falloff."
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:65
-msgid ""
-"Then you are back to how that material's :doc:`shader "
-"</render/blender_render/materials/properties/diffuse_shaders>` reacts to "
-"the light."
+msgid "Then you are back to how that material's shader reacts to the light."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:68
+#: ../../manual/render/lighting/introduction.rst:67
 msgid ""
 "This chapter attempts to address the above, including how lights can work"
 " together in rigs to light your scene. In this chapter we will analyze "
 "the different types of light in Blender and their behavior; we will "
-"discuss their strong and weak points. We will also describe many lighting"
-" rigs, including the ever-popular three-point light method."
+"discuss their strong and weak points."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:76
+#: ../../manual/render/lighting/introduction.rst:74
 msgid "Lighting in the Workflow"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:78
+#: ../../manual/render/lighting/introduction.rst:76
 msgid ""
 "In this user manual we have placed Lighting before Materials; you should "
 "set up your lighting before assigning materials to your meshes. Since the"
@@ -179,15 +168,15 @@ msgid ""
 "the ball, cube or background."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:88
+#: ../../manual/render/lighting/introduction.rst:86
 msgid "Overriding Materials to Reset Lighting"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:92
+#: ../../manual/render/lighting/introduction.rst:90
 msgid "Material field in the Render Layers panel."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:94
+#: ../../manual/render/lighting/introduction.rst:92
 msgid ""
 "If you have started down the road of assigning materials, and are now "
 "fiddling with the lighting, we suggest that you create a default, generic"
@@ -195,7 +184,7 @@ msgid ""
 "just plain old middle gray with RGB(0.8, 0.8, 0.8). Name this \"Gray\"."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:100
+#: ../../manual/render/lighting/introduction.rst:98
 msgid ""
 "Next go to the *Render Layer* tab. In the *Layer* panel, select your new "
 "\"Gray\" material in the *Material* field. This will override any "
@@ -203,4 +192,78 @@ msgid ""
 "this material, you can now go about adjusting the lighting. Just empty "
 "this field to get back to your original materials."
 msgstr ""
+
+#~ msgid ""
+#~ "The color of the world :doc:`ambient "
+#~ "light </render/blender_render/world/ambient_light>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The use of :doc:`Ambient Occlusion "
+#~ "</render/blender_render/world/ambient_occlusion>` as a "
+#~ "way to cast that ambient light "
+#~ "onto the object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The degree to which the ambient "
+#~ "light colors the :doc:`material "
+#~ "</render/blender_render/materials/index>` of the "
+#~ "object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The use of :doc:`Indirect lighting "
+#~ "</render/blender_render/world/indirect_lighting>`, where "
+#~ "the color of one object radiates "
+#~ "onto another."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :doc:`lamps "
+#~ "</render/blender_render/lighting/lamps/introduction>` in "
+#~ "your scene."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The physics of light bouncing around "
+#~ "in the real world is simulated by"
+#~ " Ambient Occlusion (a world setting), "
+#~ "buffer shadows (which approximate shadows "
+#~ "being cast by objects), ray tracing "
+#~ "(which traces the path of photons "
+#~ "from a light source). Also, within "
+#~ "Blender you can use :doc:`Indirect "
+#~ "lighting </render/blender_render/world/indirect_lighting>`. "
+#~ "Ray tracing, ambient occlusion, and "
+#~ "indirect lighting are computationally "
+#~ "intensive processes. Blender can perform "
+#~ "much faster rendering with its internal"
+#~ " scan line renderer, which is a "
+#~ "very good scan line renderer indeed. "
+#~ "This kind of rendering engine is "
+#~ "much faster since it does not try"
+#~ " to simulate the real behavior of "
+#~ "light, assuming many simplifying hypotheses."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Then you are back to how that "
+#~ "material's :doc:`shader "
+#~ "</render/blender_render/materials/properties/diffuse_shaders>` "
+#~ "reacts to the light."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This chapter attempts to address the "
+#~ "above, including how lights can work "
+#~ "together in rigs to light your "
+#~ "scene. In this chapter we will "
+#~ "analyze the different types of light "
+#~ "in Blender and their behavior; we "
+#~ "will discuss their strong and weak "
+#~ "points. We will also describe many "
+#~ "lighting rigs, including the ever-"
+#~ "popular three-point light method."
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: 2018-01-26 19:02+0100\n"
 "Last-Translator: blend-it\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/data_system/data_blocks.rst:6
 msgid "Data-Blocks"
@@ -32,109 +32,122 @@ msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst:11
 msgid ""
+"Data-blocks are low level program representations for items inside "
+"Blender. When you consider Blender items at a low level, they are all "
+"Data-blocks, which have common Data-block properties. Data-block level is"
+" needed to handle items in Blender program. However, when considering a "
+"higher level, which is typically visible to users, Blender items are "
+"represented as meshes, objects, materials, textures etc. which are "
+"different things. Data-block level handles the same high level items "
+"(meshes, objects, materials, textures etc.), but only considers their low"
+" level common properties and functions."
+msgstr ""
+
+#: ../../manual/data_system/data_blocks.rst:21
+msgid ""
 "For clarity, bones, sequence strips and vertex groups are **not** data-"
 "blocks, they belong to armature, scene and mesh types respectively."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:14
+#: ../../manual/data_system/data_blocks.rst:24
 #, fuzzy
 msgid "Some common characteristics:"
 msgstr "Mattone (Normale)"
 
-#: ../../manual/data_system/data_blocks.rst:16
+#: ../../manual/data_system/data_blocks.rst:26
 #, fuzzy
 msgid "They are the primary contents of the blend-file."
 msgstr "File Blend"
 
-#: ../../manual/data_system/data_blocks.rst:17
+#: ../../manual/data_system/data_blocks.rst:27
 msgid ""
 "They can link to each other, for reuse and instancing. (child/parent, "
 "object/object-data, with modifiers and constraints too)."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:19
+#: ../../manual/data_system/data_blocks.rst:29
 #, fuzzy
 msgid "Their names are unique."
 msgstr "Nomi"
 
-#: ../../manual/data_system/data_blocks.rst:20
+#: ../../manual/data_system/data_blocks.rst:30
 msgid "They can be added/removed/edited/duplicated."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:21
+#: ../../manual/data_system/data_blocks.rst:31
 msgid ""
 "They can be linked between files (only enabled for a limited set of data-"
 "blocks)."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:22
+#: ../../manual/data_system/data_blocks.rst:32
 #, fuzzy
 msgid "They can have their own animation data."
 msgstr "Il blocco-dati animazione non ha una azione attiva"
 
-#: ../../manual/data_system/data_blocks.rst:23
+#: ../../manual/data_system/data_blocks.rst:33
 msgid "They can have :doc:`Custom Properties </data_system/custom_properties>`."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:25
+#: ../../manual/data_system/data_blocks.rst:35
 msgid ""
 "When doing more complex projects, managing data-blocks becomes more "
 "important, especially when inter-linking blend-files."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:30
+#: ../../manual/data_system/data_blocks.rst:40
 msgid "Data-blocks view."
 msgstr "Vista blocchi-dati."
 
-#: ../../manual/data_system/data_blocks.rst:34
+#: ../../manual/data_system/data_blocks.rst:44
 msgid "Users (Garbage Collection)"
 msgstr "Utilizzatori (Raccolta inutilizzati)"
 
-#: ../../manual/data_system/data_blocks.rst:36
+#: ../../manual/data_system/data_blocks.rst:46
 msgid ""
 "It is good to be aware of how Blender handles data-blocks lifetime, when "
 "they are freed and why."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:39
+#: ../../manual/data_system/data_blocks.rst:49
 msgid "Blender follows the general rule where unused data is eventually removed."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:41
+#: ../../manual/data_system/data_blocks.rst:51
 msgid ""
 "Since it is common to add and remove a lot of data while working, this "
 "has the advantage of not having to manually manage every single data-"
 "block."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:44
+#: ../../manual/data_system/data_blocks.rst:54
 msgid "This works by skipping zero user data-blocks when writing blend-files."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:46
+#: ../../manual/data_system/data_blocks.rst:56
 msgid ""
 "In some cases, you want to save a data-block even when it is unused "
 "(typically for re-usable asset libraries). See `Fake User`_."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:53
+#: ../../manual/data_system/data_blocks.rst:63
 msgid "Fake User"
 msgstr "Utilizzatore Fittizio"
 
-#: ../../manual/data_system/data_blocks.rst:55
+#: ../../manual/data_system/data_blocks.rst:65
 msgid ""
 "Since zero user data-blocks are not saved, there are times when you want "
 "to force the data to be kept irrespective of its users."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:58
+#: ../../manual/data_system/data_blocks.rst:68
 msgid ""
 "If you are building a blend-file to serve as a library of things that you"
 " intend to link to and from other files, you will need to make sure that "
 "they do not accidentally get deleted from the library file."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:61
+#: ../../manual/data_system/data_blocks.rst:71
 msgid ""
 "Do this by giving the data-blocks a *Fake User*, by pressing the *F* "
 "button next to the name of the data-block. This prevents the user count "
@@ -143,45 +156,45 @@ msgid ""
 "one)."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:67
+#: ../../manual/data_system/data_blocks.rst:77
 msgid "Users (Sharing)"
 msgstr "Utilizzatori (Condivisione)"
 
-#: ../../manual/data_system/data_blocks.rst:69
+#: ../../manual/data_system/data_blocks.rst:79
 msgid "Many data-blocks can be shared among other data-blocks."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:71
+#: ../../manual/data_system/data_blocks.rst:81
 msgid "Examples where sharing data is common:"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:73
+#: ../../manual/data_system/data_blocks.rst:83
 msgid "Sharing textures among materials."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:74
+#: ../../manual/data_system/data_blocks.rst:84
 msgid "Sharing meshes between objects (instances)."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:75
+#: ../../manual/data_system/data_blocks.rst:85
 msgid ""
 "Sharing animated actions between objects, for example to make all the "
 "lights dim together."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:78
+#: ../../manual/data_system/data_blocks.rst:88
 msgid "You can also share data-blocks between files, see:"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:80
+#: ../../manual/data_system/data_blocks.rst:90
 msgid ":doc:`linked libraries </data_system/linked_libraries>`."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:87
+#: ../../manual/data_system/data_blocks.rst:97
 msgid "Make Single User"
 msgstr "Rendi Utilizzatore Singolo"
 
-#: ../../manual/data_system/data_blocks.rst:89
+#: ../../manual/data_system/data_blocks.rst:99
 msgid "Reference"
 msgstr "Riferimento"
 
@@ -189,7 +202,7 @@ msgstr "Riferimento"
 msgid "Editor"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:92
+#: ../../manual/data_system/data_blocks.rst:102
 msgid "3D View"
 msgstr ""
 
@@ -197,7 +210,7 @@ msgstr ""
 msgid "Mode"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:93
+#: ../../manual/data_system/data_blocks.rst:103
 #, fuzzy
 msgid "Object Mode"
 msgstr "Modo:     Modalità Oggetto"
@@ -206,7 +219,7 @@ msgstr "Modo:     Modalità Oggetto"
 msgid "Menu"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:94
+#: ../../manual/data_system/data_blocks.rst:104
 #, fuzzy
 msgid ":menuselection:`Object --> Make Single User`"
 msgstr "Rendi utente singolo i dati dell'oggetto"
@@ -215,185 +228,185 @@ msgstr "Rendi utente singolo i dati dell'oggetto"
 msgid "Hotkey"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:95
+#: ../../manual/data_system/data_blocks.rst:105
 msgid ":kbd:`U`"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:97
+#: ../../manual/data_system/data_blocks.rst:107
 msgid ""
 "Makes the selected or all objects data-blocks a single user, that is, not"
 " shared (linked) between other objects than the current one."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:102
-#: ../../manual/data_system/data_blocks.rst:177
+#: ../../manual/data_system/data_blocks.rst:112
+#: ../../manual/data_system/data_blocks.rst:187
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../manual/data_system/data_blocks.rst:101
+#: ../../manual/data_system/data_blocks.rst:111
 msgid ""
 "These actions work on the selected objects, or on all the objects of the "
 "scene."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:103
+#: ../../manual/data_system/data_blocks.rst:113
 #, fuzzy
 msgid "All, Selected Objects"
 msgstr "Mostra i sensori di tutti gli oggetti selezionati"
 
-#: ../../manual/data_system/data_blocks.rst:108
+#: ../../manual/data_system/data_blocks.rst:118
 msgid "Data-blocks"
 msgstr "Blocchi-dati"
 
-#: ../../manual/data_system/data_blocks.rst:105
+#: ../../manual/data_system/data_blocks.rst:115
 msgid ""
 "Lets you, in addition to the menu predefined selection, choose the type "
 "of data-blocks individually."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:107
+#: ../../manual/data_system/data_blocks.rst:117
 #, fuzzy
 msgid "Object, Object Data, Materials, Textures, Object Animation"
 msgstr "Rende i dati dell'animazione locali a ogni oggetto"
 
-#: ../../manual/data_system/data_blocks.rst:111
+#: ../../manual/data_system/data_blocks.rst:121
 msgid "Removing Data-Blocks"
 msgstr "Cancellare blocchi-dati"
 
-#: ../../manual/data_system/data_blocks.rst:113
+#: ../../manual/data_system/data_blocks.rst:123
 msgid ""
 "As covered in `Users (Garbage Collection)`_, data-blocks are typically "
 "removed when they are no longer used."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:115
+#: ../../manual/data_system/data_blocks.rst:125
 #, fuzzy
 msgid "There are some exceptions to this, however."
 msgstr "Mostra/nascondi alcuni vertici"
 
-#: ../../manual/data_system/data_blocks.rst:117
+#: ../../manual/data_system/data_blocks.rst:127
 msgid ""
 "The following data-blocks can be removed directly: Scene, Text, Group, "
 "and Screen."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:119
+#: ../../manual/data_system/data_blocks.rst:129
 msgid ""
 "Other data-blocks such as Groups and Actions can be *Unlinked* from the "
 "*Outliner* context menu."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:123
+#: ../../manual/data_system/data_blocks.rst:133
 msgid ""
 "Some data (images especially) is hard to keep track of, especially since "
 "image views are counted as users."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:126
+#: ../../manual/data_system/data_blocks.rst:136
 msgid ""
 "For data-blocks that can be unlinked hold :kbd:`Shift`, while pressing on"
 " the *X* button. This force clears the user count, so the data-block will"
 " be removed on reloading."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:133
+#: ../../manual/data_system/data_blocks.rst:143
 msgid "Data-Block Types"
 msgstr "Tipi di blocchi-dati"
 
-#: ../../manual/data_system/data_blocks.rst:147
+#: ../../manual/data_system/data_blocks.rst:157
 msgid "Data-blocks types with their icon."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:149
+#: ../../manual/data_system/data_blocks.rst:159
 msgid "For reference, here is a table of data-blocks types stored in blend-files."
 msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
-#: ../../manual/data_system/data_blocks.rst:178
+#: ../../manual/data_system/data_blocks.rst:188
 msgid "Link"
 msgstr "Collegabile"
 
-#: ../../manual/data_system/data_blocks.rst:152
+#: ../../manual/data_system/data_blocks.rst:162
 msgid "Library Linking, supports being linked into other blend-files."
 msgstr ""
 
 #: ../../manual/data_system/data_blocks.rst
-#: ../../manual/data_system/data_blocks.rst:179
+#: ../../manual/data_system/data_blocks.rst:189
 msgid "Pack"
 msgstr "Incorporabile"
 
-#: ../../manual/data_system/data_blocks.rst:154
+#: ../../manual/data_system/data_blocks.rst:164
 msgid ""
 "File Packing, supports file contents being packed into the blend-file "
 "*(not applicable for most data-blocks which have no file reference)*."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:180
+#: ../../manual/data_system/data_blocks.rst:190
 msgid "Description"
 msgstr "Descrizione"
 
-#: ../../manual/data_system/data_blocks.rst:181
+#: ../../manual/data_system/data_blocks.rst:191
 msgid "Action"
 msgstr "Azione"
 
-#: ../../manual/data_system/data_blocks.rst:182
-#: ../../manual/data_system/data_blocks.rst:188
-#: ../../manual/data_system/data_blocks.rst:193
-#: ../../manual/data_system/data_blocks.rst:197
-#: ../../manual/data_system/data_blocks.rst:201
-#: ../../manual/data_system/data_blocks.rst:205
-#: ../../manual/data_system/data_blocks.rst:206
-#: ../../manual/data_system/data_blocks.rst:210
+#: ../../manual/data_system/data_blocks.rst:192
+#: ../../manual/data_system/data_blocks.rst:198
+#: ../../manual/data_system/data_blocks.rst:203
+#: ../../manual/data_system/data_blocks.rst:207
+#: ../../manual/data_system/data_blocks.rst:211
+#: ../../manual/data_system/data_blocks.rst:215
 #: ../../manual/data_system/data_blocks.rst:216
-#: ../../manual/data_system/data_blocks.rst:221
-#: ../../manual/data_system/data_blocks.rst:222
+#: ../../manual/data_system/data_blocks.rst:220
 #: ../../manual/data_system/data_blocks.rst:226
+#: ../../manual/data_system/data_blocks.rst:231
+#: ../../manual/data_system/data_blocks.rst:232
 #: ../../manual/data_system/data_blocks.rst:236
-#: ../../manual/data_system/data_blocks.rst:240
-#: ../../manual/data_system/data_blocks.rst:244
-#: ../../manual/data_system/data_blocks.rst:249
+#: ../../manual/data_system/data_blocks.rst:246
+#: ../../manual/data_system/data_blocks.rst:250
 #: ../../manual/data_system/data_blocks.rst:254
 #: ../../manual/data_system/data_blocks.rst:259
 #: ../../manual/data_system/data_blocks.rst:264
 #: ../../manual/data_system/data_blocks.rst:269
 #: ../../manual/data_system/data_blocks.rst:274
-#: ../../manual/data_system/data_blocks.rst:280
-#: ../../manual/data_system/data_blocks.rst:285
+#: ../../manual/data_system/data_blocks.rst:279
+#: ../../manual/data_system/data_blocks.rst:284
 #: ../../manual/data_system/data_blocks.rst:290
-#: ../../manual/data_system/data_blocks.rst:305
-#: ../../manual/data_system/data_blocks.rst:306
-#: ../../manual/data_system/data_blocks.rst:310
+#: ../../manual/data_system/data_blocks.rst:295
+#: ../../manual/data_system/data_blocks.rst:300
 #: ../../manual/data_system/data_blocks.rst:315
+#: ../../manual/data_system/data_blocks.rst:316
 #: ../../manual/data_system/data_blocks.rst:320
 #: ../../manual/data_system/data_blocks.rst:325
+#: ../../manual/data_system/data_blocks.rst:330
+#: ../../manual/data_system/data_blocks.rst:335
 msgid "|tick|"
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:183
-#: ../../manual/data_system/data_blocks.rst:189
-#: ../../manual/data_system/data_blocks.rst:194
-#: ../../manual/data_system/data_blocks.rst:198
-#: ../../manual/data_system/data_blocks.rst:202
-#: ../../manual/data_system/data_blocks.rst:211
-#: ../../manual/data_system/data_blocks.rst:217
+#: ../../manual/data_system/data_blocks.rst:193
+#: ../../manual/data_system/data_blocks.rst:199
+#: ../../manual/data_system/data_blocks.rst:204
+#: ../../manual/data_system/data_blocks.rst:208
+#: ../../manual/data_system/data_blocks.rst:212
+#: ../../manual/data_system/data_blocks.rst:221
 #: ../../manual/data_system/data_blocks.rst:227
-#: ../../manual/data_system/data_blocks.rst:231
+#: ../../manual/data_system/data_blocks.rst:237
 #: ../../manual/data_system/data_blocks.rst:241
-#: ../../manual/data_system/data_blocks.rst:245
-#: ../../manual/data_system/data_blocks.rst:250
+#: ../../manual/data_system/data_blocks.rst:251
 #: ../../manual/data_system/data_blocks.rst:255
 #: ../../manual/data_system/data_blocks.rst:260
+#: ../../manual/data_system/data_blocks.rst:265
 #: ../../manual/data_system/data_blocks.rst:270
-#: ../../manual/data_system/data_blocks.rst:275
-#: ../../manual/data_system/data_blocks.rst:281
-#: ../../manual/data_system/data_blocks.rst:286
+#: ../../manual/data_system/data_blocks.rst:280
+#: ../../manual/data_system/data_blocks.rst:285
 #: ../../manual/data_system/data_blocks.rst:291
 #: ../../manual/data_system/data_blocks.rst:296
 #: ../../manual/data_system/data_blocks.rst:301
+#: ../../manual/data_system/data_blocks.rst:306
 #: ../../manual/data_system/data_blocks.rst:311
 #: ../../manual/data_system/data_blocks.rst:321
-#: ../../manual/data_system/data_blocks.rst:326
-#: ../../manual/data_system/data_blocks.rst:330
+#: ../../manual/data_system/data_blocks.rst:331
+#: ../../manual/data_system/data_blocks.rst:336
+#: ../../manual/data_system/data_blocks.rst:340
 msgid "|none|"
 msgstr ""
 
@@ -411,7 +424,7 @@ msgstr "Dati dell'animazione per questo blocco-dati"
 msgid "and the Non-Linear-Editor."
 msgstr "Animazione non-lineare"
 
-#: ../../manual/data_system/data_blocks.rst:187
+#: ../../manual/data_system/data_blocks.rst:197
 msgid "Armature"
 msgstr "Armatura"
 
@@ -425,7 +438,7 @@ msgstr "Modificatore Deforma Mesh per deformare tramite altre mesh"
 msgid "Used as object data & by the Armature Modifier."
 msgstr "Applica il modificatore ai dati dell'oggetto"
 
-#: ../../manual/data_system/data_blocks.rst:192
+#: ../../manual/data_system/data_blocks.rst:202
 msgid "Brush"
 msgstr "Pennello"
 
@@ -434,7 +447,7 @@ msgstr "Pennello"
 msgid "Used by paint tools."
 msgstr "Strumenti:"
 
-#: ../../manual/data_system/data_blocks.rst:196
+#: ../../manual/data_system/data_blocks.rst:206
 msgid "Camera"
 msgstr "Camera"
 
@@ -443,7 +456,7 @@ msgstr "Camera"
 msgid "Used as object data."
 msgstr "Origine dei dati usati per lo sfondo"
 
-#: ../../manual/data_system/data_blocks.rst:200
+#: ../../manual/data_system/data_blocks.rst:210
 msgid "Curve"
 msgstr "Curva"
 
@@ -451,7 +464,7 @@ msgstr "Curva"
 msgid "Used by camera, font & surface objects."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:204
+#: ../../manual/data_system/data_blocks.rst:214
 msgid "Font"
 msgstr "Carattere"
 
@@ -465,7 +478,7 @@ msgstr "Filtra i file di caratteri"
 msgid "Used by Font object-data."
 msgstr "Blocchi-dati Caratteri vettoriali"
 
-#: ../../manual/data_system/data_blocks.rst:209
+#: ../../manual/data_system/data_blocks.rst:219
 msgid "GreasePencil"
 msgstr "Matita"
 
@@ -482,7 +495,7 @@ msgstr ""
 msgid "3D View, Image, Sequencer & Movie Clip editors."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:215
+#: ../../manual/data_system/data_blocks.rst:225
 msgid "Group"
 msgstr "Gruppo"
 
@@ -495,7 +508,7 @@ msgstr "Oggetto Riferimento"
 msgid "Used by dupli-groups & often library linking."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:220
+#: ../../manual/data_system/data_blocks.rst:230
 msgid "Image"
 msgstr "Immagine"
 
@@ -508,7 +521,7 @@ msgstr "File di immagini."
 msgid "Used by textures & shader nodes."
 msgstr "Nodi ombreggiatori"
 
-#: ../../manual/data_system/data_blocks.rst:225
+#: ../../manual/data_system/data_blocks.rst:235
 msgid "Lamp"
 msgstr "Luce"
 
@@ -517,17 +530,17 @@ msgstr "Luce"
 msgid "Used as object-data."
 msgstr "Origine dei dati usati per lo sfondo"
 
-#: ../../manual/data_system/data_blocks.rst:229
+#: ../../manual/data_system/data_blocks.rst:239
 msgid "Lattice"
 msgstr "Lattice"
 
-#: ../../manual/data_system/data_blocks.rst:230
-#: ../../manual/data_system/data_blocks.rst:235
-#: ../../manual/data_system/data_blocks.rst:265
-#: ../../manual/data_system/data_blocks.rst:295
-#: ../../manual/data_system/data_blocks.rst:300
-#: ../../manual/data_system/data_blocks.rst:316
-#: ../../manual/data_system/data_blocks.rst:329
+#: ../../manual/data_system/data_blocks.rst:240
+#: ../../manual/data_system/data_blocks.rst:245
+#: ../../manual/data_system/data_blocks.rst:275
+#: ../../manual/data_system/data_blocks.rst:305
+#: ../../manual/data_system/data_blocks.rst:310
+#: ../../manual/data_system/data_blocks.rst:326
+#: ../../manual/data_system/data_blocks.rst:339
 #, fuzzy
 msgid "|cross|"
 msgstr "Incrocio"
@@ -542,7 +555,7 @@ msgstr "Modificatore di deformazione Lattice"
 msgid "Used as object data and by the Lattice Modifier."
 msgstr "I modificatori hanno effetto sui dati geometrici dell'oggetto"
 
-#: ../../manual/data_system/data_blocks.rst:234
+#: ../../manual/data_system/data_blocks.rst:244
 msgid "Library"
 msgstr "Libreria"
 
@@ -555,7 +568,7 @@ msgstr "Incorpora tutti i file esterni nel file .blend"
 msgid "Access from the Outliner's blend-file view."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:239
+#: ../../manual/data_system/data_blocks.rst:249
 msgid "LineStyle"
 msgstr "Stile Linea"
 
@@ -564,7 +577,7 @@ msgstr "Stile Linea"
 msgid "Used by the FreeStyle renderer."
 msgstr "Simulazione utilizzata per evitare ostacoli nel motore di gioco"
 
-#: ../../manual/data_system/data_blocks.rst:243
+#: ../../manual/data_system/data_blocks.rst:253
 msgid "Mask"
 msgstr "Maschera"
 
@@ -577,7 +590,7 @@ msgstr "Modifica animazione/fotogrammi-chiave mostrati come curve 2D"
 msgid "Used by compositing nodes & sequencer strip."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:248
+#: ../../manual/data_system/data_blocks.rst:258
 msgid "Material"
 msgstr "Materiale"
 
@@ -590,7 +603,7 @@ msgstr ""
 msgid "Used by objects, meshes & curves."
 msgstr "Attuatore usato per modificare gli oggetti"
 
-#: ../../manual/data_system/data_blocks.rst:253
+#: ../../manual/data_system/data_blocks.rst:263
 msgid "Mesh"
 msgstr "Mesh"
 
@@ -599,7 +612,7 @@ msgstr "Mesh"
 msgid "Geometry vertices/edges/faces."
 msgstr "Cancella vertici, spigoli o facce isolati/slegati"
 
-#: ../../manual/data_system/data_blocks.rst:258
+#: ../../manual/data_system/data_blocks.rst:268
 msgid "MetaBall"
 msgstr "MetaBall"
 
@@ -608,7 +621,7 @@ msgstr "MetaBall"
 msgid "An isosurface in 3D space."
 msgstr "Spazio Vista 3D"
 
-#: ../../manual/data_system/data_blocks.rst:263
+#: ../../manual/data_system/data_blocks.rst:273
 msgid "MovieClip"
 msgstr "Filmato"
 
@@ -621,7 +634,7 @@ msgstr ""
 msgid "Used in the Movie Clip editor."
 msgstr "Spazio Editor Nodi"
 
-#: ../../manual/data_system/data_blocks.rst:268
+#: ../../manual/data_system/data_blocks.rst:278
 msgid "NodeGroup"
 msgstr "Gruppo Nodi"
 
@@ -634,7 +647,7 @@ msgstr ""
 msgid "Used in the Node Editor."
 msgstr "Spazio Editor Nodi"
 
-#: ../../manual/data_system/data_blocks.rst:273
+#: ../../manual/data_system/data_blocks.rst:283
 msgid "Object"
 msgstr "Oggetto"
 
@@ -655,7 +668,7 @@ msgstr ""
 msgid "Used by scenes & groups."
 msgstr "Scene"
 
-#: ../../manual/data_system/data_blocks.rst:279
+#: ../../manual/data_system/data_blocks.rst:289
 msgid "Particle"
 msgstr "Particella"
 
@@ -669,7 +682,7 @@ msgstr "Impostazioni Particelle"
 msgid "Used by particle systems."
 msgstr "Sistema Particelle"
 
-#: ../../manual/data_system/data_blocks.rst:284
+#: ../../manual/data_system/data_blocks.rst:294
 msgid "Palette"
 msgstr "Tavolozza"
 
@@ -682,7 +695,7 @@ msgstr "Preimpostazioni Colore"
 msgid "Access from the paint tools."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:289
+#: ../../manual/data_system/data_blocks.rst:299
 msgid "Scene"
 msgstr "Scena"
 
@@ -694,7 +707,7 @@ msgstr ""
 msgid "Used as top-level storage for objects & animation."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:294
+#: ../../manual/data_system/data_blocks.rst:304
 msgid "Screen"
 msgstr "Schermo"
 
@@ -706,7 +719,7 @@ msgstr "Disposizione schermo."
 msgid "Used by each window, which has its own screen."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:299
+#: ../../manual/data_system/data_blocks.rst:309
 msgid "ShapeKeys"
 msgstr "Chiavi Forma"
 
@@ -718,7 +731,7 @@ msgstr ""
 msgid "Used by mesh, curve, and lattice objects."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:304
+#: ../../manual/data_system/data_blocks.rst:314
 msgid "Sounds"
 msgstr "Suoni"
 
@@ -732,7 +745,7 @@ msgstr "Filtra i file di suoni"
 msgid "Used by speaker objects."
 msgstr "Simulazione utilizzata per evitare ostacoli nel motore di gioco"
 
-#: ../../manual/data_system/data_blocks.rst:309
+#: ../../manual/data_system/data_blocks.rst:319
 msgid "Speaker"
 msgstr "Altoparlante"
 
@@ -741,7 +754,7 @@ msgstr "Altoparlante"
 msgid "Sound sources for a 3D scene."
 msgstr "Suono 3D"
 
-#: ../../manual/data_system/data_blocks.rst:314
+#: ../../manual/data_system/data_blocks.rst:324
 msgid "Text"
 msgstr "Testo"
 
@@ -753,7 +766,7 @@ msgstr "Dati testuali"
 msgid "Used by Python scripts and OSL shaders."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:319
+#: ../../manual/data_system/data_blocks.rst:329
 msgid "Texture"
 msgstr "Texture"
 
@@ -765,7 +778,7 @@ msgstr "Texture 2D/3D"
 msgid "Used by materials, world and brushes."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:324
+#: ../../manual/data_system/data_blocks.rst:334
 msgid "World"
 msgstr "Mondo"
 
@@ -773,7 +786,7 @@ msgstr "Mondo"
 msgid "Used by scenes for render environment settings."
 msgstr ""
 
-#: ../../manual/data_system/data_blocks.rst:328
+#: ../../manual/data_system/data_blocks.rst:338
 msgid "WindowManager"
 msgstr ""
 
