@@ -1,99 +1,313 @@
 #
 # phan <phahoatho@gmail.com>, 2016, 2017, 2018.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: 2018-04-18 10:57+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/troubleshooting/gpu.rst:4
 msgid "Graphics Hardware"
 msgstr "Matériel graphique"
 
 #: ../../manual/troubleshooting/gpu.rst:6
-msgid "Blender makes use of OpenGL, which is typically hardware accelerated."
-msgstr ""
-"Blender fait usage d'OpenGL, qui est typiquement accéléré par le matériel."
-
-#: ../../manual/troubleshooting/gpu.rst:8
 msgid ""
-"This means issues with the graphics card hardware and drivers can impact on "
-"Blender's behavior. This page lists some known issues using Blender on "
-"different graphics hardware and how to troubleshoot them."
+"Blender uses of OpenGL for the 3D viewport and user interface. The "
+"graphics card (GPU) and driver have a big impact on Blender's behavior "
+"and performance."
 msgstr ""
-"Cela signifie que les problèmes avec la carte graphique et les pilotes "
-"peuvent impacter le comportement de Blender. Cette page liste certains "
-"problèmes connus dans l'utilisation de Blender avec différents cartes "
-"graphiques et leurs solutions."
 
-#: ../../manual/troubleshooting/gpu.rst:13
-msgid "Performance"
+#: ../../manual/troubleshooting/gpu.rst:9
+msgid ""
+"This pages lists possible solutions for graphics glitches, problems with "
+"Eevee and Cycles, and crashes related to your GPU."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:14
+msgid "Drivers"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:16
+msgid ""
+"Upgrading to the latest graphics drivers often solves problems. Newer "
+"drivers have bug fixes that help Blender function correctly."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:21
+msgid "Windows"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:23
+msgid ""
+"On Windows drivers are provided by the graphics card manufacturer (Intel,"
+" AMD and NVIDIA). Windows update automatically installs graphics drivers,"
+" or your computer manufacturer may provide its own version of the "
+"graphics drivers. However these are not always the latest version or may "
+"have been corrupted in some way."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:28
+msgid ""
+"To ensure you have the latest version, go to the graphics card "
+"manufacturer's website and download the latest drivers from there. It can"
+" help to uninstall the previous drivers first and perform a clean "
+"installation."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:34
+msgid "Linux"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:36
+msgid ""
+"On Linux, graphics drivers are usually installed as a package by your "
+"Linux distribution. Installing the latest drivers is typically done by "
+"upgrading packages or the distribution as a whole. Some distributions "
+"provide multiple packages for multiple drivers versions, giving you the "
+"choice to install newer versions."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:41
+msgid ""
+"For NVIDIA there are open source (Nouveau) and closed source (by NVIDIA) "
+"graphics drivers. Blender functions best with the closed source drivers "
+"as they are more optimized and complete. Linux graphics drivers can be "
+"downloaded from NVIDIA's website, however in most cases the ones from "
+"your Linux distribution are fine and make things easier. Manually "
+"downloading drivers is mostly useful to get the very latest version, for "
+"example for a GPU that was only recently released."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:48
+msgid ""
+"For AMD the drivers are open source, except for the OpenCL support which "
+"is available as part of Pro drivers. Installing packages through your "
+"Linux distribution is usually best. AMD also provides graphics drivers "
+"for download on their website if you need the latest version."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:54
+msgid "macOS"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:56
+msgid ""
+"On macOS graphics drivers are built into the operating system and the "
+"only way to get newer drivers is to upgrade macOS as a whole to the "
+"latest version."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:61
+msgid "Laptops"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:63
+msgid ""
+"Laptops often have two GPUs for power saving purposes. One slower onboard"
+" GPU (typically Intel) and one faster dedicated GPU for better "
+"performance (AMD or NVIDIA)."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:66
+msgid ""
+"For best performance the dedicated GPU should be used for Blender. Which "
+"GPU to use for which application can be configured in your graphics "
+"driver settings."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:69
+msgid ""
+"If there is a graphics glitch specific to the onboard GPU, then using the"
+" dedicated GPU can also help avoid that."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:73
+msgid "Common Problems"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:76
+msgid "Unsupported Graphics Driver Error"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:78
+msgid ""
+"This means your graphics card and driver do not have the minimum required"
+" OpenGL 3.3 version needed by Blender."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:80
+msgid ""
+"Installing the latest driver can help upgrade the OpenGL version, though "
+"some graphics cards are simply too old to run the latest Blender. Using "
+"Blender 2.79 or earlier is the only option then."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:86
+msgid "Crash on Startup"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:88
+msgid ""
+"Try running Blender from the :doc:`command line "
+"</advanced/command_line/index>`, to see if any helpful error messages are"
+" printed."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:91
+msgid ""
+"On Windows, graphics drivers can sometimes get corrupted. In this case it"
+" can help to uninstall all graphics drivers (there may be multiple from "
+"Intel, AMD and NVIDIA) and perform a clean installation with drivers from"
+" the manufacturer's website."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:97
+#, fuzzy
+msgid "Poor Performance"
 msgstr "Performance"
 
-#: ../../manual/troubleshooting/gpu.rst:15
-msgid ""
-"When the entire interface is very slow and unresponsive (*even* with the "
-"default startup scene), this is likely a problem with the OpenGL "
-"configuration."
+#: ../../manual/troubleshooting/gpu.rst:99
+msgid "Update your graphics drivers (see above)."
 msgstr ""
-"Quand l'interface entière est très lente et peu réactive (*même* avec la "
-"scène de démarrage par défaut). C'est probablement un problème de "
-"configuration d'OpenGL. "
 
-#: ../../manual/troubleshooting/gpu.rst:18
-msgid ""
-"Unfortunately, in this situation, you may have to do some of your own tests "
-"to find the cause. Below are some common causes and possible solutions."
+#: ../../manual/troubleshooting/gpu.rst:100
+msgid "On laptops, make sure you are using a dedicated GPU (see above)."
 msgstr ""
-"Malheureusement, dans cette situation, il se peut que vous ayez à faire vos "
-"propres tests pour trouver la cause. Ci-dessous quelques causes fréquentes "
-"et leurs solutions éventuelles."
 
-#: ../../manual/troubleshooting/gpu.rst:22
-msgid "Upgrade your OpenGL Driver"
-msgstr "Mettre à jour votre pilote OpenGL"
-
-#: ../../manual/troubleshooting/gpu.rst:22
+#: ../../manual/troubleshooting/gpu.rst:101
 msgid ""
-"If you are experiencing any strange graphics problems with Blender, it is "
-"always good to double check if you are using the latest drivers."
+"Try lowering quality settings in :menuselection:`Preferences --> System "
+"--> OpenGL`."
 msgstr ""
-"Si vous êtes confronté à des problèmes graphiques étranges avec Blender, "
-"c'est toujours bon de revérifier si vous avez les pilotes les plus récents."
 
-#: ../../manual/troubleshooting/gpu.rst:24
-msgid "Disable Anti-Aliasing :term:`FSAA, Multisampling <FSAA>`"
-msgstr "Désactiver l'anti-aliasing :term:`FSAA, Multi-Sampling <FSAA>`"
-
-#: ../../manual/troubleshooting/gpu.rst:25
+#: ../../manual/troubleshooting/gpu.rst:102
 msgid ""
-"See :ref:`Invalid Selection, Disable Anti-Aliasing <troubleshooting-3dview-"
-"invalid-selection>`."
+"Try undoing settings in your graphics drivers, if you made any changes "
+"there."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:106
+msgid "Render Errors"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:108
+msgid ""
+"See :doc:`Eevee </render/eevee/limitations>` and :doc:`Cycles "
+"</render/cycles/gpu_rendering>` documentation respectively."
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:113
+msgid "Wrong Selection in 3D Viewport"
+msgstr ""
+
+#: ../../manual/troubleshooting/gpu.rst:115
+msgid ""
+"See :ref:`Invalid Selection, Disable Anti-Aliasing <troubleshooting-"
+"3dview-invalid-selection>`."
 msgstr ""
 "Voir :ref:`Sélection invalide, désactiver l'Anti-Aliasing "
 "<troubleshooting-3dview-invalid-selection>`."
 
-#: ../../<generated>:1
-msgid "Change the *Window Draw Method*"
-msgstr "Modifier la *Window Draw Method*"
-
-#: ../../manual/troubleshooting/gpu.rst:27
-msgid ""
-"This is set in the :ref:`system preferences <prefs-system-window-draw>`. It "
-"is selected automatically, however, when experiencing problems it's worth "
-"checking if changing this resolves interface drawing problems."
+#: ../../manual/troubleshooting/gpu.rst:119
+msgid "Information"
 msgstr ""
-"Ce réglage est défini dans les :ref:`préférences système <prefs-system-"
-"window-draw>`. Il est sélectionné automatiquement. Cependant, en cas de "
-"problème, il est judicieux de vérifier que sa modification résout les "
-"problèmes d'affichage de l'interface."
+
+#: ../../manual/troubleshooting/gpu.rst:121
+msgid ""
+"To find out which graphics card and driver Blender is using, use "
+":menuselection:`Help --> Save System Info` inside Blender. The OpenGL "
+"section will have information about your graphics card, vendor and driver"
+" version."
+msgstr ""
+
+#~ msgid "Blender makes use of OpenGL, which is typically hardware accelerated."
+#~ msgstr ""
+#~ "Blender fait usage d'OpenGL, qui est "
+#~ "typiquement accéléré par le matériel."
+
+#~ msgid ""
+#~ "This means issues with the graphics "
+#~ "card hardware and drivers can impact "
+#~ "on Blender's behavior. This page lists"
+#~ " some known issues using Blender on"
+#~ " different graphics hardware and how "
+#~ "to troubleshoot them."
+#~ msgstr ""
+#~ "Cela signifie que les problèmes avec "
+#~ "la carte graphique et les pilotes "
+#~ "peuvent impacter le comportement de "
+#~ "Blender. Cette page liste certains "
+#~ "problèmes connus dans l'utilisation de "
+#~ "Blender avec différents cartes graphiques "
+#~ "et leurs solutions."
+
+#~ msgid ""
+#~ "When the entire interface is very "
+#~ "slow and unresponsive (*even* with the"
+#~ " default startup scene), this is "
+#~ "likely a problem with the OpenGL "
+#~ "configuration."
+#~ msgstr ""
+#~ "Quand l'interface entière est très lente"
+#~ " et peu réactive (*même* avec la "
+#~ "scène de démarrage par défaut). C'est"
+#~ " probablement un problème de configuration"
+#~ " d'OpenGL. "
+
+#~ msgid ""
+#~ "Unfortunately, in this situation, you "
+#~ "may have to do some of your "
+#~ "own tests to find the cause. Below"
+#~ " are some common causes and possible"
+#~ " solutions."
+#~ msgstr ""
+#~ "Malheureusement, dans cette situation, il "
+#~ "se peut que vous ayez à faire "
+#~ "vos propres tests pour trouver la "
+#~ "cause. Ci-dessous quelques causes "
+#~ "fréquentes et leurs solutions éventuelles."
+
+#~ msgid "Upgrade your OpenGL Driver"
+#~ msgstr "Mettre à jour votre pilote OpenGL"
+
+#~ msgid ""
+#~ "If you are experiencing any strange "
+#~ "graphics problems with Blender, it is"
+#~ " always good to double check if "
+#~ "you are using the latest drivers."
+#~ msgstr ""
+#~ "Si vous êtes confronté à des "
+#~ "problèmes graphiques étranges avec Blender,"
+#~ " c'est toujours bon de revérifier si"
+#~ " vous avez les pilotes les plus "
+#~ "récents."
+
+#~ msgid "Disable Anti-Aliasing :term:`FSAA, Multisampling <FSAA>`"
+#~ msgstr "Désactiver l'anti-aliasing :term:`FSAA, Multi-Sampling <FSAA>`"
+
+#~ msgid "Change the *Window Draw Method*"
+#~ msgstr "Modifier la *Window Draw Method*"
+
+#~ msgid ""
+#~ "This is set in the :ref:`system "
+#~ "preferences <prefs-system-window-draw>`. "
+#~ "It is selected automatically, however, "
+#~ "when experiencing problems it's worth "
+#~ "checking if changing this resolves "
+#~ "interface drawing problems."
+#~ msgstr ""
+#~ "Ce réglage est défini dans les "
+#~ ":ref:`préférences système <prefs-system-"
+#~ "window-draw>`. Il est sélectionné "
+#~ "automatiquement. Cependant, en cas de "
+#~ "problème, il est judicieux de vérifier"
+#~ " que sa modification résout les "
+#~ "problèmes d'affichage de l'interface."
+

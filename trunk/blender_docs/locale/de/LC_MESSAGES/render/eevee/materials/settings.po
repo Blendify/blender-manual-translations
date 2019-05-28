@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/eevee/materials/settings.rst:4
 msgid "Material Settings"
@@ -53,7 +53,7 @@ msgid ""
 msgstr ""
 
 #: ../../manual/render/eevee/materials/settings.rst:25
-#: ../../manual/render/eevee/materials/settings.rst:88
+#: ../../manual/render/eevee/materials/settings.rst:95
 msgid "Opaque"
 msgstr ""
 
@@ -180,44 +180,53 @@ msgid ""
 "shadows and larger Soft value on shadow map."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:85
-msgid "None"
-msgstr ""
-
-#: ../../manual/render/eevee/materials/settings.rst:85
-msgid "The surface will not cast any shadow."
-msgstr ""
-
-#: ../../manual/render/eevee/materials/settings.rst:88
-msgid "The surface will cast shadows like an opaque surface."
+#: ../../manual/render/eevee/materials/settings.rst:86
+msgid ""
+"This option does not change the behavior of contact shadows which are "
+"traced using the depth buffer. If the material is writing to the depth "
+"buffer (in other words, if the blend mode is set to either *Opaque*, "
+"*Alpha Clip* or *Alpha Hashed*), contact shadows will be casted by the "
+"surface material regardless of the *Transparent Shadow* type."
 msgstr ""
 
 #: ../../manual/render/eevee/materials/settings.rst:92
+msgid "None"
+msgstr ""
+
+#: ../../manual/render/eevee/materials/settings.rst:92
+msgid "The surface will not cast any shadow."
+msgstr ""
+
+#: ../../manual/render/eevee/materials/settings.rst:95
+msgid "The surface will cast shadows like an opaque surface."
+msgstr ""
+
+#: ../../manual/render/eevee/materials/settings.rst:99
 msgid "Clip"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:91
+#: ../../manual/render/eevee/materials/settings.rst:98
 msgid ""
 "The surface will cast shadows like an opaque surface, but only areas "
 "where the alpha value is above the clip threshold."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:97
+#: ../../manual/render/eevee/materials/settings.rst:104
 msgid "Hashed"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:95
+#: ../../manual/render/eevee/materials/settings.rst:102
 msgid ""
 "The surface will cast shadows like an opaque surface, but only areas "
 "where the alpha value is above a random threshold."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:100
-#: ../../manual/render/eevee/materials/settings.rst:114
+#: ../../manual/render/eevee/materials/settings.rst:107
+#: ../../manual/render/eevee/materials/settings.rst:121
 msgid "Screen Space Refraction"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:102
+#: ../../manual/render/eevee/materials/settings.rst:109
 msgid ""
 "Enabling Screen Space Refraction on a surface means that refraction BSDFs"
 " will do a raytrace against the depth buffer to find the most accurate "
@@ -225,28 +234,28 @@ msgid ""
 "lot of pixels."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:106
+#: ../../manual/render/eevee/materials/settings.rst:113
 msgid ""
 "Screen Space Reflections is not compatible with Screen Space Refraction. "
-"It will be disabled on the surfaces that uses it. Surfaces that uses "
-"Screen Space Refraction will not appear in Screen Space Reflections."
+"It will be disabled on the surfaces that use it. Surfaces that use Screen"
+" Space Refraction will not appear in Screen Space Reflections."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:110
+#: ../../manual/render/eevee/materials/settings.rst:117
 msgid ""
 "If this option is disabled or if the Screen Space Refraction raytrace "
 "fails, the refracted ray will use the color of the nearest probe."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:114
+#: ../../manual/render/eevee/materials/settings.rst:121
 msgid "Enable screen space refraction."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:123
+#: ../../manual/render/eevee/materials/settings.rst:130
 msgid "Refraction Depth"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:117
+#: ../../manual/render/eevee/materials/settings.rst:124
 msgid ""
 "If Refraction Depth is not 0.0, all refraction BSDFs in the shader will "
 "act as if the object would be a thin slab of the refraction material with"
@@ -255,33 +264,42 @@ msgid ""
 "second event."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:122
+#: ../../manual/render/eevee/materials/settings.rst:129
 msgid "This option greatly increase the quality of thin glass objects."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:126
+#: ../../manual/render/eevee/materials/settings.rst:133
 msgid "Subsurface Translucency"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:128
+#: ../../manual/render/eevee/materials/settings.rst:135
 msgid ""
 "Eevee's Subsurface Scattering algorithm works by blurring the irradiance "
 "in screen space. This means that if no visible part of the surface is "
 "lit, the effect disappear."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:131
+#: ../../manual/render/eevee/materials/settings.rst:138
 msgid ""
 "However, true Subsurface Scattering goes beneath the surface and can "
 "travel a lot of distance. This is why a human ear lit from behind appears"
 " red on the front side."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:134
+#: ../../manual/render/eevee/materials/settings.rst:141
 msgid ""
 "That is what this effect mimics. This translucency approximation does "
 "only work with lamps that have shadow maps and only on Subsurface BSDFs "
 "(not the Translucency BSDFs). It does not work with indirect lighting. "
 "The soft parameter of the shadow maps also affects this effect."
 msgstr ""
+
+#~ msgid ""
+#~ "Screen Space Reflections is not "
+#~ "compatible with Screen Space Refraction. "
+#~ "It will be disabled on the "
+#~ "surfaces that uses it. Surfaces that "
+#~ "uses Screen Space Refraction will not"
+#~ " appear in Screen Space Reflections."
+#~ msgstr ""
 

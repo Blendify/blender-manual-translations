@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: 2016-07-08 22:51+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/cycles/materials/introduction.rst:5
 msgid "Introduction"
@@ -228,16 +228,14 @@ msgstr ""
 
 #: ../../manual/render/cycles/materials/introduction.rst:112
 msgid ""
-"First, you can set the :doc:`Properties "
-"</render/blender_render/materials/properties/introduction>` in the "
-"various Material panels."
+"First, you can set the :doc:`Settings "
+"</render/cycles/materials/settings>` in the various Material panels."
 msgstr ""
 
 #: ../../manual/render/cycles/materials/introduction.rst:114
 msgid ""
-"Second, you can use :doc:`Nodes "
-"</render/blender_render/materials/nodes/index>`; a graphical nodes editor"
-" is available."
+"Second, you can use :doc:`Nodes </render/cycles/nodes/index>`; a "
+"graphical nodes editor is available."
 msgstr ""
 
 #: ../../manual/render/cycles/materials/introduction.rst:116
@@ -246,14 +244,11 @@ msgid ""
 "special effects. Strictly speaking, these are not materials at all, but "
 "they are included here because they affect the appearance of your "
 "objects. These include :ref:`Vertex Painting <painting-vertex-index>`, "
-":doc:`Wire Rendering "
-"</render/blender_render/materials/special_effects/wire>`, :doc:`Volume "
-"Rendering </render/blender_render/materials/special_effects/volume>`, and"
-" :doc:`Halo Rendering "
-"</render/blender_render/materials/special_effects/halo>`."
+":doc:`Volume Rendering </render/cycles/materials/volume>`, and :doc:`Wire"
+" Rendering </render/cycles/nodes/types/input/wireframe>`."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:123
+#: ../../manual/render/cycles/materials/introduction.rst:122
 msgid ""
 "The exact effect of Material settings can be affected by a number of "
 "system settings. First and foremost is the renderer used: Cycles and the "
@@ -265,37 +260,36 @@ msgid ""
 "the appropriate system settings before starting the design of materials."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/introduction.rst:137
+#: ../../manual/render/cycles/materials/introduction.rst:136
 msgid "Surface Shader"
 msgstr "Шейдер поверхности"
 
-#: ../../manual/render/cycles/materials/introduction.rst:139
+#: ../../manual/render/cycles/materials/introduction.rst:138
+#, fuzzy
 msgid ""
-"The surface shader defines the light interaction at the surface of the "
-"mesh."
+"The :doc:`surface shader </render/cycles/materials/surface>` defines the "
+"light interaction at the surface of the mesh."
 msgstr ""
 "Шейдер поверхности определяет взаимодействие света с поверхностью "
 "полисетки."
 
 #: ../../manual/render/cycles/materials/introduction.rst:143
-msgid ":doc:`Surface Shader </render/cycles/materials/surface>`."
-msgstr ":doc:`Шейдер поверхности </render/cycles/materials/surface>`."
-
-#: ../../manual/render/cycles/materials/introduction.rst:147
 msgid "Volume Shader"
 msgstr "Шейдер объёма"
 
-#: ../../manual/render/cycles/materials/introduction.rst:149
+#: ../../manual/render/cycles/materials/introduction.rst:145
+#, fuzzy
 msgid ""
 "When the surface shader does not reflect or absorb light, it enters into "
-"the volume. If no volume shader is specified, it will pass straight "
-"through to the other side of the mesh."
+"the volume. If no :doc:`volume shader </render/cycles/materials/volume>` "
+"is specified, it will pass straight through to the other side of the "
+"mesh."
 msgstr ""
 "Если шейдер поверхности не отражает и не поглощает свет, тот проникает в "
 "объём. Если шейдер объёма не определён, свет просто пройдёт сквозь объект"
 " и выйдет с другой стороны полисетки."
 
-#: ../../manual/render/cycles/materials/introduction.rst:152
+#: ../../manual/render/cycles/materials/introduction.rst:149
 msgid ""
 "If it is defined, a volume shader describes the light interaction as it "
 "passes through the volume of the mesh. Light may be scattered, absorbed, "
@@ -305,7 +299,7 @@ msgstr ""
 "проходит сквозь объём полисетки. Свет может быть рассеян, поглощён или "
 "испущен в любой точке объёма."
 
-#: ../../manual/render/cycles/materials/introduction.rst:156
+#: ../../manual/render/cycles/materials/introduction.rst:153
 msgid ""
 "A material may have both a surface and a volume shader, or only one of "
 "either. Using both may be useful for materials such as glass, water or "
@@ -318,25 +312,22 @@ msgstr ""
 "чтобы часть света поглощалась при прохождении сквозь поверхность, а "
 "другая часть отражалась от поверхности шейдером стекла или глянца."
 
-#: ../../manual/render/cycles/materials/introduction.rst:163
-msgid ":doc:`Volume Shader </render/cycles/materials/volume>`."
-msgstr ":doc:`Шейдер объёма </render/cycles/materials/volume>`."
-
-#: ../../manual/render/cycles/materials/introduction.rst:167
+#: ../../manual/render/cycles/materials/introduction.rst:160
 msgid "Displacement"
 msgstr "Шейдер смещения"
 
-#: ../../manual/render/cycles/materials/introduction.rst:169
+#: ../../manual/render/cycles/materials/introduction.rst:162
+#, fuzzy
 msgid ""
 "The shape of the surface and the volume inside it may be altered by "
-"displacement shaders. This way, textures can then be used to make the "
-"mesh surface more detailed."
+":doc:`displacement </render/cycles/materials/displacement>`. This way, "
+"textures can then be used to make the mesh surface more detailed."
 msgstr ""
 "Форма поверхности и внутренний объём объекта могут быть изменены "
 "шейдерами смещения. Таким образом можно использовать текстуры, чтобы "
 "сделать поверхность полисетки более детализированной."
 
-#: ../../manual/render/cycles/materials/introduction.rst:172
+#: ../../manual/render/cycles/materials/introduction.rst:166
 msgid ""
 "Depending on the settings, the displacement may be virtual, only "
 "modifying the surface normals to give the impression of displacement, "
@@ -348,15 +339,11 @@ msgstr ""
 "оно известно как рельефное текстурирование или bump mapping) или быть "
 "комбинацией реального и виртуального смещения."
 
-#: ../../manual/render/cycles/materials/introduction.rst:178
-msgid ":doc:`Displacement </render/cycles/materials/displacement>`."
-msgstr ":doc:`Шейдер смещения </render/cycles/materials/displacement>`."
-
-#: ../../manual/render/cycles/materials/introduction.rst:182
+#: ../../manual/render/cycles/materials/introduction.rst:172
 msgid "Energy Conservation"
 msgstr "Сохранение энергии"
 
-#: ../../manual/render/cycles/materials/introduction.rst:184
+#: ../../manual/render/cycles/materials/introduction.rst:174
 #, fuzzy
 msgid ""
 "The material system is built with physically-based rendering in mind, "
@@ -371,7 +358,7 @@ msgstr ""
 "сбалансированного освещения, хотя и есть несколько вещей, о которых "
 "следует знать."
 
-#: ../../manual/render/cycles/materials/introduction.rst:189
+#: ../../manual/render/cycles/materials/introduction.rst:179
 #, fuzzy
 msgid ""
 "In order for materials to work well with global illumination, they should"
@@ -390,7 +377,7 @@ msgstr ""
 "рассеивания отражения)` только в узле «Смешать шейдеры», оно будет "
 "выполнено автоматически."
 
-#: ../../manual/render/cycles/materials/introduction.rst:196
+#: ../../manual/render/cycles/materials/introduction.rst:186
 msgid ""
 "It is however, possible to break this, with color values higher than 1.0 "
 "or using the Add Shader node, but one must be careful when doing this to "
@@ -423,4 +410,41 @@ msgstr ""
 #~ "внешний вид поверхности полисетки, объём "
 #~ "внутри полисетки и смещение поверхности "
 #~ "полисетки."
+
+#~ msgid ""
+#~ "First, you can set the :doc:`Properties"
+#~ " </render/blender_render/materials/properties/introduction>` "
+#~ "in the various Material panels."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Second, you can use :doc:`Nodes "
+#~ "</render/blender_render/materials/nodes/index>`; a "
+#~ "graphical nodes editor is available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Last, you can directly set the "
+#~ "color of object surfaces using various"
+#~ " special effects. Strictly speaking, these"
+#~ " are not materials at all, but "
+#~ "they are included here because they "
+#~ "affect the appearance of your objects."
+#~ " These include :ref:`Vertex Painting "
+#~ "<painting-vertex-index>`, :doc:`Wire Rendering"
+#~ " </render/blender_render/materials/special_effects/wire>`, "
+#~ ":doc:`Volume Rendering "
+#~ "</render/blender_render/materials/special_effects/volume>`, and"
+#~ " :doc:`Halo Rendering "
+#~ "</render/blender_render/materials/special_effects/halo>`."
+#~ msgstr ""
+
+#~ msgid ":doc:`Surface Shader </render/cycles/materials/surface>`."
+#~ msgstr ":doc:`Шейдер поверхности </render/cycles/materials/surface>`."
+
+#~ msgid ":doc:`Volume Shader </render/cycles/materials/volume>`."
+#~ msgstr ":doc:`Шейдер объёма </render/cycles/materials/volume>`."
+
+#~ msgid ":doc:`Displacement </render/cycles/materials/displacement>`."
+#~ msgstr ":doc:`Шейдер смещения </render/cycles/materials/displacement>`."
 

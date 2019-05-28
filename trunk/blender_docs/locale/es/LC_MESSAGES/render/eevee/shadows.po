@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 23:09-0500\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/eevee/shadows.rst:4
 msgid "Shadows"
@@ -67,11 +67,11 @@ msgstr ""
 
 #: ../../manual/render/eevee/shadows.rst:25
 msgid ""
-"They are fast to filter but suffer form light leaking near the occluder. "
-"This can be minimized by increasing the *Exponent* parameter. Another "
-"issue is the artifacts present at depth discontinuity. Unfortunately, "
-"there is no workaround for this issue and the only way to minimize it is "
-"to reduce the *Soft* parameter."
+"They are fast to filter but light leaking may occur near a occluder. This"
+" can be minimized by increasing the *Exponent* parameter. Another issue "
+"is the artifacts present at depth discontinuity. Unfortunately, there is "
+"no workaround for this issue and the only way to minimize it is to reduce"
+" the *Soft* parameter."
 msgstr ""
 
 #: ../../manual/render/eevee/shadows.rst:37
@@ -81,11 +81,11 @@ msgstr ""
 #: ../../manual/render/eevee/shadows.rst:32
 msgid ""
 "Filters nicely and gives smooth shadow map appearance across the whole "
-"shadow range. However it suffers from visible grainy artifacts when using"
-" low bit depth. It is also prone to light leaking when two occluders "
-"overlap. In this case the shadows can be overdarkened to reduce the leak,"
-" by using the *Bleed Bias* parameter. VSM uses twice as much memory as "
-"ESM, and are slower."
+"shadow range. However grainy artifacts will be visible when using a low "
+"bit depth. It is also prone to light leaking when two occluders overlap. "
+"In this case the shadows can be overdarkened to reduce the leak, by using"
+" the *Bleed Bias* parameter. VSM uses twice as much memory as ESM, and is"
+" slower."
 msgstr ""
 
 #: ../../manual/render/eevee/shadows.rst:41
@@ -152,8 +152,8 @@ msgstr ""
 #: ../../manual/render/eevee/shadows.rst:64
 msgid ""
 "The influence distance is also used as shadow far clip distance, which "
-"might affect how shadows looks. This influence distance does not concerns"
-" sun lights that still have a far clip distance."
+"might affect how shadows looks. This influence distance does not concern "
+"sun lights that still have a far clip distance."
 msgstr ""
 
 #: ../../manual/render/eevee/shadows.rst:69
@@ -288,35 +288,41 @@ msgid ""
 "These special kind of shadow maps are used by Sun lights. This is because"
 " they can shadow large scenes by distributing multiple shadow maps over "
 "the frustum range. Each cascade covers a different portion of the view "
-"frustum. Do note that cascade shadow map are always updated because they "
-"are view dependent. This means they have a high performance impact."
+"frustum. Do note that cascade shadow maps are always updated because they"
+" are view dependent. This means they have a high performance impact."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:146
+#: ../../manual/render/eevee/shadows.rst:147
+msgid ""
+"In orthographic view the cascades cover the whole depth range of the "
+"camera with an evenly distributed shadow precision."
+msgstr ""
+
+#: ../../manual/render/eevee/shadows.rst:151
 msgid "Count"
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:146
+#: ../../manual/render/eevee/shadows.rst:151
 msgid ""
-"Number of cascade to use. More cascade means better precision but slower "
-"update."
+"Number of cascades to use. More cascades means better precision but "
+"slower a update rate."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:150
+#: ../../manual/render/eevee/shadows.rst:155
 msgid "Fade"
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:149
+#: ../../manual/render/eevee/shadows.rst:154
 msgid ""
 "Fade transition area between two cascades. Higher values means less "
 "overall resolution because cascades need to overlap."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:155
+#: ../../manual/render/eevee/shadows.rst:160
 msgid "Max Distance"
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:153
+#: ../../manual/render/eevee/shadows.rst:158
 msgid ""
 "Distance away from the view origin (or camera origin if in camera view) "
 "to cover with the cascade. If the view far clip distance is lower than "
@@ -324,31 +330,85 @@ msgid ""
 "perspective view."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:159
+#: ../../manual/render/eevee/shadows.rst:164
 msgid "Distribution"
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:158
+#: ../../manual/render/eevee/shadows.rst:163
 msgid ""
 "Puts more resolution towards the near clip plane. Only works in "
 "perspective view."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:162
+#: ../../manual/render/eevee/shadows.rst:167
 msgid "Limitations"
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:164
+#: ../../manual/render/eevee/shadows.rst:169
 msgid ""
 "Shadows are not supported on light instances (dupli objects, group "
 "instancing)."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:165
+#: ../../manual/render/eevee/shadows.rst:170
 msgid "Only 128 active lights can be supported by Eevee in a scene."
 msgstr ""
 
-#: ../../manual/render/eevee/shadows.rst:166
+#: ../../manual/render/eevee/shadows.rst:171
 msgid "Only 8 Shadowed sun lights can be supported at the same time."
 msgstr ""
+
+#~ msgid ""
+#~ "They are fast to filter but suffer"
+#~ " form light leaking near the "
+#~ "occluder. This can be minimized by "
+#~ "increasing the *Exponent* parameter. Another"
+#~ " issue is the artifacts present at"
+#~ " depth discontinuity. Unfortunately, there "
+#~ "is no workaround for this issue "
+#~ "and the only way to minimize it"
+#~ " is to reduce the *Soft* parameter."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Filters nicely and gives smooth shadow"
+#~ " map appearance across the whole "
+#~ "shadow range. However it suffers from"
+#~ " visible grainy artifacts when using "
+#~ "low bit depth. It is also prone"
+#~ " to light leaking when two occluders"
+#~ " overlap. In this case the shadows"
+#~ " can be overdarkened to reduce the"
+#~ " leak, by using the *Bleed Bias* "
+#~ "parameter. VSM uses twice as much "
+#~ "memory as ESM, and are slower."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The influence distance is also used "
+#~ "as shadow far clip distance, which "
+#~ "might affect how shadows looks. This "
+#~ "influence distance does not concerns sun"
+#~ " lights that still have a far "
+#~ "clip distance."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These special kind of shadow maps "
+#~ "are used by Sun lights. This is"
+#~ " because they can shadow large scenes"
+#~ " by distributing multiple shadow maps "
+#~ "over the frustum range. Each cascade "
+#~ "covers a different portion of the "
+#~ "view frustum. Do note that cascade "
+#~ "shadow map are always updated because"
+#~ " they are view dependent. This means"
+#~ " they have a high performance impact."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Number of cascade to use. More "
+#~ "cascade means better precision but "
+#~ "slower update."
+#~ msgstr ""
 

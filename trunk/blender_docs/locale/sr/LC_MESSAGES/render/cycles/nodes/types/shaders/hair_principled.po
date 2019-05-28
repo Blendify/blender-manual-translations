@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 18:32-0400\n"
+"POT-Creation-Date: 2019-05-28 09:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:5
 msgid "Principled Hair BSDF"
@@ -138,6 +138,13 @@ msgid ""
 "following formula (section 4.2 of [CBTB16]_):"
 msgstr ""
 
+#: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:69
+msgid ""
+"\\sigma_{a} = \\frac{\\ln(Color)} {\\left(5.969 - 0.215\\beta_{N} + "
+"2.532\\beta_{N}^{2} - 10.73\\beta_{N}^{3} + 5.574\\beta_{N}^{4} + "
+"0.245\\beta_{N}^{5}\\right)^{2}}"
+msgstr ""
+
 #: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:75
 msgid ""
 "where :math:`\\beta_{N}` is the radial roughness of the hair after "
@@ -162,6 +169,10 @@ msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:88
 msgid "This is a linear mapping to the underlying exponential function:"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:90
+msgid "melanin\\_qty = -\\ln(\\max(1.0 - Melanin, 0.0001))"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:97
@@ -189,6 +200,13 @@ msgid ""
 "The resulting quantities are converted (after randomization, if "
 "specified) to absorption concentration via the following formula (section"
 " 6.1 of [EFHLA11]_, adjusted for the range :math:`[0, 1]`):"
+msgstr ""
+
+#: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:112
+msgid ""
+"\\sigma_{a} = eumelanin * \\left[\\begin{matrix}   0.506 \\\\ 0.841 \\\\ "
+"1.653 \\\\ \\end{matrix}\\right] + pheomelanin * \\left[\\begin{matrix} "
+"0.343 \\\\ 0.733 \\\\ 1.924 \\\\ \\end{matrix}\\right]"
 msgstr ""
 
 #: ../../manual/render/cycles/nodes/types/shaders/hair_principled.rst:121
