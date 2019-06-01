@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-05-31 21:26-0400\n"
 "PO-Revision-Date: 2019-04-15 09:38+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -57,6 +57,7 @@ msgid "Lights"
 msgstr ""
 
 #: ../../manual/render/eevee/limitations.rst:21
+#: ../../manual/render/eevee/limitations.rst:48
 msgid ""
 "Shadows are not supported on light instances (dupli objects, group "
 "instancing)."
@@ -65,12 +66,14 @@ msgstr ""
 " objects, instanciation de groupe)."
 
 #: ../../manual/render/eevee/limitations.rst:22
+#: ../../manual/render/eevee/limitations.rst:49
 msgid "Only 128 active lights can be supported by Eevee in a scene."
 msgstr ""
 "Seulement 128 lumières actives peuvent être prises en charge par Eevee "
 "dans une scène."
 
 #: ../../manual/render/eevee/limitations.rst:23
+#: ../../manual/render/eevee/limitations.rst:50
 msgid "Only 8 Shadowed sun lights can be supported at the same time."
 msgstr ""
 "Seulement 8 lumières Sun *Shadowed* peuvent être prises en charge en même"
@@ -110,7 +113,7 @@ msgid "Indirect Lighting"
 msgstr "Lumière indirecte"
 
 #: ../../manual/render/eevee/limitations.rst:38
-#: ../../manual/render/eevee/limitations.rst:48
+#: ../../manual/render/eevee/limitations.rst:60
 msgid ""
 "Volumetrics don't receive light from Irradiance Volumes but does receive "
 "world's diffuse lighting."
@@ -128,24 +131,29 @@ msgstr ""
 "diffuse\" ni les rebonds de lumière \"specular to specular\". Tout "
 "l'éclairage spéculaire est désactivé pendant le précalcul."
 
-#: ../../manual/render/eevee/limitations.rst:44
+#: ../../manual/render/eevee/limitations.rst:46
+msgid "Shadows"
+msgstr ""
+
+#: ../../manual/render/eevee/limitations.rst:56
 msgid "Volumetrics"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:46
+#: ../../manual/render/eevee/limitations.rst:58
 msgid "Only single scattering is supported."
 msgstr "Seulement *single scattering* est pris en charge."
 
-#: ../../manual/render/eevee/limitations.rst:47
+#: ../../manual/render/eevee/limitations.rst:59
+#, fuzzy
 msgid ""
-"Volumetrics are rendered only for the Camera \"Rays\". They don't appear "
+"Volumetrics are rendered only for the camera \"rays\". They don't appear "
 "in reflections/refractions and probes."
 msgstr ""
 "Les volumétriques* ne sont l'objet d'un rendu que pour les \"rayons\" de "
 "la caméra. Ils n'apparaissent pas dans les réflexions/réfractions et dans"
 " les sondes."
 
-#: ../../manual/render/eevee/limitations.rst:49
+#: ../../manual/render/eevee/limitations.rst:61
 msgid ""
 "Volumetric shadowing does only work on other volumetrics. They won't cast"
 " shadows on solid objects in the scene."
@@ -153,33 +161,52 @@ msgstr ""
 "L'ombrage volumétrique ne fonctionne que sur d'autres volumétriques. Ils "
 "ne vont pas projeter des ombres sur des objets solides dans la scène. "
 
-#: ../../manual/render/eevee/limitations.rst:50
+#: ../../manual/render/eevee/limitations.rst:62
 msgid "Volumetric shadowing does only work for volumes inside the view frustum."
 msgstr ""
 "L'ombrage volumétrique ne fonctionne que pour les volumes se trouvant "
 "dans le *view frustum*."
 
-#: ../../manual/render/eevee/limitations.rst:51
+#: ../../manual/render/eevee/limitations.rst:63
+#, fuzzy
 msgid ""
-"Volumetric lighting does not respect the Lights shapes. They are treated "
-"as point lights"
+"Volumetric lighting does not respect the lights shapes. They are treated "
+"as point lights."
 msgstr ""
 "L'éclairage volumétrique ne respecte pas la forme des lumières. Elles "
 "sont traitées comme des lumières *Point*."
 
-#: ../../manual/render/eevee/limitations.rst:55
+#: ../../manual/render/eevee/limitations.rst:67
+msgid "Screen Space Effects"
+msgstr ""
+
+#: ../../manual/render/eevee/limitations.rst:72
+msgid "Ambient Occlusion"
+msgstr ""
+
+#: ../../manual/render/eevee/limitations.rst:74
+#, fuzzy
+msgid ""
+"Objects are treated as infinitely thick, producing overshadowing if the "
+"*Distance* is really large."
+msgstr ""
+"Des objets sont traités comme infiniment épais, produisant un "
+"*overshadowing* si la *Distance* est réellement grande."
+
+#: ../../manual/render/eevee/limitations.rst:80
 msgid "Screen Space Reflections"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:57
+#: ../../manual/render/eevee/limitations.rst:82
 msgid "Only one glossy BSDF can emit screen space reflections."
 msgstr "Seulement un BSDF *glossy* peut émettre des *screen space reflections*."
 
-#: ../../manual/render/eevee/limitations.rst:58
-msgid "The chosen BSDF is currently arbitrary chosen."
+#: ../../manual/render/eevee/limitations.rst:83
+#, fuzzy
+msgid "The evaluated BSDF is currently arbitrarily chosen."
 msgstr "Le BSDF choisi est actuellement choisi arbitrairement."
 
-#: ../../manual/render/eevee/limitations.rst:59
+#: ../../manual/render/eevee/limitations.rst:84
 #, fuzzy
 msgid ""
 "Screen Space Reflections will reflect transparent objects and objects "
@@ -190,45 +217,65 @@ msgstr ""
 "des objets utilisant la *Screen Space Refraction* mais sans "
 "positionnement précis en raison du tampon d'épaisseur en une couche."
 
-#: ../../manual/render/eevee/limitations.rst:64
+#: ../../manual/render/eevee/limitations.rst:89
 msgid "Screen Space Refraction"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:66
+#: ../../manual/render/eevee/limitations.rst:91
 msgid "Only one refraction event is correctly modeled."
 msgstr "Seulement un événement de réfraction est correctement modélisé."
 
-#: ../../manual/render/eevee/limitations.rst:67
+#: ../../manual/render/eevee/limitations.rst:92
 msgid "Only opaque and alpha hashed materials can be refracted."
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:71
-msgid "Ambient Occlusion"
+#: ../../manual/render/eevee/limitations.rst:98
+msgid "Subsurface Scattering"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:73
+#: ../../manual/render/eevee/limitations.rst:100
+#, fuzzy
+msgid "Only one BSSSDF can produce screen space subsurface scattering."
+msgstr "Seulement un BSDF *glossy* peut émettre des *screen space reflections*."
+
+#: ../../manual/render/eevee/limitations.rst:101
+#, fuzzy
+msgid "The evaluated BSSSDF is currently arbitrarily chosen."
+msgstr "Le BSDF choisi est actuellement choisi arbitrairement."
+
+#: ../../manual/render/eevee/limitations.rst:102
+msgid "A maximum of 254 different surfaces can use subsurface scattering."
+msgstr ""
+
+#: ../../manual/render/eevee/limitations.rst:103
 msgid ""
-"Objects are treated as infinitely thick, producing overshadowing if the "
-"Distance is really large."
+"Only scalling is adjustable per pixel. Individual RGB radii are "
+"adjustable in the socket default value."
 msgstr ""
-"Des objets sont traités comme infiniment épais, produisant un "
-"*overshadowing* si la *Distance* est réellement grande."
 
-#: ../../manual/render/eevee/limitations.rst:77
+#: ../../manual/render/eevee/limitations.rst:104
+msgid ""
+"Input radiance from each surfaces are not isolated during the blurring, "
+"leading to light leaking from surface to surface."
+msgstr ""
+
+#: ../../manual/render/eevee/limitations.rst:110
 msgid "Materials"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:83
+#: ../../manual/render/eevee/limitations.rst:117
 msgid "Refraction"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:80
+#: ../../manual/render/eevee/limitations.rst:113
+#, fuzzy
 msgid ""
 "Refraction is faked by sampling the same reflection probe used by the "
 "Glossy BSDFs, but using the refracted view direction instead of the "
 "reflected view direction. Only the first refraction event is modeled "
 "correctly. An approximation of the second refraction event can be used "
-"for relatively thin objects using Refraction Depth."
+"for relatively thin objects using Refraction Depth. Using Screen Space "
+"refraction will refract what is visible in."
 msgstr ""
 "La réfraction est simulée en échantillonnant la même sonde de réflexion "
 "utilisée par les BSDF *glossy*, mais en utilisant la direction de vue de "
@@ -237,11 +284,11 @@ msgstr ""
 "approximation du second événement réfraction peut être utilisée pour des "
 "objets relativement fins en utilisant la *Refraction Depth*."
 
-#: ../../manual/render/eevee/limitations.rst:93
+#: ../../manual/render/eevee/limitations.rst:127
 msgid "Bump"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:86
+#: ../../manual/render/eevee/limitations.rst:120
 msgid ""
 "As of now, bump mapping is supported using OpenGL derivatives which are "
 "the same for each block of 2x2 pixels. This means the bump output value "
@@ -252,7 +299,7 @@ msgstr ""
 "Ce qui signifie que la valeur de sortie de bump apparaîtra pixelisé. Il "
 "est recommandé d'utiliser à la place le mapping de normales."
 
-#: ../../manual/render/eevee/limitations.rst:92
+#: ../../manual/render/eevee/limitations.rst:126
 msgid ""
 "If you absolutely need to render using Bump nodes, render at twice the "
 "target resolution and downscale the final output."
@@ -261,11 +308,11 @@ msgstr ""
 "faites le rendu à deux fois la résolution de la cible et réduisez "
 "l'échelle de la sortie finale. "
 
-#: ../../manual/render/eevee/limitations.rst:98
+#: ../../manual/render/eevee/limitations.rst:132
 msgid "Volumes Objects"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:96
+#: ../../manual/render/eevee/limitations.rst:130
 #, fuzzy
 msgid ""
 "Object volume shaders will affect the whole bounding box of the object. "
@@ -276,11 +323,11 @@ msgstr ""
 " de l'objet. La forme du volume doit être ajustée en utilisant le "
 "texturage procédural dans le shader."
 
-#: ../../manual/render/eevee/limitations.rst:101
+#: ../../manual/render/eevee/limitations.rst:135
 msgid "Shader Nodes"
 msgstr ""
 
-#: ../../manual/render/eevee/limitations.rst:103
+#: ../../manual/render/eevee/limitations.rst:137
 msgid ""
 "All BSDF are using approximations to achieve realtime performance so "
 "there will always be small differences between Cycles and Eevee."
@@ -289,7 +336,7 @@ msgstr ""
 "performances en temps réel, aussi il y aura toujours de petites "
 "différences entre Cycles et Eevee. "
 
-#: ../../manual/render/eevee/limitations.rst:105
+#: ../../manual/render/eevee/limitations.rst:139
 #, fuzzy
 msgid ""
 "Some utility nodes are not yet compatible with Eevee (e.g. Sky Texture "
@@ -298,7 +345,7 @@ msgstr ""
 "Certaines nodes utilitaires ne sont pas encore compatibles avec Eevee "
 "(ex. le node Sky Texture)."
 
-#: ../../manual/render/eevee/limitations.rst:109
+#: ../../manual/render/eevee/limitations.rst:143
 msgid ""
 "For a full list of unsupported nodes see :doc:`Nodes Support "
 "</render/eevee/materials/nodes_support>`."
@@ -306,11 +353,11 @@ msgstr ""
 "Pour une liste complète de nodes non pris en charge, voir :doc:`Prise en "
 "charge des Nodes </render/eevee/materials/nodes_support>`."
 
-#: ../../manual/render/eevee/limitations.rst:113
+#: ../../manual/render/eevee/limitations.rst:147
 msgid "Memory Management"
 msgstr "Gestion de la mémoire"
 
-#: ../../manual/render/eevee/limitations.rst:115
+#: ../../manual/render/eevee/limitations.rst:149
 msgid ""
 "As of now Eevee uses OpenGL, and :abbr:`GPU (Graphic Processing Unit, "
 "also known as Graphics Card)` Memory management is done by the OpenGL "
@@ -325,7 +372,7 @@ msgstr ""
 " un appel de tracé unique (càd. un seul objet) doivent tenir dans la "
 "mémoire GPU. "
 
-#: ../../manual/render/eevee/limitations.rst:120
+#: ../../manual/render/eevee/limitations.rst:154
 msgid ""
 "So if the scene is really heavy, the driver will swap things in and out "
 "to make sure all objects are rendered correctly."
@@ -333,7 +380,7 @@ msgstr ""
 "Aussi si la scène est réellement lourde, le pilote va interchanger les "
 "choses pour s'assurer que tous les objets sont rendus correctement."
 
-#: ../../manual/render/eevee/limitations.rst:123
+#: ../../manual/render/eevee/limitations.rst:157
 msgid ""
 "In practice, using too much GPU memory can make the GPU driver crash, "
 "freeze, or kill the application. So be careful of what you ask."
@@ -342,7 +389,7 @@ msgstr ""
 "pilote GPU, ou tuer l'application. Aussi soyez prudent avec ce que vous "
 "demandez."
 
-#: ../../manual/render/eevee/limitations.rst:126
+#: ../../manual/render/eevee/limitations.rst:160
 #, fuzzy
 msgid ""
 "There is no standard way of estimating if the resources will fit into the"
@@ -352,11 +399,11 @@ msgstr ""
 "tenir dans la mémoire GPU et/ou si le GPU va en faire le rendu avec "
 "succès."
 
-#: ../../manual/render/eevee/limitations.rst:131
+#: ../../manual/render/eevee/limitations.rst:165
 msgid "CPU Rendering"
 msgstr "Rendu CPU"
 
-#: ../../manual/render/eevee/limitations.rst:133
+#: ../../manual/render/eevee/limitations.rst:167
 msgid ""
 "Being an OpenGL engine, Eevee only uses the power of the :abbr:`GPU "
 "(Graphic Processing Unit, also known as Graphics Card)` to render. There "
@@ -373,11 +420,11 @@ msgstr ""
 "complexité car la géométrie est toujours préparé par le CPU avant le "
 "rendu de chaque trame."
 
-#: ../../manual/render/eevee/limitations.rst:141
+#: ../../manual/render/eevee/limitations.rst:175
 msgid "Multiple GPU Support"
 msgstr "Prise en charge de plusieurs GPU"
 
-#: ../../manual/render/eevee/limitations.rst:143
+#: ../../manual/render/eevee/limitations.rst:177
 msgid ""
 "There is currently no support for multiple :abbr:`GPU (Graphic Processing"
 " Unit, also known as Graphics Card)` system."
@@ -386,11 +433,11 @@ msgstr ""
 ":abbr:`GPU (Graphic Processing Unit, aussi appelé carte graphique) "
 "multiples."
 
-#: ../../manual/render/eevee/limitations.rst:147
+#: ../../manual/render/eevee/limitations.rst:181
 msgid "Headless Rendering"
 msgstr "Rendu sans affichage"
 
-#: ../../manual/render/eevee/limitations.rst:149
+#: ../../manual/render/eevee/limitations.rst:183
 msgid ""
 "There is currently no support for using Eevee on headless systems (i.e. "
 "without a Display Manager)."

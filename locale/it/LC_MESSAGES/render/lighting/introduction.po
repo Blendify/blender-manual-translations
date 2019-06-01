@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-05-31 21:26-0400\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,12 +53,10 @@ msgid "The quality of the image (e.g. a ``jpeg`` at 0.4 compression versus 1.0).
 msgstr ""
 
 #: ../../manual/render/lighting/introduction.rst:20
-msgid ""
-"The environment in which you are viewing the image (e.g. a CRT monitor "
-"with glare versus in a dark room, or in a sunshiny blue room)."
+msgid "The environment in which you are viewing the image"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:22
+#: ../../manual/render/lighting/introduction.rst:21
 msgid ""
 "Your brain's perception of the color and intensity relative to those "
 "objects around it and the world background color, which can be changed "
@@ -66,41 +64,41 @@ msgid ""
 "</compositing/introduction>`."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:29
+#: ../../manual/render/lighting/introduction.rst:28
 msgid "Global Influences"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:31
+#: ../../manual/render/lighting/introduction.rst:30
 msgid "In Blender, the elements under your control which affect lighting are:"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:33
+#: ../../manual/render/lighting/introduction.rst:32
 msgid "The color of the world :doc:`ambient light </render/cycles/world>`."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:34
+#: ../../manual/render/lighting/introduction.rst:33
 msgid ""
 "The use of :ref:`Ambient Occlusion <render-cycles-integrator-world-ao>` "
 "as a way to cast that ambient light onto the object."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:36
+#: ../../manual/render/lighting/introduction.rst:35
 msgid ""
 "The degree to which the ambient light colors the :doc:`material "
 "</render/cycles/materials/index>` of the object."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:38
+#: ../../manual/render/lighting/introduction.rst:37
 msgid ""
 "The use of :doc:`Indirect lighting </render/eevee/indirect_lighting>`, "
 "where the color of one object radiates onto another."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:40
+#: ../../manual/render/lighting/introduction.rst:39
 msgid "The :doc:`lamps </render/lighting/lamp_panel>` in your scene."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:42
+#: ../../manual/render/lighting/introduction.rst:41
 msgid ""
 "The physics of light bouncing around in the real world is simulated by "
 "Ambient Occlusion (a world setting), buffer shadows (which approximate "
@@ -114,38 +112,38 @@ msgid ""
 " the real behavior of light, assuming many simplifying hypotheses."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:54
+#: ../../manual/render/lighting/introduction.rst:53
 msgid "Lighting Settings"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:56
+#: ../../manual/render/lighting/introduction.rst:55
 msgid ""
 "Only after the above global influences have been considered, do you start"
 " adding light from lamps in your scene. The main things under your "
 "control are the:"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:60
-msgid "Type of light used (*Sun*, *Spot*, *Lamp*, *Hemi*, etc.)."
+#: ../../manual/render/lighting/introduction.rst:59
+msgid "Type of light used (*Sun*, *Spot*, *Area*, *Point*)."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:61
+#: ../../manual/render/lighting/introduction.rst:60
 msgid "Color of the light."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:62
+#: ../../manual/render/lighting/introduction.rst:61
 msgid "Position of the light and its direction."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:63
+#: ../../manual/render/lighting/introduction.rst:62
 msgid "Settings for the light, including energy and falloff."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:65
+#: ../../manual/render/lighting/introduction.rst:64
 msgid "Then you are back to how that material's shader reacts to the light."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:67
+#: ../../manual/render/lighting/introduction.rst:66
 msgid ""
 "This chapter attempts to address the above, including how lights can work"
 " together in rigs to light your scene. In this chapter we will analyze "
@@ -153,11 +151,11 @@ msgid ""
 "discuss their strong and weak points."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:74
+#: ../../manual/render/lighting/introduction.rst:75
 msgid "Lighting in the Workflow"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:76
+#: ../../manual/render/lighting/introduction.rst:77
 msgid ""
 "In this user manual we have placed Lighting before Materials; you should "
 "set up your lighting before assigning materials to your meshes. Since the"
@@ -165,18 +163,18 @@ msgid ""
 "shaders will not look right, and you will end up fighting the shaders, "
 "when it is really the bad lighting that is causing you grief. All of the "
 "example images in this section do not use any material setting at all on "
-"the ball, cube or background."
+"the sphere, cube or background."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:86
+#: ../../manual/render/lighting/introduction.rst:87
 msgid "Overriding Materials to Reset Lighting"
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:90
+#: ../../manual/render/lighting/introduction.rst:91
 msgid "Material field in the Render Layers panel."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:92
+#: ../../manual/render/lighting/introduction.rst:93
 msgid ""
 "If you have started down the road of assigning materials, and are now "
 "fiddling with the lighting, we suggest that you create a default, generic"
@@ -184,7 +182,7 @@ msgid ""
 "just plain old middle gray with RGB(0.8, 0.8, 0.8). Name this \"Gray\"."
 msgstr ""
 
-#: ../../manual/render/lighting/introduction.rst:98
+#: ../../manual/render/lighting/introduction.rst:99
 msgid ""
 "Next go to the *Render Layer* tab. In the *Layer* panel, select your new "
 "\"Gray\" material in the *Material* field. This will override any "
@@ -287,5 +285,33 @@ msgstr ""
 #~ "points. We will also describe many "
 #~ "lighting rigs, including the ever-"
 #~ "popular three-point light method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The environment in which you are "
+#~ "viewing the image (e.g. a CRT "
+#~ "monitor with glare versus in a "
+#~ "dark room, or in a sunshiny blue"
+#~ " room)."
+#~ msgstr ""
+
+#~ msgid "Type of light used (*Sun*, *Spot*, *Lamp*, *Hemi*, etc.)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this user manual we have placed"
+#~ " Lighting before Materials; you should "
+#~ "set up your lighting before assigning"
+#~ " materials to your meshes. Since the"
+#~ " material shaders react to light, "
+#~ "without proper lighting, the material "
+#~ "shaders will not look right, and "
+#~ "you will end up fighting the "
+#~ "shaders, when it is really the bad"
+#~ " lighting that is causing you grief."
+#~ " All of the example images in "
+#~ "this section do not use any "
+#~ "material setting at all on the "
+#~ "ball, cube or background."
 #~ msgstr ""
 
