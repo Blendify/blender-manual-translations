@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-05-31 21:26-0400\n"
 "PO-Revision-Date: 2017-10-05 17:52+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -52,36 +52,134 @@ msgid "User Preferences System tab."
 msgstr "Вкладка «Система» -- System Уподобань Користувача."
 
 #: ../../manual/preferences/system.rst:21
-msgid "General"
-msgstr "Загальне -- General"
-
-#: ../../manual/preferences/system.rst:30
-msgid "Frame Server Port"
-msgstr "Порт Сервера Кадрів -- Frame Server Port"
-
-#: ../../manual/preferences/system.rst:26
-msgid ""
-"TCP/IP port used in conjunction with the IP Address of the machine for "
-"frameserver rendering. Used when working with distributed rendering. "
-"Avoid changing this port value unless it is conflicting with already "
-"existing service ports used by your Operating System and/or other "
-"software. Always consult your operating system documentation and services"
-" or consult your system administrator before changing this value."
+msgid "Cycles Render Device"
 msgstr ""
-"TCP/IP порт, використовуваний у поєднанні з IP Адресою комп'ютера для "
-"рендерингу на сервері. Використовується при роботі з розподіленим "
-"рендерингом. Уникайте зміни значення цього порту, інакше це буде "
-"конфліктувати з уже наявними сервісними портами, що використовується "
-"вашою Операційною Системою та/або іншими програмами. Завжди "
-"консультуйтеся з документацією до вашої операційної системи та сервісів "
-"або проконсультуйтеся з вашим системним адміністратором перед змінюванням"
-" цього значення."
+
+#: ../../manual/preferences/system.rst:23
+#, fuzzy
+msgid ""
+"Changes the computing device the :doc:`Cycles </render/cycles/index>` "
+"render engine uses to render images. Cycles can use either the CPU or "
+"certain GPU's to render images, for more information see the :doc:`GPU "
+"Rendering </render/cycles/gpu_rendering>` page."
+msgstr ""
+"Опція *Compute Device* дозволяє користувачу змінювати пристрій обчислення"
+" для рушія-рендерера :doc:`Cycles </render/cycles/index>`, що буде "
+"використовуватися для рендерингу зображень. Рушій Cycles може "
+"використовувати головний процесор CPU або процесори певних відеокарт GPU "
+"для рендерингу зображень, детальніше дивіться тут -- :doc:`GPU Rendering "
+"</render/cycles/gpu_rendering>`."
+
+#: ../../manual/preferences/system.rst:28
+#: ../../manual/preferences/system.rst:92
+msgid "None"
+msgstr "Нема -- None"
+
+#: ../../manual/preferences/system.rst:28
+#, fuzzy
+msgid ""
+"When set to *None* or when the only option is *None*: the CPU will be "
+"used as the computing device for the Cycles Renderer."
+msgstr ""
+"Коли ви задаєте значення «Нема» -- *None* або коли доступне тільки це "
+"значення *None*: то буде використовуватися центральний процесор CPU як "
+"пристрій обчислення для рушія Cycles Render Engine."
+
+#: ../../manual/preferences/system.rst:31
+msgid "CUDA"
+msgstr "CUDA"
+
+#: ../../manual/preferences/system.rst:31
+msgid ""
+"If the system has a compatible Nvidia CUDA enabled graphics card you will"
+" be able to use it to render with the :doc:`Cycles "
+"</render/cycles/features>` render engine."
+msgstr ""
+"Якщо ваша система має установлену сумісну відеокарту Nvidia CUDA, то ви у"
+" змозі використати технологію CUDA для рендерингу рушієм :doc:`Cycles "
+"</render/cycles/features>`."
 
 #: ../../manual/preferences/system.rst:35
-msgid "Console Scrollback"
+msgid "OpenCL"
+msgstr "OpenCL"
+
+#: ../../manual/preferences/system.rst:34
+msgid ""
+"If the system has a compatible AMD OpenCL device, it will show up an "
+"option for rendering with Cycles."
+msgstr ""
+"Якщо ваша система має установлений пристрій з підтримкою технології AMD "
+"OpenCL, то вона буде доступна також на вибір для рендерингу з Cycles."
+
+#: ../../manual/preferences/system.rst:38
+#, fuzzy
+msgid "Memory & Limits"
+msgstr "Ліміт Кешу Пам'яті -- Memory Cache Limit"
+
+#: ../../manual/preferences/system.rst:40
+msgid "Undo Steps"
+msgstr ""
+
+#: ../../manual/preferences/system.rst:41
+msgid "Number of Undo steps available."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:42
+msgid "Undo Memory Limit"
+msgstr ""
+
+#: ../../manual/preferences/system.rst:43
+msgid "Maximum memory usage in Mb (0 is unlimited)."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:53
+msgid "Global Undo"
+msgstr ""
+
+#: ../../manual/preferences/system.rst:45
+msgid ""
+"This enables Blender to save actions done when you are **not** in *Edit "
+"Mode*. For example, duplicating Objects, changing panel settings or "
+"switching between modes."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:50
+msgid ""
+"While disabling this option does save memory, it stops the :ref:`Redo "
+"Panel <ui-redo-last>` from functioning, also preventing tool options from"
+" being changed in some cases."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:53
+msgid "For typical usage, its best to keep this enabled."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:57
+msgid ":doc:`Read more about Undo and Redo options </interface/undo_redo>`."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:60
+#, fuzzy
+msgid "Sequencer Cache Limit"
+msgstr "Ліміт Кешу Пам'яті -- Memory Cache Limit"
+
+#: ../../manual/preferences/system.rst:60
+#, fuzzy
+msgid ""
+"Upper limit of the Sequencer's memory cache (in megabytes). For an "
+"optimal Clip editor and Sequencer performance, high values are "
+"recommended."
+msgstr ""
+"Верхній ліміт кешу пам'яті для відеорядника (мегабайти). Для оптимальної "
+"продуктивності Редактора Кліпів та Відеорядника рекомендуються вищі "
+"значення."
+
+#: ../../manual/preferences/system.rst:64
+#, fuzzy
+msgid "Console Scrollback Lines"
 msgstr "Прокрутка Консолі -- Console Scrollback"
 
-#: ../../manual/preferences/system.rst:33
+#: ../../manual/preferences/system.rst:63
 #, fuzzy
 msgid ""
 "The number of lines, buffered in memory of the console window. Useful for"
@@ -90,32 +188,72 @@ msgstr ""
 "Кількість ліній, буферизованих у пам'яті для вікна консолі. Корисно для "
 "цілей налагодження та рендерингу з командного рядка."
 
-#: ../../manual/preferences/system.rst:40
+#: ../../manual/preferences/system.rst:67
+msgid "Texture Time Out"
+msgstr ""
+
+#: ../../manual/preferences/system.rst:67
+#, fuzzy
+msgid ""
+"Time since last access of a GL texture in seconds, after which it is "
+"freed. Set this to 0 to keep textures allocated."
+msgstr ""
+"Час після останнього доступу до GL текстури у секундах, після якого вона "
+"вивільняється. Задання в 0 збереже текстури призначеними. Мінімум: *0*, "
+"Максимум: *3600*."
+
+#: ../../manual/preferences/system.rst:70
+#: ../../manual/preferences/system.rst:76
+#, fuzzy
+msgid "Garbage Collection Rate"
+msgstr "Частота Збирання -- Collection Rate"
+
+#: ../../manual/preferences/system.rst:70
+#, fuzzy
+msgid "Number of seconds between each run of the GL texture garbage collector."
+msgstr ""
+"Кількість секунд між кожним виконанням збирача сміття GL текстури. "
+"Мінімум: *0*, Максимум: *3600*."
+
+#: ../../manual/preferences/system.rst:72
+#, fuzzy
+msgid "VBO Time Out"
+msgstr "Час Очікування -- Time Out"
+
+#: ../../manual/preferences/system.rst:73
+#: ../../manual/preferences/system.rst:75
+msgid "TODO 2.8."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:81
 msgid "Sound"
 msgstr "Звук -- Sound"
 
-#: ../../manual/preferences/system.rst:53
+#: ../../manual/preferences/system.rst:83
+msgid ""
+"This panel contains the sound settings for live playback within Blender "
+"and are only available with *SDL* or *OpenAL*. To control these settings "
+"for exporting sound see the :ref:`Encoding Panel <render-output-video-"
+"encoding-panel>` and :ref:`Audio Panel <data-scenes-audio>`."
+msgstr ""
+
+#: ../../manual/preferences/system.rst:99
 msgid "Audio Device"
 msgstr "Пристрій Звуку -- Audio Device"
 
-#: ../../manual/preferences/system.rst:43
+#: ../../manual/preferences/system.rst:90
 msgid "Sets the audio engine to use to process and output audio."
 msgstr "Визначає рушій звуку для використання в обробці та виводі аудіо."
 
-#: ../../manual/preferences/system.rst:45
-#: ../../manual/preferences/system.rst:103
-msgid "None"
-msgstr "Нема -- None"
-
-#: ../../manual/preferences/system.rst:46
+#: ../../manual/preferences/system.rst:93
 msgid "No Audio support (audio strips can still be loaded normally)."
 msgstr "Без підтримки звуку (смужки звуку все ще можуть звичайно завантажуватися)."
 
-#: ../../manual/preferences/system.rst:48
+#: ../../manual/preferences/system.rst:95
 msgid "SDL"
 msgstr "SDL"
 
-#: ../../manual/preferences/system.rst:48
+#: ../../manual/preferences/system.rst:95
 msgid ""
 "Uses Simple Direct Media Layer API from `libsdl.org "
 "<https://www.libsdl.org>`__ to render sounds directly to the sound device"
@@ -126,11 +264,11 @@ msgstr ""
 "вивід звукового пристрою. Дуже корисно для монтування смужок звуку у "
 "відеоряднику."
 
-#: ../../manual/preferences/system.rst:53
+#: ../../manual/preferences/system.rst:99
 msgid "OpenAL"
 msgstr "OpenAL"
 
-#: ../../manual/preferences/system.rst:51
+#: ../../manual/preferences/system.rst:98
 #, fuzzy
 msgid ""
 "Provides buffered sound rendering with 3D/spatial support. Used for 3D "
@@ -140,24 +278,11 @@ msgstr ""
 "Використовується для 3D джерела, що підтримується об'єктами типу "
 "«Гучномовець» -- *Speaker Objects* та ігровим рушієм *Game Engine*."
 
-#: ../../manual/preferences/system.rst:56
-#, fuzzy
-msgid "Sound Options"
-msgstr "Опції звуку"
-
-#: ../../manual/preferences/system.rst:58
-msgid ""
-"These settings control how sound behaves during live playback within "
-"Blender and are only available with *SDL* or *OpenAL*. To control these "
-"settings for exporting sound see the :ref:`Encoding Panel <render-output-"
-"video-encoding-panel>` and :ref:`Audio Panel <data-scenes-audio>`."
-msgstr ""
-
-#: ../../manual/preferences/system.rst:65
+#: ../../manual/preferences/system.rst:102
 msgid "Channels"
 msgstr "Канали -- Channels"
 
-#: ../../manual/preferences/system.rst:65
+#: ../../manual/preferences/system.rst:102
 #, fuzzy
 msgid ""
 "Sets the audio channel count. Available options are: *Mono*, *Stereo*, *4"
@@ -167,11 +292,11 @@ msgstr ""
 "Канали» -- *4 Channels* , «5.1 Об'ємний звук» -- *5.1 Surround* , «7.1 "
 "Об'ємний звук» -- *7.1 Surround*."
 
-#: ../../manual/preferences/system.rst:70
+#: ../../manual/preferences/system.rst:107
 msgid "Mixing Buffer"
 msgstr "Буфер Мікшування -- Mixing Buffer"
 
-#: ../../manual/preferences/system.rst:68
+#: ../../manual/preferences/system.rst:105
 #, fuzzy
 msgid ""
 "Sets the number of samples used by the audio mixing buffer. Available "
@@ -183,11 +308,11 @@ msgstr ""
 "Доступні опції: *512* , *1024* , *2048*, *4096* , *8192*, *16384* та "
 "*32768*."
 
-#: ../../manual/preferences/system.rst:73
+#: ../../manual/preferences/system.rst:110
 msgid "Sample Rate"
 msgstr "Частота Вибірки -- Sample Rate"
 
-#: ../../manual/preferences/system.rst:73
+#: ../../manual/preferences/system.rst:110
 #, fuzzy
 msgid ""
 "Sets the audio `sampling rate "
@@ -197,11 +322,11 @@ msgstr ""
 "Задає частоту вибірки, дискретизації звуку. Доступні опції: *44.1 Khz*, "
 "*48 Khz*, *96 Khz* та *192 Khz*."
 
-#: ../../manual/preferences/system.rst:79
+#: ../../<generated>:1
 msgid "Sample Format"
 msgstr "Формат Вибірки -- Sample Format"
 
-#: ../../manual/preferences/system.rst:76
+#: ../../manual/preferences/system.rst:113
 msgid ""
 "Sets the audio sample format. Available options are: *32 bit float*, *8 "
 "bit Unsigned*, *16 Bits Signed*, *24 Bits Signed*, *32 Bits Signed*, *32 "
@@ -210,521 +335,6 @@ msgstr ""
 "Визначає формат вибірки звуку. Доступні опції: *32 bit float*, *8 bit "
 "Unsigned*, *16 Bits Signed*, *24 Bits Signed*, *32 Bits Signed*, *32 Bits"
 " Float* та *64 Bits Float*."
-
-#: ../../manual/preferences/system.rst:84
-msgid "Screencast"
-msgstr "Екранозапис -- Screencast"
-
-#: ../../manual/preferences/system.rst:86
-#, fuzzy
-msgid ""
-"These settings are used to control the frame rate for recording a "
-":ref:`Screencast <info-screencast>`."
-msgstr ""
-"Ці устави використовуються для керування кадровою частотою для запису "
-"екранозаписів -- :ref:`Screencast <info-screencast>`."
-
-#: ../../manual/preferences/system.rst:88
-msgid "FPS"
-msgstr "FPS"
-
-#: ../../manual/preferences/system.rst:89
-#, fuzzy
-msgid "The frame rate for screencast playback."
-msgstr "Частота кадрів для відтворення екранозапису."
-
-#: ../../manual/preferences/system.rst:92
-msgid "Wait Timer"
-msgstr "Часолік Очікування -- Wait Timer"
-
-#: ../../manual/preferences/system.rst:91
-msgid "Time in milliseconds between each frame recorded for screencast."
-msgstr "Час у мілісекундах між кожним записуваним кадром для екранозапису."
-
-#: ../../manual/preferences/system.rst:95
-msgid "Compute Device"
-msgstr "Пристрій Обчислення -- Compute Device"
-
-#: ../../manual/preferences/system.rst:97
-msgid ""
-"The *Compute Device* option allows the user to change the computing "
-"device the :doc:`Cycles </render/cycles/index>` render engine uses to "
-"render images. Cycles can use either the CPU or certain GPU's to render "
-"images, for more information see the :doc:`GPU Rendering "
-"</render/cycles/gpu_rendering>` page."
-msgstr ""
-"Опція *Compute Device* дозволяє користувачу змінювати пристрій обчислення"
-" для рушія-рендерера :doc:`Cycles </render/cycles/index>`, що буде "
-"використовуватися для рендерингу зображень. Рушій Cycles може "
-"використовувати головний процесор CPU або процесори певних відеокарт GPU "
-"для рендерингу зображень, детальніше дивіться тут -- :doc:`GPU Rendering "
-"</render/cycles/gpu_rendering>`."
-
-#: ../../manual/preferences/system.rst:103
-#, fuzzy
-msgid ""
-"When set to *None* or when the only option is *None*: the CPU will be "
-"used as the computing device for the Cycles Renderer."
-msgstr ""
-"Коли ви задаєте значення «Нема» -- *None* або коли доступне тільки це "
-"значення *None*: то буде використовуватися центральний процесор CPU як "
-"пристрій обчислення для рушія Cycles Render Engine."
-
-#: ../../manual/preferences/system.rst:106
-msgid "CUDA"
-msgstr "CUDA"
-
-#: ../../manual/preferences/system.rst:106
-msgid ""
-"If the system has a compatible Nvidia CUDA enabled graphics card you will"
-" be able to use it to render with the :doc:`Cycles "
-"</render/cycles/features>` render engine."
-msgstr ""
-"Якщо ваша система має установлену сумісну відеокарту Nvidia CUDA, то ви у"
-" змозі використати технологію CUDA для рендерингу рушієм :doc:`Cycles "
-"</render/cycles/features>`."
-
-#: ../../manual/preferences/system.rst:110
-msgid "OpenCL"
-msgstr "OpenCL"
-
-#: ../../manual/preferences/system.rst:109
-msgid ""
-"If the system has a compatible AMD OpenCL device, it will show up an "
-"option for rendering with Cycles."
-msgstr ""
-"Якщо ваша система має установлений пристрій з підтримкою технології AMD "
-"OpenCL, то вона буде доступна також на вибір для рендерингу з Cycles."
-
-#: ../../manual/preferences/system.rst:113
-msgid "OpenGL"
-msgstr "OpenGL"
-
-#: ../../manual/preferences/system.rst:116
-msgid "Clip Alpha"
-msgstr "Відсікання Альфа -- Clip Alpha"
-
-#: ../../manual/preferences/system.rst:116
-msgid ""
-"Clip alpha below this threshold in the 3D View. Note that the default is "
-"set to a low value to prevent issues on some GPU's."
-msgstr ""
-"Відсікає альфа нижче цього порогу у 3D Огляді -- 3D View. Зауважте, що "
-"стандартно задано низьке значення для запобігання проблемам на деяких "
-"GPU."
-
-#: ../../manual/preferences/system.rst:118
-msgid "Mipmaps"
-msgstr "MIP-карти -- Mipmaps"
-
-#: ../../manual/preferences/system.rst:119
-#, fuzzy
-msgid ""
-"Scale textures for 3D View using :term:`mip-map` filtering. This "
-"increases display quality, but uses more memory."
-msgstr ""
-"Масштабує текстури для 3D Огляду використовуючи фільтрування "
-"багаторівневих карт текстур -- MIP-карт -- :term:`Mipmap`. Це збільшує "
-"якість показу, але використовує більше пам'яті."
-
-#: ../../manual/preferences/system.rst:120
-msgid "GPU Mipmap Generation"
-msgstr "Генерування MIP-карти GPU -- GPU Mipmap Generation"
-
-#: ../../manual/preferences/system.rst:121
-#, fuzzy
-msgid "Generate mip-maps on the GPU instead of the CPU."
-msgstr "Генерує MIP-карти на GPU замість CPU."
-
-#: ../../manual/preferences/system.rst:123
-msgid "16 Bit Float Textures"
-msgstr "16 -бітні Дійсночислові Текстури -- 16 Bit Float Textures"
-
-#: ../../manual/preferences/system.rst:123
-#, fuzzy
-msgid ""
-"Enables the use of 16 Bit per component Texture Images (floating point "
-"images)."
-msgstr ""
-"Вмикає використання 16-бітних компонент зображень текстур (Дійсночислові "
-"зображення)."
-
-#: ../../manual/preferences/system.rst:128
-msgid "OpenGL Depth Picking"
-msgstr "OpenGL Вказування Глибини -- OpenGL Depth Picking"
-
-#: ../../manual/preferences/system.rst:126
-#, fuzzy
-msgid ""
-"This option uses an alternative method of picking which uses depth "
-"information to select the front-most elements. It is only used for "
-"selecting with the cursor (not border select, lasso, circle select, "
-"etc.)."
-msgstr ""
-"Ця опція вживає альтернативний метод вказування, що використовує "
-"інформацію про глибину для виділення найбільш передніх елементів. Це "
-"використовується тільки для виділення з курсором (не виділ рамкою, ласо, "
-"кругом тощо)."
-
-#: ../../manual/preferences/system.rst:129
-#, fuzzy
-msgid "Performance varies depending on your OpenGL hardware and drivers."
-msgstr ""
-"Продуктивність варіюється залежно від ваших устаткування та драйверів "
-"OpenGL."
-
-#: ../../manual/preferences/system.rst:134
-msgid "Anisotropic Filtering"
-msgstr "Анізотропна Фільтрація -- Anisotropic Filtering"
-
-#: ../../manual/preferences/system.rst:131
-msgid ""
-"Sets the level of anisotropic filtering. This improves the quality of how"
-" textures are drawn at the cost of performance. Available Options are: "
-"*Off* (No Filtering), *2x*, *4x*, *8x*, and *16x*."
-msgstr ""
-"Встановлює рівень анізотропної фільтрації. Це підвищує якість того, як "
-"текстури рисуються, за рахунок продуктивності. Доступні опції: «Вимк» -- "
-"*Off* (Без Фільтрації), *2x*, *4x*, *8x* та *16x*."
-
-#: ../../manual/preferences/system.rst:144
-msgid "Multi-Sampling"
-msgstr "Багато-Відбір -- Multi-Sampling"
-
-#: ../../manual/preferences/system.rst:139
-msgid ""
-"This enables :term:`FSAA` for smoother drawing, at the expense of some "
-"performance."
-msgstr ""
-"Це вмикає :term:`FSAA` для згладженого прорису за рахунок деякої величини"
-" продуктивності."
-
-#: ../../manual/preferences/system.rst:143
-msgid ""
-"This is known to cause selection issues on some configurations, see: :ref"
-":`troubleshooting-3dview-invalid-selection`."
-msgstr ""
-"Це відомо спричиняє проблеми виділення на деяких конфігураціях, дивіться "
-"тут -- :ref:`troubleshooting-3dview-invalid-selection`."
-
-#: ../../manual/preferences/system.rst:153
-msgid "Region Overlap"
-msgstr "Перекриття Регіону -- Region Overlap"
-
-#: ../../manual/preferences/system.rst:147
-msgid ""
-"This checkbox will enable Blender to draw regions overlapping the 3D "
-"View. It means that the *Tool Shelf* and *Properties regions*, will be "
-"drawn overlapping the 3D View editor."
-msgstr ""
-"Цей стяг дозволяє Blender'у прорисовувати регіони, перекриваючи 3D Огляд."
-" Це означає, що регіони «Полиця Інструментів» -- *Tool Shelf* та "
-"«Властивості» -- *Properties* будуть рисуватися, перекриваючи редактор 3D"
-" Огляду."
-
-#: ../../manual/preferences/system.rst:151
-msgid ""
-"If you have a capable graphics card and drivers with *Triple Buffer* "
-"support, clicking the checkbox will enable the overlapping regions to be "
-"drawn using the *Triple Buffer* method, which will also enable them to be"
-" drawn using Alpha, showing the 3D View contents through the regions."
-msgstr ""
-"Якщо ви маєте відповідну відеокарту та драйвери з підтримкою *Triple "
-"Buffer*, увімкніть цей стяг та виберіть метод *Triple Buffer*, який "
-"дозволить також прорисовувати регіони з використанням Альфа, показуючи "
-"вміст 3D Огляду крізь ці регіони."
-
-#: ../../manual/preferences/system.rst:158
-msgid "Text Draw Options"
-msgstr "Опції Прорису Тексту -- Text Draw Options"
-
-#: ../../manual/preferences/system.rst:156
-#, fuzzy
-msgid ""
-"Enable interface text anti-aliasing. When disabled, texts are drawn using"
-" text straight render (filling only absolute pixels)."
-msgstr ""
-"Вмикає загладжування тексту в інтерфейсі. При вимкненні текст інтерфейсу "
-"буде прорисовуватися прямим рендером тексту (заповнення тільки "
-"абсолютними пікселями)."
-
-#: ../../manual/preferences/system.rst:161
-msgid "Textures"
-msgstr "Текстури -- Textures"
-
-#: ../../manual/preferences/system.rst:167
-msgid "Limit Size"
-msgstr "Ліміт Розміру -- Limit Size"
-
-#: ../../manual/preferences/system.rst:164
-msgid ""
-"Limit the maximum resolution for pictures used in textured display to "
-"save memory. The limit options are specified in a square of pixels (e.g: "
-"the option 256 means a texture of 256×256 pixels). This is useful for "
-"game engineers, whereas the texture limit matches paging blocks of the "
-"textures in the target graphic card memory. Available Options are: *Off* "
-"(No limit), *128*, *256*, *512*, *1024*, *2048*, *4096*, and *8192*."
-msgstr ""
-"Лімітує максимальну роздільність картинок, що використовуються у "
-"текстурованому показі для заощадження пам'яті. Опції ліміту визначаються "
-"у кількості пікселів, піднесеній до квадрата (наприклад: опція 256 "
-"означає текстуру 256×256 пікселів). Це корисно для розробників ігор, де "
-"ліміт текстури відповідає блокам підкачки текстур у цільову пам'ять "
-"відеокарти. Доступні опції: «Вимк» -- *Off* (Без ліміту), *128*, *256*, "
-"*512*, *1024*, *2048*, *4096* та *8192*."
-
-#: ../../manual/preferences/system.rst:170
-msgid "Time Out"
-msgstr "Час Очікування -- Time Out"
-
-#: ../../manual/preferences/system.rst:170
-msgid ""
-"Time since last access of a GL texture in seconds, after which it is "
-"freed. Set to 0 to keep textures allocated. Minimum: *0*, Maximum: "
-"*3600*."
-msgstr ""
-"Час після останнього доступу до GL текстури у секундах, після якого вона "
-"вивільняється. Задання в 0 збереже текстури призначеними. Мінімум: *0*, "
-"Максимум: *3600*."
-
-#: ../../manual/preferences/system.rst:174
-msgid "Collection Rate"
-msgstr "Частота Збирання -- Collection Rate"
-
-#: ../../manual/preferences/system.rst:173
-msgid ""
-"Number of seconds between each run of the GL texture garbage collector. "
-"Minimum: *0*, Maximum: *3600*."
-msgstr ""
-"Кількість секунд між кожним виконанням збирача сміття GL текстури. "
-"Мінімум: *0*, Максимум: *3600*."
-
-#: ../../manual/preferences/system.rst:185
-msgid "Image Draw Method"
-msgstr "Метод Прорису Зображень -- Images Draw Method"
-
-#: ../../manual/preferences/system.rst:177
-msgid "Method to draw images as the following options are supported:"
-msgstr "Метод для прорису зображень з такими підтримуваними опціями:"
-
-#: ../../manual/preferences/system.rst:179
-msgid "2D Texture"
-msgstr "2D Текстура -- 2D Texture"
-
-#: ../../manual/preferences/system.rst:180
-#: ../../manual/preferences/system.rst:184
-msgid "Uses CPU for display transform and draws images as a 2D texture."
-msgstr ""
-"Використовує CPU для показу трансформувань та прорисовує зображення як 2D"
-" текстури."
-
-#: ../../manual/preferences/system.rst:181
-msgid "GLSL"
-msgstr "GLSL"
-
-#: ../../manual/preferences/system.rst:182
-msgid ""
-"Fastest method using GLSL for display transform and draws images as a 2D "
-"texture."
-msgstr ""
-"Найшвидший метод використання GLSL для показу трансформувань та "
-"прорисовує зображення як 2D текстури."
-
-#: ../../manual/preferences/system.rst:185
-msgid "Draw Pixels"
-msgstr "Рисування Пікселів -- Draw Pixels"
-
-#: ../../manual/preferences/system.rst:188
-msgid "Sequencer/Clip Editor"
-msgstr "Відеорядник/Редактор Кліпів -- Sequencer/Clip Editor"
-
-#: ../../manual/preferences/system.rst:193
-msgid "Memory Cache Limit"
-msgstr "Ліміт Кешу Пам'яті -- Memory Cache Limit"
-
-#: ../../manual/preferences/system.rst:191
-#, fuzzy
-msgid ""
-"Upper limit of the Sequencer's memory cache (megabytes). For optimum Clip"
-" editor and Sequencer performance, high values are recommended."
-msgstr ""
-"Верхній ліміт кешу пам'яті для відеорядника (мегабайти). Для оптимальної "
-"продуктивності Редактора Кліпів та Відеорядника рекомендуються вищі "
-"значення."
-
-#: ../../manual/preferences/system.rst:198
-msgid "Solid OpenGL Lights"
-msgstr "Суцільні Освітлювачі OpenGL -- Solid OpenGL Lights"
-
-#: ../../manual/preferences/system.rst:200
-msgid ""
-"*Solid OpenGL Lights* are used to light the 3D View, mostly during *Solid"
-" view*. Lighting is constant and position \"world\" based. There are "
-"three virtual light sources, also called OpenGL auxiliary lamps, used to "
-"illuminate 3D View scenes, which will not display in renders."
-msgstr ""
-"Суцільні Освітлювачі OpenGL -- *Solid OpenGL Lights* використовуються для"
-" освітлення 3D Огляду здебільшого у режимі відтінення «Суцільно» -- "
-"*Solid*. Освітлення є постійним та базованим на позиції «світу». Існують "
-"три такі віртуальні джерела освітлення, також звані як допоміжні лампи "
-"OpenGL -- OpenGL auxiliary lamps, що використовуються для освітлення сцен"
-" у 3D Огляді та не показуються на рендерах."
-
-#: ../../manual/preferences/system.rst:205
-msgid ""
-"The Lamp icons allow the user to enable or disable OpenGL lamps. At least"
-" one of the three auxiliary OpenGL Lamps must remain enabled for the 3D "
-"View. The lamps are equal, their difference is their positioning and "
-"colors. You can control the direction of the lamps, as well as their "
-"diffuse and specular colors."
-msgstr ""
-"Іконки з лампою дозволяють користувачу вмикати або вимикати лампи OpenGL."
-" Принаймні одна з трьох допоміжних ламп OpenGL повинна залишатися "
-"увімкненою для 3D Огляду. Ці лампи є рівнозначні й відрізняються своєю "
-"позицією та кольорами. Ви можете керувати напрямком цих ламп, а також "
-"дифузним чи розсіяним та бліковим чи відсвітним кольорами."
-
-#: ../../manual/preferences/system.rst:210
-msgid "Use"
-msgstr "Вживання -- Use"
-
-#: ../../manual/preferences/system.rst:211
-msgid "Toggles the specific lamp."
-msgstr "Перемикає конкретну лампу."
-
-#: ../../manual/preferences/system.rst:212
-msgid "Diffuse"
-msgstr "Розсіяння -- Diffuse"
-
-#: ../../manual/preferences/system.rst:213
-msgid "This is the constant color of the lamp."
-msgstr "Це постійний колір лампи."
-
-#: ../../manual/preferences/system.rst:214
-msgid "Specular"
-msgstr "Блікування -- Specular"
-
-#: ../../manual/preferences/system.rst:215
-msgid "This is the highlight color of the lamp."
-msgstr "Це колір відсвітів від лампи."
-
-#: ../../manual/preferences/system.rst:220
-msgid "Direction"
-msgstr "Напрям -- Direction"
-
-#: ../../manual/preferences/system.rst:217
-msgid ""
-"Clicking with :kbd:`LMB` in the sphere and dragging the mouse cursor let "
-"us the user change the direction of the lamp by rotating the sphere. The "
-"direction of the lamp will be the same as shown at the sphere surface."
-msgstr ""
-"Клацання :kbd:`LMB` на сфері та перетяг мишкою дає обертання сфери та "
-"дозволяє вам змінювати напрямок лампи. Напрямок лампи показується "
-"відтіненням поверхні сфери."
-
-#: ../../manual/preferences/system.rst:223
-msgid "Color Picker Type"
-msgstr "Тип Відбірника Кольору -- Color Picker Type"
-
-#: ../../manual/preferences/system.rst:225
-msgid ""
-"Choose which type of :term:`color space` you prefer. It will show when "
-"clicking :kbd:`LMB` on any color button."
-msgstr ""
-"Дає змогу вибрати бажаний колірний простір -- :term:`color space` для "
-"відбору кольору. Він буде показуватися при клацанні вами :kbd:`LMB` на "
-"будь-якій кнопці вибірника кольору."
-
-#: ../../manual/preferences/system.rst:227
-msgid ""
-"See the different color picker types at the :doc:`Color picker "
-"</interface/controls/templates/color_picker>` page."
-msgstr ""
-"Дивіться про різні типи відбірника кольору тут -- :doc:`Color picker "
-"</interface/controls/templates/color_picker>`."
-
-#: ../../manual/preferences/system.rst:233
-msgid "Custom Weight Paint Range"
-msgstr "Власний Діапазон Малювання Вагомостей -- Custom Weight Paint Range"
-
-#: ../../manual/preferences/system.rst:235
-msgid ""
-"*Mesh skin weighting* is used to control how much a bone deforms the mesh"
-" of a character. To visualize and paint these weights, Blender uses a "
-"color ramp (from blue to green, and from yellow to red). Enabling the "
-"checkbox will enable an alternate map using a ramp starting with an empty"
-" range. Now you can create your custom map using the common color ramp "
-"options. For detailed information see the :doc:`Color ramps "
-"</interface/controls/templates/color_ramp>` page."
-msgstr ""
-"*Виваження сітьового покриву* використовується для керування тим, "
-"наскільки кістка буде деформувати сіть покриву персонажа. Для "
-"візуалізації та малювання цих вагомостей Blender використовує колірний "
-"градієнт (від синього до зеленого та від жовтого до червоного). Вмикання "
-"цього стяга дозволить використовувати альтернативну розкладку, створивши "
-"її тут на основі порожнього градієнта. Ви можете створити власну "
-"розкладку, використовуючи загальні опції колірного градієнта. Детальніше "
-"дивіться тут -- :doc:`Color ramps "
-"</interface/controls/templates/color_ramp>`."
-
-#: ../../manual/preferences/system.rst:243
-msgid "Fonts"
-msgstr "Шрифти -- Fonts"
-
-#: ../../manual/preferences/system.rst:246
-#: ../../manual/preferences/system.rst:248
-msgid "Interface Font"
-msgstr "Шрифт Інтерфейсу -- Interface Font"
-
-#: ../../manual/preferences/system.rst:249
-msgid "Replacement for the default user interface font."
-msgstr "Дає змогу замінити стандартний шрифт інтерфейсу користувача."
-
-#: ../../manual/preferences/system.rst:252
-msgid "Mono-space Font"
-msgstr "Моноширинний Шрифт -- Mono-space Font"
-
-#: ../../manual/preferences/system.rst:251
-msgid "Same as above for the mono-space font."
-msgstr "Дозволяє замінити стандартний моноширинний шрифт для інтерфейсу."
-
-#: ../../manual/preferences/system.rst:257
-msgid "Internationalization"
-msgstr "Інтернаціоналізація"
-
-#: ../../manual/preferences/system.rst:259
-#, fuzzy
-msgid ""
-"Blender supports a wide range of languages, enabling this checkbox will "
-"enable Blender to support International Fonts. International fonts can be"
-" loaded for the User Interface and used instead of Blender default "
-"bundled font."
-msgstr ""
-"Blender підтримує широкий діапазон мов, вмикання цього стяга дозволяє "
-"Blender'у підтримувати Іншомовні Шрифти -- International Fonts. Іншомовні"
-" шрифти можна завантажити для Інтерфейсу Користувача та використовувати "
-"замість стандартного шрифту Blender'а."
-
-#: ../../manual/preferences/system.rst:263
-msgid ""
-"This will also enable options for translating the User Interface through "
-"a list of languages and Tips for Blender tools which appear whenever the "
-"user hovers a mouse over Blender tools."
-msgstr ""
-"Це також вмикає опції для перекладу Інтерфейсу Користувача на ряд мов, а "
-"також перекладу Підказок для інструментів у Blender'і, що з'являються при"
-" наведенні вказівника миші над ними."
-
-#: ../../manual/preferences/system.rst:267
-#, fuzzy
-msgid ""
-"Blender supports I18N for internationalization. For more Information on "
-"how to load International fonts, see: :doc:`Editing Texts "
-"</modeling/texts/selecting_editing>` page."
-msgstr ""
-"Blender підтримує I18N для інтернаціоналізації. Детальніше про "
-"завантаження іншомовних шрифтів дивіться тут: :doc:`Editing Texts "
-"</modeling/texts/editing>`."
 
 #~ msgid "DPI"
 #~ msgstr "DPI"
@@ -979,4 +589,502 @@ msgstr ""
 #~ "все інше не працює. Корисно для "
 #~ "певних відеокарт з поганим або взагалі"
 #~ " без прискорення OpenGL."
+
+#~ msgid "General"
+#~ msgstr "Загальне -- General"
+
+#~ msgid "Frame Server Port"
+#~ msgstr "Порт Сервера Кадрів -- Frame Server Port"
+
+#~ msgid ""
+#~ "TCP/IP port used in conjunction with "
+#~ "the IP Address of the machine for"
+#~ " frameserver rendering. Used when working"
+#~ " with distributed rendering. Avoid changing"
+#~ " this port value unless it is "
+#~ "conflicting with already existing service "
+#~ "ports used by your Operating System "
+#~ "and/or other software. Always consult "
+#~ "your operating system documentation and "
+#~ "services or consult your system "
+#~ "administrator before changing this value."
+#~ msgstr ""
+#~ "TCP/IP порт, використовуваний у поєднанні "
+#~ "з IP Адресою комп'ютера для рендерингу"
+#~ " на сервері. Використовується при роботі"
+#~ " з розподіленим рендерингом. Уникайте зміни"
+#~ " значення цього порту, інакше це буде"
+#~ " конфліктувати з уже наявними сервісними"
+#~ " портами, що використовується вашою "
+#~ "Операційною Системою та/або іншими програмами."
+#~ " Завжди консультуйтеся з документацією до"
+#~ " вашої операційної системи та сервісів "
+#~ "або проконсультуйтеся з вашим системним "
+#~ "адміністратором перед змінюванням цього "
+#~ "значення."
+
+#~ msgid "Sound Options"
+#~ msgstr "Опції звуку"
+
+#~ msgid ""
+#~ "These settings control how sound behaves"
+#~ " during live playback within Blender "
+#~ "and are only available with *SDL* "
+#~ "or *OpenAL*. To control these settings"
+#~ " for exporting sound see the "
+#~ ":ref:`Encoding Panel <render-output-video-"
+#~ "encoding-panel>` and :ref:`Audio Panel "
+#~ "<data-scenes-audio>`."
+#~ msgstr ""
+
+#~ msgid "Screencast"
+#~ msgstr "Екранозапис -- Screencast"
+
+#~ msgid ""
+#~ "These settings are used to control "
+#~ "the frame rate for recording a "
+#~ ":ref:`Screencast <info-screencast>`."
+#~ msgstr ""
+#~ "Ці устави використовуються для керування "
+#~ "кадровою частотою для запису екранозаписів "
+#~ "-- :ref:`Screencast <info-screencast>`."
+
+#~ msgid "FPS"
+#~ msgstr "FPS"
+
+#~ msgid "The frame rate for screencast playback."
+#~ msgstr "Частота кадрів для відтворення екранозапису."
+
+#~ msgid "Wait Timer"
+#~ msgstr "Часолік Очікування -- Wait Timer"
+
+#~ msgid "Time in milliseconds between each frame recorded for screencast."
+#~ msgstr "Час у мілісекундах між кожним записуваним кадром для екранозапису."
+
+#~ msgid "Compute Device"
+#~ msgstr "Пристрій Обчислення -- Compute Device"
+
+#~ msgid "OpenGL"
+#~ msgstr "OpenGL"
+
+#~ msgid "Clip Alpha"
+#~ msgstr "Відсікання Альфа -- Clip Alpha"
+
+#~ msgid ""
+#~ "Clip alpha below this threshold in "
+#~ "the 3D View. Note that the default"
+#~ " is set to a low value to "
+#~ "prevent issues on some GPU's."
+#~ msgstr ""
+#~ "Відсікає альфа нижче цього порогу у "
+#~ "3D Огляді -- 3D View. Зауважте, що"
+#~ " стандартно задано низьке значення для "
+#~ "запобігання проблемам на деяких GPU."
+
+#~ msgid "Mipmaps"
+#~ msgstr "MIP-карти -- Mipmaps"
+
+#~ msgid ""
+#~ "Scale textures for 3D View using "
+#~ ":term:`mip-map` filtering. This increases "
+#~ "display quality, but uses more memory."
+#~ msgstr ""
+#~ "Масштабує текстури для 3D Огляду "
+#~ "використовуючи фільтрування багаторівневих карт "
+#~ "текстур -- MIP-карт -- :term:`Mipmap`. "
+#~ "Це збільшує якість показу, але "
+#~ "використовує більше пам'яті."
+
+#~ msgid "GPU Mipmap Generation"
+#~ msgstr "Генерування MIP-карти GPU -- GPU Mipmap Generation"
+
+#~ msgid "Generate mip-maps on the GPU instead of the CPU."
+#~ msgstr "Генерує MIP-карти на GPU замість CPU."
+
+#~ msgid "16 Bit Float Textures"
+#~ msgstr "16 -бітні Дійсночислові Текстури -- 16 Bit Float Textures"
+
+#~ msgid ""
+#~ "Enables the use of 16 Bit per "
+#~ "component Texture Images (floating point "
+#~ "images)."
+#~ msgstr ""
+#~ "Вмикає використання 16-бітних компонент "
+#~ "зображень текстур (Дійсночислові зображення)."
+
+#~ msgid "OpenGL Depth Picking"
+#~ msgstr "OpenGL Вказування Глибини -- OpenGL Depth Picking"
+
+#~ msgid ""
+#~ "This option uses an alternative method"
+#~ " of picking which uses depth "
+#~ "information to select the front-most "
+#~ "elements. It is only used for "
+#~ "selecting with the cursor (not border"
+#~ " select, lasso, circle select, etc.)."
+#~ msgstr ""
+#~ "Ця опція вживає альтернативний метод "
+#~ "вказування, що використовує інформацію про "
+#~ "глибину для виділення найбільш передніх "
+#~ "елементів. Це використовується тільки для "
+#~ "виділення з курсором (не виділ рамкою,"
+#~ " ласо, кругом тощо)."
+
+#~ msgid "Performance varies depending on your OpenGL hardware and drivers."
+#~ msgstr ""
+#~ "Продуктивність варіюється залежно від ваших"
+#~ " устаткування та драйверів OpenGL."
+
+#~ msgid "Anisotropic Filtering"
+#~ msgstr "Анізотропна Фільтрація -- Anisotropic Filtering"
+
+#~ msgid ""
+#~ "Sets the level of anisotropic filtering."
+#~ " This improves the quality of how "
+#~ "textures are drawn at the cost of"
+#~ " performance. Available Options are: *Off*"
+#~ " (No Filtering), *2x*, *4x*, *8x*, "
+#~ "and *16x*."
+#~ msgstr ""
+#~ "Встановлює рівень анізотропної фільтрації. Це"
+#~ " підвищує якість того, як текстури "
+#~ "рисуються, за рахунок продуктивності. Доступні"
+#~ " опції: «Вимк» -- *Off* (Без "
+#~ "Фільтрації), *2x*, *4x*, *8x* та *16x*."
+
+#~ msgid "Multi-Sampling"
+#~ msgstr "Багато-Відбір -- Multi-Sampling"
+
+#~ msgid ""
+#~ "This enables :term:`FSAA` for smoother "
+#~ "drawing, at the expense of some "
+#~ "performance."
+#~ msgstr ""
+#~ "Це вмикає :term:`FSAA` для згладженого "
+#~ "прорису за рахунок деякої величини "
+#~ "продуктивності."
+
+#~ msgid ""
+#~ "This is known to cause selection "
+#~ "issues on some configurations, see: :ref"
+#~ ":`troubleshooting-3dview-invalid-selection`."
+#~ msgstr ""
+#~ "Це відомо спричиняє проблеми виділення "
+#~ "на деяких конфігураціях, дивіться тут --"
+#~ " :ref:`troubleshooting-3dview-invalid-selection`."
+
+#~ msgid "Region Overlap"
+#~ msgstr "Перекриття Регіону -- Region Overlap"
+
+#~ msgid ""
+#~ "This checkbox will enable Blender to "
+#~ "draw regions overlapping the 3D View."
+#~ " It means that the *Tool Shelf* "
+#~ "and *Properties regions*, will be drawn"
+#~ " overlapping the 3D View editor."
+#~ msgstr ""
+#~ "Цей стяг дозволяє Blender'у прорисовувати "
+#~ "регіони, перекриваючи 3D Огляд. Це "
+#~ "означає, що регіони «Полиця Інструментів» "
+#~ "-- *Tool Shelf* та «Властивості» -- "
+#~ "*Properties* будуть рисуватися, перекриваючи "
+#~ "редактор 3D Огляду."
+
+#~ msgid ""
+#~ "If you have a capable graphics "
+#~ "card and drivers with *Triple Buffer*"
+#~ " support, clicking the checkbox will "
+#~ "enable the overlapping regions to be "
+#~ "drawn using the *Triple Buffer* method,"
+#~ " which will also enable them to "
+#~ "be drawn using Alpha, showing the "
+#~ "3D View contents through the regions."
+#~ msgstr ""
+#~ "Якщо ви маєте відповідну відеокарту та"
+#~ " драйвери з підтримкою *Triple Buffer*, "
+#~ "увімкніть цей стяг та виберіть метод "
+#~ "*Triple Buffer*, який дозволить також "
+#~ "прорисовувати регіони з використанням Альфа,"
+#~ " показуючи вміст 3D Огляду крізь ці"
+#~ " регіони."
+
+#~ msgid "Text Draw Options"
+#~ msgstr "Опції Прорису Тексту -- Text Draw Options"
+
+#~ msgid ""
+#~ "Enable interface text anti-aliasing. "
+#~ "When disabled, texts are drawn using "
+#~ "text straight render (filling only "
+#~ "absolute pixels)."
+#~ msgstr ""
+#~ "Вмикає загладжування тексту в інтерфейсі. "
+#~ "При вимкненні текст інтерфейсу буде "
+#~ "прорисовуватися прямим рендером тексту "
+#~ "(заповнення тільки абсолютними пікселями)."
+
+#~ msgid "Textures"
+#~ msgstr "Текстури -- Textures"
+
+#~ msgid "Limit Size"
+#~ msgstr "Ліміт Розміру -- Limit Size"
+
+#~ msgid ""
+#~ "Limit the maximum resolution for "
+#~ "pictures used in textured display to "
+#~ "save memory. The limit options are "
+#~ "specified in a square of pixels "
+#~ "(e.g: the option 256 means a "
+#~ "texture of 256×256 pixels). This is "
+#~ "useful for game engineers, whereas the"
+#~ " texture limit matches paging blocks "
+#~ "of the textures in the target "
+#~ "graphic card memory. Available Options "
+#~ "are: *Off* (No limit), *128*, *256*, "
+#~ "*512*, *1024*, *2048*, *4096*, and "
+#~ "*8192*."
+#~ msgstr ""
+#~ "Лімітує максимальну роздільність картинок, що"
+#~ " використовуються у текстурованому показі "
+#~ "для заощадження пам'яті. Опції ліміту "
+#~ "визначаються у кількості пікселів, піднесеній"
+#~ " до квадрата (наприклад: опція 256 "
+#~ "означає текстуру 256×256 пікселів). Це "
+#~ "корисно для розробників ігор, де ліміт"
+#~ " текстури відповідає блокам підкачки "
+#~ "текстур у цільову пам'ять відеокарти. "
+#~ "Доступні опції: «Вимк» -- *Off* (Без "
+#~ "ліміту), *128*, *256*, *512*, *1024*, "
+#~ "*2048*, *4096* та *8192*."
+
+#~ msgid "Image Draw Method"
+#~ msgstr "Метод Прорису Зображень -- Images Draw Method"
+
+#~ msgid "Method to draw images as the following options are supported:"
+#~ msgstr "Метод для прорису зображень з такими підтримуваними опціями:"
+
+#~ msgid "2D Texture"
+#~ msgstr "2D Текстура -- 2D Texture"
+
+#~ msgid "Uses CPU for display transform and draws images as a 2D texture."
+#~ msgstr ""
+#~ "Використовує CPU для показу трансформувань "
+#~ "та прорисовує зображення як 2D текстури."
+
+#~ msgid "GLSL"
+#~ msgstr "GLSL"
+
+#~ msgid ""
+#~ "Fastest method using GLSL for display"
+#~ " transform and draws images as a "
+#~ "2D texture."
+#~ msgstr ""
+#~ "Найшвидший метод використання GLSL для "
+#~ "показу трансформувань та прорисовує зображення"
+#~ " як 2D текстури."
+
+#~ msgid "Draw Pixels"
+#~ msgstr "Рисування Пікселів -- Draw Pixels"
+
+#~ msgid "Sequencer/Clip Editor"
+#~ msgstr "Відеорядник/Редактор Кліпів -- Sequencer/Clip Editor"
+
+#~ msgid "Solid OpenGL Lights"
+#~ msgstr "Суцільні Освітлювачі OpenGL -- Solid OpenGL Lights"
+
+#~ msgid ""
+#~ "*Solid OpenGL Lights* are used to "
+#~ "light the 3D View, mostly during "
+#~ "*Solid view*. Lighting is constant and"
+#~ " position \"world\" based. There are "
+#~ "three virtual light sources, also called"
+#~ " OpenGL auxiliary lamps, used to "
+#~ "illuminate 3D View scenes, which will"
+#~ " not display in renders."
+#~ msgstr ""
+#~ "Суцільні Освітлювачі OpenGL -- *Solid "
+#~ "OpenGL Lights* використовуються для освітлення"
+#~ " 3D Огляду здебільшого у режимі "
+#~ "відтінення «Суцільно» -- *Solid*. Освітлення"
+#~ " є постійним та базованим на позиції"
+#~ " «світу». Існують три такі віртуальні "
+#~ "джерела освітлення, також звані як "
+#~ "допоміжні лампи OpenGL -- OpenGL "
+#~ "auxiliary lamps, що використовуються для "
+#~ "освітлення сцен у 3D Огляді та не"
+#~ " показуються на рендерах."
+
+#~ msgid ""
+#~ "The Lamp icons allow the user to"
+#~ " enable or disable OpenGL lamps. At"
+#~ " least one of the three auxiliary "
+#~ "OpenGL Lamps must remain enabled for "
+#~ "the 3D View. The lamps are equal,"
+#~ " their difference is their positioning "
+#~ "and colors. You can control the "
+#~ "direction of the lamps, as well as"
+#~ " their diffuse and specular colors."
+#~ msgstr ""
+#~ "Іконки з лампою дозволяють користувачу "
+#~ "вмикати або вимикати лампи OpenGL. "
+#~ "Принаймні одна з трьох допоміжних ламп"
+#~ " OpenGL повинна залишатися увімкненою для"
+#~ " 3D Огляду. Ці лампи є рівнозначні"
+#~ " й відрізняються своєю позицією та "
+#~ "кольорами. Ви можете керувати напрямком "
+#~ "цих ламп, а також дифузним чи "
+#~ "розсіяним та бліковим чи відсвітним "
+#~ "кольорами."
+
+#~ msgid "Use"
+#~ msgstr "Вживання -- Use"
+
+#~ msgid "Toggles the specific lamp."
+#~ msgstr "Перемикає конкретну лампу."
+
+#~ msgid "Diffuse"
+#~ msgstr "Розсіяння -- Diffuse"
+
+#~ msgid "This is the constant color of the lamp."
+#~ msgstr "Це постійний колір лампи."
+
+#~ msgid "Specular"
+#~ msgstr "Блікування -- Specular"
+
+#~ msgid "This is the highlight color of the lamp."
+#~ msgstr "Це колір відсвітів від лампи."
+
+#~ msgid "Direction"
+#~ msgstr "Напрям -- Direction"
+
+#~ msgid ""
+#~ "Clicking with :kbd:`LMB` in the sphere"
+#~ " and dragging the mouse cursor let"
+#~ " us the user change the direction "
+#~ "of the lamp by rotating the "
+#~ "sphere. The direction of the lamp "
+#~ "will be the same as shown at "
+#~ "the sphere surface."
+#~ msgstr ""
+#~ "Клацання :kbd:`LMB` на сфері та перетяг"
+#~ " мишкою дає обертання сфери та "
+#~ "дозволяє вам змінювати напрямок лампи. "
+#~ "Напрямок лампи показується відтіненням "
+#~ "поверхні сфери."
+
+#~ msgid "Color Picker Type"
+#~ msgstr "Тип Відбірника Кольору -- Color Picker Type"
+
+#~ msgid ""
+#~ "Choose which type of :term:`color space`"
+#~ " you prefer. It will show when "
+#~ "clicking :kbd:`LMB` on any color button."
+#~ msgstr ""
+#~ "Дає змогу вибрати бажаний колірний "
+#~ "простір -- :term:`color space` для "
+#~ "відбору кольору. Він буде показуватися "
+#~ "при клацанні вами :kbd:`LMB` на "
+#~ "будь-якій кнопці вибірника кольору."
+
+#~ msgid ""
+#~ "See the different color picker types "
+#~ "at the :doc:`Color picker "
+#~ "</interface/controls/templates/color_picker>` page."
+#~ msgstr ""
+#~ "Дивіться про різні типи відбірника "
+#~ "кольору тут -- :doc:`Color picker "
+#~ "</interface/controls/templates/color_picker>`."
+
+#~ msgid "Custom Weight Paint Range"
+#~ msgstr "Власний Діапазон Малювання Вагомостей -- Custom Weight Paint Range"
+
+#~ msgid ""
+#~ "*Mesh skin weighting* is used to "
+#~ "control how much a bone deforms "
+#~ "the mesh of a character. To "
+#~ "visualize and paint these weights, "
+#~ "Blender uses a color ramp (from "
+#~ "blue to green, and from yellow to"
+#~ " red). Enabling the checkbox will "
+#~ "enable an alternate map using a "
+#~ "ramp starting with an empty range. "
+#~ "Now you can create your custom map"
+#~ " using the common color ramp options."
+#~ " For detailed information see the "
+#~ ":doc:`Color ramps "
+#~ "</interface/controls/templates/color_ramp>` page."
+#~ msgstr ""
+#~ "*Виваження сітьового покриву* використовується "
+#~ "для керування тим, наскільки кістка буде"
+#~ " деформувати сіть покриву персонажа. Для"
+#~ " візуалізації та малювання цих вагомостей"
+#~ " Blender використовує колірний градієнт "
+#~ "(від синього до зеленого та від "
+#~ "жовтого до червоного). Вмикання цього "
+#~ "стяга дозволить використовувати альтернативну "
+#~ "розкладку, створивши її тут на основі"
+#~ " порожнього градієнта. Ви можете створити"
+#~ " власну розкладку, використовуючи загальні "
+#~ "опції колірного градієнта. Детальніше дивіться"
+#~ " тут -- :doc:`Color ramps "
+#~ "</interface/controls/templates/color_ramp>`."
+
+#~ msgid "Fonts"
+#~ msgstr "Шрифти -- Fonts"
+
+#~ msgid "Interface Font"
+#~ msgstr "Шрифт Інтерфейсу -- Interface Font"
+
+#~ msgid "Replacement for the default user interface font."
+#~ msgstr "Дає змогу замінити стандартний шрифт інтерфейсу користувача."
+
+#~ msgid "Mono-space Font"
+#~ msgstr "Моноширинний Шрифт -- Mono-space Font"
+
+#~ msgid "Same as above for the mono-space font."
+#~ msgstr "Дозволяє замінити стандартний моноширинний шрифт для інтерфейсу."
+
+#~ msgid "Internationalization"
+#~ msgstr "Інтернаціоналізація"
+
+#~ msgid ""
+#~ "Blender supports a wide range of "
+#~ "languages, enabling this checkbox will "
+#~ "enable Blender to support International "
+#~ "Fonts. International fonts can be loaded"
+#~ " for the User Interface and used "
+#~ "instead of Blender default bundled font."
+#~ msgstr ""
+#~ "Blender підтримує широкий діапазон мов, "
+#~ "вмикання цього стяга дозволяє Blender'у "
+#~ "підтримувати Іншомовні Шрифти -- International"
+#~ " Fonts. Іншомовні шрифти можна завантажити"
+#~ " для Інтерфейсу Користувача та "
+#~ "використовувати замість стандартного шрифту "
+#~ "Blender'а."
+
+#~ msgid ""
+#~ "This will also enable options for "
+#~ "translating the User Interface through a"
+#~ " list of languages and Tips for "
+#~ "Blender tools which appear whenever the"
+#~ " user hovers a mouse over Blender "
+#~ "tools."
+#~ msgstr ""
+#~ "Це також вмикає опції для перекладу "
+#~ "Інтерфейсу Користувача на ряд мов, а "
+#~ "також перекладу Підказок для інструментів "
+#~ "у Blender'і, що з'являються при "
+#~ "наведенні вказівника миші над ними."
+
+#~ msgid ""
+#~ "Blender supports I18N for "
+#~ "internationalization. For more Information on"
+#~ " how to load International fonts, "
+#~ "see: :doc:`Editing Texts "
+#~ "</modeling/texts/selecting_editing>` page."
+#~ msgstr ""
+#~ "Blender підтримує I18N для "
+#~ "інтернаціоналізації. Детальніше про завантаження "
+#~ "іншомовних шрифтів дивіться тут: :doc:`Editing"
+#~ " Texts </modeling/texts/editing>`."
 
