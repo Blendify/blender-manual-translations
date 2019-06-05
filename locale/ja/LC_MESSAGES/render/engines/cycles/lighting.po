@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-31 21:26-0400\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2017-03-24 11:00+0900\n"
 "Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
 "Language: ja\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/lamps.rst:4
-msgid "Lamps"
-msgstr "Lamps (ランプ)"
+#: ../../manual/render/engines/cycles/lighting.rst:4
+msgid "Lighting"
+msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:6
+#: ../../manual/render/engines/cycles/lighting.rst:6
 msgid "Reference"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst
+#: ../../manual/render/engines/cycles/lighting.rst
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:9
-msgid ":menuselection:`Lamp --> Lamp`"
+#: ../../manual/render/engines/cycles/lighting.rst:9
+msgid ":menuselection:`Properties --> Lamp`"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:11
+#: ../../manual/render/engines/cycles/lighting.rst:11
 msgid ""
 "Next to lighting from the background and any object with an emission "
 "shader, lamps are another way to add light into the scene. The difference"
@@ -45,40 +45,16 @@ msgstr ""
 "Background シェーダーによる光や Emission シェーダーを適用したオブジェクトに続き、Lamp (ランプ) "
 "はシーンに光源を追加する手法の一つです。その違いは光源がレンダリング画像上に直接見えず、独自のオブジェクトとしてより簡単に操作できる事です。"
 
-#: ../../manual/render/cycles/lamps.rst:18
-msgid "Point, Spot, and Area Lamps also have texture coordinates."
-msgstr ""
-
-#: ../../manual/render/cycles/lamps.rst:22
-msgid "Common Settings"
+#: ../../manual/render/engines/cycles/lighting.rst:18
+#, fuzzy
+msgid "Common Light Settings"
 msgstr "共通設定"
 
-#: ../../manual/render/cycles/lamps.rst:24
-msgid "Type"
-msgstr "Type (タイプ)"
-
-#: ../../manual/render/cycles/lamps.rst:25
-#, fuzzy
-msgid "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported."
-msgstr ""
-"現時点では *Point*、*Spot*、*Area* および *Sun* のランプがサポートされています。*Hemi* "
-"ランプはサポートされておらず、Sun ランプとしてレンダリングされます。"
-
-#: ../../manual/render/cycles/lamps.rst:26
-msgid "Size"
-msgstr "Size (サイズ)"
-
-#: ../../manual/render/cycles/lamps.rst:27
-msgid ""
-"Size of the lamp in Blender Units; increasing this will result in softer "
-"shadows and shading."
-msgstr "Blender Unit で表されるランプの大きさです;この値を大きくすると影と陰影の描画が柔らかな物になります。"
-
-#: ../../manual/render/cycles/lamps.rst:29
+#: ../../manual/render/engines/cycles/lighting.rst:21
 msgid "Samples"
 msgstr "Samples (サンプル量)"
 
-#: ../../manual/render/cycles/lamps.rst:29
+#: ../../manual/render/engines/cycles/lighting.rst:21
 msgid ""
 "For the branch path tracing integrator, this specifies the number of "
 "direct light samples per AA sample. Point lamps might need only one "
@@ -88,11 +64,11 @@ msgstr ""
 "(アンチエイリアス) サンプルに応じた直接光のサンプルの量を定義します。Point ランプは 1 サンプルしか必要としませんが、Area "
 "ランプは通常もっと多くのサンプルを必要とします。"
 
-#: ../../manual/render/cycles/lamps.rst:32
+#: ../../manual/render/engines/cycles/lighting.rst:24
 msgid "Max Bounces"
 msgstr "Max Bounces (最大バウンス回数)"
 
-#: ../../manual/render/cycles/lamps.rst:32
+#: ../../manual/render/engines/cycles/lighting.rst:24
 #, fuzzy
 msgid ""
 "Maximum number of times light from the lamp is allowed to :term:`bounce "
@@ -102,11 +78,11 @@ msgstr ""
 "ランプから放射される光線について :term:`バウンス <light bounces>` が許容される上限回数を表します。:ref"
 ":`scene-wide のバウンス設定 <cycles-bounces>` によって制限されます。"
 
-#: ../../manual/render/cycles/lamps.rst:35
+#: ../../manual/render/engines/cycles/lighting.rst:27
 msgid "Cast Shadow"
 msgstr "Cast Shadow (影のキャスト)"
 
-#: ../../manual/render/cycles/lamps.rst:35
+#: ../../manual/render/engines/cycles/lighting.rst:27
 #, fuzzy
 msgid ""
 "By disabling this option, light from lamps will not be blocked by objects"
@@ -114,11 +90,11 @@ msgid ""
 "the light source."
 msgstr "このオプションを無効化することで、ランプからの光線はオブジェクト間で遮断されなくなります。光源への光線のトレースを行わなくなりレンダリングを高速化できます。"
 
-#: ../../manual/render/cycles/lamps.rst:41
+#: ../../manual/render/engines/cycles/lighting.rst:33
 msgid "Multiple Importance Sample"
 msgstr "Multiple Importance Sample (多重重点サンプル)"
 
-#: ../../manual/render/cycles/lamps.rst:38
+#: ../../manual/render/engines/cycles/lighting.rst:30
 msgid ""
 "By default lamps use only direct light sampling. For area lights and "
 "sharp glossy reflections, however, this can be noisy, and enabling this "
@@ -128,53 +104,65 @@ msgstr ""
 "標準ではランプは直接光のサンプリングのみを利用します。しかしながら、Area "
 "の光源と鮮烈にきらめく反射を対象とすると、その設定ではノイズが強くなり、このオプションを有効化することで間接光のサンプリングを用いてノイズを低減します。"
 
-#: ../../manual/render/cycles/lamps.rst:44
+#: ../../manual/render/engines/cycles/lighting.rst:36
 msgid "Lamp Types"
 msgstr "Lamp の種別"
 
-#: ../../manual/render/cycles/lamps.rst:47
+#: ../../manual/render/engines/cycles/lighting.rst:39
 msgid "Point Lamp"
 msgstr "Point Lamp (ポイントランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:49
+#: ../../manual/render/engines/cycles/lighting.rst:41
+#, fuzzy
 msgid ""
 "Point lamps emit light equally in all directions. By setting the *Size* "
 "larger than zero, they become spherical lamps, which give softer shadows "
-"and shading. The strength of point lamps is specified in Watts."
+"and shading."
 msgstr ""
 "ポイントランプは全方位に対して等しく光を放射します。その *Size* を 0 "
 "より大きい値にすることで、陰影を淡い物にする球状の光源となります。ポイントランプの明るさの強度は Watt (ワット) で表されます。"
 
-#: ../../manual/render/cycles/lamps.rst:55
+#: ../../manual/render/engines/cycles/lighting.rst:47
+msgid ":ref:`Point Lights <light-type-point>`."
+msgstr ""
+
+#: ../../manual/render/engines/cycles/lighting.rst:51
 msgid "Spot Lamp"
 msgstr "Spot Lamp (スポットランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:57
+#: ../../manual/render/engines/cycles/lighting.rst:53
+#, fuzzy
 msgid ""
 "Spot lamps emit light in a particular direction, inside a cone. By "
 "setting the *Size* larger than zero, they can cast softer shadows and "
-"shading. The size parameter defines the size of the cone, while the blend"
-" parameter can soften the edges of the cone."
+"shading."
 msgstr ""
 "スポットランプは特定の方向に対して光を円錐状に放射します。その *Size* を 0 "
 "より大きい値にすることで、より柔らかな陰影を投影できます。Size パラメータは円錐の大きさを表し、Blend "
 "パラメータは円錐の境界を曖昧な物にするために利用できます。"
 
-#: ../../manual/render/cycles/lamps.rst:66
+#: ../../manual/render/engines/cycles/lighting.rst:58
+msgid ":ref:`Spot Lights <light-type-spot>`."
+msgstr ""
+
+#: ../../manual/render/engines/cycles/lighting.rst:64
 msgid "Area Lamp"
 msgstr "Area Lamp (エリアランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:68
-msgid ""
-"Area lamps emit light from a square or rectangular area with a Lambertian"
-" distribution."
+#: ../../manual/render/engines/cycles/lighting.rst:66
+#, fuzzy
+msgid "Area lamps emit light from a rectangular or elliptic area."
 msgstr "エリアランプは Lambertian 分布に従い正方形もしくは長方形の領域から光を放射します。"
 
-#: ../../manual/render/cycles/lamps.rst:74
+#: ../../manual/render/engines/cycles/lighting.rst:70
+msgid ":ref:`Area Lights <light-type-area>`."
+msgstr ""
+
+#: ../../manual/render/engines/cycles/lighting.rst:76
 msgid "Light Portals"
 msgstr "Light Portals (ライトポータル)"
 
-#: ../../manual/render/cycles/lamps.rst:76
+#: ../../manual/render/engines/cycles/lighting.rst:78
 msgid ""
 "Area lamps can also function as light portals to help sample the "
 "environment light, and significantly reduce noise in interior scenes. "
@@ -182,7 +170,7 @@ msgid ""
 "more quickly, less samples are required."
 msgstr "エリアランプは環境光サンプルを補助するライトポータルとしての機能を持ち、インテリアのシーン上でノイズを大幅に低減させます。ポータルを用いたレンダリングは通常遅い物となりますが、必要とするサンプル量を少なくする程、より高速に終了するようになります。"
 
-#: ../../manual/render/cycles/lamps.rst:80
+#: ../../manual/render/engines/cycles/lighting.rst:82
 msgid ""
 "Light portals work by enabling the *Portal* option, and placing areas "
 "lamps in windows, door openings, and any place where light will enter the"
@@ -191,33 +179,37 @@ msgstr ""
 "ライトポータルは *Portal* "
 "オプションを有効にすることで利用可能となり、そのエリアランプを窓、開いているドア、その他インテリアに光を入れるあらゆる場所に設置します。"
 
-#: ../../manual/render/cycles/lamps.rst:83
+#: ../../manual/render/engines/cycles/lighting.rst:85
 msgid ""
 "In outdoor scenes most rays do not bounce much and just fly off into the "
 "sky and therefore, light portals are not helpful for outdoor scenes."
 msgstr "野外のシーンに置いては光線の大半がバウンスせずに空中に拡散していくだけなので、ライトポータルは野外のシーンにおいては無用です。"
 
-#: ../../manual/render/cycles/lamps.rst:89
+#: ../../manual/render/engines/cycles/lighting.rst:91
 msgid "White Room model by Jay Hardy."
 msgstr "Jay Hardy による白い部屋のモデル。"
 
-#: ../../manual/render/cycles/lamps.rst:93
+#: ../../manual/render/engines/cycles/lighting.rst:95
 msgid "Sun Lamp"
 msgstr "Sun Lamp (サンランプ)"
 
-#: ../../manual/render/cycles/lamps.rst:95
+#: ../../manual/render/engines/cycles/lighting.rst:97
 msgid ""
 "Sun lamps emit light in a given direction. Their position is not taken "
 "into account; they are always located outside of the scene, infinitely "
 "far away, and will not result in any distance falloff."
 msgstr "サンランプは定められた方向に向かって光を放射します。サンランプの位置は考慮されません;サンランプは常にシーンの外部、遥か遠方、に位置して距離による減衰が発生しません。"
 
-#: ../../manual/render/cycles/lamps.rst:99
+#: ../../manual/render/engines/cycles/lighting.rst:101
 msgid ""
 "Because they are not located inside the scene, their strength uses "
 "different units, and should typically be set to lower values than other "
 "lights."
 msgstr "シーン上に位置しないため、サンランプの強さには異なる単位を用い、通常は他の光源よりも低い値とします。"
+
+#: ../../manual/render/engines/cycles/lighting.rst:106
+msgid ":ref:`Sun Lights <light-type-sun>`."
+msgstr ""
 
 #~ msgid "Panel:    :menuselection:`Lamp --> Lamp`"
 #~ msgstr ""
@@ -245,4 +237,31 @@ msgstr "シーン上に位置しないため、サンランプの強さには異
 #~ "represented as a square and changed "
 #~ "with the *Size* property."
 #~ msgstr "ランプの形状を正方形として \"Size\" プロパティを変更できます。"
+
+#~ msgid "Lamps"
+#~ msgstr "Lamps (ランプ)"
+
+#~ msgid ":menuselection:`Lamp --> Lamp`"
+#~ msgstr ""
+
+#~ msgid "Point, Spot, and Area Lamps also have texture coordinates."
+#~ msgstr ""
+
+#~ msgid "Type"
+#~ msgstr "Type (タイプ)"
+
+#~ msgid "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported."
+#~ msgstr ""
+#~ "現時点では *Point*、*Spot*、*Area* および *Sun* "
+#~ "のランプがサポートされています。*Hemi* ランプはサポートされておらず、Sun "
+#~ "ランプとしてレンダリングされます。"
+
+#~ msgid "Size"
+#~ msgstr "Size (サイズ)"
+
+#~ msgid ""
+#~ "Size of the lamp in Blender Units;"
+#~ " increasing this will result in "
+#~ "softer shadows and shading."
+#~ msgstr "Blender Unit で表されるランプの大きさです;この値を大きくすると影と陰影の描画が柔らかな物になります。"
 

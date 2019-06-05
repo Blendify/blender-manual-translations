@@ -12,21 +12,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2017-03-01 20:12+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/materials/surface.rst:4
+#: ../../manual/render/engines/cycles/materials/surface.rst:4
 #, fuzzy
 msgid "Surfaces"
 msgstr "Шейдер поверхности"
 
-#: ../../manual/render/cycles/materials/surface.rst:6
+#: ../../manual/render/engines/cycles/materials/surface.rst:6
 #, fuzzy
 msgid ""
 "The surface shader defines the light interaction at the surface of the "
@@ -40,7 +40,7 @@ msgstr ""
 "рассеивания отражения)` определяют, что происходит с лучом света: он "
 "отражается назад, преломляется или поглощается."
 
-#: ../../manual/render/cycles/materials/surface.rst:10
+#: ../../manual/render/engines/cycles/materials/surface.rst:10
 msgid ""
 "Emission defines how light is emitted from the surface, allowing any "
 "surface to become a light source."
@@ -48,15 +48,15 @@ msgstr ""
 "Излучение определяет, сколько света испустится с поверхности, что "
 "позволяет любую поверхность превратить в источник света."
 
-#: ../../manual/render/cycles/materials/surface.rst:15
+#: ../../manual/render/engines/cycles/materials/surface.rst:15
 msgid "Terminology"
 msgstr "Терминология"
 
-#: ../../manual/render/cycles/materials/surface.rst:18
+#: ../../manual/render/engines/cycles/materials/surface.rst:18
 msgid "BSDF"
 msgstr "BSDF"
 
-#: ../../manual/render/cycles/materials/surface.rst:18
+#: ../../manual/render/engines/cycles/materials/surface.rst:18
 #, fuzzy
 msgid ""
 "Stands for Bidirectional Scattering Distribution Function. It defines how"
@@ -66,11 +66,11 @@ msgstr ""
 "функция двунаправленного поверхностного рассеивания отражения. Она "
 "определяет, как свет отражается от поверхности и преломляется ею."
 
-#: ../../manual/render/cycles/materials/surface.rst:20
+#: ../../manual/render/engines/cycles/materials/surface.rst:20
 msgid "Reflection"
 msgstr "Отражение"
 
-#: ../../manual/render/cycles/materials/surface.rst:21
+#: ../../manual/render/engines/cycles/materials/surface.rst:21
 #, fuzzy
 msgid "BSDFs reflect an incoming ray on the same side of the surface."
 msgstr ""
@@ -78,11 +78,11 @@ msgstr ""
 "двунаправленного поверхностного рассеивания отражения)` отражает падающий"
 " луч обратно в то же полупространство, откуда он пришёл."
 
-#: ../../manual/render/cycles/materials/surface.rst:22
+#: ../../manual/render/engines/cycles/materials/surface.rst:22
 msgid "Transmission"
 msgstr "Передача"
 
-#: ../../manual/render/cycles/materials/surface.rst:23
+#: ../../manual/render/engines/cycles/materials/surface.rst:23
 #, fuzzy
 msgid ""
 "BSDFs transmit an incoming ray through the surface, leaving on the other "
@@ -93,11 +93,11 @@ msgstr ""
 " луч через поверхность, в результате чего он покидает её с другой "
 "стороны."
 
-#: ../../manual/render/cycles/materials/surface.rst:27
+#: ../../manual/render/engines/cycles/materials/surface.rst:27
 msgid "Refraction"
 msgstr "Преломление"
 
-#: ../../manual/render/cycles/materials/surface.rst:25
+#: ../../manual/render/engines/cycles/materials/surface.rst:25
 #, fuzzy
 msgid ""
 "BSDFs are a type of *Transmission*, transmitting an incoming ray and "
@@ -108,11 +108,11 @@ msgstr ""
 "передаёт падающий луч и изменяет его направление, так что он выходит с "
 "другой стороны поверхности."
 
-#: ../../manual/render/cycles/materials/surface.rst:30
+#: ../../manual/render/engines/cycles/materials/surface.rst:30
 msgid "BSDF Parameters"
 msgstr "Параметры BSDF"
 
-#: ../../manual/render/cycles/materials/surface.rst:32
+#: ../../manual/render/engines/cycles/materials/surface.rst:32
 #, fuzzy
 msgid ""
 "A major difference from non-physically-based renderers is that direct "
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Roughness"
 msgstr "Шероховатость"
 
-#: ../../manual/render/cycles/materials/surface.rst:39
+#: ../../manual/render/engines/cycles/materials/surface.rst:39
 #, fuzzy
 msgid ""
 "For the glossy :abbr:`BSDF (Bidirectional scattering distribution "
@@ -155,16 +155,16 @@ msgstr ""
 "текстурируемость. Соотношение между ними примерно следующее: "
 "*шероховатость* = 1 - 1/*жёсткость*."
 
-#: ../../manual/render/cycles/materials/surface.rst:48
+#: ../../manual/render/engines/cycles/materials/surface.rst:48
 #, fuzzy
 msgid ""
 "Currently Blender is coded to use an unsquared model. So if you are using"
 " a :term:`Roughness Map` chances are that the result will not be "
 "accurate. To fix this, you can square the texture by connecting the "
-"texture to a :doc:`Math node </render/cycles/nodes/types/converter/math>`"
-" and either setting it to *Multiply* and inputing the texture in both "
-"input sockets, or using the *Power* function and setting the second input"
-" to 2."
+"texture to a :doc:`Math node "
+"</render/shaders/nodes/types/converter/math>` and either setting it to "
+"*Multiply* and inputing the texture in both input sockets, or using the "
+"*Power* function and setting the second input to 2."
 msgstr ""
 "На текущий момент Blender использует модель без возведения результата в "
 "квадрат. Так что если вы используете :term:`карту шероховатости "

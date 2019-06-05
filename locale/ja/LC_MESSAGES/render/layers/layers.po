@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,99 +18,267 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:5
-msgid "Layers"
+#: ../../manual/render/layers/layers.rst:7
+msgid "Render Layers"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:7
+#: ../../manual/render/layers/layers.rst:9
+msgid ""
+"Render layers allow you to render your scene in separate layers, usually "
+"with the intension of compositing them back together afterwards."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:12
+msgid ""
+"This can be useful for several purposes, such as color correcting certain"
+" elements differently, blurring the foreground as a fast manual method of"
+" creating DoF, or reducing the render quality for unimportant objects."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:16
+msgid ""
+"Using Render Layers can also save you from having to re-render your "
+"entire image each time you change something, allowing you to instead re-"
+"render only the layer(s) that you need."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:21
+msgid "Layer List"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:23
+#: ../../manual/render/layers/layers.rst:44
+#: ../../manual/render/layers/layers.rst:104
 msgid "Reference"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst
+#: ../../manual/render/layers/layers.rst
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:10
+#: ../../manual/render/layers/layers.rst:26
+msgid ":menuselection:`Properties editor --> Scene --> Scene`"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:30
+msgid "Layer list."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:32
+msgid "This is a list of all the Render Layers in the current scene."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:34
+msgid ""
+"Only layers which are enabled (checkbox on right is ticked) will be "
+"rendered. If the pin icon at the bottom right of the list is enabled, "
+"only the active (highlighted) layer will be rendered."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:37
+msgid ""
+"Render Layers can be added and removed using the ``+`` and ``-`` buttons "
+"on the right, and existing layers can be renamed by double-clicking on "
+"their name."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:42
+msgid "Layer Panel"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:47
+msgid ":menuselection:`Properties editor --> Scene --> Layer`"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:51
+msgid "Layer panel."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:53
+msgid ""
+"The Layer Panel shows the settings of the active Render Layer from the "
+"list above."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:55
+msgid "You can select multiple layers using :kbd:`Shift-LMB`."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:57
+msgid "Scene"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:58
+msgid ""
+"The Scene Layers, showing which are currently visible and will be "
+"rendered."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:62
+msgid "Layer"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:60
+msgid ""
+"The Scene Layers which are associated with the active Render Layer. "
+"Objects in those Scene Layers will be rendered in that Render Layer. When"
+" an object is in the Scene Layers but not the Render Layer, it will still"
+" cast shadows and be visible in reflections, so it is still indirectly "
+"visible."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:66
+msgid "Mask Layer"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:65
+msgid ""
+"Objects on these will mask out other objects appearing behind them. This "
+"can be used for compositing objects into footage, to take into account "
+"objects in front of the virtual objects blocking the view from the "
+"camera."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:75
+msgid "Material Override"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:69
+msgid "Overrides all material settings to use the Material chosen here."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:71
+msgid "Examples of where this might be used:"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:73
+msgid "To check lighting by using a plain diffuse material on all objects."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:74
+msgid "Render a wireframe of the scene."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:75
+msgid ""
+"Create a custom render pass such as an anti-aliased matte or global "
+"coordinates."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:79
+msgid ""
+"Additional options shown in this panel are different for each render "
+"engine. See these options for:"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:81
+msgid ":doc:`Cycles </render/layers/passes>`"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:85
+msgid "Usage"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:87
+msgid ""
+"Each Render Layer has an associated set of :doc:`Scene Layers "
+"</scene_layout/object/properties/relations/layers>`. Objects which are on"
+" one of the associated Scene Layers are shown in that Render Layer, as "
+"long as that Scene Layer is also visible."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:93
+msgid ""
+"Only the objects in visible Scene Layers will be rendered. So, if only "
+"Scene Layer 1 is visible and your Render Layer set specifies to render "
+"only Layers 2 and 3, nothing will be rendered."
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:102
+msgid "Cycles Layers"
+msgstr ""
+
+#: ../../manual/render/layers/layers.rst:107
 msgid ":menuselection:`Render Layers --> Layer`"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:12
+#: ../../manual/render/layers/layers.rst:109
 msgid ""
 "This section covers only the Render Layer settings appropriate for the "
-"Cycles renderer. For the engine-independent settings, see :doc:`this "
-"section </render/post_process/layers>`."
+"Cycles renderer. For the engine-independent settings, see :ref:`this "
+"section <render-layers>`."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:17
+#: ../../manual/render/layers/layers.rst:115
 msgid "View Layer"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:22
+#: ../../manual/render/layers/layers.rst:120
 msgid "Exclude"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:20
+#: ../../manual/render/layers/layers.rst:118
 msgid ""
 "Scene layers are shared between all render layers; however, sometimes it "
 "is useful to leave out some object influence for a particular render "
 "layer."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:25
+#: ../../manual/render/layers/layers.rst:123
 msgid "Filter"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:27
+#: ../../manual/render/layers/layers.rst:125
 msgid "Use Environment"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:28
+#: ../../manual/render/layers/layers.rst:126
 msgid "Disables rendering the *Environment* render pass in the final render."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:29
+#: ../../manual/render/layers/layers.rst:127
 msgid "Use Ambient Occlusion"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:30
+#: ../../manual/render/layers/layers.rst:128
 msgid ""
 "Disables rendering the *Ambient Occlusion* render pass in the final "
 "render."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:31
+#: ../../manual/render/layers/layers.rst:129
 msgid "Use Surfaces"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:32
+#: ../../manual/render/layers/layers.rst:130
 msgid "Disables rendering object materials in the final render."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:33
+#: ../../manual/render/layers/layers.rst:131
 msgid "Use Hair"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:34
+#: ../../manual/render/layers/layers.rst:132
 msgid "Disables rendering hair strands in the final render."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:37
+#: ../../manual/render/layers/layers.rst:135
 msgid "Use Freestyle"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:36
+#: ../../manual/render/layers/layers.rst:134
 msgid "Todo 2.8."
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:40
+#: ../../manual/render/layers/layers.rst:138
 msgid "Override"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:42
+#: ../../manual/render/layers/layers.rst:140
 msgid "Material"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:43
+#: ../../manual/render/layers/layers.rst:141
 msgid "Overrides all materials in the render layer."
 msgstr ""
 
@@ -118,7 +286,7 @@ msgstr ""
 msgid "Samples"
 msgstr ""
 
-#: ../../manual/render/cycles/settings/scene/render_layers/layers.rst:45
+#: ../../manual/render/layers/layers.rst:143
 msgid ""
 "Render layer samples to override the scene samples. Controlled by the "
 ":ref:`layer samples <render-cycles-integrator-layer-samples>` in the "
@@ -159,5 +327,16 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Use AO"
+#~ msgstr ""
+
+#~ msgid "Layers"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This section covers only the Render "
+#~ "Layer settings appropriate for the "
+#~ "Cycles renderer. For the engine-"
+#~ "independent settings, see :doc:`this section"
+#~ " </render/post_process/layers>`."
 #~ msgstr ""
 

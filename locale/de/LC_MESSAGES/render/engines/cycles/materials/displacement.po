@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,99 +12,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/materials/displacement.rst:4
+#: ../../manual/render/engines/cycles/materials/displacement.rst:4
 msgid "Displacement"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:6
+#: ../../manual/render/engines/cycles/materials/displacement.rst:6
 msgid "Reference"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst
+#: ../../manual/render/engines/cycles/materials/displacement.rst
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:9
+#: ../../manual/render/engines/cycles/materials/displacement.rst:9
 msgid ":menuselection:`Material --> Settings --> Displacement`"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:11
+#: ../../manual/render/engines/cycles/materials/displacement.rst:11
 msgid "Detail can be added to the shape of a surface with displacement shaders."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:13
+#: ../../manual/render/engines/cycles/materials/displacement.rst:13
 msgid ""
 "To create displacement, connect a :doc:`Displacement "
-"</render/cycles/nodes/types/vector/displacement>` or :doc:`Vector "
-"Displacement </render/cycles/nodes/types/vector/vector_displacement>` "
+"</render/shaders/nodes/types/vector/displacement>` or :doc:`Vector "
+"Displacement </render/shaders/nodes/types/vector/vector_displacement>` "
 "node to the displacement output of the Material Output node. Procedural, "
 "painted or baked textures can then be connected to these nodes."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:20
+#: ../../manual/render/engines/cycles/materials/displacement.rst:20
 msgid "Typical displacement node setup."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:22
+#: ../../manual/render/engines/cycles/materials/displacement.rst:22
 msgid ""
 "Three displacement methods exist, with varying accuracy, performance and "
 "memory usage."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:26
+#: ../../manual/render/engines/cycles/materials/displacement.rst:26
 msgid "Bump only, displacement only and displacement and bump combined."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:30
+#: ../../manual/render/engines/cycles/materials/displacement.rst:30
 msgid "Displacement Only"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:32
+#: ../../manual/render/engines/cycles/materials/displacement.rst:32
 msgid ""
 "The most accurate and memory intensive displacement method is to apply "
 "true displacement to the mesh surface."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:35
+#: ../../manual/render/engines/cycles/materials/displacement.rst:35
 msgid ""
 "It requires the mesh to be finely subdivided, which can be memory "
 "intensive. :doc:`Adaptive Subdivision "
-"</render/cycles/settings/objects/adaptive_subsurf>` is the best way to "
-"subdivide the mesh, so that exactly the right amount of subdivision is "
-"used depending on the distance of the object to the camera."
+"</render/engines/cycles/settings/objects/adaptive_subsurf>` is the best "
+"way to subdivide the mesh, so that exactly the right amount of "
+"subdivision is used depending on the distance of the object to the "
+"camera."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:40
+#: ../../manual/render/engines/cycles/materials/displacement.rst:40
 msgid ""
 "For baked displacement maps, best results are achieved with 16 or 32-bit "
 "float maps, as 8-bit byte images often can not represent all the "
 "necessary detail."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:45
+#: ../../manual/render/engines/cycles/materials/displacement.rst:45
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:49
+#: ../../manual/render/engines/cycles/materials/displacement.rst:49
 msgid "Bump Only"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:51
+#: ../../manual/render/engines/cycles/materials/displacement.rst:51
 msgid ""
 "The least accurate but most memory efficient method is to use a bump "
 "mapping. This method does not actually alter the mesh surface, but merely"
 " changes the shading to make it seem so."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:54
+#: ../../manual/render/engines/cycles/materials/displacement.rst:54
 msgid ""
 "Bump maps are often used to add smaller details on a model, for example "
 "pores or wrinkles on skin."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:56
+#: ../../manual/render/engines/cycles/materials/displacement.rst:56
 msgid ""
 "For baked bump maps 8-bit byte images are commonly used, however 16 or "
 "32-bit float maps can provide better looking results. When using image "
@@ -112,7 +113,7 @@ msgid ""
 "more visible for bump maps than other types of textures."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:62
+#: ../../manual/render/engines/cycles/materials/displacement.rst:62
 msgid ""
 "Because bump mapping is a fake effect, it can cause artifacts if the "
 "actual shape of the geometry is too different from the bump mapped shape."
@@ -120,18 +121,18 @@ msgid ""
 " displacement should be used."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:68
+#: ../../manual/render/engines/cycles/materials/displacement.rst:68
 msgid "Displacement and Bump"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:70
+#: ../../manual/render/engines/cycles/materials/displacement.rst:70
 msgid ""
 "Both methods can be combined to use actual displacement for the bigger "
 "displacement and bump for the finer details. This can provide a good "
 "balance to reduce memory usage."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/displacement.rst:73
+#: ../../manual/render/engines/cycles/materials/displacement.rst:73
 msgid ""
 "Once you subdivide the mesh very finely, it is better to use only actual "
 "displacement. Keeping bump maps will then only increase memory usage and "
@@ -400,5 +401,29 @@ msgstr ""
 #~ "Three displacement methods exits, with "
 #~ "varying accuracy, performance and memory "
 #~ "usage."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To create displacement, connect a "
+#~ ":doc:`Displacement "
+#~ "</render/cycles/nodes/types/vector/displacement>` or "
+#~ ":doc:`Vector Displacement "
+#~ "</render/cycles/nodes/types/vector/vector_displacement>` node"
+#~ " to the displacement output of the"
+#~ " Material Output node. Procedural, painted"
+#~ " or baked textures can then be "
+#~ "connected to these nodes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It requires the mesh to be finely"
+#~ " subdivided, which can be memory "
+#~ "intensive. :doc:`Adaptive Subdivision "
+#~ "</render/cycles/settings/objects/adaptive_subsurf>` is the"
+#~ " best way to subdivide the mesh, "
+#~ "so that exactly the right amount "
+#~ "of subdivision is used depending on "
+#~ "the distance of the object to the"
+#~ " camera."
 #~ msgstr ""
 

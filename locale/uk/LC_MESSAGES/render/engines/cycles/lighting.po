@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-31 21:26-0400\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2018-01-17 09:16+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -16,24 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/lamps.rst:4
-msgid "Lamps"
-msgstr "Лампи -- Lamps"
+#: ../../manual/render/engines/cycles/lighting.rst:4
+msgid "Lighting"
+msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:6
+#: ../../manual/render/engines/cycles/lighting.rst:6
 msgid "Reference"
 msgstr "Орієнтир -- Reference"
 
-#: ../../manual/render/cycles/lamps.rst
+#: ../../manual/render/engines/cycles/lighting.rst
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/render/cycles/lamps.rst:9
+#: ../../manual/render/engines/cycles/lighting.rst:9
 #, fuzzy
-msgid ":menuselection:`Lamp --> Lamp`"
+msgid ":menuselection:`Properties --> Lamp`"
 msgstr "Панель:    «Дані Об'єкта > Лампа» -- :menuselection:`Lamp --> Lamp`"
 
-#: ../../manual/render/cycles/lamps.rst:11
+#: ../../manual/render/engines/cycles/lighting.rst:11
 msgid ""
 "Next to lighting from the background and any object with an emission "
 "shader, lamps are another way to add light into the scene. The difference"
@@ -45,45 +45,16 @@ msgstr ""
 "є те, що вони не видимі безпосередньо на рендереному зображенні та можуть"
 " легко управлятися як об'єкти окремого типу."
 
-#: ../../manual/render/cycles/lamps.rst:18
-msgid "Point, Spot, and Area Lamps also have texture coordinates."
-msgstr ""
-"Лампи типів «Точка» -- Point, «Прожектор» -- Spot та «Площина» -- Area "
-"також мають текстурові координати."
-
-#: ../../manual/render/cycles/lamps.rst:22
-msgid "Common Settings"
+#: ../../manual/render/engines/cycles/lighting.rst:18
+#, fuzzy
+msgid "Common Light Settings"
 msgstr "Загальні устави"
 
-#: ../../manual/render/cycles/lamps.rst:24
-msgid "Type"
-msgstr "Тип"
-
-#: ../../manual/render/cycles/lamps.rst:25
-#, fuzzy
-msgid "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported."
-msgstr ""
-"Наразі підтримуються лампи типу «Точка» -- *Point*, «Прожектор» -- "
-"*Spot*, «Площина» -- *Area* та «Сонце» -- *Sun*. Лампи типу «Півсфера» --"
-" *Hemi* не підтримуються та рендеряться як Сонцеві лампи."
-
-#: ../../manual/render/cycles/lamps.rst:26
-msgid "Size"
-msgstr "Розмір -- Size"
-
-#: ../../manual/render/cycles/lamps.rst:27
-msgid ""
-"Size of the lamp in Blender Units; increasing this will result in softer "
-"shadows and shading."
-msgstr ""
-"Розмір лампи в Одиницях Blender; збільшення цього значення дає м'якіші "
-"тіні та відтінення."
-
-#: ../../manual/render/cycles/lamps.rst:29
+#: ../../manual/render/engines/cycles/lighting.rst:21
 msgid "Samples"
 msgstr "Вибірки -- Samples"
 
-#: ../../manual/render/cycles/lamps.rst:29
+#: ../../manual/render/engines/cycles/lighting.rst:21
 msgid ""
 "For the branch path tracing integrator, this specifies the number of "
 "direct light samples per AA sample. Point lamps might need only one "
@@ -94,11 +65,11 @@ msgstr ""
 "АА. Для ламп типу Point може потребуватися тільки одна вибірка, тоді як "
 "лампи типу Area зазвичай вимагають задання більше вибірок."
 
-#: ../../manual/render/cycles/lamps.rst:32
+#: ../../manual/render/engines/cycles/lighting.rst:24
 msgid "Max Bounces"
 msgstr "Макс Відскоків -- Max Bounces"
 
-#: ../../manual/render/cycles/lamps.rst:32
+#: ../../manual/render/engines/cycles/lighting.rst:24
 msgid ""
 "Maximum number of times light from the lamp is allowed to :term:`bounce "
 "<light bounces>`. Limited by :ref:`scene-wide bounce settings <cycles-"
@@ -108,11 +79,11 @@ msgstr ""
 "bounces>` світла з цієї лампи. Лімітується уставами відскоків для сцени "
 "-- :ref:`scene-wide bounce settings <cycles-bounces>`."
 
-#: ../../manual/render/cycles/lamps.rst:35
+#: ../../manual/render/engines/cycles/lighting.rst:27
 msgid "Cast Shadow"
 msgstr "Відкидати Тінь -- Cast Shadow"
 
-#: ../../manual/render/cycles/lamps.rst:35
+#: ../../manual/render/engines/cycles/lighting.rst:27
 #, fuzzy
 msgid ""
 "By disabling this option, light from lamps will not be blocked by objects"
@@ -123,11 +94,11 @@ msgstr ""
 "між ними. Це може прискорити рендеринг, не потребуючи простеження "
 "променів до такого джерела світла."
 
-#: ../../manual/render/cycles/lamps.rst:41
+#: ../../manual/render/engines/cycles/lighting.rst:33
 msgid "Multiple Importance Sample"
 msgstr "Багатовибірка за Значністю -- Multiple Importance Sample"
 
-#: ../../manual/render/cycles/lamps.rst:38
+#: ../../manual/render/engines/cycles/lighting.rst:30
 msgid ""
 "By default lamps use only direct light sampling. For area lights and "
 "sharp glossy reflections, however, this can be noisy, and enabling this "
@@ -139,35 +110,40 @@ msgstr ""
 "шумність, і вмикання цієї опції буде вмикати відбір побічного освітлення,"
 " що буде використано додатково для зменшення шуму."
 
-#: ../../manual/render/cycles/lamps.rst:44
+#: ../../manual/render/engines/cycles/lighting.rst:36
 msgid "Lamp Types"
 msgstr "Типи Ламп -- Lamp Types"
 
-#: ../../manual/render/cycles/lamps.rst:47
+#: ../../manual/render/engines/cycles/lighting.rst:39
 msgid "Point Lamp"
 msgstr "Лампа типу «Точка» -- Point Lamp"
 
-#: ../../manual/render/cycles/lamps.rst:49
+#: ../../manual/render/engines/cycles/lighting.rst:41
+#, fuzzy
 msgid ""
 "Point lamps emit light equally in all directions. By setting the *Size* "
 "larger than zero, they become spherical lamps, which give softer shadows "
-"and shading. The strength of point lamps is specified in Watts."
+"and shading."
 msgstr ""
 "Точкові лампи емітують світло рівномірно у всіх напрямках. При заданні "
 "устави *Size* більшою за нуль, вони стають сферичними лампами, які дають "
 "м'якіші тіні та відтінення. Сила точкових ламп визначається у Ватах -- "
 "Watts."
 
-#: ../../manual/render/cycles/lamps.rst:55
+#: ../../manual/render/engines/cycles/lighting.rst:47
+msgid ":ref:`Point Lights <light-type-point>`."
+msgstr ""
+
+#: ../../manual/render/engines/cycles/lighting.rst:51
 msgid "Spot Lamp"
 msgstr "Лампа типу «Прожектор» -- Spot Lamp"
 
-#: ../../manual/render/cycles/lamps.rst:57
+#: ../../manual/render/engines/cycles/lighting.rst:53
+#, fuzzy
 msgid ""
 "Spot lamps emit light in a particular direction, inside a cone. By "
 "setting the *Size* larger than zero, they can cast softer shadows and "
-"shading. The size parameter defines the size of the cone, while the blend"
-" parameter can soften the edges of the cone."
+"shading."
 msgstr ""
 "Прожекторні лампи емітують світло у певному напрямку, всередині уявного "
 "конуса. При заданні устави *Size* більшою за нуль, вони можуть давати "
@@ -175,23 +151,30 @@ msgstr ""
 " визначає розмір конуса, тоді як параметр Blend може дати пом'якшення "
 "країв конуса."
 
-#: ../../manual/render/cycles/lamps.rst:66
+#: ../../manual/render/engines/cycles/lighting.rst:58
+msgid ":ref:`Spot Lights <light-type-spot>`."
+msgstr ""
+
+#: ../../manual/render/engines/cycles/lighting.rst:64
 msgid "Area Lamp"
 msgstr "Лампа типу «Площина» -- Area Lamp"
 
-#: ../../manual/render/cycles/lamps.rst:68
-msgid ""
-"Area lamps emit light from a square or rectangular area with a Lambertian"
-" distribution."
+#: ../../manual/render/engines/cycles/lighting.rst:66
+#, fuzzy
+msgid "Area lamps emit light from a rectangular or elliptic area."
 msgstr ""
 "Площинні лампи емітують світло з квадратної або прямокутної площі з "
 "розподілом за Ламбертом."
 
-#: ../../manual/render/cycles/lamps.rst:74
+#: ../../manual/render/engines/cycles/lighting.rst:70
+msgid ":ref:`Area Lights <light-type-area>`."
+msgstr ""
+
+#: ../../manual/render/engines/cycles/lighting.rst:76
 msgid "Light Portals"
 msgstr "Портали Світла -- Light Portals"
 
-#: ../../manual/render/cycles/lamps.rst:76
+#: ../../manual/render/engines/cycles/lighting.rst:78
 msgid ""
 "Area lamps can also function as light portals to help sample the "
 "environment light, and significantly reduce noise in interior scenes. "
@@ -203,7 +186,7 @@ msgstr ""
 "сценах. Зауважте, що рендеринг з порталами зазвичай повільніший, але "
 "оскільки він зводиться більш швидко, то вимагається менше вибірок."
 
-#: ../../manual/render/cycles/lamps.rst:80
+#: ../../manual/render/engines/cycles/lighting.rst:82
 msgid ""
 "Light portals work by enabling the *Portal* option, and placing areas "
 "lamps in windows, door openings, and any place where light will enter the"
@@ -213,7 +196,7 @@ msgstr ""
 " лампи та розмістити площинні лампи у вікнах, дверних отворах та у всіх "
 "місцях, через які світло входить в інтер'єр."
 
-#: ../../manual/render/cycles/lamps.rst:83
+#: ../../manual/render/engines/cycles/lighting.rst:85
 msgid ""
 "In outdoor scenes most rays do not bounce much and just fly off into the "
 "sky and therefore, light portals are not helpful for outdoor scenes."
@@ -222,15 +205,15 @@ msgstr ""
 "просто відлітають у небо, а тому портали світла не є корисними для "
 "екстер'єрних сцен."
 
-#: ../../manual/render/cycles/lamps.rst:89
+#: ../../manual/render/engines/cycles/lighting.rst:91
 msgid "White Room model by Jay Hardy."
 msgstr "Вітальня: модель Джея Харді (Jay Hardy)."
 
-#: ../../manual/render/cycles/lamps.rst:93
+#: ../../manual/render/engines/cycles/lighting.rst:95
 msgid "Sun Lamp"
 msgstr "Лампа типу «Сонце» -- Sun Lamp"
 
-#: ../../manual/render/cycles/lamps.rst:95
+#: ../../manual/render/engines/cycles/lighting.rst:97
 msgid ""
 "Sun lamps emit light in a given direction. Their position is not taken "
 "into account; they are always located outside of the scene, infinitely "
@@ -240,7 +223,7 @@ msgstr ""
 "враховується; вони завжди розміщені поза сценою, безкінечно далеко і не "
 "мають спаду освітлення з відстанню."
 
-#: ../../manual/render/cycles/lamps.rst:99
+#: ../../manual/render/engines/cycles/lighting.rst:101
 msgid ""
 "Because they are not located inside the scene, their strength uses "
 "different units, and should typically be set to lower values than other "
@@ -249,6 +232,10 @@ msgstr ""
 "Оскільки вони не знаходяться всередині сцени, для задання їх сили "
 "Strength використовуються інші одиниці, і зазвичай вона типово повинна "
 "мати нижчі значення, ніж для інших освітлювачів."
+
+#: ../../manual/render/engines/cycles/lighting.rst:106
+msgid ":ref:`Sun Lights <light-type-sun>`."
+msgstr ""
 
 #~ msgid "Shape"
 #~ msgstr "Форма -- Shape"
@@ -279,4 +266,37 @@ msgstr ""
 #~ "Форма такої лампи може бути представлена"
 #~ " як квадрат та змінюватися за "
 #~ "допомогою властивості *Size*."
+
+#~ msgid "Lamps"
+#~ msgstr "Лампи -- Lamps"
+
+#~ msgid "Point, Spot, and Area Lamps also have texture coordinates."
+#~ msgstr ""
+#~ "Лампи типів «Точка» -- Point, "
+#~ "«Прожектор» -- Spot та «Площина» -- "
+#~ "Area також мають текстурові координати."
+
+#~ msgid "Type"
+#~ msgstr "Тип"
+
+#~ msgid "Currently *Point*, *Spot*, *Area* and *Sun* lamps are supported."
+#~ msgstr ""
+#~ "Наразі підтримуються лампи типу «Точка» "
+#~ "-- *Point*, «Прожектор» -- *Spot*, "
+#~ "«Площина» -- *Area* та «Сонце» -- "
+#~ "*Sun*. Лампи типу «Півсфера» -- *Hemi*"
+#~ " не підтримуються та рендеряться як "
+#~ "Сонцеві лампи."
+
+#~ msgid "Size"
+#~ msgstr "Розмір -- Size"
+
+#~ msgid ""
+#~ "Size of the lamp in Blender Units;"
+#~ " increasing this will result in "
+#~ "softer shadows and shading."
+#~ msgstr ""
+#~ "Розмір лампи в Одиницях Blender; "
+#~ "збільшення цього значення дає м'якіші "
+#~ "тіні та відтінення."
 
