@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2019-01-28 21:09+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/materials/introduction.rst:5
+#: ../../manual/render/engines/cycles/materials/introduction.rst:5
 msgid "Introduction"
 msgstr "Вступ"
 
-#: ../../manual/render/cycles/materials/introduction.rst:7
+#: ../../manual/render/engines/cycles/materials/introduction.rst:7
 msgid ""
 "A material defines the artistic qualities of the substance that an object"
 " is made of. In its simplest form, you can use materials to show the "
@@ -38,7 +38,7 @@ msgstr ""
 "складні ефекти, як прозорість, дифракція та підповерхневе розсіювання. "
 "Типовими матеріалами можуть бути мідь, шкіра, скло або тканина."
 
-#: ../../manual/render/cycles/materials/introduction.rst:14
+#: ../../manual/render/engines/cycles/materials/introduction.rst:14
 msgid ""
 "Materials can also contain displacement information to described how the "
 "material raises and lowers the surface of the material."
@@ -46,7 +46,7 @@ msgstr ""
 "Матеріали можуть також містити інформацію зміщення для опису того, як "
 "матеріал піднімає та опускає поверхню матеріалу."
 
-#: ../../manual/render/cycles/materials/introduction.rst:20
+#: ../../manual/render/engines/cycles/materials/introduction.rst:20
 msgid ""
 "Various basic materials (single, multiple material, transparency, vertex "
 "paint)."
@@ -54,7 +54,7 @@ msgstr ""
 "Різні базові матеріали (одиничний, одночасно кілька матеріалів, "
 "прозорість, малювання вершин)."
 
-#: ../../manual/render/cycles/materials/introduction.rst:22
+#: ../../manual/render/engines/cycles/materials/introduction.rst:22
 msgid ""
 "The basic (un-textured) Blender material is uniform across each face of "
 "an object (although the various pixels of each face of the object may "
@@ -67,13 +67,13 @@ msgstr ""
 "по-різному через ефекти освітлення). Однак, різні грані об'єкта можуть "
 "використовувати різні матеріали (дивіться :ref:`bi-multiple-materials`)."
 
-#: ../../manual/render/cycles/materials/introduction.rst:26
+#: ../../manual/render/engines/cycles/materials/introduction.rst:26
+#, fuzzy
 msgid ""
 "In Blender, materials can (optionally) have associated textures. Textures"
 " *describe* the substance: e.g. *polished* brass, *dirty* glass or "
-"*embroidered* linen. The :doc:`Textures "
-"</editors/uv_image/uv/textures/index>` chapter describes how to add "
-"textures to materials."
+"*embroidered* linen. The :doc:`Textures </render/shaders/textures/index>`"
+" chapter describes how to add textures to materials."
 msgstr ""
 "У Blender'і матеріали можуть (за бажанням) мати асоційовані з ними "
 "текстури. Текстури *описують* речовину: наприклад, *полірована* мідь, "
@@ -81,11 +81,11 @@ msgstr ""
 "</editors/uv_image/uv/textures/index>` описує, як додавати текстури у "
 "матеріали."
 
-#: ../../manual/render/cycles/materials/introduction.rst:33
+#: ../../manual/render/engines/cycles/materials/introduction.rst:33
 msgid "How Materials Work"
 msgstr "Як Матеріали Працюють"
 
-#: ../../manual/render/cycles/materials/introduction.rst:35
+#: ../../manual/render/engines/cycles/materials/introduction.rst:35
 msgid ""
 "Before you can understand how to design effectively with materials, you "
 "must understand how simulated light and surfaces interact in Blender's "
@@ -97,7 +97,7 @@ msgstr ""
 "у Blender'і та як устави матеріалу керують цими взаємодіями. Глибоке "
 "розуміння рушія рендера допоможе вам максимально використовувати його."
 
-#: ../../manual/render/cycles/materials/introduction.rst:40
+#: ../../manual/render/engines/cycles/materials/introduction.rst:40
 msgid ""
 "The rendered image you create with Blender is a projection of the scene "
 "onto an imaginary surface called the *viewing plane*. The viewing plane "
@@ -111,7 +111,7 @@ msgstr ""
 "паличок у людському оці, за винятком того, що вона сприймає імітоване, а "
 "не реальне, світло."
 
-#: ../../manual/render/cycles/materials/introduction.rst:46
+#: ../../manual/render/engines/cycles/materials/introduction.rst:46
 msgid ""
 "To render an image of a scene we must first determine what light from the"
 " scene is arriving at each point on the viewing plane. The best way to "
@@ -129,7 +129,7 @@ msgstr ""
 "renderable surface -- у сцені, у точці якої ми зможемо визначити, яке "
 "світло потрапляє на цю точку."
 
-#: ../../manual/render/cycles/materials/introduction.rst:53
+#: ../../manual/render/engines/cycles/materials/introduction.rst:53
 msgid ""
 "The surface properties and incident light angle tells how much of that "
 "light would be reflected back along the incident viewing angle "
@@ -139,11 +139,11 @@ msgstr ""
 "-- розкажуть, наскільки це світло було відбито назад уздовж кута падіння "
 "огляду -- incident viewing angle -- *(Базовий принцип рушія рендеринга)*."
 
-#: ../../manual/render/cycles/materials/introduction.rst:59
+#: ../../manual/render/engines/cycles/materials/introduction.rst:59
 msgid "Rendering engine basic principle."
 msgstr "Базовий принцип рушія рендеринга."
 
-#: ../../manual/render/cycles/materials/introduction.rst:61
+#: ../../manual/render/engines/cycles/materials/introduction.rst:61
 msgid ""
 "Two basic types of phenomena take place at any point on a surface when a "
 "light ray strikes it: diffusion and specular reflection. Diffusion and "
@@ -157,7 +157,7 @@ msgstr ""
 " один від одного головно відношенням між кутом падіння світла та кутом "
 "відбивання світла."
 
-#: ../../manual/render/cycles/materials/introduction.rst:66
+#: ../../manual/render/engines/cycles/materials/introduction.rst:66
 msgid ""
 "The shading (or coloring) of the object during render will then take into"
 " account the base color (as modified by the diffusion and specular "
@@ -167,7 +167,7 @@ msgstr ""
 "рендера далі враховуватиме цей базовий колір (модифікований явищами "
 "розсіяння і відбиття бліків) та інтенсивність світла."
 
-#: ../../manual/render/cycles/materials/introduction.rst:69
+#: ../../manual/render/engines/cycles/materials/introduction.rst:69
 msgid ""
 "Using the internal ray tracer, other (more advanced) phenomena could "
 "occur. In ray-traced reflections, the point of a surface struck by a "
@@ -182,7 +182,7 @@ msgstr ""
 "(змішування базового кольору і кольору навколишнього середовища) та кута "
 "огляду."
 
-#: ../../manual/render/cycles/materials/introduction.rst:74
+#: ../../manual/render/engines/cycles/materials/introduction.rst:74
 msgid ""
 "On the other hand, in ray-traced refractions, the point of a surface "
 "struck by a light ray will return the color of its background "
@@ -198,7 +198,7 @@ msgstr ""
 "матеріалу, та додатковий вказівник заломлення матеріалу, який буде "
 "спотворювати кут огляду."
 
-#: ../../manual/render/cycles/materials/introduction.rst:80
+#: ../../manual/render/engines/cycles/materials/introduction.rst:80
 msgid ""
 "Of course, shading of the object hit by a light ray will be about mixing "
 "all these phenomena at the same time during the rendering. The appearance"
@@ -208,17 +208,17 @@ msgstr ""
 "одночасному змішуванні всіх цих явищ у ході рендеринга. Вигляд об'єкта "
 "після рендеринга залежить від багатьох взаємопов'язаних устав:"
 
-#: ../../manual/render/cycles/materials/introduction.rst:84
+#: ../../manual/render/engines/cycles/materials/introduction.rst:84
 msgid "World (Ambient color, Radiosity, Ambient Occlusion)"
 msgstr ""
 "Світ сцени -- World (колір оточення -- Ambient Color, опромінюваність -- "
 "Radiosity, загорода оточення -- Ambient Occlusion)"
 
-#: ../../manual/render/cycles/materials/introduction.rst:85
+#: ../../manual/render/engines/cycles/materials/introduction.rst:85
 msgid "Lights"
 msgstr "Освітлювачі -- Lights"
 
-#: ../../manual/render/cycles/materials/introduction.rst:86
+#: ../../manual/render/engines/cycles/materials/introduction.rst:86
 msgid ""
 "Material settings (including ambient, emission, and every other setting "
 "on every panel in that tab)"
@@ -226,53 +226,53 @@ msgstr ""
 "Устави Матеріалів (включаючи оточення -- ambient, емісію -- emission та "
 "всі інші устави на панелях у цій вкладці)"
 
-#: ../../manual/render/cycles/materials/introduction.rst:87
+#: ../../manual/render/engines/cycles/materials/introduction.rst:87
 msgid "Texture(s) and how they are mixed"
 msgstr "Текстури -- Texture та як вони змішуються"
 
-#: ../../manual/render/cycles/materials/introduction.rst:88
+#: ../../manual/render/engines/cycles/materials/introduction.rst:88
 msgid "Material Nodes"
 msgstr "Матеріалові Вузли -- Material Nodes"
 
-#: ../../manual/render/cycles/materials/introduction.rst:89
+#: ../../manual/render/engines/cycles/materials/introduction.rst:89
 msgid "Camera"
 msgstr "Камера -- Camera"
 
-#: ../../manual/render/cycles/materials/introduction.rst:90
+#: ../../manual/render/engines/cycles/materials/introduction.rst:90
 msgid "Viewing angle"
 msgstr "Кут Огляду -- Viewing angle"
 
-#: ../../manual/render/cycles/materials/introduction.rst:91
+#: ../../manual/render/engines/cycles/materials/introduction.rst:91
 msgid "Obstructions and transparent occlusions"
 msgstr "Перешкоди -- obstructions та Загороди Прозорості -- transparent occlusions"
 
-#: ../../manual/render/cycles/materials/introduction.rst:92
+#: ../../manual/render/engines/cycles/materials/introduction.rst:92
 msgid "Shadows from other opaque/transparent objects"
 msgstr "Тіні -- Shadows від інших безпрозорих/прозорих об'єктів"
 
-#: ../../manual/render/cycles/materials/introduction.rst:93
+#: ../../manual/render/engines/cycles/materials/introduction.rst:93
 msgid "Render settings"
 msgstr "Устави Рендеринга -- Render settings"
 
-#: ../../manual/render/cycles/materials/introduction.rst:94
+#: ../../manual/render/engines/cycles/materials/introduction.rst:94
 msgid "Object dimensions (SS settings are relevant to dimensions)"
 msgstr "Розміри Об'єкта (устави підповерхневого розсіювання залежать від розмірів)"
 
-#: ../../manual/render/cycles/materials/introduction.rst:95
+#: ../../manual/render/engines/cycles/materials/introduction.rst:95
 msgid "Object shape (refractions, Fresnel effects)"
 msgstr ""
 "Форма Об'єкта (заломлення, рефракції -- refractions, ефекти Френеля -- "
 "Fresnel)"
 
-#: ../../manual/render/cycles/materials/introduction.rst:99
+#: ../../manual/render/engines/cycles/materials/introduction.rst:99
 msgid "Using Materials"
 msgstr "Використання матеріалів"
 
-#: ../../manual/render/cycles/materials/introduction.rst:101
+#: ../../manual/render/engines/cycles/materials/introduction.rst:101
 msgid "Check your Render"
 msgstr "Перевіряйте ваш Рендер"
 
-#: ../../manual/render/cycles/materials/introduction.rst:103
+#: ../../manual/render/engines/cycles/materials/introduction.rst:103
 msgid ""
 "When designing materials (and textures and lighting), frequently check "
 "the rendered appearance of your scene, using your chosen render "
@@ -284,7 +284,7 @@ msgstr ""
 "рендеринга / шейдера. Цей рендерений вигляд може сильно відрізнятися від "
 "показу текстури у 3D Огляді."
 
-#: ../../manual/render/cycles/materials/introduction.rst:107
+#: ../../manual/render/engines/cycles/materials/introduction.rst:107
 msgid ""
 "As stated above, the material settings usually determine the surface "
 "properties of the object. There are several ways in which materials can "
@@ -297,35 +297,36 @@ msgstr ""
 " Взагалі кажучи, вони не сумісні. Ви повинні обрати, який метод ви "
 "збираєтеся використати для кожного конкретного об'єкта у вашій сцені:"
 
-#: ../../manual/render/cycles/materials/introduction.rst:112
+#: ../../manual/render/engines/cycles/materials/introduction.rst:112
 #, fuzzy
 msgid ""
 "First, you can set the :doc:`Settings "
-"</render/cycles/materials/settings>` in the various Material panels."
+"</render/engines/cycles/materials/settings>` in the various Material "
+"panels."
 msgstr ""
 "По-перше, ви можете задати властивості -- :doc:`Properties "
 "</render/blender_render/materials/properties/introduction>` на різних "
 "панелях вкладки «Матеріал»."
 
-#: ../../manual/render/cycles/materials/introduction.rst:114
+#: ../../manual/render/engines/cycles/materials/introduction.rst:114
 #, fuzzy
 msgid ""
-"Second, you can use :doc:`Nodes </render/cycles/nodes/index>`; a "
+"Second, you can use :doc:`Nodes </render/shaders/nodes/index>`; a "
 "graphical nodes editor is available."
 msgstr ""
 "По-друге, ви можете використати вузли -- :doc:`Nodes "
 "</render/blender_render/materials/nodes/index>`; доступний графічний "
 "редактор вузлів."
 
-#: ../../manual/render/cycles/materials/introduction.rst:116
+#: ../../manual/render/engines/cycles/materials/introduction.rst:116
 #, fuzzy
 msgid ""
 "Last, you can directly set the color of object surfaces using various "
 "special effects. Strictly speaking, these are not materials at all, but "
 "they are included here because they affect the appearance of your "
 "objects. These include :ref:`Vertex Painting <painting-vertex-index>`, "
-":doc:`Volume Rendering </render/cycles/materials/volume>`, and :doc:`Wire"
-" Rendering </render/cycles/nodes/types/input/wireframe>`."
+":doc:`Volume Rendering </render/engines/cycles/materials/volume>`, and "
+":doc:`Wire Rendering </render/shaders/nodes/types/input/wireframe>`."
 msgstr ""
 "Останнє, ви можете безпосередньо задати колір поверхонь об'єктів, "
 "використовуючи різні ефекти. Строго кажучи, вони не є взагалі "
@@ -338,7 +339,7 @@ msgstr ""
 "рендеринг -- :doc:`Halo Rendering "
 "</render/blender_render/materials/special_effects/halo>`."
 
-#: ../../manual/render/cycles/materials/introduction.rst:122
+#: ../../manual/render/engines/cycles/materials/introduction.rst:122
 msgid ""
 "The exact effect of Material settings can be affected by a number of "
 "system settings. First and foremost is the renderer used: Cycles and the "
@@ -358,34 +359,34 @@ msgstr ""
 "одночасно кілька текстур або GLSL). А тому, рекомендується завжди обирати"
 " відповідні системні устави перед початком розроблення матеріалів."
 
-#: ../../manual/render/cycles/materials/introduction.rst:136
+#: ../../manual/render/engines/cycles/materials/introduction.rst:136
 msgid "Surface Shader"
 msgstr "Поверхнєвий Відтінювач -- Surface Shader"
 
-#: ../../manual/render/cycles/materials/introduction.rst:138
+#: ../../manual/render/engines/cycles/materials/introduction.rst:138
 #, fuzzy
 msgid ""
-"The :doc:`surface shader </render/cycles/materials/surface>` defines the "
-"light interaction at the surface of the mesh."
+"The :doc:`surface shader </render/engines/cycles/materials/surface>` "
+"defines the light interaction at the surface of the mesh."
 msgstr "Поверхнєвий відтінювач визначає взаємодію світла з поверхнею сіті."
 
-#: ../../manual/render/cycles/materials/introduction.rst:143
+#: ../../manual/render/engines/cycles/materials/introduction.rst:143
 msgid "Volume Shader"
 msgstr "Об'ємовий Відтінювач -- Volume Shader"
 
-#: ../../manual/render/cycles/materials/introduction.rst:145
+#: ../../manual/render/engines/cycles/materials/introduction.rst:145
 #, fuzzy
 msgid ""
 "When the surface shader does not reflect or absorb light, it enters into "
-"the volume. If no :doc:`volume shader </render/cycles/materials/volume>` "
-"is specified, it will pass straight through to the other side of the "
-"mesh."
+"the volume. If no :doc:`volume shader "
+"</render/engines/cycles/materials/volume>` is specified, it will pass "
+"straight through to the other side of the mesh."
 msgstr ""
 "Коли поверхнєвий відтінювач не відбиває або не поглинає світло, воно "
 "входить в об'єм. Якщо жоден об'ємовий відтінювач не визначено, то світло "
 "проходить прямо крізь об'єм на іншу сторону сіті."
 
-#: ../../manual/render/cycles/materials/introduction.rst:149
+#: ../../manual/render/engines/cycles/materials/introduction.rst:149
 msgid ""
 "If it is defined, a volume shader describes the light interaction as it "
 "passes through the volume of the mesh. Light may be scattered, absorbed, "
@@ -395,7 +396,7 @@ msgstr ""
 "проходженні його крізь об'єм сіті. Світло може бути розсіяне, поглинуте "
 "або емітоване у будь-якій точці об'єму."
 
-#: ../../manual/render/cycles/materials/introduction.rst:153
+#: ../../manual/render/engines/cycles/materials/introduction.rst:153
 msgid ""
 "A material may have both a surface and a volume shader, or only one of "
 "either. Using both may be useful for materials such as glass, water or "
@@ -408,22 +409,22 @@ msgstr ""
 "щоб деяке світло було поглинуте при проходженні крізь поверхню, "
 "комбіновано зі, наприклад, скляним або глянцевим шейдером на поверхні."
 
-#: ../../manual/render/cycles/materials/introduction.rst:160
+#: ../../manual/render/engines/cycles/materials/introduction.rst:160
 msgid "Displacement"
 msgstr "Зміщення -- Displacement"
 
-#: ../../manual/render/cycles/materials/introduction.rst:162
+#: ../../manual/render/engines/cycles/materials/introduction.rst:162
 #, fuzzy
 msgid ""
 "The shape of the surface and the volume inside it may be altered by "
-":doc:`displacement </render/cycles/materials/displacement>`. This way, "
-"textures can then be used to make the mesh surface more detailed."
+":doc:`displacement </render/engines/cycles/materials/displacement>`. This"
+" way, textures can then be used to make the mesh surface more detailed."
 msgstr ""
 "Форма поверхні та об'єм всередині неї можуть бути змінені шейдерами "
 "зміщення -- displacement. Таким чином, для зроблення поверхні сіті більш "
 "деталізованою можуть використовуватися текстури."
 
-#: ../../manual/render/cycles/materials/introduction.rst:166
+#: ../../manual/render/engines/cycles/materials/introduction.rst:166
 msgid ""
 "Depending on the settings, the displacement may be virtual, only "
 "modifying the surface normals to give the impression of displacement, "
@@ -435,11 +436,11 @@ msgstr ""
 "розкладання вигинів -- bump mapping, або комбінацією реального та "
 "віртуального зміщень."
 
-#: ../../manual/render/cycles/materials/introduction.rst:172
+#: ../../manual/render/engines/cycles/materials/introduction.rst:172
 msgid "Energy Conservation"
 msgstr "Збереження Енергії -- Energy Conservation"
 
-#: ../../manual/render/cycles/materials/introduction.rst:174
+#: ../../manual/render/engines/cycles/materials/introduction.rst:174
 msgid ""
 "The material system is built with physically-based rendering in mind, "
 "cleanly separating how a material looks and which rendering algorithm is "
@@ -452,7 +453,7 @@ msgstr ""
 "реалістичних результатів та збалансованого освітлення, хоча тут є кілька "
 "речей, про які слід пам'ятати."
 
-#: ../../manual/render/cycles/materials/introduction.rst:179
+#: ../../manual/render/engines/cycles/materials/introduction.rst:179
 msgid ""
 "In order for materials to work well with global illumination, they should"
 " be, speaking in terms of physics, energy conserving. That means they "
@@ -469,7 +470,7 @@ msgstr ""
 " function)` змішуються за допомогою вузла Mix Shader -- «Мішаний "
 "Відтінювач», то це автоматично буде правдою."
 
-#: ../../manual/render/cycles/materials/introduction.rst:186
+#: ../../manual/render/engines/cycles/materials/introduction.rst:186
 msgid ""
 "It is however, possible to break this, with color values higher than 1.0 "
 "or using the Add Shader node, but one must be careful when doing this to "

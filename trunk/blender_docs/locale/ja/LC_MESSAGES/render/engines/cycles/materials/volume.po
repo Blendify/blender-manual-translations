@@ -8,28 +8,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2017-03-22 13:55+0900\n"
 "Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/materials/volume.rst:4
+#: ../../manual/render/engines/cycles/materials/volume.rst:4
 #, fuzzy
 msgid "Volumes"
 msgstr "ボリューム"
 
-#: ../../manual/render/cycles/materials/volume.rst:6
+#: ../../manual/render/engines/cycles/materials/volume.rst:6
 msgid ""
 "Volume rendering can be used to render effects like fire, smoke, mist, "
 "absorption in glass, and many other effects that cannot be represented by"
 " surface meshes alone."
 msgstr "ボリュームのレンダリングは炎、煙、霧、ガラスによる光の吸収等、サーフェスのメッシュのみでは表現できない効果のために用いることができます。"
 
-#: ../../manual/render/cycles/materials/volume.rst:9
+#: ../../manual/render/engines/cycles/materials/volume.rst:9
 msgid ""
 "To set up a volume, you create a mesh that defines the bounds within "
 "which the volume exists. In the material you typically remove the surface"
@@ -42,43 +42,43 @@ msgstr ""
 "ノードを削除して代わりに Volume "
 "ノードを用意してボリューム内のシェーディングを定義します。ガラスが吸収する光といった効果のためにサーフェスシェーダーとボリュームシェーダー両方を用いることもできます。ワールドに対して霧のような効果を持たせるためにボリュームシェーダーを用いることもできます。"
 
-#: ../../manual/render/cycles/materials/volume.rst:17
+#: ../../manual/render/engines/cycles/materials/volume.rst:17
 msgid "Shading"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:20
+#: ../../manual/render/engines/cycles/materials/volume.rst:20
 msgid "Principled Volume"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:22
+#: ../../manual/render/engines/cycles/materials/volume.rst:22
 msgid ""
 ":doc:`Principled Volume "
-"</render/cycles/nodes/types/shaders/volume_principled>` is a physically-"
+"</render/shaders/nodes/types/shaders/volume_principled>` is a physically-"
 "based volume shader that can be used to create a wide range of volume "
 "materials. It supports scattering, absorption and emission in one easy to"
 " use node. Fire can be rendered with blackbody emission."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:29
+#: ../../manual/render/engines/cycles/materials/volume.rst:29
 msgid "Smoke and fire rendered with Principled Volume shader."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:33
+#: ../../manual/render/engines/cycles/materials/volume.rst:33
 msgid "Volume Components"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:35
+#: ../../manual/render/engines/cycles/materials/volume.rst:35
 msgid ""
 "For more control, volume shading components can be manually combined into"
 " a custom shader setup."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:37
+#: ../../manual/render/engines/cycles/materials/volume.rst:37
 #, fuzzy
 msgid ""
 ":doc:`Volume Absorption "
-"</render/cycles/nodes/types/shaders/volume_absorption>` will absorb part "
-"of the light as it passes through the volume. This can be used to shade "
+"</render/shaders/nodes/types/shaders/volume_absorption>` will absorb part"
+" of the light as it passes through the volume. This can be used to shade "
 "for example black smoke or colored glass objects, or mixed with the "
 "volume scatter node. This node is similar to the transparent BSDF node, "
 "it blocks part of the light and lets other light pass straight through."
@@ -88,37 +88,38 @@ msgstr ""
 " Scatter ノードとの併用で用いられます。このノードは Transparent BSDF "
 "ノードと似ており、光線の一部を吸収して光線の一部を通過させます。"
 
-#: ../../manual/render/cycles/materials/volume.rst:42
+#: ../../manual/render/engines/cycles/materials/volume.rst:42
 #, fuzzy
 msgid ""
-":doc:`Volume Scatter </render/cycles/nodes/types/shaders/volume_scatter>`"
-" lets light scatter in other directions as it hits particles in the "
-"volume. The anisotropy defines in which direction the light is more "
-"likely to scatter. A value of 0 will let light scatter evenly in all "
-"directions (similar to the diffuse BSDF node), negative values let light "
-"scatter mostly backwards, and positive values let light scatter mostly "
-"forward. This can be used to shade white smoke or clouds for example."
+":doc:`Volume Scatter "
+"</render/shaders/nodes/types/shaders/volume_scatter>` lets light scatter "
+"in other directions as it hits particles in the volume. The anisotropy "
+"defines in which direction the light is more likely to scatter. A value "
+"of 0 will let light scatter evenly in all directions (similar to the "
+"diffuse BSDF node), negative values let light scatter mostly backwards, "
+"and positive values let light scatter mostly forward. This can be used to"
+" shade white smoke or clouds for example."
 msgstr ""
 "Volume Scatter (ボリュームによる拡散) はボリューム中の粒子に衝突した光を他方に拡散させます。Anisotropy (異方向性) "
 "は光がどの方向に拡散しきそうであるかを定義します。この値が 0 であれば光は全ての方向に対して等しく拡散し (Diffuse BSDF "
 "ノードに働きが似ています)、負の値は光線を後方に拡散させ、正の値は光線を前方に拡散させます。このノードは例えば白い煙や雲をシェードする際に利用できます。"
 
-#: ../../manual/render/cycles/materials/volume.rst:48
+#: ../../manual/render/engines/cycles/materials/volume.rst:48
 msgid ""
-":doc:`Emission </render/cycles/nodes/types/shaders/emission>` will emit "
+":doc:`Emission </render/shaders/nodes/types/shaders/emission>` will emit "
 "light from the volume, for example for fire."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:54
+#: ../../manual/render/engines/cycles/materials/volume.rst:54
 #, fuzzy
 msgid "Volume Absorption, Scatter and Emission"
 msgstr "ボリュームシェーダー: Absorption/Absorption と Scatter/Emission 。"
 
-#: ../../manual/render/cycles/materials/volume.rst:58
+#: ../../manual/render/engines/cycles/materials/volume.rst:58
 msgid "Attributes"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:60
+#: ../../manual/render/engines/cycles/materials/volume.rst:60
 msgid ""
 "When rendering smoke and fire, volume attributes are used to define the "
 "shape and shading of the volume. The Principled Volume shader will use "
@@ -126,11 +127,11 @@ msgid ""
 "to get attributes such as density, color and temperature."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:66
+#: ../../manual/render/engines/cycles/materials/volume.rst:66
 msgid "Density"
 msgstr "Density (密度)"
 
-#: ../../manual/render/cycles/materials/volume.rst:68
+#: ../../manual/render/engines/cycles/materials/volume.rst:68
 msgid ""
 "All volume shaders have a density input. The density defines how much of "
 "the light will interact with the volume, getting absorbed or scattered, "
@@ -144,7 +145,7 @@ msgstr ""
 "Density の値を、煙が存在してどの程度であるか (Density は 0 より大きな値) と、煙が存在しない (Density は 0) "
 "との間でどれだけの値にするかを設定することになるでしょう。"
 
-#: ../../manual/render/cycles/materials/volume.rst:74
+#: ../../manual/render/engines/cycles/materials/volume.rst:74
 msgid ""
 "Volumes in the real world consist of particles, a higher density means "
 "there are more particles per unit volume. More particles means there is a"
@@ -152,11 +153,11 @@ msgid ""
 "scattered, rather than passing straight through."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:81
+#: ../../manual/render/engines/cycles/materials/volume.rst:81
 msgid "Mesh Volumes"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:83
+#: ../../manual/render/engines/cycles/materials/volume.rst:83
 msgid ""
 "Meshes used for volume render should be closed and :term:`manifold`. That"
 " means that there should be no holes in the mesh. Each edge must be "
@@ -167,7 +168,7 @@ msgstr ""
 "でなければなりません。これはそのメッシュ状に穴が無いことを意味します。辺は厳格に 2 つの面に繋がっていて穴や一つの辺に 3 "
 "つ以上の面が繋がった状態で T 字型の面となっている箇所があってはいけません。"
 
-#: ../../manual/render/cycles/materials/volume.rst:89
+#: ../../manual/render/engines/cycles/materials/volume.rst:89
 msgid ""
 "Normals must point outside for correct results. The normals are used to "
 "determine if a ray enters or exits a volume, and if they point in a wrong"
@@ -175,22 +176,22 @@ msgid ""
 "to decide what is the inside or outside of the volume."
 msgstr "正しい結果を得るため法線は外側を向いている必要が有ります。法線はボリュームに対して光が出入りする方向を決め、もしその方向が間違っていたり、メッシュ上に穴がある場合、レンダラーはボリュームの内側と外側を決定する事ができなくなります。"
 
-#: ../../manual/render/cycles/materials/volume.rst:94
+#: ../../manual/render/engines/cycles/materials/volume.rst:94
 msgid "These rules are the same as for rendering glass refraction correctly."
 msgstr "これらのルールはガラスの屈折を正しくレンダリングする際も同様です。"
 
-#: ../../manual/render/cycles/materials/volume.rst:98
+#: ../../manual/render/engines/cycles/materials/volume.rst:98
 msgid "World Volume"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:100
+#: ../../manual/render/engines/cycles/materials/volume.rst:100
 #, fuzzy
 msgid ""
 "A volume shader can also be applied to the world, filling the entire "
 "space."
 msgstr "ボリュームシェーダは空間全体を満たすワールドに対しても適用できます。"
 
-#: ../../manual/render/cycles/materials/volume.rst:102
+#: ../../manual/render/engines/cycles/materials/volume.rst:102
 msgid ""
 "Currently, this is most useful for night time or other dark scenes, as "
 "the world surface shader or sun lamps will have no effect if a volume "
@@ -206,11 +207,11 @@ msgstr ""
 "現状では、ワールドに対してボリュームシェーダが用いられている場合はサーフェスシェーダーや Sun "
 "光源が何の効果も持たないため、夜景やその他暗いシーンの表現に最も有用です。これはワールドの背景が、例えば日光が実際にそうであるように、無限遠に存在するとされるためです。しかし、霧や空気中の拡散の効果をモデリングする上では、太陽と地球間の空間の大半は空っぽの空間である事から分かるように、ボリュームが空間全てを等しく満たすというのは好ましくない前提です。こういった効果を表現するにはシーンの環境のためのボリュームを作成したほうが良いでしょう。そのオブジェクトの大きさによってどれだけ光を拡散もしくは吸収するのかが決まります。"
 
-#: ../../manual/render/cycles/materials/volume.rst:114
+#: ../../manual/render/engines/cycles/materials/volume.rst:114
 msgid "Multiple Scattering"
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:116
+#: ../../manual/render/engines/cycles/materials/volume.rst:116
 #, fuzzy
 msgid ""
 "Real-world effects such as scattering in clouds or subsurface scattering "
@@ -224,7 +225,7 @@ msgstr ""
 " 0 もしくは 1 回のバウンスのみを用います。0 の値のバウンスによって得られるレンダリングの効果は \"単一錯乱\" "
 "として知られる物で、複数のバウンスによる効果は \"多重錯乱\" と呼ばれます。"
 
-#: ../../manual/render/cycles/materials/volume.rst:122
+#: ../../manual/render/engines/cycles/materials/volume.rst:122
 msgid ""
 "For rendering materials like skin or milk that require multiple "
 "scattering, subsurface scattering is more efficient and easier to "
@@ -232,7 +233,7 @@ msgid ""
 "materials."
 msgstr ""
 
-#: ../../manual/render/cycles/materials/volume.rst:126
+#: ../../manual/render/engines/cycles/materials/volume.rst:126
 msgid ""
 "For materials such as clouds or smoke that do not have a well defined "
 "surface, volume rendering is required. These look best with many "
@@ -242,15 +243,15 @@ msgstr ""
 "雲や煙といったマテリアルではボリュームレンダリングが必要とする、明確なサーフェスを持っていません。こういった表現では多くの拡散光のバウンスを利用する事で最も外見的に良い結果を得られるのですが、許容できるレンダー時間を維持するために実際にはバウンスの回数を"
 " 1 回とします。"
 
-#: ../../manual/render/cycles/materials/volume.rst:132
+#: ../../manual/render/engines/cycles/materials/volume.rst:132
 msgid "Limitations"
 msgstr "制限"
 
-#: ../../manual/render/cycles/materials/volume.rst:134
+#: ../../manual/render/engines/cycles/materials/volume.rst:134
 msgid "Not available on GPU:"
 msgstr "GPU では利用できない機能:"
 
-#: ../../manual/render/cycles/materials/volume.rst:136
+#: ../../manual/render/engines/cycles/materials/volume.rst:136
 msgid "Multiple importance sampling for efficient lights inside volumes."
 msgstr ""
 
@@ -369,4 +370,22 @@ msgstr ""
 #~ "or scattered, rather than passing "
 #~ "straight through."
 #~ msgstr "現実世界におけるボリュームは粒子から構成され、密度が高いということは単位容積あたりにより多くの粒子が存在している事を意味します。構成する粒子が多いという事は入射した光がそのまま通過するよりも、粒子と衝突して吸収もしくは拡散される事を意味します。"
+
+#~ msgid ""
+#~ ":doc:`Principled Volume "
+#~ "</render/cycles/nodes/types/shaders/volume_principled>` is "
+#~ "a physically-based volume shader that"
+#~ " can be used to create a wide"
+#~ " range of volume materials. It "
+#~ "supports scattering, absorption and emission"
+#~ " in one easy to use node. Fire"
+#~ " can be rendered with blackbody "
+#~ "emission."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":doc:`Emission </render/cycles/nodes/types/shaders/emission>`"
+#~ " will emit light from the volume, "
+#~ "for example for fire."
+#~ msgstr ""
 

@@ -12,20 +12,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2017-02-23 18:05+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:4
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:4
 msgid "Texture Editing"
 msgstr "Редактирование текстур"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:6
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:6
 #, fuzzy
 msgid ""
 "3D View draw types, UV mapping, and texture painting work somewhat "
@@ -39,11 +39,11 @@ msgstr ""
 "UV-развёртки; вместо этого они всегда должны получать их путём добавления"
 " к материалу узла «Изображение-текстура»."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:13
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:13
 msgid "3D View Draw Types"
 msgstr "Методы отображения в области 3D-просмотра"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:15
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:15
 msgid ""
 "The Texture draw types used for Blender Internal have been replaced by "
 "three others in Cycles:"
@@ -51,11 +51,11 @@ msgstr ""
 "Режимы отображения текстур, используемые встроенным рендером Blender, при"
 " использовании рендера Cycles заменяются на трое других:"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:19
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:19
 msgid "Texture"
 msgstr "Текстура"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:18
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:18
 msgid ""
 "This draw mode is used for editing, painting and mapping individual "
 "textures. Lighting is the same as in solid mode, so this is similar to "
@@ -68,11 +68,11 @@ msgstr ""
 "Blender. В этом режиме рисуется изображение с активного узла материала "
 "«Изображение-текстура»."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:23
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:23
 msgid "Material"
 msgstr "Материал"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:22
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:22
 msgid ""
 "A simplified version of the entire material is drawn using GLSL shaders. "
 "This uses solid lighting, and also is mostly useful for editing, painting"
@@ -85,11 +85,11 @@ msgstr ""
 "текстур, но в отличие от предыдущего, он показывает, как текстура "
 "интегрируется в материал."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:28
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:28
 msgid "Rendered"
 msgstr "С визуализацией"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:26
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:26
 #, fuzzy
 msgid ""
 "In this draw mode the renderer does the drawing, interactively refining "
@@ -103,15 +103,15 @@ msgstr ""
 " объектов используются настройки разрешения и видимости области "
 "просмотра."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:32
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:32
 msgid "Material draw modes (Texture, Material, Rendered)."
 msgstr "Методы отображения материала (Текстура, Материал, С визуализацией)"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:36
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:36
 msgid "Texture Properties"
 msgstr "Параметры текстуры"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:42
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:42
 msgid ""
 "In the texture properties, the texture can now be selected from a list "
 "that contains all texture nodes from the world, lamps and materials, but "
@@ -121,7 +121,7 @@ msgstr ""
 "содержащего все узлы текстур для мира, ламп и материалов, но так же, "
 "например, из модификаторов, кистей и физических полей."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:46
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:46
 msgid ""
 "For shading nodes, the available textures are Cycles textures. For "
 "others, Blender textures are still used, but this will change in the "
@@ -131,27 +131,29 @@ msgstr ""
 " узлов всё ещё используются текстуры рендера Blender, но в будущем это "
 "будет изменено."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:55
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:55
 msgid "Painting & UV Editing"
 msgstr "Рисование и редактирование UV"
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:60
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:60
+#, fuzzy
 msgid ""
 "For texture paint mode, the image that is painted on is taken from the "
-"active image texture node. This can be selected in the Node editor or the"
-" texture properties, and it is indicated as blue in the material "
-"properties."
+"active image texture node. This can be selected in the Texture Node "
+"editor or the texture properties, and it is indicated as blue in the "
+"material properties."
 msgstr ""
 "В режиме текстурирования изображение, по которому производится рисование,"
 " берётся из активного узла «Изображение-текстура». Он может быть выбран в"
 " редакторе узлов или в свойствах текстуры и в свойствах материала будет "
 "отображаться голубым цветом."
 
-#: ../../manual/render/cycles/materials/texture_editing.rst:65
+#: ../../manual/render/engines/cycles/materials/texture_editing.rst:65
+#, fuzzy
 msgid ""
 "For UV mapping, the active UV map as specified in the mesh properties is "
-"used. Assigning images in the UV/Image editor also affects the active "
-"image texture node."
+"used. Assigning images in the UV editor also affects the active image "
+"texture node."
 msgstr ""
 "При редактировании UV используется активная UV-развёртка, указанная в "
 "свойствах полисетки. Присваивание изображения в редакторе UV/изображений "

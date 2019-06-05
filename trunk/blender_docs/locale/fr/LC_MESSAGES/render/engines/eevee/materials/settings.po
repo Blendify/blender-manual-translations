@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-06-05 15:27+1000\n"
 "PO-Revision-Date: 2019-04-15 15:09+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -18,27 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/eevee/materials/settings.rst:4
+#: ../../manual/render/engines/eevee/materials/settings.rst:4
 msgid "Material Settings"
 msgstr "Paramètres de matériau"
 
-#: ../../manual/render/eevee/materials/settings.rst:6
+#: ../../manual/render/engines/eevee/materials/settings.rst:6
 msgid "Reference"
 msgstr "Référence"
 
-#: ../../manual/render/eevee/materials/settings.rst
+#: ../../manual/render/engines/eevee/materials/settings.rst
 msgid "Panel"
 msgstr "Panneau "
 
-#: ../../manual/render/eevee/materials/settings.rst:9
-msgid ":menuselection:`Material --> Options`"
+#: ../../manual/render/engines/eevee/materials/settings.rst:9
+msgid ":menuselection:`Properties --> Material --> Options`"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:13
+#: ../../manual/render/engines/eevee/materials/settings.rst:13
+msgid "Backface Culling"
+msgstr ""
+
+#: ../../manual/render/engines/eevee/materials/settings.rst:15
+msgid "Backface Culling hides the back side of faces in the final render."
+msgstr ""
+
+#: ../../manual/render/engines/eevee/materials/settings.rst:19
 msgid "Blend Mode"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:15
+#: ../../manual/render/engines/eevee/materials/settings.rst:21
 msgid ""
 "After calculating the color of a surface, Eevee needs to know how to add "
 "it to the color buffer. Depending on the blend mode the final color will "
@@ -48,22 +56,23 @@ msgstr ""
 "l'ajouter au tampon de couleur. Selon le mode blend, la couleur finale "
 "sera différente. "
 
-#: ../../manual/render/eevee/materials/settings.rst:20
+#: ../../manual/render/engines/eevee/materials/settings.rst:26
+#, fuzzy
 msgid ""
 "Additive, Multiplicative and Alpha Blending are considered "
-"\"Transparent\" blend mode. This has implications regarding screen space "
-"effects."
+"\"Transparent\" blend modes. This has implications regarding screen space"
+" effects."
 msgstr ""
 "Additive, Multiplicative et Alpha Blending sont considérés comme des "
 "modes blend \"transparents\". Ceci a des implications sur les effets "
 "d'espace de scène. "
 
-#: ../../manual/render/eevee/materials/settings.rst:25
-#: ../../manual/render/eevee/materials/settings.rst:95
+#: ../../manual/render/engines/eevee/materials/settings.rst:31
+#: ../../manual/render/engines/eevee/materials/settings.rst:102
 msgid "Opaque"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:24
+#: ../../manual/render/engines/eevee/materials/settings.rst:30
 msgid ""
 "The previous color will be overwritten by the surface color. The alpha "
 "component is ignored. This is the fastest option."
@@ -71,11 +80,11 @@ msgstr ""
 "La dernière couleur sera remplacée par la couleur de surface. La "
 "composante alpha est ignorée. C'est l'option la plus rapide."
 
-#: ../../manual/render/eevee/materials/settings.rst:29
+#: ../../manual/render/engines/eevee/materials/settings.rst:35
 msgid "Additive"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:28
+#: ../../manual/render/engines/eevee/materials/settings.rst:34
 msgid ""
 "The surface color will be added to the previous color. The alpha value "
 "will be used to mix surface color with the neutral color black (0.0, 0.0,"
@@ -85,11 +94,11 @@ msgstr ""
 " sera utilisée pour mélanger la couleur de surface avec la couleur noire "
 "neutre (0.0, 0.0, 0.0)."
 
-#: ../../manual/render/eevee/materials/settings.rst:33
+#: ../../manual/render/engines/eevee/materials/settings.rst:39
 msgid "Multiplicative"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:32
+#: ../../manual/render/engines/eevee/materials/settings.rst:38
 msgid ""
 "The previous color will be multiplied by the surface color. The alpha "
 "value will be used to mix surface color with the neutral color white "
@@ -99,11 +108,11 @@ msgstr ""
 "alpha sera utilisée pour mélanger la couleur de surface avec la couleur "
 "blanche neutre (1.0, 1.0, 1.0)."
 
-#: ../../manual/render/eevee/materials/settings.rst:37
+#: ../../manual/render/engines/eevee/materials/settings.rst:43
 msgid "Alpha Clip"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:36
+#: ../../manual/render/engines/eevee/materials/settings.rst:42
 msgid ""
 "The previous color will be overwritten by the surface color, but only if "
 "the alpha value is above the clip threshold."
@@ -111,11 +120,11 @@ msgstr ""
 "La dernière couleur sera remplacée par la couleur de surface, mais "
 "seulement si la valeur alpha est au dessus du seuil du clip. "
 
-#: ../../manual/render/eevee/materials/settings.rst:43
+#: ../../manual/render/engines/eevee/materials/settings.rst:49
 msgid "Alpha Hashed"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:40
+#: ../../manual/render/engines/eevee/materials/settings.rst:46
 msgid ""
 "The previous color will be overwritten by the surface color, but only if "
 "the alpha value is above a random clip threshold. This statistical "
@@ -130,11 +139,11 @@ msgstr ""
 "d'échantillons dans la paramètres de rendu va réduire le bruit résultant."
 " "
 
-#: ../../manual/render/eevee/materials/settings.rst:47
+#: ../../manual/render/engines/eevee/materials/settings.rst:53
 msgid "Alpha Blending"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:46
+#: ../../manual/render/engines/eevee/materials/settings.rst:52
 msgid ""
 "Use alpha blending to overlay the surface color on top of the previous "
 "color."
@@ -142,11 +151,11 @@ msgstr ""
 "Utiliser l'*alpha blending* pour recouvrir la couleur de surface au "
 "dessus la dernière couleur."
 
-#: ../../manual/render/eevee/materials/settings.rst:50
+#: ../../manual/render/engines/eevee/materials/settings.rst:56
 msgid "Sorting Problem"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:52
+#: ../../manual/render/engines/eevee/materials/settings.rst:58
 msgid ""
 "When writing to the color buffer using transparent blend modes, the order"
 " in which the color blending happens is important as it can change the "
@@ -163,7 +172,7 @@ msgstr ""
 "automatiquement effectué sur toutes les surfaces transparentes selon "
 "l'origine de l'objet. "
 
-#: ../../manual/render/eevee/materials/settings.rst:59
+#: ../../manual/render/engines/eevee/materials/settings.rst:65
 msgid ""
 "This per-object sorting has already a cost and having thousands of these "
 "objects in a scene will greatly degrade performance."
@@ -171,7 +180,7 @@ msgstr ""
 "Ce tri par objet a déjà un coût et le fait d'avoir des milliers de ces "
 "objets dans une scène va dégrader rapidement la performance."
 
-#: ../../manual/render/eevee/materials/settings.rst:62
+#: ../../manual/render/engines/eevee/materials/settings.rst:68
 msgid ""
 "Additive and Multiplicative blending are, individually, order "
 "independent. This means all the triangles of a surface rendered with one "
@@ -185,7 +194,7 @@ msgstr ""
 "pas avec d'autres surfaces transparentes. Ceci va fonctionner même si les"
 " triangles de cette surface se coupent les uns les autres."
 
-#: ../../manual/render/eevee/materials/settings.rst:67
+#: ../../manual/render/engines/eevee/materials/settings.rst:73
 msgid ""
 "However this does not work with Alpha Blending, where even triangle order"
 " is important. In this case you can disable the *Show Backside* option."
@@ -194,43 +203,46 @@ msgstr ""
 " des triangles est important. Dans ce cas, vous pouvez désactiver "
 "l'option *Show Backside*."
 
-#: ../../manual/render/eevee/materials/settings.rst:74
+#: ../../manual/render/engines/eevee/materials/settings.rst:80
 msgid "Show Backside"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:71
+#: ../../manual/render/engines/eevee/materials/settings.rst:77
+#, fuzzy
 msgid ""
 "If enabled all transparent fragments will be rendered. If disabled, only "
-"the frontmost surface fragments will be render. Disable this option to "
-"ensure correct appearance of transparent from any point of view."
+"the front-most surface fragments will be rendered. Disable this option to"
+" ensure correct appearance of transparency from any point of view."
 msgstr ""
 "Si cette option est activée, tous les fragments transparents seront "
 "rendus. Si cette option est désactivée, seuls les fragments de surface "
 "les plus seront rendus. Désactivez cette option pour assurer un aspect de"
 " transparence depuis n'importe quel point de vue."
 
-#: ../../manual/render/eevee/materials/settings.rst:77
+#: ../../manual/render/engines/eevee/materials/settings.rst:83
 msgid "Transparent Shadow"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:79
+#: ../../manual/render/engines/eevee/materials/settings.rst:85
+#, fuzzy
 msgid ""
-"Type of shadows used for this transparent surface. Eevee does not support"
-" colored shadow maps."
+"Type of shadows used for a transparent surface. Eevee does not support "
+"colored shadow maps."
 msgstr ""
 "Type d'ombre utilisé pour cette surface transparente. Eevee ne prend pas "
 "en charge les *shadow maps* colorées."
 
-#: ../../manual/render/eevee/materials/settings.rst:82
+#: ../../manual/render/engines/eevee/materials/settings.rst:88
+#, fuzzy
 msgid ""
 "Half transparent shadows can be produced by using hashed transparent "
-"shadows and larger Soft value on shadow map."
+"shadows and a larger Soft value on the shadow map."
 msgstr ""
 "Des ombres semi-transparentes peuvent être produites en utilisant des "
 "ombres transparentes hachées et une plus grande valeur *Soft* sur *shadow"
 " map*. "
 
-#: ../../manual/render/eevee/materials/settings.rst:86
+#: ../../manual/render/engines/eevee/materials/settings.rst:93
 msgid ""
 "This option does not change the behavior of contact shadows which are "
 "traced using the depth buffer. If the material is writing to the depth "
@@ -239,23 +251,23 @@ msgid ""
 "surface material regardless of the *Transparent Shadow* type."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:92
+#: ../../manual/render/engines/eevee/materials/settings.rst:99
 msgid "None"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:92
+#: ../../manual/render/engines/eevee/materials/settings.rst:99
 msgid "The surface will not cast any shadow."
 msgstr "La surface ne jettera aucune ombre."
 
-#: ../../manual/render/eevee/materials/settings.rst:95
+#: ../../manual/render/engines/eevee/materials/settings.rst:102
 msgid "The surface will cast shadows like an opaque surface."
 msgstr "La surface va jeter des ombres comme une surface opaque."
 
-#: ../../manual/render/eevee/materials/settings.rst:99
+#: ../../manual/render/engines/eevee/materials/settings.rst:106
 msgid "Clip"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:98
+#: ../../manual/render/engines/eevee/materials/settings.rst:105
 msgid ""
 "The surface will cast shadows like an opaque surface, but only areas "
 "where the alpha value is above the clip threshold."
@@ -263,11 +275,11 @@ msgstr ""
 "La surface va jeter des ombres comme une surface opaque, mais seulement "
 "sur les zones où la valeur alpha est au dessus du seuil de coupe."
 
-#: ../../manual/render/eevee/materials/settings.rst:104
+#: ../../manual/render/engines/eevee/materials/settings.rst:111
 msgid "Hashed"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:102
+#: ../../manual/render/engines/eevee/materials/settings.rst:109
 msgid ""
 "The surface will cast shadows like an opaque surface, but only areas "
 "where the alpha value is above a random threshold."
@@ -275,12 +287,12 @@ msgstr ""
 "La surface va jeter des ombres comme une surface opaque, mais seulement "
 "sur les zones où la valeur alpha est au dessus d'un seuil aléatoire."
 
-#: ../../manual/render/eevee/materials/settings.rst:107
-#: ../../manual/render/eevee/materials/settings.rst:121
+#: ../../manual/render/engines/eevee/materials/settings.rst:114
+#: ../../manual/render/engines/eevee/materials/settings.rst:128
 msgid "Screen Space Refraction"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:109
+#: ../../manual/render/engines/eevee/materials/settings.rst:116
 msgid ""
 "Enabling Screen Space Refraction on a surface means that refraction BSDFs"
 " will do a raytrace against the depth buffer to find the most accurate "
@@ -292,7 +304,7 @@ msgstr ""
 " profondeur pour trouver la couleur réfractée la plus précise. Ceci a une"
 " gros coût de performance si la surface couvre un grand nombre de pixels."
 
-#: ../../manual/render/eevee/materials/settings.rst:113
+#: ../../manual/render/engines/eevee/materials/settings.rst:120
 #, fuzzy
 msgid ""
 "Screen Space Reflections is not compatible with Screen Space Refraction. "
@@ -304,7 +316,7 @@ msgstr ""
 "surfaces qui utilisent *Screen Space Refraction* n'apparaîtront pas dans "
 "*Screen Space Reflections*."
 
-#: ../../manual/render/eevee/materials/settings.rst:117
+#: ../../manual/render/engines/eevee/materials/settings.rst:124
 msgid ""
 "If this option is disabled or if the Screen Space Refraction raytrace "
 "fails, the refracted ray will use the color of the nearest probe."
@@ -313,47 +325,45 @@ msgstr ""
 "Refraction raytrace* échoue, le rayon réfracté va utiliser la couleur de "
 "la sonde la plus proche."
 
-#: ../../manual/render/eevee/materials/settings.rst:121
-msgid "Enable screen space refraction."
+#: ../../manual/render/engines/eevee/materials/settings.rst:128
+#, fuzzy
+msgid "Enables screen space refraction."
 msgstr "Activer screen space refraction."
 
-#: ../../manual/render/eevee/materials/settings.rst:130
+#: ../../manual/render/engines/eevee/materials/settings.rst:137
 msgid "Refraction Depth"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:124
+#: ../../manual/render/engines/eevee/materials/settings.rst:131
 msgid ""
 "If Refraction Depth is not 0.0, all refraction BSDFs in the shader will "
-"act as if the object would be a thin slab of the refraction material with"
-" this thickness. This will model a second refraction event that will "
+"act as if the object is a thin slab of the refraction material having "
+"this thickness. This will model a second refraction event that will "
 "double the absorption color and start the refraction ray after this "
 "second event."
 msgstr ""
-"Si *Refraction Depth* n'est pas égal à 0.0, tous les BSDF de réfraction "
-"dans le shader agiront comme si l'objet était une dalle mince du matériau"
-" de réfraction avec cette épaisseur. Ceci va modeler un second évènement "
-"de réfraction qui va doubler la couleur d'absorption et démarrer le rayon"
-" de réfraction après le second évènement."
 
-#: ../../manual/render/eevee/materials/settings.rst:129
-msgid "This option greatly increase the quality of thin glass objects."
+#: ../../manual/render/engines/eevee/materials/settings.rst:136
+#, fuzzy
+msgid "This option greatly increases the quality of thin glass objects."
 msgstr "Cette option augmente grandement la qualité des objets fins en verre."
 
-#: ../../manual/render/eevee/materials/settings.rst:133
+#: ../../manual/render/engines/eevee/materials/settings.rst:140
 msgid "Subsurface Translucency"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/settings.rst:135
+#: ../../manual/render/engines/eevee/materials/settings.rst:142
+#, fuzzy
 msgid ""
 "Eevee's Subsurface Scattering algorithm works by blurring the irradiance "
 "in screen space. This means that if no visible part of the surface is "
-"lit, the effect disappear."
+"lit, the effect disappears."
 msgstr ""
 "L'algorithme de *Subsurface Scattering* d'Eevee fonctionne en floutant "
 "l'irradiance dans l'espace de scène. Ce qui signifie que si aucune "
 "portion visible de la surface est éclairée, l'effet disparaît."
 
-#: ../../manual/render/eevee/materials/settings.rst:138
+#: ../../manual/render/engines/eevee/materials/settings.rst:145
 msgid ""
 "However, true Subsurface Scattering goes beneath the surface and can "
 "travel a lot of distance. This is why a human ear lit from behind appears"
@@ -364,16 +374,68 @@ msgstr ""
 "oreille humaine éclairée depuis l'arrière apparaît rouge sur la face "
 "avant."
 
-#: ../../manual/render/eevee/materials/settings.rst:141
+#: ../../manual/render/engines/eevee/materials/settings.rst:148
 msgid ""
-"That is what this effect mimics. This translucency approximation does "
-"only work with lamps that have shadow maps and only on Subsurface BSDFs "
-"(not the Translucency BSDFs). It does not work with indirect lighting. "
-"The soft parameter of the shadow maps also affects this effect."
+"That is what this effect mimics. This translucency approximation only "
+"works with lamps that have shadow maps and only on Subsurface BSDFs (not "
+"the Translucency BSDFs). It does not work with indirect lighting. The "
+"soft parameter of the shadow maps also affects this effect."
 msgstr ""
-"C'est ce que cet effet imite. Cette approximation de translucidité ne "
-"fonctionne qu'avec des lampes qui ont des *shadow maps* et seulement sur "
-"les BSDF Subsurface (pas les BSDF Translucency). Il ne fonctionne pas "
-"avec l'éclairage indirect. Le paramètre *Soft* des *shadow maps* affecte "
-"également cet effet."
+
+#: ../../manual/render/engines/eevee/materials/settings.rst:154
+msgid "Pass Index"
+msgstr ""
+
+#: ../../manual/render/engines/eevee/materials/settings.rst:156
+msgid ""
+"Index number for the *Material Index* :doc:`render pass "
+"</render/layers/passes>`. This can be used to give a mask to a material "
+"which then can be read with the :doc:`ID Mask Node "
+"</compositing/types/converter/id_mask>` in the compositor."
+msgstr ""
+
+#~ msgid ":menuselection:`Material --> Options`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If Refraction Depth is not 0.0, "
+#~ "all refraction BSDFs in the shader "
+#~ "will act as if the object would"
+#~ " be a thin slab of the "
+#~ "refraction material with this thickness. "
+#~ "This will model a second refraction "
+#~ "event that will double the absorption"
+#~ " color and start the refraction ray"
+#~ " after this second event."
+#~ msgstr ""
+#~ "Si *Refraction Depth* n'est pas égal "
+#~ "à 0.0, tous les BSDF de réfraction"
+#~ " dans le shader agiront comme si "
+#~ "l'objet était une dalle mince du "
+#~ "matériau de réfraction avec cette "
+#~ "épaisseur. Ceci va modeler un second "
+#~ "évènement de réfraction qui va doubler"
+#~ " la couleur d'absorption et démarrer "
+#~ "le rayon de réfraction après le "
+#~ "second évènement."
+
+#~ msgid ""
+#~ "That is what this effect mimics. "
+#~ "This translucency approximation does only "
+#~ "work with lamps that have shadow "
+#~ "maps and only on Subsurface BSDFs "
+#~ "(not the Translucency BSDFs). It does"
+#~ " not work with indirect lighting. The"
+#~ " soft parameter of the shadow maps"
+#~ " also affects this effect."
+#~ msgstr ""
+#~ "C'est ce que cet effet imite. "
+#~ "Cette approximation de translucidité ne "
+#~ "fonctionne qu'avec des lampes qui ont"
+#~ " des *shadow maps* et seulement sur"
+#~ " les BSDF Subsurface (pas les BSDF"
+#~ " Translucency). Il ne fonctionne pas "
+#~ "avec l'éclairage indirect. Le paramètre "
+#~ "*Soft* des *shadow maps* affecte "
+#~ "également cet effet."
 
