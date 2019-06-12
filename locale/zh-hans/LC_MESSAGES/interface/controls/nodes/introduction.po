@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-06-12 13:47+0200\n"
 "PO-Revision-Date: 2018-04-28 00:30+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/interface/controls/nodes/introduction.rst:4
 msgid "Introduction"
@@ -26,8 +26,8 @@ msgstr "简介"
 #: ../../manual/interface/controls/nodes/introduction.rst:6
 msgid ""
 "The different node editors are used to work with node-based workflows. "
-"Each node editor type has there own specific purpose, so, here we will "
-"only give an overview of what the generic node editor is. In the list "
+"Each node editor type has there own specific purpose. Therefore, this "
+"section only explains how to work with nodes in general. In the list "
 "below it shows a list of different types of node trees and where each is "
 "documented."
 msgstr ""
@@ -55,7 +55,7 @@ msgstr ""
 #: ../../manual/interface/controls/nodes/introduction.rst:27
 msgid ""
 ":doc:`Cycles </render/shaders/nodes/index>` and :doc:`Eevee "
-"</render/engines/eevee/materials/nodes/index>`."
+"</render/eevee/materials/nodes/index>`."
 msgstr ""
 
 #: ../../manual/interface/controls/nodes/introduction.rst:30
@@ -78,60 +78,54 @@ msgid ""
 "</editors/texture_node/introduction>` docs."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:37
-msgid ""
-"After choosing what node context you want to use, you have to enable "
-"nodes with the *Use Nodes* button."
-msgstr ""
-
-#: ../../manual/interface/controls/nodes/introduction.rst:41
+#: ../../manual/interface/controls/nodes/introduction.rst:40
 msgid "Editor Interface"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:44
+#: ../../manual/interface/controls/nodes/introduction.rst:43
 msgid "Header"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:46
+#: ../../manual/interface/controls/nodes/introduction.rst:45
 msgid ""
 "The *Header* contains various menus, buttons and options, partially based"
 " on the current node tree type."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:50
+#: ../../manual/interface/controls/nodes/introduction.rst:49
 msgid "Common node editor header options."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:52
+#: ../../manual/interface/controls/nodes/introduction.rst:51
 msgid "View"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:53
+#: ../../manual/interface/controls/nodes/introduction.rst:52
 msgid "This menu changes your view of the editor."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:54
+#: ../../manual/interface/controls/nodes/introduction.rst:53
 msgid "Select"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:55
+#: ../../manual/interface/controls/nodes/introduction.rst:54
 msgid "This menu allows you to select a node or groups of nodes."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:56
+#: ../../manual/interface/controls/nodes/introduction.rst:55
 msgid "Add"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:57
+#: ../../manual/interface/controls/nodes/introduction.rst:56
 msgid "This menu allows you to add nodes."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:58
+#: ../../manual/interface/controls/nodes/introduction.rst:57
 #, fuzzy
 msgid "Node"
 msgstr "模式"
 
-#: ../../manual/interface/controls/nodes/introduction.rst:59
+#: ../../manual/interface/controls/nodes/introduction.rst:58
 msgid "This menu allows you to do things with selected nodes."
 msgstr ""
 
@@ -139,11 +133,12 @@ msgstr ""
 msgid "Use Nodes"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:61
+#: ../../manual/interface/controls/nodes/introduction.rst:60
 msgid ""
-"Tells the render engine to use the node map in computing the material "
-"color or rendering the final image, or not. If not, the map is ignored "
-"and the basic render of the material tabs or scene is accomplished."
+"Tells the render engine to use the node tree when computing the material "
+"color or rendering the final image, or not. If not, the tree is ignored. "
+"For materials, this is mostly a legacy option, because in the past "
+"materials could not be created with node trees."
 msgstr ""
 
 #: ../../manual/interface/controls/nodes/introduction.rst:64
@@ -157,7 +152,7 @@ msgid ""
 "independent of the object selection in the 3D View."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:68
+#: ../../manual/interface/controls/nodes/introduction.rst:66
 msgid "Go to Parent button"
 msgstr ""
 
@@ -165,15 +160,22 @@ msgstr ""
 msgid "This button allows you go to parent node tree e.g. leaving a group."
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:71
+#: ../../manual/interface/controls/nodes/introduction.rst:69
+msgid "Snapping"
+msgstr ""
+
+#: ../../manual/interface/controls/nodes/introduction.rst:69
+msgid ""
+"Change options for snapping node positions to achieve a cleaner node tree"
+" layout."
+msgstr ""
+
+#: ../../manual/interface/controls/nodes/introduction.rst:72
 msgid "Toolbar"
 msgstr ""
 
-#: ../../manual/interface/controls/nodes/introduction.rst:73
-msgid ""
-"The *Toolbar* is a context-sensitive region, natively containing tools "
-"for the Grease Pencil and buttons for adding nodes. The Toolbar is "
-"organized using tabs."
+#: ../../manual/interface/controls/nodes/introduction.rst:74
+msgid "The *Toolbar* contains a set of tools that can be used in the node editor."
 msgstr ""
 
 #: ../../manual/interface/controls/nodes/introduction.rst:78
@@ -271,17 +273,9 @@ msgstr ":kbd:`Shift-A`"
 
 #: ../../manual/interface/controls/nodes/introduction.rst:109
 #, fuzzy
-msgid "Nodes are added in two ways to the node editors:"
-msgstr "有两种添加节点到节点编辑器中的方法 ："
-
-#: ../../manual/interface/controls/nodes/introduction.rst:111
 msgid ""
-"By using the Tool Shelf which has buttons for adding nodes, organized "
-"with tabs."
-msgstr "通过使用工具架选项卡上的添加节点按钮。"
-
-#: ../../manual/interface/controls/nodes/introduction.rst:112
-msgid "By using the :menuselection:`Add` menu :kbd:`Shift-A`."
+"Nodes are added via the :menuselection:`Add` menu or using the "
+":kbd:`Shift-A` shortcut."
 msgstr "通过使用 :menuselection:`添加` 菜单，和快捷键 :kbd:`Shift-A` 。"
 
 #~ msgid "Mode:     All Modes"
@@ -292,4 +286,54 @@ msgstr "通过使用 :menuselection:`添加` 菜单，和快捷键 :kbd:`Shift-A
 
 #~ msgid "Adding"
 #~ msgstr "添加"
+
+#~ msgid ""
+#~ "The different node editors are used "
+#~ "to work with node-based workflows. "
+#~ "Each node editor type has there "
+#~ "own specific purpose, so, here we "
+#~ "will only give an overview of what"
+#~ " the generic node editor is. In "
+#~ "the list below it shows a list "
+#~ "of different types of node trees "
+#~ "and where each is documented."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After choosing what node context you "
+#~ "want to use, you have to enable"
+#~ " nodes with the *Use Nodes* button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tells the render engine to use the"
+#~ " node map in computing the material"
+#~ " color or rendering the final image,"
+#~ " or not. If not, the map is "
+#~ "ignored and the basic render of "
+#~ "the material tabs or scene is "
+#~ "accomplished."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The *Toolbar* is a context-sensitive "
+#~ "region, natively containing tools for "
+#~ "the Grease Pencil and buttons for "
+#~ "adding nodes. The Toolbar is organized"
+#~ " using tabs."
+#~ msgstr ""
+
+#~ msgid "Nodes are added in two ways to the node editors:"
+#~ msgstr "有两种添加节点到节点编辑器中的方法 ："
+
+#~ msgid ""
+#~ "By using the Tool Shelf which has"
+#~ " buttons for adding nodes, organized "
+#~ "with tabs."
+#~ msgstr "通过使用工具架选项卡上的添加节点按钮。"
+
+#~ msgid ""
+#~ ":doc:`Cycles </render/shaders/nodes/index>` and "
+#~ ":doc:`Eevee </render/engines/eevee/materials/nodes/index>`."
+#~ msgstr ""
 

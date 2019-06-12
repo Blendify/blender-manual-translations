@@ -1,0 +1,552 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) : This page is licensed under a CC-BY-SA 4.0 Intl. License
+# This file is distributed under the same license as the Blender 2.77 Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender 2.79 Manual 2.79\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-12 13:47+0200\n"
+"PO-Revision-Date: 2018-05-07 15:41-0300\n"
+"Last-Translator: Eduardo Schilling <elschilling@gmail.com>\n"
+"Language: pt\n"
+"Language-Team: portuguese\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:4
+msgid "Reducing Noise"
+msgstr "Reduzindo Ruído"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:6
+msgid ""
+"When performing a final render, it is important to reduce noise as much "
+"as possible. Here we will discuss a number of tricks that, while breaking"
+" the laws of physics, are particularly important when rendering "
+"animations within a reasonable time. Click to enlarge the example images "
+"to see the noise differences well."
+msgstr ""
+"Quando realizando uma renderização final, é importante reduzir o ruído o "
+"máximo possível. Aqui iremos discutir alguns truques que, apesar de "
+"violar as leis da física, são particularmente importantes quando "
+"renderizando animações em tempo razoável. Clique nas imagens de exemplo "
+"para aumentá-las e ver bem as diferenças de ruído."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:13
+msgid "Path Tracing"
+msgstr "Traçador de caminhos"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:15
+msgid ""
+"Cycles uses path tracing with next event estimation, which is not good at"
+" rendering all types of light effects, like caustics, but has the "
+"advantage of being able to render more detailed and larger scenes "
+"compared to some other rendering algorithms. This is because we do not "
+"need to store, for example, a photon map in memory, and because we can "
+"keep rays relatively coherent to use an on-demand image cache, compared "
+"to e.g. bidirectional path tracing."
+msgstr ""
+"Cycles usa traçador de caminhos com estimativa de próximo evento, o que "
+"não é bom na renderização de todos tipos de efeitos de luz, como "
+"cáustica, mas tem a vantagem de ser hábil na renderização de cenas "
+"maiores e mais detalhadas comparado a alguns outros algoritmos de "
+"renderização. Isso porquê não precisamos armazenar, por exemplo, um mapa "
+"de fótons na memória, e porquê podemos manter raios relativamente "
+"coerentes para usar um cache sob demanda, comparado a por ex. traçador de"
+" caminhos bidirecional."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:27
+msgid ""
+"We do the inverse of what reality does, tracing light rays from the "
+"camera into the scene and onto lights, rather than from the light sources"
+" into the scene and then into the camera. This has the advantage that we "
+"do not waste light rays that will not end up in the camera, but also "
+"means that it is difficult to find some light paths that may contribute a"
+" lot. Light rays will be sent either according to the surface BRDF, or in"
+" the direction of known light sources (lamps, emitting meshes with Sample"
+" as Lamp)."
+msgstr ""
+"Nós fazemos o inverso do que a realidade faz, traçando raios de luz da "
+"câmera para a cena até as luzes, ao invés das fontes de luz para a cena e"
+" então até a câmera. Isso tem a vantagem que não precisamos desperdiçar "
+"raios de luz que não irão chegar na câmera, mas também significa que é "
+"difícil de achar alguns caminhos de luz que podem contribuir muito. Raios"
+" de luz serão enviados tanto de acordo com o BRDF de superfície, como na "
+"direção de fontes de luz conhecidas (lâmpadas, malhas emissivas com "
+"Amostra como Lâmpada)."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:37
+#, fuzzy
+msgid ""
+"For more details, see the :doc:`Light Paths "
+"</render/cycles/render_settings/light_paths>` and :doc:`Integrator "
+"</render/cycles/render_settings/integrator>` documentation."
+msgstr ""
+"Para mais detalhes, veja a documentação de :doc:`Caminhos de Luz "
+"</render/cycles/settings/scene/render/light_paths>` e :doc:`Integrador "
+"</render/cycles/settings/scene/render/integrator>`."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:43
+msgid "Where Noise Comes From"
+msgstr "De Onde o Ruído Vem"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:45
+msgid ""
+"To understand where noise can come from, take for example the scene "
+"below. When we trace a light ray into the location marked by the white "
+"circle on a red dot, the second image below gives an impression of what "
+"the diffuse shader \"sees\"."
+msgstr ""
+"Para entender de onde vem o ruído, pegue por exemplo a cena abaixo. "
+"Quando traçamos o raio de luz no local marcado por um círculo branco em "
+"um ponto vermelho, a segunda imagem dá a impressão do que o sombreador "
+"difuso \"vê\"."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:49
+msgid ""
+"To find the light that is reflected from this surface, we need to find "
+"the average color from all these pixels. Note the glossy highlight on the"
+" sphere, and the bright spot the lamp casts on the nearby wall. These "
+"hotspots are 100x brighter than other parts of the image and will "
+"contribute significantly to the lighting of this pixel."
+msgstr ""
+"Para encontrar a luz que é refletida a partir da superfície, precisamos "
+"encontrar a cor média de todos esses pixeis. Note os destaques de brilho "
+"na esfera, e a região brilhosa que a lâmpada lança  na parede próxima. "
+"Essas regiões são 100x mais claras que as outras partes da imagem e irão "
+"contribuir significativamente para a iluminação desse pixel."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:60
+msgid "The scene."
+msgstr "A cena."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:65
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:96
+msgid "Irradiance at the shading point."
+msgstr "Irradiância no ponto de sombreamento."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:70
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:101
+msgid "The detected highlights."
+msgstr "Os destaques detectados."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:72
+msgid ""
+"The lamp is a known light source, so its location is already known, but "
+"the glossy highlight(s) that it causes are a different matter. The best "
+"we can do with path tracing is to distribute light rays randomly over the"
+" hemisphere, hoping to find all the important bright spots. If for some "
+"pixels we miss some bright spot, but we do find it for another, that "
+"results in noise. The more samples we take, the higher the probability "
+"that we cover all the important sources of light."
+msgstr ""
+"A lâmpada é uma fonte de luz conhecida, então sua localização já é "
+"conhecida, mas o(s) destaque(s) de brilho que o(s) causa(m) são uma "
+"matéria diferente. A melhor que podemos fazer com traçador de caminho é "
+"distribuir raios de luz randomicamente sobre a hemiesfera, na esperança "
+"de encontrar todas as regiões brilhosas. Se para alguns pixeis nós "
+"perdemos alguma região brilhante, mas encontramos ela para outra, isso "
+"resulta em ruído. Quanto mais amostras, maior a probabilidade de "
+"cobrirmos todas as fontes de luz importantes."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:79
+#, fuzzy
+msgid ""
+"With some tricks we can reduce this noise. If we blur the bright spots, "
+"they become bigger and less intense, making them easier to find and less "
+"noisy. This will not give the same exact result, but often it's close "
+"enough when viewed through a diffuse or soft glossy reflection. Below is "
+"an example of using :ref:`Glossy Filter <render-cycles-integrator-filter-"
+"glossy>` and :doc:`Light Falloff "
+"</render/shader_nodes/color/light_falloff>`."
+msgstr ""
+"Com alguns truques podemos reduzir o ruído. Se borrarmos as regiões "
+"brilhantes, elas tornam-se maiores e menos intensas, tornando mais fácil "
+"encontrá-las e menos ruidosas. Isso não irá fornecer o mesmo resultado, "
+"mas geralmente é próximo o suficiente quando visto através de uma "
+"reflexão difusa ou de polimento suave. Abaixo é um exemplo usando "
+":ref:`Filtro de Polimento <render-cycles-integrator-filter-glossy>` e "
+":doc:`Decaimento de Luz "
+"</render/cycles/nodes/types/color/light_falloff>`."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:91
+msgid "Using Glossy Filter & Light Falloff."
+msgstr "Usando Filtro de Polimento & Decaimento de Luz"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:105
+msgid "Bounces"
+msgstr "Rebatimentos"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:107
+msgid ""
+"In reality light will bounce a huge number of times due to the speed of "
+"light being very high. In practice more bounces will introduce more "
+"noise, and it might be good to use something like the Limited Global "
+"Illumination preset in the :ref:`Light Paths <render-cycles-integrator-"
+"light-paths>` Section that uses *fewer* bounces for different shader "
+"types. Diffuse surfaces typically can get away with fewer bounces, while "
+"glossy surfaces need a few more, and transmission shaders such as glass "
+"usually need the most."
+msgstr ""
+"Na realidade a luz irá rebater uma quantidade gigante de vezes devido à "
+"velocidade da luz ser muito grande. Na prática mais rebatimentos irá "
+"introduzir  mais ruído, e pode ser bom usar algo como a predefinição "
+"Iluminação Global Limitada na seção :ref:`Caminhos de Luz <render-cycles-"
+"integrator-light-paths>` que usa *menos* rebatimentos para diferentes "
+"tipos de sombreador. Tipicamente superfícies difusas podem sair com menos"
+" rebatimentos, enquanto superfícies polidas precisam mais algumas, e "
+"sombreadores de transmissão como vidro usualmente precisam mais."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:120
+msgid "No bounces."
+msgstr "Sem rebatimentos."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:125
+msgid "Two bounces at max."
+msgstr "Dois rebatimentos ao máximo."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:130
+msgid "Four bounces at max."
+msgstr "Quatro rebatimentos ao máximo."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:132
+msgid ""
+"Also important is to use shader colors that do **not** have components of"
+" value 1.0 or values near that; try to keep the maximum value to 0.8 or "
+"less and make your lights brighter. In reality, surfaces are rarely "
+"perfectly reflecting all light, but there are of course exceptions; "
+"usually glass will let most light through, which is why we need more "
+"bounces there. High values for the color components tend to introduce "
+"noise because light intensity then does not decrease much as it bounces "
+"off each surface."
+msgstr ""
+"Importante também é usar sombreadores de cor que **não**  têm componentes"
+" com valor de 1.0 ou valores próximos a isso; tente manter o valor máximo"
+" de 0.8 ou menos e faça suas luzes mais brilhantes. Na realidade, "
+"superfícies são raramente perfeitas ao refletir toda luz, mas claro há "
+"exceções; vidro usualmente irá deixar mais luz através, por isso "
+"precisamos mais rebatimentos nesse caso. Valores maiores para os "
+"componentes de cor tendem a introduzir ruído porquê a intensidade da luz "
+"não diminui muito conforme rebate em cada superfície."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:142
+msgid "Caustics and Filter Glossy"
+msgstr "Cáusticas e Filtro de Polimento"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:144
+msgid ""
+"Caustics are a well-known source of noise, causing fireflies. They happen"
+" because the renderer has difficulty finding specular highlights viewed "
+"through a soft glossy or diffuse reflection. There is a :ref:`No Caustics"
+" <render-cycles-integrator-no-caustics>` option to disable glossy behind "
+"a diffuse reflection entirely. Many renderers will typically disable "
+"caustics by default."
+msgstr ""
+"Cáusticas são uma fonte bem conhecida de ruído, causando pontos de brilho"
+" (fireflies). Eles ocorrem porque o renderizador tem dificuldade ao "
+"encontrar os destaques especulares vistos através de reflexões difusas ou"
+" de polimentos suaves. Há uma opção :ref:`Sem Cáusticas <render-cycles-"
+"integrator-no-caustics>` para desativar completamente o polimento atrás "
+"de uma reflexão difusa. Muitos renderizadores irão tipicamente desativar "
+"cáusticas por padrão."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:156
+msgid "Default settings."
+msgstr "Configurações padrão."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:161
+msgid "Caustics disabled."
+msgstr "Cáusticas desativadas."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:166
+msgid "Filter Glossy greater than zero."
+msgstr "Filtro de Polimento maior que zero."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:168
+msgid ""
+"However, using No Caustics will result in missing light, and it still "
+"does not cover the case where a sharp glossy reflection is viewed through"
+" a soft glossy reflection. There is a :ref:`Filter Glossy <render-cycles-"
+"integrator-filter-glossy>` option to reduce the noise from such cases at "
+"the cost of accuracy. This will blur the sharp glossy reflection to make "
+"it easier to find, by increasing the shader Roughness."
+msgstr ""
+"Entretanto, usar Sem Cáustica irá resultar em luz faltando, e ainda não "
+"cobre o caso onde uma reflexão polida nítida  é vista através de uma "
+"reflexão polida suave. Existe a opção :ref:`Filtro de Polimento <render-"
+"cycles-integrator-filter-glossy>` para reduzir o ruído nesses casos à "
+"custa de precisão. Isso irá borrar as reflexões polidas nítidas para "
+"tornar mais fácil encontrar, aumentando a Rugosidade do sombreador."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:174
+msgid ""
+"The above images show default settings, no caustics, and filter glossy "
+"set to 1.0."
+msgstr ""
+"A imagem acima mostra as configurações padrão, sem cáustica, e filtro de "
+"polimento em 1.0."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:178
+msgid "Light Falloff"
+msgstr "Decaimento de Luz"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:180
+msgid ""
+"In reality light in a vacuum will always fall off at a rate of "
+"1/(distance^2). However, as distance goes to zero, this value goes to "
+"infinity and we can get very bright spots in the image. These are mostly "
+"a problem for indirect lighting, where the probability of hitting such a "
+"small but extremely bright spot is low and so happens only rarely. This "
+"is a typical recipe for fireflies."
+msgstr ""
+"Na realidade a luz no vácuo irá sempre decair a uma taxa de "
+"1/(distância^2). Entretanto, conforme a distância vai a zero, esse valor "
+"vai ao infinito e nós podemos obter regiões muito claras na imagem. Isso "
+"é problema para a iluminação indireta principalmente, onde a "
+"probabilidade de acertar uma região tão pequena mas extremamente clara é "
+"baixa e portanto acontece apenas raramente. Essa é uma receita típica "
+"para pontos de brilho (fireflies)"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:192
+msgid "Hard Falloff."
+msgstr "Decaimento abrupto."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:197
+msgid "Soft Falloff."
+msgstr "Decaimento suave."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:199
+#, fuzzy
+msgid ""
+"To reduce this problem, the :doc:`Light Falloff "
+"</render/shader_nodes/color/light_falloff>` node has a *Smooth factor*, "
+"that can be used to reduce the maximum intensity a light can contribute "
+"to nearby surfaces. The images above show default falloff and smooth "
+"value 1.0."
+msgstr ""
+"Para reduzir esse problema, o nó :doc:`Decaimento de Luz "
+"</render/cycles/nodes/types/color/light_falloff>` tem um fator "
+"*Suavizar*, que pode ser usado para reduzir a intensidade máxima que uma "
+"luz pode contribuir para superfícies próximas. As imagens abaixo mostram "
+"o decaimento padrão e suavizar com valor 1.0. "
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:207
+msgid "Multiple Importance Sampling"
+msgstr "Amostra de múltipla importância"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:209
+#, fuzzy
+msgid ""
+"Materials with emission shaders can be configured to use Multiple "
+"Importance Sampling (:doc:`/render/engines/cycles/materials/settings`). "
+"This means that they will get rays sent directly towards them, rather "
+"than ending up there based on rays randomly bouncing around. For very "
+"bright mesh light sources, this can reduce noise significantly. However, "
+"when the emission is not particularly bright, this will take samples away"
+" from other brighter light sources for which it is important to find them"
+" this way."
+msgstr ""
+"Materiais com sombreadores de emissão podem ser configurados para usar "
+"Amostra de múltipla importâcia "
+"(:doc:`/render/cycles/materials/settings`). Isso significa que eles irão "
+"receber raios enviados diretamente para eles, ao invés de baseado em "
+"raios que rebatem randomicamente ao redor. Para malhas fonte de luz muito"
+" claras, isso pode reduzir o ruído significativamente. Entretanto, quando"
+" a emissão não é particularmente clara, isso irá tirar amostras de outras"
+" fontes de luz mais claras para as quais é importante encontrar seu "
+"caminho."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:217
+msgid ""
+"The optimal setting here is difficult to guess; it may be a matter of "
+"trial and error, but often it is clear that a somewhat glowing object may"
+" be only contributing light locally, while a mesh light used as a lamp "
+"would need this option enabled. Here is an example where the emissive "
+"spheres contribute little to the lighting, and the image renders with "
+"slightly less noise by disabling Multiple Importance on them."
+msgstr ""
+"As configurações ótimas aqui são difíceis de adivinhar; pode ser "
+"tentativa e erro, mas frequentemente é claro que um objeto pouco "
+"brilhante irá contribuir com luz apenas localmente, enquanto malha de luz"
+" usada como lâmpada precisaria essa opção ativada. Aqui é exemplo onde "
+"esferas emissivas contribuem pouco para a iluminação, e a imagem "
+"renderiza com um pouco menos de ruído desativando a opção de Importância "
+"múltipla neles."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:228
+msgid "Multiple Importance off."
+msgstr "Amostra de múltipla importância desabilitada."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:233
+msgid "Multiple Importance on."
+msgstr "Amostra de múltipla importância habilitada."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:235
+msgid ""
+"The world background also has a *Multiple Importance* (:ref:`render-"
+"cycles-integrator-world-settings`) option. This is mostly useful for "
+"environment maps that have small bright spots in them, rather than being "
+"smooth. This option will then, in a preprocess, determine the bright "
+"spots, and send light rays directly towards them. Again, enabling this "
+"option may take samples away from more important light sources if it is "
+"not needed."
+msgstr ""
+"O plano de fundo do mundo também possui uma opção de *Importância "
+"Múltipla* (:ref:`render-cycles-integrator-world-settings`). Isso é mais "
+"útil para mapas de ambiente que possuem pontos claros pequenos neles. "
+"Essa opção irá então, num pré-processo, determinar as regiões claras, e "
+"enviar raios de luz diretamente na sua direção. Novamente, ativar essa "
+"opção pode levar amostras de fontes de luz mais importantes se não for "
+"necessário."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:244
+msgid "Glass and Transparent Shadows"
+msgstr "Vidros e Sombras Transparentes"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:246
+msgid ""
+"With caustics disabled, glass will miss shadows, and with filter glossy "
+"they might be too soft. We can make a glass shader that will use a Glass "
+"BSDF when viewed *directly*, and a Transparent BSDF when viewed "
+"*indirectly*. The Transparent BSDF can be used for transparent shadows to"
+" find light sources straight through surfaces, and will give properly-"
+"colored shadows, but without the caustics. The Light Path node is used to"
+" determine when to use which of the two shaders."
+msgstr ""
+"Com cáusticas desativada, vidro irá perder sombras, e com filtro de "
+"polimento elas podem ser muito suaves. Nós podemos fazer sombreador de "
+"vidro que irá usar um BSDF de Vidro quando visto *diretamente*, e um BSDF"
+" Transparente quando visto *indiretamente*. O BSDF Transparente pode ser "
+"usado para sombras transparentes para encontrar fontes de luz direto "
+"através das superfícies, e irá fornecer sombras corretamente coloridas, "
+"mas sem cáustica. O nó Caminho de Luz é usado para de determinar quando "
+"usar cada um dos dois sombreadores."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:256
+msgid "Optimized glass shader."
+msgstr "Sombreador de vidro otimizado."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:258
+msgid ""
+"Above we can see the node setup used for the glass transparency trick; on"
+" the left the render has too much shadow due to missing caustics, and on "
+"the right the render with the trick."
+msgstr ""
+"Acima podemos ver a configuração dos nós usados para o truque da "
+"transparência do vidro; a esquerda a renderização tem muita sombra devido"
+" à ausência de cáustica, e na direita a renderização com o truque."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:267
+msgid "Default Glas BSDF."
+msgstr "BSDF de Vidro Padrão."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:272
+msgid "Optimized Glass Shader."
+msgstr "Sombreador para Vidros Otimizado."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:276
+msgid "Light Portals"
+msgstr "Portais de Luz"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:278
+msgid ""
+"When rendering a daylight indoor scene where most of the light is coming "
+"in through a window or door opening, it is difficult for the integrator "
+"to find its way to them. To fix this, use :ref:`Light Portals <render-"
+"cycles-lamps-area-portals>`, these work by adding an :ref:`Area Lamp "
+"<render-cycles-lamps-area>`. You then will need to modify its shape to "
+"match that of the opening that you are trying to fill."
+msgstr ""
+"Quandor renderizando uma cena interna com luz do dia onde a maioria da "
+"luz vem através de uma janela ou abertura de porta, é difícil para o "
+"integrador encontrar seu caminho até ela. Para corrigir isso, use "
+":ref:`Portais de Luz <render-cycles-lamps-area-portals>`, que funcionam "
+"adicionando uma :ref:`Lâmpada de área <render-cycles-lamps-area>`. Você "
+"irá então precisar modificar a sua forma para coincidir com a abertura "
+"que você está tentando preencher."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:289
+msgid "Denoising"
+msgstr "Redução de ruídos"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:291
+#, fuzzy
+msgid ""
+"Even with all the settings described above there will always end up being"
+" some render noise no matter how many samples you use. To fix this there "
+"is a post-processing technique to cleanup the final bit of noise. To use "
+"this enable :doc:`Denoising </render/layers/denoising>` in the *Render "
+"Layers* tab of the Properties editor."
+msgstr ""
+"Mesmo com todas as configurações descritas acima sempre haverá algum "
+"ruído não importa quantas amostras você usar. Para corrigir isso há uma "
+"técnica de pós processamento para limpar a porção final de ruído. Para "
+"usá-la ative :doc:`Redução de ruídos "
+"</render/cycles/settings/scene/render_layers/denoising>` na aba *Camadas "
+"de Renderização* no editor de Propriedades."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:297
+msgid ""
+"Below is an example render by `The Pixelary "
+"<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
+"tested>`__."
+msgstr ""
+"Abaixo uma renderização de exemplo por `The Pixelary "
+"<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
+"tested>`__."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:304
+msgid "Example render before denoising."
+msgstr "Renderização exemplo antes da redução de ruídos."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:308
+msgid "Example render after denoising."
+msgstr "Renderização exemplo após a redução de ruídos."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:314
+msgid "Clamp Fireflies"
+msgstr "Truncar Pontos de Brilho (Fireflies)"
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:316
+msgid ""
+"Ideally with all the previous tricks, fireflies would be eliminated, but "
+"they could still happen. For that, the *intensity* that any individual "
+"light ray sample will contribute to a pixel can be *clamped* to a maximum"
+" value with the integrator :ref:`Clamp setting <render-cycles-integrator-"
+"clamp-samples>`."
+msgstr ""
+"Idealmente com todos truques anteriores, os pontos de brilho(fireflies) "
+"serão eliminados, mas eles ainda podem aparecer. Por isso, a "
+"*intensidade* que cada amostra de raio de luz contribui pode ser "
+"*truncada* a um valor máximo com a configuração :ref:`Truncar <render-"
+"cycles-integrator-clamp-samples>` do integrador."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:320
+msgid ""
+"If set too low this can cause missing highlights in the image, which "
+"might be useful to preserve for camera effects such as bloom or glare. To"
+" mitigate this conundrum it's often useful to clamp only indirect "
+"bounces, leaving highlights directly visible to the camera untouched."
+msgstr ""
+"Se definida muito baixa isso pode causar pontos de brilho faltando na "
+"imagem, que pode ser útil preservá-los para efeitos de câmera como bloom "
+"e glare. Para mitigar esse enigma é frequentemente útil truncar apenas os"
+" rebatimentos indiretos, deixando pontos de brilho diretamente visíveis à"
+" câmera intocados."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:330
+msgid "No Clamp (0)."
+msgstr "Sem Truncar (0)."
+
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:335
+msgid "With Clamp set to 4."
+msgstr "Com Truncar definido para 4."
+
+#~ msgid "What the Shader sees."
+#~ msgstr "O que o sombreador vê."
+

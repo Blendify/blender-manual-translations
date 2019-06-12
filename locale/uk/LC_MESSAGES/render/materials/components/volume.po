@@ -1,0 +1,322 @@
+#
+# urko <urkokul@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender 2.78 Manual 2.78\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-12 13:27+0200\n"
+"PO-Revision-Date: 2019-02-03 23:16+0200\n"
+"Last-Translator: urko <urkokul@gmail.com>\n"
+"Language: uk\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:4
+msgid "Volumes"
+msgstr "Об'єми -- Volumes"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:6
+msgid ""
+"Volume rendering can be used to render effects like fire, smoke, mist, "
+"absorption in glass, and many other effects that cannot be represented by"
+" surface meshes alone."
+msgstr ""
+"Рендеринг об'єму може використовуватися для зображування ефектів, таких "
+"як вогонь, дим, імла, поглинання у склі та багатьох інших, що не можуть "
+"бути представлені тільки самими сітями поверхонь."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:9
+msgid ""
+"To set up a volume, you create a mesh that defines the bounds within "
+"which the volume exists. In the material you typically remove the surface"
+" nodes and instead connect volume nodes to define the shading inside the "
+"volume. For effects such as absorption in glass you can use both a "
+"surface and volume shader. The world can also use a volume shader to "
+"create effects such as mist."
+msgstr ""
+"Для укладання об'єму ви створюєте сіть, що визначає межі, всередині яких "
+"цей об'єм існує. У дереві матеріалу ви зазвичай вилучаєте вузли типу "
+"Surface -- «Поверхня» та натомість під'єднуєте вузли типу Volume -- "
+"«Об'єм» для визначення відтінення всередині цього об'єму. Для ефектів, "
+"таких як поглинання у склі, ви можете використовувати обидва, поверхнєвий"
+" та об'ємовий відтінювачі, шейдери. Світ може також використовувати "
+"об'ємовий відтінювач для створення ефектів, таких як імла."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:17
+msgid "Shading"
+msgstr "Відтінення -- Shading"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:20
+msgid "Principled Volume"
+msgstr "Principled Volume -- Першооснова Об'єму"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:22
+#, fuzzy
+msgid ""
+":doc:`Principled Volume </render/shader_nodes/shader/volume_principled>` "
+"is a physically-based volume shader that can be used to create a wide "
+"range of volume materials. It supports scattering, absorption and "
+"emission in one easy to use node. Fire can be rendered with blackbody "
+"emission."
+msgstr ""
+":doc:`Principled Volume "
+"</render/cycles/nodes/types/shaders/volume_principled>` -- «Першооснова "
+"Об'єму» -- це фізично-базований об'ємовий шейдер або відтінювач, що може "
+"використовуватися для створення широкого діапазону об'ємових матеріалів. "
+"Він підтримує розсіювання, поглинання та емісію в одному, легкому для "
+"використання, вузлі. Вогонь може бути рендерено за допомогою емісії "
+"чорного тіла -- blackbody emission."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:29
+msgid "Smoke and fire rendered with Principled Volume shader."
+msgstr "Дим та вогонь, рендерені за допомогою відтінювача Principled Volume."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:33
+msgid "Volume Components"
+msgstr "Компоненти Об'єму -- Volume Components"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:35
+msgid ""
+"For more control, volume shading components can be manually combined into"
+" a custom shader setup."
+msgstr ""
+"Для більшого керування компоненти відтінення об'єму можуть вручну "
+"комбінуватися у власний уклад шейдера."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:37
+#, fuzzy
+msgid ""
+":doc:`Volume Absorption </render/shader_nodes/shader/volume_absorption>` "
+"will absorb part of the light as it passes through the volume. This can "
+"be used to shade for example black smoke or colored glass objects, or "
+"mixed with the volume scatter node. This node is similar to the "
+"transparent BSDF node, it blocks part of the light and lets other light "
+"pass straight through."
+msgstr ""
+":doc:`Volume Absorption "
+"</render/cycles/nodes/types/shaders/volume_absorption>` -- «Поглинання "
+"Об'ємом» -- буде абсорбувати частину світла при проходженні ним через "
+"об'єм. Це може використовуватися для відтінення, наприклад, чорного диму "
+"або забарвлених скляних об'єктів, чи для змішування з вузлом Volume "
+"Scatter -- «Розсіювання Об'ємом». Цей вузол подібний до вузла Transparent"
+" BSDF у тому, що він блокує частину світла та дозволяє іншому світлу "
+"проходити прямо крізь."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:42
+#, fuzzy
+msgid ""
+":doc:`Volume Scatter </render/shader_nodes/shader/volume_scatter>` lets "
+"light scatter in other directions as it hits particles in the volume. The"
+" anisotropy defines in which direction the light is more likely to "
+"scatter. A value of 0 will let light scatter evenly in all directions "
+"(similar to the diffuse BSDF node), negative values let light scatter "
+"mostly backwards, and positive values let light scatter mostly forward. "
+"This can be used to shade white smoke or clouds for example."
+msgstr ""
+":doc:`Volume Scatter </render/cycles/nodes/types/shaders/volume_scatter>`"
+" -- «Розсіювання Об'ємом» -- дозволяє світлу розсіюватися в інших "
+"напрямках при потраплянні його на частинки об'єму. Anisotropy -- "
+"«Анізотропія » визначає, в якому напрямку світло більш ймовірно буде "
+"розсіюватися. Значення 0 буде давати рівномірне розсіювання у всіх "
+"напрямках (дещо подібно на вузол Diffuse BSDF -- «Розсіяння BSDF»), "
+"від'ємні значення дозволяють світлу розсіюватися здебільшого назад, а "
+"додатні значення дозволяють світлу розсіюватися здебільшого вперед. Це "
+"може використовуватися для відтінення білого диму або хмар, наприклад."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:48
+#, fuzzy
+msgid ""
+":doc:`Emission </render/shader_nodes/shader/emission>` will emit light "
+"from the volume, for example for fire."
+msgstr ""
+":doc:`Emission </render/cycles/nodes/types/shaders/emission>` -- «Емісія»"
+" -- буде емітувати світло з об'єму, наприклад, для вогню."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:54
+msgid "Volume Absorption, Scatter and Emission"
+msgstr "Поглинання Об'ємом, Розсіювання Об'ємом та Емісія"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:58
+msgid "Attributes"
+msgstr "Атрибути -- Attributes"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:60
+msgid ""
+"When rendering smoke and fire, volume attributes are used to define the "
+"shape and shading of the volume. The Principled Volume shader will use "
+"them by default, while custom volume shaders can use the Attribute node "
+"to get attributes such as density, color and temperature."
+msgstr ""
+"При рендерингу диму та вогню атрибути об'єму використовуються для "
+"визначення форми та відтінення об'єму. Шейдер Principled Volume буде "
+"використовувати їх стандартно, тоді як власні об'ємові відтінювачі можуть"
+" використовувати вузол Attribute -- «Атрибут» для отримання таких "
+"атрибутів, як щільність, колір та температура."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:66
+msgid "Density"
+msgstr "Density -- Щільність"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:68
+msgid ""
+"All volume shaders have a density input. The density defines how much of "
+"the light will interact with the volume, getting absorbed or scattered, "
+"and how much will pass straight through. For effects such as smoke you "
+"would specify a density field to indicate where in the volume there is "
+"smoke and how much (density bigger than 0), and where there is no smoke "
+"(density equals 0)."
+msgstr ""
+"Усі об'ємові відтінювачі мають увід щільності Density. Щільність "
+"визначає, наскільки світло буде взаємодіяти з об'ємом, поглинаючись або "
+"розсіюючись, та наскільки воно проходитиме прямо крізь об'єм. Для "
+"ефектів, таких як дим, ви маєте визначити поле Density для вказування, де"
+" в об'ємі є дим і скільки (щільність більша за 0) та де дим відсутній "
+"(щільність дорівнює 0)."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:74
+msgid ""
+"Volumes in the real world consist of particles, a higher density means "
+"there are more particles per unit volume. More particles means there is a"
+" higher chance for light to collide with a particle and get absorbed or "
+"scattered, rather than passing straight through."
+msgstr ""
+"Об'єми у реальному житті складаються з частинок, вища щільність означає "
+"місця, де є більше частинок на одиницю об'єму. Більше частинок означає, "
+"що є вищий шанс для світла зіткнутися з частинкою та поглинутися чи "
+"розсіятися, а не пройти прямо крізь об'єм."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:81
+msgid "Mesh Volumes"
+msgstr "Об'єми Сітей -- Mesh Volumes"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:83
+msgid ""
+"Meshes used for volume render should be closed and :term:`manifold`. That"
+" means that there should be no holes in the mesh. Each edge must be "
+"connected to exactly two faces such that there are no holes or T-shaped "
+"faces where three or more faces are connected to an edge."
+msgstr ""
+"Сіті, використовувані для рендера об'єму, повинні бути закритими та "
+"розгортними -- :term:`manifold`. Це означає, що у сіті повинні бути "
+"відсутні отвори. Кожне ребро повинно бути з'єднане точно з двома гранями,"
+" так щоб не було жодних отворів та Т-подібних граней, де три або більше "
+"граней з'єднані з ребром."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:89
+msgid ""
+"Normals must point outside for correct results. The normals are used to "
+"determine if a ray enters or exits a volume, and if they point in a wrong"
+" direction, or there is a hole in the mesh, then the renderer is unable "
+"to decide what is the inside or outside of the volume."
+msgstr ""
+"Нормалі повинні вказувати назовні поверхні для коректних результатів. Ці "
+"нормалі використовуються для визначення того, чи промінь проходить чи "
+"виходить з об'єму і, якщо вони вказують у неправильному напрямку або у "
+"сіті є отвір, то рендерер буде не здатний вирішити, що є всередині, а що "
+"є назовні об'єму."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:94
+msgid "These rules are the same as for rendering glass refraction correctly."
+msgstr "Ці правила такі ж, як для коректного рендерингу заломлення світла склом."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:98
+msgid "World Volume"
+msgstr "Об'єм Світу -- World Volume"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:100
+msgid ""
+"A volume shader can also be applied to the world, filling the entire "
+"space."
+msgstr ""
+"Об'ємовий відтінювач може застосовуватися для всього світу, заповнюючи "
+"простір повністю."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:102
+msgid ""
+"Currently, this is most useful for night time or other dark scenes, as "
+"the world surface shader or sun lamps will have no effect if a volume "
+"shader is used. This is because the world background is assumed to be "
+"infinitely far away, which is accurate enough for the sun for example. "
+"However, for modeling effects such as fog or atmospheric scattering, it "
+"is not a good assumption that the volume fills the entire space, as most "
+"of the distance between the sun and the earth is empty space. For such "
+"effects it is be better to create a volume object surrounding the scene. "
+"The size of this object will determine how much light is scattered or "
+"absorbed."
+msgstr ""
+"Наразі це найбільш корисно для нічних сцен та інших темних сцен, оскільки"
+" поверхнєвий відтінювач світу або сонцеві лампи не здійснюватимуть "
+"жодного впливу, якщо використовується об'ємовий відтінювач. Це через "
+"припущення, що фон світу є безкінечно віддаленим, котре є достатньо "
+"точним для Сонця, наприклад. Однак, для моделювальних ефектів, таких як "
+"туман або розсіювання атмосферою, це не є добрим припущенням, що цей "
+"об'єм заповнює увесь простір, оскільки більшість відстані між Сонцем і "
+"Землею займає порожній космос. Для таких ефектів краще створювати об'єкт "
+"об'єму, що оточує сцену. Розмір такого об'єкта буде визначати, наскільки "
+"світло буде розсіюватися чи поглинатися."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:114
+msgid "Multiple Scattering"
+msgstr "Багато Розсіювання -- Multiple Scattering"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:116
+msgid ""
+"Real-world effects such as scattering in clouds or subsurface scattering "
+"require many scattering bounces. However, unbiased rendering of such "
+"effects can be noisy, so by default the number of bounces is zero. The "
+"effect you get when rendering with zero volume bounces is what is known "
+"as \"single scattering\", the effect from more bounces is \"multiple "
+"scattering\"."
+msgstr ""
+"Ефекти реального світу, такі як розсіювання у хмарах або підповерхневе "
+"розсіювання вимагають багато відскоків розсіювання. Однак, безупереджений"
+" рендеринг таких ефектів може бути повільним і шумним, а тому стандартно "
+"ця кількість відскоків є нульовою. Ефект, що ви отримуєте при рендерингу "
+"з нульовою кількістю відскоків для об'єму, відомий як «одиничне "
+"розсіювання» -- \"single scattering\", а ефект з більшою кількістю "
+"відскоків називається «багато розсіювання» -- \"multiple scattering\"."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:122
+msgid ""
+"For rendering materials like skin or milk that require multiple "
+"scattering, subsurface scattering is more efficient and easier to "
+"control. Particularly the random walk method can accurately render such "
+"materials."
+msgstr ""
+"Для рендерингу матеріалів, як шкіра або молоко, що вимагають багато "
+"розсіювання, відтінювач підповерхневого розсіювання Subsurface Scattering"
+" є більш ефективним та легшим для керування. Зокрема, метод «випадкового "
+"ходу» -- random walk може точно рендерити такі матеріали."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:126
+msgid ""
+"For materials such as clouds or smoke that do not have a well defined "
+"surface, volume rendering is required. These look best with many "
+"scattering bounces, but in practice one might have to limit the number of"
+" bounces to keep render times acceptable."
+msgstr ""
+"Для матеріалів, таких як хмари або дим, що не мають добре визначеної "
+"поверхні, вимагається рендеринг об'єму. Вони виглядають найкраще з "
+"багатьма відскоками розсіювання, але на практиці, можливо, доведеться "
+"лімітувати кількість цих відскоків для підтримання часу рендерингу у "
+"прийнятних межах."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:132
+msgid "Limitations"
+msgstr "Обмеження"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:134
+msgid "Not available on GPU:"
+msgstr "Не доступно на GPU:"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:136
+msgid "Multiple importance sampling for efficient lights inside volumes."
+msgstr ""
+"Multiple importance sampling -- «Багатовибірка за значністю» -- для "
+"ефективних освітлювачів всередині об'ємів."
+

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 18:32-0400\n"
+"POT-Creation-Date: 2019-06-12 13:27+0200\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,48 +18,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../manual/render/post_process/color_management.rst:6
+#: ../../manual/render/color_management.rst:6
 msgid "Color Management"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:8
+#: ../../manual/render/color_management.rst:8
 msgid ""
-"Color management is one of the most important tools that an artist can "
-"use. It allows an artist to make sure that an image stays the same from "
-"rendering, to saving, to post-processing. Color management also allows an"
-" artist to tweak things like exposure, gamma, or the overall color grade."
+"Color management is important to create renders and assets that are "
+"physically accurate and look great on multiple display devices. It is "
+"used both to ensure all parts of the pipeline interpret colors correctly,"
+" and to make artistics changes like exposure and color grading."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:16
+#: ../../manual/render/color_management.rst:16
 msgid "Different views and exposures of the same render."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:18
+#: ../../manual/render/color_management.rst:18
 msgid ""
-"To achieve color management in Blender, the `OpenColorIO "
-"<http://opencolorio.org/>`__ (OCIO) library has been integrated into "
-"Blender. This library offers fine control over different :abbr:`LUT (Look"
-" Up Table)` along with integrating your own set of color profiles to keep"
-" your work linearized with other software."
+"Blender's color management is based on the `OpenColorIO "
+"<http://opencolorio.org/>`__ library. By using the same OpenColorIO "
+"configuration in multiple applications, the same color spaces and "
+"transforms will be available for consistent results."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:25
+#: ../../manual/render/color_management.rst:23
+msgid "Workflow"
+msgstr ""
+
+#: ../../manual/render/color_management.rst:26
 msgid "Scene Linear Color Space"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:27
+#: ../../manual/render/color_management.rst:28
 msgid ""
 "For correct results, different :term:`color spaces <color space>` are "
-"needed for rendering display and storage of images. Rendering and "
-"compositing is best done in scene *linear* color space, which corresponds"
+"needed for rendering, display and storage of images. Rendering and "
+"compositing is best done in *scene linear* color space, which corresponds"
 " more closely to nature, and makes computations more physically accurate."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:34
+#: ../../manual/render/color_management.rst:35
 msgid "An example of a linear workflow."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:36
+#: ../../manual/render/color_management.rst:37
 msgid ""
 "If the colors are linear, it means that if in reality, we double the "
 "number of photons, the color values are also doubled. Put another way, if"
@@ -69,55 +72,111 @@ msgid ""
 "best for photorealistic rendering and compositing."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:42
+#: ../../manual/render/color_management.rst:43
 msgid ""
 "However, these values do not directly correspond to human perception or "
-"the way display devices work and image files are often stored in "
-"different color spaces, so we have to take care to do the right "
-"conversion into and out of this linear color space."
+"the way display devices work. and image files are often stored in "
+"different color spaces. So we have to take care to do the right "
+"conversion into and out of this scene linear color space."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:50
+#: ../../manual/render/color_management.rst:48
+msgid "Display Transforms"
+msgstr ""
+
+#: ../../manual/render/color_management.rst:50
+msgid ""
+"Transforming scene linear colors to display involves both technical and "
+"artistic choices."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:52
+msgid ""
+"Correct display of renders requires a conversion to the display device "
+"color space. A computer monitor works differently from a digital cinema "
+"projector or HDTV, and so needs a different conversion."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:56
+msgid ""
+"There is also an artistic choice to be made. Partially that is because "
+"display devices cannot display the full spectrum of colors and only have "
+"limited brightness, so we can squeeze the colors to fit in the gamut of "
+"the device. Besides that, it can also be useful to give the renders a "
+"particular look, e.g. as if they have been printed on real film. The "
+"default Filmic transform does this."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:63
+msgid ""
+"Another common use case is when you want to inspect renders, to see "
+"details in dark shadows or bright highlights, or identify render errors. "
+"Such settings would be only used temporarily and not for final renders."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:69
+msgid "Conversion from linear to display device space."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:73
+msgid "Image Color Spaces"
+msgstr ""
+
+#: ../../manual/render/color_management.rst:75
+msgid ""
+"When loading and saving media formats it is important to have color "
+"management in mind. File formats such as PNG or JPEG will typically store"
+" colors in a color space ready for display, not in a linear space. When "
+"they are used as textures in renders, they need to be converted to linear"
+" first, and when saving renders for display on the web, they also need to"
+" be converted to a display space."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:81
+msgid ""
+"For intermediate files in production, it is recommended to use *OpenEXR* "
+"files. These are always stored in scene linear color spaces, without any "
+"data loss. That makes them suitable to store renders that can later be "
+"composited, color graded and converted to different output formats."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:86
+msgid ""
+"Images can also contain data that is not actually a color. For example "
+"normal or displacement maps merely contain vectors and offsets. Such "
+"images should be marked as *Non-Color Data* so that no color space "
+"conversion happens on them."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:94
 msgid "Settings"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:52
+#: ../../manual/render/color_management.rst:96
 msgid "Reference"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst
+#: ../../manual/render/color_management.rst
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:55
-msgid ":menuselection:`Properties editor --> Scene --> Color Management`"
+#: ../../manual/render/color_management.rst:99
+msgid ":menuselection:`Properties editor --> Render --> Color Management`"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:59
-msgid "Scene settings for color management."
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:63
+#: ../../manual/render/color_management.rst:107
 msgid "Display"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:65
-msgid ""
-"Correct display of renders requires a conversion to the display device "
-"color space, which can be configured here. A computer monitor works "
-"differently from a digital cinema projector HDTV. The scene properties "
-"have these settings:"
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:78
+#: ../../manual/render/color_management.rst:119
 msgid "Display Device"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:69
+#: ../../manual/render/color_management.rst:110
 msgid "The device that the image is being viewed on."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:71
+#: ../../manual/render/color_management.rst:112
 msgid ""
 "Most computer monitors are configured for the sRGB color space, and so "
 "when working on a computer usually this option should just be left to the"
@@ -126,25 +185,21 @@ msgid ""
 "files intended to be displayed on another device."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:76
+#: ../../manual/render/color_management.rst:117
 msgid ""
 "Rec709 is commonly used for HDTVs, while XYZ and DCI-P3 are common for "
 "digital projectors."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:78
+#: ../../manual/render/color_management.rst:119
 msgid "Color management can be disabled by setting the device to None."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:82
-msgid "Conversion from linear to display device space."
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:86
+#: ../../manual/render/color_management.rst:122
 msgid "Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:88
+#: ../../manual/render/color_management.rst:124
 msgid ""
 "There is also an artistic choice to be made for renders. Partially that "
 "is because display devices cannot display the full spectrum of colors and"
@@ -154,7 +209,7 @@ msgid ""
 "film."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:94
+#: ../../manual/render/color_management.rst:130
 msgid ""
 "Another common use case is when you want to inspect renders, to see "
 "details in dark shadows or bright highlights, or identify render errors. "
@@ -162,135 +217,119 @@ msgid ""
 "renders."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:118
+#: ../../manual/render/color_management.rst:150
 msgid "View"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:99
+#: ../../manual/render/color_management.rst:135
 msgid "These are different ways to view the image on the same display device."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:101
-msgid "Default"
+#: ../../manual/render/color_management.rst:139
+msgid "Standard"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:102
-msgid "Does no extra conversion besides the conversion for the display device."
+#: ../../manual/render/color_management.rst:138
+msgid ""
+"Does no extra conversion besides the conversion for the display device. "
+"Often used for non-photorealistic results or video editing where a "
+"specific look is already baked into the input video."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:104
+#: ../../manual/render/color_management.rst:142
 msgid "Filmic"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:104
+#: ../../manual/render/color_management.rst:142
 msgid ""
-"For more photorealistic results and better handling of high dynamic "
-"range. The contrast can be adjusted by changing the *Look* option for the"
-" Filmic view transform."
+"For photorealistic results and better handling of high dynamic range "
+"colors. The contrast can be adjusted by changing the *Look* option for "
+"the Filmic view transform."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:106
-msgid "RRT"
+#: ../../manual/render/color_management.rst:145
+msgid "Filmic Log"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:107
-msgid "Uses the ACES Reference Rendering Transform, to simulate a film-like look."
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:110
-msgid "Film"
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:109
+#: ../../manual/render/color_management.rst:145
 msgid ""
-"Uses a technique known as film emulation to give renders a look similar "
-"to what might be expected from a film-based camera. This is usually done "
-"by crushing the blacks and decreasing the contrast of the image."
+"Converts to Filmic log colorspace. This can be used for export to color "
+"grading applications, or to inspect the image by flattening out very dark"
+" and light areas."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:113
+#: ../../manual/render/color_management.rst:148
 msgid "Raw"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:113
+#: ../../manual/render/color_management.rst:148
 msgid ""
 "Intended for inspecting the image but not for final export. Raw gives the"
 " image without any color space conversion."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:116
-msgid "Log"
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:116
-msgid ""
-"Intended for inspecting the image but not for final export. Log works "
-"similar to Raw but gives a more \"flat\" view of the image without very "
-"dark or light areas."
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:118
+#: ../../manual/render/color_management.rst:150
 msgid "False Color"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:119
+#: ../../manual/render/color_management.rst:151
 msgid "Shows a heat map of image intensities, to visualize the dynamic range."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:121
+#: ../../manual/render/color_management.rst:153
 msgid "Exposure"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:121
+#: ../../manual/render/color_management.rst:153
 msgid ""
 "Used to control the image brightness (in stops) applied before color "
 "space conversion. It is calculated as follows: :math:`output\\_value = "
 "render\\_value × 2^{(exposure)}`"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:125
+#: ../../manual/render/color_management.rst:157
 msgid "Gamma"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:124
+#: ../../manual/render/color_management.rst:156
 msgid ""
 "Extra gamma correction applied after color space conversion. Note that "
-"the default sRGB or Rec709 color space conversions already include a "
-"gamma correction of approximately 2.2 (except the *Raw* and *Log* views),"
-" so this would be applied in addition to that."
+"the default display transforms already perform the appropriate "
+"conversion, so this mainly acts as an additional effect for artistic "
+"tweaks."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:128
+#: ../../manual/render/color_management.rst:160
 msgid "Look"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:128
+#: ../../manual/render/color_management.rst:160
 msgid ""
 "Choose an artistic effect from a set of measured film response data which"
 " roughly emulates the look of certain film types. Applied before color "
 "space conversion."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:133
+#: ../../manual/render/color_management.rst:165
 msgid "Use Curves"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:131
+#: ../../manual/render/color_management.rst:163
 msgid ""
 "Adjust RGB Curves to control image colors before color space conversion. "
 "Read more about using the :ref:`ui-curve-widget`."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:136
+#: ../../manual/render/color_management.rst:168
 msgid "Sequencer"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:142
-#: ../../manual/render/post_process/color_management.rst:169
+#: ../../manual/render/color_management.rst:174
+#: ../../manual/render/color_management.rst:193
 msgid "Color Space"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:139
+#: ../../manual/render/color_management.rst:171
 msgid ""
 "The color space that the Sequencer operates in. By default, the Sequencer"
 " operates in sRGB space, but it can also be set to work in Linear space "
@@ -299,41 +338,29 @@ msgid ""
 "other operations."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:145
+#: ../../manual/render/color_management.rst:177
 msgid "Image Files"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:147
-msgid ""
-"When loading and saving media formats it is important to have color "
-"management in mind. File formats such as PNG or JPEG will typically store"
-" colors in a color space ready for display, not in a linear space. When "
-"they are, for example, used as textures in renders, they need to be "
-"converted to linear first, and when saving renders for display on the "
-"web, they also need to be converted to a display space. Other file "
-"formats like OpenEXR store linear color spaces and as such are useful as "
-"intermediate files in production."
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:154
+#: ../../manual/render/color_management.rst:179
 msgid ""
 "When working with image files, the default color space is usually the "
 "right one. If this is not the case, the color space of the image file can"
 " be configured in the image settings. A common situation where manual "
 "changes are needed is when working with or baking normal maps or "
 "displacement maps, for example. Such maps do not actually store colors, "
-"just data encoded as colors. In such cases, they should be marked as "
-"*Non-Color Data*."
+"just data encoded as colors. Those images should be marked as *Non-Color "
+"Data*."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:161
+#: ../../manual/render/color_management.rst:185
 msgid ""
 "Image data-blocks will always store float buffers in memory in the scene "
 "linear color space, while a byte buffer in memory and files in a drive "
 "are stored in the color space specified with this setting:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:165
+#: ../../manual/render/color_management.rst:189
 msgid ""
 "The color space of the image file on a drive. This depends on the file "
 "format, for example, PNG or JPEG images are often stored in sRGB, while "
@@ -343,11 +370,7 @@ msgid ""
 "images, the color space should be set to *None*."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:173
-msgid "Image settings for color management."
-msgstr ""
-
-#: ../../manual/render/post_process/color_management.rst:175
+#: ../../manual/render/color_management.rst:199
 msgid ""
 "By default only renders are displayed and saved with the render view "
 "transformations applied. These are the Render Result and Viewer image "
@@ -359,33 +382,33 @@ msgid ""
 "transformations applied, with these two settings:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:185
+#: ../../manual/render/color_management.rst:209
 msgid "View as Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:185
+#: ../../manual/render/color_management.rst:209
 msgid ""
 "Display the image data-block (not only renders) with view transform, "
 "exposure, gamma, RGB curves applied. Useful for viewing rendered frames "
 "in linear OpenEXR files the same as when rendering them directly."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:190
+#: ../../manual/render/color_management.rst:214
 msgid "Save as Render"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:188
+#: ../../manual/render/color_management.rst:212
 msgid ""
 "Option in the image save operator to apply the view transform, exposure, "
 "gamma, RGB curves. This is useful for saving linear OpenEXR to e.g. PNG "
 "or JPEG files in display space."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:193
+#: ../../manual/render/color_management.rst:217
 msgid "OpenColorIO Configuration"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:195
+#: ../../manual/render/color_management.rst:219
 msgid ""
 "Blender comes with a standard OpenColorIO configuration that contains a "
 "number of useful display devices and view transforms. The reference "
@@ -393,7 +416,7 @@ msgid ""
 "chromaticities and D65 white point."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:200
+#: ../../manual/render/color_management.rst:224
 msgid ""
 "However, OpenColorIO was also designed to give a consistent user "
 "experience across `multiple applications "
@@ -405,59 +428,87 @@ msgid ""
 "<http://opencolorio.org/>`__."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:207
+#: ../../manual/render/color_management.rst:231
 msgid "We currently use the following color space rules:"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:209
+#: ../../manual/render/color_management.rst:233
 msgid "scene_linear"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:210
+#: ../../manual/render/color_management.rst:234
 msgid ""
 "Color space used for rendering, compositing, and storing all float "
 "precision images in memory."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:211
+#: ../../manual/render/color_management.rst:235
+msgid "data"
+msgstr ""
+
+#: ../../manual/render/color_management.rst:236
+msgid "Color space for non-color data."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:238
+msgid "XYZ"
+msgstr ""
+
+#: ../../manual/render/color_management.rst:238
+msgid ""
+"Standard linear XYZ color space. Used for effects such as blackbody "
+"emission to convert from physical units to the *scene_linear* color "
+"space."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:242
+msgid "color_picking"
+msgstr ""
+
+#: ../../manual/render/color_management.rst:241
+msgid ""
+"Defines the distribution of colors in color pickers. It is expected to be"
+" approximately perceptually linear, have the same gamut as the "
+"*scene_linear* color space, map 0..1 values to 0..1 values in the scene "
+"linear color space for predictable editing of material albedos."
+msgstr ""
+
+#: ../../manual/render/color_management.rst:244
 msgid "default_sequencer"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:212
+#: ../../manual/render/color_management.rst:245
 msgid "Default color space for the Sequencer, *scene_linear* if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:213
+#: ../../manual/render/color_management.rst:246
 msgid "default_byte"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:214
+#: ../../manual/render/color_management.rst:247
 msgid ""
 "Default color space for byte precision images and files, *texture_paint* "
 "if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:216
+#: ../../manual/render/color_management.rst:249
 msgid "default_float"
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:216
+#: ../../manual/render/color_management.rst:249
 msgid ""
 "Default color space for float precision images and files, *scene_linear* "
 "if not specified."
 msgstr ""
 
-#: ../../manual/render/post_process/color_management.rst:218
+#: ../../manual/render/color_management.rst:251
 msgid ""
-"The standard Blender configuration also includes some support for `ACES "
-"<https://www.oscars.org/science-technology/sci-tech-projects/aces>`__ "
-"(`code and documentation <https://github.com/ampas/aces-dev>`__), even "
-"though we have a different linear color space. It is possible to load and"
-" save EXR files with the Linear ACES color space, and the RRT view "
-"transform can be used to view images with their standard display "
-"transform. However, the ACES gamut is larger than the Rec. 709 gamut, so "
-"for best results, an ACES specific configuration file should be used. "
-"OpenColorIO provides an `ACES configuration "
+"The standard Blender configuration includes support for saving and "
+"loading images in `ACES <https://www.oscars.org/science-technology/sci-"
+"tech-projects/aces>`__ (`code and documentation <https://github.com/ampas"
+"/aces-dev>`__) color spaces. However, the ACES gamut is larger than the "
+"Rec. 709 gamut, so for best results, an ACES specific configuration file "
+"should be used. OpenColorIO provides an `ACES configuration "
 "<http://opencolorio.org/configurations/index.html>`__ file, though it may"
 " need a few more tweaks to be usable in production."
 msgstr ""
@@ -592,5 +643,183 @@ msgstr ""
 #~ "Used to control the image brightness "
 #~ "(in stops) applied before color space"
 #~ " conversion. :math:`2^(stops) × value`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Color management is one of the "
+#~ "most important tools that an artist "
+#~ "can use. It allows an artist to"
+#~ " make sure that an image stays "
+#~ "the same from rendering, to saving, "
+#~ "to post-processing. Color management "
+#~ "also allows an artist to tweak "
+#~ "things like exposure, gamma, or the "
+#~ "overall color grade."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To achieve color management in Blender,"
+#~ " the `OpenColorIO <http://opencolorio.org/>`__ "
+#~ "(OCIO) library has been integrated into"
+#~ " Blender. This library offers fine "
+#~ "control over different :abbr:`LUT (Look "
+#~ "Up Table)` along with integrating your"
+#~ " own set of color profiles to "
+#~ "keep your work linearized with other "
+#~ "software."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For correct results, different :term:`color"
+#~ " spaces <color space>` are needed for"
+#~ " rendering display and storage of "
+#~ "images. Rendering and compositing is "
+#~ "best done in scene *linear* color "
+#~ "space, which corresponds more closely to"
+#~ " nature, and makes computations more "
+#~ "physically accurate."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "However, these values do not directly"
+#~ " correspond to human perception or "
+#~ "the way display devices work and "
+#~ "image files are often stored in "
+#~ "different color spaces, so we have "
+#~ "to take care to do the right "
+#~ "conversion into and out of this "
+#~ "linear color space."
+#~ msgstr ""
+
+#~ msgid ":menuselection:`Properties editor --> Scene --> Color Management`"
+#~ msgstr ""
+
+#~ msgid "Scene settings for color management."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Correct display of renders requires a"
+#~ " conversion to the display device "
+#~ "color space, which can be configured "
+#~ "here. A computer monitor works "
+#~ "differently from a digital cinema "
+#~ "projector HDTV. The scene properties "
+#~ "have these settings:"
+#~ msgstr ""
+
+#~ msgid "Default"
+#~ msgstr ""
+
+#~ msgid "Does no extra conversion besides the conversion for the display device."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For more photorealistic results and "
+#~ "better handling of high dynamic range."
+#~ " The contrast can be adjusted by "
+#~ "changing the *Look* option for the "
+#~ "Filmic view transform."
+#~ msgstr ""
+
+#~ msgid "RRT"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Uses the ACES Reference Rendering "
+#~ "Transform, to simulate a film-like "
+#~ "look."
+#~ msgstr ""
+
+#~ msgid "Film"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Uses a technique known as film "
+#~ "emulation to give renders a look "
+#~ "similar to what might be expected "
+#~ "from a film-based camera. This is"
+#~ " usually done by crushing the blacks"
+#~ " and decreasing the contrast of the"
+#~ " image."
+#~ msgstr ""
+
+#~ msgid "Log"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Intended for inspecting the image but"
+#~ " not for final export. Log works "
+#~ "similar to Raw but gives a more"
+#~ " \"flat\" view of the image without"
+#~ " very dark or light areas."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Extra gamma correction applied after "
+#~ "color space conversion. Note that the"
+#~ " default sRGB or Rec709 color space"
+#~ " conversions already include a gamma "
+#~ "correction of approximately 2.2 (except "
+#~ "the *Raw* and *Log* views), so "
+#~ "this would be applied in addition "
+#~ "to that."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When loading and saving media formats"
+#~ " it is important to have color "
+#~ "management in mind. File formats such"
+#~ " as PNG or JPEG will typically "
+#~ "store colors in a color space "
+#~ "ready for display, not in a linear"
+#~ " space. When they are, for example,"
+#~ " used as textures in renders, they"
+#~ " need to be converted to linear "
+#~ "first, and when saving renders for "
+#~ "display on the web, they also need"
+#~ " to be converted to a display "
+#~ "space. Other file formats like OpenEXR"
+#~ " store linear color spaces and as "
+#~ "such are useful as intermediate files"
+#~ " in production."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When working with image files, the "
+#~ "default color space is usually the "
+#~ "right one. If this is not the "
+#~ "case, the color space of the image"
+#~ " file can be configured in the "
+#~ "image settings. A common situation where"
+#~ " manual changes are needed is when"
+#~ " working with or baking normal maps"
+#~ " or displacement maps, for example. "
+#~ "Such maps do not actually store "
+#~ "colors, just data encoded as colors. "
+#~ "In such cases, they should be "
+#~ "marked as *Non-Color Data*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The standard Blender configuration also "
+#~ "includes some support for `ACES "
+#~ "<https://www.oscars.org/science-technology/sci-tech-"
+#~ "projects/aces>`__ (`code and documentation "
+#~ "<https://github.com/ampas/aces-dev>`__), even though"
+#~ " we have a different linear color "
+#~ "space. It is possible to load and"
+#~ " save EXR files with the Linear "
+#~ "ACES color space, and the RRT view"
+#~ " transform can be used to view "
+#~ "images with their standard display "
+#~ "transform. However, the ACES gamut is"
+#~ " larger than the Rec. 709 gamut, "
+#~ "so for best results, an ACES "
+#~ "specific configuration file should be "
+#~ "used. OpenColorIO provides an `ACES "
+#~ "configuration "
+#~ "<http://opencolorio.org/configurations/index.html>`__ file, "
+#~ "though it may need a few more "
+#~ "tweaks to be usable in production."
 #~ msgstr ""
 
