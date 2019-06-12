@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:27+0200\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2017-03-21 23:08+0900\n"
 "Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
 "Language: ja\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:4
+#: ../../manual/render/materials/components/surface.rst:4
 #, fuzzy
 msgid "Surfaces"
 msgstr "サーフェス"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:6
+#: ../../manual/render/materials/components/surface.rst:6
 #, fuzzy
 msgid ""
 "The surface shader defines the light interaction at the surface of the "
@@ -36,21 +36,21 @@ msgstr ""
 "scattering distribution function)` "
 "によって入射した光線が反射されるか、メッシュ内部に屈折して入射するか、吸収されるかが定義されます。"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:10
+#: ../../manual/render/materials/components/surface.rst:10
 msgid ""
 "Emission defines how light is emitted from the surface, allowing any "
 "surface to become a light source."
 msgstr "Emission はそのサーフェスからどのように光線が発射されるかを定義します、全てのサーフェスは光源になる事ができます。"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:15
+#: ../../manual/render/materials/components/surface.rst:15
 msgid "Terminology"
 msgstr "用語"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:18
+#: ../../manual/render/materials/components/surface.rst:18
 msgid "BSDF"
 msgstr "BSDF"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:18
+#: ../../manual/render/materials/components/surface.rst:18
 #, fuzzy
 msgid ""
 "Stands for Bidirectional Scattering Distribution Function. It defines how"
@@ -59,22 +59,22 @@ msgstr ""
 "Bidirectional Scattering Distribution Function "
 "(双方向性拡散分布関数)の略称です。この関数はある表面でどのように光が反射と屈折するかを表します。"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:20
+#: ../../manual/render/materials/components/surface.rst:20
 msgid "Reflection"
 msgstr "Reflection (反射)"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:21
+#: ../../manual/render/materials/components/surface.rst:21
 #, fuzzy
 msgid "BSDFs reflect an incoming ray on the same side of the surface."
 msgstr ""
 ":abbr:`BSDF (Bidirectional Scattering Distribution Function)` "
 "はその表面の同じ面から入射した光線を反射します。"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:22
+#: ../../manual/render/materials/components/surface.rst:22
 msgid "Transmission"
 msgstr "Transmission (透過)"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:23
+#: ../../manual/render/materials/components/surface.rst:23
 #, fuzzy
 msgid ""
 "BSDFs transmit an incoming ray through the surface, leaving on the other "
@@ -83,11 +83,11 @@ msgstr ""
 ":abbr:`BSDF (Bidirectional scattering distribution function)` "
 "はその表面を通る光線を、別の面へと透過させます。"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:27
+#: ../../manual/render/materials/components/surface.rst:27
 msgid "Refraction"
 msgstr "Refraction (屈折)"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:25
+#: ../../manual/render/materials/components/surface.rst:25
 #, fuzzy
 msgid ""
 "BSDFs are a type of *Transmission*, transmitting an incoming ray and "
@@ -96,15 +96,15 @@ msgstr ""
 ":abbr:`BSDF (Bidirectional Scattering Distribution Function)` "
 "は、入射した光線の方向を他の表面から出るように変えて通過させる、 *屈折* の一種です。"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:30
+#: ../../manual/render/materials/components/surface.rst:30
 msgid "BSDF Parameters"
 msgstr "BSDF のパラメータ"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:32
+#: ../../manual/render/materials/components/surface.rst:32
 #, fuzzy
 msgid ""
 "A major difference from non-physically-based renderers is that direct "
-"light reflection from lamps and indirect light reflection of other "
+"light reflection from lights and indirect light reflection of other "
 "surfaces are not decoupled, but rather handled using a single :abbr:`BSDF"
 " (Bidirectional scattering distribution function)`. This limits the "
 "possibilities a bit, but we believe overall it is helpful in creating "
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Roughness"
 msgstr "Roughness (表面粗さ)"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:39
+#: ../../manual/render/materials/components/surface.rst:39
 #, fuzzy
 msgid ""
 "For the glossy :abbr:`BSDF (Bidirectional scattering distribution "
@@ -135,7 +135,7 @@ msgstr ""
 "という範囲を持っているという利点が有り、より線形的な調整とテクスチャ化しやすいという結果につながっています。関係式はおよそ以下のような物です: "
 "*roughness* = 1 - 1/*hardness*"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:48
+#: ../../manual/render/materials/components/surface.rst:48
 #, fuzzy
 msgid ""
 "Currently Blender is coded to use an unsquared model. So if you are using"

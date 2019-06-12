@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 00:07+0100\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2019-04-24 02:16+0100\n"
 "Last-Translator: Hoang Duy Tran <hoangduytran1960@googlemail.com>\n"
 "Language: vi\n"
@@ -45,10 +45,6 @@ msgstr "Bảng -- Panel"
 #: ../../manual/animation/armatures/bones/properties/relations.rst:10
 msgid ":menuselection:`Bone --> Relations`"
 msgstr ":menuselection:`Xương (Bone) --> Mối Quan Hệ (Relations)`"
-
-#: ../../manual/animation/armatures/bones/properties/relations.rst:14
-msgid "The Relations panel."
-msgstr ""
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:16
 msgid ""
@@ -104,10 +100,6 @@ msgstr "Nhóm Xương -- Bone Group"
 msgid "Pose Mode"
 msgstr "Chế Độ Tư Thế -- Pose Mode"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:49
-msgid "The Bone Group data ID."
-msgstr ""
-
 #: ../../manual/animation/armatures/bones/properties/relations.rst:51
 msgid ""
 "To assign a selected bone to a given bone group use the *Bone Group* data"
@@ -123,7 +115,7 @@ msgid "Relative Parenting"
 msgstr "Phụ Huynh Hóa Tương Đối -- Relative Parenting"
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:63
-msgid "ToDo 2.66."
+msgid "Changes how transformation of the bone is applied to its child Objects."
 msgstr ""
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:69
@@ -198,10 +190,6 @@ msgstr ""
 "Exactly like standard children objects. You can modify this behavior on a"
 " per-bone basis, using the Relations panel in the *Bones* tab:"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:110
-msgid "Relations panel in Pose Mode."
-msgstr ""
-
 #: ../../manual/animation/armatures/bones/properties/relations.rst:113
 msgid "Inherit Rotation"
 msgstr "Thừa Kế Độ Xoay -- Inherit Rotation"
@@ -213,7 +201,7 @@ msgid ""
 "armature object space when its parent is rotated."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:116
+#: ../../manual/animation/armatures/bones/properties/relations.rst:115
 msgid "Inherit Scale"
 msgstr "Thừa Kế Tỷ Lệ -- Inherit Scale"
 
@@ -223,39 +211,50 @@ msgid ""
 "parent."
 msgstr ""
 
+#: ../../manual/animation/armatures/bones/properties/relations.rst:119
+msgid "Local Location"
+msgstr ""
+
 #: ../../manual/animation/armatures/bones/properties/relations.rst:118
+msgid ""
+"When disabled, the location transform property is evaluated in the parent"
+" bone's local space, rather than using the bone's own *rest pose* local "
+"space orientation."
+msgstr ""
+
+#: ../../manual/animation/armatures/bones/properties/relations.rst:121
 msgid ""
 "These inheriting behaviors propagate along the bones' hierarchy. So when "
 "you scale down a bone, all its descendants are by default scaled down "
-"accordingly. However, if you set one bone's *Inherit Scale* or *Inherit "
-"Rotation* property on in this \"family\", this will break the scaling "
-"propagation, i.e. this bone *and all its descendants* will no longer be "
-"affected when you scale one of its ancestors."
+"accordingly. However, if you disable one bone's *Inherit Scale* or "
+"*Inherit Rotation* property in this \"family\", this will break the "
+"scaling propagation, i.e. this bone *and all its descendants* will no "
+"longer be affected when you scale one of its ancestors."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:124
+#: ../../manual/animation/armatures/bones/properties/relations.rst:127
 msgid ""
 "Examples of transforming parented/connected bones with Inherit Rotation "
 "disabled."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:129
+#: ../../manual/animation/armatures/bones/properties/relations.rst:132
 msgid "The yellow outlined Inherit Rotation disabled bone in the armature."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:134
+#: ../../manual/animation/armatures/bones/properties/relations.rst:137
 msgid ""
 "Rotation of a bone with an Inherit Rotation disabled bone among its "
 "descendants."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:139
+#: ../../manual/animation/armatures/bones/properties/relations.rst:142
 msgid ""
 "Scaling of a bone with an Inherit Rotation disabled bone among its "
 "descendants."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:141
+#: ../../manual/animation/armatures/bones/properties/relations.rst:144
 msgid ""
 "Connected bones have another specificity: they cannot be translated. "
 "Indeed, as their root must be at their parent's tip, if you do not move "
@@ -271,7 +270,7 @@ msgstr ""
 ":kbd:`G` with a connected bone selected, Blender automatically switches "
 "to rotation operation."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:147
+#: ../../manual/animation/armatures/bones/properties/relations.rst:150
 msgid ""
 "Bones relationships also have important consequences on how selections of"
 " multiple bones behave when transformed. There are many different "
@@ -283,15 +282,15 @@ msgstr ""
 "situations which may not be included on this list, however, this should "
 "give a good idea of the problem:"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:151
+#: ../../manual/animation/armatures/bones/properties/relations.rst:154
 msgid "Non-related selected bones are transformed independently, as usual."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:158
+#: ../../manual/animation/armatures/bones/properties/relations.rst:161
 msgid "Scaling bones, some of them related."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:160
+#: ../../manual/animation/armatures/bones/properties/relations.rst:163
 msgid ""
 "When several bones of the same \"family\" are selected, *only* the \"most"
 " parent\" ones are really transformed -- the descendants are just handled"
@@ -309,13 +308,13 @@ msgstr ""
 "the unselected ones, even though it is selected and active. Otherwise, it"
 " should have been twice smaller!)."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:167
+#: ../../manual/animation/armatures/bones/properties/relations.rst:170
 msgid ""
 "When connected and unconnected bones are selected, and you start a grab "
 "operation, only the unconnected bones are affected."
 msgstr ""
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:169
+#: ../../manual/animation/armatures/bones/properties/relations.rst:172
 msgid ""
 "When a child connected hinge bone is in the selection, and the \"most "
 "parent\" selected one is connected, when you press :kbd:`G`, nothing "
@@ -327,7 +326,7 @@ msgstr ""
 "happens, because Blender remains in grab operation, which of course has "
 "no effect on a connected bone."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:173
+#: ../../manual/animation/armatures/bones/properties/relations.rst:176
 msgid ""
 "So, when posing a chain of bones, you should always edit its elements "
 "from the root bone to the tip bone. This process is known as *forward "
@@ -343,7 +342,7 @@ msgstr ""
 "*inverse kinematics* (IK), which allows you to pose a whole chain just by"
 " moving its tip."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:181
+#: ../../manual/animation/armatures/bones/properties/relations.rst:184
 #, fuzzy
 msgid ""
 "This feature is somewhat extended/completed by the :doc:`pose library "
@@ -351,4 +350,31 @@ msgid ""
 msgstr ""
 "This feature is somewhat extended/completed by the :doc:`pose library "
 "</rigging/armatures/properties/pose_library>` tool."
+
+#~ msgid "The Relations panel."
+#~ msgstr ""
+
+#~ msgid "The Bone Group data ID."
+#~ msgstr ""
+
+#~ msgid "ToDo 2.66."
+#~ msgstr ""
+
+#~ msgid "Relations panel in Pose Mode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These inheriting behaviors propagate along "
+#~ "the bones' hierarchy. So when you "
+#~ "scale down a bone, all its "
+#~ "descendants are by default scaled down"
+#~ " accordingly. However, if you set one"
+#~ " bone's *Inherit Scale* or *Inherit "
+#~ "Rotation* property on in this "
+#~ "\"family\", this will break the scaling"
+#~ " propagation, i.e. this bone *and all"
+#~ " its descendants* will no longer be"
+#~ " affected when you scale one of "
+#~ "its ancestors."
+#~ msgstr ""
 

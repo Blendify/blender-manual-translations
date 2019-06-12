@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:47+0200\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2017-03-21 11:36+0900\n"
 "Last-Translator: Takashi Sugawara <aimaimokomoko@gmail.com>\n"
 "Language: ja\n"
@@ -226,13 +226,13 @@ msgstr ""
 
 #: ../../manual/render/materials/introduction.rst:112
 msgid ""
-"First, you can set the :doc:`Settings </render/cycles/material_settings>`"
-" in the various Material panels."
+"First, you can set the :doc:`Settings </render/materials/settings>` in "
+"the various Material panels."
 msgstr ""
 
 #: ../../manual/render/materials/introduction.rst:114
 msgid ""
-"Second, you can use :doc:`Nodes </render/shaders/nodes/index>`; a "
+"Second, you can use :doc:`Nodes </render/shader_nodes/index>`; a "
 "graphical nodes editor is available."
 msgstr ""
 
@@ -257,106 +257,6 @@ msgid ""
 "texture, multi-texture or GLSL). So it is recommended to always select "
 "the appropriate system settings before starting the design of materials."
 msgstr ""
-
-#: ../../manual/render/materials/introduction.rst:136
-msgid "Surface Shader"
-msgstr "サーフェスシェーダー"
-
-#: ../../manual/render/materials/introduction.rst:138
-#, fuzzy
-msgid ""
-"The :doc:`surface shader </render/materials/components/surface>` defines "
-"the light interaction at the surface of the mesh."
-msgstr "サーフェスシェーダーはメッシュ表面の光に対する反応を定義します。"
-
-#: ../../manual/render/materials/introduction.rst:143
-msgid "Volume Shader"
-msgstr "ボリュームシェーダー"
-
-#: ../../manual/render/materials/introduction.rst:145
-#, fuzzy
-msgid ""
-"When the surface shader does not reflect or absorb light, it enters into "
-"the volume. If no :doc:`volume shader "
-"</render/materials/components/volume>` is specified, it will pass "
-"straight through to the other side of the mesh."
-msgstr "サーフェスシェーダーが光線を反射しないかもしくは吸収する場合、その光線はボリュームに入射します。もしボリュームシェーダーが定義されていない場合、入射した光線は反対側のメッシュに向かって通過します。"
-
-#: ../../manual/render/materials/introduction.rst:149
-msgid ""
-"If it is defined, a volume shader describes the light interaction as it "
-"passes through the volume of the mesh. Light may be scattered, absorbed, "
-"or emitted at any point in the volume."
-msgstr "ボリュームシェーダーが定義されている場合、ボリュームシェーダーはメッシュのボリュームを通過する光線に対する反応を定義します。光線はボリューム内のあらゆる場所で錯乱、吸収あるいは発射されます。"
-
-#: ../../manual/render/materials/introduction.rst:153
-msgid ""
-"A material may have both a surface and a volume shader, or only one of "
-"either. Using both may be useful for materials such as glass, water or "
-"ice, where you want some of the light to be absorbed as it passes through"
-" the surface, combined with e.g. a glass or glossy shader at the surface."
-msgstr "一つのマテリアルはサーフェスシェーダーとボリュームシェーダーの両方、もしくはいずれか一つだけを持ちます。両方を用いてサーフェスでガラスや光沢を表現するシェーダーを組み合わせる事は、光線をある程度吸収させながらその表面を通過させるガラス、水や氷といったマテリアルを表現する上で役立ちます。"
-
-#: ../../manual/render/materials/introduction.rst:160
-msgid "Displacement"
-msgstr "ディスプレイスメント"
-
-#: ../../manual/render/materials/introduction.rst:162
-#, fuzzy
-msgid ""
-"The shape of the surface and the volume inside it may be altered by "
-":doc:`displacement </render/materials/components/displacement>`. This "
-"way, textures can then be used to make the mesh surface more detailed."
-msgstr "サーフェスの形状と内部のボリュームはディスプレイスメントシェーダーによって変化する場合が有ります。これを用いると、メッシュの表面をより詳細に表現するのにテクスチャを用いる事ができます。"
-
-#: ../../manual/render/materials/introduction.rst:166
-msgid ""
-"Depending on the settings, the displacement may be virtual, only "
-"modifying the surface normals to give the impression of displacement, "
-"which is known as bump mapping, or a combination of real and virtual "
-"displacement."
-msgstr "設定によって、ディスプレイスメントは仮想的な物や、サーフェスの法線に対してのみディスプレイスメントの度合いを影響させるバンプマッピングと呼ばれる手法や、実際のディスプレイスメントと仮想のディスプレイスメントとを組み合わせる事ができます。"
-
-#: ../../manual/render/materials/introduction.rst:172
-msgid "Energy Conservation"
-msgstr "エネルギーの節約"
-
-#: ../../manual/render/materials/introduction.rst:174
-#, fuzzy
-msgid ""
-"The material system is built with physically-based rendering in mind, "
-"cleanly separating how a material looks and which rendering algorithm is "
-"used to render it. This makes it easier to achieve realistic results and "
-"balanced lighting, though there are a few things to keep in mind."
-msgstr "マテリアルの機能は物理法則に基づいたレンダリングを行い、どのようにマテリアルが見えるかという事とレンダー処理にどのレンダリングアルゴリズムを用いるかという事を明確に区別します。この仕組みによって、覚えておくべき事がいくつか有りますが、現実感の有る出力結果とバランスの取れたライティング結果を得る事が容易になっています。"
-
-#: ../../manual/render/materials/introduction.rst:179
-#, fuzzy
-msgid ""
-"In order for materials to work well with global illumination, they should"
-" be, speaking in terms of physics, energy conserving. That means they "
-"cannot reflect more light than comes in. This property is not strictly "
-"enforced, but if colors are in the range 0.0 to 1.0, and :abbr:`BSDF "
-"(Bidirectional scattering distribution function)`\\ s are only mixed "
-"together with the Mix Shader node, this will automatically be true."
-msgstr ""
-"多様な光源と調和するマテリアルは、物理における言い方をすれば、省エネルギー的でなければなりません。それは入射する光よりも多くの光を反射しないという事です。この性質は強制的に適用できませんが、カラーが"
-" 0.0 から 1.0 の範囲内であり、 :abbr:`BSDF (Bidirectional scattering distribution "
-"function)` が Mix Shader ノードによってのみ合成される場合、自動的にそのようになります。"
-
-#: ../../manual/render/materials/introduction.rst:186
-msgid ""
-"It is however, possible to break this, with color values higher than 1.0 "
-"or using the Add Shader node, but one must be careful when doing this to "
-"keep materials behaving predictably under various lighting conditions. It"
-" can result in a reflection adding light into the system at each bounce, "
-"turning a :abbr:`BSDF (Bidirectional scattering distribution function)` "
-"into a kind of emitter."
-msgstr ""
-"ただ、1.0 より高いカラー値もしくは Add Shader "
-"ノードを用いる事でこの状態を破綻させる事ができますが、予想される多様な光源下でのマテリアルの振る舞いを維持するため、その処理を行う場合は注意する必要があります。反射する度に光量を増加させる設定によって、"
-" :abbr:`BSDF (Bidirectional scattering distribution function)` "
-"がエミッターのようになってしまうかもしれません。"
 
 #~ msgid ""
 #~ "Materials define the appearance of "
@@ -486,4 +386,132 @@ msgstr ""
 #~ ":doc:`Wire Rendering "
 #~ "</render/shader_nodes/input/wireframe>`."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "First, you can set the :doc:`Settings"
+#~ " </render/cycles/material_settings>` in the "
+#~ "various Material panels."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Second, you can use :doc:`Nodes "
+#~ "</render/shaders/nodes/index>`; a graphical nodes"
+#~ " editor is available."
+#~ msgstr ""
+
+#~ msgid "Surface Shader"
+#~ msgstr "サーフェスシェーダー"
+
+#~ msgid ""
+#~ "The :doc:`surface shader "
+#~ "</render/materials/components/surface>` defines the "
+#~ "light interaction at the surface of "
+#~ "the mesh."
+#~ msgstr "サーフェスシェーダーはメッシュ表面の光に対する反応を定義します。"
+
+#~ msgid "Volume Shader"
+#~ msgstr "ボリュームシェーダー"
+
+#~ msgid ""
+#~ "When the surface shader does not "
+#~ "reflect or absorb light, it enters "
+#~ "into the volume. If no :doc:`volume "
+#~ "shader </render/materials/components/volume>` is "
+#~ "specified, it will pass straight through"
+#~ " to the other side of the mesh."
+#~ msgstr "サーフェスシェーダーが光線を反射しないかもしくは吸収する場合、その光線はボリュームに入射します。もしボリュームシェーダーが定義されていない場合、入射した光線は反対側のメッシュに向かって通過します。"
+
+#~ msgid ""
+#~ "If it is defined, a volume shader"
+#~ " describes the light interaction as "
+#~ "it passes through the volume of "
+#~ "the mesh. Light may be scattered, "
+#~ "absorbed, or emitted at any point "
+#~ "in the volume."
+#~ msgstr "ボリュームシェーダーが定義されている場合、ボリュームシェーダーはメッシュのボリュームを通過する光線に対する反応を定義します。光線はボリューム内のあらゆる場所で錯乱、吸収あるいは発射されます。"
+
+#~ msgid ""
+#~ "A material may have both a surface"
+#~ " and a volume shader, or only "
+#~ "one of either. Using both may be"
+#~ " useful for materials such as glass,"
+#~ " water or ice, where you want "
+#~ "some of the light to be absorbed"
+#~ " as it passes through the surface,"
+#~ " combined with e.g. a glass or "
+#~ "glossy shader at the surface."
+#~ msgstr "一つのマテリアルはサーフェスシェーダーとボリュームシェーダーの両方、もしくはいずれか一つだけを持ちます。両方を用いてサーフェスでガラスや光沢を表現するシェーダーを組み合わせる事は、光線をある程度吸収させながらその表面を通過させるガラス、水や氷といったマテリアルを表現する上で役立ちます。"
+
+#~ msgid "Displacement"
+#~ msgstr "ディスプレイスメント"
+
+#~ msgid ""
+#~ "The shape of the surface and the"
+#~ " volume inside it may be altered "
+#~ "by :doc:`displacement "
+#~ "</render/materials/components/displacement>`. This way,"
+#~ " textures can then be used to "
+#~ "make the mesh surface more detailed."
+#~ msgstr "サーフェスの形状と内部のボリュームはディスプレイスメントシェーダーによって変化する場合が有ります。これを用いると、メッシュの表面をより詳細に表現するのにテクスチャを用いる事ができます。"
+
+#~ msgid ""
+#~ "Depending on the settings, the "
+#~ "displacement may be virtual, only "
+#~ "modifying the surface normals to give"
+#~ " the impression of displacement, which "
+#~ "is known as bump mapping, or a "
+#~ "combination of real and virtual "
+#~ "displacement."
+#~ msgstr "設定によって、ディスプレイスメントは仮想的な物や、サーフェスの法線に対してのみディスプレイスメントの度合いを影響させるバンプマッピングと呼ばれる手法や、実際のディスプレイスメントと仮想のディスプレイスメントとを組み合わせる事ができます。"
+
+#~ msgid "Energy Conservation"
+#~ msgstr "エネルギーの節約"
+
+#~ msgid ""
+#~ "The material system is built with "
+#~ "physically-based rendering in mind, cleanly"
+#~ " separating how a material looks and"
+#~ " which rendering algorithm is used to"
+#~ " render it. This makes it easier "
+#~ "to achieve realistic results and "
+#~ "balanced lighting, though there are a"
+#~ " few things to keep in mind."
+#~ msgstr "マテリアルの機能は物理法則に基づいたレンダリングを行い、どのようにマテリアルが見えるかという事とレンダー処理にどのレンダリングアルゴリズムを用いるかという事を明確に区別します。この仕組みによって、覚えておくべき事がいくつか有りますが、現実感の有る出力結果とバランスの取れたライティング結果を得る事が容易になっています。"
+
+#~ msgid ""
+#~ "In order for materials to work "
+#~ "well with global illumination, they "
+#~ "should be, speaking in terms of "
+#~ "physics, energy conserving. That means "
+#~ "they cannot reflect more light than "
+#~ "comes in. This property is not "
+#~ "strictly enforced, but if colors are "
+#~ "in the range 0.0 to 1.0, and "
+#~ ":abbr:`BSDF (Bidirectional scattering distribution"
+#~ " function)`\\ s are only mixed "
+#~ "together with the Mix Shader node, "
+#~ "this will automatically be true."
+#~ msgstr ""
+#~ "多様な光源と調和するマテリアルは、物理における言い方をすれば、省エネルギー的でなければなりません。それは入射する光よりも多くの光を反射しないという事です。この性質は強制的に適用できませんが、カラーが"
+#~ " 0.0 から 1.0 の範囲内であり、 :abbr:`BSDF "
+#~ "(Bidirectional scattering distribution function)`"
+#~ " が Mix Shader ノードによってのみ合成される場合、自動的にそのようになります。"
+
+#~ msgid ""
+#~ "It is however, possible to break "
+#~ "this, with color values higher than "
+#~ "1.0 or using the Add Shader node,"
+#~ " but one must be careful when "
+#~ "doing this to keep materials behaving"
+#~ " predictably under various lighting "
+#~ "conditions. It can result in a "
+#~ "reflection adding light into the system"
+#~ " at each bounce, turning a "
+#~ ":abbr:`BSDF (Bidirectional scattering distribution"
+#~ " function)` into a kind of emitter."
+#~ msgstr ""
+#~ "ただ、1.0 より高いカラー値もしくは Add Shader "
+#~ "ノードを用いる事でこの状態を破綻させる事ができますが、予想される多様な光源下でのマテリアルの振る舞いを維持するため、その処理を行う場合は注意する必要があります。反射する度に光量を増加させる設定によって、"
+#~ " :abbr:`BSDF (Bidirectional scattering "
+#~ "distribution function)` がエミッターのようになってしまうかもしれません。"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2018-04-30 23:37+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:4
 msgid "Relations"
@@ -44,10 +44,6 @@ msgstr "面板"
 #: ../../manual/animation/armatures/bones/properties/relations.rst:10
 msgid ":menuselection:`Bone --> Relations`"
 msgstr ":menuselection:`Bone --> Relations`"
-
-#: ../../manual/animation/armatures/bones/properties/relations.rst:14
-msgid "The Relations panel."
-msgstr "关系面板。"
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:16
 msgid ""
@@ -99,10 +95,6 @@ msgstr "Bone Group 骨骼组"
 msgid "Pose Mode"
 msgstr "姿态模式"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:49
-msgid "The Bone Group data ID."
-msgstr "骨骼组数据-ID."
-
 #: ../../manual/animation/armatures/bones/properties/relations.rst:51
 msgid ""
 "To assign a selected bone to a given bone group use the *Bone Group* data"
@@ -118,8 +110,8 @@ msgid "Relative Parenting"
 msgstr "Relative Parenting 相对父子关系"
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:63
-msgid "ToDo 2.66."
-msgstr "ToDo 2.66."
+msgid "Changes how transformation of the bone is applied to its child Objects."
+msgstr ""
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:69
 msgid "Parenting"
@@ -191,10 +183,6 @@ msgid ""
 " per-bone basis, using the Relations panel in the *Bones* tab:"
 msgstr "就像标准的子对象。你可以 *骨骼* 标签的关系面板在前面的骨骼的基础上修改此行为:"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:110
-msgid "Relations panel in Pose Mode."
-msgstr "在姿态模式的关系面板。"
-
 #: ../../manual/animation/armatures/bones/properties/relations.rst:113
 msgid "Inherit Rotation"
 msgstr "Inherit Rotation 继承旋转"
@@ -206,7 +194,7 @@ msgid ""
 "armature object space when its parent is rotated."
 msgstr "禁用时，这将“破坏”与骨骼的父级的旋转关系。这意味着当它的父级旋转时，子级将在骨架对象空间中保持旋转。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:116
+#: ../../manual/animation/armatures/bones/properties/relations.rst:115
 msgid "Inherit Scale"
 msgstr "Inherit Scale  继承缩放"
 
@@ -216,41 +204,53 @@ msgid ""
 "parent."
 msgstr "当被禁用时，这将“破坏”与骨骼的父级的缩放关系。"
 
+#: ../../manual/animation/armatures/bones/properties/relations.rst:119
+msgid "Local Location"
+msgstr ""
+
 #: ../../manual/animation/armatures/bones/properties/relations.rst:118
+msgid ""
+"When disabled, the location transform property is evaluated in the parent"
+" bone's local space, rather than using the bone's own *rest pose* local "
+"space orientation."
+msgstr ""
+
+#: ../../manual/animation/armatures/bones/properties/relations.rst:121
+#, fuzzy
 msgid ""
 "These inheriting behaviors propagate along the bones' hierarchy. So when "
 "you scale down a bone, all its descendants are by default scaled down "
-"accordingly. However, if you set one bone's *Inherit Scale* or *Inherit "
-"Rotation* property on in this \"family\", this will break the scaling "
-"propagation, i.e. this bone *and all its descendants* will no longer be "
-"affected when you scale one of its ancestors."
+"accordingly. However, if you disable one bone's *Inherit Scale* or "
+"*Inherit Rotation* property in this \"family\", this will break the "
+"scaling propagation, i.e. this bone *and all its descendants* will no "
+"longer be affected when you scale one of its ancestors."
 msgstr ""
 "这些继承行为沿骨骼层次传播。 所以当你缩小骨骼时，它的所有后代子级按默认值相应缩小。但是，如果在此“系列”中设置了一个骨骼的 *继承缩放* 或 "
 "*继承旋转* 属性，这将打破缩放传播， 当你缩小它的祖先（父级）时，这个骨骼 *和它所有的后代（所有的子级）*  将不再受到影响。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:124
+#: ../../manual/animation/armatures/bones/properties/relations.rst:127
 msgid ""
 "Examples of transforming parented/connected bones with Inherit Rotation "
 "disabled."
 msgstr "将父子/连接的骨骼继承旋转禁用实例。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:129
+#: ../../manual/animation/armatures/bones/properties/relations.rst:132
 msgid "The yellow outlined Inherit Rotation disabled bone in the armature."
 msgstr "在骨架的黄色轮廓骨骼禁用继承旋转。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:134
+#: ../../manual/animation/armatures/bones/properties/relations.rst:137
 msgid ""
 "Rotation of a bone with an Inherit Rotation disabled bone among its "
 "descendants."
 msgstr "禁用继承旋转的骨骼子级骨骼的旋转。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:139
+#: ../../manual/animation/armatures/bones/properties/relations.rst:142
 msgid ""
 "Scaling of a bone with an Inherit Rotation disabled bone among its "
 "descendants."
 msgstr "禁用继承旋转的骨骼子级骨骼的缩放。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:141
+#: ../../manual/animation/armatures/bones/properties/relations.rst:144
 msgid ""
 "Connected bones have another specificity: they cannot be translated. "
 "Indeed, as their root must be at their parent's tip, if you do not move "
@@ -262,7 +262,7 @@ msgstr ""
 "连接的骨骼有另一个特点：它们不能被转换。事实上，由于它们的首端必须是父级的尾端，如果你不移动父级，你就不能移动子级的首端，而只能移动子级的尾端，导致子级的旋转。这究竟是个什么情况，当你按："
 " :kbd:`G` 与连接骨选择时，Blender自动切换到旋转操作。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:147
+#: ../../manual/animation/armatures/bones/properties/relations.rst:150
 msgid ""
 "Bones relationships also have important consequences on how selections of"
 " multiple bones behave when transformed. There are many different "
@@ -270,15 +270,15 @@ msgid ""
 "give a good idea of the problem:"
 msgstr "骨骼关系也对多个骨骼的选择在变换时的行为有重要的影响。然而，有许多不同的情况可能不包括在这个名单上，这应该给出一个好主意的问题："
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:151
+#: ../../manual/animation/armatures/bones/properties/relations.rst:154
 msgid "Non-related selected bones are transformed independently, as usual."
 msgstr "通常，不相关的骨骼被独立转化。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:158
+#: ../../manual/animation/armatures/bones/properties/relations.rst:161
 msgid "Scaling bones, some of them related."
 msgstr "缩放其中一些相关骨骼。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:160
+#: ../../manual/animation/armatures/bones/properties/relations.rst:163
 msgid ""
 "When several bones of the same \"family\" are selected, *only* the \"most"
 " parent\" ones are really transformed -- the descendants are just handled"
@@ -292,13 +292,13 @@ msgstr ""
 ":`fig-rig-pose-edit-scale`  "
 "是黄色轮廓的第三个尾端骨，只是通过父子关系缩小，与未选择的关系完全相同，即使它被选中和活动，否则应该是缩小两次！）。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:167
+#: ../../manual/animation/armatures/bones/properties/relations.rst:170
 msgid ""
 "When connected and unconnected bones are selected, and you start a grab "
 "operation, only the unconnected bones are affected."
 msgstr "当选择了连接和未连接的骨骼，并且您开始移动操作时，只有未连接的骨骼受到影响。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:169
+#: ../../manual/animation/armatures/bones/properties/relations.rst:172
 msgid ""
 "When a child connected hinge bone is in the selection, and the \"most "
 "parent\" selected one is connected, when you press :kbd:`G`, nothing "
@@ -308,7 +308,7 @@ msgstr ""
 "当子级连接链骨骼选择时，\"最多父级\"选择的那个是链接的，当你按 :kbd:`G` "
 "，什么都没发生，因为Blender仍然在移动操作，这当然对连接的骨骼没有影响。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:173
+#: ../../manual/animation/armatures/bones/properties/relations.rst:176
 msgid ""
 "So, when posing a chain of bones, you should always edit its elements "
 "from the root bone to the tip bone. This process is known as *forward "
@@ -321,7 +321,7 @@ msgstr ""
 "<bone-constraints-inverse-kinematics>` Blender具有另一种姿态方法，称为 *反向运动学*  "
 "(IK),这可以让你通过移动其尾端来摆动整个链。"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:181
+#: ../../manual/animation/armatures/bones/properties/relations.rst:184
 #, fuzzy
 msgid ""
 "This feature is somewhat extended/completed by the :doc:`pose library "
@@ -335,4 +335,16 @@ msgstr ""
 
 #~ msgid "Mode:     Pose Mode"
 #~ msgstr "模式:     Pose Mode"
+
+#~ msgid "The Relations panel."
+#~ msgstr "关系面板。"
+
+#~ msgid "The Bone Group data ID."
+#~ msgstr "骨骼组数据-ID."
+
+#~ msgid "ToDo 2.66."
+#~ msgstr "ToDo 2.66."
+
+#~ msgid "Relations panel in Pose Mode."
+#~ msgstr "在姿态模式的关系面板。"
 
