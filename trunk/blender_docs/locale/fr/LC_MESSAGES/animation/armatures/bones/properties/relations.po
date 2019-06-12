@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2018-05-21 18:23+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:4
 msgid "Relations"
@@ -43,10 +43,6 @@ msgstr "Panneau "
 #: ../../manual/animation/armatures/bones/properties/relations.rst:10
 msgid ":menuselection:`Bone --> Relations`"
 msgstr ""
-
-#: ../../manual/animation/armatures/bones/properties/relations.rst:14
-msgid "The Relations panel."
-msgstr "Le panneau Relations."
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:16
 msgid ""
@@ -108,10 +104,6 @@ msgstr "Bone Group (groupe d'os)"
 msgid "Pose Mode"
 msgstr "Mode Pose"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:49
-msgid "The Bone Group data ID."
-msgstr "Le data-ID du groupe d'os."
-
 #: ../../manual/animation/armatures/bones/properties/relations.rst:51
 msgid ""
 "To assign a selected bone to a given bone group use the *Bone Group* data"
@@ -129,7 +121,7 @@ msgid "Relative Parenting"
 msgstr ""
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:63
-msgid "ToDo 2.66."
+msgid "Changes how transformation of the bone is applied to its child Objects."
 msgstr ""
 
 #: ../../manual/animation/armatures/bones/properties/relations.rst:69
@@ -211,10 +203,6 @@ msgstr ""
 "comportement sur la base , en utilisant la panneau *Relations* dans "
 "l'onglet *Bones* :"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:110
-msgid "Relations panel in Pose Mode."
-msgstr "la panneau Relations en Mode Pose."
-
 #: ../../manual/animation/armatures/bones/properties/relations.rst:113
 msgid "Inherit Rotation"
 msgstr ""
@@ -229,7 +217,7 @@ msgstr ""
 "parent de l'os. Ceci signifie que l'enfant va garder sa rotation dans "
 "l'espace objet de l'armature quand son parent est tourné."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:116
+#: ../../manual/animation/armatures/bones/properties/relations.rst:115
 msgid "Inherit Scale"
 msgstr ""
 
@@ -241,14 +229,26 @@ msgstr ""
 "Si l'option est désactivée, ceci va *casser* la relation d'échelle au "
 "parent de l'os."
 
+#: ../../manual/animation/armatures/bones/properties/relations.rst:119
+msgid "Local Location"
+msgstr ""
+
 #: ../../manual/animation/armatures/bones/properties/relations.rst:118
+msgid ""
+"When disabled, the location transform property is evaluated in the parent"
+" bone's local space, rather than using the bone's own *rest pose* local "
+"space orientation."
+msgstr ""
+
+#: ../../manual/animation/armatures/bones/properties/relations.rst:121
+#, fuzzy
 msgid ""
 "These inheriting behaviors propagate along the bones' hierarchy. So when "
 "you scale down a bone, all its descendants are by default scaled down "
-"accordingly. However, if you set one bone's *Inherit Scale* or *Inherit "
-"Rotation* property on in this \"family\", this will break the scaling "
-"propagation, i.e. this bone *and all its descendants* will no longer be "
-"affected when you scale one of its ancestors."
+"accordingly. However, if you disable one bone's *Inherit Scale* or "
+"*Inherit Rotation* property in this \"family\", this will break the "
+"scaling propagation, i.e. this bone *and all its descendants* will no "
+"longer be affected when you scale one of its ancestors."
 msgstr ""
 "Ces comportements hérités propagent sur la hiérarchie des os. Ainsi quand"
 " vous réduisez l'échelle d'un os, tous ses descendants sont par défaut "
@@ -257,7 +257,7 @@ msgstr ""
 "propagation d'échelle, càd. que cet os *et tous ses descendants* ne "
 "seront plus affectés quand vous mettez à l'échelle un de ses ancêtres."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:124
+#: ../../manual/animation/armatures/bones/properties/relations.rst:127
 msgid ""
 "Examples of transforming parented/connected bones with Inherit Rotation "
 "disabled."
@@ -265,13 +265,13 @@ msgstr ""
 "Exemples de transformation d'os parentés/connectés avec Inherit Rotation "
 "désactivé."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:129
+#: ../../manual/animation/armatures/bones/properties/relations.rst:132
 msgid "The yellow outlined Inherit Rotation disabled bone in the armature."
 msgstr ""
 "Les lignes jaunes entourent l'os *Inherit Rotation disabled* dans "
 "l'armature."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:134
+#: ../../manual/animation/armatures/bones/properties/relations.rst:137
 msgid ""
 "Rotation of a bone with an Inherit Rotation disabled bone among its "
 "descendants."
@@ -279,7 +279,7 @@ msgstr ""
 "Rotation d'un os avec un os *Inherit Rotation disabled* parmi ses "
 "descendants."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:139
+#: ../../manual/animation/armatures/bones/properties/relations.rst:142
 msgid ""
 "Scaling of a bone with an Inherit Rotation disabled bone among its "
 "descendants."
@@ -287,7 +287,7 @@ msgstr ""
 "Mise à l'échelle d'un os avec un os *Inherit Rotation disabled* parmi ses"
 " descendants."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:141
+#: ../../manual/animation/armatures/bones/properties/relations.rst:144
 msgid ""
 "Connected bones have another specificity: they cannot be translated. "
 "Indeed, as their root must be at their parent's tip, if you do not move "
@@ -304,7 +304,7 @@ msgstr ""
 "quand vous pressez :kbd:`G` avec  un os connecté sélectionné, Blender "
 "bascule automatiquement dans une opération de rotation."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:147
+#: ../../manual/animation/armatures/bones/properties/relations.rst:150
 msgid ""
 "Bones relationships also have important consequences on how selections of"
 " multiple bones behave when transformed. There are many different "
@@ -317,17 +317,17 @@ msgstr ""
 "pas être incluses sur cette liste, cependant, ceci devrait donner une "
 "bonne idée du problème :"
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:151
+#: ../../manual/animation/armatures/bones/properties/relations.rst:154
 msgid "Non-related selected bones are transformed independently, as usual."
 msgstr ""
 "Les os sélectionnés non en relation sont transformés indépendamment, "
 "comme d'habitude."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:158
+#: ../../manual/animation/armatures/bones/properties/relations.rst:161
 msgid "Scaling bones, some of them related."
 msgstr "Mise à l'échelle des os, certains d'entre eux étant connectés."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:160
+#: ../../manual/animation/armatures/bones/properties/relations.rst:163
 msgid ""
 "When several bones of the same \"family\" are selected, *only* the \"most"
 " parent\" ones are really transformed -- the descendants are just handled"
@@ -346,7 +346,7 @@ msgstr ""
 "sélectionné et actif. Autrement, il devrait être deux fois plus petit !)."
 " "
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:167
+#: ../../manual/animation/armatures/bones/properties/relations.rst:170
 msgid ""
 "When connected and unconnected bones are selected, and you start a grab "
 "operation, only the unconnected bones are affected."
@@ -354,7 +354,7 @@ msgstr ""
 "Quand les os connectés et non connectés sont sélectionnés, et vous "
 "débutez une opération *grab*, seuls les os non connectés sont affectés."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:169
+#: ../../manual/animation/armatures/bones/properties/relations.rst:172
 msgid ""
 "When a child connected hinge bone is in the selection, and the \"most "
 "parent\" selected one is connected, when you press :kbd:`G`, nothing "
@@ -366,7 +366,7 @@ msgstr ""
 "passe, parce que Blender reste dans l'opération *Grab*, qui bien entendu "
 "n'a aucun effet sur un os connecté."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:173
+#: ../../manual/animation/armatures/bones/properties/relations.rst:176
 msgid ""
 "So, when posing a chain of bones, you should always edit its elements "
 "from the root bone to the tip bone. This process is known as *forward "
@@ -382,7 +382,7 @@ msgstr ""
 " autre méthode de pose, appelée *inverse kinematics* (IK), qui vous "
 "permet de poser une chaîne entière simplement en déplaçant son extrémité."
 
-#: ../../manual/animation/armatures/bones/properties/relations.rst:181
+#: ../../manual/animation/armatures/bones/properties/relations.rst:184
 #, fuzzy
 msgid ""
 "This feature is somewhat extended/completed by the :doc:`pose library "
@@ -399,4 +399,16 @@ msgstr ""
 
 #~ msgid "Mode:     Pose Mode"
 #~ msgstr "Mode :     Pose Mode"
+
+#~ msgid "The Relations panel."
+#~ msgstr "Le panneau Relations."
+
+#~ msgid "The Bone Group data ID."
+#~ msgstr "Le data-ID du groupe d'os."
+
+#~ msgid "ToDo 2.66."
+#~ msgstr ""
+
+#~ msgid "Relations panel in Pose Mode."
+#~ msgstr "la panneau Relations en Mode Pose."
 

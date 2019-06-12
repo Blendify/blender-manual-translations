@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:47+0200\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2018-01-20 12:42+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -63,6 +63,7 @@ msgstr ""
 "простеженням шляху."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:27
+#, fuzzy
 msgid ""
 "We do the inverse of what reality does, tracing light rays from the "
 "camera into the scene and onto lights, rather than from the light sources"
@@ -70,8 +71,7 @@ msgid ""
 "do not waste light rays that will not end up in the camera, but also "
 "means that it is difficult to find some light paths that may contribute a"
 " lot. Light rays will be sent either according to the surface BRDF, or in"
-" the direction of known light sources (lamps, emitting meshes with Sample"
-" as Lamp)."
+" the direction of known light sources."
 msgstr ""
 "Ми робимо зворотне до того, що відбувається у реальності, простежуючи "
 "світлові промені від камери у сцену та на освітлювачі, а не з джерел "
@@ -86,8 +86,8 @@ msgstr ""
 #, fuzzy
 msgid ""
 "For more details, see the :doc:`Light Paths "
-"</render/cycles/render_settings/light_paths>` and :doc:`Integrator "
-"</render/cycles/render_settings/integrator>` documentation."
+"</render/cycles/render_settings/light_paths>` and :doc:`Sampling "
+"</render/cycles/render_settings/sampling>` documentation."
 msgstr ""
 "Детальніше дивіться тут -- :doc:`Light Paths "
 "</render/cycles/settings/scene/render/light_paths>` та тут -- "
@@ -110,10 +110,11 @@ msgstr ""
 "відтінювач дифузії, розсіяння."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:49
+#, fuzzy
 msgid ""
 "To find the light that is reflected from this surface, we need to find "
 "the average color from all these pixels. Note the glossy highlight on the"
-" sphere, and the bright spot the lamp casts on the nearby wall. These "
+" sphere, and the bright spot the light casts on the nearby wall. These "
 "hotspots are 100x brighter than other parts of the image and will "
 "contribute significantly to the lighting of this pixel."
 msgstr ""
@@ -140,8 +141,9 @@ msgid "The detected highlights."
 msgstr "Виявлені Підсвітки."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:72
+#, fuzzy
 msgid ""
-"The lamp is a known light source, so its location is already known, but "
+"The light is a known light source, so its location is already known, but "
 "the glossy highlight(s) that it causes are a different matter. The best "
 "we can do with path tracing is to distribute light rays randomly over the"
 " hemisphere, hoping to find all the important bright spots. If for some "
@@ -352,13 +354,13 @@ msgstr "Багатовибірка за Значністю -- Multiple Importanc
 #, fuzzy
 msgid ""
 "Materials with emission shaders can be configured to use Multiple "
-"Importance Sampling (:doc:`/render/engines/cycles/materials/settings`). "
-"This means that they will get rays sent directly towards them, rather "
-"than ending up there based on rays randomly bouncing around. For very "
-"bright mesh light sources, this can reduce noise significantly. However, "
-"when the emission is not particularly bright, this will take samples away"
-" from other brighter light sources for which it is important to find them"
-" this way."
+"Importance Sampling (:doc:`/render/cycles/material_settings`). This means"
+" that they will get rays sent directly towards them, rather than ending "
+"up there based on rays randomly bouncing around. For very bright mesh "
+"light sources, this can reduce noise significantly. However, when the "
+"emission is not particularly bright, this will take samples away from "
+"other brighter light sources for which it is important to find them this "
+"way."
 msgstr ""
 "Матеріали з відтінювачем Emission можуть бути налаштовані, щоб "
 "використовувати Багатовибірку за Значністю -- Multiple Importance "
@@ -371,10 +373,11 @@ msgstr ""
 "виявити їх таким способом."
 
 #: ../../manual/render/cycles/optimizations/reducing_noise.rst:217
+#, fuzzy
 msgid ""
 "The optimal setting here is difficult to guess; it may be a matter of "
 "trial and error, but often it is clear that a somewhat glowing object may"
-" be only contributing light locally, while a mesh light used as a lamp "
+" be only contributing light locally, while a mesh light used as a light "
 "would need this option enabled. Here is an example where the emissive "
 "spheres contribute little to the lighting, and the image renders with "
 "slightly less noise by disabling Multiple Importance on them."
@@ -466,8 +469,7 @@ msgid ""
 "When rendering a daylight indoor scene where most of the light is coming "
 "in through a window or door opening, it is difficult for the integrator "
 "to find its way to them. To fix this, use :ref:`Light Portals <render-"
-"cycles-lamps-area-portals>`, these work by adding an :ref:`Area Lamp "
-"<render-cycles-lamps-area>`. You then will need to modify its shape to "
+"cycles-lights-area-portals>`. You then will need to modify its shape to "
 "match that of the opening that you are trying to fill."
 msgstr ""
 "При рендерингу інтер'єрної сцени, освітленої денним світлом, в якій "
@@ -479,11 +481,11 @@ msgstr ""
 "відповідно до форми отвору, через яке світло надходить і джерело якого ви"
 " намагаєтеся заповнити."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:289
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:288
 msgid "Denoising"
 msgstr "Знешумлення -- Denoising"
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:291
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:290
 #, fuzzy
 msgid ""
 "Even with all the settings described above there will always end up being"
@@ -500,7 +502,7 @@ msgstr ""
 "у вкладці «Шари Зобража» -- *Render Layers* Редактора Властивостей -- "
 "Properties Editor."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:297
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:296
 msgid ""
 "Below is an example render by `The Pixelary "
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
@@ -510,19 +512,19 @@ msgstr ""
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
 "tested>`__."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:304
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:303
 msgid "Example render before denoising."
 msgstr "Приклад рендера перед знешумленням."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:308
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:307
 msgid "Example render after denoising."
 msgstr "Приклад рендера після знешумлення."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:314
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:313
 msgid "Clamp Fireflies"
 msgstr "Затиск Світлячків -- Clamp Fireflies"
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:316
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:315
 msgid ""
 "Ideally with all the previous tricks, fireflies would be eliminated, but "
 "they could still happen. For that, the *intensity* that any individual "
@@ -537,7 +539,7 @@ msgstr ""
 " «Затиск» -- :ref:`Clamp setting <render-cycles-integrator-clamp-"
 "samples>` для інтегратора."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:320
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:319
 msgid ""
 "If set too low this can cause missing highlights in the image, which "
 "might be useful to preserve for camera effects such as bloom or glare. To"
@@ -550,11 +552,11 @@ msgstr ""
 " корисно затискати тільки побічні -- indirect відскоки, залишаючи "
 "підсвітки, що прямо (directly) видимі для камери, неторканими."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:330
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:329
 msgid "No Clamp (0)."
 msgstr "Без затиску -- Clamp на 0."
 
-#: ../../manual/render/cycles/optimizations/reducing_noise.rst:335
+#: ../../manual/render/cycles/optimizations/reducing_noise.rst:334
 msgid "With Clamp set to 4."
 msgstr "Із затиском -- Clamp на 4."
 

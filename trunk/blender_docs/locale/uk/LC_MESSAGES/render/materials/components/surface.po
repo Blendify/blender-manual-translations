@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:27+0200\n"
+"POT-Creation-Date: 2019-06-12 16:58+0200\n"
 "PO-Revision-Date: 2019-02-03 22:40+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:4
+#: ../../manual/render/materials/components/surface.rst:4
 msgid "Surfaces"
 msgstr "Поверхні -- Surfaces"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:6
+#: ../../manual/render/materials/components/surface.rst:6
 msgid ""
 "The surface shader defines the light interaction at the surface of the "
 "mesh. One or more :abbr:`BSDF (Bidirectional scattering distribution "
@@ -32,7 +32,7 @@ msgstr ""
 "function)` визначають, чи вхідне світло відбивається назад, заломлюється "
 "через сіть або поглинається."
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:10
+#: ../../manual/render/materials/components/surface.rst:10
 msgid ""
 "Emission defines how light is emitted from the surface, allowing any "
 "surface to become a light source."
@@ -40,15 +40,15 @@ msgstr ""
 "Emission -- емісія визначає, як світло емітується з поверхні, дозволяючи "
 "будь-якій поверхні стати джерелом освітлення."
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:15
+#: ../../manual/render/materials/components/surface.rst:15
 msgid "Terminology"
 msgstr "Термінологія"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:18
+#: ../../manual/render/materials/components/surface.rst:18
 msgid "BSDF"
 msgstr "BSDF"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:18
+#: ../../manual/render/materials/components/surface.rst:18
 msgid ""
 "Stands for Bidirectional Scattering Distribution Function. It defines how"
 " light is reflected and refracted at a surface."
@@ -57,19 +57,19 @@ msgstr ""
 "Розподілу Двонапрямного Розсіювання. Вона визначає, як світло "
 "відбивається та заломлюється поверхнею."
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:20
+#: ../../manual/render/materials/components/surface.rst:20
 msgid "Reflection"
 msgstr "Reflection -- Відбиття"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:21
+#: ../../manual/render/materials/components/surface.rst:21
 msgid "BSDFs reflect an incoming ray on the same side of the surface."
 msgstr "Ці BSDF'и відбивають вхідний промінь на тій же стороні поверхні."
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:22
+#: ../../manual/render/materials/components/surface.rst:22
 msgid "Transmission"
 msgstr "Пропускання -- Transmission"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:23
+#: ../../manual/render/materials/components/surface.rst:23
 msgid ""
 "BSDFs transmit an incoming ray through the surface, leaving on the other "
 "side."
@@ -77,11 +77,11 @@ msgstr ""
 "Ці BSDF'и пропускають вхідний промінь крізь поверхню, залишаючи на іншій "
 "стороні."
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:27
+#: ../../manual/render/materials/components/surface.rst:27
 msgid "Refraction"
 msgstr "Заломлення -- Refraction"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:25
+#: ../../manual/render/materials/components/surface.rst:25
 msgid ""
 "BSDFs are a type of *Transmission*, transmitting an incoming ray and "
 "changing its direction as it exits on the other side of the surface."
@@ -90,14 +90,15 @@ msgstr ""
 " променя та змінення його напрямку при виході його з іншого боку "
 "поверхні."
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:30
+#: ../../manual/render/materials/components/surface.rst:30
 msgid "BSDF Parameters"
 msgstr "Параметри BSDF"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:32
+#: ../../manual/render/materials/components/surface.rst:32
+#, fuzzy
 msgid ""
 "A major difference from non-physically-based renderers is that direct "
-"light reflection from lamps and indirect light reflection of other "
+"light reflection from lights and indirect light reflection of other "
 "surfaces are not decoupled, but rather handled using a single :abbr:`BSDF"
 " (Bidirectional scattering distribution function)`. This limits the "
 "possibilities a bit, but we believe overall it is helpful in creating "
@@ -115,7 +116,7 @@ msgstr ""
 msgid "Roughness"
 msgstr "Roughness -- Шорсткість"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:39
+#: ../../manual/render/materials/components/surface.rst:39
 msgid ""
 "For the glossy :abbr:`BSDF (Bidirectional scattering distribution "
 "function)`\\ s, the *roughness* parameter controls the sharpness of the "
@@ -133,7 +134,7 @@ msgstr ""
 "більший прямолінійний контроль, і є більш легко здатним для "
 "текстурування. Грубе співвідношення: *roughness* = 1 - 1/*hardness*"
 
-#: ../../manual/render/engines/cycles/materials/surface.rst:48
+#: ../../manual/render/materials/components/surface.rst:48
 #, fuzzy
 msgid ""
 "Currently Blender is coded to use an unsquared model. So if you are using"
