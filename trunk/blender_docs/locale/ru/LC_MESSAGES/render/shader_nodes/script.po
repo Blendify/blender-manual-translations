@@ -1,0 +1,521 @@
+# Этот файл является частью перевода руководства к Blender'у.
+# Соответствующая страница руководства может быть получена по адресу
+#
+#
+# https://docs.blender.org/manual/ru/dev/render/cycles/nodes/types/script.html
+# Этот файл распространяется под всемирной лицензией CC-BY-SA 4.0
+# https://creativecommons.org/licenses/by-sa/4.0/deed.ru
+# Список переводчиков
+# ===================
+# Mingun <alexander_sergey@mail.ru>, 2016 - 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: Руководство по Blender 2.78\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-12 13:27+0200\n"
+"PO-Revision-Date: 2017-02-23 18:40+0500\n"
+"Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../manual/render/shader_nodes/script.rst:6
+msgid "Script Node"
+msgstr "Узел «Скрипт»"
+
+#~ msgid "Script Node."
+#~ msgstr "Узел «Скрипт»"
+
+#~ msgid ""
+#~ "OSL was designed for node-based "
+#~ "shading, and *each* OSL shader "
+#~ "corresponds to *one* node in a "
+#~ "node setup. To add an OSL shader,"
+#~ " add a script node and link it"
+#~ " to a text data-block or an "
+#~ "external file. Input and output sockets"
+#~ " will be created from the shader "
+#~ "parameters on clicking the update button"
+#~ " in the Node or the Text "
+#~ "editor."
+#~ msgstr ""
+#~ "OSL был спроектирован для затенения, "
+#~ "основанного на узлах, так что *каждый*"
+#~ " шейдер OSL соответствует *одному* узлу "
+#~ "в редакторе узлов. Для добавления "
+#~ "шейдера OSL, добавьте узел скрипта и "
+#~ "свяжите его с текстовым блоком данных"
+#~ " или внешним файлом. Входные и "
+#~ "выходные сокеты будут созданы из "
+#~ "параметров шейдера после нажатия на "
+#~ "кнопку обновления в узле или в "
+#~ "текстовом редакторе."
+
+#~ msgid ""
+#~ "OSL shaders can be linked to the"
+#~ " node in a few different ways. "
+#~ "With the *Internal* mode, a text "
+#~ "data-block is used to store the "
+#~ "OSL shader, and the OSO bytecode "
+#~ "is stored in the node itself. This"
+#~ " is useful for distributing a "
+#~ "blend-file with everything packed into "
+#~ "it."
+#~ msgstr ""
+#~ "Шейдеры OSL могут быть связаны с "
+#~ "узлом несколькими различными способами. При"
+#~ " использовании режима *Встроенный* для "
+#~ "хранения шейдера OSL будет использоваться "
+#~ "текстовый блок данных, а байт-код OSO"
+#~ " будет сохранён в самом узле. Это "
+#~ "полезно для распространения blend-файла без"
+#~ " зависимостей."
+
+#~ msgid ""
+#~ "The *External* mode can be used to"
+#~ " specify a ``.osl`` file from a "
+#~ "drive, and this will then be "
+#~ "automatically compiled into a ``.oso`` "
+#~ "file in the same directory. It is"
+#~ " also possible to specify a path "
+#~ "to a ``.oso`` file, which will "
+#~ "then be used directly, with compilation"
+#~ " done manually by the user. The "
+#~ "third option is to specify just "
+#~ "the module name, which will be "
+#~ "looked up in the shader search "
+#~ "path."
+#~ msgstr ""
+#~ "Режим *Внешний* может использоваться для "
+#~ "указания файла ``.osl`` на диске, "
+#~ "который будет автоматически скомпилирован в"
+#~ " файл ``.oso`` и помещён в тот "
+#~ "же каталог. Так же возможно определить"
+#~ " путь непосредственно к файлу ``.oso``, "
+#~ "который в таком случае будет "
+#~ "использоваться напрямую и должен будет "
+#~ "компилироваться пользователем самостоятельно. "
+#~ "Третьим вариантом можно указать просто "
+#~ "имя модуля, который будет искаться по"
+#~ " пути поиска шейдеров."
+
+#~ msgid ""
+#~ "The shader search path is located "
+#~ "in the same place as the scripts"
+#~ " or configuration path, under:"
+#~ msgstr ""
+#~ "Шейдеры ищутся в том же самом "
+#~ "месте, где расположены все остальные "
+#~ "скрипты или другая конфигурация:"
+
+#~ msgid "Linux"
+#~ msgstr "Linux"
+
+#~ msgid "MS-Windows"
+#~ msgstr "MS-Windows"
+
+#~ msgid "macOS"
+#~ msgstr "macOS"
+
+#~ msgid ""
+#~ "For use in production, we suggest "
+#~ "to use a node group to wrap "
+#~ "shader script nodes, and link that "
+#~ "into other blend-files. This makes "
+#~ "it easier to make changes to the"
+#~ " node afterwards as sockets are added"
+#~ " or removed, without having to update"
+#~ " the script nodes in all files."
+#~ msgstr ""
+#~ "Для использования в реальной работе, мы"
+#~ " предлагаем использовать узел группы, "
+#~ "обёртывающий узлы скрипта и ссылаться на"
+#~ " него из других blend-файлов. Это "
+#~ "упростит внесение изменений в узел после"
+#~ " добавления или удаления сокетов, без "
+#~ "необходимости в обновлении узлов скриптов "
+#~ "во всех файлах."
+
+#~ msgid "Writing Shaders"
+#~ msgstr "Написание шейдеров"
+
+#~ msgid ""
+#~ "For more details on how to write"
+#~ " shaders, see the `OSL specification "
+#~ "<https://github.com/imageworks/OpenShadingLanguage/blob/master/src/doc"
+#~ "/osl-languagespec.pdf>`__. Here is a simple"
+#~ " example:"
+#~ msgstr ""
+#~ "Более подробную информацию о том, как"
+#~ " писать шейдеры, смотрите в `спецификации"
+#~ " OSL "
+#~ "<https://github.com/imageworks/OpenShadingLanguage/blob/master/src/doc"
+#~ "/osl-languagespec.pdf>`__ (на английском языке)."
+#~ " Здесь приводится лишь простой пример:"
+
+#~ msgid "Closures"
+#~ msgstr "Замыкания"
+
+#~ msgid ""
+#~ "OSL is different from, for example, "
+#~ "RSL or GLSL, in that it does "
+#~ "not have a light loop. There is"
+#~ " no access to lights in the "
+#~ "scene, and the material must be "
+#~ "built from closures that are implemented"
+#~ " in the renderer itself. This is "
+#~ "more limited, but also makes it "
+#~ "possible for the renderer to do "
+#~ "optimizations and ensure all shaders can"
+#~ " be importance sampled."
+#~ msgstr ""
+#~ "OSL отличается от, например, RSL или "
+#~ "GLSL, в том, что он не имеет "
+#~ "светового цикла. У вас нет доступа "
+#~ "к источникам света в сцене, а "
+#~ "материалы должны быть собраны из "
+#~ "замыканий, реализованных в самом движке "
+#~ "визуализации. Этот подход более ограничен, "
+#~ "однако при этом он позволяет движку "
+#~ "визуализации проводить некоторые оптимизации и"
+#~ " гарантировать, что все шейдеры будут "
+#~ "значимы для выборки."
+
+#~ msgid ""
+#~ "The available closures in Cycles "
+#~ "correspond to the shader nodes and "
+#~ "their sockets; for more details on "
+#~ "what they do and the meaning of"
+#~ " the parameters, see the :doc:`shader "
+#~ "nodes manual </render/shaders/nodes/types/shaders/index>`."
+#~ msgstr ""
+#~ "Доступные замыкания в Cycles соответствуют "
+#~ "узлам шейдера и его сокетам; "
+#~ "дополнительную информацию о том, что они"
+#~ " делают и каков смысл каждого "
+#~ "параметра смотрите в :doc:`руководстве по "
+#~ "узлам шейдера </render/cycles/nodes/types/shaders/index>`."
+
+#~ msgid "BSDF"
+#~ msgstr "BSDF"
+
+#~ msgid "``diffuse(N)``"
+#~ msgstr "``diffuse(N)``"
+
+#~ msgid "``oren_nayar(N, roughness)``"
+#~ msgstr "``oren_nayar(N, roughness)``"
+
+#~ msgid "``diffuse_ramp(N, colors[8])``"
+#~ msgstr "``diffuse_ramp(N, colors[8])``"
+
+#~ msgid "``phong_ramp(N, exponent, colors[8])``"
+#~ msgstr "``phong_ramp(N, exponent, colors[8])``"
+
+#~ msgid "``diffuse_toon(N, size, smooth)``"
+#~ msgstr "``diffuse_toon(N, size, smooth)``"
+
+#~ msgid "``glossy_toon(N, size, smooth)``"
+#~ msgstr "``glossy_toon(N, size, smooth)``"
+
+#~ msgid "``translucent(N)``"
+#~ msgstr "``translucent(N)``"
+
+#~ msgid "``reflection(N)``"
+#~ msgstr "``reflection(N)``"
+
+#~ msgid "``refraction(N, ior)``"
+#~ msgstr "``refraction(N, ior)``"
+
+#~ msgid "``transparent()``"
+#~ msgstr "``transparent()``"
+
+#~ msgid "``microfacet_ggx(N, roughness)``"
+#~ msgstr "``microfacet_ggx(N, roughness)``"
+
+#~ msgid "``microfacet_ggx_aniso(N, T, ax, ay)``"
+#~ msgstr "``microfacet_ggx_aniso(N, T, ax, ay)``"
+
+#~ msgid "``microfacet_ggx_refraction(N, roughness, ior)``"
+#~ msgstr "``microfacet_ggx_refraction(N, roughness, ior)``"
+
+#~ msgid "``microfacet_beckmann(N, roughness)``"
+#~ msgstr "``microfacet_beckmann(N, roughness)``"
+
+#~ msgid "``microfacet_beckmann_aniso(N, T, ax, ay)``"
+#~ msgstr "``microfacet_beckmann_aniso(N, T, ax, ay)``"
+
+#~ msgid "``microfacet_beckmann_refraction(N, roughness, ior)``"
+#~ msgstr "``microfacet_beckmann_refraction(N, roughness, ior)``"
+
+#~ msgid "``ashikhmin_shirley(N, T, ax, ay)``"
+#~ msgstr "``ashikhmin_shirley(N, T, ax, ay)``"
+
+#~ msgid "``ashikhmin_velvet(N, roughness)``"
+#~ msgstr "``ashikhmin_velvet(N, roughness)``"
+
+#~ msgid "Hair"
+#~ msgstr "Волосы"
+
+#~ msgid "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
+#~ msgstr "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
+
+#~ msgid "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
+#~ msgstr "``hair_transmission(N, roughnessu, roughnessv, T, offset)``"
+
+#~ msgid ""
+#~ "``principled_hair(N, absorption, roughness, "
+#~ "radial_roughness, coat, offset, IOR)``"
+#~ msgstr "``hair_reflection(N, roughnessu, roughnessv, T, offset)``"
+
+#~ msgid "BSSRDF"
+#~ msgstr "BSSRDF"
+
+#~ msgid "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
+#~ msgstr "``bssrdf_cubic(N, radius, texture_blur, sharpness)``"
+
+#~ msgid "``bssrdf_gaussian(N, radius, texture_blur)``"
+#~ msgstr "``bssrdf_gaussian(N, radius, texture_blur)``"
+
+#~ msgid "Volume"
+#~ msgstr "Объём"
+
+#~ msgid "``henyey_greenstein(g)``"
+#~ msgstr "``henyey_greenstein(g)``"
+
+#~ msgid "``absorption()``"
+#~ msgstr "``absorption()``"
+
+#~ msgid "Other"
+#~ msgstr "Другие"
+
+#~ msgid "``emission()``"
+#~ msgstr "``emission()``"
+
+#~ msgid "``ambient_occlusion()``"
+#~ msgstr "``ambient_occlusion()``"
+
+#~ msgid "``holdout()``"
+#~ msgstr "``holdout()``"
+
+#~ msgid "``background()``"
+#~ msgstr "``background()``"
+
+#~ msgid "Attributes"
+#~ msgstr "Атрибуты"
+
+#~ msgid ""
+#~ "Some object, particle and mesh "
+#~ "attributes are available to the "
+#~ "built-in ``getattribute()`` function. UV "
+#~ "maps and vertex colors can be "
+#~ "retrieved using their name. Other "
+#~ "attributes are listed below:"
+#~ msgstr ""
+#~ "Некоторые атрибуты объектов, частиц и "
+#~ "полисеток доступны через встроенную функцию"
+#~ " getattribute(). UV-карты и цвета вершин"
+#~ " могут быть получены по их именам."
+#~ " Другие атрибуты перечислены ниже:"
+
+#~ msgid "``geom:generated``"
+#~ msgstr "``geom:generated``"
+
+#~ msgid "Generated texture coordinates."
+#~ msgstr "Сгенерированные текстурные координаты."
+
+#~ msgid "``geom:uv``"
+#~ msgstr "``geom:uv``"
+
+#~ msgid "Default render UV map."
+#~ msgstr "UV-развёртка по умолчанию."
+
+#~ msgid "``geom:dupli_generated``"
+#~ msgstr "``geom:dupli_generated``"
+
+#~ msgid "For instances, generated coordinate from duplicator object."
+#~ msgstr "Для экземпляров – сгенерированные координаты из дублирующего объекта."
+
+#~ msgid "``geom:dupli_uv``"
+#~ msgstr "``geom:dupli_uv``"
+
+#~ msgid "For instances, UV coordinate from duplicator object."
+#~ msgstr "Для экземпляров – UV-координаты из дублирующего объекта."
+
+#~ msgid "``geom:trianglevertices``"
+#~ msgstr "``geom:trianglevertices``"
+
+#~ msgid "3 vertex coordinates of the triangle."
+#~ msgstr "Координаты трёх вершин треугольника."
+
+#~ msgid "``geom:numpolyvertices``"
+#~ msgstr "``geom:numpolyvertices``"
+
+#~ msgid "Number of vertices in the polygon (always returns three currently)."
+#~ msgstr ""
+#~ "Количество вершим в многоугольнике (на "
+#~ "текущий момент всегда возвращает три "
+#~ "вершины)."
+
+#~ msgid "``geom:polyvertices``"
+#~ msgstr "``geom:polyvertices``"
+
+#~ msgid ""
+#~ "Vertex coordinates array of the polygon"
+#~ " (always three vertices currently)."
+#~ msgstr ""
+#~ "Массив с координатами вершин многоугольника"
+#~ " (на текущий момент в массиве всегда"
+#~ " три вершины)."
+
+#~ msgid "``geom:name``"
+#~ msgstr "``geom:name``"
+
+#~ msgid "Name of the object."
+#~ msgstr "Название объекта."
+
+#~ msgid "``geom:is_curve``"
+#~ msgstr "``geom:is_curve``"
+
+#~ msgid "Is object a strand or not."
+#~ msgstr "Является ли объект прядью или нет."
+
+#~ msgid "``geom:curve_intercept``"
+#~ msgstr "``geom:curve_intercept``"
+
+#~ msgid "Point along the strand, from root to tip."
+#~ msgstr "Точка вдоль пряди от корня до кончика."
+
+#~ msgid "``geom:curve_thickness``"
+#~ msgstr "``geom:curve_thickness``"
+
+#~ msgid "Thickness of the strand."
+#~ msgstr "Толщина пряди."
+
+#~ msgid "``geom:curve_tangent_normal``"
+#~ msgstr "``geom:curve_tangent_normal``"
+
+#~ msgid "Tangent Normal of the strand."
+#~ msgstr "Касательная нормали пряди."
+
+#~ msgid "``path:ray_length``"
+#~ msgstr "``path:ray_length``"
+
+#~ msgid "Ray distance since last hit."
+#~ msgstr ""
+#~ "Расстояние, пройденное лучом с момента "
+#~ "последнего попадания в препятствие."
+
+#~ msgid "``object:location``"
+#~ msgstr "``object:location``"
+
+#~ msgid "Object location."
+#~ msgstr "Местоположение объекта."
+
+#~ msgid "``object:index``"
+#~ msgstr "``object:index``"
+
+#~ msgid "Object index number."
+#~ msgstr "Номер индекса объекта."
+
+#~ msgid "``object:random``"
+#~ msgstr "``object:random``"
+
+#~ msgid "Per object random number generated from object index and name."
+#~ msgstr ""
+#~ "Случайный номер для каждого объекта, "
+#~ "генерируемый из его индекса и имени."
+
+#~ msgid "``material:index``"
+#~ msgstr "``material:index``"
+
+#~ msgid "Material index number."
+#~ msgstr "Номер индекса материала."
+
+#~ msgid "``particle:index``"
+#~ msgstr "``particle:index``"
+
+#~ msgid "Particle instance number."
+#~ msgstr "Номер экземпляра частицы."
+
+#~ msgid "``particle:age``"
+#~ msgstr "``particle:age``"
+
+#~ msgid "Particle age in frames."
+#~ msgstr "Возраст частицы, в кадрах."
+
+#~ msgid "``particle:lifetime``"
+#~ msgstr "``particle:lifetime``"
+
+#~ msgid "Total lifespan of particle in frames."
+#~ msgstr "Общее время жизни частицы, в кадрах."
+
+#~ msgid "``particle:location``"
+#~ msgstr "``particle:location``"
+
+#~ msgid "Location of the particle."
+#~ msgstr "Местоположение частицы."
+
+#~ msgid "``particle:size``"
+#~ msgstr "``particle:size``"
+
+#~ msgid "Size of the particle."
+#~ msgstr "Размер частицы."
+
+#~ msgid "``particle:velocity``"
+#~ msgstr "``particle:velocity``"
+
+#~ msgid "Velocity of the particle."
+#~ msgstr "Скорость частицы."
+
+#~ msgid "``particle:angular_velocity``"
+#~ msgstr "``particle:angular_velocity``"
+
+#~ msgid "Angular velocity of the particle."
+#~ msgstr "Угловая скорость частицы."
+
+#~ msgid "Trace"
+#~ msgstr "Трассировка"
+
+#~ msgid ""
+#~ "We support the ``trace(point pos, vector"
+#~ " dir, ...)`` function, to trace rays"
+#~ " from the OSL shader. The \"shade\""
+#~ " parameter is not supported currently, "
+#~ "but attributes can be retrieved from "
+#~ "the object that was hit using the"
+#~ " ``getmessage(\"trace\", ..)`` function. See "
+#~ "the OSL specification for details on "
+#~ "how to use this."
+#~ msgstr ""
+#~ "Мы поддерживаем функцию ``trace(point pos, "
+#~ "vector dir, ...)`` для трассировки лучей"
+#~ " из шейдеров OSL. Параметр \"shade\" "
+#~ "на текущий момент не поддерживается, но"
+#~ " атрибуты объекта, с которым произошло "
+#~ "столкновение луча, могут быть получены "
+#~ "через функцию ``getmessage(\"trace\", ..)``. "
+#~ "Подробности по использованию этого механизма"
+#~ " смотрите в спецификации OSL."
+
+#~ msgid ""
+#~ "This function cannot be used instead "
+#~ "of lighting; the main purpose is "
+#~ "to allow shaders to \"probe\" nearby "
+#~ "geometry, for example to apply a "
+#~ "projected texture that can be blocked"
+#~ " by geometry, apply more \"wear\" to"
+#~ " exposed geometry, or make other "
+#~ "ambient occlusion-like effects."
+#~ msgstr ""
+#~ "Эта функция не может использоваться "
+#~ "вместо освещения; основная её цель – "
+#~ "позволить шейдерам «щупать» ближайшую "
+#~ "геометрию, например, чтобы применить "
+#~ "проецируемую текстуру, которая может быть "
+#~ "заблокирована геометрией, сделать открытую "
+#~ "геометрию более «изношенной» или применить "
+#~ "ещё какие-нибудь эффекты, подобные ambient "
+#~ "occlusion."
+

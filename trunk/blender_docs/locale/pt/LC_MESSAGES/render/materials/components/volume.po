@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) : This page is public domain as CC0
+# This file is distributed under the same license as the Blender 2.77 Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender 2.79 Manual 2.79\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-12 13:27+0200\n"
+"PO-Revision-Date: 2018-05-05 22:30-0300\n"
+"Last-Translator: Eduardo Schilling<elschilling@gmail.com>\n"
+"Language: pt\n"
+"Language-Team: portuguese\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:4
+msgid "Volumes"
+msgstr "Volumes"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:6
+msgid ""
+"Volume rendering can be used to render effects like fire, smoke, mist, "
+"absorption in glass, and many other effects that cannot be represented by"
+" surface meshes alone."
+msgstr ""
+"Renderização de volumes pode ser usada para efeitos como fogo, fumaça, "
+"névoa, absorção em vidro, e muitos outros efeitos que não podem ser "
+"representados por superfícies de malhas apenas."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:9
+msgid ""
+"To set up a volume, you create a mesh that defines the bounds within "
+"which the volume exists. In the material you typically remove the surface"
+" nodes and instead connect volume nodes to define the shading inside the "
+"volume. For effects such as absorption in glass you can use both a "
+"surface and volume shader. The world can also use a volume shader to "
+"create effects such as mist."
+msgstr ""
+"Para criar um volume, você cria uma malha que define os limites nos quais"
+" o volume existe. No material você tipicamente remove os nós de "
+"superfície e ao invés disso conecta nós de volume para definir o "
+"sombreamento dentro do volume. Para efeitos como absorção em vidro você "
+"pode usar tanto um sombreador de superfície como um sombreador de volume."
+" O mundo também pode usar um sombreador de volume para criar efeitos como"
+" névoa."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:17
+msgid "Shading"
+msgstr "Sombreamento"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:20
+msgid "Principled Volume"
+msgstr "Principled Volume"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:22
+#, fuzzy
+msgid ""
+":doc:`Principled Volume </render/shader_nodes/shader/volume_principled>` "
+"is a physically-based volume shader that can be used to create a wide "
+"range of volume materials. It supports scattering, absorption and "
+"emission in one easy to use node. Fire can be rendered with blackbody "
+"emission."
+msgstr ""
+":doc:`Principled Volume "
+"</render/cycles/nodes/types/shaders/volume_principled>` é um sombreador "
+"fisicamente baseado que pode ser usado para criar uma ampla variedade de "
+"materiais volumétricos. Suporta espalhamento, absorção e emissão em um nó"
+" fácil de usar. Fogo pode ser renderizado com emissão de corpo negro "
+"(blackbody)."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:29
+msgid "Smoke and fire rendered with Principled Volume shader."
+msgstr "Fumaça e fogo renderizados com o sombreador Principled Volume."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:33
+msgid "Volume Components"
+msgstr "Componentes de Volume"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:35
+msgid ""
+"For more control, volume shading components can be manually combined into"
+" a custom shader setup."
+msgstr ""
+"Para maior controle, componentes de sombreadores de volume podem ser "
+"combinados manualmente  em uma configuração de sombreador customizado."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:37
+#, fuzzy
+msgid ""
+":doc:`Volume Absorption </render/shader_nodes/shader/volume_absorption>` "
+"will absorb part of the light as it passes through the volume. This can "
+"be used to shade for example black smoke or colored glass objects, or "
+"mixed with the volume scatter node. This node is similar to the "
+"transparent BSDF node, it blocks part of the light and lets other light "
+"pass straight through."
+msgstr ""
+":doc:`Absorção de Volume "
+"</render/cycles/nodes/types/shaders/volume_absorption>` irá absorver "
+"parte da luz a medida que ela passa através do volume. Isso pode ser "
+"usado para por exemplo sombrear fumaça preta ou objetos de vidro "
+"colorido, ou misturado com o nó de espalhamento de volume. Esse nó é "
+"similar ao nó BSDF Transparente, ele bloqueia parte da luz e deixa outra "
+"parte passar direto"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:42
+#, fuzzy
+msgid ""
+":doc:`Volume Scatter </render/shader_nodes/shader/volume_scatter>` lets "
+"light scatter in other directions as it hits particles in the volume. The"
+" anisotropy defines in which direction the light is more likely to "
+"scatter. A value of 0 will let light scatter evenly in all directions "
+"(similar to the diffuse BSDF node), negative values let light scatter "
+"mostly backwards, and positive values let light scatter mostly forward. "
+"This can be used to shade white smoke or clouds for example."
+msgstr ""
+":doc:`Espalhamento de Volume "
+"</render/cycles/nodes/types/shaders/volume_scatter>` faz a luz espalhar "
+"em outras direções a medida que ela atinge partículas no volume. A "
+"anisotropia define em qual direção a luz tem maior tendência para "
+"espalhar. Um valor de 0 irá deixar a luz espalhar uniformemente em todas "
+"as direções (simular ao nó BSDF Difuso), valores negativos fazem a maior "
+"parte da luz espalhar para trás, e valores positivos fazem a maior parte "
+"da luz espalhar para frente. Isso pode ser usado para sombrear fumaça "
+"branca ou nuvens por exemplo."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:48
+#, fuzzy
+msgid ""
+":doc:`Emission </render/shader_nodes/shader/emission>` will emit light "
+"from the volume, for example for fire."
+msgstr ""
+":doc:`Emissão </render/cycles/nodes/types/shaders/emission>` irá emitir "
+"luz do volume, para fogo por exemplo."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:54
+msgid "Volume Absorption, Scatter and Emission"
+msgstr "Absorção, Espalhamento e Emissão de Volume"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:58
+msgid "Attributes"
+msgstr "Atributos"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:60
+msgid ""
+"When rendering smoke and fire, volume attributes are used to define the "
+"shape and shading of the volume. The Principled Volume shader will use "
+"them by default, while custom volume shaders can use the Attribute node "
+"to get attributes such as density, color and temperature."
+msgstr ""
+"Quando renderizando fumaça e fogo, atributos de volume são usados para "
+"definir a forma e sombreamento do volume. Então o sombreador Principled "
+"Volume será usado por padrão, enquanto sombreadores de volume "
+"customizados podem usar o nó Atributo para obter atributos como "
+"densidade, cor e temperatura."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:66
+msgid "Density"
+msgstr "Densidade"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:68
+msgid ""
+"All volume shaders have a density input. The density defines how much of "
+"the light will interact with the volume, getting absorbed or scattered, "
+"and how much will pass straight through. For effects such as smoke you "
+"would specify a density field to indicate where in the volume there is "
+"smoke and how much (density bigger than 0), and where there is no smoke "
+"(density equals 0)."
+msgstr ""
+"Todos os sombreadores de volume têm entrada de densidade. A densidade "
+"define quanto da luz irá interagir com o volume, sendo absorvida ou "
+"espalhada, e quanto irá passar direto através. Para efeitos como fumaça "
+"você especificaria um campo de densidade para indicar onde no volume há "
+"fumaça e quanto (densidade maior que 0), e onde não há fumaça (densidade "
+"igual a 0)."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:74
+msgid ""
+"Volumes in the real world consist of particles, a higher density means "
+"there are more particles per unit volume. More particles means there is a"
+" higher chance for light to collide with a particle and get absorbed or "
+"scattered, rather than passing straight through."
+msgstr ""
+"Volumes no mundo real consistem de partículas, uma densidade maior "
+"significa que há mais partículas por unidade de volume. Mais partículas "
+"significa  que há mais chance da luz colidir com uma partícula e ser "
+"absorvida ou espalhada, ao invés de passar direto através."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:81
+msgid "Mesh Volumes"
+msgstr "Volumes de Malha"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:83
+msgid ""
+"Meshes used for volume render should be closed and :term:`manifold`. That"
+" means that there should be no holes in the mesh. Each edge must be "
+"connected to exactly two faces such that there are no holes or T-shaped "
+"faces where three or more faces are connected to an edge."
+msgstr ""
+"Malhas usadas para renderização de volume devem ser fechadas e "
+":term:`contíguo`. Isso significa que não deve haver buracos na malha. "
+"Cada aresta deve estar conectada a exatamente duas faces de modo que não "
+"existam buracos ou faces em forma de T onde três ou mais faces estão "
+"conectadas a uma aresta."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:89
+msgid ""
+"Normals must point outside for correct results. The normals are used to "
+"determine if a ray enters or exits a volume, and if they point in a wrong"
+" direction, or there is a hole in the mesh, then the renderer is unable "
+"to decide what is the inside or outside of the volume."
+msgstr ""
+"Normais devem apontar para fora para resultados corretos. As normais são "
+"usadas para determinar se um raio entra ou sai de um volume, e se elas "
+"apontam na direção errada, ou há um buraco na malha, então o renderizador"
+" não é capaz de decidir que lado é dentro ou fora do volume."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:94
+msgid "These rules are the same as for rendering glass refraction correctly."
+msgstr ""
+"Essas regras são as mesma para a renderização correta da refração em "
+"vidros."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:98
+msgid "World Volume"
+msgstr "Volume do Mundo"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:100
+msgid ""
+"A volume shader can also be applied to the world, filling the entire "
+"space."
+msgstr ""
+"Um sombreador de volume também pode ser aplicado ao mundo, preenchendo "
+"todo espaço."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:102
+msgid ""
+"Currently, this is most useful for night time or other dark scenes, as "
+"the world surface shader or sun lamps will have no effect if a volume "
+"shader is used. This is because the world background is assumed to be "
+"infinitely far away, which is accurate enough for the sun for example. "
+"However, for modeling effects such as fog or atmospheric scattering, it "
+"is not a good assumption that the volume fills the entire space, as most "
+"of the distance between the sun and the earth is empty space. For such "
+"effects it is be better to create a volume object surrounding the scene. "
+"The size of this object will determine how much light is scattered or "
+"absorbed."
+msgstr ""
+"Atualmente, isso é mais útil para tempo noturno ou outras cenas escuras, "
+"já que sombreadores de superfície do mundo não terão efeito se um "
+"sombreador de volume é usado. Isso porquê assume-se que o plano de fundo "
+"do mundo está infinitamente distante, o que é preciso o bastante para o "
+"sol por exemplo. Entretanto, para modelar efeitos como neblina ou "
+"espalhamento da atmosfera, não é uma boa suposição que o volume preenche "
+"todo o espaço, já que a maior parte da distância entre o sol e a terra é "
+"espaço vazio. Para tais efeitos é melhor criar um objeto de volume ao "
+"redor da cena. O tamanho desse objeto irá determinar quanta luz é "
+"espalhada ou absorvida."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:114
+msgid "Multiple Scattering"
+msgstr "Espalhamento Múltiplo"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:116
+msgid ""
+"Real-world effects such as scattering in clouds or subsurface scattering "
+"require many scattering bounces. However, unbiased rendering of such "
+"effects can be noisy, so by default the number of bounces is zero. The "
+"effect you get when rendering with zero volume bounces is what is known "
+"as \"single scattering\", the effect from more bounces is \"multiple "
+"scattering\"."
+msgstr ""
+"Efeitos do mundo real como espalhamento em nuvens ou espalhamento de sub-"
+"superfície exigem muitos rebatimentos de espalhamento. Entretanto, a "
+"renderização imparcial (unbiased) de tais efeitos pode ser ruidosa, por "
+"isso por padrão o número de rebatimentos é zero. O efeito que você obtém "
+"quando renderizando rebatimentos de volume igual a zero é o que é "
+"conhecido como \"espalhamento único\", o efeito de mais rebatimentos é "
+"\"espalhamento múltiplo\"."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:122
+msgid ""
+"For rendering materials like skin or milk that require multiple "
+"scattering, subsurface scattering is more efficient and easier to "
+"control. Particularly the random walk method can accurately render such "
+"materials."
+msgstr ""
+"Para renderizar materiais como pele ou leite que exigem espalhamento "
+"múltiplo, espalhamento sub-superfície é mais eficiente e fácil de "
+"controlar. Particularmente o método de caminhada aleatória pode "
+"renderizar precisamente tais materiais."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:126
+msgid ""
+"For materials such as clouds or smoke that do not have a well defined "
+"surface, volume rendering is required. These look best with many "
+"scattering bounces, but in practice one might have to limit the number of"
+" bounces to keep render times acceptable."
+msgstr ""
+"Para materiais como nuvens ou fumaça que não possuem uma superfície bem "
+"definida, renderização de volume é necessário. Esses ficam melhor com "
+"muitos rebatimentos de espalhamento, mas na prática pode ser necessário "
+"limitar o número de rebatimentos para manter o tempo de renderização "
+"aceitável."
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:132
+msgid "Limitations"
+msgstr "Limitações"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:134
+msgid "Not available on GPU:"
+msgstr "Não disponível na GPU"
+
+#: ../../manual/render/engines/cycles/materials/volume.rst:136
+msgid "Multiple importance sampling for efficient lights inside volumes."
+msgstr ""
+"Amostragem de importância múltipla para luzes eficientes dentro de "
+"volumes."
+
+#~ msgid "Volume Shaders"
+#~ msgstr "Sombreadores de volume"
+
+#~ msgid "Volume Material"
+#~ msgstr "Material volumétrico"
+
+#~ msgid ""
+#~ "A material may have both a surface"
+#~ " and a volume shader, or only "
+#~ "one of either. Using both may be"
+#~ " useful for materials such as glass,"
+#~ " water or ice, where you want "
+#~ "some of the light to be absorbed"
+#~ " as it passes through the surface,"
+#~ " combined with e.g. a glass or "
+#~ "glossy shader at the surface."
+#~ msgstr ""
+#~ "Um material pode ter tanto um "
+#~ "sombreador de superfície quanto um "
+#~ "sombreador de volume, ou somente um "
+#~ "de ambos. A utilização de ambos "
+#~ "pode ser útil para materiais como "
+#~ "vidro, água ou gelo, onde você "
+#~ "provavelmente queira que parte da luz"
+#~ " seja absorvida conforme ela passa "
+#~ "através da superfície, combinando-a por "
+#~ "exemplo com um sombreador para vidros"
+#~ " ou polimento na superfície."
+
+#~ msgid "Mesh Topology"
+#~ msgstr "Topologia da malha"
+
+#~ msgid "Smoke"
+#~ msgstr "Fumaça"
+
+#~ msgid "Smoke and Fire Material."
+#~ msgstr "Material de fogo e fumaça."
+
+#~ msgid "Scattering Bounces"
+#~ msgstr "Rebatimentos de espalhamento"
+
