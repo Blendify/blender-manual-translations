@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-06 12:27+1000\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2019-04-20 19:35+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -29,12 +29,10 @@ msgstr "场景"
 
 #: ../../manual/scene_layout/scene/properties.rst:13
 #: ../../manual/scene_layout/scene/properties.rst:51
-#: ../../manual/scene_layout/scene/properties.rst:152
-#: ../../manual/scene_layout/scene/properties.rst:163
-#: ../../manual/scene_layout/scene/properties.rst:182
-#: ../../manual/scene_layout/scene/properties.rst:237
-#: ../../manual/scene_layout/scene/properties.rst:250
-#: ../../manual/scene_layout/scene/properties.rst:267
+#: ../../manual/scene_layout/scene/properties.rst:162
+#: ../../manual/scene_layout/scene/properties.rst:175
+#: ../../manual/scene_layout/scene/properties.rst:191
+#: ../../manual/scene_layout/scene/properties.rst:240
 msgid "Reference"
 msgstr "参考"
 
@@ -57,7 +55,8 @@ msgid ""
 msgstr "用于选择相机作为活动相机。还可以在3D视图使用 :kbd:`Ctrl-0` 设置活动相机。"
 
 #: ../../manual/scene_layout/scene/properties.rst:39
-msgid "Background"
+#, fuzzy
+msgid "Background Scene"
 msgstr "背景"
 
 #: ../../manual/scene_layout/scene/properties.rst:25
@@ -91,7 +90,8 @@ msgstr ""
 "一起使用，当blend文件包含该环境，可以在很多地方重复使用。"
 
 #: ../../manual/scene_layout/scene/properties.rst:43
-msgid "Active Clip"
+#, fuzzy
+msgid "Active Movie Clip"
 msgstr "当前激活的剪辑"
 
 #: ../../manual/scene_layout/scene/properties.rst:42
@@ -106,347 +106,383 @@ msgstr "单位"
 msgid ":menuselection:`Properties editor --> Scene --> Units`"
 msgstr ":menuselection:`属性编辑器 --> 场景 --> 单位`"
 
-#: ../../manual/scene_layout/scene/properties.rst:56
-msgid "Length Presets"
-msgstr "长度预设"
+#: ../../manual/scene_layout/scene/properties.rst:61
+msgid "Unit System"
+msgstr ""
 
 #: ../../manual/scene_layout/scene/properties.rst:57
-msgid "Common unit scales to use."
-msgstr "常用单位比例。"
-
-#: ../../manual/scene_layout/scene/properties.rst:61
-msgid "Length"
-msgstr "长度"
-
-#: ../../manual/scene_layout/scene/properties.rst:59
 msgid "None"
 msgstr "无"
 
+#: ../../manual/scene_layout/scene/properties.rst:58
+msgid "Use :term:`Blender Units` that have with no relation to the real world."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:59
+#, fuzzy
+msgid "Metric"
+msgstr "meter"
+
 #: ../../manual/scene_layout/scene/properties.rst:60
-msgid "Uses :term:`Blender Units`."
-msgstr "使用 :term:`Blender单位`."
+msgid "Use the metric unit system in this scene."
+msgstr ""
 
 #: ../../manual/scene_layout/scene/properties.rst:61
-msgid "Metric, Imperial"
+#, fuzzy
+msgid "Imperial"
 msgstr "公制, 英制"
 
 #: ../../manual/scene_layout/scene/properties.rst:62
-msgid "Standard unit of measurement for lengths."
-msgstr "长度计量标准单位。"
+msgid "Use the imperial unit system in this scene."
+msgstr ""
 
-#: ../../manual/scene_layout/scene/properties.rst:70
-msgid "Angle"
-msgstr "角度"
-
-#: ../../manual/scene_layout/scene/properties.rst:64
-msgid "Standard unit for angular measurement."
-msgstr "角度计量标准单位。"
-
-#: ../../manual/scene_layout/scene/properties.rst:66
-msgid "Degrees, Radians"
-msgstr "角度，弧度"
-
-#: ../../manual/scene_layout/scene/properties.rst:70
-msgid ""
-"When you are using *Degrees*, the radian value is also displayed in the "
-"tooltip."
-msgstr "当使用 *角度* 时，工具提示会显示弧度值。"
-
-#: ../../manual/scene_layout/scene/properties.rst:78
+#: ../../manual/scene_layout/scene/properties.rst:72
 msgid "Unit Scale"
 msgstr "单位比例"
 
-#: ../../manual/scene_layout/scene/properties.rst:73
+#: ../../manual/scene_layout/scene/properties.rst:64
 msgid ""
-"Scale factor to use when converting between :term:`Blender Units` and "
-"*Metric*/*Imperial*."
-msgstr "用于 :term:`Blender单位` 与 *公制*/*英制* 单位之间转换的比例尺。"
+"Scale factor to use when converting between internal :term:`Blender "
+"Units` and values displayed in the user interface. This can be changed "
+"when modeling at microscopic or astronomical scales."
+msgstr ""
 
-#: ../../manual/scene_layout/scene/properties.rst:77
+#: ../../manual/scene_layout/scene/properties.rst:70
 msgid ""
-"Usually you will want to use the *Length* presets to change to scale "
-"factor, as this does not require looking up values to use for conversion."
-msgstr "通常用户会设置比例尺为 *长度* 预设值，这样就无需计算数值转换了。"
+"This only influences the values displayed in the user interface and not "
+"how things behave internally. For example, physics simulations don't take"
+" the unit scale into account."
+msgstr ""
 
-#: ../../manual/scene_layout/scene/properties.rst:82
+#: ../../manual/scene_layout/scene/properties.rst:75
 msgid "Separate Units"
 msgstr "分离单位"
 
-#: ../../manual/scene_layout/scene/properties.rst:81
+#: ../../manual/scene_layout/scene/properties.rst:75
+#, fuzzy
 msgid ""
-"When *Metric* or *Imperial* display units as multiple values, for "
-"example, \"2.285m\" will become \"2m 28.5cm\"."
+"When using *Metric* or *Imperial*, display properties as multiple values."
+" For example, `2.285m` will become `2m 28.5cm`."
 msgstr "使用 *公制* 或 *英制* 时，显示双位单位，如 \"2.285m\" 会显示为 \"2m 28.5cm\" 。"
 
+#: ../../manual/scene_layout/scene/properties.rst:80
+msgid "Rotation"
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:78
+msgid "Degrees"
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:79
+msgid "Use degrees for angles in the user interface."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:80
+#, fuzzy
+msgid "Radians"
+msgstr "角度，弧度"
+
+#: ../../manual/scene_layout/scene/properties.rst:81
+msgid "Use radians for angles in the user interface."
+msgstr ""
+
 #: ../../manual/scene_layout/scene/properties.rst:87
-msgid "Imperial Units"
+msgid "Length"
+msgstr "长度"
+
+#: ../../manual/scene_layout/scene/properties.rst:85
+msgid "Adaptive"
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:84
+msgid ""
+"The unit used for a specific value depends on the magnitude of the value."
+" For example, some values might be displayed as `23cm` while others are "
+"displayed as `10km`."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:87
+msgid "Meters/Centimeters/Feet/..."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:88
+msgid "A fixed unit that will be used for all lengths in the user interface."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:89
+msgid "Mass"
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:90
+#: ../../manual/scene_layout/scene/properties.rst:92
+msgid "See *Length*."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:92
+msgid "Time"
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:97
+#, fuzzy
+msgid "Imperial Length Units"
 msgstr "英制单位"
 
-#: ../../manual/scene_layout/scene/properties.rst:91
-#: ../../manual/scene_layout/scene/properties.rst:120
+#: ../../manual/scene_layout/scene/properties.rst:101
+#: ../../manual/scene_layout/scene/properties.rst:130
 msgid "Full Name"
 msgstr "全称"
 
-#: ../../manual/scene_layout/scene/properties.rst:92
-#: ../../manual/scene_layout/scene/properties.rst:121
+#: ../../manual/scene_layout/scene/properties.rst:102
+#: ../../manual/scene_layout/scene/properties.rst:131
 msgid "Short Name(s)"
 msgstr "简写"
 
-#: ../../manual/scene_layout/scene/properties.rst:93
-#: ../../manual/scene_layout/scene/properties.rst:122
+#: ../../manual/scene_layout/scene/properties.rst:103
+#: ../../manual/scene_layout/scene/properties.rst:132
 msgid "Scale of a Meter"
 msgstr "对应米单位数值"
 
-#: ../../manual/scene_layout/scene/properties.rst:94
+#: ../../manual/scene_layout/scene/properties.rst:104
 msgid "thou"
 msgstr "毫英寸"
 
-#: ../../manual/scene_layout/scene/properties.rst:95
+#: ../../manual/scene_layout/scene/properties.rst:105
 msgid "``mil``"
 msgstr "``mil``"
 
-#: ../../manual/scene_layout/scene/properties.rst:96
+#: ../../manual/scene_layout/scene/properties.rst:106
 msgid "0.0000254"
 msgstr "0.0000254"
 
-#: ../../manual/scene_layout/scene/properties.rst:97
+#: ../../manual/scene_layout/scene/properties.rst:107
 msgid "inch"
 msgstr "英寸"
 
-#: ../../manual/scene_layout/scene/properties.rst:98
+#: ../../manual/scene_layout/scene/properties.rst:108
 msgid "``\"``, ``in``"
 msgstr "``\"``, ``in``"
 
-#: ../../manual/scene_layout/scene/properties.rst:99
+#: ../../manual/scene_layout/scene/properties.rst:109
 msgid "0.0254"
 msgstr "0.0254"
 
-#: ../../manual/scene_layout/scene/properties.rst:100
+#: ../../manual/scene_layout/scene/properties.rst:110
 msgid "foot, feet"
 msgstr "英尺"
 
-#: ../../manual/scene_layout/scene/properties.rst:101
+#: ../../manual/scene_layout/scene/properties.rst:111
 msgid "``'``, ``ft``"
 msgstr "``'``, ``ft``"
 
-#: ../../manual/scene_layout/scene/properties.rst:102
+#: ../../manual/scene_layout/scene/properties.rst:112
 msgid "0.3048"
 msgstr "0.3048"
 
-#: ../../manual/scene_layout/scene/properties.rst:103
+#: ../../manual/scene_layout/scene/properties.rst:113
 msgid "yard"
 msgstr "码"
 
-#: ../../manual/scene_layout/scene/properties.rst:104
+#: ../../manual/scene_layout/scene/properties.rst:114
 msgid "``yd``"
 msgstr "``yd``"
 
-#: ../../manual/scene_layout/scene/properties.rst:105
+#: ../../manual/scene_layout/scene/properties.rst:115
 msgid "0.9144"
 msgstr "0.9144"
 
-#: ../../manual/scene_layout/scene/properties.rst:106
+#: ../../manual/scene_layout/scene/properties.rst:116
 msgid "chain"
 msgstr "链"
 
-#: ../../manual/scene_layout/scene/properties.rst:107
+#: ../../manual/scene_layout/scene/properties.rst:117
 msgid "``ch``"
 msgstr "``ch``"
 
-#: ../../manual/scene_layout/scene/properties.rst:108
+#: ../../manual/scene_layout/scene/properties.rst:118
 msgid "20.1168"
 msgstr "20.1168"
 
-#: ../../manual/scene_layout/scene/properties.rst:109
+#: ../../manual/scene_layout/scene/properties.rst:119
 msgid "furlong"
 msgstr "浪"
 
-#: ../../manual/scene_layout/scene/properties.rst:110
+#: ../../manual/scene_layout/scene/properties.rst:120
 msgid "``fur``"
 msgstr "``fur``"
 
-#: ../../manual/scene_layout/scene/properties.rst:111
+#: ../../manual/scene_layout/scene/properties.rst:121
 msgid "201.168"
 msgstr "201.168"
 
-#: ../../manual/scene_layout/scene/properties.rst:112
+#: ../../manual/scene_layout/scene/properties.rst:122
 msgid "mile"
 msgstr "英里"
 
-#: ../../manual/scene_layout/scene/properties.rst:113
+#: ../../manual/scene_layout/scene/properties.rst:123
 msgid "``mi``, ``m``"
 msgstr "``mi``, ``m``"
 
-#: ../../manual/scene_layout/scene/properties.rst:114
+#: ../../manual/scene_layout/scene/properties.rst:124
 msgid "1609.344"
 msgstr "1609.344"
 
-#: ../../manual/scene_layout/scene/properties.rst:116
-msgid "Metric Units"
+#: ../../manual/scene_layout/scene/properties.rst:126
+#, fuzzy
+msgid "Metric Length Units"
 msgstr "公制单位"
 
-#: ../../manual/scene_layout/scene/properties.rst:123
+#: ../../manual/scene_layout/scene/properties.rst:133
 msgid "micrometer"
 msgstr "微米"
 
-#: ../../manual/scene_layout/scene/properties.rst:124
+#: ../../manual/scene_layout/scene/properties.rst:134
 msgid "``um``"
 msgstr "``um``"
 
-#: ../../manual/scene_layout/scene/properties.rst:125
+#: ../../manual/scene_layout/scene/properties.rst:135
 msgid "0.000001"
 msgstr "0.000001"
 
-#: ../../manual/scene_layout/scene/properties.rst:126
+#: ../../manual/scene_layout/scene/properties.rst:136
 msgid "millimeter"
 msgstr "毫米"
 
-#: ../../manual/scene_layout/scene/properties.rst:127
+#: ../../manual/scene_layout/scene/properties.rst:137
 msgid "``mm``"
 msgstr "``mm``"
 
-#: ../../manual/scene_layout/scene/properties.rst:128
+#: ../../manual/scene_layout/scene/properties.rst:138
 msgid "0.001"
 msgstr "0.001"
 
-#: ../../manual/scene_layout/scene/properties.rst:129
+#: ../../manual/scene_layout/scene/properties.rst:139
 msgid "centimeter"
 msgstr "厘米"
 
-#: ../../manual/scene_layout/scene/properties.rst:130
+#: ../../manual/scene_layout/scene/properties.rst:140
 msgid "``cm``"
 msgstr "``cm``"
 
-#: ../../manual/scene_layout/scene/properties.rst:131
+#: ../../manual/scene_layout/scene/properties.rst:141
 msgid "0.01"
 msgstr "0.01"
 
-#: ../../manual/scene_layout/scene/properties.rst:132
+#: ../../manual/scene_layout/scene/properties.rst:142
 msgid "decimeter"
 msgstr "分米"
 
-#: ../../manual/scene_layout/scene/properties.rst:133
+#: ../../manual/scene_layout/scene/properties.rst:143
 msgid "``dm``"
 msgstr "``dm``"
 
-#: ../../manual/scene_layout/scene/properties.rst:134
+#: ../../manual/scene_layout/scene/properties.rst:144
 msgid "0.1"
 msgstr "0.1"
 
-#: ../../manual/scene_layout/scene/properties.rst:135
+#: ../../manual/scene_layout/scene/properties.rst:145
 msgid "meter"
 msgstr "meter"
 
-#: ../../manual/scene_layout/scene/properties.rst:136
+#: ../../manual/scene_layout/scene/properties.rst:146
 msgid "``m``"
 msgstr "``m``"
 
-#: ../../manual/scene_layout/scene/properties.rst:137
+#: ../../manual/scene_layout/scene/properties.rst:147
 msgid "1.0"
 msgstr "1.0"
 
-#: ../../manual/scene_layout/scene/properties.rst:138
+#: ../../manual/scene_layout/scene/properties.rst:148
 msgid "dekameter"
 msgstr "十米"
 
-#: ../../manual/scene_layout/scene/properties.rst:139
+#: ../../manual/scene_layout/scene/properties.rst:149
 msgid "``dam``"
 msgstr "``dam``"
 
-#: ../../manual/scene_layout/scene/properties.rst:140
+#: ../../manual/scene_layout/scene/properties.rst:150
 msgid "10.0"
 msgstr "10.0"
 
-#: ../../manual/scene_layout/scene/properties.rst:141
+#: ../../manual/scene_layout/scene/properties.rst:151
 msgid "hectometer"
 msgstr "百米"
 
-#: ../../manual/scene_layout/scene/properties.rst:142
+#: ../../manual/scene_layout/scene/properties.rst:152
 msgid "``hm``"
 msgstr "``hm``"
 
-#: ../../manual/scene_layout/scene/properties.rst:143
+#: ../../manual/scene_layout/scene/properties.rst:153
 msgid "100.0"
 msgstr "100.0"
 
-#: ../../manual/scene_layout/scene/properties.rst:144
+#: ../../manual/scene_layout/scene/properties.rst:154
 msgid "kilometer"
 msgstr "千米"
 
-#: ../../manual/scene_layout/scene/properties.rst:145
+#: ../../manual/scene_layout/scene/properties.rst:155
 msgid "``km``"
 msgstr "``km``"
 
-#: ../../manual/scene_layout/scene/properties.rst:146
+#: ../../manual/scene_layout/scene/properties.rst:156
 msgid "1000.0"
 msgstr "1000.0"
 
-#: ../../manual/scene_layout/scene/properties.rst:150
+#: ../../manual/scene_layout/scene/properties.rst:160
+msgid "Gravity"
+msgstr "重力"
+
+#: ../../manual/scene_layout/scene/properties.rst:165
+msgid ":menuselection:`Properties editor --> Scene --> Gravity`"
+msgstr ":menuselection:`属性编辑器 --> 场景 --> 重力`"
+
+#: ../../manual/scene_layout/scene/properties.rst:167
+msgid "Options to control global gravity used for physics effects."
+msgstr "控制物理效应中全局重力的选项。"
+
+#: ../../manual/scene_layout/scene/properties.rst:169
+#, fuzzy
+msgid ""
+"See the :doc:`Physics chapter </physics/forces/gravity>` for more "
+"information."
+msgstr "更多信息参考 :doc:`物理章节 </physics/gravity>` 。"
+
+#: ../../manual/scene_layout/scene/properties.rst:173
 msgid "Keying Sets"
 msgstr "插帧集"
 
-#: ../../manual/scene_layout/scene/properties.rst:155
+#: ../../manual/scene_layout/scene/properties.rst:178
 msgid ":menuselection:`Properties editor --> Scene --> Keying Sets`"
 msgstr ":menuselection:`属性编辑器 --> 场景 --> 插帧集`"
 
-#: ../../manual/scene_layout/scene/properties.rst:157
+#: ../../manual/scene_layout/scene/properties.rst:180
 msgid "See :doc:`/animation/keyframes/keying_sets`."
 msgstr "见 :doc:`/animation/keyframes/keying_sets`."
 
-#: ../../manual/scene_layout/scene/properties.rst:161
-msgid "Color Management"
-msgstr "色彩管理"
-
-#: ../../manual/scene_layout/scene/properties.rst:166
-msgid ":menuselection:`Properties editor --> Scene --> Color Management`"
-msgstr ":menuselection:`属性编辑器 --> 场景 --> 色彩管理`"
-
-#: ../../manual/scene_layout/scene/properties.rst:168
-msgid "Options to control how images appear on the screen."
-msgstr "用于图片在屏幕上如何显示的选项。"
-
-#: ../../manual/scene_layout/scene/properties.rst:170
-msgid ""
-"For :ref:`Color Management settings <render-post-color-management>` for "
-"more information."
-msgstr "更多信息请参考 :ref:`色彩管理设置 <render-post-color-management>`  。"
-
-#: ../../manual/scene_layout/scene/properties.rst:180
+#: ../../manual/scene_layout/scene/properties.rst:189
 msgid "Audio"
 msgstr "音频"
 
-#: ../../manual/scene_layout/scene/properties.rst:185
+#: ../../manual/scene_layout/scene/properties.rst:194
 msgid ":menuselection:`Properties editor --> Scene --> Audio`"
 msgstr ":menuselection:`属性编辑器 --> 场景 --> 音频`"
 
-#: ../../manual/scene_layout/scene/properties.rst:187
+#: ../../manual/scene_layout/scene/properties.rst:196
 msgid "Options to control global audio settings."
 msgstr "控制全局音频设置的选项。"
 
-#: ../../manual/scene_layout/scene/properties.rst:189
+#: ../../manual/scene_layout/scene/properties.rst:198
 msgid "Volume"
 msgstr "音量"
 
-#: ../../manual/scene_layout/scene/properties.rst:190
+#: ../../manual/scene_layout/scene/properties.rst:199
 msgid "Volume for the scene."
 msgstr "该场景的音量。"
 
-#: ../../manual/scene_layout/scene/properties.rst:193
-msgid "Update Animation Cache"
-msgstr "更新动画缓存"
-
-#: ../../manual/scene_layout/scene/properties.rst:192
-msgid ""
-"Updates the audio animation cache. This is useful if you start noticing "
-"artifact in the audio."
-msgstr "更新音频动画缓存。这在你意识到音频存在瑕疵时很有用。"
-
-#: ../../manual/scene_layout/scene/properties.rst:196
-#: ../../manual/scene_layout/scene/properties.rst:204
+#: ../../manual/scene_layout/scene/properties.rst:207
 msgid "Distance Model"
 msgstr "间距模型"
 
-#: ../../manual/scene_layout/scene/properties.rst:199
+#: ../../manual/scene_layout/scene/properties.rst:201
 msgid ""
 "Changes how the sound attenuation is calculated based on the distance. "
 "Most physically correct is the *Inverse* model, but it's also possible to"
@@ -457,31 +493,11 @@ msgid ""
 "<https://www.openal.org/documentation/>`__."
 msgstr ""
 
-#: ../../manual/scene_layout/scene/properties.rst:207
-msgid "Speed"
-msgstr "速率"
-
-#: ../../manual/scene_layout/scene/properties.rst:207
-msgid ""
-"Speed of the sound for the Doppler effect calculations. The typical value"
-" is 343.3 m/s in air, in water for example this value is around 1560 m/s."
+#: ../../manual/scene_layout/scene/properties.rst:224
+msgid "Format Settings"
 msgstr ""
 
-#: ../../manual/scene_layout/scene/properties.rst:212
-msgid "Doppler"
-msgstr "多普勒"
-
-#: ../../manual/scene_layout/scene/properties.rst:210
-msgid ""
-"Controls how strong the Doppler effect is. You can exaggerate or "
-"attenuate the change of pitch, but physically correct is a factor of 1.0."
-msgstr ""
-
-#: ../../manual/scene_layout/scene/properties.rst:218
-msgid "Format"
-msgstr "格式"
-
-#: ../../manual/scene_layout/scene/properties.rst:220
+#: ../../manual/scene_layout/scene/properties.rst:213
 msgid ""
 "These settings, along with the settings found in the :ref:`Encoding Panel"
 " <render-output-video-encoding-panel>` change how sound is exported while"
@@ -490,28 +506,29 @@ msgstr ""
 "这些设置与 :ref:`编码面板 <render-output-video-encoding-panel>` "
 "中的一样，用于修改渲染时的声音输出方式。"
 
-#: ../../manual/scene_layout/scene/properties.rst:224
+#: ../../manual/scene_layout/scene/properties.rst:217
 #, fuzzy
 msgid ""
 "To control how sounds plays back from within Blender, see the audio "
 "settings in the :ref:`Preferences <prefs-system-sound>`."
 msgstr "关于如何控制Blender中的声音播放，请参考 :ref:`用户设置 <prefs-system-sound>` 中的音频设置。"
 
-#: ../../manual/scene_layout/scene/properties.rst:228
-msgid "Channels"
+#: ../../manual/scene_layout/scene/properties.rst:221
+#, fuzzy
+msgid "Audio Channels"
 msgstr "通道"
 
-#: ../../manual/scene_layout/scene/properties.rst:228
+#: ../../manual/scene_layout/scene/properties.rst:221
 msgid ""
 "Sets the audio channel count. Available options are: *Mono*, *Stereo*, *4"
 " Channels*, *5.1 Surround*, *7.1 Surround*."
 msgstr "设置音频通道数量，可供选择的选项有: *单声道*, *立体声*, *4声道* , *5.1声道环绕* , *7.1声道环绕*。"
 
-#: ../../manual/scene_layout/scene/properties.rst:232
-msgid "Mix Rate"
-msgstr "Rate"
+#: ../../manual/scene_layout/scene/properties.rst:224
+msgid "Sample Rate"
+msgstr ""
 
-#: ../../manual/scene_layout/scene/properties.rst:231
+#: ../../manual/scene_layout/scene/properties.rst:224
 msgid ""
 "Sets the audio `sampling rate "
 "<https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate>`__."
@@ -519,80 +536,56 @@ msgstr ""
 "设置音频 `采样率 "
 "<https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate>`__。"
 
-#: ../../manual/scene_layout/scene/properties.rst:235
-msgid "Gravity"
-msgstr "重力"
-
-#: ../../manual/scene_layout/scene/properties.rst:240
-msgid ":menuselection:`Properties editor --> Scene --> Gravity`"
-msgstr ":menuselection:`属性编辑器 --> 场景 --> 重力`"
-
-#: ../../manual/scene_layout/scene/properties.rst:242
-msgid "Options to control global gravity used for physics effects."
-msgstr "控制物理效应中全局重力的选项。"
-
-#: ../../manual/scene_layout/scene/properties.rst:244
+#: ../../manual/scene_layout/scene/properties.rst:227
 #, fuzzy
-msgid ""
-"See the :doc:`Physics chapter </physics/forces/gravity>` for more "
-"information."
-msgstr "更多信息参考 :doc:`物理章节 </physics/gravity>` 。"
+msgid "Doppler Speed"
+msgstr "多普勒"
 
-#: ../../manual/scene_layout/scene/properties.rst:248
+#: ../../manual/scene_layout/scene/properties.rst:227
+msgid ""
+"Speed of the sound for the Doppler effect calculations. The typical value"
+" is 343.3 m/s in air, in water for example this value is around 1560 m/s."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:231
+msgid "Doppler Factor"
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:230
+msgid ""
+"Controls how strong the Doppler effect is. You can exaggerate or "
+"attenuate the change of pitch, but physically correct is a factor of 1.0."
+msgstr ""
+
+#: ../../manual/scene_layout/scene/properties.rst:235
+msgid "Update Animation Cache"
+msgstr "更新动画缓存"
+
+#: ../../manual/scene_layout/scene/properties.rst:234
+msgid ""
+"Updates the audio animation cache. This is useful if you start noticing "
+"artifact in the audio."
+msgstr "更新音频动画缓存。这在你意识到音频存在瑕疵时很有用。"
+
+#: ../../manual/scene_layout/scene/properties.rst:238
 msgid "Rigid Body World"
 msgstr "刚体世界"
 
-#: ../../manual/scene_layout/scene/properties.rst:253
+#: ../../manual/scene_layout/scene/properties.rst:243
 msgid ":menuselection:`Properties editor --> Scene --> Rigid Body World`"
 msgstr ":menuselection:`属性编辑器r --> 场景 --> 刚体世界`"
 
-#: ../../manual/scene_layout/scene/properties.rst:255
+#: ../../manual/scene_layout/scene/properties.rst:245
 msgid ""
 "The *Rigid Body World* is a group of rigid body objects, which holds "
 "settings that apply to all rigid bodies in this simulation."
 msgstr "*刚体世界* 是一组刚体物体，包含适用于模拟中所有刚体的设置。"
 
-#: ../../manual/scene_layout/scene/properties.rst:258
+#: ../../manual/scene_layout/scene/properties.rst:248
 msgid ""
 "See :doc:`Rigid Body World </physics/rigid_body/world>` for more "
 "information."
 msgstr "更多信息参考 :doc:`刚体世界 </physics/rigid_body/world>` 。"
-
-#: ../../manual/scene_layout/scene/properties.rst:265
-msgid "Simplify"
-msgstr "简化"
-
-#: ../../manual/scene_layout/scene/properties.rst:270
-msgid ":menuselection:`Properties editor --> Scene --> Simplify`"
-msgstr ":menuselection:`属性编辑器 --> 场景 --> 简化`"
-
-#: ../../manual/scene_layout/scene/properties.rst:274
-msgid "Subdivision"
-msgstr "细分"
-
-#: ../../manual/scene_layout/scene/properties.rst:273
-msgid ""
-"Maximum number of *Viewport*/*Render* subdivisions to use for the "
-":doc:`Subdivision Modifier </modeling/modifiers/generate/subsurf>`."
-msgstr ""
-":doc:`表面细分修改器 </modeling/modifiers/generate/subsurf>` 在 *视图*/*渲染* "
-"中的最大细分次数。"
-
-#: ../../manual/scene_layout/scene/properties.rst:278
-msgid "Child Particles"
-msgstr "子粒子"
-
-#: ../../manual/scene_layout/scene/properties.rst:277
-msgid ""
-"Percentage of :doc:`Child Particles "
-"</physics/particles/emitter/children>` to see in the *Viewport*/*Render*."
-msgstr "*视图*/*渲染* 中 :doc:`子粒子 </physics/particles/emitter/children>` 的百分比。"
-
-#: ../../manual/scene_layout/scene/properties.rst:282
-msgid ""
-"There are also renderer specific *Simplify* settings for :ref:`Cycles "
-"<render-cycles-settings-scene-simplify>`."
-msgstr ":ref:`Cycles <render-cycles-settings-scene-simplify>` 有特定的 *简化* 设置。"
 
 #~ msgid "TODO."
 #~ msgstr "TODO."
@@ -612,4 +605,99 @@ msgstr ":ref:`Cycles <render-cycles-settings-scene-simplify>` 有特定的 *简�
 
 #~ msgid "Pitch factor for Doppler effect calculation."
 #~ msgstr "音高系数，用于计算多普勒效应。"
+
+#~ msgid "Length Presets"
+#~ msgstr "长度预设"
+
+#~ msgid "Common unit scales to use."
+#~ msgstr "常用单位比例。"
+
+#~ msgid "Uses :term:`Blender Units`."
+#~ msgstr "使用 :term:`Blender单位`."
+
+#~ msgid "Standard unit of measurement for lengths."
+#~ msgstr "长度计量标准单位。"
+
+#~ msgid "Angle"
+#~ msgstr "角度"
+
+#~ msgid "Standard unit for angular measurement."
+#~ msgstr "角度计量标准单位。"
+
+#~ msgid ""
+#~ "When you are using *Degrees*, the "
+#~ "radian value is also displayed in "
+#~ "the tooltip."
+#~ msgstr "当使用 *角度* 时，工具提示会显示弧度值。"
+
+#~ msgid ""
+#~ "Scale factor to use when converting "
+#~ "between :term:`Blender Units` and "
+#~ "*Metric*/*Imperial*."
+#~ msgstr "用于 :term:`Blender单位` 与 *公制*/*英制* 单位之间转换的比例尺。"
+
+#~ msgid ""
+#~ "Usually you will want to use the"
+#~ " *Length* presets to change to scale"
+#~ " factor, as this does not require "
+#~ "looking up values to use for "
+#~ "conversion."
+#~ msgstr "通常用户会设置比例尺为 *长度* 预设值，这样就无需计算数值转换了。"
+
+#~ msgid "Color Management"
+#~ msgstr "色彩管理"
+
+#~ msgid ":menuselection:`Properties editor --> Scene --> Color Management`"
+#~ msgstr ":menuselection:`属性编辑器 --> 场景 --> 色彩管理`"
+
+#~ msgid "Options to control how images appear on the screen."
+#~ msgstr "用于图片在屏幕上如何显示的选项。"
+
+#~ msgid ""
+#~ "For :ref:`Color Management settings "
+#~ "<render-post-color-management>` for more"
+#~ " information."
+#~ msgstr "更多信息请参考 :ref:`色彩管理设置 <render-post-color-management>`  。"
+
+#~ msgid "Speed"
+#~ msgstr "速率"
+
+#~ msgid "Format"
+#~ msgstr "格式"
+
+#~ msgid "Mix Rate"
+#~ msgstr "Rate"
+
+#~ msgid "Simplify"
+#~ msgstr "简化"
+
+#~ msgid ":menuselection:`Properties editor --> Scene --> Simplify`"
+#~ msgstr ":menuselection:`属性编辑器 --> 场景 --> 简化`"
+
+#~ msgid "Subdivision"
+#~ msgstr "细分"
+
+#~ msgid ""
+#~ "Maximum number of *Viewport*/*Render* "
+#~ "subdivisions to use for the "
+#~ ":doc:`Subdivision Modifier "
+#~ "</modeling/modifiers/generate/subsurf>`."
+#~ msgstr ""
+#~ ":doc:`表面细分修改器 </modeling/modifiers/generate/subsurf>` 在"
+#~ " *视图*/*渲染* 中的最大细分次数。"
+
+#~ msgid "Child Particles"
+#~ msgstr "子粒子"
+
+#~ msgid ""
+#~ "Percentage of :doc:`Child Particles "
+#~ "</physics/particles/emitter/children>` to see in "
+#~ "the *Viewport*/*Render*."
+#~ msgstr "*视图*/*渲染* 中 :doc:`子粒子 </physics/particles/emitter/children>` 的百分比。"
+
+#~ msgid ""
+#~ "There are also renderer specific "
+#~ "*Simplify* settings for :ref:`Cycles "
+#~ "<render-cycles-settings-scene-simplify>`."
+#~ msgstr ":ref:`Cycles <render-cycles-settings-scene-simplify>` 有特定的 *简化* 设置。"
 

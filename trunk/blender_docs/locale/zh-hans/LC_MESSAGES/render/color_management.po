@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 16:58+0200\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2018-07-22 12:39+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/color_management.rst:6
 msgid "Color Management"
@@ -28,7 +28,7 @@ msgid ""
 "Color management is important to create renders and assets that are "
 "physically accurate and look great on multiple display devices. It is "
 "used both to ensure all parts of the pipeline interpret colors correctly,"
-" and to make artistics changes like exposure and color grading."
+" and to make artistic changes like exposure and color grading."
 msgstr ""
 
 #: ../../manual/render/color_management.rst:16
@@ -43,15 +43,15 @@ msgid ""
 "transforms will be available for consistent results."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:23
+#: ../../manual/render/color_management.rst:24
 msgid "Workflow"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:26
+#: ../../manual/render/color_management.rst:27
 msgid "Scene Linear Color Space"
 msgstr "场景线性色彩空间"
 
-#: ../../manual/render/color_management.rst:28
+#: ../../manual/render/color_management.rst:29
 #, fuzzy
 msgid ""
 "For correct results, different :term:`color spaces <color space>` are "
@@ -62,11 +62,11 @@ msgstr ""
 "为了得到正确的效果，需要不同的 :term:`色彩空间 <color space>` 来呈现渲染效果以及存储图像。渲染和合成选择在 *线性* "
 "色彩空间中操作效果更佳，因为它的处理更贴近自然，而且让计算的指令执行得更精准到位。"
 
-#: ../../manual/render/color_management.rst:35
+#: ../../manual/render/color_management.rst:36
 msgid "An example of a linear workflow."
 msgstr "线性工作流示例"
 
-#: ../../manual/render/color_management.rst:37
+#: ../../manual/render/color_management.rst:38
 msgid ""
 "If the colors are linear, it means that if in reality, we double the "
 "number of photons, the color values are also doubled. Put another way, if"
@@ -76,7 +76,7 @@ msgid ""
 "best for photorealistic rendering and compositing."
 msgstr "线性色彩实际上意味着当我们加倍全局光的数量，那么颜色值也将加倍。换句话说，如果我们有两张图片/渲染图，分别有一或两束光打在上面，然后将这些图像拼接在一起，结果将是一张图像/渲染图拥有双方的光源。因此，根据辐射度来测量线性空间，可以实现图像般逼真的渲染和合成效果。"
 
-#: ../../manual/render/color_management.rst:43
+#: ../../manual/render/color_management.rst:44
 #, fuzzy
 msgid ""
 "However, these values do not directly correspond to human perception or "
@@ -85,17 +85,17 @@ msgid ""
 "conversion into and out of this scene linear color space."
 msgstr "然而，这些值并不能直接被人眼或是显示设备所感知，而且图像文件经常存储于不同的色彩空间，因此我们应该留意这些线性色彩空间的正确的转入和转出。"
 
-#: ../../manual/render/color_management.rst:48
+#: ../../manual/render/color_management.rst:50
 msgid "Display Transforms"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:50
+#: ../../manual/render/color_management.rst:52
 msgid ""
 "Transforming scene linear colors to display involves both technical and "
 "artistic choices."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:52
+#: ../../manual/render/color_management.rst:54
 #, fuzzy
 msgid ""
 "Correct display of renders requires a conversion to the display device "
@@ -105,7 +105,7 @@ msgstr ""
 "为了正确地显示渲染，颜色空间会通过转换到不同的播放设备，此处可以进行设置。\n"
 "电脑显示器的工作原理和数字电影投影仪HDTV有所差异，场景属性有如下设置："
 
-#: ../../manual/render/color_management.rst:56
+#: ../../manual/render/color_management.rst:58
 #, fuzzy
 msgid ""
 "There is also an artistic choice to be made. Partially that is because "
@@ -116,16 +116,16 @@ msgid ""
 "The default Filmic transform does this."
 msgstr "用户可以有一个较为艺术的渲染选择：由于显示设备不能直接播放全波段光谱，并且显示的亮度范围有限，因此我们筛选出有效的颜色去适应全部的设备。此外，渲染也常用于让显示的画面更独特，就像实际在电影中播放的效果一样。"
 
-#: ../../manual/render/color_management.rst:65
+#: ../../manual/render/color_management.rst:67
 msgid "Conversion from linear to display device space."
 msgstr "从线性空间到显示设备空间的转换。"
 
-#: ../../manual/render/color_management.rst:69
+#: ../../manual/render/color_management.rst:71
 #, fuzzy
 msgid "Image Color Spaces"
 msgstr "色彩空间"
 
-#: ../../manual/render/color_management.rst:71
+#: ../../manual/render/color_management.rst:73
 #, fuzzy
 msgid ""
 "When loading and saving media formats it is important to have color "
@@ -136,7 +136,7 @@ msgid ""
 " be converted to a display space."
 msgstr "在加载和保存媒体格式时谨记色彩管理。PNG或JPEG类的文件格式显而易见的需要存储颜色信息，因此会在色彩显示空间存储以备呈现，而不是在线性空间。例如渲染中使用纹理效果，首先需要转换为线性。当用于web上显示时，它们还需要被转换为显示空间。其他的文件格式如OpenEXR等存储在线性色彩空间，是产生的中间文件。"
 
-#: ../../manual/render/color_management.rst:77
+#: ../../manual/render/color_management.rst:79
 msgid ""
 "For intermediate files in production, it is recommended to use *OpenEXR* "
 "files. These are always stored in scene linear color spaces, without any "
@@ -144,7 +144,7 @@ msgid ""
 "composited, color graded and converted to different output formats."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:82
+#: ../../manual/render/color_management.rst:84
 msgid ""
 "Images can also contain data that is not actually a color. For example "
 "normal or displacement maps merely contain vectors and offsets. Such "
@@ -152,11 +152,11 @@ msgid ""
 "conversion happens on them."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:90
+#: ../../manual/render/color_management.rst:92
 msgid "Settings"
 msgstr "设置"
 
-#: ../../manual/render/color_management.rst:92
+#: ../../manual/render/color_management.rst:94
 msgid "Reference"
 msgstr "指引"
 
@@ -164,24 +164,24 @@ msgstr "指引"
 msgid "Panel"
 msgstr "面板"
 
-#: ../../manual/render/color_management.rst:95
+#: ../../manual/render/color_management.rst:97
 #, fuzzy
 msgid ":menuselection:`Properties editor --> Render --> Color Management`"
 msgstr "面板:    :menuselection:`属性编辑器 --> 场景 --> 色彩管理`"
 
-#: ../../manual/render/color_management.rst:103
+#: ../../manual/render/color_management.rst:105
 msgid "Display"
 msgstr "显示"
 
-#: ../../manual/render/color_management.rst:115
+#: ../../manual/render/color_management.rst:117
 msgid "Display Device"
 msgstr "显示设备"
 
-#: ../../manual/render/color_management.rst:106
+#: ../../manual/render/color_management.rst:108
 msgid "The device that the image is being viewed on."
 msgstr "正在查看的图像的设备。"
 
-#: ../../manual/render/color_management.rst:108
+#: ../../manual/render/color_management.rst:110
 msgid ""
 "Most computer monitors are configured for the sRGB color space, and so "
 "when working on a computer usually this option should just be left to the"
@@ -192,85 +192,85 @@ msgstr ""
 "大多数显示器配置为 "
 "sRGB色彩空间，所以在电脑上作业时，此选项通常为默认值。除非有另外的显示设备连接到这台电脑去查看图像，又或是将图像文件输出到另一台设备上显示时，则这块的选项需要改变设置。"
 
-#: ../../manual/render/color_management.rst:113
+#: ../../manual/render/color_management.rst:115
 msgid ""
 "Rec709 is commonly used for HDTVs, while XYZ and DCI-P3 are common for "
 "digital projectors."
 msgstr "Rec709 通常用于高清电视，XYZ 和 DCI P3 是常见的数字投影仪。"
 
-#: ../../manual/render/color_management.rst:115
+#: ../../manual/render/color_management.rst:117
 msgid "Color management can be disabled by setting the device to None."
 msgstr "设置为空时，色彩管理不可用。"
 
-#: ../../manual/render/color_management.rst:118
+#: ../../manual/render/color_management.rst:120
 msgid "Render"
 msgstr "渲染"
 
-#: ../../manual/render/color_management.rst:136
+#: ../../manual/render/color_management.rst:138
 msgid "View"
 msgstr "视图"
 
-#: ../../manual/render/color_management.rst:121
+#: ../../manual/render/color_management.rst:123
 msgid "These are different ways to view the image on the same display device."
 msgstr "将图像转换到色彩空间时的效果，在同个显示设备上可以有多种不同的视图。"
 
-#: ../../manual/render/color_management.rst:125
+#: ../../manual/render/color_management.rst:127
 msgid "Standard"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:124
+#: ../../manual/render/color_management.rst:126
 msgid ""
 "Does no extra conversion besides the conversion for the display device. "
 "Often used for non-photorealistic results or video editing where a "
 "specific look is already baked into the input video."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:128
+#: ../../manual/render/color_management.rst:130
 msgid "Filmic"
 msgstr "Filmic"
 
-#: ../../manual/render/color_management.rst:128
+#: ../../manual/render/color_management.rst:130
 msgid ""
 "For photorealistic results and better handling of high dynamic range "
 "colors. The contrast can be adjusted by changing the *Look* option for "
 "the Filmic view transform."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:131
+#: ../../manual/render/color_management.rst:133
 #, fuzzy
 msgid "Filmic Log"
 msgstr "Filmic"
 
-#: ../../manual/render/color_management.rst:131
+#: ../../manual/render/color_management.rst:133
 msgid ""
-"Converts to Filmic log colorspace. This can be used for export to color "
+"Converts to Filmic log color space. This can be used for export to color "
 "grading applications, or to inspect the image by flattening out very dark"
 " and light areas."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:134
+#: ../../manual/render/color_management.rst:136
 msgid "Raw"
 msgstr "Raw"
 
-#: ../../manual/render/color_management.rst:134
+#: ../../manual/render/color_management.rst:136
 msgid ""
 "Intended for inspecting the image but not for final export. Raw gives the"
 " image without any color space conversion."
 msgstr "用于检查图像而不是用于最终输出。RAW给出的图像不作任何色彩空间转换。"
 
-#: ../../manual/render/color_management.rst:136
+#: ../../manual/render/color_management.rst:138
 msgid "False Color"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:137
+#: ../../manual/render/color_management.rst:139
 msgid "Shows a heat map of image intensities, to visualize the dynamic range."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:139
+#: ../../manual/render/color_management.rst:141
 msgid "Exposure"
 msgstr "曝光度"
 
-#: ../../manual/render/color_management.rst:139
+#: ../../manual/render/color_management.rst:141
 msgid ""
 "Used to control the image brightness (in stops) applied before color "
 "space conversion. It is calculated as follows: :math:`output\\_value = "
@@ -279,11 +279,11 @@ msgstr ""
 "用于控制色彩空间转换前的图像亮度(in stops)，计算公式为 :math:`output\\_value = render\\_value ×"
 " 2^{(exposure)}`"
 
-#: ../../manual/render/color_management.rst:143
+#: ../../manual/render/color_management.rst:145
 msgid "Gamma"
 msgstr "伽玛"
 
-#: ../../manual/render/color_management.rst:142
+#: ../../manual/render/color_management.rst:144
 msgid ""
 "Extra gamma correction applied after color space conversion. Note that "
 "the default display transforms already perform the appropriate "
@@ -291,37 +291,37 @@ msgid ""
 "tweaks."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:146
+#: ../../manual/render/color_management.rst:148
 msgid "Look"
 msgstr "效果"
 
-#: ../../manual/render/color_management.rst:146
+#: ../../manual/render/color_management.rst:148
 msgid ""
 "Choose an artistic effect from a set of measured film response data which"
 " roughly emulates the look of certain film types. Applied before color "
 "space conversion."
 msgstr "在色彩空间转换之前，可以从一组标准的电影响应数据中选择一种艺术效果，这些数据大致模拟某些类型的影片的效果。"
 
-#: ../../manual/render/color_management.rst:151
+#: ../../manual/render/color_management.rst:153
 msgid "Use Curves"
 msgstr "使用曲线"
 
-#: ../../manual/render/color_management.rst:149
+#: ../../manual/render/color_management.rst:151
 msgid ""
 "Adjust RGB Curves to control image colors before color space conversion. "
 "Read more about using the :ref:`ui-curve-widget`."
 msgstr "在色彩空间转换之前调整RGB曲线来控制图像颜色。阅读更多关于使用 :ref:`ui-curve-widget` 。"
 
-#: ../../manual/render/color_management.rst:154
+#: ../../manual/render/color_management.rst:156
 msgid "Sequencer"
 msgstr "序列编辑器"
 
-#: ../../manual/render/color_management.rst:160
-#: ../../manual/render/color_management.rst:179
+#: ../../manual/render/color_management.rst:162
+#: ../../manual/render/color_management.rst:181
 msgid "Color Space"
 msgstr "色彩空间"
 
-#: ../../manual/render/color_management.rst:157
+#: ../../manual/render/color_management.rst:159
 msgid ""
 "The color space that the Sequencer operates in. By default, the Sequencer"
 " operates in sRGB space, but it can also be set to work in Linear space "
@@ -330,11 +330,11 @@ msgid ""
 "other operations."
 msgstr "序列编辑中的色彩显示空间：默认情况下，序列编辑在色彩显示空间中的sRGB空间运行，但它也可以被设置在线性空间中运行，譬如合成节点又或者是另一个色彩空间运行。不同的色彩空间将产生不同的效果，例如颜色校正、交叉渐变等操作效果。"
 
-#: ../../manual/render/color_management.rst:163
+#: ../../manual/render/color_management.rst:165
 msgid "Image Files"
 msgstr "图像文件"
 
-#: ../../manual/render/color_management.rst:165
+#: ../../manual/render/color_management.rst:167
 #, fuzzy
 msgid ""
 "When working with image files, the default color space is usually the "
@@ -348,14 +348,14 @@ msgstr ""
 "使用图像文件时，通常色彩空间使用默认设置即可。否则，可以在图像设置中配置图像文件的色彩空间。常见的需要手动设置的一种情况是：使用或者烘烤凹凸贴图或位移图时，例如。这样的贴图实际上不存储颜色信息，只是将数据编译为颜色。在这种情况下，它们应该被标记为"
 " *非颜色数据* 。"
 
-#: ../../manual/render/color_management.rst:171
+#: ../../manual/render/color_management.rst:173
 msgid ""
 "Image data-blocks will always store float buffers in memory in the scene "
 "linear color space, while a byte buffer in memory and files in a drive "
 "are stored in the color space specified with this setting:"
 msgstr "线性色彩显示空间场景中，图像数据块将始终以浮动缓存的方式在内存中存储，而内存中的字节缓存和驱动器中的文件都存储在指定的色彩显示空间中，设置如下："
 
-#: ../../manual/render/color_management.rst:175
+#: ../../manual/render/color_management.rst:177
 msgid ""
 "The color space of the image file on a drive. This depends on the file "
 "format, for example, PNG or JPEG images are often stored in sRGB, while "
@@ -367,7 +367,7 @@ msgstr ""
 "驱动器上的图像文件的色彩显示空间。取决于文件的格式，比如PNG或JPEG图像通常存储在sRGB，而OpenEXR图像存储在线性色彩显示空间。一些图像，如法线，凹凸或模板贴图不完全包含"
 " '颜色' 信息，这种情况下没有进行色彩显示空间转换。因此对于这些图像，色彩显示空间应设置为 *无* 。"
 
-#: ../../manual/render/color_management.rst:185
+#: ../../manual/render/color_management.rst:187
 msgid ""
 "By default only renders are displayed and saved with the render view "
 "transformations applied. These are the Render Result and Viewer image "
@@ -379,33 +379,33 @@ msgid ""
 "transformations applied, with these two settings:"
 msgstr "默认情况下只有显示和保存时渲染视图需要用到转换。这些渲染结果、查看器图像数据块以及文件被直接保存到渲染动画操作的驱动器上。然而，当加载一个已存储在中间OpenEXR文件的渲染对象，Blander不能自动检测出这是一个渲染（如图像纹理或位移图）。我们需要指定这是一个渲染对象，且希望应用转换操作，则设置这两个："
 
-#: ../../manual/render/color_management.rst:195
+#: ../../manual/render/color_management.rst:197
 msgid "View as Render"
 msgstr "预览为渲染结果"
 
-#: ../../manual/render/color_management.rst:195
+#: ../../manual/render/color_management.rst:197
 msgid ""
 "Display the image data-block (not only renders) with view transform, "
 "exposure, gamma, RGB curves applied. Useful for viewing rendered frames "
 "in linear OpenEXR files the same as when rendering them directly."
 msgstr "显示图像数据块（不仅是渲染）情况如视图转换，曝光，伽玛，RGB曲线应用。和直接渲染一样，常用于查看在线性OpenEXR文件中渲染完成的帧。"
 
-#: ../../manual/render/color_management.rst:200
+#: ../../manual/render/color_management.rst:202
 msgid "Save as Render"
 msgstr "另存为渲染图"
 
-#: ../../manual/render/color_management.rst:198
+#: ../../manual/render/color_management.rst:200
 msgid ""
 "Option in the image save operator to apply the view transform, exposure, "
 "gamma, RGB curves. This is useful for saving linear OpenEXR to e.g. PNG "
 "or JPEG files in display space."
 msgstr "图像的选项免除了用户的操作设置如视图变换，曝光，伽玛，RGB曲线。常用于在显示空间储存线性OpenEXR如PNG或JPEG文件。"
 
-#: ../../manual/render/color_management.rst:203
+#: ../../manual/render/color_management.rst:205
 msgid "OpenColorIO Configuration"
 msgstr "OpenColorIO配置"
 
-#: ../../manual/render/color_management.rst:205
+#: ../../manual/render/color_management.rst:207
 msgid ""
 "Blender comes with a standard OpenColorIO configuration that contains a "
 "number of useful display devices and view transforms. The reference "
@@ -415,7 +415,7 @@ msgstr ""
 "Blender中OpenColorIO的标准配置，包含一系列常用的设置，例如显示设备和视图变换。参考用于 Rec. 709色度以及 D65白点的 "
 "线性色彩显示空间的 :term:`色彩空间`  。"
 
-#: ../../manual/render/color_management.rst:210
+#: ../../manual/render/color_management.rst:212
 msgid ""
 "However, OpenColorIO was also designed to give a consistent user "
 "experience across `multiple applications "
@@ -432,44 +432,46 @@ msgstr ""
 "OCIO环境变量读取OpenColorIO配置。更多关于如何建立这样一个工作流的信息可以在  `OpenColorIO 网站 "
 "<http://opencolorio.org/>`__ 中查看。"
 
-#: ../../manual/render/color_management.rst:217
-msgid "We currently use the following color space rules:"
+#: ../../manual/render/color_management.rst:219
+#, fuzzy
+msgid "Blender currently use the following color space rules:"
 msgstr "目前使用的色彩显示空间规则如下："
 
-#: ../../manual/render/color_management.rst:219
-msgid "scene_linear"
+#: ../../manual/render/color_management.rst:221
+#, fuzzy
+msgid "``scene_linear``"
 msgstr "场景线性色彩显示空间"
 
-#: ../../manual/render/color_management.rst:220
+#: ../../manual/render/color_management.rst:222
 msgid ""
 "Color space used for rendering, compositing, and storing all float "
 "precision images in memory."
 msgstr "用于渲染、合成以及在内存中存储所有浮点精度图像的色彩空间。"
 
-#: ../../manual/render/color_management.rst:221
-msgid "data"
+#: ../../manual/render/color_management.rst:223
+msgid "``data``"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:222
+#: ../../manual/render/color_management.rst:224
 msgid "Color space for non-color data."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:224
-msgid "XYZ"
+#: ../../manual/render/color_management.rst:226
+msgid "``XYZ``"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:224
+#: ../../manual/render/color_management.rst:226
 msgid ""
 "Standard linear XYZ color space. Used for effects such as blackbody "
 "emission to convert from physical units to the *scene_linear* color "
 "space."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:228
-msgid "color_picking"
+#: ../../manual/render/color_management.rst:230
+msgid "``color_picking``"
 msgstr ""
 
-#: ../../manual/render/color_management.rst:227
+#: ../../manual/render/color_management.rst:229
 msgid ""
 "Defines the distribution of colors in color pickers. It is expected to be"
 " approximately perceptually linear, have the same gamut as the "
@@ -477,35 +479,38 @@ msgid ""
 "linear color space for predictable editing of material albedos."
 msgstr ""
 
-#: ../../manual/render/color_management.rst:230
-msgid "default_sequencer"
+#: ../../manual/render/color_management.rst:232
+#, fuzzy
+msgid "``default_sequencer``"
 msgstr "默认序列编辑设置"
 
-#: ../../manual/render/color_management.rst:231
+#: ../../manual/render/color_management.rst:233
 msgid "Default color space for the Sequencer, *scene_linear* if not specified."
 msgstr "如果没有指定 *线性场景* ，则在序列编辑中使用默认的色彩显示空间。"
 
-#: ../../manual/render/color_management.rst:232
-msgid "default_byte"
+#: ../../manual/render/color_management.rst:234
+#, fuzzy
+msgid "``default_byte``"
 msgstr "默认字节设置"
 
-#: ../../manual/render/color_management.rst:233
+#: ../../manual/render/color_management.rst:235
 msgid ""
 "Default color space for byte precision images and files, *texture_paint* "
 "if not specified."
 msgstr "字节精度的图像和文件的默认色彩显示空间，如果没有指定*纹理涂料*，则字节精度图像和文件使用默认的色彩显示空间。"
 
-#: ../../manual/render/color_management.rst:235
-msgid "default_float"
+#: ../../manual/render/color_management.rst:237
+#, fuzzy
+msgid "``default_float``"
 msgstr "默认浮度"
 
-#: ../../manual/render/color_management.rst:235
+#: ../../manual/render/color_management.rst:237
 msgid ""
 "Default color space for float precision images and files, *scene_linear* "
 "if not specified."
 msgstr "如果没有指定 *线性场景* ，浮动精度的图像和文件则使用默认的色彩显示。"
 
-#: ../../manual/render/color_management.rst:237
+#: ../../manual/render/color_management.rst:239
 msgid ""
 "The standard Blender configuration includes support for saving and "
 "loading images in `ACES <https://www.oscars.org/science-technology/sci-"
@@ -673,4 +678,32 @@ msgstr ""
 #~ "used temporarily and not get used "
 #~ "for final renders."
 #~ msgstr "另一个常见的用例是当你想检查渲染情况，在黑暗的阴影或明亮的亮点可以查看细节，或识别渲染错误。这样的设置只能暂时使用，而不用于最终渲染。"
+
+#~ msgid ""
+#~ "Color management is important to create"
+#~ " renders and assets that are "
+#~ "physically accurate and look great on"
+#~ " multiple display devices. It is used"
+#~ " both to ensure all parts of "
+#~ "the pipeline interpret colors correctly, "
+#~ "and to make artistics changes like "
+#~ "exposure and color grading."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Converts to Filmic log colorspace. This"
+#~ " can be used for export to "
+#~ "color grading applications, or to "
+#~ "inspect the image by flattening out "
+#~ "very dark and light areas."
+#~ msgstr ""
+
+#~ msgid "data"
+#~ msgstr ""
+
+#~ msgid "XYZ"
+#~ msgstr ""
+
+#~ msgid "color_picking"
+#~ msgstr ""
 

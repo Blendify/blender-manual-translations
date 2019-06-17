@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 16:58+0200\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2019-01-13 20:04+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -12,39 +12,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/lights/world.rst:3
-#: ../../manual/render/lights/world.rst:19
-msgid "World"
-msgstr "世界"
+#: ../../manual/render/lights/world.rst:4
+msgid "World Environment"
+msgstr ""
 
-#: ../../manual/render/lights/world.rst:8
+#: ../../manual/render/lights/world.rst:9
 msgid "Lighting with an HDR image."
 msgstr "使用 HDR 图像进行照明。"
 
-#: ../../manual/render/lights/world.rst:10
+#: ../../manual/render/lights/world.rst:11
 msgid ""
-"The world buttons let you set up the shading of your scene in general. It"
-" can provide ambient color, and special effects such as mist, but a very "
-"common use of a *World* is to shade a background color. These are "
-"accessible via the *World* tab. The world environment can emit light, "
-"ranging from a single solid color, physical sky model, to arbitrary "
-"textures."
+"The world defines the environment that the scene is in. The surface "
+"shader sets the background and environment lighting, either as a fixed "
+"color, sky model or HDRI texture. With volume shaders the entire scene "
+"can be covered in mist or other volumetric effects."
 msgstr ""
-"通过世界按钮，你可以设置场景的阴影。它可以提供环境色彩和雾等特殊效果，但 *World* 的一个非常常见的用途是背景色着色。这些可通过 "
-"*World* 标签访问。世界环境可以发出光，从单一的纯色，物理天空模型到任意纹理。"
 
 #: ../../manual/render/lights/world.rst:18
-msgid "The World :ref:`ui-data-block`."
-msgstr "The World :ref:`ui-data-block`."
-
-#: ../../manual/render/lights/world.rst:22
 msgid "Surface"
 msgstr "面"
 
-#: ../../manual/render/lights/world.rst:24
-#: ../../manual/render/lights/world.rst:48
+#: ../../manual/render/lights/world.rst:20
+#: ../../manual/render/lights/world.rst:44
 msgid "Reference"
 msgstr "参考"
 
@@ -52,11 +43,11 @@ msgstr "参考"
 msgid "Panel"
 msgstr "面板"
 
-#: ../../manual/render/lights/world.rst:27
+#: ../../manual/render/lights/world.rst:23
 msgid ":menuselection:`World --> Surface`"
 msgstr ":menuselection:`世界环境 --> 面`"
 
-#: ../../manual/render/lights/world.rst:29
+#: ../../manual/render/lights/world.rst:25
 msgid ""
 "The surface shader defines the light emission from the environment into "
 "the scene. The world surface is rendered as if it is very distant from "
@@ -66,36 +57,37 @@ msgid ""
 "for the intensity of the light."
 msgstr "表面着色器定义了从环境照射到场景中的光照。环境表面的渲染似乎是在场景内容十分遥远的地方，而且这意味着在场景物体与环境背景之间不会产生双向作用，只是光照可以进入而已。唯一支持的着色器就是具有输入接口的Background（背景）结点，以及决定光线密度的强度因数。"
 
-#: ../../manual/render/lights/world.rst:37
+#: ../../manual/render/lights/world.rst:33
 msgid "Image Based Lighting"
 msgstr "基于图像照明"
 
-#: ../../manual/render/lights/world.rst:39
+#: ../../manual/render/lights/world.rst:35
+#, fuzzy
 msgid ""
 "For image based lighting, use the Environment Texture node rather than "
 "the Image Texture node for correct mapping. This supports "
-"*Equirectangular* (also known as Lat/Long) for environment maps, and "
-"*Mirror Ball* mapping for converting photos of mirror balls to "
+"*Equirectangular* (also known as latitude/longitude) for environment "
+"maps, and *Mirror Ball* mapping for converting photos of mirror balls to "
 "environment maps."
 msgstr ""
 "基于图像照明，最好使用做好映射的环境纹理节点而不要去用图像纹理节点。环境贴图是支持等距圆柱投影（Equirectangular ）的(也叫 "
 "经度/纬度)；也支持铬球反射映射，它是从铬球反射的环境图照片转换过来的映射贴图。"
 
-#: ../../manual/render/lights/world.rst:46
+#: ../../manual/render/lights/world.rst:42
 msgid "Volume"
 msgstr "体积"
 
-#: ../../manual/render/lights/world.rst:51
+#: ../../manual/render/lights/world.rst:47
 msgid ":menuselection:`World --> Volume`"
 msgstr "面板： :menuselection:`世界环境 --> 体积`"
 
-#: ../../manual/render/lights/world.rst:53
+#: ../../manual/render/lights/world.rst:49
 msgid ""
 "A volume shader can be applied to the entirely world, filling the entire "
 "space."
 msgstr "体着色器可以在整个世界中应用，它会填满整个空间。"
 
-#: ../../manual/render/lights/world.rst:55
+#: ../../manual/render/lights/world.rst:51
 #, fuzzy
 msgid ""
 "Currently this is most useful for night time or other dark scenes, as the"
@@ -475,4 +467,27 @@ msgstr "面着色器非常适合夜景和灰暗的场景，如果面着色器被
 
 #~ msgid "Nodes for the trick above."
 #~ msgstr "以上情况的节点技巧。"
+
+#~ msgid "World"
+#~ msgstr "世界"
+
+#~ msgid ""
+#~ "The world buttons let you set up"
+#~ " the shading of your scene in "
+#~ "general. It can provide ambient color,"
+#~ " and special effects such as mist,"
+#~ " but a very common use of a "
+#~ "*World* is to shade a background "
+#~ "color. These are accessible via the "
+#~ "*World* tab. The world environment can"
+#~ " emit light, ranging from a single"
+#~ " solid color, physical sky model, to"
+#~ " arbitrary textures."
+#~ msgstr ""
+#~ "通过世界按钮，你可以设置场景的阴影。它可以提供环境色彩和雾等特殊效果，但 *World* "
+#~ "的一个非常常见的用途是背景色着色。这些可通过 *World* "
+#~ "标签访问。世界环境可以发出光，从单一的纯色，物理天空模型到任意纹理。"
+
+#~ msgid "The World :ref:`ui-data-block`."
+#~ msgstr "The World :ref:`ui-data-block`."
 
