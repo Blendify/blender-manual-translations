@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-22 18:54-0400\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/physics/collision.rst:6
 msgid "Collisions"
@@ -52,213 +52,224 @@ msgid ""
 msgstr ""
 
 #: ../../manual/physics/collision.rst:18
-msgid "The objects need to share at least one common layer to have effect."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:19
 msgid ""
 "You may limit the effect on particles to a group of objects (in the "
-":doc:`Field Weights panel </physics/particles/emitter/physics/index>`)."
+":doc:`Field Weights panel </physics/particles/emitter/force_field>`)."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:21
+#: ../../manual/physics/collision.rst:20
 msgid ""
 "*Deflection* for soft body objects is difficult, they often penetrate the"
 " colliding objects."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:22
+#: ../../manual/physics/collision.rst:21
 msgid ""
 "Hair particles ignore deflecting objects (but you can animate them as "
 "soft bodies which take deflection into account)."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:25
+#: ../../manual/physics/collision.rst:24
 msgid ""
 "If you change the deflection settings for an object you have to "
-"recalculate the particle, soft body or cloth system by *Free Cache*, this"
-" is not done automatically. You can clear the cache for all selected "
-"objects with :kbd:`Ctrl-B` :menuselection:`--> Free cache selected`."
+"recalculate the particle, soft body or cloth system by *Delete Bake*, "
+"this is not done automatically."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:31
+#: ../../manual/physics/collision.rst:29
 msgid "Options"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:35
+#: ../../manual/physics/collision.rst:33
 msgid "Collision panel."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:39
-msgid "Particle"
-msgstr ""
-
-#: ../../manual/physics/collision.rst:41
-msgid "Permeability"
-msgstr ""
-
-#: ../../manual/physics/collision.rst:42
-msgid "Fraction of particles passing through the mesh."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:43
-msgid "Stickiness"
+#: ../../manual/physics/collision.rst:37
+msgid "Force Field"
 msgstr ""
 
 #: ../../manual/physics/collision.rst:44
-msgid "How much particles stick to the object."
+msgid "Field Absorption"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:46
-msgid "Kill Particles"
+#: ../../manual/physics/collision.rst:40
+msgid ""
+"A deflector can also deflect effectors. You can specify some "
+"collision/deflector objects which deflect a specific portion of the "
+"effector force using the *Field Absorption* value. 100% absorption "
+"results in no force getting through the collision/deflector object at "
+"all. If you have three collision object behind each other with e.g. 10%, "
+"43% and 3%, the absorption ends up at around 50% :math:`100 × (1 - 0.1) ×"
+" (1 - 0.43) × (1 - 0.03)`."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:46
-msgid "Deletes Particles upon impact."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:48 ../../manual/physics/collision.rst:88
-msgid "Damping Factor"
+#: ../../manual/physics/collision.rst:47
+msgid "Particle"
 msgstr ""
 
 #: ../../manual/physics/collision.rst:49
-msgid "Damping during a collision (independent of the velocity of the particles)."
+msgid "Permeability"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:50
+msgid "Fraction of particles passing through the mesh."
 msgstr ""
 
 #: ../../manual/physics/collision.rst:51
-msgid "Random damping"
+msgid "Stickiness"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:51
-msgid "Random variation of damping."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:53
-msgid "Friction Factor"
+#: ../../manual/physics/collision.rst:52
+msgid "How much particles stick to the object."
 msgstr ""
 
 #: ../../manual/physics/collision.rst:54
-msgid "Friction during movements along the surface."
+msgid "Kill Particles"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:54
+msgid "Deletes Particles upon impact."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:77
+msgid "Damping"
 msgstr ""
 
 #: ../../manual/physics/collision.rst:57
-msgid "Random friction"
+msgid "Damping during a collision (independent of the velocity of the particles)."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:56
-msgid "Random variation of friction."
+#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:67
+msgid "Randomize"
 msgstr ""
 
 #: ../../manual/physics/collision.rst:60
-msgid "Soft Body and Cloth"
+msgid "Random variation of damping."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:62
-msgid ""
-"A padding distance is added to the inside and outside of each face, to "
-"help to prevent intersections. The soft body will come to rest at this "
-"distance away from the face of the colliding object."
+#: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:97
+msgid "Friction"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:65
-msgid "Outer"
+#: ../../manual/physics/collision.rst:63
+msgid "Friction during movements along the surface."
 msgstr ""
 
 #: ../../manual/physics/collision.rst:66
-msgid "Size of the outer collision zone."
+msgid "Random variation of friction."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:68
-msgid "Inner"
+#: ../../manual/physics/collision.rst:70
+msgid "Soft body and Cloth"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:68
-msgid "Size of the inner collision zone (padding distance)."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:75
-msgid "A soft body vertex colliding with a plane."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:77
-msgid ""
-"Outside and inside is defined by the face normal, depicted as blue arrow "
-"in Fig. :ref:`fig-collision-soft-plane`."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:81
-msgid "Soft Body Damping"
-msgstr ""
-
-#: ../../manual/physics/collision.rst:84
+#: ../../manual/physics/collision.rst:73
 msgid "Damping during a collision. The amount of bounce that surfaces will have."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:87
+#: ../../manual/physics/collision.rst:76
 msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:88
+#: ../../manual/physics/collision.rst:77
 msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:90
+#: ../../manual/physics/collision.rst:87
+msgid "Thickness"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:80
+msgid ""
+"A padding distance is added to the inside and outside of each face, to "
+"help to prevent intersections. The soft body will come to rest at this "
+"distance away from the face of the colliding object. Outside and inside "
+"is defined by the face normal, depicted as blue arrow in Fig. :ref:`fig-"
+"collision-soft-plane`."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:84
+msgid "Outer"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:85
+msgid "Size of the outer collision zone."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:87
+msgid "Inner"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:87
+msgid "Size of the inner collision zone (padding distance)."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:94
+msgid "A soft body vertex colliding with a plane."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:97
+msgid "Friction for cloth collisions."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:100
+msgid "Single Sided"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:100
+msgid ""
+"When enabled, cloth collisions are only performed on the normal side of "
+"the collider plane."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:103
+msgid "Override Normals"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:103
+msgid ""
+"When enabled, cloth collision impulses act in the direction of the "
+"collider normals."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:105
 msgid ""
 "*Soft body* collisions are difficult to get perfect. If one of the "
 "objects move too fast, the soft body will penetrate the mesh. See also "
 "the section about :doc:`Soft Bodies </physics/soft_body/index>`."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:95
-msgid "Force Field"
-msgstr ""
-
-#: ../../manual/physics/collision.rst:102
-msgid "Absorption"
-msgstr ""
-
-#: ../../manual/physics/collision.rst:98
-msgid ""
-"A deflector can also deflect effectors. You can specify some "
-"collision/deflector objects which deflect a specific portion of the "
-"effector force using the *Absorption* value. 100% absorption results in "
-"no force getting through the collision/deflector object at all. If you "
-"have three collision object behind each other with e.g. 10%, 43% and 3%, "
-"the absorption ends up at around 50% :math:`100 × (1 - 0.1) × (1 - 0.43) "
-"× (1 - 0.03)`."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:105
+#: ../../manual/physics/collision.rst:110
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:109
+#: ../../manual/physics/collision.rst:114
 msgid "Deflected particles."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:111
+#: ../../manual/physics/collision.rst:116
 msgid ""
 "Here is a *Meta* object, dupliverted to a particle system emitting "
 "downwards, and deflected by a mesh cube."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:115
+#: ../../manual/physics/collision.rst:120
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:117
+#: ../../manual/physics/collision.rst:122
 msgid ""
 "Make sure that the normals of the mesh surface are facing towards the "
 "particles/points for correct deflection."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:118
+#: ../../manual/physics/collision.rst:123
 msgid ""
 "Hair particles react directly to force fields, so if you use a force "
 "field with a short range you do not need necessarily collision."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:120
+#: ../../manual/physics/collision.rst:125
 msgid ""
 "Hair particles avoid their emitting mesh if you edit them in *Particle "
 "Edit Mode*. So you can at least model the hair with collision."
@@ -313,5 +324,79 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Damping during a collision."
+#~ msgstr ""
+
+#~ msgid "The objects need to share at least one common layer to have effect."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You may limit the effect on "
+#~ "particles to a group of objects "
+#~ "(in the :doc:`Field Weights panel "
+#~ "</physics/particles/emitter/physics/index>`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you change the deflection settings"
+#~ " for an object you have to "
+#~ "recalculate the particle, soft body or"
+#~ " cloth system by *Free Cache*, this"
+#~ " is not done automatically. You can"
+#~ " clear the cache for all selected "
+#~ "objects with :kbd:`Ctrl-B` :menuselection:`--> "
+#~ "Free cache selected`."
+#~ msgstr ""
+
+#~ msgid "Damping Factor"
+#~ msgstr ""
+
+#~ msgid "Random damping"
+#~ msgstr ""
+
+#~ msgid "Friction Factor"
+#~ msgstr ""
+
+#~ msgid "Random friction"
+#~ msgstr ""
+
+#~ msgid "Soft Body and Cloth"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A padding distance is added to the"
+#~ " inside and outside of each face, "
+#~ "to help to prevent intersections. The"
+#~ " soft body will come to rest at"
+#~ " this distance away from the face "
+#~ "of the colliding object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Outside and inside is defined by "
+#~ "the face normal, depicted as blue "
+#~ "arrow in Fig. :ref:`fig-collision-"
+#~ "soft-plane`."
+#~ msgstr ""
+
+#~ msgid "Soft Body Damping"
+#~ msgstr ""
+
+#~ msgid "Absorption"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A deflector can also deflect effectors."
+#~ " You can specify some collision/deflector"
+#~ " objects which deflect a specific "
+#~ "portion of the effector force using "
+#~ "the *Absorption* value. 100% absorption "
+#~ "results in no force getting through "
+#~ "the collision/deflector object at all. "
+#~ "If you have three collision object "
+#~ "behind each other with e.g. 10%, "
+#~ "43% and 3%, the absorption ends up"
+#~ " at around 50% :math:`100 × (1 "
+#~ "- 0.1) × (1 - 0.43) × (1 "
+#~ "- 0.03)`."
 #~ msgstr ""
 
