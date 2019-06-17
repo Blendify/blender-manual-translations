@@ -9,22 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2018-11-08 09:17+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/physics/fluid/types/fluid_object.rst:5
 msgid "Fluid Object"
 msgstr "Objet Fluide"
 
 #: ../../manual/physics/fluid/types/fluid_object.rst:7
+#: ../../manual/physics/fluid/types/fluid_object.rst:27
 msgid "Reference"
 msgstr "Référence"
 
@@ -41,81 +40,93 @@ msgid "Type"
 msgstr "Type "
 
 #: ../../manual/physics/fluid/types/fluid_object.rst:11
+#: ../../manual/physics/fluid/types/fluid_object.rst:31
 msgid "Fluid"
 msgstr "Fluide"
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:15
-msgid "Fluid object settings."
-msgstr "Paramètres de l'Objet Fluide."
-
-#: ../../manual/physics/fluid/types/fluid_object.rst:17
+#: ../../manual/physics/fluid/types/fluid_object.rst:18
 msgid ""
-"All regions of this object that are inside the domain bounding box will be "
-"used as actual fluid in the simulation. If you place more than one fluid "
-"object inside the domain, they should currently not intersect. Also make "
-"sure the surface normals are pointing outwards. In contrast to domain "
-"objects, the actual mesh geometry is used for fluid objects."
+"All regions of this object that are inside the domain bounding box will "
+"be used as actual fluid in the simulation. If you place more than one "
+"fluid object inside the domain, they should currently not intersect. Also"
+" make sure the surface normals are pointing outwards. In contrast to "
+"domain objects, the actual mesh geometry is used for fluid objects."
 msgstr ""
 "Toutes les régions de cet objet qui sont à l'intérieur de la boîte "
 "d'encombrement du domaine seront utilisées comme fluide réel dans la "
-"simulation. Si vous placez plus d'un objet fluide à l'intérieur du domaine, "
-"il ne faudrait pas qu'ils aient des intersections. Assurez-vous aussi que "
-"les normales des surfaces pointent vers l'extérieur. Au contraire des objets "
-"domaine, la géométrie réelle du maillage est utilisée pour les objets fluide."
+"simulation. Si vous placez plus d'un objet fluide à l'intérieur du "
+"domaine, il ne faudrait pas qu'ils aient des intersections. Assurez-vous "
+"aussi que les normales des surfaces pointent vers l'extérieur. Au "
+"contraire des objets domaine, la géométrie réelle du maillage est "
+"utilisée pour les objets fluide."
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:24
-msgid "Options"
+#: ../../manual/physics/fluid/types/fluid_object.rst:25
+msgid "Settings"
 msgstr ""
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:27
+#: ../../manual/physics/fluid/types/fluid_object.rst:30
+msgid ":menuselection:`Physics --> Fluid --> Settings`"
+msgstr ""
+
+#: ../../manual/physics/fluid/types/fluid_object.rst:34
 msgid "Volume Initialization Type"
 msgstr "Type d'initialisation du Volume"
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:27
+#: ../../manual/physics/fluid/types/fluid_object.rst:34
 msgid "See :ref:`Volume Initialization Type <fluid-initialization>`."
 msgstr "Voir :ref:`Type d'initialisation du Volume <fluid-initialization>`."
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:30
+#: ../../manual/physics/fluid/types/fluid_object.rst:37
 msgid "Animated Mesh/Export"
 msgstr "Maillage/Export animé"
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:30
+#: ../../manual/physics/fluid/types/fluid_object.rst:37
 msgid "See :ref:`Animated Mesh/Export <fluid-animated-mesh>`."
 msgstr "Voir :ref:`Maillage/Export animé <fluid-animated-mesh>`."
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:33
+#: ../../manual/physics/fluid/types/fluid_object.rst:40
 msgid "Initial velocity"
 msgstr "Vitesse initiale"
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:33
+#: ../../manual/physics/fluid/types/fluid_object.rst:40
 msgid ""
-"Speed of the fluid at the beginning of the simulation, in meters per second."
+"Speed of the fluid at the beginning of the simulation, in meters per "
+"second."
 msgstr "Vitesse du fluide au début de la simulation, en mètres par seconde."
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:35
+#: ../../manual/physics/fluid/types/fluid_object.rst:42
 msgid "The direction of Surface Normals makes a big difference!"
 msgstr "La direction des Normales de surface fait une grosse différence !"
 
-#: ../../manual/physics/fluid/types/fluid_object.rst:37
+#: ../../manual/physics/fluid/types/fluid_object.rst:44
+#, fuzzy
 msgid ""
 "Blender uses the orientation of the Surface Normals to determine what is "
-"\"inside of\" the Fluid object and what is \"outside\". You want all of the "
-"normals to face *outside* (in *Edit Mode*, use :kbd:`Ctrl-N` or press :kbd:"
-"`Spacebar` and choose :menuselection:`Edit --> Normals --> Calculate "
-"Outside`). If the normals face the wrong way, you will be rewarded with a "
-"\"gigantic flood of water\", because Blender will think that the volume of "
-"the object is outside of its mesh! This applies regardless of the *Volume "
-"initialization* type setting."
+"\"inside of\" the Fluid object and what is \"outside\". You want all of "
+"the normals to face *outside* (in *Edit Mode*, use :kbd:`Shift-N` or "
+"press :kbd:`F3` and choose :menuselection:`Mesh --> Normals --> Calculate"
+" Outside`). If the normals face the wrong way, you will be rewarded with "
+"a \"gigantic flood of water\", because Blender will think that the volume"
+" of the object is outside of its mesh! This applies regardless of the "
+"*Volume initialization* type setting."
 msgstr ""
-"Blender utilise l'orientation des Normales de surface pour déterminer ce qui "
-"est \"à l'intérieur\" de l'objet fluide et ce qui est \"à l'extérieur\". Ce "
-"que vous souhaitez est d'avoir toutes les normales pointant vers "
-"l'extérieur. (en *Mode Édition*, utilisez kbd:`Ctrl-N` ou appuyez sur :kbd:"
-"`Barre d'espace` et choisissez :menuselection:`Edit --> Normals --> "
-"Calculate Outside`). Si les Normales pointent du mauvais côté, vous serez "
-"récompensé avec \"un gigantesque torrent d'eau\" parce que Blender pensera "
-"que le volume de l'objet est à l'extérieur de son maillage ! Cela s'applique "
-"indépendamment du réglage du type de *Volume init*."
+"Blender utilise l'orientation des Normales de surface pour déterminer ce "
+"qui est \"à l'intérieur\" de l'objet fluide et ce qui est \"à "
+"l'extérieur\". Ce que vous souhaitez est d'avoir toutes les normales "
+"pointant vers l'extérieur. (en *Mode Édition*, utilisez kbd:`Ctrl-N` ou "
+"appuyez sur :kbd:`Barre d'espace` et choisissez :menuselection:`Edit --> "
+"Normals --> Calculate Outside`). Si les Normales pointent du mauvais "
+"côté, vous serez récompensé avec \"un gigantesque torrent d'eau\" parce "
+"que Blender pensera que le volume de l'objet est à l'extérieur de son "
+"maillage ! Cela s'applique indépendamment du réglage du type de *Volume "
+"init*."
 
 #~ msgid "Type:     Fluid"
 #~ msgstr "Type :     Fluid"
+
+#~ msgid "Fluid object settings."
+#~ msgstr "Paramètres de l'Objet Fluide."
+
+#~ msgid "Options"
+#~ msgstr ""
+

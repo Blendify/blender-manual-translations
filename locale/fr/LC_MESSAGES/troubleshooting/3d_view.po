@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2018-06-22 20:57+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -153,7 +153,7 @@ msgid "This becomes especially problematic on dense geometry."
 msgstr "Ceci devient spécialement problématique sur une géométrie dense."
 
 #: ../../manual/troubleshooting/3d_view.rst:75
-#: ../../manual/troubleshooting/3d_view.rst:155
+#: ../../manual/troubleshooting/3d_view.rst:154
 msgid "Possible Solutions:"
 msgstr "Solutions possibles :"
 
@@ -200,9 +200,10 @@ msgid "Change Draw Modes (Workaround)"
 msgstr "Changement de modes de dessin (solution de rechange)"
 
 #: ../../manual/troubleshooting/3d_view.rst:89
+#, fuzzy
 msgid ""
-"Using *Wireframe* or even *Bounding Box* draw modes can be used to more "
-"quickly select different objects."
+"Using *Wireframe* draw mode can be used to more quickly select different "
+"objects."
 msgstr ""
 "Les modes de tracé *Wireframe* ou même *Bounding Box* peuvent être "
 "utilisés pour sélectionner plus rapidement différents objets."
@@ -245,9 +246,10 @@ msgstr ""
 "deux façons de corriger cela :"
 
 #: ../../manual/troubleshooting/3d_view.rst:108
+#, fuzzy
 msgid ""
 "Select an object in the :doc:`Outliner </editors/outliner>`, then zoom to"
-" that object with :menuselection:`View --> Show Active` or "
+" that object with :menuselection:`View --> Frame Selected` or "
 ":kbd:`NumpadPeriod`."
 msgstr ""
 "Sélectionner un objet dans l':doc:`Outliner </editors/outliner>`, puis "
@@ -293,7 +295,8 @@ msgid "Use :ref:`View Dolly <3dview-nav-zoom-dolly>`."
 msgstr "Utiliser :ref:`View Dolly <3dview-nav-zoom-dolly>`"
 
 #: ../../manual/troubleshooting/3d_view.rst:129
-msgid "Use :ref:`Walk/Fly modes <3dview-walk-fly>`."
+#, fuzzy
+msgid "Use :ref:`Walk/Fly modes <3dview-fly-walk>`."
 msgstr "Utiliser les :ref:`modes Walk/Fly <3dview-walk-fly>`."
 
 #: ../../manual/troubleshooting/3d_view.rst:130
@@ -315,37 +318,35 @@ msgstr ""
 "réinitialise aussi le point central pendant le zoom."
 
 #: ../../manual/troubleshooting/3d_view.rst:133
+#, fuzzy
 msgid ""
-"Center the view around the mouse cursor :kbd:`Alt-F`. This will take the "
-"position under the cursor and make it your viewpoint center."
+"Center the view around the mouse cursor :kbd:`Alt-MMB`. This will take "
+"the position under the cursor and make it your viewpoint center."
 msgstr ""
 "Centrer la vue autour du curseur de la souris :kbd:`Alt-F`. Ceci va "
 "prendre la position sous le curseur et en fait le centre de votre point "
 "de vue."
 
 #: ../../manual/troubleshooting/3d_view.rst:135
-msgid "Center the view around the 3D cursor :kbd:`Alt-Home`."
-msgstr "Centrer la vue autour du curseur 3D :kbd:`Alt-Home`."
-
-#: ../../manual/troubleshooting/3d_view.rst:136
+#, fuzzy
 msgid ""
 "Use an :abbr:`NDOF (N-Degrees of Freedom)`, also known as a 3D mouse, see"
-" :ref:`configuring peripherals <hardware_3d-mice>` for more information."
+" :ref:`configuring peripherals <hardware-ndof>` for more information."
 msgstr ""
 "Utiliser un :abbr:`NDOF (N-Degrees of Freedom)`, aussi connu comme une "
 "souris 3D. Voir :doc:`configuration des périphériques "
 "</getting_started/installing/configuration/hardware>` pour plus "
 "d'informations."
 
-#: ../../manual/troubleshooting/3d_view.rst:141
+#: ../../manual/troubleshooting/3d_view.rst:140
 msgid "Tools"
 msgstr "Outils"
 
-#: ../../manual/troubleshooting/3d_view.rst:146
+#: ../../manual/troubleshooting/3d_view.rst:145
 msgid "Invalid Selection"
 msgstr "Sélection invalide"
 
-#: ../../manual/troubleshooting/3d_view.rst:148
+#: ../../manual/troubleshooting/3d_view.rst:147
 msgid ""
 "There are times when selection fails under some configurations, often "
 "this is noticeable in mesh *Edit Mode*, selecting vertices/edges/faces "
@@ -356,7 +357,7 @@ msgstr ""
 "sélectionnant des sommets/arêtes/facettes où des éléments aléatoires sont"
 " sélectionnés."
 
-#: ../../manual/troubleshooting/3d_view.rst:152
+#: ../../manual/troubleshooting/3d_view.rst:151
 msgid ""
 "Internally Blender uses :term:`OpenGL` for selection, so the graphics "
 "card driver relies on giving correct results."
@@ -365,33 +366,36 @@ msgstr ""
 "sorte que le pilote de carte graphique en dépend pour produire des "
 "résultats corrects."
 
-#: ../../manual/troubleshooting/3d_view.rst:164
-msgid "Disable Anti-Aliasing :term:`FSAA, Multisampling <FSAA>`"
+#: ../../manual/troubleshooting/3d_view.rst:163
+#, fuzzy
+msgid "Disable Anti-Aliasing :term:`Multisampling`"
 msgstr "Désactivation de l'Anti-Aliasing :term:`FSAA, Multi-Sampling <FSAA>`"
 
-#: ../../manual/troubleshooting/3d_view.rst:158
+#: ../../manual/troubleshooting/3d_view.rst:157
 msgid "This is by far the most common cause of selection issues."
 msgstr "C'est de loin la cause la plus fréquente de problèmes de sélection."
 
-#: ../../manual/troubleshooting/3d_view.rst:160
+#: ../../manual/troubleshooting/3d_view.rst:159
+#, fuzzy
 msgid ""
 "There are known problems with some graphics cards when using "
-"FSAA/multisampling."
+"multisampling."
 msgstr ""
 "Il y a des problèmes connus avec les cartes graphiques dans l'utilisation"
 " de FSAA/multi-sampling."
 
-#: ../../manual/troubleshooting/3d_view.rst:162
+#: ../../manual/troubleshooting/3d_view.rst:161
 msgid "You can disable this option by:"
 msgstr "Vous pouvez désactiver cette option :"
 
-#: ../../manual/troubleshooting/3d_view.rst:164
-msgid "Turning FSAA/multisampling off in your graphics card driver options."
+#: ../../manual/troubleshooting/3d_view.rst:163
+#, fuzzy
+msgid "Turning multisampling off in your graphics card driver options."
 msgstr ""
 "En désactivant FSAA/multi-sampling dans les options de pilote de votre "
 "carte graphique."
 
-#: ../../manual/troubleshooting/3d_view.rst:165
+#: ../../manual/troubleshooting/3d_view.rst:164
 msgid ""
 "Turning *Multi-Sampling* off in the :ref:`System Preferences <prefs-"
 "system-multi-sampling>`."
@@ -399,11 +403,11 @@ msgstr ""
 "En désactivant *Multi-Sampling* dans les :ref:`préférences système "
 "<prefs-system-multi-sampling>`."
 
-#: ../../manual/troubleshooting/3d_view.rst:169
+#: ../../manual/troubleshooting/3d_view.rst:168
 msgid "Change Anti-Aliasing Sample Settings"
 msgstr "Modification des réglages d'Anti-Aliasing"
 
-#: ../../manual/troubleshooting/3d_view.rst:167
+#: ../../manual/troubleshooting/3d_view.rst:166
 msgid ""
 "Depending on your OpenGL configuration, some specific sample settings may"
 " work while others fail."
@@ -411,7 +415,7 @@ msgstr ""
 "Selon votre configuration d'OpenGL, certains réglages spécifiques peuvent"
 " fonctionner tandis que d'autres échouent."
 
-#: ../../manual/troubleshooting/3d_view.rst:170
+#: ../../manual/troubleshooting/3d_view.rst:169
 msgid ""
 "Unfortunately finding working configuration involves trial & error "
 "testing."
@@ -419,7 +423,7 @@ msgstr ""
 "Malheureusement la découverte d'une configuration fonctionnelle nécessite"
 " des tests de type \"essai-échec\"."
 
-#: ../../manual/troubleshooting/3d_view.rst:172
+#: ../../manual/troubleshooting/3d_view.rst:171
 msgid ""
 "As with any OpenGL-related issues, using recent drivers can resolve "
 "problems."
@@ -427,7 +431,7 @@ msgstr ""
 "Comme avec les problèmes liés à OpenGL, l'utilisation de pilotes récents "
 "peut résoudre les problèmes."
 
-#: ../../manual/troubleshooting/3d_view.rst:174
+#: ../../manual/troubleshooting/3d_view.rst:173
 msgid ""
 "However, it should be noted that this is a fairly common problem and "
 "remains unresolved with many drivers."
@@ -453,4 +457,7 @@ msgstr ""
 
 #~ msgid "OpenGL Depth Picking (User Preferences)"
 #~ msgstr ""
+
+#~ msgid "Center the view around the 3D cursor :kbd:`Alt-Home`."
+#~ msgstr "Centrer la vue autour du curseur 3D :kbd:`Alt-Home`."
 
