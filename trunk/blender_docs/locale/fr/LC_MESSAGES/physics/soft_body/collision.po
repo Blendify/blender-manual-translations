@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-28 09:34-0400\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2018-12-01 20:00+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -53,19 +53,15 @@ msgstr ""
 
 #: ../../manual/physics/soft_body/collision.rst:19
 msgid ""
-"If *Collision Group* is set, the object must belong to the group. "
-"Otherwise, both objects have to share a layer, but the layer does not "
-"necessarily have to be visible."
+"If *Collision Collection* is set, the object must belong to the "
+"collection."
 msgstr ""
-"Si *Collision Group* est activé, l'objet doit appartenir au groupe. "
-"Autrement, les deux objets doivent partager un calque, mais le calque ne "
-"doit pas être nécessairement visible. "
 
-#: ../../manual/physics/soft_body/collision.rst:21
+#: ../../manual/physics/soft_body/collision.rst:20
 msgid "The collision object has to be a mesh object."
 msgstr "L'objet de collision doit être un objet mesh."
 
-#: ../../manual/physics/soft_body/collision.rst:22
+#: ../../manual/physics/soft_body/collision.rst:21
 msgid ""
 "You have to activate the *Collision* in the *Physics* tab for the "
 "collision object. The collision object may also be a soft body."
@@ -73,11 +69,11 @@ msgstr ""
 "Vous devez activer *Collision* dans l'onglet *Physics* pour l'objet de "
 "collision. L'objet de collision doit de plus êre un corps souple."
 
-#: ../../manual/physics/soft_body/collision.rst:27
+#: ../../manual/physics/soft_body/collision.rst:26
 msgid "Examples"
 msgstr "Exemples"
 
-#: ../../manual/physics/soft_body/collision.rst:29
+#: ../../manual/physics/soft_body/collision.rst:28
 msgid ""
 "A soft body cube colliding with a plane (Fig. :ref:`fig-softbody-"
 "collision-plane1`) works pretty well, but a soft body plane falls right "
@@ -89,17 +85,17 @@ msgstr ""
 "*plan* traverse un cube avec lequel il est sensé entrer en collision "
 "(Fig. :ref:`fig-softbody-collision-plane2`)."
 
-#: ../../manual/physics/soft_body/collision.rst:39
+#: ../../manual/physics/soft_body/collision.rst:38
 msgid "A soft body cube colliding with a plane."
 msgstr "Un corps souple *cube* entrant en collision avec un plan."
 
-#: ../../manual/physics/soft_body/collision.rst:45
+#: ../../manual/physics/soft_body/collision.rst:44
 msgid "A soft body plane colliding with a cube, so no interaction at all."
 msgstr ""
 "un corps souple *plan* entrant en collision avec un cube ; aucune "
 "interaction."
 
-#: ../../manual/physics/soft_body/collision.rst:47
+#: ../../manual/physics/soft_body/collision.rst:46
 msgid ""
 "Why is that? Because the default method of calculation only checks to see"
 " if the four vertices of the soft body plane collides with the cube as "
@@ -115,7 +111,7 @@ msgstr ""
 " pour activer à la place la collision entre la face du plan et l'objet "
 "mais ce type de calcul prend beaucoup plus de temps.   "
 
-#: ../../manual/physics/soft_body/collision.rst:52
+#: ../../manual/physics/soft_body/collision.rst:51
 msgid ""
 "Let us have a closer look at the collision calculation, so you can get an"
 " idea of how we might optimize it."
@@ -123,11 +119,11 @@ msgstr ""
 "Regardons de plus près le calcul de collision, ainsi vous pourrez avoir "
 "une idée sur la manière dont nous pourrions l'optimiser. "
 
-#: ../../manual/physics/soft_body/collision.rst:56
+#: ../../manual/physics/soft_body/collision.rst:55
 msgid "Calculating Collisions"
 msgstr "Calcul des collisions"
 
-#: ../../manual/physics/soft_body/collision.rst:58
+#: ../../manual/physics/soft_body/collision.rst:57
 msgid ""
 "Soft body simulations are by default done on a per-vertex basis. If the "
 "vertices of the soft body do not collide with the collision object, there"
@@ -138,7 +134,7 @@ msgstr ""
 "l'objet de collision, il n'y aura pas d'interaction entre les deux "
 "objets."
 
-#: ../../manual/physics/soft_body/collision.rst:61
+#: ../../manual/physics/soft_body/collision.rst:60
 msgid ""
 "In the video below, you can see the vertices colliding with a plane. If a"
 " vertex penetrates the zone between *Outer* and *Inner*, it is repulsed "
@@ -160,7 +156,7 @@ msgstr ""
 " de collision est influencée par le paramètre *Choke* dans les "
 ":ref:`réglages de Soft Body Solver <physics-softbody-settings-solver>`."
 
-#: ../../manual/physics/soft_body/collision.rst:73
+#: ../../manual/physics/soft_body/collision.rst:72
 msgid ""
 "Download the `blend-file "
 "<https://en.blender.org/uploads/8/8d/CollidingVertices.blend>`__."
@@ -168,7 +164,7 @@ msgstr ""
 "Téléchargez le `fichier blend "
 "<https://en.blender.org/uploads/8/8d/CollidingVertices.blend>`__."
 
-#: ../../manual/physics/soft_body/collision.rst:75
+#: ../../manual/physics/soft_body/collision.rst:74
 msgid ""
 "Now let's see what happens if we make vertices heavier and let them "
 "travel at a faster speed. In the video above, you can see vertices "
@@ -180,7 +176,7 @@ msgid ""
 "vertices collide correctly."
 msgstr ""
 
-#: ../../manual/physics/soft_body/collision.rst:82
+#: ../../manual/physics/soft_body/collision.rst:81
 msgid ""
 "You can set up your collision so that edges and even faces are included "
 "in the collision calculation in the *Soft Body Edges* panel with the "
@@ -195,11 +191,11 @@ msgstr ""
 "entrecoupe l'objet de collision, les zones de collision ne sont pas "
 "utilisées."
 
-#: ../../manual/physics/soft_body/collision.rst:89
+#: ../../manual/physics/soft_body/collision.rst:88
 msgid "Good Collisions"
 msgstr "Bonnes collisions"
 
-#: ../../manual/physics/soft_body/collision.rst:91
+#: ../../manual/physics/soft_body/collision.rst:90
 msgid ""
 "If the collision you have set up is not behaving properly, you can try "
 "the following:"
@@ -207,7 +203,7 @@ msgstr ""
 "Si la collision que vous avez configurée ne se comporte pas proprement, "
 "vous pouvez essayer ce que suit :"
 
-#: ../../manual/physics/soft_body/collision.rst:93
+#: ../../manual/physics/soft_body/collision.rst:92
 msgid ""
 "The soft body object must have more subdivisions than the collision "
 "object. Add loop cuts to the soft body object in strategic areas that you"
@@ -217,11 +213,11 @@ msgstr ""
 "collision. Ajoutez à l'objet corps souple dans des zones stratégiques que"
 " vous connaissez les plus à même d'être impliquées dans une collision."
 
-#: ../../manual/physics/soft_body/collision.rst:96
+#: ../../manual/physics/soft_body/collision.rst:95
 msgid "Check the direction of the face normals."
 msgstr "Vérifier la direction des normales de face."
 
-#: ../../manual/physics/soft_body/collision.rst:97
+#: ../../manual/physics/soft_body/collision.rst:96
 msgid ""
 "If the collision object has sharp spikes, they might penetrate the soft "
 "body."
@@ -229,7 +225,7 @@ msgstr ""
 "Si l'objet de collision à des pointes aiguës, elles pourraient pénétrer "
 "le corps souple."
 
-#: ../../manual/physics/soft_body/collision.rst:98
+#: ../../manual/physics/soft_body/collision.rst:97
 msgid ""
 "The resolution of the solver must match the speed at which soft body "
 "vertices are traveling. Lower the parameter *Error Limit* and carefully "
@@ -239,7 +235,7 @@ msgstr ""
 "souple voyagent. Baissez le paramètre *Error Limit* et augmentez "
 "prudemment *Min Step*."
 
-#: ../../manual/physics/soft_body/collision.rst:100
+#: ../../manual/physics/soft_body/collision.rst:99
 msgid ""
 "*Outer* and *Inner* should be large enough, but zones of opposite faces "
 "should not overlap, or you have forces in opposite directions."
@@ -248,13 +244,13 @@ msgstr ""
 "opposées ne devraient pas se superposer, ou vous aurez des forces dans "
 "des directions opposées.  "
 
-#: ../../manual/physics/soft_body/collision.rst:102
+#: ../../manual/physics/soft_body/collision.rst:101
 msgid "If you use strong forces you should use large zones."
 msgstr ""
 "Si vous utilisez des forces puissantes. vous devriez utiliser de grandes "
 "zones."
 
-#: ../../manual/physics/soft_body/collision.rst:103
+#: ../../manual/physics/soft_body/collision.rst:102
 msgid ""
 "Set *Choke* to a high enough value (all the way up if necessary) if you "
 "have difficulties with repelled vertices."
@@ -262,7 +258,7 @@ msgstr ""
 "Définissez *Choke* à une valeur assez haute (jusqu'en haut si nécessaire)"
 " si vous des difficultés avec des sommets repoussés."
 
-#: ../../manual/physics/soft_body/collision.rst:104
+#: ../../manual/physics/soft_body/collision.rst:103
 msgid ""
 "Colliding faces are difficult to control and need long calculation times."
 " Try not to use them."
@@ -270,7 +266,7 @@ msgstr ""
 "Les faces en collision sont difficiles à contrôler et nécessitent de "
 "longs calculs. Essayez de ne pas les utiliser."
 
-#: ../../manual/physics/soft_body/collision.rst:106
+#: ../../manual/physics/soft_body/collision.rst:105
 msgid ""
 "Often it is better to create a simplified mesh to use as your collision "
 "object, however, this may be difficult if you are using an animated mesh."
@@ -279,11 +275,11 @@ msgstr ""
 " votre objet de collision. Cependant il peut être difficile si vous "
 "utilisez un maillage d'animation."
 
-#: ../../manual/physics/soft_body/collision.rst:111
+#: ../../manual/physics/soft_body/collision.rst:110
 msgid "Self-Collisions"
 msgstr "Auto-collisions"
 
-#: ../../manual/physics/soft_body/collision.rst:113
+#: ../../manual/physics/soft_body/collision.rst:112
 msgid ""
 "For information on self-collision please refer to the :ref:`Self-"
 "Collision <physics-softbody-settings-self-collision>` settings."
@@ -291,4 +287,17 @@ msgstr ""
 "Pour des informations sur les auto-collisions, veuillez vous référer aux "
 "paramètres de :ref:`Self-Collision <physics-softbody-settings-self-"
 "collision>`."
+
+#~ msgid ""
+#~ "If *Collision Group* is set, the "
+#~ "object must belong to the group. "
+#~ "Otherwise, both objects have to share"
+#~ " a layer, but the layer does "
+#~ "not necessarily have to be visible."
+#~ msgstr ""
+#~ "Si *Collision Group* est activé, l'objet"
+#~ " doit appartenir au groupe. Autrement, "
+#~ "les deux objets doivent partager un "
+#~ "calque, mais le calque ne doit pas"
+#~ " être nécessairement visible. "
 

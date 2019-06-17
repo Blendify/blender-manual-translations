@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 16:58+0200\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2019-04-14 22:19+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/eevee/materials/nodes_support.rst:4
 msgid "Nodes Support"
@@ -173,7 +173,7 @@ msgid ""
 "and 1.0."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:72
+#: ../../manual/render/eevee/materials/nodes_support.rst:73
 msgid "Transparent BSDF"
 msgstr ""
 
@@ -181,18 +181,16 @@ msgstr ""
 msgid ""
 "Only monochromatic transparency is supported. The color input will be "
 "converted to float and used as alpha value. Transparency will only have "
-"an effect if the Material blend mode is not Opaque."
+"an effect if the Material blend mode is not Opaque. Using an Add Shader "
+"node with a Transparent BSDF node will not result in an additive blending"
+" behavior."
 msgstr ""
-"Seulement *monochromatic transparency* est pris en charge. L'entrée "
-"*color* sera convertie en flottant et utilisé comme valeur alpha. "
-"*Transpèarency* n'aura un effet que si le mode blend *Material* n'est pas"
-" *Opaque*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:75
+#: ../../manual/render/eevee/materials/nodes_support.rst:76
 msgid "Translucent BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:75
+#: ../../manual/render/eevee/materials/nodes_support.rst:76
 msgid ""
 "Does not diffuse the light inside the object. It only lights the object "
 "with reversed normals."
@@ -200,30 +198,30 @@ msgstr ""
 "Ne diffuse pas la lumière dans l'objet. Il n'éclaire que l'objet avec des"
 " normales inversées."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:79
+#: ../../manual/render/eevee/materials/nodes_support.rst:80
 msgid "Principled BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:78
+#: ../../manual/render/eevee/materials/nodes_support.rst:79
 msgid ""
 "Cumulate limitations from Diffuse BSDF, Glossy BSDF, Refraction BSDF and "
 "Subsurface Scattering. Anisotropy is not supported. Transmission "
 "Roughness is not supported. The Sheen layer is a crude approximation."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:82
+#: ../../manual/render/eevee/materials/nodes_support.rst:83
 msgid "Volume Absorption"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:82
+#: ../../manual/render/eevee/materials/nodes_support.rst:83
 msgid "See :ref:`Volume Limitation <eevee-limitations-volumetrics>`."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:86
+#: ../../manual/render/eevee/materials/nodes_support.rst:88
 msgid "Volume Scatter"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:85
+#: ../../manual/render/eevee/materials/nodes_support.rst:86
 #, fuzzy
 msgid ""
 "The anisotropy parameter will be mixed and averaged for all overlapping "
@@ -235,66 +233,76 @@ msgstr ""
 "volumétriques recouvrants, qui n'est pas physiquement correct et diffère "
 "de Cycles. Voir également *Limitation de volume*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:89
+#: ../../manual/render/eevee/materials/nodes_support.rst:91
 msgid "Principled Volume"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:89
+#: ../../manual/render/eevee/materials/nodes_support.rst:91
 #, fuzzy
 msgid ""
 "Same as Volume Scatter. Also see :ref:`Volume Limitation <eevee-"
 "limitations-volumetrics>`."
 msgstr "Identique à *Volume Scatter*. Voir également limitation de volume."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:92
+#: ../../manual/render/eevee/materials/nodes_support.rst:94
 msgid "Holdout"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:92
-#: ../../manual/render/eevee/materials/nodes_support.rst:95
-#: ../../manual/render/eevee/materials/nodes_support.rst:98
-#: ../../manual/render/eevee/materials/nodes_support.rst:101
-#: ../../manual/render/eevee/materials/nodes_support.rst:104
-#: ../../manual/render/eevee/materials/nodes_support.rst:107
-#: ../../manual/render/eevee/materials/nodes_support.rst:128
-#: ../../manual/render/eevee/materials/nodes_support.rst:171
-#: ../../manual/render/eevee/materials/nodes_support.rst:190
-#: ../../manual/render/eevee/materials/nodes_support.rst:196
-#: ../../manual/render/eevee/materials/nodes_support.rst:199
-#: ../../manual/render/eevee/materials/nodes_support.rst:202
-#: ../../manual/render/eevee/materials/nodes_support.rst:216
+#: ../../manual/render/eevee/materials/nodes_support.rst:94
+#: ../../manual/render/eevee/materials/nodes_support.rst:97
+#: ../../manual/render/eevee/materials/nodes_support.rst:100
+#: ../../manual/render/eevee/materials/nodes_support.rst:103
+#: ../../manual/render/eevee/materials/nodes_support.rst:106
+#: ../../manual/render/eevee/materials/nodes_support.rst:109
+#: ../../manual/render/eevee/materials/nodes_support.rst:133
+#: ../../manual/render/eevee/materials/nodes_support.rst:176
+#: ../../manual/render/eevee/materials/nodes_support.rst:195
+#: ../../manual/render/eevee/materials/nodes_support.rst:201
+#: ../../manual/render/eevee/materials/nodes_support.rst:204
+#: ../../manual/render/eevee/materials/nodes_support.rst:207
+#: ../../manual/render/eevee/materials/nodes_support.rst:221
 msgid "Not supported."
 msgstr "Non pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:95
+#: ../../manual/render/eevee/materials/nodes_support.rst:97
 msgid "Anisotropic BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:98
+#: ../../manual/render/eevee/materials/nodes_support.rst:100
 msgid "Toon BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:101
+#: ../../manual/render/eevee/materials/nodes_support.rst:103
 msgid "Hair BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:104
+#: ../../manual/render/eevee/materials/nodes_support.rst:106
 msgid "Velvet BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:108
+#: ../../manual/render/eevee/materials/nodes_support.rst:109
 msgid "Principled Hair BSDF"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:111
+#: ../../manual/render/eevee/materials/nodes_support.rst:113
+msgid "Add Shader"
+msgstr ""
+
+#: ../../manual/render/eevee/materials/nodes_support.rst:112
+msgid ""
+"Using an Add Shader node with a Transparent BSDF node will not result in "
+"an additive blending behavior."
+msgstr ""
+
+#: ../../manual/render/eevee/materials/nodes_support.rst:116
 msgid "Input Nodes"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:115
+#: ../../manual/render/eevee/materials/nodes_support.rst:120
 msgid "Ambient Occlusion"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:114
+#: ../../manual/render/eevee/materials/nodes_support.rst:119
 #, fuzzy
 msgid ""
 "All parameters will have no effects except Normal and Color. This is "
@@ -305,31 +313,31 @@ msgstr ""
 "C'est parce que AO est calculé avant évaluation de ce node et il utilise "
 "les paramètres de la scène pour cela. "
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:118
+#: ../../manual/render/eevee/materials/nodes_support.rst:123
 msgid "Camera Data"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:118
-#: ../../manual/render/eevee/materials/nodes_support.rst:131
-#: ../../manual/render/eevee/materials/nodes_support.rst:138
-#: ../../manual/render/eevee/materials/nodes_support.rst:168
-#: ../../manual/render/eevee/materials/nodes_support.rst:174
+#: ../../manual/render/eevee/materials/nodes_support.rst:123
+#: ../../manual/render/eevee/materials/nodes_support.rst:136
+#: ../../manual/render/eevee/materials/nodes_support.rst:143
+#: ../../manual/render/eevee/materials/nodes_support.rst:173
+#: ../../manual/render/eevee/materials/nodes_support.rst:179
 msgid "Everything is compatible."
 msgstr "Tout est compatible."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:121
+#: ../../manual/render/eevee/materials/nodes_support.rst:126
 msgid "Geometry"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:121
+#: ../../manual/render/eevee/materials/nodes_support.rst:126
 msgid "Pointiness is not supported."
 msgstr "*Pointiness* n'est pas pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:125
+#: ../../manual/render/eevee/materials/nodes_support.rst:130
 msgid "Attribute"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:124
+#: ../../manual/render/eevee/materials/nodes_support.rst:129
 #, fuzzy
 msgid ""
 "Defaults to active UV layer. Only \"density\", \"color\", \"flame\" and "
@@ -340,19 +348,19 @@ msgstr ""
 "\"temperature\" sont pris en charge. Les calques *UV* et *Vertex Color* "
 "sont pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:128
+#: ../../manual/render/eevee/materials/nodes_support.rst:133
 msgid "Bevel"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:131
+#: ../../manual/render/eevee/materials/nodes_support.rst:136
 msgid "Fresnel"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:135
+#: ../../manual/render/eevee/materials/nodes_support.rst:140
 msgid "Hair Info"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:134
+#: ../../manual/render/eevee/materials/nodes_support.rst:139
 msgid ""
 "The Random output uses a different :abbr:`RNG (Random Number Generator)` "
 "algorithm. Range and statistical distribution of the values should be the"
@@ -362,15 +370,15 @@ msgstr ""
 "Generator)` différent. L'intervalle et la distribution statistique des "
 "valeurs devraient être les mêmes mais les valeurs seront différentes."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:138
+#: ../../manual/render/eevee/materials/nodes_support.rst:143
 msgid "Layer Weight"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:165
+#: ../../manual/render/eevee/materials/nodes_support.rst:170
 msgid "Light Path"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:141
+#: ../../manual/render/eevee/materials/nodes_support.rst:146
 #, fuzzy
 msgid ""
 "Eevee has no real concept of rays. But in order to ease the workflow "
@@ -383,7 +391,7 @@ msgstr ""
 "charge dans des cas particuliers. Ce node rend possible l'éclairage "
 "indirect dans le shader."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:145
+#: ../../manual/render/eevee/materials/nodes_support.rst:150
 msgid ""
 "Only a subset of the outputs is supported and the ray depth has not "
 "exactly the same meaning:"
@@ -391,63 +399,63 @@ msgstr ""
 "Seul un sous-ensemble des sorties est pris en charge et la profondeur de "
 "rayon n'a pas exactement la même signification :"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:148
+#: ../../manual/render/eevee/materials/nodes_support.rst:153
 msgid "*Is Camera*: Supported."
 msgstr "*Is Camera*: pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:149
+#: ../../manual/render/eevee/materials/nodes_support.rst:154
 msgid "*Is Shadow*: Supported."
 msgstr "*Is Shadow*: pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:150
+#: ../../manual/render/eevee/materials/nodes_support.rst:155
 msgid "*Is Diffuse*: Supported."
 msgstr "*Is Shadow*: pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:151
+#: ../../manual/render/eevee/materials/nodes_support.rst:156
 msgid "*Is Glossy*: Supported."
 msgstr "*Is Shadow*: pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:152
+#: ../../manual/render/eevee/materials/nodes_support.rst:157
 msgid "*Is Singular*: Not supported. Same as Is Glossy."
 msgstr "*Is Singular*: non pris en charge. Identique à *Is Glossy*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:153
+#: ../../manual/render/eevee/materials/nodes_support.rst:158
 msgid "*Is Reflection*: Not supported. Same as Is Glossy."
 msgstr "*Is Reflection*: non pris en charge. Identique à *Is Glossy*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:154
+#: ../../manual/render/eevee/materials/nodes_support.rst:159
 msgid "*Is Transmission*: Not supported. Same as Is Glossy."
 msgstr "*Is Transmission*: non pris en charge. Identique à *Is Glossy*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:155
+#: ../../manual/render/eevee/materials/nodes_support.rst:160
 msgid "*Ray Length*: Not supported. Defaults to 1.0."
 msgstr "*Ray Length*: non pris en charge. Défaut à 1.0."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:156
+#: ../../manual/render/eevee/materials/nodes_support.rst:161
 msgid "*Ray Depth*: Indicates the current bounce when baking the light cache."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:157
+#: ../../manual/render/eevee/materials/nodes_support.rst:162
 msgid "*Diffuse Depth*: Same as Ray Depth but only when baking diffuse light."
 msgstr ""
 "*Diffuse Depth*: identique à Ray Depth en cas de précalcul de la lumière "
 "diffuse."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:158
+#: ../../manual/render/eevee/materials/nodes_support.rst:163
 msgid "*Glossy Depth*: Same as Ray Depth but only when baking specular light."
 msgstr ""
 "*Glossy Depth*: identique à Ray Depth mais seulement en cas de précalcul "
 "de la lumière spéculaire."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:159
+#: ../../manual/render/eevee/materials/nodes_support.rst:164
 msgid "*Transparent Depth*: Not supported. Defaults to 0."
 msgstr "*Transparent Depth*: non pris en charge. Défaut à 0."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:160
+#: ../../manual/render/eevee/materials/nodes_support.rst:165
 msgid "*Transmission Depth*: Not supported. Same as Glossy Depth."
 msgstr "*Transmission Depth*: non pris en charge. Identique à *Glossy Depth*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:164
+#: ../../manual/render/eevee/materials/nodes_support.rst:169
 #, fuzzy
 msgid ""
 "Is Glossy does not work with Screen Space Reflections/Refractions but "
@@ -457,77 +465,74 @@ msgstr ""
 " mais ne fonctionne pas avec les *reflection planes* (quand il est "
 "utilisé avec SSR ou non)."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:168
+#: ../../manual/render/eevee/materials/nodes_support.rst:173
 msgid "Object Info"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:171
+#: ../../manual/render/eevee/materials/nodes_support.rst:176
 msgid "Particle Info"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:174
+#: ../../manual/render/eevee/materials/nodes_support.rst:179
 msgid "Tangent"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:177
+#: ../../manual/render/eevee/materials/nodes_support.rst:182
 msgid "Texture Coordinate"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:177
-msgid "From Dupli and coordinate from Custom Object is not supported."
-msgstr ""
-
-#: ../../manual/render/eevee/materials/nodes_support.rst:180
-msgid "UV Map"
-msgstr ""
-
-#: ../../manual/render/eevee/materials/nodes_support.rst:180
+#: ../../manual/render/eevee/materials/nodes_support.rst:182
+#: ../../manual/render/eevee/materials/nodes_support.rst:185
 msgid "From Dupli is not supported."
 msgstr "*From Dupli* n'est pas pris en charge."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:184
+#: ../../manual/render/eevee/materials/nodes_support.rst:185
+msgid "UV Map"
+msgstr ""
+
+#: ../../manual/render/eevee/materials/nodes_support.rst:189
 msgid "Wireframe"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:183
+#: ../../manual/render/eevee/materials/nodes_support.rst:188
 msgid ""
 "Pixel size option does not give exactly the same output as Cycles. The "
 "width can be a bit different."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:187
+#: ../../manual/render/eevee/materials/nodes_support.rst:192
 msgid "Other Nodes"
 msgstr "Autres nodes"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:190
+#: ../../manual/render/eevee/materials/nodes_support.rst:195
 msgid "Light Falloff"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:193
+#: ../../manual/render/eevee/materials/nodes_support.rst:198
 msgid "Bump"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:193
+#: ../../manual/render/eevee/materials/nodes_support.rst:198
 msgid "Imprecision due to less precise derivatives."
 msgstr "Imprécision due à des dérivés moins précis."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:196
+#: ../../manual/render/eevee/materials/nodes_support.rst:201
 msgid "Displacement/Vector Displacement"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:199
+#: ../../manual/render/eevee/materials/nodes_support.rst:204
 msgid ":abbr:`IES (Illuminating Engineering Society)` Texture"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:202
+#: ../../manual/render/eevee/materials/nodes_support.rst:207
 msgid "Sky Texture"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:210
+#: ../../manual/render/eevee/materials/nodes_support.rst:215
 msgid "Image Texture"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:205
+#: ../../manual/render/eevee/materials/nodes_support.rst:210
 #, fuzzy
 msgid ""
 "Smart Interpolation always uses Cubic interpolation. Artifact present "
@@ -543,11 +548,11 @@ msgstr ""
 "*Extend type* mis à *Clip* ou *Extend* n'est pas pris en charge. À la "
 "place il utilise toujours *Repeat*."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:213
+#: ../../manual/render/eevee/materials/nodes_support.rst:218
 msgid "Material Output"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:213
+#: ../../manual/render/eevee/materials/nodes_support.rst:218
 msgid "Displacement output behavior is broken compared to Cycles."
 msgstr ""
 
@@ -603,4 +608,22 @@ msgstr ""
 
 #~ msgid ":doc:`Material </render/shaders/nodes/index>`."
 #~ msgstr ""
+
+#~ msgid "From Dupli and coordinate from Custom Object is not supported."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Only monochromatic transparency is supported."
+#~ " The color input will be converted"
+#~ " to float and used as alpha "
+#~ "value. Transparency will only have an"
+#~ " effect if the Material blend mode"
+#~ " is not Opaque."
+#~ msgstr ""
+#~ "Seulement *monochromatic transparency* est "
+#~ "pris en charge. L'entrée *color* sera"
+#~ " convertie en flottant et utilisé "
+#~ "comme valeur alpha. *Transpèarency* n'aura "
+#~ "un effet que si le mode blend "
+#~ "*Material* n'est pas *Opaque*."
 
