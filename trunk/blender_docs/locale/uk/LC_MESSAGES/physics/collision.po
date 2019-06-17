@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-22 18:54-0400\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2017-11-02 19:22+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/physics/collision.rst:6
 msgid "Collisions"
@@ -58,21 +58,16 @@ msgstr ""
 " з властивістю *Collision*."
 
 #: ../../manual/physics/collision.rst:18
-msgid "The objects need to share at least one common layer to have effect."
-msgstr ""
-"Такі об'єкти повинні знаходитися спільно принаймні на одному спільному "
-"шарі, щоб був ефект зіткнення."
-
-#: ../../manual/physics/collision.rst:19
+#, fuzzy
 msgid ""
 "You may limit the effect on particles to a group of objects (in the "
-":doc:`Field Weights panel </physics/particles/emitter/physics/index>`)."
+":doc:`Field Weights panel </physics/particles/emitter/force_field>`)."
 msgstr ""
 "Ви можете лімітувати цей ефект для частинок групою об'єкті (на панелі "
 "«Вагомості Полів» -- :doc:`Field Weights panel "
 "</physics/particles/emitter/physics/index>`)."
 
-#: ../../manual/physics/collision.rst:21
+#: ../../manual/physics/collision.rst:20
 #, fuzzy
 msgid ""
 "*Deflection* for soft body objects is difficult, they often penetrate the"
@@ -81,7 +76,7 @@ msgstr ""
 "«Відхиляння» -- *Deflection* для об'єктів з властивістю «м'яке тіло» є "
 "утрудненим, частинки часто проникають об'єкти з властивістю «зіткнення»."
 
-#: ../../manual/physics/collision.rst:22
+#: ../../manual/physics/collision.rst:21
 #, fuzzy
 msgid ""
 "Hair particles ignore deflecting objects (but you can animate them as "
@@ -90,13 +85,12 @@ msgstr ""
 "Волосяні частинки ігнорують відхильні об'єкти (але ви можете анімувати "
 "їх, як м'які тіла, що враховують відхиляння)."
 
-#: ../../manual/physics/collision.rst:25
+#: ../../manual/physics/collision.rst:24
 #, fuzzy
 msgid ""
 "If you change the deflection settings for an object you have to "
-"recalculate the particle, soft body or cloth system by *Free Cache*, this"
-" is not done automatically. You can clear the cache for all selected "
-"objects with :kbd:`Ctrl-B` :menuselection:`--> Free cache selected`."
+"recalculate the particle, soft body or cloth system by *Delete Bake*, "
+"this is not done automatically."
 msgstr ""
 "Якщо ви зміните устави відхиляння для об'єкта, то повинні перерахувати "
 "системи частинок, м'якого тіла або тканини, перед цим вивільнивши кеш -- "
@@ -104,132 +98,178 @@ msgstr ""
 "зчистити кеш для усіх виділених об'єктів за допомогою :kbd:`Ctrl-B` «> "
 "Вивільнити кеш виділеного» -- :menuselection:`--> Free cache selected`."
 
-#: ../../manual/physics/collision.rst:31
+#: ../../manual/physics/collision.rst:29
 msgid "Options"
 msgstr "Опції"
 
-#: ../../manual/physics/collision.rst:35
+#: ../../manual/physics/collision.rst:33
 #, fuzzy
 msgid "Collision panel."
 msgstr "Панель типу фізики «Зіткнення» -- Collision."
 
-#: ../../manual/physics/collision.rst:39
+#: ../../manual/physics/collision.rst:37
+msgid "Force Field"
+msgstr "Силове Поле -- Force Field"
+
+#: ../../manual/physics/collision.rst:44
+#, fuzzy
+msgid "Field Absorption"
+msgstr "Поглинання -- Absorption"
+
+#: ../../manual/physics/collision.rst:40
+#, fuzzy
+msgid ""
+"A deflector can also deflect effectors. You can specify some "
+"collision/deflector objects which deflect a specific portion of the "
+"effector force using the *Field Absorption* value. 100% absorption "
+"results in no force getting through the collision/deflector object at "
+"all. If you have three collision object behind each other with e.g. 10%, "
+"43% and 3%, the absorption ends up at around 50% :math:`100 × (1 - 0.1) ×"
+" (1 - 0.43) × (1 - 0.03)`."
+msgstr ""
+"Відхильник може також відхиляти ефектори. Ви можете визначати деякі "
+"об'єкти зіткнення/відхильники, які відхилятимуть певну частину сили "
+"ефектора використовуючи це значення *Absorption*. 100% поглинання "
+"призводить до того, що жодна сила взагалі не проходить через об'єкт "
+"зіткнення/відхильник. Якщо ви маєте три об'єкти зіткнення, один позаду "
+"іншого, з, наприклад, 10%, 43% та 3%, то поглинання завершиться біля 50% "
+":math:`100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)`."
+
+#: ../../manual/physics/collision.rst:47
 msgid "Particle"
 msgstr "Частинка -- Particle"
 
-#: ../../manual/physics/collision.rst:41
+#: ../../manual/physics/collision.rst:49
 msgid "Permeability"
 msgstr "Проникність -- Permeability"
 
-#: ../../manual/physics/collision.rst:42
+#: ../../manual/physics/collision.rst:50
 msgid "Fraction of particles passing through the mesh."
 msgstr "Фракція частинок, що проходитимуть крізь цю сіть."
 
-#: ../../manual/physics/collision.rst:43
+#: ../../manual/physics/collision.rst:51
 msgid "Stickiness"
 msgstr "Липкість -- Stickiness"
 
-#: ../../manual/physics/collision.rst:44
+#: ../../manual/physics/collision.rst:52
 msgid "How much particles stick to the object."
 msgstr "Скільки частинок прилипатимуть до об'єкта."
 
-#: ../../manual/physics/collision.rst:46
+#: ../../manual/physics/collision.rst:54
 msgid "Kill Particles"
 msgstr "Знищити Частинки -- Kill Particles"
 
-#: ../../manual/physics/collision.rst:46
+#: ../../manual/physics/collision.rst:54
 msgid "Deletes Particles upon impact."
 msgstr "Видаляє частинки при зіткненні."
 
-#: ../../manual/physics/collision.rst:48 ../../manual/physics/collision.rst:88
-msgid "Damping Factor"
-msgstr "Фактор Згасання -- Damping Factor"
+#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:77
+#, fuzzy
+msgid "Damping"
+msgstr "Випадкове згасання -- Random damping"
 
-#: ../../manual/physics/collision.rst:49
+#: ../../manual/physics/collision.rst:57
 msgid "Damping during a collision (independent of the velocity of the particles)."
 msgstr "Згасання у ході зіткнення (не залежить від скорості частинок)."
 
-#: ../../manual/physics/collision.rst:51
-msgid "Random damping"
-msgstr "Випадкове згасання -- Random damping"
+#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:67
+msgid "Randomize"
+msgstr ""
 
-#: ../../manual/physics/collision.rst:51
+#: ../../manual/physics/collision.rst:60
 msgid "Random variation of damping."
 msgstr "Випадкове варіювання згасання."
 
-#: ../../manual/physics/collision.rst:53
-msgid "Friction Factor"
-msgstr "Фактор Тертя -- Friction Factor"
+#: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:97
+#, fuzzy
+msgid "Friction"
+msgstr "Випадкове тертя -- Random friction"
 
-#: ../../manual/physics/collision.rst:54
+#: ../../manual/physics/collision.rst:63
 msgid "Friction during movements along the surface."
 msgstr "Тертя у ході пересувів частинок по поверхні сіті."
 
-#: ../../manual/physics/collision.rst:57
-msgid "Random friction"
-msgstr "Випадкове тертя -- Random friction"
-
-#: ../../manual/physics/collision.rst:56
+#: ../../manual/physics/collision.rst:66
 msgid "Random variation of friction."
 msgstr "Випадкове варіювання тертя."
 
-#: ../../manual/physics/collision.rst:60
-msgid "Soft Body and Cloth"
+#: ../../manual/physics/collision.rst:70
+#, fuzzy
+msgid "Soft body and Cloth"
 msgstr "М'яке Тіло і Тканина -- Soft Body and Cloth"
 
-#: ../../manual/physics/collision.rst:62
+#: ../../manual/physics/collision.rst:73
+msgid "Damping during a collision. The amount of bounce that surfaces will have."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:76
+msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:77
+msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:87
+#, fuzzy
+msgid "Thickness"
+msgstr "Липкість -- Stickiness"
+
+#: ../../manual/physics/collision.rst:80
 msgid ""
 "A padding distance is added to the inside and outside of each face, to "
 "help to prevent intersections. The soft body will come to rest at this "
-"distance away from the face of the colliding object."
+"distance away from the face of the colliding object. Outside and inside "
+"is defined by the face normal, depicted as blue arrow in Fig. :ref:`fig-"
+"collision-soft-plane`."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:65
+#: ../../manual/physics/collision.rst:84
 msgid "Outer"
 msgstr "Зовнішньо -- Outer"
 
-#: ../../manual/physics/collision.rst:66
+#: ../../manual/physics/collision.rst:85
 msgid "Size of the outer collision zone."
 msgstr "Розмір зони зіткнення зовні."
 
-#: ../../manual/physics/collision.rst:68
+#: ../../manual/physics/collision.rst:87
 msgid "Inner"
 msgstr "Внутрішньо -- Inner"
 
-#: ../../manual/physics/collision.rst:68
+#: ../../manual/physics/collision.rst:87
 msgid "Size of the inner collision zone (padding distance)."
 msgstr "Розмір зони зіткнення внутрішньо (відстань набивки)."
 
-#: ../../manual/physics/collision.rst:75
+#: ../../manual/physics/collision.rst:94
 #, fuzzy
 msgid "A soft body vertex colliding with a plane."
 msgstr "Зіткнення м'якого тіла з площиною."
 
-#: ../../manual/physics/collision.rst:77
+#: ../../manual/physics/collision.rst:97
+msgid "Friction for cloth collisions."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:100
+msgid "Single Sided"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:100
 msgid ""
-"Outside and inside is defined by the face normal, depicted as blue arrow "
-"in Fig. :ref:`fig-collision-soft-plane`."
-msgstr ""
-"Зовні та внутрішньо визначається нормаллю грані, позначеної як синя "
-"стрілка на Ілюстрації :ref:`fig-collision-soft-plane`."
-
-#: ../../manual/physics/collision.rst:81
-msgid "Soft Body Damping"
-msgstr "Згасання М'якого Тіла -- Soft Body Damping"
-
-#: ../../manual/physics/collision.rst:84
-msgid "Damping during a collision. The amount of bounce that surfaces will have."
+"When enabled, cloth collisions are only performed on the normal side of "
+"the collider plane."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:87
-msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
+#: ../../manual/physics/collision.rst:103
+msgid "Override Normals"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:88
-msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
+#: ../../manual/physics/collision.rst:103
+msgid ""
+"When enabled, cloth collision impulses act in the direction of the "
+"collider normals."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:90
+#: ../../manual/physics/collision.rst:105
 #, fuzzy
 msgid ""
 "*Soft body* collisions are difficult to get perfect. If one of the "
@@ -241,42 +281,16 @@ msgstr ""
 "Дивіться також підрозділ про м'які тіла тут -- :doc:`Soft Bodies "
 "</physics/soft_body/index>`."
 
-#: ../../manual/physics/collision.rst:95
-msgid "Force Field"
-msgstr "Силове Поле -- Force Field"
-
-#: ../../manual/physics/collision.rst:102
-msgid "Absorption"
-msgstr "Поглинання -- Absorption"
-
-#: ../../manual/physics/collision.rst:98
-msgid ""
-"A deflector can also deflect effectors. You can specify some "
-"collision/deflector objects which deflect a specific portion of the "
-"effector force using the *Absorption* value. 100% absorption results in "
-"no force getting through the collision/deflector object at all. If you "
-"have three collision object behind each other with e.g. 10%, 43% and 3%, "
-"the absorption ends up at around 50% :math:`100 × (1 - 0.1) × (1 - 0.43) "
-"× (1 - 0.03)`."
-msgstr ""
-"Відхильник може також відхиляти ефектори. Ви можете визначати деякі "
-"об'єкти зіткнення/відхильники, які відхилятимуть певну частину сили "
-"ефектора використовуючи це значення *Absorption*. 100% поглинання "
-"призводить до того, що жодна сила взагалі не проходить через об'єкт "
-"зіткнення/відхильник. Якщо ви маєте три об'єкти зіткнення, один позаду "
-"іншого, з, наприклад, 10%, 43% та 3%, то поглинання завершиться біля 50% "
-":math:`100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)`."
-
-#: ../../manual/physics/collision.rst:105
+#: ../../manual/physics/collision.rst:110
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../manual/physics/collision.rst:109
+#: ../../manual/physics/collision.rst:114
 #, fuzzy
 msgid "Deflected particles."
 msgstr "Відхилені частинки."
 
-#: ../../manual/physics/collision.rst:111
+#: ../../manual/physics/collision.rst:116
 #, fuzzy
 msgid ""
 "Here is a *Meta* object, dupliverted to a particle system emitting "
@@ -285,11 +299,11 @@ msgstr ""
 "Тут є об'єкт типу *Meta*, дубль-вершинений в емітування вниз системи "
 "частинок, та відхилений сітьовим кубом:"
 
-#: ../../manual/physics/collision.rst:115
+#: ../../manual/physics/collision.rst:120
 msgid "Hints"
 msgstr "Поради"
 
-#: ../../manual/physics/collision.rst:117
+#: ../../manual/physics/collision.rst:122
 msgid ""
 "Make sure that the normals of the mesh surface are facing towards the "
 "particles/points for correct deflection."
@@ -297,7 +311,7 @@ msgstr ""
 "Переконайтеся, що нормалі поверхні сіті вказують у напрямку "
 "частинок/точок для коректного відхиляння."
 
-#: ../../manual/physics/collision.rst:118
+#: ../../manual/physics/collision.rst:123
 msgid ""
 "Hair particles react directly to force fields, so if you use a force "
 "field with a short range you do not need necessarily collision."
@@ -306,7 +320,7 @@ msgstr ""
 "вживаєте силове поле з коротким діапазоном, то вам необов'язково мати "
 "зіткнення."
 
-#: ../../manual/physics/collision.rst:120
+#: ../../manual/physics/collision.rst:125
 msgid ""
 "Hair particles avoid their emitting mesh if you edit them in *Particle "
 "Edit Mode*. So you can at least model the hair with collision."
@@ -326,4 +340,38 @@ msgstr ""
 
 #~ msgid "Damping during a collision."
 #~ msgstr "Згасання у ході зіткнення."
+
+#~ msgid "The objects need to share at least one common layer to have effect."
+#~ msgstr ""
+#~ "Такі об'єкти повинні знаходитися спільно "
+#~ "принаймні на одному спільному шарі, щоб"
+#~ " був ефект зіткнення."
+
+#~ msgid "Damping Factor"
+#~ msgstr "Фактор Згасання -- Damping Factor"
+
+#~ msgid "Friction Factor"
+#~ msgstr "Фактор Тертя -- Friction Factor"
+
+#~ msgid ""
+#~ "A padding distance is added to the"
+#~ " inside and outside of each face, "
+#~ "to help to prevent intersections. The"
+#~ " soft body will come to rest at"
+#~ " this distance away from the face "
+#~ "of the colliding object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Outside and inside is defined by "
+#~ "the face normal, depicted as blue "
+#~ "arrow in Fig. :ref:`fig-collision-"
+#~ "soft-plane`."
+#~ msgstr ""
+#~ "Зовні та внутрішньо визначається нормаллю "
+#~ "грані, позначеної як синя стрілка на "
+#~ "Ілюстрації :ref:`fig-collision-soft-plane`."
+
+#~ msgid "Soft Body Damping"
+#~ msgstr "Згасання М'якого Тіла -- Soft Body Damping"
 

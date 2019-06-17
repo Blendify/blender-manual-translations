@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2018-06-06 23:44+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -36,7 +36,8 @@ msgid "Scripted Expression"
 msgstr "Скриптований Вираз -- Scripted Expression"
 
 #: ../../manual/animation/drivers/troubleshooting.rst:14
-msgid "An Auto-execution warning in the Drivers panel."
+#, fuzzy
+msgid "A security warning in the Drivers panel."
 msgstr "Попередження про Авто-виконання у панелі Drivers."
 
 #: ../../manual/animation/drivers/troubleshooting.rst:18
@@ -44,39 +45,34 @@ msgid "An Auto-run warning in the Info editor's header."
 msgstr "Попередження про Авто-виконання у заголовку редактора Info."
 
 #: ../../manual/animation/drivers/troubleshooting.rst:20
-msgid "By default Blender will not autorun Python scripts."
+#, fuzzy
+msgid "By default Blender will restrict execution of Python scripts."
 msgstr "Стандартно Blender не буде автоматично виконувати скрипти Python."
 
 #: ../../manual/animation/drivers/troubleshooting.rst:22
-#, fuzzy
 msgid ""
-"If using a *Scripted Expression* Driver Type, you will have to open the "
-"file as *Trusted Source*, or set *Auto Run Python Scripts* in "
-":menuselection:`Preferences --> File --> Auto Execution`."
+"If using a *Scripted Expression* Driver Type that doesn't follow the "
+":ref:`Simple Expressions <drivers-simple-expressions>` subset, you will "
+"have to open the file as *Trusted Source*, or set *Auto Run Python "
+"Scripts* in :menuselection:`Preferences --> File --> Auto Execution`."
 msgstr ""
-"Якщо ви використовуєте Тип драйвера «Скриптований Вираз» -- *Scripted "
-"Expression* Driver Type, то вам слід відкрити файл з ним як «Довірене "
-"Джерело» -- *Trusted Source*, або увімкнути опцію «Авто Виконувати "
-"Скрипти Python» -- *Auto Run Python Scripts* у «Уподобання Користувача > "
-"Файл > Авто Виконання» :menuselection:`User Preferences --> File --> Auto"
-" Execution`."
 
-#: ../../manual/animation/drivers/troubleshooting.rst:30
+#: ../../manual/animation/drivers/troubleshooting.rst:32
 msgid "The Trusted Source checkbox in the File Browser."
 msgstr "Стяг «Довірене Джерело» -- Trusted Source в Оглядачі Файлів."
 
-#: ../../manual/animation/drivers/troubleshooting.rst:34
+#: ../../manual/animation/drivers/troubleshooting.rst:36
 #, fuzzy
 msgid "The Auto Run Python Scripts checkbox in the Preferences."
 msgstr ""
 "Стяг «Авто Виконання Скриптів Python» -- Auto Run Python Scripts в "
 "Уподобаннях Користувача -- User Preferences."
 
-#: ../../manual/animation/drivers/troubleshooting.rst:38
+#: ../../manual/animation/drivers/troubleshooting.rst:40
 msgid "Rotational Properties are Radians"
 msgstr "Властивості Обертання обчислюються в Радіанах"
 
-#: ../../manual/animation/drivers/troubleshooting.rst:40
+#: ../../manual/animation/drivers/troubleshooting.rst:42
 msgid ""
 "Parts of the User Interface may use different units of measurements for "
 "angles, rotation. In the Graph Editor, while working with Drivers, all "
@@ -86,27 +82,57 @@ msgstr ""
 "виміру для кутів, обертань. У Редакторі Графів -- Graph Editor при роботі"
 " з Драйверами усі кути обчислюються в Радіанах -- Radians."
 
-#: ../../manual/animation/drivers/troubleshooting.rst:45
-msgid "Intra-armature Bone Drivers can Misbehave"
-msgstr "Драйвери внутрішньо-арматурних Кісток можуть Погано поводитися"
+#~ msgid ""
+#~ "If using a *Scripted Expression* Driver"
+#~ " Type, you will have to open "
+#~ "the file as *Trusted Source*, or "
+#~ "set *Auto Run Python Scripts* in "
+#~ ":menuselection:`Preferences --> File --> Auto"
+#~ " Execution`."
+#~ msgstr ""
+#~ "Якщо ви використовуєте Тип драйвера "
+#~ "«Скриптований Вираз» -- *Scripted Expression*"
+#~ " Driver Type, то вам слід відкрити"
+#~ " файл з ним як «Довірене Джерело» "
+#~ "-- *Trusted Source*, або увімкнути опцію"
+#~ " «Авто Виконувати Скрипти Python» -- "
+#~ "*Auto Run Python Scripts* у «Уподобання"
+#~ " Користувача > Файл > Авто Виконання»"
+#~ " :menuselection:`User Preferences --> File "
+#~ "--> Auto Execution`."
 
-#: ../../manual/animation/drivers/troubleshooting.rst:47
-msgid ""
-"There is a `well-known limitation "
-"<https://developer.blender.org/T40301>`__ with drivers on bones that "
-"refer to another bone in the same armature. Their values can be "
-"incorrectly calculated based on the position of the other bone as it was "
-"*before* you adjust the current frame. This can lead to obvious shape "
-"glitches when the rendering of frames has a jump in the frame number "
-"(either because the blend-file is currently on a different frame number "
-"or because you are skipping already rendered frames)."
-msgstr ""
-"Існує відоме обмеження -- `well-known limitation "
-"<https://developer.blender.org/T40301>`__ для драйверів на кістках, що "
-"посилаються на іншу кістку в тій самій арматурі. Їх значення можуть "
-"неправильно обчислюватися на основі позиції іншої кістки, якщо ви *перед*"
-" тим коригували поточний кадр current_frame. Це може призвести до "
-"очевидних спотворень форми, коли рендеринг кадрів переходить у "
-"відповідних номер кадру (оскільки blend-файл знаходиться поточно на "
-"іншому номері кадру або ви пропускаєте вже рендерені кадри)."
+#~ msgid "Intra-armature Bone Drivers can Misbehave"
+#~ msgstr "Драйвери внутрішньо-арматурних Кісток можуть Погано поводитися"
+
+#~ msgid ""
+#~ "There is a `well-known limitation "
+#~ "<https://developer.blender.org/T40301>`__ with drivers "
+#~ "on bones that refer to another "
+#~ "bone in the same armature. Their "
+#~ "values can be incorrectly calculated "
+#~ "based on the position of the other"
+#~ " bone as it was *before* you "
+#~ "adjust the current frame. This can "
+#~ "lead to obvious shape glitches when "
+#~ "the rendering of frames has a jump"
+#~ " in the frame number (either because"
+#~ " the blend-file is currently on "
+#~ "a different frame number or because "
+#~ "you are skipping already rendered "
+#~ "frames)."
+#~ msgstr ""
+#~ "Існує відоме обмеження -- `well-known"
+#~ " limitation <https://developer.blender.org/T40301>`__ "
+#~ "для драйверів на кістках, що посилаються"
+#~ " на іншу кістку в тій самій "
+#~ "арматурі. Їх значення можуть неправильно "
+#~ "обчислюватися на основі позиції іншої "
+#~ "кістки, якщо ви *перед* тим коригували"
+#~ " поточний кадр current_frame. Це може "
+#~ "призвести до очевидних спотворень форми, "
+#~ "коли рендеринг кадрів переходить у "
+#~ "відповідних номер кадру (оскільки blend-файл"
+#~ " знаходиться поточно на іншому номері "
+#~ "кадру або ви пропускаєте вже рендерені"
+#~ " кадри)."
 
