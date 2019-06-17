@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 16:58+0200\n"
+"POT-Creation-Date: 2019-06-17 17:01+1000\n"
 "PO-Revision-Date: 2019-04-20 20:20+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/eevee/materials/nodes_support.rst:4
 msgid "Nodes Support"
@@ -160,7 +160,7 @@ msgstr ""
 "不支持Random Walk采样。每个颜色通道半径由默认插值指定。插值的任何链接都将被忽略。如果单独的Albedo "
 "是关闭的，纹理模糊将被视为始终1.0。纹理模糊对于除0.0和1.0之外的任何值都是不准确的。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:72
+#: ../../manual/render/eevee/materials/nodes_support.rst:73
 msgid "Transparent BSDF"
 msgstr "透明BSDF"
 
@@ -168,43 +168,45 @@ msgstr "透明BSDF"
 msgid ""
 "Only monochromatic transparency is supported. The color input will be "
 "converted to float and used as alpha value. Transparency will only have "
-"an effect if the Material blend mode is not Opaque."
-msgstr "只支持单色透明。颜色输入将被转换为浮点数并用作alpha值。透明度只有在材质混合模式不透明的情况下才会有效果。"
+"an effect if the Material blend mode is not Opaque. Using an Add Shader "
+"node with a Transparent BSDF node will not result in an additive blending"
+" behavior."
+msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:75
+#: ../../manual/render/eevee/materials/nodes_support.rst:76
 msgid "Translucent BSDF"
 msgstr "半透明BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:75
+#: ../../manual/render/eevee/materials/nodes_support.rst:76
 msgid ""
 "Does not diffuse the light inside the object. It only lights the object "
 "with reversed normals."
 msgstr "不扩散物体内部的光。它只用反向法线照亮物体。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:79
+#: ../../manual/render/eevee/materials/nodes_support.rst:80
 msgid "Principled BSDF"
 msgstr "Principled BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:78
+#: ../../manual/render/eevee/materials/nodes_support.rst:79
 msgid ""
 "Cumulate limitations from Diffuse BSDF, Glossy BSDF, Refraction BSDF and "
 "Subsurface Scattering. Anisotropy is not supported. Transmission "
 "Roughness is not supported. The Sheen layer is a crude approximation."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:82
+#: ../../manual/render/eevee/materials/nodes_support.rst:83
 msgid "Volume Absorption"
 msgstr "体积吸收"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:82
+#: ../../manual/render/eevee/materials/nodes_support.rst:83
 msgid "See :ref:`Volume Limitation <eevee-limitations-volumetrics>`."
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:86
+#: ../../manual/render/eevee/materials/nodes_support.rst:88
 msgid "Volume Scatter"
 msgstr "体积散射"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:85
+#: ../../manual/render/eevee/materials/nodes_support.rst:86
 #, fuzzy
 msgid ""
 "The anisotropy parameter will be mixed and averaged for all overlapping "
@@ -213,66 +215,76 @@ msgid ""
 "volumetrics>`."
 msgstr "各向异性参数将对所有重叠的体积对象进行混合和平均，这在物理上是不正确的，与Cycles不同。请参阅体积限制。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:89
+#: ../../manual/render/eevee/materials/nodes_support.rst:91
 msgid "Principled Volume"
 msgstr "Principled 体积"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:89
+#: ../../manual/render/eevee/materials/nodes_support.rst:91
 #, fuzzy
 msgid ""
 "Same as Volume Scatter. Also see :ref:`Volume Limitation <eevee-"
 "limitations-volumetrics>`."
 msgstr "和体积散射一样。参见体积限制。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:92
+#: ../../manual/render/eevee/materials/nodes_support.rst:94
 msgid "Holdout"
 msgstr ""
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:92
-#: ../../manual/render/eevee/materials/nodes_support.rst:95
-#: ../../manual/render/eevee/materials/nodes_support.rst:98
-#: ../../manual/render/eevee/materials/nodes_support.rst:101
-#: ../../manual/render/eevee/materials/nodes_support.rst:104
-#: ../../manual/render/eevee/materials/nodes_support.rst:107
-#: ../../manual/render/eevee/materials/nodes_support.rst:128
-#: ../../manual/render/eevee/materials/nodes_support.rst:171
-#: ../../manual/render/eevee/materials/nodes_support.rst:190
-#: ../../manual/render/eevee/materials/nodes_support.rst:196
-#: ../../manual/render/eevee/materials/nodes_support.rst:199
-#: ../../manual/render/eevee/materials/nodes_support.rst:202
-#: ../../manual/render/eevee/materials/nodes_support.rst:216
+#: ../../manual/render/eevee/materials/nodes_support.rst:94
+#: ../../manual/render/eevee/materials/nodes_support.rst:97
+#: ../../manual/render/eevee/materials/nodes_support.rst:100
+#: ../../manual/render/eevee/materials/nodes_support.rst:103
+#: ../../manual/render/eevee/materials/nodes_support.rst:106
+#: ../../manual/render/eevee/materials/nodes_support.rst:109
+#: ../../manual/render/eevee/materials/nodes_support.rst:133
+#: ../../manual/render/eevee/materials/nodes_support.rst:176
+#: ../../manual/render/eevee/materials/nodes_support.rst:195
+#: ../../manual/render/eevee/materials/nodes_support.rst:201
+#: ../../manual/render/eevee/materials/nodes_support.rst:204
+#: ../../manual/render/eevee/materials/nodes_support.rst:207
+#: ../../manual/render/eevee/materials/nodes_support.rst:221
 msgid "Not supported."
 msgstr "不支持。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:95
+#: ../../manual/render/eevee/materials/nodes_support.rst:97
 msgid "Anisotropic BSDF"
 msgstr "各向异性BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:98
+#: ../../manual/render/eevee/materials/nodes_support.rst:100
 msgid "Toon BSDF"
 msgstr "卡通BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:101
+#: ../../manual/render/eevee/materials/nodes_support.rst:103
 msgid "Hair BSDF"
 msgstr "毛发BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:104
+#: ../../manual/render/eevee/materials/nodes_support.rst:106
 msgid "Velvet BSDF"
 msgstr "天鹅绒BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:108
+#: ../../manual/render/eevee/materials/nodes_support.rst:109
 msgid "Principled Hair BSDF"
 msgstr "Principled 毛发BSDF"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:111
+#: ../../manual/render/eevee/materials/nodes_support.rst:113
+msgid "Add Shader"
+msgstr ""
+
+#: ../../manual/render/eevee/materials/nodes_support.rst:112
+msgid ""
+"Using an Add Shader node with a Transparent BSDF node will not result in "
+"an additive blending behavior."
+msgstr ""
+
+#: ../../manual/render/eevee/materials/nodes_support.rst:116
 msgid "Input Nodes"
 msgstr "输入节点"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:115
+#: ../../manual/render/eevee/materials/nodes_support.rst:120
 msgid "Ambient Occlusion"
 msgstr "AO（环境光遮蔽）"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:114
+#: ../../manual/render/eevee/materials/nodes_support.rst:119
 #, fuzzy
 msgid ""
 "All parameters will have no effects except Normal and Color. This is "
@@ -280,31 +292,31 @@ msgid ""
 "scene settings for that."
 msgstr "除法线和颜色外，所有参数都没有效果。 这是因为在评估此节点之前计算AO并且它使用场景设置。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:118
+#: ../../manual/render/eevee/materials/nodes_support.rst:123
 msgid "Camera Data"
 msgstr "摄像机数据"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:118
-#: ../../manual/render/eevee/materials/nodes_support.rst:131
-#: ../../manual/render/eevee/materials/nodes_support.rst:138
-#: ../../manual/render/eevee/materials/nodes_support.rst:168
-#: ../../manual/render/eevee/materials/nodes_support.rst:174
+#: ../../manual/render/eevee/materials/nodes_support.rst:123
+#: ../../manual/render/eevee/materials/nodes_support.rst:136
+#: ../../manual/render/eevee/materials/nodes_support.rst:143
+#: ../../manual/render/eevee/materials/nodes_support.rst:173
+#: ../../manual/render/eevee/materials/nodes_support.rst:179
 msgid "Everything is compatible."
 msgstr "一切都是兼容的。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:121
+#: ../../manual/render/eevee/materials/nodes_support.rst:126
 msgid "Geometry"
 msgstr "集合体"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:121
+#: ../../manual/render/eevee/materials/nodes_support.rst:126
 msgid "Pointiness is not supported."
 msgstr "不支持Pointiness。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:125
+#: ../../manual/render/eevee/materials/nodes_support.rst:130
 msgid "Attribute"
 msgstr "属性"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:124
+#: ../../manual/render/eevee/materials/nodes_support.rst:129
 msgid ""
 "Defaults to active UV layer. Only \"density\", \"color\", \"flame\" and "
 "\"temperature\" built-in attributes are supported. UVs and Vertex Color "
@@ -313,34 +325,34 @@ msgstr ""
 "默认为激活UV图层。 仅支持“density密度”，“color颜色”，“flame火焰”和“temperature温度”内置属性。 "
 "支持UV和顶点颜色图层。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:128
+#: ../../manual/render/eevee/materials/nodes_support.rst:133
 msgid "Bevel"
 msgstr "倒角"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:131
+#: ../../manual/render/eevee/materials/nodes_support.rst:136
 msgid "Fresnel"
 msgstr "菲涅尔"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:135
+#: ../../manual/render/eevee/materials/nodes_support.rst:140
 msgid "Hair Info"
 msgstr "毛发信息"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:134
+#: ../../manual/render/eevee/materials/nodes_support.rst:139
 msgid ""
 "The Random output uses a different :abbr:`RNG (Random Number Generator)` "
 "algorithm. Range and statistical distribution of the values should be the"
 " same but the values will be different."
 msgstr "随机输出使用不同的 :abbr:`RNG(随机数生成器)` 算法。 值的范围和统计分布应该相同，但是值是不同的。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:138
+#: ../../manual/render/eevee/materials/nodes_support.rst:143
 msgid "Layer Weight"
 msgstr "层权重"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:165
+#: ../../manual/render/eevee/materials/nodes_support.rst:170
 msgid "Light Path"
 msgstr "灯光路径"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:141
+#: ../../manual/render/eevee/materials/nodes_support.rst:146
 #, fuzzy
 msgid ""
 "Eevee has no real concept of rays. But in order to ease the workflow "
@@ -349,144 +361,140 @@ msgid ""
 "shader."
 msgstr "Eevee没有射线的真正概念。但是为了简化循环和Eevee之间的工作流，一些输出在特定情况下是受支持的。这个节点使得在着色器中调整间接照明成为可能。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:145
+#: ../../manual/render/eevee/materials/nodes_support.rst:150
 msgid ""
 "Only a subset of the outputs is supported and the ray depth has not "
 "exactly the same meaning:"
 msgstr "只支持输出的一个子集，射线深度的含义并不完全相同:"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:148
+#: ../../manual/render/eevee/materials/nodes_support.rst:153
 msgid "*Is Camera*: Supported."
 msgstr "*Is Camera*: 支持。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:149
+#: ../../manual/render/eevee/materials/nodes_support.rst:154
 msgid "*Is Shadow*: Supported."
 msgstr "*Is Shadow*: 支持。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:150
+#: ../../manual/render/eevee/materials/nodes_support.rst:155
 msgid "*Is Diffuse*: Supported."
 msgstr "*Is Diffuse*: 支持。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:151
+#: ../../manual/render/eevee/materials/nodes_support.rst:156
 msgid "*Is Glossy*: Supported."
 msgstr "*Is Glossy*: 支持。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:152
+#: ../../manual/render/eevee/materials/nodes_support.rst:157
 msgid "*Is Singular*: Not supported. Same as Is Glossy."
 msgstr "*Is Singular*: 不支持。 与光泽度相同。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:153
+#: ../../manual/render/eevee/materials/nodes_support.rst:158
 msgid "*Is Reflection*: Not supported. Same as Is Glossy."
 msgstr "*Is Reflection*: 不支持。 与光泽度相同。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:154
+#: ../../manual/render/eevee/materials/nodes_support.rst:159
 msgid "*Is Transmission*: Not supported. Same as Is Glossy."
 msgstr "*Is Transmission*: 不支持。 与光泽度相同。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:155
+#: ../../manual/render/eevee/materials/nodes_support.rst:160
 msgid "*Ray Length*: Not supported. Defaults to 1.0."
 msgstr "*Ray Length*: 不支持，默认1.0。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:156
+#: ../../manual/render/eevee/materials/nodes_support.rst:161
 #, fuzzy
 msgid "*Ray Depth*: Indicates the current bounce when baking the light cache."
 msgstr "*Ray Depth*: 表示烘焙光缓存时的反弹。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:157
+#: ../../manual/render/eevee/materials/nodes_support.rst:162
 msgid "*Diffuse Depth*: Same as Ray Depth but only when baking diffuse light."
 msgstr "*Diffuse Depth*: 与Ray Depth相同，但仅在烘焙漫反射光照时。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:158
+#: ../../manual/render/eevee/materials/nodes_support.rst:163
 msgid "*Glossy Depth*: Same as Ray Depth but only when baking specular light."
 msgstr "*Glossy Depth*: 与Ray Depth相同，但仅在烘焙镜面光照时。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:159
+#: ../../manual/render/eevee/materials/nodes_support.rst:164
 msgid "*Transparent Depth*: Not supported. Defaults to 0."
 msgstr "*Transparent Depth*: 不支持，默认0."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:160
+#: ../../manual/render/eevee/materials/nodes_support.rst:165
 msgid "*Transmission Depth*: Not supported. Same as Glossy Depth."
 msgstr "*Transmission Depth*: 不支持. 与Glossy Depth（光泽深度）相同."
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:164
+#: ../../manual/render/eevee/materials/nodes_support.rst:169
 #, fuzzy
 msgid ""
 "Is Glossy does not work with Screen Space Reflections/Refractions but "
 "does work with reflection planes (whether used with SSR or not)."
 msgstr "光泽度不适用于屏幕空间反射/折射，但适用于反射平面（与SSR一起使用时）。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:168
+#: ../../manual/render/eevee/materials/nodes_support.rst:173
 msgid "Object Info"
 msgstr "物体信息"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:171
+#: ../../manual/render/eevee/materials/nodes_support.rst:176
 msgid "Particle Info"
 msgstr "粒子信息"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:174
+#: ../../manual/render/eevee/materials/nodes_support.rst:179
 msgid "Tangent"
 msgstr "切线"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:177
+#: ../../manual/render/eevee/materials/nodes_support.rst:182
 msgid "Texture Coordinate"
 msgstr "纹理坐标"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:177
-#, fuzzy
-msgid "From Dupli and coordinate from Custom Object is not supported."
-msgstr "从Dupli和自定义物体的坐标不受支持。"
-
-#: ../../manual/render/eevee/materials/nodes_support.rst:180
-msgid "UV Map"
-msgstr "UV 贴图"
-
-#: ../../manual/render/eevee/materials/nodes_support.rst:180
+#: ../../manual/render/eevee/materials/nodes_support.rst:182
+#: ../../manual/render/eevee/materials/nodes_support.rst:185
 msgid "From Dupli is not supported."
 msgstr "从Dupli不受支持。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:184
+#: ../../manual/render/eevee/materials/nodes_support.rst:185
+msgid "UV Map"
+msgstr "UV 贴图"
+
+#: ../../manual/render/eevee/materials/nodes_support.rst:189
 msgid "Wireframe"
 msgstr "线框"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:183
+#: ../../manual/render/eevee/materials/nodes_support.rst:188
 msgid ""
 "Pixel size option does not give exactly the same output as Cycles. The "
 "width can be a bit different."
 msgstr "像素大小选项不会提供与Cycles完全相同的输出。 宽度可能有点不同。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:187
+#: ../../manual/render/eevee/materials/nodes_support.rst:192
 msgid "Other Nodes"
 msgstr "其他节点"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:190
+#: ../../manual/render/eevee/materials/nodes_support.rst:195
 msgid "Light Falloff"
 msgstr "灯光衰减"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:193
+#: ../../manual/render/eevee/materials/nodes_support.rst:198
 msgid "Bump"
 msgstr "凹凸"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:193
+#: ../../manual/render/eevee/materials/nodes_support.rst:198
 msgid "Imprecision due to less precise derivatives."
 msgstr "由于衍生物不太精确而导致不精确。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:196
+#: ../../manual/render/eevee/materials/nodes_support.rst:201
 msgid "Displacement/Vector Displacement"
 msgstr "置换/矢量置换"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:199
+#: ../../manual/render/eevee/materials/nodes_support.rst:204
 msgid ":abbr:`IES (Illuminating Engineering Society)` Texture"
 msgstr ":abbr:`IES (Illuminating Engineering Society)` 纹理"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:202
+#: ../../manual/render/eevee/materials/nodes_support.rst:207
 msgid "Sky Texture"
 msgstr "天空纹理"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:210
+#: ../../manual/render/eevee/materials/nodes_support.rst:215
 msgid "Image Texture"
 msgstr "图像纹理"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:205
+#: ../../manual/render/eevee/materials/nodes_support.rst:210
 #, fuzzy
 msgid ""
 "Smart Interpolation always uses Cubic interpolation. Artifact present "
@@ -500,11 +508,11 @@ msgstr ""
 "如果提供的纹理坐标不连续，那么这种伪像也将是可见的。 不支持使用带有 *Extend type* 设置为Clip或Extend的Box投影。 "
 "它将始终使用重复。"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:213
+#: ../../manual/render/eevee/materials/nodes_support.rst:218
 msgid "Material Output"
 msgstr "材质输出"
 
-#: ../../manual/render/eevee/materials/nodes_support.rst:213
+#: ../../manual/render/eevee/materials/nodes_support.rst:218
 msgid "Displacement output behavior is broken compared to Cycles."
 msgstr "与Cycles相比，置换输出行为被破坏。"
 
@@ -525,4 +533,16 @@ msgstr ""
 
 #~ msgid "See volume Limitation."
 #~ msgstr "体积限制。"
+
+#~ msgid "From Dupli and coordinate from Custom Object is not supported."
+#~ msgstr "从Dupli和自定义物体的坐标不受支持。"
+
+#~ msgid ""
+#~ "Only monochromatic transparency is supported."
+#~ " The color input will be converted"
+#~ " to float and used as alpha "
+#~ "value. Transparency will only have an"
+#~ " effect if the Material blend mode"
+#~ " is not Opaque."
+#~ msgstr "只支持单色透明。颜色输入将被转换为浮点数并用作alpha值。透明度只有在材质混合模式不透明的情况下才会有效果。"
 
