@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-06-19 16:43+1000\n"
 "PO-Revision-Date: 2019-03-19 21:20+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -73,8 +73,8 @@ msgstr "Edges (arêtes)"
 #, fuzzy
 msgid ""
 "An edge always connects two vertices by a straight line. The edges are "
-"the \"wires\" you see when you look at a mesh in wire-frame view. They "
-"are usually invisible on the rendered image. They are used to construct "
+"the \"wires\" you see when you look at a mesh in wireframe view. They are"
+" usually invisible on the rendered image. They are used to construct "
 "faces."
 msgstr ""
 "Une arête connecte toujours deux sommets par une ligne droite. Les arêtes"
@@ -117,23 +117,31 @@ msgstr ""
 "côté, les quadrangles \"se déforment bien\" et sont donc préférés pour "
 "l'animation et la modélisation par subdivision."
 
-#: ../../manual/modeling/meshes/structure.rst:54
+#: ../../manual/modeling/meshes/structure.rst:56
 msgid ""
-"While you could build a cube with triangular faces, it would just look "
-"more confusing in *Edit Mode*."
+"`Why should triangles be avoided for character animation? "
+"<https://blender.stackexchange.com/questions/2931>`__"
 msgstr ""
-"Bien que vous puissiez construire un cube avec des faces triangulaires, "
-"il aurait simplement un aspect plus déroutant en *Mode Édition*."
 
-#: ../../manual/modeling/meshes/structure.rst:59
+#: ../../manual/modeling/meshes/structure.rst:57
+msgid ""
+"`When should N-Gons be used, and when shouldn't they? "
+"<https://blender.stackexchange.com/questions/89>`__"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:61
+msgid "Topology"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:66
 msgid "Loops"
 msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:65
+#: ../../manual/modeling/meshes/structure.rst:72
 msgid "Edge and face loops."
 msgstr "Edge et Face Loops."
 
-#: ../../manual/modeling/meshes/structure.rst:67
+#: ../../manual/modeling/meshes/structure.rst:74
 msgid ""
 "*Edge* and *face* loops are sets of faces or edges that form continuous "
 "\"loops\" as shown in Fig. :ref:`fig-mesh-topo-loop`."
@@ -141,21 +149,6 @@ msgstr ""
 "Les *Edge* et *Face Loops* sont des ensembles de faces et d'arêtes qui "
 "forment des \"boucles\" continues comme affichées dans la Fig. :ref:`fig-"
 "mesh-topo-loop`."
-
-#: ../../manual/modeling/meshes/structure.rst:72
-msgid ""
-"Note that loops (2 and 4) do not go around the whole model. Loops stop at"
-" so-called poles because there is no unique way to continue a loop from a"
-" pole. Poles are vertices that are connected to either three, five, or "
-"more edges. Accordingly, vertices connected to exactly one, two or four "
-"edges are not poles."
-msgstr ""
-"Notez que les loops (2 et 4) ne font pas le tour du modèle entier. Les "
-"loops s'arrêtent aux soi-disant pôles parce qu'il n'y a pas de façon "
-"unique de continuer un loop depuis un pôle. Les pôles sont des sommets "
-"qui sont connectés à trois, cinq ou plus d'arêtes. Par conséquent les "
-"sommets connectés à exactement un, deux ou quatre arêtes ne sont pas des "
-"pôles."
 
 #: ../../manual/modeling/meshes/structure.rst:77
 msgid ""
@@ -176,11 +169,26 @@ msgstr ""
 "travailler avec les loops dans Blender, voir :doc:`Sélection avancée "
 "</modeling/meshes/selecting/advanced>`."
 
-#: ../../manual/modeling/meshes/structure.rst:88
+#: ../../manual/modeling/meshes/structure.rst:86
+msgid ""
+"Note that loops (2 and 4) do not go around the whole model. Loops stop at"
+" so-called poles because there is no unique way to continue a loop from a"
+" pole. Poles are vertices that are connected to either three, five, or "
+"more edges. Accordingly, vertices connected to exactly one, two or four "
+"edges are not poles."
+msgstr ""
+"Notez que les loops (2 et 4) ne font pas le tour du modèle entier. Les "
+"loops s'arrêtent aux soi-disant pôles parce qu'il n'y a pas de façon "
+"unique de continuer un loop depuis un pôle. Les pôles sont des sommets "
+"qui sont connectés à trois, cinq ou plus d'arêtes. Par conséquent les "
+"sommets connectés à exactement un, deux ou quatre arêtes ne sont pas des "
+"pôles."
+
+#: ../../manual/modeling/meshes/structure.rst:107
 msgid "Edge Loops"
 msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:90
+#: ../../manual/modeling/meshes/structure.rst:94
 msgid ""
 "Loops (1 and 2) in Fig. :ref:`fig-mesh-topo-loop` are edge loops. They "
 "connect vertices so that each one on the loop has exactly two neighbors "
@@ -193,7 +201,7 @@ msgstr ""
 "deux côtés de la loop (à l'exception des sommets de début et de fin dans "
 "le cas des pôles)."
 
-#: ../../manual/modeling/meshes/structure.rst:94
+#: ../../manual/modeling/meshes/structure.rst:98
 msgid ""
 "Edge loops are an important concept especially in organic (subsurface) "
 "modeling and character animation. When used correctly, they allow you to "
@@ -207,7 +215,7 @@ msgstr ""
 " si elles sont utilisées comme *surfaces de subdivision* et qui se "
 "déforment très bien en animation."
 
-#: ../../manual/modeling/meshes/structure.rst:99
+#: ../../manual/modeling/meshes/structure.rst:103
 msgid ""
 "Take Fig. :ref:`fig-mesh-topo-loop` in organic modeling as an example: "
 "the edge loops follow the natural contours and deformation lines of the "
@@ -220,7 +228,7 @@ msgstr ""
 " dans les zones qui se déforment davantage quand le personnage bouge, par"
 " exemple, au niveau des épaules et des genoux."
 
-#: ../../manual/modeling/meshes/structure.rst:103
+#: ../../manual/modeling/meshes/structure.rst:107
 msgid ""
 "Further details on working with edge loops can be found in :ref:`Edge "
 "Loop Selection <modeling-meshes-selecting-edge-loops>`."
@@ -229,7 +237,7 @@ msgstr ""
 "trouvent dans :ref:`Sélection d'Edge Loop <modeling-meshes-selecting-"
 "edge-loops>`."
 
-#: ../../manual/modeling/meshes/structure.rst:108
+#: ../../manual/modeling/meshes/structure.rst:117
 msgid "Face Loops"
 msgstr ""
 
@@ -254,6 +262,22 @@ msgstr ""
 "Des détails supplémentaires sur le travail avec les *Face Loops* se "
 "trouvent dans :ref:`Sélection de Face Loop <modeling-meshes-selecting-"
 "face-loops>`. "
+
+#: ../../manual/modeling/meshes/structure.rst:120
+msgid "Poles"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:122
+msgid "See `N-poles & E-poles <https://blender.stackexchange.com/a/133676/55>`__."
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:126
+msgid "Non-manifold"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:128
+msgid "See :term:`Non-manifold`."
+msgstr ""
 
 #~ msgid ""
 #~ "A simple way to create a new "
@@ -305,4 +329,14 @@ msgstr ""
 #~ "étiqueté \"C\" est un nouveau sommet "
 #~ "ajouté au cube avec une nouvelle "
 #~ "arête ajoutée entre \"B\" et \"C\"."
+
+#~ msgid ""
+#~ "While you could build a cube with"
+#~ " triangular faces, it would just look"
+#~ " more confusing in *Edit Mode*."
+#~ msgstr ""
+#~ "Bien que vous puissiez construire un "
+#~ "cube avec des faces triangulaires, il"
+#~ " aurait simplement un aspect plus "
+#~ "déroutant en *Mode Édition*."
 

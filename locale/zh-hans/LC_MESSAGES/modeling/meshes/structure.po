@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-06-19 16:43+1000\n"
 "PO-Revision-Date: 2019-04-20 20:32+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -66,8 +66,8 @@ msgstr "边"
 #, fuzzy
 msgid ""
 "An edge always connects two vertices by a straight line. The edges are "
-"the \"wires\" you see when you look at a mesh in wire-frame view. They "
-"are usually invisible on the rendered image. They are used to construct "
+"the \"wires\" you see when you look at a mesh in wireframe view. They are"
+" usually invisible on the rendered image. They are used to construct "
 "faces."
 msgstr "边是连接两个顶点之间的直线。当你在线框视图查看网格时边是“线”。这些线条通常不会出现在渲染图像上。它们用于构造面。"
 
@@ -96,34 +96,35 @@ msgid ""
 "animation and subdivision modeling."
 msgstr "三角形总是平坦的，因此易于计算。另一方面，四边形 “利于形变”，因此常用于动画和细分建模。"
 
-#: ../../manual/modeling/meshes/structure.rst:54
+#: ../../manual/modeling/meshes/structure.rst:56
 msgid ""
-"While you could build a cube with triangular faces, it would just look "
-"more confusing in *Edit Mode*."
-msgstr "尽管可以使用三角形面构建一个立方体，但是在 *编辑模式* 中会看起来很混乱。"
+"`Why should triangles be avoided for character animation? "
+"<https://blender.stackexchange.com/questions/2931>`__"
+msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:59
+#: ../../manual/modeling/meshes/structure.rst:57
+msgid ""
+"`When should N-Gons be used, and when shouldn't they? "
+"<https://blender.stackexchange.com/questions/89>`__"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:61
+msgid "Topology"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:66
 msgid "Loops"
 msgstr "循环"
 
-#: ../../manual/modeling/meshes/structure.rst:65
+#: ../../manual/modeling/meshes/structure.rst:72
 msgid "Edge and face loops."
 msgstr "边和面循环。"
 
-#: ../../manual/modeling/meshes/structure.rst:67
+#: ../../manual/modeling/meshes/structure.rst:74
 msgid ""
 "*Edge* and *face* loops are sets of faces or edges that form continuous "
 "\"loops\" as shown in Fig. :ref:`fig-mesh-topo-loop`."
 msgstr "*边* 和 *面循环* 是形成连续“循环”的一组面或边，如上图 :ref:`fig-mesh-topo-loop` 所示。"
-
-#: ../../manual/modeling/meshes/structure.rst:72
-msgid ""
-"Note that loops (2 and 4) do not go around the whole model. Loops stop at"
-" so-called poles because there is no unique way to continue a loop from a"
-" pole. Poles are vertices that are connected to either three, five, or "
-"more edges. Accordingly, vertices connected to exactly one, two or four "
-"edges are not poles."
-msgstr "请注意，循环(2和4)不能围绕整个模型。循环在所谓的极点上中断，因为没有从极点继续循环的路径。极点是连接到三个，五个或更多边的顶点。因此，与一条，两条或四条边连接的顶点不是极点。"
 
 #: ../../manual/modeling/meshes/structure.rst:77
 msgid ""
@@ -138,11 +139,20 @@ msgstr ""
 "在上图中，不在极点中断的循环是闭合的(1和3)。它们开始和结束的顶点是相同的，并将模型分成两个部分。在处理网格的特定连续区域时，循环是一个快捷和强大的工具，这也是活体角色动画的先决条件。有关如何在Blender中使用循环的详细说明，请参阅："
 " :doc:`进阶选择 </modeling/meshes/selecting/advanced>` 。"
 
-#: ../../manual/modeling/meshes/structure.rst:88
+#: ../../manual/modeling/meshes/structure.rst:86
+msgid ""
+"Note that loops (2 and 4) do not go around the whole model. Loops stop at"
+" so-called poles because there is no unique way to continue a loop from a"
+" pole. Poles are vertices that are connected to either three, five, or "
+"more edges. Accordingly, vertices connected to exactly one, two or four "
+"edges are not poles."
+msgstr "请注意，循环(2和4)不能围绕整个模型。循环在所谓的极点上中断，因为没有从极点继续循环的路径。极点是连接到三个，五个或更多边的顶点。因此，与一条，两条或四条边连接的顶点不是极点。"
+
+#: ../../manual/modeling/meshes/structure.rst:107
 msgid "Edge Loops"
 msgstr "边循环"
 
-#: ../../manual/modeling/meshes/structure.rst:90
+#: ../../manual/modeling/meshes/structure.rst:94
 msgid ""
 "Loops (1 and 2) in Fig. :ref:`fig-mesh-topo-loop` are edge loops. They "
 "connect vertices so that each one on the loop has exactly two neighbors "
@@ -152,7 +162,7 @@ msgstr ""
 "图 :ref:`fig-mesh-topo-loop` "
 "中1和2为边循环。循环边上的顶点需满足：每个顶点正好有两个不在循环中，且分别位于循环两侧的相邻顶点(极点情形下的首尾端点例外)。"
 
-#: ../../manual/modeling/meshes/structure.rst:94
+#: ../../manual/modeling/meshes/structure.rst:98
 msgid ""
 "Edge loops are an important concept especially in organic (subsurface) "
 "modeling and character animation. When used correctly, they allow you to "
@@ -160,7 +170,7 @@ msgid ""
 "used as subdivision surfaces and deform very well in animation."
 msgstr "边循环是一个重要的概念，特别是在生物(细分)建模和角色动画中。正确使用的话，可以使用相对少的顶点构造模型，使其用在细分表面和变形动画时，看起来非常自然。"
 
-#: ../../manual/modeling/meshes/structure.rst:99
+#: ../../manual/modeling/meshes/structure.rst:103
 msgid ""
 "Take Fig. :ref:`fig-mesh-topo-loop` in organic modeling as an example: "
 "the edge loops follow the natural contours and deformation lines of the "
@@ -170,13 +180,13 @@ msgstr ""
 "以机体建模中的 :ref:`fig-mesh-topo-loop` "
 "为例：边循环沿着皮肤和底层肌肉的自然轮廓和变形线，并且在角色移动时变形更多的区域(比如肩膀或者膝盖)，边循环更密集。"
 
-#: ../../manual/modeling/meshes/structure.rst:103
+#: ../../manual/modeling/meshes/structure.rst:107
 msgid ""
 "Further details on working with edge loops can be found in :ref:`Edge "
 "Loop Selection <modeling-meshes-selecting-edge-loops>`."
 msgstr "有关使用边循环的更多详细信息，请参见： :ref:`循环边选择 <modeling-meshes-selecting-edge-loops>` 。"
 
-#: ../../manual/modeling/meshes/structure.rst:108
+#: ../../manual/modeling/meshes/structure.rst:117
 msgid "Face Loops"
 msgstr "面循环"
 
@@ -196,6 +206,22 @@ msgid ""
 "Loop Selection <modeling-meshes-selecting-face-loops>`."
 msgstr "有关使用面循环的更多详细信息，请参见 :ref:`面循环选择 <modeling-meshes-selecting-face-loops>`。"
 
+#: ../../manual/modeling/meshes/structure.rst:120
+msgid "Poles"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:122
+msgid "See `N-poles & E-poles <https://blender.stackexchange.com/a/133676/55>`__."
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:126
+msgid "Non-manifold"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:128
+msgid "See :term:`Non-manifold`."
+msgstr ""
+
 #~ msgid "Vertex example."
 #~ msgstr "顶点示例。"
 
@@ -205,4 +231,10 @@ msgstr "有关使用面循环的更多详细信息，请参见 :ref:`面循环�
 #~ "added to the cube with a new "
 #~ "edge added between \"B\" and \"C\"."
 #~ msgstr "在上图中，标记为“C”的顶点是添加到立方体中的一个新的顶点，并且在“B”和“C”之间添加了一个新的边。"
+
+#~ msgid ""
+#~ "While you could build a cube with"
+#~ " triangular faces, it would just look"
+#~ " more confusing in *Edit Mode*."
+#~ msgstr "尽管可以使用三角形面构建一个立方体，但是在 *编辑模式* 中会看起来很混乱。"
 
