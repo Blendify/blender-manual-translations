@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-06-19 16:43+1000\n"
 "PO-Revision-Date: 2018-07-31 13:53+0900\n"
 "Last-Translator: \n"
 "Language: ja_JP\n"
@@ -68,8 +68,8 @@ msgstr "辺"
 #, fuzzy
 msgid ""
 "An edge always connects two vertices by a straight line. The edges are "
-"the \"wires\" you see when you look at a mesh in wire-frame view. They "
-"are usually invisible on the rendered image. They are used to construct "
+"the \"wires\" you see when you look at a mesh in wireframe view. They are"
+" usually invisible on the rendered image. They are used to construct "
 "faces."
 msgstr "辺は必ず2つの頂点を真っ直ぐな線で繋いでいます。辺は、メッシュをワイヤーフレームで見た時に「ワイヤー」として見えるものです。レンダー画像では通常、見えません。面を作るために使われます。"
 
@@ -100,34 +100,35 @@ msgid ""
 "animation and subdivision modeling."
 msgstr "三角形は常に平面であり、簡単に計算ができます。一方、四角形は\"うまく変形する\"ため、アニメーションやサブディビジョン・モデリングで好まれて使われます。"
 
-#: ../../manual/modeling/meshes/structure.rst:54
+#: ../../manual/modeling/meshes/structure.rst:56
 msgid ""
-"While you could build a cube with triangular faces, it would just look "
-"more confusing in *Edit Mode*."
-msgstr "三角系の面で立方体を構築することもできますが、 *編集モード* で紛らわしく見えるだけです。"
+"`Why should triangles be avoided for character animation? "
+"<https://blender.stackexchange.com/questions/2931>`__"
+msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:59
+#: ../../manual/modeling/meshes/structure.rst:57
+msgid ""
+"`When should N-Gons be used, and when shouldn't they? "
+"<https://blender.stackexchange.com/questions/89>`__"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:61
+msgid "Topology"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:66
 msgid "Loops"
 msgstr "ループ"
 
-#: ../../manual/modeling/meshes/structure.rst:65
+#: ../../manual/modeling/meshes/structure.rst:72
 msgid "Edge and face loops."
 msgstr "辺と面のループ"
 
-#: ../../manual/modeling/meshes/structure.rst:67
+#: ../../manual/modeling/meshes/structure.rst:74
 msgid ""
 "*Edge* and *face* loops are sets of faces or edges that form continuous "
 "\"loops\" as shown in Fig. :ref:`fig-mesh-topo-loop`."
 msgstr "*辺* と *面* のループは図 :ref:`fig-mesh-topo-loop`　で示すように連続した「ループ」を成す面や辺の集まりです。"
-
-#: ../../manual/modeling/meshes/structure.rst:72
-msgid ""
-"Note that loops (2 and 4) do not go around the whole model. Loops stop at"
-" so-called poles because there is no unique way to continue a loop from a"
-" pole. Poles are vertices that are connected to either three, five, or "
-"more edges. Accordingly, vertices connected to exactly one, two or four "
-"edges are not poles."
-msgstr "2と4で示したループがモデル全体を回らないことに注意してください。ループはポール(poles)と呼ばれるところで止まり、これはポール以降はループを一意に続ける方法がないからです。ポールは3つ、5つ、あるいはそれ以上の数の辺と繋がった頂点です。したがって、1つ、2つ、あるいは4つの辺と繋がった頂点はポールではありません。"
 
 #: ../../manual/modeling/meshes/structure.rst:77
 msgid ""
@@ -143,11 +144,20 @@ msgstr ""
 " :doc:`Advanced Selection </modeling/meshes/selecting/advanced>` "
 "を参照してください。"
 
-#: ../../manual/modeling/meshes/structure.rst:88
+#: ../../manual/modeling/meshes/structure.rst:86
+msgid ""
+"Note that loops (2 and 4) do not go around the whole model. Loops stop at"
+" so-called poles because there is no unique way to continue a loop from a"
+" pole. Poles are vertices that are connected to either three, five, or "
+"more edges. Accordingly, vertices connected to exactly one, two or four "
+"edges are not poles."
+msgstr "2と4で示したループがモデル全体を回らないことに注意してください。ループはポール(poles)と呼ばれるところで止まり、これはポール以降はループを一意に続ける方法がないからです。ポールは3つ、5つ、あるいはそれ以上の数の辺と繋がった頂点です。したがって、1つ、2つ、あるいは4つの辺と繋がった頂点はポールではありません。"
+
+#: ../../manual/modeling/meshes/structure.rst:107
 msgid "Edge Loops"
 msgstr "辺ループ"
 
-#: ../../manual/modeling/meshes/structure.rst:90
+#: ../../manual/modeling/meshes/structure.rst:94
 msgid ""
 "Loops (1 and 2) in Fig. :ref:`fig-mesh-topo-loop` are edge loops. They "
 "connect vertices so that each one on the loop has exactly two neighbors "
@@ -157,7 +167,7 @@ msgstr ""
 "図 :ref:`fig-mesh-topo-loop` "
 "において、1と2で示したループは辺ループです。辺ループは頂点を繋げ、ループ上の各頂点において、ループ上にない2つの頂点に隣接し、その2つの頂点がループの両側に配置されるようにしています。（ポールがある場合の始点と終点は例外です）"
 
-#: ../../manual/modeling/meshes/structure.rst:94
+#: ../../manual/modeling/meshes/structure.rst:98
 msgid ""
 "Edge loops are an important concept especially in organic (subsurface) "
 "modeling and character animation. When used correctly, they allow you to "
@@ -165,7 +175,7 @@ msgid ""
 "used as subdivision surfaces and deform very well in animation."
 msgstr "有機的な（サブサーフェスを使った）モデリングやキャラクターでは、辺ループは特に重要な概念です。適切に使えば、サブディビジョンサーフェスで使うととても自然に見えるモデルを比較的少数の頂点で作れますし、アニメーションにおいても綺麗に変形します。"
 
-#: ../../manual/modeling/meshes/structure.rst:99
+#: ../../manual/modeling/meshes/structure.rst:103
 msgid ""
 "Take Fig. :ref:`fig-mesh-topo-loop` in organic modeling as an example: "
 "the edge loops follow the natural contours and deformation lines of the "
@@ -175,7 +185,7 @@ msgstr ""
 "例として図 :ref:`fig-mesh-topo-loop` "
 "を有機モデリングとして捉えてみましょう。辺ループは皮膚やその下の筋肉の自然な輪郭や変形の線に沿って走り、キャラクターが動く時により大きく変形するところ（例えば、肩や膝など）では密度がより高くなります。"
 
-#: ../../manual/modeling/meshes/structure.rst:103
+#: ../../manual/modeling/meshes/structure.rst:107
 msgid ""
 "Further details on working with edge loops can be found in :ref:`Edge "
 "Loop Selection <modeling-meshes-selecting-edge-loops>`."
@@ -183,7 +193,7 @@ msgstr ""
 "より詳細な辺ループの扱い方は :ref:`辺ループ選択 <modeling-meshes-selecting-edge-loops>` "
 "を参照してください。"
 
-#: ../../manual/modeling/meshes/structure.rst:108
+#: ../../manual/modeling/meshes/structure.rst:117
 msgid "Face Loops"
 msgstr "面ループ"
 
@@ -204,4 +214,26 @@ msgid ""
 msgstr ""
 "より詳細な面ループの扱い方は :ref:`面ループ選択 <modeling-meshes-selecting-face-loops>` "
 "を参照してください。"
+
+#: ../../manual/modeling/meshes/structure.rst:120
+msgid "Poles"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:122
+msgid "See `N-poles & E-poles <https://blender.stackexchange.com/a/133676/55>`__."
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:126
+msgid "Non-manifold"
+msgstr ""
+
+#: ../../manual/modeling/meshes/structure.rst:128
+msgid "See :term:`Non-manifold`."
+msgstr ""
+
+#~ msgid ""
+#~ "While you could build a cube with"
+#~ " triangular faces, it would just look"
+#~ " more confusing in *Edit Mode*."
+#~ msgstr "三角系の面で立方体を構築することもできますが、 *編集モード* で紛らわしく見えるだけです。"
 
