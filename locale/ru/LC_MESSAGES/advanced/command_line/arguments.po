@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-06-19 16:43+1000\n"
 "PO-Revision-Date: 2016-01-17 18:26+0200\n"
 "Last-Translator: Virus <alexander.semenko@gmail.com>\n"
 "Language-Team: \n"
@@ -819,11 +819,11 @@ msgstr "Пропускает чтение startup.blend из домашнего 
 
 #: ../../manual/advanced/command_line/arguments.rst:238
 #, fuzzy
-msgid "``--enable-static-override``"
+msgid "``--enable-library-override``"
 msgstr "``-y``, ``--enable-autoexec``"
 
 #: ../../manual/advanced/command_line/arguments.rst:239
-msgid "Enable Static Override features in the UI."
+msgid "Enable Library Override features in the UI."
 msgstr ""
 
 #: ../../manual/advanced/command_line/arguments.rst:241
@@ -976,28 +976,18 @@ msgid "Arguments must be separated by white space, eg:"
 msgstr "Аргументы должны быть разделены пробелами, т.е."
 
 #: ../../manual/advanced/command_line/arguments.rst:288
-#, fuzzy
-msgid "...will ignore the ``a``."
-msgstr "... проигнорирует ``a``"
-
-#: ../../manual/advanced/command_line/arguments.rst:294
-#, fuzzy
-msgid ""
-"...will ignore ``8`` because there is no space between the ``-f`` and the"
-" frame value."
+msgid "...will exit since ``-ba`` is an unknown argument."
 msgstr ""
-"... проигнорирует ``8``, т.к. между ``-f`` и количеством кадров нет "
-"пробела"
 
-#: ../../manual/advanced/command_line/arguments.rst:298
+#: ../../manual/advanced/command_line/arguments.rst:292
 msgid "Argument Order"
 msgstr "Порядок аргументов"
 
-#: ../../manual/advanced/command_line/arguments.rst:300
+#: ../../manual/advanced/command_line/arguments.rst:294
 msgid "Arguments are executed in the order they are given. eg:"
 msgstr "Аргументы обрабатываются в том порядке, в котором они заданы, т.е."
 
-#: ../../manual/advanced/command_line/arguments.rst:306
+#: ../../manual/advanced/command_line/arguments.rst:300
 #, fuzzy
 msgid ""
 "...will not render to ``/tmp`` because ``--render-frame 1`` renders "
@@ -1006,7 +996,7 @@ msgstr ""
 "... не отрендерит в ``/tmp`` т.к. ``--render-frame 1`` начинает рендер до"
 " того, как будет установлен путь рендера"
 
-#: ../../manual/advanced/command_line/arguments.rst:312
+#: ../../manual/advanced/command_line/arguments.rst:306
 #, fuzzy
 msgid ""
 "...will not render to ``/tmp`` because loading the blend-file overwrites "
@@ -1015,11 +1005,11 @@ msgstr ""
 "... не отрендерит в ``/tmp`` т.к. загрузка blend-файла перезапишет "
 "установленный ранее путь вывода рендера"
 
-#: ../../manual/advanced/command_line/arguments.rst:318
+#: ../../manual/advanced/command_line/arguments.rst:312
 msgid "...works as expected."
 msgstr "... работает как это и указано."
 
-#: ../../manual/advanced/command_line/arguments.rst:322
+#: ../../manual/advanced/command_line/arguments.rst:316
 msgid "Environment Variables"
 msgstr "Переменные окружения"
 
@@ -1027,7 +1017,7 @@ msgstr "Переменные окружения"
 msgid "BLENDER_USER_CONFIG"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:324
+#: ../../manual/advanced/command_line/arguments.rst:318
 msgid "Directory for user configuration files."
 msgstr "Каталог для конфигурационных файлов пользователя"
 
@@ -1035,7 +1025,7 @@ msgstr "Каталог для конфигурационных файлов по
 msgid "BLENDER_USER_SCRIPTS"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:325
+#: ../../manual/advanced/command_line/arguments.rst:319
 msgid "Directory for user scripts."
 msgstr "Каталог для пользовательских скриптов"
 
@@ -1044,7 +1034,7 @@ msgstr "Каталог для пользовательских скриптов"
 msgid "BLENDER_SYSTEM_SCRIPTS"
 msgstr "``--env-system-scripts``"
 
-#: ../../manual/advanced/command_line/arguments.rst:326
+#: ../../manual/advanced/command_line/arguments.rst:320
 msgid "Directory for system wide scripts."
 msgstr "Каталог для общесистемных скриптов"
 
@@ -1052,7 +1042,7 @@ msgstr "Каталог для общесистемных скриптов"
 msgid "BLENDER_USER_DATAFILES"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:327
+#: ../../manual/advanced/command_line/arguments.rst:321
 msgid "Directory for user data files (icons, translations, ..)."
 msgstr "Каталог для пользовательских файлов данных (иконы, переводы и пр.)"
 
@@ -1061,7 +1051,7 @@ msgstr "Каталог для пользовательских файлов да
 msgid "BLENDER_SYSTEM_DATAFILES"
 msgstr "``--env-system-datafiles``"
 
-#: ../../manual/advanced/command_line/arguments.rst:328
+#: ../../manual/advanced/command_line/arguments.rst:322
 msgid "Directory for system wide data files."
 msgstr "Каталог для общесистемных файлов данных"
 
@@ -1070,7 +1060,7 @@ msgstr "Каталог для общесистемных файлов данны
 msgid "BLENDER_SYSTEM_PYTHON"
 msgstr "``--env-system-python``"
 
-#: ../../manual/advanced/command_line/arguments.rst:329
+#: ../../manual/advanced/command_line/arguments.rst:323
 #, fuzzy
 msgid "Directory for system Python libraries."
 msgstr "Каталог для системных библиотек Python"
@@ -1079,7 +1069,7 @@ msgstr "Каталог для системных библиотек Python"
 msgid "TEMP"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:330
+#: ../../manual/advanced/command_line/arguments.rst:324
 msgid "Store temporary files here."
 msgstr "Сохранять временные файлы сюда"
 
@@ -1087,7 +1077,7 @@ msgstr "Сохранять временные файлы сюда"
 msgid "TMP"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:331
+#: ../../manual/advanced/command_line/arguments.rst:325
 msgid "or $TMPDIR           Store temporary files here."
 msgstr "или $TMPDIR          Сохранять временные файлы сюда"
 
@@ -1095,7 +1085,7 @@ msgstr "или $TMPDIR          Сохранять временные файлы
 msgid "SDL_AUDIODRIVER"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:332
+#: ../../manual/advanced/command_line/arguments.rst:326
 msgid "LibSDL audio driver - alsa, esd, dma."
 msgstr "Аудиодрайвер LibSDL - alsa, esd, dma."
 
@@ -1103,7 +1093,7 @@ msgstr "Аудиодрайвер LibSDL - alsa, esd, dma."
 msgid "PYTHONHOME"
 msgstr ""
 
-#: ../../manual/advanced/command_line/arguments.rst:333
+#: ../../manual/advanced/command_line/arguments.rst:327
 #, fuzzy
 msgid "Path to the Python directory, eg. /usr/lib/python."
 msgstr "Путь к каталогу python, т.е. /usr/lib/python."
@@ -1306,4 +1296,18 @@ msgstr "Путь к каталогу python, т.е. /usr/lib/python."
 
 #~ msgid "Set the application template, use ``default`` for none."
 #~ msgstr ""
+
+#~ msgid "Enable Static Override features in the UI."
+#~ msgstr ""
+
+#~ msgid "...will ignore the ``a``."
+#~ msgstr "... проигнорирует ``a``"
+
+#~ msgid ""
+#~ "...will ignore ``8`` because there is"
+#~ " no space between the ``-f`` and "
+#~ "the frame value."
+#~ msgstr ""
+#~ "... проигнорирует ``8``, т.к. между "
+#~ "``-f`` и количеством кадров нет пробела"
 
