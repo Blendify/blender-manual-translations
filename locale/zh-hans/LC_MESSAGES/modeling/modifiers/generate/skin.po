@@ -5,9 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
-msgstr "Project-Id-Version: Blender Reference Manual 0.1\n"
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-06 21:41+1100\n"
+"POT-Creation-Date: 2019-06-21 14:24+1000\n"
 "PO-Revision-Date: 2017-05-25 21:57+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -16,15 +17,16 @@ msgstr "Project-Id-Version: Blender Reference Manual 0.1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:5
 msgid "Skin Modifier"
 msgstr "蒙皮修改器"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:7
+#, fuzzy
 msgid ""
-"The Skin Modifier uses vertices and edges to create a skinned surface, "
+"The *Skin* modifier uses vertices and edges to create a skinned surface, "
 "using a per-vertex radius to better define the shape. The output is "
 "mostly quads, although some triangles will appear around intersections."
 msgstr "蒙皮修改器使用顶点和边来创建蒙皮面，使用每个顶点的半径来更好地定义形状。输出通常是四边形，尽管一些三角形可能在相交处出现。"
@@ -36,7 +38,8 @@ msgid ""
 msgstr "用任意拓扑来雕刻和/或光滑形体来生成基础网格是一种快速的方法。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:16
-msgid "Faces in the original geometry are ignored by the Skin Modifier."
+#, fuzzy
+msgid "Faces in the original geometry are ignored."
 msgstr "原始几何形体的面会被蒙皮修改器忽略掉。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:20
@@ -44,110 +47,117 @@ msgid "Options"
 msgstr "选项"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:25
-msgid "Skin Modifier."
+#, fuzzy
+msgid "The Skin modifier."
 msgstr "蒙皮修改器."
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:29
-msgid "Create Armature"
-msgstr "创建骨架"
-
 #: ../../manual/modeling/modifiers/generate/skin.rst:31
-msgid "Create an armature on top of the object. Each edge becomes a bone."
-msgstr "在物体之上创建骨架.每个边都成为骨头。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:35
-msgid ""
-"If the root vertex has more than one adjacent edge, an extra bone will be"
-" created to serve as the root."
-msgstr "如果根顶点有多于一个的邻接边，它会创建额外的一根骨头作为根。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:38
-msgid "This tool does the following:"
-msgstr "该功能实现了下面几条:"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:40
-msgid ""
-"A new armature object is added with bones matching the input mesh. The "
-"active selection is switched to the new armature."
-msgstr "添加一个新的骨架物体，其骨骼匹配输入网格。活动选中项将切换到新的骨架上。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:42
-msgid ""
-"Weight groups are added to the input mesh. The Skin Modifier propagates "
-"these weights to the output as well."
-msgstr "权重组添加到输入网格中。蒙皮修改器传播这些权重到输出网格。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:43
-msgid ""
-"An Armature Modifier is added directly below the Skin Modifier. Note "
-"that, the Armature Modifier is being applied after the Skin Modifier "
-"because it should only deform the output, whereas if it were above the "
-"Skin Modifier it might change the resulting topology."
-msgstr "在蒙皮修改器下方直接添加骨架修改器。 请注意，在蒙皮修改器之后应用骨架修改器，因为它只应使输出变形，而如果它在蒙皮修改器上方，则可能会更改生成的拓扑."
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:50
-msgid "Smoothing"
-msgstr "平滑"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:56
 msgid "Branch Smoothing"
 msgstr "分支平滑"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:53
+#: ../../manual/modeling/modifiers/generate/skin.rst:28
+#, fuzzy
 msgid ""
 "A branch point is a vertex with three or more connected edges. These "
 "areas tend to produce more complicated topology, some of which may "
-"overlap. The *Branch Smoothing* setting relaxes the surface around these "
-"points, with the side effect of shrinking the surface."
-msgstr "分支顶点是一个有三个或三个以上连接边的顶点。这些区域倾向于产生更复杂的拓扑，其中一些可能重叠。 *分支光滑* 设置使这些点周围的表面松散点，但会有收缩表面的副作用。"
+"overlap. This setting relaxes the surface around these points, with the "
+"side effect of shrinking it."
+msgstr ""
+"分支顶点是一个有三个或三个以上连接边的顶点。这些区域倾向于产生更复杂的拓扑，其中一些可能重叠。 *分支光滑* "
+"设置使这些点周围的表面松散点，但会有收缩表面的副作用。"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:61
+#: ../../manual/modeling/modifiers/generate/skin.rst:36
 msgid "Smooth Shading"
 msgstr "平滑着色"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:59
+#: ../../manual/modeling/modifiers/generate/skin.rst:34
 msgid ""
 "Output faces with smooth shading rather than flat shading. The "
 "smooth/flat shading of the input geometry is not preserved."
 msgstr "采用光滑着色而不是平直着色来输出面。输入几何形体的光滑、平直着色不被保留。"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:64
+#: ../../manual/modeling/modifiers/generate/skin.rst:46
+#, fuzzy
+msgid "Symmetry Axes X/Y/Z"
+msgstr "对称轴"
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:39
+#, fuzzy
+msgid ""
+"These checkboxes are used to keep the output topology symmetrical in "
+"their respective axes. In other words, using it avoids merging triangles "
+"across an axis unless the triangles form a symmetric quad."
+msgstr "对称轴复选框用来保持输出的拓扑在它们各自的轴上对称。换句话讲，使用它可以避免在某个轴上合并三角面，除非三角面构成一个对称的四边形。"
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:43
+#, fuzzy
+msgid ""
+"They do not add geometry flipped across an axis. For that, the "
+":doc:`Mirror</modeling/modifiers/generate/mirror>` modifier should be "
+"used, typically placed above the *Skin* one."
+msgstr "这些对称轴复选框不会添加在轴上翻转的几何体。想做到这点，应当使用镜像修改器，且通常置于蒙皮修改器之上。"
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:49
+msgid "Add Skin Data"
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:51
+msgid ""
+"This modifier uses a :ref:`custom set of data <modeling-modifiers-"
+"generate-skin-data>` in the mesh, that is generated automatically when "
+"you add the modifier the first time."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:54
+msgid ""
+"However, you may remove that data, or loose it some way or the other. "
+"That operator will generate it again."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:58
 msgid "Selected Vertices"
 msgstr "选择的顶点"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:69
+#: ../../manual/modeling/modifiers/generate/skin.rst:60
+msgid ""
+"Those operators modify the original mesh 'control data' for the *Skin* "
+"modifier. They help manage its behavior."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:65
 msgid "Mark/Clear Loose"
 msgstr "标记、清除松散点"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:67
+#: ../../manual/modeling/modifiers/generate/skin.rst:63
+#, fuzzy
 msgid ""
 "By default, a branch vertex (vertex with three or more connected edges) "
 "will generate extra edge loops along adjacent edges in order to keep the "
 "output tight. Branches can be made loose by clicking *Mark Loose*, which "
 "will allow the output to stretch between all adjacent vertices. This can "
-"be disabled again by clicking *Clear Loose* with the vertex selected."
-msgstr "默认情况下，为了保持输出紧凑，分支顶点 (具有三个或更多的连接边的顶点) 将沿相邻的边生成额外的边环。可通过点击 *标记松散点* 使分支松散点，这将使输出在所有相邻的顶点之间伸展开来。可对选定的顶点再次点击 *清除松散点* 而禁用。"
+"be disabled again by clicking *Clear Loose*."
+msgstr ""
+"默认情况下，为了保持输出紧凑，分支顶点 (具有三个或更多的连接边的顶点) 将沿相邻的边生成额外的边环。可通过点击 *标记松散点* "
+"使分支松散点，这将使输出在所有相邻的顶点之间伸展开来。可对选定的顶点再次点击 *清除松散点* 而禁用。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:77
 msgid "Mark Root"
 msgstr "标记根点"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:72
+#: ../../manual/modeling/modifiers/generate/skin.rst:68
+#, fuzzy
 msgid ""
 "Marking a vertex as root causes that vertex to be used for calculating "
 "rotations for connected limbs. Root vertices also affect the armature "
-"output; they will be used as the origin for the root bones."
+"output, they will be used as the origin for the root bones."
 msgstr "将一个顶点标记为根点，将导致该顶点用来为连接的枝干计算旋转。根顶点也影响骨架的输出，它们会用作根骨头的原点。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:75
-msgid "Roots are shown in the 3D View with a red dashed circle around the vertex."
-msgstr "根在3D视图里是以红色虚线圆圈显示的，绕着该顶点。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:77
+#, fuzzy
 msgid ""
-"Each set of connected vertices should have one root node. *Mark Root* "
-"enforces the one-root per set rule, so it is not necessary to manually "
-"unmark roots."
+"Each set of connected vertices should have one root node (one is selected"
+" by default if you do not assign any manually). *Mark Root* enforces the "
+"one-root per set rule, so it is not necessary to manually unmark roots."
 msgstr "每个连接的顶点集应该只有一个根节点。 *标记根点* 加强了每个集和有一个根节点的条件，所以手动取消标记根节点就没有必要了。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:81
@@ -159,108 +169,94 @@ msgid "Makes the skin radii of selected vertices equal on each axis."
 msgstr "使选择顶点的蒙皮半径在每个轴上都相等。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:84
-msgid "Symmetry Axes"
-msgstr "对称轴"
+msgid "Create Armature"
+msgstr "创建骨架"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:86
-msgid ""
-"The Symmetry Axes checkboxes are used to keep the output topology "
-"symmetrical in their respective axes. In other words, using it avoids "
-"merging triangles across an axis unless the triangles form a symmetric "
-"quad."
-msgstr "对称轴复选框用来保持输出的拓扑在它们各自的轴上对称。换句话讲，使用它可以避免在某个轴上合并三角面，除非三角面构成一个对称的四边形。"
+msgid "Create an armature on top of the object. Each edge becomes a bone."
+msgstr "在物体之上创建骨架.每个边都成为骨头。"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:91
+#: ../../manual/modeling/modifiers/generate/skin.rst:90
 msgid ""
-"These symmetry axes checkboxes do not add geometry flipped across an "
-"axis. For that, the Mirror Modifier should be used, typically placed "
-"above the Skin Modifier."
-msgstr "这些对称轴复选框不会添加在轴上翻转的几何体。想做到这点，应当使用镜像修改器，且通常置于蒙皮修改器之上。"
+"If the root vertex has more than one adjacent edge, an extra bone will be"
+" created to serve as the root."
+msgstr "如果根顶点有多于一个的邻接边，它会创建额外的一根骨头作为根。"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:96
-msgid "Usage"
-msgstr "使用"
+#: ../../manual/modeling/modifiers/generate/skin.rst:93
+msgid "This tool does the following:"
+msgstr "该功能实现了下面几条:"
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:95
+msgid ""
+"A new armature object is added with bones matching the input mesh. The "
+"active selection is switched to the new armature."
+msgstr "添加一个新的骨架物体，其骨骼匹配输入网格。活动选中项将切换到新的骨架上。"
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:97
+#, fuzzy
+msgid ""
+"Weight groups are added to the input mesh. The *Skin* modifier propagates"
+" these weights to the output as well."
+msgstr "权重组添加到输入网格中。蒙皮修改器传播这些权重到输出网格。"
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:98
 msgid ""
-"Add the Skin Modifier to a mesh. Disable *Limit selection to visible* in "
-"the 3D View so that you can see the vertices inside the new geometry. "
-"Ensure the modifier is enabled for display in Edit Mode (on by default)."
-msgstr "添加蒙皮修改器到一个网格。关闭3D视图的 *仅选择可见元素* 选项，这样你可以看到新几何体的内部顶点。确认修改器对于编辑模式中的显示是启用的(默认开启)."
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:101
-msgid ""
-"The Skin Modifier uses ordinary vertices and edges as input. All of the "
-"regular Edit Mode tools (such as extrude, subdivide, grab, scale, and "
-"rotate) can be used when building a skinned mesh."
-msgstr "蒙皮修改器用普通的顶点和边作为输入。当构建一个带蒙皮的网格时，在编辑模式下的所有常规工具（比如挤出、细分、平移、缩放，以及旋转）都可以使用。"
+"An :doc:`Armature</modeling/modifiers/deform/armature>` modifier is added"
+" directly below the *Skin* one. Note that the *Armature* modifier is "
+"being applied after the *Skin* one because it should only deform the "
+"output, whereas if it were above, it might change the resulting topology."
+msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:107
-msgid "Skin Resize"
-msgstr "皮肤重缩放"
+msgid "Skin Mesh Data"
+msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/skin.rst:109
 msgid ""
-"The radii of input vertices can be individually scaled in Edit Mode to "
-"alter the thickness of the skin by pressing :kbd:`Ctrl-A`. Non-uniform "
-"scaling of the X and Y axes is accessible by locking it with :kbd:`X` or "
-":kbd:`Y`. The radius can also be adjusted in the *Transform* panel of the"
-" *Properties* region."
-msgstr "默认情况下，输入顶点的半径可以在编辑模式下单独缩放，以改变皮肤的厚度, 通过按下 :kbd:`Ctrl-A`. 通过用 :kbd:`X` 或 :kbd:`Y` 将其锁定 ，可以使用X轴和Y轴的非均匀缩放。 也可以在 *属性* 区域的 *变换* 面板中调整半径。"
+"That modifier needs a set of specific data in the original mesh to work "
+"properly. This data allows to define the root vertices of each tree, "
+"which ones are loose (see `Selected Vertices`_ above), and the size "
+"(radius) of the skin at each vertex."
+msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:116
+#: ../../manual/modeling/modifiers/generate/skin.rst:115
+#, fuzzy
+msgid "Skin Size"
+msgstr "皮肤重缩放"
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:117
+msgid ""
+"The radii of input vertices can be individually scaled in *Edit* mode by "
+"pressing :kbd:`Ctrl-A`. Non-uniform scaling of the X and Y axes is "
+"accessible by the usual axis locking with :kbd:`X` or :kbd:`Y`. The "
+"radius can also be adjusted in the *Transform* panel of the *Properties* "
+"region, in the *3D View*."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/skin.rst:123
 msgid "Examples"
 msgstr "例子"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:122
-msgid "Simple creature, made with only the Skin Modifier."
+#: ../../manual/modeling/modifiers/generate/skin.rst:129
+#, fuzzy
+msgid "Simple creature, made with only the Skin and Subsurf modifiers."
 msgstr "只用蒙皮修改器制作的简单的生物."
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:124
-msgid "In the *modifiers* menu, add a Skin Modifier."
-msgstr "在 *修改器* 菜单里添加一个蒙皮修改器。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:125
-msgid ":kbd:`Tab` into edit mode and start extruding."
-msgstr "按下 :kbd:`Tab` 进入编辑模式，然后挤出。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:126
-msgid ""
-"Try to sketch results similar to Fig. :ref:`fig-modifier-skin-creature`, "
-"through extruding the vertices of the object."
-msgstr "试着绘制如图 :ref:`fig-modifier-skin-creature` 的草图结果, 通过基础物体的顶点."
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:128
-msgid ""
-"Use :kbd:`Ctrl-A` to change the size of the different regions within the "
-"creature."
-msgstr "用 :kbd:`Ctrl-A` 来改变这个怪物不同区域的尺寸。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:129
-msgid ""
-"Use *Mark Loose* at regions like the neck, to merge these faces more "
-"together."
-msgstr "在像脖子一样的区域用上 *标记松散点* ，可以使这些面更紧凑地在一起。"
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:130
-msgid ""
-"To get smoother results, activate *Smooth Shading* and add a "
-":doc:`Subdivision Surface </modeling/modifiers/generate/subsurf>`."
-msgstr "为了得到更光滑的结果, 激活 *平滑着色* 并添加 :doc:`表面细分 </modeling/modifiers/generate/subsurf>`."
-
-#: ../../manual/modeling/modifiers/generate/skin.rst:135
+#: ../../manual/modeling/modifiers/generate/skin.rst:133
 msgid "External Links"
 msgstr "外部链接"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:137
+#: ../../manual/modeling/modifiers/generate/skin.rst:135
 msgid ""
 "`Skin Modifier Development at Blender Nation "
 "<http://www.blendernation.com/2011/03/11/skin-modifier-development/>`__ "
 "-- An early demonstration of the Skin Modifier by Nicholas Bishop (March "
 "2011)."
-msgstr "`Blender Nation 的蒙皮修改器开发 <http://www.blendernation.com/2011/03/11/skin-modifier-development/>`__ -- Nicholas Bishop (March 2011)的蒙皮修改器早期示范."
+msgstr ""
+"`Blender Nation 的蒙皮修改器开发 <http://www.blendernation.com/2011/03/11/skin-"
+"modifier-development/>`__ -- Nicholas Bishop (March 2011)的蒙皮修改器早期示范."
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:140
+#: ../../manual/modeling/modifiers/generate/skin.rst:138
 msgid ""
 "Ji, Zhongping; Liu, Ligang; Wang, Yigang (2010). `B-Mesh: A Fast Modeling"
 " System for Base Meshes of 3D Articulated Shapes "
@@ -268,12 +264,115 @@ msgid ""
 "Graphics Forum 29(7), pp. 2169-2178. -- The work this modifier is based "
 "on (`direct link to PDF "
 "<http://www.math.zju.edu.cn/ligangliu/cagd/projects/bmesh/paper/bmesh.pdf>`__)."
-msgstr "计忠平，刘利刚，王毅刚 (2010). `B-Mesh：一种用在3D关节互连形状的基网格的快速建模系统 <http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/>`__, 计算机图形学论坛 29(7), pp. 2169-2178. -- 该修改器基于(`直接链接到 PDF <http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/Paper/BMesh.pdf>`__)。"
+msgstr ""
+"计忠平，刘利刚，王毅刚 (2010). `B-Mesh：一种用在3D关节互连形状的基网格的快速建模系统 "
+"<http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/>`__, 计算机图形学论坛 "
+"29(7), pp. 2169-2178. -- 该修改器基于(`直接链接到 PDF "
+"<http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/Paper/BMesh.pdf>`__)。"
 
-#: ../../manual/modeling/modifiers/generate/skin.rst:145
+#: ../../manual/modeling/modifiers/generate/skin.rst:143
 msgid ""
 "`Related thread on Blender artists "
 "<http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-"
 "tools-papers-better-than-zsfere>`__."
-msgstr "`Blender artists 上的相关内容 <http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-tools-papers-better-than-zsfere>`__."
+msgstr ""
+"`Blender artists 上的相关内容 "
+"<http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-"
+"tools-papers-better-than-zsfere>`__."
+
+#~ msgid ""
+#~ "An Armature Modifier is added directly"
+#~ " below the Skin Modifier. Note that,"
+#~ " the Armature Modifier is being "
+#~ "applied after the Skin Modifier because"
+#~ " it should only deform the output,"
+#~ " whereas if it were above the "
+#~ "Skin Modifier it might change the "
+#~ "resulting topology."
+#~ msgstr ""
+#~ "在蒙皮修改器下方直接添加骨架修改器。 "
+#~ "请注意，在蒙皮修改器之后应用骨架修改器，因为它只应使输出变形，而如果它在蒙皮修改器上方，则可能会更改生成的拓扑."
+
+#~ msgid "Smoothing"
+#~ msgstr "平滑"
+
+#~ msgid ""
+#~ "Roots are shown in the 3D View "
+#~ "with a red dashed circle around "
+#~ "the vertex."
+#~ msgstr "根在3D视图里是以红色虚线圆圈显示的，绕着该顶点。"
+
+#~ msgid "Usage"
+#~ msgstr "使用"
+
+#~ msgid ""
+#~ "Add the Skin Modifier to a mesh."
+#~ " Disable *Limit selection to visible* "
+#~ "in the 3D View so that you "
+#~ "can see the vertices inside the "
+#~ "new geometry. Ensure the modifier is "
+#~ "enabled for display in Edit Mode "
+#~ "(on by default)."
+#~ msgstr ""
+#~ "添加蒙皮修改器到一个网格。关闭3D视图的 *仅选择可见元素* "
+#~ "选项，这样你可以看到新几何体的内部顶点。确认修改器对于编辑模式中的显示是启用的(默认开启)."
+
+#~ msgid ""
+#~ "The Skin Modifier uses ordinary vertices"
+#~ " and edges as input. All of the"
+#~ " regular Edit Mode tools (such as "
+#~ "extrude, subdivide, grab, scale, and "
+#~ "rotate) can be used when building "
+#~ "a skinned mesh."
+#~ msgstr "蒙皮修改器用普通的顶点和边作为输入。当构建一个带蒙皮的网格时，在编辑模式下的所有常规工具（比如挤出、细分、平移、缩放，以及旋转）都可以使用。"
+
+#~ msgid ""
+#~ "The radii of input vertices can be"
+#~ " individually scaled in Edit Mode to"
+#~ " alter the thickness of the skin "
+#~ "by pressing :kbd:`Ctrl-A`. Non-uniform "
+#~ "scaling of the X and Y axes "
+#~ "is accessible by locking it with "
+#~ ":kbd:`X` or :kbd:`Y`. The radius can "
+#~ "also be adjusted in the *Transform* "
+#~ "panel of the *Properties* region."
+#~ msgstr ""
+#~ "默认情况下，输入顶点的半径可以在编辑模式下单独缩放，以改变皮肤的厚度, 通过按下 :kbd:`Ctrl-A`."
+#~ " 通过用 :kbd:`X` 或 :kbd:`Y` 将其锁定 "
+#~ "，可以使用X轴和Y轴的非均匀缩放。 也可以在 *属性* 区域的 *变换* "
+#~ "面板中调整半径。"
+
+#~ msgid "In the *modifiers* menu, add a Skin Modifier."
+#~ msgstr "在 *修改器* 菜单里添加一个蒙皮修改器。"
+
+#~ msgid ":kbd:`Tab` into edit mode and start extruding."
+#~ msgstr "按下 :kbd:`Tab` 进入编辑模式，然后挤出。"
+
+#~ msgid ""
+#~ "Try to sketch results similar to "
+#~ "Fig. :ref:`fig-modifier-skin-creature`, "
+#~ "through extruding the vertices of the"
+#~ " object."
+#~ msgstr "试着绘制如图 :ref:`fig-modifier-skin-creature` 的草图结果, 通过基础物体的顶点."
+
+#~ msgid ""
+#~ "Use :kbd:`Ctrl-A` to change the size "
+#~ "of the different regions within the "
+#~ "creature."
+#~ msgstr "用 :kbd:`Ctrl-A` 来改变这个怪物不同区域的尺寸。"
+
+#~ msgid ""
+#~ "Use *Mark Loose* at regions like "
+#~ "the neck, to merge these faces "
+#~ "more together."
+#~ msgstr "在像脖子一样的区域用上 *标记松散点* ，可以使这些面更紧凑地在一起。"
+
+#~ msgid ""
+#~ "To get smoother results, activate "
+#~ "*Smooth Shading* and add a "
+#~ ":doc:`Subdivision Surface "
+#~ "</modeling/modifiers/generate/subsurf>`."
+#~ msgstr ""
+#~ "为了得到更光滑的结果, 激活 *平滑着色* 并添加 :doc:`表面细分 "
+#~ "</modeling/modifiers/generate/subsurf>`."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-06-21 14:24+1000\n"
 "PO-Revision-Date: 2019-03-23 20:50+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -23,401 +23,341 @@ msgstr ""
 msgid "Vertex Weight Edit Modifier"
 msgstr "顶点权重编辑修改器"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:10
-msgid "The Vertex Weight Edit Modifier panel."
-msgstr "顶点权重编辑修改器面板。"
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:12
-msgid "This modifier is intended to edit the weights of one vertex group."
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:7
+#, fuzzy
+msgid "This modifier is intended to edit the weights of a vertex group."
 msgstr "这个修改器是用来编辑一个顶点组的权重的."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:14
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:9
 msgid "The general process is the following, for each vertex:"
 msgstr "对于一个顶点的整个过程如下:"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:16
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:11
 msgid ""
 "(Optional) It does the mapping, either through one of the predefined "
 "functions, or a custom mapping curve."
 msgstr "(可选)进行映射,要么通过预定义的函数之一,要么通过自定义映射曲线."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:17
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:12
 msgid ""
 "It applies the influence factor, and optionally the vertex group or "
 "texture mask (0.0 means original weight, 1.0 means fully mapped weight)."
 msgstr "它应用影响因子，并且可选地应用顶点组或纹理遮罩（0.0表示原始权重，1.0表示完全映射的权重）."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:19
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:14
 msgid ""
 "It applies back the weight to the vertex, and/or it might optionally "
 "remove the vertex from the group if its weight is below a given "
 "threshold, or add it if it is above a given threshold."
 msgstr "它将权重应用于顶点，和/或如果其权重低于给定阈值，它可以选择性地从组中删除顶点，或者如果它高于给定阈值则添加它."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:24
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:19
 msgid ""
 "This modifier does implicit clamping of weight values in the standard "
 "(0.0 to 1.0) range. All values below 0.0 will be set to 0.0, and all "
 "values above 1.0 will be set to 1.0."
 msgstr "此修改器会在标准（0.0到1.0）范围内隐含地限制权重值。 低于0.0的所有值都将设置为0.0，高于1.0的所有值都将设置为1.0."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:29
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:24
+msgid ""
+"You can view the modified weights in Weight Paint Mode. This also implies"
+" that you will have to disable the *Vertex Weight Edit* modifier if you "
+"want to see the original weights of the vertex group you are editing."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:30
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:31
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:35
+#, fuzzy
+msgid "The Vertex Weight Edit modifier panel."
+msgstr "顶点权重编辑修改器面板。"
+
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:37
 msgid "Vertex Group"
 msgstr "顶点组"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:32
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:38
 msgid "The vertex group to affect."
 msgstr "要影响的顶点组."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:34
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:40
 msgid "Default Weight"
 msgstr "默认权重"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:34
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:40
 msgid ""
 "The default weight to assign to all vertices not in the given vertex "
 "group."
 msgstr "分配给不在给定顶点组中的所有顶点的默认权重."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:36
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:42
 msgid "Group Add"
 msgstr "添加组"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:37
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:43
 msgid ""
 "Adds vertices with a final weight over *Add Threshold* to the vertex "
 "group."
 msgstr "将最终权重超过 *添加阈值* 的顶点添加到顶点组."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:39
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:45
 msgid "Group Remove"
 msgstr "移除组"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:39
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:45
 msgid ""
 "Removes vertices with a final weight below *Remove Threshold* from the "
 "vertex group."
 msgstr "从顶点组中删除最终权重低于 *删除阈值* 的顶点."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:54
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:60
 msgid "Falloff Type"
 msgstr "衰减类型"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:42
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:48
 msgid "Type of mapping:"
 msgstr "映射的类型:"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:44
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:50
 msgid "Linear"
 msgstr "线性"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:45
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:51
 msgid "No mapping."
 msgstr "不映射."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:46
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:52
 msgid "Custom Curve"
 msgstr "自定义曲线"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:47
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:53
 msgid "Allows the user to manually define the mapping using a curve."
 msgstr "可以使用曲线手动定义映射."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:48
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:54
 msgid "Sharp, Smooth, Root and Sphere"
 msgstr "锐利,平滑,根凸和球状"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:49
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:55
 msgid "These are classical mapping functions, from spikiest to roundest."
 msgstr "这些是经典的映射函数，从最尖锐到最圆."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:50
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:56
 msgid "Random"
 msgstr "随机"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:51
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:57
 msgid "Uses a random value for each vertex."
 msgstr "每个顶点使用一个随机值."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:54
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:60
 msgid "Median Step"
 msgstr "中值梯级"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:53
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:59
 msgid "Creates binary weights (0.0 or 1.0), with 0.5 as cutting value."
 msgstr "创建二值权重（0.0或1.0），其中0.5为切割值."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:57
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:65
 msgid "Influence/Mask Options"
 msgstr "影响 / 遮罩选项"
 
 #: ../../manual/modeling/modifiers/modify/weight_edit.rst:67
+msgid "Those settings are the same for the three *Vertex Weight* modifiers."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:77
 msgid "Global Influence"
 msgstr "全局影响"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:60
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:70
 msgid ""
 "The overall influence of the modifier (0.0 will leave the vertex group's "
 "weights untouched, 1.0 is standard influence)."
 msgstr "修改器的整体影响（0.0将保持顶点组的权重不变，1.0是标准影响）."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:65
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:75
 msgid ""
 "Influence only affects weights, adding/removing of vertices to/from "
 "vertex group is not prevented by setting this value to 0.0."
 msgstr "影响仅作用于权重，将此值设置为0.0并不会阻止向/从顶点组添加/删除顶点."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:70
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:76
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:80
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:86
 msgid "Vertex Group Mask"
 msgstr "顶点组遮罩"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:73
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:83
+#, fuzzy
 msgid ""
-"An additional vertex group, the weights of which will be multiplied with "
-"the global influence value for each vertex. If a vertex is not in the "
-"masking vertex group, its weight will be not be affected."
+"An additional vertex group, which weights will be multiplied with the "
+"global influence value for each vertex. If a vertex is not in the masking"
+" vertex group, its weight will be not be affected."
 msgstr "一个额外的顶点组，其权重将与每个顶点的全局影响值相乘。 如果顶点不在遮罩顶点组中，则其权重将不受影响."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:79
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:85
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:89
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:95
 msgid "Texture Mask"
 msgstr "贴图遮罩"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:82
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:92
+#, fuzzy
 msgid ""
-"An additional texture, the values of which will be multiplied with the "
-"global influence value for each vertex."
+"An additional texture, which values will be multiplied with the global "
+"influence value for each vertex."
 msgstr "一个额外的纹理，其值将与每个顶点的全局影响值相乘."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:84
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:94
 #, fuzzy
 msgid ""
 "This is a standard texture :doc:`data-block </files/data_blocks>` "
 "control. When set, it reveals other settings:"
 msgstr "这是一个标准纹理 :doc:`数据块 </data_system/data_blocks>` 控制. 设置后，它会显示其他设置项:"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:103
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:113
 msgid "Texture Coordinates"
 msgstr "贴图坐标系"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:88
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:98
 msgid "How the texture is mapped to the mesh."
 msgstr "纹理映射到网格的方式."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:90
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:100
 msgid "Local"
 msgstr "自身"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:91
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:101
 msgid "Use local vertex coordinates."
 msgstr "使用自身顶点坐标系."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:92
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:102
 msgid "Global"
 msgstr "全局"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:93
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:103
 msgid "Use vertex coordinates in global space."
 msgstr "使用全局空间中的顶点坐标."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:97
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:107
 msgid "Object"
 msgstr "物体"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:95
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:105
 msgid "Use vertex coordinates in another object's space."
 msgstr "使用另一个物体的空间中的顶点坐标."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:98
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:108
 msgid "The object to be used as reference for *Object* mapping."
 msgstr "用作 *物体* 映射的参考的物体."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:103
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:113
 msgid "UV"
 msgstr "UV"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:100
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:110
 msgid "Use a UV map's coordinates."
 msgstr "使用 UV 映射的坐标."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:103
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:113
 msgid "UV Map"
 msgstr "UV 贴图"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:103
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:113
 msgid "The UV map to be used for *UV* mapping."
 msgstr "用于 *UV* 映射的UV贴图."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:121
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:132
 msgid "Use Channel"
 msgstr "使用通道"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:106
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:116
 msgid "Which channel to use as weight factor source."
 msgstr "哪个通道用作权重系数源."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:108
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:118
 msgid "Red/Green/Blue/Alpha"
 msgstr "红/绿/蓝/Alpha"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:109
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:119
 msgid "One of the color channels' values."
 msgstr "颜色通道值之一."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:110
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:120
 msgid "Intensity"
 msgstr "强度"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:111
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:121
 msgid "The average of the RGB channels (if RGB(1.0, 0.0, 0.0) value is 0.33)."
 msgstr "RGB通道的平均值(如果 RGB取(1.0,0.0,0.0)则值为0.33)."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:112
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:122
 msgid "Value"
 msgstr "值"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:113
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:123
 msgid ""
 "The highest value of the RGB channels (if RGB(1.0, 0.0, 0.0) value is "
 "1.0)."
 msgstr "RGB通道的最大值(如果 RGB取(1.0,0.0,0.0)则值为1.0)."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:114
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:124
 msgid "Hue"
 msgstr "色相"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:115
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:125
 msgid ""
 "Uses the hue value from the standard color wheel (e.g. blue has a higher "
 "hue value than yellow)."
 msgstr "使用标准调色盘的色相值（例如，蓝色的色相值高于黄色）."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:117
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:127
 msgid "Saturation"
 msgstr "饱和度"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:117
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:127
 msgid "Uses the saturation value (e.g. pure red's value is 1.0, gray is 0.0)."
 msgstr "使用饱和度值(例如,纯红的值为1.0,绿为0.0)."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:121
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:131
 msgid "All of the channels above are gamma corrected, except for *Intensity*."
 msgstr "除 *强度* 外，上述所有通道都经过伽马校正."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:125
-msgid ""
-"You can view the modified weights in *Weight Paint Mode*. This also "
-"implies that you will have to disable the *Vertex Weight Edit Modifier* "
-"if you want to see the original weights of the vertex group you are "
-"editing."
-msgstr "可以在 *权重绘制模式* 中查看修改后的权重。 这也意味着如果要查看正在编辑的顶点组的原始权重，则必须禁用 *顶点权重编辑修改器*."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:131
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:135
 msgid "Example"
 msgstr "例子"
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:134
-msgid "Using Distance from a Target Object's Geometry"
-msgstr "使用到目标物体几何体的距离"
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:135
-msgid "We are going to illustrate this with a Displace Modifier."
-msgstr "我们将用置换修改器来说明这一点."
-
 #: ../../manual/modeling/modifiers/modify/weight_edit.rst:137
 msgid ""
-"Add a (10×10 BU) 100×100 vertices grid, and in *Edit Mode*, add to it a "
-"vertex group containing all of its vertices, as above. You can even "
-"further subdivide it with a first Subdivision Surface Modifier."
-msgstr "添加(10×10 BU) 100×100顶点网格，并在 *编辑模式* 中，添加包含其所有顶点的顶点组。你甚至可以使用表面细分修改器进一步细分。"
+"Here is an example of various effects achieved using *Vertex Weight Edit*"
+" modifier (together with the :doc:`Vertex Weight Proximity "
+"</modeling/modifiers/modify/weight_proximity>` modifier) to generate "
+"weights used by the :doc:`Displace </modeling/modifiers/deform/displace>`"
+" modifier."
+msgstr ""
 
 #: ../../manual/modeling/modifiers/modify/weight_edit.rst:141
-msgid ""
-"Now add a curve circle, and place it 0.25 BU above the grid. Scale it up "
-"a bit (e.g. 4.0 BU)."
-msgstr "现在添加一个曲线圆，并将其放置在网格上方0.25 BU。 将其缩放一点（例如4.0 BU）。"
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:143
-msgid ""
-"Back to the grid object, add to it a Vertex Weight Proximity Modifier, in"
-" *Geometry Distance* mode. Enable *Edge* (if you use *Vertex* only, and "
-"your curve has a low U definition, you would get wavy patterns, see Fig. "
-":ref:`fig-modifier-vertex-weight-wavy`)."
-msgstr ""
-"回到网格物体，在 *几何体距离* 模式下添加顶点权重邻近修改器. 启用 *边*（如果您仅使用 "
-"*顶点*，并且您的曲线具有较低的U定义，您将获得波浪图案，请参见图 :ref:`fig-modifier-vertex-weight-"
-"wavy`)."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:150
-msgid "Wavy patterns."
-msgstr "波浪图案."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:155
-msgid "Distance from edges."
-msgstr "到边的距离."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:160
-msgid "Distance from vertices."
-msgstr "到顶点的距离."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:162
-msgid ""
-"Set the *Lowest Distance* to 0.2, and the *Highest Distance* to 2.0, to "
-"map back the computed distances into the regular weight range."
-msgstr "将 *最小距离* 设置为0.2，将 *最远距离* 设置为2.0，以将计算出的距离映射回常规权重范围."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:165
-msgid ""
-"Add a third Displace Modifier and affect it the texture you like. Now, we"
-" want the vertices of the grid nearest to the curve circle to remain "
-"undisplaced. As they will get weights near zero, this means that you have"
-" to set the *Midlevel* of the displace to 0.0. Make it use our affected "
-"vertex group, and that is it! Your nice mountains just shrink to a flat "
-"plane near the curve circle."
-msgstr ""
-"添加第三个置换修改器并将其设置为您喜欢的纹理。 现在，我们希望最接近曲线圆的网格顶点保持不变。 因为它们将使权重接近零，这意味着您必须将位移的 "
-"*中间等级* 设置为0.0。 让它使用受影响的顶点组，就是这样！ 漂亮的山脉缩小到曲线圆附近的平面."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:171
-msgid ""
-"As in the previous example, you can insert a Vertex Weight Edit Modifier "
-"before the *Displace* one, and play with the *Custom Curve* mapping to "
-"get a larger/narrower \"valley\"..."
-msgstr "与前面的示例一样，您可以在 *置换* 之前插入顶点权重编辑修改器，并使用 *自定义曲线* 映射来获得更大/更窄的“山谷”..."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:175
 msgid "*Curve Map* variations."
 msgstr "*曲线映射* 差异."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:181
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:147
 msgid "Concave-type mapping curve."
 msgstr "凹类型映射曲线."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:186
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:152
 msgid "No mapping curve (linear)."
 msgstr "无映射曲线(线性)."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:191
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:157
 msgid "Convex-type mapping curve."
 msgstr "凸类型映射曲线."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:196
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:162
 msgid "Vertices with a computed weight below 0.1 removed from the vertex group."
 msgstr "从顶点组移除计算重量低于0.1的顶点."
 
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:198
-msgid ""
-"You can also add a fifth Mask Modifier, and enable Vertex Weight Edit's "
-"*Group Remove* option, with a *Remove Threshold* of 0.1, to see the "
-"bottom of your valley disappear."
-msgstr "您还可以添加第五个遮罩修改器，并启用顶点权重编辑的 *组删除* 选项，*删除阈值* 为0.1，可以看到山谷底部消失."
-
-#: ../../manual/modeling/modifiers/modify/weight_edit.rst:203
+#: ../../manual/modeling/modifiers/modify/weight_edit.rst:166
 msgid ""
 "`The blend-file "
 "<https://wiki.blender.org/wiki/File:ManModifiersWeightVGroupEx.blend>`__,"
@@ -426,4 +366,100 @@ msgstr ""
 "`blend 文件 "
 "<https://wiki.blender.org/wiki/File:ManModifiersWeightVGroupEx.blend>`__,"
 " TEST_2 场景."
+
+#~ msgid ""
+#~ "You can view the modified weights "
+#~ "in *Weight Paint Mode*. This also "
+#~ "implies that you will have to "
+#~ "disable the *Vertex Weight Edit "
+#~ "Modifier* if you want to see the"
+#~ " original weights of the vertex group"
+#~ " you are editing."
+#~ msgstr "可以在 *权重绘制模式* 中查看修改后的权重。 这也意味着如果要查看正在编辑的顶点组的原始权重，则必须禁用 *顶点权重编辑修改器*."
+
+#~ msgid "Using Distance from a Target Object's Geometry"
+#~ msgstr "使用到目标物体几何体的距离"
+
+#~ msgid "We are going to illustrate this with a Displace Modifier."
+#~ msgstr "我们将用置换修改器来说明这一点."
+
+#~ msgid ""
+#~ "Add a (10×10 BU) 100×100 vertices "
+#~ "grid, and in *Edit Mode*, add to"
+#~ " it a vertex group containing all "
+#~ "of its vertices, as above. You can"
+#~ " even further subdivide it with a "
+#~ "first Subdivision Surface Modifier."
+#~ msgstr "添加(10×10 BU) 100×100顶点网格，并在 *编辑模式* 中，添加包含其所有顶点的顶点组。你甚至可以使用表面细分修改器进一步细分。"
+
+#~ msgid ""
+#~ "Now add a curve circle, and place"
+#~ " it 0.25 BU above the grid. "
+#~ "Scale it up a bit (e.g. 4.0 "
+#~ "BU)."
+#~ msgstr "现在添加一个曲线圆，并将其放置在网格上方0.25 BU。 将其缩放一点（例如4.0 BU）。"
+
+#~ msgid ""
+#~ "Back to the grid object, add to"
+#~ " it a Vertex Weight Proximity "
+#~ "Modifier, in *Geometry Distance* mode. "
+#~ "Enable *Edge* (if you use *Vertex* "
+#~ "only, and your curve has a low "
+#~ "U definition, you would get wavy "
+#~ "patterns, see Fig. :ref:`fig-modifier-"
+#~ "vertex-weight-wavy`)."
+#~ msgstr ""
+#~ "回到网格物体，在 *几何体距离* 模式下添加顶点权重邻近修改器. 启用 *边*（如果您仅使用"
+#~ " *顶点*，并且您的曲线具有较低的U定义，您将获得波浪图案，请参见图 :ref:`fig-"
+#~ "modifier-vertex-weight-wavy`)."
+
+#~ msgid "Wavy patterns."
+#~ msgstr "波浪图案."
+
+#~ msgid "Distance from edges."
+#~ msgstr "到边的距离."
+
+#~ msgid "Distance from vertices."
+#~ msgstr "到顶点的距离."
+
+#~ msgid ""
+#~ "Set the *Lowest Distance* to 0.2, "
+#~ "and the *Highest Distance* to 2.0, "
+#~ "to map back the computed distances "
+#~ "into the regular weight range."
+#~ msgstr "将 *最小距离* 设置为0.2，将 *最远距离* 设置为2.0，以将计算出的距离映射回常规权重范围."
+
+#~ msgid ""
+#~ "Add a third Displace Modifier and "
+#~ "affect it the texture you like. "
+#~ "Now, we want the vertices of the"
+#~ " grid nearest to the curve circle "
+#~ "to remain undisplaced. As they will "
+#~ "get weights near zero, this means "
+#~ "that you have to set the "
+#~ "*Midlevel* of the displace to 0.0. "
+#~ "Make it use our affected vertex "
+#~ "group, and that is it! Your nice"
+#~ " mountains just shrink to a flat "
+#~ "plane near the curve circle."
+#~ msgstr ""
+#~ "添加第三个置换修改器并将其设置为您喜欢的纹理。 现在，我们希望最接近曲线圆的网格顶点保持不变。 "
+#~ "因为它们将使权重接近零，这意味着您必须将位移的 *中间等级* 设置为0.0。 "
+#~ "让它使用受影响的顶点组，就是这样！ 漂亮的山脉缩小到曲线圆附近的平面."
+
+#~ msgid ""
+#~ "As in the previous example, you "
+#~ "can insert a Vertex Weight Edit "
+#~ "Modifier before the *Displace* one, and"
+#~ " play with the *Custom Curve* mapping"
+#~ " to get a larger/narrower \"valley\"..."
+#~ msgstr "与前面的示例一样，您可以在 *置换* 之前插入顶点权重编辑修改器，并使用 *自定义曲线* 映射来获得更大/更窄的“山谷”..."
+
+#~ msgid ""
+#~ "You can also add a fifth Mask "
+#~ "Modifier, and enable Vertex Weight "
+#~ "Edit's *Group Remove* option, with a "
+#~ "*Remove Threshold* of 0.1, to see "
+#~ "the bottom of your valley disappear."
+#~ msgstr "您还可以添加第五个遮罩修改器，并启用顶点权重编辑的 *组删除* 选项，*删除阈值* 为0.1，可以看到山谷底部消失."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-06 10:58+1000\n"
+"POT-Creation-Date: 2019-06-21 14:24+1000\n"
 "PO-Revision-Date: 2018-09-25 12:34+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -30,7 +30,7 @@ msgstr "投射Blender的logo到猴头上。"
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:13
 #, fuzzy
 msgid ""
-"The *UV Project* Modifier acts like a slide projector. It emits a UV map "
+"The *UV Project* modifier acts like a slide projector. It emits a UV map "
 "from the negative Z axis of a controller object (such as an :doc:`empty "
 "object </modeling/empties>`), and applies it to the object as the "
 "\"light\" hits it."
@@ -49,23 +49,17 @@ msgid "Options"
 msgstr "选项"
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:27
+#, fuzzy
+msgid "The UV Project modifier."
+msgstr "UV 投射修改器"
+
+#: ../../manual/modeling/modifiers/modify/uv_project.rst:30
 msgid "UV Map"
 msgstr "UV 贴图"
 
-#: ../../manual/modeling/modifiers/modify/uv_project.rst:27
+#: ../../manual/modeling/modifiers/modify/uv_project.rst:30
 msgid "Which UV map to modify. Defaults to the active rendering layer."
 msgstr "要修改的 UV映射. 默认为激活的渲染层."
-
-#: ../../manual/modeling/modifiers/modify/uv_project.rst:30
-msgid "Image"
-msgstr "图像"
-
-#: ../../manual/modeling/modifiers/modify/uv_project.rst:30
-msgid ""
-"The image associated with this modifier. Not required; you can just "
-"project a UV for use elsewhere. *Override Image*, below, defines how the "
-"image is used."
-msgstr "用于修改器的image（图像）,是可选项；你可以之将UV投射到任意位置。下面提到的Override Image（覆盖图像）选项将定义图像的应用方式。"
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:35
 msgid "Projectors"
@@ -87,7 +81,8 @@ msgid "Objects"
 msgstr "物体"
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:38
-msgid "Specify the projector Object."
+#, fuzzy
+msgid "Specify the projector object(s)."
 msgstr "指定投影物体."
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:42
@@ -95,9 +90,10 @@ msgid "Aspect X/Y and Scale X/Y"
 msgstr "X/Y 向比例和X/Y 向缩放"
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:41
+#, fuzzy
 msgid ""
 "These allow simple manipulation of the image. Only apply when a camera is"
-" used as projector *Object*."
+" used as projector object."
 msgstr "这些允许简单地操纵图像。 仅在将相机用作投射物时才适用 *物体*."
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:45
@@ -109,35 +105,18 @@ msgid "General"
 msgstr "常规项"
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:50
+#, fuzzy
 msgid ""
-"UV Project is great for making spotlights more diverse, and also for "
+"*UV Project* is great for making spotlights more diverse, and also for "
 "creating decals to break up repetition."
 msgstr "UV Project（UV投影）适合营造出丰富多彩的聚光灯效果，同时也适合制作出别具一格的decals（贴纸）效果。"
 
 #: ../../manual/modeling/modifiers/modify/uv_project.rst:52
 msgid ""
-"The modifier's Image property is not generally used. Instead, a texture "
-"mapped to the UV map that the modifier targets is added to the object's "
-"Material. This allows you to prevent the image from repeating by setting "
-":menuselection:`Texture --> Image Mapping --> Extension to Clip`."
+"Usually, an :doc:`Image Texture node "
+"</render/shader_nodes/textures/image>` mapped to the UV map that the "
+"modifier targets is added to the object's material."
 msgstr ""
-"通常不使用修改器的图像属性。 相反，映射到修改器目标的UV贴图的纹理将添加到对象的“材质”中。 通过设置 :menuselection:`纹理 "
-"--> 图像映射 --> 扩展到剪贴板` 可以防止图像重复."
-
-#: ../../manual/modeling/modifiers/modify/uv_project.rst:59
-msgid "Perspective Cameras"
-msgstr "透视模式相机"
-
-#: ../../manual/modeling/modifiers/modify/uv_project.rst:61
-msgid ""
-"When using perspective cameras or spot lamps, you will likely want to "
-"enable the *UV Project* Material Option (available in the materials "
-"panel), This uses a different UV interpolation to prevent distortion."
-msgstr "使用透视相机或聚光灯时，您可能需要启用 *UV项目* 材质选项（在材质面板中可用），这使用不同的UV插值来防止失真."
-
-#: ../../manual/modeling/modifiers/modify/uv_project.rst:68
-msgid "This option is not yet available for Cycles."
-msgstr "这个选项还不适用于Cycles."
 
 #~ msgid "Override Image"
 #~ msgstr "覆盖图像"
@@ -157,4 +136,46 @@ msgstr "这个选项还不适用于Cycles."
 #~ "to faces with the Image as their"
 #~ " Face Texture."
 #~ msgstr "如果没有勾选此项，修改器将被限制仅使用Image（图像）项中的图像作为其Face Texture（表面贴图）。"
+
+#~ msgid "Image"
+#~ msgstr "图像"
+
+#~ msgid ""
+#~ "The image associated with this modifier."
+#~ " Not required; you can just project"
+#~ " a UV for use elsewhere. *Override"
+#~ " Image*, below, defines how the image"
+#~ " is used."
+#~ msgstr ""
+#~ "用于修改器的image（图像）,是可选项；你可以之将UV投射到任意位置。下面提到的Override "
+#~ "Image（覆盖图像）选项将定义图像的应用方式。"
+
+#~ msgid ""
+#~ "The modifier's Image property is not "
+#~ "generally used. Instead, a texture "
+#~ "mapped to the UV map that the "
+#~ "modifier targets is added to the "
+#~ "object's Material. This allows you to"
+#~ " prevent the image from repeating by"
+#~ " setting :menuselection:`Texture --> Image "
+#~ "Mapping --> Extension to Clip`."
+#~ msgstr ""
+#~ "通常不使用修改器的图像属性。 相反，映射到修改器目标的UV贴图的纹理将添加到对象的“材质”中。 通过设置 "
+#~ ":menuselection:`纹理 --> 图像映射 --> 扩展到剪贴板` "
+#~ "可以防止图像重复."
+
+#~ msgid "Perspective Cameras"
+#~ msgstr "透视模式相机"
+
+#~ msgid ""
+#~ "When using perspective cameras or spot"
+#~ " lamps, you will likely want to "
+#~ "enable the *UV Project* Material Option"
+#~ " (available in the materials panel), "
+#~ "This uses a different UV interpolation"
+#~ " to prevent distortion."
+#~ msgstr "使用透视相机或聚光灯时，您可能需要启用 *UV项目* 材质选项（在材质面板中可用），这使用不同的UV插值来防止失真."
+
+#~ msgid "This option is not yet available for Cycles."
+#~ msgstr "这个选项还不适用于Cycles."
 
