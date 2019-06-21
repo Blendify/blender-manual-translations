@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-06-21 14:24+1000\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,33 +24,34 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:7
 msgid ""
-"The Bevel Modifier adds the ability to bevel the edges of the mesh it is "
-"applied to, allowing control of how and where the bevel is applied to the"
-" mesh."
+"The *Bevel* modifier bevels the edges of the mesh it is applied to, with "
+"some control of how and where the bevel is applied to the mesh."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:10
 msgid ""
-"The Bevel Modifier is a non-destructive alternative to the :doc:`Bevel "
-"Operation </modeling/meshes/editing/subdividing/bevel>` in Edit Mode."
+"It is a non-destructive alternative to the :doc:`Bevel Operation "
+"</modeling/meshes/editing/subdividing/bevel>` in Edit Mode."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:18
+#: ../../manual/modeling/modifiers/generate/bevel.rst:13
+msgid "Side views of a cube."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/bevel.rst:19
 msgid "Not beveled."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:23
+#: ../../manual/modeling/modifiers/generate/bevel.rst:24
 msgid "Beveled."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:25
-msgid ""
-"The images above show the side views of a plain (not beveled) cube and a "
-"beveled one."
+#: ../../manual/modeling/modifiers/generate/bevel.rst:28
+msgid "Options"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:29
-msgid "Options"
+#: ../../manual/modeling/modifiers/generate/bevel.rst:33
+msgid "The Bevel modifier."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:41
@@ -59,11 +60,11 @@ msgid "Width"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:36
-msgid "The size of the bevel affect. See *Width Method* below."
+msgid "The size of the bevel effect. See *Width Method* below."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:41
-msgid "Three Cubes with 0.1, 0.3 and 0.5 bevel Widths."
+msgid "Three Cubes with 0.1, 0.3 and 0.5 bevel widths."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:43
@@ -100,14 +101,14 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:51
 msgid ""
-"When enabled, only the areas near vertices are beveled; the edges are "
-"left not beveled."
+"When enabled, only the areas near vertices are beveled, the edges remain "
+"unchanged."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:56
 msgid ""
-"Three cubes with 0.1, 0.3 and 0.5 bevel Widths, with Only Vertices option"
-" enabled."
+"Three cubes with 0.1, 0.3 and 0.5 bevel widths, with *Only Vertices* "
+"option enabled."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:59
@@ -117,8 +118,8 @@ msgstr ""
 #: ../../manual/modeling/modifiers/generate/bevel.rst:59
 msgid ""
 "When enabled, the width of each beveled edge will be limited such that "
-"they cannot intersect each other. Edges that are far apart will still "
-"bevel with the full width, only edges too close to each other are "
+"they cannot intersect with each other. Edges that are far apart will "
+"still bevel with the full width, only edges too close to each other are "
 "affected."
 msgstr ""
 
@@ -161,8 +162,8 @@ msgid ""
 " to match the surrounding faces, and the normals of the surrounding faces"
 " are not affected. This will keep the surrounding faces flat (if they "
 "were before), with the bevel faces shading smoothly into them. For this "
-"effect to work, custom split normals need to be enabled, which requires "
-"Auto Smooth to be enabled (see :doc:`Normals "
+"effect to work, you need custom normals data, which requires *Auto "
+"Smooth* option to be enabled (see :doc:`Normals "
 "</modeling/meshes/editing/normals>`)."
 msgstr ""
 
@@ -274,9 +275,8 @@ msgstr ""
 msgid ""
 "Set *Face Strength* on the faces involved in the bevel, according to the "
 "mode specified here. This can be used in conjunction with a following "
-":doc:`Weight Normals Modifier "
-"</modeling/modifiers/modify/weighted_normal>` (with the *Face Influence* "
-"option checked)."
+":doc:`Weighted Normals </modeling/modifiers/modify/weighted_normal>` "
+"modifier (with the *Face Influence* option checked)."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/generate/bevel.rst:121
@@ -313,7 +313,7 @@ msgid ""
 "of the faces of the model to have strength *Strong*."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:149
+#: ../../manual/modeling/modifiers/generate/bevel.rst:152
 msgid "Miter Patterns"
 msgstr ""
 
@@ -336,7 +336,7 @@ msgid ""
 "edges."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:144
+#: ../../manual/modeling/modifiers/generate/bevel.rst:145
 msgid "Patch"
 msgstr ""
 
@@ -344,33 +344,41 @@ msgstr ""
 msgid ""
 "Edges meet at a sharp point but in addition, two extra vertices are "
 "introduced near the point so that the edges and faces at the vertex may "
-"be less pinched together than what occurs in the Sharp case. The *Spread*"
-" slider controls how far the new vertices are from the meeting point. "
-"(This pattern does makes no sense for inner miters, so behaves like Arc "
-"for them.)"
+"be less pinched together than what occurs in the *Sharp* case. This "
+"pattern does makes no sense for inner miters, so it behaves like *Arc* "
+"for them."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:149
+#: ../../manual/modeling/modifiers/generate/bevel.rst:146
+#: ../../manual/modeling/modifiers/generate/bevel.rst:150
+msgid ""
+"The *Spread* slider controls how far the new vertices are from the "
+"meeting point."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/bevel.rst:152
 msgid "Arc"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:147
+#: ../../manual/modeling/modifiers/generate/bevel.rst:148
 msgid ""
 "Two vertices are introduced near the meeting point, and a curved arc "
-"joins them together. The *Spread* slider controls how far the new "
-"vertices are from the meeting point. The *Profile* slider controls the "
-"shape of the arc."
+"joins them together."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:151
+#: ../../manual/modeling/modifiers/generate/bevel.rst:152
+msgid "The *Profile* slider controls the shape of the arc."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/generate/bevel.rst:154
 msgid "Diagrams of the miter patterns."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:156
+#: ../../manual/modeling/modifiers/generate/bevel.rst:158
 msgid "Sharp outer miter."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:161
+#: ../../manual/modeling/modifiers/generate/bevel.rst:162
 msgid "Patch outer miter."
 msgstr ""
 
@@ -378,11 +386,11 @@ msgstr ""
 msgid "Arc outer miter."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:171
+#: ../../manual/modeling/modifiers/generate/bevel.rst:170
 msgid "Sharp inner miter."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:176
+#: ../../manual/modeling/modifiers/generate/bevel.rst:174
 msgid "Arc inner miter."
 msgstr ""
 
@@ -390,10 +398,8 @@ msgstr ""
 msgid "Spread"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/generate/bevel.rst:181
-msgid ""
-"The value used to spread extra vertices apart for *Outer* and *Inner "
-"Miters*."
+#: ../../manual/modeling/modifiers/generate/bevel.rst:179
+msgid "The value used to spread extra vertices apart for non-sharp miters."
 msgstr ""
 
 #~ msgid ""
@@ -443,5 +449,110 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "The miter patterns are shown in these diagrams:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Bevel Modifier adds the ability "
+#~ "to bevel the edges of the mesh "
+#~ "it is applied to, allowing control "
+#~ "of how and where the bevel is "
+#~ "applied to the mesh."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Bevel Modifier is a non-"
+#~ "destructive alternative to the :doc:`Bevel "
+#~ "Operation </modeling/meshes/editing/subdividing/bevel>` in"
+#~ " Edit Mode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The images above show the side "
+#~ "views of a plain (not beveled) "
+#~ "cube and a beveled one."
+#~ msgstr ""
+
+#~ msgid "The size of the bevel affect. See *Width Method* below."
+#~ msgstr ""
+
+#~ msgid "Three Cubes with 0.1, 0.3 and 0.5 bevel Widths."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When enabled, only the areas near "
+#~ "vertices are beveled; the edges are "
+#~ "left not beveled."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Three cubes with 0.1, 0.3 and 0.5"
+#~ " bevel Widths, with Only Vertices "
+#~ "option enabled."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When enabled, the width of each "
+#~ "beveled edge will be limited such "
+#~ "that they cannot intersect each other."
+#~ " Edges that are far apart will "
+#~ "still bevel with the full width, "
+#~ "only edges too close to each other"
+#~ " are affected."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When enabled, the per-vertex face "
+#~ "normals of the bevel faces are "
+#~ "adjusted to match the surrounding faces,"
+#~ " and the normals of the surrounding"
+#~ " faces are not affected. This will"
+#~ " keep the surrounding faces flat (if"
+#~ " they were before), with the bevel"
+#~ " faces shading smoothly into them. "
+#~ "For this effect to work, custom "
+#~ "split normals need to be enabled, "
+#~ "which requires Auto Smooth to be "
+#~ "enabled (see :doc:`Normals "
+#~ "</modeling/meshes/editing/normals>`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set *Face Strength* on the faces "
+#~ "involved in the bevel, according to "
+#~ "the mode specified here. This can "
+#~ "be used in conjunction with a "
+#~ "following :doc:`Weight Normals Modifier "
+#~ "</modeling/modifiers/modify/weighted_normal>` (with the"
+#~ " *Face Influence* option checked)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edges meet at a sharp point but"
+#~ " in addition, two extra vertices are"
+#~ " introduced near the point so that"
+#~ " the edges and faces at the "
+#~ "vertex may be less pinched together "
+#~ "than what occurs in the Sharp "
+#~ "case. The *Spread* slider controls how"
+#~ " far the new vertices are from "
+#~ "the meeting point. (This pattern does"
+#~ " makes no sense for inner miters, "
+#~ "so behaves like Arc for them.)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Two vertices are introduced near the "
+#~ "meeting point, and a curved arc "
+#~ "joins them together. The *Spread* slider"
+#~ " controls how far the new vertices"
+#~ " are from the meeting point. The "
+#~ "*Profile* slider controls the shape of"
+#~ " the arc."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The value used to spread extra "
+#~ "vertices apart for *Outer* and *Inner"
+#~ " Miters*."
 #~ msgstr ""
 

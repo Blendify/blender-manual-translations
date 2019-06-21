@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-19 16:43+1000\n"
+"POT-Creation-Date: 2019-06-21 14:24+1000\n"
 "PO-Revision-Date: 2018-07-31 13:53+0900\n"
 "Last-Translator: \n"
 "Language: ja_JP\n"
@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../../manual/modeling/meshes/structure.rst:57
 msgid ""
-"`When should N-Gons be used, and when shouldn't they? "
+"`When should N-gons be used, and when shouldn't they? "
 "<https://blender.stackexchange.com/questions/89>`__"
 msgstr ""
 
@@ -131,14 +131,15 @@ msgid ""
 msgstr "*辺* と *面* のループは図 :ref:`fig-mesh-topo-loop`　で示すように連続した「ループ」を成す面や辺の集まりです。"
 
 #: ../../manual/modeling/meshes/structure.rst:77
+#, fuzzy
 msgid ""
 "In the image above, loops that do not end in poles are cyclic (1 and 3). "
 "They start and end at the same vertex and divide the model into two "
 "partitions. Loops can be a quick and powerful tool to work with specific,"
 " continuous regions of a mesh and are a prerequisite for organic "
 "character animation. For a detailed description of how to work with loops"
-" in Blender, see: :doc:`Advanced Selection "
-"</modeling/meshes/selecting/advanced>`."
+" in Blender, see: :ref:`Edge Loop Selection <modeling-meshes-selecting-"
+"edge-loops>`."
 msgstr ""
 "上の図では、ポールに終わらないループはサイクリック（1と3）です。これらはループが始まった頂点でループが終わり、モデルを2つに分けます。特定の、連続的なメッシュ領域を扱う上で、ループは速くて強力なツールとして使え、有機的なキャラクター・アニメーションをする上で必須です。Blenderにおけるループの扱いに関する詳細は"
 " :doc:`Advanced Selection </modeling/meshes/selecting/advanced>` "
@@ -153,11 +154,11 @@ msgid ""
 "edges are not poles."
 msgstr "2と4で示したループがモデル全体を回らないことに注意してください。ループはポール(poles)と呼ばれるところで止まり、これはポール以降はループを一意に続ける方法がないからです。ポールは3つ、5つ、あるいはそれ以上の数の辺と繋がった頂点です。したがって、1つ、2つ、あるいは4つの辺と繋がった頂点はポールではありません。"
 
-#: ../../manual/modeling/meshes/structure.rst:107
+#: ../../manual/modeling/meshes/structure.rst:94
 msgid "Edge Loops"
 msgstr "辺ループ"
 
-#: ../../manual/modeling/meshes/structure.rst:94
+#: ../../manual/modeling/meshes/structure.rst:95
 msgid ""
 "Loops (1 and 2) in Fig. :ref:`fig-mesh-topo-loop` are edge loops. They "
 "connect vertices so that each one on the loop has exactly two neighbors "
@@ -167,7 +168,7 @@ msgstr ""
 "図 :ref:`fig-mesh-topo-loop` "
 "において、1と2で示したループは辺ループです。辺ループは頂点を繋げ、ループ上の各頂点において、ループ上にない2つの頂点に隣接し、その2つの頂点がループの両側に配置されるようにしています。（ポールがある場合の始点と終点は例外です）"
 
-#: ../../manual/modeling/meshes/structure.rst:98
+#: ../../manual/modeling/meshes/structure.rst:99
 msgid ""
 "Edge loops are an important concept especially in organic (subsurface) "
 "modeling and character animation. When used correctly, they allow you to "
@@ -175,7 +176,7 @@ msgid ""
 "used as subdivision surfaces and deform very well in animation."
 msgstr "有機的な（サブサーフェスを使った）モデリングやキャラクターでは、辺ループは特に重要な概念です。適切に使えば、サブディビジョンサーフェスで使うととても自然に見えるモデルを比較的少数の頂点で作れますし、アニメーションにおいても綺麗に変形します。"
 
-#: ../../manual/modeling/meshes/structure.rst:103
+#: ../../manual/modeling/meshes/structure.rst:104
 msgid ""
 "Take Fig. :ref:`fig-mesh-topo-loop` in organic modeling as an example: "
 "the edge loops follow the natural contours and deformation lines of the "
@@ -185,7 +186,7 @@ msgstr ""
 "例として図 :ref:`fig-mesh-topo-loop` "
 "を有機モデリングとして捉えてみましょう。辺ループは皮膚やその下の筋肉の自然な輪郭や変形の線に沿って走り、キャラクターが動く時により大きく変形するところ（例えば、肩や膝など）では密度がより高くなります。"
 
-#: ../../manual/modeling/meshes/structure.rst:107
+#: ../../manual/modeling/meshes/structure.rst:108
 msgid ""
 "Further details on working with edge loops can be found in :ref:`Edge "
 "Loop Selection <modeling-meshes-selecting-edge-loops>`."
@@ -193,11 +194,11 @@ msgstr ""
 "より詳細な辺ループの扱い方は :ref:`辺ループ選択 <modeling-meshes-selecting-edge-loops>` "
 "を参照してください。"
 
-#: ../../manual/modeling/meshes/structure.rst:117
+#: ../../manual/modeling/meshes/structure.rst:113
 msgid "Face Loops"
 msgstr "面ループ"
 
-#: ../../manual/modeling/meshes/structure.rst:110
+#: ../../manual/modeling/meshes/structure.rst:114
 msgid ""
 "These are a logical extension of edge loops in that they consist of the "
 "faces between two edge loops, as shown in loops (3 and 4) in Fig. :ref"
@@ -207,7 +208,7 @@ msgstr ""
 "面ループは辺ループの理論的な拡張であり、図 :ref:`fig-mesh-topo-loop` "
 "の3と4で示すように2つの辺ループの間の面から成ります。4で示すように、循環しないループではポールを含む面は面ループに含まれないことに注意してください。"
 
-#: ../../manual/modeling/meshes/structure.rst:115
+#: ../../manual/modeling/meshes/structure.rst:119
 msgid ""
 "Further details on working with face loops can be found in :ref:`Face "
 "Loop Selection <modeling-meshes-selecting-face-loops>`."
@@ -215,19 +216,19 @@ msgstr ""
 "より詳細な面ループの扱い方は :ref:`面ループ選択 <modeling-meshes-selecting-face-loops>` "
 "を参照してください。"
 
-#: ../../manual/modeling/meshes/structure.rst:120
+#: ../../manual/modeling/meshes/structure.rst:124
 msgid "Poles"
 msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:122
+#: ../../manual/modeling/meshes/structure.rst:126
 msgid "See `N-poles & E-poles <https://blender.stackexchange.com/a/133676/55>`__."
 msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:126
-msgid "Non-manifold"
+#: ../../manual/modeling/meshes/structure.rst:130
+msgid "Non-Manifold"
 msgstr ""
 
-#: ../../manual/modeling/meshes/structure.rst:128
+#: ../../manual/modeling/meshes/structure.rst:132
 msgid "See :term:`Non-manifold`."
 msgstr ""
 
@@ -236,4 +237,13 @@ msgstr ""
 #~ " triangular faces, it would just look"
 #~ " more confusing in *Edit Mode*."
 #~ msgstr "三角系の面で立方体を構築することもできますが、 *編集モード* で紛らわしく見えるだけです。"
+
+#~ msgid ""
+#~ "`When should N-Gons be used, and "
+#~ "when shouldn't they? "
+#~ "<https://blender.stackexchange.com/questions/89>`__"
+#~ msgstr ""
+
+#~ msgid "Non-manifold"
+#~ msgstr ""
 
