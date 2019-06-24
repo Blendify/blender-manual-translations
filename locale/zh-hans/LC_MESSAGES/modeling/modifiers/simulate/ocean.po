@@ -1,8 +1,9 @@
 #
 msgid ""
-msgstr "Project-Id-Version: Blender Reference Manual 0.1\n"
+msgstr ""
+"Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 01:30+0200\n"
+"POT-Creation-Date: 2019-06-24 14:49+1000\n"
 "PO-Revision-Date: 2017-11-10 10:32+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -11,7 +12,7 @@ msgstr "Project-Id-Version: Blender Reference Manual 0.1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:5
 msgid "Ocean Modifier"
@@ -151,12 +152,15 @@ msgid "Spatial Size"
 msgstr "空间尺寸"
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:65
+#, fuzzy
 msgid ""
 "The width of the ocean surface area being simulated, in meters. This also"
-" determines the size of the generated mesh, or the displaced area, in "
-"Blender units. Of course you can scale the object with Ocean Modifier in "
-"*Object Mode* to tweak the apparent size in your scene."
-msgstr "模拟海洋表面区域的宽度，以米为单位。 这也决定了Blender单位中生成的网格或位移区域的大小。 当然，您可以使用 *物体模式* 中的海洋修改器缩放对象，以调整场景中的外观尺寸."
+" determines the size of the generated mesh, or the displaced area. Of "
+"course you can scale the object with Ocean Modifier in *Object Mode* to "
+"tweak the apparent size in your scene."
+msgstr ""
+"模拟海洋表面区域的宽度，以米为单位。 这也决定了Blender单位中生成的网格或位移区域的大小。 当然，您可以使用 *物体模式* "
+"中的海洋修改器缩放对象，以调整场景中的外观尺寸."
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:72
 msgid "Wave"
@@ -220,7 +224,9 @@ msgid ""
 "reflected off each other every direction, with damping of 1.0, these "
 "inter-reflected waves are damped out, leaving only waves traveling in the"
 " direction of the wind."
-msgstr "使用对齐时，这将定义相互反射波衰减的量。 这具有使波浪运动更具方向性的效果（不仅仅是波浪形状）。 当阻尼为0.0时，波在每个方向上相互反射，阻尼为1.0，这些相互反射的波被衰减，只留下沿风向传播的波."
+msgstr ""
+"使用对齐时，这将定义相互反射波衰减的量。 这具有使波浪运动更具方向性的效果（不仅仅是波浪形状）。 "
+"当阻尼为0.0时，波在每个方向上相互反射，阻尼为1.0，这些相互反射的波被衰减，只留下沿风向传播的波."
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:96
 msgid "Smallest Wave"
@@ -341,7 +347,9 @@ msgid ""
 " the bake sequence is read from a drive, it is cached in memory. This "
 "means that accessing loaded frames subsequent times is fast, not "
 "incurring the overhead of drive access."
-msgstr "模拟数据作为 ``OpenEXR`` 图像映射的序列存储在硬盘上，每个图像映射一个位移，法线和泡沫（如果能够生成）。 在从这些烘焙文件加载数据时，当从硬盘读取烘焙序列的帧时，它被缓存在内存中。 这意味着随后访问加载的帧很快，不会产生硬盘访问的开销."
+msgstr ""
+"模拟数据作为 ``OpenEXR`` 图像映射的序列存储在硬盘上，每个图像映射一个位移，法线和泡沫（如果能够生成）。 "
+"在从这些烘焙文件加载数据时，当从硬盘读取烘焙序列的帧时，它被缓存在内存中。 这意味着随后访问加载的帧很快，不会产生硬盘访问的开销."
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:154
 msgid ""
@@ -364,7 +372,10 @@ msgid ""
 "dissipates. With baking, it is possible to approximate that behavior, by "
 "accumulating foam from previous frames, leaving it remaining on the "
 "surface."
-msgstr "烘培还提供改进的泡沫能力。 在实时模拟时，海洋模拟器仅检索当前帧的数据。 在泡沫映射的情况下，这代表给定帧的波峰顶端。 实际上，在通过波浪相互作用产生泡沫之后，它会在波浪表面的顶部保持一段时间，因为它会消散。 通过烘培，可以通过累积前一帧中的泡沫使其保持在表面上来近似该行为."
+msgstr ""
+"烘培还提供改进的泡沫能力。 在实时模拟时，海洋模拟器仅检索当前帧的数据。 在泡沫映射的情况下，这代表给定帧的波峰顶端。 "
+"实际上，在通过波浪相互作用产生泡沫之后，它会在波浪表面的顶部保持一段时间，因为它会消散。 "
+"通过烘培，可以通过累积前一帧中的泡沫使其保持在表面上来近似该行为."
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:175
 msgid "Baking Options"
@@ -406,7 +417,10 @@ msgid ""
 " 3D, and also can be used for shading via the Ocean texture. The internal"
 " simulation engine is multi threaded with OpenMP to take advantage of "
 "multiple cores."
-msgstr "模拟器本身使用FFT方法在内部生成模拟信息的2D网格，非常类似于2D纹理贴图。 模拟器可以生成三种类型的数据：位移，法线和额外数据，用于计算波峰交叉点（即泡沫）。 模拟后，这些图用于在3D中移动海洋表面几何体，也可用于通过海洋纹理进行着色。 内部模拟引擎采用OpenMP多线程，以利用多个内核."
+msgstr ""
+"模拟器本身使用FFT方法在内部生成模拟信息的2D网格，非常类似于2D纹理贴图。 "
+"模拟器可以生成三种类型的数据：位移，法线和额外数据，用于计算波峰交叉点（即泡沫）。 "
+"模拟后，这些图用于在3D中移动海洋表面几何体，也可用于通过海洋纹理进行着色。 内部模拟引擎采用OpenMP多线程，以利用多个内核."
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:200
 msgid "Examples"
@@ -414,7 +428,13 @@ msgstr "例子"
 
 #: ../../manual/modeling/modifiers/simulate/ocean.rst:206
 msgid "Simulated and baked to image maps in Blender, rendered in 3Delight."
-msgstr "在Blender中模拟和烘焙贴图，在3Dlight里面渲染。                                                                                                            历史 History \n"
-"模拟器的核心开发者是Drew Whitehouse，源自 Houdini Ocean Toolkit。由Hamed Zaghaghi转换为C语言并集成在Blender 2.4系列的一个补丁中，由ProMotion Studios/Red Cartel在短片《Lighthouse（灯塔）》的制作过程中提供资助。\n"
-"在此项目中，Matt Ebb将核心模拟器再次引入到Blender 2.5版本中，同时增加了功能，并进行了修复与优化。由'Save the Ocean Sim（拯救洋面模拟器）'项目提供资助。"
+msgstr ""
+"在Blender中模拟和烘焙贴图，在3Dlight里面渲染。"
+"                                                                                                            "
+"历史 History \n"
+"模拟器的核心开发者是Drew Whitehouse，源自 Houdini Ocean Toolkit。由Hamed "
+"Zaghaghi转换为C语言并集成在Blender 2.4系列的一个补丁中，由ProMotion Studios/Red "
+"Cartel在短片《Lighthouse（灯塔）》的制作过程中提供资助。\n"
+"在此项目中，Matt Ebb将核心模拟器再次引入到Blender 2.5版本中，同时增加了功能，并进行了修复与优化。由'Save the "
+"Ocean Sim（拯救洋面模拟器）'项目提供资助。"
 
