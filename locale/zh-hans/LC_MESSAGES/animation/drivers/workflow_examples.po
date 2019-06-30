@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-25 16:56+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2019-06-07 15:22+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -32,181 +32,216 @@ msgstr ""
 #: ../../manual/animation/drivers/workflow_examples.rst:8
 msgid ""
 "When adding multiple Drivers or for more advanced configurations, it is "
-"useful to have open the *Drivers Editor*."
+"useful to have open the :doc:`Drivers Editor </editors/drivers_editor>`."
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:12
+#: ../../manual/animation/drivers/workflow_examples.rst:13
 msgid "Examples"
 msgstr "范例"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:15
+#: ../../manual/animation/drivers/workflow_examples.rst:16
 msgid "Transform Driver"
 msgstr "变换驱动器"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:17
+#: ../../manual/animation/drivers/workflow_examples.rst:18
+msgid ""
+"Control a property with an object's transform. In this example, the Y "
+"rotation of Object 2 will be driven by the X position of Object 1."
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:21
 msgid "Starting from a simple setup with two objects:"
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:19
+#: ../../manual/animation/drivers/workflow_examples.rst:23
 msgid ""
-"Add a Driver to the *Rotation Y* property of the second object with the "
-"context menu or with :kbd:`Ctrl-D`."
+"Add a Driver to the *Rotation Y* property of the second object by right-"
+"clicking it or with :kbd:`Ctrl-D`."
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:23
+#: ../../manual/animation/drivers/workflow_examples.rst:27
 msgid "Open the *Drivers Editor* (:kbd:`Shift-F6`)."
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:24
+#: ../../manual/animation/drivers/workflow_examples.rst:28
 msgid "In the channels region, select the *Y Euler Rotation* property."
 msgstr "在通道区域，选择 *Y欧拉旋转* 属性。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:25
+#: ../../manual/animation/drivers/workflow_examples.rst:29
 #, fuzzy
 msgid "Press :kbd:`N` to open the Sidebar region and select the *Drivers* tab."
 msgstr "按下 :kbd:`N` 打开侧栏，向下滚动到驱动器面板。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:26
+#: ../../manual/animation/drivers/workflow_examples.rst:30
 msgid ""
 "Configure the driver to be the *Averaged Value* of a *Transform Channel* "
 "of the first object."
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:30
+#: ../../manual/animation/drivers/workflow_examples.rst:34
 msgid ""
 "Experiment with moving the first object and notice how it affects the Y "
 "rotation of the second object."
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:35
-msgid "Driver Expression"
-msgstr "驱动器表达式"
+#: ../../manual/animation/drivers/workflow_examples.rst:39
+msgid "Scripted Expression - Orbit a Point"
+msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:37
+#: ../../manual/animation/drivers/workflow_examples.rst:41
 msgid ""
-"Here are some examples using the scripted expression Expr to set the "
-"Driver Value."
-msgstr "这里是一些使用脚本表达式设置驱动器值的范例。"
+"Orbit an object's position around a point with a custom *Scripted "
+"Expression*. The object's position will change when scrubbing the "
+"timeline."
+msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:43
-msgid "Object rotation example."
-msgstr "物体旋转。"
+#: ../../manual/animation/drivers/workflow_examples.rst:44
+msgid ""
+"Using trigonometry, circular motion can be defined in 2D using the sin "
+"and cos functions. (See `Unit Circle "
+"<https://en.wikipedia.org/wiki/Unit_circle>`__)."
+msgstr ""
 
 #: ../../manual/animation/drivers/workflow_examples.rst:47
-msgid "Orbit a Point"
-msgstr "环绕一个点"
-
-#: ../../manual/animation/drivers/workflow_examples.rst:49
-msgid "Here two drivers have been added to the Cube, X Location and Y Location."
-msgstr "这里对立方体的X位移和Y位移分别添加驱动器。"
-
-#: ../../manual/animation/drivers/workflow_examples.rst:51
-msgid "The scripted expressions are being used to set the object location."
-msgstr "使用脚本表达式设置物体位置。"
-
-#: ../../manual/animation/drivers/workflow_examples.rst:57
-msgid "X Location Expr"
-msgstr "X位移表达式"
-
-#: ../../manual/animation/drivers/workflow_examples.rst:57
-msgid "``0 + (sin(frame / 8) * 4)``"
-msgstr "``0 + (sin(frame / 8) * 4)``"
+msgid ""
+"In this example, the current frame is used as the variable that induces "
+"the motion. ``frame`` is a :ref:`Simple Expression <drivers-simple-"
+"expressions>` that corresponds to ``bpy.context.scene.frame_current``."
+msgstr ""
 
 #: ../../manual/animation/drivers/workflow_examples.rst:55
-msgid ""
-"``(frame/8)`` : is the current frame of the animation, divided by 8 to "
-"slow the orbit down. ``(sin( )*4)`` : This returns the sine of (frame/8),"
-" then multiplies by 4 for a bigger circle. ``0 +`` : is used to control "
-"the X Location offset of the orbit."
+msgid "Add a driver to the X Location property."
 msgstr ""
-"``(frame/8)`` : 表示当前动画帧除以8，降低环绕速度。 ``(sin( )*4)`` : 返回 "
-"(frame/8)的正弦值，再乘以4，放大环绕半径。 ``0 +`` : 用于控制环绕时 X 位移偏移量。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:63
-msgid "Y Location Expr"
-msgstr "Y位移表达式"
+#: ../../manual/animation/drivers/workflow_examples.rst:57
+msgid "Set the *Driver Type* to *Scripted Expression*."
+msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:63
-msgid "``0 + (cos(frame / 8) * 4)``"
-msgstr "``0 + (cos(frame / 8) * 4)``"
+#: ../../manual/animation/drivers/workflow_examples.rst:58
+#, fuzzy
+msgid "Add the expression ``0 + (sin(frame / 8) * 4)``"
+msgstr "``0 + (sin(frame / 8) * 4)``"
+
+#: ../../manual/animation/drivers/workflow_examples.rst:60
+msgid ""
+"``frame/8`` : is the current frame of the animation, divided by 8 to slow"
+" the orbit down."
+msgstr ""
 
 #: ../../manual/animation/drivers/workflow_examples.rst:61
 msgid ""
-"``(frame / 8)`` : is the current frame of the animation, divided by 8 to "
-"slow the orbit down. ``(cos( ) * 4)`` : This returns the cosine of "
-"(frame/8), then multiplies by 4 for a bigger circle. ``0 +`` : is used to"
-" control the Y Location offset of the orbit."
+"``(sin( )*4)`` : multiplies the result of ``sin(frame/8)`` by 4 for a "
+"bigger circle."
 msgstr ""
-"``(frame/8)`` : 表示当前动画帧除以8，降低环绕速度。 ``(cos( )*4)`` : 返回 "
-"(frame/8)的余弦值，再乘以4，放大环绕半径。 ``0 +`` : 用于控制环绕时 Y 位移偏移量。"
+
+#: ../../manual/animation/drivers/workflow_examples.rst:62
+msgid "``0 +`` : is used to control the offset to the orbit center point."
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:64
+msgid ""
+"Add a driver to the Y Location property with the expression ``0 + "
+"(cos(frame / 8) * 4)``"
+msgstr ""
 
 #: ../../manual/animation/drivers/workflow_examples.rst:65
-msgid "``frame`` is the same as bpy.context.scene.frame_current."
-msgstr "``frame`` 与 bpy.context.scene.frame_current 等价。"
-
-#: ../../manual/animation/drivers/workflow_examples.rst:69
-msgid "Driver Namespace"
-msgstr "驱动器命名空间"
-
-#: ../../manual/animation/drivers/workflow_examples.rst:71
 msgid ""
-"There is a list of built-in driver functions and properties. These can be"
-" displayed via the Python Console:"
-msgstr "内置的驱动器函数和属性是一个列表。可以使用Python控制台显示出来:"
+"Scrub the timeline to see the effect. Experiment with the variables to "
+"control the size and center of the orbit."
+msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:96
+#: ../../manual/animation/drivers/workflow_examples.rst:70
+msgid "Custom Function - Square Value"
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:72
 msgid ""
-"This script will add a function to the driver namespace, which can then "
-"be used in the expression ``driver_func(frame)``"
-msgstr "下面的脚本用于添加一个函数到驱动器命名空间，接下来可以在表达式中使用 ``driver_func(frame)``"
+"Make a custom function to get the square of a value (i.e. value\\ "
+":sup:`2`). Adding the function to the *Driver Namespace* allows it to be "
+"used from driver expressions."
+msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:111
+#: ../../manual/animation/drivers/workflow_examples.rst:75
+msgid ""
+"The *Driver Namespace* has a list of built-in functions for use in driver"
+" expressions, as well as constants such as π and e. These can be "
+"inspected via the Python Console:"
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:89
+msgid ""
+"To add a new function to the *Driver Namespace*, the function itself "
+"needs to be implemented and then added to the "
+"``bpy.app.driver_namespace``."
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:92
+msgid ""
+"Add the following to the Text Editor inside Blender and press *Run "
+"Script*."
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:106
+msgid "Add a driver with a *Scripted Expression* such as ``square(frame)``"
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:107
+msgid "Observe the effect when scrubbing the timeline."
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:109
+msgid ""
+"There are more custom function examples available in Blender's Text "
+"Editor :menuselection:`Templates > Python > Driver Functions`."
+msgstr ""
+
+#: ../../manual/animation/drivers/workflow_examples.rst:115
 msgid "Shape Key Driver"
 msgstr "形态键驱动器"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:113
+#: ../../manual/animation/drivers/workflow_examples.rst:117
 msgid ""
 "This example is a shape key driver. The driver was added to the shape key"
 " Value."
 msgstr "这是一个形态键驱动器的范例，即对形态键数值添加驱动器。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:120
+#: ../../manual/animation/drivers/workflow_examples.rst:124
 msgid "Shape key driver example."
 msgstr "形态键驱动器。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:122
+#: ../../manual/animation/drivers/workflow_examples.rst:126
 msgid ""
 "This example uses the Armature Bone \"b\" 's Z Rotation to control the "
 "Value of a Shape Key. The bone rotation mode is set to XYZ Euler."
 msgstr "该例子使用骨架的骨骼 \"b\" 的Z旋转控制形态键数值。骨骼旋转模式设置为XYZ欧拉。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:125
+#: ../../manual/animation/drivers/workflow_examples.rst:129
 msgid "The Driver F-Curve is mapped like so:"
 msgstr "驱动器函数曲线映射如下："
 
-#: ../../manual/animation/drivers/workflow_examples.rst:127
+#: ../../manual/animation/drivers/workflow_examples.rst:131
 msgid "Bone Z Rotation 0.0 (0.0): Shape Key value 0.0"
 msgstr "骨骼Z旋转 0.0 (0.0): 形态键数值 0.0"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:128
+#: ../../manual/animation/drivers/workflow_examples.rst:132
 msgid "Bone Z Rotation -2.09 (-120.0): Shape Key value 1.0"
 msgstr "骨骼Z旋转 -2.09 (-120.0): 形态键数值 1.0"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:130
+#: ../../manual/animation/drivers/workflow_examples.rst:134
 msgid ""
 "This kind of driver can also be setup with the Variable Type Rotational "
 "Difference."
 msgstr "这种类型的驱动器还可以使用旋转差值变量类型设置。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:132
+#: ../../manual/animation/drivers/workflow_examples.rst:136
 msgid "See :doc:`Shape Keys </animation/shape_keys/index>` for more info."
 msgstr "更多信息参考 :doc:`形态键 </animation/shape_keys/index>` 。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:136
+#: ../../manual/animation/drivers/workflow_examples.rst:140
 msgid "Drivers and Multiple Relative Shape Keys"
 msgstr "驱动器和多重相关形态键"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:138
+#: ../../manual/animation/drivers/workflow_examples.rst:142
 msgid ""
 "The following screenshots illustrate combining shape keys, bones, and "
 "drivers to make multiple chained relative shape keys sharing a single "
@@ -215,23 +250,23 @@ msgid ""
 "between your shape keys."
 msgstr "下面的屏幕截图展示了结合形态键，骨骼和驱动器，来制作共用基型的多重链状相关形态键。尽管这样没有使用绝对形态键的单一时间计算来的方便，但却可以做出更复杂的形态键关系。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:150
+#: ../../manual/animation/drivers/workflow_examples.rst:154
 msgid "Basis shape key."
 msgstr "Basis 形态键。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:155
+#: ../../manual/animation/drivers/workflow_examples.rst:159
 msgid "Key1 shape key."
 msgstr "Key1 形态键。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:160
+#: ../../manual/animation/drivers/workflow_examples.rst:164
 msgid "Key2A shape key."
 msgstr "Key2A 形态键。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:165
+#: ../../manual/animation/drivers/workflow_examples.rst:169
 msgid "Key2B shape key."
 msgstr "Key2B 形态键。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:167
+#: ../../manual/animation/drivers/workflow_examples.rst:171
 msgid ""
 "The Basis shape key has the stacks fully retracted. Key1 has the base "
 "fully extended. Key2A has the left stack fully extended. Key2B has the "
@@ -239,21 +274,21 @@ msgid ""
 " you can see in the field in the bottom right of the Shape Keys panel)."
 msgstr "作为基型的形态键的挤出面完全缩回，Key1的基底完全挤出，Key2A挤出左侧凸起，Key2B挤出右侧凸起。Key2A和2B都和Key1相关(如右下角的形态键面板所见)。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:179
+#: ../../manual/animation/drivers/workflow_examples.rst:183
 msgid "Key1 must handle conflicting values from the two bones."
 msgstr "Key1需要处理来自两个骨骼的数值冲突。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:184
+#: ../../manual/animation/drivers/workflow_examples.rst:188
 msgid ""
 "Key2A has different generator coefficients so it is activated in a "
 "different range of the bone's position."
 msgstr "Key2A有不同的生成器系数，所以会在骨骼的另外一段位置范围内才被激活。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:189
+#: ../../manual/animation/drivers/workflow_examples.rst:193
 msgid "Key2B is the same as Key2A, but is controlled by the second bone."
 msgstr "Key2B和Key2A类似，但是被第二根骨骼控制。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:191
+#: ../../manual/animation/drivers/workflow_examples.rst:195
 msgid ""
 "The value of Key1 is bound to the position of bones by a driver with two "
 "variables. Each variable uses the world Z coordinate of a bone and uses "
@@ -262,7 +297,7 @@ msgid ""
 "should line up with the bone for that stack."
 msgstr "Key1的值通过一个包含两个变量的驱动器，与两个骨骼的位置属性绑定。每一个变量使用的都是骨骼的全局Z坐标，然后取最大值决定基底的挤出量。多项式生成器用于使基底的上表面与骨骼对齐。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:197
+#: ../../manual/animation/drivers/workflow_examples.rst:201
 msgid ""
 "The value of Key2A is bound to the position of \"Bone.L\". Its generator "
 "parameters are crafted such that when Key1's value reaches 1, the value "
@@ -272,24 +307,24 @@ msgstr ""
 "Key2A的值与 ``Bone.L`` 的位置绑定。生成器的参数使得当Key1的值增加到1时，Key2A "
 "才开始从0增长。这样的话，左侧凸起顶部会与 bone.L 一起移动(基本上)。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:202
+#: ../../manual/animation/drivers/workflow_examples.rst:206
 msgid ""
 "The value of Key2B is bound to the position of \"Bone.R\". Its generator "
 "parameters are similar to Key2A so that the top of the right stack will "
 "move with bone.R (mostly)."
 msgstr "Key2B的值与 ``Bone.R`` 的位置绑定。它的生成参数和Key2A类似，右边的凸起会随着bone.R一起移动(基本上)。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:213
+#: ../../manual/animation/drivers/workflow_examples.rst:217
 msgid ""
 "When both bones are low, Key2B and Key2A are deactivated and Key1 is at "
 "low influence."
 msgstr "当骨骼所有骨骼调低时，Key2B 和 Key2A 不被激活，Key1处于低影响。"
 
-#: ../../manual/animation/drivers/workflow_examples.rst:218
+#: ../../manual/animation/drivers/workflow_examples.rst:222
 msgid "Extended."
 msgstr ""
 
-#: ../../manual/animation/drivers/workflow_examples.rst:220
+#: ../../manual/animation/drivers/workflow_examples.rst:224
 msgid ""
 "Since it is quite easy for bone.L and bone.R to be in positions that "
 "indicate conflicting values for Key1 there will be times when the bones "
@@ -365,4 +400,100 @@ msgstr ""
 #~ "on the Y axis when moving \"Cube\""
 #~ " left to right."
 #~ msgstr "结束之后，从左向右移动 \"Cube\"时，\"Cube.001\" 会绕Y轴旋转。"
+
+#~ msgid ""
+#~ "When adding multiple Drivers or for "
+#~ "more advanced configurations, it is "
+#~ "useful to have open the *Drivers "
+#~ "Editor*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add a Driver to the *Rotation Y*"
+#~ " property of the second object with"
+#~ " the context menu or with "
+#~ ":kbd:`Ctrl-D`."
+#~ msgstr ""
+
+#~ msgid "Driver Expression"
+#~ msgstr "驱动器表达式"
+
+#~ msgid ""
+#~ "Here are some examples using the "
+#~ "scripted expression Expr to set the "
+#~ "Driver Value."
+#~ msgstr "这里是一些使用脚本表达式设置驱动器值的范例。"
+
+#~ msgid "Object rotation example."
+#~ msgstr "物体旋转。"
+
+#~ msgid "Orbit a Point"
+#~ msgstr "环绕一个点"
+
+#~ msgid ""
+#~ "Here two drivers have been added "
+#~ "to the Cube, X Location and Y "
+#~ "Location."
+#~ msgstr "这里对立方体的X位移和Y位移分别添加驱动器。"
+
+#~ msgid "The scripted expressions are being used to set the object location."
+#~ msgstr "使用脚本表达式设置物体位置。"
+
+#~ msgid "X Location Expr"
+#~ msgstr "X位移表达式"
+
+#~ msgid ""
+#~ "``(frame/8)`` : is the current frame "
+#~ "of the animation, divided by 8 to"
+#~ " slow the orbit down. ``(sin( )*4)``"
+#~ " : This returns the sine of "
+#~ "(frame/8), then multiplies by 4 for "
+#~ "a bigger circle. ``0 +`` : is "
+#~ "used to control the X Location "
+#~ "offset of the orbit."
+#~ msgstr ""
+#~ "``(frame/8)`` : 表示当前动画帧除以8，降低环绕速度。 ``(sin( "
+#~ ")*4)`` : 返回 (frame/8)的正弦值，再乘以4，放大环绕半径。 ``0 "
+#~ "+`` : 用于控制环绕时 X 位移偏移量。"
+
+#~ msgid "Y Location Expr"
+#~ msgstr "Y位移表达式"
+
+#~ msgid "``0 + (cos(frame / 8) * 4)``"
+#~ msgstr "``0 + (cos(frame / 8) * 4)``"
+
+#~ msgid ""
+#~ "``(frame / 8)`` : is the current"
+#~ " frame of the animation, divided by"
+#~ " 8 to slow the orbit down. "
+#~ "``(cos( ) * 4)`` : This returns"
+#~ " the cosine of (frame/8), then "
+#~ "multiplies by 4 for a bigger "
+#~ "circle. ``0 +`` : is used to "
+#~ "control the Y Location offset of "
+#~ "the orbit."
+#~ msgstr ""
+#~ "``(frame/8)`` : 表示当前动画帧除以8，降低环绕速度。 ``(cos( "
+#~ ")*4)`` : 返回 (frame/8)的余弦值，再乘以4，放大环绕半径。 ``0 "
+#~ "+`` : 用于控制环绕时 Y 位移偏移量。"
+
+#~ msgid "``frame`` is the same as bpy.context.scene.frame_current."
+#~ msgstr "``frame`` 与 bpy.context.scene.frame_current 等价。"
+
+#~ msgid "Driver Namespace"
+#~ msgstr "驱动器命名空间"
+
+#~ msgid ""
+#~ "There is a list of built-in "
+#~ "driver functions and properties. These "
+#~ "can be displayed via the Python "
+#~ "Console:"
+#~ msgstr "内置的驱动器函数和属性是一个列表。可以使用Python控制台显示出来:"
+
+#~ msgid ""
+#~ "This script will add a function to"
+#~ " the driver namespace, which can then"
+#~ " be used in the expression "
+#~ "``driver_func(frame)``"
+#~ msgstr "下面的脚本用于添加一个函数到驱动器命名空间，接下来可以在表达式中使用 ``driver_func(frame)``"
 

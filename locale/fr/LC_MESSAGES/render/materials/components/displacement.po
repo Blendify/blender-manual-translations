@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2019-04-16 19:24+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -69,10 +69,65 @@ msgid "Bump only, displacement only and displacement and bump combined."
 msgstr "Bump only, displacement only et displacement and bump."
 
 #: ../../manual/render/materials/components/displacement.rst:30
-msgid "Displacement Only"
+msgid "Bump Only"
 msgstr ""
 
 #: ../../manual/render/materials/components/displacement.rst:32
+msgid ""
+"The least accurate but most memory efficient method is to use a bump "
+"mapping. This method does not actually alter the mesh surface, but merely"
+" changes the shading to make it seem so."
+msgstr ""
+"La méthode la moins précise mais la plus efficiente en mémoire consiste à"
+" utiliser un *bump mapping*, Cette méthode ne modifie pas réellement la "
+"surface du maillage, mais change simplement l'ombrage pour le rendre "
+"semblable à cela."
+
+#: ../../manual/render/materials/components/displacement.rst:35
+msgid ""
+"Bump maps are often used to add smaller details on a model, for example "
+"pores or wrinkles on skin."
+msgstr ""
+"Les *Bump Maps* sont souvent utilisées pour ajouter de petits détails sur"
+" un modèle, par exemple des pores ou des rides sur une peau."
+
+#: ../../manual/render/materials/components/displacement.rst:37
+msgid ""
+"For baked bump maps 8-bit byte images are commonly used, however 16 or "
+"32-bit float maps can provide better looking results. When using image "
+"textures use Cubic interpolation to avoid stepping artifacts, these are "
+"more visible for bump maps than other types of textures."
+msgstr ""
+"Pour les *bump maps* précalculées, des images 8 bits sont habituellement "
+"utilisées. Cependant les maps flottants en 16 ou 32-bits peuvent offrir "
+"des résultats plus beaux. dans le cas d'utilisation de textures d'images,"
+" utilisez une interpolation *Cubic* pour éviter des artefacts en "
+"escalier, ceux-ci sont plus visibles pour les *bump maps* que d'autres "
+"types de textures. "
+
+#: ../../manual/render/materials/components/displacement.rst:43
+msgid ""
+"Because bump mapping is a fake effect, it can cause artifacts if the "
+"actual shape of the geometry is too different from the bump mapped shape."
+" If this happens the strength of bump mapping should be reduced or actual"
+" displacement should be used."
+msgstr ""
+"Du fait que le *bump mapping* est un effet factice, il peut occasionner "
+"des artefacts si la forme réelle de la géométrie est trop différente de "
+"la forme après le *bump mapping*. Si ceci se produit, la force du *bump "
+"mapping* devrait être réduite ou le déplacement réel devrait être "
+"utilisé."
+
+#: ../../manual/render/materials/components/displacement.rst:49
+msgid "Displacement Only"
+msgstr ""
+
+#: ../../manual/render/materials/components/displacement.rst:51
+#: ../../manual/render/materials/components/displacement.rst:72
+msgid ":guilabel:`Cycles Only`"
+msgstr ""
+
+#: ../../manual/render/materials/components/displacement.rst:53
 msgid ""
 "The most accurate and memory intensive displacement method is to apply "
 "true displacement to the mesh surface."
@@ -81,7 +136,7 @@ msgstr ""
 " de mémoire consiste à d'appliquer le vrai déplacement à la surface du "
 "maillage."
 
-#: ../../manual/render/materials/components/displacement.rst:35
+#: ../../manual/render/materials/components/displacement.rst:56
 #, fuzzy
 msgid ""
 "It requires the mesh to be finely subdivided, which can be memory "
@@ -97,7 +152,7 @@ msgstr ""
 "subdivisions est utilisée en fonction de la distance de l'objet à la "
 "caméra."
 
-#: ../../manual/render/materials/components/displacement.rst:40
+#: ../../manual/render/materials/components/displacement.rst:61
 msgid ""
 "For baked displacement maps, best results are achieved with 16 or 32-bit "
 "float maps, as 8-bit byte images often can not represent all the "
@@ -108,7 +163,7 @@ msgstr ""
 "images en 8 bits ne peuvent pas représenter tous les détails nécessaires."
 "  "
 
-#: ../../manual/render/materials/components/displacement.rst:45
+#: ../../manual/render/materials/components/displacement.rst:66
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
@@ -116,61 +171,11 @@ msgstr ""
 "Le :doc:`Modificateur Displace </modeling/modifiers/deform/displace>` "
 "peut également être utilisé pour déplacer un maillage."
 
-#: ../../manual/render/materials/components/displacement.rst:49
-msgid "Bump Only"
-msgstr ""
-
-#: ../../manual/render/materials/components/displacement.rst:51
-msgid ""
-"The least accurate but most memory efficient method is to use a bump "
-"mapping. This method does not actually alter the mesh surface, but merely"
-" changes the shading to make it seem so."
-msgstr ""
-"La méthode la moins précise mais la plus efficiente en mémoire consiste à"
-" utiliser un *bump mapping*, Cette méthode ne modifie pas réellement la "
-"surface du maillage, mais change simplement l'ombrage pour le rendre "
-"semblable à cela."
-
-#: ../../manual/render/materials/components/displacement.rst:54
-msgid ""
-"Bump maps are often used to add smaller details on a model, for example "
-"pores or wrinkles on skin."
-msgstr ""
-"Les *Bump Maps* sont souvent utilisées pour ajouter de petits détails sur"
-" un modèle, par exemple des pores ou des rides sur une peau."
-
-#: ../../manual/render/materials/components/displacement.rst:56
-msgid ""
-"For baked bump maps 8-bit byte images are commonly used, however 16 or "
-"32-bit float maps can provide better looking results. When using image "
-"textures use Cubic interpolation to avoid stepping artifacts, these are "
-"more visible for bump maps than other types of textures."
-msgstr ""
-"Pour les *bump maps* précalculées, des images 8 bits sont habituellement "
-"utilisées. Cependant les maps flottants en 16 ou 32-bits peuvent offrir "
-"des résultats plus beaux. dans le cas d'utilisation de textures d'images,"
-" utilisez une interpolation *Cubic* pour éviter des artefacts en "
-"escalier, ceux-ci sont plus visibles pour les *bump maps* que d'autres "
-"types de textures. "
-
-#: ../../manual/render/materials/components/displacement.rst:62
-msgid ""
-"Because bump mapping is a fake effect, it can cause artifacts if the "
-"actual shape of the geometry is too different from the bump mapped shape."
-" If this happens the strength of bump mapping should be reduced or actual"
-" displacement should be used."
-msgstr ""
-"Du fait que le *bump mapping* est un effet factice, il peut occasionner "
-"des artefacts si la forme réelle de la géométrie est trop différente de "
-"la forme après le *bump mapping*. Si ceci se produit, la force du *bump "
-"mapping* devrait être réduite ou le déplacement réel devrait être "
-"utilisé."
-
-#: ../../manual/render/materials/components/displacement.rst:68
+#: ../../manual/render/materials/components/displacement.rst:70
 msgid "Displacement and Bump"
 msgstr ""
 
-#: ../../manual/render/materials/components/displacement.rst:70
+#: ../../manual/render/materials/components/displacement.rst:74
 msgid ""
 "Both methods can be combined to use actual displacement for the bigger "
 "displacement and bump for the finer details. This can provide a good "
@@ -181,7 +186,7 @@ msgstr ""
 " pour les détails les plus fins. Ceci peut offrir un bon équilibre pour "
 "diminuer l'usage de la mémoire."
 
-#: ../../manual/render/materials/components/displacement.rst:73
+#: ../../manual/render/materials/components/displacement.rst:77
 msgid ""
 "Once you subdivide the mesh very finely, it is better to use only actual "
 "displacement. Keeping bump maps will then only increase memory usage and "

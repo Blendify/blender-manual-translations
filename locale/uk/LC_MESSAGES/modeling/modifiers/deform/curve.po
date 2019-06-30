@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2018-03-25 11:53+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -20,9 +20,10 @@ msgid "Curve Modifier"
 msgstr "Модифікатор «Крива» -- Curve Modifier"
 
 #: ../../manual/modeling/modifiers/deform/curve.rst:7
+#, fuzzy
 msgid ""
-"The Curve Modifier provides a simple but efficient method of deforming a "
-"mesh along a curve object."
+"The *Curve* modifier provides a simple but efficient method of deforming "
+"a mesh along a curve object."
 msgstr ""
 "Модифікатор Curve надає простий, але ефективний метод деформування сіті "
 "уздовж об'єкта кривої."
@@ -30,11 +31,11 @@ msgstr ""
 #: ../../manual/modeling/modifiers/deform/curve.rst:9
 #, fuzzy
 msgid ""
-"The Curve Modifier works on a (global) dominant axis, X, Y, or Z. This "
-"means that when you move your mesh in the dominant direction (by default,"
-" the X axis), the mesh will traverse along the curve. Moving the mesh "
-"perpendicularly to this axis, the object will move closer or further away"
-" from the curve."
+"It works on a (global) dominant axis, X, Y, or Z. This means that when "
+"you move your mesh in the dominant direction (by default, the X axis), "
+"the mesh will traverse along the curve, as if it was a train following "
+"and deforming along rails. Moving the mesh perpendicularly to this axis, "
+"the object will move closer or further away from the curve."
 msgstr ""
 "Модифікатор Curve працює на (глобальній) домінантній осі, X, Y або Z. Це "
 "означає, що коли ви переміщуєте вашу сіть у домінантному напрямку "
@@ -43,158 +44,93 @@ msgstr ""
 "буде рухатися ближче або дальше від кривої."
 
 #: ../../manual/modeling/modifiers/deform/curve.rst:14
+#, fuzzy
 msgid ""
-"When you move the object beyond the curve endings the object will "
-"continue to deform based on the direction vector of the curve endings."
+"When you move the object beyond the curve's ends, the object will "
+"continue to deform based on the direction vector at those ends."
 msgstr ""
 "Коли ви рухаєте об'єкт поза кінцями кривої, то цей об'єкт буде "
 "продовжувати деформуватися на основі вектора напрямку кінців кривої."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:17
+#: ../../manual/modeling/modifiers/deform/curve.rst:19
+msgid ""
+"This modifier works in global space, in other words, the actual position "
+"of the geometry relative to the curve is determinant to get a correct "
+"result."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/curve.rst:22
+msgid ""
+"Typically, you'll want your object's origin to be at the center of your "
+"geometry (not offset far away from it, you can e.g. :ref:`Set Origin to "
+"Geometry <bpy.ops.object.origin_set>`)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/curve.rst:25
+msgid ""
+"And then you'll want to start with your object's origin at the same "
+"location as your curve object's origin (you may use :ref:`snap tools "
+"<bpy.ops.view3d.snap>` for that...)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/curve.rst:28
 msgid ""
 "If the curve is 3D, the *Tilt* value of its control points will be used "
 "to twist the deformed object. And the *Radius* property controls the size"
-" of the object as well."
+" of the object as well. Those options are in the *Shape* panel, under "
+":ref:`Path/Curve-Deform <curve-shape-path-curve-deform>`."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:20
-#, fuzzy
-msgid ""
-"In the :menuselection:`Properties editor --> Curve tab --> Shape panel` "
-"under :ref:`Path/Curve-Deform <curve-shape-path-curve-deform>` are "
-"options that influence the modifier."
-msgstr ""
-"Якщо крива є за типом 3D, то значення «Похил» -- *Tilt* її керувальних "
-"точок буде використовуватися для закручування деформованого об'єкта. На "
-"панелі :menuselection:`Curve tab --> Shape panel` у секції :ref:`Path"
-"/Curve-Deform <curve-shape-path-curve-deform>` є опції, які впливають на "
-"цей модифікатор."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:26
+#: ../../manual/modeling/modifiers/deform/curve.rst:34
 msgid "Options"
 msgstr "Опції"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:32
-msgid "Curve Modifier."
+#: ../../manual/modeling/modifiers/deform/curve.rst:41
+#, fuzzy
+msgid "The Curve modifier."
 msgstr "Модифікатор «Крива» -- Curve."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:34
+#: ../../manual/modeling/modifiers/deform/curve.rst:43
 msgid "Object"
 msgstr "Об'єкт -- Object"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:35
+#: ../../manual/modeling/modifiers/deform/curve.rst:44
 msgid "The name of the curve object that will affect the deformed object."
 msgstr "Ім'я об'єкта типу крива, що буде впливати на деформований об'єкт."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:36
+#: ../../manual/modeling/modifiers/deform/curve.rst:45
 msgid "Vertex Group"
 msgstr "Група Вершин -- Vertex Group"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:37
-msgid ""
-"A vertex group name within the deformed object. The modifier will only "
-"affect vertices assigned to this group."
+#: ../../manual/modeling/modifiers/deform/curve.rst:46
+msgid "If set, restrict the effect to the only vertices in that vertex group."
 msgstr ""
-"Ім'я групи вершин у межах деформованого об'єкта. Цей модифікатор буде "
-"впливати тільки на вершини, призначені у цю групу."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:42
-msgid "Deformation Axis"
-msgstr "Вісь Деформацій -- Deformation Axis"
+#: ../../manual/modeling/modifiers/deform/curve.rst:49
+msgid "Deformation Axis X/Y/Z/-X/-Y/-Z"
+msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:39
+#: ../../manual/modeling/modifiers/deform/curve.rst:48
 msgid "This is the axis that the curve deforms along."
 msgstr "Це вісь, уздовж якої крива деформує об'єкт."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:41
-msgid "X, Y, Z, -X, -Y, -Z"
-msgstr "X, Y, Z, -X, -Y, -Z"
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:45
+#: ../../manual/modeling/modifiers/deform/curve.rst:52
 msgid "Example"
 msgstr "Приклад"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:47
-msgid "Let us make a simple example:"
-msgstr "Давайте зробімо прости приклад:"
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:49
-msgid ""
-"Remove the default cube object from the scene and add a Monkey with "
-":menuselection:`Add --> Mesh --> Monkey`."
-msgstr ""
-"Вилучимо об'єкт стандартного куба зі сцени та додамо Мавпу за допомогою "
-":menuselection:`Add --> Mesh --> Monkey`."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:51
-msgid "Now add a curve with :menuselection:`Add --> Curve --> Bézier Curve`."
-msgstr ""
-"Тепер додамо криву за допомогою :menuselection:`Add --> Curve --> Bézier "
-"Curve`."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:52
-msgid ""
-"While in Edit Mode, move the control points of the curve as shown in Fig."
-" :ref:`fig-modifier-curve-edit`, then exit Edit Mode :kbd:`Tab`."
-msgstr ""
-"Перейдемо для кривої у режим правки Edit Mode, пересунемо керувальні "
-"точки, як показано на Ілюстрації :ref:`fig-modifier-curve-edit`, та "
-"вийдемо з режиму Edit Mode :kbd:`Tab`."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:54
-msgid "Select the Monkey :kbd:`RMB` in *Object Mode* and add the Curve Modifier."
-msgstr ""
-"Виділимо Мавпу з :kbd:`RMB` у режимі об'єкта *Object Mode* та додамо для "
-"неї модифікатор Curve."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:55
-msgid ""
-"Assign the Bézier curve to the modifier, as shown in Fig. :ref:`fig-"
-"modifier-curve-panel`. The Monkey should be positioned on the curve."
-msgstr ""
-"Призначимо дану криву Безьє як об'єкт для цього модифікатора, як показано"
-" на Ілюстрації :ref:`fig-modifier-curve-panel`. Мавпа повинна "
-"розташуватися на кривій."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:65
+#: ../../manual/modeling/modifiers/deform/curve.rst:61
 #, fuzzy
 msgid "Edit curve."
 msgstr "Редагувальна крива."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:70
+#: ../../manual/modeling/modifiers/deform/curve.rst:66
 #, fuzzy
 msgid "Monkey on a curve."
 msgstr "Мавпа на кривій."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:75
+#: ../../manual/modeling/modifiers/deform/curve.rst:71
 msgid "Monkey deformations."
 msgstr "Деформації мавпи."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:77
-#, fuzzy
-msgid ""
-"Now if you select the Monkey, and move it in the Y direction :kbd:`G Y`, "
-"the monkey will deform nicely along the curve."
-msgstr ""
-"Тепер, якщо ви виділите Мавпу, та пересунете її у напрямку Y з :kbd:`G "
-"Y`, то мавпа буде гарно деформуватися уздовж кривої."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:79
-#, fuzzy
-msgid ""
-"In the image above you can see the Monkey at different positions along "
-"the curve. To get a cleaner view over the deformation, a "
-":doc:`Subdivision Surface "
-"</modeling/modifiers/generate/subdivision_surface>` Modifier with two "
-"subdivision levels was applied, and :ref:`smooth <modeling-meshes-"
-"editing-normals-shading>` shading was used."
-msgstr ""
-"На ілюстрації вище ви можете бачити Мавпу у різних позиціях уздовж "
-"кривої. Для отримання кращого вигляду цього деформування було застосовано"
-" модифікатор «Підподіл Поверхні» -- :doc:`Subdivision Surface "
-"</modeling/modifiers/generate/subsurf>` з двома рівнями підподілення та "
-"використано згладжене відтінення -- :ref:`smooth <modeling-meshes-"
-"editing-normals-shading>`."
 
 #~ msgid ""
 #~ "If you press :kbd:`MMB` (or one of"
@@ -216,4 +152,129 @@ msgstr ""
 #~ "control the size of the object as"
 #~ " well."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "If the curve is 3D, the *Tilt* "
+#~ "value of its control points will "
+#~ "be used to twist the deformed "
+#~ "object. And the *Radius* property "
+#~ "controls the size of the object as"
+#~ " well."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :menuselection:`Properties editor -->"
+#~ " Curve tab --> Shape panel` under "
+#~ ":ref:`Path/Curve-Deform <curve-shape-path-"
+#~ "curve-deform>` are options that "
+#~ "influence the modifier."
+#~ msgstr ""
+#~ "Якщо крива є за типом 3D, то "
+#~ "значення «Похил» -- *Tilt* її "
+#~ "керувальних точок буде використовуватися для"
+#~ " закручування деформованого об'єкта. На "
+#~ "панелі :menuselection:`Curve tab --> Shape "
+#~ "panel` у секції :ref:`Path/Curve-Deform "
+#~ "<curve-shape-path-curve-deform>` є "
+#~ "опції, які впливають на цей модифікатор."
+
+#~ msgid ""
+#~ "A vertex group name within the "
+#~ "deformed object. The modifier will only"
+#~ " affect vertices assigned to this "
+#~ "group."
+#~ msgstr ""
+#~ "Ім'я групи вершин у межах деформованого"
+#~ " об'єкта. Цей модифікатор буде впливати "
+#~ "тільки на вершини, призначені у цю "
+#~ "групу."
+
+#~ msgid "Deformation Axis"
+#~ msgstr "Вісь Деформацій -- Deformation Axis"
+
+#~ msgid "X, Y, Z, -X, -Y, -Z"
+#~ msgstr "X, Y, Z, -X, -Y, -Z"
+
+#~ msgid "Let us make a simple example:"
+#~ msgstr "Давайте зробімо прости приклад:"
+
+#~ msgid ""
+#~ "Remove the default cube object from "
+#~ "the scene and add a Monkey with"
+#~ " :menuselection:`Add --> Mesh --> Monkey`."
+#~ msgstr ""
+#~ "Вилучимо об'єкт стандартного куба зі "
+#~ "сцени та додамо Мавпу за допомогою "
+#~ ":menuselection:`Add --> Mesh --> Monkey`."
+
+#~ msgid "Now add a curve with :menuselection:`Add --> Curve --> Bézier Curve`."
+#~ msgstr ""
+#~ "Тепер додамо криву за допомогою "
+#~ ":menuselection:`Add --> Curve --> Bézier "
+#~ "Curve`."
+
+#~ msgid ""
+#~ "While in Edit Mode, move the "
+#~ "control points of the curve as "
+#~ "shown in Fig. :ref:`fig-modifier-"
+#~ "curve-edit`, then exit Edit Mode "
+#~ ":kbd:`Tab`."
+#~ msgstr ""
+#~ "Перейдемо для кривої у режим правки "
+#~ "Edit Mode, пересунемо керувальні точки, "
+#~ "як показано на Ілюстрації :ref:`fig-"
+#~ "modifier-curve-edit`, та вийдемо з "
+#~ "режиму Edit Mode :kbd:`Tab`."
+
+#~ msgid ""
+#~ "Select the Monkey :kbd:`RMB` in *Object"
+#~ " Mode* and add the Curve Modifier."
+#~ msgstr ""
+#~ "Виділимо Мавпу з :kbd:`RMB` у режимі "
+#~ "об'єкта *Object Mode* та додамо для "
+#~ "неї модифікатор Curve."
+
+#~ msgid ""
+#~ "Assign the Bézier curve to the "
+#~ "modifier, as shown in Fig. :ref:`fig-"
+#~ "modifier-curve-panel`. The Monkey should"
+#~ " be positioned on the curve."
+#~ msgstr ""
+#~ "Призначимо дану криву Безьє як об'єкт"
+#~ " для цього модифікатора, як показано "
+#~ "на Ілюстрації :ref:`fig-modifier-curve-"
+#~ "panel`. Мавпа повинна розташуватися на "
+#~ "кривій."
+
+#~ msgid ""
+#~ "Now if you select the Monkey, and"
+#~ " move it in the Y direction "
+#~ ":kbd:`G Y`, the monkey will deform "
+#~ "nicely along the curve."
+#~ msgstr ""
+#~ "Тепер, якщо ви виділите Мавпу, та "
+#~ "пересунете її у напрямку Y з "
+#~ ":kbd:`G Y`, то мавпа буде гарно "
+#~ "деформуватися уздовж кривої."
+
+#~ msgid ""
+#~ "In the image above you can see "
+#~ "the Monkey at different positions along"
+#~ " the curve. To get a cleaner "
+#~ "view over the deformation, a "
+#~ ":doc:`Subdivision Surface "
+#~ "</modeling/modifiers/generate/subdivision_surface>` Modifier "
+#~ "with two subdivision levels was applied,"
+#~ " and :ref:`smooth <modeling-meshes-"
+#~ "editing-normals-shading>` shading was used."
+#~ msgstr ""
+#~ "На ілюстрації вище ви можете бачити "
+#~ "Мавпу у різних позиціях уздовж кривої."
+#~ " Для отримання кращого вигляду цього "
+#~ "деформування було застосовано модифікатор "
+#~ "«Підподіл Поверхні» -- :doc:`Subdivision "
+#~ "Surface </modeling/modifiers/generate/subsurf>` з "
+#~ "двома рівнями підподілення та використано "
+#~ "згладжене відтінення -- :ref:`smooth "
+#~ "<modeling-meshes-editing-normals-shading>`."
 

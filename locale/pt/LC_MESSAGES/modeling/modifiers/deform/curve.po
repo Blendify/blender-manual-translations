@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2019-05-15 21:21-0300\n"
 "Last-Translator: Eduardo Luiz Schilling <elschilling@gmail.com>\n"
 "Language: pt\n"
@@ -24,20 +24,22 @@ msgid "Curve Modifier"
 msgstr "Modificador Curva"
 
 #: ../../manual/modeling/modifiers/deform/curve.rst:7
+#, fuzzy
 msgid ""
-"The Curve Modifier provides a simple but efficient method of deforming a "
-"mesh along a curve object."
+"The *Curve* modifier provides a simple but efficient method of deforming "
+"a mesh along a curve object."
 msgstr ""
 "O Modificador Curva provê um método simples mas eficiente de deformação "
 "de uma malha ao longo de um objeto curva."
 
 #: ../../manual/modeling/modifiers/deform/curve.rst:9
+#, fuzzy
 msgid ""
-"The Curve Modifier works on a (global) dominant axis, X, Y, or Z. This "
-"means that when you move your mesh in the dominant direction (by default,"
-" the X axis), the mesh will traverse along the curve. Moving the mesh "
-"perpendicularly to this axis, the object will move closer or further away"
-" from the curve."
+"It works on a (global) dominant axis, X, Y, or Z. This means that when "
+"you move your mesh in the dominant direction (by default, the X axis), "
+"the mesh will traverse along the curve, as if it was a train following "
+"and deforming along rails. Moving the mesh perpendicularly to this axis, "
+"the object will move closer or further away from the curve."
 msgstr ""
 "O Modificador Curva funciona em um eixo dominante (global), X, Y ou Z. "
 "Isso significa que quando você move sua malha na direção dominante (por "
@@ -46,151 +48,206 @@ msgstr ""
 "ou longe da curva."
 
 #: ../../manual/modeling/modifiers/deform/curve.rst:14
+#, fuzzy
 msgid ""
-"When you move the object beyond the curve endings the object will "
-"continue to deform based on the direction vector of the curve endings."
+"When you move the object beyond the curve's ends, the object will "
+"continue to deform based on the direction vector at those ends."
 msgstr ""
 "Quando você move o objeto além do fim da curva o objeto irá continuar a "
 "deformar baseado no vetor direção do final da curva."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:17
+#: ../../manual/modeling/modifiers/deform/curve.rst:19
+msgid ""
+"This modifier works in global space, in other words, the actual position "
+"of the geometry relative to the curve is determinant to get a correct "
+"result."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/curve.rst:22
+msgid ""
+"Typically, you'll want your object's origin to be at the center of your "
+"geometry (not offset far away from it, you can e.g. :ref:`Set Origin to "
+"Geometry <bpy.ops.object.origin_set>`)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/curve.rst:25
+msgid ""
+"And then you'll want to start with your object's origin at the same "
+"location as your curve object's origin (you may use :ref:`snap tools "
+"<bpy.ops.view3d.snap>` for that...)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/deform/curve.rst:28
+#, fuzzy
 msgid ""
 "If the curve is 3D, the *Tilt* value of its control points will be used "
 "to twist the deformed object. And the *Radius* property controls the size"
-" of the object as well."
+" of the object as well. Those options are in the *Shape* panel, under "
+":ref:`Path/Curve-Deform <curve-shape-path-curve-deform>`."
 msgstr ""
 "Se a curva é 3D, o valor *Inclinar* de seus pontos de controle serão "
 "usados para torcer o objeto deformado. E a propriedade *Raio* controla o "
 "tamanho do objeto."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:20
-msgid ""
-"In the :menuselection:`Properties editor --> Curve tab --> Shape panel` "
-"under :ref:`Path/Curve-Deform <curve-shape-path-curve-deform>` are "
-"options that influence the modifier."
-msgstr ""
-"No :menuselection:`Propriedades --> Aba Curva --> Painel Forma` em "
-"ref:`Caminho/Curva-Deformação <curve-shape-path-curve-deform>` estão as "
-"opções que influenciam o modificador."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:26
+#: ../../manual/modeling/modifiers/deform/curve.rst:34
 msgid "Options"
 msgstr "Opções"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:32
-msgid "Curve Modifier."
+#: ../../manual/modeling/modifiers/deform/curve.rst:41
+#, fuzzy
+msgid "The Curve modifier."
 msgstr "Modificador Curva."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:34
+#: ../../manual/modeling/modifiers/deform/curve.rst:43
 msgid "Object"
 msgstr "Objeto"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:35
+#: ../../manual/modeling/modifiers/deform/curve.rst:44
 msgid "The name of the curve object that will affect the deformed object."
 msgstr "O nome do objeto de curva que irá afetar o objeto deformado."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:36
+#: ../../manual/modeling/modifiers/deform/curve.rst:45
 msgid "Vertex Group"
 msgstr "Grupo de vértices"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:37
-msgid ""
-"A vertex group name within the deformed object. The modifier will only "
-"affect vertices assigned to this group."
+#: ../../manual/modeling/modifiers/deform/curve.rst:46
+msgid "If set, restrict the effect to the only vertices in that vertex group."
 msgstr ""
-"O nome do grupo de vértices dentro do objeto deformado. O modificador ira"
-" afetar apenas vértices associados a esse grupo."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:42
-msgid "Deformation Axis"
-msgstr "Eixo de deformação"
+#: ../../manual/modeling/modifiers/deform/curve.rst:49
+msgid "Deformation Axis X/Y/Z/-X/-Y/-Z"
+msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:39
+#: ../../manual/modeling/modifiers/deform/curve.rst:48
 msgid "This is the axis that the curve deforms along."
 msgstr "Este é o eixo ao longo do qual haverá a deformação pela curva."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:41
-msgid "X, Y, Z, -X, -Y, -Z"
-msgstr "X, Y, Z, -X, -Y, -Z"
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:45
+#: ../../manual/modeling/modifiers/deform/curve.rst:52
 msgid "Example"
 msgstr "Exemplo"
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:47
-msgid "Let us make a simple example:"
-msgstr "Vamos fazer um exemplo simples:"
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:49
-msgid ""
-"Remove the default cube object from the scene and add a Monkey with "
-":menuselection:`Add --> Mesh --> Monkey`."
-msgstr ""
-"Remova o objeto cubo padrão da cena e adicione um Macaco com "
-":menuselection:`Adicionar --> Malha --> Macaco`."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:51
-msgid "Now add a curve with :menuselection:`Add --> Curve --> Bézier Curve`."
-msgstr ""
-"Agora adicione uma curva com :menuselection:`Adicionar --> Curva --> "
-"Bézier`."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:52
-msgid ""
-"While in Edit Mode, move the control points of the curve as shown in Fig."
-" :ref:`fig-modifier-curve-edit`, then exit Edit Mode :kbd:`Tab`."
-msgstr ""
-"Enquanto no Modo Edição, mova os pontos de controle da curva como "
-"mostrado na Fig. :ref:`fig-modifier-curve-edit`, e saia do Modo Edição "
-":kbd:`Tab`."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:54
-msgid "Select the Monkey :kbd:`RMB` in *Object Mode* and add the Curve Modifier."
-msgstr ""
-"Selecione o Macaco :kbd:`RMB` no *Modo Objeto* e adicione o Modificador "
-"Curva."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:55
-msgid ""
-"Assign the Bézier curve to the modifier, as shown in Fig. :ref:`fig-"
-"modifier-curve-panel`. The Monkey should be positioned on the curve."
-msgstr ""
-"Associe a curva Bézier ao modificador, como mostra a Fig. :ref:`fig-"
-"modifier-curve-panel`. O Macaco deve estar posicionado em cima da curva."
-
-#: ../../manual/modeling/modifiers/deform/curve.rst:65
+#: ../../manual/modeling/modifiers/deform/curve.rst:61
 msgid "Edit curve."
 msgstr "Edite a curva."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:70
+#: ../../manual/modeling/modifiers/deform/curve.rst:66
 msgid "Monkey on a curve."
 msgstr "O macaco na curva."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:75
+#: ../../manual/modeling/modifiers/deform/curve.rst:71
 msgid "Monkey deformations."
 msgstr "Deformações aplicadas ao macaco."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:77
-msgid ""
-"Now if you select the Monkey, and move it in the Y direction :kbd:`G Y`, "
-"the monkey will deform nicely along the curve."
-msgstr ""
-"Agora se você selecionar o Macaco, e movê-lo na direção Y com :kbd:`G Y`,"
-" o macaco irá deformar corretamente ao longo da curva."
+#~ msgid ""
+#~ "In the :menuselection:`Properties editor -->"
+#~ " Curve tab --> Shape panel` under "
+#~ ":ref:`Path/Curve-Deform <curve-shape-path-"
+#~ "curve-deform>` are options that "
+#~ "influence the modifier."
+#~ msgstr ""
+#~ "No :menuselection:`Propriedades --> Aba Curva"
+#~ " --> Painel Forma` em ref:`Caminho"
+#~ "/Curva-Deformação <curve-shape-path-"
+#~ "curve-deform>` estão as opções que "
+#~ "influenciam o modificador."
 
-#: ../../manual/modeling/modifiers/deform/curve.rst:79
-#, fuzzy
-msgid ""
-"In the image above you can see the Monkey at different positions along "
-"the curve. To get a cleaner view over the deformation, a "
-":doc:`Subdivision Surface "
-"</modeling/modifiers/generate/subdivision_surface>` Modifier with two "
-"subdivision levels was applied, and :ref:`smooth <modeling-meshes-"
-"editing-normals-shading>` shading was used."
-msgstr ""
-"Na imagem acima você pode ver o Macaco em diferentes posições ao longo da"
-" curva. Para visualizar bem a deformação, um Modificador :doc:`Subdivisão"
-" de Superfície </modeling/modifiers/generate/subsurf>` com dois níveis de"
-" subdivisões  foi aplicado, e sombreamento :ref:`suave <modeling-meshes-"
-"editing-normals-shading>` foi usado."
+#~ msgid ""
+#~ "A vertex group name within the "
+#~ "deformed object. The modifier will only"
+#~ " affect vertices assigned to this "
+#~ "group."
+#~ msgstr ""
+#~ "O nome do grupo de vértices dentro"
+#~ " do objeto deformado. O modificador "
+#~ "ira afetar apenas vértices associados a"
+#~ " esse grupo."
+
+#~ msgid "Deformation Axis"
+#~ msgstr "Eixo de deformação"
+
+#~ msgid "X, Y, Z, -X, -Y, -Z"
+#~ msgstr "X, Y, Z, -X, -Y, -Z"
+
+#~ msgid "Let us make a simple example:"
+#~ msgstr "Vamos fazer um exemplo simples:"
+
+#~ msgid ""
+#~ "Remove the default cube object from "
+#~ "the scene and add a Monkey with"
+#~ " :menuselection:`Add --> Mesh --> Monkey`."
+#~ msgstr ""
+#~ "Remova o objeto cubo padrão da "
+#~ "cena e adicione um Macaco com "
+#~ ":menuselection:`Adicionar --> Malha --> "
+#~ "Macaco`."
+
+#~ msgid "Now add a curve with :menuselection:`Add --> Curve --> Bézier Curve`."
+#~ msgstr ""
+#~ "Agora adicione uma curva com "
+#~ ":menuselection:`Adicionar --> Curva --> "
+#~ "Bézier`."
+
+#~ msgid ""
+#~ "While in Edit Mode, move the "
+#~ "control points of the curve as "
+#~ "shown in Fig. :ref:`fig-modifier-"
+#~ "curve-edit`, then exit Edit Mode "
+#~ ":kbd:`Tab`."
+#~ msgstr ""
+#~ "Enquanto no Modo Edição, mova os "
+#~ "pontos de controle da curva como "
+#~ "mostrado na Fig. :ref:`fig-modifier-"
+#~ "curve-edit`, e saia do Modo Edição"
+#~ " :kbd:`Tab`."
+
+#~ msgid ""
+#~ "Select the Monkey :kbd:`RMB` in *Object"
+#~ " Mode* and add the Curve Modifier."
+#~ msgstr ""
+#~ "Selecione o Macaco :kbd:`RMB` no *Modo"
+#~ " Objeto* e adicione o Modificador "
+#~ "Curva."
+
+#~ msgid ""
+#~ "Assign the Bézier curve to the "
+#~ "modifier, as shown in Fig. :ref:`fig-"
+#~ "modifier-curve-panel`. The Monkey should"
+#~ " be positioned on the curve."
+#~ msgstr ""
+#~ "Associe a curva Bézier ao modificador,"
+#~ " como mostra a Fig. :ref:`fig-"
+#~ "modifier-curve-panel`. O Macaco deve "
+#~ "estar posicionado em cima da curva."
+
+#~ msgid ""
+#~ "Now if you select the Monkey, and"
+#~ " move it in the Y direction "
+#~ ":kbd:`G Y`, the monkey will deform "
+#~ "nicely along the curve."
+#~ msgstr ""
+#~ "Agora se você selecionar o Macaco, "
+#~ "e movê-lo na direção Y com :kbd:`G"
+#~ " Y`, o macaco irá deformar "
+#~ "corretamente ao longo da curva."
+
+#~ msgid ""
+#~ "In the image above you can see "
+#~ "the Monkey at different positions along"
+#~ " the curve. To get a cleaner "
+#~ "view over the deformation, a "
+#~ ":doc:`Subdivision Surface "
+#~ "</modeling/modifiers/generate/subdivision_surface>` Modifier "
+#~ "with two subdivision levels was applied,"
+#~ " and :ref:`smooth <modeling-meshes-"
+#~ "editing-normals-shading>` shading was used."
+#~ msgstr ""
+#~ "Na imagem acima você pode ver o"
+#~ " Macaco em diferentes posições ao "
+#~ "longo da curva. Para visualizar bem "
+#~ "a deformação, um Modificador :doc:`Subdivisão"
+#~ " de Superfície </modeling/modifiers/generate/subsurf>`"
+#~ " com dois níveis de subdivisões  foi"
+#~ " aplicado, e sombreamento :ref:`suave "
+#~ "<modeling-meshes-editing-normals-shading>` "
+#~ "foi usado."
 
