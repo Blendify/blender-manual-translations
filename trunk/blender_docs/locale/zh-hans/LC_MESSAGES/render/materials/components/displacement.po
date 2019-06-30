@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2019-02-27 21:56+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -63,16 +63,54 @@ msgid "Bump only, displacement only and displacement and bump combined."
 msgstr "仅凹凸，仅置换，置换和凹凸相结合。"
 
 #: ../../manual/render/materials/components/displacement.rst:30
+msgid "Bump Only"
+msgstr "仅凹凸"
+
+#: ../../manual/render/materials/components/displacement.rst:32
+msgid ""
+"The least accurate but most memory efficient method is to use a bump "
+"mapping. This method does not actually alter the mesh surface, but merely"
+" changes the shading to make it seem so."
+msgstr "最不精确但内存效率最高的方法是使用凹凸贴图。这种方法实际上并没有改变网格表面，只是改变了阴影，使其看起来像这样。"
+
+#: ../../manual/render/materials/components/displacement.rst:35
+msgid ""
+"Bump maps are often used to add smaller details on a model, for example "
+"pores or wrinkles on skin."
+msgstr "凹凸贴图通常用于在模型上添加较小的细节，例如皮肤上的毛孔或皱纹。"
+
+#: ../../manual/render/materials/components/displacement.rst:37
+msgid ""
+"For baked bump maps 8-bit byte images are commonly used, however 16 or "
+"32-bit float maps can provide better looking results. When using image "
+"textures use Cubic interpolation to avoid stepping artifacts, these are "
+"more visible for bump maps than other types of textures."
+msgstr "对于烘焙凹凸贴图，通常使用8位字节图像，但是16位或32位浮动贴图可以提供更好的效果。当使用图像纹理时，使用立方插值来避免步进瑕疵，与其他类型的纹理相比，这些纹理对凹凸贴图更为可见。"
+
+#: ../../manual/render/materials/components/displacement.rst:43
+msgid ""
+"Because bump mapping is a fake effect, it can cause artifacts if the "
+"actual shape of the geometry is too different from the bump mapped shape."
+" If this happens the strength of bump mapping should be reduced or actual"
+" displacement should be used."
+msgstr "因为凹凸贴图是一种假效果，所以如果几何体的实际形状与凹凸贴图的形状不太相同，它可能会导致瑕疵。如果发生这种情况，应降低凹凸贴图的强度或使用实际的置换。"
+
+#: ../../manual/render/materials/components/displacement.rst:49
 msgid "Displacement Only"
 msgstr "仅仅置换"
 
-#: ../../manual/render/materials/components/displacement.rst:32
+#: ../../manual/render/materials/components/displacement.rst:51
+#: ../../manual/render/materials/components/displacement.rst:72
+msgid ":guilabel:`Cycles Only`"
+msgstr ""
+
+#: ../../manual/render/materials/components/displacement.rst:53
 msgid ""
 "The most accurate and memory intensive displacement method is to apply "
 "true displacement to the mesh surface."
 msgstr "最精确和最占内存的置换方法是将真实置换应用于网格表面。"
 
-#: ../../manual/render/materials/components/displacement.rst:35
+#: ../../manual/render/materials/components/displacement.rst:56
 #, fuzzy
 msgid ""
 "It requires the mesh to be finely subdivided, which can be memory "
@@ -85,64 +123,31 @@ msgstr ""
 "</render/cycles/settings/objects/adaptive_subsurf>` "
 "是细分网格的最佳方法，根据物体与相机的距离，可以使用恰当的细分量。"
 
-#: ../../manual/render/materials/components/displacement.rst:40
+#: ../../manual/render/materials/components/displacement.rst:61
 msgid ""
 "For baked displacement maps, best results are achieved with 16 or 32-bit "
 "float maps, as 8-bit byte images often can not represent all the "
 "necessary detail."
 msgstr "对于烘焙置换贴图，使用16位或32位浮点贴图可获得最佳结果，因为8位字节图像通常无法表示所有必需的细节。"
 
-#: ../../manual/render/materials/components/displacement.rst:45
+#: ../../manual/render/materials/components/displacement.rst:66
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
 msgstr "通过 :doc:`置换修改器 </modeling/modifiers/deform/displace>` 也可以用来取代网格。"
 
-#: ../../manual/render/materials/components/displacement.rst:49
-msgid "Bump Only"
-msgstr "仅凹凸"
-
-#: ../../manual/render/materials/components/displacement.rst:51
-msgid ""
-"The least accurate but most memory efficient method is to use a bump "
-"mapping. This method does not actually alter the mesh surface, but merely"
-" changes the shading to make it seem so."
-msgstr "最不精确但内存效率最高的方法是使用凹凸贴图。这种方法实际上并没有改变网格表面，只是改变了阴影，使其看起来像这样。"
-
-#: ../../manual/render/materials/components/displacement.rst:54
-msgid ""
-"Bump maps are often used to add smaller details on a model, for example "
-"pores or wrinkles on skin."
-msgstr "凹凸贴图通常用于在模型上添加较小的细节，例如皮肤上的毛孔或皱纹。"
-
-#: ../../manual/render/materials/components/displacement.rst:56
-msgid ""
-"For baked bump maps 8-bit byte images are commonly used, however 16 or "
-"32-bit float maps can provide better looking results. When using image "
-"textures use Cubic interpolation to avoid stepping artifacts, these are "
-"more visible for bump maps than other types of textures."
-msgstr "对于烘焙凹凸贴图，通常使用8位字节图像，但是16位或32位浮动贴图可以提供更好的效果。当使用图像纹理时，使用立方插值来避免步进瑕疵，与其他类型的纹理相比，这些纹理对凹凸贴图更为可见。"
-
-#: ../../manual/render/materials/components/displacement.rst:62
-msgid ""
-"Because bump mapping is a fake effect, it can cause artifacts if the "
-"actual shape of the geometry is too different from the bump mapped shape."
-" If this happens the strength of bump mapping should be reduced or actual"
-" displacement should be used."
-msgstr "因为凹凸贴图是一种假效果，所以如果几何体的实际形状与凹凸贴图的形状不太相同，它可能会导致瑕疵。如果发生这种情况，应降低凹凸贴图的强度或使用实际的置换。"
-
-#: ../../manual/render/materials/components/displacement.rst:68
+#: ../../manual/render/materials/components/displacement.rst:70
 msgid "Displacement and Bump"
 msgstr "置换和凹凸"
 
-#: ../../manual/render/materials/components/displacement.rst:70
+#: ../../manual/render/materials/components/displacement.rst:74
 msgid ""
 "Both methods can be combined to use actual displacement for the bigger "
 "displacement and bump for the finer details. This can provide a good "
 "balance to reduce memory usage."
 msgstr "都可以结合使用两种方法，实际置换来获得更大的置换，而凹凸可以获得更精细的细节。这可以提供一个很好的平衡来减少内存使用。"
 
-#: ../../manual/render/materials/components/displacement.rst:73
+#: ../../manual/render/materials/components/displacement.rst:77
 msgid ""
 "Once you subdivide the mesh very finely, it is better to use only actual "
 "displacement. Keeping bump maps will then only increase memory usage and "

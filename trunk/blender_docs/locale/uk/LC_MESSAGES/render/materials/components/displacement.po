@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2019-01-28 20:09+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -74,10 +74,65 @@ msgid "Bump only, displacement only and displacement and bump combined."
 msgstr "Лише вигинання, лише зміщення та комбіновано зміщення і вигинання."
 
 #: ../../manual/render/materials/components/displacement.rst:30
+msgid "Bump Only"
+msgstr "Лише Вигинання -- Bump Only"
+
+#: ../../manual/render/materials/components/displacement.rst:32
+msgid ""
+"The least accurate but most memory efficient method is to use a bump "
+"mapping. This method does not actually alter the mesh surface, but merely"
+" changes the shading to make it seem so."
+msgstr ""
+"Найменш точний, але найбільш ефективний щодо пам'яті метод - це "
+"використання розкладки вигинань - bump mapping. Цей метод фактично не "
+"зміню поверхню сіті, а просто змінює відтінення, щоб зробити лише вигляд "
+"вигинань."
+
+#: ../../manual/render/materials/components/displacement.rst:35
+msgid ""
+"Bump maps are often used to add smaller details on a model, for example "
+"pores or wrinkles on skin."
+msgstr ""
+"Карти вигинань часто використовуються для додання менших деталей на "
+"модель, наприклад, пор або зморшок на шкірі."
+
+#: ../../manual/render/materials/components/displacement.rst:37
+msgid ""
+"For baked bump maps 8-bit byte images are commonly used, however 16 or "
+"32-bit float maps can provide better looking results. When using image "
+"textures use Cubic interpolation to avoid stepping artifacts, these are "
+"more visible for bump maps than other types of textures."
+msgstr ""
+"Як запечені карти вигинань поширено використовуються зображення з "
+"глибиною кольору 8-bit, проте, карти з глибиною кольору 16 або 32-bit "
+"float можуть забезпечувати кращі на вигляд результати. При використанні "
+"текстур зображення вживайте Кубічну Інтерполяцію - Cubic interpolation "
+"для запобігання артефактам сходинковості, вони більш видимі для карт "
+"вигинань, ніж для інших типів текстур."
+
+#: ../../manual/render/materials/components/displacement.rst:43
+msgid ""
+"Because bump mapping is a fake effect, it can cause artifacts if the "
+"actual shape of the geometry is too different from the bump mapped shape."
+" If this happens the strength of bump mapping should be reduced or actual"
+" displacement should be used."
+msgstr ""
+"Оскільки розкладка вигинання - це підробний ефект, вона може спричиняти "
+"артефакти, якщо фактична форма геометрії надто відрізняється від форми з "
+"розкладеним на ній вигинанням. Якщо це стається, сила розкладання "
+"вигинання повинна бути зменшена або повинно використовуватися справжнє "
+"зміщення."
+
+#: ../../manual/render/materials/components/displacement.rst:49
 msgid "Displacement Only"
 msgstr "Лише Зміщення -- Displacement Only"
 
-#: ../../manual/render/materials/components/displacement.rst:32
+#: ../../manual/render/materials/components/displacement.rst:51
+#: ../../manual/render/materials/components/displacement.rst:72
+msgid ":guilabel:`Cycles Only`"
+msgstr ""
+
+#: ../../manual/render/materials/components/displacement.rst:53
 msgid ""
 "The most accurate and memory intensive displacement method is to apply "
 "true displacement to the mesh surface."
@@ -85,7 +140,7 @@ msgstr ""
 "Найбільш точним та інтенсивним щодо пам'яті методом зміщення є "
 "застосування справжнього зміщення до поверхні сіті."
 
-#: ../../manual/render/materials/components/displacement.rst:35
+#: ../../manual/render/materials/components/displacement.rst:56
 #, fuzzy
 msgid ""
 "It requires the mesh to be finely subdivided, which can be memory "
@@ -101,7 +156,7 @@ msgstr ""
 "використовувалася точна потрібна величина підподілення залежно від "
 "відстані об'єкта до камери."
 
-#: ../../manual/render/materials/components/displacement.rst:40
+#: ../../manual/render/materials/components/displacement.rst:61
 msgid ""
 "For baked displacement maps, best results are achieved with 16 or 32-bit "
 "float maps, as 8-bit byte images often can not represent all the "
@@ -111,7 +166,7 @@ msgstr ""
 " мають глибину кольору 16 або 32-bit float, оскільки зображення з "
 "глибиною кольору 8-bit часто не представляє усієї необхідної детальності."
 
-#: ../../manual/render/materials/components/displacement.rst:45
+#: ../../manual/render/materials/components/displacement.rst:66
 msgid ""
 "The :doc:`Displace Modifier </modeling/modifiers/deform/displace>` can "
 "also be used to displace a mesh."
@@ -120,61 +175,11 @@ msgstr ""
 "</modeling/modifiers/deform/displace>` -- «Зміщення» може також бути "
 "використаний для зміщення сіті."
 
-#: ../../manual/render/materials/components/displacement.rst:49
-msgid "Bump Only"
-msgstr "Лише Вигинання -- Bump Only"
-
-#: ../../manual/render/materials/components/displacement.rst:51
-msgid ""
-"The least accurate but most memory efficient method is to use a bump "
-"mapping. This method does not actually alter the mesh surface, but merely"
-" changes the shading to make it seem so."
-msgstr ""
-"Найменш точний, але найбільш ефективний щодо пам'яті метод - це "
-"використання розкладки вигинань - bump mapping. Цей метод фактично не "
-"зміню поверхню сіті, а просто змінює відтінення, щоб зробити лише вигляд "
-"вигинань."
-
-#: ../../manual/render/materials/components/displacement.rst:54
-msgid ""
-"Bump maps are often used to add smaller details on a model, for example "
-"pores or wrinkles on skin."
-msgstr ""
-"Карти вигинань часто використовуються для додання менших деталей на "
-"модель, наприклад, пор або зморшок на шкірі."
-
-#: ../../manual/render/materials/components/displacement.rst:56
-msgid ""
-"For baked bump maps 8-bit byte images are commonly used, however 16 or "
-"32-bit float maps can provide better looking results. When using image "
-"textures use Cubic interpolation to avoid stepping artifacts, these are "
-"more visible for bump maps than other types of textures."
-msgstr ""
-"Як запечені карти вигинань поширено використовуються зображення з "
-"глибиною кольору 8-bit, проте, карти з глибиною кольору 16 або 32-bit "
-"float можуть забезпечувати кращі на вигляд результати. При використанні "
-"текстур зображення вживайте Кубічну Інтерполяцію - Cubic interpolation "
-"для запобігання артефактам сходинковості, вони більш видимі для карт "
-"вигинань, ніж для інших типів текстур."
-
-#: ../../manual/render/materials/components/displacement.rst:62
-msgid ""
-"Because bump mapping is a fake effect, it can cause artifacts if the "
-"actual shape of the geometry is too different from the bump mapped shape."
-" If this happens the strength of bump mapping should be reduced or actual"
-" displacement should be used."
-msgstr ""
-"Оскільки розкладка вигинання - це підробний ефект, вона може спричиняти "
-"артефакти, якщо фактична форма геометрії надто відрізняється від форми з "
-"розкладеним на ній вигинанням. Якщо це стається, сила розкладання "
-"вигинання повинна бути зменшена або повинно використовуватися справжнє "
-"зміщення."
-
-#: ../../manual/render/materials/components/displacement.rst:68
+#: ../../manual/render/materials/components/displacement.rst:70
 msgid "Displacement and Bump"
 msgstr "Зміщення та Вигинання -- Displacement and Bump"
 
-#: ../../manual/render/materials/components/displacement.rst:70
+#: ../../manual/render/materials/components/displacement.rst:74
 msgid ""
 "Both methods can be combined to use actual displacement for the bigger "
 "displacement and bump for the finer details. This can provide a good "
@@ -184,7 +189,7 @@ msgstr ""
 "зміщення для більшого зміщення та вигинання для тонших деталей. Це може "
 "забезпечити хороший баланс для зменшення використання пам'яті."
 
-#: ../../manual/render/materials/components/displacement.rst:73
+#: ../../manual/render/materials/components/displacement.rst:77
 msgid ""
 "Once you subdivide the mesh very finely, it is better to use only actual "
 "displacement. Keeping bump maps will then only increase memory usage and "

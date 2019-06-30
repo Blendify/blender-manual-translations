@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2018-05-01 00:20+0800\n"
 "Last-Translator: kidux(xueke pei) <blender@vip.qq.com>\n"
 "Language: zh_CN\n"
@@ -14,11 +14,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/layers/passes.rst:5
+#: ../../manual/render/layers/passes.rst:4
 msgid "Passes"
 msgstr "通道"
 
-#: ../../manual/render/layers/passes.rst:7
+#: ../../manual/render/layers/passes.rst:6
+#: ../../manual/render/layers/passes.rst:20
+msgid ""
+"Passes can be used to split rendered images into colors, direct and "
+"indirect light to edit them individually, and also to extract data such "
+"as depth or normals."
+msgstr ""
+
+#: ../../manual/render/layers/passes.rst:13
+msgid "Cycles"
+msgstr ""
+
+#: ../../manual/render/layers/passes.rst:15
+#: ../../manual/render/layers/passes.rst:163
 msgid "Reference"
 msgstr "参考"
 
@@ -26,42 +39,40 @@ msgstr "参考"
 msgid "Panel"
 msgstr "面板"
 
-#: ../../manual/render/layers/passes.rst:10
-msgid ":menuselection:`Render Layers --> Passes`"
+#: ../../manual/render/layers/passes.rst:18
+#: ../../manual/render/layers/passes.rst:166
+#, fuzzy
+msgid ":menuselection:`Scene --> View Layers --> Passes`"
 msgstr ":menuselection:`渲染层 --> 通道`"
 
-#: ../../manual/render/layers/passes.rst:12
-msgid ""
-"Passes can be used to split rendered images into colors, direct and "
-"indirect light to edit them individually, and also to extract data such "
-"as depth or normals."
-msgstr ""
-
-#: ../../manual/render/layers/passes.rst:17
+#: ../../manual/render/layers/passes.rst:25
+#: ../../manual/render/layers/passes.rst:170
 msgid "Lighting Passes"
 msgstr "照明通道"
 
-#: ../../manual/render/layers/passes.rst:19
+#: ../../manual/render/layers/passes.rst:27
+#: ../../manual/render/layers/passes.rst:172
 msgid "Combined"
 msgstr "合成结果"
 
-#: ../../manual/render/layers/passes.rst:20
+#: ../../manual/render/layers/passes.rst:28
+#: ../../manual/render/layers/passes.rst:173
 msgid "The final combination of render passes with everything included."
 msgstr "包含所有渲染通道的最终合成的渲染通道"
 
-#: ../../manual/render/layers/passes.rst:22
+#: ../../manual/render/layers/passes.rst:30
 msgid "Noisy Image"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:22
+#: ../../manual/render/layers/passes.rst:30
 msgid "If denoising is enabled, the original combined pass before denoising."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:26
+#: ../../manual/render/layers/passes.rst:34
 msgid "Diffuse Direct"
 msgstr "直接漫射光"
 
-#: ../../manual/render/layers/passes.rst:25
+#: ../../manual/render/layers/passes.rst:33
 msgid ""
 "Direct lighting from diffuse BSDFs. We define direct lighting as coming "
 "from lights, emitting surfaces, the background, or ambient occlusion "
@@ -69,11 +80,11 @@ msgid ""
 "not included in this pass."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:30
+#: ../../manual/render/layers/passes.rst:38
 msgid "Diffuse Indirect"
 msgstr "间接漫射光"
 
-#: ../../manual/render/layers/passes.rst:29
+#: ../../manual/render/layers/passes.rst:37
 msgid ""
 "Indirect lighting from diffuse BSDFs. We define indirect lighting as "
 "coming from lights, emitting surfaces or the background after more than "
@@ -81,11 +92,11 @@ msgid ""
 "in this pass."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:33
+#: ../../manual/render/layers/passes.rst:41
 msgid "Diffuse Color"
 msgstr "漫射光颜色"
 
-#: ../../manual/render/layers/passes.rst:33
+#: ../../manual/render/layers/passes.rst:41
 msgid ""
 "Color weights of diffuse BSDFs. These weights are the color input socket "
 "for BSDF nodes, modified by any Mix and Add Shader nodes."
@@ -93,70 +104,72 @@ msgstr ""
 " Diffuse BSDF（漫反射BSDF）的Color weights（色重值）。这些值供BSDF结点的颜色输入接口使用。可通过 "
 "Mix（混合）以及Add（添加）着色器结点进行编辑。"
 
-#: ../../manual/render/layers/passes.rst:35
+#: ../../manual/render/layers/passes.rst:43
 msgid "Glossy Direct, Indirect, Color"
 msgstr "直接光泽，间接光泽，光泽颜色"
 
-#: ../../manual/render/layers/passes.rst:36
+#: ../../manual/render/layers/passes.rst:44
 msgid "Same as above, but for glossy BSDFs."
 msgstr "同上，而这是针对Glossy BSDF（光泽BSDF）。"
 
-#: ../../manual/render/layers/passes.rst:37
+#: ../../manual/render/layers/passes.rst:45
 msgid "Transmission Direct, Indirect, Color"
 msgstr "直接透射光，间接透射光，透射光颜色"
 
-#: ../../manual/render/layers/passes.rst:38
+#: ../../manual/render/layers/passes.rst:46
 msgid "Same as above, but for transmission BSDFs."
 msgstr "同上，而这是针对Transmission BSDF（透射BSDF）。"
 
-#: ../../manual/render/layers/passes.rst:39
+#: ../../manual/render/layers/passes.rst:47
 msgid "Subsurface Direct, Indirect, Color"
 msgstr "潜表面直接光，潜表面透射光，潜表面颜色"
 
-#: ../../manual/render/layers/passes.rst:40
+#: ../../manual/render/layers/passes.rst:48
 msgid "Same as above, but for subsurface BSDFs."
 msgstr "同上，而这是针对subsurface BSDFs（潜表面BSDF）。"
 
-#: ../../manual/render/layers/passes.rst:41
+#: ../../manual/render/layers/passes.rst:49
 msgid "Emission"
 msgstr "自发光"
 
-#: ../../manual/render/layers/passes.rst:42
+#: ../../manual/render/layers/passes.rst:50
 msgid "Emission from directly visible surfaces."
 msgstr "从直接可见表面发出的光。"
 
-#: ../../manual/render/layers/passes.rst:44
+#: ../../manual/render/layers/passes.rst:52
 msgid "Environment"
 msgstr "环境光"
 
-#: ../../manual/render/layers/passes.rst:44
+#: ../../manual/render/layers/passes.rst:52
 msgid ""
 "Emission from the directly visible background. When the film is set to "
 "transparent, this can be used to get the environment color and composite "
 "it back in."
 msgstr "从直接可见背景发出的光。"
 
-#: ../../manual/render/layers/passes.rst:46
+#: ../../manual/render/layers/passes.rst:54
 msgid "Shadow"
 msgstr "阴影"
 
-#: ../../manual/render/layers/passes.rst:47
+#: ../../manual/render/layers/passes.rst:55
 msgid ""
 "Shadows from light objects. Mostly useful for compositing objects with "
 "shadow into existing footage."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:50
+#: ../../manual/render/layers/passes.rst:58
+#: ../../manual/render/layers/passes.rst:184
 msgid "Ambient Occlusion"
 msgstr "环境光遮蔽"
 
-#: ../../manual/render/layers/passes.rst:49
+#: ../../manual/render/layers/passes.rst:57
+#: ../../manual/render/layers/passes.rst:182
 msgid ""
 "Ambient occlusion from directly visible surfaces. BSDF color or AO factor"
 " is not included; i.e. it gives a 'normalized' value between 0 and 1."
 msgstr "来自直接可见表面的环境光遮蔽。它不含BSDF颜色或AO系数，例如，它提供了“标准化”的值，区间为0到1。"
 
-#: ../../manual/render/layers/passes.rst:54
+#: ../../manual/render/layers/passes.rst:62
 #, fuzzy
 msgid ""
 ":doc:`Transparent BSDFs are given special treatment "
@@ -171,40 +184,44 @@ msgstr ""
 "，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分光线能够穿过。也就是说，它并未包含在Transmission（透射）通道中，这样，可以使用折射率设定为1.0的Glass"
 " BSDF（玻璃BSDF）。"
 
-#: ../../manual/render/layers/passes.rst:62
+#: ../../manual/render/layers/passes.rst:70
 msgid "Combining"
 msgstr "合成"
 
-#: ../../manual/render/layers/passes.rst:64
+#: ../../manual/render/layers/passes.rst:72
 msgid ""
 "All these lighting passes can be combined to produce the final image as "
 "follows:"
 msgstr "所有的照明通道都可以用于合成最终成品，流程如下："
 
-#: ../../manual/render/layers/passes.rst:70
+#: ../../manual/render/layers/passes.rst:78
+#: ../../manual/render/layers/passes.rst:187
 msgid "Data Passes"
 msgstr "数据通道"
 
-#: ../../manual/render/layers/passes.rst:78
+#: ../../manual/render/layers/passes.rst:86
+#: ../../manual/render/layers/passes.rst:190
 msgid "Z"
 msgstr "Z深度通道"
 
-#: ../../manual/render/layers/passes.rst:73
+#: ../../manual/render/layers/passes.rst:81
+#: ../../manual/render/layers/passes.rst:190
 #, fuzzy
 msgid "Distance to any visible surfaces."
 msgstr "从直接可见表面发出的光。"
 
-#: ../../manual/render/layers/passes.rst:77
+#: ../../manual/render/layers/passes.rst:85
 msgid ""
 "The Z pass only uses one sample. When depth values need to be blended in "
 "case of motion blur or :term:`Depth of Field`, use the mist pass."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:83
+#: ../../manual/render/layers/passes.rst:91
+#: ../../manual/render/layers/passes.rst:193
 msgid "Mist"
 msgstr "雾"
 
-#: ../../manual/render/layers/passes.rst:81
+#: ../../manual/render/layers/passes.rst:89
 msgid ""
 "Distance to visible surfaces, mapped to the 0.0-1.0 range. When enabled, "
 "settings are in :ref:`World tab <render-cycles-integrator-world-mist>`. "
@@ -212,73 +229,74 @@ msgid ""
 " away."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:85
+#: ../../<generated>:1 ../../manual/render/layers/passes.rst:93
 msgid "Normal"
 msgstr "法线通道"
 
-#: ../../manual/render/layers/passes.rst:86
+#: ../../manual/render/layers/passes.rst:94
+#: ../../manual/render/layers/passes.rst:196
 msgid "Surface normal used for shading."
 msgstr "用于着色的表面法线。"
 
-#: ../../manual/render/layers/passes.rst:88
+#: ../../manual/render/layers/passes.rst:96
 msgid "Vector"
 msgstr "向量通道"
 
-#: ../../manual/render/layers/passes.rst:88
+#: ../../manual/render/layers/passes.rst:96
 msgid ""
 "Motion vectors for the vector blur node. The four components consist of "
 "2D vectors giving the motion towards the next and previous frame position"
 " in pixel space."
 msgstr "用于向量模糊结点的运动向量通道。其中的四个部分包含了在像素空间内朝向前一帧和后一帧位置的2D向量数据。"
 
-#: ../../manual/render/layers/passes.rst:90
+#: ../../manual/render/layers/passes.rst:98
 msgid "UV"
 msgstr "UV通道"
 
-#: ../../manual/render/layers/passes.rst:91
+#: ../../manual/render/layers/passes.rst:99
 msgid "Default render UV coordinates."
 msgstr "渲染时默认的UV坐标。"
 
-#: ../../manual/render/layers/passes.rst:93
+#: ../../manual/render/layers/passes.rst:101
 msgid "Object Index"
 msgstr "物体索引通道"
 
-#: ../../manual/render/layers/passes.rst:93
+#: ../../manual/render/layers/passes.rst:101
 msgid ""
 "Creates a mask of the object that can be later read by the :doc:`ID Mask "
 "Node </compositing/types/converter/id_mask>` in the compositor."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:96
+#: ../../manual/render/layers/passes.rst:104
 msgid "Material Index"
 msgstr "材质索引通道"
 
-#: ../../manual/render/layers/passes.rst:96
+#: ../../manual/render/layers/passes.rst:104
 msgid ""
 "Creates a mask of the material that can be later read by the :doc:`ID "
 "Mask Node </compositing/types/converter/id_mask>` in the compositor."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:101
+#: ../../manual/render/layers/passes.rst:109
 msgid "Denoising Data"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:99
+#: ../../manual/render/layers/passes.rst:107
 msgid ""
 "Passes needed by the denoiser, for performing animation denoising in a "
 "second pass after rendering the entire animation. For still image "
 "denoising as part of the render process these are not needed."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:103
+#: ../../manual/render/layers/passes.rst:111
 msgid "The Z, Object Index and Material Index passes are not anti-aliased."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:110
+#: ../../manual/render/layers/passes.rst:118
 msgid "Alpha Threshold"
 msgstr "Alpha 阀值"
 
-#: ../../manual/render/layers/passes.rst:106
+#: ../../manual/render/layers/passes.rst:114
 msgid ""
 "Z, Index, normal, UV and vector passes are only affected by surfaces with"
 " alpha transparency equal to or higher than this threshold. With value "
@@ -289,11 +307,11 @@ msgstr ""
 "Z通道、索引通道、法线通道、UV通道以及向量通道在表面的alpha透明值等于或者大于该阀值的时候才受影响。该值为0.0的时候，首次被光线碰到的表面会立即写入这些通道而不管透明度如何。"
 " 如果存在更高的值的透明表面会在遇到不透明的表面的时候跳过写入。"
 
-#: ../../manual/render/layers/passes.rst:113
+#: ../../manual/render/layers/passes.rst:121
 msgid "Cryptomatte"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:115
+#: ../../manual/render/layers/passes.rst:123
 msgid ""
 "Cryptomatte is a standard to efficiently create mattes for compositing. "
 "Cycles outputs the required render passes, which can then be used in the "
@@ -301,85 +319,121 @@ msgid ""
 "create masks for specified objects."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:119
+#: ../../manual/render/layers/passes.rst:127
 msgid ""
 "Unlike the Material and Object Index passes, the objects to isolate are "
 "selected in compositing, and mattes will be anti-aliased and take into "
 "account effects like motion blur and transparency."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:122
+#: ../../manual/render/layers/passes.rst:130
 msgid "Object"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:123
+#: ../../manual/render/layers/passes.rst:131
 msgid "Render cryptomatte object pass, for isolating objects in compositing."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:124
+#: ../../manual/render/layers/passes.rst:132
 #, fuzzy
 msgid "Material"
 msgstr "材质索引通道"
 
-#: ../../manual/render/layers/passes.rst:125
-#: ../../manual/render/layers/passes.rst:127
+#: ../../manual/render/layers/passes.rst:133
+#: ../../manual/render/layers/passes.rst:135
 msgid "Render cryptomatte material pass, for isolating materials in compositing."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:127
+#: ../../manual/render/layers/passes.rst:135
 #, fuzzy
 msgid "Asset"
 msgstr "通道"
 
-#: ../../manual/render/layers/passes.rst:129
+#: ../../manual/render/layers/passes.rst:137
 msgid "Levels"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:130
+#: ../../manual/render/layers/passes.rst:138
 msgid "Sets how many unique objects can be distinguished per pixel."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:133
+#: ../../manual/render/layers/passes.rst:141
 msgid "Accurate Mode"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:132
+#: ../../manual/render/layers/passes.rst:140
 msgid ""
 "Generate a more accurate Cryptomatte pass. CPU only, may render slower "
 "and use more memory."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:136
+#: ../../manual/render/layers/passes.rst:144
 msgid "Typical Workflow"
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:138
+#: ../../manual/render/layers/passes.rst:146
 msgid "Enable Cryptomatte Object render pass in the Passes panel, and render."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:139
+#: ../../manual/render/layers/passes.rst:147
 msgid ""
 "In the compositing nodes, create a Cryptomatte node and link the Render "
 "Layer matching Image and Cryptomatte passes to it."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:141
+#: ../../manual/render/layers/passes.rst:149
 msgid "Attach a Viewer node to the Pick output of the Cryptomatte node."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:142
+#: ../../manual/render/layers/passes.rst:150
 msgid ""
 "Use the Cryptomatte Add/Remove button to sample objects in the Pick "
 "Viewer node."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:143
+#: ../../manual/render/layers/passes.rst:151
 msgid "Use the Matte output of the Cryptomatte node to get the alpha mask."
 msgstr ""
 
-#: ../../manual/render/layers/passes.rst:147
+#: ../../manual/render/layers/passes.rst:155
 msgid ":doc:`Cryptomatte Node </compositing/types/matte/cryptomatte>`."
 msgstr ""
+
+#: ../../manual/render/layers/passes.rst:161
+msgid "Eevee"
+msgstr ""
+
+#: ../../manual/render/layers/passes.rst:176
+#, fuzzy
+msgid "Subsurface Direct"
+msgstr "潜表面直接光，潜表面透射光，潜表面颜色"
+
+#: ../../manual/render/layers/passes.rst:175
+msgid ""
+"Direct lighting from subsurface BSDFs. We define direct lighting as "
+"coming from lights, emitting surfaces, the background, or ambient "
+"occlusion after a single reflection or transmission off a surface. BSDF "
+"color is not included in this pass."
+msgstr ""
+
+#: ../../manual/render/layers/passes.rst:179
+#, fuzzy
+msgid "Subsurface Color"
+msgstr "潜表面直接光，潜表面透射光，潜表面颜色"
+
+#: ../../manual/render/layers/passes.rst:179
+#, fuzzy
+msgid ""
+"Color weights of subsurface BSDFs. These weights are the color input "
+"socket for BSDF nodes, modified by any Mix and Add Shader nodes."
+msgstr ""
+" Diffuse BSDF（漫反射BSDF）的Color weights（色重值）。这些值供BSDF结点的颜色输入接口使用。可通过 "
+"Mix（混合）以及Add（添加）着色器结点进行编辑。"
+
+#: ../../manual/render/layers/passes.rst:193
+#, fuzzy
+msgid "Distance to visible surfaces, mapped to the 0.0 - 1.0 range."
+msgstr "从直接可见表面发出的光。"
 
 #~ msgid "Distance in :term:`BU` to any visible surfaces."
 #~ msgstr ""

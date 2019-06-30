@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:47+0200\n"
+"POT-Creation-Date: 2019-06-30 09:48+1000\n"
 "PO-Revision-Date: 2018-05-08 13:09-0300\n"
 "Last-Translator: Eduardo Schilling<elschilling@gmail.com>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/layers/denoising.rst:4
 msgid "Denoising"
@@ -46,7 +46,11 @@ msgstr ""
 "renderização para se livrar do ruído, enquanto preserva os detalhes "
 "visuais na medida do possível."
 
-#: ../../manual/render/layers/denoising.rst:14
+#: ../../manual/render/layers/denoising.rst:16
+msgid "The denoising panel is only available for the Cycles render engine."
+msgstr ""
+
+#: ../../manual/render/layers/denoising.rst:18
 msgid ""
 "To use the option, enable it in the render layers tab of the Properties "
 "editor. On rendering, it will denoise tile by tile once all the "
@@ -62,7 +66,7 @@ msgstr ""
 "pode ajustar configurações individuais para controlar o balanço entre uma"
 " imagem sem ruído, detalhes e tempo de cálculo."
 
-#: ../../manual/render/layers/denoising.rst:21
+#: ../../manual/render/layers/denoising.rst:25
 #, fuzzy
 msgid ""
 "See the other ways to reduce noise on the general :doc:`Noise "
@@ -71,19 +75,19 @@ msgstr ""
 "Veja outras maneiras de reduzir ruído na página geral :doc:`Otimização de"
 " Ruído </render/cycles/optimizations/reducing_noise>`."
 
-#: ../../manual/render/layers/denoising.rst:26
+#: ../../manual/render/layers/denoising.rst:30
 msgid "Options"
 msgstr "Opções"
 
-#: ../../manual/render/layers/denoising.rst:30
+#: ../../manual/render/layers/denoising.rst:34
 msgid "Denoising panel."
 msgstr "Painel Redução de ruídos."
 
-#: ../../manual/render/layers/denoising.rst:33
+#: ../../manual/render/layers/denoising.rst:37
 msgid "Radius"
 msgstr "Raio"
 
-#: ../../manual/render/layers/denoising.rst:33
+#: ../../manual/render/layers/denoising.rst:37
 msgid ""
 "Size of the image area that is used to denoise a pixel. Higher values are"
 " smoother, but might lose detail and are slower."
@@ -92,11 +96,11 @@ msgstr ""
 "Valores maiores são mais suaves, mas podem perder detalhe e são mais "
 "lentos."
 
-#: ../../manual/render/layers/denoising.rst:37
+#: ../../manual/render/layers/denoising.rst:41
 msgid "Strength"
 msgstr "Força"
 
-#: ../../manual/render/layers/denoising.rst:36
+#: ../../manual/render/layers/denoising.rst:40
 msgid ""
 "Controls how different the area around a neighbor pixel can look compared"
 " to the center pixel before it's no longer used for denoising. Lower "
@@ -106,11 +110,11 @@ msgstr ""
 "comparados ao pixel central antes de não ser mais usado para remover "
 "ruído. Valores menores preservam mais detalhes, mas não são suaves."
 
-#: ../../manual/render/layers/denoising.rst:42
+#: ../../manual/render/layers/denoising.rst:46
 msgid "Feature Strength"
 msgstr "Força das funcionalidades"
 
-#: ../../manual/render/layers/denoising.rst:40
+#: ../../manual/render/layers/denoising.rst:44
 msgid ""
 "Controls removal of noisy and redundant image feature passes before the "
 "actual denoising. This is required in some cases like DoF or Motion Blur "
@@ -125,11 +129,11 @@ msgstr ""
 "textura/geométricos. Valores mais baixos preservam mais detalhes, mas não"
 " são suaves."
 
-#: ../../manual/render/layers/denoising.rst:46
+#: ../../manual/render/layers/denoising.rst:50
 msgid "Relative Filter"
 msgstr "Filtro relativo"
 
-#: ../../manual/render/layers/denoising.rst:45
+#: ../../manual/render/layers/denoising.rst:49
 msgid ""
 "When removing features that don't carry information, decide which to keep"
 " based on the total amount of information in the features. This can help "
@@ -140,11 +144,11 @@ msgstr ""
 "pode ajudar a reduzir artefatos, mas pode causar perda de detalhe ao "
 "redor de arestas."
 
-#: ../../manual/render/layers/denoising.rst:51
+#: ../../manual/render/layers/denoising.rst:55
 msgid "Passes"
 msgstr "Passos"
 
-#: ../../manual/render/layers/denoising.rst:49
+#: ../../manual/render/layers/denoising.rst:53
 #, fuzzy
 msgid ""
 "You can choose to selectively choose which :doc:`Render Passes "
@@ -154,11 +158,11 @@ msgstr ""
 "Renderização </render/cycles/settings/scene/render_layers/passes>` você  "
 "quer remover ruído."
 
-#: ../../manual/render/layers/denoising.rst:54
+#: ../../manual/render/layers/denoising.rst:58
 msgid "Notes and Issues"
 msgstr "Notas e Questões"
 
-#: ../../manual/render/layers/denoising.rst:56
+#: ../../manual/render/layers/denoising.rst:60
 msgid ""
 "The denoiser will change in the future and some features are not "
 "implemented yet. If denoising fails to produce good results, more samples"
@@ -169,7 +173,7 @@ msgstr ""
 "bons resultados, mais amostras ou truncamento frequentemente irão "
 "resolver a questão."
 
-#: ../../manual/render/layers/denoising.rst:59
+#: ../../manual/render/layers/denoising.rst:63
 msgid ""
 "Setting the radius too high is generally not advisable. It increases "
 "denoising time a lot and, while the result might be smoother, it is not "
@@ -183,11 +187,11 @@ msgstr ""
 "renderização. Um raio além de ~15, o tempo adicional de renderização é "
 "provavelmente melhor gasto em aumentar a quantidade de amostras."
 
-#: ../../manual/render/layers/denoising.rst:63
+#: ../../manual/render/layers/denoising.rst:67
 msgid "Denoising cannot be used for baking yet."
 msgstr "Redução não pode ser usado para Gerar e gravar (bake) ainda."
 
-#: ../../manual/render/layers/denoising.rst:64
+#: ../../manual/render/layers/denoising.rst:68
 #, fuzzy
 msgid ""
 "For animation denoising can be used, however it still requires high "
@@ -200,7 +204,7 @@ msgstr ""
 "amostras (borrado) o ruído pode ser visível na animação, mesmo se não é "
 "imediatamente aparente nas imagens paradas."
 
-#: ../../manual/render/layers/denoising.rst:67
+#: ../../manual/render/layers/denoising.rst:71
 msgid ""
 "When using GPU rendering, the denoising process may use a significant "
 "amount of vRAM. If the GPU runs out of memory but renders fine without "
@@ -210,11 +214,11 @@ msgstr ""
 "quantidade significativa de vRAM. Se a GPU fica sem memória mas renderiza"
 " bem sem a redução de ruído, tente reduzir o tamanho do ladrilho."
 
-#: ../../manual/render/layers/denoising.rst:72
+#: ../../manual/render/layers/denoising.rst:76
 msgid "Examples"
 msgstr "Exemplos"
 
-#: ../../manual/render/layers/denoising.rst:74
+#: ../../manual/render/layers/denoising.rst:78
 msgid ""
 "Below is an example render by `The Pixelary "
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
@@ -224,11 +228,11 @@ msgstr ""
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
 "tested>`__."
 
-#: ../../manual/render/layers/denoising.rst:81
+#: ../../manual/render/layers/denoising.rst:85
 msgid "Example render before denoising."
 msgstr "Exemplo de renderização antes da redução de ruídos."
 
-#: ../../manual/render/layers/denoising.rst:85
+#: ../../manual/render/layers/denoising.rst:89
 msgid "Example render after denoising."
 msgstr "Exemplo de renderização após a redução de ruídos."
 
