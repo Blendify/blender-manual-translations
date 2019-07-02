@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-07-02 09:04+0100\n"
 "PO-Revision-Date: 2019-04-24 02:16+0100\n"
 "Last-Translator: Hoang Duy Tran <hoangduytran1960@googlemail.com>\n"
 "Language: vi\n"
@@ -93,35 +93,92 @@ msgid ""
 "the *Edit* panel and Press *Smooth*."
 msgstr ""
 
-#: ../../manual/physics/cloth/examples.rst:43
-#, fuzzy
-msgid ""
-"Now, if you start playback, things are starting to look pretty nice, do "
-"not you think?"
-msgstr ""
-"Now, if you press :kbd:`Alt-A`, things are starting to look pretty nice, "
-"do not you think?"
-
-#: ../../manual/physics/cloth/examples.rst:47
+#: ../../manual/physics/cloth/examples.rst:45
 msgid "Cloth on Armature"
 msgstr "-- Cloth on Armature"
 
-#: ../../manual/physics/cloth/examples.rst:49
+#: ../../manual/physics/cloth/examples.rst:47
 msgid ""
-"Cloth deformed by armature and also respecting an additional collision "
-"object: `Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
-"regression-armature.blend>`__."
+"Clothing can be simulated and pinned to an armature. For example, a "
+"character could have a baggy tunic pinned to the character's waist with a"
+" belt."
 msgstr ""
-"Cloth deformed by armature and also respecting an additional collision "
-"object: `Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
-"regression-armature.blend>`__."
+
+#: ../../manual/physics/cloth/examples.rst:50
+msgid "The typical workflow for pinning:"
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:52
+msgid "Set the armature to its bind pose."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:53
+msgid "Model clothing that encloses but does not penetrate the character's mesh."
+msgstr ""
 
 #: ../../manual/physics/cloth/examples.rst:54
-msgid "Cloth with Animated Vertex Groups"
-msgstr "-- Cloth with Animated Vertex Groups"
+msgid ""
+"Parent the clothing objects to the armature. The armature will now have "
+"several child meshes bound to it."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:55
+msgid "Create a new vertex group on each cloth object for its pinned vertices."
+msgstr ""
 
 #: ../../manual/physics/cloth/examples.rst:56
 msgid ""
+"Add vertices to be pinned to this vertex group and give these vertices "
+"non-zero weights (you probably want weight = 1). For example the belt "
+"area of the tunic would be in the vertex group and have weight one."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:59
+msgid ""
+"Designate the clothing objects as \"cloth\" in the Physics tab of the "
+"Properties editor. Make sure the Cloth Modifier is below the Armature "
+"Modifier in the modifier stack."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:61
+msgid "In the cloth Shape panel select the vertex group."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:62
+msgid "Add :doc:`collision physics </physics/collision>` to the character's mesh."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:63
+msgid ""
+"The clothing is now ready; non-pinned vertices will be under control of "
+"the Cloth modifier. Pinned vertices will be under control of the Armature"
+" modifier."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:68
+msgid ""
+"When animating or posing the character you must begin from the bind pose."
+" Move the character to its initial pose over several frames so the "
+"physics engine can simulate the clothing moving. Very fast movements and "
+"teleport jumps can break the physics simulation."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:72
+#, fuzzy
+msgid ""
+"`Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
+"regression-armature.blend>`__."
+msgstr ""
+"Cloth deformed by armature and also respecting an additional collision "
+"object: `Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
+"regression-armature.blend>`__."
+
+#: ../../manual/physics/cloth/examples.rst:76
+msgid "Cloth with Animated Vertex Groups"
+msgstr "-- Cloth with Animated Vertex Groups"
+
+#: ../../manual/physics/cloth/examples.rst:78
+msgid ""
 "Cloth with animated pinned vertices: `Regression blend-file "
 "<https://wiki.blender.org/wiki/File:Cloth_anim_vertex.blend>`__. "
 "Unsupported: Starting with a goal of 0 and increasing it, but still "
@@ -134,11 +191,11 @@ msgstr ""
 "having the vertex not pinned will **not** work (e.g. from goal = 0 to "
 "goal = 0.5)."
 
-#: ../../manual/physics/cloth/examples.rst:63
+#: ../../manual/physics/cloth/examples.rst:85
 msgid "Cloth with Dynamic Paint"
 msgstr "-- Cloth with Dynamic Paint"
 
-#: ../../manual/physics/cloth/examples.rst:65
+#: ../../manual/physics/cloth/examples.rst:87
 msgid ""
 "Cloth with Dynamic Paint using animated vertex groups: `Regression blend-"
 "file <https://wiki.blender.org/wiki/File:Cloth_dynamic_paint.blend>`__. "
@@ -154,15 +211,15 @@ msgstr ""
 "goal = 0.5) because the necessary \"goal springs\" cannot be generated "
 "on-the-fly."
 
-#: ../../manual/physics/cloth/examples.rst:72
+#: ../../manual/physics/cloth/examples.rst:94
 msgid "Using Cloth for Soft Bodies"
 msgstr "-- Using Cloth for Soft Bodies"
 
-#: ../../manual/physics/cloth/examples.rst:77
+#: ../../manual/physics/cloth/examples.rst:99
 msgid "Using cloth for soft bodies."
 msgstr ""
 
-#: ../../manual/physics/cloth/examples.rst:79
+#: ../../manual/physics/cloth/examples.rst:101
 msgid ""
 "Cloth can also be used to simulate soft bodies. It is for sure not its "
 "main purpose but it works nonetheless. The example image uses standard "
@@ -172,7 +229,7 @@ msgstr ""
 "main purpose but it works nonetheless. The example image uses standard "
 "*Rubber* material, no fancy settings, just :kbd:`Alt-A`."
 
-#: ../../manual/physics/cloth/examples.rst:84
+#: ../../manual/physics/cloth/examples.rst:106
 msgid ""
 "Blend-file for the example image: `Using Cloth for soft bodies "
 "<https://wiki.blender.org/wiki/File:Cloth-sb1.blend>`__."
@@ -180,15 +237,15 @@ msgstr ""
 "Blend-file for the example image: `Using Cloth for soft bodies "
 "<https://wiki.blender.org/wiki/File:Cloth-sb1.blend>`__."
 
-#: ../../manual/physics/cloth/examples.rst:89
+#: ../../manual/physics/cloth/examples.rst:111
 msgid "Cloth with Wind"
 msgstr "-- Cloth with Wind"
 
-#: ../../manual/physics/cloth/examples.rst:94
+#: ../../manual/physics/cloth/examples.rst:116
 msgid "Flag with wind applied."
 msgstr ""
 
-#: ../../manual/physics/cloth/examples.rst:96
+#: ../../manual/physics/cloth/examples.rst:118
 msgid ""
 "Regression blend-file for Cloth with wind and self-collisions (also the "
 "blend for the image above): `Cloth flag with wind and self-collisions "
@@ -197,4 +254,13 @@ msgstr ""
 "Regression blend-file for Cloth with wind and self-collisions (also the "
 "blend for the image above): `Cloth flag with wind and self-collisions "
 "<https://wiki.blender.org/wiki/File:Cloth-flag2.blend>`__."
+
+#~ msgid ""
+#~ "Now, if you start playback, things "
+#~ "are starting to look pretty nice, "
+#~ "do not you think?"
+#~ msgstr ""
+#~ "Now, if you press :kbd:`Alt-A`, things"
+#~ " are starting to look pretty nice,"
+#~ " do not you think?"
 
