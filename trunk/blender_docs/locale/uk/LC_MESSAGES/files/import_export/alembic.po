@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2017-12-12 21:01+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -74,10 +74,10 @@ msgstr ""
 #, fuzzy
 msgid ""
 ":abbr:`TL;DR (Too long; didn't read.)`: Alembic can be used to write an "
-"animated mesh to disk, and read it back quickly & efficiently. This means"
-" that a mesh can be animated with a very CPU-intensive rig, 'baked' to an"
-" Alembic file, and loaded into the shot file for shading and lighting "
-"with only moderate CPU usage."
+"animated mesh to disk, and read it back quickly and efficiently. This "
+"means that a mesh can be animated with a very CPU-intensive rig, 'baked' "
+"to an Alembic file, and loaded into the shot file for shading and "
+"lighting with only moderate CPU usage."
 msgstr ""
 ":abbr:`TL;DR (Too long; didn't read -- Надто довго; не зчитує.)`: Alembic"
 " може використовуватися для запису анімованої сіті на диск та зчитування "
@@ -159,48 +159,58 @@ msgstr ""
 "Задає діапазон кадрів для експорту в Alembic. Це стандарти для діапазону "
 "кадрів поточної сцени."
 
-#: ../../manual/files/import_export/alembic.rst:71
-msgid "Sub-frame sampling: Transform & Geometry Samples, Shutter Open & Close"
+#: ../../manual/files/import_export/alembic.rst:79
+msgid "Sub-frame Sampling"
 msgstr ""
-"Під-кадровий відбір: Вибірки Трансформацій -- Transform Samples та "
-"Вибірки Геометрії -- Geometry Samples, Відкриття Затвору -- Shutter Open "
-"та Закриття Затвору -- Shutter Close"
 
 #: ../../manual/files/import_export/alembic.rst:64
-msgid ""
-"These options control the sub-frame sampling of animations. Transform "
-"Samples sets the number of times per frame at which animated "
-"transformations are sampled and written to Alembic. Geometry Samples sets"
-" the same, but then for animated geometry. Shutter Open & Close define "
-"the interval [open, close] over which those samples are taken. The valid "
-"range is -1 to 1, where -1 indicates the previous frame, 0 indicates the "
-"current frame, and 1 indicates the next frame. For example, if "
-"information for detailed mesh motion blur is desired, some subframes "
-"around the current frame can be written to Alembic by using a sample "
-"count of 5, Shutter Open at -0.25 and Shutter Close at 0.25. This mimics "
-"a \"180 degree\" shutter, opening 90 degrees before the frame and closing"
-" 90 degrees after the frame."
+msgid "These options control the sub-frame sampling of animations."
 msgstr ""
-"Ці опції керують під-кадровим відбором в анімаціях. Вибірки Трансформацій"
-" -- Transform Samples задає кількість разів за кадр, якими відбираються "
-"анімовані трансформації та записуються в Alembic. Вибірки Геометрії -- "
-"Geometry Samples задає кількість тих же разів за кадр, але для анімованої"
-" геометрії. Відкриття Відкриття Затвору -- Shutter Open та Закриття "
-"Затвору -- Shutter Close визначає інтервал [відкриття, закриття], "
-"упродовж якого беруться ці вибірки. Допустимий діапазон -- від -1 до 1, "
-"де -1 вказує на попередній кадр, 0 вказує на поточний кадр та 1 вказує на"
-" наступний кадр. Наприклад, якщо бажана інформація для деталізованого "
-"розмиву рухом сіті, то деякі підкадри навколо поточного кадру можуть бути"
-" записані в Alembic, використовуючи в рахунку вибірок числа 5, Shutter "
-"Open як -0.25 та Shutter Close як 0.25. Це імітує «180 градусний» затвор,"
-" відкриття на 90 градусів перед цим кадром та закриття на 90 градусів "
-"після цього кадру."
 
-#: ../../manual/files/import_export/alembic.rst:73
+#: ../../manual/files/import_export/alembic.rst:67
+msgid "Transform Samples"
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:67
+msgid ""
+"Transform Samples sets the number of times per frame at which animated "
+"transformations are sampled and written to Alembic."
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:69
+msgid "Geometry Samples"
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:70
+msgid "Geometry Samples sets the same, but then for animated geometry."
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:79
+msgid "Shutter Open/Close"
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:72
+msgid ""
+"Shutter Open/Close define the interval [open, close] over which those "
+"samples are taken. The valid range is -1 to 1, where -1 indicates the "
+"previous frame, 0 indicates the current frame, and 1 indicates the next "
+"frame."
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:76
+msgid ""
+"For example, if information for detailed mesh motion blur is desired, "
+"some subframes around the current frame can be written to Alembic by "
+"using a sample count of 5, Shutter Open at -0.25 and Shutter Close at "
+"0.25. This mimics a \"180 degree\" shutter, opening 90 degrees before the"
+" frame and closing 90 degrees after the frame."
+msgstr ""
+
+#: ../../manual/files/import_export/alembic.rst:81
 msgid "Selected Objects Only"
 msgstr "Лише Виділені Об'єкти -- Selected Objects Only"
 
-#: ../../manual/files/import_export/alembic.rst:74
+#: ../../manual/files/import_export/alembic.rst:82
 msgid ""
 "When enabled, exports only the selected objects. When disabled, all "
 "objects are exported."
@@ -208,27 +218,27 @@ msgstr ""
 "При увімкненні, експортує тільки поточно виділені об'єкти. При вимкненні,"
 " усі об'єкти будуть експортовані."
 
-#: ../../manual/files/import_export/alembic.rst:75
+#: ../../manual/files/import_export/alembic.rst:83
 msgid "Renderable Objects Only"
 msgstr "Лише Зображуваноздатні Об'єкти -- Renderable Objects Only"
 
-#: ../../manual/files/import_export/alembic.rst:76
+#: ../../manual/files/import_export/alembic.rst:84
 msgid "This is useful to, for example, avoid exporting custom bone shapes."
 msgstr "Це корисно для, наприклад, запобігання експортуванню власних форм кісток."
 
-#: ../../manual/files/import_export/alembic.rst:77
+#: ../../manual/files/import_export/alembic.rst:85
 msgid "Visible Layers Only"
 msgstr "Лише Видимі Шари -- Visible Layers Only"
 
-#: ../../manual/files/import_export/alembic.rst:78
+#: ../../manual/files/import_export/alembic.rst:86
 msgid "Limits the export to scene layers that are currently visible."
 msgstr "Лімітує експорт шарів сцени лише тими, які поточно видимими."
 
-#: ../../manual/files/import_export/alembic.rst:84
+#: ../../manual/files/import_export/alembic.rst:92
 msgid "Flatten Hierarchy"
 msgstr "Випрямлена Ієрархія -- Flatten Hierarchy"
 
-#: ../../manual/files/import_export/alembic.rst:80
+#: ../../manual/files/import_export/alembic.rst:88
 msgid ""
 "When disabled, parent/child relations between objects are exported too. "
 "Any parent object that is not exported itself, but with children that "
@@ -243,20 +253,20 @@ msgstr ""
 "експортуються, а будь-які трансформації записуються повністю у "
 "координатах світу."
 
-#: ../../manual/files/import_export/alembic.rst:87
+#: ../../manual/files/import_export/alembic.rst:95
 msgid "Object Options"
 msgstr "Опції Об'єкта -- Object Options"
 
-#: ../../manual/files/import_export/alembic.rst:92
+#: ../../manual/files/import_export/alembic.rst:100
 #, fuzzy
 msgid "Object options."
 msgstr "Опції Об'єкта -- Object Options"
 
-#: ../../manual/files/import_export/alembic.rst:95
+#: ../../manual/files/import_export/alembic.rst:103
 msgid "UVs"
 msgstr "UV-ти -- UVs"
 
-#: ../../manual/files/import_export/alembic.rst:95
+#: ../../manual/files/import_export/alembic.rst:103
 msgid ""
 "When enabled, UV maps are exported. Although the Alembic standard only "
 "supports a single UV map, Blender exports all UV maps in a way that "
@@ -266,11 +276,11 @@ msgstr ""
 "підтримує тільки одиничну карту UV, Blender експортує усі карти UV у "
 "спосіб, що повинен бути читаним іншою програмою."
 
-#: ../../manual/files/import_export/alembic.rst:100
+#: ../../manual/files/import_export/alembic.rst:108
 msgid "Pack UV Islands"
 msgstr "Упакувати Острови UV -- Pack UV Islands"
 
-#: ../../manual/files/import_export/alembic.rst:98
+#: ../../manual/files/import_export/alembic.rst:106
 msgid ""
 "Generates an optimized UV layout with non-overlapping islands that tries "
 "to efficiently fill the :term:`Texture Space`. See the :ref:`pack islands"
@@ -278,19 +288,19 @@ msgid ""
 "same principle for more information."
 msgstr ""
 
-#: ../../manual/files/import_export/alembic.rst:102
+#: ../../manual/files/import_export/alembic.rst:110
 msgid "Normals"
 msgstr "Нормалі -- Normals"
 
-#: ../../manual/files/import_export/alembic.rst:103
+#: ../../manual/files/import_export/alembic.rst:111
 msgid "When enabled, an object's :term:`normals <normal>` are exported."
 msgstr ""
 
-#: ../../manual/files/import_export/alembic.rst:105
+#: ../../manual/files/import_export/alembic.rst:113
 msgid "Vertex Colors"
 msgstr "Кольори Вершин -- Vertex Colors"
 
-#: ../../manual/files/import_export/alembic.rst:105
+#: ../../manual/files/import_export/alembic.rst:113
 msgid ""
 "When enabled, exports vertex colors. At this moment, this only supports "
 "static vertex colors, and not dynamically animated vertex colors."
@@ -299,59 +309,59 @@ msgstr ""
 "тільки статичні кольори вершин та не підтримує динамічно анімовані "
 "кольори вершин."
 
-#: ../../manual/files/import_export/alembic.rst:107
+#: ../../manual/files/import_export/alembic.rst:115
 msgid "Face Sets"
 msgstr "Набори Граней -- Face Sets"
 
-#: ../../manual/files/import_export/alembic.rst:108
+#: ../../manual/files/import_export/alembic.rst:116
 msgid ""
 "Exports the material names per face. The material data is not exported "
 "but only material names."
 msgstr ""
 
-#: ../../manual/files/import_export/alembic.rst:110
+#: ../../manual/files/import_export/alembic.rst:118
 msgid "Use Subdivision Schema"
 msgstr "Вжити Схему Підподілення -- Use Subdivision Schema"
 
-#: ../../manual/files/import_export/alembic.rst:110
+#: ../../manual/files/import_export/alembic.rst:118
 msgid ""
 "Writes polygonal meshes using the \"SubD\" Alembic schema, rather than "
 "the \"PolyMesh\" schema. This tells the program opening the file to apply"
 " its form of a non-destructive subdivision."
 msgstr ""
 
-#: ../../manual/files/import_export/alembic.rst:113
+#: ../../manual/files/import_export/alembic.rst:121
 msgid "Apply Subdivision Surface"
 msgstr "Застосувати Підподілення Поверхні -- Apply Subdivision Surface"
 
-#: ../../manual/files/import_export/alembic.rst:113
+#: ../../manual/files/import_export/alembic.rst:121
 msgid ""
 "Applies any :doc:`Subdivision surface modifiers "
 "</modeling/modifiers/generate/subdivision_surface>` before writing to "
 "Alembic."
 msgstr ""
 
-#: ../../manual/files/import_export/alembic.rst:119
+#: ../../manual/files/import_export/alembic.rst:127
 msgid "Triangulate"
 msgstr "Трибічникування -- Triangulate"
 
-#: ../../manual/files/import_export/alembic.rst:116
+#: ../../manual/files/import_export/alembic.rst:124
 msgid ""
 "Triangulates the mesh before writing to Alembic. For more detail on the "
 "specific option see the :doc:`Triangulate Modifier "
 "</modeling/modifiers/generate/triangulate>`."
 msgstr ""
 
-#: ../../manual/files/import_export/alembic.rst:122
+#: ../../manual/files/import_export/alembic.rst:130
 msgid "Particle Systems"
 msgstr "Системи Частинок -- Particle Systems"
 
-#: ../../manual/files/import_export/alembic.rst:127
+#: ../../manual/files/import_export/alembic.rst:135
 #, fuzzy
 msgid "Particle Systems options."
 msgstr "Системи Частинок -- Particle Systems"
 
-#: ../../manual/files/import_export/alembic.rst:129
+#: ../../manual/files/import_export/alembic.rst:137
 msgid ""
 "Alembic has no support for Particle Systems, in the same way that it does"
 " not support armatures. Hair is exported as animated zero-width curves. "
@@ -401,4 +411,65 @@ msgstr ""
 #~ "modifiers </modeling/modifiers/generate/subsurf>` before"
 #~ " writing to Alembic."
 #~ msgstr ""
+
+#~ msgid "Sub-frame sampling: Transform & Geometry Samples, Shutter Open & Close"
+#~ msgstr ""
+#~ "Під-кадровий відбір: Вибірки Трансформацій --"
+#~ " Transform Samples та Вибірки Геометрії "
+#~ "-- Geometry Samples, Відкриття Затвору "
+#~ "-- Shutter Open та Закриття Затвору "
+#~ "-- Shutter Close"
+
+#~ msgid ""
+#~ "These options control the sub-frame "
+#~ "sampling of animations. Transform Samples "
+#~ "sets the number of times per frame"
+#~ " at which animated transformations are "
+#~ "sampled and written to Alembic. Geometry"
+#~ " Samples sets the same, but then "
+#~ "for animated geometry. Shutter Open &"
+#~ " Close define the interval [open, "
+#~ "close] over which those samples are "
+#~ "taken. The valid range is -1 to"
+#~ " 1, where -1 indicates the previous"
+#~ " frame, 0 indicates the current "
+#~ "frame, and 1 indicates the next "
+#~ "frame. For example, if information for"
+#~ " detailed mesh motion blur is "
+#~ "desired, some subframes around the "
+#~ "current frame can be written to "
+#~ "Alembic by using a sample count of"
+#~ " 5, Shutter Open at -0.25 and "
+#~ "Shutter Close at 0.25. This mimics "
+#~ "a \"180 degree\" shutter, opening 90 "
+#~ "degrees before the frame and closing "
+#~ "90 degrees after the frame."
+#~ msgstr ""
+#~ "Ці опції керують під-кадровим відбором в"
+#~ " анімаціях. Вибірки Трансформацій -- "
+#~ "Transform Samples задає кількість разів "
+#~ "за кадр, якими відбираються анімовані "
+#~ "трансформації та записуються в Alembic. "
+#~ "Вибірки Геометрії -- Geometry Samples "
+#~ "задає кількість тих же разів за "
+#~ "кадр, але для анімованої геометрії. "
+#~ "Відкриття Відкриття Затвору -- Shutter "
+#~ "Open та Закриття Затвору -- Shutter "
+#~ "Close визначає інтервал [відкриття, закриття],"
+#~ " упродовж якого беруться ці вибірки. "
+#~ "Допустимий діапазон -- від -1 до "
+#~ "1, де -1 вказує на попередній "
+#~ "кадр, 0 вказує на поточний кадр та"
+#~ " 1 вказує на наступний кадр. "
+#~ "Наприклад, якщо бажана інформація для "
+#~ "деталізованого розмиву рухом сіті, то "
+#~ "деякі підкадри навколо поточного кадру "
+#~ "можуть бути записані в Alembic, "
+#~ "використовуючи в рахунку вибірок числа "
+#~ "5, Shutter Open як -0.25 та "
+#~ "Shutter Close як 0.25. Це імітує "
+#~ "«180 градусний» затвор, відкриття на 90"
+#~ " градусів перед цим кадром та "
+#~ "закриття на 90 градусів після цього "
+#~ "кадру."
 

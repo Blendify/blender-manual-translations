@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-30 09:48+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-10-21 19:17+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -122,128 +122,31 @@ msgstr ""
 "Avec une direction fixée à X, Y, Z, or XYZ , le modificateur peut "
 "déplacer soit sur les axes locaux soit sur les axes globaux."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:82
+#: ../../manual/modeling/modifiers/deform/displace.rst:47
 msgid "Texture Coordinates"
 msgstr ""
 
 #: ../../manual/modeling/modifiers/deform/displace.rst:45
+#, fuzzy
 msgid ""
 "The texture coordinate system to use when retrieving values from the "
-"texture for each vertex. Can be one of the following:"
+"texture for each vertex."
 msgstr ""
 "Le système de coordonnées de texture à utiliser au cours de la "
 "récupération des valeurs de la texture pour chaque sommet. Peut être un "
 "des suivants :"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:63
-msgid "UV"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:49
-msgid "Take texture coordinates from face UV coordinates."
-msgstr "Prendre les coordonnées de texture des coordonnées UV des faces."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:55
-msgid "UV Map"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:52
-#, fuzzy
+#: ../../manual/modeling/modifiers/deform/displace.rst:47
 msgid ""
-"The :term:`UV map` from which to take texture coordinates. If the object "
-"has no UV coordinates, it falls back to the *Local* coordinate system. If"
-" this field is blank, but there is a UV map available (e.g. just after "
-"adding the first UV map to the mesh), the currently active UV map will be"
-" used."
-msgstr ""
-"L'UV map duquel sont prises les coordonnées de texture. Si l'objet n'a "
-"pas de coordonnées UV, il utilise le système de coordonnées locales. Si "
-"ce champ est vide, mais qu'il y a un UV map disponible (ex. juste après "
-"l'ajout du premier UV map au maillage), il sera avec l'UV map actif "
-"courant."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:59
-#, fuzzy
-msgid ""
-"Since UV coordinates are specified per face, the UV texture coordinate "
-"system currently determines the UV coordinate for each vertex from the "
-"first face encountered which uses that vertex. Any other faces using that"
-" vertex are ignored."
-msgstr ""
-"Étant donné que les coordonnées sont spécifiées par face, le système de "
-"coordonnées de la texture UV détermine actuellement les coordonnées UV "
-"pour chaque sommet de la première face rencontrée qui utilise ce sommet ;"
-" toute autre face utilisant ce sommet est ignorée. Cette manière conduit "
-"à des artefacts si le maillage a des coordonnées UV non contiguës."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:63
-msgid "This may lead to artifacts if the mesh has non-contiguous UV coordinates."
+"See :ref:`common masking options <modifiers-common-options-masking>` for "
+"a complete reference."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:72
-#: ../../manual/modeling/modifiers/deform/displace.rst:77
-msgid "Object"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:66
-#, fuzzy
-msgid "Take the texture coordinates from another object's coordinate system."
-msgstr ""
-"Prendre les coordonnées de texture du système de coordonnées locale de "
-"l'objet."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:69
-msgid ""
-"The object from which to take texture coordinates. Moving the object will"
-" therefore alter the coordinates of the texture mapping."
-msgstr ""
-"L'objet duqzel sont prises les coordonnées de la texture. Le dépèlacement"
-" de l'objet va par conséquent modifier les coordonnées du mapping de la "
-"texture."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:72
-#, fuzzy
-msgid "If this field is blank, it falls back to the *Local* coordinate system."
-msgstr "Si ce champ est vide, le système de coordonnées *locales* est utilisé."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:75
-#, fuzzy
-msgid ""
-"Moving the original object will **also** result in a texture coordinate "
-"update. As such, if you need to maintain a displacement coordinate system"
-" while moving the modified object, consider :ref:`parenting "
-"<bpy.ops.object.parent_set>` the coordinate object to the modified "
-"object."
-msgstr ""
-"Prenez note que que le déplacement de l'objet d'origine va **aussi** "
-"produire une mise à jour des coordonnées de la texture. Comme tel, si "
-"vous devez maintenir un système de coordonnées de déplacement pendant le "
-"déplacement de l'objet modifié, envisagez le parentage de l'objet des "
-"coordonnées à l'objet modifié. "
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:79
-msgid "Global"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:80
-msgid "Take the texture coordinates from the global coordinate system."
-msgstr "Prendre les coordonnées de texture du système de coordonnées globles."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:82
-msgid "Local"
-msgstr ""
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:82
-msgid "Take the texture coordinates from the object's local coordinate system."
-msgstr ""
-"Prendre les coordonnées de texture du système de coordonnées locale de "
-"l'objet."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:86
+#: ../../manual/modeling/modifiers/deform/displace.rst:51
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:85
+#: ../../manual/modeling/modifiers/deform/displace.rst:50
 msgid ""
 "The name of a vertex group which is used to control the influence of the "
 "modifier. If left empty, the modifier affects all vertices equally."
@@ -252,11 +155,11 @@ msgstr ""
 " modificateur. Si ce champ est laissé vide, le modificateur affecte tous "
 "les sommets de façon égale."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:96
+#: ../../manual/modeling/modifiers/deform/displace.rst:61
 msgid "Midlevel"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:89
+#: ../../manual/modeling/modifiers/deform/displace.rst:54
 #, fuzzy
 msgid ""
 "The texture value which will be treated as no displacement by the "
@@ -270,11 +173,11 @@ msgstr ""
 " de texture au dessus e cette valeur vont produire un déplacement "
 "positif."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:93
-msgid "`displacement = texture_value - Midlevel`"
+#: ../../manual/modeling/modifiers/deform/displace.rst:58
+msgid ":math:`displacement = texture_value - Midlevel`"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:95
+#: ../../manual/modeling/modifiers/deform/displace.rst:60
 msgid ""
 "Recall that color/luminosity values are typically between (0.0 to 1.0) in"
 " Blender, and not between (0 to 255)."
@@ -282,11 +185,11 @@ msgstr ""
 "Rappelez-vous que les valeurs de couleur et de luminosité sont "
 "typiquement entre (0.0 et 1.0) dans Blender, et non entre (0 et 255)."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:105
+#: ../../manual/modeling/modifiers/deform/displace.rst:70
 msgid "Strength"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:99
+#: ../../manual/modeling/modifiers/deform/displace.rst:64
 msgid ""
 "The strength of the displacement. After offsetting by the *Midlevel* "
 "value, the displacement will be multiplied by the *Strength* value to "
@@ -296,21 +199,21 @@ msgstr ""
 "déplacement sera multiplié par la valeur *Strength* pour donner la "
 "compensation de sommet final."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:102
-msgid "`vertex_offset = displacement × Strength`"
+#: ../../manual/modeling/modifiers/deform/displace.rst:67
+msgid ":math:`vertex_offset = displacement × Strength`"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:104
+#: ../../manual/modeling/modifiers/deform/displace.rst:69
 msgid "A negative strength can be used to invert the effect of the modifier."
 msgstr ""
 "Une force négative peut être utilisée pour inverser l'effet du "
 "modificateur."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:108
+#: ../../manual/modeling/modifiers/deform/displace.rst:73
 msgid "Example"
 msgstr "Exemple"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:113
+#: ../../manual/modeling/modifiers/deform/displace.rst:78
 msgid ""
 "Three different objects created with the Displace modifier. `Sample "
 "blend-file <https://en.blender.org/uploads/9/9e/Manual-Modifier-Displace-"
@@ -320,7 +223,7 @@ msgstr ""
 "blend de l'exemple <https://en.blender.org/uploads/9/9e/Manual-Modifier-"
 "Displace-Example01.blend>`__."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:119
+#: ../../manual/modeling/modifiers/deform/displace.rst:84
 msgid ""
 "A slime animation created with the Displace modifier. `Sample blend-file "
 "<https://en.blender.org/uploads/6/62/Manual-Modifier-Displace-"
@@ -381,5 +284,126 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "*vertex_offset* = *displacement* × *Strength*."
+#~ msgstr ""
+
+#~ msgid "UV"
+#~ msgstr ""
+
+#~ msgid "Take texture coordinates from face UV coordinates."
+#~ msgstr "Prendre les coordonnées de texture des coordonnées UV des faces."
+
+#~ msgid "UV Map"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :term:`UV map` from which to "
+#~ "take texture coordinates. If the object"
+#~ " has no UV coordinates, it falls "
+#~ "back to the *Local* coordinate system."
+#~ " If this field is blank, but "
+#~ "there is a UV map available (e.g."
+#~ " just after adding the first UV "
+#~ "map to the mesh), the currently "
+#~ "active UV map will be used."
+#~ msgstr ""
+#~ "L'UV map duquel sont prises les "
+#~ "coordonnées de texture. Si l'objet n'a"
+#~ " pas de coordonnées UV, il utilise"
+#~ " le système de coordonnées locales. "
+#~ "Si ce champ est vide, mais qu'il"
+#~ " y a un UV map disponible (ex."
+#~ " juste après l'ajout du premier UV"
+#~ " map au maillage), il sera avec "
+#~ "l'UV map actif courant."
+
+#~ msgid ""
+#~ "Since UV coordinates are specified per"
+#~ " face, the UV texture coordinate "
+#~ "system currently determines the UV "
+#~ "coordinate for each vertex from the "
+#~ "first face encountered which uses that"
+#~ " vertex. Any other faces using that"
+#~ " vertex are ignored."
+#~ msgstr ""
+#~ "Étant donné que les coordonnées sont "
+#~ "spécifiées par face, le système de "
+#~ "coordonnées de la texture UV détermine"
+#~ " actuellement les coordonnées UV pour "
+#~ "chaque sommet de la première face "
+#~ "rencontrée qui utilise ce sommet ; "
+#~ "toute autre face utilisant ce sommet "
+#~ "est ignorée. Cette manière conduit à "
+#~ "des artefacts si le maillage a des"
+#~ " coordonnées UV non contiguës."
+
+#~ msgid ""
+#~ "This may lead to artifacts if the"
+#~ " mesh has non-contiguous UV "
+#~ "coordinates."
+#~ msgstr ""
+
+#~ msgid "Object"
+#~ msgstr ""
+
+#~ msgid "Take the texture coordinates from another object's coordinate system."
+#~ msgstr ""
+#~ "Prendre les coordonnées de texture du"
+#~ " système de coordonnées locale de "
+#~ "l'objet."
+
+#~ msgid ""
+#~ "The object from which to take "
+#~ "texture coordinates. Moving the object "
+#~ "will therefore alter the coordinates of"
+#~ " the texture mapping."
+#~ msgstr ""
+#~ "L'objet duqzel sont prises les "
+#~ "coordonnées de la texture. Le "
+#~ "dépèlacement de l'objet va par "
+#~ "conséquent modifier les coordonnées du "
+#~ "mapping de la texture."
+
+#~ msgid "If this field is blank, it falls back to the *Local* coordinate system."
+#~ msgstr "Si ce champ est vide, le système de coordonnées *locales* est utilisé."
+
+#~ msgid ""
+#~ "Moving the original object will **also**"
+#~ " result in a texture coordinate "
+#~ "update. As such, if you need to"
+#~ " maintain a displacement coordinate system"
+#~ " while moving the modified object, "
+#~ "consider :ref:`parenting <bpy.ops.object.parent_set>` "
+#~ "the coordinate object to the modified"
+#~ " object."
+#~ msgstr ""
+#~ "Prenez note que que le déplacement "
+#~ "de l'objet d'origine va **aussi** "
+#~ "produire une mise à jour des "
+#~ "coordonnées de la texture. Comme tel,"
+#~ " si vous devez maintenir un système"
+#~ " de coordonnées de déplacement pendant "
+#~ "le déplacement de l'objet modifié, "
+#~ "envisagez le parentage de l'objet des"
+#~ " coordonnées à l'objet modifié. "
+
+#~ msgid "Global"
+#~ msgstr ""
+
+#~ msgid "Take the texture coordinates from the global coordinate system."
+#~ msgstr "Prendre les coordonnées de texture du système de coordonnées globles."
+
+#~ msgid "Local"
+#~ msgstr ""
+
+#~ msgid "Take the texture coordinates from the object's local coordinate system."
+#~ msgstr ""
+#~ "Prendre les coordonnées de texture du"
+#~ " système de coordonnées locale de "
+#~ "l'objet."
+
+#~ msgid "`displacement = texture_value - Midlevel`"
+#~ msgstr ""
+
+#~ msgid "`vertex_offset = displacement × Strength`"
 #~ msgstr ""
 

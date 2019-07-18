@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-12-06 08:42+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,9 +37,9 @@ msgstr "실행 취소(undo)"
 #: ../../manual/interface/undo_redo.rst:17
 #: ../../manual/interface/undo_redo.rst:36
 #: ../../manual/interface/undo_redo.rst:51
-#: ../../manual/interface/undo_redo.rst:100
-#: ../../manual/interface/undo_redo.rst:128
-#: ../../manual/interface/undo_redo.rst:161
+#: ../../manual/interface/undo_redo.rst:108
+#: ../../manual/interface/undo_redo.rst:136
+#: ../../manual/interface/undo_redo.rst:169
 msgid "Reference"
 msgstr "찾기"
 
@@ -50,9 +50,9 @@ msgstr ""
 #: ../../manual/interface/undo_redo.rst:20
 #: ../../manual/interface/undo_redo.rst:39
 #: ../../manual/interface/undo_redo.rst:54
-#: ../../manual/interface/undo_redo.rst:103
-#: ../../manual/interface/undo_redo.rst:131
-#: ../../manual/interface/undo_redo.rst:164
+#: ../../manual/interface/undo_redo.rst:111
+#: ../../manual/interface/undo_redo.rst:139
+#: ../../manual/interface/undo_redo.rst:172
 msgid "All Modes"
 msgstr "모든 모드"
 
@@ -112,85 +112,89 @@ msgid ":kbd:`F9`"
 msgstr ""
 
 #: ../../manual/interface/undo_redo.rst:58
+msgid ""
+"After an operation is complete you can tweak the parameters of the "
+"operation afterwards. In editors that support it, there is a \"head-up "
+"display\" panel in the bottom left based on the last performed operation;"
+" dependent on mode and context. Alternatively, you can create a pop-up "
+"with :kbd:`F9` does the same thing."
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:63
 #, fuzzy
 msgid ""
-":kbd:`F9` after an action will present you a context-sensitive pop-up "
-"menu based on your last action taken and the Mode and Editor in which "
-"Blender is being used."
-msgstr "어떤 명령을 실행하고서 :kbd:`F6` 를 누르면 맥락에 맞는 팝업이 뜰 거예요."
-
-#: ../../manual/interface/undo_redo.rst:61
-msgid ""
-"For example, if your last action was a rotation in *Object Mode*, Blender"
-" will show you the last value changed for the angle (see Fig. :ref:`fig-"
-"interface-redo-last` left), where you can change your action back "
-"completely by typing :kbd:`Numpad0`. There are other useful options, "
-"based on your action context, and you cannot only Undo actions, but "
+"For example, if your last operation was a rotation in *Object Mode*, "
+"Blender will show you the last value changed for the angle (see Fig. :ref"
+":`fig-interface-redo-last-object-mode` left), where you can change your "
+"action back completely by typing :kbd:`Numpad0`. There are other useful "
+"options, based on the operator, and you cannot only Undo actions, but "
 "change them completely using the available options."
 msgstr ""
 "예를 들어, 마지막으로 한 행동이 *오브젝트 모드*에서 회전시키는 거였다면, 블렌더는 팝업에서 그 회전 명령어에서의 회전값을 보여줄"
 " 거예요( :ref:`fig-interface-redo-last` 에 자세히 나와있어요). 그 상태에서 :kbd:`Numpad0` "
 "를 누르면 방금 실행했던 걸 되돌릴 수도 있어요. 실행취소뿐만 아니라, 다양한 옵션을 통해 했던 실행을 수정할 수도 있답니다."
 
-#: ../../manual/interface/undo_redo.rst:67
+#: ../../manual/interface/undo_redo.rst:69
+#, fuzzy
 msgid ""
 "If you are in *Edit Mode*, Blender will also change its contents based on"
-" your last action taken. In our second example (at the right), the last "
-"action taken was a Vertex Move; we did a *Scale* on a Face, and, as you "
-"can see, the contents of the Pop-Up menu are different, because of your "
-"mode (Edit Mode) (See Fig. :ref:`fig-interface-redo-last` right)."
+" your last action taken. In the second example (at the right), the last "
+"operation was a Move in object mode; but a *Scale* on a Face in Edit "
+"mode, and, as you can see, the contents of *Adjust Last Operation* are "
+"different, because of the mode (Edit mode) (See Fig. :ref:`fig-interface-"
+"redo-last-edit-mode` right)."
 msgstr ""
 "*편집 모드*라면, 팝업 내용은 마지막 명령어를 실행했던 상황을 반영해요. 두번째 예시에서 마지막으로 실행했던 명령은 면을 "
 "*Scale*을 해서 점의 위치를 바꾸는 거였어요. 그리고 보시다시피 팝업의 내용이 다르죠? 마지막 명령을 실행했던 모드가 달라서 "
 "그래요( :ref:`fig-interface-redo-last` 에 더 자세한 설명이 있어요)."
 
 #: ../../manual/interface/undo_redo.rst:76
-msgid "Redo Last."
-msgstr "방금 명령"
+msgid "Adjust Last Operation."
+msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:81
-msgid "Redo Last -- Rotation (Object Mode, 60 degrees)."
+#: ../../manual/interface/undo_redo.rst:83
+#, fuzzy
+msgid "Rotation (Object Mode, 60 degrees)."
 msgstr "방금 명령 -- Rotate (오브젝트 모드, 60도)"
-
-#: ../../manual/interface/undo_redo.rst:86
-msgid "Redo Last -- Scale (Edit Mode, Resize face)."
-msgstr "방금 명령 -- Scale (편집 모드, 면 대상)"
-
-#: ../../manual/interface/undo_redo.rst:88
-msgid "Operations using Redo Last"
-msgstr "방금 명령 활용하기"
 
 #: ../../manual/interface/undo_redo.rst:90
 #, fuzzy
-msgid ""
-"Some operations produce particularly useful results if you tweak their "
-"parameters with the :kbd:`F9` Menu. Take, for example, adding a Circle. "
-"If you reduce the Vertex count to three, you get a perfect equilateral "
-"triangle."
-msgstr ""
-"어떤 명령은 :kbd:`F6` 메뉴에서 변수를 조정할 때 아주 유용해요. 예를 들어 원을 만들 때, 방금 명령 팝업의 변수에서 점의"
-" 개수를 3으로 낮추면 완벽한 정삼각형이 나타나겠죠."
+msgid "Scale (Edit Mode, Resize face)."
+msgstr "방금 명령 -- Scale (편집 모드, 면 대상)"
 
-#: ../../manual/interface/undo_redo.rst:98
+#: ../../manual/interface/undo_redo.rst:94
+msgid ""
+"Some operations produce particularly useful results by using *Adjust Last"
+" Operation*. For example, adding a Circle in the 3D Viewport; if you "
+"reduce the *Vertices* to three, you get a perfect equilateral triangle."
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:100
+msgid ""
+"The *Adjust Last Operation* region can be hidden by :menuselection:`View "
+"--> Adjust Last Operation`"
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:106
 msgid "Undo History"
 msgstr "실행 기록(undo history)"
 
-#: ../../manual/interface/undo_redo.rst:104
+#: ../../manual/interface/undo_redo.rst:112
 msgid ":menuselection:`Edit --> Undo History`"
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:109
+#: ../../manual/interface/undo_redo.rst:117
 msgid "The Undo History menu."
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:111
+#: ../../manual/interface/undo_redo.rst:119
 #, fuzzy
 msgid ""
 "There is also an Undo History of the last actions taken, recorded by "
 "Blender."
 msgstr "지금까지 해 왔던 일들이 쭉 나열된 것이 실행 기록이에요. :kbd:`Ctrl-Alt-Z` 로 열어볼 수 있어요."
 
-#: ../../manual/interface/undo_redo.rst:113
+#: ../../manual/interface/undo_redo.rst:121
 msgid ""
 "First positions correspond to most recent actions. A small icon of an eye"
 " next to one of the entries indicates the current status. Rolling back "
@@ -206,7 +210,7 @@ msgstr ""
 " 돌아갈 수 있어요. *실행취소* 로 과거로 돌아간 다음 *다시실행* 으로 시간을 빠르게 감는다는 상상처럼, 역사 타임라인을 "
 "한꺼번에 보면서 그 중 하나를 고를 수 있다는 얘기에요. 중간에서 새 명령을 실행하면 해당 시점에서 실행기록이 잘린답니다."
 
-#: ../../manual/interface/undo_redo.rst:126
+#: ../../manual/interface/undo_redo.rst:134
 msgid "Repeat Last"
 msgstr "방금 명령 반복(repeat last)"
 
@@ -214,21 +218,21 @@ msgstr "방금 명령 반복(repeat last)"
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:132
+#: ../../manual/interface/undo_redo.rst:140
 msgid ":menuselection:`Edit --> Repeat Last`"
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:133
+#: ../../manual/interface/undo_redo.rst:141
 msgid ":kbd:`Shift-R`"
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:135
+#: ../../manual/interface/undo_redo.rst:143
 msgid ""
 "The Repeat Last feature will repeat your last action when you press "
 ":kbd:`Shift-R`."
 msgstr "방금명령반복 기능은 :kbd:`Shift-R` 으로 사용할 수 있어요. 말 그대로 방금 했던 명령을 반복하는 기능이에요."
 
-#: ../../manual/interface/undo_redo.rst:137
+#: ../../manual/interface/undo_redo.rst:145
 msgid ""
 "In the example Images below, we duplicated a *Monkey* mesh, and then we "
 "moved the Object a bit. Using repeat :kbd:`Shift-R`, the *Monkey* was "
@@ -237,31 +241,31 @@ msgstr ""
 "이 예시에서는 원숭이 오브젝트를 복사한 다음 이동해 봤어요. :kbd:`Shift-R` 으로 방금 명령을 반복하면, 원숭이가 같은 "
 "거리만큼 떨어져서 복제돼요."
 
-#: ../../manual/interface/undo_redo.rst:145
+#: ../../manual/interface/undo_redo.rst:153
 msgid "Suzanne."
 msgstr "Suzanne"
 
-#: ../../manual/interface/undo_redo.rst:149
+#: ../../manual/interface/undo_redo.rst:157
 msgid "After a :kbd:`Shift-D` and move."
 msgstr ":kbd:`Shift-D` 그리고 :kbd:`G`"
 
-#: ../../manual/interface/undo_redo.rst:153
+#: ../../manual/interface/undo_redo.rst:161
 msgid "After a :kbd:`Shift-R`."
 msgstr ":kbd:`Shift-R`"
 
-#: ../../manual/interface/undo_redo.rst:159
+#: ../../manual/interface/undo_redo.rst:167
 msgid "Repeat History"
 msgstr "반복 기록(repeat history)"
 
-#: ../../manual/interface/undo_redo.rst:165
+#: ../../manual/interface/undo_redo.rst:173
 msgid ":menuselection:`Edit --> Repeat History...`"
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:170
+#: ../../manual/interface/undo_redo.rst:178
 msgid "The Repeat History menu."
 msgstr "반복기록 메뉴"
 
-#: ../../manual/interface/undo_redo.rst:172
+#: ../../manual/interface/undo_redo.rst:180
 #, fuzzy
 msgid ""
 "The *Repeat History* feature will present you a list of the last repeated"
@@ -272,13 +276,13 @@ msgstr ""
 "*반복기록* 기능을 쓰면 어떤 명령을 반복했었는지 볼 수 있고, 그 중 하나를 골라서 또 반복할 수 있어요. 실행기록이랑 "
 "비슷하지만, 반복했던 명령어만 기록되어 있답니다. :kbd:`F3` 로 열 수 있어요."
 
-#: ../../manual/interface/undo_redo.rst:183
+#: ../../manual/interface/undo_redo.rst:191
 msgid ""
 "When you quit Blender, the complete list of user actions will be lost, "
 "even if you save your file before quitting."
 msgstr "블렌더를 끄면, 파일 저장 여부랑은 상관없이 실행기록이 모두 사라진답니다."
 
-#: ../../manual/interface/undo_redo.rst:187
+#: ../../manual/interface/undo_redo.rst:195
 msgid ""
 "Troubleshooting section on :doc:`Recovering your lost work "
 "</troubleshooting/recover>`."
@@ -335,4 +339,32 @@ msgstr ":doc:`잃어버린 작업 복구하기 </troubleshooting/recover>` 도 �
 #~ "블렌더에는 별도의 두 가지 기록(history)이 있어요. "
 #~ "하나는 편집 모드(edit mode)고, 하나는 오브젝트 "
 #~ "모드(object mode)에서 일어났던 일들을 기억해요."
+
+#~ msgid ""
+#~ ":kbd:`F9` after an action will present"
+#~ " you a context-sensitive pop-up "
+#~ "menu based on your last action "
+#~ "taken and the Mode and Editor in"
+#~ " which Blender is being used."
+#~ msgstr "어떤 명령을 실행하고서 :kbd:`F6` 를 누르면 맥락에 맞는 팝업이 뜰 거예요."
+
+#~ msgid "Redo Last."
+#~ msgstr "방금 명령"
+
+#~ msgid "Operations using Redo Last"
+#~ msgstr "방금 명령 활용하기"
+
+#~ msgid ""
+#~ "Some operations produce particularly useful"
+#~ " results if you tweak their "
+#~ "parameters with the :kbd:`F9` Menu. "
+#~ "Take, for example, adding a Circle. "
+#~ "If you reduce the Vertex count to"
+#~ " three, you get a perfect equilateral"
+#~ " triangle."
+#~ msgstr ""
+#~ "어떤 명령은 :kbd:`F6` 메뉴에서 변수를 조정할 때"
+#~ " 아주 유용해요. 예를 들어 원을 만들 때, "
+#~ "방금 명령 팝업의 변수에서 점의 개수를 3으로 "
+#~ "낮추면 완벽한 정삼각형이 나타나겠죠."
 

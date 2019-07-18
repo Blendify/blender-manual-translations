@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-12-01 08:03+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -105,7 +105,6 @@ msgid "Collision Settings"
 msgstr "Réglages de collision."
 
 #: ../../manual/physics/cloth/settings/collisions.rst:27
-#: ../../manual/physics/cloth/settings/collisions.rst:113
 msgid "Reference"
 msgstr "Référence"
 
@@ -118,16 +117,16 @@ msgid ":menuselection:`Physics --> Cloth --> Collision`"
 msgstr ""
 
 #: ../../manual/physics/cloth/settings/collisions.rst:37
+#, fuzzy
 msgid ""
 "Now you must tell the *Cloth* object that you want it to participate in "
-"collisions. For the cloth object, locate the *Cloth Collision* panel, "
-"shown to the right:"
+"collisions. For the cloth object, locate the *Cloth Collision* panel."
 msgstr ""
 "Maintenant vous pouvez indiquer à l'objet *Cloth* que vous voulez qu'il "
 "participe aux collisions. Pour l'objet *Cloth*, trouvez le panneau *Cloth"
 " Collision*, affiché à droite :"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:41
+#: ../../manual/physics/cloth/settings/collisions.rst:43
 msgid "Quality"
 msgstr ""
 
@@ -141,12 +140,37 @@ msgstr ""
 "vous souhaitez. Des nombres élevés prennent plus de temps mais "
 "garantissent moins de déchirures et de pénétrations à travers le tissu."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:44
-#: ../../manual/physics/cloth/settings/collisions.rst:63
+#: ../../manual/physics/cloth/settings/collisions.rst:46
+msgid "Object Collisions"
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:48
+#, fuzzy
+msgid ""
+"If the cloth object needs to be deflected by some other object. To "
+"deflect a cloth, the object must be enabled as an object that collides "
+"with the cloth object. To enable objects to collide with cloth objects "
+"enable :ref:`collision physics <physics-collision-soft-bodt-cloth>` for "
+"the collider object (not on the cloth object)."
+msgstr ""
+"L'objet cloth a besoin d'être dévié par un autre objet. Pour dévier un "
+"tissu, l'objet doit être activé en tant qu'objet qui entre en collision "
+"avec l'objet cloth. Pour activer Cloth -- collision d'objet, vous devez "
+"activer les déflexions sur l'objet de collision (pas sur l'objet cloth)."
+
+#: ../../manual/physics/cloth/settings/collisions.rst:56
+msgid ""
+"If your colliding object is not a mesh object, such as a NURBS surface, "
+"or a text object, you must convert it to a mesh object using :ref"
+":`object-convert-to`."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:60
+#: ../../manual/physics/cloth/settings/collisions.rst:84
 msgid "Distance"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:44
+#: ../../manual/physics/cloth/settings/collisions.rst:60
 #, fuzzy
 msgid ""
 "As another object gets this close to it, the simulation will start to "
@@ -155,42 +179,39 @@ msgstr ""
 "Si un autre objet se rapproche de très près de lui (en Unités Blender), "
 "la simulation va commencer à pousser le tissu hors du chemin."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:49
+#: ../../manual/physics/cloth/settings/collisions.rst:65
+#: ../../manual/physics/cloth/settings/collisions.rst:80
 msgid "Friction"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:47
+#: ../../manual/physics/cloth/settings/collisions.rst:63
+#: ../../manual/physics/cloth/settings/collisions.rst:80
+#, fuzzy
 msgid ""
-"A coefficient for how slippery the cloth is when it collides with the "
-"mesh object. For example, silk has a lower coefficient of friction than "
-"cotton."
+"A coefficient for how slippery the cloth is when it collides with itself."
+" For example, silk has a lower coefficient of friction than cotton."
 msgstr ""
 "un coefficient de glissement du tissu lorsqu'il entre en collision avec "
 "l'objet *mesh*. Par exemple, la soie a un coefficient de friction "
 "inférieur à celui du coton."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:52
-msgid "Self-collisions"
+#: ../../manual/physics/cloth/settings/collisions.rst:68
+msgid "Self-Collisions"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:54
+#: ../../manual/physics/cloth/settings/collisions.rst:70
 msgid ""
 "Real cloth cannot permeate itself, so you normally want the cloth to "
-"self-collide."
-msgstr ""
-"Un tissu réel ne peut pas s'infiltrer en lui-même, aussi vous souhaitez "
-"normalement que le tissu entre en collision avec lui-même."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:58
-msgid "Enable Self Collisions"
+"self-collide. Enable this to tell the cloth object that it should not "
+"penetrate itself. This adds to the simulation's compute time, but "
+"provides more realistic results."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:57
+#: ../../manual/physics/cloth/settings/collisions.rst:76
+#, fuzzy
 msgid ""
-"Click this to tell the cloth object that it should not penetrate itself. "
-"This adds to simulation compute time, but provides more realistic "
-"results. A flag, viewed from a distance does not need this enabled, but a"
-" close-up of a cape or blouse on a character should have this enabled."
+"A flag, viewed from a distance does not need this enabled, but a close-up"
+" of a cape or blouse on a character should have this enabled."
 msgstr ""
 "Cliquez ceci pour indiquer à l'objet *Cloth* qu'il ne devrait pas se "
 "pénétrer. Ceci augmente le temps de calcul, mais offre des résultats plus"
@@ -198,7 +219,7 @@ msgstr ""
 "cette option, mais celui-ci devrait être activé pour un gros plan sur la "
 "cape ou la blouse d'un personnage."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:61
+#: ../../manual/physics/cloth/settings/collisions.rst:83
 msgid ""
 "If you encounter problems, you could also change the *Min Distance* value"
 " for the self-collisions. The best value is 0.75; for fast things you "
@@ -211,205 +232,40 @@ msgstr ""
 " est assez risquée (très probablement beaucoup de pénétrations) mais "
 "offre quelque accélération. "
 
-#: ../../manual/physics/cloth/settings/collisions.rst:65
+#: ../../manual/physics/cloth/settings/collisions.rst:86
+msgid "Impulse Clamping"
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:87
+#: ../../manual/physics/cloth/settings/collisions.rst:89
+msgid "TODO2.8."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:89
+msgid "Vertex Group"
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:93
 msgid ""
-"Regression blend-file: `Cloth self-collisions "
+"Example blend-file: `Cloth self-collisions "
 "<https://wiki.blender.org/wiki/File:Cloth-regression-"
 "selfcollisions.blend>`__."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:70
-msgid "Mesh Objects Collide"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:72
-msgid ""
-"If your colliding object is not a mesh object, such as a NURBS surface, "
-"or text object, you must convert it to a mesh object using :ref:`object-"
-"convert-to`."
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:77
-msgid "Cloth - Object Collisions"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:81
-msgid "Collision settings."
-msgstr "Réglages de collision."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:83
-msgid ""
-"The cloth object needs to be deflected by some other object. To deflect a"
-" cloth, the object must be enabled as an object that collides with the "
-"cloth object. To enable Cloth -- Object collisions, you have to enable "
-"deflections on the collision object (not on the cloth object)."
-msgstr ""
-"L'objet cloth a besoin d'être dévié par un autre objet. Pour dévier un "
-"tissu, l'objet doit être activé en tant qu'objet qui entre en collision "
-"avec l'objet cloth. Pour activer Cloth -- collision d'objet, vous devez "
-"activer les déflexions sur l'objet de collision (pas sur l'objet cloth)."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:88
-msgid ""
-"In the Properties editor, *Object* tab and *Physics* tab, locate the "
-"*Collision* panel shown to the right. It is also important to note that "
-"this collision panel is used to tell all simulations that this object is "
-"to participate in colliding/deflecting other objects on a shared layer "
-"(particles, soft bodies, and cloth)."
-msgstr ""
-"Dans l'éditeur *Properties*, onglet *Object* et onglet *Physics*, repérez"
-" le panneau *Collision* à droite. C'est aussi important de noter que ce "
-"panneau *Collision* est utilisé pour informer toutes les simulations que "
-"cet objet doit participer dans la collision/déviation d'autres objets "
-"dans un calque partagé (particules, corps souples, et tissu)."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:95
-msgid "Mesh Object Modifier Stack"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:102
-msgid ""
-"The object's shape deforms the cloth, so the cloth simulation must know "
-"the \"true\" shape of that mesh object at that frame. This true shape is "
-"the basis shape as modified by shape keys or armatures. Therefore, the "
-"Collision Modifier must be **after** any of those. The image to the right"
-" shows the *Modifiers* panel for the Character mesh object (not the cloth"
-" object)."
-msgstr ""
-"La forme de l'objet déforme le tissu, aussi la simulation de tissu doit "
-"connaître la \"vraie\" forme de cet objet mesh dans cette trame. Cette "
-"vraie forme est la forme de base modifiée par les clés de forme ou les "
-"armatures. Ainsi, le Modificateur Collision doit être **après** tout "
-"autre. L'image à droite montre le panneau *Modifiers* pour l'objet mesh "
-"Personnage (pas l'objet Cloth)."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:111
-msgid "Cloth Cache"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:116
-msgid ":menuselection:`Physics --> Cloth Cache`"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:118
-msgid ""
-"Cache settings for cloth are the same as with other dynamic systems. See "
-":doc:`Particle Cache </physics/particles/emitter/cache>` for details."
-msgstr ""
-"Les réglages de cache sont les mêmes qu'avec les autres systèmes "
-"dynamiques. Voir :doc:`Cache de particules "
-"</physics/particles/emitter/cache>` pour les détails."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:123
-msgid "Bake Collision"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:130
-msgid ""
-"After you have set up the deflection mesh for the frame range you intend "
-"to run the simulation (including animating that mesh *via* armatures), "
-"you can now tell the cloth simulation to compute (and avoid) collisions. "
-"Select the cloth object and in the *Object* tab, *Physics* tab, set the "
-"*Start* and *End* settings for the simulation frames you wish to compute,"
-" and click the *Bake* button."
-msgstr ""
-"Après avoir défini le maillage de déflexion pour l'intervalle de trames "
-"sur lequel vous avez l'intention de  lancer la simulation (y compris "
-"l'animation de ce maillage *via* des armatures), vous pouvez maintenant "
-"demander à la simulation de tissu de calculer (et d'éviter) les "
-"collisions. Sélectionnez l'objet cloth et dans l'onglet *Object*, onglet "
-"*Physics*, définissez les réglages de *Start* et de *End* pour les trames"
-" de simulation que vous souhaitez calculer, et cliquez sur le bouton "
-"*Bake*."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:137
-msgid ""
-"You cannot change *Start* or *End* without clearing the bake simulation. "
-"When the simulation has finished, you will notice you have the option to "
-"free the bake, edit the bake and re-bake:"
-msgstr ""
-"Vous ne pouvez pas modifier *Start* ou *End* sans effacer la simulation "
-"précalculée. Quand la simulation est terminée, vous noterez que vous avez"
-" l'option de libérer le précalcul, d'éditer le précalcul et de "
-"précalculer une nouvelle fois : "
-
-#: ../../manual/physics/cloth/settings/collisions.rst:141
-msgid ""
-"There are a few things you will probably notice right away. First, it "
-"will bake significantly slower than before, and it will probably clip "
-"through the box pretty badly as in the picture on the right."
-msgstr ""
-"Il y a quelques objets que vous remarquerez probablement immédiatement. "
-"D'abord, il va précalculer plus lentement qu'avant, et il va probablement"
-"  comme dans l'image à droite."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:147
-msgid "Editing the Cached Simulation"
-msgstr "Édition de la simulation en cache."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:149
-msgid ""
-"The cache contains the shape of the mesh at each frame. You can edit the "
-"cached simulation, after you have baked the simulation and pressed the "
-"*Bake Editing* button. Just go to the frame you want to fix and "
-":kbd:`Tab` into *Edit Mode*. There you can move your vertices using all "
-"of Blender's mesh shaping tools. When you exit, the shape of the mesh "
-"will be recorded for that frame of the animation. If you want Blender to "
-"resume the simulation using the new shape going forward, :kbd:`LMB` click"
-" *Rebake from next Frame* and play the animation. Blender will then pick "
-"up with that shape and resume the simulation."
-msgstr ""
-"Le cache contient la forme du maillage dans chaque trame. Vous pouvez "
-"éditer la simulation en cache, après avoir précalculé la simulation et "
-"pressé le bouton *Bake Editing*. Allez simplement à la trame que vous "
-"voulez corriger et :kbd:`Tab` pour entrer en *Mode Édition*. Là vous "
-"pouvez déplacer vos sommets en utilisant tous les outils de modelage de "
-"maillage dans Blender. Lorsque vous sortez, la forme du maillage sera "
-"enregistrée pour cette trame de l'animation. Si vous voulez que Blender "
-"reprenne la simulation en utilisant la nouvelle forme, :kbd:`LMB` cliquez"
-" *Rebake from next Frame* et lisez l'animation. Blender va alors "
-"reprendre cette forme pour la suite de l'animation.  "
-
-#: ../../manual/physics/cloth/settings/collisions.rst:158
-msgid ""
-"Edit the mesh to correct minor tears and places where the colliding "
-"object has punctured the cloth."
-msgstr ""
-"Éditez le maillage pour corriger les déchirures mineures et les endroits "
-"où l'objet de collision a perforé le tissu.  "
-
-#: ../../manual/physics/cloth/settings/collisions.rst:161
-msgid ""
-"If you add, delete, or extrude vertices in the mesh, Blender will take "
-"the new mesh as the starting shape of the mesh back to the *first frame* "
-"of the animation, replacing the original shape you started with, up to "
-"the frame you were on when you edited the mesh. Therefore, if you change "
-"the content of a mesh, when you press :kbd:`Tab` out of *Edit Mode*, you "
-"should unprotect and clear the cache so that Blender will make a "
-"consistent simulation."
-msgstr ""
-"Si vous ajoutez, supprimez ou extrudez des sommets dans le maillage, "
-"Blender prendra le nouveau maillage comme forme de départ du maillage en "
-"remontant jusqu'à la *première trame* de l'animation, remplaçant la forme"
-" d'origine avec laquelle vous avez commencé, jusqu'à la trame sur "
-"laquelle vous êtes au moment de l'édition du maillage. Par conséquent, si"
-" vous modifiez le contenu du maillage, quand vous pressez :kbd:`Tab` en "
-"dehors du *Mode Édition*, vous devriez déprotéger et effacer le cache "
-"afin que Blender fasse une simulation cohérente."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:170
+#: ../../manual/physics/cloth/settings/collisions.rst:98
 msgid "Troubleshooting"
 msgstr "Résolution de problèmes"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:172
+#: ../../manual/physics/cloth/settings/collisions.rst:100
+#, fuzzy
 msgid ""
-"If you encounter some problems with collision detection, there are two "
+"If you encounter some problems with collision detection, there are a few "
 "ways to fix them:"
 msgstr ""
 "Si vous rencontrez quelques problèmes avec la détection de collision, il "
 "y a deux manières de les corriger :"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:174
+#: ../../manual/physics/cloth/settings/collisions.rst:102
 msgid ""
 "The fastest solution is to increase the *Min Distance* setting under the "
 "*Cloth Collision* panel. This will be the fastest way to fix the "
@@ -423,7 +279,7 @@ msgstr ""
 "paraîtra pas aussi bon. L'utilisation de cette méthode tend à faire comme"
 " si le tissu flotte en l'air, et lui donne un aspect très arrondi."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:177
+#: ../../manual/physics/cloth/settings/collisions.rst:105
 msgid ""
 "A second method is to increase the *Quality* (in the first *Cloth* "
 "panel). This results in smaller steps for the simulator and therefore to "
@@ -437,7 +293,7 @@ msgstr ""
 " rapide soient saisies. Vous pouvez aussi augmenter *Collision Quality* "
 "pour effectuer plus d'itérations pour résoudre les collisions."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:181
+#: ../../manual/physics/cloth/settings/collisions.rst:109
 msgid ""
 "If none of the methods help, you can easily edit the cached/baked result "
 "in *Edit Mode* afterwards."
@@ -445,28 +301,11 @@ msgstr ""
 "Si aucune de ces méthodes ne fonctionne, vous pouvez aisément éditer "
 "après le résultat en cache/précalculé en *Mode Édition*."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:182
+#: ../../manual/physics/cloth/settings/collisions.rst:110
 msgid ""
-"The Cloth is torn by the deforming mesh -- he \"Hulks Out\": Increase its"
-" structural stiffness (*Structure Stiffness* setting, *Cloth* panel), "
-"very high, like 1000."
+"If the Cloth is torn by the deforming mesh; increase its *Stiffness* "
+"settings."
 msgstr ""
-"Le tissu est déchiré par le maillage de déformation -- à la manière de "
-"Hulk : augmentez sa raideur structurale (réglage *Structure Stiffness*, "
-"panneau *Cloth*), très fortement, comme 1000."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:185
-msgid "Subdivision Surface Modifier"
-msgstr "Modificateur Subdivision Surface"
-
-#: ../../manual/physics/cloth/settings/collisions.rst:187
-msgid ""
-"A bake/cache is done for every subdivision level so please use **the "
-"equal** subdivision level for render and preview."
-msgstr ""
-"Un précalcul/cache est réalisé pour chaque niveau de subdivision, aussi "
-"veuillez utiliser le **même** niveau de subdivision pour le rendu et la "
-"prévisualisation."
 
 #~ msgid ""
 #~ "If your colliding object is not a"
@@ -619,4 +458,289 @@ msgstr ""
 
 #~ msgid "After baking."
 #~ msgstr "Après le précalcul."
+
+#~ msgid "Self-collisions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Real cloth cannot permeate itself, so"
+#~ " you normally want the cloth to "
+#~ "self-collide."
+#~ msgstr ""
+#~ "Un tissu réel ne peut pas "
+#~ "s'infiltrer en lui-même, aussi vous "
+#~ "souhaitez normalement que le tissu entre"
+#~ " en collision avec lui-même."
+
+#~ msgid "Enable Self Collisions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Regression blend-file: `Cloth self-"
+#~ "collisions <https://wiki.blender.org/wiki/File:Cloth-"
+#~ "regression-selfcollisions.blend>`__."
+#~ msgstr ""
+
+#~ msgid "Mesh Objects Collide"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your colliding object is not a"
+#~ " mesh object, such as a NURBS "
+#~ "surface, or text object, you must "
+#~ "convert it to a mesh object using"
+#~ " :ref:`object-convert-to`."
+#~ msgstr ""
+
+#~ msgid "Cloth - Object Collisions"
+#~ msgstr ""
+
+#~ msgid "Collision settings."
+#~ msgstr "Réglages de collision."
+
+#~ msgid ""
+#~ "In the Properties editor, *Object* tab"
+#~ " and *Physics* tab, locate the "
+#~ "*Collision* panel shown to the right."
+#~ " It is also important to note "
+#~ "that this collision panel is used "
+#~ "to tell all simulations that this "
+#~ "object is to participate in "
+#~ "colliding/deflecting other objects on a "
+#~ "shared layer (particles, soft bodies, "
+#~ "and cloth)."
+#~ msgstr ""
+#~ "Dans l'éditeur *Properties*, onglet *Object*"
+#~ " et onglet *Physics*, repérez le "
+#~ "panneau *Collision* à droite. C'est "
+#~ "aussi important de noter que ce "
+#~ "panneau *Collision* est utilisé pour "
+#~ "informer toutes les simulations que cet"
+#~ " objet doit participer dans la "
+#~ "collision/déviation d'autres objets dans un"
+#~ " calque partagé (particules, corps souples,"
+#~ " et tissu)."
+
+#~ msgid "Mesh Object Modifier Stack"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The object's shape deforms the cloth,"
+#~ " so the cloth simulation must know"
+#~ " the \"true\" shape of that mesh "
+#~ "object at that frame. This true "
+#~ "shape is the basis shape as "
+#~ "modified by shape keys or armatures. "
+#~ "Therefore, the Collision Modifier must "
+#~ "be **after** any of those. The "
+#~ "image to the right shows the "
+#~ "*Modifiers* panel for the Character mesh"
+#~ " object (not the cloth object)."
+#~ msgstr ""
+#~ "La forme de l'objet déforme le "
+#~ "tissu, aussi la simulation de tissu "
+#~ "doit connaître la \"vraie\" forme de "
+#~ "cet objet mesh dans cette trame. "
+#~ "Cette vraie forme est la forme de"
+#~ " base modifiée par les clés de "
+#~ "forme ou les armatures. Ainsi, le "
+#~ "Modificateur Collision doit être **après** "
+#~ "tout autre. L'image à droite montre "
+#~ "le panneau *Modifiers* pour l'objet mesh"
+#~ " Personnage (pas l'objet Cloth)."
+
+#~ msgid "Cloth Cache"
+#~ msgstr ""
+
+#~ msgid ":menuselection:`Physics --> Cloth Cache`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Cache settings for cloth are the "
+#~ "same as with other dynamic systems. "
+#~ "See :doc:`Particle Cache "
+#~ "</physics/particles/emitter/cache>` for details."
+#~ msgstr ""
+#~ "Les réglages de cache sont les "
+#~ "mêmes qu'avec les autres systèmes "
+#~ "dynamiques. Voir :doc:`Cache de particules "
+#~ "</physics/particles/emitter/cache>` pour les "
+#~ "détails."
+
+#~ msgid "Bake Collision"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After you have set up the "
+#~ "deflection mesh for the frame range "
+#~ "you intend to run the simulation "
+#~ "(including animating that mesh *via* "
+#~ "armatures), you can now tell the "
+#~ "cloth simulation to compute (and avoid)"
+#~ " collisions. Select the cloth object "
+#~ "and in the *Object* tab, *Physics* "
+#~ "tab, set the *Start* and *End* "
+#~ "settings for the simulation frames you"
+#~ " wish to compute, and click the "
+#~ "*Bake* button."
+#~ msgstr ""
+#~ "Après avoir défini le maillage de "
+#~ "déflexion pour l'intervalle de trames "
+#~ "sur lequel vous avez l'intention de  "
+#~ "lancer la simulation (y compris "
+#~ "l'animation de ce maillage *via* des "
+#~ "armatures), vous pouvez maintenant demander"
+#~ " à la simulation de tissu de "
+#~ "calculer (et d'éviter) les collisions. "
+#~ "Sélectionnez l'objet cloth et dans "
+#~ "l'onglet *Object*, onglet *Physics*, "
+#~ "définissez les réglages de *Start* et"
+#~ " de *End* pour les trames de "
+#~ "simulation que vous souhaitez calculer, "
+#~ "et cliquez sur le bouton *Bake*."
+
+#~ msgid ""
+#~ "You cannot change *Start* or *End* "
+#~ "without clearing the bake simulation. "
+#~ "When the simulation has finished, you"
+#~ " will notice you have the option "
+#~ "to free the bake, edit the bake"
+#~ " and re-bake:"
+#~ msgstr ""
+#~ "Vous ne pouvez pas modifier *Start* "
+#~ "ou *End* sans effacer la simulation "
+#~ "précalculée. Quand la simulation est "
+#~ "terminée, vous noterez que vous avez "
+#~ "l'option de libérer le précalcul, "
+#~ "d'éditer le précalcul et de précalculer"
+#~ " une nouvelle fois : "
+
+#~ msgid ""
+#~ "There are a few things you will"
+#~ " probably notice right away. First, "
+#~ "it will bake significantly slower than"
+#~ " before, and it will probably clip"
+#~ " through the box pretty badly as "
+#~ "in the picture on the right."
+#~ msgstr ""
+#~ "Il y a quelques objets que vous"
+#~ " remarquerez probablement immédiatement. D'abord,"
+#~ " il va précalculer plus lentement "
+#~ "qu'avant, et il va probablement  comme"
+#~ " dans l'image à droite."
+
+#~ msgid "Editing the Cached Simulation"
+#~ msgstr "Édition de la simulation en cache."
+
+#~ msgid ""
+#~ "The cache contains the shape of "
+#~ "the mesh at each frame. You can"
+#~ " edit the cached simulation, after "
+#~ "you have baked the simulation and "
+#~ "pressed the *Bake Editing* button. Just"
+#~ " go to the frame you want to"
+#~ " fix and :kbd:`Tab` into *Edit Mode*."
+#~ " There you can move your vertices "
+#~ "using all of Blender's mesh shaping "
+#~ "tools. When you exit, the shape of"
+#~ " the mesh will be recorded for "
+#~ "that frame of the animation. If "
+#~ "you want Blender to resume the "
+#~ "simulation using the new shape going "
+#~ "forward, :kbd:`LMB` click *Rebake from "
+#~ "next Frame* and play the animation. "
+#~ "Blender will then pick up with "
+#~ "that shape and resume the simulation."
+#~ msgstr ""
+#~ "Le cache contient la forme du "
+#~ "maillage dans chaque trame. Vous pouvez"
+#~ " éditer la simulation en cache, après"
+#~ " avoir précalculé la simulation et "
+#~ "pressé le bouton *Bake Editing*. Allez"
+#~ " simplement à la trame que vous "
+#~ "voulez corriger et :kbd:`Tab` pour "
+#~ "entrer en *Mode Édition*. Là vous "
+#~ "pouvez déplacer vos sommets en utilisant"
+#~ " tous les outils de modelage de "
+#~ "maillage dans Blender. Lorsque vous "
+#~ "sortez, la forme du maillage sera "
+#~ "enregistrée pour cette trame de "
+#~ "l'animation. Si vous voulez que Blender"
+#~ " reprenne la simulation en utilisant "
+#~ "la nouvelle forme, :kbd:`LMB` cliquez "
+#~ "*Rebake from next Frame* et lisez "
+#~ "l'animation. Blender va alors reprendre "
+#~ "cette forme pour la suite de "
+#~ "l'animation.  "
+
+#~ msgid ""
+#~ "Edit the mesh to correct minor "
+#~ "tears and places where the colliding "
+#~ "object has punctured the cloth."
+#~ msgstr ""
+#~ "Éditez le maillage pour corriger les "
+#~ "déchirures mineures et les endroits où"
+#~ " l'objet de collision a perforé le"
+#~ " tissu.  "
+
+#~ msgid ""
+#~ "If you add, delete, or extrude "
+#~ "vertices in the mesh, Blender will "
+#~ "take the new mesh as the starting"
+#~ " shape of the mesh back to the"
+#~ " *first frame* of the animation, "
+#~ "replacing the original shape you started"
+#~ " with, up to the frame you were"
+#~ " on when you edited the mesh. "
+#~ "Therefore, if you change the content "
+#~ "of a mesh, when you press "
+#~ ":kbd:`Tab` out of *Edit Mode*, you "
+#~ "should unprotect and clear the cache "
+#~ "so that Blender will make a "
+#~ "consistent simulation."
+#~ msgstr ""
+#~ "Si vous ajoutez, supprimez ou extrudez"
+#~ " des sommets dans le maillage, "
+#~ "Blender prendra le nouveau maillage "
+#~ "comme forme de départ du maillage "
+#~ "en remontant jusqu'à la *première trame*"
+#~ " de l'animation, remplaçant la forme "
+#~ "d'origine avec laquelle vous avez "
+#~ "commencé, jusqu'à la trame sur laquelle"
+#~ " vous êtes au moment de l'édition "
+#~ "du maillage. Par conséquent, si vous "
+#~ "modifiez le contenu du maillage, quand"
+#~ " vous pressez :kbd:`Tab` en dehors du"
+#~ " *Mode Édition*, vous devriez déprotéger"
+#~ " et effacer le cache afin que "
+#~ "Blender fasse une simulation cohérente."
+
+#~ msgid ""
+#~ "The Cloth is torn by the deforming"
+#~ " mesh -- he \"Hulks Out\": Increase"
+#~ " its structural stiffness (*Structure "
+#~ "Stiffness* setting, *Cloth* panel), very "
+#~ "high, like 1000."
+#~ msgstr ""
+#~ "Le tissu est déchiré par le "
+#~ "maillage de déformation -- à la "
+#~ "manière de Hulk : augmentez sa "
+#~ "raideur structurale (réglage *Structure "
+#~ "Stiffness*, panneau *Cloth*), très fortement,"
+#~ " comme 1000."
+
+#~ msgid "Subdivision Surface Modifier"
+#~ msgstr "Modificateur Subdivision Surface"
+
+#~ msgid ""
+#~ "A bake/cache is done for every "
+#~ "subdivision level so please use **the"
+#~ " equal** subdivision level for render "
+#~ "and preview."
+#~ msgstr ""
+#~ "Un précalcul/cache est réalisé pour "
+#~ "chaque niveau de subdivision, aussi "
+#~ "veuillez utiliser le **même** niveau de"
+#~ " subdivision pour le rendu et la "
+#~ "prévisualisation."
 

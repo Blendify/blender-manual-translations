@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2017-11-02 19:22+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -163,7 +163,7 @@ msgstr "Знищити Частинки -- Kill Particles"
 msgid "Deletes Particles upon impact."
 msgstr "Видаляє частинки при зіткненні."
 
-#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:77
+#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:97
 #, fuzzy
 msgid "Damping"
 msgstr "Випадкове згасання -- Random damping"
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Random variation of damping."
 msgstr "Випадкове варіювання згасання."
 
-#: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:97
+#: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:117
 #, fuzzy
 msgid "Friction"
 msgstr "Випадкове тертя -- Random friction"
@@ -193,29 +193,50 @@ msgstr "Тертя у ході пересувів частинок по пове
 msgid "Random variation of friction."
 msgstr "Випадкове варіювання тертя."
 
-#: ../../manual/physics/collision.rst:70
+#: ../../manual/physics/collision.rst:72
 #, fuzzy
-msgid "Soft body and Cloth"
+msgid "Soft Body and Cloth"
 msgstr "М'яке Тіло і Тканина -- Soft Body and Cloth"
 
-#: ../../manual/physics/collision.rst:73
-msgid "Damping during a collision. The amount of bounce that surfaces will have."
+#: ../../manual/physics/collision.rst:74
+msgid ""
+"It is also important to note that this collision panel is used to tell "
+"all simulations that this object is to participate in "
+"colliding/deflecting other objects on a shared layer (particles, soft "
+"bodies, and cloth)."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:76
+#: ../../manual/physics/collision.rst:80
+msgid ""
+"The object's shape deforms the cloth, so the cloth simulation must be "
+"inputted the \"true\" shape of that mesh object at that frame. This true "
+"shape is the basis shape as modified by shape keys or armatures. "
+"Therefore, the Collision Modifier must be **after** any of those. The "
+"image to the right shows the *Modifiers* panel for the Character mesh "
+"object (not the cloth object)."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:93
+#, fuzzy
+msgid ""
+"Damping during a collision. The amount of bounce that the surfaces will "
+"have."
+msgstr "Згасання у ході зіткнення (не залежить від скорості частинок)."
+
+#: ../../manual/physics/collision.rst:96
 msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:77
+#: ../../manual/physics/collision.rst:97
 msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:87
+#: ../../manual/physics/collision.rst:107
 #, fuzzy
 msgid "Thickness"
 msgstr "Липкість -- Stickiness"
 
-#: ../../manual/physics/collision.rst:80
+#: ../../manual/physics/collision.rst:100
 msgid ""
 "A padding distance is added to the inside and outside of each face, to "
 "help to prevent intersections. The soft body will come to rest at this "
@@ -224,52 +245,52 @@ msgid ""
 "collision-soft-plane`."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:84
+#: ../../manual/physics/collision.rst:104
 msgid "Outer"
 msgstr "Зовнішньо -- Outer"
 
-#: ../../manual/physics/collision.rst:85
+#: ../../manual/physics/collision.rst:105
 msgid "Size of the outer collision zone."
 msgstr "Розмір зони зіткнення зовні."
 
-#: ../../manual/physics/collision.rst:87
+#: ../../manual/physics/collision.rst:107
 msgid "Inner"
 msgstr "Внутрішньо -- Inner"
 
-#: ../../manual/physics/collision.rst:87
+#: ../../manual/physics/collision.rst:107
 msgid "Size of the inner collision zone (padding distance)."
 msgstr "Розмір зони зіткнення внутрішньо (відстань набивки)."
 
-#: ../../manual/physics/collision.rst:94
+#: ../../manual/physics/collision.rst:114
 #, fuzzy
 msgid "A soft body vertex colliding with a plane."
 msgstr "Зіткнення м'якого тіла з площиною."
 
-#: ../../manual/physics/collision.rst:97
+#: ../../manual/physics/collision.rst:117
 msgid "Friction for cloth collisions."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:100
+#: ../../manual/physics/collision.rst:120
 msgid "Single Sided"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:100
+#: ../../manual/physics/collision.rst:120
 msgid ""
 "When enabled, cloth collisions are only performed on the normal side of "
 "the collider plane."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:103
+#: ../../manual/physics/collision.rst:123
 msgid "Override Normals"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:103
+#: ../../manual/physics/collision.rst:123
 msgid ""
 "When enabled, cloth collision impulses act in the direction of the "
 "collider normals."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:105
+#: ../../manual/physics/collision.rst:125
 #, fuzzy
 msgid ""
 "*Soft body* collisions are difficult to get perfect. If one of the "
@@ -281,16 +302,16 @@ msgstr ""
 "Дивіться також підрозділ про м'які тіла тут -- :doc:`Soft Bodies "
 "</physics/soft_body/index>`."
 
-#: ../../manual/physics/collision.rst:110
+#: ../../manual/physics/collision.rst:130
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../manual/physics/collision.rst:114
+#: ../../manual/physics/collision.rst:134
 #, fuzzy
 msgid "Deflected particles."
 msgstr "Відхилені частинки."
 
-#: ../../manual/physics/collision.rst:116
+#: ../../manual/physics/collision.rst:136
 #, fuzzy
 msgid ""
 "Here is a *Meta* object, using instancing verts to a particle system "
@@ -299,11 +320,11 @@ msgstr ""
 "Тут є об'єкт типу *Meta*, дубль-вершинений в емітування вниз системи "
 "частинок, та відхилений сітьовим кубом:"
 
-#: ../../manual/physics/collision.rst:120
+#: ../../manual/physics/collision.rst:140
 msgid "Hints"
 msgstr "Поради"
 
-#: ../../manual/physics/collision.rst:122
+#: ../../manual/physics/collision.rst:142
 msgid ""
 "Make sure that the normals of the mesh surface are facing towards the "
 "particles/points for correct deflection."
@@ -311,7 +332,7 @@ msgstr ""
 "Переконайтеся, що нормалі поверхні сіті вказують у напрямку "
 "частинок/точок для коректного відхиляння."
 
-#: ../../manual/physics/collision.rst:123
+#: ../../manual/physics/collision.rst:143
 msgid ""
 "Hair particles react directly to force fields, so if you use a force "
 "field with a short range you do not need necessarily collision."
@@ -320,7 +341,7 @@ msgstr ""
 "вживаєте силове поле з коротким діапазоном, то вам необов'язково мати "
 "зіткнення."
 
-#: ../../manual/physics/collision.rst:125
+#: ../../manual/physics/collision.rst:145
 msgid ""
 "Hair particles avoid their emitting mesh if you edit them in *Particle "
 "Edit Mode*. So you can at least model the hair with collision."
@@ -374,4 +395,9 @@ msgstr ""
 
 #~ msgid "Soft Body Damping"
 #~ msgstr "Згасання М'якого Тіла -- Soft Body Damping"
+
+#~ msgid ""
+#~ "Damping during a collision. The amount"
+#~ " of bounce that surfaces will have."
+#~ msgstr ""
 

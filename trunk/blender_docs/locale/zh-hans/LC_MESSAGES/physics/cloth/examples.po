@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-09-25 12:36+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -93,31 +93,90 @@ msgstr ""
 "现在，如果你从前一节中看到这里，你的布料很可能看起来有点粗糙。为了使它看起来像图片一样美观和平滑，您需要在 *修改器* "
 "选项卡中应用表面细分修改器。然后，在工具栏中，找到 *编辑* 面板并选择 *光滑*。"
 
-#: ../../manual/physics/cloth/examples.rst:43
-#, fuzzy
-msgid ""
-"Now, if you start playback, things are starting to look pretty nice, do "
-"not you think?"
-msgstr "现在，如果按下 :kbd:`Alt-A`，事情看起来美多了，你不觉得吗？"
-
-#: ../../manual/physics/cloth/examples.rst:47
+#: ../../manual/physics/cloth/examples.rst:45
 msgid "Cloth on Armature"
 msgstr "骨架上的布料"
 
-#: ../../manual/physics/cloth/examples.rst:49
+#: ../../manual/physics/cloth/examples.rst:47
 msgid ""
-"Cloth deformed by armature and also respecting an additional collision "
-"object: `Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
+"Clothing can be simulated and pinned to an armature. For example, a "
+"character could have a baggy tunic pinned to the character's waist with a"
+" belt."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:50
+msgid "The typical workflow for pinning:"
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:52
+msgid "Set the armature to its bind pose."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:53
+msgid "Model clothing that encloses but does not penetrate the character's mesh."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:54
+msgid ""
+"Parent the clothing objects to the armature. The armature will now have "
+"several child meshes bound to it."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:55
+msgid "Create a new vertex group on each cloth object for its pinned vertices."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:56
+msgid ""
+"Add vertices to be pinned to this vertex group and give these vertices "
+"non-zero weights (you probably want weight = 1). For example the belt "
+"area of the tunic would be in the vertex group and have weight one."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:59
+msgid ""
+"Designate the clothing objects as \"cloth\" in the Physics tab of the "
+"Properties editor. Make sure the Cloth Modifier is below the Armature "
+"Modifier in the modifier stack."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:61
+msgid "In the cloth Shape panel select the vertex group."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:62
+msgid "Add :doc:`collision physics </physics/collision>` to the character's mesh."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:63
+msgid ""
+"The clothing is now ready; non-pinned vertices will be under control of "
+"the Cloth modifier. Pinned vertices will be under control of the Armature"
+" modifier."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:68
+msgid ""
+"When animating or posing the character you must begin from the bind pose."
+" Move the character to its initial pose over several frames so the "
+"physics engine can simulate the clothing moving. Very fast movements and "
+"teleport jumps can break the physics simulation."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:72
+#, fuzzy
+msgid ""
+"`Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
 "regression-armature.blend>`__."
 msgstr ""
 "因骨架而变形并且还考虑到附加的碰撞物体的布料实例：`Regression blend-file "
 "<https://wiki.blender.org/wiki/File:Cloth-regression-armature.blend>`__."
 
-#: ../../manual/physics/cloth/examples.rst:54
+#: ../../manual/physics/cloth/examples.rst:76
 msgid "Cloth with Animated Vertex Groups"
 msgstr "带动画顶点组的布料"
 
-#: ../../manual/physics/cloth/examples.rst:56
+#: ../../manual/physics/cloth/examples.rst:78
 #, fuzzy
 msgid ""
 "Cloth with animated pinned vertices: `Regression blend-file "
@@ -130,11 +189,11 @@ msgstr ""
 "<https://wiki.blender.org/wiki/File:Cloth_anim_vertex.blend>`__. "
 "*不支持*：以0为目标并增加它，但顶点仍然未固定时不起作用（例如从目标=0到目标=0.5）。"
 
-#: ../../manual/physics/cloth/examples.rst:63
+#: ../../manual/physics/cloth/examples.rst:85
 msgid "Cloth with Dynamic Paint"
 msgstr "带动态绘画的布料"
 
-#: ../../manual/physics/cloth/examples.rst:65
+#: ../../manual/physics/cloth/examples.rst:87
 #, fuzzy
 msgid ""
 "Cloth with Dynamic Paint using animated vertex groups: `Regression blend-"
@@ -148,15 +207,15 @@ msgstr ""
 "<https://wiki.blender.org/wiki/File:Cloth_dynamic_paint.blendd>`__. "
 "*不支持*：以0为目标并增加它，但顶点仍然未固定时不起作用（例如从目标=0到目标=0.5）因为必要的“目标弹性”不能在漂浮中生成。"
 
-#: ../../manual/physics/cloth/examples.rst:72
+#: ../../manual/physics/cloth/examples.rst:94
 msgid "Using Cloth for Soft Bodies"
 msgstr "给软体使用布料"
 
-#: ../../manual/physics/cloth/examples.rst:77
+#: ../../manual/physics/cloth/examples.rst:99
 msgid "Using cloth for soft bodies."
 msgstr "给软体使用布料。"
 
-#: ../../manual/physics/cloth/examples.rst:79
+#: ../../manual/physics/cloth/examples.rst:101
 msgid ""
 "Cloth can also be used to simulate soft bodies. It is for sure not its "
 "main purpose but it works nonetheless. The example image uses standard "
@@ -165,7 +224,7 @@ msgstr ""
 "布料也可以被用来模拟软体。当然这不是它的主要目的不过也可以奏效。例图使用了标准的 *橡胶* 材料，没有什么花哨的设置，直接按 "
 ":kbd:`Alt-A`。"
 
-#: ../../manual/physics/cloth/examples.rst:84
+#: ../../manual/physics/cloth/examples.rst:106
 msgid ""
 "Blend-file for the example image: `Using Cloth for soft bodies "
 "<https://wiki.blender.org/wiki/File:Cloth-sb1.blend>`__."
@@ -173,15 +232,15 @@ msgstr ""
 "例图的blend文件：`Using Cloth for softbodies "
 "<https://wiki.blender.org/wiki/File:Cloth-sb1.blend>`__。"
 
-#: ../../manual/physics/cloth/examples.rst:89
+#: ../../manual/physics/cloth/examples.rst:111
 msgid "Cloth with Wind"
 msgstr "带风力的布料"
 
-#: ../../manual/physics/cloth/examples.rst:94
+#: ../../manual/physics/cloth/examples.rst:116
 msgid "Flag with wind applied."
 msgstr "应用了风力的旗子。"
 
-#: ../../manual/physics/cloth/examples.rst:96
+#: ../../manual/physics/cloth/examples.rst:118
 msgid ""
 "Regression blend-file for Cloth with wind and self-collisions (also the "
 "blend for the image above): `Cloth flag with wind and self-collisions "
@@ -231,4 +290,10 @@ msgstr ""
 #~ "带风力和自碰撞的blend文件（同样也是上图的blend文件）：`Cloth flag with "
 #~ "wind and selfcollisions "
 #~ "<https://wiki.blender.org/index.php/Media:Cloth-flag2.blend>`__。"
+
+#~ msgid ""
+#~ "Now, if you start playback, things "
+#~ "are starting to look pretty nice, "
+#~ "do not you think?"
+#~ msgstr "现在，如果按下 :kbd:`Alt-A`，事情看起来美多了，你不觉得吗？"
 

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-30 09:48+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2017-02-28 19:48+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -26,6 +26,22 @@ msgid "Sampling"
 msgstr "Сэмплирование"
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:6
+msgid "Reference"
+msgstr "Справка"
+
+#: ../../manual/render/cycles/render_settings/sampling.rst
+msgid "Panel"
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:9
+#, fuzzy
+msgid ":menuselection:`Render --> Sampling`"
+msgstr ""
+"Панель:    :menuselection:`Редактор свойств --> Визуализация --> "
+"Сэмплирование` (:menuselection:`Properties editor --> Render --> "
+"Sampling`)"
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:11
 msgid ""
 "The integrator is the rendering algorithm used to compute the lighting. "
 "Cycles currently supports a path tracing integrator with direct light "
@@ -38,7 +54,7 @@ msgstr ""
 " различных настроек освещения, но не очень подходит для каустик и прочего"
 " сложного освещения."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:11
+#: ../../manual/render/cycles/render_settings/sampling.rst:16
 msgid ""
 "Rays are traced from the camera into the scene, bouncing around until "
 "they find a light source such as a light, an object emitting light, or "
@@ -48,43 +64,24 @@ msgid ""
 "it) are used."
 msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:19
-msgid "Settings"
+#: ../../manual/render/cycles/render_settings/sampling.rst:39
+msgid "Integrator"
 msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:21
-msgid "Reference"
-msgstr "Справка"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst
-msgid "Panel"
-msgstr ""
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:24
+#: ../../manual/render/cycles/render_settings/sampling.rst:23
 #, fuzzy
-msgid ":menuselection:`Render --> Sampling`"
-msgstr ""
-"Панель:    :menuselection:`Редактор свойств --> Визуализация --> "
-"Сэмплирование` (:menuselection:`Properties editor --> Render --> "
-"Sampling`)"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:28
-msgid "Sample Method"
-msgstr "Интегратор"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:27
 msgid ""
-"There are two integrator modes that can be used: *Path Tracing* and "
+"There are two sample methods that can be used: *Path Tracing* and "
 "*Branched Path Tracing*."
 msgstr ""
 "Интегратор может использоваться в двух режимах: *Трассировка путей* и "
 "*Трассировка путей с расщеплением*."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:31
+#: ../../manual/render/cycles/render_settings/sampling.rst:28
 msgid "Path Tracing"
 msgstr "Трассировка путей"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:33
+#: ../../manual/render/cycles/render_settings/sampling.rst:26
 msgid ""
 "The *Path Tracing* integrator is a pure path tracer; at each hit it will "
 "bounce light in one direction and pick one light to receive lighting "
@@ -98,32 +95,10 @@ msgstr ""
 "избавиться от шума, обычно требуется довольно много сэмплов."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:39
-msgid "Render Samples"
-msgstr "Сэмплов визуализации"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:39
-msgid ""
-"Number of paths to trace for each pixel in the final render. As more "
-"samples are taken, the solution becomes less noisy and more accurate."
-msgstr ""
-"Количество путей для трассировки по каждому пикселю в окончательной "
-"визуализации. Чем больше сэмплов, тем более точным и менее зашумлённым "
-"будет результат."
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:43
-msgid "Preview Samples"
-msgstr "Сэмплов предпросмотра"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:42
-#: ../../manual/render/cycles/render_settings/sampling.rst:61
-msgid "Number of samples for viewport rendering."
-msgstr "Количество сэмплов для визуализации в области просмотра."
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:46
 msgid "Branched Path Tracing"
 msgstr "Трассировка путей с расщеплением"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:48
+#: ../../manual/render/cycles/render_settings/sampling.rst:31
 msgid ""
 "The non-progressive Branched Path Tracing integrator offers finer control"
 " over sampling. It is similar to *Path Tracing*, but at the first hit it "
@@ -136,12 +111,13 @@ msgstr ""
 "различные компоненты поверхности и при затенении будет принимать во "
 "внимание все источники света, а не один."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:52
+#: ../../manual/render/cycles/render_settings/sampling.rst:35
+#, fuzzy
 msgid ""
 "This makes each sample slower, but will reduce noise, especially in "
 "scenes dominated by direct or one-bounce lighting. To get the same number"
 " of diffuse samples as in the path tracing integrator, note that e.g. 250"
-" path tracing samples = 10 AA samples x 25 diffuse samples. The Sampling "
+" path tracing samples = 10 AA Samples x 25 diffuse samples. The Sampling "
 "panel shows this total number of samples."
 msgstr ""
 "Из-за этого сэмплы считаются медленнее, но с меньшим количеством шумов, "
@@ -153,154 +129,133 @@ msgstr ""
 "сглаживания x 25 диффузных сэмплов. Панель *Семплирование* показывает "
 "именно это общее количество сэмплов."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:58
-msgid "AA Render Samples"
-msgstr "Сглаживающих сэмплов визуализации"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:59
-#, fuzzy
-msgid ""
-"Number of samples to take for each pixel in the final render. More "
-"samples will improve anti-aliasing."
+#: ../../manual/render/cycles/render_settings/sampling.rst:45
+msgid "Render"
 msgstr ""
-"Количество сглаживающих сэмплов, визуализируемых для каждого пикселя в "
-"окончательной визуализации. Большее количество сэмплов даёт лучшее "
-"сглаживание."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:61
-msgid "AA Preview Samples"
-msgstr "Сглаживающих сэмплов предпросмотра"
+#: ../../manual/render/cycles/render_settings/sampling.rst:42
+msgid ""
+"Number of paths to trace for each pixel in the final render. As more "
+"samples are taken, the solution becomes less noisy and more accurate."
+msgstr ""
+"Количество путей для трассировки по каждому пикселю в окончательной "
+"визуализации. Чем больше сэмплов, тем более точным и менее зашумлённым "
+"будет результат."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:63
-msgid "Diffuse Samples"
-msgstr "Диффузных сэмплов"
+#: ../../manual/render/cycles/render_settings/sampling.rst:45
+msgid ""
+"When using *Branched Path Tracing*, this changes the *AA Samples* which "
+"are multiplied by the `Sub Samples`_ and improve anti-aliasing."
+msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:64
+#: ../../manual/render/cycles/render_settings/sampling.rst:49
+msgid "Viewport"
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:48
+msgid "Number of samples for viewport rendering."
+msgstr "Количество сэмплов для визуализации в области просмотра."
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:52
+#, fuzzy
+msgid "Sub Samples"
+msgstr "Сэмплов AO"
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:54
+msgid "The panel is visible only when using *Branched Path Tracing*."
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:56
+msgid "Diffuse"
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:57
 msgid "Number of diffuse bounce samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов диффузных отскоков, визуализируемых для каждого "
 "сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:65
-msgid "Glossy Samples"
-msgstr "Сэмплов глянца"
+#: ../../manual/render/cycles/render_settings/sampling.rst:58
+msgid "Glossy"
+msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:66
+#: ../../manual/render/cycles/render_settings/sampling.rst:59
 msgid "Number of glossy bounce samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов глянцевых отскоков, визуализируемых для каждого "
 "сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:67
-msgid "Transmission Samples"
+#: ../../manual/render/cycles/render_settings/sampling.rst:60
+#, fuzzy
+msgid "Transmission"
 msgstr "Сэмплов передачи"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:68
+#: ../../manual/render/cycles/render_settings/sampling.rst:61
 msgid "Number of transmission bounce samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов отскоков передачи, визуализируемых для каждого "
 "сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:69
-msgid "AO Samples"
-msgstr "Сэмплов AO"
+#: ../../manual/render/cycles/render_settings/sampling.rst:62
+msgid "AO"
+msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:70
+#: ../../manual/render/cycles/render_settings/sampling.rst:63
 msgid "Number of ambient occlusion samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов ambient occlusion, визуализируемых для каждого "
 "сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:71
-msgid "Mesh Light Samples"
-msgstr "Сэмплов полисеток-ламп"
+#: ../../manual/render/cycles/render_settings/sampling.rst:64
+msgid "Mesh Light"
+msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:72
+#: ../../manual/render/cycles/render_settings/sampling.rst:65
 msgid "Number of mesh light samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов испускаемого света, визуализируемых для каждого "
 "сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:73
-msgid "Subsurface Samples"
+#: ../../manual/render/cycles/render_settings/sampling.rst:66
+#, fuzzy
+msgid "Subsurface"
 msgstr "Сэмплов подповерхностного рассеивания"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:74
+#: ../../manual/render/cycles/render_settings/sampling.rst:67
 msgid "Number of subsurface scattering samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов подповерхностного рассеяния, визуализируемых для "
 "каждого сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:76
-msgid "Volume Samples"
-msgstr "Сэмплов объёма"
+#: ../../manual/render/cycles/render_settings/sampling.rst:70
+msgid "Volume"
+msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:76
+#: ../../manual/render/cycles/render_settings/sampling.rst:69
 msgid "Number of volume scattering samples to take for each AA sample."
 msgstr ""
 "Количество сэмплов рассеивания в объёме, визуализируемых для каждого "
 "сглаживающего сэмпла."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:79
-msgid "Sample All Direct Lights"
-msgstr "Сэмплировать весь прямой свет"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:79
-#, fuzzy
-msgid ""
-"When enabled, Cycles will sample all lights in the scene for direct "
-"bounces, instead of randomly picking one. Disabling this can improve the "
-"performance, when using a lot of AA Samples anyway, to clear up the "
-"render."
-msgstr ""
-"Когда этот параметр включён, Cycles при прямых отскоках будет выбирать "
-"все источники света в сцене, вместо выбора одного из них случайным "
-"образом. Отключение этого параметра может повысить производительность. В "
-"любом случае, при использовании большого количества сэмплов сглаживания, "
-"шумов на визуализации будет мало."
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:83
-msgid "Sample All Indirect Lights"
-msgstr "Сэмплировать весь непрямой свет"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:82
-#, fuzzy
-msgid ""
-"Similar to direct light, but for indirect lights. This can reduce noise "
-"in scenes with many lights."
-msgstr ""
-"Работает аналогично сэмплированию всего прямого света, только для "
-"непрямых источников освещения. Он может уменьшить шум в сценах с большим "
-"количеством источников света."
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:86
+#: ../../manual/render/cycles/render_settings/sampling.rst:73
 msgid "Advanced"
 msgstr ""
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:88
-msgid "Square Samples"
-msgstr "Возвести сэмплы в квадрат"
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:89
-#, fuzzy
-msgid "Square the amount of samples."
-msgstr "Возводит количество сэмплов в квадрат."
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:96
+#: ../../manual/render/cycles/render_settings/sampling.rst:81
 msgid "Seed"
 msgstr "Вариация"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:91
+#: ../../manual/render/cycles/render_settings/sampling.rst:76
 msgid "Seed value for integrator to get different noise patterns."
 msgstr ""
 "Начальное значение генератора случайных чисел в интеграторе для получения"
 " различных структур шума."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:96
+#: ../../manual/render/cycles/render_settings/sampling.rst:81
 msgid "Animate Seed (clock icon)"
 msgstr "Вариация анимации (иконка часов)"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:94
+#: ../../manual/render/cycles/render_settings/sampling.rst:79
 #, fuzzy
 msgid ""
 "This button, which can be found on the right side of the *Seed* value, "
@@ -313,34 +268,19 @@ msgstr ""
 "значений. Хорошо бы включить её при производстве анимации, поскольку в "
 "реальном мире каждый кадр имеет отличный от других шаблон шума."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:107
-msgid "Light Sampling Threshold"
-msgstr ""
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:101
-msgid ""
-"Probabilistically terminates light samples when the light contribution is"
-" below this threshold (more noise but faster rendering). Zero disables "
-"the test and never ignores lights. This is useful because in large scenes"
-" with many light sources, some might only contribute a small amount to "
-"the final image, and increase render times. Using this setting can "
-"decrease the render times needed to calculate the rays which in the end "
-"have very little affect on the image."
-msgstr ""
-
-#: ../../manual/render/cycles/render_settings/sampling.rst:118
+#: ../../manual/render/cycles/render_settings/sampling.rst:92
 msgid "Pattern"
 msgstr "Шаблон"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:110
+#: ../../manual/render/cycles/render_settings/sampling.rst:84
 msgid "Random sampling pattern used by the integrator."
 msgstr "Шаблон, по которому отбираются случайные места в интеграторе."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:113
+#: ../../manual/render/cycles/render_settings/sampling.rst:87
 msgid "Sobol"
 msgstr "Соболь"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:113
+#: ../../manual/render/cycles/render_settings/sampling.rst:87
 #, fuzzy
 msgid ""
 "Uses a Sobol pattern to decide the random sampling pattern used by the "
@@ -353,11 +293,11 @@ msgstr ""
 "последовательности Соболя смотрите в `Википедии "
 "<https://en.wikipedia.org/wiki/Sobol_sequence>`__ (на английском языке)."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:118
+#: ../../manual/render/cycles/render_settings/sampling.rst:92
 msgid "Correlated Multi-Jitter"
 msgstr "Коррелированное множественное дрожание"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:116
+#: ../../manual/render/cycles/render_settings/sampling.rst:90
 #, fuzzy
 msgid ""
 "Uses a Correlated Multi-Jitter pattern to decide the random sampling "
@@ -371,11 +311,95 @@ msgstr ""
 "<http://graphics.pixar.com/library/MultiJitteredSampling/paper.pdf>`__ от"
 " Pixar (на английском языке)."
 
+#: ../../manual/render/cycles/render_settings/sampling.rst:95
+msgid "Square Samples"
+msgstr "Возвести сэмплы в квадрат"
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:95
+#, fuzzy
+msgid "Square the amount of samples."
+msgstr "Возводит количество сэмплов в квадрат."
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:101
+msgid "Min Light Bounces"
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:98
+msgid ""
+"Minimum number of light bounces for each path, after which the integrator"
+" uses Russian Roulette to terminate paths that contribute less to the "
+"image. Setting this higher gives less noise, but may also increase render"
+" time considerably. For a low number of bounces, it is strongly "
+"recommended to set this equal to the maximum number of bounces."
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:105
+msgid "Min Transparent Bounces"
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:104
+msgid ""
+"Minimum number of transparent bounces. Setting this higher reduces noise "
+"in the first bounces, but can also be less efficient for more complex "
+"geometry like hair and volumes."
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:114
+msgid "Light Threshold"
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:108
+msgid ""
+"Probabilistically terminates light samples when the light contribution is"
+" below this threshold (more noise but faster rendering). Zero disables "
+"the test and never ignores lights. This is useful because in large scenes"
+" with many light sources, some might only contribute a small amount to "
+"the final image, and increase render times. Using this setting can "
+"decrease the render times needed to calculate the rays which in the end "
+"have very little affect on the image."
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:120
+msgid "Sample All Direct Lights"
+msgstr "Сэмплировать весь прямой свет"
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:117
+#, fuzzy
+msgid ""
+"When enabled, Cycles will sample all lights in the scene for direct "
+"bounces, instead of randomly picking one. Disabling this can improve the "
+"performance, but will need a lot of *Samples*, to clear up the render."
+msgstr ""
+"Когда этот параметр включён, Cycles при прямых отскоках будет выбирать "
+"все источники света в сцене, вместо выбора одного из них случайным "
+"образом. Отключение этого параметра может повысить производительность. В "
+"любом случае, при использовании большого количества сэмплов сглаживания, "
+"шумов на визуализации будет мало."
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:120
+#: ../../manual/render/cycles/render_settings/sampling.rst:125
+msgid "Visible only when using *Branched Path Tracing*."
+msgstr ""
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:126
+msgid "Sample All Indirect Lights"
+msgstr "Сэмплировать весь непрямой свет"
+
+#: ../../manual/render/cycles/render_settings/sampling.rst:123
+#, fuzzy
+msgid ""
+"Similar to direct light, but for indirect lights. This can reduce noise "
+"in scenes with many lights."
+msgstr ""
+"Работает аналогично сэмплированию всего прямого света, только для "
+"непрямых источников освещения. Он может уменьшить шум в сценах с большим "
+"количеством источников света."
+
 #: ../../<generated>:1
 msgid "Layer Samples"
 msgstr "Сэмплы слоёв"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:123
+#: ../../manual/render/cycles/render_settings/sampling.rst:131
 msgid ""
 "When render layers have per layer number of samples set, this option "
 "specifies how to use them."
@@ -384,20 +408,20 @@ msgstr ""
 "количество сэмплов, этот параметр определяет, как именно нужно "
 "использовать эти сэмплы."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:125
+#: ../../manual/render/cycles/render_settings/sampling.rst:133
 msgid "Use"
 msgstr "Включить"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:126
+#: ../../manual/render/cycles/render_settings/sampling.rst:134
 #, fuzzy
 msgid "The render layer samples will override the set scene samples."
 msgstr "Ограничить послойное количество сэмплов глобальным количеством."
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:127
+#: ../../manual/render/cycles/render_settings/sampling.rst:135
 msgid "Bounded"
 msgstr "С ограничением"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:128
+#: ../../manual/render/cycles/render_settings/sampling.rst:136
 msgid "Bound render layer samples by scene samples."
 msgstr "Ограничить послойное количество сэмплов глобальным количеством."
 
@@ -405,7 +429,7 @@ msgstr "Ограничить послойное количество сэмпл�
 msgid "Ignore"
 msgstr "Игнорировать"
 
-#: ../../manual/render/cycles/render_settings/sampling.rst:130
+#: ../../manual/render/cycles/render_settings/sampling.rst:138
 msgid "Ignore render layer sample settings."
 msgstr "Игнорировать послойные значения сэмплов."
 
@@ -959,4 +983,47 @@ msgstr "Игнорировать послойные значения сэмпл�
 #~ "<render-cycles-reducing-noise-clamp-"
 #~ "samples>`, чтобы увидеть примеры использования"
 #~ " этих параметров."
+
+#~ msgid "Settings"
+#~ msgstr ""
+
+#~ msgid "Sample Method"
+#~ msgstr "Интегратор"
+
+#~ msgid "Render Samples"
+#~ msgstr "Сэмплов визуализации"
+
+#~ msgid "Preview Samples"
+#~ msgstr "Сэмплов предпросмотра"
+
+#~ msgid "AA Render Samples"
+#~ msgstr "Сглаживающих сэмплов визуализации"
+
+#~ msgid ""
+#~ "Number of samples to take for each"
+#~ " pixel in the final render. More "
+#~ "samples will improve anti-aliasing."
+#~ msgstr ""
+#~ "Количество сглаживающих сэмплов, визуализируемых "
+#~ "для каждого пикселя в окончательной "
+#~ "визуализации. Большее количество сэмплов даёт"
+#~ " лучшее сглаживание."
+
+#~ msgid "AA Preview Samples"
+#~ msgstr "Сглаживающих сэмплов предпросмотра"
+
+#~ msgid "Diffuse Samples"
+#~ msgstr "Диффузных сэмплов"
+
+#~ msgid "Glossy Samples"
+#~ msgstr "Сэмплов глянца"
+
+#~ msgid "Mesh Light Samples"
+#~ msgstr "Сэмплов полисеток-ламп"
+
+#~ msgid "Volume Samples"
+#~ msgstr "Сэмплов объёма"
+
+#~ msgid "Light Sampling Threshold"
+#~ msgstr ""
 

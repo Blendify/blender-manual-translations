@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-30 09:48+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2019-04-14 18:28+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -85,6 +85,7 @@ msgstr ""
 "*Distance* spécifie où l'influence de la lumière sera définie à 0."
 
 #: ../../manual/render/eevee/lighting.rst:33
+#: ../../manual/render/eevee/lighting.rst:87
 msgid "Distance"
 msgstr ""
 
@@ -100,21 +101,179 @@ msgstr ""
 msgid "The light's *Power*/*Strength* affect both specular and diffuse light."
 msgstr ""
 
-#: ../../manual/render/eevee/lighting.rst:45
+#: ../../manual/render/eevee/lighting.rst:47
 msgid "Shadows"
 msgstr ""
 
-#: ../../manual/render/eevee/lighting.rst:47
-msgid ""
-"All lights can cast shadows, see :doc:`shadow settings "
-"</render/eevee/render_settings/shadows>`."
+#: ../../manual/render/eevee/lighting.rst:50
+msgid "Common Parameters"
 msgstr ""
 
-#: ../../manual/render/eevee/lighting.rst:51
-msgid "Limitations"
+#: ../../manual/render/eevee/lighting.rst:55
+msgid "Clip"
 msgstr ""
 
 #: ../../manual/render/eevee/lighting.rst:53
+msgid ""
+"Distance from the light object at which the shadow map starts and ends. "
+"Any object before this distance will not appear to cast shadows. *Clip "
+"End* will only appear for sun lights."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:61
+msgid "Soft"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:58
+msgid ""
+"Size of the filter applied to the shadow map. This filter size is "
+"independent of the shadow map resolution. Higher filter size can have a "
+"big impact on performance. There is a maximum cap to filter size (in "
+"pixels) that depends on shadow resolution."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:64
+#: ../../manual/render/eevee/lighting.rst:94
+msgid "Bias"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:64
+msgid "Bias applied to the depth test to reduce self shadowing artifacts."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:67
+msgid "Exponent"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:67
+msgid "Exponent applied to ESM to reduce light leaking."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:71
+msgid "Bleed Bias"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:70
+msgid "Bias applied to VSM to reduce light leaking."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:74
+msgid "Contact Shadows"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:76
+msgid ""
+"This type of shadow exists to fix light leaking caused by bias or shadow "
+"map undersampling. It uses the depth buffer to find occluders (just like "
+"Screen Space Reflections). However, just like Screen Space Reflections it"
+" has the same limitations, namely, unknown object thickness and effect "
+"disappearing at screen edges."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:83
+msgid ""
+"The distance of action of Contact Shadows should remain quite small. They"
+" are not accurate enough to shadow the entire scene."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:87
+msgid "World space distance in which to search for screen space occluder."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:91
+msgid "Softness"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:90
+msgid ""
+"Controls how soft the contact shadows will be. Contact shadow blurring "
+"does not match a light's physical size."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:94
+msgid "Bias applied to the ray tracing to reduce self-shadowing artifacts."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:98
+msgid "Thickness"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:97
+msgid ""
+"Pixel thickness used to detect occlusion, treating any potential occluder"
+" as this thick."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:103
+msgid "Cascaded Shadow Map"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:105
+msgid ""
+"These special kind of shadow maps are used by Sun lights. This is because"
+" they can shadow large scenes by distributing multiple shadow maps over "
+"the frustum range. Each cascade covers a different portion of the view "
+"frustum. Do note that cascade shadow maps are always updated because they"
+" are view dependent. This means they have a high performance impact."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:113
+msgid ""
+"In orthographic view the cascades cover the whole depth range of the "
+"camera with an evenly distributed shadow precision."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:117
+msgid "Count"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:117
+msgid ""
+"Number of cascades to use. More cascades means better precision but a "
+"lower update rate."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:121
+msgid "Fade"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:120
+msgid ""
+"Fade transition area between two cascades. Higher values means less "
+"overall resolution because cascades need to overlap."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:126
+msgid "Max Distance"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:124
+msgid ""
+"Distance away from the view origin (or camera origin if in camera view) "
+"to cover by the cascade. If the view far clip distance is lower than Max "
+"Distance, the lowest of the two will be used. Only works in perspective "
+"view."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:129
+msgid "Distribution"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:129
+msgid ""
+"Puts more resolution towards the near clip plane. Only works in "
+"perspective view."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:131
+msgid ":ref:`Limitations <eevee-limitations-shadows>`."
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:135
+msgid "Limitations"
+msgstr ""
+
+#: ../../manual/render/eevee/lighting.rst:137
 #, fuzzy
 msgid ""
 "Unlike in Cycles, the *Size* of spot lights does not change the softness "
@@ -384,5 +543,11 @@ msgstr ""
 #~ msgid ""
 #~ "All lights can cast shadows, see "
 #~ ":doc:`shadow settings </render/eevee/shadows>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All lights can cast shadows, see "
+#~ ":doc:`shadow settings "
+#~ "</render/eevee/render_settings/shadows>`."
 #~ msgstr ""
 

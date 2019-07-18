@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-12-15 15:10+0100\n"
 "Last-Translator: Gorazd Gorup <gorupgorazd@gmail.com>\n"
 "Language: sl\n"
@@ -41,9 +41,9 @@ msgstr "Razveljavitev"
 #: ../../manual/interface/undo_redo.rst:17
 #: ../../manual/interface/undo_redo.rst:36
 #: ../../manual/interface/undo_redo.rst:51
-#: ../../manual/interface/undo_redo.rst:100
-#: ../../manual/interface/undo_redo.rst:128
-#: ../../manual/interface/undo_redo.rst:161
+#: ../../manual/interface/undo_redo.rst:108
+#: ../../manual/interface/undo_redo.rst:136
+#: ../../manual/interface/undo_redo.rst:169
 msgid "Reference"
 msgstr "Sklic"
 
@@ -54,9 +54,9 @@ msgstr "Način"
 #: ../../manual/interface/undo_redo.rst:20
 #: ../../manual/interface/undo_redo.rst:39
 #: ../../manual/interface/undo_redo.rst:54
-#: ../../manual/interface/undo_redo.rst:103
-#: ../../manual/interface/undo_redo.rst:131
-#: ../../manual/interface/undo_redo.rst:164
+#: ../../manual/interface/undo_redo.rst:111
+#: ../../manual/interface/undo_redo.rst:139
+#: ../../manual/interface/undo_redo.rst:172
 msgid "All Modes"
 msgstr "Vsi načini"
 
@@ -121,24 +121,22 @@ msgid ":kbd:`F9`"
 msgstr ":kbd:`F6`"
 
 #: ../../manual/interface/undo_redo.rst:58
+msgid ""
+"After an operation is complete you can tweak the parameters of the "
+"operation afterwards. In editors that support it, there is a \"head-up "
+"display\" panel in the bottom left based on the last performed operation;"
+" dependent on mode and context. Alternatively, you can create a pop-up "
+"with :kbd:`F9` does the same thing."
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:63
 #, fuzzy
 msgid ""
-":kbd:`F9` after an action will present you a context-sensitive pop-up "
-"menu based on your last action taken and the Mode and Editor in which "
-"Blender is being used."
-msgstr ""
-"*Redo Last* pomeni obnovitev zadnjega dejanje. Če po dejanju pritisnete "
-":kbd:`F6`, se bo pojavil kontekstni meni, katerega vsebina bo odvisna od "
-"vašega zadnjega dejanja in načina oz. urejevalnika, v katerem ste to "
-"dejanje storili."
-
-#: ../../manual/interface/undo_redo.rst:61
-msgid ""
-"For example, if your last action was a rotation in *Object Mode*, Blender"
-" will show you the last value changed for the angle (see Fig. :ref:`fig-"
-"interface-redo-last` left), where you can change your action back "
-"completely by typing :kbd:`Numpad0`. There are other useful options, "
-"based on your action context, and you cannot only Undo actions, but "
+"For example, if your last operation was a rotation in *Object Mode*, "
+"Blender will show you the last value changed for the angle (see Fig. :ref"
+":`fig-interface-redo-last-object-mode` left), where you can change your "
+"action back completely by typing :kbd:`Numpad0`. There are other useful "
+"options, based on the operator, and you cannot only Undo actions, but "
 "change them completely using the available options."
 msgstr ""
 "Kot primer privzemimo, da je bilo vaše zadnje dejanje rotiranje v načinu "
@@ -148,13 +146,15 @@ msgstr ""
 "uporabnih možnosti na podlagi konteksta vašega dejanja. Poleg "
 "razveljavitve dejanj jih lahko tudi popolnoma spremenite."
 
-#: ../../manual/interface/undo_redo.rst:67
+#: ../../manual/interface/undo_redo.rst:69
+#, fuzzy
 msgid ""
 "If you are in *Edit Mode*, Blender will also change its contents based on"
-" your last action taken. In our second example (at the right), the last "
-"action taken was a Vertex Move; we did a *Scale* on a Face, and, as you "
-"can see, the contents of the Pop-Up menu are different, because of your "
-"mode (Edit Mode) (See Fig. :ref:`fig-interface-redo-last` right)."
+" your last action taken. In the second example (at the right), the last "
+"operation was a Move in object mode; but a *Scale* on a Face in Edit "
+"mode, and, as you can see, the contents of *Adjust Last Operation* are "
+"different, because of the mode (Edit mode) (See Fig. :ref:`fig-interface-"
+"redo-last-edit-mode` right)."
 msgstr ""
 "Če ste v načinu *Edit Mode*, bo Blender spremenil svoj kontekst na "
 "podlagi vašega zadnjega dejanja. V spodnjem primeru (na desni) je bilo "
@@ -164,50 +164,48 @@ msgstr ""
 "<fig-interface-redo-last>`)."
 
 #: ../../manual/interface/undo_redo.rst:76
-msgid "Redo Last."
-msgstr "Obnovitev zadnjega dejanja."
+msgid "Adjust Last Operation."
+msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:81
-msgid "Redo Last -- Rotation (Object Mode, 60 degrees)."
+#: ../../manual/interface/undo_redo.rst:83
+#, fuzzy
+msgid "Rotation (Object Mode, 60 degrees)."
 msgstr "Redo Last -- Rotacija (Object Mode, 60 stopinj)."
 
-#: ../../manual/interface/undo_redo.rst:86
-msgid "Redo Last -- Scale (Edit Mode, Resize face)."
+#: ../../manual/interface/undo_redo.rst:90
+#, fuzzy
+msgid "Scale (Edit Mode, Resize face)."
 msgstr ""
 "Redo Last -- Sprememba velikosti (Edit Mode, spremenjena velikost "
 "ploskve)."
 
-#: ../../manual/interface/undo_redo.rst:88
-msgid "Operations using Redo Last"
-msgstr "Operacije, ki uporabljajo Redo Last"
-
-#: ../../manual/interface/undo_redo.rst:90
-#, fuzzy
+#: ../../manual/interface/undo_redo.rst:94
 msgid ""
-"Some operations produce particularly useful results if you tweak their "
-"parameters with the :kbd:`F9` Menu. Take, for example, adding a Circle. "
-"If you reduce the Vertex count to three, you get a perfect equilateral "
-"triangle."
+"Some operations produce particularly useful results by using *Adjust Last"
+" Operation*. For example, adding a Circle in the 3D Viewport; if you "
+"reduce the *Vertices* to three, you get a perfect equilateral triangle."
 msgstr ""
-"Nekatere operacije proizvedejo uporabne rezultate, če spremenite njihove "
-"parametre z menijem :kbd:`F6`. Za primer vzemimo dodajanje kroga "
-"(*Circle*). Če zmanjšate število ogljišč na tri, dobite popoln "
-"enakostranični trikotnik."
 
-#: ../../manual/interface/undo_redo.rst:98
+#: ../../manual/interface/undo_redo.rst:100
+msgid ""
+"The *Adjust Last Operation* region can be hidden by :menuselection:`View "
+"--> Adjust Last Operation`"
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:106
 msgid "Undo History"
 msgstr "Undo History"
 
-#: ../../manual/interface/undo_redo.rst:104
+#: ../../manual/interface/undo_redo.rst:112
 #, fuzzy
 msgid ":menuselection:`Edit --> Undo History`"
 msgstr ":menuselection:`Object/Object types --> Undo History`"
 
-#: ../../manual/interface/undo_redo.rst:109
+#: ../../manual/interface/undo_redo.rst:117
 msgid "The Undo History menu."
 msgstr "Meni Undo History."
 
-#: ../../manual/interface/undo_redo.rst:111
+#: ../../manual/interface/undo_redo.rst:119
 #, fuzzy
 msgid ""
 "There is also an Undo History of the last actions taken, recorded by "
@@ -216,7 +214,7 @@ msgstr ""
 "Za zadnje izvedeno dejanje obstaja tudi razveljavitvena zgodovina, ki jo "
 "Blender beleži. Do nje lahko dostopate s :kbd:`Ctrl-Alt-Z`."
 
-#: ../../manual/interface/undo_redo.rst:113
+#: ../../manual/interface/undo_redo.rst:121
 msgid ""
 "First positions correspond to most recent actions. A small icon of an eye"
 " next to one of the entries indicates the current status. Rolling back "
@@ -237,7 +235,7 @@ msgstr ""
 "novo spremembo, bo zgodovina okrajšana na tisti točki. Izbor enega izmed "
 "vnosov na seznamu nastavi trenutno stanje na takratni položaj."
 
-#: ../../manual/interface/undo_redo.rst:126
+#: ../../manual/interface/undo_redo.rst:134
 msgid "Repeat Last"
 msgstr "Repeat Last"
 
@@ -245,16 +243,16 @@ msgstr "Repeat Last"
 msgid "Panel"
 msgstr "Podokno"
 
-#: ../../manual/interface/undo_redo.rst:132
+#: ../../manual/interface/undo_redo.rst:140
 #, fuzzy
 msgid ":menuselection:`Edit --> Repeat Last`"
 msgstr ":menuselection:`Operator panel`"
 
-#: ../../manual/interface/undo_redo.rst:133
+#: ../../manual/interface/undo_redo.rst:141
 msgid ":kbd:`Shift-R`"
 msgstr ":kbd:`Shift-R`"
 
-#: ../../manual/interface/undo_redo.rst:135
+#: ../../manual/interface/undo_redo.rst:143
 msgid ""
 "The Repeat Last feature will repeat your last action when you press "
 ":kbd:`Shift-R`."
@@ -262,7 +260,7 @@ msgstr ""
 "Funkcija The Repeat Last bo ponovila vaše zadnje dejanje, ko pritisnete "
 ":kbd:`Shift-R`."
 
-#: ../../manual/interface/undo_redo.rst:137
+#: ../../manual/interface/undo_redo.rst:145
 msgid ""
 "In the example Images below, we duplicated a *Monkey* mesh, and then we "
 "moved the Object a bit. Using repeat :kbd:`Shift-R`, the *Monkey* was "
@@ -272,32 +270,32 @@ msgstr ""
 "predmet malce premaknili. Nato smo pritisnili :kbd:`Shift-R` in opica je "
 "bila znova podvojena in premaknjena."
 
-#: ../../manual/interface/undo_redo.rst:145
+#: ../../manual/interface/undo_redo.rst:153
 msgid "Suzanne."
 msgstr "Opica Suzanne."
 
-#: ../../manual/interface/undo_redo.rst:149
+#: ../../manual/interface/undo_redo.rst:157
 msgid "After a :kbd:`Shift-D` and move."
 msgstr "Po podvojitvi s :kbd:`Shift-D` in premiku."
 
-#: ../../manual/interface/undo_redo.rst:153
+#: ../../manual/interface/undo_redo.rst:161
 msgid "After a :kbd:`Shift-R`."
 msgstr "Po :kbd:`Shift-R`."
 
-#: ../../manual/interface/undo_redo.rst:159
+#: ../../manual/interface/undo_redo.rst:167
 msgid "Repeat History"
 msgstr "Repeat History"
 
-#: ../../manual/interface/undo_redo.rst:165
+#: ../../manual/interface/undo_redo.rst:173
 #, fuzzy
 msgid ":menuselection:`Edit --> Repeat History...`"
 msgstr ":menuselection:`Tool Shelf --> Tools --> History --> Repeat: History...`"
 
-#: ../../manual/interface/undo_redo.rst:170
+#: ../../manual/interface/undo_redo.rst:178
 msgid "The Repeat History menu."
 msgstr "Meni Repeat History."
 
-#: ../../manual/interface/undo_redo.rst:172
+#: ../../manual/interface/undo_redo.rst:180
 #, fuzzy
 msgid ""
 "The *Repeat History* feature will present you a list of the last repeated"
@@ -311,7 +309,7 @@ msgstr ""
 "vsebuje le ponovljena dejanja. Funkcijo Repeat History lahko prikličete s"
 " tipko :kbd:`F3`."
 
-#: ../../manual/interface/undo_redo.rst:183
+#: ../../manual/interface/undo_redo.rst:191
 msgid ""
 "When you quit Blender, the complete list of user actions will be lost, "
 "even if you save your file before quitting."
@@ -319,7 +317,7 @@ msgstr ""
 "Ko zaprete Blender, bo seznam uporabniških dejanj izbrisan, tudi če "
 "shranite datoteko pred zaprtjem."
 
-#: ../../manual/interface/undo_redo.rst:187
+#: ../../manual/interface/undo_redo.rst:195
 msgid ""
 "Troubleshooting section on :doc:`Recovering your lost work "
 "</troubleshooting/recover>`."
@@ -360,4 +358,41 @@ msgstr ""
 #~ "Blender uporablja dve ločeni zgodovini, "
 #~ "eno namenjeno načinu *Edit Mode* in "
 #~ "drugo namenjeno načinu *Object Mode*."
+
+#~ msgid ""
+#~ ":kbd:`F9` after an action will present"
+#~ " you a context-sensitive pop-up "
+#~ "menu based on your last action "
+#~ "taken and the Mode and Editor in"
+#~ " which Blender is being used."
+#~ msgstr ""
+#~ "*Redo Last* pomeni obnovitev zadnjega "
+#~ "dejanje. Če po dejanju pritisnete "
+#~ ":kbd:`F6`, se bo pojavil kontekstni "
+#~ "meni, katerega vsebina bo odvisna od "
+#~ "vašega zadnjega dejanja in načina oz."
+#~ " urejevalnika, v katerem ste to "
+#~ "dejanje storili."
+
+#~ msgid "Redo Last."
+#~ msgstr "Obnovitev zadnjega dejanja."
+
+#~ msgid "Operations using Redo Last"
+#~ msgstr "Operacije, ki uporabljajo Redo Last"
+
+#~ msgid ""
+#~ "Some operations produce particularly useful"
+#~ " results if you tweak their "
+#~ "parameters with the :kbd:`F9` Menu. "
+#~ "Take, for example, adding a Circle. "
+#~ "If you reduce the Vertex count to"
+#~ " three, you get a perfect equilateral"
+#~ " triangle."
+#~ msgstr ""
+#~ "Nekatere operacije proizvedejo uporabne "
+#~ "rezultate, če spremenite njihove parametre "
+#~ "z menijem :kbd:`F6`. Za primer vzemimo"
+#~ " dodajanje kroga (*Circle*). Če zmanjšate"
+#~ " število ogljišč na tri, dobite "
+#~ "popoln enakostranični trikotnik."
 
