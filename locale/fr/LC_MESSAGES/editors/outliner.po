@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-12-04 22:03+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -17,53 +17,51 @@ msgstr ""
 msgid "Outliner"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:10
+#: ../../manual/editors/outliner.rst:11
 msgid "The Outliner editor."
 msgstr "L'éditeur Outliner."
 
-#: ../../manual/editors/outliner.rst:12
+#: ../../manual/editors/outliner.rst:13
 #, fuzzy
 msgid ""
-"The *Outliner* is a list that organizes data in the blend-file. i.e. the "
-"scene data and also the Preferences."
+"The *Outliner* is a list that organizes data in the blend-file, i.e. the "
+"scene data, Video Sequencer data, or anything that gets stored in a "
+"blend-file. The *Outliner* can be used to:"
 msgstr ""
 "L'*Outliner* est une liste qui organise les données dans le fichier "
 "blend. Ã savoir les données de la scène ainsi que les préférences "
 "utilisateur. "
 
 #: ../../manual/editors/outliner.rst:17
-msgid "Usage"
-msgstr "Utilisation"
-
-#: ../../manual/editors/outliner.rst:18
 msgid "View the data in the scene."
 msgstr "Visualiser les données dans la scène."
 
-#: ../../manual/editors/outliner.rst:19
+#: ../../manual/editors/outliner.rst:18
 msgid "Select and deselect objects in the scene."
 msgstr "Sélectionner et désélectionner des objets dans la scène."
 
-#: ../../manual/editors/outliner.rst:20
+#: ../../manual/editors/outliner.rst:19
 msgid "Hide or show an object in the scene."
 msgstr "Cacher ou montrer un objet dans la scène."
 
-#: ../../manual/editors/outliner.rst:21
+#: ../../manual/editors/outliner.rst:20
+#, fuzzy
 msgid ""
 "Enable or disable selection (to make an object \"unselectable\" in the 3D"
-" View)."
+" Viewport)."
 msgstr ""
 "Activer ou désactiver la sélection (pour rendre un objet \"non "
 "sélectionnable\" dans la Vue 3D)."
 
-#: ../../manual/editors/outliner.rst:22
+#: ../../manual/editors/outliner.rst:21
 msgid "Enable or disable the rendering of an object."
 msgstr "Activer ou désactiver le rendu d'un objet."
 
-#: ../../manual/editors/outliner.rst:23
+#: ../../manual/editors/outliner.rst:22
 msgid "Delete objects from the scene."
 msgstr "Supprimer des objets de la scène."
 
-#: ../../manual/editors/outliner.rst:24
+#: ../../manual/editors/outliner.rst:23
 msgid ""
 "Unlink data (equivalent to pressing the *X* button next to the name of a "
 "data-block)."
@@ -71,23 +69,7 @@ msgstr ""
 "Défaire le lien sur des données (équivalent à presser le bouton *X* près "
 "du nom d'un bloc de données)."
 
-#: ../../manual/editors/outliner.rst:25
-msgid "Easily select which render layer to render."
-msgstr "Sélectionner facilement le calque de rendu à faire le rendu."
-
-#: ../../manual/editors/outliner.rst:26
-msgid ""
-"Easily select which render pass to render (for example, you can choose to"
-" render just the *Specular* pass)."
-msgstr ""
-"Sélectionner facilement la passe de rendu à faire le rendu (par exemple, "
-"vous pouvez choisir de faire seulement le rendu de la passe *Specular*)."
-
-#: ../../manual/editors/outliner.rst:33
-msgid "Tree View"
-msgstr "Vue de l'arborescence"
-
-#: ../../manual/editors/outliner.rst:35
+#: ../../manual/editors/outliner.rst:28
 msgid ""
 "Each row in the *Outliner* shows a data-block. You can click the plus "
 "sign to the left of a name to expand the current data-block and see what "
@@ -97,7 +79,7 @@ msgstr ""
 "cliquer le signe plus à gauche d'un nom pour développer le bloc de "
 "données courant et voir les autres blocs de données qu'il contient."
 
-#: ../../manual/editors/outliner.rst:38
+#: ../../manual/editors/outliner.rst:31
 msgid ""
 "You can select data-blocks in the *Outliner*, but this will not "
 "necessarily select the data-block in the scene. To select the data-block "
@@ -108,21 +90,22 @@ msgstr ""
 "scène. Pour sélectionner le bloc de données dans la scène, vous devez "
 "l'activer. "
 
-#: ../../manual/editors/outliner.rst:44
+#: ../../manual/editors/outliner.rst:37
 msgid "Selecting and Activating"
 msgstr "Sélection et activation."
 
-#: ../../manual/editors/outliner.rst:46
+#: ../../manual/editors/outliner.rst:39
+#, fuzzy
 msgid ""
 "Single selection does not require any pre-selection: just work directly "
-"with :kbd:`LMB` (and/or :kbd:`RMB` -- contextual menu, see below) "
-"*inside* the name/icon area."
+"with :kbd:`LMB` (and/or the `context menu`_, see below) *inside* the "
+"name/icon area."
 msgstr ""
 "Une sélection unique ne requiert pas une quelconque présélection : "
 "travaillez simplement directement avec :kbd:`LMB` (et/ou :kbd:`RMB` -- "
 "menu contextuel, voir ci-dessous) *dans* la zone de nom/icône."
 
-#: ../../manual/editors/outliner.rst:49
+#: ../../manual/editors/outliner.rst:42
 msgid ""
 "When you select an object in the list this way, it is selected and "
 "becomes the active object in all other 3D Views."
@@ -130,11 +113,55 @@ msgstr ""
 "Quand vous sélectionnez de cette manière un objet dans la liste, il est "
 "sélectionné et devient l'objet actif dans toutes les autres Vues 3D. "
 
+#: ../../manual/editors/outliner.rst:47
+#, fuzzy
+msgid "Selecting a Group of Data-Blocks"
+msgstr "Sélection d'un groupe de blocs de données"
+
+#: ../../manual/editors/outliner.rst:52
+msgid "Selection of a data-block."
+msgstr "Sélection d'un bloc de données."
+
 #: ../../manual/editors/outliner.rst:54
-msgid "Activating a Data-block"
+msgid ""
+"Useful when you want to select/deselect a whole bunch of data-blocks. For"
+" this you must prepare the selection using, to your liking:"
+msgstr ""
+"Utile quand vous voulez sélectionner/désélectionner un ensemble entier de"
+" blocs de données. Pour cela vous devez préparer le sélection en "
+"utilisant, à votre convenance :"
+
+#: ../../manual/editors/outliner.rst:57
+msgid ":kbd:`RMB` or :kbd:`LMB`,"
+msgstr ":kbd:`RMB` ou :kbd:`LMB`,"
+
+#: ../../manual/editors/outliner.rst:58
+msgid ":kbd:`Shift-RMB` or :kbd:`Shift-LMB`,"
+msgstr ":kbd:`Maj-RMB` ou :kbd:`Maj-LMB`,"
+
+#: ../../manual/editors/outliner.rst:59
+msgid ":kbd:`RMB` and drag or :kbd:`LMB` and drag,"
+msgstr ":kbd:`RMB` et glisser ou :kbd:`LMB` et glisser,"
+
+#: ../../manual/editors/outliner.rst:61
+msgid ""
+"all *outside* the name/icon area. Those pre-selected have their line in a"
+" lighter color. You then can (de)select them with an :kbd:`RMB`-click "
+"*on* the name/icon area, which brings on a context menu (see below). "
+":kbd:`A` to select/deselect all open items."
+msgstr ""
+"tout *en dehors* de la zone de nom/icône. Ces présélectionnés ont leur "
+"ligne dans une couleur plus claire. Vous pouvez alors les "
+"(dé)sélectionner avec un :kbd:`RMB`-clic *sur* la zone de nom/icône, ce "
+"qui déclenche un menu contextuel (voir ci-dessous). :kbd:`A` pour "
+"sélectionner/désélectionner tous les éléments ouverts.  "
+
+#: ../../manual/editors/outliner.rst:67
+#, fuzzy
+msgid "Activating a Data-Block"
 msgstr "Activation d'un bloc de données"
 
-#: ../../manual/editors/outliner.rst:56
+#: ../../manual/editors/outliner.rst:69
 msgid ""
 "To \"activate\" the data-block with :kbd:`LMB` on the *icon* of the data-"
 "block. Activating the data-block will automatically switch to the "
@@ -149,59 +176,142 @@ msgstr ""
 "l'activation des données d'objet du cube va sélectionner le cube et "
 "passer en *Mode Objet* (voir à droite)."
 
-#: ../../manual/editors/outliner.rst:62
+#: ../../manual/editors/outliner.rst:75
 msgid ""
 "If the data-block type supports multi-editing, you can use :kbd:`Shift` "
 "to add/remove objects from the edit mode."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:67
-msgid "Selecting a Group of Data-blocks"
-msgstr "Sélection d'un groupe de blocs de données"
-
-#: ../../manual/editors/outliner.rst:69
-msgid ""
-"Useful when you want to select/deselect a whole bunch of data-blocks. For"
-" this you must prepare the selection using, to your liking:"
+#: ../../manual/editors/outliner.rst:82 ../../manual/editors/outliner.rst:261
+msgid "Collections"
 msgstr ""
-"Utile quand vous voulez sélectionner/désélectionner un ensemble entier de"
-" blocs de données. Pour cela vous devez préparer le sélection en "
-"utilisant, à votre convenance :"
 
-#: ../../manual/editors/outliner.rst:72
-msgid ":kbd:`RMB` or :kbd:`LMB`,"
-msgstr ":kbd:`RMB` ou :kbd:`LMB`,"
-
-#: ../../manual/editors/outliner.rst:73
-msgid ":kbd:`Shift-RMB` or :kbd:`Shift-LMB`,"
-msgstr ":kbd:`Maj-RMB` ou :kbd:`Maj-LMB`,"
-
-#: ../../manual/editors/outliner.rst:74
-msgid ":kbd:`RMB` and drag or :kbd:`LMB` and drag,"
-msgstr ":kbd:`RMB` et glisser ou :kbd:`LMB` et glisser,"
-
-#: ../../manual/editors/outliner.rst:76
+#: ../../manual/editors/outliner.rst:84
 msgid ""
-"all *outside* the name/icon area. Those pre-selected have their line in a"
-" lighter color. You then can (de)select them with an :kbd:`RMB`-click "
-"*on* the name/icon area, which brings on a context menu (see below). "
-":kbd:`A` to select/deselect all open items."
+"Collections are a way Blender uses to organize scenes. Collections "
+"contain objects and everything thing else in a scene. They can be include"
+" collections themselves and are fully recursive."
 msgstr ""
-"tout *en dehors* de la zone de nom/icône. Ces présélectionnés ont leur "
-"ligne dans une couleur plus claire. Vous pouvez alors les "
-"(dé)sélectionner avec un :kbd:`RMB`-clic *sur* la zone de nom/icône, ce "
-"qui déclenche un menu contextuel (voir ci-dessous). :kbd:`A` pour "
-"sélectionner/désélectionner tous les éléments ouverts.  "
 
-#: ../../manual/editors/outliner.rst:82
-msgid "Selection of a data-block."
-msgstr "Sélection d'un bloc de données."
+#: ../../manual/editors/outliner.rst:90
+msgid "Read more about :doc:`Collections </scene_layout/collections/index>`"
+msgstr ""
 
-#: ../../manual/editors/outliner.rst:86
+#: ../../manual/editors/outliner.rst:92
+msgid "New"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:93
+msgid "Creates a new collection."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:94
+msgid "Duplicate Collections"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:95
+msgid ""
+"Recursively duplicates the collection including all child collections, "
+"objects, and object data."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:96
+msgid "Duplicate Linked"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:97
+msgid "Duplicate entire hierarchy keeping content linked with original."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:98
+msgid "Delete Hierarchy"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:99
+#, fuzzy
+msgid "Deletes the collection and all of its child objects."
+msgstr "Supprime l'objet et tous ses enfants enfants."
+
+#: ../../manual/editors/outliner.rst:100
+msgid "Instance to Scene"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:101
+msgid ""
+"Creates a new :doc:`collection instance "
+"</scene_layout/object/properties/instancing/collection>`."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:112
+msgid "Visibility"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:103
+msgid "Isolate"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:104
+msgid ""
+"Hides all collections except the selected collection and any parent "
+"collections (if any exist)."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:105
+msgid "Show/Hide"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:106
+msgid ""
+"Shows/Hides the selected collection from the :doc:`View Layer "
+"</scene_layout/view_layers/index>`."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:108
+msgid "Show/Hide Inside"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:108
+msgid ""
+"Shows/Hides all items that are a member of the selected collection, "
+"include child collections, from the :doc:`View Layer "
+"</scene_layout/view_layers/index>`."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:110
+msgid "Enable/Disable in Viewports"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:111
+msgid ""
+"Enables/disables drawing in the :doc:`View Layer "
+"</scene_layout/view_layers/index>`."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:112
+msgid "Enable/Disable in Renders"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:113
+msgid "Enables/disables visibility of the collection in renders."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:117 ../../manual/editors/outliner.rst:224
+msgid "View Layer"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:117
+msgid "Disable/Enable in View Layer"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:116
+msgid "Disables/Enables the collection from the view layer."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:120
 msgid "Context Menu"
 msgstr "Menu contextuel"
 
-#: ../../manual/editors/outliner.rst:88
+#: ../../manual/editors/outliner.rst:122
 msgid ""
 "Show the context menu for a data-block with :kbd:`RMB` on the icon or "
 "name. Depending on the type of the pre-selected data-block(s), you will "
@@ -211,75 +321,81 @@ msgstr ""
 "l'icône ou le nom. Selon le type du/des bloc(s) de données "
 "sélectionné(s), vous aurez toutes ou partie des options suivantes :\n"
 
-#: ../../manual/editors/outliner.rst:91
+#: ../../manual/editors/outliner.rst:125 ../../manual/editors/outliner.rst:147
+msgid "Copy/Paste"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:126 ../../manual/editors/outliner.rst:148
+#, fuzzy
+msgid "Copy/pastes selected data-blocks."
+msgstr "renomme le bloc de données sélectionné."
+
+#: ../../manual/editors/outliner.rst:127 ../../manual/editors/outliner.rst:142
+msgid "Delete"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:128 ../../manual/editors/outliner.rst:143
+msgid "Deletes the selected data-block."
+msgstr "Supprime le bloc de données sélectionné."
+
+#: ../../manual/editors/outliner.rst:131
 msgid "Select, Select Hierarchy, Deselect"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:92
+#: ../../manual/editors/outliner.rst:130
 msgid "Add object to current selection without making it the active one."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:93
+#: ../../manual/editors/outliner.rst:134
+msgid "ID Data Menu"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:136
 msgid "Unlink"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:94
+#: ../../manual/editors/outliner.rst:137
 msgid "To unlink a data-block from its \"owner\" (e.g. a material from its mesh)."
 msgstr ""
 "Pour défaire le lien d'un bloc de données de son \"propriétaire\" (ex. un"
 " matériau de son maillage)."
 
-#: ../../manual/editors/outliner.rst:95
+#: ../../manual/editors/outliner.rst:138
 msgid "Make Local"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:96
+#: ../../manual/editors/outliner.rst:139
 msgid "To create a \"local\" duplicate of this data-block."
 msgstr "Pour créer une copie \"locale\" de ce bloc de données."
 
-#: ../../manual/editors/outliner.rst:97
+#: ../../manual/editors/outliner.rst:140
 msgid "Make Single User"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:98
+#: ../../manual/editors/outliner.rst:141
 msgid "This feature is not yet implemented."
 msgstr "Cette fonction n'est pas encore implémentée."
 
-#: ../../manual/editors/outliner.rst:99
-msgid "Delete"
-msgstr ""
-
-#: ../../manual/editors/outliner.rst:100
-msgid "Deletes the selected data-block."
-msgstr "Supprime le bloc de données sélectionné."
-
-#: ../../manual/editors/outliner.rst:101
-msgid "Delete Hierarchy"
-msgstr ""
-
-#: ../../manual/editors/outliner.rst:102
-msgid "Deletes the object and all of its child objects."
-msgstr "Supprime l'objet et tous ses enfants enfants."
-
-#: ../../manual/editors/outliner.rst:104
+#: ../../manual/editors/outliner.rst:145
 msgid "Remap Users"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:104
+#: ../../manual/editors/outliner.rst:145
+#, fuzzy
 msgid ""
-"Remap Users of a data-block to another one (of same type of course) -- "
-"means you can e.g. replace all usages of a material or texture by another"
-" one."
+"Remap Users of a data-block to another one (of same type of course). This"
+" means you can e.g. replace all usages of a material or texture by "
+"another one."
 msgstr ""
 "Réaffecter les utilisateurs (Remap Users) d'un bloc de données à un autre"
 " (du même type, bien sûr) -- signifie que vous pouvez par ex. remplacer "
 "toutes les utilisations d'un matériau ou d'une texture par un(e) autre."
 
-#: ../../manual/editors/outliner.rst:107
+#: ../../manual/editors/outliner.rst:150
 msgid "Add Fake User, Clear Fake User"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:107
+#: ../../manual/editors/outliner.rst:150
 msgid ""
 "Adds a \"dummy\" (fake) user so that the selected data-block always gets "
 "saved even if it has no users. The fake user can be removed with *Clear "
@@ -289,19 +405,19 @@ msgstr ""
 "toujours sauvegardé même s'il n'a aucun utilisateur. L'utilisateur fictif"
 " peut être supprimé par *Clear Fake User*."
 
-#: ../../manual/editors/outliner.rst:109
+#: ../../manual/editors/outliner.rst:152
 msgid "Rename :kbd:`Ctrl-LMB`"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:110
+#: ../../manual/editors/outliner.rst:153
 msgid "Renames the selected data-block."
 msgstr "renomme le bloc de données sélectionné."
 
-#: ../../manual/editors/outliner.rst:113
+#: ../../manual/editors/outliner.rst:156
 msgid "Select Linked"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:112
+#: ../../manual/editors/outliner.rst:155
 msgid ""
 "Selects the linked data, see :ref:`bpy.ops.object.select_linked` for more"
 " information."
@@ -309,29 +425,37 @@ msgstr ""
 "Sélectionne les données liées, voir :ref:`bpy.ops.object.select_linked` "
 "pour plus d'informations."
 
-#: ../../manual/editors/outliner.rst:116
+#: ../../manual/editors/outliner.rst:159
 msgid "View Menu"
 msgstr "Menu View"
 
-#: ../../manual/editors/outliner.rst:118
+#: ../../manual/editors/outliner.rst:161
 msgid ""
 "The view menu is part of the context menu and supported in all the "
 "Outliner elements."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:120
+#: ../../manual/editors/outliner.rst:163
 msgid "Show Active"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:121
+#: ../../manual/editors/outliner.rst:164
 msgid "Centers the Tree View to selected object :kbd:`Period`."
 msgstr "Centre la *Tree View* à l'objet sélectionné :kbd:`Point`."
 
-#: ../../manual/editors/outliner.rst:122
+#: ../../manual/editors/outliner.rst:165
+msgid "Show Hierarchy"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:166
+msgid "To collapse all levels of the tree :kbd:`Home`."
+msgstr "Pour replier tous les niveaux de l'arborescence  :kbd:`Début`."
+
+#: ../../manual/editors/outliner.rst:169
 msgid "Show/Hide One Level"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:123
+#: ../../manual/editors/outliner.rst:168
 msgid ""
 "Expand one level down in the tree :kbd:`NumpadPlus` and "
 ":kbd:`NumpadMinus` to collapse."
@@ -339,25 +463,17 @@ msgstr ""
 "Développer un niveau dans l'arborescence :kbd:`PavnumPlus` et "
 ":kbd:`PavnumMinus` pour replier."
 
-#: ../../manual/editors/outliner.rst:126
-msgid "Show Hierarchy"
-msgstr ""
-
-#: ../../manual/editors/outliner.rst:125
-msgid "To collapse all levels of the tree :kbd:`Home`."
-msgstr "Pour replier tous les niveaux de l'arborescence  :kbd:`Début`."
-
-#: ../../manual/editors/outliner.rst:130
+#: ../../manual/editors/outliner.rst:173
 msgid "Some data-block types will not have a context menu at all!"
 msgstr ""
 "Certains types de blocs de données n'auront pas du tout de menu "
 "contextuel !"
 
-#: ../../manual/editors/outliner.rst:134
+#: ../../manual/editors/outliner.rst:177
 msgid "Restriction Columns"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:136
+#: ../../manual/editors/outliner.rst:179
 #, fuzzy
 msgid ""
 "The following toggles, in the right side of the *Outliner* editor, are "
@@ -367,52 +483,52 @@ msgstr ""
 "sont disponibles pour les objets, les modificateurs et les contraintes: "
 "Avec l'appui sur :kbd:`Ctrl` tous ses objets enfants sont aussi affectés."
 
-#: ../../manual/editors/outliner.rst:139
+#: ../../manual/editors/outliner.rst:182
 msgid ""
 "By default only the temporary viewport visibility is enabled. The other "
 "options can be enabled in the *Restriction Toggles* option in the "
 "Outliner filter."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:142
+#: ../../manual/editors/outliner.rst:185
 msgid ""
 "Holding :kbd:`Shift` sets or unsets the value to all its child "
 "collections or objects."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:143
+#: ../../manual/editors/outliner.rst:186
 msgid ""
 "Holding :kbd:`Ctrl` isolates the object or collection, so they are the "
 "only ones with its value set."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:145
+#: ../../manual/editors/outliner.rst:188
 msgid "Visibility (eye icon)"
 msgstr "Visibility (icône œil)"
 
-#: ../../manual/editors/outliner.rst:146
+#: ../../manual/editors/outliner.rst:189
 msgid "Toggles the visibility of the object in the 3D View."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:149
+#: ../../manual/editors/outliner.rst:192
 msgid "Enable collection (checkbox)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:148
+#: ../../manual/editors/outliner.rst:191
 msgid ""
 "Exclude the collection from the view layer. This is not really a "
 "restriction column. It is shown besides the collection icon."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:153
+#: ../../manual/editors/outliner.rst:196
 msgid "The following options need to first be enabled in the Outliner filter."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:156
+#: ../../manual/editors/outliner.rst:199
 msgid "Selectability (mouse cursor icon)"
 msgstr "Sélectability (icône curseur de souris)"
 
-#: ../../manual/editors/outliner.rst:156
+#: ../../manual/editors/outliner.rst:199
 #, fuzzy
 msgid ""
 "This is useful for if you have placed something in the scene and do not "
@@ -423,11 +539,11 @@ msgstr ""
 "chose. :kbd:`S` va commuter cette propriété pour tous les objets "
 "sélectionnés dans l'*Outliner*."
 
-#: ../../manual/editors/outliner.rst:159
+#: ../../manual/editors/outliner.rst:202
 msgid "Rendering (camera icon)"
 msgstr "Rendering (icône caméra)"
 
-#: ../../manual/editors/outliner.rst:159
+#: ../../manual/editors/outliner.rst:202
 #, fuzzy
 msgid ""
 "This will still keep the object visible in the scene, but it will be "
@@ -438,45 +554,45 @@ msgstr ""
 "ignoré par le moteur de rendu. :kbd:`R` va commuter cette propriété pour "
 "tous les objets sélectionnés dans l'*Outliner*."
 
-#: ../../manual/editors/outliner.rst:162
+#: ../../manual/editors/outliner.rst:205
 #, fuzzy
 msgid "Global Viewport Visibility (screen icon)"
 msgstr "Visibility (icône œil)"
 
-#: ../../manual/editors/outliner.rst:162
+#: ../../manual/editors/outliner.rst:205
 msgid ""
 "This will still render the object/collection, but it will be ignored by "
 "all the viewports. Often used for collections with high-poly objects that"
 " need to be instanced in other files."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:164
+#: ../../manual/editors/outliner.rst:207
 msgid "Holdout (collection only)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:165
+#: ../../manual/editors/outliner.rst:208
 msgid "Mask out objects in collection from view layer -- *Cycles only*."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:168
+#: ../../manual/editors/outliner.rst:211
 msgid "Indirect Only (collection only)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:167
+#: ../../manual/editors/outliner.rst:210
 msgid ""
 "Objects in these collections only contribute to indirect light -- *Cycles"
 " only*."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:171
+#: ../../manual/editors/outliner.rst:214
 msgid "Header"
 msgstr "Entête"
 
-#: ../../manual/editors/outliner.rst:174
+#: ../../manual/editors/outliner.rst:217
 msgid "Display Mode"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:176
+#: ../../manual/editors/outliner.rst:219
 msgid ""
 "The editors header has a select menu that let you filter what the "
 "Outliner should show. It helps to narrow the list of objects so that you "
@@ -487,11 +603,11 @@ msgstr ""
 "d'objets afin que vous puissiez trouver les choses rapidement et "
 "facilement."
 
-#: ../../manual/editors/outliner.rst:179
+#: ../../manual/editors/outliner.rst:222
 msgid "Scenes"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:180
+#: ../../manual/editors/outliner.rst:223
 #, fuzzy
 msgid ""
 "Shows *everything* the *Outliner* can display (in all scenes, all view "
@@ -500,40 +616,36 @@ msgstr ""
 "Montre *tout* ce que l'*Outliner* peut afficher (dans toutes les scènes, "
 "tous les calques, etc.)."
 
-#: ../../manual/editors/outliner.rst:181
-msgid "View Layer"
-msgstr ""
-
-#: ../../manual/editors/outliner.rst:182
+#: ../../manual/editors/outliner.rst:225
 msgid "Shows all the collections and objects in the current view layer."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:184
+#: ../../manual/editors/outliner.rst:227
 msgid "Sequence"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:184
+#: ../../manual/editors/outliner.rst:227
 #, fuzzy
 msgid ""
 "Lists :doc:`data-block </files/data_blocks>` that are used by the "
-":doc:`Sequencer </sequencer/index>`."
+":doc:`Sequencer </video_editing/index>`."
 msgstr ""
 "Liste les :doc:`blocs de données_</data_system/data_blocks>` qui sont "
 "utilisés par le :doc:`Séquenceur </editors/vse/index>`."
 
-#: ../../manual/editors/outliner.rst:186
+#: ../../manual/editors/outliner.rst:229
 msgid "Blender File"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:187
+#: ../../manual/editors/outliner.rst:230
 msgid "Lists all data in the current blend-file."
 msgstr "Liste toutes les données dans le fichier blend courant."
 
-#: ../../manual/editors/outliner.rst:188
+#: ../../manual/editors/outliner.rst:231
 msgid "Data API"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:189
+#: ../../manual/editors/outliner.rst:232
 #, fuzzy
 msgid ""
 "Lists every :doc:`data-block </files/data_blocks>` along with any "
@@ -542,11 +654,11 @@ msgstr ""
 "Liste tous les :doc:`blocs de données </data_system/data_blocks>` avec "
 "toutes les propriétés qu'ils pourraient avoir."
 
-#: ../../manual/editors/outliner.rst:195
+#: ../../manual/editors/outliner.rst:238
 msgid "Orphan Data"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:191
+#: ../../manual/editors/outliner.rst:234
 #, fuzzy
 msgid ""
 "Lists :doc:`data-blocks </files/data_blocks>` which are unused and/or "
@@ -560,11 +672,11 @@ msgstr ""
 "ajouter/supprimer un *Fake User* en cliquant sur l'icône croix/coche à "
 "droite de l'éditeur *Outliner*. "
 
-#: ../../manual/editors/outliner.rst:198
+#: ../../manual/editors/outliner.rst:241
 msgid "Searching"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:200
+#: ../../manual/editors/outliner.rst:243
 #, fuzzy
 msgid ""
 "You can search the view for data-blocks, by using Search field in the "
@@ -575,84 +687,80 @@ msgstr ""
 "champ *Search* dans l'entête de l'*Outliner*, le menu *Search* vous "
 "permet de commuter les options suivantes :"
 
-#: ../../manual/editors/outliner.rst:204
+#: ../../manual/editors/outliner.rst:247
 msgid "Case Sensitive Matches Only"
 msgstr ""
 "Case Sensitive Matches Only (Correspondances sensibles à la casse "
 "uniquement)"
 
-#: ../../manual/editors/outliner.rst:205
+#: ../../manual/editors/outliner.rst:248
 msgid "Complete Matches Only"
 msgstr "Complete Matches Only (Correspondances totales uniquement)"
 
-#: ../../manual/editors/outliner.rst:209
+#: ../../manual/editors/outliner.rst:252
 msgid "Filter"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:211
+#: ../../manual/editors/outliner.rst:254
 msgid "Restriction Toggles"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:212
+#: ../../manual/editors/outliner.rst:255
 msgid "Set which `Restriction Columns`_ should be visible."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:214
+#: ../../manual/editors/outliner.rst:257
 msgid "Sort Alphabetically"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:214
+#: ../../manual/editors/outliner.rst:257
 msgid "Sort the entries alphabetically."
 msgstr "Trie les entrées par ordre alphabétique."
 
-#: ../../manual/editors/outliner.rst:218
-msgid "Collections"
-msgstr ""
-
-#: ../../manual/editors/outliner.rst:217
+#: ../../manual/editors/outliner.rst:260
 msgid ""
 "List the objects and collections under the :doc:`collection hierarchy "
 "</scene_layout/collections/index>` of the scene. Objects may appear in "
 "more than one collection."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:221
+#: ../../manual/editors/outliner.rst:264
 msgid "Objects"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:221
+#: ../../manual/editors/outliner.rst:264
 msgid ""
 "List of all the objects, respecting the other filter options. Disabled "
 "only if you need an overview of the collections without the objects."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:232
+#: ../../manual/editors/outliner.rst:275
 msgid "Object State"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:224
+#: ../../manual/editors/outliner.rst:267
 msgid "All"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:225
+#: ../../manual/editors/outliner.rst:268
 msgid "The default option, no restrictions."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:227
+#: ../../manual/editors/outliner.rst:270
 msgid "Visible"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:227
+#: ../../manual/editors/outliner.rst:270
 msgid ""
 "List only the objects visible in the viewports. The global and temporary "
 "visibility settings are taken into considerations."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:230
+#: ../../manual/editors/outliner.rst:273
 msgid "Selected"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:230
+#: ../../manual/editors/outliner.rst:273
 #, fuzzy
 msgid ""
 "Lists the object(s) that are currently selected in the 3D View. See "
@@ -663,95 +771,103 @@ msgstr ""
 "Voir :doc:`sélection dans la Vue 3D "
 "</editors/3dview/object/selecting/index>` pour plus d'informations."
 
-#: ../../manual/editors/outliner.rst:232
+#: ../../manual/editors/outliner.rst:275
 msgid "Active"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:233
+#: ../../manual/editors/outliner.rst:276
 msgid "Lists only the active (often last selected) object."
 msgstr "Liste seulement l'objet actif (souvent le dernier sélectionné)."
 
-#: ../../manual/editors/outliner.rst:234
+#: ../../manual/editors/outliner.rst:277
 msgid "Object Contents"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:235
+#: ../../manual/editors/outliner.rst:278
 msgid "List materials, modifiers, mesh data, ..."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:238
+#: ../../manual/editors/outliner.rst:281
 msgid "Object Children"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:237
+#: ../../manual/editors/outliner.rst:280
 msgid ""
 "List the object children. If the *Collections* option is enabled, you "
 "will see the object children even if the children are not in the "
 "collection. However the Outliner shows them as a dashed line."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:242
+#: ../../manual/editors/outliner.rst:285
 #, fuzzy
 msgid "Data-Block"
 msgstr "Data-Blocks (blocs de données)"
 
-#: ../../manual/editors/outliner.rst:241
+#: ../../manual/editors/outliner.rst:284
 msgid ""
 "Allows you to filter out certain data-blocks currently present in the "
 "scene."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:245
+#: ../../manual/editors/outliner.rst:288
 msgid "Miscellaneous"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:247
+#: ../../manual/editors/outliner.rst:290
 msgid ""
 "Some options in the header will only show if compatible with the active "
 "`Display Mode`_."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:249
+#: ../../manual/editors/outliner.rst:292
 msgid "New Collection (View Layer)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:250
+#: ../../manual/editors/outliner.rst:293
 msgid "Add a new collection inside selected collection."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:251
+#: ../../manual/editors/outliner.rst:294
 msgid "Filter ID Type (Orphan Data, Blender File)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:252
+#: ../../manual/editors/outliner.rst:295
 msgid "Restrict the type of the data-blocks shown in the Outliner."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:253
+#: ../../manual/editors/outliner.rst:296
 msgid "Keying Sets (Data API)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:254
+#: ../../manual/editors/outliner.rst:297
 msgid ""
 "Add/Remove selected data to the active :doc:`Keying Set "
 "</animation/keyframes/keying_sets>`."
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:257
+#: ../../manual/editors/outliner.rst:298
+msgid "Drivers"
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:299
+msgid "Add/Remove :doc:`Drivers </animation/drivers/index>` to the selected item."
+msgstr ""
+
+#: ../../manual/editors/outliner.rst:302
 msgid "Purge (Orphan Data)"
 msgstr ""
 
-#: ../../manual/editors/outliner.rst:256
+#: ../../manual/editors/outliner.rst:301
 msgid "Remove all unused data-blocks from the file (cannot be undone)."
 msgstr ""
 "Supprimer tous les blocs de données inutilisés du fichier (opération non "
 "annulable)."
 
-#: ../../manual/editors/outliner.rst:262
+#: ../../manual/editors/outliner.rst:305
 msgid "Example"
 msgstr "Exemple"
 
-#: ../../manual/editors/outliner.rst:266
+#: ../../manual/editors/outliner.rst:309
 msgid "The Outliner with different kinds of data."
 msgstr "L'Outliner avec différents types de données."
 
@@ -882,4 +998,24 @@ msgstr "L'Outliner avec différents types de données."
 #~ "collection. However the Outliner draws "
 #~ "them in a dashed line."
 #~ msgstr ""
+
+#~ msgid "Usage"
+#~ msgstr "Utilisation"
+
+#~ msgid "Easily select which render layer to render."
+#~ msgstr "Sélectionner facilement le calque de rendu à faire le rendu."
+
+#~ msgid ""
+#~ "Easily select which render pass to "
+#~ "render (for example, you can choose "
+#~ "to render just the *Specular* pass)."
+#~ msgstr ""
+#~ "Sélectionner facilement la passe de "
+#~ "rendu à faire le rendu (par "
+#~ "exemple, vous pouvez choisir de faire"
+#~ " seulement le rendu de la passe "
+#~ "*Specular*)."
+
+#~ msgid "Tree View"
+#~ msgstr "Vue de l'arborescence"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-30 09:48+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-09-25 12:35+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -24,139 +24,186 @@ msgid "Explode Modifier"
 msgstr "爆炸修改器"
 
 #: ../../manual/modeling/modifiers/simulate/explode.rst:7
+#, fuzzy
 msgid ""
-"The Explode Modifier is used to alter the mesh geometry by "
+"The *Explode* modifier is used to alter the mesh geometry by "
 "moving/rotating its faces in a way that roughly tracks particles emitted "
 "by that object, making it look as if the mesh is being exploded (broken "
 "apart and pushed outward)."
 msgstr "爆炸修改器用于改变网格几何体,通过移动/旋转它的面,并以粗略追踪该物体发射的粒子的方式进行，使其看起来好像网格爆炸了（破碎分离并向外推）."
 
 #: ../../manual/modeling/modifiers/simulate/explode.rst:11
-msgid ""
-"For the Explode Modifier to have a visible effect, there needs to be "
-"particle system on it. The particle system on the mesh is what controls "
-"how the mesh will be exploded, and therefore without the particle system "
-"the mesh will not appear to alter."
-msgstr "为了让爆炸修改器有明显的效果，需要在其上附加粒子系统。网格上的粒子系统是用来控制网格如何爆炸的，所以没有粒子系统的话，网格是不会改变的."
-
-#: ../../manual/modeling/modifiers/simulate/explode.rst:15
-msgid ""
-"Both the number of emitted particles and number of faces determine how "
-"granular the Explode Modifier will be. More faces and more particles will"
-" mean more individual pieces."
-msgstr "发射粒子的数量和面数决定着爆炸修改器的细粒度。更多的面和更多的粒子意味着更多的爆炸块。"
-
-#: ../../manual/modeling/modifiers/simulate/explode.rst:18
 #, fuzzy
 msgid ""
-"Here is a `demo video "
-"<https://wiki.blender.org/uploads/7/7b/Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.ogg>`__"
-" showing a cube with a particle system and Explode Modifier (`blend-file "
-"<https://wiki.blender.org/wiki/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__)."
+"For this modifier to have any visible effect, there needs to be a "
+"particle system on its object. That particle system will control how the "
+"mesh is exploded."
+msgstr "为了让爆炸修改器有明显的效果，需要在其上附加粒子系统。网格上的粒子系统是用来控制网格如何爆炸的，所以没有粒子系统的话，网格是不会改变的."
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:14
+#, fuzzy
+msgid ""
+"Both the number of emitted particles and number of faces determine how "
+"granular the *Explode* modifier is. More faces and more particles will "
+"mean more individual pieces."
+msgstr "发射粒子的数量和面数决定着爆炸修改器的细粒度。更多的面和更多的粒子意味着更多的爆炸块。"
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:23
+#, fuzzy
+msgid ""
+"Here is a `demo blend-file "
+"<https://wiki.blender.org/wiki/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__"
+" showing a cube with a particle system and *Explode* modifier."
 msgstr ""
 "这个 `样例视频 "
 "<https://wiki.blender.org/uploads/7/7b/Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.ogg>`__"
 " 展示了有粒子系统和爆炸修改器的立方体. (`Blend 文件 "
 "<https://wiki.blender.org/wiki/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__)."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:25
+#: ../../manual/modeling/modifiers/simulate/explode.rst:29
 msgid ""
-"The Explode Modifier must come after the Particle System Modifier because"
-" the Particle System Modifier has the information needed to drive the "
-"Explode Modifier."
-msgstr "爆炸修改器只能出现在粒子系统修改器之后，因为粒子系统修改器有驱动爆炸修改器运作的信息."
+"The *Explode* modifier must come after the *Particle System* one in the "
+":ref:`modifier stack <modifier-stack>`, in order for the former to get "
+"required data from the later."
+msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:30
+#: ../../manual/modeling/modifiers/simulate/explode.rst:34
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:34
-msgid "Explode Modifier panel with Particle System Modifier above it."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:39
+#, fuzzy
+msgid "The Explode modifier, with a Particle System above it."
 msgstr "爆炸修改器面板以及上面的粒子系统修改器."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:41
-msgid "Vertex group"
+#: ../../manual/modeling/modifiers/simulate/explode.rst:53
+#, fuzzy
+msgid "Vertex Group"
 msgstr "顶点组"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:37
+#: ../../manual/modeling/modifiers/simulate/explode.rst:42
+#, fuzzy
 msgid ""
-"Vertices in this group may not be affected by the Explode Modifier. "
+"Vertices in this group may not be affected by the *Explode* modifier. "
 "Vertices with full weight are not affected at all, while vertices with "
 "less weight have a higher chance of being affected."
 msgstr "该组的顶点不会受爆炸修改器的影响。带全部权重（1.0）的顶点也不会受影响，顶点的权重值越低，越有几率受影响。"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:41
+#: ../../manual/modeling/modifiers/simulate/explode.rst:46
+#, fuzzy
 msgid ""
-"Vertices with no weight will be treated like those which do not belong to"
-" the group at all and explode normally."
+"Vertices with null weight will be treated like those which do not belong "
+"to the group at all, and explode normally."
 msgstr "没有权重的顶点会被当做不属于顶点组对待，它们跟一般的爆炸一样。"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:47
+#: ../../manual/modeling/modifiers/simulate/explode.rst:53
 msgid "Protect"
 msgstr "保护"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:44
+#: ../../manual/modeling/modifiers/simulate/explode.rst:49
+#, fuzzy
 msgid ""
 "Clean vertex group edges. Depending on the weights assigned to that "
-"vertex group; either completely protect those faces from being affected "
-"by the Explode Modifier (which would happen if the faces had a weight "
-"value of 1) or completely remove protection from those faces (which would"
-" happen if the faces had a weight value 0)."
+"vertex group, either completely protect those faces from being affected "
+"by the *Explode* modifier (which would happen if the faces had a weight "
+"value of 1), or completely remove protection from those faces (which "
+"would happen if the faces had a weight value of 0)."
 msgstr "清除顶点组边。取决于赋给顶点组的权重，或者全部保护这些面受爆炸修改器的影响（如果面的权重值是1），或者全部从这些面里移除保护（如果面的权重值是0）。"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:50
+#: ../../manual/modeling/modifiers/simulate/explode.rst:63
 msgid "Particle UV"
 msgstr "粒子UV"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:50
-msgid "UV map to change with particle age."
-msgstr "随粒子年龄而改变的UV图"
+#: ../../manual/modeling/modifiers/simulate/explode.rst:56
+msgid ""
+"If set, the U value of the coordinates in that :term:`UV map` will be "
+"overwritten with the age of the particle attached to the matching mesh "
+"face (in proportion, from 0 for not yet born particles, to 1 for dead "
+"ones)."
+msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:53
+#: ../../manual/modeling/modifiers/simulate/explode.rst:60
+msgid "The V value is set to a constant 0.5 value."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:62
+msgid ""
+"This allows e.g. to make the color of a fragment (face) vary during it "
+"'explosion' phase, by using a texture with a gradient of colors along its"
+" *U* axis."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:67
 msgid "Cut Edges"
 msgstr "切割边线"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:53
-msgid "Cut face edges for nicer shrapnel."
-msgstr "切割面的边以获得更好的弹片."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:66
+msgid ""
+"Split the mesh in pieces based on location of emitted particles, instead "
+"of using existing faces. This will typically give a splitting that "
+"appears more random."
+msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:55
+#: ../../manual/modeling/modifiers/simulate/explode.rst:69
 msgid "Unborn"
 msgstr "未诞生"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:56
-msgid "Show mesh when particles are unborn."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:70
+#, fuzzy
+msgid "Show faces when their attached particles are unborn."
 msgstr "粒子显现前显示网格."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:57
+#: ../../manual/modeling/modifiers/simulate/explode.rst:71
 msgid "Alive"
 msgstr "活跃的"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:58
-msgid "Show mesh when particles are alive."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:72
+#, fuzzy
+msgid "Show faces when their attached particles are alive."
 msgstr "粒子活跃时显示网格."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:59
+#: ../../manual/modeling/modifiers/simulate/explode.rst:73
 msgid "Dead"
 msgstr "消逝"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:60
-msgid "Show mesh when particles are dead."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:74
+#, fuzzy
+msgid "Show faces when their attached particles are dead."
 msgstr "粒子消逝时显示网格."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:62
+#: ../../manual/modeling/modifiers/simulate/explode.rst:76
 msgid "Size"
 msgstr "尺寸"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:62
-msgid "Use particle size for shrapnel."
-msgstr "为碎片使用粒子尺寸."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:76
+msgid ""
+"Scale each face using the size of its attached particle, once that "
+"particle is alive."
+msgstr ""
 
 #: ../../<generated>:1
 msgid "Refresh"
 msgstr "刷新"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:65
-msgid "Refresh data in the Explode Modifier."
+#: ../../manual/modeling/modifiers/simulate/explode.rst:79
+#, fuzzy
+msgid "Refresh data in the *Explode* modifier."
 msgstr "刷新爆炸修改器的数据."
+
+#~ msgid ""
+#~ "The Explode Modifier must come after "
+#~ "the Particle System Modifier because the"
+#~ " Particle System Modifier has the "
+#~ "information needed to drive the Explode"
+#~ " Modifier."
+#~ msgstr "爆炸修改器只能出现在粒子系统修改器之后，因为粒子系统修改器有驱动爆炸修改器运作的信息."
+
+#~ msgid "UV map to change with particle age."
+#~ msgstr "随粒子年龄而改变的UV图"
+
+#~ msgid "Cut face edges for nicer shrapnel."
+#~ msgstr "切割面的边以获得更好的弹片."
+
+#~ msgid "Use particle size for shrapnel."
+#~ msgstr "为碎片使用粒子尺寸."
 

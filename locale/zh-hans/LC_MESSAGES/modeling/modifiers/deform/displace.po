@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-30 09:48+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2017-11-21 05:42+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -111,117 +111,38 @@ msgid ""
 "along local or global axes."
 msgstr "根据方向设置为 X,Y,Z还是 XYZ,修改器会沿着自身轴或全局轴."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:82
+#: ../../manual/modeling/modifiers/deform/displace.rst:47
 msgid "Texture Coordinates"
 msgstr "贴图坐标系"
 
 #: ../../manual/modeling/modifiers/deform/displace.rst:45
+#, fuzzy
 msgid ""
 "The texture coordinate system to use when retrieving values from the "
-"texture for each vertex. Can be one of the following:"
+"texture for each vertex."
 msgstr "用来获取每个顶点对应的纹理坐标而使用的纹理坐标系统，可以从以下值中选取："
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:63
-msgid "UV"
-msgstr "UV"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:49
-msgid "Take texture coordinates from face UV coordinates."
-msgstr "从面的UV坐标获取纹理坐标。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:55
-msgid "UV Map"
-msgstr "UV 贴图"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:52
-#, fuzzy
+#: ../../manual/modeling/modifiers/deform/displace.rst:47
 msgid ""
-"The :term:`UV map` from which to take texture coordinates. If the object "
-"has no UV coordinates, it falls back to the *Local* coordinate system. If"
-" this field is blank, but there is a UV map available (e.g. just after "
-"adding the first UV map to the mesh), the currently active UV map will be"
-" used."
-msgstr ""
-"从中获取纹理坐标的UV贴图。 如果对象没有UV坐标，则使用 *自身* 坐标系。 "
-"如果此字段为空，但有可用的UV贴图（例如，在将第一个UV贴图添加到网格后），则将使用当前活动的UV贴图覆盖该贴图."
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:59
-#, fuzzy
-msgid ""
-"Since UV coordinates are specified per face, the UV texture coordinate "
-"system currently determines the UV coordinate for each vertex from the "
-"first face encountered which uses that vertex. Any other faces using that"
-" vertex are ignored."
-msgstr "因为UV坐标是按面指定的，UV纹理坐标系通过第一个用那个顶点的面决定每个顶点的UV坐标；其他用那个顶点的面会被忽略掉。所以如果网格是非连续的UV坐标，用这个选项可能导致人工假象（穿帮）。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:63
-msgid "This may lead to artifacts if the mesh has non-contiguous UV coordinates."
+"See :ref:`common masking options <modifiers-common-options-masking>` for "
+"a complete reference."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:72
-#: ../../manual/modeling/modifiers/deform/displace.rst:77
-msgid "Object"
-msgstr "物体"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:66
-#, fuzzy
-msgid "Take the texture coordinates from another object's coordinate system."
-msgstr "从物体的自身坐标系获取纹理坐标。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:69
-msgid ""
-"The object from which to take texture coordinates. Moving the object will"
-" therefore alter the coordinates of the texture mapping."
-msgstr "获取纹理坐标的物体。移动物体会改变纹理映射的坐标。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:72
-#, fuzzy
-msgid "If this field is blank, it falls back to the *Local* coordinate system."
-msgstr "如果该字段为空，就用 *局部* 坐标系。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:75
-#, fuzzy
-msgid ""
-"Moving the original object will **also** result in a texture coordinate "
-"update. As such, if you need to maintain a displacement coordinate system"
-" while moving the modified object, consider :ref:`parenting "
-"<bpy.ops.object.parent_set>` the coordinate object to the modified "
-"object."
-msgstr ""
-"注意移动最初的物体 **也** "
-"会导致纹理坐标的更新。所以，如果你需要在保持位移坐标不变的情况下移动修改后的物体，考虑建立从物体到修改的物体的父子关系。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:79
-msgid "Global"
-msgstr "全局"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:80
-msgid "Take the texture coordinates from the global coordinate system."
-msgstr "从全局坐标系获取纹理坐标。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:82
-msgid "Local"
-msgstr "自身"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:82
-msgid "Take the texture coordinates from the object's local coordinate system."
-msgstr "从物体的自身坐标系获取纹理坐标。"
-
-#: ../../manual/modeling/modifiers/deform/displace.rst:86
+#: ../../manual/modeling/modifiers/deform/displace.rst:51
 msgid "Vertex Group"
 msgstr "顶点组"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:85
+#: ../../manual/modeling/modifiers/deform/displace.rst:50
 msgid ""
 "The name of a vertex group which is used to control the influence of the "
 "modifier. If left empty, the modifier affects all vertices equally."
 msgstr "用来控制修改器影响因子的顶点数组的名字。如果留空，修改器会同样影响所有的顶点。"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:96
+#: ../../manual/modeling/modifiers/deform/displace.rst:61
 msgid "Midlevel"
 msgstr "中间值"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:89
+#: ../../manual/modeling/modifiers/deform/displace.rst:54
 #, fuzzy
 msgid ""
 "The texture value which will be treated as no displacement by the "
@@ -230,42 +151,42 @@ msgid ""
 "will result in positive displacement."
 msgstr "该纹理值将被修改器当作没有偏移。低于此值会在所选方向上负向偏移，高于此值会在所选方向上正向偏移。"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:93
+#: ../../manual/modeling/modifiers/deform/displace.rst:58
 #, fuzzy
-msgid "`displacement = texture_value - Midlevel`"
+msgid ":math:`displacement = texture_value - Midlevel`"
 msgstr "*置换* = *纹理值* - *中间值*"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:95
+#: ../../manual/modeling/modifiers/deform/displace.rst:60
 msgid ""
 "Recall that color/luminosity values are typically between (0.0 to 1.0) in"
 " Blender, and not between (0 to 255)."
 msgstr "回忆一下, Blender中 颜色/亮度值通常是在(0.0 到 1.0)之间,而不是 (0 到 255)."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:105
+#: ../../manual/modeling/modifiers/deform/displace.rst:70
 msgid "Strength"
 msgstr "强度"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:99
+#: ../../manual/modeling/modifiers/deform/displace.rst:64
 msgid ""
 "The strength of the displacement. After offsetting by the *Midlevel* "
 "value, the displacement will be multiplied by the *Strength* value to "
 "give the final vertex offset."
 msgstr "置换的强度。偏移 *中间值* 之后，置换将被乘以 *强度* 值得到最终的顶点偏移量."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:102
+#: ../../manual/modeling/modifiers/deform/displace.rst:67
 #, fuzzy
-msgid "`vertex_offset = displacement × Strength`"
+msgid ":math:`vertex_offset = displacement × Strength`"
 msgstr "*顶点偏移* = *置换* × *强度*."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:104
+#: ../../manual/modeling/modifiers/deform/displace.rst:69
 msgid "A negative strength can be used to invert the effect of the modifier."
 msgstr "负强度可用于翻转修改器的效果."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:108
+#: ../../manual/modeling/modifiers/deform/displace.rst:73
 msgid "Example"
 msgstr "例子"
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:113
+#: ../../manual/modeling/modifiers/deform/displace.rst:78
 msgid ""
 "Three different objects created with the Displace modifier. `Sample "
 "blend-file <https://en.blender.org/uploads/9/9e/Manual-Modifier-Displace-"
@@ -274,7 +195,7 @@ msgstr ""
 "置换修改器创建的三个不同的物体. `样例 blend文件 <https://en.blender.org/uploads/9/9e/Manual-"
 "Modifier-Displace-Example01.blend>`__."
 
-#: ../../manual/modeling/modifiers/deform/displace.rst:119
+#: ../../manual/modeling/modifiers/deform/displace.rst:84
 msgid ""
 "A slime animation created with the Displace modifier. `Sample blend-file "
 "<https://en.blender.org/uploads/6/62/Manual-Modifier-Displace-"
@@ -314,4 +235,84 @@ msgstr ""
 #~ "another object's coordinate system (specified"
 #~ " by the *Object* field)."
 #~ msgstr "从其他物体的坐标系获取纹理坐标系（通过 *物体* 字段指定的）。"
+
+#~ msgid "UV"
+#~ msgstr "UV"
+
+#~ msgid "Take texture coordinates from face UV coordinates."
+#~ msgstr "从面的UV坐标获取纹理坐标。"
+
+#~ msgid "UV Map"
+#~ msgstr "UV 贴图"
+
+#~ msgid ""
+#~ "The :term:`UV map` from which to "
+#~ "take texture coordinates. If the object"
+#~ " has no UV coordinates, it falls "
+#~ "back to the *Local* coordinate system."
+#~ " If this field is blank, but "
+#~ "there is a UV map available (e.g."
+#~ " just after adding the first UV "
+#~ "map to the mesh), the currently "
+#~ "active UV map will be used."
+#~ msgstr ""
+#~ "从中获取纹理坐标的UV贴图。 如果对象没有UV坐标，则使用 *自身* 坐标系。 "
+#~ "如果此字段为空，但有可用的UV贴图（例如，在将第一个UV贴图添加到网格后），则将使用当前活动的UV贴图覆盖该贴图."
+
+#~ msgid ""
+#~ "Since UV coordinates are specified per"
+#~ " face, the UV texture coordinate "
+#~ "system currently determines the UV "
+#~ "coordinate for each vertex from the "
+#~ "first face encountered which uses that"
+#~ " vertex. Any other faces using that"
+#~ " vertex are ignored."
+#~ msgstr "因为UV坐标是按面指定的，UV纹理坐标系通过第一个用那个顶点的面决定每个顶点的UV坐标；其他用那个顶点的面会被忽略掉。所以如果网格是非连续的UV坐标，用这个选项可能导致人工假象（穿帮）。"
+
+#~ msgid ""
+#~ "This may lead to artifacts if the"
+#~ " mesh has non-contiguous UV "
+#~ "coordinates."
+#~ msgstr ""
+
+#~ msgid "Object"
+#~ msgstr "物体"
+
+#~ msgid "Take the texture coordinates from another object's coordinate system."
+#~ msgstr "从物体的自身坐标系获取纹理坐标。"
+
+#~ msgid ""
+#~ "The object from which to take "
+#~ "texture coordinates. Moving the object "
+#~ "will therefore alter the coordinates of"
+#~ " the texture mapping."
+#~ msgstr "获取纹理坐标的物体。移动物体会改变纹理映射的坐标。"
+
+#~ msgid "If this field is blank, it falls back to the *Local* coordinate system."
+#~ msgstr "如果该字段为空，就用 *局部* 坐标系。"
+
+#~ msgid ""
+#~ "Moving the original object will **also**"
+#~ " result in a texture coordinate "
+#~ "update. As such, if you need to"
+#~ " maintain a displacement coordinate system"
+#~ " while moving the modified object, "
+#~ "consider :ref:`parenting <bpy.ops.object.parent_set>` "
+#~ "the coordinate object to the modified"
+#~ " object."
+#~ msgstr ""
+#~ "注意移动最初的物体 **也** "
+#~ "会导致纹理坐标的更新。所以，如果你需要在保持位移坐标不变的情况下移动修改后的物体，考虑建立从物体到修改的物体的父子关系。"
+
+#~ msgid "Global"
+#~ msgstr "全局"
+
+#~ msgid "Take the texture coordinates from the global coordinate system."
+#~ msgstr "从全局坐标系获取纹理坐标。"
+
+#~ msgid "Local"
+#~ msgstr "自身"
+
+#~ msgid "Take the texture coordinates from the object's local coordinate system."
+#~ msgstr "从物体的自身坐标系获取纹理坐标。"
 

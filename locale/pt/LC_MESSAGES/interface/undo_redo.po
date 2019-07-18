@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-01-03 08:38-0300\n"
 "Last-Translator: Ivan Paulos Tomé <greylica@gmail.com>\n"
 "Language: pt_BR\n"
@@ -42,9 +42,9 @@ msgstr "Desfazer"
 #: ../../manual/interface/undo_redo.rst:17
 #: ../../manual/interface/undo_redo.rst:36
 #: ../../manual/interface/undo_redo.rst:51
-#: ../../manual/interface/undo_redo.rst:100
-#: ../../manual/interface/undo_redo.rst:128
-#: ../../manual/interface/undo_redo.rst:161
+#: ../../manual/interface/undo_redo.rst:108
+#: ../../manual/interface/undo_redo.rst:136
+#: ../../manual/interface/undo_redo.rst:169
 msgid "Reference"
 msgstr "Referência"
 
@@ -55,9 +55,9 @@ msgstr ""
 #: ../../manual/interface/undo_redo.rst:20
 #: ../../manual/interface/undo_redo.rst:39
 #: ../../manual/interface/undo_redo.rst:54
-#: ../../manual/interface/undo_redo.rst:103
-#: ../../manual/interface/undo_redo.rst:131
-#: ../../manual/interface/undo_redo.rst:164
+#: ../../manual/interface/undo_redo.rst:111
+#: ../../manual/interface/undo_redo.rst:139
+#: ../../manual/interface/undo_redo.rst:172
 msgid "All Modes"
 msgstr ""
 
@@ -130,25 +130,22 @@ msgid ":kbd:`F9`"
 msgstr "Após um :kbd:`Shift-R`."
 
 #: ../../manual/interface/undo_redo.rst:58
+msgid ""
+"After an operation is complete you can tweak the parameters of the "
+"operation afterwards. In editors that support it, there is a \"head-up "
+"display\" panel in the bottom left based on the last performed operation;"
+" dependent on mode and context. Alternatively, you can create a pop-up "
+"with :kbd:`F9` does the same thing."
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:63
 #, fuzzy
 msgid ""
-":kbd:`F9` after an action will present you a context-sensitive pop-up "
-"menu based on your last action taken and the Mode and Editor in which "
-"Blender is being used."
-msgstr ""
-"A operação de *Refazer* é uma abreviação da ação de *Desfazer a última "
-"ação*. Pressionar :kbd:`F6` após uma ação, irá mostrar a você uma janela "
-"de contexto sensitivo com base na sua última ação tomada e o *Modo* e "
-"*Editor* no qual o Blender estava sendo usado naquele determinado "
-"momento."
-
-#: ../../manual/interface/undo_redo.rst:61
-msgid ""
-"For example, if your last action was a rotation in *Object Mode*, Blender"
-" will show you the last value changed for the angle (see Fig. :ref:`fig-"
-"interface-redo-last` left), where you can change your action back "
-"completely by typing :kbd:`Numpad0`. There are other useful options, "
-"based on your action context, and you cannot only Undo actions, but "
+"For example, if your last operation was a rotation in *Object Mode*, "
+"Blender will show you the last value changed for the angle (see Fig. :ref"
+":`fig-interface-redo-last-object-mode` left), where you can change your "
+"action back completely by typing :kbd:`Numpad0`. There are other useful "
+"options, based on the operator, and you cannot only Undo actions, but "
 "change them completely using the available options."
 msgstr ""
 "Por exemplo, caso a sua última ação tenha sido a rotação de um objeto no "
@@ -160,13 +157,15 @@ msgstr ""
 "desfazer as ações, mas alterá-las completamente usando as opções "
 "disponíveis."
 
-#: ../../manual/interface/undo_redo.rst:67
+#: ../../manual/interface/undo_redo.rst:69
+#, fuzzy
 msgid ""
 "If you are in *Edit Mode*, Blender will also change its contents based on"
-" your last action taken. In our second example (at the right), the last "
-"action taken was a Vertex Move; we did a *Scale* on a Face, and, as you "
-"can see, the contents of the Pop-Up menu are different, because of your "
-"mode (Edit Mode) (See Fig. :ref:`fig-interface-redo-last` right)."
+" your last action taken. In the second example (at the right), the last "
+"operation was a Move in object mode; but a *Scale* on a Face in Edit "
+"mode, and, as you can see, the contents of *Adjust Last Operation* are "
+"different, because of the mode (Edit mode) (See Fig. :ref:`fig-interface-"
+"redo-last-edit-mode` right)."
 msgstr ""
 "Caso você esteja no *Modo de edição*, o Blender também irá alterar os "
 "conteúdos desta janela com base nas suas últimas ações realizadas. Em "
@@ -177,53 +176,47 @@ msgstr ""
 " (Veja a imagem :ref:`fig-interface-redo-last` a direita)."
 
 #: ../../manual/interface/undo_redo.rst:76
-#, fuzzy
-msgid "Redo Last."
-msgstr "Refazer a última ação"
-
-#: ../../manual/interface/undo_redo.rst:81
-msgid "Redo Last -- Rotation (Object Mode, 60 degrees)."
+msgid "Adjust Last Operation."
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:86
-msgid "Redo Last -- Scale (Edit Mode, Resize face)."
+#: ../../manual/interface/undo_redo.rst:83
+msgid "Rotation (Object Mode, 60 degrees)."
 msgstr ""
-
-#: ../../manual/interface/undo_redo.rst:88
-msgid "Operations using Redo Last"
-msgstr "Operações utilizando refazer a última ação"
 
 #: ../../manual/interface/undo_redo.rst:90
-#, fuzzy
-msgid ""
-"Some operations produce particularly useful results if you tweak their "
-"parameters with the :kbd:`F9` Menu. Take, for example, adding a Circle. "
-"If you reduce the Vertex count to three, you get a perfect equilateral "
-"triangle."
+msgid "Scale (Edit Mode, Resize face)."
 msgstr ""
-"Algumas operações produzem resultados particularmente úteis caso você "
-"ajuste os seus parâmetros através do menu que é apresentado através do "
-"atalho :kbd:`F6`. Leve em consideração, por exemplo, a adição de um "
-"círculo. Caso você reduza a contagem de vértices para três, você obterá "
-"um triângulo equilátero perfeito."
 
-#: ../../manual/interface/undo_redo.rst:98
+#: ../../manual/interface/undo_redo.rst:94
+msgid ""
+"Some operations produce particularly useful results by using *Adjust Last"
+" Operation*. For example, adding a Circle in the 3D Viewport; if you "
+"reduce the *Vertices* to three, you get a perfect equilateral triangle."
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:100
+msgid ""
+"The *Adjust Last Operation* region can be hidden by :menuselection:`View "
+"--> Adjust Last Operation`"
+msgstr ""
+
+#: ../../manual/interface/undo_redo.rst:106
 msgid "Undo History"
 msgstr "Histórico para desfazer ações"
 
-#: ../../manual/interface/undo_redo.rst:104
+#: ../../manual/interface/undo_redo.rst:112
 #, fuzzy
 msgid ":menuselection:`Edit --> Undo History`"
 msgstr ""
 "Menu:     :menuselection:`Objeto / Tipos de objetos --> Histórico para "
 "desfazer ações`"
 
-#: ../../manual/interface/undo_redo.rst:109
+#: ../../manual/interface/undo_redo.rst:117
 #, fuzzy
 msgid "The Undo History menu."
 msgstr "O menu do histórico para desfazer ações."
 
-#: ../../manual/interface/undo_redo.rst:111
+#: ../../manual/interface/undo_redo.rst:119
 #, fuzzy
 msgid ""
 "There is also an Undo History of the last actions taken, recorded by "
@@ -233,7 +226,7 @@ msgstr ""
 "ações feitas, e que é gravado pelo Blender. Você pode acessar a caixa de "
 "diálogo do histórico através do atalho :kbd:`Ctrl-Alt-Z`."
 
-#: ../../manual/interface/undo_redo.rst:113
+#: ../../manual/interface/undo_redo.rst:121
 msgid ""
 "First positions correspond to most recent actions. A small icon of an eye"
 " next to one of the entries indicates the current status. Rolling back "
@@ -257,7 +250,7 @@ msgstr ""
 "truncado neste ponto. A seleção de uma das entradas na lista levará o "
 "status atual a esta posição."
 
-#: ../../manual/interface/undo_redo.rst:126
+#: ../../manual/interface/undo_redo.rst:134
 msgid "Repeat Last"
 msgstr "Repetir última ação"
 
@@ -265,17 +258,17 @@ msgstr "Repetir última ação"
 msgid "Panel"
 msgstr ""
 
-#: ../../manual/interface/undo_redo.rst:132
+#: ../../manual/interface/undo_redo.rst:140
 #, fuzzy
 msgid ":menuselection:`Edit --> Repeat Last`"
 msgstr "Painel:    :menuselection:`Painel de operadores`"
 
-#: ../../manual/interface/undo_redo.rst:133
+#: ../../manual/interface/undo_redo.rst:141
 #, fuzzy
 msgid ":kbd:`Shift-R`"
 msgstr "Após um :kbd:`Shift-R`."
 
-#: ../../manual/interface/undo_redo.rst:135
+#: ../../manual/interface/undo_redo.rst:143
 msgid ""
 "The Repeat Last feature will repeat your last action when you press "
 ":kbd:`Shift-R`."
@@ -283,7 +276,7 @@ msgstr ""
 "A funcionalidade de *Repetir a última ação* irá repetir a sua última ação"
 " quando você pressionar :kbd:`Shift-R`."
 
-#: ../../manual/interface/undo_redo.rst:137
+#: ../../manual/interface/undo_redo.rst:145
 msgid ""
 "In the example Images below, we duplicated a *Monkey* mesh, and then we "
 "moved the Object a bit. Using repeat :kbd:`Shift-R`, the *Monkey* was "
@@ -294,35 +287,35 @@ msgstr ""
 " última ação com :kbd:`Shift-R`, o *Macaco* também foi duplicado e "
 "movido."
 
-#: ../../manual/interface/undo_redo.rst:145
+#: ../../manual/interface/undo_redo.rst:153
 msgid "Suzanne."
 msgstr "Suzanne"
 
-#: ../../manual/interface/undo_redo.rst:149
+#: ../../manual/interface/undo_redo.rst:157
 msgid "After a :kbd:`Shift-D` and move."
 msgstr "Após um acionamento do :kbd:`Shift-D` e movimentação."
 
-#: ../../manual/interface/undo_redo.rst:153
+#: ../../manual/interface/undo_redo.rst:161
 msgid "After a :kbd:`Shift-R`."
 msgstr "Após um :kbd:`Shift-R`."
 
-#: ../../manual/interface/undo_redo.rst:159
+#: ../../manual/interface/undo_redo.rst:167
 msgid "Repeat History"
 msgstr "Histórico para repetir ações"
 
-#: ../../manual/interface/undo_redo.rst:165
+#: ../../manual/interface/undo_redo.rst:173
 #, fuzzy
 msgid ":menuselection:`Edit --> Repeat History...`"
 msgstr ""
 "Painel:    :menuselection:`Estante de ferramentas --> Ferramentas (aba) "
 "--> Histórico (painel) --> Histórico para repetir ações (botão)`"
 
-#: ../../manual/interface/undo_redo.rst:170
+#: ../../manual/interface/undo_redo.rst:178
 #, fuzzy
 msgid "The Repeat History menu."
 msgstr "O menu do histórico para repetir ações."
 
-#: ../../manual/interface/undo_redo.rst:172
+#: ../../manual/interface/undo_redo.rst:180
 #, fuzzy
 msgid ""
 "The *Repeat History* feature will present you a list of the last repeated"
@@ -336,7 +329,7 @@ msgstr ""
 "desfazer ações*, explicado acima, mas a lista contém somente as ações "
 "repetidas. Para acessar o *Histórico para repetir ações*, use :kbd:`F3`."
 
-#: ../../manual/interface/undo_redo.rst:183
+#: ../../manual/interface/undo_redo.rst:191
 msgid ""
 "When you quit Blender, the complete list of user actions will be lost, "
 "even if you save your file before quitting."
@@ -344,7 +337,7 @@ msgstr ""
 "Quando você encerra o Blender, a lista completa das ações do usuário será"
 " perdida, mesmo que você salve seu arquivo antes de encerrar o software."
 
-#: ../../manual/interface/undo_redo.rst:187
+#: ../../manual/interface/undo_redo.rst:195
 #, fuzzy
 msgid ""
 "Troubleshooting section on :doc:`Recovering your lost work "
@@ -434,4 +427,52 @@ msgstr ""
 #~ " um dedicado ao *Modo de edição*, "
 #~ "e outro dedicado ao *Modo de "
 #~ "objeto*."
+
+#~ msgid ""
+#~ ":kbd:`F9` after an action will present"
+#~ " you a context-sensitive pop-up "
+#~ "menu based on your last action "
+#~ "taken and the Mode and Editor in"
+#~ " which Blender is being used."
+#~ msgstr ""
+#~ "A operação de *Refazer* é uma "
+#~ "abreviação da ação de *Desfazer a "
+#~ "última ação*. Pressionar :kbd:`F6` após "
+#~ "uma ação, irá mostrar a você uma"
+#~ " janela de contexto sensitivo com "
+#~ "base na sua última ação tomada e"
+#~ " o *Modo* e *Editor* no qual o"
+#~ " Blender estava sendo usado naquele "
+#~ "determinado momento."
+
+#~ msgid "Redo Last."
+#~ msgstr "Refazer a última ação"
+
+#~ msgid "Redo Last -- Rotation (Object Mode, 60 degrees)."
+#~ msgstr ""
+
+#~ msgid "Redo Last -- Scale (Edit Mode, Resize face)."
+#~ msgstr ""
+
+#~ msgid "Operations using Redo Last"
+#~ msgstr "Operações utilizando refazer a última ação"
+
+#~ msgid ""
+#~ "Some operations produce particularly useful"
+#~ " results if you tweak their "
+#~ "parameters with the :kbd:`F9` Menu. "
+#~ "Take, for example, adding a Circle. "
+#~ "If you reduce the Vertex count to"
+#~ " three, you get a perfect equilateral"
+#~ " triangle."
+#~ msgstr ""
+#~ "Algumas operações produzem resultados "
+#~ "particularmente úteis caso você ajuste "
+#~ "os seus parâmetros através do menu "
+#~ "que é apresentado através do atalho "
+#~ ":kbd:`F6`. Leve em consideração, por "
+#~ "exemplo, a adição de um círculo. "
+#~ "Caso você reduza a contagem de "
+#~ "vértices para três, você obterá um "
+#~ "triângulo equilátero perfeito."
 

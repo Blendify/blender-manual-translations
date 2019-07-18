@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.79 Manual 2.79\n"
 "Report-Msgid-Bugs-To: Eduardo Schilling <elschilling@gmail.com>\n"
-"POT-Creation-Date: 2019-06-25 16:56+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2018-09-16 22:08-0300\n"
 "Last-Translator: Eduardo Schilling <elschilling@gmail.com>\n"
 "Language: pt\n"
@@ -24,239 +24,151 @@ msgid "Introduction"
 msgstr "Introdução"
 
 #: ../../manual/animation/drivers/introduction.rst:6
-#, fuzzy
-msgid ""
-"Drivers are small scripts with the purpose of controlling properties with"
-" other properties. For example, the rotation of one object can be "
-"controlled by the location of another object."
+msgid "Drivers control values of properties by means of a function."
 msgstr ""
-"Os controladores são scripts, cuja a principal finalidade é controlar as "
-"propriedades através de outras propriedades. No exemplo a rotação de um "
-"objeto é controlada através da localização de outro objeto."
 
-#: ../../manual/animation/drivers/introduction.rst:9
+#: ../../manual/animation/drivers/introduction.rst:8
+msgid ""
+"Driver functions are added to a property and they set, or 'drive', the "
+"value of that property according to the values of other properties, small"
+" Python scripts and mathematical expressions."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:12
+msgid ""
+"For example, the *rotation* of Object 1 can be controlled by the "
+"*location* of Object 2. It is then said that the *location* of Object 2 "
+"drives the *rotation* of Object 1."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:15
+msgid ""
+"Not only drivers can use the value of most properties as a direct mapping"
+" to other properties, they can evaluate that value as part of a "
+"mathematical expression or Python script and further modulate it with a "
+"function."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:19
 msgid ""
 "Effectively, drivers are animation :doc:`F-Curves "
-"</editors/graph_editor/fcurves/introduction>` that use a custom "
-"expression as the X axis input instead of the current frame."
+"</editors/graph_editor/fcurves/introduction>`, vary with custom changing "
+"value, instead of varying with the current frame."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:14
-msgid ":doc:`Auto run </advanced/scripting/security>`"
-msgstr ":doc:`Auto run </advanced/scripting/security>`"
-
-#: ../../manual/animation/drivers/introduction.rst:18
-msgid "Adding & Removing"
-msgstr "Adicionando e removendo"
-
-#: ../../manual/animation/drivers/introduction.rst:20
-#, fuzzy
-msgid ""
-"There are some different ways to add drivers in Blender. After adding "
-"drivers they are usually modified in the *Graph Editor* with the mode set"
-" to *Drivers*, or via a simplified *Edit Driver* popover invoked from the"
-" property context menu."
-msgstr ""
-"Existem algumas maneiras diferentes para adicionar controladores no "
-"Blender. Após a adição dos controladores, eles são normalmente "
-"modificados dentro do *Editor gráfico*, através da definição de seu modo "
-"para *Controladores*."
-
-#: ../../manual/animation/drivers/introduction.rst:26
-msgid "Add Driver"
-msgstr "Adicionar controlador"
-
-#: ../../manual/animation/drivers/introduction.rst:28
-#: ../../manual/animation/drivers/introduction.rst:44
-#: ../../manual/animation/drivers/introduction.rst:59
-#: ../../manual/animation/drivers/introduction.rst:71
-#: ../../manual/animation/drivers/introduction.rst:97
-msgid "Reference"
-msgstr "Referência"
-
-#: ../../manual/animation/drivers/introduction.rst
-msgid "Menu"
-msgstr "Menu"
-
-#: ../../manual/animation/drivers/introduction.rst:31
-msgid ":menuselection:`Context menu --> Add Driver`"
-msgstr ":menuselection:`Menu de contexto --> Adicionar controlador`"
-
-#: ../../manual/animation/drivers/introduction.rst
-msgid "Hotkey"
-msgstr "Atalho"
-
-#: ../../manual/animation/drivers/introduction.rst:32
-msgid ":kbd:`Ctrl-D`"
-msgstr ":kbd:`Ctrl-D`"
-
-#: ../../manual/animation/drivers/introduction.rst:34
-#, fuzzy
-msgid ""
-"The common way to add a driver to a property is to :kbd:`RMB` click a "
-"property, then add a driver via the context menu. Drivers can also be "
-"added by pressing :kbd:`Ctrl-D` with the mouse over the property set."
-msgstr ""
-"A maneira mais comumente utilizada para adicionar controladores a uma "
-"propriedade é clicar em uma propriedade com o  :kbd:`BDM`, e depois "
-"adicionar o controlador através do menu de contexto. Os controladores "
-"também podem ser adicionados através do atalho  :kbd:`Ctrl-D` com o "
-"ponteiro do mouse  sobre o conjunto de propriedades. As propriedades "
-"selecionadas serão usadas como a destinação (saída) para o controlador."
-
-#: ../../manual/animation/drivers/introduction.rst:38
-#, fuzzy
-msgid ""
-"This operation adds a driver with a single variable (but not filled in), "
-"and displays the *Edit Driver* popover."
-msgstr ""
-"Isto irá adicionar um controlador ou conjunto de controladores, sendo "
-"cada um deles de variável única (mas sem preenchimento). Nenhum ícone de "
-"conta-gotas aparecerá."
-
-#: ../../manual/animation/drivers/introduction.rst:42
-#, fuzzy
-msgid "Edit Driver"
-msgstr "Adicionar controlador"
-
-#: ../../manual/animation/drivers/introduction.rst:47
-#, fuzzy
-msgid ":menuselection:`Context menu --> Edit Driver`"
-msgstr ":menuselection:`Menu de contexto --> Adicionar controlador`"
-
-#: ../../manual/animation/drivers/introduction.rst:49
-msgid ""
-"Displays a popover window that allows editing the custom expression and "
-"input variables of the driver without opening the full *Graph Editor*."
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:52
-msgid ""
-"Most drivers don't use their :doc:`F-Curve "
-"</editors/graph_editor/fcurves/introduction>` component, so this reduced "
-"interface is sufficient."
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:57
-msgid "Open Drivers Editor"
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:62
-#, fuzzy
-msgid ":menuselection:`Context menu --> Open Drivers Editor`"
-msgstr ":menuselection:`Menu de contexto --> Copiar / Colar controlador`"
-
-#: ../../manual/animation/drivers/introduction.rst:64
-msgid ""
-"Opens a new window with the *Graph Editor* in the *Drivers* mode, and "
-"selects the driver associated with the property."
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:69
-msgid "Copy & Paste"
-msgstr "Copiar e Colar"
-
-#: ../../manual/animation/drivers/introduction.rst:74
-msgid ":menuselection:`Context menu --> Copy/Paste Driver`"
-msgstr ":menuselection:`Menu de contexto --> Copiar / Colar controlador`"
-
-#: ../../manual/animation/drivers/introduction.rst:76
-msgid ""
-"Drivers can be copied and pasted in the UI, via the context menu. When "
-"adding drivers with the same settings, this can save time modifying "
-"settings."
-msgstr ""
-"Os controladores podem ser copiados e colados na interface de usuário, "
-"através do menu de contexto. Ao adicionar controladores com as mesmas "
-"definições, isto pode economizar tempo ao modificar estas definições."
-
-#: ../../manual/animation/drivers/introduction.rst:81
-msgid "Expression"
-msgstr "Expressão"
-
-#: ../../manual/animation/drivers/introduction.rst:83
-msgid ""
-"This is a quick way to add drivers with a scripted expression. First "
-"click the property you want to add a driver to, then add a hash ``#`` and"
-" a scripted expression."
-msgstr ""
-"Esta é uma maneira rápida de adicionar controladores usando uma expressão"
-" em formato de script. Inicialmente, clique na propriedade na qual você "
-"deseja adicionar o controlador, e então adicione uma cerquilha ou antífen"
-" ``#`` (ou *Hash*, em Inglês), e uma expressão em formato de script."
-
-#: ../../manual/animation/drivers/introduction.rst:86
-msgid "Some examples:"
-msgstr "Alguns exemplos:"
-
-#: ../../manual/animation/drivers/introduction.rst:88
-msgid "``#frame``"
-msgstr "``#frame``"
-
-#: ../../manual/animation/drivers/introduction.rst:89
-msgid "``#frame / 20.0``"
-msgstr "``#frame / 20.0``"
-
-#: ../../manual/animation/drivers/introduction.rst:90
-msgid "``#sin(frame)``"
-msgstr "``#sin(frame)``"
-
-#: ../../manual/animation/drivers/introduction.rst:91
-msgid "``#cos(frame)``"
-msgstr "``#cos(frame)``"
-
-#: ../../manual/animation/drivers/introduction.rst:95
-msgid "Removing Drivers"
-msgstr "Removendo controladores"
-
-#: ../../manual/animation/drivers/introduction.rst:100
-msgid ":menuselection:`Context menu --> Delete (Single) Driver(s)`"
-msgstr ":menuselection:`Menu de contexto --> Apagar (único) controlador(es)`"
-
-#: ../../manual/animation/drivers/introduction.rst:101
-msgid ":kbd:`Ctrl-Alt-D`"
-msgstr ":kbd:`Ctrl-Alt-D`"
-
-#: ../../manual/animation/drivers/introduction.rst:103
-msgid ""
-"Removes driver(s) associated with the property, either for the single "
-"selected sub-channel or all of them."
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:107
+#: ../../manual/animation/drivers/introduction.rst:24
 msgid "Graph View"
 msgstr "Visualização gráfica"
 
-#: ../../manual/animation/drivers/introduction.rst:112
-msgid "Driver example in the Graph editor."
+#: ../../manual/animation/drivers/introduction.rst:29
+#, fuzzy
+msgid "Driver curve in the Drivers editor."
 msgstr "Exemplo de controlador no Editor gráfico"
 
-#: ../../manual/animation/drivers/introduction.rst:114
+#: ../../manual/animation/drivers/introduction.rst:31
 msgid ""
-"The main area of the :doc:`Graph editor </editors/graph_editor/index>` in"
-" Driver Mode shows an :doc:`F-Curve "
-"</editors/graph_editor/fcurves/introduction>` that maps the Driver Value "
-"to the target property. The Driver Value is the output of the driver "
-"script. The X axis represents the Driver Value and the Y axis is the "
-"value of the target property. In the example image, if the Driver Value "
-"is 2.0 the property will be 0.5."
+"The main area of the :doc:`Drivers editor </editors/drivers_editor>` "
+"shows an :doc:`F-Curve </editors/graph_editor/fcurves/introduction>` that"
+" represents the driver."
 msgstr ""
-"A área principal do :doc:`Editor gráfico </editors/graph_editor/index>` "
-"em Modo Controlador mostra uma :doc:`Curva-F "
-"</editors/graph_editor/fcurves/introduction>` que mapeia o Valor do "
-"Controlador para a propriedade alvo. O Valor do Controlador é a saída do "
-"script controlador. O eixo X representa o Valor do Controlador e o eixo Y"
-" é o valor da propriedade alvo. Na imagem exemplo, se o Valor do "
-"Controlador é 2.0 a propriedade será 0.5."
 
-#: ../../manual/animation/drivers/introduction.rst:120
+#: ../../manual/animation/drivers/introduction.rst:35
 msgid ""
-"The default F-curve is an identity map i.e. the value is not changed. It "
-"can be used to create corrective drivers."
+"The *X axis* maps the output value of the driver. The units depend on the"
+" driver configuration."
 msgstr ""
-"A curva de função (Curva-F) padrão é uma espécie de \"mapa de "
-"identidade\", ou seja, o valor em si não é alterado. Ele pode ser usado "
-"para a criação de controladores corretivos."
+
+#: ../../manual/animation/drivers/introduction.rst:37
+msgid ""
+"The *Y axis* shows the value applied to the target property. The units "
+"depend on the property."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:39
+msgid ""
+"In the example image, if the driver value is 2.0 the property value will "
+"be 0.5."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:41
+msgid ""
+"The default F-curve is an identity map i.e. the value is applied to the "
+"driven property as is outputted by the driver, unchanged. If the driver "
+"output value is 2.0, the property will be 2.0."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:45
+msgid ""
+"The driver function can be defined manually with Bézier curve handles or "
+"mathematically with a polynomial expression such as :math:`y = a + bx^2`."
+" Furthermore, the function can also be procedurally modulated with noise "
+"or cyclic repetitions. See :doc:`Modifiers "
+"</editors/graph_editor/fcurves/modifiers>` for more details."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:52
+msgid "Driver Configuration"
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:54
+msgid ""
+"A driver can be configured in the :doc:`Drivers panel "
+"</animation/drivers/drivers_panel>`."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:56
+msgid ""
+"A driver has zero, one, or more *variables*. Variables are the values of "
+"properties or distances between two objects."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:59
+msgid "The driver *Type* determines how the variables are used. The type can be:"
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:61
+msgid "A built-in function: for example, the sum of the variables."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:62
+msgid ""
+"A scripted expression: a custom mathematical or Python expression that "
+"can make use of any existing variables."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:64
+msgid ""
+"This driver configuration outputs a single value which changes when the "
+"variables change. This value is then evaluated through the driver "
+"function to produce the result to be applied to the driven property."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:70
+msgid "Notes on Scripted Expressions"
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:72
+msgid ""
+"When a driver uses a Scripted expression, Blender can convert it to a "
+"native expression if it is simple enough. This means that drivers are "
+"fast to evaluate with simple divisions or mathematical expressions even "
+"on heavy scenes."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:76
+msgid ""
+"See :ref:`Simple Expressions <drivers-simple-expressions>` for a "
+"comprehensive list of expressions that can be evaluated natively."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:79
+msgid ""
+"When the expression is not simple, it will be evaluated using Python. As "
+"a consequence, the driver will be slower and there is a **security risk**"
+" if the author of the Python code is unknown. This is an important thing "
+"to take into consideration for heavy scenes and when sharing files with "
+"other people. See also: :doc:`Auto run </advanced/scripting/security>`."
+msgstr ""
 
 #~ msgid "Graph Editor: Driver example."
 #~ msgstr "Editor gráfico: Exemplo de controlador."
@@ -413,4 +325,244 @@ msgstr ""
 
 #~ msgid "ToDo add."
 #~ msgstr "Para ser adicionado."
+
+#~ msgid ""
+#~ "Drivers are small scripts with the "
+#~ "purpose of controlling properties with "
+#~ "other properties. For example, the "
+#~ "rotation of one object can be "
+#~ "controlled by the location of another"
+#~ " object."
+#~ msgstr ""
+#~ "Os controladores são scripts, cuja a "
+#~ "principal finalidade é controlar as "
+#~ "propriedades através de outras propriedades."
+#~ " No exemplo a rotação de um "
+#~ "objeto é controlada através da "
+#~ "localização de outro objeto."
+
+#~ msgid ""
+#~ "Effectively, drivers are animation "
+#~ ":doc:`F-Curves </editors/graph_editor/fcurves/introduction>` "
+#~ "that use a custom expression as "
+#~ "the X axis input instead of the"
+#~ " current frame."
+#~ msgstr ""
+
+#~ msgid ":doc:`Auto run </advanced/scripting/security>`"
+#~ msgstr ":doc:`Auto run </advanced/scripting/security>`"
+
+#~ msgid "Adding & Removing"
+#~ msgstr "Adicionando e removendo"
+
+#~ msgid ""
+#~ "There are some different ways to "
+#~ "add drivers in Blender. After adding "
+#~ "drivers they are usually modified in "
+#~ "the *Graph Editor* with the mode "
+#~ "set to *Drivers*, or via a "
+#~ "simplified *Edit Driver* popover invoked "
+#~ "from the property context menu."
+#~ msgstr ""
+#~ "Existem algumas maneiras diferentes para "
+#~ "adicionar controladores no Blender. Após "
+#~ "a adição dos controladores, eles são "
+#~ "normalmente modificados dentro do *Editor "
+#~ "gráfico*, através da definição de seu"
+#~ " modo para *Controladores*."
+
+#~ msgid "Add Driver"
+#~ msgstr "Adicionar controlador"
+
+#~ msgid "Reference"
+#~ msgstr "Referência"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid ":menuselection:`Context menu --> Add Driver`"
+#~ msgstr ":menuselection:`Menu de contexto --> Adicionar controlador`"
+
+#~ msgid "Hotkey"
+#~ msgstr "Atalho"
+
+#~ msgid ":kbd:`Ctrl-D`"
+#~ msgstr ":kbd:`Ctrl-D`"
+
+#~ msgid ""
+#~ "The common way to add a driver "
+#~ "to a property is to :kbd:`RMB` "
+#~ "click a property, then add a "
+#~ "driver via the context menu. Drivers "
+#~ "can also be added by pressing "
+#~ ":kbd:`Ctrl-D` with the mouse over the"
+#~ " property set."
+#~ msgstr ""
+#~ "A maneira mais comumente utilizada para"
+#~ " adicionar controladores a uma propriedade"
+#~ " é clicar em uma propriedade com "
+#~ "o  :kbd:`BDM`, e depois adicionar o "
+#~ "controlador através do menu de contexto."
+#~ " Os controladores também podem ser "
+#~ "adicionados através do atalho  :kbd:`Ctrl-D`"
+#~ " com o ponteiro do mouse  sobre "
+#~ "o conjunto de propriedades. As "
+#~ "propriedades selecionadas serão usadas como"
+#~ " a destinação (saída) para o "
+#~ "controlador."
+
+#~ msgid ""
+#~ "This operation adds a driver with "
+#~ "a single variable (but not filled "
+#~ "in), and displays the *Edit Driver* "
+#~ "popover."
+#~ msgstr ""
+#~ "Isto irá adicionar um controlador ou "
+#~ "conjunto de controladores, sendo cada um"
+#~ " deles de variável única (mas sem "
+#~ "preenchimento). Nenhum ícone de conta-"
+#~ "gotas aparecerá."
+
+#~ msgid "Edit Driver"
+#~ msgstr "Adicionar controlador"
+
+#~ msgid ":menuselection:`Context menu --> Edit Driver`"
+#~ msgstr ":menuselection:`Menu de contexto --> Adicionar controlador`"
+
+#~ msgid ""
+#~ "Displays a popover window that allows"
+#~ " editing the custom expression and "
+#~ "input variables of the driver without"
+#~ " opening the full *Graph Editor*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Most drivers don't use their "
+#~ ":doc:`F-Curve </editors/graph_editor/fcurves/introduction>` "
+#~ "component, so this reduced interface is"
+#~ " sufficient."
+#~ msgstr ""
+
+#~ msgid "Open Drivers Editor"
+#~ msgstr ""
+
+#~ msgid ":menuselection:`Context menu --> Open Drivers Editor`"
+#~ msgstr ":menuselection:`Menu de contexto --> Copiar / Colar controlador`"
+
+#~ msgid ""
+#~ "Opens a new window with the *Graph"
+#~ " Editor* in the *Drivers* mode, and"
+#~ " selects the driver associated with "
+#~ "the property."
+#~ msgstr ""
+
+#~ msgid "Copy & Paste"
+#~ msgstr "Copiar e Colar"
+
+#~ msgid ":menuselection:`Context menu --> Copy/Paste Driver`"
+#~ msgstr ":menuselection:`Menu de contexto --> Copiar / Colar controlador`"
+
+#~ msgid ""
+#~ "Drivers can be copied and pasted "
+#~ "in the UI, via the context menu."
+#~ " When adding drivers with the same"
+#~ " settings, this can save time "
+#~ "modifying settings."
+#~ msgstr ""
+#~ "Os controladores podem ser copiados e"
+#~ " colados na interface de usuário, "
+#~ "através do menu de contexto. Ao "
+#~ "adicionar controladores com as mesmas "
+#~ "definições, isto pode economizar tempo "
+#~ "ao modificar estas definições."
+
+#~ msgid "Expression"
+#~ msgstr "Expressão"
+
+#~ msgid ""
+#~ "This is a quick way to add "
+#~ "drivers with a scripted expression. "
+#~ "First click the property you want "
+#~ "to add a driver to, then add "
+#~ "a hash ``#`` and a scripted "
+#~ "expression."
+#~ msgstr ""
+#~ "Esta é uma maneira rápida de "
+#~ "adicionar controladores usando uma expressão"
+#~ " em formato de script. Inicialmente, "
+#~ "clique na propriedade na qual você "
+#~ "deseja adicionar o controlador, e então"
+#~ " adicione uma cerquilha ou antífen "
+#~ "``#`` (ou *Hash*, em Inglês), e "
+#~ "uma expressão em formato de script."
+
+#~ msgid "Some examples:"
+#~ msgstr "Alguns exemplos:"
+
+#~ msgid "``#frame``"
+#~ msgstr "``#frame``"
+
+#~ msgid "``#frame / 20.0``"
+#~ msgstr "``#frame / 20.0``"
+
+#~ msgid "``#sin(frame)``"
+#~ msgstr "``#sin(frame)``"
+
+#~ msgid "``#cos(frame)``"
+#~ msgstr "``#cos(frame)``"
+
+#~ msgid "Removing Drivers"
+#~ msgstr "Removendo controladores"
+
+#~ msgid ":menuselection:`Context menu --> Delete (Single) Driver(s)`"
+#~ msgstr ":menuselection:`Menu de contexto --> Apagar (único) controlador(es)`"
+
+#~ msgid ":kbd:`Ctrl-Alt-D`"
+#~ msgstr ":kbd:`Ctrl-Alt-D`"
+
+#~ msgid ""
+#~ "Removes driver(s) associated with the "
+#~ "property, either for the single selected"
+#~ " sub-channel or all of them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The main area of the :doc:`Graph "
+#~ "editor </editors/graph_editor/index>` in Driver "
+#~ "Mode shows an :doc:`F-Curve "
+#~ "</editors/graph_editor/fcurves/introduction>` that maps"
+#~ " the Driver Value to the target "
+#~ "property. The Driver Value is the "
+#~ "output of the driver script. The X"
+#~ " axis represents the Driver Value and"
+#~ " the Y axis is the value of "
+#~ "the target property. In the example "
+#~ "image, if the Driver Value is 2.0"
+#~ " the property will be 0.5."
+#~ msgstr ""
+#~ "A área principal do :doc:`Editor gráfico"
+#~ " </editors/graph_editor/index>` em Modo "
+#~ "Controlador mostra uma :doc:`Curva-F "
+#~ "</editors/graph_editor/fcurves/introduction>` que mapeia"
+#~ " o Valor do Controlador para a "
+#~ "propriedade alvo. O Valor do Controlador"
+#~ " é a saída do script controlador. "
+#~ "O eixo X representa o Valor do "
+#~ "Controlador e o eixo Y é o "
+#~ "valor da propriedade alvo. Na imagem "
+#~ "exemplo, se o Valor do Controlador "
+#~ "é 2.0 a propriedade será 0.5."
+
+#~ msgid ""
+#~ "The default F-curve is an identity "
+#~ "map i.e. the value is not changed."
+#~ " It can be used to create "
+#~ "corrective drivers."
+#~ msgstr ""
+#~ "A curva de função (Curva-F) padrão "
+#~ "é uma espécie de \"mapa de "
+#~ "identidade\", ou seja, o valor em "
+#~ "si não é alterado. Ele pode ser"
+#~ " usado para a criação de "
+#~ "controladores corretivos."
 

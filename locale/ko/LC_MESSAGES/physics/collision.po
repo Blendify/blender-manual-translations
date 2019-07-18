@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Deletes Particles upon impact."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:77
+#: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:97
 msgid "Damping"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Random variation of damping."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:97
+#: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:117
 msgid "Friction"
 msgstr ""
 
@@ -159,27 +159,47 @@ msgstr ""
 msgid "Random variation of friction."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:70
-msgid "Soft body and Cloth"
+#: ../../manual/physics/collision.rst:72
+msgid "Soft Body and Cloth"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:73
-msgid "Damping during a collision. The amount of bounce that surfaces will have."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:76
-msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:77
-msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
-msgstr ""
-
-#: ../../manual/physics/collision.rst:87
-msgid "Thickness"
+#: ../../manual/physics/collision.rst:74
+msgid ""
+"It is also important to note that this collision panel is used to tell "
+"all simulations that this object is to participate in "
+"colliding/deflecting other objects on a shared layer (particles, soft "
+"bodies, and cloth)."
 msgstr ""
 
 #: ../../manual/physics/collision.rst:80
+msgid ""
+"The object's shape deforms the cloth, so the cloth simulation must be "
+"inputted the \"true\" shape of that mesh object at that frame. This true "
+"shape is the basis shape as modified by shape keys or armatures. "
+"Therefore, the Collision Modifier must be **after** any of those. The "
+"image to the right shows the *Modifiers* panel for the Character mesh "
+"object (not the cloth object)."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:93
+msgid ""
+"Damping during a collision. The amount of bounce that the surfaces will "
+"have."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:96
+msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:97
+msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
+msgstr ""
+
+#: ../../manual/physics/collision.rst:107
+msgid "Thickness"
+msgstr ""
+
+#: ../../manual/physics/collision.rst:100
 msgid ""
 "A padding distance is added to the inside and outside of each face, to "
 "help to prevent intersections. The soft body will come to rest at this "
@@ -188,88 +208,88 @@ msgid ""
 "collision-soft-plane`."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:84
+#: ../../manual/physics/collision.rst:104
 msgid "Outer"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:85
+#: ../../manual/physics/collision.rst:105
 msgid "Size of the outer collision zone."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:87
+#: ../../manual/physics/collision.rst:107
 msgid "Inner"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:87
+#: ../../manual/physics/collision.rst:107
 msgid "Size of the inner collision zone (padding distance)."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:94
+#: ../../manual/physics/collision.rst:114
 msgid "A soft body vertex colliding with a plane."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:97
+#: ../../manual/physics/collision.rst:117
 msgid "Friction for cloth collisions."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:100
+#: ../../manual/physics/collision.rst:120
 msgid "Single Sided"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:100
+#: ../../manual/physics/collision.rst:120
 msgid ""
 "When enabled, cloth collisions are only performed on the normal side of "
 "the collider plane."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:103
+#: ../../manual/physics/collision.rst:123
 msgid "Override Normals"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:103
+#: ../../manual/physics/collision.rst:123
 msgid ""
 "When enabled, cloth collision impulses act in the direction of the "
 "collider normals."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:105
+#: ../../manual/physics/collision.rst:125
 msgid ""
 "*Soft body* collisions are difficult to get perfect. If one of the "
 "objects move too fast, the soft body will penetrate the mesh. See also "
 "the section about :doc:`Soft Bodies </physics/soft_body/index>`."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:110
+#: ../../manual/physics/collision.rst:130
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:114
+#: ../../manual/physics/collision.rst:134
 msgid "Deflected particles."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:116
+#: ../../manual/physics/collision.rst:136
 msgid ""
 "Here is a *Meta* object, using instancing verts to a particle system "
 "emitting downwards, and deflected by a mesh cube."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:120
+#: ../../manual/physics/collision.rst:140
 msgid "Hints"
 msgstr ""
 
-#: ../../manual/physics/collision.rst:122
+#: ../../manual/physics/collision.rst:142
 msgid ""
 "Make sure that the normals of the mesh surface are facing towards the "
 "particles/points for correct deflection."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:123
+#: ../../manual/physics/collision.rst:143
 msgid ""
 "Hair particles react directly to force fields, so if you use a force "
 "field with a short range you do not need necessarily collision."
 msgstr ""
 
-#: ../../manual/physics/collision.rst:125
+#: ../../manual/physics/collision.rst:145
 msgid ""
 "Hair particles avoid their emitting mesh if you edit them in *Particle "
 "Edit Mode*. So you can at least model the hair with collision."
@@ -425,5 +445,13 @@ msgstr ""
 #~ "Here is a *Meta* object, dupliverted "
 #~ "to a particle system emitting downwards,"
 #~ " and deflected by a mesh cube."
+#~ msgstr ""
+
+#~ msgid "Soft body and Cloth"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Damping during a collision. The amount"
+#~ " of bounce that surfaces will have."
 #~ msgstr ""
 

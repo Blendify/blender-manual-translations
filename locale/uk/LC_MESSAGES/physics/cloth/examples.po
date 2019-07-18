@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 17:01+1000\n"
+"POT-Creation-Date: 2019-07-18 15:55-0400\n"
 "PO-Revision-Date: 2017-11-08 15:35+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -110,25 +110,81 @@ msgid ""
 "the *Edit* panel and Press *Smooth*."
 msgstr ""
 
-#: ../../manual/physics/cloth/examples.rst:43
-#, fuzzy
-msgid ""
-"Now, if you start playback, things are starting to look pretty nice, do "
-"not you think?"
-msgstr ""
-"Тепер, якщо ви натиснете :kbd:`Alt-A`, то тканинна поверхня буде "
-"виглядати набагато краще, ви не думаєте?"
-
-#: ../../manual/physics/cloth/examples.rst:47
+#: ../../manual/physics/cloth/examples.rst:45
 #, fuzzy
 msgid "Cloth on Armature"
 msgstr "Тканина на арматурі"
 
-#: ../../manual/physics/cloth/examples.rst:49
+#: ../../manual/physics/cloth/examples.rst:47
+msgid ""
+"Clothing can be simulated and pinned to an armature. For example, a "
+"character could have a baggy tunic pinned to the character's waist with a"
+" belt."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:50
+msgid "The typical workflow for pinning:"
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:52
+msgid "Set the armature to its bind pose."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:53
+msgid "Model clothing that encloses but does not penetrate the character's mesh."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:54
+msgid ""
+"Parent the clothing objects to the armature. The armature will now have "
+"several child meshes bound to it."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:55
+msgid "Create a new vertex group on each cloth object for its pinned vertices."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:56
+msgid ""
+"Add vertices to be pinned to this vertex group and give these vertices "
+"non-zero weights (you probably want weight = 1). For example the belt "
+"area of the tunic would be in the vertex group and have weight one."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:59
+msgid ""
+"Designate the clothing objects as \"cloth\" in the Physics tab of the "
+"Properties editor. Make sure the Cloth Modifier is below the Armature "
+"Modifier in the modifier stack."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:61
+msgid "In the cloth Shape panel select the vertex group."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:62
+msgid "Add :doc:`collision physics </physics/collision>` to the character's mesh."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:63
+msgid ""
+"The clothing is now ready; non-pinned vertices will be under control of "
+"the Cloth modifier. Pinned vertices will be under control of the Armature"
+" modifier."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:68
+msgid ""
+"When animating or posing the character you must begin from the bind pose."
+" Move the character to its initial pose over several frames so the "
+"physics engine can simulate the clothing moving. Very fast movements and "
+"teleport jumps can break the physics simulation."
+msgstr ""
+
+#: ../../manual/physics/cloth/examples.rst:72
 #, fuzzy
 msgid ""
-"Cloth deformed by armature and also respecting an additional collision "
-"object: `Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
+"`Regression blend-file <https://wiki.blender.org/wiki/File:Cloth-"
 "regression-armature.blend>`__."
 msgstr ""
 "Тканина деформована арматурою, а також враховано додатковий об'єкт "
@@ -136,12 +192,12 @@ msgstr ""
 "<https://wiki.blender.org/index.php/Media:Cloth-regression-"
 "armature.blend>`__."
 
-#: ../../manual/physics/cloth/examples.rst:54
+#: ../../manual/physics/cloth/examples.rst:76
 #, fuzzy
 msgid "Cloth with Animated Vertex Groups"
 msgstr "Тканина з анімованими групами вершин"
 
-#: ../../manual/physics/cloth/examples.rst:56
+#: ../../manual/physics/cloth/examples.rst:78
 #, fuzzy
 msgid ""
 "Cloth with animated pinned vertices: `Regression blend-file "
@@ -156,11 +212,11 @@ msgstr ""
 "але при відсутності пришпилення вершини це не працює (наприклад, від goal"
 " = 0 до goal = 0.5)."
 
-#: ../../manual/physics/cloth/examples.rst:63
+#: ../../manual/physics/cloth/examples.rst:85
 msgid "Cloth with Dynamic Paint"
 msgstr "Тканина з Динамічним Малюванням"
 
-#: ../../manual/physics/cloth/examples.rst:65
+#: ../../manual/physics/cloth/examples.rst:87
 #, fuzzy
 msgid ""
 "Cloth with Dynamic Paint using animated vertex groups: `Regression blend-"
@@ -178,17 +234,17 @@ msgstr ""
 "від goal = 0 до goal = 0.5), оскільки необхідні «пружини цілі» не можуть "
 "генеруватися на льоту."
 
-#: ../../manual/physics/cloth/examples.rst:72
+#: ../../manual/physics/cloth/examples.rst:94
 #, fuzzy
 msgid "Using Cloth for Soft Bodies"
 msgstr "Використання алгоритму тканини для імітації м'яких тіл."
 
-#: ../../manual/physics/cloth/examples.rst:77
+#: ../../manual/physics/cloth/examples.rst:99
 #, fuzzy
 msgid "Using cloth for soft bodies."
 msgstr "Використання алгоритму тканини для імітації м'яких тіл."
 
-#: ../../manual/physics/cloth/examples.rst:79
+#: ../../manual/physics/cloth/examples.rst:101
 #, fuzzy
 msgid ""
 "Cloth can also be used to simulate soft bodies. It is for sure not its "
@@ -200,7 +256,7 @@ msgstr ""
 "Ілюстрація з цього прикладу використовує матеріал гуми *Rubber*, без "
 "особливих значень устав, при відтворенні анімації просто :kbd:`Alt-A`."
 
-#: ../../manual/physics/cloth/examples.rst:84
+#: ../../manual/physics/cloth/examples.rst:106
 #, fuzzy
 msgid ""
 "Blend-file for the example image: `Using Cloth for soft bodies "
@@ -209,15 +265,15 @@ msgstr ""
 "Blend файл прикладу, що на ілюстрації: `Using Cloth for softbodies "
 "<https://wiki.blender.org/index.php/Media:Cloth-sb1.blend>`__."
 
-#: ../../manual/physics/cloth/examples.rst:89
+#: ../../manual/physics/cloth/examples.rst:111
 msgid "Cloth with Wind"
 msgstr "Тканина з Вітром"
 
-#: ../../manual/physics/cloth/examples.rst:94
+#: ../../manual/physics/cloth/examples.rst:116
 msgid "Flag with wind applied."
 msgstr "Імітація тканини прапора разом з імітацією вітру."
 
-#: ../../manual/physics/cloth/examples.rst:96
+#: ../../manual/physics/cloth/examples.rst:118
 msgid ""
 "Regression blend-file for Cloth with wind and self-collisions (also the "
 "blend for the image above): `Cloth flag with wind and self-collisions "
@@ -274,4 +330,13 @@ msgstr ""
 #~ "flag with wind and self-collisions "
 #~ "<https://wiki.blender.org/index.php/Media:Cloth-flag2.blend>`__."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "Now, if you start playback, things "
+#~ "are starting to look pretty nice, "
+#~ "do not you think?"
+#~ msgstr ""
+#~ "Тепер, якщо ви натиснете :kbd:`Alt-A`, "
+#~ "то тканинна поверхня буде виглядати "
+#~ "набагато краще, ви не думаєте?"
 
