@@ -9,46 +9,47 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-30 09:48+1000\n"
-"PO-Revision-Date: 2019-04-20 20:19+0800\n"
+"PO-Revision-Date: 2019-07-21 11:19+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:5
 msgid "Screen Space Reflections"
-msgstr ""
+msgstr "屏幕空间反射"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:7
 msgid ""
 "If this effect is enabled, all Materials will use the depth buffer and "
 "the previous frame color to create more accurate reflection than "
 "reflection probes."
-msgstr "如果开启此效果，所有材质将使用深度缓存器和之前帧的颜色，来形成比反射探针更精准的反射效果。"
+msgstr ""
+"如果开启此效果，所有材质将利用深度缓存器和前一帧的颜色，来创建比反射探针"
+"更精准的反射。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:10
-#, fuzzy
 msgid ""
 "If a *Reflection Plane* is near a reflective surface, it will be used as "
 "the source for tracing rays more efficiently and fix the partial "
 "visibility problem."
 msgstr ""
-"如果一个 *反射平面* "
-"足够接近一个反光物体表面，它将会更好地作为追踪反射源，且能更好地处理某些反射视觉错误问题。当然，反射的色彩不包括以下效果：次表面散射、体积光、屏幕空间反射、屏幕空间折射。"
+"如果 *反射平面* 和反光物体足够近，将有利于追踪反射源，和处理某些反射视觉"
+"错误的问题。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:15
-#, fuzzy
 msgid ""
 "However, the reflected color will not contain the following effects: "
 "Subsurface scattering, volumetrics, screen space reflections, screen "
 "space refractions."
 msgstr ""
-"如果一个 *反射平面* "
-"足够接近一个反光物体表面，它将会更好地作为追踪反射源，且能更好地处理某些反射视觉错误问题。当然，反射的色彩不包括以下效果：次表面散射、体积光、屏幕空间反射、屏幕空间折射。"
+"当然，反射的颜色不包含以下效果：次表面散射、体积、屏幕空间反射、屏幕空间"
+"折射。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:18
 msgid "Reference"
@@ -67,7 +68,6 @@ msgid "Refractions"
 msgstr "折射"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:24
-#, fuzzy
 msgid ""
 "Screen space refractions work the same way as screen space reflections "
 "and use the same parameters. But they are not enabled by default on all "
@@ -76,19 +76,23 @@ msgid ""
 "Materials using screen space refractions will not be able to cast screen "
 "space reflections."
 msgstr ""
-"屏幕空间折射与屏幕空间反射有相同的工作机制并使用相同的参数。但所有物体表面都默认不使用该两种功能，开启它们将消耗一定的资源。你需要在 "
-":menuselection:`材质属性 --> 选项` 中开启。应用了屏幕空间折射的材质将无法同时产生屏幕空间反射效果。"
+"屏幕空间折射和屏幕空间反射有相同的工作机制并使用相同的参数。开启它会有额"
+"外性能消耗，因此所有物体材质默认不启用这功能。你需要在 :menuselection:`材"
+"质 --> 设置` 中开启屏幕空间折射。使用屏幕空间折射的材质将无法使用屏幕空间"
+"反射。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:32
 msgid "Half Resolution Trace"
-msgstr "半分辨率追踪"
+msgstr "半精度追踪"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:31
 msgid ""
-"Use half resolution ray tracing. Only cast a ray for every fourth pixels."
-" Enabling this option reduces drastically video memory usage and "
+"Use half resolution ray tracing. Only cast a ray for every fourth "
+"pixels. Enabling this option reduces drastically video memory usage and "
 "increased performance at the cost of quality."
-msgstr "使用半分辨率光线追踪。仅使用四分之一像素的光线。开启此选项将会降低质量，但可以大幅减少图像占用内存并提升性能表现。"
+msgstr ""
+"使用半精度光线追踪。 仅为每四个像素投射一条光线。 启用此选项可大幅降低视"
+"频内存使用量并提高性能，但会降低质量。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:36
 msgid "Trace Precision"
@@ -96,10 +100,11 @@ msgstr "追踪精度"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:35
 msgid ""
-"Increases precision of the ray trace but introduces more noise and lowers"
-" the maximum trace distance. Increased precision also increases "
+"Increases precision of the ray trace but introduces more noise and "
+"lowers the maximum trace distance. Increased precision also increases "
 "performance cost."
-msgstr "提升光线追踪精度的同时会引起更多的噪点并降低最大追踪距离，另外也会增加性能开销。"
+msgstr ""
+"提升光线追踪精度会增加噪点并减小最大追踪距离，还会额外增加性能消耗。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:40
 msgid "Thickness"
@@ -110,17 +115,21 @@ msgid ""
 "How thick to consider the pixels of the depth buffer during the tracing. "
 "Higher values will stretch the reflections and add flickering. Lower "
 "values may make the ray miss surfaces."
-msgstr "在追踪过程中纳入深度缓存器内计算的像素的厚度。较高的数值将拉伸反射和增加闪烁。较低的数值可能导致光线丢失物体表面。"
+msgstr ""
+"在追踪过程中纳入深度缓存器内计算的像素厚度。较高的数值会将反射像素拉伸并"
+"增加闪烁。较低的数值可能会导致物体表面反射被裁剪或消失。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:43
 msgid "Edge Fading"
-msgstr "边缘衰减"
+msgstr "边衰减"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:43
 msgid ""
 "Smoothly fade out the reflected pixels if they are close to a screen "
 "edge. The unit is in screen percentage."
-msgstr "反射的像素在靠近屏幕边缘的地方会平滑淡出。淡出的程度由像素位置所处的屏幕中心到边缘的百分比决定。"
+msgstr ""
+"反射像素在靠近屏幕边缘时会平滑淡出。淡出的程度由像素位置所处的屏幕中心到"
+"边缘的百分比决定。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:46
 msgid "Clamp"
@@ -128,11 +137,11 @@ msgstr "钳制"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:46
 msgid "Clamp the reflected color intensity to remove noise and fireflies."
-msgstr "牵制反射颜色强度来移除噪点和闪烁。"
+msgstr "通过钳制反射颜色强度来移除噪点和闪烁。"
 
 #: ../../manual/render/eevee/render_settings/screen_space_reflections.rst:48
 msgid ":ref:`Limitations <eevee-limitations-reflections>`."
-msgstr ""
+msgstr ":ref:`限制 <eevee-limitations-reflections>`"
 
 #~ msgid "Limitations"
 #~ msgstr "使用限制"
@@ -147,12 +156,11 @@ msgstr ""
 #~ msgstr "只能正确计算一次折射事件。"
 
 #~ msgid ""
-#~ "Screen Space Reflections will reflect "
-#~ "transparent object but without accurate "
-#~ "positioning due to the one layer "
-#~ "depth buffer."
-#~ msgstr "由于只使用单独一层深度缓存器，屏幕空间反射在反射透明物体的时候将无法确定精准位置。"
+#~ "Screen Space Reflections will reflect transparent object but without "
+#~ "accurate positioning due to the one layer depth buffer."
+#~ msgstr ""
+#~ "由于只使用单独一层深度缓存器，屏幕空间反射在反射透明物体的时候将无法确"
+#~ "定精准位置。"
 
 #~ msgid "Reflections"
 #~ msgstr "反射"
-
