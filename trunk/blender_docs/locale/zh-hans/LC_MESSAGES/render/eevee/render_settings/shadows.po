@@ -9,32 +9,30 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-04-20 20:19+0800\n"
+"PO-Revision-Date: 2019-07-21 15:53+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:5
 msgid "Shadows"
 msgstr "阴影"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:7
-msgid ""
-"Eevee uses Shadow Mapping techniques to properly shadow the light coming "
-"directly from light objects."
-msgstr "Eevee使用阴影贴图技术产生直接来自灯光物体的光线的正确的阴影。"
+msgid "Eevee uses Shadow Mapping techniques to properly shadow the light coming directly from light objects."
+msgstr "Eevee使用阴影贴图技术创建直接来自光源光线的正确阴影。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:9
 msgid ""
-"A shadow map is a texture that stores the nearest occluder from the light"
-" position. Eevee also filters the shadow maps in order to smooth out the "
-"pixelated appearance."
-msgstr "阴影贴图是一种纹理，用于存储距光照位置最近的遮挡。 Eevee还会过滤阴影贴图，以平滑像素化的外观。"
+"A shadow map is a texture that stores the nearest occluder from the light position. Eevee also filters the shadow "
+"maps in order to smooth out the pixelated appearance."
+msgstr "阴影贴图是一种纹理，用于存储光照遮挡信息。 Eevee还会过滤阴影贴图，以平滑像素。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:12
 msgid "Reference"
@@ -53,9 +51,7 @@ msgid "Method"
 msgstr "模式"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:18
-msgid ""
-"Select the shadow map type. It changes how shadows are stored and "
-"filtered."
+msgid "Select the shadow map type. It changes how shadows are stored and filtered."
 msgstr "选择阴影贴图类型。它改变了阴影的存储和过滤方式。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:25
@@ -63,145 +59,123 @@ msgid ":abbr:`ESM (Exponential Shadow Mapping)`"
 msgstr ":abbr:`ESM (指数阴影贴图)`"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:21
-#, fuzzy
 msgid ""
-"They are fast to filter but light leaking may occur near an occluder. "
-"This can be minimized by increasing the *Exponent* parameter. Another "
-"issue is the artifacts present at depth discontinuity. Unfortunately, "
-"there is no workaround for this issue and the only way to minimize it is "
-"to reduce the *Soft* parameter."
+"They are fast to filter but light leaking may occur near an occluder. This can be minimized by increasing the "
+"*Exponent* parameter. Another issue is the artifacts present at depth discontinuity. Unfortunately, there is no "
+"workaround for this issue and the only way to minimize it is to reduce the *Soft* parameter."
 msgstr ""
-"它们滤光快，但在遮挡物附近会受到光泄漏的影响。这可以通过增加 *Exponent* "
-"参数来最小化。另一个问题是深度不连续时存在的伪影。不幸的是，这个问题没有解决办法，而将其最小化的唯一方法是减少 *Soft* 参数。"
+"它们滤光较快，但在遮挡物附近会有漏光。这可以通过增加灯光的 *指数* 参数值减少漏光。另一个问题是深度不连续时存在的伪"
+"影。遗憾的是，这个没有解决办法，减少灯光 *柔和* 参数值是其唯一的解决方法。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:33
 msgid ":abbr:`VSM (Variance Shadow Mapping)`"
-msgstr ":abbr:`VSM (方差阴影映射)`"
+msgstr ":abbr:`VSM (方差阴影贴图)`"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:28
 msgid ""
-"Filters nicely and gives smooth shadow map appearance across the whole "
-"shadow range. However grainy artifacts will be visible when using a low "
-"bit depth. It is also prone to light leaking when two occluders overlap. "
-"In this case the shadows can be overdarkened to reduce the leak, by using"
-" the *Bleed Bias* parameter. VSM uses twice as much memory as ESM, and is"
-" slower."
+"Filters nicely and gives smooth shadow map appearance across the whole shadow range. However grainy artifacts "
+"will be visible when using a low bit depth. It is also prone to light leaking when two occluders overlap. In this "
+"case the shadows can be overdarkened to reduce the leak, by using the *Bleed Bias* parameter. VSM uses twice as "
+"much memory as ESM, and is slower."
 msgstr ""
-"过滤效果很好，可在整个阴影范围内提供平滑的阴影贴图。然而，当使用低位深度时，它会受到可见的颗粒状伪影的影响。当两个遮挡物重叠时，它也容易发生漏光。在这种情况下，可以通过使用"
-" *Bleed Bias* 参数来遮蔽阴影以减少泄漏。 VSM使用的内存是ESM的两倍，并且速度较慢。"
+"过滤效果很好，可在整个阴影范围内提供平滑的阴影贴图。然而，当使用低位深度时，它可能会出现颗粒状伪影。当两个遮挡物重"
+"叠时，它容易发生漏光。在这种情况下，可以通过使用 *出血偏移量* 参数来遮蔽阴影以减少泄漏。 VSM使用的内存是ESM的两"
+"倍，并且速度较慢。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:37
 msgid "Cube Size"
-msgstr "立方体大小"
+msgstr "矩形尺寸"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:36
 msgid ""
-"Size of the shadow cubemaps used to shadow Point, Area and Spot lights. "
-"Higher shadow map size will give higher precision and sharper shadows."
-msgstr "用于点光，区域光和聚光灯的阴影立方体贴图的大小。较高的阴影贴图大小将提供更高的精度和更清晰的阴影。"
+"Size of the shadow cubemaps used to shadow Point, Area and Spot lights. Higher shadow map size will give higher "
+"precision and sharper shadows."
+msgstr "用于点光，面光和聚光的阴影立方体贴图的尺寸。较高的阴影贴图尺寸将提供更高的精度和更清晰的阴影。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:40
 msgid "Cascade Size"
 msgstr "级联大小"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:40
-#, fuzzy
-msgid ""
-"Size of one cascade used by *Cascaded Shadow Maps*. This is only for Sun "
-"lights."
-msgstr "*级联阴影贴图* 使用的一个级联的大小。这仅适用于阳光灯。"
+msgid "Size of one cascade used by *Cascaded Shadow Maps*. This is only for Sun lights."
+msgstr "*级联阴影贴图* 使用的一个级联的大小。仅适用于日光。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:44
 msgid "High Bitdepth"
-msgstr "高色彩深度"
+msgstr "高位深"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:43
 msgid ""
-"This option can help reduce some artifacts due to float imprecision "
-"inside the shadow maps. This option effectively double the memory usage "
-"of shadow maps and will slow down their update."
-msgstr "此选项可以帮助减少由于阴影贴图内的浮动不精确而导致的一些瑕疵。此选项会使阴影贴图的内存使用量加倍，并且会降低其更新速度。"
+"This option can help reduce some artifacts due to float imprecision inside the shadow maps. This option "
+"effectively double the memory usage of shadow maps and will slow down their update."
+msgstr ""
+"此选项可以帮助减少由于阴影贴图内的浮点数精度不足而导致的一些瑕疵。此选项会使阴影贴图的内存使用量加倍，并降低其更新"
+"速度。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:47
 msgid "Soft Shadows"
-msgstr "柔和阴影（软阴影）"
+msgstr "柔和阴影"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:47
 msgid ""
-"Randomize the shadow maps origin to create soft shadows. It needs a lot "
-"of samples to get rid of the banding."
-msgstr "随机化阴影贴图原点以创建柔和阴影。它需要大量的样品来去除带状物。"
+"Randomize the shadow maps origin to create soft shadows. It needs a lot of samples to get rid of the banding."
+msgstr "随机化阴影贴图原点以创建柔和阴影。它需要大量采样来消除硬阴影。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:65
 msgid "Light Threshold"
-msgstr "灯光阈值"
+msgstr "光照阈值"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:50
 msgid ""
-"In order to avoid costly setup time, this distance is first computed "
-"automatically based on a light threshold. The distance is computed at the"
-" light origin and using the inverse square falloff. The setting can be "
-"found inside the :menuselection:`Render Settings panel --> Shadow tab`."
+"In order to avoid costly setup time, this distance is first computed automatically based on a light threshold. "
+"The distance is computed at the light origin and using the inverse square falloff. The setting can be found "
+"inside the :menuselection:`Render Settings panel --> Shadow tab`."
 msgstr ""
-"为了避免花费昂贵的设置时间，首先根据光阈值自动计算该距离。该距离在光源原点处计算，并使用平方反比衰减。该设置可以在 "
-":menuselection:`渲染设置面板 --> 阴影栏` 中找到。"
+"为了避免大量的灯光设置浪费时间，eevee首先会根据此灯光阈值自动计算该距离。该距离从光源原点处计算，并使用平方反比衰"
+"减。该设置可以在 :menuselection:`渲染设置面板 --> 阴影栏` 中找到。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:55
-#, fuzzy
 msgid ""
-"This light threshold does not take the light shape into account and may "
-"not suit every case. That is why we provide a per-light override where "
-"you can just set the cut off distance (:menuselection:`Properties --> "
-"Object Data --> Light --> Custom Distance`)."
+"This light threshold does not take the light shape into account and may not suit every case. That is why we "
+"provide a per-light override where you can just set the cut off distance (:menuselection:`Properties --> Object "
+"Data --> Light --> Custom Distance`)."
 msgstr ""
-"此光阈值不考虑光的形状，可能不适合每种情况。这就是我们提供每种灯替换的原因，你可以在这里设置截止距离（ :menuselection:`Light"
-" Properties Panel --> Light --> Custom Distance`）。"
+"此灯光阈值不考虑灯光的形状，可能不适用所有情况。这就是我们提供每种灯独立选项的原因，你可以在这里设置截止距离（ :"
+"menuselection:`灯光属性面板 --> 灯光 --> 自定义距离`）。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:60
 msgid ""
-"The influence distance is also used as shadow far clip distance, which "
-"might affect how shadows looks. This influence distance does not concern "
-"sun lights that still have a far clip distance."
-msgstr "影响距离也用作阴影远距剪辑距离，这可能会影响阴影的外观。这种影响距离不涉及仍然具有远距剪辑距离的阳光。"
+"The influence distance is also used as shadow far clip distance, which might affect how shadows looks. This "
+"influence distance does not concern sun lights that still have a far clip distance."
+msgstr "自定义距离也是阴影最远裁剪距离，因此调整它会影响阴影的效果。日光光照距离没有限制，所以不受光照阈值影响。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:65
-#, fuzzy
 msgid ":doc:`Custom Limit </render/eevee/lighting>`."
-msgstr ":doc:`自定义限制 </render/eevee/lamps>`."
+msgstr ":doc:`自定义距离 </render/eevee/lighting>`"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:69
-#, fuzzy
-msgid ""
-"The Soft Shadows method is not physically based and will not match Cycles"
-" for very large lights."
-msgstr "软阴影方法不是基于物理的，并且不匹配非常大的Cycles灯光。"
+msgid "The Soft Shadows method is not physically based and will not match Cycles for very large lights."
+msgstr "和cycles里的大光源打光不同，eevee软阴影的生成不是基于物理光线跟踪计算的。"
 
 #: ../../manual/render/eevee/render_settings/shadows.rst:73
-#, fuzzy
 msgid ""
-"A 512 px cubemap has 6 x 512 x 512 pixels in it. Tweaking the *Size* "
-"parameters can have a big impact on memory consumption and performance."
-msgstr "512px立方体贴图是6 x 512 x 512像素。调整 *尺寸* 参数会对内存消耗和性能产生很大影响。"
+"A 512 px cubemap has 6 x 512 x 512 pixels in it. Tweaking the *Size* parameters can have a big impact on memory "
+"consumption and performance."
+msgstr "一个矩形尺寸为512px的贴图是6 x 512 x 512px大小。调整 *矩形尺寸* 参数对硬件内存消耗和性能有显著影响。"
 
 #~ msgid ""
-#~ "These special kind of shadow maps "
-#~ "are used by Sun lights. This is"
-#~ " because they can shadow large scenes"
-#~ " by distributing multiple shadow maps "
-#~ "over the frustum range. Each cascade "
-#~ "covers a different portion of the "
-#~ "view frustum. Do note that cascade "
-#~ "shadow map are always updated because"
-#~ " they are view dependent. This means"
-#~ " they have a high performance impact."
-#~ msgstr "这些特殊类型的阴影贴图被阳光所使用。这是因为它们可以通过在截锥体范围内分布多个阴影贴图来隐藏大型场景。每个级联覆盖视图截锥的不同部分。请注意，级联阴影贴图总是更新的，因为它们依赖于视图。这意味着需要很高的性。"
+#~ "These special kind of shadow maps are used by Sun lights. This is because they can shadow large scenes by "
+#~ "distributing multiple shadow maps over the frustum range. Each cascade covers a different portion of the view "
+#~ "frustum. Do note that cascade shadow map are always updated because they are view dependent. This means they "
+#~ "have a high performance impact."
+#~ msgstr ""
+#~ "这些特殊类型的阴影贴图被阳光所使用。这是因为它们可以通过在截锥体范围内分布多个阴影贴图来隐藏大型场景。每个级联"
+#~ "覆盖视图截锥的不同部分。请注意，级联阴影贴图总是更新的，因为它们依赖于视图。这意味着需要很高的性。"
 
 #~ msgid "Limitations"
 #~ msgstr "局限"
 
-#~ msgid ""
-#~ "Shadows are not supported on light "
-#~ "instances (dupli objects, group instancing)."
+#~ msgid "Shadows are not supported on light instances (dupli objects, group instancing)."
 #~ msgstr "不支持灯光实例阴影（复制对象，组实例）。"
 
 #~ msgid "Only 128 active lights can be supported by Eevee in a scene."
@@ -226,27 +200,20 @@ msgstr "512px立方体贴图是6 x 512 x 512像素。调整 *尺寸* 参数会�
 #~ msgstr "剪辑"
 
 #~ msgid ""
-#~ "Distance from the light object at "
-#~ "which the shadow map starts and "
-#~ "ends. Any object before this distance"
-#~ " will not appear to cast shadows. "
-#~ "*Clip End* will only appear for "
-#~ "sun lights."
+#~ "Distance from the light object at which the shadow map starts and ends. Any object before this distance will "
+#~ "not appear to cast shadows. *Clip End* will only appear for sun lights."
 #~ msgstr "阴影贴图开始和结束距灯光物体的距离。此距离之前的任何物体都不会投射阴影。 *Clip End* 仅适用于阳光灯。"
 
 #~ msgid "Soft"
 #~ msgstr "柔和"
 
 #~ msgid ""
-#~ "Size of the filter applied to the"
-#~ " shadow map. This filter size is "
-#~ "independent of the shadow map "
-#~ "resolution. Higher filter size can have"
-#~ " a big impact on performance. There"
-#~ " is a maximum cap to filter "
-#~ "size (in pixels) that depends on "
-#~ "shadow resolution."
-#~ msgstr "应用于阴影贴图的滤镜大小。此滤镜大小独立于阴影贴图分辨率。较高的过滤器尺寸会对性能产生很大影响。滤镜大小（以像素为单位）的最大上限取决于阴影分辨率。"
+#~ "Size of the filter applied to the shadow map. This filter size is independent of the shadow map resolution. "
+#~ "Higher filter size can have a big impact on performance. There is a maximum cap to filter size (in pixels) "
+#~ "that depends on shadow resolution."
+#~ msgstr ""
+#~ "应用于阴影贴图的滤镜大小。此滤镜大小独立于阴影贴图分辨率。较高的过滤器尺寸会对性能产生很大影响。滤镜大小（以像"
+#~ "素为单位）的最大上限取决于阴影分辨率。"
 
 #~ msgid "Bias"
 #~ msgstr "偏差"
@@ -270,22 +237,16 @@ msgstr "512px立方体贴图是6 x 512 x 512像素。调整 *尺寸* 参数会�
 #~ msgstr "接触阴影"
 
 #~ msgid ""
-#~ "This type of shadow exists to fix"
-#~ " light leaking caused by bias or "
-#~ "shadow map undersampling. It uses the"
-#~ " depth buffer to find occluders (just"
-#~ " like Screen Space Reflections). However,"
-#~ " just like Screen Space Reflections "
-#~ "it suffers from the same limitations,"
-#~ " namely, unknown object thickness and "
-#~ "effect disappearing at screen edges."
-#~ msgstr "这种类型的阴影存在以解决由偏别或阴影贴图缺少采样引起的光泄漏。他们使用深度缓冲区来查找遮挡物（就像屏幕空间反射一样）。然而，与屏幕空间反射完全一样，它们也受到同样的限制：未知物体厚度，效果在屏幕边缘消失。"
+#~ "This type of shadow exists to fix light leaking caused by bias or shadow map undersampling. It uses the depth "
+#~ "buffer to find occluders (just like Screen Space Reflections). However, just like Screen Space Reflections it "
+#~ "suffers from the same limitations, namely, unknown object thickness and effect disappearing at screen edges."
+#~ msgstr ""
+#~ "这种类型的阴影存在以解决由偏别或阴影贴图缺少采样引起的光泄漏。他们使用深度缓冲区来查找遮挡物（就像屏幕空间反射"
+#~ "一样）。然而，与屏幕空间反射完全一样，它们也受到同样的限制：未知物体厚度，效果在屏幕边缘消失。"
 
 #~ msgid ""
-#~ "The distance of action of Contact "
-#~ "Shadows should remain quite small. They"
-#~ " are not accurate enough to shadow"
-#~ " the entire scene."
+#~ "The distance of action of Contact Shadows should remain quite small. They are not accurate enough to shadow "
+#~ "the entire scene."
 #~ msgstr "接触阴影的作用距离应该保持很小。它们不够精确，无法覆盖整个场景。"
 
 #~ msgid "Distance"
@@ -298,10 +259,7 @@ msgstr "512px立方体贴图是6 x 512 x 512像素。调整 *尺寸* 参数会�
 #~ msgstr "柔软性"
 
 #~ msgid ""
-#~ "Controls how soft the contact shadows"
-#~ " will be. Contact shadow blurring "
-#~ "does not match a light's physical "
-#~ "size."
+#~ "Controls how soft the contact shadows will be. Contact shadow blurring does not match a light's physical size."
 #~ msgstr "控制接触阴影的柔和程度。接触阴影模糊与灯光的物理大小不匹配。"
 
 #~ msgid "Bias applied to the ray tracing to reduce self-shadowing artifacts."
@@ -310,51 +268,23 @@ msgstr "512px立方体贴图是6 x 512 x 512像素。调整 *尺寸* 参数会�
 #~ msgid "Thickness"
 #~ msgstr "厚度"
 
-#~ msgid ""
-#~ "Pixel thickness used to detect "
-#~ "occlusion, treating any potential occluder "
-#~ "as this thick."
+#~ msgid "Pixel thickness used to detect occlusion, treating any potential occluder as this thick."
 #~ msgstr "像素厚度用于检测遮挡。将任何潜在的遮挡当成这个厚度。"
 
 #~ msgid "Cascaded Shadow Map"
 #~ msgstr "级联（层叠）阴影贴图"
 
-#~ msgid ""
-#~ "These special kind of shadow maps "
-#~ "are used by Sun lights. This is"
-#~ " because they can shadow large scenes"
-#~ " by distributing multiple shadow maps "
-#~ "over the frustum range. Each cascade "
-#~ "covers a different portion of the "
-#~ "view frustum. Do note that cascade "
-#~ "shadow maps are always updated because"
-#~ " they are view dependent. This means"
-#~ " they have a high performance impact."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In orthographic view the cascades cover"
-#~ " the whole depth range of the "
-#~ "camera with an evenly distributed shadow"
-#~ " precision."
-#~ msgstr ""
-
 #~ msgid "Count"
 #~ msgstr "计数"
 
-#~ msgid ""
-#~ "Number of cascades to use. More "
-#~ "cascades means better precision but a"
-#~ " lower update rate."
+#~ msgid "Number of cascades to use. More cascades means better precision but a lower update rate."
 #~ msgstr "要使用的级联数。更多级联意味着更好的精度但更慢的更新。"
 
 #~ msgid "Fade"
 #~ msgstr "淡化"
 
 #~ msgid ""
-#~ "Fade transition area between two "
-#~ "cascades. Higher values means less "
-#~ "overall resolution because cascades need "
+#~ "Fade transition area between two cascades. Higher values means less overall resolution because cascades need "
 #~ "to overlap."
 #~ msgstr "淡化两个级联之间的过渡区域。值越高意味着整体分辨率越低，因为级联需要重叠。"
 
@@ -362,24 +292,15 @@ msgstr "512px立方体贴图是6 x 512 x 512像素。调整 *尺寸* 参数会�
 #~ msgstr "最大距离"
 
 #~ msgid ""
-#~ "Distance away from the view origin "
-#~ "(or camera origin if in camera "
-#~ "view) to cover by the cascade. If"
-#~ " the view far clip distance is "
-#~ "lower than Max Distance, the lowest "
-#~ "of the two will be used. Only "
-#~ "works in perspective view."
-#~ msgstr "远离视图原点（或摄像机原点，如果在摄像机视图中）以覆盖级联。如果视图远剪辑距离低于最大距离，则将使用两者中的最低距离。仅适用于透视图。"
+#~ "Distance away from the view origin (or camera origin if in camera view) to cover by the cascade. If the view "
+#~ "far clip distance is lower than Max Distance, the lowest of the two will be used. Only works in perspective "
+#~ "view."
+#~ msgstr ""
+#~ "远离视图原点（或摄像机原点，如果在摄像机视图中）以覆盖级联。如果视图远剪辑距离低于最大距离，则将使用两者中的最"
+#~ "低距离。仅适用于透视图。"
 
 #~ msgid "Distribution"
 #~ msgstr "分布"
 
-#~ msgid ""
-#~ "Puts more resolution towards the near"
-#~ " clip plane. Only works in "
-#~ "perspective view."
+#~ msgid "Puts more resolution towards the near clip plane. Only works in perspective view."
 #~ msgstr "使更多分辨率朝向近剪裁平面。仅适用于透视图。"
-
-#~ msgid ":ref:`Limitations <eevee-limitations-shadows>`."
-#~ msgstr ""
-
