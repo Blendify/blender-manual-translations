@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-21 08:31+0800\n"
+"POT-Creation-Date: 2019-07-23 03:08+0800\n"
 "PO-Revision-Date: 2019-06-07 15:21+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -17,154 +17,167 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/animation/drivers/introduction.rst:4
 msgid "Introduction"
 msgstr "简介"
 
 #: ../../manual/animation/drivers/introduction.rst:6
-msgid "Drivers control values of properties by means of a function."
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:8
 msgid ""
-"Driver functions are added to a property and they set, or *drive*, the "
-"value of that property according to the values of other properties, small"
-" Python scripts and mathematical expressions."
+"Drivers are a way to control values of properties by means of a function,"
+" mathematical expression or small script."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:12
+#: ../../manual/animation/drivers/introduction.rst:9
+msgid "Effectively, drivers are composed by:"
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:11
 msgid ""
-"For example, the *rotation* of Object 1 can be controlled by the "
-"*location* of Object 2. It is then said that the *location* of Object 2 "
-"drives the *rotation* of Object 1."
+"A **driver configuration** that specifies input values from properties "
+"and combines them with a mathematical expression or Python script."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:15
+#: ../../manual/animation/drivers/introduction.rst:13
+msgid ""
+"An **animation** :doc:`F-Curve "
+"</editors/graph_editor/fcurves/introduction>` that maps the output of the"
+" driver configuration to the value to apply to the driven property."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:17
+msgid ""
+"As an example, the rotation of Object 1 can be controlled by the scale of"
+" Object 2. It is then said that the scale of Object 2 *drives* the "
+"rotation of Object 1."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:20
 msgid ""
 "Not only drivers can use the value of most properties as a direct mapping"
-" to other properties, they can evaluate that value as part of a "
+" to other properties, they can also evaluate that value as part of a "
 "mathematical expression or Python script and further modulate it with a "
-"function."
-msgstr ""
-
-#: ../../manual/animation/drivers/introduction.rst:19
-msgid ""
-"Effectively, drivers are animation :doc:`F-Curves "
-"</editors/graph_editor/fcurves/introduction>`, vary with custom changing "
-"value, instead of varying with the current frame."
+"function and a modifier stack."
 msgstr ""
 
 #: ../../manual/animation/drivers/introduction.rst:24
+msgid ""
+"Drivers are an extremely powerful tool for building rigs and are "
+"typically used to drive bone transforms and the influence of shape keys, "
+"action constraints and custom properties."
+msgstr ""
+
+#: ../../manual/animation/drivers/introduction.rst:30
 msgid "Graph View"
 msgstr "曲线视图"
 
-#: ../../manual/animation/drivers/introduction.rst:29
+#: ../../manual/animation/drivers/introduction.rst:35
 #, fuzzy
 msgid "Driver curve in the Drivers editor."
 msgstr "曲线编辑器中的驱动器范例。"
 
-#: ../../manual/animation/drivers/introduction.rst:31
+#: ../../manual/animation/drivers/introduction.rst:37
 msgid ""
 "The main area of the :doc:`Drivers editor </editors/drivers_editor>` "
 "shows an :doc:`F-Curve </editors/graph_editor/fcurves/introduction>` that"
-" represents the driver."
+" represents the driver function."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:35
+#: ../../manual/animation/drivers/introduction.rst:41
 msgid ""
-"The **X axis** maps the output value of the driver. The units depend on "
-"the driver configuration."
+"The **X axis** maps the output value of the driver configuration. The "
+"units depend on the setup."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:37
+#: ../../manual/animation/drivers/introduction.rst:43
 msgid ""
 "The **Y axis** shows the value applied to the target property. The units "
 "depend on the property."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:39
+#: ../../manual/animation/drivers/introduction.rst:45
 msgid ""
 "In the example image, if the driver value is 2.0 the property value will "
 "be 0.5."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:41
+#: ../../manual/animation/drivers/introduction.rst:47
 msgid ""
 "The default F-curve is an identity map i.e. the value is applied to the "
 "driven property as is outputted by the driver, unchanged. If the driver "
 "output value is 2.0, the property will be 2.0."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:45
+#: ../../manual/animation/drivers/introduction.rst:51
 msgid ""
 "The driver function can be defined artistically with Bézier curve handles"
-" or mathematically with a polynomial expression such as :math:`y = a + "
-"bx`. Furthermore, the function can also be procedurally modulated with "
-"noise or cyclic repetitions. See :doc:`Modifiers "
-"</editors/graph_editor/fcurves/modifiers>` for more details."
+" or mathematically with trigonometric functions or polynomial expressions"
+" such as :math:`y = a + bx`. Furthermore, the function can also be "
+"procedurally modulated with noise or cyclic repetitions. See "
+":doc:`Modifiers </editors/graph_editor/fcurves/modifiers>` for more "
+"details."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:52
+#: ../../manual/animation/drivers/introduction.rst:58
 msgid "Driver Configuration"
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:54
+#: ../../manual/animation/drivers/introduction.rst:60
 msgid ""
-"A driver can be configured in the :doc:`Drivers panel "
-"</animation/drivers/drivers_panel>`."
+"The :doc:`Drivers panel </animation/drivers/drivers_panel>` shows the "
+"setup for a driver."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:56
+#: ../../manual/animation/drivers/introduction.rst:62
 msgid ""
-"A driver has zero, one, or more **variables**. Variables are the values "
-"of properties or distances between two objects."
+"A driver can have zero, one, or more **variables**. Variables are the "
+"values of properties or distances between two objects."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:59
+#: ../../manual/animation/drivers/introduction.rst:65
 msgid ""
 "The driver **type** determines how the variables are used. The type can "
 "be:"
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:61
-msgid "A built-in function: for example, the sum of the variables' values."
+#: ../../manual/animation/drivers/introduction.rst:67
+msgid "a built-in function: for example, the sum of the variables' values, or"
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:62
+#: ../../manual/animation/drivers/introduction.rst:68
 msgid ""
-"A scripted expression: a custom mathematical or Python expression that "
+"a scripted expression: a custom mathematical or Python expression that "
 "can make use of any existing variables."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:64
+#: ../../manual/animation/drivers/introduction.rst:70
 msgid ""
 "This driver configuration outputs a single value which changes when the "
 "variables change. This value is then evaluated through the driver "
 "function to produce the result to be applied to the driven property."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:70
+#: ../../manual/animation/drivers/introduction.rst:77
 msgid "Notes on Scripted Expressions"
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:72
+#: ../../manual/animation/drivers/introduction.rst:79
 msgid ""
-"When a driver uses a Scripted expression, Blender can convert it to a "
+"When a driver uses a *Scripted Expression*, Blender can convert it to a "
 "native expression if it is simple enough. This means that drivers are "
-"fast to evaluate with simple divisions, additions and other 'simple' "
+"fast to evaluate with simple divisions, additions and other \"simple\" "
 "expressions even on heavy scenes. The built-in functions are always "
 "evaluated natively."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:77
+#: ../../manual/animation/drivers/introduction.rst:84
 msgid ""
 "See :ref:`Simple Expressions <drivers-simple-expressions>` for a "
 "comprehensive list of expressions that can be evaluated natively."
 msgstr ""
 
-#: ../../manual/animation/drivers/introduction.rst:80
+#: ../../manual/animation/drivers/introduction.rst:87
 msgid ""
 "When the expression is not simple, it will be evaluated using Python. As "
 "a consequence, the driver will be slower and there is a security risk if "
@@ -540,5 +553,104 @@ msgstr ""
 #~ "when sharing files with other people."
 #~ " See also: :doc:`Auto run "
 #~ "</advanced/scripting/security>`."
+#~ msgstr ""
+
+#~ msgid "Drivers control values of properties by means of a function."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Driver functions are added to a "
+#~ "property and they set, or *drive*, "
+#~ "the value of that property according "
+#~ "to the values of other properties, "
+#~ "small Python scripts and mathematical "
+#~ "expressions."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For example, the *rotation* of Object"
+#~ " 1 can be controlled by the "
+#~ "*location* of Object 2. It is then"
+#~ " said that the *location* of Object"
+#~ " 2 drives the *rotation* of Object"
+#~ " 1."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Not only drivers can use the value"
+#~ " of most properties as a direct "
+#~ "mapping to other properties, they can"
+#~ " evaluate that value as part of "
+#~ "a mathematical expression or Python "
+#~ "script and further modulate it with "
+#~ "a function."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Effectively, drivers are animation "
+#~ ":doc:`F-Curves </editors/graph_editor/fcurves/introduction>`,"
+#~ " vary with custom changing value, "
+#~ "instead of varying with the current "
+#~ "frame."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The main area of the :doc:`Drivers "
+#~ "editor </editors/drivers_editor>` shows an "
+#~ ":doc:`F-Curve </editors/graph_editor/fcurves/introduction>` "
+#~ "that represents the driver."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The **X axis** maps the output "
+#~ "value of the driver. The units "
+#~ "depend on the driver configuration."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The driver function can be defined "
+#~ "artistically with Bézier curve handles "
+#~ "or mathematically with a polynomial "
+#~ "expression such as :math:`y = a +"
+#~ " bx`. Furthermore, the function can "
+#~ "also be procedurally modulated with "
+#~ "noise or cyclic repetitions. See "
+#~ ":doc:`Modifiers </editors/graph_editor/fcurves/modifiers>` "
+#~ "for more details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A driver can be configured in the"
+#~ " :doc:`Drivers panel "
+#~ "</animation/drivers/drivers_panel>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A driver has zero, one, or more"
+#~ " **variables**. Variables are the values"
+#~ " of properties or distances between "
+#~ "two objects."
+#~ msgstr ""
+
+#~ msgid "A built-in function: for example, the sum of the variables' values."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A scripted expression: a custom "
+#~ "mathematical or Python expression that "
+#~ "can make use of any existing "
+#~ "variables."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When a driver uses a Scripted "
+#~ "expression, Blender can convert it to"
+#~ " a native expression if it is "
+#~ "simple enough. This means that drivers"
+#~ " are fast to evaluate with simple "
+#~ "divisions, additions and other 'simple' "
+#~ "expressions even on heavy scenes. The"
+#~ " built-in functions are always "
+#~ "evaluated natively."
 #~ msgstr ""
 
