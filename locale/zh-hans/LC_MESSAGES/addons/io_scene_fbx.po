@@ -4,88 +4,101 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-07-23 06:32-0400\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/addons/io_scene_fbx.rst:4
 msgid "FBX"
-msgstr ""
+msgstr "FBX"
 
 #: ../../manual/addons/io_scene_fbx.rst:6
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Category"
-msgstr ""
+msgstr "类别"
 
 #: ../../manual/addons/io_scene_fbx.rst:9
 msgid "Import-Export"
-msgstr ""
+msgstr "导入-导出"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Menu"
-msgstr ""
+msgstr "菜单"
 
 #: ../../manual/addons/io_scene_fbx.rst:10
 msgid ":menuselection:`File --> Import/Export --> FBX (.fbx)`"
-msgstr ""
+msgstr ":menuselection:`文件 --> 导入/导出 --> FBX (.fbx)`"
 
 #: ../../manual/addons/io_scene_fbx.rst:14
 msgid "Usage"
-msgstr ""
+msgstr "用法"
 
 #: ../../manual/addons/io_scene_fbx.rst:16
 msgid ""
 "This format is mainly use for interchanging character animations between "
 "applications and is supported by applications such as Cinema4D, Maya, "
-"Autodesk 3ds Max, Wings3D and engines such as Unity3D, Unreal Engine "
-"3/UDK and Unreal Engine 4."
+"Autodesk 3ds Max, Wings3D and engines such as Unity3D, Unreal Engine 3/"
+"UDK and Unreal Engine 4."
 msgstr ""
+"此格式主要用在不同应用程序之间交换角色动画，支持的应用程序有Cinema4D，"
+"Maya，Autodesk 3ds Max，Wings3D，支持的引擎有Unity3D，Unreal Engine 3/UDK"
+"及Unreal Engine 4。"
 
 #: ../../manual/addons/io_scene_fbx.rst:20
 msgid ""
 "The exporter can bake mesh modifiers and animation into the FBX so the "
 "final result looks the same as in Blender."
 msgstr ""
+"导出器可将网格修改器及动画烘培到FBX文件中，因此最终效果与Blender中的结果"
+"相同。"
 
 #: ../../manual/addons/io_scene_fbx.rst:24
 msgid ""
 "Bones would need to get a correction to their orientation (FBX bones "
 "seems to be -X aligned, Blender's are Y aligned), this does not affect "
-"skinning or animation, but imported bones in other applications will look"
-" wrong."
+"skinning or animation, but imported bones in other applications will "
+"look wrong."
 msgstr ""
+"骨骼需要对其方向进行校正（FBX骨骼似乎是-X对齐，Blender是Y对齐的），这不会"
+"影响蒙皮或动画，但在其他应用程序中导入的骨骼看起来会出错。"
 
 #: ../../manual/addons/io_scene_fbx.rst:27
 msgid ""
 "Animations (FBX AnimStacks, Blender actions) **are not linked** to their "
 "object, because there is no real way to know which stack to use as "
-"'active' action for a given object, mesh or bone. This may be enhanced to"
-" be smarter in the future, but it's not really considered urgent, so for "
-"now you'll have to link actions to objects manually."
+"'active' action for a given object, mesh or bone. This may be enhanced "
+"to be smarter in the future, but it's not really considered urgent, so "
+"for now you'll have to link actions to objects manually."
 msgstr ""
+"动画（FBX 动画堆栈，Blender动作）**没有链接**到其对象，因为没有真正的方法"
+"可以知道哪个堆栈用作给定对象，网格或骨骼的“活动”动作。 这未来可能会做强化"
+"以更智能，但目前并非紧急任务，所以现在你必须手动将动作链接到对象。"
 
 #: ../../manual/addons/io_scene_fbx.rst:31
 msgid "Armature instances **are not supported**."
-msgstr ""
+msgstr "骨架实例 **是不被支持的** 。"
 
 #: ../../manual/addons/io_scene_fbx.rst:35
 msgid ""
 "Bones' orientation importing is complex, you may have to play a bit with "
 "related settings until you get the expected results."
 msgstr ""
+"Bones的方向导入很复杂，您可能需要使用相关设置，直到获得预期的结果。"
 
 #: ../../manual/addons/io_scene_fbx.rst:37
 msgid ""
@@ -93,6 +106,8 @@ msgid ""
 "were 'baked' ones (i.e. a set of close keyframes with linear "
 "interpolation)."
 msgstr ""
+"动画的支持目前是最小的。如果经过“烘焙”，我们读取所有曲线（即一组具有线性"
+"插值的近似关键帧）。"
 
 #: ../../manual/addons/io_scene_fbx.rst:39
 msgid ""
@@ -100,42 +115,50 @@ msgid ""
 "on a 'first one wins' basis. If you export a set of them for a single "
 "object you'll have to reassign them yourself."
 msgstr ""
+"导入的动作将依照“先到先得”原则链接到它们的相关对象，骨骼或形态键。如果您"
+"将组对象作为单一对象导出，则需要手动重新对其进行制定。"
 
 #: ../../manual/addons/io_scene_fbx.rst:42
 msgid "Saving Just Animations"
-msgstr ""
+msgstr "只保存动画"
 
 #: ../../manual/addons/io_scene_fbx.rst:44
 msgid ""
 "The FBX file format supports files that only contain takes. It is up to "
 "you to keep track of which animation belongs to which model. The "
 "animation that will be exported is the currently selected action within "
-"the Action editor. To reduce the file size, turn off the exporting of any"
-" parts you do not want and disable *All Actions*. For armature animations"
-" typically you just leave the armature enabled which is necessary for "
-"that type of animation. Reducing what is output makes the export and "
-"future import much faster. Normally each action will have its own name "
-"but the current or only take can be forced to be named \"Default Take\". "
-"Typically, this option can remain off."
+"the Action editor. To reduce the file size, turn off the exporting of "
+"any parts you do not want and disable *All Actions*. For armature "
+"animations typically you just leave the armature enabled which is "
+"necessary for that type of animation. Reducing what is output makes the "
+"export and future import much faster. Normally each action will have its "
+"own name but the current or only take can be forced to be named "
+"\"Default Take\". Typically, this option can remain off."
 msgstr ""
+"FBX文件格式支持仅包含take动画实例的文件，需由您自行指定动画跟踪的模型。 "
+"将导出的动画是动作编辑器中当前选定的动作。 要减小文件大小，请关闭任何不需"
+"要导出的部分，并禁用*所有动作*。 对于骨架动画，通常只需启用骨架，这对于该"
+"类型的动画是必需的。 减少导出量可以使导入和之后的导出操作更快。 通常情况"
+"下，每个动作都有自己的名称，但可以强制将当前或唯一的take实例命名"
+"为“Default Take”。 通常该选项可以保持关闭状态。"
 
 #: ../../manual/addons/io_scene_fbx.rst:55
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: ../../manual/addons/io_scene_fbx.rst:58
 #: ../../manual/addons/io_scene_fbx.rst:221
 msgid "Import"
-msgstr ""
+msgstr "导入"
 
 #: ../../manual/addons/io_scene_fbx.rst:61
 #: ../../manual/addons/io_scene_fbx.rst:110
 msgid "Main"
-msgstr ""
+msgstr "主标签"
 
 #: ../../manual/addons/io_scene_fbx.rst:63
 msgid "Manual Orientation"
-msgstr ""
+msgstr "手动朝向"
 
 #: ../../manual/addons/io_scene_fbx.rst:64
 #: ../../manual/addons/io_scene_fbx.rst:73
@@ -171,20 +194,22 @@ msgstr ""
 #: ../../manual/addons/io_scene_fbx.rst:212
 #: ../../manual/addons/io_scene_fbx.rst:214
 msgid "TODO."
-msgstr ""
+msgstr "待完成。"
 
 #: ../../manual/addons/io_scene_fbx.rst:70
 #: ../../manual/addons/io_scene_fbx.rst:127
 msgid "Forward / Up Axis"
-msgstr ""
+msgstr "向前/向上轴"
 
 #: ../../manual/addons/io_scene_fbx.rst:66
 msgid ""
 "Since many applications use a different axis for 'Up', these are axis "
-"conversion for these settings, Forward and Up axes -- By mapping these to"
-" different axes you can convert rotations between applications default up"
-" and forward axes."
+"conversion for these settings, Forward and Up axes -- By mapping these "
+"to different axes you can convert rotations between applications default "
+"up and forward axes."
 msgstr ""
+"由于许多应用程序使用不同的“向上”轴，因此存在转换轴向设置，向前和向上轴——"
+"通过映射不同的轴，您可以转换应用程序默认的向上和向前轴之间的旋转。"
 
 #: ../../manual/addons/io_scene_fbx.rst:70
 #: ../../manual/addons/io_scene_fbx.rst:127
@@ -193,122 +218,129 @@ msgid ""
 "direction). For example, its common for applications to use Y as the up "
 "axis, in that case -Z Forward, Y Up is needed."
 msgstr ""
+"Blender使用Y轴向前，Z轴向上（因为前视图沿+Y轴方向看）。 例如，许多应用程"
+"序通常使用Y作为向上轴，在这种情况下，需要使用-Z轴向前，Y轴向上。"
 
 #: ../../manual/addons/io_scene_fbx.rst:72
 #: ../../manual/addons/io_scene_fbx.rst:131
 msgid "Apply Transform"
-msgstr ""
+msgstr "应用变换"
 
 #: ../../manual/addons/io_scene_fbx.rst:74
 msgid "Import Normals"
-msgstr ""
+msgstr "导入法向"
 
 #: ../../manual/addons/io_scene_fbx.rst:79
 msgid "Import Animation"
-msgstr ""
+msgstr "导入动画"
 
 #: ../../manual/addons/io_scene_fbx.rst:79
 msgid "Animation Offset"
-msgstr ""
+msgstr "动画偏移"
 
 #: ../../manual/addons/io_scene_fbx.rst:81
 msgid "Import User Properties"
-msgstr ""
+msgstr "导入用户属性"
 
 #: ../../manual/addons/io_scene_fbx.rst:83
 msgid "Import Enums As Strings"
-msgstr ""
+msgstr "导入枚举为字符串"
 
 #: ../../manual/addons/io_scene_fbx.rst:85
 msgid "Image Search"
-msgstr ""
+msgstr "图像查找"
 
 #: ../../manual/addons/io_scene_fbx.rst:87
 msgid "Decal Offset"
-msgstr ""
+msgstr "贴花偏移"
 
 #: ../../manual/addons/io_scene_fbx.rst:91
 msgid "Use Pre/Post Rotation"
-msgstr ""
+msgstr "使用预/后旋转"
 
 #: ../../manual/addons/io_scene_fbx.rst:94
 #: ../../manual/addons/io_scene_fbx.rst:184
 msgid "Armatures"
-msgstr ""
+msgstr "骨架"
 
 #: ../../manual/addons/io_scene_fbx.rst:96
 msgid "Ignore Leaf Bones"
-msgstr ""
+msgstr "忽略叶骨"
 
 #: ../../manual/addons/io_scene_fbx.rst:98
 msgid "Force Connect Children"
-msgstr ""
+msgstr "强制连接子级"
 
 #: ../../manual/addons/io_scene_fbx.rst:100
 msgid "Automatic Bone Orientation"
-msgstr ""
+msgstr "自动骨骼坐标系"
 
 #: ../../manual/addons/io_scene_fbx.rst:104
 #: ../../manual/addons/io_scene_fbx.rst:190
 msgid "Primary/Secondary Bone Axis"
-msgstr ""
+msgstr "主/次骨骼轴向"
 
 #: ../../manual/addons/io_scene_fbx.rst:107
 #: ../../manual/addons/io_scene_fbx.rst:236
 msgid "Export"
-msgstr ""
+msgstr "导出"
 
 #: ../../manual/addons/io_scene_fbx.rst:113
 msgid "Selected Objects"
-msgstr ""
+msgstr "选定的物体"
 
 #: ../../manual/addons/io_scene_fbx.rst:113
 msgid ""
 "Only export the selected objects. Otherwise export all objects in the "
 "scene. Note, this does not apply when batch exporting."
 msgstr ""
+"仅导出选定的物体。否则将导出场景中所有的物体。注意，批量导出时不适用。"
 
 #: ../../manual/addons/io_scene_fbx.rst:116
 msgid "Scale"
-msgstr ""
+msgstr "比例"
 
 #: ../../manual/addons/io_scene_fbx.rst:116
 msgid ""
 "Scale the exported data by this value. 10 is the default because this "
 "fits best with the scale most applications import FBX to."
 msgstr ""
+"按此值缩放导出的数据。 10是默认值，因为这最适合大多数应用程序导入FBX的比"
+"例。"
 
 #: ../../manual/addons/io_scene_fbx.rst:118
 msgid "Apply Scale"
-msgstr ""
+msgstr "应用比例"
 
 #: ../../manual/addons/io_scene_fbx.rst:120
 msgid "Apply Scalings"
-msgstr ""
+msgstr "应用缩放"
 
 #: ../../manual/addons/io_scene_fbx.rst:123
 msgid ""
 "Since many applications use a different axis for 'Up', these are axis "
-"conversions for Forward and Up axes -- By mapping these to different axes"
-" you can convert rotations between applications default up and forward "
-"axes."
+"conversions for Forward and Up axes -- By mapping these to different "
+"axes you can convert rotations between applications default up and "
+"forward axes."
 msgstr ""
+"由于许多应用程序使用不同的“向上”轴，因此存在转换向前和向上轴的设置——通过"
+"映射不同的轴，您可以转换应用程序默认的向上和向前轴之间的旋转。"
 
 #: ../../manual/addons/io_scene_fbx.rst:129
 msgid "Empty/Camera/Light/Armature/Mesh/Other"
-msgstr ""
+msgstr "空物体/相机/光/骨架/网格/其他"
 
 #: ../../manual/addons/io_scene_fbx.rst:130
 msgid "Enable/Disable exporting of respective object types."
-msgstr ""
+msgstr "启用/禁用各类物体的导出。"
 
 #: ../../manual/addons/io_scene_fbx.rst:133
 msgid "Custom Properties"
-msgstr ""
+msgstr "自定义属性"
 
 #: ../../manual/addons/io_scene_fbx.rst:150
 msgid "Path Mode"
-msgstr ""
+msgstr "路径模式"
 
 #: ../../manual/addons/io_scene_fbx.rst:136
 msgid ""
@@ -320,74 +352,80 @@ msgid ""
 "application will search a set of predefined paths anyway so you have the "
 "option to strip the path too."
 msgstr ""
+"在导出文件中引用路径时，您可能需要对所使用的方法进行一些控制，因为绝对路"
+"径可能只在您自己的系统上正确。 另一方面，相对路径更具可移植性，但这意味着"
+"在本地文件系统上移动时必须保持文件分组。 在某些情况下，路径无关紧要，因为"
+"目标应用程序无论如何都会搜索一组预定义路径，因此您也可以选择去除路径。"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Auto"
-msgstr ""
+msgstr "自动"
 
 #: ../../manual/addons/io_scene_fbx.rst:142
 msgid ""
-"Uses relative paths for files which are in a subdirectory of the exported"
-" location, absolute for any directories outside that."
+"Uses relative paths for files which are in a subdirectory of the "
+"exported location, absolute for any directories outside that."
 msgstr ""
+"对于导出位置的子目录中的文件使用相对路径，对于此外的任何目录使用绝对路"
+"径。"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Absolute"
-msgstr ""
+msgstr "绝对"
 
 #: ../../manual/addons/io_scene_fbx.rst:144
 msgid "Uses full paths."
-msgstr ""
+msgstr "使用完整路径。"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Relative"
-msgstr ""
+msgstr "相对"
 
 #: ../../manual/addons/io_scene_fbx.rst:145
 msgid ""
 "Uses relative paths in every case (except when on a different drive on "
 "windows)."
-msgstr ""
+msgstr "在所有情况都使用相对路径（除了在Windows上的不同驱动器上）。"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Match"
-msgstr ""
+msgstr "匹配"
 
 #: ../../manual/addons/io_scene_fbx.rst:146
 msgid "Uses relative / absolute paths based on the paths used in Blender."
-msgstr ""
+msgstr "依照在Blender中用到的路径使用相对/绝对路径。"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Strip Path"
-msgstr ""
+msgstr "片段路径"
 
 #: ../../manual/addons/io_scene_fbx.rst:147
 msgid "Only write the filename and omit the path component."
-msgstr ""
+msgstr "只写入文件名并忽略路径组件。"
 
 #: ../../manual/addons/io_scene_fbx.rst
 msgid "Copy"
-msgstr ""
+msgstr "复制"
 
 #: ../../manual/addons/io_scene_fbx.rst:148
 msgid "Copy the file on exporting and reference it with a relative path."
-msgstr ""
+msgstr "在导出时复制文件并使用相对路径引用它。"
 
 #: ../../manual/addons/io_scene_fbx.rst:150
 msgid "Embed Textures"
-msgstr ""
+msgstr "内嵌纹理"
 
 #: ../../manual/addons/io_scene_fbx.rst:166
 msgid "Batch Mode"
-msgstr ""
+msgstr "分批模式"
 
 #: ../../manual/addons/io_scene_fbx.rst:153
 msgid "When enabled, export each group or scene to a file."
-msgstr ""
+msgstr "当启用时，导出每个群组或场景为一个文件。"
 
 #: ../../manual/addons/io_scene_fbx.rst:159
 msgid "Group/Scene"
-msgstr ""
+msgstr "群组/场景"
 
 #: ../../manual/addons/io_scene_fbx.rst:156
 msgid ""
@@ -397,10 +435,13 @@ msgid ""
 "scenes. Also note, when Group/Scene is enabled you must include the "
 "armature objects in the group for animated actions to work."
 msgstr ""
+"选择是否批量导出群组或场景到文件。 请注意，启用组/场景选项时，您无法使用"
+"动画选项的*当前动作*，因为它使用场景数据，并且组不会附加到任何场景。 另请"
+"注意，启用“群组/场景”时，必须在群组中包含骨架对象才能使动画动作起作用。"
 
 #: ../../manual/addons/io_scene_fbx.rst:166
 msgid "Own Dir"
-msgstr ""
+msgstr "自身目录"
 
 #: ../../manual/addons/io_scene_fbx.rst:162
 msgid ""
@@ -410,158 +451,165 @@ msgid ""
 "installation. If you do not have a full Python installation, this button "
 "will not be shown."
 msgstr ""
+"启用后每个文件都会导出到自己的目录中，这在使用*复制图像*选项时很有用。 因"
+"此每个目录都包含一个模型及其所用到的图片。 注意，这需要Python被完整安"
+"装， 否则不会显示此按钮。"
 
 #: ../../manual/addons/io_scene_fbx.rst:169
 msgid "Geometries"
-msgstr ""
+msgstr "几何数据"
 
 #: ../../manual/addons/io_scene_fbx.rst:171
 msgid "Apply Modifiers"
-msgstr ""
+msgstr "应用修改器"
 
 #: ../../manual/addons/io_scene_fbx.rst:172
 msgid ""
 "When enabled, the mesh will be from the output of the modifiers applied "
 "to the mesh."
-msgstr ""
+msgstr "启用后，网格将来自应用于网格的修改器的输出。"
 
 #: ../../manual/addons/io_scene_fbx.rst:173
 msgid "Use Modifiers Render Setting"
-msgstr ""
+msgstr "使用修改器的渲染设定"
 
 #: ../../manual/addons/io_scene_fbx.rst:175
 msgid "Smoothing"
-msgstr ""
+msgstr "平滑"
 
 #: ../../manual/addons/io_scene_fbx.rst:177
 msgid "Loose Edges"
-msgstr ""
+msgstr "松散边"
 
 #: ../../manual/addons/io_scene_fbx.rst:181
 msgid "Tangent Space"
-msgstr ""
+msgstr "切向空间"
 
 #: ../../manual/addons/io_scene_fbx.rst:186
 msgid "Only Deform Bones"
-msgstr ""
+msgstr "仅使骨骼箱变"
 
 #: ../../manual/addons/io_scene_fbx.rst:188
 msgid "Add Leaf Bones"
-msgstr ""
+msgstr "添加叶骨"
 
 #: ../../manual/addons/io_scene_fbx.rst:194
 msgid "Armature FBXNode Type"
-msgstr ""
+msgstr "骨架FBXNode类型"
 
 #: ../../manual/addons/io_scene_fbx.rst:197
 msgid "Animation"
-msgstr ""
+msgstr "动画"
 
 #: ../../manual/addons/io_scene_fbx.rst:199
 msgid "Baked Animation"
-msgstr ""
+msgstr "烘焙动画"
 
 #: ../../manual/addons/io_scene_fbx.rst:201
 msgid "Key All Bones"
-msgstr ""
+msgstr "对所有骨骼插帧"
 
 #: ../../manual/addons/io_scene_fbx.rst:203
 msgid "NLA Strips"
-msgstr ""
+msgstr "NLA片段"
 
 #: ../../manual/addons/io_scene_fbx.rst:207
 msgid "All Actions"
-msgstr ""
+msgstr "全部动作"
 
 #: ../../manual/addons/io_scene_fbx.rst:206
 msgid ""
-"Export all actions compatible with the selected armatures start/end times"
-" which are derived from the keyframe range of each action. When disabled "
-"only the currently assigned action is exported."
+"Export all actions compatible with the selected armatures start/end "
+"times which are derived from the keyframe range of each action. When "
+"disabled only the currently assigned action is exported."
 msgstr ""
+"导出与所选骨骼开始/结束时间兼容的所有动作，这些动作源自每个动作的关键帧范"
+"围。禁用时，仅导出当前分配的动作。"
 
 #: ../../manual/addons/io_scene_fbx.rst:209
 msgid "Force Start/End Keying"
-msgstr ""
+msgstr "强制开始/结束关键帧"
 
 #: ../../manual/addons/io_scene_fbx.rst:211
 msgid "Sampling Rate"
-msgstr ""
+msgstr "采样率"
 
 #: ../../manual/addons/io_scene_fbx.rst:215
 msgid "Simplify"
-msgstr ""
+msgstr "简化"
 
 #: ../../manual/addons/io_scene_fbx.rst:218
 msgid "Compatibility"
-msgstr ""
+msgstr "兼容性"
 
 #: ../../manual/addons/io_scene_fbx.rst:223
 msgid ""
 "Note that the importer is a new addition and lacks many features the "
 "exporter supports."
-msgstr ""
+msgstr "请注意，导入器是新增加的，并且缺少导出器支持的许多功能。"
 
 #: ../../manual/addons/io_scene_fbx.rst:225
 msgid "binary FBX files only."
-msgstr ""
+msgstr "仅限二进制FBX文件。"
 
 #: ../../manual/addons/io_scene_fbx.rst:226
 msgid "Version 7.1 or newer."
-msgstr ""
+msgstr "7.1及更新版本。"
 
 #: ../../manual/addons/io_scene_fbx.rst:230
 #: ../../manual/addons/io_scene_fbx.rst:242
 msgid "Missing"
-msgstr ""
+msgstr "缺失"
 
 #: ../../manual/addons/io_scene_fbx.rst:232
 msgid "Mesh: shape keys."
-msgstr ""
+msgstr "网格：形态键"
 
 #: ../../manual/addons/io_scene_fbx.rst:238
 msgid ""
 "NURBS surfaces, text3D and metaballs are converted to meshes at export "
 "time."
-msgstr ""
+msgstr "NURBS表面，文本3D及变形球在导出时会被转换为网格。"
 
 #: ../../manual/addons/io_scene_fbx.rst:244
 msgid ""
-"Some of the following features are missing because they are not supported"
-" by the FBX format, others may be added later."
-msgstr ""
+"Some of the following features are missing because they are not "
+"supported by the FBX format, others may be added later."
+msgstr "因为FBX格式不支持，缺少以下某些功能，其他功能可能会在以后添加。"
 
 #: ../../manual/addons/io_scene_fbx.rst:247
 msgid ""
 "Object instancing -- exported objects do not share data, instanced "
 "objects will each be written with their own data."
-msgstr ""
+msgstr "对象实例化——导出对象不可共享数据，实例化对象将分别写入自身数据。"
 
 #: ../../manual/addons/io_scene_fbx.rst:249
 msgid "Material textures"
-msgstr ""
+msgstr "材质纹理"
 
 #: ../../manual/addons/io_scene_fbx.rst:250
 msgid ""
 "Vertex shape keys -- FBX supports them but this exporter does not write "
 "them yet."
-msgstr ""
+msgstr "顶点形态键——FBX支持，但此导出器尚未写入。"
 
 #: ../../manual/addons/io_scene_fbx.rst:251
 msgid ""
-"Animated fluid simulation -- FBX does not support this kind of animation."
-" You can however use the OBJ exporter to write a sequence of files."
+"Animated fluid simulation -- FBX does not support this kind of "
+"animation. You can however use the OBJ exporter to write a sequence of "
+"files."
 msgstr ""
+"动画流体模拟——FBX不支持这种此类动画。 但您可以使用OBJ导出器写入文件序列。"
 
 #: ../../manual/addons/io_scene_fbx.rst:253
 msgid ""
 "Constraints -- The result of using constraints is exported as a keyframe "
 "animation however the constraints themselves are not saved in the FBX."
 msgstr ""
+"约束——使用约束的结果将导出为关键帧动画，但约束本身不会保存在FBX中。"
 
 #: ../../manual/addons/io_scene_fbx.rst:255
 msgid ""
 "Instanced objects -- At the moment instanced objects are only written in "
 "static scenes (when animation is disabled)."
-msgstr ""
-
+msgstr "实例化对象——目前实例化对象仅可在静态场景中写入（禁用动画时）。"
