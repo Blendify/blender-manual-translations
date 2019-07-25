@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
+"POT-Creation-Date: 2019-07-25 13:05+1000\n"
 "PO-Revision-Date: 2018-12-01 08:03+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -116,7 +116,11 @@ msgstr "Panneau "
 msgid ":menuselection:`Physics --> Cloth --> Collision`"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:37
+#: ../../manual/physics/cloth/settings/collisions.rst:34
+msgid "Cloth Collisions panel."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:36
 #, fuzzy
 msgid ""
 "Now you must tell the *Cloth* object that you want it to participate in "
@@ -126,11 +130,11 @@ msgstr ""
 "participe aux collisions. Pour l'objet *Cloth*, trouvez le panneau *Cloth"
 " Collision*, affiché à droite :"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:43
+#: ../../manual/physics/cloth/settings/collisions.rst:42
 msgid "Quality"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:41
+#: ../../manual/physics/cloth/settings/collisions.rst:40
 msgid ""
 "A general setting for how fine and good a simulation you wish. Higher "
 "numbers take more time but ensure less tears and penetrations through the"
@@ -140,11 +144,11 @@ msgstr ""
 "vous souhaitez. Des nombres élevés prennent plus de temps mais "
 "garantissent moins de déchirures et de pénétrations à travers le tissu."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:46
+#: ../../manual/physics/cloth/settings/collisions.rst:45
 msgid "Object Collisions"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:48
+#: ../../manual/physics/cloth/settings/collisions.rst:47
 #, fuzzy
 msgid ""
 "If the cloth object needs to be deflected by some other object. To "
@@ -158,56 +162,63 @@ msgstr ""
 "avec l'objet cloth. Pour activer Cloth -- collision d'objet, vous devez "
 "activer les déflexions sur l'objet de collision (pas sur l'objet cloth)."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:56
+#: ../../manual/physics/cloth/settings/collisions.rst:55
 msgid ""
 "If your colliding object is not a mesh object, such as a NURBS surface, "
 "or a text object, you must convert it to a mesh object using :ref"
 ":`object-convert-to`."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:60
-#: ../../manual/physics/cloth/settings/collisions.rst:84
+#: ../../manual/physics/cloth/settings/collisions.rst:62
+#: ../../manual/physics/cloth/settings/collisions.rst:90
 msgid "Distance"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:60
-#, fuzzy
+#: ../../manual/physics/cloth/settings/collisions.rst:59
 msgid ""
-"As another object gets this close to it, the simulation will start to "
-"push the cloth out of the way."
+"The distance another object must get to the cloth for the simulation to "
+"repel the cloth out of the way. Smaller values might give errors but "
+"gives some speed-up while larger will give unrealistic results if too "
+"large and can be slow. It is best to find a good in between value."
 msgstr ""
-"Si un autre objet se rapproche de très près de lui (en Unités Blender), "
-"la simulation va commencer à pousser le tissu hors du chemin."
 
 #: ../../manual/physics/cloth/settings/collisions.rst:65
-#: ../../manual/physics/cloth/settings/collisions.rst:80
-msgid "Friction"
+#: ../../manual/physics/cloth/settings/collisions.rst:93
+msgid "Impulse Clamping"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:63
-#: ../../manual/physics/cloth/settings/collisions.rst:80
-#, fuzzy
+#: ../../manual/physics/cloth/settings/collisions.rst:65
+#: ../../manual/physics/cloth/settings/collisions.rst:93
 msgid ""
-"A coefficient for how slippery the cloth is when it collides with itself."
-" For example, silk has a lower coefficient of friction than cotton."
-msgstr ""
-"un coefficient de glissement du tissu lorsqu'il entre en collision avec "
-"l'objet *mesh*. Par exemple, la soie a un coefficient de friction "
-"inférieur à celui du coton."
-
-#: ../../manual/physics/cloth/settings/collisions.rst:68
-msgid "Self-Collisions"
+"Prevents explosions in tight and complicated collision situations by "
+"restricting the amount of movement after a collision."
 msgstr ""
 
 #: ../../manual/physics/cloth/settings/collisions.rst:70
+#, fuzzy
+msgid "Collision Collection"
+msgstr "Réglages de collision."
+
+#: ../../manual/physics/cloth/settings/collisions.rst:68
 msgid ""
-"Real cloth cannot permeate itself, so you normally want the cloth to "
+"Only objects that are a part of this :doc:`Collection "
+"</scene_layout/collections/index>` can collide with the cloth. Note that "
+"these objects must also have Collision physics enabled."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:73
+msgid "Self-Collisions"
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:75
+msgid ""
+"Real cloth cannot penetrate itself, so you normally want the cloth to "
 "self-collide. Enable this to tell the cloth object that it should not "
 "penetrate itself. This adds to the simulation's compute time, but "
 "provides more realistic results."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:76
+#: ../../manual/physics/cloth/settings/collisions.rst:81
 #, fuzzy
 msgid ""
 "A flag, viewed from a distance does not need this enabled, but a close-up"
@@ -219,44 +230,51 @@ msgstr ""
 "cette option, mais celui-ci devrait être activé pour un gros plan sur la "
 "cape ou la blouse d'un personnage."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:83
+#: ../../manual/physics/cloth/settings/collisions.rst:85
+msgid "Friction"
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:85
+#, fuzzy
 msgid ""
-"If you encounter problems, you could also change the *Min Distance* value"
-" for the self-collisions. The best value is 0.75; for fast things you "
-"better take 1.0. The value 0.5 is quite risky (most likely many "
-"penetrations) but also gives some speed-up."
+"A coefficient for how slippery the cloth is when it collides with itself."
+" For example, silk has a lower coefficient of friction than cotton."
 msgstr ""
-"Si vous rencontrez des problèmes, vous pourriez aussi modifier la valeur "
-"de *Min Distance* pour les auto-collisions. La meilleure valeur est 0.75 "
-"; pour des choses rapides, vous ferez mieux de prendre 1.0. La valeur 0.5"
-" est assez risquée (très probablement beaucoup de pénétrations) mais "
-"offre quelque accélération. "
+"un coefficient de glissement du tissu lorsqu'il entre en collision avec "
+"l'objet *mesh*. Par exemple, la soie a un coefficient de friction "
+"inférieur à celui du coton."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:86
-msgid "Impulse Clamping"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:87
-#: ../../manual/physics/cloth/settings/collisions.rst:89
-msgid "TODO2.8."
+#: ../../manual/physics/cloth/settings/collisions.rst:88
+msgid ""
+"As cloth at this distance begins to repel away from itself. Smaller "
+"values might give errors but gives some speed-up while larger will give "
+"unrealistic results if too large and can be slow. It is best to find a "
+"good in between value."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:89
+#: ../../manual/physics/cloth/settings/collisions.rst:97
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:93
+#: ../../manual/physics/cloth/settings/collisions.rst:96
+msgid ""
+"Only vertices that are a part of this :doc:`Vertex Group "
+"</modeling/meshes/properties/vertex_groups/index>` can collide with each "
+"other."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:101
 msgid ""
 "Example blend-file: `Cloth self-collisions "
 "<https://wiki.blender.org/wiki/File:Cloth-regression-"
 "selfcollisions.blend>`__."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:98
+#: ../../manual/physics/cloth/settings/collisions.rst:106
 msgid "Troubleshooting"
 msgstr "Résolution de problèmes"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:100
+#: ../../manual/physics/cloth/settings/collisions.rst:108
 #, fuzzy
 msgid ""
 "If you encounter some problems with collision detection, there are a few "
@@ -265,13 +283,14 @@ msgstr ""
 "Si vous rencontrez quelques problèmes avec la détection de collision, il "
 "y a deux manières de les corriger :"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:102
+#: ../../manual/physics/cloth/settings/collisions.rst:110
+#, fuzzy
 msgid ""
-"The fastest solution is to increase the *Min Distance* setting under the "
-"*Cloth Collision* panel. This will be the fastest way to fix the "
-"clipping; however, it will be less accurate and will not look as good. "
-"Using this method tends to make it look like the cloth is resting on air,"
-" and gives it a very rounded look."
+"The fastest solution is to increase the *Distance* for Object/Self "
+"Collisions. This will be the fastest way to fix the clipping; however, it"
+" will be less accurate and will not look as good. Using this method tends"
+" to make it look like the cloth is resting on air, and gives it a very "
+"rounded look."
 msgstr ""
 "La solution la plus rapide est d'augmenter le réglage *Min Distance* dans"
 " le panneau *Cloth Collision*. Celle-ci est la manière la plus rapide "
@@ -279,13 +298,14 @@ msgstr ""
 "paraîtra pas aussi bon. L'utilisation de cette méthode tend à faire comme"
 " si le tissu flotte en l'air, et lui donne un aspect très arrondi."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:105
+#: ../../manual/physics/cloth/settings/collisions.rst:113
+#, fuzzy
 msgid ""
-"A second method is to increase the *Quality* (in the first *Cloth* "
-"panel). This results in smaller steps for the simulator and therefore to "
-"a higher probability that fast-moving collisions get caught. You can also"
-" increase the *Collision Quality* to perform more iterations to get "
-"collisions solved."
+"A second method is to increase the *Quality* (in the *Cloth* panel). This"
+" results in smaller steps for the simulator and therefore to a higher "
+"probability that fast-moving collisions get caught. You can also increase"
+" the Collisions *Quality* to perform more iterations to get collisions "
+"solved."
 msgstr ""
 "Une seconde méthode est d'augmenter *Quality* (dans le premier panneau de"
 " *Cloth*). Celle-ci se passe en étapes plus petites pour le simulateur et"
@@ -293,7 +313,7 @@ msgstr ""
 " rapide soient saisies. Vous pouvez aussi augmenter *Collision Quality* "
 "pour effectuer plus d'itérations pour résoudre les collisions."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:109
+#: ../../manual/physics/cloth/settings/collisions.rst:117
 msgid ""
 "If none of the methods help, you can easily edit the cached/baked result "
 "in *Edit Mode* afterwards."
@@ -301,9 +321,9 @@ msgstr ""
 "Si aucune de ces méthodes ne fonctionne, vous pouvez aisément éditer "
 "après le résultat en cache/précalculé en *Mode Édition*."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:110
+#: ../../manual/physics/cloth/settings/collisions.rst:118
 msgid ""
-"If the Cloth is torn by the deforming mesh; increase its *Stiffness* "
+"If the Cloth is torn by the deforming mesh; increase the stiffness "
 "settings."
 msgstr ""
 
@@ -743,4 +763,54 @@ msgstr ""
 #~ "veuillez utiliser le **même** niveau de"
 #~ " subdivision pour le rendu et la "
 #~ "prévisualisation."
+
+#~ msgid ""
+#~ "As another object gets this close "
+#~ "to it, the simulation will start "
+#~ "to push the cloth out of the "
+#~ "way."
+#~ msgstr ""
+#~ "Si un autre objet se rapproche de"
+#~ " très près de lui (en Unités "
+#~ "Blender), la simulation va commencer à"
+#~ " pousser le tissu hors du chemin."
+
+#~ msgid ""
+#~ "Real cloth cannot permeate itself, so"
+#~ " you normally want the cloth to "
+#~ "self-collide. Enable this to tell "
+#~ "the cloth object that it should "
+#~ "not penetrate itself. This adds to "
+#~ "the simulation's compute time, but "
+#~ "provides more realistic results."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you encounter problems, you could "
+#~ "also change the *Min Distance* value "
+#~ "for the self-collisions. The best "
+#~ "value is 0.75; for fast things you"
+#~ " better take 1.0. The value 0.5 "
+#~ "is quite risky (most likely many "
+#~ "penetrations) but also gives some "
+#~ "speed-up."
+#~ msgstr ""
+#~ "Si vous rencontrez des problèmes, vous"
+#~ " pourriez aussi modifier la valeur de"
+#~ " *Min Distance* pour les auto-"
+#~ "collisions. La meilleure valeur est 0.75"
+#~ " ; pour des choses rapides, vous "
+#~ "ferez mieux de prendre 1.0. La "
+#~ "valeur 0.5 est assez risquée (très "
+#~ "probablement beaucoup de pénétrations) mais"
+#~ " offre quelque accélération. "
+
+#~ msgid "TODO2.8."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the Cloth is torn by the "
+#~ "deforming mesh; increase its *Stiffness* "
+#~ "settings."
+#~ msgstr ""
 
