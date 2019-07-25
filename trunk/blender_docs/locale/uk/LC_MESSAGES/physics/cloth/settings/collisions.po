@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
+"POT-Creation-Date: 2019-07-25 13:05+1000\n"
 "PO-Revision-Date: 2017-11-14 15:52+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -122,7 +122,12 @@ msgstr "Відштовх -- Repel"
 msgid ":menuselection:`Physics --> Cloth --> Collision`"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:37
+#: ../../manual/physics/cloth/settings/collisions.rst:34
+#, fuzzy
+msgid "Cloth Collisions panel."
+msgstr "Зіткнення «Об'єкт - Тканина»"
+
+#: ../../manual/physics/cloth/settings/collisions.rst:36
 #, fuzzy
 msgid ""
 "Now you must tell the *Cloth* object that you want it to participate in "
@@ -132,11 +137,11 @@ msgstr ""
 "щоб він брав участь у зіткненнях. Для цього об'єкта тканини розгорніть "
 "панель *Cloth Collision*, показану тут на ілюстрації:"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:43
+#: ../../manual/physics/cloth/settings/collisions.rst:42
 msgid "Quality"
 msgstr "Якість -- Quality"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:41
+#: ../../manual/physics/cloth/settings/collisions.rst:40
 msgid ""
 "A general setting for how fine and good a simulation you wish. Higher "
 "numbers take more time but ensure less tears and penetrations through the"
@@ -147,12 +152,12 @@ msgstr ""
 "обчислення імітації, але це гарантує менше розривів та перетинань у "
 "тканині."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:46
+#: ../../manual/physics/cloth/settings/collisions.rst:45
 #, fuzzy
 msgid "Object Collisions"
 msgstr "Зіткнення «Об'єкт - Тканина»"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:48
+#: ../../manual/physics/cloth/settings/collisions.rst:47
 #, fuzzy
 msgid ""
 "If the cloth object needs to be deflected by some other object. To "
@@ -166,58 +171,64 @@ msgstr ""
 " Задання зіткнення для цього іншого відхильного об'єкта робиться окремо, "
 "а не одночасно на об'єкті тканини."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:56
+#: ../../manual/physics/cloth/settings/collisions.rst:55
 msgid ""
 "If your colliding object is not a mesh object, such as a NURBS surface, "
 "or a text object, you must convert it to a mesh object using :ref"
 ":`object-convert-to`."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:60
-#: ../../manual/physics/cloth/settings/collisions.rst:84
+#: ../../manual/physics/cloth/settings/collisions.rst:62
+#: ../../manual/physics/cloth/settings/collisions.rst:90
 msgid "Distance"
 msgstr "Відстань -- Distance"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:60
-#, fuzzy
+#: ../../manual/physics/cloth/settings/collisions.rst:59
 msgid ""
-"As another object gets this close to it, the simulation will start to "
-"push the cloth out of the way."
+"The distance another object must get to the cloth for the simulation to "
+"repel the cloth out of the way. Smaller values might give errors but "
+"gives some speed-up while larger will give unrealistic results if too "
+"large and can be slow. It is best to find a good in between value."
 msgstr ""
-"Як тільки інший об'єкт наближається ближче за це значення (в Одиницях "
-"Blender -- Blender Units), то імітація почне відштовхувати тканину від "
-"нього."
 
 #: ../../manual/physics/cloth/settings/collisions.rst:65
-#: ../../manual/physics/cloth/settings/collisions.rst:80
-msgid "Friction"
-msgstr "Тертя -- Friction"
-
-#: ../../manual/physics/cloth/settings/collisions.rst:63
-#: ../../manual/physics/cloth/settings/collisions.rst:80
-#, fuzzy
-msgid ""
-"A coefficient for how slippery the cloth is when it collides with itself."
-" For example, silk has a lower coefficient of friction than cotton."
+#: ../../manual/physics/cloth/settings/collisions.rst:93
+msgid "Impulse Clamping"
 msgstr ""
-"Коефіцієнт того, наскільки слизькою буде тканина, коли стикається з іншим"
-" сітьовим об'єктом. Наприклад, шовк має менше значення цього коефіцієнта "
-"тертя, ніж бавовна."
+
+#: ../../manual/physics/cloth/settings/collisions.rst:65
+#: ../../manual/physics/cloth/settings/collisions.rst:93
+msgid ""
+"Prevents explosions in tight and complicated collision situations by "
+"restricting the amount of movement after a collision."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:70
+#, fuzzy
+msgid "Collision Collection"
+msgstr "Устави зіткнень"
 
 #: ../../manual/physics/cloth/settings/collisions.rst:68
+msgid ""
+"Only objects that are a part of this :doc:`Collection "
+"</scene_layout/collections/index>` can collide with the cloth. Note that "
+"these objects must also have Collision physics enabled."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:73
 #, fuzzy
 msgid "Self-Collisions"
 msgstr "Само-зіткнення"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:70
+#: ../../manual/physics/cloth/settings/collisions.rst:75
 msgid ""
-"Real cloth cannot permeate itself, so you normally want the cloth to "
+"Real cloth cannot penetrate itself, so you normally want the cloth to "
 "self-collide. Enable this to tell the cloth object that it should not "
 "penetrate itself. This adds to the simulation's compute time, but "
 "provides more realistic results."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:76
+#: ../../manual/physics/cloth/settings/collisions.rst:81
 #, fuzzy
 msgid ""
 "A flag, viewed from a distance does not need this enabled, but a close-up"
@@ -230,33 +241,40 @@ msgstr ""
 " крупний план капюшона або блузки на персонажів вимагає, щоб ця опція "
 "була увімкнена."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:83
+#: ../../manual/physics/cloth/settings/collisions.rst:85
+msgid "Friction"
+msgstr "Тертя -- Friction"
+
+#: ../../manual/physics/cloth/settings/collisions.rst:85
 #, fuzzy
 msgid ""
-"If you encounter problems, you could also change the *Min Distance* value"
-" for the self-collisions. The best value is 0.75; for fast things you "
-"better take 1.0. The value 0.5 is quite risky (most likely many "
-"penetrations) but also gives some speed-up."
+"A coefficient for how slippery the cloth is when it collides with itself."
+" For example, silk has a lower coefficient of friction than cotton."
 msgstr ""
-"У разі виникнення проблем, ви можете також змінити це мінімальне значення"
-" *Distance* для само-зіткнень. Найкраще значення -- 0.75; для швидко "
-"рухомих речей краще буде 1.0. Значення 0.5 є досить ризикованим (швидше "
-"за все, дасть багато проникань), але також може дати деяке пришвидшення."
+"Коефіцієнт того, наскільки слизькою буде тканина, коли стикається з іншим"
+" сітьовим об'єктом. Наприклад, шовк має менше значення цього коефіцієнта "
+"тертя, ніж бавовна."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:86
-msgid "Impulse Clamping"
-msgstr ""
-
-#: ../../manual/physics/cloth/settings/collisions.rst:87
-#: ../../manual/physics/cloth/settings/collisions.rst:89
-msgid "TODO2.8."
+#: ../../manual/physics/cloth/settings/collisions.rst:88
+msgid ""
+"As cloth at this distance begins to repel away from itself. Smaller "
+"values might give errors but gives some speed-up while larger will give "
+"unrealistic results if too large and can be slow. It is best to find a "
+"good in between value."
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:89
+#: ../../manual/physics/cloth/settings/collisions.rst:97
 msgid "Vertex Group"
 msgstr ""
 
-#: ../../manual/physics/cloth/settings/collisions.rst:93
+#: ../../manual/physics/cloth/settings/collisions.rst:96
+msgid ""
+"Only vertices that are a part of this :doc:`Vertex Group "
+"</modeling/meshes/properties/vertex_groups/index>` can collide with each "
+"other."
+msgstr ""
+
+#: ../../manual/physics/cloth/settings/collisions.rst:101
 #, fuzzy
 msgid ""
 "Example blend-file: `Cloth self-collisions "
@@ -267,11 +285,11 @@ msgstr ""
 "<https://wiki.blender.org/index.php/Media:Cloth-regression-"
 "selfcollisions.blend>`__."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:98
+#: ../../manual/physics/cloth/settings/collisions.rst:106
 msgid "Troubleshooting"
 msgstr "Вирішення проблем"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:100
+#: ../../manual/physics/cloth/settings/collisions.rst:108
 #, fuzzy
 msgid ""
 "If you encounter some problems with collision detection, there are a few "
@@ -280,13 +298,14 @@ msgstr ""
 "Якщо ви стикнулися з деякими проблемами при визначенні зіткнень, існує "
 "два способи виправлення цього:"
 
-#: ../../manual/physics/cloth/settings/collisions.rst:102
+#: ../../manual/physics/cloth/settings/collisions.rst:110
+#, fuzzy
 msgid ""
-"The fastest solution is to increase the *Min Distance* setting under the "
-"*Cloth Collision* panel. This will be the fastest way to fix the "
-"clipping; however, it will be less accurate and will not look as good. "
-"Using this method tends to make it look like the cloth is resting on air,"
-" and gives it a very rounded look."
+"The fastest solution is to increase the *Distance* for Object/Self "
+"Collisions. This will be the fastest way to fix the clipping; however, it"
+" will be less accurate and will not look as good. Using this method tends"
+" to make it look like the cloth is resting on air, and gives it a very "
+"rounded look."
 msgstr ""
 "Найшвидшим рішенням є збільшити значення устави *Distance* на панелі "
 "*Cloth Collision*. Це буде найшвидший спосіб виправлення відсікання; "
@@ -294,13 +313,14 @@ msgstr ""
 "Використання цього методу, зазвичай, робить вигляд тканини, ніби це "
 "позиція її спокою на повітрі, та дає дуже її заокруглений вигляд."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:105
+#: ../../manual/physics/cloth/settings/collisions.rst:113
+#, fuzzy
 msgid ""
-"A second method is to increase the *Quality* (in the first *Cloth* "
-"panel). This results in smaller steps for the simulator and therefore to "
-"a higher probability that fast-moving collisions get caught. You can also"
-" increase the *Collision Quality* to perform more iterations to get "
-"collisions solved."
+"A second method is to increase the *Quality* (in the *Cloth* panel). This"
+" results in smaller steps for the simulator and therefore to a higher "
+"probability that fast-moving collisions get caught. You can also increase"
+" the Collisions *Quality* to perform more iterations to get collisions "
+"solved."
 msgstr ""
 "Другий метод -- це збільшити значення устави *Quality* (на панелі "
 "*Cloth*). Це дає менші кроки для імітатора та звідси вищу ймовірність "
@@ -308,7 +328,7 @@ msgstr ""
 "*Quality* на панелі *Collision* для здійснення більше повторів для "
 "обчислення зіткнень."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:109
+#: ../../manual/physics/cloth/settings/collisions.rst:117
 msgid ""
 "If none of the methods help, you can easily edit the cached/baked result "
 "in *Edit Mode* afterwards."
@@ -317,9 +337,9 @@ msgstr ""
 "кешований/запечений результат у Режимі Правки -- *Edit Mode* після "
 "всього."
 
-#: ../../manual/physics/cloth/settings/collisions.rst:110
+#: ../../manual/physics/cloth/settings/collisions.rst:118
 msgid ""
-"If the Cloth is torn by the deforming mesh; increase its *Stiffness* "
+"If the Cloth is torn by the deforming mesh; increase the stiffness "
 "settings."
 msgstr ""
 
@@ -766,4 +786,53 @@ msgstr ""
 #~ "підподілу, а тому, будь ласка, "
 #~ "використовуйте **однаковий** рівень підподілу "
 #~ "для рендера та передогляду."
+
+#~ msgid ""
+#~ "As another object gets this close "
+#~ "to it, the simulation will start "
+#~ "to push the cloth out of the "
+#~ "way."
+#~ msgstr ""
+#~ "Як тільки інший об'єкт наближається "
+#~ "ближче за це значення (в Одиницях "
+#~ "Blender -- Blender Units), то імітація"
+#~ " почне відштовхувати тканину від нього."
+
+#~ msgid ""
+#~ "Real cloth cannot permeate itself, so"
+#~ " you normally want the cloth to "
+#~ "self-collide. Enable this to tell "
+#~ "the cloth object that it should "
+#~ "not penetrate itself. This adds to "
+#~ "the simulation's compute time, but "
+#~ "provides more realistic results."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you encounter problems, you could "
+#~ "also change the *Min Distance* value "
+#~ "for the self-collisions. The best "
+#~ "value is 0.75; for fast things you"
+#~ " better take 1.0. The value 0.5 "
+#~ "is quite risky (most likely many "
+#~ "penetrations) but also gives some "
+#~ "speed-up."
+#~ msgstr ""
+#~ "У разі виникнення проблем, ви можете "
+#~ "також змінити це мінімальне значення "
+#~ "*Distance* для само-зіткнень. Найкраще "
+#~ "значення -- 0.75; для швидко рухомих "
+#~ "речей краще буде 1.0. Значення 0.5 "
+#~ "є досить ризикованим (швидше за все, "
+#~ "дасть багато проникань), але також може"
+#~ " дати деяке пришвидшення."
+
+#~ msgid "TODO2.8."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the Cloth is torn by the "
+#~ "deforming mesh; increase its *Stiffness* "
+#~ "settings."
+#~ msgstr ""
 
