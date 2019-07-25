@@ -3,66 +3,76 @@
 # This file is distributed under the same license as the Blender 2.80 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# urko <urkokul@gmail.com>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 14:49+1000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-07-25 16:13+0300\n"
+"Last-Translator: urko <urkokul@gmail.com>\n"
+"Language: uk\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/compositing/types/input/time.rst:5
 msgid "Time Node"
-msgstr ""
+msgstr "Вузол «Час» -- Time Node"
 
 #: ../../manual/compositing/types/input/time.rst:10
 msgid "Time Node."
-msgstr ""
+msgstr "Вузол «Час» -- Time Node."
 
 #: ../../manual/compositing/types/input/time.rst:12
 msgid ""
 "The *Time node* generates a factor value (from 0.0 to 1.0) that changes "
 "according to the curve as time progresses through the *Timeline*."
 msgstr ""
+"Вузол *Time* генерує значення фактора (від 0.0 до 1.0), що змінюється "
+"відповідно кривої, як час прогресує через Часолінію -- *Timeline*."
 
 #: ../../manual/compositing/types/input/time.rst:17
 msgid "Inputs"
-msgstr ""
+msgstr "Уводи -- Inputs"
 
 #: ../../manual/compositing/types/input/time.rst:19
 msgid "This node has no inputs."
-msgstr ""
+msgstr "Цей вузол не має уводів."
 
 #: ../../manual/compositing/types/input/time.rst:23
 msgid "Properties"
-msgstr ""
+msgstr "Властивості -- Properties"
 
 #: ../../manual/compositing/types/input/time.rst:32
 msgid "Curve"
-msgstr ""
+msgstr "Крива -- Curve"
 
 #: ../../manual/compositing/types/input/time.rst:26
 msgid ""
 "The Y value defined by the curve is the factor output. For the curve "
 "controls see: :ref:`Curve widget <ui-curve-widget>`."
 msgstr ""
+"Значення Y, визначене кривою, є виводом фактора. Про керувальники кривої "
+"дивіться про віджет «Крива»: :ref:`Curve widget <ui-curve-widget>`."
 
 #: ../../manual/compositing/types/input/time.rst:31
 msgid ""
-"Flipping the curve around reverses the time input, but doing so is easily"
-" overlooked in the node setup."
+"Flipping the curve around reverses the time input, but doing so is "
+"easily overlooked in the node setup."
 msgstr ""
+"Перевертання кривої розвертає назад увід часу, але це легко пропустити "
+"при укладанні цього вузла."
 
 #: ../../manual/compositing/types/input/time.rst:38
 msgid "Start, End"
-msgstr ""
+msgstr "Старт -- Start, Кінець -- End"
 
 #: ../../manual/compositing/types/input/time.rst:35
 msgid ""
@@ -71,14 +81,19 @@ msgid ""
 "input could be reversed by specifying a start frame greater than the end "
 "frame."
 msgstr ""
+"Стартовий кадр -- Start frame та Кінцевий кадр -- End frame діапазону "
+"часу визначає значення, у межах яких буде тривати вивід. Це діапазон "
+"стає віссю X графа цього вузла. Увід часу може бути розвернений назад "
+"шляхом визначення значення для Стартового кадру більшого, ніж для "
+"Кінцевого кадру."
 
 #: ../../manual/compositing/types/input/time.rst:41
 msgid "Outputs"
-msgstr ""
+msgstr "Виводи -- Outputs"
 
 #: ../../manual/compositing/types/input/time.rst:46
 msgid "Factor"
-msgstr ""
+msgstr "Фактор -- Factor"
 
 #: ../../manual/compositing/types/input/time.rst:44
 msgid ""
@@ -86,35 +101,39 @@ msgid ""
 "defined in the :ref:`Render Dimensions Panel <render-tab-dimensions>`. "
 "The factor changes according to the defined curve."
 msgstr ""
+"Швидкість фактора часу (від 0.00 до 1.00) відносно частоти кадрів, "
+"визначеної на панелі «Розміри» контексту «Рендер» Редактора Властивостей "
+"-- :ref:`Render Dimensions Panel <render-tab-dimensions>`. Цей фактор "
+"змінюється відповідно до визначеної кривої."
 
 #: ../../manual/compositing/types/input/time.rst:48
 msgid "Output values"
-msgstr ""
+msgstr "Значення виводу"
 
 #: ../../manual/compositing/types/input/time.rst:50
 msgid ""
 "The :doc:`Map Value </compositing/types/vector/map_value>` node can be "
 "used to map the output to a more appropriate value. With sometimes "
-"curves, it is possible that the Time node may output a number larger than"
-" one or less than zero. To be safe, use the Min/Max clamping function of "
-"the Map Value node to limit output."
+"curves, it is possible that the Time node may output a number larger "
+"than one or less than zero. To be safe, use the Min/Max clamping "
+"function of the Map Value node to limit output."
 msgstr ""
+"Вузол «Розкладка Значень» -- :doc:`Map Value </compositing/types/vector/"
+"map_value>` може бути використаний для розкладки виводу на більш "
+"відповідний діапазон значень. При деяких кривих часу можливо, що вузол "
+"«Час» -- Time може виводити значення, більші ніж один та менші за нуль. "
+"Для перестрахування використовуйте функцію затиску -- Min/Max на вузлі "
+"«Розкладка Значень» -- Map Value для лімітування виводу стандартним "
+"діапазоном."
 
 #: ../../manual/compositing/types/input/time.rst:57
 msgid "Example"
-msgstr ""
+msgstr "Приклад -- Example"
 
 #: ../../manual/compositing/types/input/time.rst:61
 msgid ""
 "Time controls from left to right: no effect, slow down, freeze, "
 "accelerate, reverse."
 msgstr ""
-
-#~ msgid ""
-#~ "The *Time node* generates a factor "
-#~ "value (from 0.00 to 1.00) that "
-#~ "changes according to the curve was "
-#~ "drawn as time progresses through the "
-#~ "*Timeline*."
-#~ msgstr ""
-
+"Керувальники часу зліва направо: без ефекту, уповільнення, завмирання, "
+"прискорення, розворот."
