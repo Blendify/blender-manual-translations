@@ -4,41 +4,45 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-07-26 12:36+0800\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/physics/cloth/settings/cache.rst:4
 msgid "Cache"
-msgstr ""
+msgstr "高速缓存"
 
 #: ../../manual/physics/cloth/settings/cache.rst:6
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/physics/cloth/settings/cache.rst
 msgid "Panel"
-msgstr ""
+msgstr "面板"
 
 #: ../../manual/physics/cloth/settings/cache.rst:9
 msgid ":menuselection:`Physics --> Cloth Cache`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 布料缓存`"
 
 #: ../../manual/physics/cloth/settings/cache.rst:11
 msgid ""
-"Cache settings for cloth are the same as with other dynamic systems. See "
-":doc:`Particle Cache </physics/particles/emitter/cache>` for details."
+"Cache settings for cloth are the same as with other dynamic systems. "
+"See :doc:`Particle Cache </physics/particles/emitter/cache>` for details."
 msgstr ""
+"布料缓存和其他动力系统一样. 见 :doc:`粒子缓存 </physics/particles/"
+"emitter/cache>` 详情."
 
 #: ../../manual/physics/cloth/settings/cache.rst:16
 msgid ""
@@ -47,20 +51,24 @@ msgid ""
 "position of the current/cached mesh's vertices when trying to represent "
 "where they are."
 msgstr ""
+"如果在你移动或者编辑布料对象 **之后** 你已经运行了模拟,你必须清除缓存;或"
+"者, 在尝试表现它们所在的位置时Blender将使用当前/缓存的网格顶点的位置."
 
 #: ../../manual/physics/cloth/settings/cache.rst:20
 msgid "Subdivision Surface Modifier"
-msgstr ""
+msgstr "表面细分修改器"
 
 #: ../../manual/physics/cloth/settings/cache.rst:22
 msgid ""
 "A bake/cache is done for every subdivision level so please use the "
 "**equal** subdivision level for render and preview."
 msgstr ""
+"每个细分级别都会进行烘焙/缓存，因此请使用 **同等** 细分级别进行渲染和预"
+"览。"
 
 #: ../../manual/physics/cloth/settings/cache.rst:27
 msgid "Bake Collision"
-msgstr ""
+msgstr "烘烤碰撞"
 
 #: ../../manual/physics/cloth/settings/cache.rst:34
 msgid ""
@@ -68,9 +76,13 @@ msgid ""
 "to run the simulation (including animating that mesh *via* armatures), "
 "you can now tell the cloth simulation to compute (and avoid) collisions. "
 "Select the cloth object and in the *Object* tab, *Physics* tab, set the "
-"*Start* and *End* settings for the simulation frames you wish to compute,"
-" and click the *Bake* button."
+"*Start* and *End* settings for the simulation frames you wish to "
+"compute, and click the *Bake* button."
 msgstr ""
+"在为偏转网格设置帧范围后，您打算运行模拟（包括 *通过* 骨骼来动画网格），"
+"现在你可以告诉布料模拟计算（并避免）碰撞。 选择布料对象，然后在 *物体* 选"
+"项 *物理* 选项中，为要计算的模拟帧设置 *开始* 和 *结束* 设置，然后单击 *"
+"烘焙* 按钮。"
 
 #: ../../manual/physics/cloth/settings/cache.rst:41
 msgid ""
@@ -78,6 +90,8 @@ msgid ""
 "When the simulation has finished, you will notice you have the option to "
 "free the bake, edit the bake and re-bake:"
 msgstr ""
+"在不清除烘焙模拟的情况下，您无法更改 *开始* 或 *结束* 。 当模拟完成后，您"
+"会注意到您可以选择清除烘烤，编辑烘烤和重新烘烤："
 
 #: ../../manual/physics/cloth/settings/cache.rst:45
 msgid ""
@@ -85,29 +99,36 @@ msgid ""
 "will bake significantly slower than before, and it will probably clip "
 "through the box pretty badly as in the picture on the right."
 msgstr ""
+"您可能会立即注意到一些事情。 首先，它会比以前烘焙更慢，并且它可能会非常糟"
+"糕地夹在盒子中，如右图所示。"
 
 #: ../../manual/physics/cloth/settings/cache.rst:51
 msgid "Editing the Cached Simulation"
-msgstr ""
+msgstr "编辑缓存模拟"
 
 #: ../../manual/physics/cloth/settings/cache.rst:53
 msgid ""
 "The cache contains the shape of the mesh at each frame. You can edit the "
 "cached simulation, after you have baked the simulation and pressed the "
-"*Bake Editing* button. Just go to the frame you want to fix and "
-":kbd:`Tab` into *Edit Mode*. There you can move your vertices using all "
-"of Blender's mesh shaping tools. When you exit, the shape of the mesh "
-"will be recorded for that frame of the animation. If you want Blender to "
-"resume the simulation using the new shape going forward, :kbd:`LMB` click"
-" *Rebake from next Frame* and play the animation. Blender will then pick "
-"up with that shape and resume the simulation."
+"*Bake Editing* button. Just go to the frame you want to fix and :kbd:"
+"`Tab` into *Edit Mode*. There you can move your vertices using all of "
+"Blender's mesh shaping tools. When you exit, the shape of the mesh will "
+"be recorded for that frame of the animation. If you want Blender to "
+"resume the simulation using the new shape going forward, :kbd:`LMB` "
+"click *Rebake from next Frame* and play the animation. Blender will then "
+"pick up with that shape and resume the simulation."
 msgstr ""
+"缓存包含每帧的网格形状。 您可以在烘焙的模拟并按下*烘焙编辑*按钮后编辑缓存"
+"的模拟。 只需转到要修复的帧，然后 :kbd:`Tab` 进入 *编辑模式*。 在那里，您"
+"可以使用Blender的所有网格造型工具移动顶点。 退出时，将为动画的该帧记录网"
+"格的形状。 如果你想让Blender继续使用新的形状继续模拟， :kbd:`LMB` 点击 *"
+"从下一帧* 重拍并播放动画。 然后Blender将采用该形状并恢复模拟。"
 
 #: ../../manual/physics/cloth/settings/cache.rst:62
 msgid ""
 "Edit the mesh to correct minor tears and places where the colliding "
 "object has punctured the cloth."
-msgstr ""
+msgstr "编辑网格以纠正轻微撕裂和碰撞物体刺穿布料的位置。"
 
 #: ../../manual/physics/cloth/settings/cache.rst:65
 msgid ""
@@ -119,4 +140,7 @@ msgid ""
 "should unprotect and clear the cache so that Blender will make a "
 "consistent simulation."
 msgstr ""
-
+"如果在网格中添加，删除或拉伸顶点，Blender会将新网格作为网格的起始形状返回"
+"到动画的 *第一帧*，替换您开始使用的原始形状，直到框架为止 在编辑网格时打"
+"开了。 因此，如果您更改网格的内容，当您按下 *编辑模式* 中的 :kbd:`Tab`"
+"时，您应取消保护并清除缓存，以便Blender进行一致的模拟。"
