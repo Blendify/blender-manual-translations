@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-25 13:05+1000\n"
+"POT-Creation-Date: 2019-07-27 11:43+0800\n"
 "PO-Revision-Date: 2019-04-20 20:32+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -23,18 +23,59 @@ msgstr ""
 msgid "Structure"
 msgstr "结构"
 
-#: ../../manual/modeling/curves/structure.rst:9
-msgid "Bézier Curves"
-msgstr "贝塞尔曲线"
+#: ../../manual/modeling/curves/structure.rst:7
+msgid "Control Points"
+msgstr ""
 
 #: ../../manual/modeling/curves/structure.rst:11
+msgid "Splines"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:13
+msgid "Todo."
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:17
+msgid "Spline Types"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:20
+msgid "Poly"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:22
+msgid ""
+"Poly splines are the most simple spline type as they do not interpolate "
+"the shape of the curve between control points."
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:25
+msgid ""
+"Poly Curves are used when :doc:`converting meshes to curves "
+"<bpy.ops.object.convert>`. Because they do not interpolate the shape, "
+"Poly splines are able to give an accurate representation of the original "
+"mesh object."
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:29
+msgid ""
+"This is the primary use case of splines, most of the time `Bézier`_ or "
+"`NURBS`_ splines are used instead; both of which interpolate the shape "
+"and give smooth results."
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:36
+msgid "Bézier"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:38
 msgid ""
 "The main elements used in editing Bézier curves are the control points "
 "and handles. A segment (the actual curve) is found between two control "
 "points. The handles define the curvature of the segment."
 msgstr "用于编辑贝塞尔曲线的主要元素是控制点和控制柄。两个控制点构成一条线段(实际是曲线)。控制柄用于定义线段的曲率。"
 
-#: ../../manual/modeling/curves/structure.rst:15
+#: ../../manual/modeling/curves/structure.rst:42
 msgid ""
 "In the image below, the control points can be found in the middle of the "
 "pink line, while the handles comprise the extensions from the control "
@@ -42,30 +83,30 @@ msgid ""
 " the direction and the tilt."
 msgstr "在下图中，在粉红色的线中间可以看到控制点，而控制柄则由控制点延伸出来。箭头表示曲线的法线，指示其方向和倾斜程度。"
 
-#: ../../manual/modeling/curves/structure.rst:23
+#: ../../manual/modeling/curves/structure.rst:51
 msgid "Bézier Curve in Edit Mode."
 msgstr "编辑模式下的贝塞尔曲线。"
 
-#: ../../manual/modeling/curves/structure.rst:29
+#: ../../manual/modeling/curves/structure.rst:57
 msgid "Handle Types"
 msgstr "控制柄类型"
 
-#: ../../manual/modeling/curves/structure.rst:31
+#: ../../manual/modeling/curves/structure.rst:59
 msgid ""
 "There are four Bézier curve handle types. They can be accessed by "
 "pressing :kbd:`V` and selecting from the list that appears, or by "
 "pressing the appropriate hotkey combination."
 msgstr "贝塞尔曲线有四种控制柄类型。可以按下 :kbd:`V` 并从弹出菜单中进行选择，或者按下相应的快捷键组合。"
 
-#: ../../manual/modeling/curves/structure.rst:38
+#: ../../manual/modeling/curves/structure.rst:66
 msgid "Bézier Curve Handle Types."
 msgstr "贝塞尔曲线控制柄类型。"
 
-#: ../../manual/modeling/curves/structure.rst:44
+#: ../../manual/modeling/curves/structure.rst:72
 msgid "Automatic (yellow handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:43
+#: ../../manual/modeling/curves/structure.rst:71
 #, fuzzy
 msgid ""
 "This handle has a completely automatic length and direction which is set "
@@ -73,11 +114,11 @@ msgid ""
 "*Aligned* handles when moved."
 msgstr "该控制柄长度和方向完全由自动设置，以确保最平滑的结果。移动这些控制柄后，自动转换为 *对齐* 控制柄。(黄色控制柄)。"
 
-#: ../../manual/modeling/curves/structure.rst:48
+#: ../../manual/modeling/curves/structure.rst:76
 msgid "Vector (green handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:47
+#: ../../manual/modeling/curves/structure.rst:75
 #, fuzzy
 msgid ""
 "Both parts of a handle always point to the previous handle or the next "
@@ -86,31 +127,31 @@ msgid ""
 "handles when moved."
 msgstr "控制柄的两端总是指向前一个控制柄或下一个控制柄，用于创建由直线或尖角组成的曲线或线段。移动矢量控制柄，自动转换为 *自由* 控制柄。(绿色控制柄)。"
 
-#: ../../manual/modeling/curves/structure.rst:51
+#: ../../manual/modeling/curves/structure.rst:79
 msgid "Aligned (purple handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:51
+#: ../../manual/modeling/curves/structure.rst:79
 #, fuzzy
 msgid ""
 "These handles always lie in a straight line, and give a continuous curve "
 "without sharp angles."
 msgstr "该控制柄总是一条直线，组成一条没有尖角的连续曲线。(紫色控制柄)。"
 
-#: ../../manual/modeling/curves/structure.rst:55
+#: ../../manual/modeling/curves/structure.rst:83
 msgid "Free (black handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:54
+#: ../../manual/modeling/curves/structure.rst:82
 #, fuzzy
 msgid "The handles are independent of each other."
 msgstr "该控制柄的两端互不相关。(黑色控制柄)。"
 
-#: ../../manual/modeling/curves/structure.rst:60
+#: ../../manual/modeling/curves/structure.rst:88
 msgid "NURBS"
 msgstr "NURBS"
 
-#: ../../manual/modeling/curves/structure.rst:62
+#: ../../manual/modeling/curves/structure.rst:90
 msgid ""
 "N.U.R.B.S. is the abbreviation of Non-Uniform Rational B-Splines. One of "
 "the major differences between Bézier objects and NURBS objects is that "
@@ -148,4 +189,7 @@ msgstr ""
 
 #~ msgid "Free (black handles) :kbd:`V F`"
 #~ msgstr ""
+
+#~ msgid "Bézier Curves"
+#~ msgstr "贝塞尔曲线"
 
