@@ -9,241 +9,265 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-21 14:24+1000\n"
-"PO-Revision-Date: 2017-11-10 12:28+0800\n"
+"PO-Revision-Date: 2019-07-26 15:31+0800\n"
 "Last-Translator: \n"
-"Language: zh_Hans_CN\n"
+"Language: zh_CN\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:5
 msgid "Principled BSDF"
-msgstr ""
+msgstr "原理化 BSDF着色器节点"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:10
 msgid "Principled BSDF."
-msgstr ""
+msgstr "原理化 BSDF着色器节点。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:12
 msgid ""
 "The *Principled* :abbr:`BSDF (Bidirectional scattering distribution "
-"function)` that combines multiple layers into a single easy to use node. "
-"It is based on the Disney principled model also known as the \"PBR\" "
-"shader, making it compatible with other software such as Pixar's "
-"Renderman\\ :sup:`®` and Unreal Engine\\ :sup:`®`. Image textures painted"
-" or baked from software like Substance Painter\\ :sup:`®` may be directly"
-" linked to the corresponding parameters in this shader."
+"function)` that combines multiple layers into a single easy to use node. It "
+"is based on the Disney principled model also known as the \"PBR\" shader, "
+"making it compatible with other software such as Pixar's Renderman\\ :sup:`®` "
+"and Unreal Engine\\ :sup:`®`. Image textures painted or baked from software "
+"like Substance Painter\\ :sup:`®` may be directly linked to the corresponding "
+"parameters in this shader."
 msgstr ""
+"*原理化* :abbr:`BSDF (双向散射分布函数，Bidirectional scattering distribution "
+"function)` 节点将多个节点组合成一个易于使用的节点。它基于迪士尼原理模型，也称"
+"为“PBR”着色器，使其与其他软件兼容，如皮克斯的Renderman®和虚幻引擎®。从"
+"SubstancePainter®等软件绘制或烘焙的图像纹理可以直接链接到此着色器中的相应参"
+"数。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:20
 msgid ""
-"This \"Uber\" shader includes multiple layers to create a wide variety of"
-" materials. The base layer is a user controlled mix between diffuse, "
-"metal, subsurface scattering and transmission. On top of that there is a "
-"specular layer, sheen layer and clearcoat layer."
+"This \"Uber\" shader includes multiple layers to create a wide variety of "
+"materials. The base layer is a user controlled mix between diffuse, metal, "
+"subsurface scattering and transmission. On top of that there is a specular "
+"layer, sheen layer and clearcoat layer."
 msgstr ""
+"该着色器节点包含多个层，可以创建各种各样的材质。基础层为漫反射，金属度，次表面"
+"散射和透射。除此之外，还有镜面层，光泽层和透明涂层。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:27
 msgid ""
-"The emphasis on compatibility with other software means that it "
-"interprets certain input parameters differently from older Blender nodes."
+"The emphasis on compatibility with other software means that it interprets "
+"certain input parameters differently from older Blender nodes."
 msgstr ""
+"由于强调与其他软件的兼容性，所以它对某些输入参数的定义就与旧版本的Blender节点"
+"不同。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:32
 msgid "Inputs"
-msgstr ""
+msgstr "输入选项"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:34
 msgid "Base Color"
-msgstr ""
+msgstr "基础色"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:35
 msgid "Diffuse or metal surface color."
-msgstr ""
+msgstr "漫反射或金属表面颜色。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:38
 msgid "Subsurface"
-msgstr ""
+msgstr "次表面"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:37
 msgid ""
-"Mix between diffuse and subsurface scattering. Rather than being a simple"
-" mix between Diffuse and Subsurface Scattering, it acts as a multiplier "
-"for the Subsurface Radius."
+"Mix between diffuse and subsurface scattering. Rather than being a simple mix "
+"between Diffuse and Subsurface Scattering, it acts as a multiplier for the "
+"Subsurface Radius."
 msgstr ""
+"漫反射和次表面散射之间的混合。并非漫反射和次表面散射之间的简单混合，而是会与次"
+"表面半径的数值进行相乘运算。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:44
 msgid "Subsurface Radius"
-msgstr ""
+msgstr "次表面半径"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:41
 msgid ""
-"Average distance that light scatters below the surface. Higher radius "
-"gives a softer appearance, as light bleeds into shadows and through the "
-"object. The scattering distance is specified separately for the RGB "
-"channels, to render materials such as skin where red light scatters "
-"deeper. The X, Y and Z values are mapped to the R, G and B values, "
-"respectively."
+"Average distance that light scatters below the surface. Higher radius gives a "
+"softer appearance, as light bleeds into shadows and through the object. The "
+"scattering distance is specified separately for the RGB channels, to render "
+"materials such as skin where red light scatters deeper. The X, Y and Z values "
+"are mapped to the R, G and B values, respectively."
 msgstr ""
+"光散射到表面下方的平均距离。较高的半径可以使外观更柔和，因为光线会流入阴影区域"
+"并穿过物体。散射距离是针对RGB通道单独指定的，对于具有较强红光散射的皮肤材质，"
+"渲染效果较佳。X，Y和Z的数值会分别映射到R，G和B的值。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:46
 msgid "Subsurface Color"
-msgstr ""
+msgstr "次表面颜色"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:47
 msgid "Subsurface scattering base color."
-msgstr ""
+msgstr "次表面基础颜色。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:51
 msgid "Metallic"
-msgstr ""
+msgstr "金属度"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:49
 msgid ""
-"Blends between a non-metallic and metallic material model. A value of 1.0"
-" gives a fully specular reflection tinted with the base color, without "
-"diffuse reflection or transmission. At 0.0 the material consists of a "
-"diffuse or transmissive base layer, with a specular reflection layer on "
-"top."
+"Blends between a non-metallic and metallic material model. A value of 1.0 "
+"gives a fully specular reflection tinted with the base color, without diffuse "
+"reflection or transmission. At 0.0 the material consists of a diffuse or "
+"transmissive base layer, with a specular reflection layer on top."
 msgstr ""
+"非金属和金属材料模型之间的混合。数值为1.0时，表示使用基础色着色的完全镜面反"
+"射，且不含有漫反射或透射。数值为1.0时，材料由漫射或透射基础层组成，顶部具有镜"
+"面反射层。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:69
 msgid "Specular"
-msgstr ""
+msgstr "高光"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:54
 #, python-format
 msgid ""
-"Amount of dielectric specular reflection. Specifies facing (along normal)"
-" reflectivity in the most common 0 - 8% range."
-msgstr ""
+"Amount of dielectric specular reflection. Specifies facing (along normal) "
+"reflectivity in the most common 0 - 8% range."
+msgstr "非传导性高光反射量。表面沿法线方向的反射率常设定在0-8％范围内。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:59
 msgid ""
 "To compute this value for a realistic material with a known index of "
-"refraction, you may use this special case of the Fresnel formula: "
-":math:`specular = ((ior - 1)/(ior + 1))^2 / 0.08`"
+"refraction, you may use this special case of the Fresnel formula: :math:"
+"`specular = ((ior - 1)/(ior + 1))^2 / 0.08`"
 msgstr ""
+"可以使用下面这个特殊情况下的菲涅耳公式，来计算具有已知折射率的真实材质计算高光"
+"值： :math:`specular = ((ior - 1)/(ior + 1))^2 / 0.08`"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:63
 msgid "For example:"
-msgstr ""
+msgstr "举例："
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:65
 msgid "water: ior = 1.33, specular = 0.25"
-msgstr ""
+msgstr "水: 折射率 = 1.33, 高光 = 0.25"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:66
 msgid "glass: ior = 1.5, specular = 0.5"
-msgstr ""
+msgstr "玻璃: 折射率 = 1.5, 高光 = 0.5"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:67
 msgid "diamond: ior = 2.417, specular = 2.15"
-msgstr ""
+msgstr "钻石: 折射率 = 2.417, 高光 = 2.15"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:69
 #, python-format
 msgid ""
-"Since materials with reflectivity above 8% do exist, the field allows "
-"values above 1."
-msgstr ""
+"Since materials with reflectivity above 8% do exist, the field allows values "
+"above 1."
+msgstr "由于确实存在反射率高于8％的材料，因此该处允许取值大于1。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:74
 msgid "Specular Tint"
-msgstr ""
+msgstr "高光染色"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:72
 msgid ""
-"Tints the facing specular reflection using the base color, while glancing"
-" reflection remains white."
-msgstr ""
+"Tints the facing specular reflection using the base color, while glancing "
+"reflection remains white."
+msgstr "使用基础色对朝向面进行高光反射，而镜面反射保持白色。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:74
 msgid ""
 "Normal dielectrics have colorless reflection, so this parameter is not "
-"technically physically correct and is provided for faking the appearance "
-"of materials with complex surface structure."
+"technically physically correct and is provided for faking the appearance of "
+"materials with complex surface structure."
 msgstr ""
+"普通电介质具有无色反射，因此该参数在技术上并不具有物理学上的正确性，但可用于模"
+"拟具有复杂表面结构的材质外观。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:81
 msgid "Roughness"
-msgstr ""
+msgstr "糙度"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:77
 msgid ""
 "Specifies microfacet roughness of the surface for diffuse and specular "
 "reflection."
-msgstr ""
+msgstr "用于确定漫反射和镜面反射时，物体表面的微平面粗糙度。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:81
 msgid ""
-"When converting from the older *Glossy BSDF* node, use the square root of"
-" the original value."
-msgstr ""
+"When converting from the older *Glossy BSDF* node, use the square root of the "
+"original value."
+msgstr "从旧版的 *光泽 BSDF* 着色器节点转换时，应使用原始值的平方根。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:84
 msgid "Anisotropic :guilabel:`Cycles Only`"
-msgstr ""
+msgstr "各向异性过滤 :guilabel:`仅适用于Cycles引擎`"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:84
 msgid ""
-"Amount of anisotropy for specular reflection. Higher values give "
-"elongated highlights along the tangent direction; negative values give "
-"highlights shaped perpendicular to the tangent direction."
+"Amount of anisotropy for specular reflection. Higher values give elongated "
+"highlights along the tangent direction; negative values give highlights "
+"shaped perpendicular to the tangent direction."
 msgstr ""
+"镜面反射的各向异性量。较高的设定值可提供沿切线方向的细长高光；设定为负值则会给"
+"出垂直于切线方向的高光。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:92
 msgid "Anisotropic Rotation :guilabel:`Cycles Only`"
-msgstr ""
+msgstr "各向异性旋转 :guilabel:`仅适用于Cycles引擎`"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:87
 msgid "Rotates the direction of anisotropy, with 1.0 going full circle."
-msgstr ""
+msgstr "旋转各向异性的方向，取值为1.0时，旋转一周。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:91
 msgid ""
 "Compared to the *Anisotropic BSDF* node, the direction of highlight "
 "elongation is rotated by 90°. Add 0.25 to the value to correct."
 msgstr ""
+"与 *各向异性 BSDF* 着色器节点不同，该节点的高光延伸方向会旋转90°。可通过增加"
+"0.25的旋转值进行更正。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:95
 msgid "Sheen"
-msgstr ""
+msgstr "光泽"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:95
 msgid ""
-"Amount of soft velvet like reflection near edges, for simulating "
-"materials such as cloth."
-msgstr ""
+"Amount of soft velvet like reflection near edges, for simulating materials "
+"such as cloth."
+msgstr "边缘附近类似天鹅绒材质的反射数量，用于模拟布料等材质。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:97
 msgid "Sheen Tint"
-msgstr ""
+msgstr "光泽染色"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:98
 msgid "Mix between white and using base color for sheen reflection."
-msgstr ""
+msgstr "在白色和基础色之间进行混合，以获得光泽反射效果。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:100
 msgid "Clearcoat"
-msgstr ""
+msgstr "清漆"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:100
 msgid ""
-"Extra white specular layer on top of others. This is useful for materials"
-" like car paint and the like."
-msgstr ""
+"Extra white specular layer on top of others. This is useful for materials "
+"like car paint and the like."
+msgstr "物体顶部的白色高光层。适用于汽车油漆等材质的模拟。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:102
 msgid "Clearcoat Roughness:"
-msgstr ""
+msgstr "清漆粗糙度："
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:103
 msgid "Roughness of clearcoat specular."
-msgstr ""
+msgstr "清漆的粗糙度。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:104
 msgid "IOR"
@@ -251,33 +275,35 @@ msgstr ""
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:105
 msgid "Index of refraction for transmission."
-msgstr ""
+msgstr "折射率。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:106
 msgid "Transmission"
-msgstr ""
+msgstr "透射"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:107
 msgid ""
-"Mix between fully opaque surface at zero and fully glass like "
-"transmission at one."
+"Mix between fully opaque surface at zero and fully glass like transmission at "
+"one."
 msgstr ""
+"数值设定为0时，表面完全不透明；数值设定为1时，表面为玻璃状。不同的取值代表上述"
+"两种状态的混合效果。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:108
 msgid "Transmission Roughness :guilabel:`Cycles Only`"
-msgstr ""
+msgstr "透射粗糙度 :guilabel:`仅适用于Cycles引擎`"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:109
 msgid "With **GGX** distribution controls roughness used for transmitted light."
-msgstr ""
+msgstr "与 **GGX** 分布一起，用于控制透射光的粗糙度。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:110
 msgid "Emission"
-msgstr ""
+msgstr "自发光(发射)"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:111
 msgid "Light emission from the surface, like the Emission shader."
-msgstr ""
+msgstr "来自表面的自发光，与自发光着色器类似。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:113
 msgid "Alpha"
@@ -288,42 +314,44 @@ msgid ""
 "Controls the transparency of the surface, with 1.0 fully opaque. Usually "
 "linked to the Alpha output of an Image Texture node."
 msgstr ""
+"控制表面的透明度，数值设定为1.0时，表面完全不透明。通常连接到 “图像纹理” 着色"
+"器节点的Alpha输出接口。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:115
 msgid "Normal"
-msgstr ""
+msgstr "法向(正常)"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:116
 msgid "Controls the normals of the base layers."
-msgstr ""
+msgstr "控制基础图层的法线方向。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:117
 msgid "Clearcoat Normal"
-msgstr ""
+msgstr "清漆法线"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:118
 msgid "Controls the normals of the *Clearcoat* layer."
-msgstr ""
+msgstr "控制 *清漆* 图层的法线方向。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:121
 msgid "Tangent"
-msgstr ""
+msgstr "切向"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:120
 msgid "Controls the tangent for the *Anisotropic* layer."
-msgstr ""
+msgstr "控制 *各向异性* 图层的法线方向。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:124
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:135
 msgid "Distribution"
-msgstr ""
+msgstr "分布"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:127
 msgid "Microfacet distribution to use."
-msgstr ""
+msgstr "使用微表面分布。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:130
 msgid "GGX"
@@ -331,57 +359,64 @@ msgstr ""
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:130
 msgid ""
-"A method that is faster than *Multiple-scattering GGX* but is less "
-"physically accurate. Selecting it enables the *Transmission Roughness* "
-"input."
+"A method that is faster than *Multiple-scattering GGX* but is less physically "
+"accurate. Selecting it enables the *Transmission Roughness* input."
 msgstr ""
+"比 *多重散射 GGX* 渲染速度快，但不够精确。选择它后，可以启用 *透射粗糙度* 输入"
+"选项。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:135
 msgid "Multiple-scattering GGX"
-msgstr ""
+msgstr "多重散射 GGX"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:133
 msgid ""
-"Takes multiple bounce (scattering) events between microfacets into "
-"account. This gives a more energy conserving results, which would "
-"otherwise be visible as excessive darkening."
+"Takes multiple bounce (scattering) events between microfacets into account. "
+"This gives a more energy conserving results, which would otherwise be visible "
+"as excessive darkening."
 msgstr ""
+"会计算微平面之间的多次反弹和散射。这样就可以使物体不会因为过度变暗而显得突兀。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:150
 msgid "Subsurface Method"
-msgstr ""
+msgstr "次表面渲染方式"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:138
 msgid "Rendering method to simulate subsurface scattering."
-msgstr ""
+msgstr "模拟次表面散射的渲染方式。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:141
 msgid "Christensen-Burley"
-msgstr ""
+msgstr "克里斯坦森-伯利"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:141
 msgid ""
-"Is an approximation to physically-based volume scattering. Gives less "
-"blurry results than Cubic and Gaussian functions."
+"Is an approximation to physically-based volume scattering. Gives less blurry "
+"results than Cubic and Gaussian functions."
 msgstr ""
+"基于物理学中的体积散射得到的近似值。与立方函数和高斯函数相比，计算结果精度较"
+"低。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:150
 msgid "Random Walk"
-msgstr ""
+msgstr "随机游走"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:144
 msgid ""
-"Provides the most accurate results for thin and curved objects. This "
-"comes at the cost of increased render time or noise for more dense media "
-"like skin, but also better geometry detail preservation. Random Walk uses"
-" true volumetric scattering inside the mesh, which means that it works "
-"best for closed meshes. Overlapping faces and holes in the mesh can cause"
-" problems."
+"Provides the most accurate results for thin and curved objects. This comes at "
+"the cost of increased render time or noise for more dense media like skin, "
+"but also better geometry detail preservation. Random Walk uses true "
+"volumetric scattering inside the mesh, which means that it works best for "
+"closed meshes. Overlapping faces and holes in the mesh can cause problems."
 msgstr ""
+"对薄物体和弯曲物体的计算结果较理想。这是以增加渲染时间或噪点为代价，来使密集的"
+"介质(如皮肤)获得较好的渲染效果，并且可以更好保存物体的几何细节。随机游走模式在"
+"网格内部使用真正体积散射，这意味着它更加适用于闭合网格。 网格中的重叠面和孔可"
+"能会导致渲染出现问题。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:153
 msgid "Outputs"
-msgstr ""
+msgstr "输出选项"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:157
 msgid "BSDF"
@@ -389,78 +424,14 @@ msgstr ""
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:156
 msgid "Standard shader output."
-msgstr ""
+msgstr "标准着色器输出。"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:160
 msgid "Examples"
-msgstr ""
+msgstr "举例"
 
 #: ../../manual/render/shader_nodes/shader/principled.rst:162
 msgid ""
-"Below are some examples of how all the Principled BSDF's parameters "
-"interact with each other."
-msgstr ""
-
-#~ msgid ""
-#~ "The emphasis on compatibility with other"
-#~ " software means that it interprets "
-#~ "certain input parameters differently from "
-#~ "older blender nodes."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To compute this value for a "
-#~ "realistic material with a known index"
-#~ " of refraction, you may use this "
-#~ "special case of the Fresnel formula: "
-#~ ":math:`specular = sqr((ior - 1)/(ior +"
-#~ " 1)) / 0.08`"
-#~ msgstr ""
-
-#~ msgid "Principled Node"
-#~ msgstr ""
-
-#~ msgid "Principled Node."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Below are some examples of how all"
-#~ " the Principled Node's parameters interact"
-#~ " with each other."
-#~ msgstr ""
-
-#~ msgid "Roughness of clear coat specular."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Is an approximation to physically based"
-#~ " volume scattering. Gives less blurry "
-#~ "results than Cubic and Gaussian "
-#~ "functions."
-#~ msgstr ""
-
-#~ msgid "Mix between diffuse and subsurface scattering."
-#~ msgstr ""
-
-#~ msgid "Average scattering distance for RGB channels."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Mix between dielectric (diffuse and "
-#~ "specular with possible transparency) and "
-#~ "metallic (fully specular with complex "
-#~ "Fresnel)."
-#~ msgstr ""
-
-#~ msgid "Amount of anisotropy for specular reflection."
-#~ msgstr ""
-
-#~ msgid "Anisotropic"
-#~ msgstr ""
-
-#~ msgid "Anisotropic Rotation"
-#~ msgstr ""
-
-#~ msgid "Transmission Roughness"
-#~ msgstr ""
-
+"Below are some examples of how all the Principled BSDF's parameters interact "
+"with each other."
+msgstr "下面这些示例展示了原理化BSDF着色器节点中的各参数间的相互影响。"
