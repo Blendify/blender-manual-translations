@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-07-24 06:12+0800\n"
+"PO-Revision-Date: 2019-07-26 15:26+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
@@ -62,7 +62,7 @@ msgstr "渲染某一 ``<frame>`` 并保存。"
 
 #: ../../manual/advanced/command_line/arguments.rst:29
 msgid "``+<frame>`` start frame relative, ``-<frame>`` end frame relative."
-msgstr "``+<frame>`` start frame relative, ``-<frame>`` end frame relative."
+msgstr "``+<frame>`` 相对起始帧， ``-<frame>`` 相对结束帧。"
 
 #: ../../manual/advanced/command_line/arguments.rst:30
 msgid "A comma separated list of frames can also be used (no spaces)."
@@ -205,6 +205,8 @@ msgid ""
 "player, to view movies and image sequences rendered in Blender (ignored if ``-"
 "b`` is set)."
 msgstr ""
+"该操作将Blender作为动画播放器运行，以查看Blender渲染的影片和图像序列帧（如果 ``-"
+"b`` 被设定则忽略此参数），不显示Blender的用户界面."
 
 #: ../../manual/advanced/command_line/arguments.rst:86
 msgid "Playback Arguments:"
@@ -411,6 +413,10 @@ msgid ""
 "\"*,^wm.operator.*\"`` logs all except for ``wm.operators.*`` Use \"*\" to log "
 "everything."
 msgstr ""
+"启用日志分类，使用单个逗号分隔的参数。多个类别可使用 ``.*`` 后缀进行匹配，所以 "
+"``--log \"wm.*\"`` 记录窗口管理器所有类型的日志。使用 \"^\" 前缀以忽略，所以 "
+"``--log \"*,^wm.operator.*\"`` 记录所有类型的日志但是除了 ``wm.operators.*`` 使"
+"用 \"*\" 以记录所有日志。"
 
 #: ../../manual/advanced/command_line/arguments.rst:154
 msgid "``--log-level`` ``<level>``"
@@ -420,31 +426,31 @@ msgstr "``--log-level`` ``<level>``"
 msgid ""
 "Set the logging verbosity level (higher for more details) defaults to 1, use -1 "
 "to log all levels."
-msgstr ""
+msgstr "设置日志冗余等级（等级越高细节越多）默认为1，使用-1以启用所有等级。"
 
 #: ../../manual/advanced/command_line/arguments.rst:156
 msgid "``--log-show-basename``"
-msgstr ""
+msgstr "``--log-show-basename``"
 
 #: ../../manual/advanced/command_line/arguments.rst:157
 msgid "Only show file name in output (not the leading path)."
-msgstr ""
+msgstr "只显示文件名称于输出中（不显示加载路径）。"
 
 #: ../../manual/advanced/command_line/arguments.rst:158
 msgid "``--log-show-backtrace``"
-msgstr ""
+msgstr "``--log-show-backtrace``"
 
 #: ../../manual/advanced/command_line/arguments.rst:159
 msgid "Show a back trace for each log message (debug builds only)."
-msgstr ""
+msgstr "显示日志信息回溯（仅限于debug模式）。"
 
 #: ../../manual/advanced/command_line/arguments.rst:160
 msgid "``--log-show-timestamp``"
-msgstr ""
+msgstr "``--log-show-timestamp``"
 
 #: ../../manual/advanced/command_line/arguments.rst:161
 msgid "Show a timestamp for each log message in seconds since start."
-msgstr ""
+msgstr "从启动后开始为每个日志信息添加以秒为单位的时间戳显示。"
 
 #: ../../manual/advanced/command_line/arguments.rst:164
 msgid "``--log-file`` ``<filename>``"
@@ -452,7 +458,7 @@ msgstr "``--log-file`` ``<filename>``"
 
 #: ../../manual/advanced/command_line/arguments.rst:163
 msgid "Set a file to output the log to."
-msgstr ""
+msgstr "设定日志输出文件。"
 
 #: ../../manual/advanced/command_line/arguments.rst:167
 msgid "Debug Options"
@@ -475,8 +481,9 @@ msgid "Disables mouse grab (to interact with a debugger in some cases)"
 msgstr "禁用鼠标抓取（在某些情况下与调试器进行交互）"
 
 #: ../../manual/advanced/command_line/arguments.rst:174
+#, fuzzy
 msgid "Keeps Python's ``sys.stdin`` rather than setting it to None"
-msgstr "自动import导入 ``sys.stdin`` 而不是未导入"
+msgstr "自动import导入 ``sys.stdin`` 而不是设为None"
 
 #: ../../manual/advanced/command_line/arguments.rst:176
 msgid "``--debug-value`` ``<value>``"
@@ -607,9 +614,8 @@ msgid "``--debug-depsgraph-pretty``"
 msgstr "``--debug-depsgraph-pretty``"
 
 #: ../../manual/advanced/command_line/arguments.rst:207
-#, fuzzy
 msgid "Enable colors for dependency graph debug messages."
-msgstr "启用全部调试消息。"
+msgstr "启用调试信息颜色。"
 
 #: ../../manual/advanced/command_line/arguments.rst:208
 msgid "``--debug-gpu``"
@@ -642,11 +648,10 @@ msgid "``--debug-wm``"
 msgstr "``--debug-wm``"
 
 #: ../../manual/advanced/command_line/arguments.rst:217
-#, fuzzy
 msgid ""
 "Enable debug messages for the window manager, shows all operators in search, "
 "shows keymap errors."
-msgstr "启用窗口管理器的调试消息，同时逐个打印operator调用。"
+msgstr "启用窗口管理器的调试消息，同时逐个打印operator调用，打印键位映射错误。"
 
 #: ../../manual/advanced/command_line/arguments.rst:218
 msgid "``--debug-all``"
@@ -700,7 +705,7 @@ msgstr "``--app-template`` ``<template>``"
 msgid ""
 "Set the application template (matching the directory name), use ``default`` for "
 "none."
-msgstr ""
+msgstr "设置应用模板（匹配目录名称）， ``default`` 表示参数为空。"
 
 #: ../../manual/advanced/command_line/arguments.rst:236
 msgid "``--factory-startup``"
@@ -716,7 +721,7 @@ msgstr "``--enable-library-override``"
 
 #: ../../manual/advanced/command_line/arguments.rst:239
 msgid "Enable Library Override features in the UI."
-msgstr ""
+msgstr "在UI中启用库重载特性。"
 
 #: ../../manual/advanced/command_line/arguments.rst:241
 msgid "``--enable-event-simulate``"
@@ -725,7 +730,7 @@ msgstr "``--enable-event-simulate``"
 #: ../../manual/advanced/command_line/arguments.rst:241
 msgid ""
 "Enable event simulation testing feature ``bpy.types.Window.event_simulate``."
-msgstr ""
+msgstr "启用事件模拟测试特性 ``bpy.types.Window.event_simulate``。"
 
 #: ../../manual/advanced/command_line/arguments.rst:243
 msgid "``--env-system-datafiles``"
