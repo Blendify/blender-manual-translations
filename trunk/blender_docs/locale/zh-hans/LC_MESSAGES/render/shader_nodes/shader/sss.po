@@ -9,34 +9,37 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-12 16:58+0200\n"
-"PO-Revision-Date: 2017-10-14 18:50+0800\n"
+"PO-Revision-Date: 2019-07-26 17:48+0800\n"
 "Last-Translator: \n"
-"Language: zh_Hans_CN\n"
+"Language: zh\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:5
-#, fuzzy
 msgid "Subsurface Scattering"
-msgstr "次表面散射节点"
+msgstr "次表面散射(SSS)着色器节点"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:10
-#, fuzzy
 msgid "Subsurface Scattering Shader."
-msgstr "次表面散射节点"
+msgstr "次表面散射节点次表面散射(SSS)着色器节点。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:12
 msgid ""
 "The *Subsurface Scattering* node is used to add simple subsurface "
 "multiple scattering, for materials such as skin, wax, marble, milk and "
-"others. For these materials, rather than light being reflect directly off"
-" the surface, it will penetrate the surface and bounce around internally "
-"before getting absorbed or leaving the surface at a nearby point."
+"others. For these materials, rather than light being reflect directly "
+"off the surface, it will penetrate the surface and bounce around "
+"internally before getting absorbed or leaving the surface at a nearby "
+"point."
 msgstr ""
+"*次表面散射* 节点用于为诸如皮肤，蜡，大理石，牛奶等材质添加简单的次表面多"
+"次散射效果。对于上述材质，光线不会直接从表面反射，而是会穿透表面并在内部"
+"反弹，然后被吸收或离开表面到达附近的点。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:17
 msgid ""
@@ -44,32 +47,34 @@ msgid ""
 "channel. For example, for skin, red colors scatter further, which gives "
 "distinctive red-colored shadows, and a soft appearance."
 msgstr ""
+"可以根据RGB颜色通道配置颜色散布的平均距离。例如，对于皮肤，红色会进一步散"
+"射，从而产生独特的红色阴影和柔和的外观。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:23
 msgid "Inputs"
-msgstr ""
+msgstr "输入选项"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:25
 msgid "Color"
-msgstr ""
+msgstr "颜色"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:26
 msgid ""
 "Color of the surface, or physically speaking, the probability that light "
 "is reflected for each wavelength."
-msgstr ""
+msgstr "物体表面的颜色，从物理学角度讲，既光线中的不同波长被反射的概率。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:27
 msgid "Scale"
-msgstr ""
+msgstr "缩放"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:28
 msgid "Global scale factor for the scattering radius."
-msgstr ""
+msgstr "散射半径的全局全局缩放系数。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:33
 msgid "Radius"
-msgstr ""
+msgstr "半径"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:30
 msgid ""
@@ -80,108 +85,130 @@ msgid ""
 "deeper. The X, Y and Z values are mapped to the R, G and B values, "
 "respectively."
 msgstr ""
+"光散射到表面下方的平均距离。较高的半径可以使外观更柔和，因为光线会流入阴"
+"影区域并穿过物体。散射距离是针对RGB通道单独指定的，对于具有较强红光散射的"
+"皮肤材质，渲染效果较佳。X，Y和Z的数值会分别映射到R，G和B的值。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:36
 msgid "Sharpness"
-msgstr ""
+msgstr "锐度"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:36
 msgid ""
 "Used only with *Cubic* falloff. Values increasing from 0 to 1 prevents "
 "softening of sharp edges and reduces unwanted darkening."
 msgstr ""
+"仅在 *Cubic* 衰减模式下有效。设定值从0增加到1可防止锐边柔化并减少不必要的"
+"变暗。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:38
 msgid "Normal"
-msgstr ""
+msgstr "法向(正常)"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:39
 msgid ""
 "Normal used for shading; if nothing is connected the default shading "
 "normal is used."
-msgstr ""
+msgstr "用于着色的法向；如果不与其它节点连接，则使用默认着色法向。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:50
 msgid "Texture Blur"
-msgstr ""
+msgstr "纹理模糊"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:41
 msgid ""
 "How much of the texture will be blurred along with the lighting, mixing "
-"the texture at the incoming and outgoing points on the surface. Note that"
-" the right choice depends on the texture. Consider for example a texture "
-"created from a photograph of skin, in this case the colors will already "
-"be pre-blurred and texture blur could be set to 0. Even for hand-painted "
-"textures, no blurring or minimal blurring might be appropriate, as a "
-"texture artist would likely paint in softening already. One would usually"
-" not even know what an unblurred skin texture looks like; we always see "
-"it blurred. For a procedural texture on the other hand this option would "
-"likely have a higher value."
+"the texture at the incoming and outgoing points on the surface. Note "
+"that the right choice depends on the texture. Consider for example a "
+"texture created from a photograph of skin, in this case the colors will "
+"already be pre-blurred and texture blur could be set to 0. Even for hand-"
+"painted textures, no blurring or minimal blurring might be appropriate, "
+"as a texture artist would likely paint in softening already. One would "
+"usually not even know what an unblurred skin texture looks like; we "
+"always see it blurred. For a procedural texture on the other hand this "
+"option would likely have a higher value."
 msgstr ""
+"在表面上的传入和传出点混合纹理，所以，纹理的模糊程度与光线的模糊程度相"
+"同。请注意，选择纹理才能得到正确的渲染结果。例如，利用皮肤的照片创建纹理"
+"时，颜色已经预先模糊，纹理模糊可以设置为0。即使对于手绘纹理，也不适合进行"
+"模糊或最小模糊处理，因为绘制纹理的作者可能已经进行过模糊处理了。由于我们"
+"看到的皮肤纹理永远都是模糊的，因此，人们通常甚至不知道什么是不模糊的皮肤"
+"纹理。另一方面，对于程序纹理，此选项可能须要设定更高的数值。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:53
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:77
 msgid "Method"
-msgstr ""
+msgstr "方式"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:56
 msgid "Rendering method to simulate subsurface scattering."
-msgstr ""
+msgstr "模拟次表面散射的渲染方式。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:59
 msgid "Christensen-Burley"
-msgstr ""
+msgstr "克里斯坦森-伯利"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:59
 msgid ""
 "Is an approximation to physically-based volume scattering. Gives less "
 "blurry results than Cubic and Gaussian functions."
 msgstr ""
+"基于物理学中体积散射的近似值。与立方型和高斯函数相比，其渲染结果更加模"
+"糊。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:66
 msgid "Random Walk :guilabel:`Cycles Only`"
-msgstr ""
+msgstr "随机游走 :guilabel:`仅适用于Cycles引擎`"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:62
 msgid ""
 "Provides the most accurate results for thin and curved objects. This "
 "comes at the cost of increased render time or noise for more dense media "
-"like skin, but also better geometry detail preservation. Random Walk uses"
-" true volumetric scattering inside the mesh, which means that it works "
-"best for closed meshes. Overlapping faces and holes in the mesh can cause"
-" problems."
+"like skin, but also better geometry detail preservation. Random Walk "
+"uses true volumetric scattering inside the mesh, which means that it "
+"works best for closed meshes. Overlapping faces and holes in the mesh "
+"can cause problems."
 msgstr ""
+"对薄物体和弯曲物体的计算结果较理想。这是以增加渲染时间或噪点为代价，来使"
+"密集的介质(如皮肤)获得较好的渲染效果，并且可以更好保存物体的几何细节。随"
+"机游走模式在网格内部使用真正体积散射，这意味着它更加适用于闭合网格。 网格"
+"中的重叠面和孔可能会导致渲染出现问题。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:68
 msgid "Cubic"
-msgstr ""
+msgstr "立方型"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:69
 msgid ""
-"Is a sharp falloff useful for many simple materials. The function is "
-":math:`(radius - x)^3`."
+"Is a sharp falloff useful for many simple materials. The function is :"
+"math:`(radius - x)^3`."
 msgstr ""
+"对于许多简单的材料来说是一个尖锐的衰减。公式为 :math:`(radius - x)^3`。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:77
 msgid "Gaussian"
-msgstr ""
+msgstr "高斯"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:71
 msgid ""
 "Gives a smoother falloff following a normal distribution, which is "
 "particularly useful for more advanced materials that use measured data "
-"that was fitted to one or more such Gaussian functions. The function is "
-":math:`e^{-8x^2/ radius^2}`, such that the radius roughly matches the "
-"maximum falloff distance. To match a given measured variance *v*, set "
-":math:`radius = sqrt(16 × v)`."
+"that was fitted to one or more such Gaussian functions. The function is :"
+"math:`e^{-8x^2/ radius^2}`, such that the radius roughly matches the "
+"maximum falloff distance. To match a given measured variance *v*, set :"
+"math:`radius = sqrt(16 × v)`."
 msgstr ""
+"在正态分布之后给出更平滑的衰减，将一个或多个这种高斯函数的测量数据应用于"
+"更高级的材料时，该方式更具优势。公式为 :math:`e^{-8x^2/ radius^2}`，计算"
+"后的半径可以大致匹配最大衰减距离。要匹配给定的测量方差 *v* ，可设置 :"
+"math:`radius = sqrt(16 × v)` 。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:80
 msgid "Outputs"
-msgstr ""
+msgstr "输出选项"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:84
 msgid "BSSRDF"
@@ -192,41 +219,13 @@ msgid ""
 ":abbr:`BSSRDF (Bidirectional subsurface scattering distribution "
 "function)` shader output."
 msgstr ""
+":abbr:`双向次表面散射反射分布函数(Bidirectional subsurface scattering "
+"distribution function)` 着色器输出。"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:87
 msgid "Examples"
-msgstr ""
+msgstr "举例"
 
 #: ../../manual/render/shader_nodes/shader/sss.rst:91
-#, fuzzy
 msgid "Random Walk subsurface scattering."
-msgstr "次表面散射节点"
-
-#~ msgid "Subsurface Scattering Node."
-#~ msgstr ""
-
-#~ msgid "Falloff"
-#~ msgstr ""
-
-#~ msgid "Lighting distance falloff function."
-#~ msgstr ""
-
-#~ msgid "A skin-toned SSS shader with color radius (1.0, 0.8, 0.5)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Is an approximation to physically based"
-#~ " volume scattering. Gives less blurry "
-#~ "results than Cubic and Gaussian "
-#~ "functions."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Scattering radius for each RGB color "
-#~ "channel, the maximum distance that light"
-#~ " can scatter."
-#~ msgstr ""
-
-#~ msgid "Random Walk"
-#~ msgstr ""
-
+msgstr "随机游走次表面散射效果。"
