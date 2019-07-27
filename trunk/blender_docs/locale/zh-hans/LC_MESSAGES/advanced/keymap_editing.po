@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-07-27 07:52+0800\n"
+"PO-Revision-Date: 2019-07-27 11:17+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -126,7 +126,7 @@ msgid ""
 "This is used in the default key-map in the 3D Viewport, :kbd:`Alt-MMB` dragging "
 "in different directions rotates the view."
 msgstr ""
-"3D视图四的默认键位映射用到了该组合， :kbd:`Alt-MMB` 向不同方向拖动来旋转视图。"
+"3D视图中的默认键位映射用到了该组合， :kbd:`Alt-MMB` 向不同方向拖动来旋转视图。"
 
 #: ../../manual/advanced/keymap_editing.rst:57
 msgid "Common Operations"
@@ -188,10 +188,12 @@ msgid ""
 "will need to use the back arrow to prevent the sub-menu from opening and "
 "gaining focus."
 msgstr ""
+"然后在弹出按钮或菜单条目上悬停，存在子菜单的情况下需要使用左方向(←)键来阻止子菜"
+"单打开以及获得焦点。"
 
 #: ../../manual/advanced/keymap_editing.rst:87
 msgid "Key Bindings for Properties"
-msgstr ""
+msgstr "属性按键绑定"
 
 #: ../../manual/advanced/keymap_editing.rst:89
 msgid ""
@@ -199,69 +201,73 @@ msgid ""
 "to define operators for each property, there are generic operators for this "
 "purpose:"
 msgstr ""
+"用户可能想将很多属性与按键绑定。为了避免需要对每个属性定义操作器，有几个作此用途"
+"的通用操作器:"
 
 #: ../../manual/advanced/keymap_editing.rst:93
 msgid "Operators for adjusting properties begin with ``wm.context_``."
-msgstr ""
+msgstr "用于调整属性的操作器以 ``wm.context_`` 开头。"
 
 #: ../../manual/advanced/keymap_editing.rst:95
 msgid "Some of these include:"
-msgstr ""
+msgstr "其中包括:"
 
 #: ../../manual/advanced/keymap_editing.rst:97
 msgid "``wm.context_toggle`` toggle a boolean property."
-msgstr ""
+msgstr "``wm.context_toggle`` 切换布尔属性。"
 
 #: ../../manual/advanced/keymap_editing.rst:98
 msgid ""
 "``wm.context_cycle_enum`` cycle an :abbr:`enum (enumeration)` property forwards "
 "or backwards."
-msgstr ""
+msgstr "``wm.context_cycle_enum`` 用于 :abbr:`enum (枚举)` 属性前后循环。"
 
 #: ../../manual/advanced/keymap_editing.rst:99
 msgid "``wm.context_menu_enum`` show a pop-up menu for an enum property."
-msgstr ""
+msgstr "``wm.context_menu_enum`` 用于为枚举属性弹出菜单。"
 
 #: ../../manual/advanced/keymap_editing.rst:100
 msgid "``wm.context_pie_enum`` show a pie menu for an enum property."
-msgstr ""
+msgstr "``wm.context_pie_enum`` 显示枚举属性为饼菜单。"
 
 #: ../../manual/advanced/keymap_editing.rst:101
 msgid ""
 "``wm.context_scale_float`` scale a number (use for increasing / decreasing "
 "brush size for example)."
-msgstr ""
+msgstr "``wm.context_scale_float`` 缩放数值 (比如用于增大/减小笔刷大小)。"
 
 #: ../../manual/advanced/keymap_editing.rst:102
 msgid "``wm.context_toggle_enum`` toggle between two options of an enum."
-msgstr ""
+msgstr "``wm.context_toggle_enum`` 用于在枚举的两个选项之间切换。"
 
 #: ../../manual/advanced/keymap_editing.rst:103
 msgid ""
 "``wm.context_modal_mouse`` moving the cursor to interactively change a value."
-msgstr ""
+msgstr "``wm.context_modal_mouse`` 用于移动游标交互修改数值。"
 
 #: ../../manual/advanced/keymap_editing.rst:105
 msgid ""
 "See `bpy.ops.wm <https://docs.blender.org/api/current/bpy.ops.wm.html>`__ for a "
 "complete list."
 msgstr ""
+"完整列表见 `bpy.ops.wm <https://docs.blender.org/api/current/bpy.ops.wm."
+"html>`__。"
 
 #: ../../manual/advanced/keymap_editing.rst:107
 msgid ""
 "Each of these operators has a ``data_path`` setting to reference the property "
 "to change."
-msgstr ""
+msgstr "每个操作器都有一个 ``data_path`` 设置，用于引用所调整的数值。"
 
 #: ../../manual/advanced/keymap_editing.rst:109
 msgid "To find the ``data_path`` basic Python knowledge is needed."
-msgstr ""
+msgstr "找到 ``data_path`` 需要一些基础的 Python知识。"
 
 #: ../../manual/advanced/keymap_editing.rst:111
 msgid ""
 "For example, you can use the Python Console to access a boolean property you "
 "wish to map to a key::"
-msgstr ""
+msgstr "比如，可以使用Python控制台访问所要映射键位的布尔属性::"
 
 #: ../../manual/advanced/keymap_editing.rst:115
 msgid ""
@@ -269,6 +275,8 @@ msgid ""
 "context_toggle`` with ``data_path`` set to ``object.show_name`` (notice the "
 "``bpy.context`` prefix is implicit)."
 msgstr ""
+"使用操作器 ``wm.context_toggle`` 配合以设置为 ``object.show_name`` 的 "
+"``data_path``(注意 ``bpy.context`` 前缀是隐式的)，来为其绑定按键。"
 
 #: ../../manual/advanced/keymap_editing.rst:118
 msgid ""
@@ -283,3 +291,5 @@ msgid ""
 "The Python API documentation can be used to find properties or you may use the "
 "Python Console's auto-complete to inspect available properties."
 msgstr ""
+"可使用Python API文档查找属性， 或者使用Python 控制台的自动补全功能来查看可用的属"
+"性。"
