@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-27 20:49+1000\n"
+"POT-Creation-Date: 2019-07-28 16:11-0400\n"
 "PO-Revision-Date: 2018-09-12 11:32+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -23,51 +23,78 @@ msgid "Structure"
 msgstr ""
 
 #: ../../manual/modeling/curves/structure.rst:7
-msgid "Control Points"
-msgstr ""
-
-#: ../../manual/modeling/curves/structure.rst:11
 msgid "Splines"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:13
-msgid "Todo."
+#: ../../manual/modeling/curves/structure.rst:9
+msgid ""
+"Splines are a substructure of curves and are the individual elements that"
+" make curve objects. A curve object can be composed of several different "
+"splines, just like mesh objects can have different discontinuous meshes "
+"under the same object. A spline defines the shape of the curve and can be"
+" transformed by alerting its `Control Points`_. Splines come in three "
+"distinct types, which are described in `Spline Types`_. Each spline type "
+"has a slightly different algorithm for computing how bends in the spline "
+"are represented."
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:17
-msgid "Spline Types"
-msgstr ""
-
-#: ../../manual/modeling/curves/structure.rst:20
-msgid "Poly"
+#: ../../manual/modeling/curves/structure.rst:16
+msgid ""
+"Splines have there own separate properties than curves and can be altered"
+" by selecting the spline in Edit Mode and using the :doc:`Active Spline "
+"</modeling/curves/properties/active_spline>` panel."
 msgstr ""
 
 #: ../../manual/modeling/curves/structure.rst:22
+msgid "Control Points"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:24
+msgid ""
+"Similar to meshes splines have control points or vertices. Control points"
+" connect to other control points to form splines. Control points can be "
+":doc:`selected </modeling/curves/selecting>` and transformed to alter the"
+" resulting shape of the spline."
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:31
+msgid ":doc:`Curve Editing </modeling/curves/editing/index>`"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:35
+msgid "Spline Types"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:38
+msgid "Poly"
+msgstr ""
+
+#: ../../manual/modeling/curves/structure.rst:40
 msgid ""
 "Poly splines are the most simple spline type as they do not interpolate "
 "the shape of the curve between control points."
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:25
+#: ../../manual/modeling/curves/structure.rst:43
 msgid ""
-"Poly Curves are used when :doc:`converting meshes to curves "
+"Poly Curves are used when :ref:`converting meshes to curves "
 "<bpy.ops.object.convert>`. Because they do not interpolate the shape, "
 "Poly splines are able to give an accurate representation of the original "
 "mesh object."
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:29
+#: ../../manual/modeling/curves/structure.rst:47
 msgid ""
 "This is the primary use case of splines, most of the time `Bézier`_ or "
 "`NURBS`_ splines are used instead; both of which interpolate the shape "
 "and give smooth results."
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:36
+#: ../../manual/modeling/curves/structure.rst:54
 msgid "Bézier"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:38
+#: ../../manual/modeling/curves/structure.rst:56
 msgid ""
 "The main elements used in editing Bézier curves are the control points "
 "and handles. A segment (the actual curve) is found between two control "
@@ -78,7 +105,7 @@ msgstr ""
 " trouve entre deux points de contrôle. Les poignées définissent la "
 "courbure du segment. "
 
-#: ../../manual/modeling/curves/structure.rst:42
+#: ../../manual/modeling/curves/structure.rst:60
 #, fuzzy
 msgid ""
 "In the image below, the control points can be found in the middle of the "
@@ -91,15 +118,15 @@ msgstr ""
 "extensions du point de contrôle. Les flèches visualisent les normales de "
 "la courbe, qui indiquent entre autres la direction et l'inclinaison."
 
-#: ../../manual/modeling/curves/structure.rst:51
+#: ../../manual/modeling/curves/structure.rst:69
 msgid "Bézier Curve in Edit Mode."
 msgstr "Courbe de Bézier en Mode Édition."
 
-#: ../../manual/modeling/curves/structure.rst:57
+#: ../../manual/modeling/curves/structure.rst:75
 msgid "Handle Types"
 msgstr "Types de poignée (handle)"
 
-#: ../../manual/modeling/curves/structure.rst:59
+#: ../../manual/modeling/curves/structure.rst:77
 msgid ""
 "There are four Bézier curve handle types. They can be accessed by "
 "pressing :kbd:`V` and selecting from the list that appears, or by "
@@ -109,15 +136,15 @@ msgstr ""
 "obtenus en pressant :kbd:`V` et en sélectionnant dans la liste qui "
 "apparaît, ou en pressant la combinaison de touches appropriée. "
 
-#: ../../manual/modeling/curves/structure.rst:66
+#: ../../manual/modeling/curves/structure.rst:84
 msgid "Bézier Curve Handle Types."
 msgstr "Types de poignée de courbe de Bézier."
 
-#: ../../manual/modeling/curves/structure.rst:72
+#: ../../manual/modeling/curves/structure.rst:90
 msgid "Automatic (yellow handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:71
+#: ../../manual/modeling/curves/structure.rst:89
 #, fuzzy
 msgid ""
 "This handle has a completely automatic length and direction which is set "
@@ -129,11 +156,11 @@ msgstr ""
 " poignées se convertissent en poignées *Aligned* quand elles sont "
 "déplacées (poignées jaunes)."
 
-#: ../../manual/modeling/curves/structure.rst:76
+#: ../../manual/modeling/curves/structure.rst:94
 msgid "Vector (green handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:75
+#: ../../manual/modeling/curves/structure.rst:93
 #, fuzzy
 msgid ""
 "Both parts of a handle always point to the previous handle or the next "
@@ -147,11 +174,11 @@ msgstr ""
 "des angles aigus. Les poignées *vector* se transforment en poignées "
 "*Free* (poignées vertes) lors de leur déplacement."
 
-#: ../../manual/modeling/curves/structure.rst:79
+#: ../../manual/modeling/curves/structure.rst:97
 msgid "Aligned (purple handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:79
+#: ../../manual/modeling/curves/structure.rst:97
 #, fuzzy
 msgid ""
 "These handles always lie in a straight line, and give a continuous curve "
@@ -160,20 +187,20 @@ msgstr ""
 "Ces poignées reposent toujours sur une ligne droite, et présentent une "
 "courbe continue sans angle aigu (poignées mauves)."
 
-#: ../../manual/modeling/curves/structure.rst:83
+#: ../../manual/modeling/curves/structure.rst:101
 msgid "Free (black handles)"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:82
+#: ../../manual/modeling/curves/structure.rst:100
 #, fuzzy
 msgid "The handles are independent of each other."
 msgstr "Les poignées sont indépendantes les unes des autres (poignées noires)."
 
-#: ../../manual/modeling/curves/structure.rst:88
+#: ../../manual/modeling/curves/structure.rst:106
 msgid "NURBS"
 msgstr ""
 
-#: ../../manual/modeling/curves/structure.rst:90
+#: ../../manual/modeling/curves/structure.rst:108
 msgid ""
 "N.U.R.B.S. is the abbreviation of Non-Uniform Rational B-Splines. One of "
 "the major differences between Bézier objects and NURBS objects is that "
@@ -229,4 +256,17 @@ msgstr ""
 
 #~ msgid "Bézier Curves"
 #~ msgstr "Courbes de Bézier"
+
+#~ msgid "Todo."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Poly Curves are used when "
+#~ ":doc:`converting meshes to curves "
+#~ "<bpy.ops.object.convert>`. Because they do not"
+#~ " interpolate the shape, Poly splines "
+#~ "are able to give an accurate "
+#~ "representation of the original mesh "
+#~ "object."
+#~ msgstr ""
 
