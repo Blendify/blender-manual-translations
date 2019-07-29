@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-30 09:48+1000\n"
-"PO-Revision-Date: 2019-07-28 19:43+0800\n"
+"PO-Revision-Date: 2019-07-29 07:54+0800\n"
 "Last-Translator: kidux(xueke pei) <blender@vip.qq.com>\n"
 "Language: zh_CN\n"
 "Language-Team: \n"
@@ -188,7 +188,7 @@ msgid ""
 "included in the Transmission passes; for that a glass BSDF with index of "
 "refraction 1.0 can be used."
 msgstr ""
-"注意， :doc:`透明BSDF需要单独对待 </render/cycles/settings/scene/render/"
+"注意， :doc:`透明BSDF需要单独对待 </render/cycles/render_settings/"
 "light_paths>` ，完全透明的表面被视作没有任何表面存在。半透明表面被视作仅有部分"
 "光线能够穿过。也就是说，它并未包含在透射通道中，这样，可以使用折射率为1.0的玻璃"
 "BSDF。"
@@ -238,7 +238,7 @@ msgid ""
 "pass can be used in compositing to fade out objects that are farther away."
 msgstr ""
 "到可见表面的距离，映射到0.0-1.0范围。启用后，设置位于 :ref:`世界选项卡 <render-"
-"cycles-integrator-world-mist>`中。此过程可在合成中用以淡出较远的物体。"
+"cycles-integrator-world-mist>` 中。此过程可在合成中用以淡出较远的物体。"
 
 #: ../../<generated>:1 ../../manual/render/layers/passes.rst:93
 msgid "Normal"
@@ -299,14 +299,13 @@ msgid "Denoising Data"
 msgstr "降噪数据"
 
 #: ../../manual/render/layers/passes.rst:107
-#, fuzzy
 msgid ""
 "Passes needed by the denoiser, for performing animation denoising in a second "
 "pass after rendering the entire animation. For still image denoising as part "
 "of the render process these are not needed."
 msgstr ""
-"降噪器所需的通过，用于在渲染整个动画后在第二遍中执行动画去噪。对于静态图像去噪"
-"作为渲染过程的一部分，这些不是必需的。"
+"降噪器所需的通道，用于在渲染整个动画后在第二遍中执行动画降噪。对于静态图像，降"
+"噪作为渲染过程的一部分，这些不是必需的。"
 
 #: ../../manual/render/layers/passes.rst:111
 msgid "The Z, Object Index and Material Index passes are not anti-aliased."
@@ -333,15 +332,14 @@ msgid "Cryptomatte"
 msgstr "Cryptomatte"
 
 #: ../../manual/render/layers/passes.rst:123
-#, fuzzy
 msgid ""
 "Cryptomatte is a standard to efficiently create mattes for compositing. Cycles "
 "outputs the required render passes, which can then be used in the Blender "
 "compositor or another compositor with Cryptomatte support to create masks for "
 "specified objects."
 msgstr ""
-"Cryptomatte是一种有效创建合成遮罩的标准。Cycles输出所需的渲染过程，然后可以在"
-"Blender合成器或具有Cryptomatte支持的其他合成器中使用它来为指定对象创建遮罩。"
+"Cryptomatte是一种有效创建合成遮罩的标准。Cycles输出所需的渲染通道，然后可以在"
+"Blender合成器或具有Cryptomatte支持的其他合成器中使用它来为指定物体创建遮罩。"
 
 #: ../../manual/render/layers/passes.rst:127
 msgid ""
@@ -357,9 +355,8 @@ msgid "Object"
 msgstr "物品"
 
 #: ../../manual/render/layers/passes.rst:131
-#, fuzzy
 msgid "Render cryptomatte object pass, for isolating objects in compositing."
-msgstr "渲染Cryptomatte对象传递，用于隔离合成中的对象。"
+msgstr "渲染Cryptomatte材质通道，用于在合成中孤立物体。"
 
 #: ../../manual/render/layers/passes.rst:132
 msgid "Material"
@@ -367,9 +364,8 @@ msgstr "材质"
 
 #: ../../manual/render/layers/passes.rst:133
 #: ../../manual/render/layers/passes.rst:135
-#, fuzzy
 msgid "Render cryptomatte material pass, for isolating materials in compositing."
-msgstr "渲染Cryptomatte材质，用于隔离合成材质。"
+msgstr "渲染Cryptomatte材质通道，用于在合成中孤立材质。"
 
 #: ../../manual/render/layers/passes.rst:135
 msgid "Asset"
@@ -398,18 +394,16 @@ msgid "Typical Workflow"
 msgstr "典型工作流程"
 
 #: ../../manual/render/layers/passes.rst:146
-#, fuzzy
 msgid "Enable Cryptomatte Object render pass in the Passes panel, and render."
-msgstr "在通道面板中启用Cryptomatte物品渲染传递，然后渲染。"
+msgstr "在通道面板中启用Cryptomatte物体渲染通道，然后渲染。"
 
 #: ../../manual/render/layers/passes.rst:147
-#, fuzzy
 msgid ""
 "In the compositing nodes, create a Cryptomatte node and link the Render Layer "
 "matching Image and Cryptomatte passes to it."
 msgstr ""
-"在合成节点中，创建一个Cryptomatte节点，并将匹配图形和Cryptomatte传递的渲染层链"
-"接到它。"
+"在合成节点中，创建一个Cryptomatte节点，并将之与匹配图形和Cryptomatte通道的渲染"
+"层相连。"
 
 #: ../../manual/render/layers/passes.rst:149
 msgid "Attach a Viewer node to the Pick output of the Cryptomatte node."
@@ -438,33 +432,30 @@ msgid "Subsurface Direct"
 msgstr "次表面直接光"
 
 #: ../../manual/render/layers/passes.rst:175
-#, fuzzy
 msgid ""
 "Direct lighting from subsurface BSDFs. We define direct lighting as coming "
 "from lights, emitting surfaces, the background, or ambient occlusion after a "
 "single reflection or transmission off a surface. BSDF color is not included in "
 "this pass."
 msgstr ""
-"来自次表面BSDF的直接照明。我们将直接照明定义为来自灯光，发射表面，背景或环境遮"
-"挡后的单次反射或从表面传输。BSDF颜色不包含在此过程中。"
+"来自次表面BSDF的直接照明。我们将直接照明定义为来自灯光，发光表面，背景或环境遮"
+"挡的，仅经过单次反射或表面透射的光线。BSDF颜色不包含在此通道中。"
 
 #: ../../manual/render/layers/passes.rst:179
 msgid "Subsurface Color"
 msgstr "次表面颜色"
 
 #: ../../manual/render/layers/passes.rst:179
-#, fuzzy
 msgid ""
 "Color weights of subsurface BSDFs. These weights are the color input socket "
 "for BSDF nodes, modified by any Mix and Add Shader nodes."
 msgstr ""
-"漫射BSDF的Color weights（色重值）。这些值供BSDF结点的颜色输入接口使用。可通过 "
-"Mix（混合）以及Add（添加）着色器结点进行编辑。"
+"漫射BSDF的Color weights（色重值）。这些值供BSDF节点的颜色输入接口使用。可通过 "
+"Mix（混合）以及Add（添加）着色器节点进行编辑。"
 
 #: ../../manual/render/layers/passes.rst:193
-#, fuzzy
 msgid "Distance to visible surfaces, mapped to the 0.0 - 1.0 range."
-msgstr "到可见曲面的距离，映射到0.0 - 1.0范围。"
+msgstr "到可见曲面的距离，映射至0.0 - 1.0范围。"
 
 #~ msgid ""
 #~ "Direct lighting from diffuse BSDFs. We define direct lighting as coming "
