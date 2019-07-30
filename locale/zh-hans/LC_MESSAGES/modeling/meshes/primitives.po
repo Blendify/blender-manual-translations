@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 11:43+0800\n"
-"PO-Revision-Date: 2019-07-27 12:04+0800\n"
+"PO-Revision-Date: 2019-07-30 11:52+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -97,7 +97,7 @@ msgid ""
 "are:"
 msgstr ""
 "这些通用选项位于 *工具栏* 中的 :ref:`ui-undo-redo-adjust-last-operation` 面板，当创建物"
-"体时显示。超过一个基本体的用到的选项有："
+"体时显示。一个以上基本体都会用到的选项一般有有："
 
 #: ../../manual/modeling/meshes/primitives.rst:38
 msgid "Generate UVs"
@@ -107,7 +107,7 @@ msgstr "生成UV"
 msgid ""
 "Generates a default UV unwrapping of new geometry. This will be defined in the first "
 "UV layer (which will get added if needed)."
-msgstr "生成新几何体的默认UV展开。生成的UV位于第一个UV层(需要时添加)。"
+msgstr "生成新几何体的默认UV展开。生成的UV位于第一个UV层（需要时添加）。"
 
 #: ../../manual/modeling/meshes/primitives.rst:42
 msgid "Radius/Size, Align to View, Location, Rotation"
@@ -168,7 +168,7 @@ msgstr "设置圆环的填充方式。"
 
 #: ../../manual/modeling/meshes/primitives.rst:69
 msgid "Triangle Fan"
-msgstr "三角扇片"
+msgstr "三角扇"
 
 #: ../../manual/modeling/meshes/primitives.rst:70
 msgid "Fill with triangular faces which share a vertex in the middle."
@@ -176,11 +176,11 @@ msgstr "填充共用顶点的三角面。"
 
 #: ../../manual/modeling/meshes/primitives.rst:71
 msgid "N-gon"
-msgstr "多边形(N-gon)"
+msgstr "多边形（N-gon）"
 
 #: ../../manual/modeling/meshes/primitives.rst:72
 msgid "Fill with a single :term:`n-gon`."
-msgstr "使用 :term:`多边面(N-gon)` 填充。"
+msgstr "使用 :term:`多边形(N-gon)` 填充。"
 
 #: ../../manual/modeling/meshes/primitives.rst:75
 msgid "Nothing"
@@ -198,7 +198,7 @@ msgstr "经纬球"
 msgid ""
 "A standard UV sphere is made out of quad faces and a triangle fan at the top and "
 "bottom. It can be used for texturing."
-msgstr "标准的经纬球体由四边面、顶部和底部的三角扇面组成。它可以用于纹理。"
+msgstr "标准的经纬球体由四边面、顶部和底部的三角扇面组成。它可以用于纹理映射。"
 
 #: ../../manual/modeling/meshes/primitives.rst:83
 msgid "Segments"
@@ -230,7 +230,8 @@ msgid ""
 "to achieve a more isotropical layout of vertices than a UV sphere, in other words, "
 "they are uniform in every direction."
 msgstr ""
-"棱角球是由三角面组成的多边形球体。棱角球通常用于实现比经纬球更多的各向同性顶点布局。"
+"棱角球是由三角面组成的多边形球体。棱角球通常用于实现比经纬球更多的各向同性顶点布局，换"
+"句话说，其每个方向上的所有顶点都在一个平面上。"
 
 #: ../../manual/modeling/meshes/primitives.rst:103
 msgid "Subdivisions"
@@ -242,8 +243,8 @@ msgid ""
 "icosahedron, a solid with 20 equilateral triangular faces. Each increase in the number "
 "of subdivisions splits each triangular face into four triangles."
 msgstr ""
-"细分级数。级数为1时，棱角球是一个二十面体，20个等边三角面组成的实体。细分级数每增加1"
-"级，三角面被细分为4个三角面1次。"
+"多少次细分等级的迭代后用于定义一个球体。细分等级为1时，棱角球是一个二十面体，20个等边三"
+"角面组成的实体。细分级数每增加1级，每个三角面会被细分为4个三角面。"
 
 #: ../../manual/modeling/meshes/primitives.rst:107
 msgid ""
@@ -251,8 +252,8 @@ msgid ""
 "(10 times creates 5,242,880 triangles), Adding such a dense mesh is a sure way to "
 "cause the program to crash."
 msgstr ""
-"即使细分级数不高，细分后的棱角球的顶点数也可能变得很高(10次细分创建5,242,880个三角形"
-"面)。添加如此密集的网格可能导致程序崩溃。"
+"对棱角球的细分会让顶点数剧增，即使仅进行几次迭代（10次细分创建5,242,880个三角形面）。添"
+"加如此密集的网格可能导致程序崩溃。"
 
 #: ../../manual/modeling/meshes/primitives.rst:113
 msgid "Cylinder"
@@ -265,7 +266,7 @@ msgstr "可以由柱体创建的物体包括手柄和杆。"
 #: ../../manual/modeling/meshes/primitives.rst:118
 msgid ""
 "The number of vertical edges between the circles used to define the cylinder or prism."
-msgstr "用于定义柱体或棱柱体的面与面之间的纵向边数。"
+msgstr "用于定义柱体或棱柱的上下底面两个圆之间的纵向边数。"
 
 #: ../../manual/modeling/meshes/primitives.rst:120
 #: ../../manual/modeling/meshes/primitives.rst:141
@@ -341,7 +342,7 @@ msgstr "环体"
 msgid ""
 "A doughnut-shaped primitive created by rotating a circle around an axis. The overall "
 "dimensions can be defined by two methods."
-msgstr "圆绕轴线旋转而形成的环形基本体。可以通过两种方法定义整体尺寸。"
+msgstr "圆绕轴线旋转而形成的类似甜甜圈形状的基本体。可以通过两种方法定义整体尺寸。"
 
 #: ../../manual/modeling/meshes/primitives.rst:153
 msgid "Operator Presets"
@@ -456,19 +457,19 @@ msgstr "猴头"
 msgid ""
 "This adds a stylized monkey head to use as a test mesh, use :term:`Subdivision "
 "Surface` for a refined shape."
-msgstr ""
+msgstr "该选项添加一个风格化的猴头作为测试网格，使用 :term:`表面细分` 以获得更好的形状。"
 
 #: ../../manual/modeling/meshes/primitives.rst:203
 msgid "This is intended as a test mesh, similar to:"
-msgstr ""
+msgstr "这主要作为一个测试网格来使用，就类似于："
 
 #: ../../manual/modeling/meshes/primitives.rst:205
 msgid "`Utah Teapot <https://en.wikipedia.org/wiki/Utah_teapot>`__"
-msgstr "`Utah Teapot <https://en.wikipedia.org/wiki/Utah_teapot>`__"
+msgstr "`犹他州茶壶 <https://en.wikipedia.org/wiki/Utah_teapot>`__"
 
 #: ../../manual/modeling/meshes/primitives.rst:206
 msgid "`Stanford Bunny <https://en.wikipedia.org/wiki/Stanford_Bunny>`__."
-msgstr "`Stanford Bunny <https://en.wikipedia.org/wiki/Stanford_Bunny>`__."
+msgstr "`斯坦福小兔子 <https://en.wikipedia.org/wiki/Stanford_Bunny>`__。"
 
 #: ../../manual/modeling/meshes/primitives.rst:208
 msgid "History"
@@ -480,6 +481,8 @@ msgid ""
 "\"Easter Egg\". It creates a monkey's head once you press the *Monkey* button. The "
 "Monkey's name is \"Suzanne\" and is Blender's mascot."
 msgstr ""
+"这是老Nan赠与社区的礼物，并被视为程序员玩笑或“复活节彩蛋”。一旦您点击 *Monkey* ，会创建"
+"一个猴头。猴子的名字叫 “Suzanne”，它也是Blender的吉祥物。"
 
 #: ../../manual/modeling/meshes/primitives.rst:214
 msgid "Add-ons"
