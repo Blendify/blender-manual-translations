@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-05 15:27+1000\n"
+"POT-Creation-Date: 2019-07-30 00:46-0400\n"
 "PO-Revision-Date: 2018-04-30 20:55+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -121,14 +121,16 @@ msgstr "权重"
 
 #: ../../manual/modeling/surfaces/structure.rst:59
 msgid ""
-"Guess what? Yes, it works exactly like :ref:`NURBS Curves <modeling-"
-"curve-weight>`! *Weight* specifies how much each control point \"pulls\" "
-"on the curve."
+"Similar to :ref:`NURBS Splines <curve-nurbs>` NURBS Surface control "
+"points have a weight property. This weight property controls how much "
+"influence the control point has on the surface. This weight should not be"
+" confused with the :ref:`Goal Weight <surface-goal-weight>`, which is "
+"used only for softbody simulations. The NURBS control point weight can be"
+" adjusted in the *W* number field of the :doc:`Transform panel "
+"</modeling/curves/editing/transform_panel>`."
 msgstr ""
-"你猜怎么着？是的, 它和 :ref:`NURBS 曲线 <modeling-curve-weight>` 的原理完全一样! *权重* "
-"指定每个控制点对曲线的\"拉伸量\"。"
 
-#: ../../manual/modeling/surfaces/structure.rst:62
+#: ../../manual/modeling/surfaces/structure.rst:66
 msgid ""
 "In Fig. :ref:`fig-surface-intro-weight` a single control point, labeled "
 "\"C\", has had its *Weight* set to 5.0 while all others are at their "
@@ -138,45 +140,31 @@ msgstr ""
 "在图 :ref:`fig-surface-intro-weight` 中, 一个的控制点, 标记为\"C\", 其 *权重* 设为5.0, "
 "而别的点是默认值1.0。如你所见, 控制点将曲面向着它\"拉\"过去。"
 
-#: ../../manual/modeling/surfaces/structure.rst:70
+#: ../../manual/modeling/surfaces/structure.rst:74
 msgid "One control point with a weight of 5."
 msgstr "一个权重为5的控制点."
 
-#: ../../manual/modeling/surfaces/structure.rst:72
+#: ../../manual/modeling/surfaces/structure.rst:78
 msgid ""
 "If all the control points have the same *Weight* then each effectively "
 "cancels each other out. It is the difference in the weights that cause "
 "the surface to move towards or away from a control point."
 msgstr "如果所有的控制点都具有相同 *权重*，然后每个点都有效地相互抵消。权重导致曲面朝向或背离控制点移动，这是曲线与曲面权重上的区别。"
 
-#: ../../manual/modeling/surfaces/structure.rst:76
-#, fuzzy
-msgid ""
-"The *Weight* of any particular control point is visible in the "
-":doc:`/scene_layout/object/properties/transforms` :kbd:`N`, in the *W* "
-"field (and not the *Weight* field...)."
-msgstr ""
-"可以在 :doc:`/editors/3dview/object/properties/transforms` :kbd:`N` *W* 数值框 "
-"(而不是 *权重* 数值框...)里查看任何特定控制点的权重。"
-
-#: ../../manual/modeling/surfaces/structure.rst:82
+#: ../../manual/modeling/surfaces/structure.rst:84
 msgid "Preset Weights"
 msgstr "预设权重"
 
-#: ../../manual/modeling/surfaces/structure.rst:84
+#: ../../manual/modeling/surfaces/structure.rst:86
 msgid ""
 "NURBS can create pure shapes such as circles, cylinders, and spheres "
 "(note that a Bézier circle is not a pure circle). To create pure circles,"
-" globes, or cylinders, you must set to specific values the weights of the"
-" control points. Some of which are provided as presets in the *Curve "
-"Tools* panel (lower right corner). This is not intuitive, and you should "
-"read more on NURBS before trying this."
+" spheres, or cylinders, you must set to specific values the weights of "
+"the control points. This is not intuitive, and you should read more on "
+"NURBS before trying this."
 msgstr ""
-"NURBS能够创建纯粹的形状，比如圆环,圆柱和球(注意贝塞尔圆环不是纯粹的圆形)。为了创建纯粹的圆环、圆球或圆柱, "
-"必须设置具体的控制点的权重值。其中一些已作为预设的形式存在于 *曲线工具* "
-"面板(右下角)里。这不是很直观，所以可以在尝试之前对NURBS多做了解。"
 
-#: ../../manual/modeling/surfaces/structure.rst:90
+#: ../../manual/modeling/surfaces/structure.rst:91
 msgid ""
 "To create a sphere with 2D surfaces, its the same principle as with a 2D "
 "circle. You will note that the four different weights needed for creating"
@@ -185,7 +173,46 @@ msgstr ""
 "要使用2D曲面创建一个球体，其原理与2D圆环相同。你可以注意到，创建球体所用到的四个不同的权重值(1.0, 0.707=sqrt(0.5), "
 "0.354=sqrt(2)/4, 和0.25)。"
 
-#: ../../manual/modeling/surfaces/structure.rst:96
+#: ../../manual/modeling/surfaces/structure.rst:97
 msgid "A sphere surface."
 msgstr "一个曲面球。"
+
+#~ msgid ""
+#~ "Guess what? Yes, it works exactly "
+#~ "like :ref:`NURBS Curves <modeling-curve-"
+#~ "weight>`! *Weight* specifies how much "
+#~ "each control point \"pulls\" on the "
+#~ "curve."
+#~ msgstr ""
+#~ "你猜怎么着？是的, 它和 :ref:`NURBS 曲线 <modeling-"
+#~ "curve-weight>` 的原理完全一样! *权重* 指定每个控制点对曲线的\"拉伸量\"。"
+
+#~ msgid ""
+#~ "The *Weight* of any particular control"
+#~ " point is visible in the "
+#~ ":doc:`/scene_layout/object/properties/transforms` :kbd:`N`, "
+#~ "in the *W* field (and not the "
+#~ "*Weight* field...)."
+#~ msgstr ""
+#~ "可以在 :doc:`/editors/3dview/object/properties/transforms` "
+#~ ":kbd:`N` *W* 数值框 (而不是 *权重* "
+#~ "数值框...)里查看任何特定控制点的权重。"
+
+#~ msgid ""
+#~ "NURBS can create pure shapes such "
+#~ "as circles, cylinders, and spheres (note"
+#~ " that a Bézier circle is not a"
+#~ " pure circle). To create pure "
+#~ "circles, globes, or cylinders, you must"
+#~ " set to specific values the weights"
+#~ " of the control points. Some of "
+#~ "which are provided as presets in "
+#~ "the *Curve Tools* panel (lower right "
+#~ "corner). This is not intuitive, and "
+#~ "you should read more on NURBS "
+#~ "before trying this."
+#~ msgstr ""
+#~ "NURBS能够创建纯粹的形状，比如圆环,圆柱和球(注意贝塞尔圆环不是纯粹的圆形)。为了创建纯粹的圆环、圆球或圆柱, "
+#~ "必须设置具体的控制点的权重值。其中一些已作为预设的形式存在于 *曲线工具* "
+#~ "面板(右下角)里。这不是很直观，所以可以在尝试之前对NURBS多做了解。"
 
