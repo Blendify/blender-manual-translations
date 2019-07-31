@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-07-30 11:54+0800\n"
+"PO-Revision-Date: 2019-07-31 15:45+0800\n"
 "Last-Translator: kidux(xueke pei) <blender@vip.qq.com>\n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -75,8 +75,8 @@ msgid ""
 "type used by paint programs such as Photoshop or Gimp, and used in common file formats like PNG, BMP or Targa. So, image textures or "
 "output for the web are usually straight alpha."
 msgstr ""
-"``RGBA`` 通道存储为 ``（R，G，B，A）`` 通道的方法，其中的RGB通道不受alpha通道的影响。这是绘图程序如Photoshop或Gimp和常见的文件格式，如"
-"PNG、BMP或Targa 使用的alpha类型。因此，图像纹理或用于Web的输出通常是直通alpha。"
+"RGBA通道存储为 (R, G, B, A) 通道的方法，其中的RGB通道不受alpha通道的影响。这是绘图程序如Photoshop或Gimp和常见的文件格式，如PNG、BMP或"
+"Targa 使用的alpha类型。因此，图像纹理或用于Web的输出通常是直通alpha。"
 
 #: ../../manual/glossary/index.rst:44 ../../manual/glossary/index.rst:588
 msgid "Premultiplied Alpha"
@@ -84,7 +84,7 @@ msgstr "预乘型Alpha"
 
 #: ../../manual/glossary/index.rst:38
 msgid "Method where RGBA channels are stored as (R × A, G × A, B × A, A), with the alpha multiplied into the RGB channel."
-msgstr "``RGBA``通道存储为`` （R * A，G * A，B * A，A）``的方法，其中alpha分别与RGB通道相乘。"
+msgstr "RGBA通道存储为(R × A, G × A, B × A, A) 的方法，其中alpha分别与RGB通道相乘。"
 
 #: ../../manual/glossary/index.rst:41
 msgid ""
@@ -100,12 +100,11 @@ msgid "Conversion (Straight/Premultiplied) Alpha"
 msgstr "（直通型/预乘型）Alpha转换"
 
 #: ../../manual/glossary/index.rst:47
-#, fuzzy
 msgid ""
 "Conversion between the two alpha types is not a simple operation and can involve data loss, as both alpha types can represent data that "
 "the other cannot, though it is often subtle."
 msgstr ""
-"两种 alpha 类型之间转换不是一个简单的操作，并且可能涉及到数据的丢失，因为两种alpha类型都可以表示对方无法表达的数据，尽管其中的差异很微"
+"两种 alpha 类型之间转换不是一个简单的操作，并且可能涉及到数据的丢失，因为两种 alpha 类型都可以表示对方无法表达的数据，尽管其中的差异很微"
 "妙。"
 
 #: ../../manual/glossary/index.rst:50
@@ -157,9 +156,8 @@ msgid "Anti-aliasing"
 msgstr "抗锯齿"
 
 #: ../../manual/glossary/index.rst:72
-#, fuzzy
 msgid "Is the technique of minimizing :term:`aliasing`, by e.g. rendering multiple samples per pixel."
-msgstr "表示以较低的分辨率高分辨率信号时 :term:`锯齿` 是最小化的技术中。"
+msgstr ":term:`锯齿` 最小化技术，通过比如为单个像素渲染多个采样的方法。"
 
 #: ../../manual/glossary/index.rst:73
 msgid "Armature"
@@ -167,20 +165,19 @@ msgstr "骨架"
 
 #: ../../manual/glossary/index.rst:75
 msgid "An :term:`Object` consisting of :term:`bones <bone>`. Used to :term:`rig` characters, props, etc."
-msgstr " :term:`对象` 由 :term:`骨骼` 组成。用来 :term:`操纵` 角色、道具等。"
+msgstr "由 :term:`骨骼 <bone>` 组成的 :term:`物体`。用来 :term:`绑定` 角色、道具等。"
 
 #: ../../manual/glossary/index.rst:76
 msgid "Axis"
-msgstr "轴"
+msgstr "轴向"
 
 #: ../../manual/glossary/index.rst:78
-#, fuzzy
 msgid "A reference line which defines coordinates along one cardinal direction in n-dimensional space."
-msgstr "参考线，用来在沿着n维空间中的某个笛卡尔方向上定义坐标。"
+msgstr "参考线，用来沿着n维空间中的某个笛卡尔方向上定义坐标。"
 
 #: ../../manual/glossary/index.rst:79
 msgid "Axis Angle"
-msgstr "轴线角"
+msgstr "轴向角度"
 
 #: ../../manual/glossary/index.rst:81
 msgid "Rotation method where X, Y, and Z correspond to the axis definition, while W corresponds to the angle around that axis, in radians."
@@ -232,12 +229,10 @@ msgid "Bone"
 msgstr "骨骼"
 
 #: ../../manual/glossary/index.rst:92
-#, fuzzy
 msgid ""
 "The building block of an :term:`Armature`. Made up of a :term:`Head`, :term:`Tail` and :term:`Roll Angle` which define a set of local "
 "axes and a point of rotation at the Head."
-msgstr ""
-"搭建起 :term:`骨架` 的块。由 :term:`头` 、 :term:`尾端` 、 :term:`Roll Angle` (定义了一系列局部坐标和关于 :term:`头` 部转向的点） 组成。"
+msgstr "搭建起 :term:`骨架` 的块。由 :term:`头部` 、 :term:`尾端` 、 :term:`扭转角度` (定义了一组局部坐标轴和头部的旋转中心点) 组成。"
 
 #: ../../manual/glossary/index.rst:94
 msgid "Boolean"
@@ -261,29 +256,27 @@ msgstr "包围住物体的形状的盒子。盒子对齐物体的局部空间。
 
 #: ../../manual/glossary/index.rst:102
 msgid "Bump Mapping"
-msgstr "凹凸纹理"
+msgstr "凹凸贴图"
 
 #: ../../manual/glossary/index.rst:104
-#, fuzzy
 msgid "Technique for simulating slight variations in surface height using a grayscale \"heightmap\" texture."
-msgstr "一种使用一个含有灰度信息的“高度映射”纹理来模拟表面高度上的轻微变化的技术。"
+msgstr "一种使用一张含有灰度信息的“高度映射”纹理来模拟表面高度上的轻微变化的技术。"
 
 #: ../../manual/glossary/index.rst:108
 msgid "BVH"
-msgstr ""
+msgstr "BVH"
 
 #: ../../manual/glossary/index.rst:109
 msgid "Bounding Volume Hierarchy"
-msgstr ""
+msgstr "层次包围盒(Bounding Volume Hierarchy)"
 
 #: ../../manual/glossary/index.rst:111
 msgid "A hierarchical structure of geometric objects."
-msgstr ""
+msgstr "一种几何物体的层次结构。"
 
 #: ../../manual/glossary/index.rst:113
-#, fuzzy
 msgid "See also `Bounding Volume Hierarchy <https://en.wikipedia.org/wiki/Bounding_volume_hierarchy>`__ on Wikipedia."
-msgstr "另请参见'过扫描<http://en.wikipedia.org/wiki/Overscan> `__维基百科。"
+msgstr "另见维基百科 `Bounding Volume Hierarchy <https://en.wikipedia.org/wiki/Bounding_volume_hierarchy>`__ 页面。"
 
 #: ../../manual/glossary/index.rst:114
 msgid "Caustics"
@@ -293,16 +286,15 @@ msgstr "焦散"
 msgid ""
 "The optical phenomenon of light concentration focused by specular reflections or refracting objects. In example observable on light "
 "passing through a glass of water onto a table or the pattern at the bottom of a swimming pool."
-msgstr ""
+msgstr "高光反射或折射物体造成光线聚集的光学现象。例如，透过玻璃水杯照射到桌面的光线，又或是光线照射到游泳池底的形成的光斑图案。"
 
 #: ../../manual/glossary/index.rst:120
 msgid "In rendering this refers to diffuse reflected light paths after a glossy or refraction bounce."
-msgstr ""
+msgstr "在渲染中指经光泽或折射反弹后的漫射光程。"
 
 #: ../../manual/glossary/index.rst:122
-#, fuzzy
 msgid "See also `Caustics <https://en.wikipedia.org/wiki/Caustic_(optics)>`__ on Wikipedia."
-msgstr "另请参见'过扫描<http://en.wikipedia.org/wiki/Overscan> `__维基百科。"
+msgstr "另见维基百科 `Caustics <https://en.wikipedia.org/wiki/Caustic_(optics)>`__ 页面。"
 
 #: ../../manual/glossary/index.rst:123
 msgid "Child"
@@ -310,21 +302,21 @@ msgstr "子级"
 
 #: ../../manual/glossary/index.rst:125
 msgid "An :term:`Object` that is affected by its :term:`Parent`."
-msgstr "受其 :term:`父级` 影响的 :term:`对象` 。"
+msgstr "受其 :term:`父级` 影响的 :term:`物体` 。"
 
 #: ../../manual/glossary/index.rst:129
 msgid "Chroma"
-msgstr ""
+msgstr "色度"
 
 #: ../../manual/glossary/index.rst:130
 msgid "Chrominance"
-msgstr ""
+msgstr "色度"
 
 #: ../../manual/glossary/index.rst:132
 msgid ""
 "In general, a resulting image color decomposition, where its (*L* or *Y*) luminance channel is separated. There are two different "
 "contexts whereas this term is used:"
-msgstr ""
+msgstr "通常是指分离 (*L* or *Y*)亮度通道后，图像的的颜色分量。该术语有以下两种使用情境:"
 
 #: ../../manual/glossary/index.rst:136
 msgid "Video systems"
@@ -334,11 +326,11 @@ msgstr "视频系统"
 msgid ""
 "Refers to the general color decomposition resulting in *Y* (Luminance) and *C* (Chrominance) channels, whereas the chrominance is "
 "represented by: U = ( Blue minus Luminance ) and V = ( Red minus Luminance )."
-msgstr ""
+msgstr "指分解为 *Y* (亮度) and *C* (色度) 通道后的大致颜色，色度表示为: U = ( 蓝色-亮度 ) ， V = (红色减亮度 )."
 
 #: ../../manual/glossary/index.rst:142
 msgid "Matte compositing"
-msgstr ""
+msgstr "蒙版合成"
 
 #: ../../manual/glossary/index.rst:139
 msgid ""
@@ -346,47 +338,46 @@ msgid ""
 "called *Chroma key* and this key (a chosen color) is used to create an *Alpha Mask*. The total amount of gamut space for this "
 "chrominance point is defined by users in a circular or square-shaped format."
 msgstr ""
+"指被其RGB相邻颜色确定的色谱结合体所包围的色域上的一点。该点被称为 *色键*，该键(选定的颜色)用于创建一个 *Alpha遮罩*。该色度点的所占据色域"
+"空间由用户以圆形或方形格式定义。"
 
 #: ../../manual/glossary/index.rst:126
 msgid "Chromaticities"
-msgstr ""
+msgstr "色度"
 
 #: ../../manual/glossary/index.rst:128
 msgid "The coordinates of the :term:`primaries` on the CIE 1931 xy chromaticity diagram."
-msgstr ""
+msgstr "CIE 1931 xy色度图表上的 :term:`原色` 坐标。"
 
 #: ../../manual/glossary/index.rst:143
 msgid "Clamp"
-msgstr "限定"
+msgstr "钳制"
 
 #: ../../manual/glossary/index.rst:144
-#, fuzzy
 msgid "Clamping"
-msgstr "多重采样"
+msgstr "钳制"
 
 #: ../../manual/glossary/index.rst:146
 msgid "Limits a variable to a range. The values over or under the range are set to the constant values of the range's minimum or maximum."
-msgstr ""
+msgstr "将变量限制在一个区间之内。在区间之上或之下的分别被设定为区间的上限或下限常数。"
 
 #: ../../manual/glossary/index.rst:148
-#, fuzzy
 msgid "Collection"
-msgstr "投射"
+msgstr "集合"
 
 #: ../../manual/glossary/index.rst:150
-#, fuzzy
 msgid "A device for organizing objects. See also :doc:`Collections </scene_layout/collections/collections>`."
-msgstr "组织对象的一种装备。另可见 :doc:`层 </editors/3dview/layers>` 。"
+msgstr "组织对象的一种方法。另见 :doc:`集合 </scene_layout/collections/collections>`。"
 
 #: ../../manual/glossary/index.rst:157
 msgid "Color Gamut"
-msgstr ""
+msgstr "色域"
 
 #: ../../manual/glossary/index.rst:159
 msgid ""
 "A gamut traditionally refers to the volume of color a particular color model/space can cover. In many instances, it is often illustrated "
 "via a 2D model using CIE Yxy coordinates."
-msgstr ""
+msgstr "传统的色域是指特定的色彩模式/空间所涵盖的颜色范围。许多情况下，它是使用CIE Yxy 坐标表示的二维坐标来描述的。"
 
 #: ../../manual/glossary/index.rst:161
 msgid "Color Space"
@@ -394,115 +385,111 @@ msgstr "色彩空间"
 
 #: ../../manual/glossary/index.rst:163
 msgid "A coordinate system in which a vector represent a color value. By doing so, the color space defines three things:"
-msgstr ""
+msgstr "一个坐标系统，每一个向量表示一个颜色值。通过这样，色彩空间定义了下面三样东西:"
 
 #: ../../manual/glossary/index.rst:166
 msgid "The exact color of each of the :term:`primaries`"
-msgstr ""
+msgstr "每个 :term:`原色` 的准确颜色值"
 
 #: ../../manual/glossary/index.rst:167
 msgid "The :term:`White Point`"
-msgstr ""
+msgstr ":term:`白场`"
 
 #: ../../manual/glossary/index.rst:168
 msgid "A transfer function"
-msgstr ""
+msgstr "传递函数"
 
 #: ../../manual/glossary/index.rst:171
 msgid "sRGB"
-msgstr ""
+msgstr "sRGB"
 
 #: ../../manual/glossary/index.rst:171
 msgid "A color space that uses the Rec .709 :term:`primaries` and white point but, with a slightly different transfer function."
-msgstr ""
+msgstr "使用 Rec .709 :term:`原色` 以及白场的色彩空间，但是其传递函数稍有不同。"
 
 #: ../../manual/glossary/index.rst:181
 msgid "HSV"
-msgstr ""
+msgstr "HSV"
 
 #: ../../manual/glossary/index.rst:174
 msgid "Three values often considered as more intuitive (human perception) than the RGB system."
-msgstr ""
+msgstr "三个数值通常被认为比RGB系统更加直观(人的感知)。"
 
 #: ../../manual/glossary/index.rst:176
 msgid "Hue"
-msgstr ""
+msgstr "色相"
 
 #: ../../manual/glossary/index.rst:177
 msgid "The Hue of the color."
-msgstr ""
+msgstr "颜色的色相。"
 
 #: ../../manual/glossary/index.rst:179
-#, fuzzy
 msgid "Saturation"
-msgstr "插值"
+msgstr "饱和度"
 
 #: ../../manual/glossary/index.rst:179
 msgid ""
 "Also known as colorfulness, saturation is the quantity of hue in the color (from desaturated -- a shade of gray -- to saturated -- "
 "brighter colors)."
-msgstr ""
+msgstr "也称之为彩度，饱和度是颜色中色相所占的份量(从去饱和 -- 灰色阴影 -- 饱和 -- 更亮的颜色)。"
 
 #: ../../manual/glossary/index.rst:181
 msgid "Value"
-msgstr ""
+msgstr "明度"
 
 #: ../../manual/glossary/index.rst:182
 msgid "The brightness of the color (dark to light)."
-msgstr ""
+msgstr "颜色的明亮程度(从暗到亮)。"
 
 #: ../../manual/glossary/index.rst:186
 msgid "HSL"
-msgstr ""
+msgstr "HSL"
 
 #: ../../manual/glossary/index.rst:184
 msgid "Hue, Saturation"
-msgstr ""
+msgstr "色相，饱和度"
 
 #: ../../manual/glossary/index.rst:185
 msgid "See HSV."
-msgstr ""
+msgstr "见HSV。"
 
 #: ../../manual/glossary/index.rst:186 ../../manual/glossary/index.rst:404
 msgid "Luminance"
-msgstr ""
+msgstr "亮度"
 
 #: ../../manual/glossary/index.rst:187
-#, fuzzy
 msgid "See :term:`Luminance`."
-msgstr "参见 :term:`世界空间` 。"
+msgstr "见 :term:`亮度`。"
 
 #: ../../manual/glossary/index.rst:188
 msgid "YUV"
-msgstr ""
+msgstr "YUV"
 
 #: ../../manual/glossary/index.rst:189
 msgid "Luminance-Chrominance standard used in broadcasting analog PAL (European) video."
-msgstr ""
+msgstr "用于广播模拟PAL(欧洲)视频中的亮度-色度标准。"
 
 #: ../../manual/glossary/index.rst:192
 msgid "YCbCr"
-msgstr ""
+msgstr "YCbCr"
 
 #: ../../manual/glossary/index.rst:191
 msgid ""
 "Luminance-ChannelBlue-ChannelRed Component video for digital broadcast use, whose standards have been updated for HDTV and commonly "
 "referred to as the HDMI format for component video."
-msgstr ""
+msgstr "用于数字广播的亮度-蓝色通道-红色通道分量视频，该标准为HDTV进行了更新，通常指的是用于分量视频的 HDMI格式。"
 
 #: ../../manual/glossary/index.rst:193
 msgid "Concave Face"
 msgstr "凹面"
 
 #: ../../manual/glossary/index.rst:195
-#, fuzzy
 msgid "Face in which one vertex is inside a triangle formed by other vertices of the face."
-msgstr "该面上的一个顶点处于面上另外的顶点组成的三角形里面。"
+msgstr "该面上的一个顶点处于面上另外的顶点组成的三角形内部。"
 
 #: ../../manual/glossary/index.rst:197
-#, fuzzy
 msgid "See also `Convex and concave polygons <https://en.wikipedia.org/wiki/Convex_and_concave_polygons>`__ on Wikipedia."
-msgstr "另请参见'过扫描<http://en.wikipedia.org/wiki/Overscan> `__维基百科。"
+msgstr "另见维百科 `Convex and concave polygons <https://en.wikipedia.org/wiki/Convex_and_concave_polygons>`__ 。"
 
 #: ../../manual/glossary/index.rst:199
 msgid "Constraint"
@@ -510,10 +497,9 @@ msgstr "约束"
 
 #: ../../manual/glossary/index.rst:201
 msgid "A way of controlling one :term:`object` with data from another."
-msgstr "使用其他 :term:`对象` 的数据控制一个对象的方法。"
+msgstr "使用其他 :term:`物体` 的数据控制另一个物体的方法。"
 
 #: ../../manual/glossary/index.rst:202
-#, fuzzy
 msgid "Convex Face"
 msgstr "凸面"
 
@@ -521,7 +507,7 @@ msgstr "凸面"
 msgid ""
 "Face where, if lines were drawn from each vertex to every other vertex, all lines would remain in the face. Opposite of a :term:`concave "
 "face`."
-msgstr "所有面上的两点连接成的线都将在这个面里面。与 :term:`凹面` 刚好相反。"
+msgstr "所有面上的两点连接成的线都将在这个面内部。与 :term:`凹面` 刚好相反。"
 
 #: ../../manual/glossary/index.rst:206
 msgid "Coplanar"
@@ -537,18 +523,17 @@ msgstr "褶皱"
 
 #: ../../manual/glossary/index.rst:211
 msgid "Property of an :term:`edge`. Used to define the sharpness of edges in :term:`subdivision surface` meshes."
-msgstr ":term:`边` 的一个属性，用来定义 :term:`表面细分` 的网格中的边的锐化度。"
+msgstr ":term:`边` 的一个属性，用来定义 :term:`表面细分(Subdivision Surface)` 的网格中的边的锐化度。"
 
 #: ../../manual/glossary/index.rst:212
 msgid "Curve"
 msgstr "曲线"
 
 #: ../../manual/glossary/index.rst:214
-#, fuzzy
 msgid ""
 "A type of object defined in terms of a line interpolated between Control Vertices. Available types of curves include :term:`Bézier`, :"
 "term:`NURBS` and Poly."
-msgstr "该物体的类型被定义为一种在控制点间差值形成的边。可用的曲线类型包括 :term:`贝塞尔` 和 :term:`NURBS` 。"
+msgstr "一种物体类型，被定义为在控制点间插值形成的线条。可用的曲线类型包括 :term:`贝塞尔` 和 :term:`NURBS` 以及多段线。"
 
 #: ../../manual/glossary/index.rst:216
 msgid "Cyclic"
@@ -564,11 +549,11 @@ msgstr "数据用户"
 
 #: ../../manual/glossary/index.rst:221
 msgid "An existing Blender object, which is using its own data, or linked data (data owned and controlled by another Blender object)."
-msgstr ""
+msgstr "一个存在的Blender对象，使用其自身数据，或关联数据(归属于其他Blender对象和控制的数据)。"
 
 #: ../../manual/glossary/index.rst:231
 msgid "Diffuse Light"
-msgstr "漫反射"
+msgstr "漫射光"
 
 #: ../../manual/glossary/index.rst:233
 msgid ""
@@ -576,15 +561,14 @@ msgid ""
 "specific direction or location and creates shading. Surfaces facing towards the light source will be brighter, while surfaces facing "
 "away from the light source will be darker."
 msgstr ""
-"直射光线离开表面时发生。对于大多数东西，我们看到的主要就是漫反射光。漫反射光来自一个特殊的方向或位置，并形成明暗效果。面向光源的一面较亮"
-"些，而背向光源的一面则较为暗些。"
+"物体表面反射出的均匀，直射光线。对于大多数物体，漫射光是我们看到的主要光线。漫反射光来自特定方向或位置，并形成明暗效果。面向光源的一面较"
+"亮些，而背向光源的一面则较为暗些。"
 
 #: ../../manual/glossary/index.rst:238
 msgid "Directional Light"
 msgstr "平行光"
 
 #: ../../manual/glossary/index.rst:240
-#, fuzzy
 msgid ""
 "The light that has a specific direction, but no location. It seems to come from an infinitely far away source, like the sun. Surfaces "
 "facing the light are illuminated more than surfaces facing away, but their location does not matter. A Directional Light illuminates all "
@@ -595,20 +579,19 @@ msgstr ""
 
 #: ../../manual/glossary/index.rst:244
 msgid "Displacement Mapping"
-msgstr "移位贴图"
+msgstr "转换贴图"
 
 #: ../../manual/glossary/index.rst:246
-#, fuzzy
 msgid ""
 "A method for distorting vertices based on an image or texture. Similar to :term:`Bump Mapping`, but instead operates on the mesh's "
 "actual geometry. This relies on the mesh having enough geometry to represent details in the image."
 msgstr ""
-"一种通过图像或纹理对顶点位置进行变形处理的方法。与 :term:`凹凸纹理` 类似，不同的是对网格的几何体进行操作。网格需要有足以表现图像细节的几"
-"何复杂度。"
+"一种通过图像或纹理来扭曲顶点的方法。与 :term:`凹凸贴图` 类似，不同的是其直接操作网格的真实几何结构。网格需要有足以表现图像细节的几何复杂"
+"度。"
 
 #: ../../manual/glossary/index.rst:249
 msgid "Display Referenced"
-msgstr ""
+msgstr "显示参考"
 
 #: ../../manual/glossary/index.rst:251
 msgid ""
@@ -616,17 +599,18 @@ msgid ""
 "display referenced is because a display cannot display an infinite range of values. So, the term :term:`Scene Referenced` must go "
 "through a transfer function to be converted from one to the other."
 msgstr ""
+"指 :term:`亮度` 受限于特定的数值区间 (通常为0-1)的图像。称之为显示参考的原因是显示器无法显示无穷范围的数值。所以术语 :term:`场景参考` 之"
+"间必须骑过传递函数转换。"
 
 #: ../../manual/glossary/index.rst:223
 msgid "DOF"
-msgstr ""
+msgstr "DOF"
 
 #: ../../manual/glossary/index.rst:224
 msgid "Depth Of Field"
 msgstr "景深"
 
 #: ../../manual/glossary/index.rst:226
-#, fuzzy
 msgid ""
 "The distance in front of and behind the subject which appears to be in focus. For any given lens setting, there is only one distance at "
 "which a subject is precisely in focus, but focus falls off gradually on either side of that distance, so there is a region in which the "
@@ -634,7 +618,7 @@ msgid ""
 "rapidly; they approach being parallel with increasing distance."
 msgstr ""
 "在聚焦物体前后仍然清晰的距离。任何给定的镜头设置中，只有处于一个距离时，物体仍能清晰出现在聚焦状态下。而在该距离的两端清晰度慢慢下降，所"
-"以会有一块可以忍受模糊的区域。因为光线的角度变化得更快的缘故（随距离增加一同进行），在焦点后面的模糊区域比前面的区域范围大。"
+"以会有一块可以忍受的模糊区域。由于光线的角度更加急剧变化的缘故(随着距离增加接近平行)，在焦点后面的模糊区域比前面的区域范围大。"
 
 #: ../../manual/glossary/index.rst:255
 msgid "Double Buffer"
@@ -645,6 +629,7 @@ msgid ""
 "Technique for rendering and displaying content on the screen. Blender uses two buffers (images) to render the interface, the content of "
 "one buffer is displayed while rendering occurs on the other buffer. When rendering is complete, the buffers are switched."
 msgstr ""
+"用于渲染与在屏幕上显示内容的技术。Blender使用两个缓冲(图像)来渲染界面，在显示一个缓冲的同时也在渲染另一个缓冲。当渲染结束，交换两个缓冲。"
 
 #: ../../manual/glossary/index.rst:261
 msgid "Edge"
@@ -656,21 +641,21 @@ msgstr "连接两个 :term:`顶点 <vertex>` 的直线段，可以作为 :term:`
 
 #: ../../manual/glossary/index.rst:264
 msgid "Edge Loop"
-msgstr "环边"
+msgstr "循环边"
 
 #: ../../manual/glossary/index.rst:266
 msgid ""
 "Chain of :term:`edges <edge>` belonging to consecutive :term:`quads <quad>`. An edge loop ends at a pole or a boundary. Otherwise, it is "
 "cyclic."
-msgstr "连续的 :term:`四边形 <quad>` 上的 :term:`边 <edge>` 链。边环在极点或边界处终止，否则，它就是循环相接的。"
+msgstr "连续的 :term:`四边形 <quad>` 上的 :term:`边 <edge>` 链。循环边在极点或边界处终止，否则，它就是循环相接的。"
 
 #: ../../manual/glossary/index.rst:268
 msgid "Edge Ring"
-msgstr "边环"
+msgstr "并排边"
 
 #: ../../manual/glossary/index.rst:270
 msgid "Path of all :term:`edges <edge>` along a :term:`face loop` that share two faces belonging to that loop."
-msgstr "指的是所有属于哪些共享环中两个面的 :term:`环面` 上 :term:`边` 的路径。"
+msgstr "指的是 :term:`面循环` 上同时归属于循环中两个面的 :term:`边 <edge>` 的路径。"
 
 #: ../../manual/glossary/index.rst:271
 msgid "Empty"
@@ -678,7 +663,7 @@ msgstr "空物体"
 
 #: ../../manual/glossary/index.rst:273
 msgid "An :term:`Object` without any :term:`Vertices`, :term:`Edges <Edge>` or :term:`Faces <Face>`."
-msgstr "没有任何 :term:`顶点` 、 :term:`边 <Edge>` 或 :term:`面 <Face>` 的 :term:`对象` 。"
+msgstr "没有任何 :term:`顶点` 、 :term:`边 <Edge>` 或 :term:`面 <Face>` 的 :term:`物体` 。"
 
 #: ../../manual/glossary/index.rst:274
 msgid "Euler"
@@ -690,7 +675,7 @@ msgstr "欧拉旋转"
 
 #: ../../manual/glossary/index.rst:277
 msgid "Rotation method where rotations applied on each X, Y, Z axis component."
-msgstr ""
+msgstr "在每个X, Y, Z轴向分量上应用旋转的旋转方法。"
 
 #: ../../manual/glossary/index.rst:294
 msgid "F-Curve"
@@ -705,21 +690,19 @@ msgid "Face"
 msgstr "面"
 
 #: ../../manual/glossary/index.rst:280
-#, fuzzy
 msgid "Mesh element that defines a piece of surface. It consists of three or more :term:`edges <edge>`."
-msgstr "定义表面的网格元素。它包含有至少3条 :term:`边 <edge> ` 。"
+msgstr "定义一片表面的网格元素。它包含有至少3条 :term:`边 <edge>` 。"
 
 #: ../../manual/glossary/index.rst:281
 msgid "Face Loop"
-msgstr "环面"
+msgstr "面循环"
 
 #: ../../manual/glossary/index.rst:283
-#, fuzzy
 msgid ""
 "Chain of consecutive :term:`quads <quad>`. A face loop stops at a :term:`triangle` or :term:`N-gon` (which do not belong to the loop), "
 "or at a boundary. Otherwise, it is cyclic."
 msgstr ""
-"连续的 :term:`四边形 <quad>`  组成的链。环面终止于 :term:`triangle` 或 :term:`多边形` （不属于该环） 或是在边界上，否则，它就是循环相接"
+"连续的 :term:`四边形 <quad>` 组成的链。循环面终止于 :term:`三角形` 或 :term:`多边形(N-gon)` (不属于该循环) 或是边界，否则，它就是循环相接"
 "的。"
 
 #: ../../manual/glossary/index.rst:285
@@ -732,20 +715,21 @@ msgstr "垂直于 :term:`面` 所在平面的归一化向量。每个面都有�
 
 #: ../../manual/glossary/index.rst:288
 msgid "Fake User"
-msgstr ""
+msgstr "伪用户"
 
 #: ../../manual/glossary/index.rst:290
 msgid ""
 "A special :term:`Data User`, a program construct that is used to mark an object (e.g. material) to be saved in a blend-file, even when "
 "no :term:`Real User` is using the object. Objects that are not used by any Data User are not included in saved blend-files."
 msgstr ""
+"一种特殊的 :term:`数据用户`, 用于标记存储于blend文件中物体 (比如材质)的程序结构，即使没有 :term:`真实用户` 在使用该物体。没有数据用户的数"
+"据不会被存储于blend文件中。"
 
 #: ../../manual/glossary/index.rst:297
 msgid "Field of View"
 msgstr "视野"
 
 #: ../../manual/glossary/index.rst:299
-#, fuzzy
 msgid "The area in which objects are visible to the camera. Also see :term:`Focal Length <focal length>`."
 msgstr "物体在相机中可见的区域。参见 :term:`焦距 <focal length>` 。"
 
@@ -754,61 +738,56 @@ msgid "Focal Length"
 msgstr "焦距"
 
 #: ../../manual/glossary/index.rst:302
-#, fuzzy
 msgid ""
 "The distance required by a lens to focus collimated light. Defines the magnification power of a lens. Also see :term:`Field of View "
 "<field of view>`."
-msgstr "镜头用来对校准光线以聚焦所需要的距离。定义了镜头的放大能力。参见 :term:`视野` 。"
+msgstr "镜头用来对校准光线以聚焦所需要的距离。定义了镜头的放大能力。参见 :term:`视野 <field of view>` 。"
 
 #: ../../manual/glossary/index.rst:304
 msgid "Frame Types"
-msgstr ""
+msgstr "帧类型"
 
 #: ../../manual/glossary/index.rst:306
 msgid ""
 "In video compression, a frame can be compressed by several different algorithms. These algorithms are known as *picture types* or *frame "
 "types* and there are three major types: **I**, **P**, and **B** frames."
-msgstr ""
+msgstr "在视频压缩中，可以通过几种不同的算法压缩帧。这些算法也被称为 *图像类型* 或 *帧类型*，有三种主要的类型: **I**, **P**, 与 **B** 帧。"
 
 #: ../../manual/glossary/index.rst:310
-#, fuzzy
 msgid "I‑frames"
-msgstr "关键帧"
+msgstr "I帧"
 
 #: ../../manual/glossary/index.rst:311
 msgid "The least compressible but don't require other video frames to decode."
-msgstr ""
+msgstr "最不可压缩的，但无需其他视频帧即可解码。"
 
 #: ../../manual/glossary/index.rst:312
-#, fuzzy
 msgid "P‑frames"
-msgstr "关键帧"
+msgstr "P帧"
 
 #: ../../manual/glossary/index.rst:313
 msgid "Use data from previous frames to decompress and are more compressible than I‑frames."
-msgstr ""
+msgstr "使用前一帧的数据来解码，比I帧更具可压缩性。"
 
 #: ../../manual/glossary/index.rst:315
-#, fuzzy
 msgid "B‑frames"
-msgstr "关键帧"
+msgstr "B帧"
 
 #: ../../manual/glossary/index.rst:315
 msgid "Use both previous and forward frames for data reference to get the highest amount of compression."
-msgstr ""
+msgstr "使用前一帧以及后一帧作为数据参考来获得最大程度的压缩。"
 
 #: ../../manual/glossary/index.rst:316
 msgid "Gamma"
-msgstr "对比度"
+msgstr "Gamma"
 
 #: ../../manual/glossary/index.rst:318
 msgid "An operation used to adjust the brightness of an image."
-msgstr "调整图像明亮度的操作。"
+msgstr "用于调整图像明亮度的操作。"
 
 #: ../../manual/glossary/index.rst:320
-#, fuzzy
 msgid "See also `Gamma correction <https://en.wikipedia.org/wiki/Gamma_correction>`__ on Wikipedia."
-msgstr "参见维基百科上的 `伽玛校正 <http://en.wikipedia.org/wiki/Gamma_correction>`__ 。"
+msgstr "另见维基百科 `伽玛校正 <http://en.wikipedia.org/wiki/Gamma_correction>`__。"
 
 #: ../../manual/glossary/index.rst:321
 msgid "Geometric Center"
@@ -820,50 +799,46 @@ msgstr "组成物体的所有顶点的位置的平均值。"
 
 #: ../../manual/glossary/index.rst:324
 msgid "Gimbal"
-msgstr ""
+msgstr "万向节"
 
 #: ../../manual/glossary/index.rst:326
 msgid "A pivoted support that allows the rotation of an object about a single axis."
-msgstr ""
+msgstr "允许物体绕单一轴向旋转的支点装置。"
 
 #: ../../manual/glossary/index.rst:328
-#, fuzzy
 msgid "See also `Gimbal <https://en.wikipedia.org/wiki/Gimbal>`__ on Wikipedia."
-msgstr "参见维基百科上的 `万向轴死锁 <http://en.wikipedia.org/wiki/Gimbal_lock> `__ 。"
+msgstr "另见维基百科 `万向轴 <http://en.wikipedia.org/wiki/Gimbal>`__ 。"
 
 #: ../../manual/glossary/index.rst:329
 msgid "Gimbal Lock"
-msgstr "万向轴死锁"
+msgstr "万向节死锁"
 
 #: ../../manual/glossary/index.rst:331
 msgid ""
 "The limitation where axes of rotation can become aligned, losing the ability to rotate on an axis (typically associated with :term:"
 "`euler rotation`)."
-msgstr "可以对齐的轴旋向的局限，将失去在轴向（与 :term:`欧拉旋转` 相联系）旋转的能力。"
+msgstr "旋转轴向存在对齐可能性，将失去在某个轴向(通常与 :term:`欧拉旋转` 相关)旋转能力的局限。"
 
 #: ../../manual/glossary/index.rst:334
-#, fuzzy
 msgid "See also `Gimbal lock <https://en.wikipedia.org/wiki/Gimbal_lock>`__ on Wikipedia."
-msgstr "参见维基百科上的 `万向轴死锁 <http://en.wikipedia.org/wiki/Gimbal_lock> `__ 。"
+msgstr "另见维基百科 `万向节死锁 <http://en.wikipedia.org/wiki/Gimbal_lock>`__ 。"
 
 #: ../../manual/glossary/index.rst:335
-#, fuzzy
 msgid "See also `Gimbal lock <https://blender.stackexchange.com/questions/469>`__ on Stackexchange."
-msgstr "另请参见 Stackexchange 上的 `万向轴死锁 <http://blender.stackexchange.com/questions/469> `__ 。"
+msgstr "另见 Stackexchange 上的 `万向节死锁 <http://blender.stackexchange.com/questions/469>`__ 。"
 
 #: ../../manual/glossary/index.rst:336
 msgid "Global Illumination"
 msgstr "全局光照"
 
 #: ../../manual/glossary/index.rst:338
-#, fuzzy
 msgid ""
 "A superset of :term:`radiosity` and ray tracing. The goal is to compute all possible light interactions in a given scene, and thus, "
 "obtain a truly photorealistic image. All combinations of diffuse and specular reflections and transmissions must be accounted for. "
 "Effects such as color bleeding and caustics must be included in a global illumination simulation."
 msgstr ""
-"辐射度和射线跟踪的一个扩展。全局指的是对给定场景中所有可能相交的光线进行计算，所以得到一副照片级真实感图像。需要考虑到所有漫反射、高光反"
-"射和传播的组合情况。在全局光照模拟中必须包含有如颜色流失和焦散的影响。"
+":term:`辐射` 和光线追踪的超集。目标是计算给定场景中所有可能的光线交互，获得照片级真实感的图像。需要考虑到所有漫反射、高光反射和透射的组合"
+"情况。在全局光照模拟中必须包含有效果如颜色流失和焦散。"
 
 #: ../../manual/glossary/index.rst:342
 msgid "Global Space"
@@ -875,35 +850,33 @@ msgstr "参见 :term:`世界空间` 。"
 
 #: ../../manual/glossary/index.rst:345
 msgid "Glossy Map"
-msgstr ""
+msgstr "光泽贴图"
 
 #: ../../manual/glossary/index.rst:347
 msgid "See :term:`Roughness Map`."
-msgstr "请参阅 :term:`糙度贴图` 。"
+msgstr "另见 :term:`糙度贴图` 。"
 
 #: ../../manual/glossary/index.rst:354
 msgid "HDRI"
-msgstr ""
+msgstr "HDRI"
 
 #: ../../manual/glossary/index.rst:355
-#, fuzzy
 msgid "High Dynamic Range Image"
-msgstr "HDRI 高动态范围图像"
+msgstr "高动态范围图像(HDRI)"
 
 #: ../../manual/glossary/index.rst:357
 msgid ""
 "A set of techniques that allow a far greater dynamic range of exposures than normal digital imaging techniques. The intention is to "
 "accurately represent the wide range of intensity levels found in real scenes, ranging from direct sunlight to the deepest shadows."
-msgstr "获得的动态曝光度范围比普通电子成像技术高的一些列技术。其目标是精确表现出现实场景中从阳光直射到深阴影范围内的宽强度级别内容。"
+msgstr "获得动态曝光度范围比普通电子成像技术更广的一系列技术。其目的是精确表现出现实场景中从阳光直射到深阴影范围内存在的宽范围强度级别。"
 
 #: ../../manual/glossary/index.rst:361
-#, fuzzy
 msgid "See also `HDRI <https://en.wikipedia.org/wiki/HDRI>`__ on Wikipedia."
-msgstr "另请参见维基百科 `HDRI <http://en.wikipedia.org/wiki/HDRI> `__ 。"
+msgstr "另见维基百科 `HDRI <http://en.wikipedia.org/wiki/HDRI>`__ 。"
 
 #: ../../manual/glossary/index.rst:348
 msgid "Head"
-msgstr "头"
+msgstr "头部"
 
 #: ../../manual/glossary/index.rst:350
 msgid ""
@@ -911,38 +884,38 @@ msgid ""
 "the :term:`Armature` :term:`Object`. Used in conjunction with the :term:`Tail` to define the local Y axis of the bone in :term:`Pose "
 "Mode`. The larger of the two ends when displayed as an :term:`Octahedron`."
 msgstr ""
+":term:`骨骼` 次级构成。骨骼的旋转中心，在 :term:`骨架` :term:`物体` 的 :term:`局部空间` 中拥有X, Y, Z坐标。在 :term:`姿态模式` 中与 :"
+"term:`尾端` 一起用来定义局部Y轴。 :term:`八面体` 显示模式下较大的一端。"
 
 #: ../../manual/glossary/index.rst:369
 msgid "Interpolation"
 msgstr "插值"
 
 #: ../../manual/glossary/index.rst:371
-#, fuzzy
 msgid "The process of calculating new data between points of known value, like :term:`keyframes <keyframe>`."
-msgstr "通过两已知数值的点来计算其间的新值，实现方式同 :term:`关键帧 <keyframe>` 。"
+msgstr "通过两已知数值的点来计算其间的数据的过程，比如 :term:`关键帧 <keyframe>` 。"
 
 #: ../../manual/glossary/index.rst:372
 msgid "Inverse Kinematics"
 msgstr "反向动力学"
 
 #: ../../manual/glossary/index.rst:374
-#, fuzzy
 msgid ""
 "The process of determining the movement of interconnected segments of a body or model. Using ordinary Kinematics on a hierarchically "
 "structured object you can, for example, move the shoulder of a puppet. The upper and lower arm and hand will automatically follow that "
 "movement. IK will allow you to move the hand and let the lower and upper arm go along with the movement. Without IK the hand would come "
 "off the model and would move independently in space."
 msgstr ""
-"测定人体或模型中相连接部分运动情况的过程。对一个层级结构模型使用动力学可以实现例如移动木偶肩膀的操作。其上下一级的手臂和手掌将随之移动。"
-"方向动力学则可以允许你通过移动手掌影响对其下一级或上一级的手臂的移动。若不使用方向动力学，手掌将脱离模型，独自在空间中移动。"
+"决定人体或模型中相连接部分运动的过程。对一个层级结构模型使用动力学可以实现例如移动木偶肩膀的操作。其上下臂和手掌将自动随之一起移动。反向"
+"动力学则可以允许你移动手掌，并使其上下手臂随之移动。若不使用反向动力学，手掌将脱离模型，独自在空间中移动。"
 
 #: ../../manual/glossary/index.rst:362
 msgid "IOR"
-msgstr ""
+msgstr "IOR"
 
 #: ../../manual/glossary/index.rst:363
 msgid "Index Of Refraction"
-msgstr "折射率"
+msgstr "折射率(Index Of Refraction)"
 
 #: ../../manual/glossary/index.rst:365
 msgid ""
@@ -950,20 +923,21 @@ msgid ""
 "from one transparent volume to another, it bends. The angle by which the ray is bent can be determined by the IOR of the materials of "
 "both volumes."
 msgstr ""
+"透明材质的一个属性。当一束光线穿透同一介质，会沿着一条笔直路径。但是，如果光线从一个透明介质进入另一个，将发生偏折。光线偏折的角度可以通"
+"过两种介质的材质折射率算出。"
 
 #: ../../manual/glossary/index.rst:379
 msgid "Keyframe"
 msgstr "关键帧"
 
 #: ../../manual/glossary/index.rst:381
-#, fuzzy
 msgid ""
 "A frame in an animated sequence drawn or otherwise constructed directly by the user. In classical animation, when all frames were drawn "
 "by animators, the senior artist would draw these frames, leaving the \"in between\" frames to an apprentice. Now, the animator creates "
 "only the first and last frames of a simple sequence (keyframes); the computer fills in the gap."
 msgstr ""
-"动画序列中的帧是直接由用户绘制或构建成的。在传统的动画中，在所有的帧都是由动画师绘制成的时候，高级画家只画这些帧，而将帧之间的内容交给新"
-"手。现在，动画师只创建简单序列（关键帧）前后帧，而电脑负责填充中间内容。"
+"动画序列中直接由用户绘制或构建成的帧。在传统的动画中，动画师绘制所有的帧，而高级艺术家只画这些关键帧，而将帧之间的内容交给学徒。现在，动"
+"画师只创建简单序列的首末帧(关键帧)，而电脑负责填充中间的内容。"
 
 #: ../../manual/glossary/index.rst:386
 msgid "Keyframing"
@@ -971,7 +945,7 @@ msgstr "插入关键帧"
 
 #: ../../manual/glossary/index.rst:388
 msgid "Inserting :term:`Keyframes <Keyframe>` to build an animated sequence."
-msgstr "通过插入 :term:`关键帧 <Keyframe>` 来建立动画序列。"
+msgstr "通过插入 :term:`关键帧 <Keyframe>` 来构建动画序列。"
 
 #: ../../manual/glossary/index.rst:389
 msgid "Lattice"
@@ -983,29 +957,27 @@ msgstr "晶格是一种由不可渲染的三维顶点栅格构成的物体。"
 
 #: ../../manual/glossary/index.rst:393
 msgid "See also :doc:`Lattice Modifier </modeling/modifiers/deform/lattice>`."
-msgstr "亦可见： :doc:`晶格修改器 </modeling/modifiers/deform/lattice>`。"
+msgstr "另见 :doc:`晶格修改器 </modeling/modifiers/deform/lattice>`。"
 
 #: ../../manual/glossary/index.rst:394
 msgid "Light Bounces"
-msgstr ""
+msgstr "光线反弹"
 
 #: ../../manual/glossary/index.rst:396
-#, fuzzy
 msgid ""
 "Refers to the reflection or transmission of a light ray upon interaction with a material. See also :doc:`Light Paths </render/cycles/"
 "render_settings/light_paths>`."
-msgstr "指光线与相交的材质之间的反射和透射。参见 :doc:`/render/cycles/settings/light_paths` 。"
+msgstr "指光线与材质之间交互时的反射和透射。见 :doc:`光程 </render/cycles/render_settings/light_paths>`。"
 
 #: ../../manual/glossary/index.rst:398
 msgid "Local Space"
 msgstr "局部空间"
 
 #: ../../manual/glossary/index.rst:400
-#, fuzzy
 msgid ""
 "A 3D coordinate system that originates (for Objects) at the :term:`Object Origin`. or (for Bones) at the :term:`Head` of the :term:"
 "`Bone`."
-msgstr "原点位于 :term:`物体中心` 或 :term:`骨骼` 的 :term:`头` 上的三维坐标系统。"
+msgstr "原点位于 :term:`物体中心` 或 :term:`骨骼` 的 :term:`头部` 的三维坐标系统。"
 
 #: ../../manual/glossary/index.rst:403
 msgid "Compare to :term:`World Space`."
@@ -1013,14 +985,13 @@ msgstr "与 :term:`世界空间` 相对。"
 
 #: ../../manual/glossary/index.rst:406
 msgid "The intensity of light either in an image/model channel, or emitted from a surface per square unit in a given direction."
-msgstr ""
+msgstr "图像/模型通道中，或给定方向上发射自单位面积表面的光线强度。"
 
 #: ../../manual/glossary/index.rst:408
 msgid "Manifold"
 msgstr "流形"
 
 #: ../../manual/glossary/index.rst:410
-#, fuzzy
 msgid ""
 "Manifold meshes, also called *water-tight* meshes, define a *closed non-self-intersecting volume* (see also :term:`non-manifold`). A "
 "manifold mesh is a mesh in which the structure of the connected faces in a closed volume will always point the normals (and there "
@@ -1029,21 +1000,21 @@ msgid ""
 "in which the normals will always define two different and non-consecutive surfaces. A manifold mesh will always define an even number of "
 "non-overlapped surfaces."
 msgstr ""
-"流形网格（又称 “水密”网格）定义了一种封闭不自相交的体（又见 :term:`非流形` ）。一个流形网格指的是封闭体的所有相连面的结构将总是无重叠地从"
-"法线（和它的面）指向网格的外面或里面。如果重新计算法向，它们将总是指向垂直方向（体外或体内）。使用非封闭体时，流形网格则指那些法向定义了"
-"两不同且不相连的面的网格。流形网格总是定义了偶数个不重叠表面。"
+"流形网格(又称 “水密”网格)定义了一种封闭不自相交的体(又见 :term:`非流形` )。一个流形网格指的是封闭体的所有相连面的结构将总是无重叠地从法线"
+"（和它的面）指向网格的外面或里面。如果重新计算法向，它们将总是指向垂直方向(向外或向内）。用于非封闭体时，流形网格则指那些法向定义了两不同"
+"且不相连的面的网格。流形网格总是定义了偶数个不重叠表面。"
 
 #: ../../manual/glossary/index.rst:418
 msgid "MatCap"
-msgstr ""
+msgstr "快照材质"
 
 #: ../../manual/glossary/index.rst:420
 msgid "Stands for \"material capture\", using an image to represent a complete material including lighting and reflections."
-msgstr ""
+msgstr "*材质快照*，使用一张图像来表达包括光照和反射在内的整个材质。"
 
 #: ../../manual/glossary/index.rst:422
 msgid "Matte"
-msgstr "遮片"
+msgstr "蒙版"
 
 #: ../../manual/glossary/index.rst:423
 msgid "Mask"
@@ -1053,7 +1024,7 @@ msgstr "遮罩"
 msgid ""
 "A grayscale image used to include or exclude parts of an image. A matte is applied as an :term:`Alpha Channel`, or it is used as a mix "
 "factor when applying :term:`Color Blend Modes`."
-msgstr ""
+msgstr "一张用于包括或排除部分图像的灰度图像。蒙版应用为 :term:`Alpha通道`，或在 :term:`颜色混合模式` 中用作混合系数。"
 
 #: ../../manual/glossary/index.rst:428
 msgid "Mesh"
@@ -1065,11 +1036,11 @@ msgstr "由 :term:`顶点 <vertex>` 、 :term:`边 <edge>` 和 :term:`面 <face>
 
 #: ../../manual/glossary/index.rst:431
 msgid "Micropolygons"
-msgstr ""
+msgstr "微多边形"
 
 #: ../../manual/glossary/index.rst:433
 msgid "A polygon roughly the size of a pixel or smaller."
-msgstr ""
+msgstr "单个像素大小或更小的多边形。"
 
 #: ../../manual/glossary/index.rst:434
 msgid "MIP"
@@ -1077,11 +1048,11 @@ msgstr "MIP"
 
 #: ../../manual/glossary/index.rst:435
 msgid "Mip-map"
-msgstr "Mip映射"
+msgstr "mip贴图"
 
 #: ../../manual/glossary/index.rst:436
 msgid "Mip-mapping"
-msgstr "Mip映射"
+msgstr "mip贴图"
 
 #: ../../manual/glossary/index.rst:438
 msgid ""
@@ -1091,31 +1062,33 @@ msgid ""
 "calculations and allocation. Mip-mapping is also a process used to create small anti-aliased samples of an image used for texturing. The "
 "mip-mapping calculations are made by CPUs, but modern graphic processors can be selected for this task and are way faster."
 msgstr ""
+"'MIP' 拉丁短语 'multum in parvo' 的简写，表示'放置很多东西的小空间'。mip贴图逐级降低图像的分辨率表达，通常每级缩小1/4并使用抗锯齿。mip贴"
+"图是用于计算相同图像的更低分辨率的过程，以此降低内存占用，加快显示速度。mip贴图也是用于为贴图图像创建更小抗锯齿样本的过程。mip贴图通过CPU"
+"完成计算的，但是也可以选用现代的显示处理器来更快地完成这类任务。"
 
 #: ../../manual/glossary/index.rst:448
 msgid "See the mip-map option present in the :doc:`System Preferences </editors/preferences/system>`."
-msgstr ""
+msgstr "见 :doc:`系统设置 </editors/preferences/system>` 中的mip映射选项。"
 
 #: ../../manual/glossary/index.rst:449
 msgid "MIS"
-msgstr ""
+msgstr "MIS"
 
 #: ../../manual/glossary/index.rst:450
 msgid "Multiple Importance Sampling"
-msgstr ""
+msgstr "多重重要性采样(Multiple Importance Sampling)"
 
 #: ../../manual/glossary/index.rst:452
 msgid "A process of estimating the direction of light rays to improve sampling quality."
-msgstr ""
+msgstr "估算光线方向以提高采样质量的过程。"
 
 #: ../../manual/glossary/index.rst:454
 msgid "See: :ref:`render-cycles-reducing-noise-mis`"
-msgstr ""
+msgstr "见: :ref:`render-cycles-reducing-noise-mis`"
 
 #: ../../manual/glossary/index.rst:456
-#, fuzzy
 msgid "See also `Importance sampling <https://en.wikipedia.org/wiki/Importance_sampling>`__ on Wikipedia."
-msgstr "参见维基百科上的 `万向轴死锁 <http://en.wikipedia.org/wiki/Gimbal_lock> `__ 。"
+msgstr "另见维基百科 `重要性采样 <https://en.wikipedia.org/wiki/Importance_sampling>`__。"
 
 #: ../../manual/glossary/index.rst:457
 msgid "Motion Blur"
@@ -1133,7 +1106,7 @@ msgstr "多重采样"
 
 #: ../../manual/glossary/index.rst:464
 msgid "Rendering multiple samples per pixel, for :term:`anti-aliasing`."
-msgstr ""
+msgstr "为每个像素渲染多个采样，用于 :term:`抗锯齿`。"
 
 #: ../../manual/glossary/index.rst:465
 msgid "N-gon"
@@ -1145,28 +1118,27 @@ msgstr "一个含有多于四个 :term:`顶点 <vertex>` 的 :term:`面` 。"
 
 #: ../../manual/glossary/index.rst:468
 msgid "NDOF"
-msgstr ""
+msgstr "NDOF"
 
 #: ../../manual/glossary/index.rst:469
 msgid "3D Mouse"
-msgstr ""
+msgstr "三维鼠标"
 
 #: ../../manual/glossary/index.rst:471
 msgid ""
 "A general term used to describe a 3D mouse, or any input devices which supports more degrees of freedom than a conventional 2D input "
 "device, see: :ref:`hardware-ndof`."
-msgstr ""
+msgstr "用于描述三维鼠标的通用术语，或者比传统二维输入设备支持更多自由度的输入设备，见 :ref:`hardware-ndof`。"
 
 #: ../../manual/glossary/index.rst:473
 msgid "Non-linear Animation"
 msgstr "非线性动画"
 
 #: ../../manual/glossary/index.rst:475
-#, fuzzy
 msgid ""
 "Animation technique that allows the animator to edit motions as a whole, not just the individual keys. Non-linear animation allows you "
 "to combine, mix, and blend different motions to create entirely new animations."
-msgstr "一种动画技术，允许动画师整体编辑动作，而不只是独立的键。非线性动画允许通过结合、混合和调合不同的动作来创建新的动画。"
+msgstr "一种动画技术，允许动画师整体编辑动作，而不只是独立的关键帧。非线性动画允许通过结合、混合和调合不同的动作来创建全新的动画。"
 
 #: ../../manual/glossary/index.rst:478
 msgid "Non-manifold"
@@ -1182,10 +1154,14 @@ msgid ""
 "discontinuity in the normal directions, either by an inversion of a connected loop, or by an odd number of surfaces. A non-manifold mesh "
 "will always define an odd number of surfaces."
 msgstr ""
+"非流形网格其实定义的是无法在真实世界存在的几何体。这种类型的几何体不适合几种操作，特别是在知道物体的体积(内部/外部)很重要的情形下(比如折"
+"射，流体，布尔，或3D打印)。非流形网格内部的非重叠面(基于其相连面)的结构无法根据其法线确定体积的内部和外部，定义了一个两侧法向相反的表面。"
+"用于非封闭体积时，一个非流形网格总是可以算出至少一个非连续法向，要么是由于相连循环反向，要么是奇数个面数。一个非流形网格总是定义了奇数个"
+"表面。"
 
 #: ../../manual/glossary/index.rst:493
 msgid "There are several types of non-manifold geometry:"
-msgstr "有多种非流形几何体。"
+msgstr "有多种非流形几何体:"
 
 #: ../../manual/glossary/index.rst:495
 msgid "Some borders and holes (edges with only a single connected face), as faces have no thickness."
@@ -1196,50 +1172,45 @@ msgid "Edges and vertices not belonging to any face (wire)."
 msgstr "不属于任何面（或线）的边和顶点。"
 
 #: ../../manual/glossary/index.rst:497
-#, fuzzy
 msgid "Edges connected to three or more faces (interior faces)."
 msgstr "连接3个或以上的面（内部面）的边。"
 
 #: ../../manual/glossary/index.rst:498
-#, fuzzy
 msgid "Vertices belonging to faces that are not adjoining (e.g. two cones sharing the vertex at the apex)."
 msgstr "同属于两个不相邻面的点（如：两个圆锥体在尖峰处共享同一个顶点）。"
 
 #: ../../manual/glossary/index.rst:500
-#, fuzzy
 msgid "See also: :ref:`Select Non-Manifold <mesh-select-non-manifold>` tool."
-msgstr "另请参阅：参考：`选择非流形<mesh-select-non_manifold> `工具。"
+msgstr "另见 :ref:`选择非流形 <mesh-select-non-manifold>` 工具。"
 
 #: ../../manual/glossary/index.rst:503
 msgid "Normal"
-msgstr "法线"
+msgstr "法向"
 
 #: ../../manual/glossary/index.rst:505
 msgid "The normalized vector perpendicular to a surface."
-msgstr "归一化矢量垂直于一个表面。"
+msgstr "垂直于一个表面的归一化矢量。"
 
 #: ../../manual/glossary/index.rst:507
 msgid "Normals can be assigned to vertices, faces and modulated across a surface using :term:`normal mapping`."
-msgstr "法线可以被分配到顶点，面和调制整个使用表面 :term:`法向映射` 。"
+msgstr "可以为顶点，面指定法向，并使用 :term:`法线贴图` 调制表面。"
 
 #: ../../manual/glossary/index.rst:510
-#, fuzzy
 msgid "See also `Normals <https://en.wikipedia.org/wiki/Normal_(geometry)>`__ on Wikipedia."
-msgstr "参见维基百科上的 `万向轴死锁 <http://en.wikipedia.org/wiki/Gimbal_lock> `__ 。"
+msgstr "另见维基百科 `法线 <https://en.wikipedia.org/wiki/Normal_(geometry)>`__ 。"
 
 #: ../../manual/glossary/index.rst:511
 msgid "Normal Mapping"
-msgstr "法向映射"
+msgstr "法线贴图"
 
 #: ../../manual/glossary/index.rst:513
-#, fuzzy
 msgid ""
 "Is similar to :term:`Bump mapping`, but instead of the image being a grayscale heightmap, the colors define in which direction the "
 "normal should be shifted, the three color channels being mapped to the three directions X, Y and Z. This allows more detail and control "
 "over the effect."
 msgstr ""
-"是类似于：术语：`凹凸mapping`，但不是该图像是灰度高度图，颜色定义在哪个方向正常应转向时，3色通道被映射到3个方向X，Y和Z的这允许更多的细节"
-"和控制的效果。"
+"与 :term:`凹凸贴图` 类似，但图像不是灰度高度图，而是用颜色定义法线的偏移方向，三色通道被映射到X，Y和Z 3个方向。这允许有更多的效果细节和控"
+"制。"
 
 #: ../../manual/glossary/index.rst:517
 msgid "NURBS"
@@ -1247,35 +1218,33 @@ msgstr "NURBS"
 
 #: ../../manual/glossary/index.rst:518
 msgid "Non-uniform Rational Basis Spline"
-msgstr ""
+msgstr "非均匀有理B样条(Non-uniform Rational Basis Spline)"
 
 #: ../../manual/glossary/index.rst:520
-#, fuzzy
 msgid "A computer graphics technique for generating and representing curves and surfaces."
-msgstr "计算机图形技术产生和代表**曲线**和**表面**。"
+msgstr "用于生成和表达曲线与曲面的计算机图形技术。"
 
 #: ../../manual/glossary/index.rst:521
 msgid "Object"
-msgstr "对象"
+msgstr "物体"
 
 #: ../../manual/glossary/index.rst:523
-#, fuzzy
 msgid ""
 "Container for a type (Mesh, Curve, Surface, Metaball, Text, Armature, Lattice, Empty, Camera, Light) and basic 3D transform data (:term:"
 "`Object Origin`)."
-msgstr "(网格、 曲线、 表面、 波浪、 文本、 电枢、 格子、 空、 相机、 灯) 的类型和基本的 3D 变换数据的容器 (: 词:' 对象中心 ')。"
+msgstr "类型(网格、曲线、曲面、融球、文本、骨架、晶格、 空物体、相机、 灯光)和基本三维变换数据(:term:`物体原点`)的容器。"
 
 #: ../../manual/glossary/index.rst:525
 msgid "Object Center"
-msgstr ""
+msgstr "物体中心"
 
 #: ../../manual/glossary/index.rst:526
 msgid "Object Origin"
-msgstr "物体原心"
+msgstr "物体原点"
 
 #: ../../manual/glossary/index.rst:528
 msgid "A reference point used to position, rotate, and scale an :term:`Object` and to define its :term:`Local Space` coordinates."
-msgstr "用于位置、 旋转和缩放的参考点 :term:`对象` 并定义其 :term:`局部空间` 的坐标。"
+msgstr "用于放置、旋转和缩放 :term:`物体` 的参考点，并定义其 :term:`局部空间` 的坐标。"
 
 #: ../../manual/glossary/index.rst:530
 msgid "Octahedron"
@@ -1283,23 +1252,21 @@ msgstr "八面体"
 
 #: ../../manual/glossary/index.rst:532
 msgid "An eight-sided figure commonly used to depict the :term:`Bones <Bone>` of an :term:`Armature`."
-msgstr "通常用来描绘八面图 :term:`骨头 <Bone>` 的 :term:`骨架 <Bone>` 。"
+msgstr "通常用来描绘八面图 :term:`骨头 <Bone>` 的 :term:`骨架` 。"
 
 #: ../../manual/glossary/index.rst:533
 msgid "OpenGL"
 msgstr "OpenGL"
 
 #: ../../manual/glossary/index.rst:535
-#, fuzzy
 msgid ""
 "The graphics system used by Blender (and many other graphics applications) for rendering 3D graphics, often taking advantage of hardware "
 "acceleration."
-msgstr "绘制3D图形，经常服用的硬件加速功能使用搅拌机（和许多其它图形应用）的图形系统。"
+msgstr "Blender(与很多其他应用)中用于渲染3D图形的图形系统，经常利用硬件加速。"
 
 #: ../../manual/glossary/index.rst:538
-#, fuzzy
 msgid "See also `OpenGL <https://en.wikipedia.org/wiki/OpenGL>`__ on Wikipedia."
-msgstr "另请参见'的OpenGL <http://en.wikipedia.org/wiki/OpenGL> `__维基百科。"
+msgstr "另见维基百科 `OpenGL <http://en.wikipedia.org/wiki/OpenGL>`__。"
 
 #: ../../manual/glossary/index.rst:539
 msgid "Overscan"
@@ -1307,12 +1274,11 @@ msgstr "过扫描"
 
 #: ../../manual/glossary/index.rst:541
 msgid "The term used to describe the situation. when not all of a televised image is present on a viewing screen."
-msgstr "这个词用来形容这种情况时，不是所有的电视图像出现在观看屏幕上。"
+msgstr "用来描述并非所有的电视图像都呈现在观看屏幕上的情况的术语。"
 
 #: ../../manual/glossary/index.rst:544
-#, fuzzy
 msgid "See also `Overscan <https://en.wikipedia.org/wiki/Overscan>`__ on Wikipedia."
-msgstr "另请参见'过扫描<http://en.wikipedia.org/wiki/Overscan> `__维基百科。"
+msgstr "另见维基百科 `过扫描<http://en.wikipedia.org/wiki/Overscan>`__。"
 
 #: ../../manual/glossary/index.rst:545
 msgid "Parent"
@@ -1320,7 +1286,7 @@ msgstr "父级"
 
 #: ../../manual/glossary/index.rst:547
 msgid "An :term:`Object` that affects its :term:`Child` objects."
-msgstr ":term:`对象`，会影响其 :term:`子级` 对象。"
+msgstr "会影响其 :term:`子级` 物体的 :term:`物体`。"
 
 #: ../../manual/glossary/index.rst:548
 msgid "Parenting"
@@ -1328,35 +1294,33 @@ msgstr "父级"
 
 #: ../../manual/glossary/index.rst:550
 msgid "Creating a :term:`Parent`-:term:`Child` relationship between two :term:`objects <Object>`."
-msgstr "为两个 :term:`对象 <Object>` 创建 :term:`父级`-:term:`子级` 关系。"
+msgstr "为两个 :term:`物体<Object>` 创建 :term:`父级`-:term:`子级` 关系。"
 
 #: ../../manual/glossary/index.rst:551
 msgid "Particle system"
 msgstr "粒子系统"
 
 #: ../../manual/glossary/index.rst:553
-#, fuzzy
 msgid ""
 "Technique that simulates certain kinds of fuzzy phenomena, which are otherwise very hard to reproduce with conventional rendering "
 "techniques. Common examples include fire, explosions, smoke, sparks, falling leaves, clouds, fog, snow, dust, meteor tails, stars, and "
 "galaxies, or abstract visual effects like glowing trails, magic spells. Also used for things like fur, grass or hair."
 msgstr ""
-"技术，模拟某些类型的模糊现象，这在其他方面很难再现与传统的渲染技术。常见的例子包括火灾，爆炸，烟雾，火花，落叶，云，雾，雪，沙尘，流星的"
-"尾巴，恒星和星系，还是像发光的路径，魔法抽象的视觉效果。也用于毛皮，草或毛发。"
+"模拟某些类型，很难使用传统渲染技术再现的模糊现象的技术。常见的例子包括火焰，爆炸，烟雾，火花，落叶，云，雾，雪，沙尘，流星的尾巴，恒星和"
+"星系，还有像发光的路径，魔法咒语的抽象视觉效果。也用于毛皮，草地或毛发。"
 
 #: ../../manual/glossary/index.rst:558
 msgid "Phong"
 msgstr "冯氏"
 
 #: ../../manual/glossary/index.rst:560
-#, fuzzy
 msgid ""
 "Local illumination model that can produce a certain degree of realism in three-dimensional objects by combining three elements: diffuse, "
 "specular and ambient for each considered point on a surface. It has several assumptions -- all lights are points, only surface geometry "
 "is considered, only local modeling of diffuse and specular, specular color is the same as light color, ambient is a global constant."
 msgstr ""
-"局部照明模型，可以通过组合三个要素产生一定程度的现实的三维对象：漫反射，镜面反射和环境为在表面上每考虑点。它具有若干假设 - 所有灯都点，漫"
-"射和镜面的唯一表面几何形状被认为，只有本地建模，镜面反射颜色是相同的光色，环境是一个全球性的常数。"
+"局部照明模型，通过组合三个要素：漫反射，镜面反射和表面上每个考虑点的环境光，在三维物体上产生一定程度真实感。它有若干假设 - 所有灯都是点"
+"光，仅考虑表面几何，仅漫射与高光本地建模，高光颜色与灯光颜色相同，环境光是全局常量。"
 
 #: ../../manual/glossary/index.rst:565
 msgid "Pivot Point"
@@ -1364,15 +1328,15 @@ msgstr "轴心点"
 
 #: ../../manual/glossary/index.rst:567
 msgid "The pivot point is the point in space around which all rotations, scalings and mirror transformations are centered."
-msgstr ""
+msgstr "轴心点是空间中旋转，缩放和镜像变换所围绕的点。"
 
 #: ../../manual/glossary/index.rst:570
 msgid "See also the :doc:`Pivot Point </scene_layout/object/editing/transform/control/pivot_point/index>` docs."
-msgstr ""
+msgstr "另见 :doc:`轴心点 </scene_layout/object/editing/transform/control/pivot_point/index>` 文档。"
 
 #: ../../manual/glossary/index.rst:571
 msgid "Pixel"
-msgstr "像素点"
+msgstr "像素"
 
 #: ../../manual/glossary/index.rst:573
 msgid ""
@@ -1382,11 +1346,11 @@ msgstr "在一个二维光栅图像信息的最小单位，代表单一颜色由
 
 #: ../../manual/glossary/index.rst:576
 msgid "Pole"
-msgstr "旋转极向轴"
+msgstr "极点"
 
 #: ../../manual/glossary/index.rst:578
 msgid ":term:`Vertex` where three, five, or more edges meet. A vertex connected to one, two, or four edges is not a pole."
-msgstr ":term:`Vertex` 其中三，五，以上边相遇。连接到一个，两个，或四个边缘顶点的是不是一个极点。"
+msgstr "三条，五条或更多边相遇的 :term:`顶点` 。与一条，两条，或四条边相连的顶点的不是极点。"
 
 #: ../../manual/glossary/index.rst:580
 msgid "Pose Mode"
@@ -1397,17 +1361,16 @@ msgid ""
 "Used for :term:`posing`, :term:`keyframing`, :term:`weight painting`, :term:`constraining <Constraint>` and :term:`parenting` the :term:"
 "`bones <Bone>` of an :term:`armature`."
 msgstr ""
-"用于  :term:`posing`, :term:`keyframing`, :term:`weight painting`, :term:`constraining <Constraint>` and :term:`parenting` the :term:"
-"`bones <Bone>` of an :term:`armature`."
+"用于 :term:`姿态`, :term:`插入关键帧`, :term:`权重绘制`, :term:`约束 <Constraint>` 与 :term:`骨架` 中 :term:`骨骼 <Bone>` :term:`父级`。"
 
 #: ../../manual/glossary/index.rst:584
 msgid "Posing"
-msgstr "姿势"
+msgstr "姿态"
 
 #: ../../manual/glossary/index.rst:586
 msgid ""
 "Moving, Rotating and Scaling the :term:`bones <Bone>` of an :term:`armature` to achieve an aesthetically pleasing pose for a character."
-msgstr "移动、 旋转和缩放 :term:`骨头<Bone>` 的 :term:`骨架` 实现为一个字符一个美观的姿势。"
+msgstr "移动、 旋转和缩放 :term:`骨架` 中 :term:`骨骼<Bone>`，为角色摆出美观的姿势。"
 
 #: ../../manual/glossary/index.rst:590 ../../manual/glossary/index.rst:724
 msgid "See :term:`Alpha Channel`."
@@ -1415,13 +1378,13 @@ msgstr "见 :term:`Alpha通道`."
 
 #: ../../manual/glossary/index.rst:591
 msgid "Primaries"
-msgstr ""
+msgstr "原色"
 
 #: ../../manual/glossary/index.rst:593
 msgid ""
 "In color theory, primaries (often known as primary colors) are the abstract lights, using an absolute model, that make up a :term:`color "
 "space`."
-msgstr ""
+msgstr "在颜色理论中，原色是指使用构成 :term:`色彩空间` 的绝对模型抽象出的光线。"
 
 #: ../../manual/glossary/index.rst:595
 msgid "Primitive"
@@ -1429,16 +1392,15 @@ msgstr "基本体"
 
 #: ../../manual/glossary/index.rst:597
 msgid "A basic object that can be used as a basis for modeling more complicated objects."
-msgstr "一个基本的目的，可以用来作为基础建模更复杂的对象。"
+msgstr "可以用来作为更加复杂物体建模基础的基本物体。"
 
 #: ../../manual/glossary/index.rst:598
 msgid "Procedural Texture"
 msgstr "程序纹理"
 
 #: ../../manual/glossary/index.rst:600
-#, fuzzy
 msgid "Computer generated (generic) textures that can be configured via different parameters."
-msgstr "电脑生成的（通用）的纹理。程序纹理可以通过参数进行配置。"
+msgstr "电脑生成的(通用)的纹理。程序纹理可以通过参数进行配置。"
 
 #: ../../manual/glossary/index.rst:601
 msgid "Projection"
@@ -1446,7 +1408,7 @@ msgstr "投射"
 
 #: ../../manual/glossary/index.rst:603
 msgid "In computer graphics, there are two common camera projections used."
-msgstr "在计算机图形学中有用于两个常见相机突起。"
+msgstr "在计算机图形学中，会用到两种常见的相机投射。"
 
 #: ../../manual/glossary/index.rst:610
 msgid "Perspective"
@@ -1460,55 +1422,54 @@ msgid ""
 "this *PO* line and the plane is the perspective projection of that point. By projecting all points *P* of the scene you get a "
 "perspective view."
 msgstr ""
+"*透视* 是通过在三维场景中一点 *O* 放置一个观察者构建出的几何视图。二维透视场景是通过在一点 *O* 的前方将要渲染二维场景的位置放置一个垂直于"
+"观察方向的平面构建的。对于三维场景中的每个点 *P*，绘制一条经过 *O* 与 *P* 的直线 *PO*。*PO* 与该平面的交点 *S* 就是该点的透视投影。通过投"
+"射场景中的所有点 *P*，就得到了透视视图。"
 
 #: ../../manual/glossary/index.rst:617
 msgid "Orthographic"
 msgstr "正交"
 
 #: ../../manual/glossary/index.rst:613
-#, fuzzy
 msgid ""
 "In an *orthographic* projection, you have a viewing direction but not a viewing point *O*. The line is then drawn through point *P* so "
 "that it is parallel to the viewing direction. The intersection *S* between the line and the plane is the orthographic projection of the "
 "point *P*. By projecting all points *P* of the scene you get the orthographic view."
 msgstr ""
-"在一个正交投影中,\n"
-"你有一个观察方向但不是观察点 ``O`` . 平行于观察方向画线穿过点 ``P``  . 与平面的相交点  ``S`` .\n"
-"通过投影所有点 ` `P``  得到的正交视图。"
+"在一个正交投影中，你有一个观察方向但不是观察点 **O**。平行于观察方向画线穿过点 *P*，与平面的交点 *S* 就是点 *P* 的正交投影。正交视图。通"
+"过投射场景中的所有点 *P*，就得到了正交视图。"
 
 #: ../../manual/glossary/index.rst:618
 msgid "Proxy"
-msgstr ""
+msgstr "代理"
 
 #: ../../manual/glossary/index.rst:620
 msgid ""
 "For video editing, a proxy is a smaller version of the original file, typically using an optimized video codec and lower resolution "
 "version (faster to load) that stands in for the main image or video."
-msgstr ""
+msgstr "对于视频编辑，代理就是原始文件的缩小版本，通常使用优化视频编码后且更低分辨率的版本(加载更快)来表示主图像或视频。"
 
 #: ../../manual/glossary/index.rst:624
 msgid ""
 "When proxies are built, editing functions like scrubbing and scrolling and compositing is much faster but gives lower resolution and "
 "slightly imprecise result."
-msgstr ""
+msgstr "建立代理后，类似拖动、滚动的编辑功能与合成会更快，但是显示的是分辨率较低且有细微偏差的结果。"
 
 #: ../../manual/glossary/index.rst:626
 msgid "Quad"
-msgstr ""
+msgstr "四边形"
 
 #: ../../manual/glossary/index.rst:627
-#, fuzzy
 msgid "Quadrilateral"
-msgstr "QuadQuadrilateralQuadrangle"
+msgstr "四边形"
 
 #: ../../manual/glossary/index.rst:628
-#, fuzzy
 msgid "Quadrangle"
-msgstr "三角网格图标"
+msgstr "四角形"
 
 #: ../../manual/glossary/index.rst:630
 msgid ":term:`Face` that contains exactly four :term:`vertices <vertex>`."
-msgstr ""
+msgstr "包含四个 :term:`顶点 <vertex>` 的 :term:`面`。"
 
 #: ../../manual/glossary/index.rst:631
 msgid "Quaternion"
@@ -1522,22 +1483,22 @@ msgstr "四元数旋转"
 msgid ""
 "Rotation method where rotations are defined by four values (X, Y, Z, and W). X, Y, and Z also define an :term:`axis`, and W an angle, "
 "but it is quite different from :term:`Axis Angle`."
-msgstr ""
+msgstr "使用四个数值(X, Y, Z与W)定义旋转的方法。 X, Y, 与 Z 还定义了 :term:`轴向`，而 W则是角度，但又与 :term:`轴向角度` 相当不一样。"
 
 #: ../../manual/glossary/index.rst:637
 msgid "Radiosity"
-msgstr "世界（环境颜色，光线传递，环境光遮蔽）"
+msgstr "辐射"
 
 #: ../../manual/glossary/index.rst:639
 msgid ""
 "A global lighting method that calculates patterns of light and shadow for rendering graphics images from three-dimensional models. One "
 "of the many different tools which can simulate diffuse lighting in Blender."
-msgstr ""
+msgstr "计算光照模式与阴影，用于从三维模型渲染图形图像的全局照明方法。Blender中可以模拟漫射光照的诸多工具之一。"
 
 #: ../../manual/glossary/index.rst:643
 #, python-format
 msgid "See also `Radiosity (computer graphics) <https://en.wikipedia.org/wiki/Radiosity_%28computer_graphics%29>`__ on Wikipedia."
-msgstr "另请参见维基百科 `光能(计算机图形) <https://en.wikipedia.org/wiki/Radiosity_%28computer_graphics%29>`__。"
+msgstr "另见维基百科 `光能(计算机图形) <https://en.wikipedia.org/wiki/Radiosity_%28computer_graphics%29>`__。"
 
 #: ../../manual/glossary/index.rst:646
 msgid "Random Seed"
@@ -1551,19 +1512,19 @@ msgstr "种子"
 msgid ""
 "Blender uses pseudo random number generators, which produce numbers that appear to be random, but given the same initial condition, they "
 "will always produce the exact same sequence of numbers."
-msgstr ""
+msgstr "Blender使用伪随机数生成器，产生看似随机的数字。但其实如果给予相同的初始条件，它们总会产生完全相同的数字序列。"
 
 #: ../../manual/glossary/index.rst:652
 msgid ""
 "This is a critical feature to get reproducible and/or stable effects (otherwise e.g. your hair simulation would change every time you re-"
 "run it, without any way to control the outcome)."
-msgstr ""
+msgstr "这是获得可再现与/或稳定效果的关键特性(否则，比如说每次重新运行后得到的毛发模拟结果都是不同的，没有任何方法控制结果)。"
 
 #: ../../manual/glossary/index.rst:656
 msgid ""
 "The **seed** is a number that represents the initial condition of a random generator, if you change its seed, it will produce a new "
 "sequence of pseudo-random numbers."
-msgstr ""
+msgstr "**种子** 是用来表示随机生成器的初始条件的数字。如果改变种子，将生成一串新的伪随机数。"
 
 #: ../../manual/glossary/index.rst:659
 msgid "See also `Random seed <https://en.wikipedia.org/wiki/Random_seed>`__ on Wikipedia."
@@ -1578,6 +1539,8 @@ msgid ""
 "Rendering technique that works by tracing the path taken by a ray of light through the scene, and calculating reflection, refraction, or "
 "absorption of the ray whenever it intersects an object in the world. More accurate than :term:`scanline`, but much slower."
 msgstr ""
+"通过跟踪一束光线在场景中经过的路径，并计算光线的与世界环境中相交物体间的反射、折射或吸收的渲染技术。比 :term:`扫描线` 更加准确，但也更"
+"慢。"
 
 #: ../../manual/glossary/index.rst:665
 msgid "Real User"
@@ -1585,7 +1548,7 @@ msgstr "真实用户"
 
 #: ../../manual/glossary/index.rst:667
 msgid "A Blender object, which is a :term:`Data User`. Opposite of :term:`Fake User`, which is only a program construct."
-msgstr ""
+msgstr "作为 :term:`数据用户` 的Blender物体。与仅仅只是程序结构的 :term:`伪用户` 相反。"
 
 #: ../../manual/glossary/index.rst:669
 msgid "Refraction"
@@ -1597,6 +1560,8 @@ msgid ""
 "refraction` to a medium with another. At the boundary between the media, the wave changes direction; its wavelength increases or "
 "decreases but frequency remains constant."
 msgstr ""
+"由于速度变化导致的波的方向变化。当波从一个介质进入另一个与之存在 :term:`折射率(Index Of Refraction)` 的介质时出现。在介质间的边界上波改变"
+"方向；其波长变长或变短，但是频率维持恒定。"
 
 #: ../../manual/glossary/index.rst:675
 msgid "Render"
@@ -1608,36 +1573,35 @@ msgstr "的计算生成三维几何2D图像的过程。"
 
 #: ../../manual/glossary/index.rst:678
 msgid "RGB"
-msgstr ""
+msgstr "RGB"
 
 #: ../../manual/glossary/index.rst:680
 msgid ""
 "A color model based on the traditional primary colors, Red/Green/Blue. RGB colors are also directly broadcasted to most computer "
 "monitors."
-msgstr ""
+msgstr "基于传统三原色(红/绿/蓝)的颜色模型。RGB也是直接播送到大多数电脑显示器的颜色。"
 
 #: ../../manual/glossary/index.rst:682
 msgid "Rig"
-msgstr "左/右骨命名在 rig 简单的一个例子。"
+msgstr "绑定"
 
 #: ../../manual/glossary/index.rst:684
 msgid "A system of relationships that determine how something moves. The act of building of such a system."
-msgstr "一种系统的关系，以决定物体的移动。这种制度建设的行为。"
+msgstr "一种决定物体的移动关系的系统。构建这种系统的行为。"
 
 #: ../../manual/glossary/index.rst:685
 msgid "Roll"
-msgstr ""
+msgstr "扭转"
 
 #: ../../manual/glossary/index.rst:686
-#, fuzzy
 msgid "Roll Angle"
-msgstr "三角网格图标"
+msgstr "扭转角度"
 
 #: ../../manual/glossary/index.rst:688
 msgid ""
 "The orientation of the local X and Z axes of a :term:`Bone`. Has no effect on the local Y axis as local Y is determined by the location "
 "of the :term:`Head` and :term:`Tail`."
-msgstr ""
+msgstr ":term:`骨骼` 局部X与Z轴向的朝向。对于Y轴没有影响，因为Y是由 :term:`头部` 与 :term:`尾端` 的位置决定的。"
 
 #: ../../manual/glossary/index.rst:691
 msgid "Rolling Shutter"
@@ -1649,6 +1613,8 @@ msgid ""
 "This, for example, make vertical straight lines being curved when doing a horizontal camera pan. See also `Rolling Shutter <https://en."
 "wikipedia.org/wiki/Rolling_shutter>`__ on Wikipedia."
 msgstr ""
+"在真实的CMOS相机中，传感器是使用扫描线读出的，因此在不同的时刻采样的扫描线也是不同的。举个例子来说，这使得在水平移动相机时将弯曲垂直方向"
+"的直线。另见维基百科 `卷帘快门 <https://en.wikipedia.org/wiki/Rolling_shutter>`__。"
 
 #: ../../manual/glossary/index.rst:697
 msgid "Roughness Map"
@@ -1656,29 +1622,29 @@ msgstr "糙度贴图"
 
 #: ../../manual/glossary/index.rst:699
 msgid "A grayscale texture that defines how rough or smooth the surface of a material is. This may also be known as a :term:`Glossy Map`."
-msgstr ""
+msgstr "定义材质表面粗糙与光滑程度的灰度贴图。也叫做 :term:`光泽贴图`。"
 
 #: ../../manual/glossary/index.rst:701
 msgid "Scanline"
-msgstr "使用反向Z缓冲渲染材质所在面 (仅扫描线)"
+msgstr "扫描线"
 
 #: ../../manual/glossary/index.rst:703
 msgid ""
 "Rendering technique. Much faster than :term:`ray tracing`, but allows fewer effects, such as reflections, refractions, motion blur and "
 "focal blur."
-msgstr ""
+msgstr "渲染技术。比 :term:`光线追踪` 更快，但效果更少，比如反射、折射、运动模糊与焦距模糊。"
 
 #: ../../manual/glossary/index.rst:705
 msgid "Scene Referenced"
-msgstr ""
+msgstr "场景参考"
 
 #: ../../manual/glossary/index.rst:707
 msgid "An image whose :term:`Luminance` channel is not limited."
-msgstr ""
+msgstr "不限制 :term:`亮度` 通道的图像。"
 
 #: ../../manual/glossary/index.rst:709
 msgid "See also :term:`Display Referenced`."
-msgstr ""
+msgstr "另见 :term:`显示参考`."
 
 #: ../../manual/glossary/index.rst:710
 msgid "Shading"
@@ -1688,7 +1654,7 @@ msgstr "着色"
 msgid ""
 "Process of altering the color of an object/surface in the 3D scene, based on its angle to lights and its distance from lights to create "
 "a photorealistic effect."
-msgstr "改变一个对象/表面的三维场景的颜色，是根据它的角度灯和灯的距离以创建逼真的效果的过程。"
+msgstr "改变三维场景中物体/表面的三维场景的颜色，基于其与灯光的角度，和到灯光的距离以创建逼真的效果的过程。"
 
 #: ../../manual/glossary/index.rst:714
 msgid "Smoothing"
@@ -1698,12 +1664,11 @@ msgstr "平滑"
 msgid ""
 "Defines how :term:`faces <face>` are shaded. Faces can be either solid (faces are rendered flat) or smooth (faces are smoothed by "
 "interpolating the normal on every point of the face)."
-msgstr ""
+msgstr "定义了 :term:`面 <face>` 的着色方式。面可以是立体的 (渲染为平直的) 或平滑的 (通过对面上每个点的法向进行插值得以平滑)."
 
 #: ../../manual/glossary/index.rst:718
-#, fuzzy
 msgid "Specular Light"
-msgstr "光线的高光亮调颜色"
+msgstr "高光光线"
 
 #: ../../manual/glossary/index.rst:720
 msgid "A light which is reflected precisely, like a mirror. Also used to refer to highlights on reflective objects."
@@ -1711,12 +1676,11 @@ msgstr "光这恰恰体现，像一面镜子。也用来指突出的反光物体
 
 #: ../../manual/glossary/index.rst:725
 msgid "SSS"
-msgstr ""
+msgstr "SSS"
 
 #: ../../manual/glossary/index.rst:726
-#, fuzzy
 msgid "Subsurface Scattering"
-msgstr "渲染时计算材质的次表面散射"
+msgstr "次表面散射(Subsurface Scattering)"
 
 #: ../../manual/glossary/index.rst:728
 msgid ""
@@ -1725,16 +1689,16 @@ msgid ""
 "materials such as marble, skin, and milk are extremely difficult to simulate realistically without taking subsurface scattering into "
 "account."
 msgstr ""
-"的光传输，其中光穿过半透明物体的表面机构，被散射通过与材料相互作用，并且退出表面在不同的点。所有非金属材料是半透明到一定程度。特别是，材"
-"料，如大理石，皮肤，乳和极难切实模拟没有考虑表面散射考虑。"
+"光线穿过半透明物体的表面，与材质交互时被散射，并在表面的另一个点透出的机制。所有非金属材料都在一定程度上是半透明的。尤其是材质如大理石，"
+"皮肤和牛奶在不考虑次表面散射的情况下都是极难切实模拟的。"
 
 #: ../../manual/glossary/index.rst:737
 msgid "Subdiv"
-msgstr ""
+msgstr "Subdiv"
 
 #: ../../manual/glossary/index.rst:738
 msgid "Subdivision Surface"
-msgstr "表面细分"
+msgstr "表面细分(Subdivision Surface)"
 
 #: ../../manual/glossary/index.rst:740
 msgid "A method of creating smooth higher poly surfaces which can take a low polygon mesh as input."
@@ -1744,7 +1708,7 @@ msgstr "一种接受低面数多边形网格作为输入，创建平滑的高面
 #, python-format
 msgid ""
 "See also `Catmull-Clark subdivision surface <https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__ on Wikipedia."
-msgstr "另请参见维基百科 `Catmull-Clark 细分曲面 <http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__ 。"
+msgstr "另见维基百科 `Catmull-Clark 细分曲面 <http://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface>`__ 。"
 
 #: ../../manual/glossary/index.rst:732
 msgid "Subdividing"
@@ -1754,7 +1718,9 @@ msgstr "网格细分工具"
 msgid ""
 "Technique for adding more geometry to a mesh. It creates new vertices on subdivided edges, new edges between subdivisions and new faces "
 "based on new edges. If new edges cross a new vertex is created at their crossing point."
-msgstr "技术添加更多几何网格。它创建于细分边缘，细分，并根据新边的新面之间的新边的新顶点。如果新的边跨一个新的顶点是在它们的交叉点创建。"
+msgstr ""
+"为网格增加更多几何元素的技术。在被细分的边上添加顶点，在细分点之间添加边，并基于新的边添加面。如果添加的边在一点相交，则在其交点添加顶"
+"点。"
 
 #: ../../manual/glossary/index.rst:745
 msgid "Tail"
@@ -1766,19 +1732,20 @@ msgid ""
 "conjunction with the :term:`Head` to define the local Y axis of a bone in :term:`Pose Mode`. The smaller of the two ends when displayed "
 "as an :term:`Octahedron`."
 msgstr ""
+":term:`骨骼` 次级构成，在骨架物体 的 :term:`局部空间` 中拥有X, Y, Z坐标。在 :term:`姿态模式` 中与 :term:`头部` 一起用来定义局部Y轴。 :"
+"term:`八面体` 显示模式下较小的一端。"
 
 #: ../../manual/glossary/index.rst:751
-#, fuzzy
 msgid "Tessellation"
-msgstr "插值"
+msgstr "密铺"
 
 #: ../../manual/glossary/index.rst:753
 msgid "The tiling of a plane using one or more geometric shapes usually resulting in :term:`Micropolygons`."
-msgstr ""
+msgstr "使用一个或更多形状填充平面的方法，通常结果为 :term:`微多边形`。"
 
 #: ../../manual/glossary/index.rst:754
 msgid "Texture"
-msgstr "纹理（Texture）"
+msgstr "纹理"
 
 #: ../../manual/glossary/index.rst:756
 msgid "Specifies visual patterns on surfaces and simulates physical surface structure."
@@ -1790,7 +1757,7 @@ msgstr "纹理空间"
 
 #: ../../manual/glossary/index.rst:759
 msgid "The bounding box to use when using *Generated* mapping to add a :term:`Texture` to an image."
-msgstr ""
+msgstr "使用 *生成* 映射 :term:`纹理` 到图像时的边界盒。"
 
 #: ../../manual/glossary/index.rst:760
 msgid "Timecode"
@@ -1800,16 +1767,15 @@ msgstr "时间码"
 msgid ""
 "A coded signal on videotape or film giving information about the frame number and time the frame was recorded. Timecodes are used to "
 "sync media between different recording devices, including both audio and video."
-msgstr ""
+msgstr "录像带或影片中提供帧编号与该帧录制时间的编码信号。时间码也用于在不同录制设备之间同步媒体(包括音频与视频)。"
 
 #: ../../manual/glossary/index.rst:764
 msgid "Title Safe"
-msgstr "动作安全区:"
+msgstr "字幕安全区"
 
 #: ../../manual/glossary/index.rst:766
-#, fuzzy
 msgid "Area of the screen visible on all devices. Place text and graphics inside this area to make sure they do not get cut off."
-msgstr "在屏幕上的所有设备的可见区域。将文本和图形这个区域内，以确保他们没有得到切断。"
+msgstr "在所有设备的屏幕上的可见区域。将文本和图形置于该区域内，以确保不会被切除。"
 
 #: ../../manual/glossary/index.rst:768
 msgid "Topology"
@@ -1818,24 +1784,23 @@ msgstr "拓扑"
 #: ../../manual/glossary/index.rst:770
 msgid ""
 "The arrangement of *Vertices*, *Edges*, and *Faces* which define the shape of a mesh. See :term:`vertex`, :term:`edge`, and :term:`face`."
-msgstr ""
+msgstr "定义网格形状的 *顶点*, *边*, 与 *面* 的排列方式。见 :term:`顶点`, :term:`边`, 与 :term:`面`。"
 
 #: ../../manual/glossary/index.rst:772
 msgid "Transforms"
 msgstr "变换"
 
 #: ../../manual/glossary/index.rst:774
-#, fuzzy
 msgid "The combined idea of location, rotation, and scale."
-msgstr "类似于“X位置”“X旋转”“X缩放”。"
+msgstr "移动、旋转与缩放的组合。"
 
 #: ../../manual/glossary/index.rst:775
 msgid "Triangle"
-msgstr "三角网格图标"
+msgstr "三角形"
 
 #: ../../manual/glossary/index.rst:777
 msgid ":term:`Face` with exactly three :term:`vertices <vertex>`."
-msgstr ""
+msgstr "三个 :term:`顶点 <vertex>` 组成的 :term:`面`。"
 
 #: ../../manual/glossary/index.rst:778
 msgid "User"
@@ -1854,8 +1819,8 @@ msgid ""
 "Defines a relation between the surface of a mesh and a 2D texture. In detail, each face of the mesh is mapped to a corresponding face on "
 "the texture. It is possible and often common practice to map several faces of the mesh to the same or overlapping areas of the texture."
 msgstr ""
-"定义了一个三维网状物的表面与2D纹理之间的关系。详细地，网格的每个面被映射到纹理上的相应表面。它是可能的，往往常见的做法网格的几个面映射到"
-"纹理的相同或重叠的区域。"
+"定义了网格表面与二维纹理之间的关系。详细地，网格的每个面被映射到纹理上的相应表面。可能的且常见的做法是将网格的几个面映射到纹理的相同或重"
+"叠的区域。"
 
 #: ../../manual/glossary/index.rst:787
 msgid "Vertex"
@@ -1868,25 +1833,26 @@ msgstr "顶点"
 #: ../../manual/glossary/index.rst:790
 msgid ""
 "A point in 3D space containing a location. It may also have a defined color. Vertices are the terminating points of :term:`edges <edge>`."
-msgstr ""
+msgstr "包含位置信息的三维空间中的点。它可能还包含一组定义好的颜色。顶点是 :term:`边 <edge>` 的端点。"
 
 #: ../../manual/glossary/index.rst:792
 msgid "Vertex Group"
-msgstr "Vertex Group顶点组"
+msgstr "顶点组"
 
 #: ../../manual/glossary/index.rst:794
 msgid "Collection of :term:`vertices <vertex>`. Vertex groups are useful for limiting operations to specific areas of a mesh."
-msgstr ""
+msgstr ":term:`顶点 <vertex>` 的集合。顶点组有助于将操作限制在网格的特定区域。"
 
 #: ../../manual/glossary/index.rst:796
 msgid "Voxel"
-msgstr "体素数据纹理的设定"
+msgstr "体素"
 
 #: ../../manual/glossary/index.rst:798
 msgid ""
 "A cubic 3D equivalent to the square 2D pixel. The name is a combination of the terms \"Volumetric\" and \":term:`Pixel <pixel>`\". Used "
 "to store smoke and fire data from physics simulations."
 msgstr ""
+"对应方形二维像素的等价三维立方体。 该名称是术语 \"体积\" 与 \":term:`像素 <pixel>`\" 的结合。用于存储来自物理模拟的烟雾与火焰数据。"
 
 #: ../../manual/glossary/index.rst:801
 msgid "Walk Cycle"
@@ -1896,7 +1862,7 @@ msgstr "行走循环"
 msgid ""
 "In animation, a walk cycle is a character that has just the walking function animated. Later on in the animation process, the character "
 "is placed in an environment and the rest of the functions are animated."
-msgstr ""
+msgstr "在动画中，行走循环是预先设置的角色行走功能。在后面的动画流程中，将该角色置于环境中，驱动余下的机能。"
 
 #: ../../manual/glossary/index.rst:806
 msgid "Weight Painting"
@@ -1904,22 +1870,22 @@ msgstr "权重绘制"
 
 #: ../../manual/glossary/index.rst:808
 msgid "Assigning :term:`vertices` to a :term:`Vertex Group` with a weight of 0.0 - 1.0."
-msgstr ""
+msgstr "将 :term:`顶点` 指定至 :term:`顶点组` ，并附带 0.0 - 1.0的权重。"
 
 #: ../../manual/glossary/index.rst:809
 msgid "White Point"
-msgstr ""
+msgstr "白场"
 
 #: ../../manual/glossary/index.rst:811
 msgid ""
 "A reference value for white light defined by what happens when all the primaries, of the particular color model, are combined evenly."
-msgstr ""
+msgstr "当特定颜色模型的所有原色均匀结合后定义出的白光的参考数值。"
 
 #: ../../manual/glossary/index.rst:814
 msgid ""
 "A white point is defined by a set of CIE illuminates which correspond to a color temperature. For example, D65 corresponds to 6500K "
 "light, D70 corresponding to 7000K and so on."
-msgstr ""
+msgstr "白场是由对应色温的一组CIE 照明定义的。例如，D65 对应 6500K 的光， D70 对应 7000K等等。"
 
 #: ../../manual/glossary/index.rst:816
 msgid "World Space"
@@ -1927,17 +1893,17 @@ msgstr "世界空间"
 
 #: ../../manual/glossary/index.rst:818
 msgid "A 3D coordinate system that originates at a point at the origin of the world. Compare to :term:`Local Space`."
-msgstr ""
+msgstr "原点位于世界原点的三维坐标系。对应 :term:`局部空间`。"
 
 #: ../../manual/glossary/index.rst:820
 msgid "Z-buffer"
-msgstr ""
+msgstr "Z缓冲"
 
 #: ../../manual/glossary/index.rst:822
 msgid ""
 "Raster-based storage of the distance measurement between the camera and the surface points. Surface points which are in front of the "
 "camera have a positive Z value and points behind have negative values. The Z-depth map can be visualized as a grayscale image."
-msgstr ""
+msgstr "基于栅格的相机与表面上点之间的测量距离存储。位于相机前方的点 Z深度为正值，而相机后方的则为负值。Z深度可直观化为灰度图。"
 
 #~ msgid "Bright concentrations of light focused by specular reflections or refracting objects."
 #~ msgstr "由物体的高光反射或折射形成的光的集中照亮部分。"
@@ -2040,8 +2006,8 @@ msgstr ""
 #~ "`Local Space` of the :term:`Armature` :term:`Object`. Used in conjunction with the :term:`Tail` to define the :term:`local <Local "
 #~ "Space>` Y axis of the :term:`Bone` in :term:`Pose Mode`. The larger of the two ends when drawn as an :term:`Octahedron`."
 #~ msgstr ""
-#~ ":term:`骨骼` 的子组件。所属 :term:`骨骼` 的旋转点。包含有 :term:`骨架` :term:`对象` 的 :term:`局部空间` 中的X、Y和Z坐标。用在与 :term:"
-#~ "`尾端` 的接合上来对 :term:`姿态模式` 中的 :term:`骨骼` 的 :term:`局部 <Local Space>` Y轴进行定义。绘制成 :term:`八面体` 时的两个大端。"
+#~ ":term:`骨骼` 的子组件。所属 :term:`骨骼` 的旋转点。包含有 :term:`骨架` :term:`物体` 的 :term:`局部空间` 中的X、Y和Z坐标。用在与 :term:"
+#~ "`尾端` 的接合上来对 :term:`姿态模式` 中的 :term:`骨骼` 的 :term:`局部 <Local Space>` Y轴进行定义。绘制成 :term:`八面体` 时较大的一端。"
 
 #~ msgid ""
 #~ "A *perspective* view is geometrically constructed by taking a scene in 3D and placing an observer at point *O*. The 2D perspective "
