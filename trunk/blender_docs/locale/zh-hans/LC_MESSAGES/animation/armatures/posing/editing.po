@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-27 11:43+0800\n"
-"PO-Revision-Date: 2019-08-08 22:34+0800\n"
+"POT-Creation-Date: 2019-08-09 11:29+0800\n"
+"PO-Revision-Date: 2019-08-09 11:33+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -13,13 +13,13 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/animation/armatures/posing/editing.rst:5
 msgid "Editing"
 msgstr "编辑"
 
-#: ../../manual/animation/armatures/posing/editing.rst:12
+#: ../../manual/animation/armatures/posing/editing.rst:13
 msgid ""
 "In *Pose Mode*, bones behave like objects. So the transform actions (move/rotate/scale, etc.) "
 "are very similar to the same ones in Object Mode (all available ones are regrouped in the :"
@@ -29,11 +29,11 @@ msgstr ""
 "像。 (所有可用的骨骼重新分组 在 :menuselection:`姿态 --> 形变`  子菜单）。但是，有一些重要的特"
 "点："
 
-#: ../../manual/animation/armatures/posing/editing.rst:17
+#: ../../manual/animation/armatures/posing/editing.rst:18
 msgid "Bones' relationships are crucial (see :ref:`bone-relations-parenting`)."
 msgstr "骨骼的关系至关重要（参见 :ref:`bone-relations-parenting`）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:18
+#: ../../manual/animation/armatures/posing/editing.rst:19
 msgid ""
 "The \"transform center\" of a given bone (i.e. its default pivot point, when it is the only "
 "selected one) is *its root*. Note by the way that some pivot point options seem to not work "
@@ -45,11 +45,11 @@ msgstr ""
 "选项似乎不能正常工作，实际上，除了 *3D游标* 之外，其它的似乎总是使用选择的中点（当 *激活物体* 被"
 "选中时，而不是例如激活骨骼的首端等）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:26
+#: ../../manual/animation/armatures/posing/editing.rst:27
 msgid "Basic Posing"
 msgstr "Basic Posing 基本姿势"
 
-#: ../../manual/animation/armatures/posing/editing.rst:28
+#: ../../manual/animation/armatures/posing/editing.rst:29
 msgid ""
 "As previously noted, bones' transformations are performed based on the *Rest Position* of the "
 "armature, which is its state as defined in *Edit Mode*. This means that in rest position, in "
@@ -60,17 +60,17 @@ msgstr ""
 "在 *姿态模式* 中，每个骨骼的缩放比例为1.0，零旋转和零位移(你可以在3D视图中按 :kbd:`N` 在 *变换* "
 "面板中看到)。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:38
+#: ../../manual/animation/armatures/posing/editing.rst:39
 msgid "An example of locally-Y-axis locked rotation, with two bones selected."
 msgstr "选择两个骨骼局部Y轴锁定旋转的示例。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:40
+#: ../../manual/animation/armatures/posing/editing.rst:41
 msgid ""
 "Note that the two green lines materializing the axes are centered on the armature's center, and "
 "not each bone's root..."
 msgstr "请注意，两条绿色的轴线以骨架的中心为中心，而不是每根骨骼的首端..."
 
-#: ../../manual/animation/armatures/posing/editing.rst:43
+#: ../../manual/animation/armatures/posing/editing.rst:44
 msgid ""
 "Moreover, the local space for these actions is the bone's own one (visible when you enable the "
 "*Axes* option of the *Armature* panel). This is especially important when using axis locking, "
@@ -82,7 +82,7 @@ msgstr ""
 "锁定时尤为重要，例如 *姿态模式* 中没有特定的“骨扭转”工具，因为你可以通过按 :kbd:`R Y Y` 键锁定在"
 "局部Y轴上的方式围绕骨骼的主轴旋转... 这也适用于选定的几个骨骼; 每个骨骼都锁定到自己的局部轴！"
 
-#: ../../manual/animation/armatures/posing/editing.rst:51
+#: ../../manual/animation/armatures/posing/editing.rst:52
 msgid ""
 "When you pose your armature, you are supposed to have one or more objects skinned on it! And "
 "obviously, when you transform a bone in *Pose Mode*, its related objects or object's shape is "
@@ -96,21 +96,21 @@ msgstr ""
 "物体，这可能会产生滞后，并让交互式编辑非常痛苦。如果遇到这种麻烦，请尝试启用 *骨架* 面板的 "
 "*Delay Deform（延迟变形）* 按钮，一旦应用了变换操作，蒙皮物体才会被更新。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:63
+#: ../../manual/animation/armatures/posing/editing.rst:64
 msgid "Auto IK"
 msgstr "自动IK"
 
-#: ../../manual/animation/armatures/posing/editing.rst:65
-#: ../../manual/animation/armatures/posing/editing.rst:80
-#: ../../manual/animation/armatures/posing/editing.rst:110
-#: ../../manual/animation/armatures/posing/editing.rst:149
-#: ../../manual/animation/armatures/posing/editing.rst:163
-#: ../../manual/animation/armatures/posing/editing.rst:176
-#: ../../manual/animation/armatures/posing/editing.rst:193
-#: ../../manual/animation/armatures/posing/editing.rst:206
-#: ../../manual/animation/armatures/posing/editing.rst:228
-#: ../../manual/animation/armatures/posing/editing.rst:306
-#: ../../manual/animation/armatures/posing/editing.rst:350
+#: ../../manual/animation/armatures/posing/editing.rst:66
+#: ../../manual/animation/armatures/posing/editing.rst:81
+#: ../../manual/animation/armatures/posing/editing.rst:111
+#: ../../manual/animation/armatures/posing/editing.rst:150
+#: ../../manual/animation/armatures/posing/editing.rst:164
+#: ../../manual/animation/armatures/posing/editing.rst:177
+#: ../../manual/animation/armatures/posing/editing.rst:194
+#: ../../manual/animation/armatures/posing/editing.rst:207
+#: ../../manual/animation/armatures/posing/editing.rst:229
+#: ../../manual/animation/armatures/posing/editing.rst:307
+#: ../../manual/animation/armatures/posing/editing.rst:351
 msgid "Reference"
 msgstr "参考"
 
@@ -118,16 +118,16 @@ msgstr "参考"
 msgid "Mode"
 msgstr "模式"
 
-#: ../../manual/animation/armatures/posing/editing.rst:68
-#: ../../manual/animation/armatures/posing/editing.rst:83
-#: ../../manual/animation/armatures/posing/editing.rst:113
-#: ../../manual/animation/armatures/posing/editing.rst:152
-#: ../../manual/animation/armatures/posing/editing.rst:166
-#: ../../manual/animation/armatures/posing/editing.rst:179
-#: ../../manual/animation/armatures/posing/editing.rst:196
-#: ../../manual/animation/armatures/posing/editing.rst:209
-#: ../../manual/animation/armatures/posing/editing.rst:231
-#: ../../manual/animation/armatures/posing/editing.rst:309
+#: ../../manual/animation/armatures/posing/editing.rst:69
+#: ../../manual/animation/armatures/posing/editing.rst:84
+#: ../../manual/animation/armatures/posing/editing.rst:114
+#: ../../manual/animation/armatures/posing/editing.rst:153
+#: ../../manual/animation/armatures/posing/editing.rst:167
+#: ../../manual/animation/armatures/posing/editing.rst:180
+#: ../../manual/animation/armatures/posing/editing.rst:197
+#: ../../manual/animation/armatures/posing/editing.rst:210
+#: ../../manual/animation/armatures/posing/editing.rst:232
+#: ../../manual/animation/armatures/posing/editing.rst:310
 msgid "Pose Mode"
 msgstr "姿态模式"
 
@@ -135,11 +135,11 @@ msgstr "姿态模式"
 msgid "Panel"
 msgstr "面板"
 
-#: ../../manual/animation/armatures/posing/editing.rst:69
+#: ../../manual/animation/armatures/posing/editing.rst:70
 msgid ":menuselection:`Sidebar region --> Tool --> Pose Options`"
 msgstr ":menuselection:`侧栏 --> 工具 --> 姿态选项 -->自动IK`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:71
+#: ../../manual/animation/armatures/posing/editing.rst:72
 msgid ""
 "The auto IK option in the Sidebar enables a temporary IK constraint when posing bones. The "
 "chain acts from the tip of the selected bone to root of the upper-most parent bone. Note that "
@@ -149,7 +149,7 @@ msgstr ""
 "侧栏中的自动IK选项在骨骼摆姿势时可以启用临时IK约束。链的行为从所选骨骼的尾端到最上面的父级骨的首"
 "端。请注意，此模式缺少选项，只能通过将结果转换应用于链中的骨骼来实现。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:78
+#: ../../manual/animation/armatures/posing/editing.rst:79
 msgid "Clear Transform"
 msgstr "Clear Transform 清除变换"
 
@@ -157,7 +157,7 @@ msgstr "Clear Transform 清除变换"
 msgid "Menu"
 msgstr "菜单"
 
-#: ../../manual/animation/armatures/posing/editing.rst:84
+#: ../../manual/animation/armatures/posing/editing.rst:85
 msgid ":menuselection:`Pose --> Clear Transform`"
 msgstr ":menuselection:`姿态 --> 清除变换`"
 
@@ -165,37 +165,37 @@ msgstr ":menuselection:`姿态 --> 清除变换`"
 msgid "Hotkey"
 msgstr "快捷键"
 
-#: ../../manual/animation/armatures/posing/editing.rst:85
+#: ../../manual/animation/armatures/posing/editing.rst:86
 msgid ":kbd:`Alt-G`, :kbd:`Alt-R`, :kbd:`Alt-S`"
 msgstr ":kbd:`Alt-G`, :kbd:`Alt-R`, :kbd:`Alt-S`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:87
+#: ../../manual/animation/armatures/posing/editing.rst:88
 msgid ""
 "Once you have transformed some bones, if you want to return to their rest position, just clear "
 "their transformations."
 msgstr "一旦你改变了一些骨骼，如果你想回到他们的重置位置，只要清除他们的变换。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:90
+#: ../../manual/animation/armatures/posing/editing.rst:91
 msgid "Location, Rotation, Scale :kbd:`Alt-G`, :kbd:`Alt-R`, :kbd:`Alt-S`"
 msgstr "位置，旋转，缩放 :kbd:`Alt-G`, :kbd:`Alt-R`, :kbd:`Alt-S`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:91
+#: ../../manual/animation/armatures/posing/editing.rst:92
 msgid "Clears individual transforms."
 msgstr "清除单个变换。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:92
+#: ../../manual/animation/armatures/posing/editing.rst:93
 msgid "All"
 msgstr "All"
 
-#: ../../manual/animation/armatures/posing/editing.rst:93
+#: ../../manual/animation/armatures/posing/editing.rst:94
 msgid "To clear everything at once."
 msgstr "立即清除所有内容。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:99
+#: ../../manual/animation/armatures/posing/editing.rst:100
 msgid "Reset Unkeyed"
 msgstr "Reset Unkeyed 重置非关键帧"
 
-#: ../../manual/animation/armatures/posing/editing.rst:95
+#: ../../manual/animation/armatures/posing/editing.rst:96
 msgid ""
 "Clears the transforms to their keyframe state. This operator is also available in the :"
 "menuselection:`Specials --> Clear User Transform` menu."
@@ -203,15 +203,15 @@ msgstr ""
 "将变换清除转换到关键帧状态。这个操作也可以用 :menuselection:`上下文菜单（默认右键） --> 清空姿态"
 "变换` 菜单项。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:99
+#: ../../manual/animation/armatures/posing/editing.rst:100
 msgid "Only Selected"
 msgstr "Only Selected 仅选定"
 
-#: ../../manual/animation/armatures/posing/editing.rst:99
+#: ../../manual/animation/armatures/posing/editing.rst:100
 msgid "Operate on just the selected or all bones."
 msgstr "仅在所选骨骼或所有骨骼上操作。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:101
+#: ../../manual/animation/armatures/posing/editing.rst:102
 msgid ""
 "Note that in *Envelope* visualization, :kbd:`Alt-S` does not clear the scale, but rather scales "
 "the *Distance* influence area of the selected bones (also available through the :menuselection:"
@@ -222,23 +222,23 @@ msgstr ""
 "影响区域（也可以通过： :menuselection:`姿态 -->形变 -->缩放封套间隔` 菜单项，这仅在 *封套"
 "（Envelope）* 可视化中有效，即使它始终可用...）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:108
+#: ../../manual/animation/armatures/posing/editing.rst:109
 msgid "Apply"
 msgstr "Apply  应用"
 
-#: ../../manual/animation/armatures/posing/editing.rst:114
+#: ../../manual/animation/armatures/posing/editing.rst:115
 msgid ":menuselection:`Pose --> Apply`"
 msgstr ":menuselection:`姿态--> 应用`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:115
+#: ../../manual/animation/armatures/posing/editing.rst:116
 msgid ":kbd:`Ctrl-A`"
 msgstr ":kbd:`Ctrl-A`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:120
+#: ../../manual/animation/armatures/posing/editing.rst:121
 msgid "Pose as Rest Pose"
 msgstr "将当前姿态应用为静置姿态。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:118
+#: ../../manual/animation/armatures/posing/editing.rst:119
 msgid ""
 "Conversely, you may define the current pose as the new rest pose (i.e. \"apply\" current "
 "transformations to the *Edit Mode*), When you do so, the skinned objects/geometry is **also** "
@@ -247,40 +247,40 @@ msgstr ""
 "相反，你可以将当前姿势定义为新的静置位置（即将当前变换应用于 *编辑模式* ），当你这样做时，蒙皮的"
 "物体/几何体 **也** 重置到其默认未变形的状态，这通常意味着你将不得不重新蒙皮。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:122
+#: ../../manual/animation/armatures/posing/editing.rst:123
 msgid "Pose Selected as Rest Pose"
 msgstr "将选中姿态应用为静置姿态。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:123
+#: ../../manual/animation/armatures/posing/editing.rst:124
 msgid "Same as *Pose as Rest Pose* but only applies to selected bones."
 msgstr "和 *将当前姿态应用为静置姿态* 相同，但仅用于选中的骨骼。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:124
+#: ../../manual/animation/armatures/posing/editing.rst:125
 msgid "Visual Transform to Pose"
 msgstr "将可视变换应用为新的姿态。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:125
-#: ../../manual/animation/armatures/posing/editing.rst:127
+#: ../../manual/animation/armatures/posing/editing.rst:126
+#: ../../manual/animation/armatures/posing/editing.rst:128
 msgid "TODO."
 msgstr "TODO。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:128
+#: ../../manual/animation/armatures/posing/editing.rst:129
 msgid "Assign Custom Property Values as Default"
 msgstr "将自定义属性值指定为默认值"
 
-#: ../../manual/animation/armatures/posing/editing.rst:131
+#: ../../manual/animation/armatures/posing/editing.rst:132
 msgid "In-Betweens"
 msgstr "间帧调整"
 
-#: ../../manual/animation/armatures/posing/editing.rst:136
+#: ../../manual/animation/armatures/posing/editing.rst:137
 msgid "In-Betweens Tools."
 msgstr "间帧调整工具"
 
-#: ../../manual/animation/armatures/posing/editing.rst:138
+#: ../../manual/animation/armatures/posing/editing.rst:139
 msgid "There are several tools for editing poses in an animation."
 msgstr "在动画中有几种编辑姿势的工具。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:140
+#: ../../manual/animation/armatures/posing/editing.rst:141
 msgid ""
 "There are also in *Pose Mode* a bunch of armature-specific editing options/tools, like :ref:"
 "`auto-bones naming <armature-editing-naming-bones>`, :ref:`properties switching/enabling/"
@@ -291,7 +291,7 @@ msgstr ""
 "bones>` ， :ref:`属性切换/启用/禁用 <armature-bone-properties>` 等等。我们已经在骨架编辑页面中描"
 "述过。看上面的链接..."
 
-#: ../../manual/animation/armatures/posing/editing.rst:147
+#: ../../manual/animation/armatures/posing/editing.rst:148
 msgid "Push Pose from Breakdown"
 msgstr "从补间姿态推移姿态"
 
@@ -299,32 +299,32 @@ msgstr "从补间姿态推移姿态"
 msgid "Tool"
 msgstr "工具"
 
-#: ../../manual/animation/armatures/posing/editing.rst:153
+#: ../../manual/animation/armatures/posing/editing.rst:154
 msgid ":menuselection:`Toolbar --> In-Betweens Tools --> Push`"
 msgstr ":menuselection:`工具栏 --> 间帧调整工具 --> 推`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:154
+#: ../../manual/animation/armatures/posing/editing.rst:155
 msgid ":menuselection:`Pose --> In-Betweens --> Push Pose from Breakdown`"
 msgstr ":menuselection:`姿态 --> 间帧调整 --> 从补间姿态推移姿态`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:155
+#: ../../manual/animation/armatures/posing/editing.rst:156
 msgid ":kbd:`Ctrl-E`"
 msgstr ":kbd:`Ctrl-E`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:157
+#: ../../manual/animation/armatures/posing/editing.rst:158
 msgid ""
 "*Push Pose* interpolates the current pose by making it closer to the next keyframed position."
 msgstr "使当前姿态的插值通过 *推移姿态* 更接近下一关键帧的位置。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:161
+#: ../../manual/animation/armatures/posing/editing.rst:162
 msgid "Push Pose from Rest"
 msgstr "从静置姿态推移姿态"
 
-#: ../../manual/animation/armatures/posing/editing.rst:167
+#: ../../manual/animation/armatures/posing/editing.rst:168
 msgid ":menuselection:`Pose --> In-Betweens --> Push Pose from Rest`"
 msgstr ":menuselection:`姿态 --> 间帧调整 --> 从静置姿态推移姿态`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:169
+#: ../../manual/animation/armatures/posing/editing.rst:170
 msgid ""
 "Similar to *Push Pose from Breakdown* but interpolates the pose to the rest position instead. "
 "Only one keyframe is needed for this tool unlike two for the other."
@@ -332,23 +332,23 @@ msgstr ""
 "与 *从补间姿态推移姿态* 类似，但将姿势推移到静置位置。 此工具只需要一个关键帧，而另一个关键帧不"
 "同。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:174
+#: ../../manual/animation/armatures/posing/editing.rst:175
 msgid "Relax Pose to Breakdown"
 msgstr "松弛姿态到补间姿态"
 
-#: ../../manual/animation/armatures/posing/editing.rst:180
+#: ../../manual/animation/armatures/posing/editing.rst:181
 msgid ":menuselection:`Toolbar --> In-Betweens Tools --> Relax`"
 msgstr ":menuselection:`工具栏 --> 间帧调整工具 --> 松弛`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:181
+#: ../../manual/animation/armatures/posing/editing.rst:182
 msgid ":menuselection:`Pose --> In-Betweens --> Relax Pose to Breakdown`"
 msgstr ":menuselection:`姿态 --> 间帧调整 --> 松弛姿态到补间姿态`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:182
+#: ../../manual/animation/armatures/posing/editing.rst:183
 msgid ":kbd:`Alt-E`"
 msgstr ":kbd:`Alt-E`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:184
+#: ../../manual/animation/armatures/posing/editing.rst:185
 msgid ""
 "Relax pose is somewhat related to the above topic, but it is only useful with keyframed bones. "
 "When you edit such a bone (and hence take it \"away\" from its \"keyed position\"), using this "
@@ -358,15 +358,15 @@ msgstr ""
 "松弛姿态与上述主题有些相关，但它只适用于关键帧。当你编辑这样一个骨骼（并因此将其从“关键位置”移"
 "开）时，使用此工具将逐渐“回到”其“关键位置”，随着越来越近的时候步调会越来越小。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:191
+#: ../../manual/animation/armatures/posing/editing.rst:192
 msgid "Relax Pose to Rest"
 msgstr "松弛姿态至静置姿态"
 
-#: ../../manual/animation/armatures/posing/editing.rst:197
+#: ../../manual/animation/armatures/posing/editing.rst:198
 msgid ":menuselection:`Pose --> In-Betweens --> Relax Pose to Rest`"
 msgstr ":menuselection:`姿态 --> 间帧调整 --> 松弛姿态到静置姿态`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:199
+#: ../../manual/animation/armatures/posing/editing.rst:200
 msgid ""
 "Similar to *Relax Pose to Breakdown* but works to bring the pose back to the rest position "
 "instead. Only one keyframe is needed for this tool unlike two for the other."
@@ -374,66 +374,66 @@ msgstr ""
 "类似于 *松弛姿态到间断姿态* 但是可以将姿态带回到静置位置。 此工具只需要一个关键帧，而另一个关键"
 "帧不同。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:204
+#: ../../manual/animation/armatures/posing/editing.rst:205
 msgid "Breakdowner"
 msgstr "Breakdowner 补间器"
 
-#: ../../manual/animation/armatures/posing/editing.rst:210
+#: ../../manual/animation/armatures/posing/editing.rst:211
 msgid ":menuselection:`Toolbar region --> In-Betweens Tools --> Breakdowner`"
 msgstr ":menuselection:`工具栏 --> 间帧调整工具 --> 补间器`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:211
+#: ../../manual/animation/armatures/posing/editing.rst:212
 msgid ":menuselection:`Pose --> In-Betweens --> Pose Breakdowner`"
 msgstr ":menuselection:`姿态 --> 间帧调整 --> 补间器`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:212
+#: ../../manual/animation/armatures/posing/editing.rst:213
 msgid ":kbd:`LMB`\\ -drag"
 msgstr ":kbd:`LMB`\\ -拖动"
 
-#: ../../manual/animation/armatures/posing/editing.rst:214
+#: ../../manual/animation/armatures/posing/editing.rst:215
 msgid "Creates a suitable breakdown pose on the current frame."
 msgstr "在当前帧创建一个合适的补间姿态。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:216
+#: ../../manual/animation/armatures/posing/editing.rst:217
 msgid ""
 "The Breakdowner tool can be constrained to work on specific transforms and axes, by pressing "
 "the following keys while the tool is active:"
 msgstr ""
 "通过在工具处于活动状态时按下以下键，“补间（Breakdowner）”工具可以约束在特定变换和轴上工作："
 
-#: ../../manual/animation/armatures/posing/editing.rst:219
+#: ../../manual/animation/armatures/posing/editing.rst:220
 msgid ":kbd:`G`, :kbd:`R`, :kbd:`S`: move, rotate, scale"
 msgstr ":kbd:`G`, :kbd:`R`, :kbd:`S`: 移动、旋转、缩放"
 
-#: ../../manual/animation/armatures/posing/editing.rst:220
+#: ../../manual/animation/armatures/posing/editing.rst:221
 msgid ":kbd:`B`: Bendy bones"
 msgstr ":kbd:`B`: 软骨骼"
 
-#: ../../manual/animation/armatures/posing/editing.rst:221
+#: ../../manual/animation/armatures/posing/editing.rst:222
 msgid ":kbd:`C`: custom properties"
 msgstr ":kbd:`C`: 自定义属性"
 
-#: ../../manual/animation/armatures/posing/editing.rst:222
+#: ../../manual/animation/armatures/posing/editing.rst:223
 msgid ":kbd:`X`, :kbd:`Y`, :kbd:`Z`: to the corresponding axes"
 msgstr ":kbd:`X`, :kbd:`Y`, :kbd:`Z`: 对应轴向"
 
-#: ../../manual/animation/armatures/posing/editing.rst:226
+#: ../../manual/animation/armatures/posing/editing.rst:227
 msgid "Copy/Paste Pose"
 msgstr "复制/粘贴姿态"
 
-#: ../../manual/animation/armatures/posing/editing.rst:232
+#: ../../manual/animation/armatures/posing/editing.rst:233
 msgid ""
-":menuselection:`Pose --> Copy Current Pose`, :menuselection:`Pose --> Paste Pose`, :"
-"menuselection:`Pose --> Paste X-Flipped Pose`"
+":menuselection:`Pose --> Copy Pose`, :menuselection:`Pose --> Paste Pose`, :menuselection:`Pose "
+"--> Paste Pose Flipped`"
 msgstr ""
 ":menuselection:`姿态 --> 复制姿态`, :menuselection:`姿态 --> 粘贴姿态`, :menuselection:`姿态 --"
 "> 粘贴已翻转姿态`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:235
+#: ../../manual/animation/armatures/posing/editing.rst:236
 msgid ":kbd:`Ctrl-C` :kbd:`Ctrl-V` :kbd:`Shift-Ctrl-V`"
 msgstr ":kbd:`Ctrl-C` :kbd:`Ctrl-V` :kbd:`Shift-Ctrl-V`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:239
+#: ../../manual/animation/armatures/posing/editing.rst:240
 msgid ""
 "Blender allows you to copy and paste a pose, either through the *Pose* menu, or by using "
 "hotkeys."
@@ -441,35 +441,35 @@ msgstr ""
 "Blender 允许你通过 *姿态* 菜单复制和粘贴姿势，或直接使用3D视图标题右侧部分的三个“复制/粘贴”按"
 "钮："
 
-#: ../../manual/animation/armatures/posing/editing.rst:242
-msgid "Copy Current Pose"
-msgstr "Copy Current Pose 复制当前姿势"
-
 #: ../../manual/animation/armatures/posing/editing.rst:243
+msgid "Copy Pose"
+msgstr "复制姿态"
+
+#: ../../manual/animation/armatures/posing/editing.rst:244
 msgid "Copy the current pose of selected bones into the pose buffer."
 msgstr "将所选骨骼的当前姿势复制到姿势缓存。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:244
+#: ../../manual/animation/armatures/posing/editing.rst:245
 msgid "Paste Pose"
 msgstr "Paste Pose 粘贴姿势"
 
-#: ../../manual/animation/armatures/posing/editing.rst:245
+#: ../../manual/animation/armatures/posing/editing.rst:246
 msgid "Paste the buffered pose to the currently posed armature."
 msgstr "将缓存的姿势粘贴到当前姿势的骨骼上。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:247
-msgid "Paste X-Flipped Pose"
+#: ../../manual/animation/armatures/posing/editing.rst:248
+msgid "Paste Pose Flipped"
 msgstr "粘贴已翻转姿态"
 
-#: ../../manual/animation/armatures/posing/editing.rst:247
+#: ../../manual/animation/armatures/posing/editing.rst:248
 msgid "Paste the *X axis mirrored* buffered pose to the currently posed armature."
 msgstr "将缓存姿势翻转粘贴到当前姿势的骨骼上。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:249
+#: ../../manual/animation/armatures/posing/editing.rst:250
 msgid "Here are important points:"
 msgstr "以下是重点："
 
-#: ../../manual/animation/armatures/posing/editing.rst:251
+#: ../../manual/animation/armatures/posing/editing.rst:252
 msgid ""
 "This tool works at the Blender session level, which means you can use it across armatures, "
 "scenes, and even files. However, the pose buffer is not saved, so you lose it when you close "
@@ -478,17 +478,17 @@ msgstr ""
 "该工具在Blender会话阶段工作，这意味着你可以在电影，场景甚至文件中使用它。但是，姿势缓存不保存，"
 "所以当你关闭Blender时，你将丢失它。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:253
+#: ../../manual/animation/armatures/posing/editing.rst:254
 msgid "There is only one pose buffer."
 msgstr "只有一个姿势缓存。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:254
+#: ../../manual/animation/armatures/posing/editing.rst:255
 msgid ""
 "Only the selected bones are taken into account during copying (i.e. you copy only selected "
 "bones' pose)."
 msgstr "在复制期间只考虑所选择的骨骼（即仅复制选定的骨骼姿势）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:255
+#: ../../manual/animation/armatures/posing/editing.rst:256
 msgid ""
 "During pasting, on the other hand, bone selection has no importance. The copied pose is applied "
 "on a per-name basis (i.e. if you had a ``forearm`` bone selected when you copied the pose, the "
@@ -499,7 +499,7 @@ msgstr ""
 "制姿势时选择了“前臂”骨骼，则当粘贴它时，当前姿势的骨骼会获得其姿势 - 如果没有这样的命名的骨骼，"
 "什么都不会发生...）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:260
+#: ../../manual/animation/armatures/posing/editing.rst:261
 msgid ""
 "What is copied and pasted is in fact the position/rotation/scale of each bone, in its own "
 "space. This means that the resulting pasted pose might be very different from the originally "
@@ -508,83 +508,83 @@ msgstr ""
 "实际上，复制和粘贴的是每个骨骼在其自身空间中的位置/旋转/缩放。这意味着所产生的粘贴姿势可能与原始"
 "复制的姿势有很大不同，具体取决于："
 
-#: ../../manual/animation/armatures/posing/editing.rst:263
+#: ../../manual/animation/armatures/posing/editing.rst:264
 msgid "The rest position of the bones,"
 msgstr "我们原来骨架的重置位置。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:264
+#: ../../manual/animation/armatures/posing/editing.rst:265
 msgid "and the current pose of their parents."
 msgstr "以及他们父级目前的姿势。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:270
+#: ../../manual/animation/armatures/posing/editing.rst:271
 msgid "The rest position of our original armature."
 msgstr "我们原来骨架的重置位置。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:274
+#: ../../manual/animation/armatures/posing/editing.rst:275
 msgid "The rest position of our destination armature."
 msgstr "我们目标骨架的重置位置。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:276
+#: ../../manual/animation/armatures/posing/editing.rst:277
 msgid "Examples of pose copy/paste."
 msgstr "姿势复制/粘贴示例。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:280
+#: ../../manual/animation/armatures/posing/editing.rst:281
 msgid "The first copied pose (note that only two bones are selected and hence copied)."
 msgstr "第一个复制的姿势（注意，只选择了两个骨骼，因此复制它们）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:284
+#: ../../manual/animation/armatures/posing/editing.rst:285
 msgid "...pasted on the destination armature..."
 msgstr "...粘贴在目标骨架上..."
 
-#: ../../manual/animation/armatures/posing/editing.rst:288
-#: ../../manual/animation/armatures/posing/editing.rst:300
+#: ../../manual/animation/armatures/posing/editing.rst:289
+#: ../../manual/animation/armatures/posing/editing.rst:301
 msgid "...and mirror-pasted on the destination armature."
 msgstr "...镜像粘贴在目标骨架上。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:292
+#: ../../manual/animation/armatures/posing/editing.rst:293
 msgid "The same pose as above is copied, but this time with all bones selected, ..."
 msgstr "上面同样的姿势被复制，但是这次所有骨骼都被选中了，…"
 
-#: ../../manual/animation/armatures/posing/editing.rst:296
+#: ../../manual/animation/armatures/posing/editing.rst:297
 msgid "... pasted on the destination armature..."
 msgstr "...粘贴在目标骨架上..."
 
-#: ../../manual/animation/armatures/posing/editing.rst:304
+#: ../../manual/animation/armatures/posing/editing.rst:305
 msgid "Propagate"
 msgstr "传导"
 
-#: ../../manual/animation/armatures/posing/editing.rst:310
+#: ../../manual/animation/armatures/posing/editing.rst:311
 msgid ":menuselection:`Pose --> Propagate`"
 msgstr ":menuselection:`姿态 --> 传导`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:311
+#: ../../manual/animation/armatures/posing/editing.rst:312
 msgid ":kbd:`Alt-P`"
 msgstr ":kbd:`Alt-P`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:313
+#: ../../manual/animation/armatures/posing/editing.rst:314
 msgid ""
 "The Propagate tool copies the pose of the selected bones on the current frame over to the "
 "keyframes delimited by the *Termination Mode*. It automates the process of copying and pasting."
 msgstr ""
 "传导工具将当前帧上所选骨骼的姿态复制到由 *终止模式* 分隔的关键帧。它自动化复制和粘贴的过程。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:319
+#: ../../manual/animation/armatures/posing/editing.rst:320
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/animation/armatures/posing/editing.rst:340
+#: ../../manual/animation/armatures/posing/editing.rst:341
 msgid "Termination Mode"
 msgstr "终止模式"
 
-#: ../../manual/animation/armatures/posing/editing.rst:322
+#: ../../manual/animation/armatures/posing/editing.rst:323
 msgid "Modes which determine how it decides when to stop overwriting keyframes."
 msgstr "确定如何决定何时停止覆盖关键帧的模式。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:326
+#: ../../manual/animation/armatures/posing/editing.rst:327
 msgid "While Held"
 msgstr "While Held 当保持时"
 
-#: ../../manual/animation/armatures/posing/editing.rst:325
+#: ../../manual/animation/armatures/posing/editing.rst:326
 msgid ""
 "The most complicated of the modes available, as it tries to guess when to stop propagating by "
 "examining the pauses in the animation curves per control (i.e. all F-curves for a bone, instead "
@@ -593,29 +593,29 @@ msgstr ""
 "最复杂的模式，因为它试图通过检查每个控件的动画曲线中的暂停来猜测何时停止传播（即骨骼的所有F曲"
 "线，而不是每个F曲线）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:328
+#: ../../manual/animation/armatures/posing/editing.rst:329
 msgid "To Next Keyframe"
 msgstr "To Next Keyframe 到下一关键帧"
 
-#: ../../manual/animation/armatures/posing/editing.rst:329
+#: ../../manual/animation/armatures/posing/editing.rst:330
 msgid ""
 "Simply copies the pose to the first keyframe after (but not including any keyframe on) the "
 "current frame."
 msgstr "简单地将姿势复制到当前帧之后的第一个关键帧（但不包括任何关键帧）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:330
+#: ../../manual/animation/armatures/posing/editing.rst:331
 msgid "To Last Keyframe"
 msgstr "To Last Keyframe 到上一关键帧"
 
-#: ../../manual/animation/armatures/posing/editing.rst:331
+#: ../../manual/animation/armatures/posing/editing.rst:332
 msgid "Will simply replace the last keyframe (i.e. making action cyclic)."
 msgstr "将简单地替换最后一个关键帧。 （即循环动作）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:334
+#: ../../manual/animation/armatures/posing/editing.rst:335
 msgid "Before Frame"
 msgstr "Before Frame 指定帧之前"
 
-#: ../../manual/animation/armatures/posing/editing.rst:333
+#: ../../manual/animation/armatures/posing/editing.rst:334
 msgid ""
 "To all keyframes between current frame and the *End frame* option. This option is best suited "
 "for use from scripts due to the difficulties in setting this frame value, though it is possible "
@@ -624,81 +624,81 @@ msgstr ""
 "到当前帧和 *结束帧* 选项之间的所有关键帧。此选项最适合脚本使用，因为设置此帧值时有困难，尽管如果"
 "需要，可以通过操作 :ref:`ui-undo-redo-adjust-last-operation` 面板手动设置此选项。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:336
+#: ../../manual/animation/armatures/posing/editing.rst:337
 msgid "Before Last Keyframe"
 msgstr "Before Last Keyframe 上一关键帧之前"
 
-#: ../../manual/animation/armatures/posing/editing.rst:337
+#: ../../manual/animation/armatures/posing/editing.rst:338
 msgid "To all keyframes from current frame until no more are found."
 msgstr "从当前帧到所有关键帧，直到找不到更多关键帧。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:338
+#: ../../manual/animation/armatures/posing/editing.rst:339
 msgid "On Selected Keyframes"
 msgstr "On Selected Keyframes 在选定的关键帧"
 
-#: ../../manual/animation/armatures/posing/editing.rst:339
+#: ../../manual/animation/armatures/posing/editing.rst:340
 msgid "Will apply the pose of the selected bones to all selected keyframes."
 msgstr "将所选骨骼的姿势应用于所有选定的关键帧。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:340
+#: ../../manual/animation/armatures/posing/editing.rst:341
 msgid "On Selected Markers"
 msgstr "On Selected Markers  在所选标记"
 
-#: ../../manual/animation/armatures/posing/editing.rst:341
+#: ../../manual/animation/armatures/posing/editing.rst:342
 msgid "To all keyframes occurring on frames with Scene Markers after the current frame."
 msgstr "发生在当前帧之后具有场景标记的帧上的所有关键帧。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:345
+#: ../../manual/animation/armatures/posing/editing.rst:346
 msgid "End Frame"
 msgstr "End Frame 结束帧"
 
-#: ../../manual/animation/armatures/posing/editing.rst:343
+#: ../../manual/animation/armatures/posing/editing.rst:344
 msgid ""
 "Defines the upper-bound for the frame range within which keyframes will be affected (with the "
 "lower bound being the current frame)."
 msgstr "定义关键帧将受影响的帧范围的上限（下限为当前帧）。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:348
+#: ../../manual/animation/armatures/posing/editing.rst:349
 msgid "Show/Hide"
 msgstr "Show/Hide 显示/隐藏"
 
-#: ../../manual/animation/armatures/posing/editing.rst:353
+#: ../../manual/animation/armatures/posing/editing.rst:354
 msgid "All Modes"
 msgstr "所有模式"
 
-#: ../../manual/animation/armatures/posing/editing.rst:354
+#: ../../manual/animation/armatures/posing/editing.rst:355
 msgid ":menuselection:`Properties editor --> Bone --> Viewport Display`"
 msgstr ":menuselection:`属性编辑器 --> 骨骼 --> 视图显示`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:355
+#: ../../manual/animation/armatures/posing/editing.rst:356
 msgid ":menuselection:`... --> Show/Hide`"
 msgstr ":menuselection:`... --> 显示/隐藏`"
 
-#: ../../manual/animation/armatures/posing/editing.rst:357
+#: ../../manual/animation/armatures/posing/editing.rst:358
 msgid ""
 "You do not have to use bone layers to show/hide some bones. As with objects, vertices or "
 "control points, you can use :kbd:`H`:"
 msgstr "你不必使用骨骼层来显示/隐藏一些骨骼。和物体，顶点或控制点一样，您可以使用快捷键 :kbd:`H`:"
 
-#: ../../manual/animation/armatures/posing/editing.rst:360
+#: ../../manual/animation/armatures/posing/editing.rst:361
 msgid ":kbd:`H` will hide the selected bone(s)."
 msgstr ":kbd:`H` 将隐藏选定的骨骼。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:361
+#: ../../manual/animation/armatures/posing/editing.rst:362
 msgid ":kbd:`Shift-H` will hide all bones *but the selected one(s)*."
 msgstr ":kbd:`Shift-H` 将隐藏所有骨骼 *但除了所选的那个* 。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:362
+#: ../../manual/animation/armatures/posing/editing.rst:363
 msgid ":kbd:`Alt-H` will show all hidden bones."
 msgstr ":kbd:`Alt-H` 将显示所有隐藏的骨骼。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:364
+#: ../../manual/animation/armatures/posing/editing.rst:365
 msgid ""
 "You can also use the *Hide* checkbox of the :menuselection:`Bone tab --> Viewport Display "
 "panel`."
 msgstr "您也可以使用显示面板（ :menuselection:`骨骼选项卡 --> 视图显示面板` )  的 *隐藏* 复选框。"
 
-#: ../../manual/animation/armatures/posing/editing.rst:366
+#: ../../manual/animation/armatures/posing/editing.rst:367
 msgid ""
 "Note that hidden bones are specific to a mode, i.e. you can hide some bones in *Edit Mode*, "
 "they will still be visible in *Pose Mode*, and vice versa. Hidden bones in *Pose Mode* are also "
@@ -765,3 +765,9 @@ msgstr ""
 
 #~ msgid "Relax Pose"
 #~ msgstr "Relax Pose  放缓姿态"
+
+#~ msgid "Copy Current Pose"
+#~ msgstr "Copy Current Pose 复制当前姿势"
+
+#~ msgid "Paste X-Flipped Pose"
+#~ msgstr "粘贴已翻转姿态"
