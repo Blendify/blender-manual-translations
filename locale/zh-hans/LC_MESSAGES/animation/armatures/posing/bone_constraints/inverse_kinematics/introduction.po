@@ -9,41 +9,38 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 11:43+0800\n"
-"PO-Revision-Date: 2019-06-07 15:07+0800\n"
+"PO-Revision-Date: 2019-08-09 15:20+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:4
 msgid "Introduction"
 msgstr "简介"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:6
-msgid ""
-"IK simplifies the animation process, and makes it possible to make more "
-"advanced animations with lesser effort."
+msgid "IK simplifies the animation process, and makes it possible to make more advanced animations with lesser effort."
 msgstr "IK简化了动画过程，并且可以用较少的努力制作更高级的动画。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:9
 msgid ""
-"IK allows you to position the last bone in a bone chain and the other "
-"bones are positioned automatically. This is like how moving someone's "
-"finger would cause his arm to follow it. By normal posing techniques, you"
-" would have to start from the root bone, and set bones sequentially until"
-" you reach the tip bone: When each parent bone is moved, its child bone "
-"would inherit its location and rotation. Thus making tiny precise changes"
-" in poses becomes harder farther down the chain, as you may have to "
+"IK allows you to position the last bone in a bone chain and the other bones are positioned automatically. This is like how moving someone's finger would cause his arm "
+"to follow it. By normal posing techniques, you would have to start from the root bone, and set bones sequentially until you reach the tip bone: When each parent bone "
+"is moved, its child bone would inherit its location and rotation. Thus making tiny precise changes in poses becomes harder farther down the chain, as you may have to "
 "adjust all the parent bones first."
-msgstr "IK允许你摆放骨骼链中的最后一个骨骼，并且其他骨骼将自动定位。这就像移动某人的手指会使他的手臂跟随它。通过正常的姿势技术，是你必须从根骨开始，并且依次设置骨骼，直到到达尖端骨骼：移动每个父骨骼时，其子级骨骼将继承其位置和旋转。因此，做出微小的姿态变化都会将变得越来越难控制，因为你也许必须首先调整所有的父级骨骼才完成姿态。"
+msgstr ""
+"IK允许你通过摆放骨骼链中的最后一个骨骼来将其他骨骼自动调整位置。这就像移动某人的手指会使他的手臂跟随它。而通过正常的姿势技术，是必须从根骨开始，并且依次设置骨骼，直到到"
+"达尖端骨骼：移动每个父骨骼时，其子级骨骼将继承其位置和旋转。因此，做出微小的姿态变化都会将变得越来越难控制，因为你也许必须首先调整所有的父级骨骼才完成姿态。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:18
 msgid "This effort is effectively avoided by use of IK."
-msgstr "通过使用IK有效地避免了这一问题。"
+msgstr "IK就是解决这一问题的有效办法。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:22
 msgid "Automatic IK"
@@ -70,44 +67,33 @@ msgid "Panel"
 msgstr "面板"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:28
-#, fuzzy
 msgid ":menuselection:`Sidebar region --> Tool --> Pose Options`"
-msgstr ":menuselection:`工具栏 --> 选项 --> 姿态选项`"
+msgstr ":menuselection:`侧边栏 --> 工具 --> 姿态选项`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:30
 msgid ""
-"Automatic IK is a tool for quick posing, it can be enabled in the Toolbar"
-" in the 3D View, when in Pose Mode. When the Auto IK option is enabled, "
-"translating a bone will activate inverse kinematics and rotate the parent"
-" bone, and the parent's parent, and so on, to follow the selected bone. "
-"The IK chain can only extend from a child to a parent bone if the child "
-"is *connected* to it."
+"Automatic IK is a tool for quick posing, it can be enabled in the Toolbar in the 3D View, when in Pose Mode. When the Auto IK option is enabled, translating a bone "
+"will activate inverse kinematics and rotate the parent bone, and the parent's parent, and so on, to follow the selected bone. The IK chain can only extend from a child "
+"to a parent bone if the child is *connected* to it."
 msgstr ""
+"自动IK是快速摆放姿势的工具，可以在“姿态模式”下在3D视图的侧边栏中启用。 启用“自动IK”选项后，调整骨骼将激活反向运动学并旋转父级骨骼，依此类推，以跟随选定的骨骼。 如果子级"
+"与 *连接* ，则IK链只能从子骨骼延伸到父骨骼。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:36
 msgid ""
-"The length of the chain is increased (if there is a connected parent "
-"available to add to it) with :kbd:`Ctrl-PageUp` or :kbd:`Ctrl-WheelDown`,"
-" and decreased with :kbd:`Ctrl-PageDown` or :kbd:`Ctrl-WheelUp`. However,"
-" the initial chain length is 0, which effectively means follow the "
-"connections to parent bones as far as possible, with no length limit. So "
-"pressing :kbd:`Ctrl-PageUp` the first time sets the chain length to 1 "
-"(move only the selected bone), and pressing :kbd:`Ctrl-PageDown` at this "
-"point sets it back to 0 (unlimited) again. Thus, you have to press :kbd"
-":`Ctrl-PageUp` *more than once* from the initial state to set a finite "
-"chain length greater than 1."
+"The length of the chain is increased (if there is a connected parent available to add to it) with :kbd:`Ctrl-PageUp` or :kbd:`Ctrl-WheelDown`, and decreased with :kbd:"
+"`Ctrl-PageDown` or :kbd:`Ctrl-WheelUp`. However, the initial chain length is 0, which effectively means follow the connections to parent bones as far as possible, with "
+"no length limit. So pressing :kbd:`Ctrl-PageUp` the first time sets the chain length to 1 (move only the selected bone), and pressing :kbd:`Ctrl-PageDown` at this "
+"point sets it back to 0 (unlimited) again. Thus, you have to press :kbd:`Ctrl-PageUp` *more than once* from the initial state to set a finite chain length greater than "
+"1."
 msgstr ""
-"链条的长度可以通过按 :kbd:`Ctrl-PageUp` 或 :kbd:`Ctrl-WheelDown` "
-"增加（如果还有连接的父级可以添加到它），可以通过按 :kbd:`Ctrl-PageDown` 或 :kbd:`Ctrl-WheelUp` "
-"减少。然而，链的初始长度为0，这有效地意味着尽可能地远离跟随父骨骼的连接，没有长度限制。所以按 :kbd:`Ctrl-PageUp` "
-"第一次将链条长度设置为1（仅移动所选骨骼），然后按 :kbd:`Ctrl-PageDown` "
-"在这一点现在将其设置为0（无限制）。因此，你必须从初始状态按 :kbd:`Ctrl-PageUp`  *多次* 设置大于1的有限链长度。"
+"链条的长度可以通过按 :kbd:`PageUp` 或 :kbd:`滚轮向下` 增加（如果还有连接的父级可以再继续增加），可以通过按 :kbd:`PageDown` 或 :kbd:`滚轮向上` 减少。链的初始长度为0，这"
+"有效地意味着尽可能地远离跟随父骨骼的连接，没有长度限制。所以按 :kbd:`PageUp` 第一次将链条长度设置为1（仅移动所选骨骼），然后按 :kbd:`PageDown` 在这一点现在将其设置为"
+"0（无限制）。因此，你必须从初始状态按 :kbd:`PageUp`  *多次* 设置大于1的有限链长度。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:47
-msgid ""
-"This is a more limited feature than using an IK constraint, which can be "
-"configured, but it can be useful for quick posing."
-msgstr "这是比可以配置的IK约束， 有更多受限的功能，但它可以用于快速摆放姿态。"
+msgid "This is a more limited feature than using an IK constraint, which can be configured, but it can be useful for quick posing."
+msgstr "这是比起可以配置的IK约束有更多受限的功能，但它可以用于快速摆放姿态。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:52
 msgid "IK Constraints"
@@ -115,18 +101,17 @@ msgstr "IK Constraints IK 约束"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:54
 msgid ""
-"IK is mostly done with bone constraints. They work by the same method but"
-" offer more choices and settings. Please refer to these pages for detail "
-"about the settings for the constraints:"
+"IK is mostly done with bone constraints. They work by the same method but offer more choices and settings. Please refer to these pages for detail about the settings "
+"for the constraints:"
 msgstr "IK主要是用骨骼约束。以相同的方法工作，但提供更多的选择和设置的有关约束设置的详细信息，请参阅这些页面："
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:58
 msgid ":doc:`IK Solver </animation/constraints/tracking/ik_solver>`"
-msgstr ":doc:`IK解算 </animation/constraints/tracking/ik_solver>`"
+msgstr ":doc:`IK反向运动学约束 </animation/constraints/tracking/ik_solver>`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:59
 msgid ":doc:`Spline IK </animation/constraints/tracking/spline_ik>`"
-msgstr ":doc:`Spline IK </animation/constraints/tracking/spline_ik>`"
+msgstr ":doc:`样条线IK约束 </animation/constraints/tracking/spline_ik>`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:63
 msgid "Armature IK Panel"
@@ -134,300 +119,260 @@ msgstr "Armature IK Panel 骨架IK面板"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:69
 msgid ":menuselection:`Properties editor --> Armature --> Inverse Kinematics`"
-msgstr ":menuselection:`Properties editor --> Armature --> Inverse Kinematics`"
+msgstr ":menuselection:`属性编辑器 --> 骨架 --> 反向动力学`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:71
-msgid ""
-"This panel is used to select the IK Solver type for the armature: "
-"*Standard* or *iTaSC*. Most the time people will use the *Standard* IK "
-"solver."
+msgid "This panel is used to select the IK Solver type for the armature: *Standard* or *iTaSC*. Most the time people will use the *Standard* IK solver."
 msgstr "该面板用于为骨架选择IK解算器类型。 *标准* 或 *iTaSC* 。大多数时候，人们会使用 *标准* IK解算。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:80
 msgid "Standard"
-msgstr ""
+msgstr "标准"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:82
 msgid "TODO."
-msgstr ""
+msgstr "TODO。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:89
 msgid "iTaSC"
-msgstr ""
+msgstr "iTaSC"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:93
 msgid "iTaSC stands for instantaneous Task Specification using Constraints."
-msgstr ""
+msgstr "iTaSC代表使用约束的即时任务规范。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:95
 msgid ""
-"iTaSC uses a different method to compute the Jacobian, which makes it "
-"able to handle other constraints than just end effectors position and "
-"orientation: iTaSC is a generic multi-constraint IK solver. However, this"
-" capability is not yet fully exploited in the current implementation, "
-"only two other types of constraints can be handled: Distance in the "
-"Cartesian space, and Joint Rotation in the joint space. The first one "
-"allows maintaining an end effector inside, at, or outside a sphere "
-"centered on a target position, the second one is the capability to "
-"control directly the rotation of a bone relative to its parent. Those "
-"interested in the mathematics can find a short description of the method "
-"used to build the Jacobian here."
+"iTaSC uses a different method to compute the Jacobian, which makes it able to handle other constraints than just end effectors position and orientation: iTaSC is a "
+"generic multi-constraint IK solver. However, this capability is not yet fully exploited in the current implementation, only two other types of constraints can be "
+"handled: Distance in the Cartesian space, and Joint Rotation in the joint space. The first one allows maintaining an end effector inside, at, or outside a sphere "
+"centered on a target position, the second one is the capability to control directly the rotation of a bone relative to its parent. Those interested in the mathematics "
+"can find a short description of the method used to build the Jacobian here."
 msgstr ""
+"iTaSC使用不同的方法来计算雅可比矩阵，这使得它能够处理除了末端效应器位置和方向之外的其他约束：iTaSC是一个通用的多约束IK解算器。 但是，在当前实现中尚未充分利用此功能，只"
+"能处理两种其他类型的约束：笛卡尔空间中的距离和关节空间中的联合旋转。 第一个允许将末端执行器保持在以目标位置为中心的球体内部，内部或外部，第二个是能够直接控制骨骼相对于"
+"其父体的旋转。 那些对数学感兴趣的人可以在这里找到用于构建雅可比矩阵方法的简短描述。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:104
 msgid ""
-"iTaSC accepts a mix of constraints, and multiple constraints per bone: "
-"the solver computes the optimal pose according to the respective weights "
-"of each constraint. This is a major improvement from the current "
-"constraint system where constraints are solved one by one in order of "
-"definition so that conflicting constraints overwrite each other."
+"iTaSC accepts a mix of constraints, and multiple constraints per bone: the solver computes the optimal pose according to the respective weights of each constraint. "
+"This is a major improvement from the current constraint system where constraints are solved one by one in order of definition so that conflicting constraints overwrite "
+"each other."
 msgstr ""
+"iTaSC接受混合约束和每个骨骼的多个约束：求解器根据每个约束的相应权重计算最佳姿势。 这是对当前约束系统的重大改进，其中约束按照定义的顺序逐个求解，使得冲突约束彼此重写。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:111
 msgid "Precision"
-msgstr ""
+msgstr "精度"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:110
 msgid ""
-"The maximum variation of the end effector between two successive "
-"iterations at which a pose is obtained that is stable enough and the "
-"solver should stop the iterations. Lower values means higher precision on"
-" the end effector position."
-msgstr ""
+"The maximum variation of the end effector between two successive iterations at which a pose is obtained that is stable enough and the solver should stop the "
+"iterations. Lower values means higher precision on the end effector position."
+msgstr "两个连续迭代之间的末端执行器的最大变化，其中获得足够稳定的姿势并且求解器应该停止迭代。 值越小意味着末端执行器位置的精度越高。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:113
 msgid "Iterations"
-msgstr ""
+msgstr "迭代"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:114
 msgid "The upper bound for the number of iterations."
-msgstr ""
+msgstr "迭代次数的上限。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:144
 msgid "Solver"
-msgstr ""
+msgstr "解算器"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:116
 msgid "Selects the inverse Jacobian solver that iTaSC will use."
-msgstr ""
+msgstr "选择iTaSC将使用的逆向雅可比解算器。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:121
 msgid ":abbr:`SDLS (Selective Damped Least Square)`"
-msgstr ""
+msgstr ":abbr:`SDLS (Selective Damped Least Square 选择性阻尼最小二乘法)`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:119
 msgid ""
-"Computes the damping automatically by estimating the level of "
-"'cancelation' in the armature kinematics. This method works well with the"
-" Copy Pose constraint but has the drawback of damping more than necessary"
-" around the singular pose, which means slower movements. Of course, this "
-"is only noticeable in Simulation mode."
+"Computes the damping automatically by estimating the level of 'cancelation' in the armature kinematics. This method works well with the Copy Pose constraint but has "
+"the drawback of damping more than necessary around the singular pose, which means slower movements. Of course, this is only noticeable in Simulation mode."
 msgstr ""
+"通过估计骨架运动学中的“取消”水平自动计算阻尼。 这种方法适用于复制姿势约束，但缺点是在单一姿势周围阻尼超过必要，这意味着移动较慢。 当然，这仅在模拟模式下才会显着。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:136
 msgid ":abbr:`DLS (Damped Least Square)`"
-msgstr ""
+msgstr ":abbr:`DLS (阻尼最小二乘)`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:124
-msgid ""
-"Computes the damping manually which can provide more reactivity and more "
-"precision."
-msgstr ""
+msgid "Computes the damping manually which can provide more reactivity and more precision."
+msgstr "手动计算阻尼，可提供更高的反应性和更高的精度。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:127
 msgid "Damping Max"
-msgstr ""
+msgstr "最大阻尼"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:127
 msgid ""
-"Maximum amount of damping. Smaller values means less damping, hence more "
-"velocity and better precision but also more risk of oscillation at "
-"singular pose. 0 means no damping at all."
-msgstr ""
+"Maximum amount of damping. Smaller values means less damping, hence more velocity and better precision but also more risk of oscillation at singular pose. 0 means no "
+"damping at all."
+msgstr "最大阻尼量。值越小意味着阻尼越小，因此速度越快，精度越高，但在单一姿态下抖动的风险也越大。 0表示根本没有阻尼。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:131
 msgid "Damping Epsilon"
-msgstr ""
+msgstr "Damping Epsilon 小量阻尼"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:130
 msgid ""
-"Range of the damping zone around singular pose. Smaller values means a "
-"smaller zone of control and greater risk of passing over the singular "
-"pose, which means oscillation."
-msgstr ""
+"Range of the damping zone around singular pose. Smaller values means a smaller zone of control and greater risk of passing over the singular pose, which means "
+"oscillation."
+msgstr "单一姿态周围的阻尼区域范围。 较小的值意味着较小的控制区域和更大通过单一姿势的风险，这意味着抖动。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:135
-msgid ""
-"*Damping* and *Epsilon* must be tuned for each armature. You should use "
-"the smallest values that preserve stability."
-msgstr ""
+msgid "*Damping* and *Epsilon* must be tuned for each armature. You should use the smallest values that preserve stability."
+msgstr "必须针对每个骨架调整 *阻尼* 和 *小量* 。 您应该使用保持稳定性的最小值。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:140
 msgid ""
-"The SDLS solver does not work together with a Distance constraint. You "
-"must use the DLS solver if you are going to have a singular pose in your "
-"animation with the Distance constraint."
-msgstr ""
+"The SDLS solver does not work together with a Distance constraint. You must use the DLS solver if you are going to have a singular pose in your animation with the "
+"Distance constraint."
+msgstr "SDLS解算器不能和“距离”约束一起使用。 如果要使用“距离”约束在动画中使用单一姿势，则必须使用DLS解算器。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:143
 msgid "Both solvers perform well if you do not have a singular pose."
-msgstr ""
+msgstr "如果你没有单一姿势，两个解算器都能使用。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:147
 msgid "Animation"
-msgstr ""
+msgstr "动画"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:149
 msgid ""
-"In Animation mode, iTaSC operates like an IK-solver: it is stateless and "
-"uses the pose from F-curves interpolation as the start pose before the IK"
-" convergence. The target velocity is ignored and the solver converges "
-"until the given precision is obtained. Still the new solver is usually "
-"faster than the old one and provides features that are inherent to iTaSC:"
-" multiple targets per bone and multiple types of constraints."
+"In Animation mode, iTaSC operates like an IK-solver: it is stateless and uses the pose from F-curves interpolation as the start pose before the IK convergence. The "
+"target velocity is ignored and the solver converges until the given precision is obtained. Still the new solver is usually faster than the old one and provides "
+"features that are inherent to iTaSC: multiple targets per bone and multiple types of constraints."
 msgstr ""
+"在动画模式下，iTaSC像IK解算器一样运行：它是无状态的，并使用来自F曲线插值的姿势作为IK收敛之前的起始姿势。 忽略目标速度，求解器收敛，直到获得给定的精度。 新解算器通常比旧"
+"解算器更快，并提供iTaSC固有的功能：每个骨骼有多个目标和多种类型的约束。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:157
 msgid "Simulation"
-msgstr ""
+msgstr "模拟"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:159
 msgid ""
-"The Simulation mode is the stateful mode of the solver: it estimates the "
-"target's velocity, operates in a 'true time' context, ignores rotation "
-"from keyframes (except via a joint rotation constraint) and builds up a "
-"state cache automatically."
-msgstr ""
+"The Simulation mode is the stateful mode of the solver: it estimates the target's velocity, operates in a 'true time' context, ignores rotation from keyframes (except "
+"via a joint rotation constraint) and builds up a state cache automatically."
+msgstr "模拟模式是求解器的有状态模式：它估计目标的速度，在“真实时间”上下文中操作，忽略关键帧的旋转（通过关节旋转约束除外）并自动构建状态缓存。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:179
 msgid "Reiteration"
-msgstr ""
+msgstr "重复"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:165
 msgid "Never"
-msgstr ""
+msgstr "从不"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:165
 msgid ""
-"The solver starts from the rest pose and does not reiterate (converges) "
-"even for the first frame. This means that it will take a few frames to "
-"get to the target at the start of the animation."
-msgstr ""
+"The solver starts from the rest pose and does not reiterate (converges) even for the first frame. This means that it will take a few frames to get to the target at the "
+"start of the animation."
+msgstr "求解器从静止姿势开始，即使对于第一帧也不重复（收敛）。 这意味着在动画开始时需要几帧才能到达目标。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:173
 msgid "Initial"
-msgstr ""
+msgstr "初始"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:168
 msgid ""
-"The solver starts from the rest pose and re-iterates until the given "
-"precision is achieved, but only on the first frame (i.e. a frame which "
-"doesn't have any previous frame in the cache). This option basically "
-"allows you to choose a different start pose than the rest pose and it is "
-"the default value. For the subsequent frames, the solver will track the "
-"target by integrating the joint velocity computed by the Jacobian solver "
-"over the time interval that the frame represents. The precision of the "
-"tracking depends on the feedback coefficient, number of substeps and "
-"velocity of the target."
+"The solver starts from the rest pose and re-iterates until the given precision is achieved, but only on the first frame (i.e. a frame which doesn't have any previous "
+"frame in the cache). This option basically allows you to choose a different start pose than the rest pose and it is the default value. For the subsequent frames, the "
+"solver will track the target by integrating the joint velocity computed by the Jacobian solver over the time interval that the frame represents. The precision of the "
+"tracking depends on the feedback coefficient, number of substeps and velocity of the target."
 msgstr ""
+"求解器从静止姿势开始并重新迭代直到达到给定精度，但仅在第一帧（即，在高速缓存中没有任何先前帧的帧）上。 此选项基本上允许您选择与其余姿势不同的开始姿势，它是默认值。 对于"
+"后续帧，解算器将通过在帧表示的时间间隔内对雅可比解算器计算的关节速度进行积分来跟踪目标。 跟踪精度取决于反馈系数，步数和目标速度。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:179
 msgid "Always"
-msgstr ""
+msgstr "总是"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:176
 msgid ""
-"The solver re-iterates on each frame until the given precision is "
-"achieved. This option omits most of the iTaSC dynamic behavior: the "
-"maximum joint velocity and the continuity between frames is not "
-"guaranteed anymore in compensation of better precision on the end "
-"effector positions. It is an intermediate mode between *Animation* and "
-"real-time *Simulation*."
+"The solver re-iterates on each frame until the given precision is achieved. This option omits most of the iTaSC dynamic behavior: the maximum joint velocity and the "
+"continuity between frames is not guaranteed anymore in compensation of better precision on the end effector positions. It is an intermediate mode between *Animation* "
+"and real-time *Simulation*."
 msgstr ""
+"求解器在每个帧上重新迭代，直到达到给定的精度。 此选项省略了大部分iTaSC动态行为：不再保证最大关节速度和帧之间的连续性，以补偿末端执行器位置的更好精度。 它是 *动画* 和 *"
+"模拟* 真实时间之间的中间模式。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:193
 msgid "Auto Step"
-msgstr ""
+msgstr "自动步长"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:182
 msgid ""
-"Use this option if you want to let the solver set how many substeps "
-"should be executed for each frame. A substep is a subdivision on the time"
-" between two frames for which the solver evaluates the IK equation and "
-"updates the joint position. More substeps means more processing but "
-"better precision on tracking the targets. The auto step algorithm "
-"estimates the optimal number of steps to get the best trade-off between "
-"processing and precision. It works by estimation of the nonlinearity of "
-"the pose and by limiting the amplitude of joint variation during a "
-"substep. It can be configured with next two parameters:"
+"Use this option if you want to let the solver set how many substeps should be executed for each frame. A substep is a subdivision on the time between two frames for "
+"which the solver evaluates the IK equation and updates the joint position. More substeps means more processing but better precision on tracking the targets. The auto "
+"step algorithm estimates the optimal number of steps to get the best trade-off between processing and precision. It works by estimation of the nonlinearity of the pose "
+"and by limiting the amplitude of joint variation during a substep. It can be configured with next two parameters:"
 msgstr ""
+"如果要让解算器设置每帧应执行的子步数，请使用此选项。 子步骤是两个帧之间时间的细分，求解器为此计算IK方程并更新关节位置。 更多子步骤意味着更多处理，但跟踪目标的精度更"
+"高。 自动步进算法估计最佳步数，以在处理和精度之间获得最佳折衷。 它通过估计姿势的非线性和通过限制子步骤期间关节变化的幅度来工作。 它可以配置下两个参数："
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:191
 msgid "Min"
-msgstr ""
+msgstr "最小步数"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:191
-msgid ""
-"Proposed minimum substep duration (in second). The auto step algorithm "
-"may reduce the substep further based on joint velocity."
-msgstr ""
+msgid "Proposed minimum substep duration (in second). The auto step algorithm may reduce the substep further based on joint velocity."
+msgstr "建议的最小子步持续时间（秒）。 自动步进算法可以进一步基于关节速度减少子步骤。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:193
 msgid "Max"
-msgstr ""
+msgstr "最大步数"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:194
-msgid ""
-"Maximum substep duration (in second). The auto step algorithm will not "
-"allow substep longer than this value."
-msgstr ""
+msgid "Maximum substep duration (in second). The auto step algorithm will not allow substep longer than this value."
+msgstr "最大子步持续时间（秒）。 自动步进算法不允许子步长超过此值。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:198
 msgid "Steps"
-msgstr ""
+msgstr "步数"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:196
 msgid ""
-"If Auto Step is disabled, you can choose a fixed number of substeps with "
-"this parameter. Substep should not be longer than 10ms, which means the "
-"number of steps is 4 for a 25 fps animation. If the armature seems "
-"unstable (vibrates) between frames, you can improve the stability by "
-"increasing the number of steps."
+"If Auto Step is disabled, you can choose a fixed number of substeps with this parameter. Substep should not be longer than 10ms, which means the number of steps is 4 "
+"for a 25 fps animation. If the armature seems unstable (vibrates) between frames, you can improve the stability by increasing the number of steps."
 msgstr ""
+"如果禁用“自动步进”，则可以使用此参数选择固定数量的子步骤。 子步不应超过10毫秒，这意味着25 fps动画的步数为4。 如果骨架在帧之间看起来不稳定（振动），则可以通过增加步数来"
+"提高稳定性。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:211
 msgid "Feedback"
-msgstr ""
+msgstr "反馈"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:201
 msgid ""
-"Coefficient on end effector position error to set corrective joint "
-"velocity. The time constant of the error correction is the inverse of "
-"this value. However, this parameter has little effect on the dynamic of "
-"the armature since the algorithm evaluates the target velocity in any "
-"case. Setting this parameter to 0 means 'opening the loop': the solver "
-"tracks the velocity but not the position; the error will accumulate "
-"rapidly. Setting this value too high means an excessive amount of "
-"correction and risk of instability. The value should be in the range "
-"20-100. Default value is 20, which means that tracking errors are "
-"corrected in a typical time of 100-200ms. The feedback coefficient is the"
-" reason why the armature continues to move slightly in Simulation mode "
-"even if the target has stopped moving: the residual error is "
+"Coefficient on end effector position error to set corrective joint velocity. The time constant of the error correction is the inverse of this value. However, this "
+"parameter has little effect on the dynamic of the armature since the algorithm evaluates the target velocity in any case. Setting this parameter to 0 means 'opening "
+"the loop': the solver tracks the velocity but not the position; the error will accumulate rapidly. Setting this value too high means an excessive amount of correction "
+"and risk of instability. The value should be in the range 20-100. Default value is 20, which means that tracking errors are corrected in a typical time of 100-200ms. "
+"The feedback coefficient is the reason why the armature continues to move slightly in Simulation mode even if the target has stopped moving: the residual error is "
 "progressively suppressed frame after frame."
 msgstr ""
+"末端执行器位置误差的系数，用于设定矫正关节速度。 纠错的时间常数是该值的倒数。 然而，该参数对骨架的动作几乎没有影响，因为算法在任何情况下都评估目标速度。 将此参数设置为0"
+"意味着“打开循环”：求解器跟踪速度而不是位置; 错误会迅速累积。 将此值设置得太高意味着过度的校正和不稳定的风险。 该值应在20-100范围内。 默认值为20，这意味着在100-200ms的典"
+"型时间内纠正跟踪错误。 反馈系数是即使目标已经停止移动，骨架在模拟模式下继续轻微移动的原因：残余误差逐帧被逐步抑制。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:218
 msgid "Max Velocity"
-msgstr ""
+msgstr "最大速度"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:214
 msgid ""
-"Indicative maximum joint velocity in radian per second. This parameter "
-"has an important effect on the armature dynamic. Smaller value will cause"
-" the armature to move slowly and lag behind if the targets are moving "
-"rapidly. You can simulate an inertia by setting this parameter to a low "
-"value."
+"Indicative maximum joint velocity in radian per second. This parameter has an important effect on the armature dynamic. Smaller value will cause the armature to move "
+"slowly and lag behind if the targets are moving rapidly. You can simulate an inertia by setting this parameter to a low value."
 msgstr ""
+"指示性最大关节速度，以弧度/秒为单位。 该参数对骨架动作有重要影响。 如果目标快速移动，较小的值将导致电枢缓慢移动并滞后。 您可以通过将此参数设置为较低值来模拟惯性。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:223
 msgid "Bone IK Panel"
@@ -435,7 +380,7 @@ msgstr "骨骼 IK 面板"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:229
 msgid ":menuselection:`Properties editor --> Bone --> Inverse Kinematics`"
-msgstr ":menuselection:`Properties editor --> Bone --> Inverse Kinematics`"
+msgstr ":menuselection:`属性编辑器 --> 骨骼 --> 反向运动学`"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:231
 msgid "This panel is used to control how the *Pose Bones* work in the IK chain."
@@ -475,41 +420,34 @@ msgstr "围绕轴限制运动。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:251
 msgid "iTaSC Solver"
-msgstr ""
+msgstr "iTaSC 解算器"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:253
-msgid ""
-"If the :ref:`iTaSC IK Solver <rigging-armatures_posing_bone-"
-"constraints_ik_model_itasc>` is used, the bone IK panel changes to add "
-"these additional parameters."
-msgstr ""
+msgid "If the :ref:`iTaSC IK Solver <rigging-armatures_posing_bone-constraints_ik_model_itasc>` is used, the bone IK panel changes to add these additional parameters."
+msgstr "如果使用 :ref:`iTaSC IK解算器 <rigging-armatures_posing_bone-constraints_ik_model_itasc>` 则骨骼IK面板会更改以添加这些附加参数。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:269
 msgid "Control Rotation"
-msgstr ""
+msgstr "控制旋转"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:257
 msgid ""
-"Activates a joint rotation constraint on that bone. The pose rotation "
-"computed from Action or UI interaction will be converted into a joint "
-"value and passed to the solver as target for the joint. This will give "
-"you control over the joint while the solver still tracks the other IK "
-"targets. You can use this feature to give a preferred pose for joints "
-"(e.g. rest pose) or to animate a joint angle by playing an action on it."
+"Activates a joint rotation constraint on that bone. The pose rotation computed from Action or UI interaction will be converted into a joint value and passed to the "
+"solver as target for the joint. This will give you control over the joint while the solver still tracks the other IK targets. You can use this feature to give a "
+"preferred pose for joints (e.g. rest pose) or to animate a joint angle by playing an action on it."
 msgstr ""
+"激活该骨骼上的关节旋转约束。 从Action或UI交互计算的姿势旋转将转换为关节值，并作为关节的目标传递给解算器。 这将使您可以控制关节，同时解算器仍然跟踪其他IK目标。 您可以使"
+"用此功能为关节（例如静置姿势）提供首选姿势，或通过对关节角度进行动作来设置关节角度的动画。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:269
 msgid "Weight"
-msgstr ""
+msgstr "IK旋转权重"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:265
 msgid ""
-"The importance of the joint rotation constraint based on the constraints "
-"weight in case all constraints cannot be achieved at the same time. For "
-"example, if you want to enforce strongly the joint rotation, set a high "
-"weight on the joint rotation constraint and a low weight on the IK "
-"constraints."
-msgstr ""
+"The importance of the joint rotation constraint based on the constraints weight in case all constraints cannot be achieved at the same time. For example, if you want "
+"to enforce strongly the joint rotation, set a high weight on the joint rotation constraint and a low weight on the IK constraints."
+msgstr "在不能同时实现所有约束的情况下，基于约束权重联合旋转约束的重要性。 例如，如果要强制执行关节旋转，请在关节旋转约束上设置较高的权重，在IK约束上设置较低的权重。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:272
 msgid "Arm Rig Example"
@@ -517,46 +455,28 @@ msgstr "Arm Rig Example 手臂绑定示例"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:274
 msgid ""
-"This arm uses two bones to overcome the twist problem for the forearm. IK"
-" locking is used to stop the forearm from bending, but the forearm can "
-"still be twisted manually by pressing :kbd:`R Y Y` in *Pose Mode*, or by "
-"using other constraints."
-msgstr ""
-"这个手臂使用两根骨骼来克服前臂的扭曲问题。IK锁定用于阻止前臂弯曲，但是在 *姿态模式* 前臂仍然可以通过按 :kbd:`R Y Y` "
-"手动扭转，或通过使用其他约束扭转。"
+"This arm uses two bones to overcome the twist problem for the forearm. IK locking is used to stop the forearm from bending, but the forearm can still be twisted "
+"manually by pressing :kbd:`R Y Y` in *Pose Mode*, or by using other constraints."
+msgstr "这个手臂使用两根骨骼来克服前臂的扭曲问题。IK锁定用于阻止前臂弯曲，但是在 *姿态模式* 前臂仍然可以通过按 :kbd:`R Y Y` 手动扭转，或通过使用其他约束扭转。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:284
-msgid ""
-"`IK Arm Example "
-"<https://wiki.blender.org/wiki/File:IK_Arm_Example.blend>`__."
+msgid "`IK Arm Example <https://wiki.blender.org/wiki/File:IK_Arm_Example.blend>`__."
 msgstr "`手臂IK示例 <https://wiki.blender.org/wiki/File:IK_Arm_Example.blend>`__."
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:287
-msgid ""
-"Note that, if a *Pole Target* is used, IK locking will not work on the "
-"root boot."
+msgid "Note that, if a *Pole Target* is used, IK locking will not work on the root boot."
 msgstr "注意 如果使用了 *极目标*，IK 锁定对首端骨骼不起作用。"
 
 #~ msgid "Mode:     Pose Mode"
 #~ msgstr "模式:     姿态模式"
 
 #~ msgid ""
-#~ "Most the time people will use the"
-#~ " *Standard* IK solver. There is some"
-#~ " documentation for the :abbr:`iTaSC "
-#~ "(instantaneous Task Specification using "
-#~ "Constraints)` IK solver here."
-#~ msgstr ""
-#~ "大多数人会使用 *标准* IK解算器。这里有一些 :abbr:`iTaSC "
-#~ "(instantaneous Task Specification using "
-#~ "Constraints)` IK解算器方面的文档。"
+#~ "Most the time people will use the *Standard* IK solver. There is some documentation for the :abbr:`iTaSC (instantaneous Task Specification using Constraints)` IK "
+#~ "solver here."
+#~ msgstr "大多数人会使用 *标准* IK解算器。这里有一些 :abbr:`iTaSC (instantaneous Task Specification using Constraints)` IK解算器方面的文档。"
 
-#~ msgid ""
-#~ "`Robot IK Solver "
-#~ "<https://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`__."
-#~ msgstr ""
-#~ "`Robot IK Solver "
-#~ "<https://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`__."
+#~ msgid "`Robot IK Solver <https://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`__."
+#~ msgstr "`Robot IK Solver <https://wiki.blender.org/index.php/Dev:Source/GameEngine/RobotIKSolver>`__."
 
 #~ msgid "The armature IK panel."
 #~ msgstr "骨架IK面板。"
@@ -565,42 +485,9 @@ msgstr "注意 如果使用了 *极目标*，IK 锁定对首端骨骼不起作�
 #~ msgstr "骨骼IK 面板。"
 
 #~ msgid ""
-#~ "The maximum variation in Blender unit"
-#~ " of the end effector between two "
-#~ "successive iterations at which a pose"
-#~ " is obtained that is stable enough"
-#~ " and the solver should stop the "
-#~ "iterations. Lower values means higher "
-#~ "precision on the end effector position."
+#~ "Automatic IK is a tool for quick posing, it can be enabled in the Tool Shelf in the 3D View, when in Pose Mode. When the Auto IK option is enabled, translating a "
+#~ "bone will activate inverse kinematics and rotate the parent bone, and the parent's parent, and so on, to follow the selected bone. The IK chain can only extend from "
+#~ "a child to a parent bone if the child is *connected* to it."
 #~ msgstr ""
-
-#~ msgid ""
-#~ "The solver re-iterates on each "
-#~ "frame until the given precision is "
-#~ "achieved. This option omits most of "
-#~ "the iTaSC dynamic behavior: the maximum"
-#~ " joint velocity and the continuity "
-#~ "between frames is not guaranteed anymore"
-#~ " in compensation of better precision "
-#~ "on the end effector positions. It "
-#~ "is an intermediate mode between "
-#~ "*Animation* and real time *Simulation*."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Automatic IK is a tool for quick"
-#~ " posing, it can be enabled in "
-#~ "the Tool Shelf in the 3D View, "
-#~ "when in Pose Mode. When the Auto"
-#~ " IK option is enabled, translating a"
-#~ " bone will activate inverse kinematics "
-#~ "and rotate the parent bone, and "
-#~ "the parent's parent, and so on, to"
-#~ " follow the selected bone. The IK "
-#~ "chain can only extend from a child"
-#~ " to a parent bone if the child"
-#~ " is *connected* to it."
-#~ msgstr ""
-#~ "自动IK是快速摆放姿态的工具，在姿态模式下可以在3D视图的工具架中启用。当启用自动IK选项时，变换一个骨骼将激活反向运动学，并旋转父级骨骼，父级的父级等，以跟随选定的骨骼。如果子级"
-#~ " *连接* 到它，则IK链只能从一个子级延伸到父级骨骼。"
-
+#~ "自动IK是快速摆放姿态的工具，在姿态模式下可以在3D视图的工具架中启用。当启用自动IK选项时，变换一个骨骼将激活反向运动学，并旋转父级骨骼，父级的父级等，以跟随选定的骨"
+#~ "骼。如果子级 *连接* 到它，则IK链只能从一个子级延伸到父级骨骼。"
