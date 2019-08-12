@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-08-04 12:22+0800\n"
+"PO-Revision-Date: 2019-08-11 17:34+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,7 +40,7 @@ msgstr ":menuselection:`材质 --> 材质槽`"
 msgid ""
 "Materials are data-blocks that can be created and then assigned to one "
 "or more objects."
-msgstr "材质是可以创建和指定给一个或多个物体的数据块。"
+msgstr "材质是一种可以被创建和指定到1个或多个物体的数据块。"
 
 #: ../../manual/render/materials/assignment.rst:14
 msgid ""
@@ -50,9 +50,9 @@ msgid ""
 "with a :doc:`Mix shader </render/shader_nodes/shader/mix>` is a better "
 "solution."
 msgstr ""
-"一个物体也可以具有多个被指定不同材质槽的材质，分别负责物体的个个部分。如"
-"果想要在两个材质之间平滑过渡，使用 :doc:`混合着色器 </render/"
-"shader_nodes/shader/mix>` 混合材质球是一个更好的解决方法。"
+"一个物体也可以由多个不同的材质插槽用来指定多个材质，对应物体的不同部分。"
+"如果需要材质间的平滑过渡， :doc:`混合着色 </render/shader_nodes/shader/"
+"mix>` 节点是一个更好的选择。"
 
 #: ../../manual/render/materials/assignment.rst:23
 msgid "Material Slots"
@@ -60,7 +60,7 @@ msgstr "材质槽"
 
 #: ../../manual/render/materials/assignment.rst:25
 msgid "Material slots link materials to objects and meshes."
-msgstr "材质槽链接材质与物体和模型。"
+msgstr "材质槽连接材质到物体和网格。"
 
 #: ../../manual/render/materials/assignment.rst:27
 msgid ""
@@ -68,8 +68,8 @@ msgid ""
 "material to the entire object. If different parts of the mesh need "
 "different materials, multiple material slots can be created."
 msgstr ""
-"默认物体只有一个材质槽，并且整个物体指定了一个材质，如果不同部分的模型需"
-"要不同材质，可以创建多个材质槽。"
+"默认情况下物体仅有一个材质槽，它指定了整个物体单一的材质。如果网格的不同"
+"部分需要不同的材质，那就创建多个材质槽。"
 
 #: ../../manual/render/materials/assignment.rst:32
 msgid "Material slots panel."
@@ -83,23 +83,23 @@ msgstr "槽列表"
 msgid ""
 "The object's material slots and active material displayed in a :ref:"
 "`List View <ui-list-view>`."
-msgstr "物体的材质槽和激活的材质被显示在 :ref:`列表视图 <ui-list-view>`。"
+msgstr "物体的材质槽和活动材质显示在 :ref:`列表视图 <ui-list-view>` 中."
 
 #: ../../manual/render/materials/assignment.rst:41
 msgid "Add Material Slot"
-msgstr "添加材质槽"
+msgstr "新建材质槽"
 
 #: ../../manual/render/materials/assignment.rst:41
 msgid "Add a new material slot on the object."
-msgstr "在物体上添加一个新的材质槽。"
+msgstr "在物体上创建新材质槽。"
 
 #: ../../manual/render/materials/assignment.rst:44
 msgid "Remove Material Slot"
-msgstr "删除材质槽"
+msgstr "移除材质槽"
 
 #: ../../manual/render/materials/assignment.rst:44
 msgid "Remove a material slot from the object."
-msgstr "从物体上删除材质槽。"
+msgstr "从物体中移除材质槽。"
 
 #: ../../manual/render/materials/assignment.rst:47
 msgid "Copy Material"
@@ -107,7 +107,7 @@ msgstr "复制材质"
 
 #: ../../manual/render/materials/assignment.rst:47
 msgid "Copy material shader nodes and settings to clipboard."
-msgstr "复制材质着色节点和设置到粘贴板。"
+msgstr "复制材质节点和设置到剪切板。"
 
 #: ../../manual/render/materials/assignment.rst:50
 msgid "Paste Material"
@@ -115,17 +115,17 @@ msgstr "粘贴材质"
 
 #: ../../manual/render/materials/assignment.rst:50
 msgid "Paste material shader nodes and settings from clipboard."
-msgstr "粘贴质着色节点和设置到粘贴板。"
+msgstr "粘贴来自剪切板的材质节点和设置。"
 
 #: ../../manual/render/materials/assignment.rst:54
 msgid "Copy Material to Selected"
-msgstr "复制材质到已选择"
+msgstr "复制选择的材质"
 
 #: ../../manual/render/materials/assignment.rst:53
 msgid ""
 "Copy the same material assignment from the active to other selected "
 "objects."
-msgstr "复制由激活对象指定的相同材质到其他已选择对象。"
+msgstr "复制当前活动物体的相同材质指定方式到另一个已选物体。"
 
 #: ../../manual/render/materials/assignment.rst:57
 msgid "Data-Block"
@@ -141,18 +141,18 @@ msgid ""
 "material slot. Here new materials can be created, or existing materials "
 "can to the material slot."
 msgstr ""
-"选中材质槽的材质 :ref:`数据块菜单 <ui-data-block>` 。在这里可以创建材质，"
-"或者链接以存在的材质到材质槽。"
+"选择的材质的材质 :ref:`数据块菜单 <ui-data-block>` 。此处可以在材质槽中创"
+"建新材质或已存在的材质。"
 
 #: ../../manual/render/materials/assignment.rst:83
 msgid "Data-block Links"
-msgstr "数据块链接"
+msgstr "数据块关联"
 
 #: ../../manual/render/materials/assignment.rst:64
 msgid ""
 "Specifies whether the material is to be linked to the Object or to the "
 "Object Data."
-msgstr "表示材质连接到物体还是物体数据。"
+msgstr "明细材质是否被关联到物体或物体数据。"
 
 #: ../../manual/render/materials/assignment.rst:66
 msgid ""
@@ -163,9 +163,9 @@ msgid ""
 "object's data-block. The Object menu item determines that the material "
 "will be linked to the object's data-block directly."
 msgstr ""
-"链接选择器有两个选择:数据和物体。这两个菜单选项决定材质是链接到物体还是数"
-"据(例如网格或曲线)。数据菜单项确定此材质将链接到网格的数据块,该数据块链接"
-"到对象的数据块。物体菜单项确定材质将直接链接到物体的数据块。"
+"关联选择器有两种选项，数据和物体。这两种选项决定了材质是关联到物体还是关"
+"联到数据 (例如网格或曲线). 数据菜单决定了材质将关联到链接到物体数据块的网"
+"格的数据块。物体菜单决定了材质将直接关联到物体的数据块。"
 
 #: ../../manual/render/materials/assignment.rst:72
 msgid ""
@@ -176,10 +176,10 @@ msgid ""
 "shared by every object that shares that mesh. So, if the material is "
 "linked to the mesh, every object will share it."
 msgstr ""
-"这当然有不同的结果。例如,不同的物体可能共享相同的网格数据块。由于此数据块"
-"定义物体的形状,编辑模式下的任何更改都将反映在所有这些物体上。此外,任何数"
-"据链接到这个网格数据块将会被每一个共享这个网格的物体共享。因此,如果材质链"
-"接到网格,则每个物体都将共享它。"
+"这些很重要。例如，不同的物体也许共享了同样的网格数据块，一旦定义物体形状"
+"的数据块在编辑模式有审核改变，那将投射到其它所有相关物体。而且，所有关联"
+"到网格数据块的东西也会被共享到每个共享了该网格的物体上。因此，如果某材质"
+"关联到了网格，那么所有物体将会共享它。"
 
 #: ../../manual/render/materials/assignment.rst:78
 msgid ""
@@ -187,8 +187,8 @@ msgid ""
 "block, the objects can have different materials and still share the same "
 "mesh."
 msgstr ""
-"另一方面,如果材质直接链接到物体数据块,则物体可以具有不同的材质并且仍共享"
-"相同的网格。"
+"另一方面，如果材质被直接关联到物体数据块，物体可以有多种材质且仍然共享相"
+"同的网格。"
 
 #: ../../manual/render/materials/assignment.rst:81
 msgid ""
@@ -197,9 +197,9 @@ msgid ""
 "to mesh data, you cannot. See :doc:`Data System </files/introduction>` "
 "for more information."
 msgstr ""
-"简短说明:如果连接到物体,你可以通过使用不同材质拥有同一个物体的多个实例。"
-"如果链接到网格数据,则不行。有关详细信息,请参阅 :doc:`数据系统 </files/"
-"introduction>`。"
+"注解：如果链接到物体，可以有若干使用了不同材质的同一物体数据的实例。如果"
+"关联到了网格数据，则前面说的就不成立了。详见 :doc:`数据系统 </files/"
+"introduction>` 。"
 
 #: ../../manual/render/materials/assignment.rst:90
 msgid "Edit Mode"
@@ -210,12 +210,12 @@ msgid ""
 "To assign materials to different parts of a mesh, enter edit mode on the "
 "mesh. Additional buttons will then appear in the material slots panel."
 msgstr ""
-"要将材质分配给网格的不同部分,请在网格上进入编辑模式。然后,其他按钮将显示"
-"在材质槽面板中。"
+"要给网格的不同部分指定各种材质，进入网格编辑模式，附加按钮将出现在材质槽"
+"面板。"
 
 #: ../../manual/render/materials/assignment.rst:97
 msgid "Material slots panel in edit mode."
-msgstr "编辑模式中的材质槽面板。"
+msgstr "编辑模式下的材质槽面板。"
 
 #: ../../manual/render/materials/assignment.rst:101
 msgid "Assign"
@@ -226,8 +226,7 @@ msgid ""
 "Assign active material slot and material to the selected faces in the "
 "mesh, strokes in a Grease Pencil, and similar for other object types."
 msgstr ""
-"将激活的材质槽和材质分配给网格中的选定面、蜡笔中的描边以及其它类似物体类"
-"型。"
+"指定活动材质槽和材质到选中的网格面，蜡笔线条，和类似的其它物体类型。"
 
 #: ../../manual/render/materials/assignment.rst:104
 msgid "Select"
@@ -235,19 +234,19 @@ msgstr "选择"
 
 #: ../../manual/render/materials/assignment.rst:104
 msgid "Select faces assigned to the active material slot."
-msgstr "选择指定至活动材质槽的面。"
+msgstr "选择要指定活动材质槽的面。"
 
 #: ../../manual/render/materials/assignment.rst:108
 msgid "Deselect"
-msgstr "取消选择"
+msgstr "删除"
 
 #: ../../manual/render/materials/assignment.rst:107
 msgid "Deselect faces assigned to the active material slot."
-msgstr "取消选择指定至活动材质槽的面。"
+msgstr "从指定了活动材质槽的面中删除。"
 
 #: ../../manual/render/materials/assignment.rst:111
 msgid "Reusing Existing Materials"
-msgstr "重复使用已存在材质"
+msgstr "重复使用已存在的材质"
 
 #: ../../manual/render/materials/assignment.rst:113
 msgid ""
@@ -256,9 +255,9 @@ msgid ""
 "you can simply reuse an existing material. There are several ways to do "
 "this using the Material's data-block menu:"
 msgstr ""
-"Blender能让你重复使用 *任何部件*，包括材质设置，在多个物体之间。你可以简"
-"单重复使用已存在的材质，而不是重新复制新的材质。通过材质数据块有很多方法"
-"做到这一点。菜单:"
+"Blender被设计成允许你重复使用 *任何* 东西,包括材质设定，在多个物体间，相"
+"比创建复制的材质，你可以轻松重复使用已存在的材质。要实现它，这里有多种方"
+"式使用材质数据块菜单："
 
 #: ../../manual/render/materials/assignment.rst:118
 msgid ""
@@ -267,12 +266,12 @@ msgid ""
 "materials available in the current blend-file. To use one, just click on "
 "it."
 msgstr ""
-"*单个物体*--当物体被选择，点击材质名称左边的小球，会弹出一个显示所有当前"
-"场景可使用的材质的列表，只要单击它即可使用。"
+"*单一物体* -- 选定物体后，点击材质名字左边的球体，一个弹出菜单将显示当前"
+"blend文件中所有可用的材质。点击即可使用。"
 
 #: ../../manual/render/materials/assignment.rst:122
 msgid "Searching for Materials"
-msgstr "搜索材质"
+msgstr "查找材质"
 
 #: ../../manual/render/materials/assignment.rst:124
 msgid ""
@@ -281,8 +280,8 @@ msgid ""
 "materials are filtered so that only materials containing \"wood\" are "
 "displayed in the list."
 msgstr ""
-"材质列表下的搜索框可以搜索列表里的关键字。例如，通过输入“wood”可过滤出列"
-"表中包含“wood”的材质。"
+"你可以在材质列表底下的查找框中查找材质名字。例如，输入 \"木纹\" 后所有名"
+"字包含 \"木纹\" 的材质将被筛选并显示出来."
 
 #: ../../manual/render/materials/assignment.rst:128
 msgid ""
@@ -294,8 +293,11 @@ msgid ""
 "them to that \"parent\". (See Tip on Linking Data in Creating about data "
 "linking.)"
 msgstr ""
-"*多个物体*--在3D视图，通过快捷键 :kbd:`Ctrl-L` 你可以快速链接选择的物体"
-"（和其他方面）给活动物体 :ref:`活动物体 <object-active>` 的材质"
+"*多个物体* --在3D视口中，按 :kbd:`Ctrl-L` 你可以快速关联所有选中的物体到"
+"某 :ref:`活动物体 <object-active>` 的材质（或其它方面）。当你需要对大量物"
+"体指定同一个材质时这招很有用；只需要选中那些物体，然后找到有想要指定的材"
+"质的那个父级物体，按 :kbd:`Ctrl-L`  关联它们到那个 \"父级\" 。 (见关联数"
+"据和创建数据关联小贴士.)"
 
 #: ../../manual/render/materials/assignment.rst:138
 msgid "Deleting a Material"
@@ -305,13 +307,14 @@ msgstr "删除材质"
 msgid ""
 "To delete a material, select the material and click X in the Available "
 "Materials List entry."
-msgstr "要删除一个材质，选择材质接着单击可使用的材质列表中的X。"
+msgstr "要删除材质，需选择可用材质列表中的材质并按X。"
 
 #: ../../manual/render/materials/assignment.rst:142
 msgid ""
 "Although the material will seem to disappear immediately, the Delete "
 "action can depend on how the material is used elsewhere."
-msgstr "尽管材质会看起来立即消失，删除动作取决于材质在其他方面被怎么使用。"
+msgstr ""
+"尽管该材质看起来立刻消失了，但是否真正删除取决于材质是否在别处正在使用。"
 
 #: ../../manual/render/materials/assignment.rst:145
 msgid ""
@@ -319,8 +322,8 @@ msgid ""
 "which use this material, then the material will be removed from that "
 "object (but remain on all its other objects)."
 msgstr ""
-"如果材质已连接到物体并且有其他物体在使用这个材质，这个材质会被从这俄格物"
-"体删除掉（但是其他物体的会被保留）。"
+"如果一个材质关联到了某个物体但其它物体也用了这个材质，那么该材质将从该物"
+"体删除（但仍然存留在其它物体上）。"
 
 #: ../../manual/render/materials/assignment.rst:148
 msgid ""
@@ -328,8 +331,8 @@ msgid ""
 "list, then the material will be retained when the file is saved, even if "
 "it has no users."
 msgstr ""
-"如果在可使用材质列表中的“伪用户”按钮点亮，那么当场景文件保存的时候材质将"
-"会保留，即使没有任何使用到。"
+"如果 \"伪用户\" 按钮被点亮，那么该材质即使没有在任何东西上使用，依然会在"
+"保存文件的时候被保留下来。"
 
 #: ../../manual/render/materials/assignment.rst:151
 msgid ""
@@ -338,8 +341,9 @@ msgid ""
 "list until the blend-file is saved, but will have disappeared when the "
 "file is reloaded."
 msgstr ""
-"只有没有“真”用户也没有“伪”用户使用它的啥时候，材质会被永久删除。请留意它"
-"依然会保留在材质列表知道blender文件保存，它将会在重新打开文件后消失。"
+"仅当 \"真实\" 为0, 且没有点亮 \"伪\" 用户, 材质才会被永久删除. 记住它当"
+"blend文件保存后该材质依然会在材质列表中存留， 而一旦重新加载blend文件则会"
+"消失."
 
 #: ../../manual/render/materials/assignment.rst:159
 msgid "Multiple Materials"
@@ -352,32 +356,32 @@ msgid ""
 "obtain multiple colors on an object by assigning different materials to "
 "the individual faces of the object."
 msgstr ""
-"正常情况下，物体的不同颜色或者图案是通过给材质添加帖图实现的。然而，在一"
-"些程序里你可以通过指定物体的每个面不同的材质实现一个物体多个颜色。"
+"通常分行，物体上的不同颜色或图案的实现需要靠给材质添加纹理来实现。当然，"
+"在某些场合你可以通过指定不同材质到物体的独立的面来获得物体上的多个颜色。"
 
 #: ../../manual/render/materials/assignment.rst:165
 msgid ""
 "To apply several materials to different faces of the same object, you "
 "use the Material Slots options in the Materials header panel."
 msgstr ""
-"将多个材质应用到同一物体的不同面，可以使用材质标题栏面板中的材质槽选项按"
-"钮。"
+"若要在同一个物体的不同面上应用若干材质，你可以使用材质标题面板的材质槽选"
+"项。"
 
 #: ../../manual/render/materials/assignment.rst:168
 msgid ""
 "The workflow for applying a second material to some faces of an object "
 "covered by a base material is as follows:"
-msgstr "给已经有基础材质的物体的多个面应用第二个材质的流程遵循以下步骤:"
+msgstr "在物体的某些面的基础材质上叠加应用第二种材质的方法流程如下:"
 
 #: ../../manual/render/materials/assignment.rst:171
 msgid "In Object Mode, apply the base material to the whole object."
-msgstr "在物体模式，指定整个物体基础材质。"
+msgstr "在物体模式，应用基础材质到整个物体。"
 
 #: ../../manual/render/materials/assignment.rst:172
 msgid ""
 "Create/select the second material (the whole object will change to this "
 "new material)."
-msgstr "创建/选择第二个材质(整个物体会应用新材质)。"
+msgstr "创建/选择第二种材质（整个物体将会变成新材质）。"
 
 #: ../../manual/render/materials/assignment.rst:173
 msgid "In the Active Material box, re-select the base material."
@@ -387,11 +391,13 @@ msgstr "在活动材质方框，重新选择基础材质。"
 msgid ""
 "Go to Edit Mode and Face Select (a new box appears above the Active "
 "Material box with Assign/Select/Deselect)."
-msgstr "进入编辑模式的面选择(指定/选择/取消选择的按钮会出现在激活材质框下)"
+msgstr ""
+"进入编辑模式的面选择（活动材质方框上面会出现一个新的带有指定/选择/弃选的"
+"方框）。"
 
 #: ../../manual/render/materials/assignment.rst:175
 msgid "Select the face/faces to be colored with the second material."
-msgstr "选择要指定第二个材质的面。"
+msgstr "选择要被赋予第二种材质的的一个/多个面。"
 
 #: ../../manual/render/materials/assignment.rst:176
 msgid ""
@@ -399,20 +405,20 @@ msgid ""
 "slot, and while this is still active, click on the second material in "
 "the Available Materials list."
 msgstr ""
-"在物体材质槽方框里，单击 kbd:`Plus` 创建新的材质槽，当它依然激活的时候，"
-"点击可使用材质列表中的第二个材质。"
+"在物体的材质槽方框内，单击 :kbd:`Plus` 创建一个新的槽，保持活动状态，再点"
+"击可用材质列表中的第二种材质。"
 
 #: ../../manual/render/materials/assignment.rst:178
 msgid ""
 "Click the Assign button, and the second material will appear on the "
 "selected object faces."
-msgstr "点击应用按钮，第二个材质会指定在先择的物体的面上。"
+msgstr "点击指定按钮，第二种材质将会出现在选定的物体的面上。"
 
 #: ../../manual/render/materials/assignment.rst:180
 msgid ""
 "You can also make this new material a copy of an existing material by "
 "adding the data-block:"
-msgstr "你也可以通过增加数据块制作一个已存在材质的副本:"
+msgstr "你也可以通过添加数据块来复制一份已有材质的拷贝:"
 
 #: ../../manual/render/materials/assignment.rst:182
 msgid ""
@@ -422,6 +428,6 @@ msgid ""
 "If you change the material on the original object, the new object color "
 "changes too."
 msgstr ""
-"选择物体，得到材质，kbd:`RMB` 复制数据到粘贴板，当你重命名材质后，单击“关"
-"联: 数据”关联存在的材质。继续应用需要的面。注意：如果你改变原始物体的材"
-"质，新材质也会跟着改变。"
+"选定物体，选择材质， :kbd:`RMB` 右键并选择复制数据到剪切板。当你重命名该"
+"材质时，单击 \"关联: 数据\" 来关联到已存在的材质。继而指定到需要的面。提"
+"示：如果你改变源物体上的材质，新物体的颜色也会跟着变化。"
