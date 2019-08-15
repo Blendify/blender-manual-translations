@@ -9,19 +9,20 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-21 14:24+1000\n"
-"PO-Revision-Date: 2017-09-04 23:35+0800\n"
+"PO-Revision-Date: 2019-08-12 21:59+0800\n"
 "Last-Translator: \n"
-"Language: zh_Hans_CN\n"
+"Language: zh\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../../manual/physics/smoke/types/domain.rst:5
 msgid "Smoke Domain"
-msgstr "烟雾场"
+msgstr "烟雾域"
 
 #: ../../manual/physics/smoke/types/domain.rst:7
 #: ../../manual/physics/smoke/types/domain.rst:41
@@ -33,19 +34,19 @@ msgstr "烟雾场"
 #: ../../manual/physics/smoke/types/domain.rst:271
 #: ../../manual/physics/smoke/types/domain.rst:285
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/physics/smoke/types/domain.rst
 msgid "Panel"
-msgstr ""
+msgstr "面板"
 
 #: ../../manual/physics/smoke/types/domain.rst:10
 msgid ":menuselection:`Physics --> Smoke`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾`"
 
 #: ../../manual/physics/smoke/types/domain.rst
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../../manual/physics/smoke/types/domain.rst:11
 #: ../../manual/physics/smoke/types/domain.rst:45
@@ -57,7 +58,7 @@ msgstr ""
 #: ../../manual/physics/smoke/types/domain.rst:274
 #: ../../manual/physics/smoke/types/domain.rst:288
 msgid "Domain"
-msgstr ""
+msgstr "域"
 
 #: ../../manual/physics/smoke/types/domain.rst:13
 msgid ""
@@ -65,754 +66,576 @@ msgid ""
 "leave the domain, it will either collide with the edge or disappear, "
 "depending on the domain's settings."
 msgstr ""
+"域物体内部包含整个模拟。 烟雾和火焰不能都离开域，它们将根据域的行为设置来选择"
+"与域的边界碰撞或者消失。"
 
 #: ../../manual/physics/smoke/types/domain.rst:16
 msgid ""
-"Keep in mind that large domains require higher resolutions and longer "
-"bake times. You will want to make it just large enough that the "
-"simulation will fit inside it, but not so large that it takes too long to"
-" compute the simulation."
+"Keep in mind that large domains require higher resolutions and longer bake "
+"times. You will want to make it just large enough that the simulation will "
+"fit inside it, but not so large that it takes too long to compute the "
+"simulation."
 msgstr ""
+"请记住，大型的域名需要更高的分辨率和更长的烘焙时间。 您需要使其足够大以使模拟"
+"适合其中，但不要太大以至于计算模拟所需的时间太长。"
 
 #: ../../manual/physics/smoke/types/domain.rst:20
 msgid ""
-"To create a domain, add a cube :menuselection:`Add --> Mesh --> Cube`, "
-":kbd:`Shift-A` and transform it until it encloses the area where you want"
-" smoke. Translation, rotation, and scaling are all allowed. To turn it "
-"into a smoke domain, click *Smoke* in :menuselection:`Properties --> "
-"Physics`, then select *Domain* as the *Smoke Type*."
+"To create a domain, add a cube :menuselection:`Add --> Mesh --> Cube`, :kbd:"
+"`Shift-A` and transform it until it encloses the area where you want smoke. "
+"Translation, rotation, and scaling are all allowed. To turn it into a smoke "
+"domain, click *Smoke* in :menuselection:`Properties --> Physics`, then "
+"select *Domain* as the *Smoke Type*."
 msgstr ""
+"要创建一个域，请添加一个立方体 :menuselection:`添加 --> 网格 --> 立方体`，或"
+"者 :kbd:`Shift-A` 添加，调整形状直到它包含您想要实行烟雾火焰的区域。 要将其转"
+"换为烟雾域，请单击 :menuselection:`属性编辑器 --> 物理` 里面的 *烟雾* ，然后"
+"选择 *域* 作为 *烟雾类型* 。"
 
 #: ../../manual/physics/smoke/types/domain.rst:27
 msgid ""
-"You *can* use other shapes of mesh objects as domain objects, but the "
-"smoke simulator will use the shape's :term:`bounding box` as the domain "
-"bounds. In other words, the actual shape of the domain will still be "
-"rectangular."
+"You *can* use other shapes of mesh objects as domain objects, but the smoke "
+"simulator will use the shape's :term:`bounding box` as the domain bounds. In "
+"other words, the actual shape of the domain will still be rectangular."
 msgstr ""
+"您 *可以* 使用其他形状的网格物体作为域对象，但烟雾模拟器将使用形状的 :term:"
+"`bounding box` （边界框）作为域边界。 换句话说，域的实际形状仍然是长方体。"
 
 #: ../../manual/physics/smoke/types/domain.rst:39
 msgid "Settings"
-msgstr ""
+msgstr "选项"
 
 #: ../../manual/physics/smoke/types/domain.rst:44
 msgid ":menuselection:`Physics --> Smoke --> Settings`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾 --> 选项`"
 
 #: ../../manual/physics/smoke/types/domain.rst:57
 msgid "Resolution"
-msgstr ""
+msgstr "细分精度"
 
 #: ../../manual/physics/smoke/types/domain.rst:50
 msgid ""
-"The smoke domain is subdivided into many \"cells\" called voxels (see "
-":term:`voxel`) which make up \"pixels\" of smoke. This setting controls "
-"the number of subdivisions in the domain. Higher numbers of subdivisions "
-"are one way of creating higher resolution smoke (see `High Resolution`_)."
+"The smoke domain is subdivided into many \"cells\" called voxels (see :term:"
+"`voxel`) which make up \"pixels\" of smoke. This setting controls the number "
+"of subdivisions in the domain. Higher numbers of subdivisions are one way of "
+"creating higher resolution smoke (see `High Resolution`_)."
 msgstr ""
+"烟雾区域被细分为许多称为体素的“细胞”（参见 :term:`体素`），它构成烟雾的“像"
+"素”。 此设置控制域中的细分数。 更多的细分是创建更高分辨率烟雾的一种方式（参"
+"见 `高精度`_）。"
 
 #: ../../manual/physics/smoke/types/domain.rst:54
 msgid ""
-"Since the resolution is defined in terms of *subdivisions*, larger "
-"domains will need more divisions to get an equivalent resolution to a "
-"small domain."
+"Since the resolution is defined in terms of *subdivisions*, larger domains "
+"will need more divisions to get an equivalent resolution to a small domain."
 msgstr ""
+"由于分辨率是根据 *细分* 定义的，因此较大的域需要更多的细分才能获得与小域相同"
+"的分辨率。"
 
 #: ../../manual/physics/smoke/types/domain.rst:57
 msgid "Also see `Note on Divisions and High Resolution`_."
-msgstr ""
+msgstr "另外参见 `关于域细分和高精度的注意事项`_。"
 
 #: ../../manual/physics/smoke/types/domain.rst:62
 msgid "Time Scale"
-msgstr ""
+msgstr "时间比例"
 
 #: ../../manual/physics/smoke/types/domain.rst:60
 msgid ""
-"Controls the speed of the simulation. Low values result in a \"slow "
-"motion\" simulation, while higher values can be used to advance the "
-"simulation faster (useful for generating smoke for use in still renders)."
+"Controls the speed of the simulation. Low values result in a \"slow motion\" "
+"simulation, while higher values can be used to advance the simulation faster "
+"(useful for generating smoke for use in still renders)."
 msgstr ""
+"控制模拟的速度。 较低的值可以实现“慢动作”模拟，而较高的值可用于更快地推进模拟"
+"（用于生成用于静态渲染的烟雾）。"
 
 #: ../../manual/physics/smoke/types/domain.rst:75
 msgid "Border Collisions"
-msgstr ""
+msgstr "边界碰撞"
 
 #: ../../manual/physics/smoke/types/domain.rst:65
 msgid ""
-"Controls which sides of the domain will allow smoke \"through\" the "
-"domain, making it disappear without influencing the rest of the "
-"simulation, and which sides will deflect smoke as if colliding with a "
-":doc:`Collision Object </physics/smoke/types/collision>`."
+"Controls which sides of the domain will allow smoke \"through\" the domain, "
+"making it disappear without influencing the rest of the simulation, and "
+"which sides will deflect smoke as if colliding with a :doc:`Collision Object "
+"</physics/smoke/types/collision>`."
 msgstr ""
+"控制域的哪一侧允许烟雾“通过”边界，使其消失而不影响模拟的其余部分，以及哪些侧"
+"面会使烟雾碰撞偏转方向 :doc:`碰撞物体 </physics/smoke/types/collision>`。"
 
 #: ../../manual/physics/smoke/types/domain.rst:70
 msgid "Vertically Open"
-msgstr ""
+msgstr "垂直开放"
 
 #: ../../manual/physics/smoke/types/domain.rst:71
 msgid ""
-"Smoke disappears when it hits the top or bottom of the domain, but "
-"collides with the walls."
-msgstr ""
+"Smoke disappears when it hits the top or bottom of the domain, but collides "
+"with the walls."
+msgstr "烟雾碰上域的顶部或底部边界时会直接消失，但与侧面边界会发生碰撞。"
 
 #: ../../manual/physics/smoke/types/domain.rst:72
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: ../../manual/physics/smoke/types/domain.rst:73
 msgid "Smoke disappears when it hits any side of the domain."
-msgstr ""
+msgstr "当它击中域的任何一侧边界时，烟雾就会消失。"
 
 #: ../../manual/physics/smoke/types/domain.rst:75
 msgid "Collide All"
-msgstr ""
+msgstr "全部碰撞"
 
 #: ../../manual/physics/smoke/types/domain.rst:75
 msgid "Smoke collides with all sides of the domain."
-msgstr ""
+msgstr "烟雾与域的所有边界相撞。"
 
 #: ../../manual/physics/smoke/types/domain.rst:79
 msgid "Empty space"
-msgstr ""
+msgstr "空白空间"
 
 #: ../../manual/physics/smoke/types/domain.rst:78
 msgid "Value under which voxels are considered to be empty."
-msgstr ""
+msgstr "体素低于此值时将被认为不存在。"
 
 #: ../../manual/physics/smoke/types/domain.rst:82
 msgid "Behavior"
-msgstr ""
+msgstr "行为"
 
 #: ../../manual/physics/smoke/types/domain.rst:87
 msgid ":menuselection:`Physics --> Smoke --> Behavior`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾 --> 行为`"
 
 #: ../../manual/physics/smoke/types/domain.rst:94
 msgid "Density"
-msgstr ""
+msgstr "密度"
 
 #: ../../manual/physics/smoke/types/domain.rst:91
 msgid "Controls how much smoke is affected by density."
-msgstr ""
+msgstr "控制密度影响的烟雾量。"
 
 #: ../../manual/physics/smoke/types/domain.rst:93
 msgid ""
 "Values above 0 will cause the smoke to rise (simulating smoke which is "
 "lighter than ambient air)."
-msgstr ""
+msgstr "高于0的值将导致烟雾上升（模拟比环境空气轻的烟雾）。"
 
 #: ../../manual/physics/smoke/types/domain.rst:94
 msgid ""
-"Values below 0 will cause smoke to sink (simulating smoke which is "
-"heavier than ambient air)."
-msgstr ""
+"Values below 0 will cause smoke to sink (simulating smoke which is heavier "
+"than ambient air)."
+msgstr "低于0的值将导致烟雾下沉（模拟比环境空气重的烟雾）。"
 
 #: ../../manual/physics/smoke/types/domain.rst:112
 msgid "Temperature Difference"
-msgstr ""
+msgstr "温差"
 
 #: ../../manual/physics/smoke/types/domain.rst:99
 msgid ""
-"The *Temperature Difference* setting controls how much smoke is affected "
-"by temperature."
-msgstr ""
+"The *Temperature Difference* setting controls how much smoke is affected by "
+"temperature."
+msgstr "*温差* 设置控制烟雾受温度影响的程度。"
 
 #: ../../manual/physics/smoke/types/domain.rst:101
 msgid ""
-"The effect this setting has on smoke depends on the per flow object "
-":ref:`Temperature Difference <smoke-flow-temp-diff>`:"
-msgstr ""
+"The effect this setting has on smoke depends on the per flow object :ref:"
+"`Temperature Difference <smoke-flow-temp-diff>`:"
+msgstr "此设置对烟雾的影响取决于每个流物体 :ref:`温差 <smoke-flow-temp-diff>`:"
 
 #: ../../manual/physics/smoke/types/domain.rst:104
 msgid ""
 "Values above 0 will result in the smoke rising when the flow object "
-"*Temperature Difference* is set to a positive value, and smoke sinking "
-"when the flow object *Temperature Difference* is set to a negative value."
+"*Temperature Difference* is set to a positive value, and smoke sinking when "
+"the flow object *Temperature Difference* is set to a negative value."
 msgstr ""
+"当流物体 *温度差* 设置为正值时，大于0的值将导致烟雾上升，当流物体 *温度差* 设"
+"置为负值时，烟雾下沉。"
 
 #: ../../manual/physics/smoke/types/domain.rst:107
 msgid ""
-"Values below 0 will result in the opposite of positive values, i.e. smoke"
-" emitted from flow objects with a positive *Temperature Difference* will "
-"sink, and smoke from flow objects with a negative *Temperature "
-"Difference* will rise."
+"Values below 0 will result in the opposite of positive values, i.e. smoke "
+"emitted from flow objects with a positive *Temperature Difference* will "
+"sink, and smoke from flow objects with a negative *Temperature Difference* "
+"will rise."
 msgstr ""
+"低于0的值将导致与正值相反，即，具有正 *温差* 的流物体发出的烟雾将下沉，具有"
+"负 *温差* 的流物体的烟雾将上升。"
 
 #: ../../manual/physics/smoke/types/domain.rst:111
 msgid ""
-"Note that smoke from multiple flow objects with different temperatures "
-"will mix and warm up/cool down until an equilibrium is reached."
+"Note that smoke from multiple flow objects with different temperatures will "
+"mix and warm up/cool down until an equilibrium is reached."
 msgstr ""
+"请注意，来自不同温度的多个流物体的烟雾将混合并相互加热/冷却直至达到平衡。"
 
 #: ../../manual/physics/smoke/types/domain.rst:122
 #: ../../manual/physics/smoke/types/domain.rst:146
 msgid "Vorticity"
-msgstr ""
+msgstr "涡量"
 
 #: ../../manual/physics/smoke/types/domain.rst:115
 msgid ""
-"Controls the amount of turbulence in the smoke. Higher values will make "
-"lots of small swirls, while lower values make smoother shapes."
+"Controls the amount of turbulence in the smoke. Higher values will make lots "
+"of small swirls, while lower values make smoother shapes."
 msgstr ""
+"控制烟雾中的湍流量。 较高的值会产生大量的小漩涡，而较低的值会产生更平滑的形"
+"状。"
 
 #: ../../manual/physics/smoke/types/domain.rst:121
 msgid ""
-"Comparison of different amounts of vorticity. The domain on the left has "
-"a vorticity of 3, while the domain on the right has a vorticity of 0.01."
-msgstr ""
+"Comparison of different amounts of vorticity. The domain on the left has a "
+"vorticity of 3, while the domain on the right has a vorticity of 0.01."
+msgstr "不同涡量的比较。 左边的域涡量为3，而右边的域涡量为0.01。"
 
 #: ../../manual/physics/smoke/types/domain.rst:124
 msgid "Dissolve"
-msgstr ""
+msgstr "消融"
 
 #: ../../manual/physics/smoke/types/domain.rst:125
 msgid "Allow smoke to dissipate over time."
-msgstr ""
+msgstr "随着时间的推移让烟雾消散。"
 
 #: ../../manual/physics/smoke/types/domain.rst:126
 msgid "Time"
-msgstr ""
+msgstr "时间"
 
 #: ../../manual/physics/smoke/types/domain.rst:127
 msgid "Speed of smoke's dissipation in frames."
-msgstr ""
+msgstr "烟雾在帧中的消散速度。"
 
 #: ../../manual/physics/smoke/types/domain.rst:130
 msgid "Slow"
-msgstr ""
+msgstr "减慢"
 
 #: ../../manual/physics/smoke/types/domain.rst:129
 msgid ""
 "Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but "
 "lingers longer."
-msgstr ""
+msgstr "以对数方式消融烟雾。 一开始很快就会消失，但会持续更长时间。"
 
 #: ../../manual/physics/smoke/types/domain.rst:133
 msgid "Smoke Flames"
-msgstr ""
+msgstr "烟雾的火焰"
 
 #: ../../manual/physics/smoke/types/domain.rst:139
 msgid ":menuselection:`Physics --> Smoke --> Flames`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾 --> 火焰`"
 
 #: ../../manual/physics/smoke/types/domain.rst:142
 msgid "Reaction Speed"
-msgstr ""
+msgstr "反应速度"
 
 #: ../../manual/physics/smoke/types/domain.rst:142
 msgid ""
 "How fast fuel burns. Larger values result in smaller flames (fuel burns "
-"before it can go very far), smaller values result in larger flames (fuel "
-"has time to flow farther before being fully consumed)."
+"before it can go very far), smaller values result in larger flames (fuel has "
+"time to flow farther before being fully consumed)."
 msgstr ""
+"燃料燃烧的速度有多快。 较大的值产生很小的火焰（燃料燃烧之前可能会走得很远），"
+"较小的值会导致较大的火焰（燃料在完全消耗之前有时间流动更远）。"
 
 #: ../../manual/physics/smoke/types/domain.rst:144
 msgid "Smoke"
-msgstr ""
+msgstr "烟雾"
 
 #: ../../manual/physics/smoke/types/domain.rst:145
 msgid "Amount of extra smoke created automatically to simulate burnt fuel."
-msgstr ""
+msgstr "为模拟燃烧燃料自动创建的额外烟雾量。"
 
 #: ../../manual/physics/smoke/types/domain.rst:147
 msgid "Additional vorticity for flames."
-msgstr ""
+msgstr "火焰的额外涡量。"
 
 #: ../../manual/physics/smoke/types/domain.rst:148
 msgid "Temperature Ignition"
-msgstr ""
+msgstr "着火点"
 
 #: ../../manual/physics/smoke/types/domain.rst:149
 msgid "Minimum temperature of flames."
-msgstr ""
+msgstr "火焰的最低温度。"
 
 #: ../../manual/physics/smoke/types/domain.rst:150
 msgid "Maximum"
-msgstr ""
+msgstr "最大值"
 
 #: ../../manual/physics/smoke/types/domain.rst:151
 msgid "Maximum temperature of flames."
-msgstr ""
+msgstr "火焰的最高温度。"
 
 #: ../../manual/physics/smoke/types/domain.rst:154
 msgid "Smoke Color"
-msgstr ""
+msgstr "烟雾颜色"
 
 #: ../../manual/physics/smoke/types/domain.rst:153
 msgid "Color of smoke created by burnt fuel."
-msgstr ""
+msgstr "燃料燃烧时产生的烟雾颜色。"
 
 #: ../../manual/physics/smoke/types/domain.rst:157
 msgid "Adaptive Domain"
-msgstr ""
+msgstr "自适应域"
 
 #: ../../manual/physics/smoke/types/domain.rst:163
 msgid ":menuselection:`Physics --> Smoke --> Adaptive Domain`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾 --> 自适应域`"
 
 #: ../../manual/physics/smoke/types/domain.rst:165
 msgid ""
 "When enabled, the domain will adaptively shrink to best fit the smoke, "
 "saving computation time by leaving voxels without smoke out of the "
-"simulation. Unless the *Additional* option is used, the adaptive domain "
-"will not exceed the bounds of the original domain."
+"simulation. Unless the *Additional* option is used, the adaptive domain will "
+"not exceed the bounds of the original domain."
 msgstr ""
+"启用后，域将自适应地缩小以最佳地适应烟雾，通过使体素没有烟雾离开模拟来节省计"
+"算时间。 除非使用 *添加* 选项，否则自适应域不会超出原始域的范围。"
 
 #: ../../manual/physics/smoke/types/domain.rst:169
 msgid "Additional"
-msgstr ""
+msgstr "添加"
 
 #: ../../manual/physics/smoke/types/domain.rst:170
 msgid "Number of voxels to add around the outside of the domain."
-msgstr ""
+msgstr "围绕域外添加的体素数。"
 
 #: ../../manual/physics/smoke/types/domain.rst:173
 msgid "Margin"
-msgstr ""
+msgstr "边距"
 
 #: ../../manual/physics/smoke/types/domain.rst:172
 msgid ""
-"Amount of extra space to leave around smoke, measured in voxels. With "
-"very fast-moving smoke larger margins may be required to prevent the "
-"smoke from being cut off by the adaptive boundary, but note this will "
-"increase the number of voxels which need to be computed."
+"Amount of extra space to leave around smoke, measured in voxels. With very "
+"fast-moving smoke larger margins may be required to prevent the smoke from "
+"being cut off by the adaptive boundary, but note this will increase the "
+"number of voxels which need to be computed."
 msgstr ""
+"在体素周围留出的额外空间量。 对于非常快速移动的烟雾，可能需要更大的余量以防止"
+"烟雾被自适应边界切断，但是注意这将增加需要计算的体素数量。"
 
 #: ../../manual/physics/smoke/types/domain.rst:178
 msgid "Threshold"
-msgstr ""
+msgstr "阈值"
 
 #: ../../manual/physics/smoke/types/domain.rst:176
 msgid ""
-"Smallest amount of smoke a voxel can contain before it is considered "
-"empty and the adaptive domain is allowed to cut it out of the simulation."
+"Smallest amount of smoke a voxel can contain before it is considered empty "
+"and the adaptive domain is allowed to cut it out of the simulation."
 msgstr ""
+"体素在被认为是空的之前可以包含的最小量的烟雾，并且允许自适应域将其从模拟中切"
+"除。"
 
 #: ../../manual/physics/smoke/types/domain.rst:183
 msgid "High Resolution"
-msgstr ""
+msgstr "高精度"
 
 #: ../../manual/physics/smoke/types/domain.rst:189
 msgid ":menuselection:`Physics --> Smoke --> High Resolution`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾 --> 高精度`"
 
 #: ../../manual/physics/smoke/types/domain.rst:191
 msgid ""
-"The High Resolution option lets you simulate at a low resolution and then"
-" it uses noise techniques to enhance the resolution without actually "
-"computing it. This allows animators to set up a low resolution simulation"
-" quickly and later add details without changing the overall fluid motion."
-" Also see `Note on Divisions and High Resolution`_."
+"The High Resolution option lets you simulate at a low resolution and then it "
+"uses noise techniques to enhance the resolution without actually computing "
+"it. This allows animators to set up a low resolution simulation quickly and "
+"later add details without changing the overall fluid motion. Also see `Note "
+"on Divisions and High Resolution`_."
 msgstr ""
+"高分辨率选项允许您以低分辨率进行模拟，然后使用噪声技术来增强分辨率，而无需实"
+"际计算。 这允许动画师快速设置低分辨率模拟，然后在不改变整体流体运动的情况下添"
+"加细节。 另请参阅 `关于域细分精度和高精度的注意事项`_。"
 
 #: ../../manual/physics/smoke/types/domain.rst:196
 msgid "Resolution Divisions"
-msgstr ""
+msgstr "细分精度"
 
 #: ../../manual/physics/smoke/types/domain.rst:197
 msgid ""
-"Factor by which to enhance the resolution of smoke using the specified "
-"noise method."
-msgstr ""
+"Factor by which to enhance the resolution of smoke using the specified noise "
+"method."
+msgstr "使用指定噪声方法提高烟雾分辨率的因素。"
 
 #: ../../manual/physics/smoke/types/domain.rst:198
 msgid "Flow Sampling"
-msgstr ""
+msgstr "流动采样"
 
 #: ../../manual/physics/smoke/types/domain.rst:199
 msgid "Method for sampling the high resolution flow."
-msgstr ""
+msgstr "高分辨率流的采样方法。"
 
 #: ../../manual/physics/smoke/types/domain.rst:211
 msgid "Noise Method"
-msgstr ""
+msgstr "噪波办法"
 
 #: ../../manual/physics/smoke/types/domain.rst:201
 msgid "The two options, *Wavelet* and *FFT*, are very similar."
-msgstr ""
+msgstr "有俩个选项， *波浪* 和 *FFT* 效果非常相似。"
 
 #: ../../manual/physics/smoke/types/domain.rst:206
 msgid "Comparison of noise methods. *Wavelet* on the left, *FFT* on the right."
-msgstr ""
+msgstr "噪声方法的比较。左边是 *波浪* ，右边是 *FFT* 。"
 
 #: ../../manual/physics/smoke/types/domain.rst:210
 msgid ""
-"*Wavelet* is an implementation of `Turbulence for Fluid Simulation "
-"<https://web.archive.org/web/20140911163550/https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__."
+"*Wavelet* is an implementation of `Turbulence for Fluid Simulation <https://"
+"web.archive.org/web/20140911163550/https://graphics.ethz.ch/research/"
+"physics_animation_fabrication/simulation/turb.php>`__."
 msgstr ""
+"*波浪* 来自于 `流体模拟的湍流 <https://web.archive.org/web/20140911163550/"
+"https://graphics.ethz.ch/research/physics_animation_fabrication/simulation/"
+"turb.php>`__."
 
 #: ../../manual/physics/smoke/types/domain.rst:219
 msgid "Strength"
-msgstr ""
+msgstr "强度/力度"
 
 #: ../../manual/physics/smoke/types/domain.rst:214
 msgid "Strength of noise."
-msgstr ""
+msgstr "噪声强度。"
 
 #: ../../manual/physics/smoke/types/domain.rst:219
 msgid ""
-"From left to right, the domains' high resolution strengths are set to 0, "
-"2, and 6."
-msgstr ""
+"From left to right, the domains' high resolution strengths are set to 0, 2, "
+"and 6."
+msgstr "从左到右，域的高分辨率强度设置为0,2和6。"
 
 #: ../../manual/physics/smoke/types/domain.rst:223
 msgid ""
-"The visibility of high resolution smoke in the viewport can be toggled in"
-" the render :ref:`Simplify options <render-cycles-simplify-viewport>`."
+"The visibility of high resolution smoke in the viewport can be toggled in "
+"the render :ref:`Simplify options <render-cycles-simplify-viewport>`."
 msgstr ""
+"可以在渲染中切换视口中高分辨率烟雾的可见性 :ref:`简化选项 <render-cycles-"
+"simplify-viewport>`."
 
 #: ../../manual/physics/smoke/types/domain.rst:228
 msgid "Note on Divisions and High Resolution"
-msgstr ""
+msgstr "关于域细分精度和高精度的说明"
 
 #: ../../manual/physics/smoke/types/domain.rst:230
 msgid ""
-":ref:`High Resolution Divisions <smoke-high-resolution>` and :ref:`Domain"
-" Subdivisions <smoke-resolution>` are not equivalent. By using different "
+":ref:`High Resolution Divisions <smoke-high-resolution>` and :ref:`Domain "
+"Subdivisions <smoke-resolution>` are not equivalent. By using different "
 "combinations of these resolution settings, you can obtain a variety of "
 "different styles of smoke."
 msgstr ""
+":ref:`高精度 <smoke-high-resolution>` 和 :ref:`域细分精度 <smoke-"
+"resolution>` 不一样。 通过使用这些分辨率设置的不同组合，您可以获得各种不同风"
+"格的烟雾。"
 
 #: ../../manual/physics/smoke/types/domain.rst:237
 msgid ""
 "Comparison between a domain with 24 divisions and 4 *High Resolution* "
-"divisions (left), and a domain with 100 divisions and 1 *High Resolution*"
-" division (right)."
+"divisions (left), and a domain with 100 divisions and 1 *High Resolution* "
+"division (right)."
 msgstr ""
+"具有24个细分精度和4个 *高精度* 细分精度（左）的域与具有100个细分精度和1个 *高"
+"精度* 细分精度（右）的域之间比较。"
 
 #: ../../manual/physics/smoke/types/domain.rst:240
 msgid ""
-"Low division simulations with lots of *High Resolution* divisions "
-"generally appear smaller in real-world scale (larger flames, etc.) and "
-"can be used to achieve pyroclastic plumes such as this:"
+"Low division simulations with lots of *High Resolution* divisions generally "
+"appear smaller in real-world scale (larger flames, etc.) and can be used to "
+"achieve pyroclastic plumes such as this:"
 msgstr ""
+"具有大量 *高精度* 细分的低域细分模拟通常在实际尺度（较大的火焰等）中看起来较"
+"小，并且可用于实现火山碎屑羽流，例如："
 
 #: ../../manual/physics/smoke/types/domain.rst:248
 msgid ""
 "High *Domain Division* simulations tend to appear larger in real-world "
 "scale, with many smaller details."
-msgstr ""
+msgstr "高 *域细分精度* 模拟往往在实际度上看起来更大，具有很多较小的细节。"
 
 #: ../../manual/physics/smoke/types/domain.rst:252
 msgid "Collections"
-msgstr ""
+msgstr "集合"
 
 #: ../../manual/physics/smoke/types/domain.rst:258
 msgid ":menuselection:`Properties --> Physics --> Collections`"
-msgstr ""
+msgstr ":menuselection:`属性编辑器 --> 物理 --> 集合`"
 
 #: ../../manual/physics/smoke/types/domain.rst:261
 msgid "Flow"
-msgstr ""
+msgstr "流"
 
 #: ../../manual/physics/smoke/types/domain.rst:261
 msgid ""
-"If set, only objects in the specified :doc:`Collection "
-"</scene_layout/collections/collections>` will be allowed to act as flow "
-"objects in this domain."
+"If set, only objects in the specified :doc:`Collection </scene_layout/"
+"collections/collections>` will be allowed to act as flow objects in this "
+"domain."
 msgstr ""
+"如果设置，则只允许指定的 :doc:`集合 </scene_layout/collections/collections>` "
+"作为此域中的流对象。"
 
 #: ../../manual/physics/smoke/types/domain.rst:266
 msgid "Collision"
-msgstr ""
+msgstr "碰撞"
 
 #: ../../manual/physics/smoke/types/domain.rst:264
 msgid ""
-"If set, only objects in the specified :doc:`Collection "
-"</scene_layout/collections/collections>` will be allowed to act as "
-"collision objects in this domain."
+"If set, only objects in the specified :doc:`Collection </scene_layout/"
+"collections/collections>` will be allowed to act as collision objects in "
+"this domain."
 msgstr ""
+"如果设置，则只允许指定的 :doc:`集合 </scene_layout/collections/collections>` "
+"作为此域中的碰撞对象。"
 
 #: ../../manual/physics/smoke/types/domain.rst:269
 msgid "Smoke Cache"
-msgstr ""
+msgstr "烟雾缓存"
 
 #: ../../manual/physics/smoke/types/domain.rst:275
 msgid ":menuselection:`Physics --> Smoke --> Cache`"
-msgstr ""
+msgstr ":menuselection:`物理 --> 烟雾 --> 缓存`"
 
 #: ../../manual/physics/smoke/types/domain.rst:277
 msgid "See :doc:`Baking </physics/smoke/baking>`."
-msgstr ""
+msgstr "参见 :doc:`烘焙 </physics/smoke/baking>`."
 
 #: ../../manual/physics/smoke/types/domain.rst:283
 msgid "Field Weights"
-msgstr ""
+msgstr "力场权重"
 
 #: ../../manual/physics/smoke/types/domain.rst:289
 msgid ":menuselection:`Properties --> Physics --> Field Weights`"
-msgstr ""
+msgstr ":menuselection:`属性编辑器 --> 物理 --> 力场权重`"
 
 #: ../../manual/physics/smoke/types/domain.rst:291
 msgid ""
-"These settings determine how much gravity and :doc:`Force Fields "
-"</physics/forces/force_fields/index>` affect the smoke."
+"These settings determine how much gravity and :doc:`Force Fields </physics/"
+"forces/force_fields/index>` affect the smoke."
 msgstr ""
+"这些设置决定了许多 :doc:`力场 </physics/forces/force_fields/index>` 如何影响"
+"烟雾。"
 
 #: ../../manual/physics/smoke/types/domain.rst:294
 msgid "Effector Collection"
-msgstr ""
+msgstr "效果器集合"
 
 #: ../../manual/physics/smoke/types/domain.rst:295
 msgid ""
 "When set, smoke can only be influenced by force fields in the specified "
 "collection."
-msgstr ""
+msgstr "设置后，烟雾只能受指定集合中的力场影响。"
 
 #: ../../manual/physics/smoke/types/domain.rst:296
 msgid "Gravity"
-msgstr ""
+msgstr "重力"
 
 #: ../../manual/physics/smoke/types/domain.rst:297
 msgid "How much the smoke is affected by Gravity."
-msgstr ""
+msgstr "重力对烟雾的影响程度。"
 
 #: ../../manual/physics/smoke/types/domain.rst:299
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: ../../manual/physics/smoke/types/domain.rst:299
 msgid "Overall influence of all force fields."
-msgstr ""
+msgstr "所有力场的整体权重。"
 
 #: ../../manual/physics/smoke/types/domain.rst:301
 msgid ""
-"The other settings determine how much influence individual force field "
-"types have."
-msgstr ""
+"The other settings determine how much influence individual force field types "
+"have."
+msgstr "其他设置决定了各个力场类型的权重。"
 
 #: ../../manual/physics/smoke/types/domain.rst:306
 msgid "Smoke with a wind force field."
-msgstr ""
-
-#~ msgid ""
-#~ "The smoke domain is subdivided into "
-#~ "many \"cells\" called voxels (see "
-#~ ":term:`voxel`) which make up \"pixels\" "
-#~ "of smoke. This setting controls the "
-#~ "number of subdivisions in the domain."
-#~ " Higher numbers of subdivisions are "
-#~ "one way of creating higher resolution"
-#~ " smoke (See `Smoke High Resolution`_)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Low division simulations with lots of"
-#~ " *High Resolution* divisions generally "
-#~ "appear smaller in real-world scale "
-#~ "(larger flames etc.) and can be "
-#~ "used to achieve pyroclastic plumes such"
-#~ " as this:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The smoke domain is subdivided into "
-#~ "many \"cells\" called voxels (see "
-#~ ":term:`voxel`) which make up \"pixels\" "
-#~ "of smoke. This setting controls the "
-#~ "number of subdivisions in the domain."
-#~ " Higher numbers of subdivisions are "
-#~ "one way of creating higher resolution"
-#~ " smoke (see `Smoke High Resolution`_)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Controls which sides of the domain "
-#~ "will allow smoke \"through\" the domain,"
-#~ " making it disappear without influencing"
-#~ " the rest of the simulation, and "
-#~ "which sides will deflect smoke as "
-#~ "if colliding with a :doc:`Collision "
-#~ "Object </physics/smoke/types/collisions>`."
-#~ msgstr ""
-
-#~ msgid "*Smoke Domain* settings."
-#~ msgstr ""
-
-#~ msgid "Settings"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The effect this setting has on "
-#~ "smoke depends on the per flow "
-#~ "object :ref:` Temperature Difference "
-#~ "<smoke-flow-temp-diff>`:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "*Wavelet* is an implementation of "
-#~ "`Turbulence for Fluid Simulation "
-#~ "<http://graphics.ethz.ch/research/physics_animation_fabrication/simulation/turb.php>`__."
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke`"
-#~ msgstr ""
-
-#~ msgid "Type:     Domain"
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke Flames`"
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke Adaptive Domain`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Amount of extra space to leave "
-#~ "around smoke, measured in voxels. With"
-#~ " very fast moving smoke larger "
-#~ "margins may be required to prevent "
-#~ "the smoke from being cut off by"
-#~ " the adaptive boundary, but note this"
-#~ " will increase the number of voxels"
-#~ " which need to be computed."
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke High Resolution`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The High Resolution option lets you "
-#~ "simulate at low resolution and then "
-#~ "uses noise techniques to enhance the "
-#~ "resolution without actually computing it. "
-#~ "This allows animators to set up a"
-#~ " low resolution simulation quickly and "
-#~ "later add details without changing the"
-#~ " overall fluid motion. Also see `Note"
-#~ " on Divisions and High Resolution`_."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Show high resolution in the viewport "
-#~ "(may cause viewport responsiveness to "
-#~ "suffer)."
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke Groups`"
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke Cache`"
-#~ msgstr ""
-
-#~ msgid "Panel:    :menuselection:`Physics --> Smoke Field Weights`"
-#~ msgstr ""
-
-#~ msgid "Smoke Groups"
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Physics --> Smoke Groups`"
-#~ msgstr ""
-
-#~ msgid "Flow Group"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If set, only objects in the "
-#~ "specified :doc:`Group "
-#~ "</editors/3dview/object/properties/relations/groups>` will "
-#~ "be allowed to act as flow objects"
-#~ " in this domain."
-#~ msgstr ""
-
-#~ msgid "Collision Group"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If set, only objects in the "
-#~ "specified :doc:`Group "
-#~ "</editors/3dview/object/properties/relations/groups>` will "
-#~ "be allowed to act as collision "
-#~ "objects in this domain."
-#~ msgstr ""
-
-#~ msgid "Smoke Field Weights"
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Physics --> Smoke Field Weights`"
-#~ msgstr ""
-
-#~ msgid "Effector Group"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When set, smoke can only be "
-#~ "influenced by force fields in the "
-#~ "specified group."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "These settings determine how much "
-#~ "gravity and :doc:`Force Fields "
-#~ "</physics/force_fields/index>` affect the smoke."
-#~ msgstr ""
-
-#~ msgid "*Smoke Domain* options."
-#~ msgstr ""
-
-#~ msgid "Options"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The smoke domain is subdivided into "
-#~ "many \"cells\" called voxels (see "
-#~ ":term:`voxel`) which make up \"pixels\" "
-#~ "of smoke. This setting controls the "
-#~ "number of subdivisions in the domain."
-#~ " Higher numbers of subdivisions are "
-#~ "one way of creating higher resolution"
-#~ " smoke (see `Smoke High Resolution`_)."
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Physics --> Smoke Flames`"
-#~ msgstr ""
-
-#~ msgid "Speed"
-#~ msgstr ""
-
-#~ msgid "Ignition"
-#~ msgstr ""
-
-#~ msgid "Smoke Adaptive Domain"
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Physics --> Smoke Adaptive Domain`"
-#~ msgstr ""
-
-#~ msgid "Smoke High Resolution"
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Physics --> Smoke High Resolution`"
-#~ msgstr ""
-
-#~ msgid "Resolution: Divisions"
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Physics --> Smoke Cache`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If set, only objects in the "
-#~ "specified :doc:`Collection "
-#~ "</scene_layout/object/properties/relations/groups>` will "
-#~ "be allowed to act as flow objects"
-#~ " in this domain."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If set, only objects in the "
-#~ "specified :doc:`Collection "
-#~ "</scene_layout/object/properties/relations/groups>` will "
-#~ "be allowed to act as collision "
-#~ "objects in this domain."
-#~ msgstr ""
-
-#~ msgid "Show High Resolution"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Show the high resolution version in "
-#~ "the viewport (may cause viewport "
-#~ "responsiveness to suffer)."
-#~ msgstr ""
-
+msgstr "风力吹动烟雾。"
