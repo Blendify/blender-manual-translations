@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-08-15 09:11+0900\n"
+"PO-Revision-Date: 2019-08-16 22:12+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -220,8 +220,8 @@ msgid ""
 "`Linked Libraries </files/linked_libraries>`."
 msgstr ""
 "外部のblendファイル (ライブラリ) のデータを、現在のシーンにリンクします。その"
-"データへの編集は、外部ライブラリ側でのみ行えます。*Link* と *Append* は、選択"
-"した部分のみを別ファイルからロードするために使用します。:doc:`Linked "
+"データへの編集は、外部ライブラリ側でのみ行えます。*Link* と *Append* は、別"
+"ファイルの中から選択した部分のみをロードするために使用します。:doc:`Linked "
 "Libraries </files/linked_libraries>` を参照してください。"
 
 #: ../../manual/interface/window_system/topbar.rst:67
@@ -234,7 +234,7 @@ msgid ""
 "is copied from the external file, and completely unlinked from it."
 msgstr ""
 "外部のblendファイルから現在のシーンにデータを追加します。新しいデータは外部"
-"ファイルからコピーされ、完全にリンクが解除されます。"
+"ファイルからコピーされ、その外部ファイルとのリンクは完全に無くなります。"
 
 #: ../../manual/interface/window_system/topbar.rst:69
 msgid "Data Previews"
@@ -269,8 +269,8 @@ msgid ""
 "of your work to a format that can be processed by other graphics programs. "
 "See :doc:`Import/Export </files/import_export>`."
 msgstr ""
-"通常は作業内容をblendファイルに保存しますが、作業内容の一部またはすべてを他の"
-"グラフィックプログラムで処理できる形式にエクスポートできます。:doc:`Import/"
+"通常は作業内容をblendファイルに保存しますが、作業内容の一部またはすべてを、他"
+"のグラフィックプログラムで処理できる形式でエクスポートできます。:doc:`Import/"
 "Export </files/import_export>` を参照してください。"
 
 #: ../../manual/interface/window_system/topbar.rst:110
@@ -284,10 +284,10 @@ msgid ""
 "of all unpacked resources via a relative or absolute path. See :ref:`pack or "
 "unpack external Data <pack-unpack-data>`."
 msgstr ""
-"テクスチャやその他リソースなどの外部データは、blendファイル内に格納 (パック) "
-"または個別のファイル (アンパック) として扱えます。Blenderは相対パスまたは絶対"
-"パスを介して、アンパックされたすべてのリソースを追跡します。:ref:`pack or "
-"unpack external Data <pack-unpack-data>` を参照してください。"
+"テクスチャやその他の外部データは、blendファイルの一部として取り込む (パック) "
+"または別々のファイルとして扱う (アンパック) ことができます。Blenderは相対パス"
+"または絶対パスを介して、アンパックされているすべてのリソースを追跡します。:"
+"ref:`pack or unpack external Data <pack-unpack-data>` を参照してください。"
 
 #: ../../manual/interface/window_system/topbar.rst:85
 msgid "Automatically Pack Into .blend"
@@ -298,9 +298,9 @@ msgid ""
 "This option activates the file packing. If enabled, every time the blend-"
 "file is saved, all external files will be saved (packed) in it."
 msgstr ""
-"このオプションで、ファイルのパッキングがアクティブになります。有効にすると、"
-"ブレンド ファイルが保存されるたびに、すべての外部ファイルが保存 (パック) され"
-"ます。"
+"このオプションで、外部ファイルの自動パッキングがアクティブになります。有効に"
+"すると、blendファイルが保存されるたびに、すべての外部ファイルがblendファイル"
+"内に保存(パック)されます。"
 
 #: ../../manual/interface/window_system/topbar.rst:87
 msgid "Pack All Into .blend"
@@ -308,7 +308,7 @@ msgstr "Pack All Into .blend"
 
 #: ../../manual/interface/window_system/topbar.rst:88
 msgid "Pack all used external files into the blend-file."
-msgstr "使用するすべての外部ファイルをblendファイルにパックします。"
+msgstr "使用しているすべての外部ファイルをblendファイル内にパックします。"
 
 #: ../../manual/interface/window_system/topbar.rst:89
 msgid "Unpack Into Files"
@@ -317,8 +317,8 @@ msgstr "Unpack Into Files"
 #: ../../manual/interface/window_system/topbar.rst:90
 msgid "Unpack all files packed into this blend-file to external ones."
 msgstr ""
-"このblendファイルにパックされたすべてのファイルを外部ファイルへアンパックしま"
-"す。"
+"blendファイルにパックさているすべてのファイルを外部ファイルとなるようにアン"
+"パックします。"
 
 #: ../../manual/interface/window_system/topbar.rst:91
 msgid "Make All Paths Relative"
@@ -342,7 +342,7 @@ msgid ""
 "the system's root."
 msgstr ""
 "外部ファイルへのすべてのパスを、絶対パスにします。絶対パスは、システムルート"
-"からの完全なパスを持っています。"
+"からの完全なパスです。"
 
 #: ../../manual/interface/window_system/topbar.rst:97
 msgid "Report Missing Files"
@@ -385,8 +385,8 @@ msgid ""
 "you can save the blend-file and reload it again, so that all external files "
 "are reloaded at once."
 msgstr ""
-"復元されたファイルは、リロードされる必要がある場合があります。 1 ファイルずつ"
-"行っても良いですし、blendファイルを保存してリロードすることで全ての外部ファイ"
+"復元されたファイルは、リロードを行う必要がある場合があります。 1ファイルずつ"
+"行っても良いですし、blendファイルを保存後にリロードすることで全ての外部ファイ"
 "ルを一括でリロードすることもできます。"
 
 #: ../../manual/interface/window_system/topbar.rst:125
@@ -400,7 +400,7 @@ msgid ""
 "file."
 msgstr ""
 "このメニューは、起動時や新規ファイル作成時に表示されるデフォルトシーン、ワー"
-"クスペース、インターフェースを保存するためのスタートアップファイルを管理しま"
+"クスペース、インターフェースを保持するためのスタートアップファイルを管理しま"
 "す。"
 
 #: ../../manual/interface/window_system/topbar.rst:118
@@ -517,7 +517,7 @@ msgstr "Render Audio"
 
 #: ../../manual/interface/window_system/topbar.rst:160
 msgid "Mix the scenes audio file to a sound file."
-msgstr "シーンのオーディオファイルをサウンドファイルにミックスします。"
+msgstr "シーンのオーディオファイルをサウンドファイルへミックスします。"
 
 #: ../../manual/interface/window_system/topbar.rst:164
 msgid ":doc:`Rendering audio </render/output/audio/introduction>` for details."
@@ -565,7 +565,7 @@ msgstr "Full Screen"
 
 #: ../../manual/interface/window_system/topbar.rst:179
 msgid "Images are rendered in a maximized Image editor."
-msgstr "イメージは最大化された Image editor 内でレンダリングされます。"
+msgstr "イメージは最大化された Image Editor 内でレンダリングされます。"
 
 #: ../../manual/interface/window_system/topbar.rst:180
 msgid "Image Editor"
@@ -573,7 +573,7 @@ msgstr "Image Editor"
 
 #: ../../manual/interface/window_system/topbar.rst:181
 msgid "Images are rendered in an Image editor."
-msgstr "イメージは Image editor  内へレンダリングされます。"
+msgstr "イメージは Image Editor 内へレンダリングされます。"
 
 #: ../../manual/interface/window_system/topbar.rst:182
 #: ../../manual/interface/window_system/topbar.rst:194
@@ -602,8 +602,8 @@ msgid ""
 "Lock interface during rendering in favor of giving more memory to the "
 "renderer."
 msgstr ""
-"レンダリング中にインターフェイスをロックして、レンダラーへのメモリを増やすこ"
-"とを優先します。"
+"レンダリング中にインターフェイスをロックして、レンダラーへ割り当てるメモリを"
+"増やすことを優先します。"
 
 #: ../../manual/interface/window_system/topbar.rst:192
 msgid "Window Menu"
@@ -627,7 +627,7 @@ msgstr "Toggle Window Fullscreen"
 
 #: ../../manual/interface/window_system/topbar.rst:199
 msgid "Toggle the current window fullscreen."
-msgstr "現在のウィンドウへ、フルスクリーン切り替えを行います。"
+msgstr "現在のウィンドウに対して、フルスクリーンかどうかの切り替えを行います。"
 
 #: ../../manual/interface/window_system/topbar.rst:200
 msgid "Next Workspace"
@@ -682,9 +682,9 @@ msgid ""
 "These set of tabs are used to select the current :doc:`Workspace </interface/"
 "window_system/workspaces>`; which are essentially predefined window layouts."
 msgstr ""
-"これらのタブセットは、:doc:`ワークスペース </interface/window_system/"
-"workspaces>` を選択するために使用されます。タブの実態は、定義済みのウィンドウ"
-"レイアウトです。"
+"タブのセットは、:doc:`ワークスペース </interface/window_system/workspaces>` "
+"を選択するために使用されます。タブの実態は、定義済みのウィンドウレイアウトで"
+"す。"
 
 #: ../../manual/interface/window_system/topbar.rst:225
 msgid "Scenes & Layers"
@@ -696,6 +696,6 @@ msgid ""
 "active :doc:`Scene </scene_layout/scene/index>` and :doc:`View Layer </"
 "scene_layout/view_layers/index>`."
 msgstr ""
-":ref:`data-block menus <ui-data-block>` を使用して、カレントの :doc:`シーン "
-"</scene_layout/scene/index>` と :doc:`ビューレイヤー </scene_layout/"
+":ref:`data-block menus <ui-data-block>` を使用して、アクティブにする :doc:`"
+"シーン </scene_layout/scene/index>` と :doc:`ビューレイヤー </scene_layout/"
 "view_layers/index>` を選択します。"
