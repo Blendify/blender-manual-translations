@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
+"POT-Creation-Date: 2019-08-17 12:08+0800\n"
 "PO-Revision-Date: 2019-07-22 21:16+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 1.8.11\n"
 
 #: ../../manual/render/eevee/materials/settings.rst:4
 msgid "Material Settings"
@@ -44,306 +43,331 @@ msgstr "背面剔除"
 msgid "Backface Culling hides the back side of faces in the final render."
 msgstr "在最终渲染中隐藏面的背面。"
 
-#: ../../manual/render/eevee/materials/settings.rst:19
+#: ../../manual/render/eevee/materials/settings.rst:21
 msgid "Blend Mode"
 msgstr "混合模式"
 
-#: ../../manual/render/eevee/materials/settings.rst:21
+#: ../../manual/render/eevee/materials/settings.rst:23
 msgid ""
-"After calculating the color of a surface, the blend mode defines how it is added to the color "
-"buffer. Depending on this the final color will be different."
+"After calculating the color of a surface, the blend mode defines how it "
+"is added to the color buffer. Depending on this the final color will be "
+"different."
 msgstr "计算表面面的颜色后，混合模式定义如何将其添加到颜色缓冲区。 根据这一点，最终颜色会有所不同。"
 
-#: ../../manual/render/eevee/materials/settings.rst:26
+#: ../../manual/render/eevee/materials/settings.rst:28
+#, fuzzy
 msgid ""
-"Additive, Multiplicative and Alpha Blending are considered \"Transparent\" blend modes. This has "
+"Alpha Blending is considered a \"Transparent\" blend modes and has "
 "implications regarding screen space effects."
 msgstr "添加、正片叠底（相乘）和Alpha混合被认为是“透明”混合模式。这会影响屏幕空间效果。"
 
-#: ../../manual/render/eevee/materials/settings.rst:31
-#: ../../manual/render/eevee/materials/settings.rst:102
+#: ../../manual/render/eevee/materials/settings.rst:33
+#: ../../manual/render/eevee/materials/settings.rst:90
 msgid "Opaque"
 msgstr "不透明"
 
-#: ../../manual/render/eevee/materials/settings.rst:30
+#: ../../manual/render/eevee/materials/settings.rst:32
 msgid ""
-"The previous color will be overwritten by the surface color. The alpha component is ignored. This "
-"is the fastest option."
+"The previous color will be overwritten by the surface color. The alpha "
+"component is ignored. This is the fastest option."
 msgstr "之前的颜色将被表面颜色覆盖。 alpha元素被忽略。 这是最快的选择。"
 
-#: ../../manual/render/eevee/materials/settings.rst:35
-msgid "Additive"
-msgstr "添加（相加）"
-
-#: ../../manual/render/eevee/materials/settings.rst:34
-msgid ""
-"The surface color will be added to the previous color. The alpha value will be used to mix surface "
-"color with the neutral color black (0.0, 0.0, 0.0)."
-msgstr "表面颜色将被添加到之前的颜色。alpha值将用于混合表面颜色和中性颜色黑色(0.0, 0.0, 0.0)。"
-
-#: ../../manual/render/eevee/materials/settings.rst:39
-msgid "Multiplicative"
-msgstr "正片叠底（相乘）"
-
-#: ../../manual/render/eevee/materials/settings.rst:38
-msgid ""
-"The previous color will be multiplied by the surface color. The alpha value will be used to mix "
-"surface color with the neutral color white (1.0, 1.0, 1.0)."
-msgstr "前一种颜色将乘以表面颜色。alpha值将用于混合表面颜色和中性白色(1.0, 1.0, 1.0)。"
-
-#: ../../manual/render/eevee/materials/settings.rst:43
+#: ../../manual/render/eevee/materials/settings.rst:37
 msgid "Alpha Clip"
 msgstr "Alpha 裁切"
 
-#: ../../manual/render/eevee/materials/settings.rst:42
+#: ../../manual/render/eevee/materials/settings.rst:36
 msgid ""
-"The previous color will be overwritten by the surface color, but only if the alpha value is above "
-"the clip threshold."
+"The previous color will be overwritten by the surface color, but only if "
+"the alpha value is above the clip threshold."
 msgstr "当alpha值高于裁切阈值时，前面的颜色将被表面颜色覆盖。"
 
-#: ../../manual/render/eevee/materials/settings.rst:49
+#: ../../manual/render/eevee/materials/settings.rst:43
 msgid "Alpha Hashed"
 msgstr "Alpha Hashed"
 
-#: ../../manual/render/eevee/materials/settings.rst:46
+#: ../../manual/render/eevee/materials/settings.rst:40
 msgid ""
-"The previous color will be overwritten by the surface color, but only if the alpha value is above "
-"a random clip threshold. This statistical approach is noisy but is able to approximate alpha "
-"blending without any sorting problem. Increasing the sample count in the render settings will "
+"The previous color will be overwritten by the surface color, but only if "
+"the alpha value is above a random clip threshold. This statistical "
+"approach is noisy but is able to approximate alpha blending without any "
+"sorting problem. Increasing the sample count in the render settings will "
 "reduce the resulting noise."
-msgstr ""
-"当alpha值高于随机裁切阈值时，前面的颜色将被表面颜色覆盖。这种选项是有图像噪点的，但能够近似alpha混"
-"合没有任何排序问题。在渲染设置中增加采样数值能减少其产生的噪点。"
+msgstr "当alpha值高于随机裁切阈值时，前面的颜色将被表面颜色覆盖。这种选项是有图像噪点的，但能够近似alpha混合没有任何排序问题。在渲染设置中增加采样数值能减少其产生的噪点。"
 
-#: ../../manual/render/eevee/materials/settings.rst:53
+#: ../../manual/render/eevee/materials/settings.rst:47
 msgid "Alpha Blending"
 msgstr "Alpha 混合"
 
-#: ../../manual/render/eevee/materials/settings.rst:52
-msgid "Use alpha blending to overlay the surface color on top of the previous color."
+#: ../../manual/render/eevee/materials/settings.rst:46
+msgid ""
+"Use alpha blending to overlay the surface color on top of the previous "
+"color."
 msgstr "使用alpha混合将表面颜色覆盖在前一种颜色之上。"
 
-#: ../../manual/render/eevee/materials/settings.rst:56
+#: ../../manual/render/eevee/materials/settings.rst:50
 msgid "Sorting Problem"
 msgstr "排序问题"
 
-#: ../../manual/render/eevee/materials/settings.rst:58
+#: ../../manual/render/eevee/materials/settings.rst:52
 msgid ""
-"When writing to the color buffer using transparent blend modes, the order in which the color "
-"blending happens is important as it can change the final output color. As of now Eevee does not "
-"support per-fragment (pixel) sorting or per-triangle sorting. Only per-object sorting is available "
-"and is automatically done on all transparent surfaces based on object origin."
+"When writing to the color buffer using transparent blend modes, the order"
+" in which the color blending happens is important as it can change the "
+"final output color. As of now Eevee does not support per-fragment (pixel)"
+" sorting or per-triangle sorting. Only per-object sorting is available "
+"and is automatically done on all transparent surfaces based on object "
+"origin."
 msgstr ""
-"使用透明混合模式写入颜色缓冲区时，颜色混合的顺序很重要，因为它可以更改最终的输出颜色。 截至目前，"
-"Eevee不支持每片段（像素）排序或每三角形排序。 只有每个物体排序可用，并且基于物体原点在所有透明表面"
-"上自动完成。"
+"使用透明混合模式写入颜色缓冲区时，颜色混合的顺序很重要，因为它可以更改最终的输出颜色。 "
+"截至目前，Eevee不支持每片段（像素）排序或每三角形排序。 只有每个物体排序可用，并且基于物体原点在所有透明表面上自动完成。"
 
-#: ../../manual/render/eevee/materials/settings.rst:65
+#: ../../manual/render/eevee/materials/settings.rst:59
 msgid ""
-"This per-object sorting has already a cost and having thousands of these objects in a scene will "
-"greatly degrade performance."
+"This per-object sorting has already a cost and having thousands of these "
+"objects in a scene will greatly degrade performance."
 msgstr "每个物体的排序会付出成本，在场景中拥有数千个这样的物体将大大降低性能。"
 
 #: ../../manual/render/eevee/materials/settings.rst:68
-msgid ""
-"Additive and Multiplicative blending are, individually, order independent. This means all the "
-"triangles of a surface rendered with one of these blending mode will always output the expected "
-"result if they do not intersect with other transparent surfaces. This will work even if the "
-"triangles of that surface intersect each others."
-msgstr ""
-"添加和相乘混合和顺序无关。这意味着，如果用其中一种混合模式渲染的表面不与其他透明表面相交，那么该表"
-"面的所有三角形都将始终输出预期结果。即使这个表面的三角形彼此相交。"
-
-#: ../../manual/render/eevee/materials/settings.rst:73
-msgid ""
-"However this does not work with Alpha Blending, where even triangle order is important. In this "
-"case you can disable the *Show Backside* option."
-msgstr ""
-"然而，这并不适用于Alpha混合，即使是三角形的顺序也很重要。在这种情况下，可以禁用 *显示背面* 选项。"
-
-#: ../../manual/render/eevee/materials/settings.rst:80
 msgid "Show Backside"
 msgstr "显示背面"
 
-#: ../../manual/render/eevee/materials/settings.rst:77
+#: ../../manual/render/eevee/materials/settings.rst:63
+#, fuzzy
 msgid ""
-"If enabled all transparent fragments will be rendered. If disabled, only the front-most surface "
-"fragments will be rendered. Disable this option to ensure correct appearance of transparency from "
-"any point of view."
-msgstr ""
-"如果启用，将渲染所有透明层次。 如果禁用，则仅渲染最前面的透明表面。 禁用此选项可确保从任何视角正确"
-"显示透明。"
+"If enabled all transparent fragments will be rendered. If disabled, only "
+"the front-most surface fragments will be rendered. Disable this option to"
+" ensure correct appearance of transparency from any point of view. Then "
+"using *Alpha Blending* this option should be disabled because with *Alpha"
+" Blending*, the order in which triangle are sorted is important."
+msgstr "如果启用，将渲染所有透明层次。 如果禁用，则仅渲染最前面的透明表面。 禁用此选项可确保从任何视角正确显示透明。"
 
-#: ../../manual/render/eevee/materials/settings.rst:83
+#: ../../manual/render/eevee/materials/settings.rst:71
 msgid "Transparent Shadow"
 msgstr "透明阴影"
 
-#: ../../manual/render/eevee/materials/settings.rst:85
-msgid "Type of shadows used for a transparent surface. Eevee does not support colored shadow maps."
+#: ../../manual/render/eevee/materials/settings.rst:73
+msgid ""
+"Type of shadows used for a transparent surface. Eevee does not support "
+"colored shadow maps."
 msgstr "用于这个透明表面的阴影类型。Eevee不支持彩色阴影贴图。"
 
-#: ../../manual/render/eevee/materials/settings.rst:88
+#: ../../manual/render/eevee/materials/settings.rst:76
 msgid ""
-"Half transparent shadows can be produced by using hashed transparent shadows and a larger Soft "
-"value on the shadow map."
+"Half transparent shadows can be produced by using hashed transparent "
+"shadows and a larger Soft value on the shadow map."
 msgstr "通过在半透明阴影上使用Alpha Hashed 阴影和较大的soft（柔化）值，可以生成半透明阴影。"
 
-#: ../../manual/render/eevee/materials/settings.rst:93
+#: ../../manual/render/eevee/materials/settings.rst:81
 msgid ""
-"This option does not change the behavior of contact shadows which are traced using the depth "
-"buffer. If the material is writing to the depth buffer (in other words, if the blend mode is set "
-"to either *Opaque*, *Alpha Clip* or *Alpha Hashed*), contact shadows will be casted by the surface "
-"material regardless of the *Transparent Shadow* type."
+"This option does not change the behavior of contact shadows which are "
+"traced using the depth buffer. If the material is writing to the depth "
+"buffer (in other words, if the blend mode is set to either *Opaque*, "
+"*Alpha Clip* or *Alpha Hashed*), contact shadows will be casted by the "
+"surface material regardless of the *Transparent Shadow* type."
 msgstr ""
-"此选项不会影响使用深度缓冲区跟踪阴影。如果材质写入深度缓冲区（换句话说，混合模式设置为 *不透明*， *"
-"透明钳制* 或者 *Alpha Hashed*），无论 *透明阴影* 选项如何，接触阴影都将由曲面材质投射。"
+"此选项不会影响使用深度缓冲区跟踪阴影。如果材质写入深度缓冲区（换句话说，混合模式设置为 *不透明*， *透明钳制* 或者 *Alpha "
+"Hashed*），无论 *透明阴影* 选项如何，接触阴影都将由曲面材质投射。"
 
-#: ../../manual/render/eevee/materials/settings.rst:99
+#: ../../manual/render/eevee/materials/settings.rst:87
 msgid "None"
 msgstr "无"
 
-#: ../../manual/render/eevee/materials/settings.rst:99
+#: ../../manual/render/eevee/materials/settings.rst:87
 msgid "The surface will not cast any shadow."
 msgstr "表面不会投射任何阴影。"
 
-#: ../../manual/render/eevee/materials/settings.rst:102
+#: ../../manual/render/eevee/materials/settings.rst:90
 msgid "The surface will cast shadows like an opaque surface."
 msgstr "表面将投射阴影，如不透明的表面。"
 
-#: ../../manual/render/eevee/materials/settings.rst:106
+#: ../../manual/render/eevee/materials/settings.rst:94
 msgid "Clip"
 msgstr "裁切"
 
-#: ../../manual/render/eevee/materials/settings.rst:105
+#: ../../manual/render/eevee/materials/settings.rst:93
 msgid ""
-"The surface will cast shadows like an opaque surface, but only areas where the alpha value is "
-"above the clip threshold."
+"The surface will cast shadows like an opaque surface, but only areas "
+"where the alpha value is above the clip threshold."
 msgstr "alpha值高于裁切阈值的区域，表面会像不透明的表面一样投射阴影。"
 
-#: ../../manual/render/eevee/materials/settings.rst:111
+#: ../../manual/render/eevee/materials/settings.rst:99
 msgid "Hashed"
 msgstr "Hashed"
 
-#: ../../manual/render/eevee/materials/settings.rst:109
+#: ../../manual/render/eevee/materials/settings.rst:97
 msgid ""
-"The surface will cast shadows like an opaque surface, but only areas where the alpha value is "
-"above a random threshold."
+"The surface will cast shadows like an opaque surface, but only areas "
+"where the alpha value is above a random threshold."
 msgstr "alpha值高于随机阈值的区域，表面会像一个不透明的表面一样投射阴影。"
 
-#: ../../manual/render/eevee/materials/settings.rst:114
-#: ../../manual/render/eevee/materials/settings.rst:129
+#: ../../manual/render/eevee/materials/settings.rst:102
+#: ../../manual/render/eevee/materials/settings.rst:117
 msgid "Screen Space Refraction"
 msgstr "屏幕空间折射"
 
-#: ../../manual/render/eevee/materials/settings.rst:116
+#: ../../manual/render/eevee/materials/settings.rst:104
 msgid ""
-"Enabling Screen Space Refraction on a surface means that refraction BSDFs will do a raytrace "
-"against the depth buffer to find the most accurate refracted color. This has a big performance "
-"cost if the surface covers a lot of pixels."
-msgstr ""
-"启用屏幕空间折射在表面上的折射意味着折射BSDF将对深度缓冲区进行光线跟踪，以找到最准确的折射颜色。如"
-"果表面覆盖了大量的像素，这会很耗性能。"
+"Enabling Screen Space Refraction on a surface means that refraction BSDFs"
+" will do a raytrace against the depth buffer to find the most accurate "
+"refracted color. This has a big performance cost if the surface covers a "
+"lot of pixels."
+msgstr "启用屏幕空间折射在表面上的折射意味着折射BSDF将对深度缓冲区进行光线跟踪，以找到最准确的折射颜色。如果表面覆盖了大量的像素，这会很耗性能。"
 
-#: ../../manual/render/eevee/materials/settings.rst:120
+#: ../../manual/render/eevee/materials/settings.rst:108
 msgid ""
-"Screen Space Reflections and Ambient Occlusion are not compatible with Screen Space Refraction. "
-"They will be disabled on the surfaces that use it. Surfaces that use Screen Space Refraction will "
-"not appear in Screen Space Reflections at the right place. Surfaces that use Screen Space "
+"Screen Space Reflections and Ambient Occlusion are not compatible with "
+"Screen Space Refraction. They will be disabled on the surfaces that use "
+"it. Surfaces that use Screen Space Refraction will not appear in Screen "
+"Space Reflections at the right place. Surfaces that use Screen Space "
 "Refraction will not cast Ambient Occlusion onto other surfaces."
-msgstr ""
-"因为兼容问题，启用屏幕空间折射的表面将禁用屏幕空间反射和环境光屏蔽（AO）。使用屏幕空间折射的物体表"
-"面将不会出现在屏幕空间反射的位置。环境光屏蔽不会计算此物体表面与其他物体的屏蔽。"
+msgstr "因为兼容问题，启用屏幕空间折射的表面将禁用屏幕空间反射和环境光屏蔽（AO）。使用屏幕空间折射的物体表面将不会出现在屏幕空间反射的位置。环境光屏蔽不会计算此物体表面与其他物体的屏蔽。"
 
-#: ../../manual/render/eevee/materials/settings.rst:125
+#: ../../manual/render/eevee/materials/settings.rst:113
 msgid ""
-"If this option is disabled or if the Screen Space Refraction raytrace fails, the refracted ray "
-"will use the color of the nearest probe."
+"If this option is disabled or if the Screen Space Refraction raytrace "
+"fails, the refracted ray will use the color of the nearest probe."
 msgstr "如果禁用此选项或屏幕空间折射光线追踪失败，折射光线将使用最近探针的颜色。"
 
-#: ../../manual/render/eevee/materials/settings.rst:129
+#: ../../manual/render/eevee/materials/settings.rst:117
 msgid "Enables screen space refraction."
 msgstr "启用屏幕空间折射。"
 
-#: ../../manual/render/eevee/materials/settings.rst:138
+#: ../../manual/render/eevee/materials/settings.rst:126
 msgid "Refraction Depth"
 msgstr "折射深度"
 
-#: ../../manual/render/eevee/materials/settings.rst:132
+#: ../../manual/render/eevee/materials/settings.rst:120
 msgid ""
-"If Refraction Depth is not 0.0, all refraction BSDFs in the shader will act as if the object is a "
-"thin slab of the refraction material having this thickness. This will model a second refraction "
-"event that will double the absorption color and start the refraction ray after this second event."
+"If Refraction Depth is not 0.0, all refraction BSDFs in the shader will "
+"act as if the object is a thin slab of the refraction material having "
+"this thickness. This will model a second refraction event that will "
+"double the absorption color and start the refraction ray after this "
+"second event."
 msgstr ""
-"如果折射深度不是0.0，则着色器中的所有折射BSDF将表现为该对象是具有该厚度的折射材料的薄板。 这将模拟"
-"第二次折射事件，该事件将使吸收颜色加倍并在第二次事件之后开始折射光线。"
+"如果折射深度不是0.0，则着色器中的所有折射BSDF将表现为该对象是具有该厚度的折射材料的薄板。 "
+"这将模拟第二次折射事件，该事件将使吸收颜色加倍并在第二次事件之后开始折射光线。"
 
-#: ../../manual/render/eevee/materials/settings.rst:137
+#: ../../manual/render/eevee/materials/settings.rst:125
 msgid "This option greatly increases the quality of thin glass objects."
 msgstr "此选项可以极大地提高了薄玻璃对象的质量。"
 
-#: ../../manual/render/eevee/materials/settings.rst:143
+#: ../../manual/render/eevee/materials/settings.rst:131
 msgid "Subsurface Translucency"
 msgstr "次表面半透明"
 
+#: ../../manual/render/eevee/materials/settings.rst:133
+msgid ""
+"Eevee's Subsurface Scattering algorithm works by blurring the irradiance "
+"in screen space. This means that if no visible part of the surface is "
+"lit, the effect disappears."
+msgstr "Eevee的次表面散射算法通过模糊屏幕空间的辐照度来工作。这意味着如果表面没有可见的部分被照亮，效果就会消失。"
+
+#: ../../manual/render/eevee/materials/settings.rst:136
+msgid ""
+"However, true Subsurface Scattering goes beneath the surface and can "
+"travel a lot of distance. This is why a human ear lit from behind appears"
+" red on the front side."
+msgstr "然而，真正的次表面散射在表面下方并且可以行进很多距离。 这就是为什么从后面照亮的人耳在正面看起来是红色的。"
+
+#: ../../manual/render/eevee/materials/settings.rst:139
+msgid ""
+"That is what this effect mimics. This translucency approximation only "
+"works with lights that have shadow maps and only on Subsurface BSDFs (not"
+" the Translucency BSDFs). It does not work with indirect lighting. The "
+"soft parameter of the shadow maps also affects this effect."
+msgstr ""
+"这就是这种效应模仿的结果。 这种半透明近似仅适用于具有阴影贴图的光，仅适用于次表面BSDF（不是半透明BSDF）。 它不适用于间接照明。 "
+"阴影贴图的软参数也会影响此效果。"
+
 #: ../../manual/render/eevee/materials/settings.rst:145
-msgid ""
-"Eevee's Subsurface Scattering algorithm works by blurring the irradiance in screen space. This "
-"means that if no visible part of the surface is lit, the effect disappears."
-msgstr ""
-"Eevee的次表面散射算法通过模糊屏幕空间的辐照度来工作。这意味着如果表面没有可见的部分被照亮，效果就会"
-"消失。"
-
-#: ../../manual/render/eevee/materials/settings.rst:148
-msgid ""
-"However, true Subsurface Scattering goes beneath the surface and can travel a lot of distance. "
-"This is why a human ear lit from behind appears red on the front side."
-msgstr ""
-"然而，真正的次表面散射在表面下方并且可以行进很多距离。 这就是为什么从后面照亮的人耳在正面看起来是红"
-"色的。"
-
-#: ../../manual/render/eevee/materials/settings.rst:151
-msgid ""
-"That is what this effect mimics. This translucency approximation only works with lights that have "
-"shadow maps and only on Subsurface BSDFs (not the Translucency BSDFs). It does not work with "
-"indirect lighting. The soft parameter of the shadow maps also affects this effect."
-msgstr ""
-"这就是这种效应模仿的结果。 这种半透明近似仅适用于具有阴影贴图的光，仅适用于次表面BSDF（不是半透明"
-"BSDF）。 它不适用于间接照明。 阴影贴图的软参数也会影响此效果。"
-
-#: ../../manual/render/eevee/materials/settings.rst:157
 msgid "Pass Index"
 msgstr "索引编号"
 
-#: ../../manual/render/eevee/materials/settings.rst:159
+#: ../../manual/render/eevee/materials/settings.rst:147
 msgid ""
-"Index number for the *Material Index* :doc:`render pass </render/layers/passes>`. This can be used "
-"to give a mask to a material which then can be read with the :doc:`ID Mask Node </compositing/"
-"types/converter/id_mask>` in the compositor."
+"Index number for the *Material Index* :doc:`render pass "
+"</render/layers/passes>`. This can be used to give a mask to a material "
+"which then can be read with the :doc:`ID Mask Node "
+"</compositing/types/converter/id_mask>` in the compositor."
 msgstr ""
 ":doc:`材质索引 </render/layers/passes>` 的索引号。为材质指定编号，后期可以使用合成器中的 :doc:`ID "
 "遮罩节点 </compositing/types/converter/id_mask>` 读取该遮罩。"
 
 #~ msgid ""
-#~ "If Refraction Depth is not 0.0, all refraction BSDFs in the shader will act as if the object "
-#~ "would be a thin slab of the refraction material with this thickness. This will model a second "
-#~ "refraction event that will double the absorption color and start the refraction ray after this "
-#~ "second event."
+#~ "If Refraction Depth is not 0.0, "
+#~ "all refraction BSDFs in the shader "
+#~ "will act as if the object would"
+#~ " be a thin slab of the "
+#~ "refraction material with this thickness. "
+#~ "This will model a second refraction "
+#~ "event that will double the absorption"
+#~ " color and start the refraction ray"
+#~ " after this second event."
 #~ msgstr ""
-#~ "如果“折射深度”不是0.0，材质中的所有折射BSDF将表现为该对象将是具有此厚度的折射材质的薄板。 这将模"
-#~ "拟第二次折射事件，该事件将使吸收颜色加倍并在第二次事件之后开始折射光线。"
+#~ "如果“折射深度”不是0.0，材质中的所有折射BSDF将表现为该对象将是具有此厚度的折射材质的薄板。 "
+#~ "这将模拟第二次折射事件，该事件将使吸收颜色加倍并在第二次事件之后开始折射光线。"
 
 #~ msgid ""
-#~ "That is what this effect mimics. This translucency approximation does only work with lamps that "
-#~ "have shadow maps and only on Subsurface BSDFs (not the Translucency BSDFs). It does not work "
-#~ "with indirect lighting. The soft parameter of the shadow maps also affects this effect."
+#~ "That is what this effect mimics. "
+#~ "This translucency approximation does only "
+#~ "work with lamps that have shadow "
+#~ "maps and only on Subsurface BSDFs "
+#~ "(not the Translucency BSDFs). It does"
+#~ " not work with indirect lighting. The"
+#~ " soft parameter of the shadow maps"
+#~ " also affects this effect."
 #~ msgstr ""
-#~ "这就是这种效应模仿的结果。 这种半透明近似仅适用于具有阴影贴图且仅在次表面BSDF（不是半透明BSDF）"
-#~ "上的灯具。 它不适用于间接照明。 阴影贴图的软参数也会影响此效果。"
+#~ "这就是这种效应模仿的结果。 这种半透明近似仅适用于具有阴影贴图且仅在次表面BSDF（不是半透明BSDF）上的灯具。 "
+#~ "它不适用于间接照明。 阴影贴图的软参数也会影响此效果。"
 
 #~ msgid ""
-#~ "Screen Space Reflections is not compatible with Screen Space Refraction. It will be disabled on "
-#~ "the surfaces that use it. Surfaces that use Screen Space Refraction will not appear in Screen "
-#~ "Space Reflections."
-#~ msgstr ""
-#~ "屏幕空间反射与屏幕空间折射不兼容。它将在使用它的表面上禁用。使用屏幕空间折射的表面不会出现在屏幕"
-#~ "空间反射中。"
+#~ "Screen Space Reflections is not "
+#~ "compatible with Screen Space Refraction. "
+#~ "It will be disabled on the "
+#~ "surfaces that use it. Surfaces that "
+#~ "use Screen Space Refraction will not "
+#~ "appear in Screen Space Reflections."
+#~ msgstr "屏幕空间反射与屏幕空间折射不兼容。它将在使用它的表面上禁用。使用屏幕空间折射的表面不会出现在屏幕空间反射中。"
+
+#~ msgid "Additive"
+#~ msgstr "添加（相加）"
+
+#~ msgid ""
+#~ "The surface color will be added to"
+#~ " the previous color. The alpha value"
+#~ " will be used to mix surface "
+#~ "color with the neutral color black "
+#~ "(0.0, 0.0, 0.0)."
+#~ msgstr "表面颜色将被添加到之前的颜色。alpha值将用于混合表面颜色和中性颜色黑色(0.0, 0.0, 0.0)。"
+
+#~ msgid "Multiplicative"
+#~ msgstr "正片叠底（相乘）"
+
+#~ msgid ""
+#~ "The previous color will be multiplied"
+#~ " by the surface color. The alpha "
+#~ "value will be used to mix surface"
+#~ " color with the neutral color white"
+#~ " (1.0, 1.0, 1.0)."
+#~ msgstr "前一种颜色将乘以表面颜色。alpha值将用于混合表面颜色和中性白色(1.0, 1.0, 1.0)。"
+
+#~ msgid ""
+#~ "Additive and Multiplicative blending are, "
+#~ "individually, order independent. This means"
+#~ " all the triangles of a surface "
+#~ "rendered with one of these blending "
+#~ "mode will always output the expected "
+#~ "result if they do not intersect "
+#~ "with other transparent surfaces. This "
+#~ "will work even if the triangles of"
+#~ " that surface intersect each others."
+#~ msgstr "添加和相乘混合和顺序无关。这意味着，如果用其中一种混合模式渲染的表面不与其他透明表面相交，那么该表面的所有三角形都将始终输出预期结果。即使这个表面的三角形彼此相交。"
+
+#~ msgid ""
+#~ "However this does not work with "
+#~ "Alpha Blending, where even triangle "
+#~ "order is important. In this case "
+#~ "you can disable the *Show Backside* "
+#~ "option."
+#~ msgstr "然而，这并不适用于Alpha混合，即使是三角形的顺序也很重要。在这种情况下，可以禁用 *显示背面* 选项。"
+
