@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-07-27 20:49+0800\n"
+"POT-Creation-Date: 2019-08-19 23:24+0800\n"
+"PO-Revision-Date: 2019-08-19 23:40+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -29,12 +29,13 @@ msgstr ""
 
 #: ../../manual/modeling/modifiers/deform/hooks.rst:10
 msgid ""
-"As the hook moves, it pulls vertices or control points from the geometry with "
-"it. You can think of it as animated :doc:`Proportional Editing </scene_layout/"
-"object/editing/transform/control/proportional_edit>`."
+"As an object specified as hook moves, it pulls vertices or control points from "
+"the geometry with it. You can think of it as animated :doc:`Proportional "
+"Editing </scene_layout/object/editing/transform/control/proportional_edit>`."
 msgstr ""
-"当钩子移动时，它会从几何体中拉出顶点或控制点。你可以把它想象成 :doc:`衰减编辑 "
-"</scene_layout/object/editing/transform/control/proportional_edit>` 。"
+"当指定为挂钩的物体移动时，它会从几何体中拉出顶点或控制点。你可以把它想象成 :"
+"doc:`衰减编辑 </scene_layout/object/editing/transform/control/"
+"proportional_edit>` 。"
 
 #: ../../manual/modeling/modifiers/deform/hooks.rst:14
 msgid ""
@@ -45,53 +46,62 @@ msgstr ""
 "虽然钩子不能像形状键那样很好地控制顶点的移动，但它们的优势是可以直接选择顶点进"
 "行操作。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:19
+#: ../../manual/modeling/modifiers/deform/hooks.rst:17
+msgid ""
+"To assign selected vertices (in Edit Mode) you can use the *Assign* button on "
+"the modifier panel or use the :ref:`Add Hook <bpy.ops.object.hook_add_selob>` "
+"menu."
+msgstr ""
+"使用修改器面板的 *指定* 按钮或 :ref:`添加挂钩 <bpy.ops.object.hook_add_selob>` "
+"菜单指定选中的顶点 (编辑模式下)。"
+
+#: ../../manual/modeling/modifiers/deform/hooks.rst:22
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:24
+#: ../../manual/modeling/modifiers/deform/hooks.rst:27
 msgid "The Hook modifier."
 msgstr "钩挂修改器。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:26
+#: ../../manual/modeling/modifiers/deform/hooks.rst:29
 msgid "Object"
 msgstr "物体"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:27
+#: ../../manual/modeling/modifiers/deform/hooks.rst:30
 msgid "The name of the object to hook vertices to."
 msgstr "钩挂顶点的物体的名字。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:31
+#: ../../manual/modeling/modifiers/deform/hooks.rst:34
 msgid "Vertex Group"
 msgstr "顶点组"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:29
+#: ../../manual/modeling/modifiers/deform/hooks.rst:32
 msgid "Allows you to define the influence per vertex."
 msgstr "允许你对每个顶点设定影响程度。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:31
+#: ../../manual/modeling/modifiers/deform/hooks.rst:34
 msgid "Useful when you want something other than a spherical field of influence."
 msgstr "当你不是想要一个球型影响域时，它很有用。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:33
+#: ../../manual/modeling/modifiers/deform/hooks.rst:36
 msgid "Radius"
 msgstr "半径"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:34
+#: ../../manual/modeling/modifiers/deform/hooks.rst:37
 msgid "The size of the hooks influence."
 msgstr "钩挂作用的范围。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:38
+#: ../../manual/modeling/modifiers/deform/hooks.rst:41
 msgid "Strength"
 msgstr "强度"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:36
+#: ../../manual/modeling/modifiers/deform/hooks.rst:39
 msgid ""
 "Adjust this hooks influence on the vertices, were (0.0 to 1.0) (no change to "
 "fully follows the hook)."
 msgstr "调整这个挂钩对顶点的影响，从（0.0到1.0）（使顶点没有改变完全跟随钩子）。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:38
+#: ../../manual/modeling/modifiers/deform/hooks.rst:41
 msgid ""
 "Since multiple hooks can work on the same vertices, you can weight the "
 "influence of a hook using this property."
@@ -99,11 +109,11 @@ msgstr ""
 "由于多个挂钩操作可作用在同一个顶点上，你可以用这个属性来加权一个挂钩操作的影响"
 "力。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:41
+#: ../../manual/modeling/modifiers/deform/hooks.rst:44
 msgid "Falloff Type"
 msgstr "衰减类型"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:41
+#: ../../manual/modeling/modifiers/deform/hooks.rst:44
 msgid ""
 "This can be used to adjust the kind of influence curve that the hook has on "
 "the mesh. You can also define a custom curve to get a much higher level of "
@@ -112,11 +122,11 @@ msgstr ""
 "这可以用来调整挂钩对网格的影响曲线。您还可以定义自定义曲线来获得更高级别的控"
 "制。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:47
+#: ../../manual/modeling/modifiers/deform/hooks.rst:50
 msgid "Uniform Falloff"
 msgstr "均匀衰减"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:44
+#: ../../manual/modeling/modifiers/deform/hooks.rst:47
 msgid ""
 "This setting is useful when using hooks on scaled objects, especially in cases "
 "where non-uniform scale would stretch the result of the hook."
@@ -124,49 +134,49 @@ msgstr ""
 "当在缩放对象上使用钩挂时，此设置非常有用，特别是在非均匀缩放会拉伸钩挂结果的情"
 "况下。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:47
+#: ../../manual/modeling/modifiers/deform/hooks.rst:50
 msgid ""
 "This is especially useful for lattices, where it is common to use non-uniform "
 "scaling."
 msgstr "该项对晶格非常有用，这在使用非均匀缩放是很常见。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:49
+#: ../../manual/modeling/modifiers/deform/hooks.rst:52
 msgid "The following settings are only available in Edit Mode:"
 msgstr "以下设置仅在编辑模式可用："
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:51
+#: ../../manual/modeling/modifiers/deform/hooks.rst:54
 msgid "Reset"
 msgstr "重置"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:52
+#: ../../manual/modeling/modifiers/deform/hooks.rst:55
 msgid "Recalculate and clear the offset transform of the hook."
 msgstr "重新计算，并清除钩挂操作的偏移变换。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:54
+#: ../../manual/modeling/modifiers/deform/hooks.rst:57
 msgid "Recenter"
 msgstr "重新指定中心"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:54
+#: ../../manual/modeling/modifiers/deform/hooks.rst:57
 msgid "Set the hook center to the 3D cursor position."
 msgstr "设置挂钩中心为3D光标的位置。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:56
+#: ../../manual/modeling/modifiers/deform/hooks.rst:59
 msgid "Select"
 msgstr "选择"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:57
+#: ../../manual/modeling/modifiers/deform/hooks.rst:60
 msgid "Select the vertices affected by this hook."
 msgstr "选择受该挂钩影响的顶点。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:59
+#: ../../manual/modeling/modifiers/deform/hooks.rst:62
 msgid "Assign"
 msgstr "指定"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:59
+#: ../../manual/modeling/modifiers/deform/hooks.rst:62
 msgid "Assigns selected vertices to this hook."
 msgstr "指定选择好的顶点到该挂钩。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:63
+#: ../../manual/modeling/modifiers/deform/hooks.rst:66
 msgid ""
 "The Hook Modifier stores vertex indices from the original mesh to determine "
 "what to affect. This means that modifiers that generate geometry, like "
@@ -178,10 +188,10 @@ msgstr ""
 "何形状的修改器（例如细分修改器），在堆栈中应该在钩挂修改器 **之后** 应用，否则"
 "产生的几何形状将不会受挂钩操作的影响。"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:70
+#: ../../manual/modeling/modifiers/deform/hooks.rst:73
 msgid "Example"
 msgstr "例子"
 
-#: ../../manual/modeling/modifiers/deform/hooks.rst:75
+#: ../../manual/modeling/modifiers/deform/hooks.rst:78
 msgid "Empty used as Hook to deform a subdivided cube."
 msgstr "用空物体做为挂钩来使细分的立方体变形。"
