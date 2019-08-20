@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 03:08+0800\n"
-"PO-Revision-Date: 2019-07-23 03:17+0800\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2019-08-20 14:49+0800\n"
+"Last-Translator: Morisan <sensensensan@gmail.com>\n"
 "Language: zh\n"
 "Language-Team: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -47,8 +47,8 @@ msgid ""
 "to avoid *Collision* objects."
 msgstr ""
 ":doc:`粒子 </physics/particles/index>`, :doc:`软体 </physics/soft_body/index>` "
-"和 :doc:`布料 </physics/cloth/index>` 可以与网格物体碰撞。 :doc:`群体 </physics/"
-"particles/emitter/physics/boids>` 尝试避免 *碰撞* 物体。"
+"和 :doc:`布料 </physics/cloth/index>` 可以与网格对象碰撞。 :doc:`群体 </physics/"
+"particles/emitter/physics/boids>` 会避开 *碰撞* 对象。"
 
 #: ../../manual/physics/collision.rst:18
 msgid ""
@@ -62,14 +62,14 @@ msgstr ""
 msgid ""
 "*Deflection* for soft body objects is difficult, they often penetrate the "
 "colliding objects."
-msgstr "软体物体的 *偏转* 是困难的，它们经常穿透碰撞物体。"
+msgstr "软体物体 *偏移* 比较困难，它们经常穿透碰撞物体。"
 
 #: ../../manual/physics/collision.rst:21
 msgid ""
 "Hair particles ignore deflecting objects (but you can animate them as soft "
 "bodies which take deflection into account)."
 msgstr ""
-"头发颗粒忽略偏转物体（但您可以将它们作为软体进行动画化，软体可以实现偏转）。"
+"毛发粒子忽略偏移物体（但您可以将它们作为软体进行动画化，软体会计算偏移）。"
 
 #: ../../manual/physics/collision.rst:24
 msgid ""
@@ -77,8 +77,8 @@ msgid ""
 "particle, soft body or cloth system by *Delete Bake*, this is not done "
 "automatically."
 msgstr ""
-"如果更改对象的偏转设置，则必须通过 *清除缓存* 重新计算粒子、软体或布料系统，但这"
-"并不是自动完成的。"
+"如果更改对象的偏转设置，则必须通过 *清除缓存* 重新计算粒子、软体或布料系统，这并"
+"不是自动完成的。"
 
 #: ../../manual/physics/collision.rst:29
 msgid "Options"
@@ -97,7 +97,6 @@ msgid "Field Absorption"
 msgstr "场吸收"
 
 #: ../../manual/physics/collision.rst:40
-#, fuzzy
 msgid ""
 "A deflector can also deflect effectors. You can specify some collision/"
 "deflector objects which deflect a specific portion of the effector force using "
@@ -106,10 +105,10 @@ msgid ""
 "object behind each other with e.g. 10%, 43% and 3%, the absorption ends up at "
 "around 50% :math:`100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)`."
 msgstr ""
-"偏转器也可以偏转效应器。您可以使用 *吸收* 值指定给一些碰撞/偏转器物体，该物体则"
-"偏转特定量的效应器的力。100％的吸收导致没有力量通过碰撞/偏转器物体。如果您有三个"
-"碰撞对象，分别有三个值，例如10％，43％和3％，则吸收最终达到50％ :math:`100 × (1 "
-"- 0.1) × (1 - 0.43) × (1 - 0.03)`."
+"偏转器可以造成效果器的损耗。您可以使用 *场吸收* 值指定给一些碰撞/偏转器对象，该"
+"物体则损失特定量的效果器的力。100％的场吸收导致没有力量传递到碰撞/偏转器物体。如"
+"果您有三个碰撞对象，分别有三个值，例如10％，43％和3％，则场吸收最终会达到50％左"
+"右 :math:`100 × (1 - 0.1) × (1 - 0.43) × (1 - 0.03)`."
 
 #: ../../manual/physics/collision.rst:47
 msgid "Particle"
@@ -129,7 +128,7 @@ msgstr "粘度"
 
 #: ../../manual/physics/collision.rst:52
 msgid "How much particles stick to the object."
-msgstr "多少颗粒粘在物体上。"
+msgstr "粒子粘在物体上的程度。"
 
 #: ../../manual/physics/collision.rst:54
 msgid "Kill Particles"
@@ -137,7 +136,7 @@ msgstr "消除粒子"
 
 #: ../../manual/physics/collision.rst:54
 msgid "Deletes Particles upon impact."
-msgstr "影响后删除粒子。"
+msgstr "消除碰到的粒子。"
 
 #: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:97
 msgid "Damping"
@@ -145,20 +144,19 @@ msgstr "阻尼"
 
 #: ../../manual/physics/collision.rst:57
 msgid "Damping during a collision (independent of the velocity of the particles)."
-msgstr "碰撞期间的阻尼（与颗粒的速度无关）。"
+msgstr "碰撞时的弹性程度（与粒子的速度无关）。"
 
 #: ../../manual/physics/collision.rst:60 ../../manual/physics/collision.rst:67
 msgid "Randomize"
-msgstr ""
+msgstr "随机"
 
 #: ../../manual/physics/collision.rst:60
 msgid "Random variation of damping."
 msgstr "阻尼随机变化。"
 
 #: ../../manual/physics/collision.rst:67 ../../manual/physics/collision.rst:118
-#, fuzzy
 msgid "Friction"
-msgstr "随机摩擦"
+msgstr "摩擦"
 
 #: ../../manual/physics/collision.rst:63
 msgid "Friction during movements along the surface."
@@ -169,7 +167,6 @@ msgid "Random variation of friction."
 msgstr "摩擦随机变化。"
 
 #: ../../manual/physics/collision.rst:72
-#, fuzzy
 msgid "Soft Body and Cloth"
 msgstr "软体和布料"
 
@@ -179,6 +176,8 @@ msgid ""
 "simulations that this object is to participate in colliding/deflecting other "
 "objects on a shared layer (particles, soft bodies, and cloth)."
 msgstr ""
+"要注意，开启碰撞面板，则碰撞体会参与同一图层中所有模拟对象的碰撞/偏移（粒子，软"
+"体和布料）。"
 
 #: ../../manual/physics/collision.rst:80
 msgid ""
@@ -188,25 +187,26 @@ msgid ""
 "Modifier must be **after** any of those. The image to the right shows the "
 "*Modifiers* panel for the Character mesh object (not the cloth object)."
 msgstr ""
+"碰撞体的形状会影响布料形变，因此碰撞模拟必须得到当前帧布料网格的“正确”形状数据。"
+"正确的形状是指经过形态键或骨架变形后的形状。因此，碰撞修改器必须位于这些修改器 "
+"**之后**。右边的图片展示了人物网格对象（不是布料对象）的 *修改器* 面板。"
 
 #: ../../manual/physics/collision.rst:93
-#, fuzzy
 msgid ""
 "Damping during a collision. The amount of bounce that the surfaces will have."
-msgstr "碰撞期间的阻尼（与颗粒的速度无关）。"
+msgstr "碰撞时的阻尼。表面的弹性程度。"
 
 #: ../../manual/physics/collision.rst:96
 msgid "0.0 - No damping, soft bodies will have a maximum bounciness."
-msgstr ""
+msgstr "0.0 - 无阻尼，软体弹性最大。"
 
 #: ../../manual/physics/collision.rst:97
 msgid "1.0 - Maximum damping, soft bodies will not bounce at all."
-msgstr ""
+msgstr "1.0 - 最大阻尼，软体不会弹开。"
 
 #: ../../manual/physics/collision.rst:107
-#, fuzzy
 msgid "Thickness"
-msgstr "粘度"
+msgstr "厚度"
 
 #: ../../manual/physics/collision.rst:100
 msgid ""
@@ -215,22 +215,25 @@ msgid ""
 "from the face of the colliding object. Outside and inside is defined by the "
 "face normal, depicted as blue arrow in Fig. :ref:`fig-collision-soft-plane`."
 msgstr ""
+"在每个面的内侧和外侧添加的填充距离，用来防止交叉。软体将离碰撞体表面此距离处停下"
+"来。外侧和内侧由平面法线决定，如图片中蓝色箭头所示 :ref:`fig-collision-soft-"
+"plane`。"
 
 #: ../../manual/physics/collision.rst:104
 msgid "Outer"
-msgstr "外表面"
+msgstr "外侧"
 
 #: ../../manual/physics/collision.rst:105
 msgid "Size of the outer collision zone."
-msgstr "外表面厚度。"
+msgstr "外侧厚度。"
 
 #: ../../manual/physics/collision.rst:107
 msgid "Inner"
-msgstr "内部面"
+msgstr "内侧"
 
 #: ../../manual/physics/collision.rst:107
 msgid "Size of the inner collision zone (padding distance)."
-msgstr "内部面厚度（仅软体使用）。"
+msgstr "内侧厚度（填充距离）。"
 
 #: ../../manual/physics/collision.rst:114
 msgid "A soft body vertex colliding with a plane."
@@ -240,27 +243,27 @@ msgstr "软体顶点与平面相撞。"
 msgid ""
 "A coefficient for how slippery the cloth is when it collides with itself. For "
 "example, silk has a lower coefficient of friction than cotton."
-msgstr ""
+msgstr "布料与碰撞体碰撞时的摩擦系数。例如，丝绸的摩擦系数低于棉花。"
 
 #: ../../manual/physics/collision.rst:121
 msgid "Single Sided"
-msgstr ""
+msgstr "单面"
 
 #: ../../manual/physics/collision.rst:121
 msgid ""
 "When enabled, cloth collisions are only performed on the normal side of the "
 "collider plane."
-msgstr ""
+msgstr "开启后，布料碰撞仅在碰撞平面法线方向的一侧执行。"
 
 #: ../../manual/physics/collision.rst:124
 msgid "Override Normals"
-msgstr ""
+msgstr "覆盖法线"
 
 #: ../../manual/physics/collision.rst:124
 msgid ""
 "When enabled, cloth collision impulses act in the direction of the collider "
 "normals."
-msgstr ""
+msgstr "开启后，布料碰撞的受力沿平面法线方向起作用。"
 
 #: ../../manual/physics/collision.rst:128
 msgid ""
@@ -280,11 +283,11 @@ msgid "Deflected particles."
 msgstr "偏转粒子。"
 
 #: ../../manual/physics/collision.rst:140
-#, fuzzy
 msgid ""
 "Here is a *Meta* object, using instancing verts to a particle system emitting "
 "downwards, and deflected by a mesh cube."
-msgstr "这是一个 *融球* 对象，被双向传输到向下发射并被网格立方体偏转的粒子系统。"
+msgstr ""
+"这是一个 *融球* 对象，使用向下发射实例化顶点的粒子系统，会被立方体网格偏移。"
 
 #: ../../manual/physics/collision.rst:144
 msgid "Hints"
@@ -294,21 +297,20 @@ msgstr "提示"
 msgid ""
 "Make sure that the normals of the mesh surface are facing towards the particles/"
 "points for correct deflection."
-msgstr "确保网格表面的法线面向颗粒/点以进行正确的偏转。"
+msgstr "确保网格表面的法线朝向粒子/点以获得正确的偏移。"
 
 #: ../../manual/physics/collision.rst:147
 msgid ""
 "Hair particles react directly to force fields, so if you use a force field with "
 "a short range you do not need necessarily collision."
-msgstr "毛发粒子直接反应力场，所以如果你使用一个短距离的力场，你不一定需要碰撞。"
+msgstr "毛发粒子直接受力场影响，所以如果你使用一个短距离的力场，不一定需要碰撞。"
 
 #: ../../manual/physics/collision.rst:149
 msgid ""
 "Hair particles avoid their emitting mesh if you edit them in *Particle Edit "
 "Mode*. So you can at least model the hair with collision."
 msgstr ""
-"如果您在 *粒子编辑模式* 中进行编辑，则头发颗粒可以避免其发射网格。所以你至少可以"
-"制作头发碰撞。"
+"在 *粒子编辑模式* 中，毛发粒子会忽略其生成的网格。但你至少可以用碰撞塑造毛发。"
 
 #~ msgid ""
 #~ "An example image can be found at: https://docs.blender.org/manual/en/dev/"
