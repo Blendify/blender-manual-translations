@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-24 14:49+1000\n"
-"PO-Revision-Date: 2019-08-04 11:57+0800\n"
+"PO-Revision-Date: 2019-08-21 00:58+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -41,7 +41,7 @@ msgid ""
 "Implementation not finished yet, marked as an :ref:`Experimental Feature "
 "Set <cycles-experimental-features>`."
 msgstr ""
-"实现尚未完成，标记为 :ref:`实验功能集 <cycles-experimental-features>` 。"
+"实现尚未完成，标记为 :ref:`实验功能集<cycles-experimental-features>` 。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:18
 msgid ""
@@ -76,11 +76,11 @@ msgstr ""
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:33
 msgid "Render"
-msgstr ""
+msgstr "渲染"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:44
 msgid "Adaptive"
-msgstr ""
+msgstr "自适应"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:35
 msgid ""
@@ -88,10 +88,12 @@ msgid ""
 "objects automatically. This allows nearer objects to get more "
 "subdivisions and far objects to get less."
 msgstr ""
+"使用 OpenSubdiv 自动为近对象和远对象提供不同的细分级别。这允许较近的对象"
+"获得更多的细分，而较远的对象获得更少的细分。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:44
 msgid "Dicing Rate"
-msgstr ""
+msgstr "分块率"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:39
 msgid ""
@@ -99,22 +101,28 @@ msgid ""
 "*Dicing Rate*, this property is used to multiply the :ref:`scene dicing "
 "rate <cycles-subdivision-rate>`."
 msgstr ""
+"使用 *自适应* 时， *渲染层级* 属性更改为 *分块率* ，此属性用于乘以 :ref:`"
+"场景分块比例 <cycles-subdivision-rate>`。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:44
 msgid ""
 "Subdivision Off/On, Dicing Rate: 1.0 - 0.3 - 0.05 (monkeys look "
 "identical in viewport, no modifiers)."
 msgstr ""
+"细分关闭/打开，分块率：1.0 - 0.3 - 0.05（猴子模型在视图中看起来完全相同，"
+"没有修改器）。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:47
 msgid ""
 "The levels of subdivision to see in the final render, this works the "
 "same as the *Render* setting on the original *Subdivision Modifier*."
 msgstr ""
+"要在最终渲染中看到的细分级别，其工作原理与原始 *细分修改器* 上的 *渲染* "
+"设置相同。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:52
 msgid "Known Limitations"
-msgstr ""
+msgstr "已知限制"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:54
 msgid ""
@@ -122,10 +130,12 @@ msgid ""
 "increased memory usage. For those it is better to use non-adaptive "
 "subdivision still."
 msgstr ""
+"多用户物体数据现在变成了单用户数据，这导致了内存使用率的增加。对于这些情"
+"况最好还是不要使用自适应细分。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:56
 msgid "Multi-view renders can have some inconsistencies between views."
-msgstr ""
+msgstr "多视图渲染可能在视图之间存在一些不一致。"
 
 #: ../../manual/render/cycles/object_settings/adaptive_subdiv.rst:60
 msgid ""
@@ -135,3 +145,5 @@ msgid ""
 "original object at the position of the instance that is closest from the "
 "camera."
 msgstr ""
+"实例不会单独细分。相反，原始对象被细分，然后在所有实例上复制。要同时利用"
+"自适应细分和实例，您应该将原始对象放置在离相机最近的实例位置。"

@@ -4,15 +4,16 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-17 17:01+1000\n"
-"PO-Revision-Date: 2018-04-30 20:05+0800\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2019-08-23 12:43+0800\n"
+"Last-Translator: Morisan <sensensensan@gmail.com>\n"
 "Language: zh\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/physics/fluid/baking.rst:5
 msgid "Baking"
@@ -23,18 +24,13 @@ msgid "Bake Button"
 msgstr "烘焙按钮"
 
 #: ../../manual/physics/fluid/baking.rst:16
-#, fuzzy
 msgid ""
-"Perform the actual fluid simulation. Blender will continue to work "
-"normally, except the progress will be displayed in the statusbar. "
-"Pressing :kbd:`Esc` or the \"X\" button next to the statusbar will abort "
-"the simulation. Afterwards two ``.bobj.gz`` (one for the *Final* quality,"
-" one for the *Preview* quality), plus one ``.bvel.gz`` (for the *Final* "
-"quality) will be in the selected output directory for each frame."
+"Perform the actual fluid simulation. Blender will continue to work normally, except the progress will be displayed in the statusbar. Pressing :kbd:"
+"`Esc` or the \"X\" button next to the statusbar will abort the simulation. Afterwards two ``.bobj.gz`` (one for the *Final* quality, one for the "
+"*Preview* quality), plus one ``.bvel.gz`` (for the *Final* quality) will be in the selected output directory for each frame."
 msgstr ""
-"执行真实的流体模拟。Blender将继续正常工作，但会出现在信息编辑器的头部一个进度条，靠近渲染下拉（render "
-"pulldown）。按Esc或旁边的状态栏的\"X\"将中止模拟。完成后2个.bobj.gz文件 "
-"（一个用于最终质量，一个用于预览质量），加上一个.bvel.gz文件 （用于最终质量）将在每一帧的选择的输出目录内生成。"
+"执行实际流体模拟。Blender将继续正常工作，但会在状态栏显示一个进度条。按 :kbd:`Esc` 或状态栏旁边的\"X\"按钮会中止模拟。烘焙完成后，指定输出目录里每一帧"
+"会生成2个 ``.bobj.gz`` 文件 （一个用于 *最终* 质量，一个用于 *预览* 质量），加上1个 ``.bvel.gz`` 文件 （用于 *最终* 质量）。"
 
 #: ../../manual/physics/fluid/baking.rst:25
 msgid "Bake Directory"
@@ -42,19 +38,16 @@ msgstr "烘焙目录"
 
 #: ../../manual/physics/fluid/baking.rst:27
 msgid "Directory and file prefix to store baked surface meshes."
-msgstr "用来储存烘焙表面网格的文件目录和前缀。"
+msgstr "缓存烘焙表面网格的路径和文件前缀名。"
 
 #: ../../manual/physics/fluid/baking.rst:29
 msgid ""
-"This is similar to the animation output settings, only selecting a file "
-"is a bit special: when you select any of the previously generated surface"
-" meshes (e.g. ``test1_fluidsurface_final_0132.bobj.gz``), the prefix will"
-" be automatically set (``test1_`` in this example). This way the "
-"simulation can be done several times with different settings, and allows "
-"quick changes between the different sets of surface data."
+"This is similar to the animation output settings, only selecting a file is a bit special: when you select any of the previously generated surface "
+"meshes (e.g. ``test1_fluidsurface_final_0132.bobj.gz``), the prefix will be automatically set (``test1_`` in this example). This way the simulation "
+"can be done several times with different settings, and allows quick changes between the different sets of surface data."
 msgstr ""
-"这与动画输出设置类似，只有选择文件时有点特殊：当你选择任何先前生成的表面网格（如test1_fluidsurface_final_0132.bobj.gz"
-" ），前缀将自动设置（ test1_在这个例子中）。通过这种方式，模拟使用不同的设置多次进行，并允许不同组的表面的数据之间的快速变化。"
+"这与动画输出设置类似，只是选择文件时有些特殊：当你选择一个之前生成好的表面网格数据时（如 ``test1_fluidsurface_final_0132.bobj.gz``），前缀名会自动设置"
+"（这个例子中是 ``test1_``）。这样一来，你可以以不同的设置进行多次模拟，并在不同的表面网格数据中快速切换。"
 
 #: ../../manual/physics/fluid/baking.rst:38
 msgid "Notes"
@@ -62,13 +55,11 @@ msgstr "注意事项"
 
 #: ../../manual/physics/fluid/baking.rst:42
 msgid "Unique domain"
-msgstr "唯一的域（全局域domain）"
+msgstr "唯一的域"
 
 #: ../../manual/physics/fluid/baking.rst:41
-msgid ""
-"Because of the possibility of spanning and linking between scenes, there "
-"can only be one domain in an entire blend-file."
-msgstr "由于存在场景之间的连接和跨越的可能性，整个blend-file中只存在一个流体域（全局域domain）。"
+msgid "Because of the possibility of spanning and linking between scenes, there can only be one domain in an entire blend-file."
+msgstr "由于数据可以在不同场景之间共用，整个blend文件中可以只存在一个流体域。"
 
 #: ../../manual/physics/fluid/baking.rst:48
 msgid "Selecting a Baked Domain"
@@ -76,46 +67,43 @@ msgstr "选择烘焙域"
 
 #: ../../manual/physics/fluid/baking.rst:45
 msgid ""
-"After a domain has been baked, it changes to the fluid mesh. To re-select"
-" the domain so that you can bake it again after you have made changes, go"
-" to any frame and select :kbd:`RMB` the fluid mesh. Then you can click "
-"the *bake* button again to recompute the fluid flows inside that domain."
-msgstr "当一个流体域被烘焙后，他的改变将映射到流体网格上。如要重新选择域，可以让您在进行了更改之后重新烘焙，只要选择任意帧并按住RMB选取流体网格即可。然后，你可以再次点击按钮烘焙（bake）来重新计算该流体域内的流体流动。"
+"After a domain has been baked, it changes to the fluid mesh. To re-select the domain so that you can bake it again after you have made changes, go to "
+"any frame and select :kbd:`RMB` the fluid mesh. Then you can click the *bake* button again to recompute the fluid flows inside that domain."
+msgstr ""
+"当一个流体域被烘焙后，它将变为流体网格。如果你进行了更改，想要选择域重新烘焙，只要在任意帧按住 :kbd:`RMB` 选中流体网格即可。然后，你可以再次点击 *烘焙"
+"* 来重新计算流体流动。"
 
 #: ../../manual/physics/fluid/baking.rst:53
 msgid "Baking always starts at Frame #1"
-msgstr "烘焙总是开始于帧＃1"
+msgstr "烘焙总是从第一帧开始"
 
 #: ../../manual/physics/fluid/baking.rst:51
 msgid ""
-"The fluid simulator disregards the *Start* setting in the *Animation* "
-"panel, it will always bake from frame 1. If you wish the simulation to "
-"start later than frame 1, you must key the fluid objects in your domain "
-"to be inactive until the frame you desire to start the simulation."
-msgstr "流体仿真无视在动画面板1中的开始设置，它总是会从第1帧烘焙。如果你想模拟在第1帧之后开始，则必须控制您的流体域中的流体对象直到你的期望帧开始模拟之前都处于非活动状态。"
+"The fluid simulator disregards the *Start* setting in the *Animation* panel, it will always bake from frame 1. If you wish the simulation to start "
+"later than frame 1, you must key the fluid objects in your domain to be inactive until the frame you desire to start the simulation."
+msgstr ""
+"流体模拟器无视 *动画* 面板中的 *开始* 设置，它总是会从第1帧开始烘焙。如果你想模拟在第1帧之后开始，你必须对域内的流体对象插入关键帧，让其在期望的开始时"
+"间之前保持静止。"
 
 #: ../../manual/physics/fluid/baking.rst:58
 msgid "Baking always ends at the *End* Frame set in the *Animation* panel"
-msgstr "烘焙总是在动画面板中设置的结束帧结束。"
+msgstr "烘焙会在 *动画* 面板中设置的 *结束* 帧处结束"
 
 #: ../../manual/physics/fluid/baking.rst:56
 msgid ""
-"If the frame rate is set to 25 frames per second, and ending time is 4.0 "
-"seconds, then you should (if your start time is 0) set your animation to "
-"end at frame ``4.0 × 25 = 100``."
-msgstr "如果你的帧速率是每秒25帧，而结束时间为4.0秒时，那么你应该（如果你的起始时间为0）设置你的动画结束帧为 ``4.0 × 25 = 100``。"
+"If the frame rate is set to 25 frames per second, and ending time is 4.0 seconds, then you should (if your start time is 0) set your animation to end "
+"at frame ``4.0 × 25 = 100``."
+msgstr "如果你的帧速率是每秒25帧，结束时间为4.0秒，那么你应该（如果你的起始时间为0）设置动画结束帧为 ``4.0 × 25 = 100``。"
 
 #: ../../manual/physics/fluid/baking.rst:63
 msgid "Freeing the previous baked solutions"
-msgstr "释放以前的已应用烘焙方案"
+msgstr "删除之前的烘焙结果"
 
 #: ../../manual/physics/fluid/baking.rst:61
 msgid ""
-"Deleting the content of the \"Bake\" directory is a destructive way to "
-"achieve this. Be careful if more than one simulation uses the same bake "
-"directory (be sure they use different filenames, or they will overwrite "
-"one another)!"
-msgstr "删除“烘焙”目录下的内容是一个破坏性的实现方式。要小心，如果超过一个以上的模拟使用相同的烘焙目录（确保它们使用不同的文件名，否则他们会互相覆盖的）！"
+"Deleting the content of the \"Bake\" directory is a destructive way to achieve this. Be careful if more than one simulation uses the same bake "
+"directory (be sure they use different filenames, or they will overwrite one another)!"
+msgstr "删除 *烘焙* 目录下的内容是一个破坏性的实现方式。要小心，如果多个模拟共用一个的烘焙路径（确保它们使用不同的文件名，否则它们会互相覆盖）！"
 
 #: ../../manual/physics/fluid/baking.rst:69
 msgid "Reusing Bakes"
@@ -123,33 +111,27 @@ msgstr "烘焙重用"
 
 #: ../../manual/physics/fluid/baking.rst:66
 msgid ""
-"Manually entering (or searching for) a previously saved (baked) "
-"computational directory and filename mask will switch the fluid flow and "
-"mesh deformation to use that which existed during the old bake. Thus, you"
-" can reuse baked flows by simply pointing to them in this field."
-msgstr "手动输入(或搜索)以前保存(已烘焙)的计算目录和文件名，可将流体流动和网格形变切换为使用之前的烘焙。这样，可以简单地通过在该文本框指定流体烘焙，实现重复使用。"
+"Manually entering (or searching for) a previously saved (baked) computational directory and filename mask will switch the fluid flow and mesh "
+"deformation to use that which existed during the old bake. Thus, you can reuse baked flows by simply pointing to them in this field."
+msgstr "手动输入(或搜索)以前保存(已烘焙)的目录和文件名，可将流体流动和网格形变切换为之前的烘焙结果。这样，可以通过在该地址栏指定烘焙数据，实现重复使用。"
 
 #: ../../manual/physics/fluid/baking.rst:80
 msgid "Baking processing time"
 msgstr "烘焙过程处理时间"
 
 #: ../../manual/physics/fluid/baking.rst:72
-msgid ""
-"Baking takes a **lot** of compute power (hence time). Depending on the "
-"scene, it might be preferable to bake overnight."
-msgstr "烘焙需要大量的计算能力（因此消耗时间）。根据场景的不同，可能最好是整夜进行烘焙过程。"
+msgid "Baking takes a **lot** of compute power (hence time). Depending on the scene, it might be preferable to bake overnight."
+msgstr "烘焙需要 **大量** 算力（因此很耗时）。根据场景的不同，最好整夜烘焙。"
 
 #: ../../manual/physics/fluid/baking.rst:75
 msgid ""
-"If the mesh has modifiers, the rendering settings are used for exporting "
-"the mesh to the fluid solver. Depending on the setting, calculation times"
-" and memory use might exponentially increase. For example, when using a "
-"moving mesh with *Subdivision Surface* as an obstacle, it might help to "
-"decrease simulation time by switching it off, or to a low subdivision "
-"level. When the setup/rig is correct, you can always increase settings to"
-" yield a more realistic result."
-msgstr "如果网格具有调整器，渲染设置可用于将网格导出到流体求解器内。根据设置的不同，计算时间和内存使用可能会成倍增加。例如，当使用具有细分曲面的动网格描述一个障碍时，可通过关闭，或降低细分级别以减少模拟时间。当安装/建立（setup/rig）正确时，你总是可以通过增加设置来产生更逼真的模拟结果。"
+"If the mesh has modifiers, the rendering settings are used for exporting the mesh to the fluid solver. Depending on the setting, calculation times and "
+"memory use might exponentially increase. For example, when using a moving mesh with *Subdivision Surface* as an obstacle, it might help to decrease "
+"simulation time by switching it off, or to a low subdivision level. When the setup/rig is correct, you can always increase settings to yield a more "
+"realistic result."
+msgstr ""
+"如果网格有修改器，渲染设置会用于将网格数据导出到流体解算器内。根据设置的不同，计算时间和内存使用量可能会呈指数增长。例如，当使用带有 *表面细分* 的运动"
+"网格对象时，可以通过关闭或降低细分级别来减少模拟时间。当设置/绑定正确时，你总是可以通过提高设置来产生更逼真的模拟结果。"
 
 #~ msgid "The fluid simulation options with Domain selected."
 #~ msgstr "选定流体域的流体模拟选项。"
-
