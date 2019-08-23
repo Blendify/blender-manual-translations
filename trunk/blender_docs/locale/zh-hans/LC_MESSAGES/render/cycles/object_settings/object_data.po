@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-08-04 10:34+0800\n"
+"PO-Revision-Date: 2019-08-10 13:09+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: \n"
@@ -22,34 +22,36 @@ msgstr ""
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:4
 msgid "Object"
-msgstr ""
+msgstr "物体"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:9
 msgid "Visibility"
-msgstr ""
+msgstr "可见性"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:11
 #: ../../manual/render/cycles/object_settings/object_data.rst:84
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst
 msgid "Panel"
-msgstr ""
+msgstr "面板"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:14
 msgid ":menuselection:`Object --> Visibility`"
-msgstr ""
+msgstr ":menuselection:`物体 --> 可见性`"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:18
 msgid ""
 "There are several other :doc:`general visibility </scene_layout/object/"
 "properties/visibility>` properties."
 msgstr ""
+"还有其他几个 :doc:`一般可见性 </scene_layout/object/properties/"
+"visibility>` 属性。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:22
 msgid "Shadow Catcher"
-msgstr ""
+msgstr "阴影捕捉"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:24
 msgid ""
@@ -58,65 +60,68 @@ msgid ""
 "light interaction. This feature makes it really easy to combine :abbr:"
 "`CGI (Computer-generated imagery)` elements into a real-world footage."
 msgstr ""
+"使对象只能接收阴影。需要注意的是，阴影捕捉物体将通过间接光交互与其他CG物"
+"体交互。这项功能使它很容易结合 :abbr:`CGI (计算机生成的图像)` 元素到现实"
+"世界的镜头。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:31
 msgid ""
 "Example of the shadow catcher. Note how the material of the plane can "
 "still be viewed in the spheres."
-msgstr ""
+msgstr "阴影捕捉示例。注意如何在球体中仍然可以看到平面的材质。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:38
 msgid "Ray Visibility"
-msgstr ""
+msgstr "射线可见性"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:40
 msgid "Objects can be set to be invisible to particular ray types:"
-msgstr ""
+msgstr "可以将物体设置为对特定光线类型不可见："
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:42
 msgid "Camera"
-msgstr ""
+msgstr "相机"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:43
 msgid "Makes the object visible in camera rays."
-msgstr ""
+msgstr "使物体在相机光线中可见。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:44
 msgid "Diffuse"
-msgstr ""
+msgstr "漫射"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:45
 msgid "Makes the object visible in diffuse rays."
-msgstr ""
+msgstr "使物体在漫射光线中可见。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:46
 msgid "Glossy"
-msgstr ""
+msgstr "光泽"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:47
 msgid "Makes the object visible in glossy rays."
-msgstr ""
+msgstr "使物体在光泽光线中可见。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:48
 msgid "Transmission"
-msgstr ""
+msgstr "透射"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:49
 #: ../../manual/render/cycles/object_settings/object_data.rst:51
 msgid "Makes the object visible in transmission rays."
-msgstr ""
+msgstr "使物体在透射光线中可见。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:50
 msgid "Volume Scatter"
-msgstr ""
+msgstr "体积散射"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:53
 msgid "Shadow"
-msgstr ""
+msgstr "阴影"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:53
 msgid "Enables the object to cast shadows."
-msgstr ""
+msgstr "使物体能够投射阴影。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:55
 msgid ""
@@ -125,6 +130,8 @@ msgid ""
 "object is hidden for some ray types, the children will be hidden for "
 "these too."
 msgstr ""
+"例如，这可以用于使发射网格对于相机光线不可见。 例如，可见性是继承的; 如果"
+"某些光线类型隐藏了父对象，则这些子对象也将被隐藏。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:59
 msgid ""
@@ -133,10 +140,13 @@ msgid ""
 "invisible to a certain ray will be skipped in ray traversal already, "
 "leading to fewer rays cast and shaders executed."
 msgstr ""
+"就性能而言，使用这些选项比使用达到相同效果的着色器节点设置更有效。对于特"
+"定光线不可见的对象将在光线发射的时候被跳过，从而导致较少的光线投射和着色"
+"器执行。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:66
 msgid "Culling"
-msgstr ""
+msgstr "背面剔除"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:68
 msgid ""
@@ -144,20 +154,22 @@ msgid ""
 "have to be enabled in the scene :ref:`simplify panel <render-cycles-"
 "settings-scene-simplify>`."
 msgstr ""
+"为了激活这些选项，必须在 :ref:`简化面板<render-cycles-settings-scene-"
+"simplify>` 中使用相机剔除选项。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:71
 msgid "Use Camera Cull"
-msgstr ""
+msgstr "使用相机剔除"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:72
 msgid ""
 "Ignore and this way make objects invisible to rays outside of the camera "
 "frustum."
-msgstr ""
+msgstr "忽略并以这种方式使对象对摄影机截面体外部的光线不可见。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:77
 msgid "Use Distance Cull"
-msgstr ""
+msgstr "使用距离剔除"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:74
 msgid ""
@@ -167,14 +179,17 @@ msgid ""
 "still visible in reflections. It is also useful to cull small objects "
 "far from the camera."
 msgstr ""
+"将剔除离相机超过特定距离的任何对象。当与相机剔除结合使用时，这可用于避免"
+"剔除位于相机视野之外但仍在反射中可见的附近对象。它对于剔除距离相机远的小"
+"对象也很有用。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:82
 msgid "Motion Blur"
-msgstr ""
+msgstr "运动模糊"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:87
 msgid ":menuselection:`Object --> Motion Blur`"
-msgstr ""
+msgstr ":menuselection:`对象 --> 运动模糊`"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:89
 msgid ""
@@ -183,26 +198,31 @@ msgid ""
 "settings can be found in the :doc:`Object Properties </scene_layout/"
 "object/properties/introduction>` tab of the Properties editor."
 msgstr ""
+"每个对象都有自己的运动模糊设置以及 :doc:`场景级运动模糊 </render/cycles/"
+"render_settings/motion_blur>` 这些设置可以在 :doc:`对象属性</"
+"scene_layout/object/properties/introduction>` 选项卡中找到。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:95
 msgid "Deformation"
-msgstr ""
+msgstr "塑性"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:96
 msgid ""
 "Enables motion blur for deformed meshes such as animated characters, "
 "including hair."
-msgstr ""
+msgstr "为变形网格（例如动画角色，包括头发）启用运动模糊。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:99
 msgid "Steps"
-msgstr ""
+msgstr "步数"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:98
 msgid ""
 "Controls accuracy of deformation motion blur, more steps gives more "
 "memory usage. The actual number of time steps is :math:`2^{steps -1}`."
 msgstr ""
+"控制塑性运动模糊的准确性，更多步数可提供更多内存使用。实际时间步长数为 :"
+"math:`2^{steps -1}`。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:103
 msgid ""
@@ -210,12 +230,14 @@ msgid ""
 "render deformation motion blur correctly. Deformation blur should be "
 "disabled for such objects."
 msgstr ""
+"随着时间推移更改网格拓扑的对象修改器设置无法正确渲染塑性运动模糊。应禁用"
+"此类对象的塑性模糊。"
 
 #: ../../manual/render/cycles/object_settings/object_data.rst:106
 msgid ""
 "Common examples of this are animated Booleans, Deformation before Edge "
 "Split, Remesh, Skin or Decimate modifiers."
-msgstr ""
+msgstr "常见的示例有布尔动画、拆边前的塑性、重构网格、蒙皮或精简修改器。"
 
 #~ msgid "Object Data"
 #~ msgstr "物体数据"
