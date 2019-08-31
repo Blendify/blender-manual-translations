@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 14:49+1000\n"
+"POT-Creation-Date: 2019-08-30 20:03-0400\n"
 "PO-Revision-Date: 2019-06-23 14:02+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -107,11 +107,11 @@ msgstr ""
 "<https://docs.blender.org/api/blender_python_api_current/info_tips_and_tricks.html"
 "#use-the-terminal>`__."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:40
+#: ../../manual/advanced/scripting/addon_tutorial.rst:41
 msgid "Documentation Links"
 msgstr "Посилання на Документацію -- Documentation Links"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:42
+#: ../../manual/advanced/scripting/addon_tutorial.rst:43
 msgid ""
 "While going through the tutorial, you may want to look into our reference"
 " documentation."
@@ -119,7 +119,7 @@ msgstr ""
 "При проходженні цього навчальника ви можливо захочете глянути на нашу "
 "орієнтувальну документацію."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:44
+#: ../../manual/advanced/scripting/addon_tutorial.rst:45
 msgid ""
 "`Blender API Overview "
 "<https://docs.blender.org/api/blender_python_api_current/info_overview.html>`__:"
@@ -131,7 +131,7 @@ msgstr ""
 " Цей документ досить детальний, але і корисний, якщо ви хочете знати "
 "більше про цю тему."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:46
+#: ../../manual/advanced/scripting/addon_tutorial.rst:47
 msgid ""
 ":mod:`blender_api:bpy.context` API reference -- Handy to have a list of "
 "available items your script may operate on."
@@ -139,7 +139,7 @@ msgstr ""
 ":mod:`blender_api:bpy.context` API reference -- Зручно мати список "
 "доступних елементів, якими може оперувати ваш скрипт."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:48
+#: ../../manual/advanced/scripting/addon_tutorial.rst:49
 msgid ""
 ":class:`blender_api:bpy.types.Operator` -- The following add-ons define "
 "operators, these docs give details and more examples of operators."
@@ -148,11 +148,11 @@ msgstr ""
 "визначають оператори, ці документи дають деталі та більше прикладів "
 "операторів."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:53
+#: ../../manual/advanced/scripting/addon_tutorial.rst:54
 msgid "What is an Add-on?"
 msgstr "Що таке Додаток? -- What is an Add-on?"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:55
+#: ../../manual/advanced/scripting/addon_tutorial.rst:56
 msgid ""
 "An add-on is simply a Python module with some additional requirements so "
 "Blender can display it in a list with useful information."
@@ -161,27 +161,30 @@ msgstr ""
 "умовами, так що Blender може показувати їх у списку з корисною "
 "інформацією."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:58
+#: ../../manual/advanced/scripting/addon_tutorial.rst:59
 msgid "To give an example, here is the simplest possible add-on::"
 msgstr "Для прикладу розглянемо найпростіший можливий додаток::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:67
+#: ../../manual/advanced/scripting/addon_tutorial.rst:74
 msgid "``bl_info``"
 msgstr "``bl_info``"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:67
+#: ../../manual/advanced/scripting/addon_tutorial.rst:72
+#, fuzzy
 msgid ""
 "is a dictionary containing add-on metadata such as the title, version and"
-" author to be displayed in the Preferences add-on list."
+" author to be displayed in the Preferences add-on list. It also specifies"
+" the minimum Blender version required to run the script; older versions "
+"won't display the addon in the list."
 msgstr ""
 "це словник, що містить метадані додатка такі, як назва, версія та автор, "
 "які показуються у списку додатків Уподобань -- Preferences."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:70
+#: ../../manual/advanced/scripting/addon_tutorial.rst:77
 msgid "``register``"
 msgstr "``register``"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:70
+#: ../../manual/advanced/scripting/addon_tutorial.rst:77
 msgid ""
 "is a function which only runs when enabling the add-on, this means the "
 "module can be loaded without activating the add-on."
@@ -189,11 +192,11 @@ msgstr ""
 "це функція, яка проганяється тільки, коли вмикається додаток, що означає,"
 " що модуль може бути завантажений у пам'ять без активування додатку."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:75
+#: ../../manual/advanced/scripting/addon_tutorial.rst:82
 msgid "``unregister``"
 msgstr "``unregister``"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:73
+#: ../../manual/advanced/scripting/addon_tutorial.rst:80
 msgid ""
 "is a function to unload anything setup by ``register``, this is called "
 "when the add-on is disabled."
@@ -201,7 +204,7 @@ msgstr ""
 "це функція розвантаження з пам'яті будь-чого, що завантажене функцією "
 "``register``, вона викликається, коли додаток вимикається."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:77
+#: ../../manual/advanced/scripting/addon_tutorial.rst:84
 msgid ""
 "Notice this add-on does not do anything related to Blender (the "
 ":mod:`blender_api:bpy` module is not imported for example)."
@@ -209,7 +212,7 @@ msgstr ""
 "Зауважте, що цей додаток нічого не робить відносно Blender'а, (модуль "
 ":mod:`blender_api:bpy` не імпортується, наприклад)."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:80
+#: ../../manual/advanced/scripting/addon_tutorial.rst:87
 msgid ""
 "This is a contrived example of an add-on that serves to illustrate the "
 "point that the base requirements of an add-on are simple."
@@ -217,7 +220,7 @@ msgstr ""
 "Це вигаданий приклад додатку, що слугує для ілюстрації тог, що базові "
 "умови додатку, є простими."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:83
+#: ../../manual/advanced/scripting/addon_tutorial.rst:90
 msgid ""
 "An add-on will typically register operators, panels, menu items, etc, but"
 " it's worth noting that *any* script can do this, when executed from the "
@@ -234,7 +237,7 @@ msgstr ""
 "забезпечується модулем :mod:`blender_api:bpy` для будь-якого скрипту, щоб"
 " він мав доступ."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:89
+#: ../../manual/advanced/scripting/addon_tutorial.rst:96
 msgid ""
 "So an add-on is just a way to encapsulate a Python module in a way a user"
 " can easily utilize."
@@ -242,7 +245,7 @@ msgstr ""
 "Звідси, додаток -- це просто засіб інкапсуляції модуля Python у спосіб, "
 "щоб користувач міг легко його використовувати."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:93
+#: ../../manual/advanced/scripting/addon_tutorial.rst:100
 msgid ""
 "Running this script within the Text editor won't print anything, to see "
 "the output it must be installed through the Preferences. Messages will be"
@@ -252,11 +255,11 @@ msgstr ""
 "нічого, щоб бачити вивід, він має бути інстальований через Уподобання -- "
 "Preferences. Повідомлення будуть виводитися при вмиканні та вимиканні."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:99
+#: ../../manual/advanced/scripting/addon_tutorial.rst:106
 msgid "Your First Add-on"
 msgstr "Ваш Перший Додаток -- Your First Add-on"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:101
+#: ../../manual/advanced/scripting/addon_tutorial.rst:108
 msgid ""
 "The simplest possible add-on above is useful as an example but not much "
 "else. This next add-on is simple but shows how to integrate a script into"
@@ -269,7 +272,7 @@ msgstr ""
 "є типовим шляхом визначення засобу, доступного за допомогою меню, кнопок "
 "та скорочень клавіатури."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:105
+#: ../../manual/advanced/scripting/addon_tutorial.rst:112
 msgid ""
 "For the first example we will make a script that simply moves all objects"
 " in a scene."
@@ -277,16 +280,16 @@ msgstr ""
 "Для першого прикладу ми зробимо скрипт, що просто переміщує усі об'єкти у"
 " сцені."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:109
-#: ../../manual/advanced/scripting/addon_tutorial.rst:232
+#: ../../manual/advanced/scripting/addon_tutorial.rst:116
+#: ../../manual/advanced/scripting/addon_tutorial.rst:240
 msgid "Write the Script"
 msgstr "Написання Скрипту -- Write the Script"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:111
+#: ../../manual/advanced/scripting/addon_tutorial.rst:118
 msgid "Add the following script to the Text editor in Blender::"
 msgstr "Додайте наступний скрипт у Редактор Тексту -- Text Editor Blender'а::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:119
+#: ../../manual/advanced/scripting/addon_tutorial.rst:126
 #, fuzzy
 msgid ""
 "Click the :ref:`Run Script button <editors-text-run-script>`, all objects"
@@ -296,11 +299,11 @@ msgstr ""
 "run-script>`, усі об'єкти в активній сцені перемістяться на одну, 1.0, "
 "одиницю Blender."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:124
+#: ../../manual/advanced/scripting/addon_tutorial.rst:131
 msgid "Write the Add-on (Simple)"
 msgstr "Написання Додатку (Просто) -- Write the Add-on (Simple)"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:126
+#: ../../manual/advanced/scripting/addon_tutorial.rst:133
 msgid ""
 "This add-on takes the body of the script above, and adds it to an "
 "operator's ``execute()`` function. ::"
@@ -308,7 +311,7 @@ msgstr ""
 "Цей додаток бере тіло вищеописаного скрипту та додає його у функцію "
 "оператора ``execute()``. ::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:166
+#: ../../manual/advanced/scripting/addon_tutorial.rst:174
 msgid ""
 "``bl_info`` is split across multiple lines, this is just a style "
 "convention used to more easily add items."
@@ -316,7 +319,7 @@ msgstr ""
 "Словник ``bl_info`` розділено на кілька рядків, це просто стиль "
 "конвенції, що використовується для більш легкого додання елементів."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:170
+#: ../../manual/advanced/scripting/addon_tutorial.rst:178
 msgid ""
 "Rather than using ``bpy.context.scene``, we use the ``context.scene`` "
 "argument passed to ``execute()``. In most cases these will be the same. "
@@ -330,7 +333,7 @@ msgstr ""
 "будуть передані кастомному контексту, тому автори скрипту повинні "
 "надавати перевагу, щоб аргумент ``context`` передавався операторам."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:174
+#: ../../manual/advanced/scripting/addon_tutorial.rst:182
 msgid ""
 "To test the script, you can copy and paste it into Blender's Text editor "
 "and run it. This will execute the script directly and call register "
@@ -340,7 +343,7 @@ msgstr ""
 "Редактор Тексту -- Text Editor Blender'а та прогнати його. Це виконає "
 "скрипт безпосередньо та відразу викличе реєстр."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:177
+#: ../../manual/advanced/scripting/addon_tutorial.rst:185
 msgid ""
 "However running the script won't move any objects. For this, you need to "
 "execute the newly registered operator."
@@ -348,11 +351,11 @@ msgstr ""
 "Проте, проганяння цього скрипту не перемістить жоден з об'єктів. Для "
 "цього вам потрібно виконати ново зареєстрований оператор."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:181
+#: ../../manual/advanced/scripting/addon_tutorial.rst:189
 msgid "Operator Search menu."
 msgstr "Меню Пошук Оператора -- Operator Search."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:183
+#: ../../manual/advanced/scripting/addon_tutorial.rst:191
 msgid ""
 "Do this by pressing :kbd:`F3` to bring up the operator search menu and "
 "type in \"Move X by One\" (the ``bl_label``), then :kbd:`Return`."
@@ -361,21 +364,21 @@ msgstr ""
 "уведіть у ньому \"Move X by One\" (``bl_label``), а потім натисніть "
 ":kbd:`Return`."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:186
+#: ../../manual/advanced/scripting/addon_tutorial.rst:194
 msgid "The objects should move as before."
 msgstr "Об'єкти повинні переміститися, як і у попередньому випадку."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:188
+#: ../../manual/advanced/scripting/addon_tutorial.rst:196
 msgid "*Keep this add-on open in Blender for the next step - Installing.*"
 msgstr ""
 "*Утримуйте цей додаток відкритим у Blender'і для наступного кроку - "
 "Інсталювання.*"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:192
+#: ../../manual/advanced/scripting/addon_tutorial.rst:200
 msgid "Install the Add-on"
 msgstr "Інсталювання Додатку -- Install the Add-on"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:194
+#: ../../manual/advanced/scripting/addon_tutorial.rst:202
 msgid ""
 "Once you have your add-on within in Blender's Text editor, you will want "
 "to be able to install it so it can be enabled in the Preferences to load "
@@ -386,7 +389,7 @@ msgstr ""
 "увімкнути в Уподобаннях -- Preferences для завантаження при запуску "
 "програми."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:197
+#: ../../manual/advanced/scripting/addon_tutorial.rst:205
 msgid ""
 "Even though the add-on above is a test, let's go through the steps anyway"
 " so you know how to do it for later."
@@ -394,7 +397,7 @@ msgstr ""
 "Навіть хоча цей додаток є всього лише тестом, давайте пройдемо усі "
 "потрібні кроки, щоб ви знали, як це робити на майбутнє."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:199
+#: ../../manual/advanced/scripting/addon_tutorial.rst:207
 msgid ""
 "To install the Blender text as an add-on, you will first have to save it "
 "to disk. Take care to obey the naming restrictions that apply to Python "
@@ -404,7 +407,7 @@ msgstr ""
 "його на диск. Подбайте, щоб дотримуватися обмежень іменування, що "
 "застосовуються до модулів Python та закінчуються розширенням ``.py``."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:202
+#: ../../manual/advanced/scripting/addon_tutorial.rst:210
 msgid ""
 "Once the file is on disk, you can install it as you would for an add-on "
 "downloaded online."
@@ -412,7 +415,7 @@ msgstr ""
 "Після збереження файлу на диск ви можете інсталювати його так само, як і "
 "додаток, звантажений з Інтернету."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:204
+#: ../../manual/advanced/scripting/addon_tutorial.rst:212
 msgid ""
 "Open the :menuselection:`Preferences --> Add-ons --> Install...` and "
 "select the file."
@@ -421,7 +424,7 @@ msgstr ""
 ":menuselection:`Preferences --> Add-ons --> Install...` та виберіть цей "
 "файл."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:206
+#: ../../manual/advanced/scripting/addon_tutorial.rst:214
 msgid ""
 "Now the add-on will be listed and you can enable it by pressing the "
 "checkbox, if you want it to be enabled on restart, press *Save as "
@@ -432,7 +435,7 @@ msgstr ""
 "автоматично при запуску програми, то клацніть на кнопці «Зберегти як "
 "Стандарт» -- *Save as Default*."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:211
+#: ../../manual/advanced/scripting/addon_tutorial.rst:219
 msgid ""
 "The destination of the add-on depends on your Blender configuration. When"
 " installing an add-on the source and destination paths are printed in the"
@@ -444,7 +447,7 @@ msgstr ""
 " можете також знайти шлях до локації додатку, виконавши це у Консолі "
 "Python -- Python Console."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:220
+#: ../../manual/advanced/scripting/addon_tutorial.rst:228
 msgid ""
 "More is written on this topic here: :ref:`Directory Layout <blender-"
 "directory-layout>`."
@@ -452,11 +455,11 @@ msgstr ""
 "Більше написано про цю тему тут: :ref:`Directory Layout <blender-"
 "directory-layout>`."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:225
+#: ../../manual/advanced/scripting/addon_tutorial.rst:233
 msgid "Your Second Add-on"
 msgstr "Ваш Другий Додаток -- Your Second Add-on"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:227
+#: ../../manual/advanced/scripting/addon_tutorial.rst:235
 msgid ""
 "For our second add-on, we will focus on object instancing -- this is -- "
 "to make linked copies of an object in a similar way to what you may have "
@@ -466,7 +469,7 @@ msgstr ""
 "тобто -- на зробленні зв'язаних копій об'єкта подібно до тих, які ми "
 "отримуємо за допомогою модифікатора Масив -- Array."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:234
+#: ../../manual/advanced/scripting/addon_tutorial.rst:242
 msgid ""
 "As before, first we will start with a script, develop it, then convert it"
 " into an add-on. ::"
@@ -474,7 +477,7 @@ msgstr ""
 "Як і попередньо, спершу почнемо зі скрипту, розробимо його, а потім "
 "конвертуємо його у додаток. ::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:257
+#: ../../manual/advanced/scripting/addon_tutorial.rst:265
 msgid ""
 "Now try copying this script into Blender and run it on the default Cube. "
 "Make sure you click to move the 3D cursor before running as the duplicate"
@@ -485,7 +488,7 @@ msgstr ""
 "для переміщення 3D курсора перед проганянням, щоб дублікат був видимий на"
 " екрані в іншій локації курсора."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:260
+#: ../../manual/advanced/scripting/addon_tutorial.rst:268
 msgid ""
 "After running, notice that when you go into *Edit Mode* to change the "
 "Cube -- all of the copies change. In Blender, this is known as *Linked "
@@ -495,7 +498,7 @@ msgstr ""
 "*Edit Mode* для зміни Куба -- всі з копій будуть змінюватися. У Blender "
 "це відомо як Пов'язані Дублікати -- *Linked Duplicates*."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:263
+#: ../../manual/advanced/scripting/addon_tutorial.rst:271
 msgid ""
 "Next, we're going to do this in a loop, to make an array of objects "
 "between the active object and the cursor. ::"
@@ -503,7 +506,7 @@ msgstr ""
 "Наступне, ми зациклимо цю дію для отримання масиву між активним об'єктом "
 "та курсором. ::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:285
+#: ../../manual/advanced/scripting/addon_tutorial.rst:293
 msgid ""
 "Try running this script with the active object and the cursor spaced "
 "apart to see the result."
@@ -511,7 +514,7 @@ msgstr ""
 "Спробуйте прогнати цей скрипт на активному об'єкті і курсорі, що "
 "розташований десь подалі від нього, щоб побачити результат."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:287
+#: ../../manual/advanced/scripting/addon_tutorial.rst:295
 msgid ""
 "With this script you'll notice we're doing some math with the object "
 "location and cursor, this works because both are 3D "
@@ -526,7 +529,7 @@ msgstr ""
 "модулем :mod:`blender_api:mathutils`, який дозволяє векторам множитися на"
 " числа та матриці."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:292
+#: ../../manual/advanced/scripting/addon_tutorial.rst:300
 msgid ""
 "If you are interested in this area, read into "
 ":class:`blender_api:mathutils.Vector` -- there are many handy utility "
@@ -542,7 +545,7 @@ msgstr ""
 ":mod:`blender_api:mathutils.geometry`, таких як інтерполяція сплайну "
 "Безьє та перетин променя з трикутником."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:297
+#: ../../manual/advanced/scripting/addon_tutorial.rst:305
 msgid ""
 "For now we will focus on making this script an add-on, but it's good to "
 "know that this 3D math module is available and can help you with more "
@@ -552,15 +555,15 @@ msgstr ""
 "знати, що цей математичний 3D модуль доступний і може допомогти вам у "
 "майбутньому отримувати просунуту функціональність."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:302
+#: ../../manual/advanced/scripting/addon_tutorial.rst:310
 msgid "Write the Add-on"
 msgstr "Написання Додатку -- Write the Add-on"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:304
+#: ../../manual/advanced/scripting/addon_tutorial.rst:312
 msgid "The first step is to convert the script as-is into an add-on::"
 msgstr "Першим кроком конвертуємо цей скрипт «як є» у додаток::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:347
+#: ../../manual/advanced/scripting/addon_tutorial.rst:356
 msgid ""
 "Everything here has been covered in the previous steps, you may want to "
 "try run the add-on still and consider what could be done to make it more "
@@ -570,7 +573,7 @@ msgstr ""
 "схотіти спробувати прогнати цей додаток так, як є, та розглянути, що ще "
 "може бути зроблено для його покращення."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:350
+#: ../../manual/advanced/scripting/addon_tutorial.rst:359
 msgid ""
 "The two of the most obvious missing things are -- having the total fixed "
 "at 10, and having to access the operator from space-bar is not very "
@@ -580,15 +583,15 @@ msgstr ""
 " елементів та наявність доступу до цього оператора через меню Пробілу -- "
 "є не дуже зручними."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:353
+#: ../../manual/advanced/scripting/addon_tutorial.rst:362
 msgid "Both these additions are explained next, with the final script afterwards."
 msgstr "Обидва ці аспекти пояснюються далі, нижче."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:357
+#: ../../manual/advanced/scripting/addon_tutorial.rst:366
 msgid "Operator Property"
 msgstr "Властивість Оператора -- Operator Property"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:359
+#: ../../manual/advanced/scripting/addon_tutorial.rst:368
 msgid ""
 "There are a variety of property types that are used for tool settings, "
 "common property types include: int, float, vector, color, boolean and "
@@ -598,7 +601,7 @@ msgstr ""
 "засобів, загальними ж із них є: int (цілочислове), float (дійсночислове),"
 " vector (вектор), color (колір), boolean (булеве) and string (рядкове)."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:362
+#: ../../manual/advanced/scripting/addon_tutorial.rst:371
 msgid ""
 "These properties are handled differently to typical Python class "
 "attributes because Blender needs to display them in the interface, store "
@@ -609,7 +612,7 @@ msgstr ""
 " у розкладках клавіш та зберігати ці установки для повторного "
 "використання."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:366
+#: ../../manual/advanced/scripting/addon_tutorial.rst:375
 msgid ""
 "While this is handled in a fairly Pythonic way, be mindful that you are "
 "in fact defining tool settings that are loaded into Blender and accessed "
@@ -619,7 +622,7 @@ msgstr ""
 "визначаєте установки засобу, які будуть завантажуватися у Blender'і та "
 "будуть доступні іншими частинами Blender'а, поза Python."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:369
+#: ../../manual/advanced/scripting/addon_tutorial.rst:378
 msgid ""
 "To get rid of the literal 10 for ``total``, we'll use an operator "
 "property. Operator properties are defined via bpy.props module, this is "
@@ -629,7 +632,7 @@ msgstr ""
 " оператора. Властивості оператора визначаються через модуль bpy.props, і "
 "це додається у тіло класу::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:379
+#: ../../manual/advanced/scripting/addon_tutorial.rst:388
 msgid ""
 "These properties from :mod:`blender_api:bpy.props` are handled specially "
 "by Blender when the class is registered so they display as buttons in the"
@@ -642,11 +645,11 @@ msgstr ""
 "передавати у властивостях для задання лімітів, зміни стандарту та показу "
 "підказки."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:384
+#: ../../manual/advanced/scripting/addon_tutorial.rst:393
 msgid ":mod:`blender_api:bpy.props.IntProperty`"
 msgstr ":mod:`blender_api:bpy.props.IntProperty`"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:386
+#: ../../manual/advanced/scripting/addon_tutorial.rst:395
 msgid ""
 "This document doesn't go into details about using other property types. "
 "However, the link above includes examples of more advanced property "
@@ -656,11 +659,11 @@ msgstr ""
 "властивостей. Проте, за цим вищенаведеним посиланням розміщено приклади "
 "про більш просунуте використання властивостей."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:391
+#: ../../manual/advanced/scripting/addon_tutorial.rst:400
 msgid "Menu Item"
 msgstr "Пункт Меню -- Menu Item"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:393
+#: ../../manual/advanced/scripting/addon_tutorial.rst:402
 msgid ""
 "Add-ons can add to the user interface of existing panels, headers and "
 "menus defined in Python."
@@ -668,15 +671,15 @@ msgstr ""
 "Додатки можуть додавати в інтерфейс користувача наявних панелей, "
 "заголовки та меню, визначені у Python."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:395
+#: ../../manual/advanced/scripting/addon_tutorial.rst:404
 msgid "For this example we'll add to an existing menu."
 msgstr "Для цього прикладу ми додамо пункт у наявне вже меню."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:399
+#: ../../manual/advanced/scripting/addon_tutorial.rst:408
 msgid "Menu Identifier."
 msgstr "Ідентифікатор Меню -- Menu Identifier."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:401
+#: ../../manual/advanced/scripting/addon_tutorial.rst:410
 msgid ""
 "To find the identifier of a menu, first enable *Python Tooltips* in the "
 "preferences. Then you can hover your mouse over the menu item and the "
@@ -686,7 +689,7 @@ msgstr ""
 "*Python Tooltips* в уподобаннях. Потім ви можете навести свою мишу над "
 "пунктом меню і його ідентифікатор покажеться."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:405
+#: ../../manual/advanced/scripting/addon_tutorial.rst:414
 msgid ""
 "The method used for adding a menu item is to append a draw function into "
 "an existing class::"
@@ -694,17 +697,17 @@ msgstr ""
 "Метод, який використовується для додання пункту меню, полягає у "
 "прикріпленні функції рисування в наявний клас::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:413
+#: ../../manual/advanced/scripting/addon_tutorial.rst:422
 msgid "For docs on extending menus, see: :class:`blender_api:bpy.types.Menu`."
 msgstr ""
 "Документи про розширення меню дивіться: "
 ":class:`blender_api:bpy.types.Menu`."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:417
+#: ../../manual/advanced/scripting/addon_tutorial.rst:426
 msgid "Keymap"
 msgstr "Розкладка клавіш -- Keymap"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:419
+#: ../../manual/advanced/scripting/addon_tutorial.rst:428
 msgid ""
 "In Blender, add-ons have their own keymaps so as not to interfere with "
 "Blender's built-in key-maps."
@@ -712,7 +715,7 @@ msgstr ""
 "У Blender'і додатки мають власні розкладки клавіші, які не пересікаються "
 "з вбудованими розкладками клавіш Blender'а."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:421
+#: ../../manual/advanced/scripting/addon_tutorial.rst:430
 msgid ""
 "In the example below, a new object mode "
 ":class:`blender_api:bpy.types.KeyMap` is added, then a "
@@ -726,7 +729,7 @@ msgstr ""
 "посилається на ново доданий оператор, використовуючи :kbd:`Shift-Ctrl-T` "
 "як клавішне скорочення для його активування. ::"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:447
+#: ../../manual/advanced/scripting/addon_tutorial.rst:456
 msgid ""
 "Notice how the keymap item can have a ``total`` setting different than "
 "the default set by the operator, this allows you to have multiple keys "
@@ -737,7 +740,7 @@ msgstr ""
 "одночасно кілька варіантів клавіш для доступу до того ж самого оператора "
 "з різними уставами."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:452
+#: ../../manual/advanced/scripting/addon_tutorial.rst:461
 msgid ""
 "While :kbd:`Shift-Ctrl-T` is not a default Blender key shortcut, it is "
 "hard to make sure add-ons will not overwrite each other's keymaps, At "
@@ -750,35 +753,35 @@ msgstr ""
 "призначенні клавіш, щоб вони не конфліктували зі скороченнями, що дають "
 "доступ до важливої функціональності у Blender'і."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:457
+#: ../../manual/advanced/scripting/addon_tutorial.rst:466
 msgid "For API documentation on the functions listed above, see:"
 msgstr "Для функій, згаданих вище, дивіться наступну API документацію:"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:459
+#: ../../manual/advanced/scripting/addon_tutorial.rst:468
 msgid ":class:`blender_api:bpy.types.KeyMaps.new`,"
 msgstr ":class:`blender_api:bpy.types.KeyMaps.new`,"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:460
+#: ../../manual/advanced/scripting/addon_tutorial.rst:469
 msgid ":class:`blender_api:bpy.types.KeyMap`,"
 msgstr ":class:`blender_api:bpy.types.KeyMap`,"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:461
+#: ../../manual/advanced/scripting/addon_tutorial.rst:470
 msgid ":class:`blender_api:bpy.types.KeyMapItems.new`,"
 msgstr ":class:`blender_api:bpy.types.KeyMapItems.new`,"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:462
+#: ../../manual/advanced/scripting/addon_tutorial.rst:471
 msgid ":class:`blender_api:bpy.types.KeyMapItem`."
 msgstr ":class:`blender_api:bpy.types.KeyMapItem`."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:466
+#: ../../manual/advanced/scripting/addon_tutorial.rst:475
 msgid "Bringing It All Together"
 msgstr "Зведення Всього В Одне -- Bringing It All Together"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:540
+#: ../../manual/advanced/scripting/addon_tutorial.rst:550
 msgid "In the menu."
 msgstr "У меню."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:542
+#: ../../manual/advanced/scripting/addon_tutorial.rst:552
 msgid ""
 "Run the script (or save it and add it through the Preferences like "
 "before) and it will appear in the *Object* menu."
@@ -786,11 +789,11 @@ msgstr ""
 "Проженіть цей скрипт (або збережіть його та додайте через Уподобання -- "
 "Preferences, як і вище) і він з'явиться у меню Об'єкт -- *Object*."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:546
+#: ../../manual/advanced/scripting/addon_tutorial.rst:556
 msgid "Operator Property."
 msgstr "Властивість Оператора."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:548
+#: ../../manual/advanced/scripting/addon_tutorial.rst:558
 msgid ""
 "After selecting it from the menu, you can choose how many instances of "
 "the cube you want create."
@@ -798,7 +801,7 @@ msgstr ""
 "Після вибору його у меню ви можете вказати, скільки примірників куба ви "
 "хочете створити."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:552
+#: ../../manual/advanced/scripting/addon_tutorial.rst:562
 msgid ""
 "Directly executing the script multiple times will add the menu each time "
 "too. While not useful behavior, there's nothing to worry about since add-"
@@ -810,11 +813,11 @@ msgstr ""
 "страшного, оскільки додатки не реєструються більше одного разу при їх "
 "увімкненні через Уподобання -- Preferences."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:558
+#: ../../manual/advanced/scripting/addon_tutorial.rst:568
 msgid "Conclusions"
 msgstr "Висновки -- Conclusions"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:560
+#: ../../manual/advanced/scripting/addon_tutorial.rst:570
 msgid ""
 "Add-ons can encapsulate certain functionality neatly for writing tools to"
 " improve your workflow or for writing utilities for others to use."
@@ -823,7 +826,7 @@ msgstr ""
 "написанні засобів для покращення вашого потоку роботи або при написанні "
 "утиліт для використання іншими користувачами."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:563
+#: ../../manual/advanced/scripting/addon_tutorial.rst:573
 msgid ""
 "While there are limits to what Python can do within Blender, there is "
 "certainly a lot that can be achieved without having to dive into "
@@ -833,7 +836,7 @@ msgstr ""
 "багато з чого може бути досягнуто без потреби заглиблюватися у код C/C++ "
 "самого Blender'а."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:566
+#: ../../manual/advanced/scripting/addon_tutorial.rst:576
 msgid ""
 "The example given in the tutorial is limited, but shows the Blender API "
 "used for common tasks that you can expand on to write your own tools."
@@ -842,11 +845,11 @@ msgstr ""
 "використання Blender API для загальних завдань, які ви можете розширити, "
 "написавши власні засоби."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:571
+#: ../../manual/advanced/scripting/addon_tutorial.rst:581
 msgid "Further Reading"
 msgstr "Додаткові матеріали -- Further Reading"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:573
+#: ../../manual/advanced/scripting/addon_tutorial.rst:583
 msgid ""
 "Blender comes with commented templates which are accessible from the Text"
 " editor's header. If you have specific areas you want to see example code"
@@ -856,7 +859,7 @@ msgstr ""
 "заголовку Редактора Тексту -- Text Editor. Якщо ви хочете переглянути "
 "приклад коду для певних областей, то це добре місце, щоб розпочати."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:576
+#: ../../manual/advanced/scripting/addon_tutorial.rst:586
 msgid ""
 "Here are some sites you might like to check on after completing this "
 "tutorial."
@@ -864,7 +867,7 @@ msgstr ""
 "Ось деякі із сайтів, які можливо ви схочете переглянути після завершення "
 "цього навчальника."
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:578
+#: ../../manual/advanced/scripting/addon_tutorial.rst:588
 msgid ""
 "`Blender/Python API Overview "
 "<https://docs.blender.org/api/blender_python_api_current/info_overview.html>`__"
@@ -874,7 +877,7 @@ msgstr ""
 "<https://docs.blender.org/api/blender_python_api_current/info_overview.html>`__"
 " -- *Для більш основоположних деталей про інтеграцію Blender/Python.*"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:580
+#: ../../manual/advanced/scripting/addon_tutorial.rst:590
 msgid ""
 "`How to Think Like a Computer Scientist "
 "<http://interactivepython.org/courselib/static/thinkcspy/index.html>`__ "
@@ -884,7 +887,7 @@ msgstr ""
 "<http://interactivepython.org/courselib/static/thinkcspy/index.html>`__ "
 "-- *Багато інфо для тих, хто тільки почав вивчати Python.*"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:582
+#: ../../manual/advanced/scripting/addon_tutorial.rst:592
 msgid ""
 "`Blender Development (Wiki) <https://wiki.blender.org>`__ -- *Blender "
 "Development, general information and helpful links.*"
@@ -892,7 +895,7 @@ msgstr ""
 "`Blender Development (Wiki) <https://wiki.blender.org>`__ -- *Розроблення"
 " Blender, загальна інформація та корисні посилання.*"
 
-#: ../../manual/advanced/scripting/addon_tutorial.rst:584
+#: ../../manual/advanced/scripting/addon_tutorial.rst:594
 msgid ""
 "`DevTalk <https://devtalk.blender.org/c/python>`__ -- *Forum where people"
 " ask Python development questions.*"
