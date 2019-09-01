@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-08-24 12:11+0800\n"
+"PO-Revision-Date: 2019-09-01 17:47+0800\n"
 "Last-Translator: kidux(xueke pei) <blender@vip.qq.com>\n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -45,7 +45,7 @@ msgstr "当指定了一个低于最大值的最小数值时，光程将会遵循
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:32
 msgid "Total"
-msgstr ""
+msgstr "总数"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:31
 msgid "Maximum number of light bounces. For best quality, this should be set to the maximum. However, in practice, it may be good to set it to lower values for faster rendering. A value of 0 bounces results in direct lighting only."
@@ -68,9 +68,8 @@ msgid "Maximum number of glossy bounces."
 msgstr "光泽反弹的最大数。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:42
-#, fuzzy
 msgid "Transparency"
-msgstr "透明反弹"
+msgstr "透明"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:39
 msgid "Maximum number of transparency bounces."
@@ -81,9 +80,8 @@ msgid "The maximum number of transparent bounces is controlled separately from o
 msgstr "透明反弹次数上限是通过其它的反弹来单独控制的。也可以使用概率性透明反弹终止机制，这会有助于渲染多个透明度层。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:44
-#, fuzzy
 msgid "Transmission"
-msgstr "透射反弹"
+msgstr "透射"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:45
 msgid "Maximum number of transmission bounces."
@@ -110,13 +108,12 @@ msgid "This option limits the maximum intensity a sample from rays which have no
 msgstr "此选项限制样本来自尚未反弹的能对像素造成影响的光线的最大强度。它降低了噪点，但精度更低。将此选项设置为 0.0 将完全禁用钳制。越低，对生成的图像的影响（调暗样本）比值较高。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:61
-#, fuzzy
 msgid "A common issue encountered with *Path Tracing* is the occurrence of \"fireflies\": improbable samples that contribute very high values to pixels. This option provides a way to limit that. However, note that as you clamp out such values, other bright lights/reflections will be dimmed as well."
-msgstr "*路径追踪* 中常见的问题是 \"萤火虫现象\": 出现对像素贡献值很高的不可能样本。这个选项提供了一种限制该现象的方法，但当你钳制这种值的时候，其他亮光和反射也会因此变暗。"
+msgstr "*路径追踪* 中常见的问题是 \"噪点\": 离奇的采样对像素贡献过高的亮度。该选项提供了一种限制该现象的方法，但当你钳制这些值的时候，其他亮光和反射也会因此变暗。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:66
 msgid "Care must be taken when using this setting to find a balance between mitigating fireflies and losing intentionally bright parts. It is often useful to clamp indirect bounces separately, as they tend to cause more fireflies than direct bounces. See the *Clamp Indirect* setting."
-msgstr "使用此设置时必须小心，以在减轻萤火虫现象和失去故意明亮的零件之间找到平衡点。单独钳制间接反弹通常很有用，因为它们往往比直接反弹导致更多的萤火虫。请参阅 *间接钳制* 设置。"
+msgstr "使用此设置时必须小心，以在减轻噪点和失去故意明亮的零件之间找到平衡点。单独钳制间接反弹通常很有用，因为它们往往比直接反弹导致更多的噪点。请参阅 *间接钳制* 设置。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:72
 msgid "Clamp Indirect"
@@ -152,16 +149,15 @@ msgstr "和反射焦散基本原理相同，但是折射的情况。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:104
 msgid "Filter Glossy"
-msgstr "光泽过滤。"
+msgstr "光泽过滤"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:92
 msgid "When using a value higher than 0.0, this will blur glossy reflections after blurry bounces, to reduce noise at the cost of accuracy. 1.0 is a good starting value to tweak."
 msgstr "当使用高于 0.0 的值时，这将模糊光泽反弹后的光泽反射，以降低噪点，但代价是精度高。1.0 是调整的好起始值。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:95
-#, fuzzy
 msgid "Some light paths have a low probability of being found while contributing much light to the pixel. As a result these light paths will be found in some pixels and not in others, causing fireflies. An example of such a difficult path might be a small light that is causing a small specular highlight on a sharp glossy material, which is observed through a rough glossy material. In fact in such a case there practically occurs a caustic."
-msgstr "某些光路径在为像素贡献大量光的同时被发现的概率较低。因此，这些光路径将在某些像素中找到，而不是在另一些像素中，从而导致萤火虫。这种困难路径的一个示例可能是小光，它导致锐光材料上的小镜面高光，通过粗糙的光泽材料观察到。事实上，在这种情况下，实际上发生了一种腐蚀性事件。"
+msgstr "某些光程在为像素贡献大量光的同时被发现的概率较低。因此，这些光程将在某些像素中找到，而其他像素中找不到，从而导致噪点。通过粗糙的光泽材料观察到的锐利光泽材质上的高光亮点就是这种复杂光程的一个例子。事实上，在这种情况下实际会发生焦散。"
 
 #: ../../manual/render/cycles/render_settings/light_paths.rst:101
 msgid "With path tracing it is difficult to find the specular highlight, but if you increase the roughness on the material, the highlight gets bigger and softer, and so easier to find. Often this blurring will hardly be noticeable, because it is blurred by the material anyway, but there are also cases where this will lead to a loss of detail in lighting."
@@ -170,194 +166,3 @@ msgstr "使用路径跟踪，很难找到镜面高光，但如果增加材质的
 #: ../../manual/render/cycles/render_settings/light_paths.rst:108
 msgid "See :ref:`Reducing Noise <render-cycles-reducing-noise-clamp-samples>` for examples of the clamp settings in use."
 msgstr "参见 :ref:`降噪 <render-cycles-reducing-noise-clamp-samples>` 钳制光泽应用的例子。"
-
-#~ msgid ""
-#~ "Alpha pass output is also different "
-#~ "for the transparent :abbr:`BSDF (Bidirectional"
-#~ " scattering distribution function)`. Other "
-#~ "transmission :abbr:`BSDF (Bidirectional scattering"
-#~ " distribution function)`\\ s are considered"
-#~ " opaque, because they change the "
-#~ "light direction. As such they cannot "
-#~ "be used for alpha-over compositing, "
-#~ "while this is possible with the "
-#~ "transparent :abbr:`BSDF (Bidirectional scattering"
-#~ " distribution function)`."
-#~ msgstr ""
-#~ "对于透明 :abbr:`BSDF (双向散射分布函数)`  "
-#~ "而言，Alpha通道的输出同样有所不同。其它透射类 :abbr:`BSDF (双向散射分布函数)`  "
-#~ "被视作非透明，因为他们改变了光线方向。因此他们无法应用于alpha over（透明上叠）合成中，而透明 "
-#~ ":abbr:`BSDF (双向散射分布函数)`  则可以实现。"
-
-#~ msgid "Ray Visibility"
-#~ msgstr "光线可见度"
-
-#~ msgid "Objects can be set to be invisible to particular ray types:"
-#~ msgstr "物体可以设置成对特定的光线类型不可见，光线类型如下："
-
-#~ msgid "Camera"
-#~ msgstr "摄像机"
-
-#~ msgid "Diffuse reflection"
-#~ msgstr "漫反射"
-
-#~ msgid "Glossy reflection"
-#~ msgstr "光泽反射"
-
-#~ msgid "Transmission"
-#~ msgstr "透射"
-
-#~ msgid "Shadow"
-#~ msgstr "阴影"
-
-#~ msgid ""
-#~ "This can be used, for example, to"
-#~ " make an emitting mesh invisible to"
-#~ " camera rays. For duplicators, visibility"
-#~ " is inherited; if the parent object"
-#~ " is hidden for some ray types, "
-#~ "the children will be hidden for "
-#~ "these too."
-#~ msgstr "比如，这可以用来制作一个对摄像机类型光线不可见的发光网格。如果父物体对于某些光线类型是不可见的话，那么对于复制器而言，可见性也将会得到继承，对于它们而言，子物体也会是不可见的。"
-
-#~ msgid ""
-#~ "In terms of performance, using these "
-#~ "options is more efficient that using "
-#~ "a shader node setup that achieves "
-#~ "the same effect. Objects invisible to"
-#~ " a certain ray will be skipped "
-#~ "in ray traversal already, leading to "
-#~ "fewer rays cast and shaders executed."
-#~ msgstr "在性能方面，使用这些选项会更加高效，通过对着色器节点进行设置，可以达到相同的效果。对于这种光线可见的那些物体将会被光线在途中忽略，从而减少了光线的投射与着色器的执行。"
-
-#~ msgid ""
-#~ "Some light paths have a low "
-#~ "probability of being found while "
-#~ "contributing much light to the pixel."
-#~ " As a result these light paths "
-#~ "will be found in some pixels and"
-#~ " not in others, causing fireflies. An"
-#~ " example of such a difficult path "
-#~ "might be a small light that is "
-#~ "causing a small specular highlight on"
-#~ " a sharp glossy material, which we"
-#~ " are seeing through a rough glossy"
-#~ " material. In fact in such a "
-#~ "case we practically have a caustic."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "With path tracing it is difficult "
-#~ "to find the specular highlight, but "
-#~ "if we increase the roughness on "
-#~ "the material, the highlight gets bigger"
-#~ " and softer, and so easier to "
-#~ "find. Often this blurring will hardly"
-#~ " be noticeable, because we are seeing"
-#~ " it through a blurry material anyway,"
-#~ " but there are also cases where "
-#~ "this will lead to a loss of "
-#~ "detail in lighting."
-#~ msgstr ""
-
-#~ msgid "Ray Types"
-#~ msgstr "光线类型"
-
-#~ msgid "Ray types can be divided into four categories:"
-#~ msgstr "光线类型可以分为以下四类："
-
-#~ msgid "Camera: the ray comes straight from the camera."
-#~ msgstr "Camera（摄像机）：光线从摄像机直接发出。"
-
-#~ msgid "Reflection: the ray is generated by a reflection off a surface."
-#~ msgstr "Reflection（反射）：光线来自表面反射光。"
-
-#~ msgid "Transmission: the ray is generated by a transmission through a surface."
-#~ msgstr "Transmission（透射）：光线来自表面透射光。"
-
-#~ msgid "Shadow: the ray is used for (transparent) shadows."
-#~ msgstr "Shadow（阴影）：光线用于制造（透明）阴影。"
-
-#~ msgid "Reflection and transmission rays can further have these properties:"
-#~ msgstr "反射与透射光线可以进一步包含以下属性："
-
-#~ msgid ""
-#~ "Diffuse: the ray is generated by a"
-#~ " diffuse reflection or transmission "
-#~ "(translucency)."
-#~ msgstr "Diffuse（漫反射）：光线来自漫反射或透射光（半透）。"
-
-#~ msgid ""
-#~ "Glossy: the ray is generated by a"
-#~ " glossy specular reflection or "
-#~ "transmission."
-#~ msgstr "Glossy（光泽）：光线来自某种光泽的高光反射或透射光。"
-
-#~ msgid ""
-#~ "Singular: the ray is generated by "
-#~ "a perfectly sharp reflection or "
-#~ "transmission."
-#~ msgstr "Singular（单一）：光线来自某种完美镜面反射或透射光。"
-
-#~ msgid ""
-#~ "The Light Path node can be used"
-#~ " to find out the type of ray"
-#~ " the shading is being computed for."
-#~ msgstr "光程结点可以用于查找执行计算的着色光线的类型。"
-
-#~ msgid "Bounce Control"
-#~ msgstr "反弹控制"
-
-#~ msgid ""
-#~ "The transparent :abbr:`BSDF (Bidirectional "
-#~ "scattering distribution function)` shader is"
-#~ " given special treatment. When a ray"
-#~ " passes through it, light passes "
-#~ "straight on, as if there was no"
-#~ " geometry there. The ray type does"
-#~ " not change when passing through a"
-#~ " transparent BSDF."
-#~ msgstr ""
-#~ "透明 :abbr:`BSDF (双向散射分布函数)`  "
-#~ "着色器应予以特别对待。当光线穿过它时，光线直接通过，就像那里没有任何几何体一样。在通过一个透明BSDF时，光线类型不会发生改变。"
-
-#~ msgid ""
-#~ "Alpha pass output is also different "
-#~ "for the transparent BSDF. Other "
-#~ "transmission BSDFs are considered opaque, "
-#~ "because they change the light direction."
-#~ " As such they cannot be used "
-#~ "for alpha-over compositing, while this"
-#~ " is possible with the transparent "
-#~ "BSDF."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that, while semantically the ray"
-#~ " passes through as if no geometry "
-#~ "was hit, rendering performance is "
-#~ "affected as each transparency step "
-#~ "requires executing the shader and "
-#~ "tracing a ray."
-#~ msgstr "注意，当从语义上讲到光线毫无阻挡地穿过几何体时，渲染性能其实会受到影响，因为每次的透明度步进都需要执行着色器来对光线进行追踪。"
-
-#~ msgid "The object :ref:`ray visibility <cycles-ray-visibility>` settings."
-#~ msgstr ""
-
-#~ msgid "Settings"
-#~ msgstr ""
-
-#~ msgid ":menuselection:`Render --> Light Paths`"
-#~ msgstr ":menuselection:`渲染 --> 光程`"
-
-#~ msgid "Diffuse Bounces"
-#~ msgstr ""
-
-#~ msgid "Glossy Bounces"
-#~ msgstr ""
-
-#~ msgid "Transmission Bounces"
-#~ msgstr ""
-
-#~ msgid "Volume Bounces"
-#~ msgstr ""
