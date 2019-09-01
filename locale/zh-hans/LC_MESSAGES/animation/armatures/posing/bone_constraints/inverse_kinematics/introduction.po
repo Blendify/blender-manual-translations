@@ -87,9 +87,9 @@ msgid ""
 "point sets it back to 0 (unlimited) again. Thus, you have to press :kbd:`Ctrl-PageUp` *more than once* from the initial state to set a finite chain length greater than "
 "1."
 msgstr ""
-"链条的长度可以通过按 :kbd:`PageUp` 或 :kbd:`滚轮向下` 增加（如果还有连接的父级可以再继续增加），可以通过按 :kbd:`PageDown` 或 :kbd:`滚轮向上` 减少。链的初始长度为0，这"
-"有效地意味着尽可能地远离跟随父骨骼的连接，没有长度限制。所以按 :kbd:`PageUp` 第一次将链条长度设置为1（仅移动所选骨骼），然后按 :kbd:`PageDown` 在这一点现在将其设置为"
-"0（无限制）。因此，你必须从初始状态按 :kbd:`PageUp`  *多次* 设置大于1的有限链长度。"
+"链条的长度可以通过按 :kbd:`PageUp` 或 :kbd:`滚轮向下` 增加(如果还有连接的父级可以再继续增加)，可以通过按 :kbd:`PageDown` 或 :kbd:`滚轮向上` 减少。链的初始长度为0，这"
+"有效地意味着尽可能地远离跟随父骨骼的连接，没有长度限制。所以按 :kbd:`PageUp` 第一次将链条长度设置为1(仅移动所选骨骼)，然后按 :kbd:`PageDown` 在这一点现在将其设置为"
+"0(无限制)。因此，你必须从初始状态按 :kbd:`PageUp`  *多次* 设置大于1的有限链长度。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:47
 msgid "This is a more limited feature than using an IK constraint, which can be configured, but it can be useful for quick posing."
@@ -261,7 +261,7 @@ msgstr "模拟"
 msgid ""
 "The Simulation mode is the stateful mode of the solver: it estimates the target's velocity, operates in a 'true time' context, ignores rotation from keyframes (except "
 "via a joint rotation constraint) and builds up a state cache automatically."
-msgstr "模拟模式是求解器的有状态模式：它估计目标的速度，在“真实时间”上下文中操作，忽略关键帧的旋转（通过关节旋转约束除外）并自动构建状态缓存。"
+msgstr "模拟模式是求解器的有状态模式：它估计目标的速度，在“真实时间”上下文中操作，忽略关键帧的旋转(通过关节旋转约束除外)并自动构建状态缓存。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:179
 msgid "Reiteration"
@@ -275,7 +275,7 @@ msgstr "从不"
 msgid ""
 "The solver starts from the rest pose and does not reiterate (converges) even for the first frame. This means that it will take a few frames to get to the target at the "
 "start of the animation."
-msgstr "求解器从静止姿势开始，即使对于第一帧也不重复（收敛）。 这意味着在动画开始时需要几帧才能到达目标。"
+msgstr "求解器从静止姿势开始，即使对于第一帧也不重复(收敛)。 这意味着在动画开始时需要几帧才能到达目标。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:173
 msgid "Initial"
@@ -288,7 +288,7 @@ msgid ""
 "solver will track the target by integrating the joint velocity computed by the Jacobian solver over the time interval that the frame represents. The precision of the "
 "tracking depends on the feedback coefficient, number of substeps and velocity of the target."
 msgstr ""
-"求解器从静止姿势开始并重新迭代直到达到给定精度，但仅在第一帧（即，在高速缓存中没有任何先前帧的帧）上。 此选项基本上允许您选择与其余姿势不同的开始姿势，它是默认值。 对于"
+"求解器从静止姿势开始并重新迭代直到达到给定精度，但仅在第一帧(即，在高速缓存中没有任何先前帧的帧)上。 此选项基本上允许您选择与其余姿势不同的开始姿势，它是默认值。 对于"
 "后续帧，解算器将通过在帧表示的时间间隔内对雅可比解算器计算的关节速度进行积分来跟踪目标。 跟踪精度取决于反馈系数，步数和目标速度。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:179
@@ -324,7 +324,7 @@ msgstr "最小步数"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:191
 msgid "Proposed minimum substep duration (in second). The auto step algorithm may reduce the substep further based on joint velocity."
-msgstr "建议的最小子步持续时间（秒）。 自动步进算法可以进一步基于关节速度减少子步骤。"
+msgstr "建议的最小子步持续时间(秒)。 自动步进算法可以进一步基于关节速度减少子步骤。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:193
 msgid "Max"
@@ -332,7 +332,7 @@ msgstr "最大步数"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:194
 msgid "Maximum substep duration (in second). The auto step algorithm will not allow substep longer than this value."
-msgstr "最大子步持续时间（秒）。 自动步进算法不允许子步长超过此值。"
+msgstr "最大子步持续时间(秒)。 自动步进算法不允许子步长超过此值。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:198
 msgid "Steps"
@@ -343,7 +343,7 @@ msgid ""
 "If Auto Step is disabled, you can choose a fixed number of substeps with this parameter. Substep should not be longer than 10ms, which means the number of steps is 4 "
 "for a 25 fps animation. If the armature seems unstable (vibrates) between frames, you can improve the stability by increasing the number of steps."
 msgstr ""
-"如果禁用“自动步进”，则可以使用此参数选择固定数量的子步骤。 子步不应超过10毫秒，这意味着25 fps动画的步数为4。 如果骨架在帧之间看起来不稳定（振动），则可以通过增加步数来"
+"如果禁用“自动步进”，则可以使用此参数选择固定数量的子步骤。 子步不应超过10毫秒，这意味着25 fps动画的步数为4。 如果骨架在帧之间看起来不稳定(振动)，则可以通过增加步数来"
 "提高稳定性。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:211
@@ -437,7 +437,7 @@ msgid ""
 "preferred pose for joints (e.g. rest pose) or to animate a joint angle by playing an action on it."
 msgstr ""
 "激活该骨骼上的关节旋转约束。 从Action或UI交互计算的姿势旋转将转换为关节值，并作为关节的目标传递给解算器。 这将使您可以控制关节，同时解算器仍然跟踪其他IK目标。 您可以使"
-"用此功能为关节（例如静置姿势）提供首选姿势，或通过对关节角度进行动作来设置关节角度的动画。"
+"用此功能为关节(例如静置姿势)提供首选姿势，或通过对关节角度进行动作来设置关节角度的动画。"
 
 #: ../../manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst:269
 msgid "Weight"

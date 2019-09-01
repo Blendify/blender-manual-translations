@@ -54,7 +54,7 @@ msgstr "Z通道"
 
 #: ../../manual/compositing/types/filter/defocus.rst:25
 msgid "Z-buffer input, but could also be a (grayscale) image used as a mask, or a single value input."
-msgstr "Z-缓冲区输入连接端口，可以用一张（灰度）图作为遮罩，或者是一个单独数值作为输入值。"
+msgstr "Z-缓冲区输入连接端口，可以用一张(灰度)图作为遮罩，或者是一个单独数值作为输入值。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:29
 msgid "Properties"
@@ -70,7 +70,7 @@ msgstr "模拟摄影机的光圈可变光阑片数量。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:34
 msgid "Disk (to emulate a perfect circle) or Triangle (3 blades), Square (4 blades), Pentagon (5 blades), Hexagon (6 blades), Heptagon (7 blades) or Octagon (8 blades)."
-msgstr "圆状（模拟一个圆形）或三角形（3片），正方形（4片），五边形（5片），六边形（6片），七边形（7片），八边形（8片）。"
+msgstr "圆状(模拟一个圆形)或三角形(3片)，正方形(4片)，五边形(5片)，六边形(6片)，七边形(7片)，八边形(8片)。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:38
 msgid "Angle"
@@ -150,7 +150,7 @@ msgstr "Z缩放"
 
 #: ../../manual/compositing/types/filter/defocus.rst:70
 msgid "Only active when *No Z-buffer* is enabled. When *No Z-buffer* is used, the input is used directly to control the blur radius (similar to *F-Stop* when using the Z-buffer). This parameter can be used to scale the range of the Z input."
-msgstr "只有当启用 *无Z缓冲区* 时才会激活。当使用 *无Z缓冲区* 时，输入用来直接控制模糊半径（和使用Z缓冲区时的 *光圈级* 类似）。此参数可用来控制缩放Z深度输入值的范围。"
+msgstr "只有当启用 *无Z缓冲区* 时才会激活。当使用 *无Z缓冲区* 时，输入用来直接控制模糊半径(和使用Z缓冲区时的 *光圈级* 类似)。此参数可用来控制缩放Z深度输入值的范围。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:76
 msgid "Outputs"
@@ -182,9 +182,9 @@ msgid ""
 "shaded image instead of a Z-buffer. (A typical method to create the fake depth-shaded image is by using a linear blend texture for all objects in the scene or by using the \"fog/mist\" fake depth shading method.) This also has the advantage that "
 "the fake depth image can have anti-aliasing, which is not possible with a real Z-buffer."
 msgstr ""
-"有时用户想对图像的模糊程度有更多的控制。比如，仅对一个物体进行模糊而它周围物体保持原来状态不变（反之亦然），或用户想立即对整体图像进行均一化模糊。这时可以连入其他的节点作为Z深度通道的输入信息。比如用户连接一个图像节点并且使用一个灰度图来描述哪些地"
-"方为模糊区域，最大模糊的地方颜色值设定为白色，无模糊区域设定为黑色。又或者用户使用时间节点来均一化模糊图像，时间值控制每帧图像的最大模糊程度。通过使用一个模拟景深明暗变化图像取代Z缓冲区，此节点也可以用来获取一个比较好的DoF（景深）模糊。（典型方法是"
-"通过使用线性blender贴图或 \"fog/mist\"淡出景深明暗的方法为场景中所有物体或来创建一个模拟景深明暗图）。这种方法有个优点是可以在淡出景深图上执行反锯齿效果，这在真实的Z缓冲区上是不可能的。"
+"有时用户想对图像的模糊程度有更多的控制。比如，仅对一个物体进行模糊而它周围物体保持原来状态不变(反之亦然)，或用户想立即对整体图像进行均一化模糊。这时可以连入其他的节点作为Z深度通道的输入信息。比如用户连接一个图像节点并且使用一个灰度图来描述哪些地"
+"方为模糊区域，最大模糊的地方颜色值设定为白色，无模糊区域设定为黑色。又或者用户使用时间节点来均一化模糊图像，时间值控制每帧图像的最大模糊程度。通过使用一个模拟景深明暗变化图像取代Z缓冲区，此节点也可以用来获取一个比较好的DoF(景深)模糊。(典型方法是"
+"通过使用线性blender贴图或 \"fog/mist\"淡出景深明暗的方法为场景中所有物体或来创建一个模拟景深明暗图)。这种方法有个优点是可以在淡出景深图上执行反锯齿效果，这在真实的Z缓冲区上是不可能的。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:112
 msgid "The parameter *No Z-buffer*, becomes then the main blur control. The input has to be scaled, because usually the value of a texture is only in the numeric range 0.0 to 1.0."
@@ -206,7 +206,7 @@ msgstr "若应用一个 *渲染层* 节点，*散焦* 节点将使用场景中�
 msgid ""
 "To set the point of focus, the camera now has a *Distance* parameter, which is shorthand for Depth of Field Distance. Use this camera parameter to set the focal plane of the camera (objects Depth of Field Distance away from the camera are in "
 "focus). Set *Distance* in the main *Camera* edit panel; the button is right below the *Depth of Field*."
-msgstr "设置聚焦点，摄影机现在有一个 *距离* 参数，是设置景深距离的简易方法。使用此摄影机参数设置摄影机的焦点平面（物体景深距离相距焦点摄影机）。在主 *摄影机* 编辑面板设置 *距离* 参数；按钮在 *景深* 的右下角。"
+msgstr "设置聚焦点，摄影机现在有一个 *距离* 参数，是设置景深距离的简易方法。使用此摄影机参数设置摄影机的焦点平面(物体景深距离相距焦点摄影机)。在主 *摄影机* 编辑面板设置 *距离* 参数；按钮在 *景深* 的右下角。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:132
 msgid "To make the focal point visible, enable the camera *Limits* option, the focal point is then visible as a yellow cross along the view direction of the camera."
@@ -252,7 +252,7 @@ msgstr "分割场景为“近处”和“远处”对象，在两个通道中分
 msgid ""
 "Now, combine the two results, each with their own \"defocus\" nodes driven by the same Time node, but with one of them inverted (e.g. using a Map Value node with a Size of -1). As the defocus of one increases, the defocus on the other decreases at "
 "the same rate, creating a smooth transition."
-msgstr "现在对两个结果进行合并，每个结果带有自己的“散焦”节点并由相同的时间节点进行驱动，其中有一个时间节点是反转的。（比如使用大小为-1的“映射值”节点）当一个结果的散焦增加时，另一个结果的散焦以等比例减少，产生平滑过渡。"
+msgstr "现在对两个结果进行合并，每个结果带有自己的“散焦”节点并由相同的时间节点进行驱动，其中有一个时间节点是反转的。(比如使用大小为-1的“映射值”节点)当一个结果的散焦增加时，另一个结果的散焦以等比例减少，产生平滑过渡。"
 
 #: ../../manual/compositing/types/filter/defocus.rst:178
 msgid "Aliasing at Low f-Stop Values"
@@ -262,7 +262,7 @@ msgstr "低光圈级的反锯齿"
 msgid ""
 "At very low values, less than 5, the node will start to remove any oversampling and bring the objects at DoF Distance very sharply into focus. If the object is against a contrasting background, this may lead to visible stair-stepping (aliasing) "
 "which OSA is designed to avoid. If you run into this problem:"
-msgstr "使用比较低的光圈级的数值，比如小于5，此节点会开始移除采样过密并且在景深距离到焦点变化非常剧烈的对象。如果对象和背景对比度明显，这将使画面产生阶梯状外观（锯齿），OSA的设置用来避免此种情况的出现。若用户陷入如下问题："
+msgstr "使用比较低的光圈级的数值，比如小于5，此节点会开始移除采样过密并且在景深距离到焦点变化非常剧烈的对象。如果对象和背景对比度明显，这将使画面产生阶梯状外观(锯齿)，OSA的设置用来避免此种情况的出现。若用户陷入如下问题："
 
 #: ../../manual/compositing/types/filter/defocus.rst:172
 msgid "Do your own OSA by rendering at twice the intended size and then scaling down, so that adjacent pixels are blurred together."
