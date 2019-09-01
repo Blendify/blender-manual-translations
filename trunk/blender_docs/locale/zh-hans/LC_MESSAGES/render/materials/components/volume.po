@@ -71,7 +71,7 @@ msgid ""
 "likely to scatter. A value of 0 will let light scatter evenly in all directions (similar to the diffuse BSDF node), negative values let light scatter mostly backwards, and positive values let light scatter "
 "mostly forward. This can be used to shade white smoke or clouds for example."
 msgstr ""
-":doc:`体积散射 </render/shader_nodes/shader/volume_scatter>` 是让穿过物体的光线在碰到粒子后散射到其他方向。各项异性值决定了光更多的向哪个方向散射。0值让光向所有方向散射（跟漫射BSDF节点很像），负值让光逆向散"
+":doc:`体积散射 </render/shader_nodes/shader/volume_scatter>` 是让穿过物体的光线在碰到粒子后散射到其他方向。各项异性值决定了光更多的向哪个方向散射。0值让光向所有方向散射(跟漫射BSDF节点很像)，负值让光逆向散"
 "射更多，正值让光前向散射。这个节点可以做白色烟雾或者云的效果。"
 
 #: ../../manual/render/materials/components/volume.rst:48
@@ -101,8 +101,8 @@ msgid ""
 "All volume shaders have a density input. The density defines how much of the light will interact with the volume, getting absorbed or scattered, and how much will pass straight through. For effects such as "
 "smoke you would specify a density field to indicate where in the volume there is smoke and how much (density bigger than 0), and where there is no smoke (density equals 0)."
 msgstr ""
-"所有的体着色器都有一个密度定义。密度决定了光线有多少需要跟体积进行交互，得到吸收或者散色，还有多少会直接穿透。要模拟烟雾的时候你需要指定一个密度场来说明体积的哪些地方烟比较多（密度大于0），哪些地方是没有烟"
-"的（密度等于0）。"
+"所有的体着色器都有一个密度定义。密度决定了光线有多少需要跟体积进行交互，得到吸收或者散色，还有多少会直接穿透。要模拟烟雾的时候你需要指定一个密度场来说明体积的哪些地方烟比较多(密度大于0)，哪些地方是没有烟"
+"的(密度等于0)。"
 
 #: ../../manual/render/materials/components/volume.rst:74
 msgid ""
@@ -146,7 +146,7 @@ msgid ""
 "how much light is scattered or absorbed."
 msgstr ""
 "当前，这种着色器非常适合夜景和灰暗的场景，如果体积着色器被使用时世界的表面着色器和太阳光源都将失效。这是因为当世界背景被设定在无穷远的位置时，对太阳光来说是足够精确的。但是，进行模拟雾效和大气散色的时候填充"
-"整个空间并不是一个好方式，因为在太阳光到地球之间实际上是有很长一段距离没有东西（无阻碍光线物质）。这种特效最好是通过创建一个体物体包含整个场景来实现。该物体的大小可以感知光线如何被散射或吸收。"
+"整个空间并不是一个好方式，因为在太阳光到地球之间实际上是有很长一段距离没有东西(无阻碍光线物质)。这种特效最好是通过创建一个体物体包含整个场景来实现。该物体的大小可以感知光线如何被散射或吸收。"
 
 #: ../../manual/render/materials/components/volume.rst:114
 msgid "Multiple Scattering"
@@ -158,14 +158,14 @@ msgid ""
 "zero in Cycles, and no support is available in Eevee. The effect you get when rendering with zero volume bounces is what is known as \"single scattering\", the effect from more bounces is \"multiple "
 "scattering\"."
 msgstr ""
-"真实世界中使用到的散射或者浅表面散射（例如云朵）涉及了多次的散射反弹。但是在非偏渲染的时候这些效果计算非常慢和多噪点的。在Cycles中一般只用到0次或者1次反弹值以确保可控的渲染时间，Eevee不支持该特性。 \"单次散"
+"真实世界中使用到的散射或者浅表面散射(例如云朵)涉及了多次的散射反弹。但是在非偏渲染的时候这些效果计算非常慢和多噪点的。在Cycles中一般只用到0次或者1次反弹值以确保可控的渲染时间，Eevee不支持该特性。 \"单次散"
 "射\" 即渲染时采用0次体积反弹，多次反弹是 \"多重散射\" 。"
 
 #: ../../manual/render/materials/components/volume.rst:122
 msgid ""
 "For rendering materials like skin or milk that require multiple scattering, subsurface scattering is more efficient and easier to control. Particularly the random walk method can accurately render such "
 "materials."
-msgstr "对于需要多次散射的渲染材质（如皮肤或牛奶），次表面散射更有效且更易于控制。特别地，随机游走方法可以准确地渲染这种材质。"
+msgstr "对于需要多次散射的渲染材质(如皮肤或牛奶)，次表面散射更有效且更易于控制。特别地，随机游走方法可以准确地渲染这种材质。"
 
 #: ../../manual/render/materials/components/volume.rst:126
 msgid ""
@@ -180,7 +180,7 @@ msgstr "云和烟雾这样没有明确边界表面的材质，体渲染是必须
 #~ msgstr "Cycles支持三种体积着色器节点，对各种特殊的光穿越体积物体以及和它之间的交互作用进行了建模:"
 
 #~ msgid "Emission will emit light from the volume. This can be used to shade fire for example."
-#~ msgstr "Emission（自发光）散射可以让物体从内部发射灯光。这种情况可以模拟火焰效果。"
+#~ msgstr "Emission(自发光)散射可以让物体从内部发射灯光。这种情况可以模拟火焰效果。"
 
 #~ msgid "Volume Material"
 #~ msgstr "体积材质"
