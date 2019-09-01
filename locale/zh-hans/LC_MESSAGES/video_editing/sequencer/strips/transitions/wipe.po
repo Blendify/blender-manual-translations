@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 03:08+0800\n"
-"PO-Revision-Date: 2019-07-23 03:18+0800\n"
+"PO-Revision-Date: 2019-09-01 21:00+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -31,6 +31,8 @@ msgid ""
 "To adjust the start and end of the wipe you must adjust the temporal bounds of the source strips in a way that alters their "
 "intersection."
 msgstr ""
+"*擦除* 过渡效果可以使用于从一个片段过渡到下一个片段。如果是从单个片段创建而非两个片段的话，擦除将不会有任何效果。擦除的持续时间是"
+"两个源片段的交集，并且不能被调整。要调整擦除的起始和结束，你必须调整源片段的时间限制范围以改变它们的交集。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:15
 msgid "Options"
@@ -46,20 +48,20 @@ msgstr "使用的过渡类型。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:20
 msgid "Single"
-msgstr "单行"
+msgstr "单一"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:21
 msgid "Reveals the next strip by uncovering it in a straight line moving across the image."
-msgstr "通过在图像上移动的直线显示下一片段。"
+msgstr "通过在图像上以直线移动的方式显示下一片段。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:23
 msgid "Double"
-msgstr "双行"
+msgstr "加倍"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:23
 msgid ""
 "Similar to *Single*, but uses two lines either starting from the middle of the image or the outside. Like the blink of an eye."
-msgstr "与 *单行*  类似，但使用两行，从图像中间或外部开始。就像眨眼之间那样。"
+msgstr "与 *单一* 类似，但是从图像中间或外部开始使用两条线。就如眨一只眼。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:27
 msgid "Iris"
@@ -69,7 +71,8 @@ msgstr "虹膜(Iris)"
 msgid ""
 "Reveals the next strip through an expanding (or contracting) circle. Like the aperture of a camera or pupil of an eye. You can "
 "blur the transition, so it looks like ink bleeding through a paper."
-msgstr "通过展开(或收缩)圆显示下一个地带。就像照相机的光圈或眼睛的瞳孔一样。你可以模糊过渡，所以它看起来像通过纸张渗墨效果。"
+msgstr ""
+"通过扩大(或缩小)圆圈显示下一个片段。就像照相机的光圈孔径或眼睛的瞳孔一样。你可以模糊过渡，则它会看起来像墨水通过一个纸渗开。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:31
 msgid "Clock"
@@ -79,7 +82,7 @@ msgstr "时钟"
 msgid ""
 "Like the hands of an analog clock, it sweeps clockwise or (if Wipe In is enabled) counterclockwise from the 9:00 position. As it "
 "sweeps, it reveals the next strip."
-msgstr "就像模拟时钟一样，它会从9点钟位置顺时针或逆时针方向(如果启用擦除)进行扫描。扫描时，它会显示下一个片段。"
+msgstr "就像模拟时钟的指针一样，它从9点钟位置顺时针或逆时针方向(如果启用擦除淡入)进行扫过。扫过时，它会显示下一个片段。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:33
 msgid "Direction"
@@ -103,7 +106,7 @@ msgstr "角度"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:38
 msgid "Controls the angle of the line for *Single* and *Double* transition types."
-msgstr "控制 *单行* 和 *双行* 转换类型的行的角度。"
+msgstr "控制 *单一* 和 *加倍* 过渡类型的线的角度。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:47
 msgid "Default Fade"
@@ -111,27 +114,27 @@ msgstr "默认过渡"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:41
 msgid "Automatically calculates a linear fade over the length of the strip."
-msgstr "自动计算一个线性的淡入淡出的长度。"
+msgstr "自动计算覆盖一个片段的长度的线性淡化。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:47
 msgid "Effect Fader"
-msgstr "效果过渡"
+msgstr "效果过渡器"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:44
 msgid ""
 "Allows you to manually :doc:`keyframe </animation/keyframes/index>` a custom fade. This can be used with different :ref:`easings "
 "<editors-graph-fcurves-settings-easing>` to fine-tune the fade in/out."
 msgstr ""
-"允许你手动调整 :doc:`关键帧 </animation/keyframes/index>` 自定义淡入淡出。这不同于 :ref:`easings <editors-graph-fcurves-settings-"
+"允许你手动 :doc:`关键帧 </animation/keyframes/index>` 一个自定义的淡化。这不同于 :ref:`缓慢 <editors-graph-fcurves-settings-"
 "easing>` 的微调淡入/淡出。"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:50
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: ../../manual/video_editing/sequencer/strips/transitions/wipe.rst:54
 msgid "Wipe Effect."
-msgstr "擦拭效果"
+msgstr "擦拭效果。"
 
 #~ msgid ""
 #~ "The wipe effect is a type of transition strip. It can be used to transition from one strip to the next. The wipe will have no "
