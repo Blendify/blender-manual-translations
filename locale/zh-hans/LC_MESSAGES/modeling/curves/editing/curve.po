@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-30 00:46-0400\n"
-"PO-Revision-Date: 2019-09-10 10:55+0800\n"
+"PO-Revision-Date: 2019-09-11 19:30+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -81,7 +81,7 @@ msgid ""
 "A Bézier curve can be edited by transforming the locations of both control "
 "points and handles. NURBS curve on the other hand have only control points."
 msgstr ""
-"通过变换控制点和控制柄的位置，可以编辑贝塞尔曲线。另一方面，NURBS曲线仅有"
+"通过变换控制点和控制柄的位置，可以编辑贝塞尔曲线。另一方面，NURBS曲线只需控制"
 "控制点。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:23
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../../manual/modeling/curves/editing/curve.rst:26
 msgid "To Sphere, Shear, Warp, Bend, Push/Pull, Warp, Randomize"
-msgstr "球形化、剪切、弯绕、弯曲、推/拉、随机化"
+msgstr "球形化、切变、弯绕、弯曲、推/拉、随机化"
 
 #: ../../manual/modeling/curves/editing/curve.rst:26
 msgid ""
@@ -152,8 +152,8 @@ msgid ""
 "(you can check it with the normals). The *Radius* of the points is set using "
 "the *Radius* transform tool. Or in the Sidebar *Transform* panel."
 msgstr ""
-"半径允许您直接控制沿“脊柱”曲线挤出的宽度。半径将从一点插值到另一点(可以用法线"
-"检查)。点的 *半径* 是使用 *半径* 变换工具，或在侧栏 *变换* 面板中设置的。"
+"半径允许直接控制沿“脊柱”曲线挤出的宽度。半径将从一点插值到另一点(可以用法线检"
+"查)。点的 *半径* 是使用 *半径* 变换工具，或在侧栏 *变换* 面板中设置的。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:54
 msgid "One control point radius set to zero."
@@ -176,8 +176,8 @@ msgid ""
 "The *Mirror* tool is also available, behaving exactly as with :doc:`mesh "
 "vertices </modeling/meshes/editing/transform/mirror>`."
 msgstr ""
-"也可以使用 *镜像* 工具，其行为与 :doc:`网格顶点的镜像 </modeling/meshes/"
-"editing/transform/mirror>` 完全相同。"
+"也可以使用 *镜像* 工具，其行为与 :doc:`网格顶点 </modeling/meshes/editing/"
+"transform/mirror>` 对应操作完全相同。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:72
 msgid "Snap"
@@ -263,9 +263,9 @@ msgid ""
 "create a new singular loose control point; leaving the previously selected "
 "control point attached to the rest of the curve."
 msgstr ""
-"*拆分* 操作从曲线的其余部分中分割选定的曲线段。可以在不影响其他曲线的情况下移"
-"动或改变这条曲线。如果选择一个单独的控制点，*拆分* 操作将创建一个新的单独的松"
-"散控制点平；将先前选择的控制点附加到曲线的其余部分。"
+"*拆分* 操作从曲线的其余部分中拆分选定的曲线段。可以在不影响其他曲线的情况下移"
+"动或改变这条曲线。拆分时复制共用的控制点。如果选择一个单独的控制点，*拆分* 操"
+"作将创建一个新的单独的松散控制点。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:141
 msgid "Separate"
@@ -279,6 +279,7 @@ msgstr ":menuselection:`曲线(Curve) --> 分离(Separate)`"
 msgid ":kbd:`P`"
 msgstr ":kbd:`P`"
 
+# 原文描述与操作不符
 #: ../../manual/modeling/curves/editing/curve.rst:150
 msgid ""
 "Curve objects that are made of multiple distinct curves can be separated "
@@ -286,9 +287,9 @@ msgid ""
 "`P`. Note, if there is only one curve in a Curve object, *Separate* will "
 "create a new Curve object with no control points."
 msgstr ""
-"通过选择所需的段并按 :kbd:`P`，可以将由多个不同曲线组成的曲线物体分离为独立的"
-"物体。 请注意，如果曲线物体中只有一条曲线，*分离* 将创建一个没有控制点的新曲"
-"线物体。"
+"通过选择所需的线段并按 :kbd:`P`，可以将由多个不同曲线组成的曲线物体分离为各自"
+"的物体。分离时复制共用的控制点。如果选择一个单独的控制点，*分离* 操作将创建一"
+"个新的单独的松散控制点。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:160
 msgid "Toggle Cyclic"
@@ -312,11 +313,12 @@ msgid ""
 "curves-editing-open-close` is the same Bézier curve open and closed."
 msgstr ""
 "这个选项在开放曲线和闭合曲线(循环)之间切换。只有具有至少一个选定控制点的曲线"
-"才会关闭/打开。闭合段的形状基于贝塞尔曲线的起始和结束控制柄，并且通常用于"
-"NURBS的相邻控制点。如果控制柄是 *自动* 控制柄，那么唯一一次调整控制柄是在闭合"
-"后。图 :ref:`fig-curves-editing-open-close` 是相同的贝塞尔曲线开放合闭合两种"
-"状态。"
+"才会关闭/打开。闭合线段的形状，对于贝塞尔曲线，基于其起始和结束控制柄；对于"
+"NURBS，通常基于其相邻控制点。如果控制柄是 *自动* 控制柄，在闭合后控制柄会调整"
+"一次。图 :ref:`fig-curves-editing-open-close` 是相同的贝塞尔曲线开放合闭合两"
+"种状态。"
 
+# 没读懂原文
 #: ../../manual/modeling/curves/editing/curve.rst:176
 msgid ""
 "This action only works on the original starting control point or the last "
@@ -326,14 +328,14 @@ msgid ""
 "a single curve! Remember that when a 2D curve is closed, it creates a "
 "renderable flat face."
 msgstr ""
-"此操作仅对原始起始控制点或添加的最后一个控制点有效。删除一个片段不会改变该操"
+"此操作仅对原始起始控制点或添加的最后一个控制点有效。删除一个线段不会改变该操"
 "作的应用方式；它仍然只在起始和最后两个控制点上操作。这意味着 :kbd:`Alt-C` 实"
-"际上可能连接两条曲线，而不是闭合一条曲线！记住，当2D曲线闭合时，它会创建一个"
+"际上可能并入两条曲线，而不是闭合一条曲线！记住，当2D曲线闭合时，它会创建一个"
 "可渲染的平面。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:186
 msgid "Open and Closed curves."
-msgstr "开放和闭合的曲线"
+msgstr "开放和闭合的曲线。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:193
 msgid "Set Spline Type"
@@ -351,14 +353,14 @@ msgid ""
 "example, when converting a NURBS to a Bézier, each group of three NURBS "
 "control points become a unique Bézier one (center point and two handles)."
 msgstr ""
-"*设置样条类型* 在贝塞尔、NURBS和多边形曲线之间转换曲线对象中的样条。注意，这"
+"*设置样条类型* 在贝塞尔、NURBS和多边形曲线之间转换曲线物体中的样条。注意，这"
 "不是一个“智能” 转换，即Blender不会试图保持相同的形状，也不会保持相同数量的控"
 "制点。例如，当将一个NURBS转换为一个贝塞尔曲线时，每组三个NURBS控制点组成一个"
 "惟一的贝塞尔控制点(中心点和两个控制柄)。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:208
 msgid ":ref:`object-convert-to`/from Mesh."
-msgstr "从网格 :ref:`object-convert-to` 。"
+msgstr ":ref:`object-convert-to` /自网格。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:216
 msgid "Show/Hide"
@@ -460,13 +462,13 @@ msgstr ""
 
 #: ../../manual/modeling/curves/editing/curve.rst:282
 msgid "Segment"
-msgstr "片段"
+msgstr "线段"
 
 #: ../../manual/modeling/curves/editing/curve.rst:283
 msgid ""
 "Deletes the segment that connects the selected control points and "
 "disconnecting them."
-msgstr "删除所选控制点构成的线段，并从控制点断开。"
+msgstr "删除连接所选控制点的线段，以断开连接控制点。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:286
 msgid "Dissolve Vertices :kbd:`Ctrl-X`"
@@ -480,7 +482,7 @@ msgstr "删除选定的控制点，而通过调整控制柄将剩余的线段拟
 
 #: ../../manual/modeling/curves/editing/curve.rst:292
 msgid "Before deleting."
-msgstr "删除前"
+msgstr "删除前。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:296
 msgid "Deleting vertices."
@@ -488,7 +490,7 @@ msgstr "删除顶点。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:300
 msgid "Deleting segment."
-msgstr "删除片段。"
+msgstr "删除线段。"
 
 #: ../../manual/modeling/curves/editing/curve.rst:304
 msgid "Dissolve vertices."
