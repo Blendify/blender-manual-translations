@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-08-01 20:24+0800\n"
+"POT-Creation-Date: 2019-09-07 22:47+0800\n"
+"PO-Revision-Date: 2019-09-13 16:10+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../../manual/animation/constraints/transform/transformation.rst:5
 msgid "Transformation Constraint"
@@ -41,19 +41,19 @@ msgstr ""
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:27
+#: ../../manual/animation/constraints/transform/transformation.rst:28
 msgid "Target"
 msgstr "Target 目标"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:28
+#: ../../manual/animation/constraints/transform/transformation.rst:29
 msgid ":ref:`ui-data-id` used to select the constraints target, and is not functional (red state) when it has none."
 msgstr ":ref:`ui-data-id` 用于选择约束目标，当它为空时表示不起作用(标题栏名称背景为红色状态)。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:52
+#: ../../manual/animation/constraints/transform/transformation.rst:53
 msgid "Extrapolate"
 msgstr "延伸"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:30
+#: ../../manual/animation/constraints/transform/transformation.rst:31
 msgid ""
 "By default, the *min* and *max* values bound the input and output values; all values outside these ranges are clipped to them. When you enable this button, "
 "the *min* and *max* values are no longer strict limits, but rather \"markers\" defining a proportional (linear) mapping between input and corresponding "
@@ -65,128 +65,191 @@ msgstr ""
 "输入和相应的输出值之间的比例(线性)映射。以下面两张图片来距离说明 :ref:`fig-constraints-transformation-extrapolate` 图片中，输入的范围(横坐标)设置为 [1.0，"
 "4.0]，对应的输出范围(纵坐标)为[1.0、 2.0]。黄色曲线表示输入和输出之间的映射。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:41
+#: ../../manual/animation/constraints/transform/transformation.rst:42
 msgid "The Extrapolate principles."
 msgstr "延伸原理。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:46
+#: ../../manual/animation/constraints/transform/transformation.rst:47
 msgid "Extrapolate disabled: the output values are bounded inside the (1.0 to 2.0) range."
 msgstr "禁用延伸: 输出值都被限制在 (1.0 至 2.0) 范围内。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:51
+#: ../../manual/animation/constraints/transform/transformation.rst:52
 msgid "Extrapolate enabled: the output values are \"free\" to proportionally follow the input ones."
 msgstr "启用延伸：输出值是按输入值等比例得出的 “自由”值。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:55
+#: ../../manual/animation/constraints/transform/transformation.rst:56
 msgid "Source"
 msgstr "源"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:57
+#: ../../manual/animation/constraints/transform/transformation.rst:58
 msgid "It contains the input (from target) settings."
 msgstr "包含输入(目标)设置。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:61
+#: ../../manual/animation/constraints/transform/transformation.rst:62
 msgid "Map From"
 msgstr "源至目标的映射模式"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:60
+#: ../../manual/animation/constraints/transform/transformation.rst:61
 msgid "The radio buttons allow you to select which type of property to use."
 msgstr "单选按钮，用于选择要使用的属性类型。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:62 ../../manual/animation/constraints/transform/transformation.rst:82
+#: ../../manual/animation/constraints/transform/transformation.rst:63 ../../manual/animation/constraints/transform/transformation.rst:90
 msgid "Location, Rotation, and Scale"
 msgstr "位置，旋转和缩放"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:67
+#: ../../manual/animation/constraints/transform/transformation.rst:69
+msgid "Mode (Rotation)"
+msgstr "模式(旋转)"
+
+#: ../../manual/animation/constraints/transform/transformation.rst:65
+msgid ""
+"Allows specifying the type of rotation input to use, including different :term:`Euler` orders, :term:`Quaternion`, and other :ref:`Rotation Channel Modes "
+"<drivers-variables-rotation-modes>`. Defaults to using the :term:`Euler` order of the constraint owner."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:69
+msgid ""
+"In the *Quaternion* mode the channels are converted to weighted angles in the same way as the swing angles of the :ref:`Swing and X/Y/Z Twist <drivers-"
+"variables-rotation-modes>` modes."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:75
 msgid "From"
 msgstr "源"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:64
+#: ../../manual/animation/constraints/transform/transformation.rst:72
 msgid ""
 "Independently for each axis (X, Y, and Z) the min and max number fields control the lower and upper bounds of the input value range. Note that if a min "
 "value is higher than its corresponding max value, the constraint behaves as if it had the same value as the max one."
 msgstr "每个轴(X，Y和Z)独立地控制输入值范围的下限和上限。 请注意，如果最小值高于其对应的最大值，则约束的行为就像它具有与最大值相同的值。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:72
+#: ../../manual/animation/constraints/transform/transformation.rst:80
 msgid "Source to Destination Mapping"
 msgstr "源到目的的映射"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:70
+#: ../../manual/animation/constraints/transform/transformation.rst:78
 msgid ""
 "The three *Axis Mapping* selectors allow you to select which input axis to map to, respectively (from top to bottom), the X, Y and Z output (owner) axes."
 msgstr "三个 *轴向映射* 选择器用于分别选择映射到X，Y和Z输出(约束对象)轴的轴向(从上到下)。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:75
+#: ../../manual/animation/constraints/transform/transformation.rst:83
 msgid "Destination"
 msgstr "目的"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:77
+#: ../../manual/animation/constraints/transform/transformation.rst:85
 msgid "It contains the output (to owner) settings."
 msgstr "包含输出(至约束对象)的设置。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:81
+#: ../../manual/animation/constraints/transform/transformation.rst:89
 msgid "Map To"
 msgstr "映射到"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:80
+#: ../../manual/animation/constraints/transform/transformation.rst:88
 msgid "The three radio buttons allow you to select which type of property to control."
 msgstr "三个单选按钮用于选择要控制的属性类型。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:87
+#: ../../manual/animation/constraints/transform/transformation.rst:92
+msgid "Order (Rotation)"
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:92
+msgid ""
+"For rotation, allows specifying which :term:`Euler` order to use during evaluation of the constraint. Defaults to using the order of the constraint owner."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:97
 msgid "To"
 msgstr "到"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:84
+#: ../../manual/animation/constraints/transform/transformation.rst:95
 msgid ""
 "The *min* and *max* number fields control the lower and upper bounds of the output value range, independently for each mapped axis. Note that if a min value "
 "is higher than its corresponding max value, the constraint behaves as if it had the same value as the max one."
 msgstr "*最小值* 和 *最大值* 的值分别控制每个映射轴的输出值范围的下限和上限。 请注意，如果最小值高于其对应的最大值，则约束的行为就像它具有与最大值相同的值。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:90
+#: ../../manual/animation/constraints/transform/transformation.rst:113
+msgid "Mix"
+msgstr "混合"
+
+#: ../../manual/animation/constraints/transform/transformation.rst:100
+msgid ""
+"Specifies how the result of the constraint is combined with existing transformation. The set of available choices varies based on the type of transformation."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:103
+msgid "Replace"
+msgstr "替换"
+
+#: ../../manual/animation/constraints/transform/transformation.rst:104
+msgid "The result of the constraint replaces existing transformation."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:105
+msgid "Multiply (Scale)"
+msgstr "乘法（缩放）"
+
+#: ../../manual/animation/constraints/transform/transformation.rst:106
+msgid "The new values are multiplied with the existing axis values."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:107
+msgid "Add (Location, Rotation)"
+msgstr "添加（位置、旋转）"
+
+#: ../../manual/animation/constraints/transform/transformation.rst:108
+msgid "The new values are added to the existing axis values."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:110
+msgid "Before Original (Rotation)"
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:110
+msgid "The new rotation is added before the existing rotation, as if it was applied to a parent of the constraint owner."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:113
+msgid "After Original (Rotation)"
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:113
+msgid "The new rotation is added after the existing rotation, as if it was applied to a child of the constraint owner."
+msgstr ""
+
+#: ../../manual/animation/constraints/transform/transformation.rst:116
 msgid "Space"
 msgstr "Space 空间"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:90
+#: ../../manual/animation/constraints/transform/transformation.rst:116
 msgid "Standard conversion between spaces."
 msgstr "空间之间的标准转换。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:94
-msgid ""
-"When mapping transform properties to location (i.e. *Location*, *Destination* button is enabled), the owner's existing location is added to the result of "
-"evaluating this constraint (exactly like when the *Offset* button of the :doc:`Copy Location constraint </animation/constraints/transform/copy_location>` is "
-"enabled...)."
+#: ../../manual/animation/constraints/transform/transformation.rst:120
+msgid "For historical reasons, the *Mix* mode defaults to *Add* for location and rotation, and *Replace* for scale."
 msgstr ""
-"当映射变换属性到位置(即 *目的*, *位置* 按钮处于启用状态)，计算结果会加上约束现有位置(如同启用 :doc:`复制位置约束 </animation/constraints/transform/"
-"copy_location>` 中的 *Offset(偏移)* 选项一样.....)。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:98
-msgid ""
-"Conversely, when mapping transform properties to rotation or scale, the owner's existing rotation or scale is overridden by the result of evaluating this "
-"constraint."
-msgstr "相反，映射变换属性到旋转或缩放，约束计算的结果会覆盖约束对象现有旋转或缩放。"
-
-#: ../../manual/animation/constraints/transform/transformation.rst:100
+#: ../../manual/animation/constraints/transform/transformation.rst:122
 msgid ""
 "When using the rotation transform properties of the target as input, whatever the real values are, the constraint will always \"take them back\" into the "
 "(-180 to 180) range. E.g. if the target has a rotation of 420 degrees around its X axis, the values used as *X* input by the constraint will be:"
 msgstr ""
 "当使用目标的旋转变换属性作为输入，无论真正的值是什么，约束将始终\"重置回\" (-180, 180)范围。例如，如果目标绕 X 轴旋转420°，约束实际使用的 \"X\" 输入值将是："
 
-#: ../../manual/animation/constraints/transform/transformation.rst:105
+#: ../../manual/animation/constraints/transform/transformation.rst:127
 msgid ":math:`((420 + 180) modulo 360) - 180 = 60 - ...`"
 msgstr ":math:`((420 + 180) modulo 360) - 180 = 60 - ...`"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:107
+#: ../../manual/animation/constraints/transform/transformation.rst:129
 msgid "This is why this constraint is not really suited for gears!"
 msgstr "这就是为什么此约束不是真的适合齿轮 ！"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:108
+#: ../../manual/animation/constraints/transform/transformation.rst:130
 msgid ""
 "Similarly, when using the scale transform properties of the target as input, whatever the real values are, the constraint will always take their absolute "
 "values (i.e. invert negative ones)."
 msgstr "类似地，当使用目标缩放变换属性作为输入，无论真正的值是什么，约束将始终使用其绝对值(即对负值取负)。"
 
-#: ../../manual/animation/constraints/transform/transformation.rst:110
+#: ../../manual/animation/constraints/transform/transformation.rst:132
 msgid ""
 "When a *min* value is higher than its corresponding *max* one, both are considered equal to the *max* one. This implies you cannot create \"reversed\" "
 "mappings..."
@@ -204,3 +267,16 @@ msgstr "当 *最小值* 高于其相应的 *最大值* 时，两个值都会取�
 #~ "The *min* and *max* number buttons control the lower and upper bounds of the output value range, independently for each mapped axis. Note that if a min "
 #~ "value is higher than its corresponding max value, the constraint behaves as if it had the same value as the max one."
 #~ msgstr "*最小值(min)* 和 *最大值(max)* 数字按钮用于分别控制各轴向输出上限和下限。请注意，如果一个最小值高于其相应的最大值，约束效果等同于上下限相等。"
+
+#~ msgid ""
+#~ "When mapping transform properties to location (i.e. *Location*, *Destination* button is enabled), the owner's existing location is added to the result of "
+#~ "evaluating this constraint (exactly like when the *Offset* button of the :doc:`Copy Location constraint </animation/constraints/transform/copy_location>` "
+#~ "is enabled...)."
+#~ msgstr ""
+#~ "当映射变换属性到位置(即 *目的*, *位置* 按钮处于启用状态)，计算结果会加上约束现有位置(如同启用 :doc:`复制位置约束 </animation/constraints/transform/"
+#~ "copy_location>` 中的 *Offset(偏移)* 选项一样.....)。"
+
+#~ msgid ""
+#~ "Conversely, when mapping transform properties to rotation or scale, the owner's existing rotation or scale is overridden by the result of evaluating this "
+#~ "constraint."
+#~ msgstr "相反，映射变换属性到旋转或缩放，约束计算的结果会覆盖约束对象现有旋转或缩放。"
