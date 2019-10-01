@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-10-01 10:20+0100\n"
+"PO-Revision-Date: 2019-10-01 15:07+0100\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../manual/render/eevee/lighting.rst:4
 msgid "Light Settings"
-msgstr "Paramètres de lumière"
+msgstr "Paramètres d'éclairage"
 
 #: ../../manual/render/eevee/lighting.rst:6
 msgid "Reference"
@@ -45,14 +45,21 @@ msgid ""
 "is that they are not directly visible in the rendered image, and can be "
 "more easily managed as objects of their own type."
 msgstr ""
+"En plus de l'éclairage dû à l'environnement et celui de n'importe quel "
+"objet avec un *emission shader*, les lampes sont un autre moyen d'ajouter "
+"de l'éclairage à une scène. La différence provient du fait qu'elles ne sont "
+"pas visibles directement dans l'image rendue. Elles peuvent aussi être plus "
+"facilement utilisées en tant qu'objets avec leurs propres caractéristiques."
 
 #: ../../manual/render/eevee/lighting.rst:18
 msgid "Common"
-msgstr ""
+msgstr "Commun"
 
 #: ../../manual/render/eevee/lighting.rst:20
 msgid ":doc:`Light settings </render/lights/light_object>` for all renderers."
 msgstr ""
+":doc:`Light settings </render/lights/light_object>` pour tous les moteurs "
+"de rendu."
 
 #: ../../manual/render/eevee/lighting.rst:24
 msgid "Eevee"
@@ -68,7 +75,7 @@ msgid ""
 "Setting this to anything but 1.0 will yield non-photorealistic result."
 msgstr ""
 "Multiplicateur d'intensité de la lumière spéculaire. Utilisez-le pour un "
-"contrôle plus artistique. Le mettre à Une valeur autre que 1.0 va conduire "
+"contrôle plus artistique. Le mettre à une valeur autre que 1.0 va conduire "
 "à un résultat non photoréaliste."
 
 #: ../../manual/render/eevee/lighting.rst:37
@@ -76,14 +83,12 @@ msgid "Custom Distance"
 msgstr ""
 
 #: ../../manual/render/eevee/lighting.rst:30
-#, fuzzy
 msgid ""
 "If enabled uses *Distance* as the custom attenuation distance instead of "
 "global light threshold."
 msgstr ""
 "Si l'option est activée, elle utilise *Distance* comme la distance "
-"d'atténuation personnalisée à la place du seuil de lumière globale. La "
-"*Distance* spécifie où l'influence de la lumière sera définie à 0."
+"d'atténuation personnalisée à la place du seuil de lumière globale."
 
 #: ../../manual/render/eevee/lighting.rst:33
 #: ../../manual/render/eevee/lighting.rst:87
@@ -92,27 +97,31 @@ msgstr ""
 
 #: ../../manual/render/eevee/lighting.rst:33
 msgid "Specifies where light influence will be set to 0."
-msgstr ""
+msgstr "C'est la distance à laquelle l'influence de la lumière sera nulle."
 
 #: ../../manual/render/eevee/lighting.rst:37
 msgid ":doc:`Light Threshold </render/eevee/render_settings/shadows>`."
 msgstr ""
+":doc:`*Light Threshold* (seuil de lumière) </render/eevee/render_settings/"
+"shadows>`."
 
 #: ../../manual/render/eevee/lighting.rst:41
 msgid "The light's *Power*/*Strength* affect both specular and diffuse light."
 msgstr ""
+"Le paramètre *Power*/*Strength (Puissance)* de la lampe a une influence "
+"simultanée sur la lumière de diffusion et sur la lumière spéculaire."
 
 #: ../../manual/render/eevee/lighting.rst:47
 msgid "Shadows"
-msgstr ""
+msgstr "Shadow (ombre)"
 
 #: ../../manual/render/eevee/lighting.rst:50
 msgid "Common Parameters"
-msgstr ""
+msgstr "Paramètres communs"
 
 #: ../../manual/render/eevee/lighting.rst:55
 msgid "Clip"
-msgstr ""
+msgstr "Clip"
 
 #: ../../manual/render/eevee/lighting.rst:53
 msgid ""
@@ -120,6 +129,9 @@ msgid ""
 "object before this distance will not appear to cast shadows. *Clip End* "
 "will only appear for sun lights."
 msgstr ""
+"Distance de l'objet à laquelle la cartes d'ombres démarre et s'arrete. Tout "
+"objet situé plus proche que cette distance ne créera pas d'ombre. *Clip "
+"End* apparaît uniquement pour la lampe for *sun*."
 
 #: ../../manual/render/eevee/lighting.rst:61
 msgid "Soft"
@@ -132,6 +144,11 @@ msgid ""
 "impact on performance. There is a maximum cap to filter size (in pixels) "
 "that depends on shadow resolution."
 msgstr ""
+"Taille du filtre appliquée à la texture d'ombre. La taille de ce filtre est "
+"indépendante de la résolution de la texture d'ombre. Les filtres de tailles "
+"importantes peuvent avoir un gros impact sur la performance. Il existe une "
+"limite maximum pour la taille du filtre (en pixels) qui dépend de la "
+"résolution de la texture d'ombre."
 
 #: ../../manual/render/eevee/lighting.rst:64
 #: ../../manual/render/eevee/lighting.rst:94
@@ -141,6 +158,8 @@ msgstr ""
 #: ../../manual/render/eevee/lighting.rst:64
 msgid "Bias applied to the depth test to reduce self shadowing artifacts."
 msgstr ""
+"Le bias est appliqué au test de profondeur pour réduire les artefacts dus à "
+"l'auto-ombrage."
 
 #: ../../manual/render/eevee/lighting.rst:67
 msgid "Exponent"
@@ -149,6 +168,7 @@ msgstr ""
 #: ../../manual/render/eevee/lighting.rst:67
 msgid "Exponent applied to ESM to reduce light leaking."
 msgstr ""
+"C'est l'exposant appliqué à l'ESM pour réduire la déperdition de lumière."
 
 #: ../../manual/render/eevee/lighting.rst:71
 msgid "Bleed Bias"
@@ -156,11 +176,11 @@ msgstr ""
 
 #: ../../manual/render/eevee/lighting.rst:70
 msgid "Bias applied to VSM to reduce light leaking."
-msgstr ""
+msgstr "C'est le bias appliqué au VSM pour réduire la déperdition de lumière."
 
 #: ../../manual/render/eevee/lighting.rst:74
 msgid "Contact Shadows"
-msgstr ""
+msgstr "Contact Shadows (ombres de contact)"
 
 #: ../../manual/render/eevee/lighting.rst:76
 msgid ""
@@ -170,16 +190,26 @@ msgid ""
 "has the same limitations, namely, unknown object thickness and effect "
 "disappearing at screen edges."
 msgstr ""
+"Ce type d'ombre existe pour empêcher la déperdition de lumière due au bias "
+"ou au sous-échantillonnage de la texture d'ombre. Il utilise le tampon de "
+"profondeur (exactement comme le *Screen Space Reflection*). Cependant, tout "
+"comme le *Screen Space Reflection*, il a les mêmes limitations , soit "
+"nommément, l'épaisseur de l'objet est inconnue et l'effet disparaît aux "
+"bords du plan."
 
 #: ../../manual/render/eevee/lighting.rst:83
 msgid ""
 "The distance of action of Contact Shadows should remain quite small. They "
 "are not accurate enough to shadow the entire scene."
 msgstr ""
+"La distance d'action des *Contact Shadows* doit rester relativement basse. "
+"Elles ne sont pas suffisamment précise pour faire l'ombrage d'une scène "
+"entière."
 
 #: ../../manual/render/eevee/lighting.rst:87
 msgid "World space distance in which to search for screen space occluder."
 msgstr ""
+"Distance, dans le repère global, dans lequel chercher le plan d'occlusion."
 
 #: ../../manual/render/eevee/lighting.rst:91
 msgid "Softness"
@@ -190,10 +220,14 @@ msgid ""
 "Controls how soft the contact shadows will be. Contact shadow blurring does "
 "not match a light's physical size."
 msgstr ""
+"Contrôle la douceur de l'ombre de contact. Le flou de l'ombre de contact ne "
+"correspond pas à la physique de la lumière."
 
 #: ../../manual/render/eevee/lighting.rst:94
 msgid "Bias applied to the ray tracing to reduce self-shadowing artifacts."
 msgstr ""
+"Le bias appliqué au lancer de rayons pour réduire les artefacts de l'auto-"
+"ombrage."
 
 #: ../../manual/render/eevee/lighting.rst:98
 msgid "Thickness"
@@ -204,10 +238,12 @@ msgid ""
 "Pixel thickness used to detect occlusion, treating any potential occluder "
 "as this thick."
 msgstr ""
+"L'epaisseur du pixel utilisée pour détecter l'occlusion, considérant tous "
+"les caches potentiels comme ayant cette épaisseur."
 
 #: ../../manual/render/eevee/lighting.rst:103
 msgid "Cascaded Shadow Map"
-msgstr ""
+msgstr "Cascaded Shadow Map (Textures d'ombres en cascade)"
 
 #: ../../manual/render/eevee/lighting.rst:105
 msgid ""
@@ -217,12 +253,21 @@ msgid ""
 "Do note that cascade shadow maps are always updated because they are view "
 "dependent. This means they have a high performance impact."
 msgstr ""
+"Ces types spéciaux de textures d'ombre sont utilisées par les lampes *Sun*. "
+"C'est parce qu'elles peuvent ombrer de larges scènes en générant plusieurs "
+"textures d'ombre sur la zone de vue. Chaque cascade couvre une portion "
+"différente de la zone de vue. Il faut noter que les textures d'ombre en "
+"cascades sont continuellement mises à jour parce qu'elle sont dépendantes "
+"de la vue. Ce qui signifie un impact important sur les performances."
 
 #: ../../manual/render/eevee/lighting.rst:113
 msgid ""
 "In orthographic view the cascades cover the whole depth range of the camera "
 "with an evenly distributed shadow precision."
 msgstr ""
+"En mode vue orthographique, les cascades couvrent la totalité de la "
+"profondeur de champs de la camera avec une précision d'ombre répartie d'une "
+"façon uniforme."
 
 #: ../../manual/render/eevee/lighting.rst:117
 msgid "Count"
@@ -233,6 +278,8 @@ msgid ""
 "Number of cascades to use. More cascades means better precision but a lower "
 "update rate."
 msgstr ""
+"Le nombre de cascade à utiliser. Plus de cascades signifient plus de "
+"précision mais un taux de mise à jour moins important."
 
 #: ../../manual/render/eevee/lighting.rst:121
 msgid "Fade"
@@ -243,6 +290,8 @@ msgid ""
 "Fade transition area between two cascades. Higher values means less overall "
 "resolution because cascades need to overlap."
 msgstr ""
+"Zone d'estompe entre deux cascades. Des valeurs importantes signifient "
+"moins de résolution parce que les cascades doivent se recouvrir."
 
 #: ../../manual/render/eevee/lighting.rst:126
 msgid "Max Distance"
@@ -255,6 +304,10 @@ msgid ""
 "Distance, the lowest of the two will be used. Only works in perspective "
 "view."
 msgstr ""
+"Distance à couvrir par la cascade depuis l'origine de la vue (ou l'origine "
+"de la caméra si on est en vue caméra). Si le plan de coupe lointain de la "
+"vue est moins important que *Max Distance*, la plus petite des deux sera "
+"utilisée. Fonctionne uniquement en mode vue perspective."
 
 #: ../../manual/render/eevee/lighting.rst:129
 msgid "Distribution"
@@ -265,6 +318,8 @@ msgid ""
 "Puts more resolution towards the near clip plane. Only works in perspective "
 "view."
 msgstr ""
+"Donne plus de résolution près du plan de coupe. Fonctionne uniquement en "
+"mode vue perspective."
 
 #: ../../manual/render/eevee/lighting.rst:131
 msgid ":ref:`Limitations <eevee-limitations-shadows>`."
@@ -272,16 +327,15 @@ msgstr ""
 
 #: ../../manual/render/eevee/lighting.rst:135
 msgid "Limitations"
-msgstr ""
+msgstr "Limitations"
 
 #: ../../manual/render/eevee/lighting.rst:137
-#, fuzzy
 msgid ""
 "Unlike in Cycles, the *Size* of spot lights does not change the softness of "
 "the cone."
 msgstr ""
-"Contrairement à *Cycles*, la taille (*Size*) de la lumière ne change pas la "
-"douceur du cône."
+"Contrairement à *Cycles*, la taille (*Size*) des lampes *Spot* ne change "
+"pas la douceur du cône."
 
 #~ msgid "Lamps"
 #~ msgstr "Lampes"
