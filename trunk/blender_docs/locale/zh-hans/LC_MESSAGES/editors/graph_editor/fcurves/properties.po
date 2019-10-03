@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2019-08-08 23:17+0800\n"
+"POT-Creation-Date: 2019-09-30 09:59+0800\n"
+"PO-Revision-Date: 2019-10-03 12:10+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:4
 msgid "Properties"
@@ -29,8 +29,8 @@ msgid "Active F-Curve Panel"
 msgstr "活动函数曲线面板"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:9
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:50
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:82
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:79
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:111
 msgid "Reference"
 msgstr "参考"
 
@@ -66,7 +66,7 @@ msgstr "RNA 路径"
 msgid "RNA Path to property + Array index."
 msgstr "属性RNA路径 + 数组索引。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:31
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:32
 msgid "Color Mode"
 msgstr "色彩模式"
 
@@ -92,7 +92,7 @@ msgid ""
 "red, green, blue."
 msgstr "对于位置XYZ等属性集，会自动将该组颜色设置为红色，绿色和蓝色。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:31
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:32
 msgid "User Defined"
 msgstr "用户设置"
 
@@ -100,159 +100,219 @@ msgstr "用户设置"
 msgid "Define a custom color for the active F-curve."
 msgstr "为活动函数曲线定义自定义颜色。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:45
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:74
 msgid "Auto Handle Smoothing"
 msgstr "自动控制柄平滑"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:34
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:37
 msgid ""
 "Selects the method used to compute automatic Bézier handles (*Automatic*, "
 "*Auto Clamped*, *Vector*)."
 msgstr "选择用于计算自动贝塞尔控制柄的方法(*自动*，*自动钳制*，*顶点*)。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:40
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:42
+msgid ""
+"Handle smoothing mode comparison. Yellow: *None*, Cyan: *Continuous "
+"Acceleration*."
+msgstr "处理平滑模式比较。黄色：*无*，青色：*连续加速*。"
+
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:44
+msgid ""
+"From left to right, 4 *Auto Clamped* keys, 1 *Vector*, and the rest are "
+"*Automatic*."
+msgstr "从左到右，4 个 *自动钳制* 关键帧，1 个 *矢量*，其余为 [自动]。"
+
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:52
 msgid "None"
 msgstr "无"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:37
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:47
 msgid ""
-"Only directly adjacent key values are considered when computing the handles."
-msgstr "计算控制柄时仅考虑直接相邻的键值。"
+"Only directly adjacent key values are considered when computing the handles. "
+"Vector handles are pointed directly at the adjacent keyframes."
+msgstr "计算控制柄时仅考虑直接相邻的键值。矢量控制柄直接指向相邻关键帧。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:39
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:50
 msgid ""
-"This legacy method is very simple and predictable, but it can only produce "
-"good smooth curves in the most trivial cases."
+"This older method is very simple and predictable, but it can only produce "
+"truly smooth curves in the most trivial cases. Note the kinks in the yellow "
+"curve around the keys located between the extremes, and near the Vector "
+"handles."
 msgstr ""
 "这种传统的方法是非常简单的，可预测的，但它只能在最简单的情形产生良好的平滑曲"
-"线。"
+"线。要注意位于极端点之间的键周围的黄色曲线及矢量控制柄附近的扭结。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:45
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:68
 msgid "Continuous Acceleration"
 msgstr "持续加速"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:43
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:55
 msgid ""
-"A system of equations is solved for each continuous stretch of curve without "
-"manual handles in order to avoid or minimize jumps in acceleration at every "
-"keyframe."
+"A system of equations is solved in order to avoid or minimize jumps in "
+"acceleration at every keyframe. Vector handles are integrated into the curves "
+"as smooth transitions to imaginary straight lines beyond the keyframe."
 msgstr ""
-"在没有手动控制的情况下，针对每个连续的曲线延伸求解方程组，以避免或最小化每个关"
-"键帧处的加速度的跳跃。"
+"求解方程以避免或尽量减少每个关键帧上的加速度跳跃。矢量控制柄作为平滑过渡集成到"
+"曲线中，作为到关键帧以外的假想直线的平滑过渡。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:48
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:59
+msgid ""
+"This produces much smoother curves out of the box, but necessarily means that "
+"any changes in the key values may affect interpolation over a significant "
+"stretch of the curve; although the amount of change decays exponentially with "
+"distance. This change propagation is stopped by any key with *Free*, "
+"*Aligned*, or *Vector* handles, as well as by extremes with *Auto Clamped* "
+"handles."
+msgstr ""
+"这在开箱即用的曲线上生成要平滑得多，但必然意味着键值的任何更改都可能影响曲线显"
+"著延伸的插值；虽然变化量随距离呈指数级衰减。此修改传递至任何具有 *自由* 、*对"
+"齐* 或 *矢量* 控制柄的键以及使用 *自动钳制* 控制柄的极点中止。"
+
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:65
+msgid ""
+"This mode also tends to overshoot and oscillate more with fully *Automatic* "
+"handles in some cases (see the right end of the image above), so it is "
+"recommended to use *Auto Clamped* by default, and only switch to *Automatic* "
+"handles in places where this is desired behavior. This effect can also be "
+"reduced by adding in-between keys."
+msgstr ""
+"在某些情况下，此模式更多倾向于使用完全 *自动* 手柄过冲和振荡(参见上图的右端)，"
+"因此建议默认情况下使用 *自动钳制*，并且仅在需要的位置切换到 *自动* 控制柄。通"
+"过添加中间帧也可以减少这种效果。"
+
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:70
+msgid ""
+"Considering the upsides and downsides of each mode, *Contiuous Acceleration* "
+"should be better suited for limited animation, which uses a small number of "
+"interpolated keys with minimal manual polish. In case of highly polished high "
+"key rate animation, the benefits of smoothing may not outweight the workflow "
+"disruption from more extensive change propagation."
+msgstr ""
+"考虑到每种模式的共性与缺点，*连续加速* 应更适合有限的动画，动画使用少量插值关"
+"键帧，只需最少的手动润色。在高度润色的高键率动画的情况下，由于更广泛的修改传递"
+"造成的工作流中断，使用平滑可能会弊大于利。"
+
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:77
 msgid "Active Keyframe Panel"
 msgstr "活动关键帧面板"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:53
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:82
 msgid ":menuselection:`Sidebar region --> F-Curve --> Active Keyframe`"
-msgstr ":menuselection:`侧边栏区域 --> 函数曲线 --> 活动关键帧`"
+msgstr ":menuselection:`侧栏 --> 函数曲线 --> 活动关键帧`"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:57
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:86
 msgid "Active Keyframe panel."
 msgstr "活动关键帧面板。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:59
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:88
 msgid "Interpolation"
 msgstr "插值"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:60
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:89
 msgid ""
 "Set the forward :ref:`editors-graph-fcurves-settings-interpolation` for the "
 "active keyframe."
 msgstr ""
 "为活动关键帧设置之前的 :ref:`editors-graph-fcurves-settings-interpolation` 。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:61
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:90
 msgid "Easing"
 msgstr "缓动"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:62
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:91
 msgid "See :ref:`editors-graph-fcurves-settings-easing`."
 msgstr "见 :ref:`editors-graph-fcurves-settings-easing` 。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:66
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:95
 msgid "Key"
 msgstr "键"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:64
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:93
 msgid "Frame"
 msgstr "帧"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:65
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:94
 msgid "Set the frame for the active keyframe."
 msgstr "为活动关键帧设置帧。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:66
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:95
 msgid "Value"
 msgstr "值"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:67
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:96
 msgid "Set the value for the active keyframe."
 msgstr "为活动关键帧设置值。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:73
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:102
 msgid "Left/Right Handle"
 msgstr "左/右控制柄"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:69
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:98
 msgid ""
 "Set the position of the left/right interpolation handle for the active "
 "keyframe."
 msgstr "为活动关键帧设置左/右插值控制柄的位置。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:73
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:102
 msgid "Handle Type"
 msgstr "控制柄类型"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:72
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:101
 msgid "See :ref:`editors-graph-fcurves-settings-handles`."
 msgstr "见 :ref:`editors-graph-fcurves-settings-handles` 。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:80
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:109
 msgid "View Properties"
 msgstr "查看属性"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:85
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:114
 msgid ":menuselection:`Sidebar region --> View --> View Properties`"
 msgstr ":menuselection:`侧边栏区域 --> 视图 --> 查看属性`"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:90
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:119
 msgid "View Properties."
-msgstr "查看属性面板"
+msgstr "查看属性。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:92
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:121
 msgid "Show Cursor"
 msgstr "显示游标"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:93
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:122
 msgid "Toggles the visibility of the :ref:`2D Cursor <graph_editor-2d-cursor>`."
 msgstr "切换 :ref:`2D Cursor <graph_editor-2d-cursor>` 的可见性。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:94
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:123
 msgid "Cursor from Selection"
 msgstr "所选项的游标"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:95
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:124
 msgid "Places the 2D Cursor at the midpoint of the selected keyframes."
 msgstr "将2D游标放在所选关键帧的中点。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:96
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:125
 msgid "Cursor Location"
 msgstr "游标位置"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:97
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:126
 msgid "Moves the cursor to the specified frame (X value) and value (Y value)."
 msgstr "将游标移动到指定的帧(X值)和值(Y值)。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:99
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:128
 msgid "To Keys"
 msgstr "到键"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:99
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:128
 msgid "Applies the current location of the 2D cursor to the selected keyframes."
 msgstr "将2D游标的当前位置应用于所选关键帧。"
 
-#: ../../manual/editors/graph_editor/fcurves/properties.rst:101
+#: ../../manual/editors/graph_editor/fcurves/properties.rst:130
 msgid "Graph Editor's :ref:`graph-view-menu`."
 msgstr "曲线编辑器 :ref:`graph-view-menu` 。"
+
+#~ msgid ""
+#~ "A system of equations is solved for each continuous stretch of curve "
+#~ "without manual handles in order to avoid or minimize jumps in acceleration "
+#~ "at every keyframe."
+#~ msgstr ""
+#~ "在没有手动控制的情况下，针对每个连续的曲线延伸求解方程组，以避免或最小化每"
+#~ "个关键帧处的加速度的跳跃。"
