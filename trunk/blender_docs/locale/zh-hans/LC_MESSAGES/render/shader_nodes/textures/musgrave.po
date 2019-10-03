@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:47+0200\n"
+"POT-Creation-Date: 2019-10-03 12:36+0800\n"
 "PO-Revision-Date: 2019-07-27 12:44+0800\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Last-Translator: \n"
-"Language-Team: \n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 2.2.3\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:5
 msgid "Musgrave Texture Node"
@@ -30,248 +29,362 @@ msgstr "马氏分形纹理着色器节点。"
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:12
 msgid ""
-"The *Musgrave Texture* is used to add an advanced procedural noise texture."
-msgstr "*马氏分形纹理* 节点用于添加高级程序的噪点纹理。"
-
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:14
-msgid ""
-"Musgrave is a type of *Fractal Noise*. Simple *Perlin Noise* is generated "
-"multiple times with different scaling, and the results are combined in "
-"different ways depending on the Musgrave type. This results in a detailed "
-"texture with self-similar appearance at different scales, like fractals."
+"The *Musgrave Texture* node evaluates a fractal Perlin noise at the input"
+" texture coordinates. Unlike the *Noise Texture*, which is also a fractal"
+" Perlin noise, the *Musgrave Texture* allows greater control over how "
+"octaves are combined."
 msgstr ""
-"*马氏分形噪点* 一种分形噪点。简单的柏林噪声函数取值会以不同的缩放比例多次生"
-"成，结果会根据马氏分形纹理类型以不同的方式进行组合。 这导致具有不同尺度的自"
-"相似外观的详细纹理，如分形。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:21
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:17
 msgid "Inputs"
 msgstr "输入选项"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:24
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:19
+msgid ""
+"The inputs are dynamic, they become available if needed depending on the "
+"node properties."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:22
 msgid "Vector"
 msgstr "矢量"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:24
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:22
+#, fuzzy
 msgid ""
-"Texture coordinate to sample texture at; defaults to *Generated* texture "
-"coordinates if the socket is left unconnected."
+"Texture coordinate to evaluate the noise at; defaults to *Generated* "
+"texture coordinates if the socket is left unconnected."
 msgstr "纹理坐标到样本纹理；如果接口未连接，则默认生成纹理坐标。"
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:24
+msgid "W"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:25
+msgid "Texture coordinate to evaluate the noise at."
+msgstr ""
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:26
 msgid "Scale"
 msgstr "缩放"
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:27
-msgid "Overall texture scale."
-msgstr "纹理的缩放值。"
+msgid "Scale of the base noise octave."
+msgstr ""
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:29
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:30
 msgid "Detail"
 msgstr "细节"
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:29
 msgid ""
-"Controls how many instances of base noise textures are combined. Each extra "
-"instance is scaled and adds smaller details."
-msgstr "控制单个噪点中实例的数量。每个实例都会缩放并添加更小的细节。"
+"Number of noise octaves. The fractional part of the input is multiplied "
+"by the magnitude of the highest octave. Higher number of octaves "
+"corresponds to a higher render time."
+msgstr ""
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:34
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:33
 msgid "Dimension"
 msgstr "尺寸规格"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:32
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:33
 msgid ""
-"Controls the intensity of the different instances of base noise. Setting it "
-"to zero will use the same intensity for all noise instances. Larger values "
-"will reduce the intensity of finer (larger-scaled) instances, making "
-"smaller details less visible."
+"The difference between the magnitude of each two consecutive octaves. "
+"Larger values corresponds to smaller magnitudes for higher octaves."
 msgstr ""
-"控制单个噪点中实例的尺寸。将其设置为0时，将对所有噪点使用相同的强度。较大的"
-"值将降低大尺寸精细模型的强度，使较小的细节不太明显。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:38
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:36
 msgid "Lacunarity"
 msgstr "间隙度"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:37
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:36
 msgid ""
-"Controls the scale of the different instances of the base noise. This is a "
-"factor for scaling each further instance, relative to the previous one, i."
-"e. the scales grow exponentially. When setting it to 1 all instances have "
-"the same scale."
+"The difference between the scale of each two consecutive octaves. Larger "
+"values corresponds to larger scale for higher octaves."
 msgstr ""
-"控制单个噪点中实例间的距离。这是相对于前一个实例缩放每个其他实例的系数，即，"
-"尺度呈指数增长。将其设置为1时，所有实例都具有相同的比例。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:41
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:38
 msgid "Offset"
 msgstr "偏移量"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:41
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:39
 msgid ""
-"This value is added to each noise instance, determines the level where "
-"least fine noise will appear. It only has an effect for *Hybrid "
-"Multifractal*, *Ridged Multifractal* and *Hetero Terrain*."
+"An added offset to each octave, determines the level where the highest "
+"octave will appear."
 msgstr ""
-"该值会被添加到每个噪点的实例中，进而确定出现最小噪点的级别。仅适用于 *混合式"
-"多重分形* , *脊状多重分形* 和 *异向地形*。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:46
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:41
 msgid "Gain"
 msgstr "增益"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:44
-msgid ""
-"An extra multiplier to change the intensity of finer noise instances. It "
-"only has an effect for *Hybrid Multifractal* and *Ridged Multifractal*."
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:41
+msgid "An extra multiplier to tune the magnitude of octaves."
 msgstr ""
-"额外用来改变更精细的噪点实例强度的乘数。仅适用于 *混合式多重分形* 和 *脊状多"
-"重分形*。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:49
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:44
 msgid "Properties"
 msgstr "属性"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:69
-msgid "Type"
-msgstr "类型"
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:56
+#, fuzzy
+msgid "Dimensions"
+msgstr "尺寸规格"
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:47
+msgid "The dimensions of the space to evaluate the noise in."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:49
+msgid "1D"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:50
+msgid "Evaluate the noise in 1D space at the input *W*."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:51
+msgid "2D"
+msgstr ""
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:52
 msgid ""
-"Specifies different methods to combine the multiple noise instances. "
-"Originally, the algorithms for generating procedural terrain."
-msgstr "指定组合多个噪声实例的不同方法。最初用于生成程序性地形的算法。"
+"Evaluate the noise in 2D space at the input *Vector*. The z component is "
+"ignored."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:53
+msgid "3D"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:54
+msgid "Evaluate the noise in 3D space at the input *Vector*."
+msgstr ""
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:56
-msgid "fBM (fractal Brownian Motion)"
-msgstr "fBM (分形布朗运动)"
+msgid "4D"
+msgstr ""
 
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:56
 msgid ""
+"Evaluate the noise in 4D space at the input *Vector* and the input *W* as"
+" the fourth dimension."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:58
+msgid ""
+"Higher dimensions corresponds to higher render time, so lower dimensions "
+"should be used unless higher dimensions are necessary."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:76
+msgid "Type"
+msgstr "类型"
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:61
+#, fuzzy
+msgid "Type of the Musgrave texture."
+msgstr "马氏分形纹理着色器效果。"
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:64
+msgid "fBM (fractal Brownian Motion)"
+msgstr "fBM (分形布朗运动)"
+
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:64
+msgid ""
 "Produces an unnatural homogeneous and isotropic result. Uses an additive "
 "cascade, the values are simply added together."
-msgstr ""
-"产生不自然的均匀和各向同性的结果。使用相加级联，将数值简单地叠加在一起。"
+msgstr "产生不自然的均匀和各向同性的结果。使用相加级联，将数值简单地叠加在一起。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:59
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:67
 msgid "Multifractal"
 msgstr "多重分形"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:59
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:67
 msgid ""
 "The result is more uneven (varies with location), more similar to a real "
 "terrain. Uses a multiplicative cascade."
 msgstr "结果更不均匀(随位置而变化)，更类似于真实地形。使用相乘级联。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:62
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:70
 msgid "Hybrid Multifractal"
 msgstr "混合式多重分形"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:62
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:70
 msgid ""
 "Creates peaks and valleys with different roughness values, like real "
 "mountains rise out of flat plains. Combines the additive cascade with a "
 "multiplicative cascade."
-msgstr ""
-"创建具有不同粗糙度值的山峰和山谷，就像真正的山脉从平原上升起一样。结合使用相"
-"加级联与相乘级联。"
+msgstr "创建具有不同粗糙度值的山峰和山谷，就像真正的山脉从平原上升起一样。结合使用相加级联与相乘级联。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:65
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:73
 msgid "Ridged Multifractal"
 msgstr "脊状多重分形"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:65
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:73
 msgid ""
-"Creates sharp peaks. Calculates the absolute value of the noise, creating "
-"\"canyons\", and then flips the surface upside down."
-msgstr ""
-"创造尖锐的山峰。计算噪点的绝对值，创建 “峡谷” 效果，然后将表面颠倒翻转。"
+"Creates sharp peaks. Calculates the absolute value of the noise, creating"
+" \"canyons\", and then flips the surface upside down."
+msgstr "创造尖锐的山峰。计算噪点的绝对值，创建 “峡谷” 效果，然后将表面颠倒翻转。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:69
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:76
 msgid "Hetero Terrain (Heterogeneous Terrain)"
 msgstr "异向地形"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:68
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:76
 msgid ""
-"Similar to *Hybrid Multifractal* creates a heterogeneous terrain, but with "
-"the likeness of river channels."
+"Similar to *Hybrid Multifractal* creates a heterogeneous terrain, but "
+"with the likeness of river channels."
 msgstr "类似于 *混合式多重分形*，可创建异质的地形，但具有河道的相似性。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:72
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:79
 msgid "Outputs"
 msgstr "输出选项"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:75
-msgid "Color"
-msgstr "颜色"
-
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:75
-msgid ""
-"Texture color output. It is grayscale, all three RGB components are equal "
-"to the value of the *Factor* output."
-msgstr "输出纹理颜色。它是一个灰度值，所有三个RGB分量都等于 *系数* 输出的值。"
-
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:78
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:82
 msgid "Factor"
 msgstr "系数"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:78
-msgid "Texture intensity output."
-msgstr "输出纹理强度。"
-
 #: ../../manual/render/shader_nodes/textures/musgrave.rst:82
-msgid ""
-"The *Musgrave Texture* often needs some adjustments (e.g. by multiplication "
-"and addition) in order to avoid clipping and to see more detail."
-msgstr ""
-"*马氏分形纹理* 通常需要一些调整(例如通过相加和相乘)来避免剪裁，以获得更多细"
-"节。"
+#, fuzzy
+msgid "Texture value."
+msgstr "纹理的缩放值。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:87
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:85
 msgid "Examples"
 msgstr "举例"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:89
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:87
 msgid "Remapped Musgrave texture such that most values are visible."
 msgstr "重新投影马氏分形纹理，以使参数可见。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:95
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:93
 msgid "Nodes for the image to the right."
 msgstr "右侧图像的节点。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:100
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:98
 msgid "Musgrave texture."
 msgstr "马氏分形纹理着色器效果。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:104
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:102
 msgid "Musgrave Types"
 msgstr "马氏分形纹理类型"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:106
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:104
 msgid "Different Musgrave types with the same parameters."
 msgstr "使用相同参数的不同分形类型效果。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:111
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:109
 msgid "fBM (fractal Brownian Motion)."
 msgstr "fBM (分形布朗运动)。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:116
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:114
 msgid "Multifractal."
 msgstr "多重分形。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:121
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:119
 msgid "Hybrid Multifractal."
 msgstr "混合式多重分形。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:126
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:124
 msgid "Heterogeneous Terrain."
 msgstr "异向地形。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:131
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:129
 msgid "Ridged Multifractal."
 msgstr "脊状多重分形。"
 
-#: ../../manual/render/shader_nodes/textures/musgrave.rst:137
+#: ../../manual/render/shader_nodes/textures/musgrave.rst:135
 msgid ":doc:`Displacement </render/materials/components/displacement>`"
 msgstr ":doc:`置换着色器</render/materials/components/displacement>`"
+
+#~ msgid ""
+#~ "The *Musgrave Texture* is used to "
+#~ "add an advanced procedural noise "
+#~ "texture."
+#~ msgstr "*马氏分形纹理* 节点用于添加高级程序的噪点纹理。"
+
+#~ msgid ""
+#~ "Musgrave is a type of *Fractal "
+#~ "Noise*. Simple *Perlin Noise* is "
+#~ "generated multiple times with different "
+#~ "scaling, and the results are combined"
+#~ " in different ways depending on the"
+#~ " Musgrave type. This results in a "
+#~ "detailed texture with self-similar "
+#~ "appearance at different scales, like "
+#~ "fractals."
+#~ msgstr ""
+#~ "*马氏分形噪点* "
+#~ "一种分形噪点。简单的柏林噪声函数取值会以不同的缩放比例多次生成，结果会根据马氏分形纹理类型以不同的方式进行组合。 "
+#~ "这导致具有不同尺度的自相似外观的详细纹理，如分形。"
+
+#~ msgid ""
+#~ "Controls how many instances of base "
+#~ "noise textures are combined. Each extra"
+#~ " instance is scaled and adds smaller"
+#~ " details."
+#~ msgstr "控制单个噪点中实例的数量。每个实例都会缩放并添加更小的细节。"
+
+#~ msgid ""
+#~ "Controls the intensity of the different"
+#~ " instances of base noise. Setting it"
+#~ " to zero will use the same "
+#~ "intensity for all noise instances. "
+#~ "Larger values will reduce the intensity"
+#~ " of finer (larger-scaled) instances, "
+#~ "making smaller details less visible."
+#~ msgstr "控制单个噪点中实例的尺寸。将其设置为0时，将对所有噪点使用相同的强度。较大的值将降低大尺寸精细模型的强度，使较小的细节不太明显。"
+
+#~ msgid ""
+#~ "Controls the scale of the different "
+#~ "instances of the base noise. This "
+#~ "is a factor for scaling each "
+#~ "further instance, relative to the "
+#~ "previous one, i.e. the scales grow "
+#~ "exponentially. When setting it to 1 "
+#~ "all instances have the same scale."
+#~ msgstr "控制单个噪点中实例间的距离。这是相对于前一个实例缩放每个其他实例的系数，即，尺度呈指数增长。将其设置为1时，所有实例都具有相同的比例。"
+
+#~ msgid ""
+#~ "This value is added to each noise"
+#~ " instance, determines the level where "
+#~ "least fine noise will appear. It "
+#~ "only has an effect for *Hybrid "
+#~ "Multifractal*, *Ridged Multifractal* and "
+#~ "*Hetero Terrain*."
+#~ msgstr "该值会被添加到每个噪点的实例中，进而确定出现最小噪点的级别。仅适用于 *混合式多重分形* , *脊状多重分形* 和 *异向地形*。"
+
+#~ msgid ""
+#~ "An extra multiplier to change the "
+#~ "intensity of finer noise instances. It"
+#~ " only has an effect for *Hybrid "
+#~ "Multifractal* and *Ridged Multifractal*."
+#~ msgstr "额外用来改变更精细的噪点实例强度的乘数。仅适用于 *混合式多重分形* 和 *脊状多重分形*。"
+
+#~ msgid ""
+#~ "Specifies different methods to combine "
+#~ "the multiple noise instances. Originally, "
+#~ "the algorithms for generating procedural "
+#~ "terrain."
+#~ msgstr "指定组合多个噪声实例的不同方法。最初用于生成程序性地形的算法。"
+
+#~ msgid "Color"
+#~ msgstr "颜色"
+
+#~ msgid ""
+#~ "Texture color output. It is grayscale,"
+#~ " all three RGB components are equal"
+#~ " to the value of the *Factor* "
+#~ "output."
+#~ msgstr "输出纹理颜色。它是一个灰度值，所有三个RGB分量都等于 *系数* 输出的值。"
+
+#~ msgid "Texture intensity output."
+#~ msgstr "输出纹理强度。"
+
+#~ msgid ""
+#~ "The *Musgrave Texture* often needs some"
+#~ " adjustments (e.g. by multiplication and"
+#~ " addition) in order to avoid clipping"
+#~ " and to see more detail."
+#~ msgstr "*马氏分形纹理* 通常需要一些调整(例如通过相加和相乘)来避免剪裁，以获得更多细节。"
+
