@@ -9,16 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 13:27+0200\n"
+"POT-Creation-Date: 2019-10-26 00:56+1100\n"
 "PO-Revision-Date: 2019-06-13 18:37+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: ../../manual/render/shader_nodes/vector/mapping.rst:5
 msgid "Mapping Node"
@@ -26,157 +24,306 @@ msgstr "Node Mapping"
 
 #: ../../manual/render/shader_nodes/vector/mapping.rst:7
 msgid ""
-"The *Mapping Node* is used to transform an image or procedural texture. For "
-"example, you can use it to move, rotate, or scale textures. If you have ever "
-"done any UV editing in the past, then you will likely know that these can "
-"also be accomplished by modifying an object's UVs in the :doc:`UV editor </"
-"editors/uv/index>`. However, it is sometimes useful to have easy access to "
-"these functions through nodes rather than having to modify the UVs. One "
-"example of this might be when you have several textures, each of which needs "
-"to be transformed individually e.g. decals on an object."
+"The *Mapping* node transforms the input vector by applying translation, "
+"rotation, and scaling."
 msgstr ""
-"Le *Node Mapping* est utilisé pour transformer une image ou une texture "
-"procédurale. Par exemple, vous pouvez l'utiliser pour déplacer, tourner, ou "
-"mettre à l'échelle des textures. Si vous n'avez jamais fait d'édition d'Uv "
-"par le passé, alors vous saurez probablement que ceux-ci peuvent aussi être "
-"accomplis en modifiant les UV d'un objet dans l':doc:`éditeur UV  </editors/"
-"uv/index>`. Cependant, c'est parfois utile d'avoir un accès facile à ces "
-"fonctions via des nodes plutôt que d'avoir à modifier les UV. Un exemple de "
-"ceci pourrait être quand vous avez plusieurs textures, chacune d'entre elles "
-"doit être transformée individuellement par ex. des décalques sur un objet. "
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:19
+#: ../../manual/render/shader_nodes/vector/mapping.rst:11
 msgid "Mapping node."
 msgstr ""
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:23
+#: ../../manual/render/shader_nodes/vector/mapping.rst:15
 msgid "Inputs"
 msgstr "Entrées"
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:28
-#: ../../manual/render/shader_nodes/vector/mapping.rst:42
-#: ../../manual/render/shader_nodes/vector/mapping.rst:66
+#: ../../manual/render/shader_nodes/vector/mapping.rst:17
+msgid ""
+"The inputs of the node are dynamic. In particular, the *Location* input "
+"is only available in the *Texture* and *Point* vector types."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:21
+#: ../../manual/render/shader_nodes/vector/mapping.rst:70
+#: ../../manual/render/shader_nodes/vector/mapping.rst:83
 msgid "Vector"
 msgstr ""
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:26
-msgid ""
-"Vector to be transformed, usually this is input from a :doc:`Texture "
-"Coordinate node </render/shader_nodes/input/texture_coordinate>`."
+#: ../../manual/render/shader_nodes/vector/mapping.rst:21
+msgid "The vector to be transformed."
 msgstr ""
-"vecteur à transformer, habituellement c'est l'entrée d'un :doc:`node Texture "
-"Coordinate </render/shader_nodes/input/texture_coordinate>`."
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:24
+msgid "Location"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:24
+msgid "The amount of translation along each axis."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:27
+msgid "Rotation"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:27
+msgid "The amount of rotation along each axis. XYZ order."
+msgstr ""
 
 #: ../../manual/render/shader_nodes/vector/mapping.rst:31
-msgid "Properties"
-msgstr "Propriétés"
+msgid "Scale"
+msgstr ""
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:45
-msgid "Vector type"
+#: ../../manual/render/shader_nodes/vector/mapping.rst:30
+msgid "The amount of scaling along each axis."
 msgstr ""
 
 #: ../../manual/render/shader_nodes/vector/mapping.rst:34
-msgid "Allows the user to choose which vector type to use."
-msgstr "Permet à l'utilisateur de choisir quel type de vecteur utiliser. "
+msgid "Properties"
+msgstr "Propriétés"
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:36
-msgid "Texture"
+#: ../../manual/render/shader_nodes/vector/mapping.rst:76
+msgid "Vector type"
 msgstr ""
 
 #: ../../manual/render/shader_nodes/vector/mapping.rst:37
 msgid ""
-"This is the most common option that you will use and will be sufficient for "
-"most cases."
-msgstr ""
-"C'est l'option la plus habituelle que vous utiliserez et sera suffisante "
-"dans la plupart des cas."
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:39
-msgid "Point"
-msgstr ""
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:39
-msgid ""
-"This works similar to *Texture* but the way the math works the *Scale* "
-"values are divided rather than multiplied."
-msgstr ""
-"Ceci fonctionne de manière similaire à *Texture* mais, de la manière dont "
-"les maths fonctionnent, les valeurs *Scale* sont divisées plutôt que "
-"multipliées."
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:42
-msgid ""
-"Behaves the same as *Point* mode but changes in *Location* are ignored -- "
-"that is, the texture does not move."
-msgstr ""
-"Se comporte comme en mode *Point* mais les modifications de *Location* sont "
-"ignorées -- autrement dit, la texture ne bouge pas. "
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:45
-msgid "Normal"
-msgstr ""
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:45
-msgid "Transforms a normal vector with unit length."
-msgstr "Transformer un vecteur normal par une longueur d'unité."
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:47
-msgid "Location"
-msgstr ""
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:48
-msgid "Vector translation."
-msgstr "Translation de vecteur."
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:49
-msgid "Rotation"
-msgstr ""
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:50
-msgid "Rotation of the vector along the XYZ axes."
-msgstr "Rotation du vecteur le long des axes XYZ. "
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:53
-msgid "Scale"
+"The node applies the transformation differently depending on the semantic"
+" type of the input vector."
 msgstr ""
 
 #: ../../manual/render/shader_nodes/vector/mapping.rst:52
+msgid "Point"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:40
+msgid "For this vector type, the node performs a straightforward transformation."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:42
 msgid ""
-"Scale of the vector, in *Point* and *Vector* modes, a value of 2.0 will "
-"halve the texture size, while in *Texture* mode the size is double."
-msgstr ""
-"Échelle du vecteur, en modes *Point* et *Vector*, une valeur de 2.0 diminue "
-"par deux la taille de la texture, tandis qu'en mode *Texture* la taille est "
-"doublée. "
-
-#: ../../manual/render/shader_nodes/vector/mapping.rst:58
-msgid "Min/Max"
+"Transforming a texture coordinates is analogous to transforming a UV map."
+" For instance, translating the texture coordinates along the **positive**"
+" X axis would result in the evaluated texture to move in the **negative**"
+" X axis, much like if one translated a UV map. Similarly, scaling the "
+"texture coordinates **up** would result in the evaluated texture to scale"
+" **down**. So transforming the texture coordinates would appear to have "
+"the opposite effect on the evaluated texture."
 msgstr ""
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:56
+#: ../../manual/render/shader_nodes/vector/mapping.rst:48
 msgid ""
-"Normalizes the *Location*, *Rotation*, and *Scale* values to fit within the "
-"specified XYZ values."
+"The order of transformation is: Scale --> Rotate --> Translate, which "
+"means:"
 msgstr ""
-"Normalise les valeurs de *Location*, *Rotation*, et *Scale* pour entrer dans "
-"les valeurs XYZ spécifiées."
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:61
+#: ../../manual/render/shader_nodes/vector/mapping.rst:50
+#, fuzzy
+msgid "Translation moves the input along the local rotation axis."
+msgstr "Rotation du vecteur le long des axes XYZ. "
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:51
+msgid "Rotation rotates the input around the origin of the space."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:52
+msgid "Scaling scales the input along the global axis."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:67
+msgid "Texture"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:55
+msgid "For this vector type, the node performs an inverse transformation."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:57
+msgid ""
+"Inverse transforming a texture coordinates would, as opposed to the "
+"*Point* type, transform the evaluated texture itself. For instance, "
+"translating the texture coordinates along the positive X axis would "
+"result in the evaluated texture to move in the positive X axis, as one "
+"would expected. Similarly, scaling the texture coordinates up would "
+"result in the evaluated texture to scale up, as one would expect."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:63
+msgid ""
+"The order of transformation is: Translate --> Rotate --> Scale, which "
+"means:"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:65
+#, fuzzy
+msgid "Translation moves the input along the global axis."
+msgstr "Rotation du vecteur le long des axes XYZ. "
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:66
+msgid "Rotation rotates the input around the translation vector."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:67
+msgid "Scaling scales the input along the local rotation axis."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:70
+msgid ""
+"For this vector type, a *Point* transformation is performed, but with "
+"zero translation."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:76
+msgid "Normal"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:73
+msgid ""
+"For this vector type, the node performs the inverse transpose of the "
+"transformation and normalize the result. Such transformation ensures "
+"correct normals after non-uniform scaling. So this type should be used "
+"when transforming normals."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/vector/mapping.rst:79
 msgid "Outputs"
 msgstr "Sorties"
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:64
-msgid ""
-"Transformed vector, usually gets connected to some sort of :doc:`Texture "
-"node </render/shader_nodes/textures/index>`."
+#: ../../manual/render/shader_nodes/vector/mapping.rst:82
+msgid "The input vector after transformation."
 msgstr ""
-"Vecteur transformé, habituellement en connexion à une sorte de :doc:`node "
-"Texture </render/shader_nodes/textures/index>`."
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:69
+#: ../../manual/render/shader_nodes/vector/mapping.rst:86
 msgid "Examples"
 msgstr "Exemples"
 
-#: ../../manual/render/shader_nodes/vector/mapping.rst:71
-msgid "Todo <2.8 add."
-msgstr ""
+#: ../../manual/render/shader_nodes/vector/mapping.rst:90
+#, fuzzy
+msgid "Mapping node example."
+msgstr "Node Mapping"
+
+#~ msgid ""
+#~ "The *Mapping Node* is used to "
+#~ "transform an image or procedural "
+#~ "texture. For example, you can use "
+#~ "it to move, rotate, or scale "
+#~ "textures. If you have ever done "
+#~ "any UV editing in the past, then"
+#~ " you will likely know that these "
+#~ "can also be accomplished by modifying"
+#~ " an object's UVs in the :doc:`UV "
+#~ "editor </editors/uv/index>`. However, it is"
+#~ " sometimes useful to have easy access"
+#~ " to these functions through nodes "
+#~ "rather than having to modify the "
+#~ "UVs. One example of this might be"
+#~ " when you have several textures, each"
+#~ " of which needs to be transformed "
+#~ "individually e.g. decals on an object."
+#~ msgstr ""
+#~ "Le *Node Mapping* est utilisé pour "
+#~ "transformer une image ou une texture "
+#~ "procédurale. Par exemple, vous pouvez "
+#~ "l'utiliser pour déplacer, tourner, ou "
+#~ "mettre à l'échelle des textures. Si "
+#~ "vous n'avez jamais fait d'édition d'Uv"
+#~ " par le passé, alors vous saurez "
+#~ "probablement que ceux-ci peuvent aussi"
+#~ " être accomplis en modifiant les UV"
+#~ " d'un objet dans l':doc:`éditeur UV  "
+#~ "</editors/uv/index>`. Cependant, c'est parfois "
+#~ "utile d'avoir un accès facile à "
+#~ "ces fonctions via des nodes plutôt "
+#~ "que d'avoir à modifier les UV. Un"
+#~ " exemple de ceci pourrait être quand"
+#~ " vous avez plusieurs textures, chacune "
+#~ "d'entre elles doit être transformée "
+#~ "individuellement par ex. des décalques "
+#~ "sur un objet. "
+
+#~ msgid ""
+#~ "Vector to be transformed, usually this"
+#~ " is input from a :doc:`Texture "
+#~ "Coordinate node "
+#~ "</render/shader_nodes/input/texture_coordinate>`."
+#~ msgstr ""
+#~ "vecteur à transformer, habituellement c'est"
+#~ " l'entrée d'un :doc:`node Texture "
+#~ "Coordinate </render/shader_nodes/input/texture_coordinate>`."
+
+#~ msgid "Allows the user to choose which vector type to use."
+#~ msgstr "Permet à l'utilisateur de choisir quel type de vecteur utiliser. "
+
+#~ msgid ""
+#~ "This is the most common option "
+#~ "that you will use and will be "
+#~ "sufficient for most cases."
+#~ msgstr ""
+#~ "C'est l'option la plus habituelle que"
+#~ " vous utiliserez et sera suffisante "
+#~ "dans la plupart des cas."
+
+#~ msgid ""
+#~ "This works similar to *Texture* but "
+#~ "the way the math works the *Scale*"
+#~ " values are divided rather than "
+#~ "multiplied."
+#~ msgstr ""
+#~ "Ceci fonctionne de manière similaire à"
+#~ " *Texture* mais, de la manière dont"
+#~ " les maths fonctionnent, les valeurs "
+#~ "*Scale* sont divisées plutôt que "
+#~ "multipliées."
+
+#~ msgid ""
+#~ "Behaves the same as *Point* mode "
+#~ "but changes in *Location* are ignored"
+#~ " -- that is, the texture does "
+#~ "not move."
+#~ msgstr ""
+#~ "Se comporte comme en mode *Point* "
+#~ "mais les modifications de *Location* "
+#~ "sont ignorées -- autrement dit, la "
+#~ "texture ne bouge pas. "
+
+#~ msgid "Transforms a normal vector with unit length."
+#~ msgstr "Transformer un vecteur normal par une longueur d'unité."
+
+#~ msgid "Vector translation."
+#~ msgstr "Translation de vecteur."
+
+#~ msgid ""
+#~ "Scale of the vector, in *Point* "
+#~ "and *Vector* modes, a value of 2.0"
+#~ " will halve the texture size, while"
+#~ " in *Texture* mode the size is "
+#~ "double."
+#~ msgstr ""
+#~ "Échelle du vecteur, en modes *Point* "
+#~ "et *Vector*, une valeur de 2.0 "
+#~ "diminue par deux la taille de la"
+#~ " texture, tandis qu'en mode *Texture* "
+#~ "la taille est doublée. "
+
+#~ msgid "Min/Max"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Normalizes the *Location*, *Rotation*, and "
+#~ "*Scale* values to fit within the "
+#~ "specified XYZ values."
+#~ msgstr ""
+#~ "Normalise les valeurs de *Location*, "
+#~ "*Rotation*, et *Scale* pour entrer dans"
+#~ " les valeurs XYZ spécifiées."
+
+#~ msgid ""
+#~ "Transformed vector, usually gets connected "
+#~ "to some sort of :doc:`Texture node "
+#~ "</render/shader_nodes/textures/index>`."
+#~ msgstr ""
+#~ "Vecteur transformé, habituellement en "
+#~ "connexion à une sorte de :doc:`node "
+#~ "Texture </render/shader_nodes/textures/index>`."
+
+#~ msgid "Todo <2.8 add."
+#~ msgstr ""
+

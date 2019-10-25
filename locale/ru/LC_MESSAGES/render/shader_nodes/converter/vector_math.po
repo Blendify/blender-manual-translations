@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Руководство по Blender 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 09:34+1000\n"
+"POT-Creation-Date: 2019-10-26 00:56+1100\n"
 "PO-Revision-Date: 2016-10-17 22:12+0500\n"
 "Last-Translator: Mingun <alexander_sergey@mail.ru>\n"
 "Language-Team: \n"
@@ -31,161 +31,243 @@ msgstr "Узел «Векторная математика»"
 
 #: ../../manual/render/shader_nodes/converter/vector_math.rst:12
 msgid ""
-"The *Vector Math* node performs the selected math operation on vectors. "
-"Select the math function by clicking the up-down selector where the "
-"\"Add\" selection is shown."
+"The *Vector Math* node performs the selected math operation on the input "
+"vectors."
 msgstr ""
-"Узел *«Векторная математика»* выполняет указанное математическое "
-"преобразование над векторами. Выберите математическую функцию из "
-"выпадающего списка, в котором показано значение «Добавить»."
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:17
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:16
 msgid "Inputs"
 msgstr "Входы"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:19
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:18
+msgid ""
+"The inputs of the node are dynamic. Some inputs are only available in "
+"certain operations. For instance, the *Scale* input is only available in "
+"the *Scale* operator."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:21
 #: ../../manual/render/shader_nodes/converter/vector_math.rst:23
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:107
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:104
 msgid "Vector"
 msgstr "Вектор"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:20
-msgid ""
-"Input vector 1 (upper). The value can be provided by another node or set "
-"manually."
-msgstr ""
-"Входной вектор 1 (верхний). Значение предоставляется другим узлом или "
-"указывается вручную."
-
 #: ../../manual/render/shader_nodes/converter/vector_math.rst:22
-msgid ""
-"Input vector 2 (lower). The value can be provided by another node or set "
-"manually."
+msgid "Input vector A."
 msgstr ""
-"Входной вектор 2 (нижний). Значение предоставляется другим узлом или "
-"указывается вручную."
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:24
+msgid "Input vector B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:27
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:68
+#, fuzzy
+msgid "Scale"
+msgstr "Значение"
 
 #: ../../manual/render/shader_nodes/converter/vector_math.rst:26
+msgid "Input Scale."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:30
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:102
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:96
 msgid "Operation"
 msgstr "Операция"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:29
-#, fuzzy
-msgid "Select the math function for conversion."
-msgstr "Выпадающий список с математической функцией преобразования."
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:33
+msgid "The vector math operator to be applied on the input vectors."
+msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:41
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:36
 msgid "Add"
 msgstr "Добавить"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:32
-msgid "Adding input 1 and 2."
-msgstr "Складывает входы 1 и 2."
-
 #: ../../manual/render/shader_nodes/converter/vector_math.rst:36
-msgid ""
-"Vector &= input_1 + input_2  Value &= \\frac{abs(Vector_x) + "
-"abs(Vector_y) + abs(Vector_z)} {3.0}"
+msgid "The sum of A and B."
 msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:53
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:39
 msgid "Subtract"
 msgstr "Вычесть"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:44
-msgid "Subtracting input 1 and 2."
-msgstr "Вычитает вход 1 из входа 2."
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:39
+msgid "The difference between A and B."
+msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:48
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:43
+msgid "Multiply"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:42
 msgid ""
-"Vector &= input_1 - input_2  Value &= \\frac{abs(Vector_x) + "
-"abs(Vector_y) + abs(Vector_z)} {3.0}"
+"The entrywise product of A and B. :math:`(A.x * B.x, A.y * B.y, A.z * "
+"B.z)`"
 msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:65
-msgid "Average"
-msgstr "Средний"
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:47
+msgid "Divide"
+msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:56
-msgid "Averaging input 1 and 2."
-msgstr "Усредняет входы 1 и 2."
-
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:60
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:46
 msgid ""
-"Vector &= \\frac{input_1+input_2} {|input_1+input_2|}  Value &= "
-"|input_1+input_2|"
+"The entrywise division of A by B. Division by zero returns zero. "
+":math:`(A.x / B.x, A.y / B.y, A.z / B.z)`"
 msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:75
-msgid "Dot Product"
-msgstr "Скал. произведение"
-
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:68
-msgid ""
-"Algebraic operation that takes two equal-length sequences of vectors 1 "
-"and 2 and returns a single number. The Result is a scalar."
-msgstr ""
-"Алгебраическая операция, принимающая две равных по длине "
-"последовательности векторов и возвращающая одно число. В результате на "
-"выходе получается скалярное значение."
-
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:73
-msgid "Value = input_1 . input_2"
-msgstr ""
-
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:89
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:50
 msgid "Cross Product"
 msgstr "Вект. произведение"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:78
-msgid ""
-"Geometric binary operation on two vectors 1 and 2 in three-dimensional "
-"space. It results in a vector which is perpendicular to both and "
-"therefore normal to the plane containing them. The Result is a vector."
-msgstr ""
-"Геометрическая бинарная операция над двумя векторами в трёхмерном "
-"пространстве. В результате получается вектор, перпендикулярный обоим "
-"входным векторам, то есть, нормаль к содержащей их плоскости. В "
-"результате на выходе получается вектор."
-
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:84
-msgid ""
-"Vector &= \\frac{input_1 \\times input_2} {|input_1 \\times input_2|}  "
-"Value &= |input_1 \\times input_2|"
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:50
+msgid "The cross product of A and B."
 msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:102
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:53
+msgid "Project"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:53
+msgid "The projection of A onto B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:56
+msgid "Reflect"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:56
+msgid "The reflection of A around the normal B. B need not be normalized."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:59
+msgid "Dot Product"
+msgstr "Скал. произведение"
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:59
+msgid "The dot product of A and B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:62
+msgid "Distance"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:62
+msgid "The distance between A and B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:65
+msgid "Length"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:65
+msgid "The length of A."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:68
+msgid "The result of multiplying A by the scalar input *Scale*."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:71
 msgid "Normalize"
 msgstr "Нормализовать"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:92
-#, fuzzy
-msgid "Normalizing input 1."
-msgstr "Нормализует входы 1 и 2."
-
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:96
-msgid "Vector &= \\frac{input_1} {|input_1|}  Value &= |input_1|"
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:71
+msgid "The result of normalizing A."
 msgstr ""
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:105
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:74
+msgid "Snap"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:74
+msgid ""
+"The result of rounding A to the largest integer multiple of B less than "
+"or equal A."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:77
+msgid "Floor"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:77
+msgid "The entrywise floor of A."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:80
+msgid "Ceil"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:80
+msgid "The entrywise ceiling of A."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:83
+msgid "Modulo"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:83
+msgid "The entrywise modulo of A by B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:86
+#, fuzzy
+msgid "Fraction"
+msgstr "Операция"
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:86
+msgid "The fractional part of A."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:89
+#, fuzzy
+msgid "Absolute"
+msgstr "Значение"
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:89
+msgid "The entrywise absolute value of A."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:92
+msgid "Minimum"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:92
+msgid "The entrywise minimum from A and B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:96
+msgid "Maximum"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:95
+msgid "The entrywise maximum from A and B."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:99
 msgid "Outputs"
 msgstr "Выходы"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:108
-msgid "Output vector, converted by the node."
-msgstr "Выходной вектор, получающийся после преобразования узла."
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:101
+msgid ""
+"The output of the node is dynamic. It is either a vector or a scalar "
+"depending on the operator. For instance, the *Length* operator have a "
+"scalar output while the *Add* operator have a vector output."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:105
+msgid "Output vector."
+msgstr ""
 
 #: ../../<generated>:1
 msgid "Value"
 msgstr "Значение"
 
-#: ../../manual/render/shader_nodes/converter/vector_math.rst:110
-msgid "Output value, converted by the node."
-msgstr "Выходное значение, получающееся после преобразования узла."
+#: ../../manual/render/shader_nodes/converter/vector_math.rst:107
+msgid "Output value."
+msgstr ""
 
 #~ msgid "Todo."
 #~ msgstr "*Дописать.*"
@@ -224,4 +306,87 @@ msgstr "Выходное значение, получающееся после �
 
 #~ msgid "Vector &= \\frac{input_1} {|input_1|}  Value &= |input_1|"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "The *Vector Math* node performs the "
+#~ "selected math operation on vectors. "
+#~ "Select the math function by clicking "
+#~ "the up-down selector where the "
+#~ "\"Add\" selection is shown."
+#~ msgstr ""
+#~ "Узел *«Векторная математика»* выполняет "
+#~ "указанное математическое преобразование над "
+#~ "векторами. Выберите математическую функцию из"
+#~ " выпадающего списка, в котором показано "
+#~ "значение «Добавить»."
+
+#~ msgid ""
+#~ "Input vector 1 (upper). The value "
+#~ "can be provided by another node or"
+#~ " set manually."
+#~ msgstr ""
+#~ "Входной вектор 1 (верхний). Значение "
+#~ "предоставляется другим узлом или указывается"
+#~ " вручную."
+
+#~ msgid ""
+#~ "Input vector 2 (lower). The value "
+#~ "can be provided by another node or"
+#~ " set manually."
+#~ msgstr ""
+#~ "Входной вектор 2 (нижний). Значение "
+#~ "предоставляется другим узлом или указывается"
+#~ " вручную."
+
+#~ msgid "Select the math function for conversion."
+#~ msgstr "Выпадающий список с математической функцией преобразования."
+
+#~ msgid "Adding input 1 and 2."
+#~ msgstr "Складывает входы 1 и 2."
+
+#~ msgid "Subtracting input 1 and 2."
+#~ msgstr "Вычитает вход 1 из входа 2."
+
+#~ msgid "Average"
+#~ msgstr "Средний"
+
+#~ msgid "Averaging input 1 and 2."
+#~ msgstr "Усредняет входы 1 и 2."
+
+#~ msgid ""
+#~ "Algebraic operation that takes two "
+#~ "equal-length sequences of vectors 1 "
+#~ "and 2 and returns a single number."
+#~ " The Result is a scalar."
+#~ msgstr ""
+#~ "Алгебраическая операция, принимающая две "
+#~ "равных по длине последовательности векторов"
+#~ " и возвращающая одно число. В "
+#~ "результате на выходе получается скалярное "
+#~ "значение."
+
+#~ msgid ""
+#~ "Geometric binary operation on two "
+#~ "vectors 1 and 2 in three-"
+#~ "dimensional space. It results in a "
+#~ "vector which is perpendicular to both"
+#~ " and therefore normal to the plane"
+#~ " containing them. The Result is a "
+#~ "vector."
+#~ msgstr ""
+#~ "Геометрическая бинарная операция над двумя "
+#~ "векторами в трёхмерном пространстве. В "
+#~ "результате получается вектор, перпендикулярный "
+#~ "обоим входным векторам, то есть, нормаль"
+#~ " к содержащей их плоскости. В "
+#~ "результате на выходе получается вектор."
+
+#~ msgid "Normalizing input 1."
+#~ msgstr "Нормализует входы 1 и 2."
+
+#~ msgid "Output vector, converted by the node."
+#~ msgstr "Выходной вектор, получающийся после преобразования узла."
+
+#~ msgid "Output value, converted by the node."
+#~ msgstr "Выходное значение, получающееся после преобразования узла."
 

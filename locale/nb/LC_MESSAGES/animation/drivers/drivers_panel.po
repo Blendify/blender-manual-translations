@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 20:03-0400\n"
+"POT-Creation-Date: 2019-10-26 00:56+1100\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,7 +218,7 @@ msgid ""
 "and only contain letters, digits, or underscores."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:163
+#: ../../manual/animation/drivers/drivers_panel.rst:167
 msgid "Variable Type"
 msgstr ""
 
@@ -283,7 +283,7 @@ msgid ""
 "Driver Variables <drivers-variables>`."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:158
+#: ../../manual/animation/drivers/drivers_panel.rst:162
 msgid "Transform Channel"
 msgstr ""
 
@@ -316,55 +316,173 @@ msgid ""
 "this value can be negative if the object is flipped by negative scaling."
 msgstr ""
 
+#: ../../manual/animation/drivers/drivers_panel.rst:159
+msgid "Mode (Rotation)"
+msgstr ""
+
 #: ../../manual/animation/drivers/drivers_panel.rst:158
+msgid ""
+"For rotation channels, specifies the type of rotation data to use, "
+"including different explicit :term:`Euler` orders. Defaults to using the "
+"Euler order of the target. See `Rotation Channel Modes`_."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:162
 msgid "Space"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:158
+#: ../../manual/animation/drivers/drivers_panel.rst:162
 msgid "World Space, Transform Space, Local Space."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:160
+#: ../../manual/animation/drivers/drivers_panel.rst:164
 msgid "Rotational Difference"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:161
+#: ../../manual/animation/drivers/drivers_panel.rst:165
 msgid ""
 "Provides the value of the rotational difference between two objects or "
 "bones, in radians."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:163
+#: ../../manual/animation/drivers/drivers_panel.rst:167
 msgid "Distance"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:163
+#: ../../manual/animation/drivers/drivers_panel.rst:167
 msgid "Provides the value of the distance between two objects or bones."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:167
+#: ../../manual/animation/drivers/drivers_panel.rst:171
 msgid "Value"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:166
+#: ../../manual/animation/drivers/drivers_panel.rst:170
 msgid "Shows the value of the variable."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:170
+#: ../../manual/animation/drivers/drivers_panel.rst:176
+msgid "Rotation Channel Modes"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:178
+msgid ""
+"Rotation Transform Channels support a number of operation modes, "
+"including:"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:181
+msgid "Auto Euler"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:181
+msgid ""
+"Uses the :term:`Euler` order of the target to decompose rotation into "
+"channels."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:184
+msgid "XYZ Euler, ..."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:184
+msgid "Explicitly specifies the :term:`Euler` rotation order to use."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:187
+msgid "Quaternion"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:187
+msgid "Provides the :term:`Quaternion` representation of the rotation."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:223
+msgid "Swing and X/Y/Z Twist"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:190
+msgid ""
+"Decomposes the rotation into two parts: a swing rotation that aims the "
+"specified axis in its final direction, followed by a twist rotation "
+"around that axis. This is often necessary for driving corrective "
+":doc:`Shape Keys </animation/shape_keys/index>` and bones for organic "
+"joint rotation."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:195
+msgid ""
+"This decomposition is often produced in rigs by using a helper bone with "
+"a :doc:`Damped Track Constraint "
+"</animation/constraints/tracking/damped_track>` to extract the swing "
+"part, and its child with :doc:`Copy Transforms "
+"</animation/constraints/transform/copy_transforms>` to extract the twist "
+"component."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:201
+msgid "The channels values for *Swing and Y Twist* are:"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:206
+msgid "Falloff curves for weighted angles."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:208
+msgid "Y Rotation"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:209
+msgid "True angle of the twist rotation."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:210
+msgid "W Rotation"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:211
+msgid "True angle of the swing rotation, independent of its direction."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:217
+msgid "X Rotation, Z Rotation"
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:213
+msgid "Weighted angles that represent the amount of swing around the X/Z axis."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:215
+msgid ""
+"The magnitude of the angle equals *W Rotation* when the rotation is "
+"purely around that axis, and fades out to zero as the direction changes "
+"toward the other axis, following the falloff curves from the graph on the"
+" right."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:219
+msgid ""
+"Mathematically, the swing angles are computed from quaternion components,"
+" using :math:`2 \\arccos(w)` for *W* and :math:`2 \\arcsin(x)` etc. for "
+"the others. The component of the swing rotation that corresponds to the "
+"twist axis is always 0, and is replaced by the twist angle."
+msgstr ""
+
+#: ../../manual/animation/drivers/drivers_panel.rst:226
 msgid "Expressions"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:180
+#: ../../manual/animation/drivers/drivers_panel.rst:236
 msgid "Expression"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:173
+#: ../../manual/animation/drivers/drivers_panel.rst:229
 msgid ""
 "A text field where you can enter an arbitrary Python expression that "
 "refers to *Driver Variables* by their names."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:176
+#: ../../manual/animation/drivers/drivers_panel.rst:232
 msgid ""
 "The expression has access to a set of standard constants and math "
 "functions provided in the *Driver Namespace*. For an example of adding a "
@@ -372,40 +490,40 @@ msgid ""
 "<driver-namespace>`."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:180
+#: ../../manual/animation/drivers/drivers_panel.rst:236
 msgid ""
 "For performance reasons it is best to use the `Simple Expressions`_ "
 "subset as much as possible."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:189
+#: ../../manual/animation/drivers/drivers_panel.rst:246
 msgid "Use Self"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:183
+#: ../../manual/animation/drivers/drivers_panel.rst:239
 msgid ""
 "If this option is enabled, the variable ``self`` can be used for drivers "
 "to reference their own data. Useful for objects and bones to avoid having"
 " creating a *Driver Variable* pointing to itself."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:186
+#: ../../manual/animation/drivers/drivers_panel.rst:242
 msgid ""
 "Example: ``self.location.x`` applied to the Y rotation property of the "
 "same object will make the object tumble when moving."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:189
+#: ../../manual/animation/drivers/drivers_panel.rst:245
 msgid ""
 "Note that dependencies for properties accessed via ``self`` may not be "
 "fully tracked."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:194
+#: ../../manual/animation/drivers/drivers_panel.rst:251
 msgid "Simple Expressions"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:196
+#: ../../manual/animation/drivers/drivers_panel.rst:253
 msgid ""
 "Blender can evaluate a useful subset of Python driver expressions "
 "directly, which significantly improves performance, especially on multi-"
@@ -413,53 +531,53 @@ msgid ""
 "use the following features:"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:200
+#: ../../manual/animation/drivers/drivers_panel.rst:257
 msgid "Variable Names"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:201
+#: ../../manual/animation/drivers/drivers_panel.rst:258
 msgid "Use only ASCII characters."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:202
+#: ../../manual/animation/drivers/drivers_panel.rst:259
 msgid "Literals"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:203
+#: ../../manual/animation/drivers/drivers_panel.rst:260
 msgid "Floating point and decimal integer."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:204
+#: ../../manual/animation/drivers/drivers_panel.rst:261
 msgid "Globals"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:205
+#: ../../manual/animation/drivers/drivers_panel.rst:262
 msgid "``frame``"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:206
+#: ../../manual/animation/drivers/drivers_panel.rst:263
 msgid "Constants"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:207
+#: ../../manual/animation/drivers/drivers_panel.rst:264
 msgid "``pi``, ``True``, ``False``"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:210
+#: ../../manual/animation/drivers/drivers_panel.rst:267
 msgid "Operators"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:209
+#: ../../manual/animation/drivers/drivers_panel.rst:266
 msgid ""
 "``+``, ``-``, ``*``, ``/``, ``==``, ``!=``, ``<``, ``<=``, ``>``, ``>=``,"
 " ``and``, ``or``, ``not``, conditional operator/ ternary if"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:216
+#: ../../manual/animation/drivers/drivers_panel.rst:273
 msgid "Functions"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:213
+#: ../../manual/animation/drivers/drivers_panel.rst:270
 msgid ""
 "``min``, ``max``, ``radians``, ``degrees``, ``abs``, ``fabs``, ``floor``,"
 " ``ceil``, ``trunc``, ``int``, ``sin``, ``cos``, ``tan``, ``asin``, "
@@ -467,13 +585,13 @@ msgid ""
 "``fmod``"
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:218
+#: ../../manual/animation/drivers/drivers_panel.rst:275
 msgid ""
 "Simple expressions are evaluated even when Python script execution is "
 "disabled."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:220
+#: ../../manual/animation/drivers/drivers_panel.rst:277
 msgid ""
 "When an expression outside of this subset is used, Blender displays a "
 "\"Slow Python expression\" warning. However, as long as the majority of "
@@ -481,17 +599,17 @@ msgid ""
 "is OK."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:226
+#: ../../manual/animation/drivers/drivers_panel.rst:283
 msgid ":ref:`Extending Blender with Python <scripting-index>`."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:228
+#: ../../manual/animation/drivers/drivers_panel.rst:285
 msgid ""
 "`Python <https://www.python.org>`__ and its `documentation "
 "<https://docs.python.org/>`__."
 msgstr ""
 
-#: ../../manual/animation/drivers/drivers_panel.rst:229
+#: ../../manual/animation/drivers/drivers_panel.rst:286
 msgid "`functions.wolfram.com <http://functions.wolfram.com/>`__."
 msgstr ""
 

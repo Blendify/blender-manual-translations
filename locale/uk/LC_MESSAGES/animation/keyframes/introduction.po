@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-08 17:28-0400\n"
+"POT-Creation-Date: 2019-10-26 00:56+1100\n"
 "PO-Revision-Date: 2019-07-16 09:59+0300\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
@@ -58,11 +58,17 @@ msgstr ""
 "інтерполяції (наприклад, Лінеарно -- Linear, Безьє -- Bézier, Квадратично"
 " -- Quadratic тощо)."
 
-#: ../../manual/animation/keyframes/introduction.rst:17
+#: ../../manual/animation/keyframes/introduction.rst:15
+msgid ""
+"An overview of existing keyframes can be seen via the :doc:`Dope Sheet "
+"</editors/dope_sheet/index>` editor."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:19
 msgid "Visualization"
 msgstr "Візуалізація -- Visualization"
 
-#: ../../manual/animation/keyframes/introduction.rst:19
+#: ../../manual/animation/keyframes/introduction.rst:21
 msgid ""
 "There are some important visualization features in the 3D Views that can "
 "help animation."
@@ -70,7 +76,7 @@ msgstr ""
 "Існує кілька важливих можливостей візуалізації у 3D Оглядах, які можуть "
 "допомогти здійснювати анімування."
 
-#: ../../manual/animation/keyframes/introduction.rst:21
+#: ../../manual/animation/keyframes/introduction.rst:23
 msgid ""
 "When the current frame is a keyframe for the current active object, the "
 "name of this object (shown in the upper left corner of the 3D Views) "
@@ -80,19 +86,91 @@ msgstr ""
 "цього об'єкта (показуване у верхньому лівому куті 3D Оглядів) "
 "забарвлюється жовтим."
 
-#: ../../manual/animation/keyframes/introduction.rst:26
+#: ../../manual/animation/keyframes/introduction.rst:29
 msgid ""
-"Bottom: Current frame isn't a keyframe. Top: Current frame is a keyframe "
-"for Cube."
+"Top: Current frame is a keyframe for Cube. Bottom: Current frame isn't a "
+"keyframe."
 msgstr ""
-"Знизу: Поточний кадр не є ключкадром. Зверху: Поточний кадр є ключкадром "
-"для куба -- Cube."
 
-#: ../../manual/animation/keyframes/introduction.rst:32
+#: ../../manual/animation/keyframes/introduction.rst:33
+#, fuzzy
+msgid "Interpolation"
+msgstr "Вступ -- Introduction"
+
+#: ../../manual/animation/keyframes/introduction.rst:35
+msgid ""
+"Keyframe interpolation is represented and controlled by :doc:`animation "
+"curves </editors/graph_editor/fcurves/introduction>`, also known as "
+":term:`F-Curves <F-Curve>`. These curves can be viewed and modified via "
+"the :doc:`Graph Editor </editors/graph_editor/index>`."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:43
+msgid ""
+"Constant, Linear, Quadratic and Bézier interpolation, with Linear "
+"extrapolation."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:45
+msgid ""
+"The X axis of the curve corresponds to time, while Y represents the value"
+" of the property. Keyframes themselves define points of the curve, while "
+"interpolation is controlled by additional parameters."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:48
+msgid ""
+"The :ref:`Interpolation Mode <editors-graph-fcurves-settings-"
+"interpolation>` is the main setting that specifies for each keyframe how "
+"the curve is interpolated from that key to the next one. There are a "
+"number of modes with fixed shapes, e.g. *Constant*, *Linear*, *Quadratic*"
+" etc, and a free form *Bézier* mode."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:53
+msgid ""
+":ref:`Extrapolation <editors-graph-fcurves-settings-extrapolation>` "
+"specifies how the curve extends before the first, and after the last "
+"keyframe. The main available choices are *Constant* and *Linear*; it is "
+"also possible to configure the curve to loop."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:58
+msgid ""
+"*Bézier* interpolation is controlled by handles, which have a "
+":ref:`handle type <editors-graph-fcurves-settings-handles>` and position."
+" The position of *Free* and *Aligned* handles must be set manually from "
+"the Graph editor, while *Vector*, *Automatic* and *Auto Clamped* handles "
+"are computed automatically from keyframe values."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:64
+msgid ""
+"Interpolation, Extrapolation and Handle Type can also be changed from the"
+" :doc:`Dope Sheet </editors/dope_sheet/index>` editor."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:70
+msgid "Handle smoothing modes. Yellow: *None*, Cyan: *Continuous Acceleration*."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:72
+msgid ""
+"The method how the three automatic handle types are computed is "
+"controlled by the per-curve :ref:`Auto Handle Smoothing <graph_editor-"
+"auto-handle-smoothing>` setting. The *None* mode resembles how most other"
+" software works and only considers the values of the immediately adjacent"
+" keys. The *Continuous Acceleration* mode considers the shape of the "
+"whole curve, which produces smoother results out of the box, but means "
+"that changes in one key affect interpolation over a larger section of the"
+" curve; it also tends to overshoot more with *Automatic* handles."
+msgstr ""
+
+#: ../../manual/animation/keyframes/introduction.rst:84
 msgid "Keyframe Types"
 msgstr "Типи Ключкадрів -- Keyframe Types"
 
-#: ../../manual/animation/keyframes/introduction.rst:34
+#: ../../manual/animation/keyframes/introduction.rst:86
 msgid ""
 "For visually distinguishing regular keyframes from different animation "
 "events or states (extremes, breakdowns, or other in-betweens) there is "
@@ -103,31 +181,31 @@ msgstr ""
 " проміжні -- in-betweens) існує можливість застосування різних кольорів "
 "забарвлення для їх візуалізації."
 
-#: ../../manual/animation/keyframes/introduction.rst:40
+#: ../../manual/animation/keyframes/introduction.rst:93
 msgid "Left: not selected; Right: selected."
 msgstr "Зліва: не вибране; Справа: вибране."
 
-#: ../../manual/animation/keyframes/introduction.rst:42
+#: ../../manual/animation/keyframes/introduction.rst:95
 msgid "Keyframe (white / yellow diamond)"
 msgstr "Ключкадр -- Keyframe (білий / жовтий діамант)"
 
-#: ../../manual/animation/keyframes/introduction.rst:43
+#: ../../manual/animation/keyframes/introduction.rst:96
 msgid "Normal keyframe."
 msgstr "Звичайний ключкадр."
 
-#: ../../manual/animation/keyframes/introduction.rst:44
+#: ../../manual/animation/keyframes/introduction.rst:97
 msgid "Breakdown (small cyan diamond)"
 msgstr "Розбивка -- Breakdown (маленький блакитний діамант)"
 
-#: ../../manual/animation/keyframes/introduction.rst:45
+#: ../../manual/animation/keyframes/introduction.rst:98
 msgid "Breakdown state. e.g. for transitions between key poses."
 msgstr "Стан розбивки. наприклад для переходів між ключовими позами."
 
-#: ../../manual/animation/keyframes/introduction.rst:47
+#: ../../manual/animation/keyframes/introduction.rst:100
 msgid "Moving Hold (dark gray / orange diamond)"
 msgstr "Утримання Рухання -- Moving Hold (темно сірий / оранжевий діамант)"
 
-#: ../../manual/animation/keyframes/introduction.rst:47
+#: ../../manual/animation/keyframes/introduction.rst:100
 msgid ""
 "A keyframe that adds a small amount of motion around a holding pose. In "
 "the Dope Sheet it will also display a bar between them."
@@ -136,19 +214,19 @@ msgstr ""
 "Аркуші Експозицій -- Dope Sheet це також буде показуватися смугою між "
 "ними."
 
-#: ../../manual/animation/keyframes/introduction.rst:49
+#: ../../manual/animation/keyframes/introduction.rst:102
 msgid "Extreme (big pink diamond)"
 msgstr "Екстремум -- Extreme (великий рожевий діамант)"
 
-#: ../../manual/animation/keyframes/introduction.rst:50
+#: ../../manual/animation/keyframes/introduction.rst:103
 msgid "An 'extreme' state, or some other purpose as needed."
 msgstr "Стан екстремуму -- 'extreme' або для деяких інших цілей при потребі."
 
-#: ../../manual/animation/keyframes/introduction.rst:53
+#: ../../manual/animation/keyframes/introduction.rst:106
 msgid "Jitter (tiny green diamond)"
 msgstr "Тремтіння -- Jitter (крихітний зелений діамант)"
 
-#: ../../manual/animation/keyframes/introduction.rst:52
+#: ../../manual/animation/keyframes/introduction.rst:105
 msgid ""
 "A filler or baked keyframe for keying on ones, or some other purpose as "
 "needed."
@@ -156,11 +234,12 @@ msgstr ""
 "Заповнювач або запечений ключкадр для ключування чи для деяких інших "
 "цілей при потребі."
 
-#: ../../manual/animation/keyframes/introduction.rst:58
-msgid "Handles & Interpolation Display"
+#: ../../manual/animation/keyframes/introduction.rst:111
+#, fuzzy
+msgid "Handles & Interpolation Mode Display"
 msgstr "Показ Держаків та Інтерполяції -- Handles & Interpolation Display"
 
-#: ../../manual/animation/keyframes/introduction.rst:60
+#: ../../manual/animation/keyframes/introduction.rst:113
 msgid ""
 "Dope Sheet can display the Bézier handle type associated with the "
 "keyframe, and mark segments with non-Bézier interpolation. This "
@@ -172,11 +251,7 @@ msgstr ""
 "полегшує базове редагування інтерполяції без використання Редактора "
 "Графів -- Graph Editor."
 
-#: ../../manual/animation/keyframes/introduction.rst:66
-msgid "Top: summary; Middle: Bézier; Bottom: linear."
-msgstr "Зверху: сумарно; Посередині: Безьє; Знизу: лінеарно."
-
-#: ../../manual/animation/keyframes/introduction.rst:68
+#: ../../manual/animation/keyframes/introduction.rst:117
 msgid ""
 "The icon shape represents the type of the :ref:`Bézier Handles <editors-"
 "graph-fcurves-settings-handles>` belonging to the keyframe."
@@ -185,47 +260,52 @@ msgstr ""
 "<editors-graph-fcurves-settings-handles>`, що належать до цього "
 "ключкадру."
 
-#: ../../manual/animation/keyframes/introduction.rst:73
+#: ../../manual/animation/keyframes/introduction.rst:123
+#, fuzzy
+msgid "From top: summary, Bézier, linear."
+msgstr "Зверху: сумарно; Посередині: Безьє; Знизу: лінеарно."
+
+#: ../../manual/animation/keyframes/introduction.rst:127
 msgid "Circle"
 msgstr "Коло -- Circle"
 
-#: ../../manual/animation/keyframes/introduction.rst:74
+#: ../../manual/animation/keyframes/introduction.rst:128
 msgid "Auto Clamped (default)"
 msgstr "Авто Затиснуто -- Auto Clamped (стандартно)"
 
-#: ../../manual/animation/keyframes/introduction.rst:75
+#: ../../manual/animation/keyframes/introduction.rst:129
 msgid "Circle With Dot"
 msgstr "Коло З Крапкою -- Circle With Dot"
 
-#: ../../manual/animation/keyframes/introduction.rst:76
+#: ../../manual/animation/keyframes/introduction.rst:130
 msgid "Automatic"
 msgstr "Автоматично -- Automatic"
 
-#: ../../manual/animation/keyframes/introduction.rst:77
+#: ../../manual/animation/keyframes/introduction.rst:131
 msgid "Square"
 msgstr "Квадрат -- Square"
 
-#: ../../manual/animation/keyframes/introduction.rst:78
+#: ../../manual/animation/keyframes/introduction.rst:132
 msgid "Vector"
 msgstr "Вектор -- Vector"
 
-#: ../../manual/animation/keyframes/introduction.rst:79
+#: ../../manual/animation/keyframes/introduction.rst:133
 msgid "Clipped Diamond"
 msgstr "Обрізаний Діамант -- Clipped Diamond"
 
-#: ../../manual/animation/keyframes/introduction.rst:80
+#: ../../manual/animation/keyframes/introduction.rst:134
 msgid "Aligned"
 msgstr "Вирівняно -- Aligned"
 
-#: ../../manual/animation/keyframes/introduction.rst:81
+#: ../../manual/animation/keyframes/introduction.rst:135
 msgid "Diamond"
 msgstr "Діамант -- Diamond"
 
-#: ../../manual/animation/keyframes/introduction.rst:82
+#: ../../manual/animation/keyframes/introduction.rst:136
 msgid "Free"
 msgstr "Вільно -- Free"
 
-#: ../../manual/animation/keyframes/introduction.rst:84
+#: ../../manual/animation/keyframes/introduction.rst:138
 msgid ""
 "If the handles of a keyframe have different types, or in case of summary "
 "rows representing multiple curves, out of the available choices the icon "
@@ -239,7 +319,7 @@ msgstr ""
 "означає, що якщо групований ряд використовує іконку кола, то гарантовано,"
 " що жоден з цих групованих каналів не має авто ключів."
 
-#: ../../manual/animation/keyframes/introduction.rst:90
+#: ../../manual/animation/keyframes/introduction.rst:144
 msgid ""
 "Horizontal green lines mark the use of non-Bézier :ref:`Interpolation "
 "<editors-graph-fcurves-settings-interpolation>`. The line is dimmed in "
@@ -250,7 +330,7 @@ msgstr ""
 "Ця лінія тьмяніє у сумарних рядах, якщо не всі груповані канали мають "
 "однакову інтерполяцію."
 
-#: ../../manual/animation/keyframes/introduction.rst:93
+#: ../../manual/animation/keyframes/introduction.rst:148
 #, fuzzy
 msgid ""
 "Display of this information can be disabled via the *Show Handles and "
@@ -261,4 +341,13 @@ msgstr ""
 "Держаків Та Інтерполяції» -- *Show Handles and Interpolation* меню "
 "«Огляд» -- :ref:`View Menu <dope-sheet-view-menu>` Аркуша Експозицій -- "
 "Dope Sheet."
+
+#~ msgid ""
+#~ "Bottom: Current frame isn't a keyframe."
+#~ " Top: Current frame is a keyframe "
+#~ "for Cube."
+#~ msgstr ""
+#~ "Знизу: Поточний кадр не є ключкадром."
+#~ " Зверху: Поточний кадр є ключкадром "
+#~ "для куба -- Cube."
 

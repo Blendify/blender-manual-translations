@@ -9,100 +9,191 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-19 14:01-0400\n"
-"PO-Revision-Date: 1971-01-02 00:00-0000\n"
+"POT-Creation-Date: 2019-10-26 00:56+1100\n"
+"PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:4
+#: ../../manual/render/shader_nodes/textures/noise.rst:5
 msgid "Noise Texture Node"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:9
+#: ../../manual/render/shader_nodes/textures/noise.rst:10
 msgid "Noise Texture Node."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:12
+#: ../../manual/render/shader_nodes/textures/noise.rst:12
 msgid ""
-"The *Noise Texture* is used to add procedural Perlin noise texture, "
-"similar to the *Clouds* texture in *Blender Internal*."
+"The *Noise Texture* node evaluates a fractal Perlin noise at the input "
+"texture coordinates."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:16
+#: ../../manual/render/shader_nodes/textures/noise.rst:16
 msgid "Inputs"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:19
+#: ../../manual/render/shader_nodes/textures/noise.rst:18
+msgid ""
+"The inputs are dynamic, they become available if needed depending on the "
+"node properties."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:21
 msgid "Vector"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:19
+#: ../../manual/render/shader_nodes/textures/noise.rst:21
 msgid ""
-"Texture coordinate to sample texture at; defaults to Generated texture "
-"coordinates if the socket is left unconnected."
+"Texture coordinate to evaluate the noise at; defaults to *Generated* "
+"texture coordinates if the socket is left unconnected."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:21
+#: ../../manual/render/shader_nodes/textures/noise.rst:23
+msgid "W"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:24
+msgid "Texture coordinate to evaluate the noise at."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:25
 msgid "Scale"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:22
-msgid "Overall texture scale."
+#: ../../manual/render/shader_nodes/textures/noise.rst:26
+msgid "Scale of the base noise octave."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:23
+#: ../../manual/render/shader_nodes/textures/noise.rst:29
 msgid "Detail"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:24
-msgid "Amount of noise detail."
+#: ../../manual/render/shader_nodes/textures/noise.rst:28
+msgid ""
+"Number of noise octaves. The fractional part of the input is multiplied "
+"by the magnitude of the highest octave. Higher number of octaves "
+"corresponds to a higher render time."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:27
+#: ../../manual/render/shader_nodes/textures/noise.rst:33
 msgid "Distortion"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:26
+#: ../../manual/render/shader_nodes/textures/noise.rst:32
 msgid "Amount of distortion."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:30
+#: ../../manual/render/shader_nodes/textures/noise.rst:36
 msgid "Properties"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:32
-msgid "This node has no properties."
+#: ../../manual/render/shader_nodes/textures/noise.rst:48
+msgid "Dimensions"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:36
+#: ../../manual/render/shader_nodes/textures/noise.rst:39
+msgid "The dimensions of the space to evaluate the noise in."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:41
+msgid "1D"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:42
+msgid "Evaluate the noise in 1D space at the input *W*."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:43
+msgid "2D"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:44
+msgid ""
+"Evaluate the noise in 2D space at the input *Vector*. The Z component is "
+"ignored."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:45
+msgid "3D"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:46
+msgid "Evaluate the noise in 3D space at the input *Vector*."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:48
+msgid "4D"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:48
+msgid ""
+"Evaluate the noise in 4D space at the input *Vector* and the input *W* as"
+" the fourth dimension."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:50
+msgid ""
+"Higher dimensions corresponds to higher render time, so lower dimensions "
+"should be used unless higher dimensions are necessary."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:55
 msgid "Outputs"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:38
-msgid "Color"
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:39
-msgid "Texture color output."
-msgstr ""
-
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:42
+#: ../../manual/render/shader_nodes/textures/noise.rst:57
 msgid "Factor"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:41
-msgid "Texture intensity output."
+#: ../../manual/render/shader_nodes/textures/noise.rst:58
+msgid "Value of fractal noise."
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:45
+#: ../../manual/render/shader_nodes/textures/noise.rst:61
+msgid "Color"
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:60
+msgid "Color with different fractal noise in each component."
+msgstr ""
+
+#: ../../manual/render/shader_nodes/textures/noise.rst:64
 msgid "Examples"
 msgstr ""
 
-#: ../../manual/render/cycles/nodes/types/textures/noise.rst:50
+#: ../../manual/render/shader_nodes/textures/noise.rst:68
 msgid "Noise Texture with high detail."
 msgstr ""
+
+#~ msgid ""
+#~ "The *Noise Texture* is used to add"
+#~ " procedural Perlin noise texture, similar"
+#~ " to the *Clouds* texture in *Blender"
+#~ " Internal*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Texture coordinate to sample texture at;"
+#~ " defaults to Generated texture coordinates"
+#~ " if the socket is left unconnected."
+#~ msgstr ""
+
+#~ msgid "Overall texture scale."
+#~ msgstr ""
+
+#~ msgid "Amount of noise detail."
+#~ msgstr ""
+
+#~ msgid "This node has no properties."
+#~ msgstr ""
+
+#~ msgid "Texture color output."
+#~ msgstr ""
+
+#~ msgid "Texture intensity output."
+#~ msgstr ""
 
