@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
+"POT-Creation-Date: 2019-10-26 00:56+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,89 +47,52 @@ msgstr ""
 msgid ":menuselection:`Render --> Shadows`"
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:33
-msgid "Method"
-msgstr ""
-
-#: ../../manual/render/eevee/render_settings/shadows.rst:18
-msgid ""
-"Select the shadow map type. It changes how shadows are stored and "
-"filtered."
-msgstr ""
-
-#: ../../manual/render/eevee/render_settings/shadows.rst:25
-msgid ":abbr:`ESM (Exponential Shadow Mapping)`"
-msgstr ""
-
-#: ../../manual/render/eevee/render_settings/shadows.rst:21
-msgid ""
-"They are fast to filter but light leaking may occur near an occluder. "
-"This can be minimized by increasing the *Exponent* parameter. Another "
-"issue is the artifacts present at depth discontinuity. Unfortunately, "
-"there is no workaround for this issue and the only way to minimize it is "
-"to reduce the *Soft* parameter."
-msgstr ""
-
-#: ../../manual/render/eevee/render_settings/shadows.rst:33
-msgid ":abbr:`VSM (Variance Shadow Mapping)`"
-msgstr ""
-
-#: ../../manual/render/eevee/render_settings/shadows.rst:28
-msgid ""
-"Filters nicely and gives smooth shadow map appearance across the whole "
-"shadow range. However grainy artifacts will be visible when using a low "
-"bit depth. It is also prone to light leaking when two occluders overlap. "
-"In this case the shadows can be overdarkened to reduce the leak, by using"
-" the *Bleed Bias* parameter. VSM uses twice as much memory as ESM, and is"
-" slower."
-msgstr ""
-
-#: ../../manual/render/eevee/render_settings/shadows.rst:37
+#: ../../manual/render/eevee/render_settings/shadows.rst:19
 msgid "Cube Size"
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:36
+#: ../../manual/render/eevee/render_settings/shadows.rst:18
 msgid ""
 "Size of the shadow cubemaps used to shadow Point, Area and Spot lights. "
 "Higher shadow map size will give higher precision and sharper shadows."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:40
+#: ../../manual/render/eevee/render_settings/shadows.rst:22
 msgid "Cascade Size"
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:40
+#: ../../manual/render/eevee/render_settings/shadows.rst:22
 msgid ""
 "Size of one cascade used by *Cascaded Shadow Maps*. This is only for Sun "
 "lights."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:44
+#: ../../manual/render/eevee/render_settings/shadows.rst:26
 msgid "High Bitdepth"
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:43
+#: ../../manual/render/eevee/render_settings/shadows.rst:25
 msgid ""
 "This option can help reduce some artifacts due to float imprecision "
 "inside the shadow maps. This option effectively double the memory usage "
 "of shadow maps and will slow down their update."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:47
+#: ../../manual/render/eevee/render_settings/shadows.rst:29
 msgid "Soft Shadows"
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:47
+#: ../../manual/render/eevee/render_settings/shadows.rst:29
 msgid ""
 "Randomize the shadow maps origin to create soft shadows. It needs a lot "
 "of samples to get rid of the banding."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:65
+#: ../../manual/render/eevee/render_settings/shadows.rst:47
 msgid "Light Threshold"
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:50
+#: ../../manual/render/eevee/render_settings/shadows.rst:32
 msgid ""
 "In order to avoid costly setup time, this distance is first computed "
 "automatically based on a light threshold. The distance is computed at the"
@@ -137,7 +100,7 @@ msgid ""
 "found inside the :menuselection:`Render Settings panel --> Shadow tab`."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:55
+#: ../../manual/render/eevee/render_settings/shadows.rst:37
 msgid ""
 "This light threshold does not take the light shape into account and may "
 "not suit every case. That is why we provide a per-light override where "
@@ -145,24 +108,24 @@ msgid ""
 "Object Data --> Light --> Custom Distance`)."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:60
+#: ../../manual/render/eevee/render_settings/shadows.rst:42
 msgid ""
 "The influence distance is also used as shadow far clip distance, which "
 "might affect how shadows looks. This influence distance does not concern "
 "sun lights that still have a far clip distance."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:65
+#: ../../manual/render/eevee/render_settings/shadows.rst:47
 msgid ":doc:`Custom Limit </render/eevee/lighting>`."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:69
+#: ../../manual/render/eevee/render_settings/shadows.rst:51
 msgid ""
 "The Soft Shadows method is not physically based and will not match Cycles"
 " for very large lights."
 msgstr ""
 
-#: ../../manual/render/eevee/render_settings/shadows.rst:73
+#: ../../manual/render/eevee/render_settings/shadows.rst:55
 msgid ""
 "A 512 px cubemap has 6 x 512 x 512 pixels in it. Tweaking the *Size* "
 "parameters can have a big impact on memory consumption and performance."
@@ -530,5 +493,46 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ":ref:`Limitations <eevee-limitations-shadows>`."
+#~ msgstr ""
+
+#~ msgid "Method"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select the shadow map type. It "
+#~ "changes how shadows are stored and "
+#~ "filtered."
+#~ msgstr ""
+
+#~ msgid ":abbr:`ESM (Exponential Shadow Mapping)`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "They are fast to filter but light"
+#~ " leaking may occur near an occluder."
+#~ " This can be minimized by increasing"
+#~ " the *Exponent* parameter. Another issue"
+#~ " is the artifacts present at depth"
+#~ " discontinuity. Unfortunately, there is no"
+#~ " workaround for this issue and the"
+#~ " only way to minimize it is to"
+#~ " reduce the *Soft* parameter."
+#~ msgstr ""
+
+#~ msgid ":abbr:`VSM (Variance Shadow Mapping)`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Filters nicely and gives smooth shadow"
+#~ " map appearance across the whole "
+#~ "shadow range. However grainy artifacts "
+#~ "will be visible when using a low"
+#~ " bit depth. It is also prone to"
+#~ " light leaking when two occluders "
+#~ "overlap. In this case the shadows "
+#~ "can be overdarkened to reduce the "
+#~ "leak, by using the *Bleed Bias* "
+#~ "parameter. VSM uses twice as much "
+#~ "memory as ESM, and is slower."
 #~ msgstr ""
 
