@@ -5,13 +5,15 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-18 15:55-0400\n"
-"PO-Revision-Date: 2018-06-17 21:30+0200\n"
+"PO-Revision-Date: 2019-10-17 21:10+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"Language: fr\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:4
 msgid "Sampling"
@@ -23,33 +25,18 @@ msgstr "Référence"
 
 #: ../../manual/render/cycles/render_settings/sampling.rst
 msgid "Panel"
-msgstr "Panneau "
+msgstr "Panneau"
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:9
 msgid ":menuselection:`Render --> Sampling`"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:11
-msgid ""
-"The integrator is the rendering algorithm used to compute the lighting. "
-"Cycles currently supports a path tracing integrator with direct light "
-"sampling. It works well for various lighting setups, but is not as "
-"suitable for caustics and some other complex lighting situations."
-msgstr ""
-"L'intégrateur est l'algorithme de rendu utilisé pour calculer "
-"l'éclairage. cycles prend en charge actuellement un intégrateur de chemin"
-" avec un échantillonnage de lumière directe. Il fonctionne bien pour des "
-"configurations d'éclairage diverses, mais n'est pas aussi adapté pour les"
-" caustiques et quelques autres situations d'éclairage complexes."
+msgid "The integrator is the rendering algorithm used to compute the lighting. Cycles currently supports a path tracing integrator with direct light sampling. It works well for various lighting setups, but is not as suitable for caustics and some other complex lighting situations."
+msgstr "L'intégrateur est l'algorithme de rendu utilisé pour calculer l'éclairage. cycles prend en charge actuellement un intégrateur de chemin avec un échantillonnage de lumière directe. Il fonctionne bien pour des configurations d'éclairage diverses, mais n'est pas aussi adapté pour les caustiques et quelques autres situations d'éclairage complexes."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:16
-msgid ""
-"Rays are traced from the camera into the scene, bouncing around until "
-"they find a light source such as a light, an object emitting light, or "
-"the world background. To find lights and surfaces emitting light, both "
-"indirect light sampling (letting the ray follow the surface BSDF) and "
-"direct light sampling (picking a light source and tracing a ray towards "
-"it) are used."
+msgid "Rays are traced from the camera into the scene, bouncing around until they find a light source such as a light, an object emitting light, or the world background. To find lights and surfaces emitting light, both indirect light sampling (letting the ray follow the surface BSDF) and direct light sampling (picking a light source and tracing a ray towards it) are used."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:39
@@ -57,24 +44,15 @@ msgid "Integrator"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:23
-#, fuzzy
-msgid ""
-"There are two sample methods that can be used: *Path Tracing* and "
-"*Branched Path Tracing*."
-msgstr ""
-"il y a deux modes d'intégrateur qui peuvent être utilisés : *Path "
-"Tracing* et *Branched Path Tracing*."
+msgid "There are two sample methods that can be used: *Path Tracing* and *Branched Path Tracing*."
+msgstr "Il y a deux méthodes d'échantillonnage qui peuvent être utilisés : *Path Tracing* et *Branched Path Tracing*."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:28
 msgid "Path Tracing"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:26
-msgid ""
-"The *Path Tracing* integrator is a pure path tracer; at each hit it will "
-"bounce light in one direction and pick one light to receive lighting "
-"from. This makes each individual sample faster to compute, but will "
-"typically require more samples to clean up the noise."
+msgid "The *Path Tracing* integrator is a pure path tracer; at each hit it will bounce light in one direction and pick one light to receive lighting from. This makes each individual sample faster to compute, but will typically require more samples to clean up the noise."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:39
@@ -82,20 +60,11 @@ msgid "Branched Path Tracing"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:31
-msgid ""
-"The non-progressive Branched Path Tracing integrator offers finer control"
-" over sampling. It is similar to *Path Tracing*, but at the first hit it "
-"will split the path for different surface components and will take all "
-"lights into account for shading instead of just one."
+msgid "The non-progressive Branched Path Tracing integrator offers finer control over sampling. It is similar to *Path Tracing*, but at the first hit it will split the path for different surface components and will take all lights into account for shading instead of just one."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:35
-msgid ""
-"This makes each sample slower, but will reduce noise, especially in "
-"scenes dominated by direct or one-bounce lighting. To get the same number"
-" of diffuse samples as in the path tracing integrator, note that e.g. 250"
-" path tracing samples = 10 AA Samples x 25 diffuse samples. The Sampling "
-"panel shows this total number of samples."
+msgid "This makes each sample slower, but will reduce noise, especially in scenes dominated by direct or one-bounce lighting. To get the same number of diffuse samples as in the path tracing integrator, note that e.g. 250 path tracing samples = 10 AA Samples x 25 diffuse samples. The Sampling panel shows this total number of samples."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:45
@@ -103,16 +72,12 @@ msgid "Render"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:42
-msgid ""
-"Number of paths to trace for each pixel in the final render. As more "
-"samples are taken, the solution becomes less noisy and more accurate."
-msgstr ""
+msgid "Number of paths to trace for each pixel in the final render. As more samples are taken, the solution becomes less noisy and more accurate."
+msgstr "Nombre de chemins à tracer pour chaque pixel dans le rendu final. Avec un nombre croissant d'échantillons, la solution devient moins bruitée et plus précise."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:45
-msgid ""
-"When using *Branched Path Tracing*, this changes the *AA Samples* which "
-"are multiplied by the `Sub Samples`_ and improve anti-aliasing."
-msgstr ""
+msgid "When using *Branched Path Tracing*, this changes the *AA Samples* which are multiplied by the `Sub Samples`_ and improve anti-aliasing."
+msgstr "À l'utilisation de *Branched Path Tracing*,  ceci change les *AA Samples* qui sont multipliés par les  `Sub Samples`_ et améliorent l'anti-aliasing."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:49
 msgid "Viewport"
@@ -128,7 +93,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:54
 msgid "The panel is visible only when using *Branched Path Tracing*."
-msgstr ""
+msgstr "Ce panneau n'est visible qu'à l'utilisation de *Branched Path Tracing*."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:56
 msgid "Diffuse"
@@ -136,9 +101,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:57
 msgid "Number of diffuse bounce samples to take for each AA sample."
-msgstr ""
-"Nombre d'échantillons de rebond *diffuse* à prendre pour chaque "
-"échantillon AA."
+msgstr "Nombre d'échantillons de rebond *diffuse* à prendre pour chaque échantillon AA."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:58
 msgid "Glossy"
@@ -154,9 +117,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:61
 msgid "Number of transmission bounce samples to take for each AA sample."
-msgstr ""
-"Nombre d'échantillons de rebond de *transformation *à prendre pour chaque"
-" échantillon AA."
+msgstr "Nombre d'échantillons de rebond de *transformation *à prendre pour chaque échantillon AA."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:62
 msgid "AO"
@@ -164,9 +125,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:63
 msgid "Number of ambient occlusion samples to take for each AA sample."
-msgstr ""
-"nombre d'échantillons d'occlusion ambiante à prendre pour chaque "
-"échantillon AA."
+msgstr "Nombre d'échantillons d'occlusion ambiante à prendre pour chaque échantillon AA."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:64
 msgid "Mesh Light"
@@ -174,9 +133,7 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:65
 msgid "Number of mesh light samples to take for each AA sample."
-msgstr ""
-"Nombre d'échantillons de lumière de maillage à prendre pour chaque "
-"échantillon AA."
+msgstr "Nombre d'échantillons de lumière de maillage à prendre pour chaque échantillon AA."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:66
 msgid "Subsurface"
@@ -184,18 +141,15 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:67
 msgid "Number of subsurface scattering samples to take for each AA sample."
-msgstr ""
-"Nombre d'échantillons de *subsurface scattering* à prendre pour chaque "
-"échantillon AA."
+msgstr "Nombre d'échantillons de *subsurface scattering* à prendre pour chaque échantillon AA."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:70
 msgid "Volume"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:69
-#, fuzzy
 msgid "Number of volume scattering samples to take for each AA sample."
-msgstr "Nombre d'échantillons de rebond  à prendre pour chaque échantillon AA."
+msgstr "Nombre d'échantillons de *volume scattering* à prendre pour chaque échantillon AA."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:73
 msgid "Advanced"
@@ -207,24 +161,15 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:76
 msgid "Seed value for integrator to get different noise patterns."
-msgstr ""
+msgstr "Valeur de graine pour l'intégrateur pour obtenir différents modèles de bruit."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:81
 msgid "Animate Seed (clock icon)"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:79
-#, fuzzy
-msgid ""
-"This button, which can be found on the right side of the *Seed* value, "
-"can be used to give different seed values. It is a good idea to enable "
-"this when making animation because in the real world each frame has a "
-"different noise pattern."
-msgstr ""
-"Ce bouton qui peut être trouvé sur le côté droit de la valeur *Seed* qui "
-"peut être utilisé pour donner différentes valeurs de graine (seed). C'est"
-" une bonne idée pour activer ceci pendant animation parce que dans le "
-"monde réel chaque trame a un motif de bruit différent. "
+msgid "This button, which can be found on the right side of the *Seed* value, can be used to give different seed values. It is a good idea to enable this when making animation because in the real world each frame has a different noise pattern."
+msgstr "Ce bouton, qui se trouve sur le côté droit de la valeur *Seed*, peut être utilisé pour donner différentes valeurs de graine (seed). C'est une bonne idée d'activer ceci pendant l'élaboration de l'animation parce que dans le monde réel chaque trame a un modèle de bruit différent."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:92
 msgid "Pattern"
@@ -232,18 +177,14 @@ msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:84
 msgid "Random sampling pattern used by the integrator."
-msgstr ""
+msgstr "Modèle d'échantillonnage aléatoire utilisé par l'intégrateur."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:87
 msgid "Sobol"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:87
-msgid ""
-"Uses a Sobol pattern to decide the random sampling pattern used by the "
-"integrator. See `Sobol sequence "
-"<https://en.wikipedia.org/wiki/Sobol_sequence>`__ on Wikipedia for more "
-"information."
+msgid "Uses a Sobol pattern to decide the random sampling pattern used by the integrator. See `Sobol sequence <https://en.wikipedia.org/wiki/Sobol_sequence>`__ on Wikipedia for more information."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:92
@@ -251,11 +192,7 @@ msgid "Correlated Multi-Jitter"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:90
-msgid ""
-"Uses a Correlated Multi-Jitter pattern to decide the random sampling "
-"pattern used by the integrator. See `this Pixar paper "
-"<http://graphics.pixar.com/library/MultiJitteredSampling/paper.pdf>`__ "
-"for more information."
+msgid "Uses a Correlated Multi-Jitter pattern to decide the random sampling pattern used by the integrator. See `this Pixar paper <http://graphics.pixar.com/library/MultiJitteredSampling/paper.pdf>`__ for more information."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:95
@@ -271,12 +208,7 @@ msgid "Min Light Bounces"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:98
-msgid ""
-"Minimum number of light bounces for each path, after which the integrator"
-" uses Russian Roulette to terminate paths that contribute less to the "
-"image. Setting this higher gives less noise, but may also increase render"
-" time considerably. For a low number of bounces, it is strongly "
-"recommended to set this equal to the maximum number of bounces."
+msgid "Minimum number of light bounces for each path, after which the integrator uses Russian Roulette to terminate paths that contribute less to the image. Setting this higher gives less noise, but may also increase render time considerably. For a low number of bounces, it is strongly recommended to set this equal to the maximum number of bounces."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:105
@@ -284,10 +216,7 @@ msgid "Min Transparent Bounces"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:104
-msgid ""
-"Minimum number of transparent bounces. Setting this higher reduces noise "
-"in the first bounces, but can also be less efficient for more complex "
-"geometry like hair and volumes."
+msgid "Minimum number of transparent bounces. Setting this higher reduces noise in the first bounces, but can also be less efficient for more complex geometry like hair and volumes."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:114
@@ -295,14 +224,7 @@ msgid "Light Threshold"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:108
-msgid ""
-"Probabilistically terminates light samples when the light contribution is"
-" below this threshold (more noise but faster rendering). Zero disables "
-"the test and never ignores lights. This is useful because in large scenes"
-" with many light sources, some might only contribute a small amount to "
-"the final image, and increase render times. Using this setting can "
-"decrease the render times needed to calculate the rays which in the end "
-"have very little affect on the image."
+msgid "Probabilistically terminates light samples when the light contribution is below this threshold (more noise but faster rendering). Zero disables the test and never ignores lights. This is useful because in large scenes with many light sources, some might only contribute a small amount to the final image, and increase render times. Using this setting can decrease the render times needed to calculate the rays which in the end have very little affect on the image."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:120
@@ -310,10 +232,7 @@ msgid "Sample All Direct Lights"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:117
-msgid ""
-"When enabled, Cycles will sample all lights in the scene for direct "
-"bounces, instead of randomly picking one. Disabling this can improve the "
-"performance, but will need a lot of *Samples*, to clear up the render."
+msgid "When enabled, Cycles will sample all lights in the scene for direct bounces, instead of randomly picking one. Disabling this can improve the performance, but will need a lot of *Samples*, to clear up the render."
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:120
@@ -326,9 +245,7 @@ msgid "Sample All Indirect Lights"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:123
-msgid ""
-"Similar to direct light, but for indirect lights. This can reduce noise "
-"in scenes with many lights."
+msgid "Similar to direct light, but for indirect lights. This can reduce noise in scenes with many lights."
 msgstr ""
 
 #: ../../<generated>:1
@@ -336,12 +253,8 @@ msgid "Layer Samples"
 msgstr ""
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:131
-msgid ""
-"When render layers have per layer number of samples set, this option "
-"specifies how to use them."
-msgstr ""
-"Quand des calques de rendu ont par nombre d'échantillon , cette option "
-"spécifie la manière de les utiliser."
+msgid "When render layers have per layer number of samples set, this option specifies how to use them."
+msgstr "Quand des calques de rendu ont par nombre d'échantillon , cette option spécifie la manière de les utiliser."
 
 #: ../../manual/render/cycles/render_settings/sampling.rst:133
 msgid "Use"
@@ -771,4 +684,3 @@ msgstr "Ignorer les réglages d'échantillon de calque de rendu."
 
 #~ msgid "Light Sampling Threshold"
 #~ msgstr ""
-
