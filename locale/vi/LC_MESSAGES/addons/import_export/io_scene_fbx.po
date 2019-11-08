@@ -47,34 +47,19 @@ msgid "Usage"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:16
-msgid ""
-"This format is mainly use for interchanging character animations between "
-"applications and is supported by applications such as Cinema4D, Maya, "
-"Autodesk 3ds Max, Wings3D and engines such as Unity3D, Unreal Engine "
-"3/UDK and Unreal Engine 4."
+msgid "This format is mainly use for interchanging character animations between applications and is supported by applications such as Cinema4D, Maya, Autodesk 3ds Max, Wings3D and engines such as Unity3D, Unreal Engine 3/UDK and Unreal Engine 4."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:20
-msgid ""
-"The exporter can bake mesh modifiers and animation into the FBX so the "
-"final result looks the same as in Blender."
+msgid "The exporter can bake mesh modifiers and animation into the FBX so the final result looks the same as in Blender."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:24
-msgid ""
-"Bones would need to get a correction to their orientation (FBX bones "
-"seems to be -X aligned, Blender's are Y aligned), this does not affect "
-"skinning or animation, but imported bones in other applications will look"
-" wrong."
+msgid "Bones would need to get a correction to their orientation (FBX bones seems to be -X aligned, Blender's are Y aligned), this does not affect skinning or animation, but imported bones in other applications will look wrong."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:27
-msgid ""
-"Animations (FBX AnimStacks, Blender actions) **are not linked** to their "
-"object, because there is no real way to know which stack to use as "
-"'active' action for a given object, mesh or bone. This may be enhanced to"
-" be smarter in the future, but it's not really considered urgent, so for "
-"now you'll have to link actions to objects manually."
+msgid "Animations (FBX AnimStacks, Blender actions) **are not linked** to their object, because there is no real way to know which stack to use as 'active' action for a given object, mesh or bone. This may be enhanced to be smarter in the future, but it's not really considered urgent, so for now you'll have to link actions to objects manually."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:31
@@ -82,23 +67,15 @@ msgid "Armature instances **are not supported**."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:35
-msgid ""
-"Bones' orientation importing is complex, you may have to play a bit with "
-"related settings until you get the expected results."
+msgid "Bones' orientation importing is complex, you may have to play a bit with related settings until you get the expected results."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:37
-msgid ""
-"Animation support is minimal currently, we read all curves as if they "
-"were 'baked' ones (i.e. a set of close keyframes with linear "
-"interpolation)."
+msgid "Animation support is minimal currently, we read all curves as if they were 'baked' ones (i.e. a set of close keyframes with linear interpolation)."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:39
-msgid ""
-"Imported actions are linked to their related object, bone or shape key, "
-"on a 'first one wins' basis. If you export a set of them for a single "
-"object you'll have to reassign them yourself."
+msgid "Imported actions are linked to their related object, bone or shape key, on a 'first one wins' basis. If you export a set of them for a single object you'll have to reassign them yourself."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:42
@@ -106,25 +83,11 @@ msgid "Saving Just Animations"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:44
-msgid ""
-"The FBX file format supports files that only contain takes. It is up to "
-"you to keep track of which animation belongs to which model. The "
-"animation that will be exported is the currently selected action within "
-"the Action editor. To reduce the file size, turn off the exporting of any"
-" parts you do not want and disable *All Actions*. For armature animations"
-" typically you just leave the armature enabled which is necessary for "
-"that type of animation. Reducing what is output makes the export and "
-"future import much faster. Normally each action will have its own name "
-"but the current or only take can be forced to be named \"Default Take\". "
-"Typically, this option can remain off."
+msgid "The FBX file format supports files that only contain takes. It is up to you to keep track of which animation belongs to which model. The animation that will be exported is the currently selected action within the Action editor. To reduce the file size, turn off the exporting of any parts you do not want and disable *All Actions*. For armature animations typically you just leave the armature enabled which is necessary for that type of animation. Reducing what is output makes the export and future import much faster. Normally each action will have its own name but the current or only take can be forced to be named \"Default Take\". Typically, this option can remain off."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:55
-msgid ""
-"Blender now only supports complex node-based shading. FBX having a fixed "
-"pipeline-like support of materials, this add-on uses the :doc:`generic "
-"wrapper </addons/import_export/io_node_shaders_info>` featured by Blender"
-" to convert between both."
+msgid "Blender now only supports complex node-based shading. FBX having a fixed pipeline-like support of materials, this add-on uses the :doc:`generic wrapper </addons/import_export/io_node_shaders_info>` featured by Blender to convert between both."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:61
@@ -187,19 +150,12 @@ msgid "Forward / Up Axis"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:72
-msgid ""
-"Since many applications use a different axis for 'Up', these are axis "
-"conversion for these settings, Forward and Up axes -- By mapping these to"
-" different axes you can convert rotations between applications default up"
-" and forward axes."
+msgid "Since many applications use a different axis for 'Up', these are axis conversion for these settings, Forward and Up axes -- By mapping these to different axes you can convert rotations between applications default up and forward axes."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:76
 #: ../../manual/addons/import_export/io_scene_fbx.rst:133
-msgid ""
-"Blender uses Y Forward, Z Up (since the front view looks along the +Y "
-"direction). For example, its common for applications to use Y as the up "
-"axis, in that case -Z Forward, Y Up is needed."
+msgid "Blender uses Y Forward, Z Up (since the front view looks along the +Y direction). For example, its common for applications to use Y as the up axis, in that case -Z Forward, Y Up is needed."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:78
@@ -271,9 +227,7 @@ msgid "Selected Objects"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:119
-msgid ""
-"Only export the selected objects. Otherwise export all objects in the "
-"scene. Note, this does not apply when batch exporting."
+msgid "Only export the selected objects. Otherwise export all objects in the scene. Note, this does not apply when batch exporting."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:122
@@ -281,9 +235,7 @@ msgid "Scale"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:122
-msgid ""
-"Scale the exported data by this value. 10 is the default because this "
-"fits best with the scale most applications import FBX to."
+msgid "Scale the exported data by this value. 10 is the default because this fits best with the scale most applications import FBX to."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:124
@@ -295,11 +247,7 @@ msgid "Apply Scalings"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:129
-msgid ""
-"Since many applications use a different axis for 'Up', these are axis "
-"conversions for Forward and Up axes -- By mapping these to different axes"
-" you can convert rotations between applications default up and forward "
-"axes."
+msgid "Since many applications use a different axis for 'Up', these are axis conversions for Forward and Up axes -- By mapping these to different axes you can convert rotations between applications default up and forward axes."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:135
@@ -319,14 +267,7 @@ msgid "Path Mode"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:142
-msgid ""
-"When referencing paths in exported files you may want some control as to "
-"the method used since absolute paths may only be correct on your own "
-"system. Relative paths, on the other hand, are more portable but mean "
-"that you have to keep your files grouped when moving about on your local "
-"file system. In some cases, the path doesn't matter since the target "
-"application will search a set of predefined paths anyway so you have the "
-"option to strip the path too."
+msgid "When referencing paths in exported files you may want some control as to the method used since absolute paths may only be correct on your own system. Relative paths, on the other hand, are more portable but mean that you have to keep your files grouped when moving about on your local file system. In some cases, the path doesn't matter since the target application will search a set of predefined paths anyway so you have the option to strip the path too."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst
@@ -334,9 +275,7 @@ msgid "Auto"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:148
-msgid ""
-"Uses relative paths for files which are in a subdirectory of the exported"
-" location, absolute for any directories outside that."
+msgid "Uses relative paths for files which are in a subdirectory of the exported location, absolute for any directories outside that."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst
@@ -352,9 +291,7 @@ msgid "Relative"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:151
-msgid ""
-"Uses relative paths in every case (except when on a different drive on "
-"windows)."
+msgid "Uses relative paths in every case (except when on a different drive on windows)."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst
@@ -398,12 +335,7 @@ msgid "Group/Scene"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:162
-msgid ""
-"Choose whether to batch export groups or scenes to files. Note, when "
-"Group/Scene is enabled, you cannot use the animation option *Current "
-"Action* since it uses scene data and groups are not attached to any "
-"scenes. Also note, when Group/Scene is enabled you must include the "
-"armature objects in the group for animated actions to work."
+msgid "Choose whether to batch export groups or scenes to files. Note, when Group/Scene is enabled, you cannot use the animation option *Current Action* since it uses scene data and groups are not attached to any scenes. Also note, when Group/Scene is enabled you must include the armature objects in the group for animated actions to work."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:172
@@ -411,12 +343,7 @@ msgid "Own Dir"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:168
-msgid ""
-"When enabled, each file is exported into its own directory, this is "
-"useful when using the *Copy Images* option. So each directory contains "
-"one model with all the images it uses. Note, this requires a full Python "
-"installation. If you do not have a full Python installation, this button "
-"will not be shown."
+msgid "When enabled, each file is exported into its own directory, this is useful when using the *Copy Images* option. So each directory contains one model with all the images it uses. Note, this requires a full Python installation. If you do not have a full Python installation, this button will not be shown."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:175
@@ -428,9 +355,7 @@ msgid "Apply Modifiers"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:178
-msgid ""
-"When enabled, the mesh will be from the output of the modifiers applied "
-"to the mesh."
+msgid "When enabled, the mesh will be from the output of the modifiers applied to the mesh."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:179
@@ -482,10 +407,7 @@ msgid "All Actions"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:212
-msgid ""
-"Export all actions compatible with the selected armatures start/end times"
-" which are derived from the keyframe range of each action. When disabled "
-"only the currently assigned action is exported."
+msgid "Export all actions compatible with the selected armatures start/end times which are derived from the keyframe range of each action. When disabled only the currently assigned action is exported."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:215
@@ -505,9 +427,7 @@ msgid "Compatibility"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:229
-msgid ""
-"Note that the importer is a new addition and lacks many features the "
-"exporter supports."
+msgid "Note that the importer is a new addition and lacks many features the exporter supports."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:231
@@ -528,21 +448,15 @@ msgid "Mesh: shape keys."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:244
-msgid ""
-"NURBS surfaces, text3D and metaballs are converted to meshes at export "
-"time."
+msgid "NURBS surfaces, text3D and metaballs are converted to meshes at export time."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:250
-msgid ""
-"Some of the following features are missing because they are not supported"
-" by the FBX format, others may be added later."
+msgid "Some of the following features are missing because they are not supported by the FBX format, others may be added later."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:253
-msgid ""
-"Object instancing -- exported objects do not share data, instanced "
-"objects will each be written with their own data."
+msgid "Object instancing -- exported objects do not share data, instanced objects will each be written with their own data."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:255
@@ -550,26 +464,18 @@ msgid "Material textures"
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:256
-msgid ""
-"Vertex shape keys -- FBX supports them but this exporter does not write "
-"them yet."
+msgid "Vertex shape keys -- FBX supports them but this exporter does not write them yet."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:257
-msgid ""
-"Animated fluid simulation -- FBX does not support this kind of animation."
-" You can however use the OBJ exporter to write a sequence of files."
+msgid "Animated fluid simulation -- FBX does not support this kind of animation. You can however use the OBJ exporter to write a sequence of files."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:259
-msgid ""
-"Constraints -- The result of using constraints is exported as a keyframe "
-"animation however the constraints themselves are not saved in the FBX."
+msgid "Constraints -- The result of using constraints is exported as a keyframe animation however the constraints themselves are not saved in the FBX."
 msgstr ""
 
 #: ../../manual/addons/import_export/io_scene_fbx.rst:261
-msgid ""
-"Instanced objects -- At the moment instanced objects are only written in "
-"static scenes (when animation is disabled)."
+msgid "Instanced objects -- At the moment instanced objects are only written in static scenes (when animation is disabled)."
 msgstr ""
 
