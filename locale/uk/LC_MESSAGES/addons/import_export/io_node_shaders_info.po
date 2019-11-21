@@ -3,31 +3,40 @@
 # This file is distributed under the same license as the Blender 2.81 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# urko <urkokul@gmail.com>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.81 Manual 2.81\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-26 00:56+1100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-11-21 12:05+0200\n"
+"Last-Translator: urko <urkokul@gmail.com>\n"
+"Language: uk\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:4
 msgid "Import & Export of Node Shaders"
 msgstr ""
+"Import & Export of Node Shaders -- Імпорт та Експорт Вузлів Шейдерів"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:6
 msgid ""
-"While Blender now only supports the advanced node-based shading model for"
-" its materials, most :abbr:`IO (Input/Output)` formats only support a "
+"While Blender now only supports the advanced node-based shading model "
+"for its materials, most :abbr:`IO (Input/Output)` formats only support a "
 "basic shading model, similar to the legacy fixed pipeline of old GPUs."
 msgstr ""
+"Хоча Blender тепер підтримує лише просунуту на основі вузлів модель "
+"відтінювання для своїх матеріалів, більшість форматів :abbr:`IO (Input/"
+"Output)` підтримують лише базову модель відтінювання, подібно до "
+"фіксованого застарілого конвеєра старих GPU."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:10
 msgid ""
@@ -36,13 +45,20 @@ msgid ""
 "from Blender materials, the node system must follow some strict "
 "requirements."
 msgstr ""
+"Blender функціонально має спосіб конвертувати між ними, який будь-який "
+"додаток може використовувати, але він поточно є дуже базовий. Особливо "
+"для експортування матеріалів Blender'а ця система вузлів повинна "
+"дотримуватися деяких суворих вимог."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:15
 msgid ""
-"Currently, only the :doc:`OBJ </addons/import_export/io_scene_obj>` and "
-":doc:`FBX </addons/import_export/io_scene_fbx>` IO add-ons uses that "
+"Currently, only the :doc:`OBJ </addons/import_export/io_scene_obj>` and :"
+"doc:`FBX </addons/import_export/io_scene_fbx>` IO add-ons uses that "
 "method."
 msgstr ""
+"Поточно лише додатки :doc:`OBJ </addons/import_export/io_scene_obj>` та :"
+"doc:`FBX </addons/import_export/io_scene_fbx>` для IO використовують цей "
+"метод."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:22
 msgid ""
@@ -50,20 +66,24 @@ msgid ""
 "expected to give reproducible results across several import/export "
 "cycles)."
 msgstr ""
+"Ця обгортка призначена бути якомога симетричною (тобто, очікується "
+"давати відтворювані результати через різні цикли імпорту/експорту)."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:28
 msgid "A typical setup of shader nodes that is can be exported."
-msgstr ""
+msgstr "Типовий уклад вузлів шейдерів, що може бути експортований."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:32
 msgid "Supported Node Setup"
-msgstr ""
+msgstr "Підтримуваний Уклад Вузлів -- Supported Node Setup"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:34
 msgid ""
 "This is especially important for exporting, importing will simply re-"
 "generate a similar setup."
 msgstr ""
+"Особливо важливо для експортування, імпортування буде просто повторно "
+"генерувати подібний уклад."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:36
 msgid ""
@@ -71,73 +91,86 @@ msgid ""
 "Each add-on may have its own way to adapt them to its material system, "
 "some may not be handled by it, etc."
 msgstr ""
+"Зауважте, що перелічені нижче функціональні можливості є тими, що "
+"підтримуються цією обгорткою. Кожен додаток може мати свій власний "
+"спосіб адаптувати їх до своєї системи матеріалів, деякі можуть не "
+"оброблятися тощо."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:52
 msgid "Principled BSDF"
-msgstr ""
+msgstr "Принципове BSDF - Principled BSDF"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:40
 msgid ""
-"The main shader must be a :doc:`Principled BSDF "
-"</render/shader_nodes/shader/principled>`. Only parameters defined there,"
-" and textures linked to it, will be exported."
+"The main shader must be a :doc:`Principled BSDF </render/shader_nodes/"
+"shader/principled>`. Only parameters defined there, and textures linked "
+"to it, will be exported."
 msgstr ""
+"Головний шейдер повинен бути :doc:`Principled BSDF </render/shader_nodes/"
+"shader/principled>`. Лише параметри, визначені там, та текстури, "
+"прив'язані до нього, будуть експортуватися."
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:43
 msgid "Currently handled parameters:"
-msgstr ""
+msgstr "Поточно оброблювані параметри:"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:45
 msgid "Base color"
-msgstr ""
+msgstr "Базовий колір -- Base color"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:46
 msgid "Specular intensity"
-msgstr ""
+msgstr "Інтенсивність блікування -- Specular intensity"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:47
 msgid "Specular tint *(no texture support)*"
-msgstr ""
+msgstr "Підбарвлення бліку -- Specular tint *(без підтримки текстур)*"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:48
 msgid "Roughness"
-msgstr ""
+msgstr "Шорсткість -- Roughness"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:49
 msgid "Metallic"
-msgstr ""
+msgstr "Металік -- Metallic"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:50
 msgid "IOR"
-msgstr ""
+msgstr "Показник Заломлення -- IOR"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:51
 msgid "Transmission"
-msgstr ""
+msgstr "Пропускання -- Transmission"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:52
 msgid "Alpha"
-msgstr ""
+msgstr "Альфа -- Alpha"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:57
 msgid "Normal Map"
-msgstr ""
+msgstr "Розкладка Нормалей -- Normal Map"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:55
 msgid ""
-"If linked to the Normal input of the Principled BSDF node, the "
-":doc:`Normal Map </render/shader_nodes/vector/normal_map>` node is also "
+"If linked to the Normal input of the Principled BSDF node, the :doc:"
+"`Normal Map </render/shader_nodes/vector/normal_map>` node is also "
 "supported (including its texture obviously)."
 msgstr ""
+"Якщо підв'язаний з уводом Normal вузла Principled BSDF, то і вузол "
+"«Розкладка Нормалей» -- :doc:`Normal Map </render/shader_nodes/vector/"
+"normal_map>` також підтримується (включаючи його текстуру, очевидно)."
 
 #: ../../<generated>:1
 msgid "Textures"
-msgstr ""
+msgstr "Текстури -- Textures"
 
 #: ../../manual/addons/import_export/io_node_shaders_info.rst:60
 msgid ""
 "Only :doc:`Image </render/shader_nodes/textures/image>` textures using a "
-"UV mapping are supported. You may also use a :doc:`Mapping "
-"</render/shader_nodes/vector/mapping>` node to move/rotate/scale it."
+"UV mapping are supported. You may also use a :doc:`Mapping </render/"
+"shader_nodes/vector/mapping>` node to move/rotate/scale it."
 msgstr ""
-
+"Лише текстури типу «Зображення» -- :doc:`Image </render/shader_nodes/"
+"textures/image>`, що використовують розкладання UV, підтримуються. Ви "
+"можете також використати вузол «Розкладання» -- :doc:`Mapping </render/"
+"shader_nodes/vector/mapping>` для переміщення/обертання/масштабування їх."
