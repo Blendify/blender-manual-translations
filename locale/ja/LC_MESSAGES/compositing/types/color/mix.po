@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-30 20:03-0400\n"
-"PO-Revision-Date: 2019-11-21 22:01+0900\n"
+"PO-Revision-Date: 2019-12-05 03:47+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -229,8 +229,8 @@ msgstr ""
 "色を取り出します。黄色を白に変えるのに必要な色は青です。これを使用すること"
 "で、非常によく似た 2 つのイメージを比較し、片方がどのような処理を経てもう片"
 "方のイメージになったのかを確認できます。つまり、イメージの変更ログのようなも"
-"のです。これにより、イメージへ盗難検出のための透かし(`Watermark images`_ 参"
-"照)を入れることができます。"
+"のです。これにより、イメージへ盗難検出のための透かし(参照: `透かし画像`_)を"
+"入れることができます。"
 
 #: ../../manual/compositing/types/color/mix.rst:92
 msgid "Darken"
@@ -255,16 +255,16 @@ msgid ""
 "equally."
 msgstr ""
 "RGB Curve の一般的な 2 つの用途とその効果 (*Darken* と *Contrast "
-"Enhancement*) を次の小さなマップに示します。それぞれのカーブの効果と、それら"
-"が等しく *Mix* された結果を確認できます。"
+"Enhancement*) を、以下の小さなマップに示します。それぞれのカーブの効果と、そ"
+"れらが等しく *Mix* された結果が確認できます。"
 
 #: ../../manual/compositing/types/color/mix.rst:105
 msgid ""
 "Example node setup showing \"Darken\", \"Enhance Contrast\" and \"Mix\" "
 "nodes for composition."
 msgstr ""
-"\"Darken\" 、\"Enhance Contrast\" および \"Mix\" ノードを使用したコンポジッ"
-"トのノード設定例。"
+"\"Darken\"、\"Enhance Contrast\"、合成のための \"Mix\" ノードを使用した、"
+"ノード設定の例。"
 
 #: ../../manual/compositing/types/color/mix.rst:107
 msgid ""
@@ -276,7 +276,6 @@ msgstr ""
 "めには、イメージを暗くし、コントラストを高める必要があります。"
 
 #: ../../manual/compositing/types/color/mix.rst:110
-#, fuzzy
 msgid ""
 "In the top RGB curve, *Darken*, only the right side of the curve was "
 "lowered; thus, any X input along the bottom results in a geometrically less "
@@ -287,22 +286,20 @@ msgid ""
 "point is added. Drag the point around to bend the curve as you wish. The "
 "Mix node combines these two effects equally, and Suzanne feels much better."
 msgstr ""
-"上側の RGB Curve、*Darken* では単純に、カーブの右側を下げています。それによ"
-"り、下部に沿って X 入力を行うと、Y 出力が幾何学的に少なくなります。*コントラ"
-"ストを強調* RGB(S字)カーブは、X の中央の値が劇的に変化できるように出力をス"
-"ケーリングします。つまり、中央の明るさのスケールが拡大され、したがって、白い"
-"白と黒い黒が出力されます。このカーブを作成するには、カーブをクリックするだけ"
-"で、新しいコントロール ポイントが追加されます。ポイントをドラッグして、必要"
-"に応じてカーブを曲げします。ミックスノードは、これら2つの効果を均等に組み合"
-"わせ、スザンヌははるかに良い感じ。"
+"上側の RGB Curve (*Darken*) では、カーブの右側を下げただけです。それにより、"
+"下側に沿った X 入力に従い、Y 出力が幾何学的に小さな値になります。*Enhance "
+"Contrast* RGB (S字) Curve は、X の中間値による変化が劇的になるように、出力を"
+"スケーリングします。つまり、中間の輝度スケールが拡大され、それにより白はより"
+"白く、黒はより黒く出力されます。このカーブを作成するには、単にカーブをクリッ"
+"クして、新しいコントロールポイントを追加するだけです。ポイントをドラッグし"
+"て、好みにカーブを曲げます。これら 2 つの効果を Mix ノードで均等に結合するこ"
+"とで、スザンヌはより良いものになりました。"
 
 #: ../../manual/compositing/types/color/mix.rst:121
-#, fuzzy
 msgid "Watermark Images"
 msgstr "透かし画像"
 
 #: ../../manual/compositing/types/color/mix.rst:123
-#, fuzzy
 msgid ""
 "In the old days, a pattern was pressed into the paper mush as it dried, "
 "creating a mark that identified who made the paper and where it came from. "
@@ -314,21 +311,19 @@ msgid ""
 "of tools for you to both encode your watermark and to tell if an image has "
 "your watermark."
 msgstr ""
-"昔は、乾いた紙に模様が押し込まれ、誰が紙を作ったのか、どこから来たのかを示す"
-"マークが作られていた。マークは、ちょうど右の光を除いて、かろうじて知覚されま"
-"した。おそらくサブリミナル広告の最初の形式。今日では、人々は、個人的な知的財"
-"産として、著者やホスティングサービスの崇高な広告のために、または単にウェブ全"
-"体で彼らの画像の拡散を追跡するために、彼らの画像に透かしを付けます。Blender "
-"には、透かしをエンコードし、画像に透かしがあるかどうかを確認するためのツール"
-"の完全なセットが用意されています。"
+"昔は、乾いていく紙に模様を押し込むことで、紙の作者や出自を示すマークが作られ"
+"ていました。マークは、正確に光を当てない限り、ほとんど知覚できませんでした。"
+"おそらくは最初のサブリミナル広告です。今日では、個人の知的財産を認識したり、"
+"作者やホスティングサービスのサブリミナル広告に使用したり、単にウェブで拡散し"
+"た画像を追跡するために、透かしがイメージへ入れられます。Blender には、透かし"
+"のエンコードと、イメージに透かしがあるかどうかを確認するための完全なツール"
+"セットが用意されています。"
 
 #: ../../manual/compositing/types/color/mix.rst:134
-#, fuzzy
 msgid "Encoding your Watermark in an Image"
-msgstr "画像で透かしをエンコードする"
+msgstr "イメージへ透かしをエンコードする"
 
 #: ../../manual/compositing/types/color/mix.rst:136
-#, fuzzy
 msgid ""
 "First, construct your own personal watermark. You can use your name, a "
 "word, or a shape or image not easily replicated. While neutral gray works "
@@ -342,57 +337,51 @@ msgid ""
 "of its original intensity. The Add node adds the corresponding pixels, "
 "making the ones containing the mark ever-so-slightly brighter."
 msgstr ""
-"まず、独自の個人的な透かしを構築します。名前、単語、または簡単に複製できない"
-"図形やイメージを使用できます。ニュートラルグレーは、推奨されるエンコード方法"
-"を使用して最適に動作しますが、他の色やパターンを自由に使用できます。単一のピ"
-"クセルまたはグラデーション全体を指定できます。それはあなた次第です。次の例で"
-"は、*Translate* ノードを使用して、イメージ内の特定の場所に透かしをエンコード"
-"しています。マークの特定の場所を見るだけで済むため、これは後で役立ちます。次"
-"に、RGB to BW ノードを使用して、イメージをマップ値ノードがイメージをサブリミ"
-"ナルにするために使用できる数値に変換します。この場合、マークは元の強度の10分"
-"の1に減少します。Add ノードは対応するピクセルを追加し、マークを含むピクセル"
-"をわずかに明るくします。"
+"最初に、独自な個人用の透かしを作成します。 自分の名前や単語、簡単には複製で"
+"きない図形やイメージが使用できます。 推奨のエンコード方法では中間の灰色を使"
+"用するのが最も効果的ですが、好みで他の色やパターンを使用しても構いません。単"
+"一のピクセルにするのも、全体のグラデーションにするのもあなた次第です。 以下"
+"の例では、Translate ノードを使用して、イメージ内の特定の場所に透かしをエン"
+"コードしています。 それにより、後でマークを探すのに特定の場所だけを見ればよ"
+"くなります。 次に RGB to BW ノードを使用してイメージを数値化し、Map Value "
+"ノードでイメージをサブリミナル化します。この例の場合、マークの強さを元の "
+"1/10 にしています。 Add ノードでは、マークを含む部分に対応するピクセルが、ほ"
+"んの少し明るくなるように加算しています。"
 
 #: ../../manual/compositing/types/color/mix.rst:152
-#, fuzzy
 msgid "Embedding your mark in an image using a mark and specific position."
-msgstr "マークと特定の位置を使用して画像にマークを埋め込みます。"
+msgstr "マークと位置の指定を使用した、イメージへのマークの埋め込み。"
 
 #: ../../manual/compositing/types/color/mix.rst:154
-#, fuzzy
 msgid ""
 "Of course, if you *want* people to notice your mark, do not scale it so "
 "much, or make it a contrasting color. There are also many other ways, using "
 "other mix settings and fancier rigs. Feel free to experiment!"
 msgstr ""
-"もちろん、*人にマークに気付いてもらいたい場合は、あまり拡大縮小したり、対照"
-"的な色にしたりしないでください。他のミックス設定やファンシアーリグを使用し"
-"て、他の多くの方法もあります。お気軽に試してみてください!"
+"もちろん、マークに気付いて「欲しい」場合には、あまりスケーリングはせず、対照"
+"的な色を使用するようにしてください。他のミックス設定やファンシーな装飾など、"
+"たくさんの方法があります。気軽に試してみてください！"
 
 #: ../../manual/compositing/types/color/mix.rst:158
-#, fuzzy
 msgid "Additional uses"
 msgstr "その他の用途"
 
 #: ../../manual/compositing/types/color/mix.rst:160
-#, fuzzy
 msgid ""
 "You can also use this technique, using settings that result in visible "
 "effects, in title sequences to make the words appear to be cast on the "
 "water's surface, or as a special effect to make words appear on the "
 "possessed girl's forearm."
 msgstr ""
-"このテクニックは、目に見える効果をもたらす設定を使用したり、タイトルシーケン"
-"スで単語を水面に投げ込んだり、所有する女の子の前腕に単語を表示させる特殊な効"
-"果として使用することもできます。"
+"このテクニックは視覚効果のセッティングに使用できます。水面に単語が投影される"
+"タイトルシーケンスや、抑圧された少女の前腕に言葉が浮かび上がる特殊効果などに"
+"使えます。"
 
 #: ../../manual/compositing/types/color/mix.rst:166
-#, fuzzy
 msgid "Decoding an Image for your Watermark"
-msgstr "透かしのイメージのデコード"
+msgstr "透かし画像のデコード"
 
 #: ../../manual/compositing/types/color/mix.rst:168
-#, fuzzy
 msgid ""
 "When you see an image that you think might be yours, use the node map below "
 "to compare it to your stock image (pre-watermarked original). In this map, "
@@ -400,18 +389,17 @@ msgid ""
 "difference. The result is routed to a viewer, and you can see how the "
 "original mark clearly stands out."
 msgstr ""
-"自分のイメージと思われる画像が表示されたら、下のノード マップを使用してス"
-"トック イメージ(事前に透かし付きの元の画像)と比較します。このマップでは、"
-"[ミックス]ノードが [差分] に設定され、[マップ値]ノードは差を増幅します。結果"
-"は視聴者にルーティングされ、元のマークがはっきりと目立つことがわかります。"
+"自分のものと思われる画像が見つかったら、以下のノードマップを使用して、その画"
+"像をストック画像（透かし前のオリジナル）と比較します。 このマップでは、Mix "
+"ノードは Difference に設定しており、Map Value ノードで差異を増幅していま"
+"す。 結果はビューアに接続され、元のマークが明確になっている様子が確認できま"
+"す。"
 
 #: ../../manual/compositing/types/color/mix.rst:177
-#, fuzzy
 msgid "Checking an image for your watermark."
-msgstr "透かしの画像を確認しています。"
+msgstr "透かし画像の確認。"
 
 #: ../../manual/compositing/types/color/mix.rst:179
-#, fuzzy
 msgid ""
 "Various image compression algorithms lose some of the original; the "
 "difference shows as noise. Experiment with different compression settings "
@@ -421,9 +409,9 @@ msgid ""
 "an acceptable result. In the example above, the mark was clearly visible "
 "all the way up to ``JPEG`` compression of 50%."
 msgstr ""
-"さまざまな画像圧縮アルゴリズムは、元の一部を失います。違いはノイズとして表示"
-"されます。異なる圧縮設定とマークを試して、あるシーンにエンコード マップを作"
-"成し、別のシーンにデコード マップを作成することで、最適な圧縮設定とマークを"
-"確認します。Blender の画像フォーマット設定を変更する際に使用し、保存後に透か"
-"し画像を再ロードして、許容できる結果を得ることができます。上記の例では、マー"
-"クは50%の'JPEG'圧縮まではっきりと見えました。"
+"さまざまな画像圧縮アルゴリズムにより元の情報の一部が失われると、違いがノイズ"
+"として表示されてしまいます。エンコードをするマップを持つシーンと、デコードを"
+"するものとを用意して、様々な圧縮設定とマークを試しながら最適なものを見つけて"
+"ください。それらのマップを使用し、Blender の画像フォーマット設定を変えなが"
+"ら、透かし画像をセーブした後にロードして、許容できる結果を探します。上記の例"
+"では、マークは 50% の ``JPEG`` 圧縮まではっきりと見えました。"
