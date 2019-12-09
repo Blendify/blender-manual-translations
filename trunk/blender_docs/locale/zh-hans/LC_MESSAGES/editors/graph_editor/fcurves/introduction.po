@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 00:56+1100\n"
+"POT-Creation-Date: 2019-12-09 08:57+0800\n"
 "PO-Revision-Date: 2019-09-30 13:12+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -151,6 +151,7 @@ msgstr "插值模式"
 #: ../../manual/editors/graph_editor/fcurves/introduction.rst:80
 #: ../../manual/editors/graph_editor/fcurves/introduction.rst:185
 #: ../../manual/editors/graph_editor/fcurves/introduction.rst:209
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:245
 msgid "Reference"
 msgstr "参考"
 
@@ -197,7 +198,7 @@ msgstr "常量。"
 
 #: ../../manual/editors/graph_editor/fcurves/introduction.rst:110
 #: ../../manual/editors/graph_editor/fcurves/introduction.rst:135
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:235
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:234
 msgid "Linear"
 msgstr "线性"
 
@@ -443,16 +444,17 @@ msgid "Constant extrapolation."
 msgstr "常量外推。"
 
 #: ../../manual/editors/graph_editor/fcurves/introduction.rst:229
+#, fuzzy
 msgid ""
-"Curves ends are straight lines (linear), as defined by their first two "
-"keyframes (respectively their last two keyframes)."
+"Curves ends are straight lines (linear), as defined by the slope of their"
+" first and last keyframes."
 msgstr "曲线末端是直线(线性)，由其前两个关键帧(分别是它们的最后两个关键帧)定义。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:235
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:234
 msgid "Linear extrapolation."
 msgstr "线性外推。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:237
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:236
 msgid ""
 "Additional extrapolation methods (e.g. the *Cycles* modifier) are located"
 " in the :doc:`F-Curve Modifiers "
@@ -461,70 +463,102 @@ msgstr ""
 "其他外推工具(例如 *循环* 函数修改器)位于 :doc:`函数曲线修改器 "
 "</editors/graph_editor/fcurves/modifiers>` 中。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:244
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:243
 msgid "Handle Types"
 msgstr "控制柄类型"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:246
-msgid ""
-"There is another curve option quite useful for Bézier-interpolated "
-"curves. You can set the type of handle to use for the curve points "
-":kbd:`V`."
-msgstr "还有另一种曲线选项对贝塞尔插值曲线非常有用。 您可以设置用于曲线点的控制柄类型 :kbd:`V` 。"
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:248
+#, fuzzy
+msgid ":menuselection:`Key --> Handle Type`"
+msgstr ":menuselection:`键 --> 缓动类型`"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:255
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:249
+#, fuzzy
+msgid ":kbd:`V`"
+msgstr ":kbd:`T`"
+
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:251
+msgid ""
+"When using Bézier-interpolated curves it is possible to control the slope"
+" of the curve at the control points. This is done via the curve point "
+"*handles*; you can set the type of handle to use for the curve points by "
+"pressing :kbd:`V` or choosing Key, Handle Type in the Graph editor menu. "
+"Each curve point can have a different handle type, even within the same "
+"curve."
+msgstr ""
+
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:256
+msgid ""
+"There are three automatic modes, *Automatic*, *Auto Clamped*, and "
+"*Vector*, where Blender automatically determines the curve's slope at "
+"each control point. The neighboring control points have the most "
+"influence of the slope, and points further away have a smaller influence."
+" This can be controlled per F-curve with the :ref:`Auto Handle Smoothing "
+"<graph_editor-auto-handle-smoothing>` properties."
+msgstr ""
+
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:262
+msgid ""
+"By using the other, non-automatic modes, you have full manual control "
+"over the slope."
+msgstr ""
+
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:270
 msgid "Automatic"
 msgstr "自动"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:250
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:265
 msgid "Handle positions are automatically chosen to produce smooth curves."
 msgstr "自动选择控制柄位置以生成平滑曲线。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:255
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:270
 msgid "Auto handles."
 msgstr "自动控制柄。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:264
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:279
 msgid "Auto Clamped"
 msgstr "自动钳制"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:258
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:273
 #, fuzzy
 msgid ""
 "Automatic handles clamped to prevent overshoots and changes in the curve "
 "direction between keyframes (S-shapes)."
 msgstr "自动钳制控制柄，以防止关键帧之间的曲线方向过冲和修改(S 形)。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:264
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:279
 msgid "Auto clamped handles."
 msgstr "自动钳制控制柄。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:273
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:288
 msgid "Vector"
 msgstr "矢量"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:267
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:282
+#, fuzzy
 msgid ""
-"Creates linear interpolation between keyframes. The linear segments "
-"remain if keyframe centers are moved. If handles are moved, the handle "
-"becomes Free."
+"Creates automatic linear interpolation between keyframes. The segments "
+"remain linear when keyframe centers are moved. However, when the handles "
+"are moved, the handle type switches to *Free*."
 msgstr "在关键帧之间创建线性插值。如果关键帧中心被移动，则线段仍然保留。如果控制柄移动，控制柄变为空闲。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:273
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:288
 msgid "Vector handles."
 msgstr "矢量控制柄。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:281
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:297
 msgid "Aligned"
 msgstr "对齐"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:276
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:291
+#, fuzzy
 msgid ""
 "The two handles of the curve point are locked together to always point in"
-" exactly opposite directions."
+" exactly opposite directions. This results in a curve that is always "
+"smooth at the control point."
 msgstr "曲线点的两个控制柄被锁定在一起，始终指向完全相反的方向。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:281
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:297
 msgid "Aligned handles."
 msgstr "对齐的控制柄。"
 
@@ -532,11 +566,14 @@ msgstr "对齐的控制柄。"
 msgid "Free"
 msgstr "自由"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:284
-msgid "The handles can be moved completely independently."
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:300
+#, fuzzy
+msgid ""
+"The handles can be moved completely independently, and thus can result in"
+" a sharp change of direction."
 msgstr "可以完全独立移动控制柄。"
 
-#: ../../manual/editors/graph_editor/fcurves/introduction.rst:289
+#: ../../manual/editors/graph_editor/fcurves/introduction.rst:305
 msgid "Free handles."
 msgstr "自由控制柄。"
 
@@ -557,4 +594,12 @@ msgstr "自由控制柄。"
 
 #~ msgid "Auto handles clamped to not overshoot."
 #~ msgstr "自动控制柄钳制以防过冲(超调)。"
+
+#~ msgid ""
+#~ "There is another curve option quite "
+#~ "useful for Bézier-interpolated curves. "
+#~ "You can set the type of handle "
+#~ "to use for the curve points "
+#~ ":kbd:`V`."
+#~ msgstr "还有另一种曲线选项对贝塞尔插值曲线非常有用。 您可以设置用于曲线点的控制柄类型 :kbd:`V` 。"
 
