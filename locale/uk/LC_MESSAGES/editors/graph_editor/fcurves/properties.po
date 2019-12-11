@@ -3,22 +3,24 @@
 # This file is distributed under the same license as the Blender 2.78 Manual
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# urko <urkokul@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-26 00:56+1100\n"
-"PO-Revision-Date: 2019-07-21 10:31+0300\n"
+"PO-Revision-Date: 2019-12-11 10:58+0200\n"
 "Last-Translator: urko <urkokul@gmail.com>\n"
 "Language: uk\n"
 "Language-Team: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:4
 msgid "Properties"
@@ -110,8 +112,8 @@ msgstr "Згладжування Авто Держаків -- Auto Handle Smooth
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:37
 msgid ""
-"Selects the method used to compute automatic Bézier handles (*Automatic*,"
-" *Auto Clamped*, *Vector*)."
+"Selects the method used to compute automatic Bézier handles "
+"(*Automatic*, *Auto Clamped*, *Vector*)."
 msgstr ""
 "Вибирає метод, використовуваний для обчислення автоматичних держаків "
 "Безьє (*Automatic*, *Auto Clamped*, *Vector*)."
@@ -121,36 +123,40 @@ msgid ""
 "Handle smoothing mode comparison. Yellow: *None*, Cyan: *Continuous "
 "Acceleration*."
 msgstr ""
+"Порівняння режимів згладжування держаків. Жовтий: *None*, Блакитний: "
+"*Continuous Acceleration*."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:44
 msgid ""
 "From left to right, four *Auto Clamped* keys, one *Vector*, and the rest "
 "are *Automatic*."
 msgstr ""
+"Зліва направо, чотири ключі за типом *Auto Clamped*, один *Vector* та "
+"решта *Automatic*."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:52
 msgid "None"
 msgstr "Нема -- None"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:47
-#, fuzzy
 msgid ""
 "Only directly adjacent key values are considered when computing the "
 "handles. Vector handles are pointed directly at the adjacent keyframes."
 msgstr ""
 "Лише безпосередньо суміжні значення ключів розглядаються при обчисленні "
-"держаків."
+"держаків. Держаки Vector спрямовані прямо на суміжні ключкадри."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:50
-#, fuzzy
 msgid ""
-"This older method is very simple and predictable, but it can only produce"
-" truly smooth curves in the most trivial cases. Note the kinks in the "
-"yellow curve around the keys located between the extremes, and near the "
-"Vector handles."
+"This older method is very simple and predictable, but it can only "
+"produce truly smooth curves in the most trivial cases. Note the kinks in "
+"the yellow curve around the keys located between the extremes, and near "
+"the Vector handles."
 msgstr ""
-"Цей застарілий метод є дуже простий і передбачуваний, але він може тільки"
-" продукувати хороші згладжені криві у найбільш тривіальних випадках."
+"Цей старіший метод є дуже простим та передбачуваним, але він може "
+"продукувати лише справді плавні криві у більшості тривіальних випадків. "
+"Зверніть увагу на звивання у жовтій кривій навколо ключів, розміщених "
+"між екстремумами та біля держаків типу Vector."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:68
 msgid "Continuous Acceleration"
@@ -163,6 +169,9 @@ msgid ""
 "curves as smooth transitions to imaginary straight lines beyond the "
 "keyframe."
 msgstr ""
+"Система рівнянь рішається, щоб уникати або мінімізувати стрибки "
+"прискорення на кожному ключкадрі. Держаки Vector інтегруються у криві як "
+"плавні переходи до уявних прямих ліній поза ключкадром."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:59
 msgid ""
@@ -173,25 +182,43 @@ msgid ""
 "key with *Free*, *Aligned*, or *Vector* handles, as well as by extremes "
 "with *Auto Clamped* handles."
 msgstr ""
+"Це продукує плавніші криві з коробки, але неодмінно означає, що будь-які "
+"зміни у значеннях ключів можуть впливати на інтерполяцію на більш "
+"значному розтяганні кривої; хоча величина зміни загасає експоненціально "
+"з відстанню. Це поширення зміни зупиняється будь-яким ключем з держаками "
+"*Free*, *Aligned* або *Vector*, а також екстремумами з держаками *Auto "
+"Clamped*."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:65
 msgid ""
 "This mode also tends to overshoot and oscillate more with fully "
-"*Automatic* handles in some cases (see the right end of the image above),"
-" so it is recommended to use *Auto Clamped* by default, and only switch "
-"to *Automatic* handles in places where this is desired behavior. This "
-"effect can also be reduced by adding in-between keys."
+"*Automatic* handles in some cases (see the right end of the image "
+"above), so it is recommended to use *Auto Clamped* by default, and only "
+"switch to *Automatic* handles in places where this is desired behavior. "
+"This effect can also be reduced by adding in-between keys."
 msgstr ""
+"Цей режим також тяжіє до проскочення та коливання більше з повністю "
+"держаками *Automatic* у деяких випадках (дивіться правий бік зображення "
+"вище), тому рекомендується використовувати їх тип *Auto Clamped* "
+"стандартно, і перемикатися на держаки *Automatic* лише у місцях, де це є "
+"бажаною поведінкою. Цей ефект може також зменшуватися шляхом додавання "
+"проміжних ключів."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:70
 msgid ""
 "Considering the upsides and downsides of each mode, *Continuous "
-"Acceleration* should be better suited for limited animation, which uses a"
-" small number of interpolated keys with minimal manual polish. In case of"
-" highly polished high key rate animation, the benefits of smoothing may "
-"not outweigh the workflow disruption from more extensive change "
+"Acceleration* should be better suited for limited animation, which uses "
+"a small number of interpolated keys with minimal manual polish. In case "
+"of highly polished high key rate animation, the benefits of smoothing "
+"may not outweigh the workflow disruption from more extensive change "
 "propagation."
 msgstr ""
+"Враховуючи позитиви та негативи кожного режиму, *Continuous "
+"Acceleration* повинен краще підходити для обмеженої анімації, яка "
+"використовує невелику кількість інтерпольованих ключів з мінімальним "
+"поліруванням вручну. У випадку високо полірованої анімації з високою "
+"частотою ключів, переваги згладжування може не переважати розрив "
+"робпотоку від більш широкого поширення зміни."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:77
 msgid "Active Keyframe Panel"
@@ -200,8 +227,8 @@ msgstr "Панель «Активний Ключкадр» -- Active Keyframe"
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:82
 msgid ":menuselection:`Sidebar region --> F-Curve --> Active Keyframe`"
 msgstr ""
-"«регіон Боковини > Ф-Крива > Активний Ключкадр» -- "
-":menuselection:`Sidebar region --> F-Curve --> Active Keyframe`"
+"«регіон Боковини > Ф-Крива > Активний Ключкадр» -- :menuselection:"
+"`Sidebar region --> F-Curve --> Active Keyframe`"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:86
 msgid "Active Keyframe panel."
@@ -225,7 +252,8 @@ msgstr "Полегшення -- Easing"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:91
 msgid "See :ref:`editors-graph-fcurves-settings-easing`."
-msgstr "Дивіться детальніше тут -- :ref:`editors-graph-fcurves-settings-easing`."
+msgstr ""
+"Дивіться детальніше тут -- :ref:`editors-graph-fcurves-settings-easing`."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:95
 msgid "Key"
@@ -265,7 +293,8 @@ msgstr "Тип Держака -- Handle Type"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:101
 msgid "See :ref:`editors-graph-fcurves-settings-handles`."
-msgstr "Детальніше дивіться тут -- :ref:`editors-graph-fcurves-settings-handles`."
+msgstr ""
+"Детальніше дивіться тут -- :ref:`editors-graph-fcurves-settings-handles`."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:109
 msgid "View Properties"
@@ -274,8 +303,8 @@ msgstr "Властивості Огляду -- View Properties"
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:114
 msgid ":menuselection:`Sidebar region --> View --> View Properties`"
 msgstr ""
-"«регіон Боковини > Огляд > Властивості Огляду» -- :menuselection:`Sidebar"
-" region --> View --> View Properties`"
+"«регіон Боковини > Огляд > Властивості Огляду» -- :menuselection:"
+"`Sidebar region --> View --> View Properties`"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:119
 msgid "View Properties."
@@ -286,7 +315,8 @@ msgid "Show Cursor"
 msgstr "Показати Курсор -- Show Cursor"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:122
-msgid "Toggles the visibility of the :ref:`2D Cursor <graph_editor-2d-cursor>`."
+msgid ""
+"Toggles the visibility of the :ref:`2D Cursor <graph_editor-2d-cursor>`."
 msgstr ""
 "Перемикає видимість 2D Курсора -- :ref:`2D Cursor <graph_editor-2d-"
 "cursor>`."
@@ -304,31 +334,20 @@ msgid "Cursor Location"
 msgstr "Локація Курсора -- Cursor Location"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:126
-msgid "Moves the cursor to the specified frame (X value) and value (Y value)."
-msgstr "Переміщує курсор у вказаний кадр (значення X) та значення (значення Y)."
+msgid ""
+"Moves the cursor to the specified frame (X value) and value (Y value)."
+msgstr ""
+"Переміщує курсор у вказаний кадр (значення X) та значення (значення Y)."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:128
 msgid "To Keys"
 msgstr "У Ключі -- To Keys"
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:128
-msgid "Applies the current location of the 2D cursor to the selected keyframes."
+msgid ""
+"Applies the current location of the 2D cursor to the selected keyframes."
 msgstr "Застосовує поточну локацію 2D курсора до вибраних ключкадрів."
 
 #: ../../manual/editors/graph_editor/fcurves/properties.rst:130
 msgid "Graph Editor's :ref:`graph-view-menu`."
 msgstr ":ref:`graph-view-menu` Редактора Графів -- Graph Editor."
-
-#~ msgid ""
-#~ "A system of equations is solved "
-#~ "for each continuous stretch of curve "
-#~ "without manual handles in order to "
-#~ "avoid or minimize jumps in acceleration"
-#~ " at every keyframe."
-#~ msgstr ""
-#~ "Система рівнянь рішається для кожного "
-#~ "продовжуваного розтягування кривої без ручних"
-#~ " держаків, щоб уникнути або мінімізувати"
-#~ " стрибки у прискоренні у кожному "
-#~ "ключкадрі."
-
