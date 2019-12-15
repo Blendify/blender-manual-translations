@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Blender Reference Manual 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-17 17:01+1000\n"
-"PO-Revision-Date: 2019-08-08 03:41+0800\n"
+"PO-Revision-Date: 2019-12-16 03:51+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: BlenderCN Translation Team\n"
@@ -123,7 +123,7 @@ msgstr "绿色"
 
 #: ../../manual/animation/introduction.rst:52
 msgid "Keyframed on a different frame"
-msgstr "当前帧不是关键帧"
+msgstr "当前帧不是关键帧(数值位于插值曲线)"
 
 #: ../../manual/animation/introduction.rst:53
 msgid "Orange"
@@ -131,7 +131,7 @@ msgstr "橙色"
 
 #: ../../manual/animation/introduction.rst:54
 msgid "Changed from the keyframed value"
-msgstr "从关键帧值改变"
+msgstr "修改过数值的非关键帧(数值偏离插值曲线)"
 
 #: ../../manual/animation/introduction.rst:55
 msgid "Purple"
@@ -139,14 +139,14 @@ msgstr "紫色"
 
 #: ../../manual/animation/introduction.rst:56
 msgid "Controlled by a driver"
-msgstr "由驱动器控制"
+msgstr "受驱动器控制"
 
 #: ../../manual/animation/introduction.rst:58
 msgid ""
 "The changed value highlight currently doesn't work with :doc:`NLA </editors/"
 "nla/introduction>`."
 msgstr ""
-"更改后的值高亮显示当前不适用于 :doc:`NLA </editors/nla/introduction>`。"
+"修改过的值高亮显示目前不适用于 :doc:`NLA </editors/nla/introduction>`。"
 
 #: ../../manual/animation/introduction.rst:61
 msgid "Rigging"
@@ -156,11 +156,11 @@ msgstr "绑定"
 msgid ""
 "Rigging is a general term used for adding controls to objects, typically for "
 "the purpose of animation."
-msgstr "绑定是通常用于向物体添加控件的通用术语，通常用于动画。"
+msgstr "绑定是通常用于向物体添加控制的通用术语，通常用于动画。"
 
 #: ../../manual/animation/introduction.rst:66
 msgid "Rigging often involves using one or more of the following features:"
-msgstr "绑定经常涉及使用到以下一个或多个功能："
+msgstr "绑定经常涉及使用到一个或多个下面的功能："
 
 #: ../../manual/animation/introduction.rst:68
 msgid ":ref:`Armatures <armatures-index>`"
@@ -170,7 +170,7 @@ msgstr ":ref:`骨架 <armatures-index>`"
 msgid ""
 "This allows mesh objects to have flexible joints and is often used for "
 "skeletal animation."
-msgstr "这允许网格物体象具有灵活的关节，经常用于骨骼动画。"
+msgstr "用于使网格物体具有灵活的关节，经常用于骨架动画。"
 
 #: ../../manual/animation/introduction.rst:70
 msgid ":ref:`Constraints <constraints-index>`"
@@ -180,7 +180,7 @@ msgstr ":ref:`约束 <constraints-index>`"
 msgid ""
 "To control the kinds of motions that make sense and add functionality to the "
 "rig."
-msgstr "控制各种有意义的运动类型并为绑定添加功能。"
+msgstr "控制逻辑上可行的运动并增添绑定的功能。"
 
 #: ../../manual/animation/introduction.rst:72
 msgid ":ref:`Object Modifiers <modifiers-index>`"
@@ -200,7 +200,7 @@ msgstr ":ref:`形态键<animation-shape_keys-index>`"
 msgid ""
 "To support different target shapes *(such as facial expressions)* to be "
 "controlled."
-msgstr "支持不同的目标形态 *(如面部表情)* 进行控制。"
+msgstr "支持对不同的目标形态 *(如面部表情)* 进行控制。"
 
 #: ../../manual/animation/introduction.rst:78
 msgid ":ref:`Drivers <animation-drivers-index>`"
@@ -211,8 +211,7 @@ msgid ""
 "So your rig can control many different values at once, as well as making "
 "some properties automatically update based on changes elsewhere."
 msgstr ""
-"因此，你的绑定可以一次控制许多不同的值，并根据其他地方的变化自动更新一些属"
-"性。"
+"使得绑定可以一次控制许多不同的值，并根据其他位置的变化自动更新某些属性。"
 
 #: ../../manual/animation/introduction.rst:80
 msgid ""
@@ -231,7 +230,7 @@ msgstr "示例"
 msgid ""
 "An armature is often used with a modifier to deform a mesh for character "
 "animation."
-msgstr "骨架通常与修改器一起形变网格用于角色动画。"
+msgstr "骨架通常用于与修改器一起改变角色动画的网格形状。"
 
 #: ../../manual/animation/introduction.rst:91
 msgid ""
@@ -239,8 +238,8 @@ msgid ""
 "simulate real-world camera rigs (with a boom arm, mounted on a rotating "
 "pedestal for example, effects such as camera jitter can be added too)."
 msgstr ""
-"可以使用摄像机绑定来代替动画化摄像机物体来直接模拟真实世界的摄像机装备 (例"
-"如，悬臂装在旋转底座上，也可以添加摄像机抖动等效果)。"
+"可以使用相机绑定来代替动画化相机物体来直接模拟真实世界的相机装备(比如，悬臂装"
+"在旋转底座上，还可以添加摄像机抖动等效果)。"
 
 #: ../../manual/animation/introduction.rst:98
 msgid ""
@@ -250,9 +249,9 @@ msgid ""
 "character rigging, `Humane Rigging <https://www.youtube.com/playlist?"
 "list=PLE211C8C41F1AFBAB>`__."
 msgstr ""
-"本章的内容是如何在Blender中完成绑定的简单的一个参考。应该搭配额外的资源，如"
-"Nathan Vegdahl优秀(免费！)的介绍角色绑定的基本概念， `人体绑定教程 "
-"<https://www.youtube.com/playlist?list=PLE211C8C41F1AFBAB>`__。"
+"本章内容只是如何在Blender中完成绑定的参考，需结合其他的资源搭配学习，如"
+"Nathan Vegdahl优秀(免费！)的介绍角色绑定的基本概念， `人体绑定教程 <https://"
+"www.youtube.com/playlist?list=PLE211C8C41F1AFBAB>`__。"
 
 #~ msgid "Chapters"
 #~ msgstr "章节"
