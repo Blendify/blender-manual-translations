@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
+"POT-Creation-Date: 2019-12-27 17:27-0600\n"
 "PO-Revision-Date: 1971-01-02 00:00+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,92 +64,92 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:43
+#: ../../manual/animation/constraints/relationship/action.rst:44
 msgid "Target"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:44
+#: ../../manual/animation/constraints/relationship/action.rst:45
 msgid ""
 ":ref:`ui-data-id` used to select the constraints target, and is not "
 "functional (red state) when it has none."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:45
+#: ../../manual/animation/constraints/relationship/action.rst:46
 msgid "Bone"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:46
+#: ../../manual/animation/constraints/relationship/action.rst:47
 msgid ""
 "When target is an armature object, use this field to select the target "
 "bone."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:48
+#: ../../manual/animation/constraints/relationship/action.rst:49
 msgid "Transform Channel"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:48
+#: ../../manual/animation/constraints/relationship/action.rst:49
 msgid ""
 "This selector controls which transform property (location, rotation or "
 "scale along/around one of its axes) from the target to use as \"action "
 "driver\"."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:50
+#: ../../manual/animation/constraints/relationship/action.rst:51
 msgid "Target Space"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:51
+#: ../../manual/animation/constraints/relationship/action.rst:52
 msgid ""
 "This constraint allows you to choose in which space to evaluate its "
 "target's transform properties."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:58
+#: ../../manual/animation/constraints/relationship/action.rst:59
 msgid "To Action"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:53
+#: ../../manual/animation/constraints/relationship/action.rst:54
 msgid "Select the name of the action you want to use."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:57
+#: ../../manual/animation/constraints/relationship/action.rst:58
 msgid ""
 "Even though it might not be in red state (UI refresh problems...), this "
 "constraint is obviously not functional when this field does not contain a"
 " valid action."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:63
+#: ../../manual/animation/constraints/relationship/action.rst:64
 msgid "Object Action"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:61
+#: ../../manual/animation/constraints/relationship/action.rst:62
 msgid ""
 "Bones **only**, when enabled, this option will make the constrained bone "
 "use the \"object\" part of the linked action, instead of the \"same-named"
 " pose\" part. This allows you to apply the action of an object to a bone."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:74
+#: ../../manual/animation/constraints/relationship/action.rst:75
 msgid "Target Range Min/Max"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:66
+#: ../../manual/animation/constraints/relationship/action.rst:67
 msgid "The lower and upper bounds of the driving transform property value."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:70
+#: ../../manual/animation/constraints/relationship/action.rst:71
 msgid "Unfortunately, here again we find the constraint's limitations:"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:72
+#: ../../manual/animation/constraints/relationship/action.rst:73
 msgid ""
 "When using a rotation property as \"driver\", these values are \"mapped "
 "back\" to the (-180.0 to 180.0) range."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:74
+#: ../../manual/animation/constraints/relationship/action.rst:75
 msgid ""
 "When using a scale property as \"driver\", these values are limited to "
 "null or positive values."
@@ -159,49 +159,80 @@ msgstr ""
 msgid "Action Range Start/End"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:77
+#: ../../manual/animation/constraints/relationship/action.rst:78
 msgid "The starting and ending frames of the action to be mapped."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:81
+#: ../../manual/animation/constraints/relationship/action.rst:82
 msgid "These values must be strictly positive."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:82
+#: ../../manual/animation/constraints/relationship/action.rst:83
 msgid ""
 "By default, both values are set to 0, which disables the mapping (i.e. "
 "the owner just gets the properties defined at frame 0 of the linked "
 "action...)."
 msgstr ""
 
+#: ../../manual/animation/constraints/relationship/action.rst:103
+msgid "Mix"
+msgstr ""
+
 #: ../../manual/animation/constraints/relationship/action.rst:87
-msgid "Notes"
+msgid ""
+"Specifies how the keyframed transformation from the action is combined "
+"with the existing transformation."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:89
-msgid ""
-"When the linked action affects some location properties, the owner's "
-"existing location is added to the result of evaluating this constraint "
-"(exactly as when the *Offset* button of the :doc:`Copy Location "
-"constraint </animation/constraints/transform/copy_location>` is "
-"enabled...)."
+#: ../../manual/animation/constraints/relationship/action.rst:92
+msgid "Before Original"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:93
+#: ../../manual/animation/constraints/relationship/action.rst:90
 msgid ""
-"When the linked action affects some scale properties, the owner's "
-"existing scale is multiplied with the result of evaluating this "
-"constraint."
+"The action transformation is added before the existing transformation, as"
+" if it was applied to an imaginary parent of the constraint owner. Scale "
+"is handled like in the :ref:`Aligned Inherit Scale <bone-relations-"
+"inherit-settings>` mode of bones to avoid creating shear."
+msgstr ""
+
+#: ../../manual/animation/constraints/relationship/action.rst:97
+msgid "After Original"
 msgstr ""
 
 #: ../../manual/animation/constraints/relationship/action.rst:95
 msgid ""
-"When the linked action affects some rotation properties, the owner's "
-"existing rotation is overridden by the result of evaluating this "
-"constraint."
+"The action transformation is added after the existing transformation, as "
+"if it was applied locally to an imaginary child of the constraint owner. "
+"Scale is handled like in the :ref:`Aligned Inherit Scale <bone-relations-"
+"inherit-settings>` mode of bones to avoid creating shear."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:97
+#: ../../manual/animation/constraints/relationship/action.rst:103
+msgid "After Original (Full Scale)"
+msgstr ""
+
+#: ../../manual/animation/constraints/relationship/action.rst:100
+msgid ""
+"The action transformation is added after the existing transformation, as "
+"if it was applied locally to an imaginary child of the constraint owner "
+"with ordinary parenting. This mode can create shear and is thus not "
+"recommended for use."
+msgstr ""
+
+#: ../../manual/animation/constraints/relationship/action.rst:106
+msgid "Notes"
+msgstr ""
+
+#: ../../manual/animation/constraints/relationship/action.rst:108
+msgid ""
+"When the object or bone already has Action constraints, the next "
+"constraint using a newly keyframed action should be added before all "
+"others in order to get the same final combined transformation. This fact "
+"is not affected by the Mix mode."
+msgstr ""
+
+#: ../../manual/animation/constraints/relationship/action.rst:111
 msgid ""
 "Unlike usual, you can have a *Start* value higher than the *End* one, or "
 "a *Min* one higher than a *Max* one: this will reverse the mapping of the"
@@ -209,7 +240,7 @@ msgid ""
 "sets reversed, obviously!"
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:100
+#: ../../manual/animation/constraints/relationship/action.rst:114
 msgid ""
 "When using a *Constraint* action, it is the constraint *channel's names* "
 "that are used to determine to which constraints of the owner apply the "
@@ -219,7 +250,7 @@ msgid ""
 "\"trackto_empt1\"."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:105
+#: ../../manual/animation/constraints/relationship/action.rst:119
 msgid ""
 "Similarly, when using a *Pose* action (which is obviously only meaningful"
 " and working when constraining a bone!), it is the bone's name that is "
@@ -230,7 +261,7 @@ msgid ""
 "in the action at once) will not work..."
 msgstr ""
 
-#: ../../manual/animation/constraints/relationship/action.rst:111
+#: ../../manual/animation/constraints/relationship/action.rst:125
 msgid ""
 "Note also that you can use the :doc:`pose library feature "
 "</animation/armatures/properties/pose_library>` to create/edit a *Pose* "
@@ -335,5 +366,30 @@ msgstr ""
 #~ " bunch of F-Curves of the same "
 #~ "type), while the latter controls a "
 #~ "single F-curve of their \"owner\"..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the linked action affects some "
+#~ "location properties, the owner's existing "
+#~ "location is added to the result of"
+#~ " evaluating this constraint (exactly as "
+#~ "when the *Offset* button of the "
+#~ ":doc:`Copy Location constraint "
+#~ "</animation/constraints/transform/copy_location>` is "
+#~ "enabled...)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the linked action affects some "
+#~ "scale properties, the owner's existing "
+#~ "scale is multiplied with the result "
+#~ "of evaluating this constraint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the linked action affects some "
+#~ "rotation properties, the owner's existing "
+#~ "rotation is overridden by the result "
+#~ "of evaluating this constraint."
 #~ msgstr ""
 
