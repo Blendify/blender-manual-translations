@@ -9,29 +9,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Reference Manual 2.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-18 15:55-0400\n"
+"POT-Creation-Date: 2019-12-27 17:27-0600\n"
 "PO-Revision-Date: 2019-09-12 19:23+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
+"Language: fr\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
-"Language: fr\n"
 
 #: ../../manual/modeling/modifiers/simulate/explode.rst:5
 msgid "Explode Modifier"
 msgstr "Le modificateur Explode"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:14
-#, fuzzy
-msgid "Both the number of emitted particles and number of faces determine how "
+#: ../../manual/modeling/modifiers/simulate/explode.rst:7
+msgid ""
+"The *Explode* modifier is used to alter the mesh geometry by "
+"moving/rotating its faces in a way that roughly tracks particles emitted "
+"by that object, making it look as if the mesh is being exploded (broken "
+"apart and pushed outward)."
 msgstr ""
-"Le nombre de particules émises et le nombre de faces déterminent tous deux "
-"la granularité du *modificateur Explode*. Plus il y aura de faces et de "
-"particules et plus il y aura de fragments individualisés."
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:11
+msgid ""
+"For this modifier to have any visible effect, there needs to be a "
+"particle system on its object. That particle system will control how the "
+"mesh is exploded."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:14
+msgid ""
+"Both the number of emitted particles and number of faces determine how "
+"granular the *Explode* modifier is. More faces and more particles will "
+"mean more individual pieces."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:23
+msgid ""
+"Here is a `demo blend-file "
+"<https://wiki.blender.org/wiki/File:Manual_-_Explode_Modifier_-_Exploding_Cube_-_2.5.blend>`__"
+" showing a cube with a particle system and *Explode* modifier."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:29
+msgid ""
+"The *Explode* modifier must come after the *Particle System* one in the "
+":ref:`modifier stack <modifier-stack>`, in order for the former to get "
+"required data from the later."
+msgstr ""
 
 #: ../../manual/modeling/modifiers/simulate/explode.rst:34
 msgid "Options"
@@ -41,98 +68,124 @@ msgstr ""
 msgid "The Explode modifier, with a Particle System above it."
 msgstr "Le modificateur Explode, avec un système de particules par dessus."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:53
+#: ../../manual/modeling/modifiers/simulate/explode.rst:54
 msgid "Vertex Group"
 msgstr "Groupe de sommets"
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:53
+#: ../../manual/modeling/modifiers/simulate/explode.rst:42
+msgid ""
+"Vertices in this group may not be affected by the *Explode* modifier. "
+"Vertices with full weight are not affected at all, while vertices with "
+"less weight have a higher chance of being affected."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:46
+msgid ""
+"Vertices with null weight will be treated like those which do not belong "
+"to the group at all, and explode normally."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:54
 msgid "Protect"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:63
+#: ../../manual/modeling/modifiers/simulate/explode.rst:50
+msgid ""
+"Clean vertex group edges. Depending on the weights assigned to that "
+"vertex group, either completely protect those faces from being affected "
+"by the *Explode* modifier (which would happen if the faces had a weight "
+"value of 1), or completely remove protection from those faces (which "
+"would happen if the faces had a weight value of 0)."
+msgstr ""
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:64
 msgid "Particle UV"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:56
+#: ../../manual/modeling/modifiers/simulate/explode.rst:57
 msgid ""
 "If set, the U value of the coordinates in that :term:`UV map` will be "
-"overwritten with the age of the particle attached to the matching mesh face "
-"(in proportion, from 0 for not yet born particles, to 1 for dead ones)."
+"overwritten with the age of the particle attached to the matching mesh "
+"face (in proportion, from 0 for not yet born particles, to 1 for dead "
+"ones)."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:60
+#: ../../manual/modeling/modifiers/simulate/explode.rst:61
 msgid "The V value is set to a constant 0.5 value."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:62
+#: ../../manual/modeling/modifiers/simulate/explode.rst:63
 msgid ""
 "This allows e.g. to make the color of a fragment (face) vary during it "
-"'explosion' phase, by using a texture with a gradient of colors along its "
-"*U* axis."
+"'explosion' phase, by using a texture with a gradient of colors along its"
+" *U* axis."
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:67
+#: ../../manual/modeling/modifiers/simulate/explode.rst:68
 msgid "Cut Edges"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:66
+#: ../../manual/modeling/modifiers/simulate/explode.rst:67
 msgid ""
-"Split the mesh in pieces based on location of emitted particles, instead of "
-"using existing faces. This will typically give a splitting that appears more "
-"random."
-msgstr ""
-
-#: ../../manual/modeling/modifiers/simulate/explode.rst:69
-msgid "Unborn"
+"Split the mesh in pieces based on location of emitted particles, instead "
+"of using existing faces. This will typically give a splitting that "
+"appears more random."
 msgstr ""
 
 #: ../../manual/modeling/modifiers/simulate/explode.rst:70
-msgid "Show faces when their attached particles are unborn."
+msgid "Unborn"
 msgstr ""
-"Affiche les faces quand les particules attachées ne sont pas encore nées."
 
 #: ../../manual/modeling/modifiers/simulate/explode.rst:71
+msgid "Show faces when their attached particles are unborn."
+msgstr "Affiche les faces quand les particules attachées ne sont pas encore nées."
+
+#: ../../manual/modeling/modifiers/simulate/explode.rst:72
 msgid "Alive"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:72
+#: ../../manual/modeling/modifiers/simulate/explode.rst:73
 msgid "Show faces when their attached particles are alive."
 msgstr "Affiche les faces quand les particules attachées sont en vie."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:73
+#: ../../manual/modeling/modifiers/simulate/explode.rst:74
 msgid "Dead"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:74
+#: ../../manual/modeling/modifiers/simulate/explode.rst:75
 msgid "Show faces when their attached particles are dead."
 msgstr "Affiche les faces quand les particules attachées sont mortes."
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:76
+#: ../../manual/modeling/modifiers/simulate/explode.rst:77
 msgid "Size"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:76
+#: ../../manual/modeling/modifiers/simulate/explode.rst:77
 msgid ""
-"Scale each face using the size of its attached particle, once that particle "
-"is alive."
+"Scale each face using the size of its attached particle, once that "
+"particle is alive."
 msgstr ""
 
 #: ../../<generated>:1
 msgid "Refresh"
 msgstr ""
 
-#: ../../manual/modeling/modifiers/simulate/explode.rst:79
+#: ../../manual/modeling/modifiers/simulate/explode.rst:80
 msgid "Refresh data in the *Explode* modifier."
 msgstr "Réactualise les données dans le modificateur *Explode*."
 
 #~ msgid ""
-#~ "The Explode Modifier must come after the Particle System Modifier because "
-#~ "the Particle System Modifier has the information needed to drive the "
-#~ "Explode Modifier."
+#~ "The Explode Modifier must come after "
+#~ "the Particle System Modifier because the"
+#~ " Particle System Modifier has the "
+#~ "information needed to drive the Explode"
+#~ " Modifier."
 #~ msgstr ""
-#~ "le modificateur *Explode* doit venir après le modificateur *Particle "
-#~ "System* parce que le modificateur *Particle System* a l'information "
-#~ "nécessaire pour piloter le modificateur *Explode*."
+#~ "le modificateur *Explode* doit venir "
+#~ "après le modificateur *Particle System* "
+#~ "parce que le modificateur *Particle "
+#~ "System* a l'information nécessaire pour "
+#~ "piloter le modificateur *Explode*."
 
 #~ msgid "UV map to change with particle age."
 #~ msgstr "UV map à modifier avec l'âge des particules.  "
@@ -142,3 +195,13 @@ msgstr "Réactualise les données dans le modificateur *Explode*."
 
 #~ msgid "Use particle size for shrapnel."
 #~ msgstr "Utilise la taille de particule pour le shrapnel."
+
+#~ msgid "Both the number of emitted particles and number of faces determine how "
+#~ msgstr ""
+#~ "Le nombre de particules émises et "
+#~ "le nombre de faces déterminent tous "
+#~ "deux la granularité du *modificateur "
+#~ "Explode*. Plus il y aura de faces"
+#~ " et de particules et plus il y"
+#~ " aura de fragments individualisés."
+
