@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-27 20:49-0600\n"
-"PO-Revision-Date: 2019-07-25 22:05+0800\n"
+"PO-Revision-Date: 2019-12-31 15:45+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: BlenderCN Translation Team\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:5
 #: ../../manual/render/shader_nodes/shader/emission.rst:52
@@ -30,37 +31,39 @@ msgstr "自发光节点。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:12
 msgid ""
-"The *Emission* node is used to add Lambertian emission shader. This can "
-"for example, be used for material and light surface outputs."
+"The *Emission* node is used to add Lambertian emission shader. This can for example, "
+"be used for material and light surface outputs."
 msgstr "*自发光* 节点用于添加朗伯发光着色器。例如，可以用于材质和灯光的表面输出。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:15
 msgid ""
-"Cycles uses a physically correct light falloff by default, whereas "
-"Blender Internal uses a smoothed falloff with a Distance parameter. A "
-"similar effect can be found by using the Light Falloff node with the "
-"Smooth parameter."
-msgstr "默认情况下，Cycles引擎使用物理性正确的光线衰减，Blender内置引擎使用带有距离参数的平滑衰减。使用光线衰减节点的平滑参数可以得到类似的效果。"
+"Cycles uses a physically correct light falloff by default, whereas Blender Internal "
+"uses a smoothed falloff with a Distance parameter. A similar effect can be found by "
+"using the Light Falloff node with the Smooth parameter."
+msgstr ""
+"默认情况下，Cycles引擎使用物理性正确的光线衰减，Blender内置引擎使用带有距离参数的平滑"
+"衰减。使用光线衰减节点的平滑参数可以得到类似的效果。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:19
 msgid ""
-"Light strength for point, spot and area lights is specified in Watts. "
-"This means you typically need higher values than Blender Internal, as you"
-" could not use a 1W light to light a room; you need something stronger "
-"like a 100W light."
-msgstr "点光，聚光和面光的光强使用瓦特为单位。也就是说，在Blender内置引擎中，你须要较高的值来点亮一个空间，1W的灯光可不行，100W还差不多。"
+"Light strength for point, spot and area lights is specified in Watts. This means you "
+"typically need higher values than Blender Internal, as you could not use a 1W light "
+"to light a room; you need something stronger like a 100W light."
+msgstr ""
+"点光，聚光和面光的光强使用瓦特为单位。也就是说，在Blender内置引擎中，你须要较高的值来"
+"点亮一个空间，1W的灯光可不行，100W还差不多。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:23
 msgid ""
-"Sun lights are specified in Watts/m\\ :sup:`2`, which require much "
-"smaller values like 1 W/m\\ :sup:`2`. This can be confusing, but "
-"specifying strength in Watts would not have been convenient; the real sun"
-" for example has strength 384.6×10\\ :sup:`24`\\ W. Emission shaders on "
-"meshes are also in Watts/m\\ :sup:`2`."
+"Sun lights are specified in Watts/m\\ :sup:`2`, which require much smaller values "
+"like 1 W/m\\ :sup:`2`. This can be confusing, but specifying strength in Watts would "
+"not have been convenient; the real sun for example has strength 384.6×10\\ :sup:`24`"
+"\\ W. Emission shaders on meshes are also in Watts/m\\ :sup:`2`."
 msgstr ""
-"日光的强度使用瓦特每平方米(Watts/m\\ :sup:`2`)，因此，较低的数值就够用了。这可能会造成混淆，但如果你知道太阳的真实强度为 "
-"384.6×10\\ :sup:`24`\\ "
-"W，你就会明白，以瓦特为单位指定太阳的强度是多么得不方便。网格的自发光强度单位也使用瓦特每平方米(Watts/m\\ :sup:`2`)。"
+"日光的强度使用瓦特每平方米(Watts/m\\ :sup:`2`)，因此，较低的数值就够用了。这可能会造"
+"成混淆，但如果你知道太阳的真实强度为 384.6×10\\ :sup:`24`\\ W，你就会明白，以瓦特为单"
+"位指定太阳的强度是多么得不方便。网格的自发光强度单位也使用瓦特每平方米(Watts/m\\ :"
+"sup:`2`)。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:30
 msgid "Inputs"
@@ -80,11 +83,12 @@ msgstr "强度"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:35
 msgid ""
-"Strength of the emitted light. For point and area lights, the unit is "
-"Watts. For materials, a value of 1.0 will ensure that the object in the "
-"image has the exact same color as the Color input, i.e. make it "
-"'shadeless'."
-msgstr "自发光的强度。对于点光和面光，其单位为瓦特。对于材质，其值设定为1.0时，可以确保该对象在最终渲染的图中，具有与输入颜色完全相同的颜色，从而对象不具有阴影。"
+"Strength of the emitted light. For point and area lights, the unit is Watts. For "
+"materials, a value of 1.0 will ensure that the object in the image has the exact "
+"same color as the Color input, i.e. make it 'shadeless'."
+msgstr ""
+"自发光的强度。对于点光和面光，其单位为瓦特。对于材质，其值设定为1.0时，可以确保该对象"
+"在最终渲染的图中，具有与输入颜色完全相同的颜色，从而对象不具有阴影。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:41
 msgid "Properties"
@@ -99,14 +103,13 @@ msgid "Outputs"
 msgstr "输出选项"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:50
-#, fuzzy
 msgid ""
-"The Emission shader output can both be plugged into the *Surface Input* "
-"as well as the *Volume Input* of the :doc:`Material Output "
-"</render/shader_nodes/output/material>` node."
+"The Emission shader output can both be plugged into the *Surface Input* as well as "
+"the *Volume Input* of the :doc:`Material Output </render/shader_nodes/output/"
+"material>` node."
 msgstr ""
-"自发光着色器节点输出端可以与 :doc:`材质输出</render/shader_nodes/output/material>` 节点的 "
-"*表(曲)面* 或者*体积(音量)* 输入端相连。"
+"自发光着色器节点输出端可以与 :doc:`材质输出</render/shader_nodes/output/material>` 节"
+"点的 *表(曲)面* 或者*体积(音量)* 输入端相连。"
 
 #: ../../manual/render/shader_nodes/shader/emission.rst:55
 msgid "Examples"
@@ -119,4 +122,3 @@ msgstr "自发光着色器强度设定为1.0时的效果。"
 #: ../../manual/render/shader_nodes/shader/emission.rst:65
 msgid "Emission shader, with strength at 3.0."
 msgstr "自发光着色器强度设定为3.0时的效果。"
-
