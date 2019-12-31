@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Blender 2.77 Manual 2.77\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-27 20:49-0600\n"
-"PO-Revision-Date: 2019-08-10 13:14+0800\n"
+"PO-Revision-Date: 2019-12-31 10:43+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
 "Language-Team: BlenderCN Translation Team\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:4
 msgid "Shader Nodes"
@@ -25,13 +26,13 @@ msgstr "材质节点"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:6
 msgid ""
-"Cycles applies a number of shader node optimizations both at compile time"
-" and run-time. By exploiting them it is possible to design complicated "
-"\"Uber Shader\" style node groups that incur minimal render time overhead"
-" for unused features."
+"Cycles applies a number of shader node optimizations both at compile "
+"time and run-time. By exploiting them it is possible to design "
+"complicated \"Uber Shader\" style node groups that incur minimal render "
+"time overhead for unused features."
 msgstr ""
-"Cycles在编译和运行时都应用了大量材质节点优化。利用它们可以设计复杂的 \"超级材质\" "
-"风格的节点组，这些节点组为未使用的功能带来最少的渲染时间开销。"
+"Cycles在编译和运行时都应用了大量材质节点优化。利用它们可以设计复杂的 \"超"
+"级材质\" 风格的节点组，这些节点组为未使用的功能带来最少的渲染时间开销。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:12
 msgid "Node Optimizations"
@@ -42,7 +43,9 @@ msgid ""
 "As the first step in preparing a node shader for execution, Cycles "
 "expands all node groups, as if using the Ungroup tool, and discards UI "
 "only features like frames and reroute nodes."
-msgstr "作为准备节点着色器执行的第一步，Cycles展开全部的节点组，就像使用取消组工具，丢弃UI 只剩像框架和重新路由节点的特性。"
+msgstr ""
+"作为准备节点着色器执行的第一步，Cycles展开全部的节点组，就像使用取消组工"
+"具，丢弃UI 只剩像框架和重新路由节点的特性。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:18
 msgid ""
@@ -52,9 +55,10 @@ msgstr "此后，应用一些明显的变换。比如，它可以(这个列表�
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:21
 msgid ""
-"Replace the following nodes with the constant result of their evaluation,"
-" if all their inputs are determined to be constant:"
-msgstr "替代下面的节点为它们评估的恒定结果，如果所有的它们的输入是确定不变的:"
+"Replace the following nodes with the constant result of their "
+"evaluation, if all their inputs are determined to be constant:"
+msgstr ""
+"替代下面的节点为它们评估的恒定结果，如果所有的它们的输入是确定不变的:"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:24
 msgid ""
@@ -62,8 +66,8 @@ msgid ""
 "Contrast, Invert, Separate/Combine RGB/XYZ/HSV, Blackbody, RGB Curves, "
 "Vector Curves, Color Ramps."
 msgstr ""
-"RGB，值，混合 RGB，数学，向量数学，RGB 到 BW，Gamma，明反差，反转，分离/组合 RGB/XYZ/HSV，黑体，RGB "
-"曲线，向量曲线，颜色斜坡。"
+"RGB，值，混合 RGB，数学，向量数学，RGB 到 BW，Gamma，明反差，反转，分离/"
+"组合 RGB/XYZ/HSV，黑体，RGB 曲线，向量曲线，颜色斜坡。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:27
 msgid ""
@@ -72,29 +76,35 @@ msgid ""
 "multiplication, division or dot/cross product with a known constant 0 or "
 "1 input, and replace with the appropriate input link or constant result."
 msgstr ""
-"探测混合 "
-"RGB，数学和向量数学节点，这些变得没操作(没有夹具)或者作为与一个已知的常数0或1输入进行加、减、乘、除或内/外积的结果是0，并替代合适的输入链接或常数结果。"
+"探测混合 RGB，数学和向量数学节点，这些变得没操作(没有夹具)或者作为与一个"
+"已知的常数0或1输入进行加、减、乘、除或内/外积的结果是0，并替代合适的输入"
+"链接或常数结果。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:31
 msgid ""
-"Eliminate Mix RGB Mix (without Clamp) and Mix Shader nodes when Factor is"
-" known to be 0 or 1 by replacing with the appropriate input value or "
+"Eliminate Mix RGB Mix (without Clamp) and Mix Shader nodes when Factor "
+"is known to be 0 or 1 by replacing with the appropriate input value or "
 "link."
-msgstr "当用适当的输入值或链接替换，因子已知是0或1时，消除混合RGB混合(没有夹具)和混合材质节点。"
+msgstr ""
+"当用适当的输入值或链接替换，因子已知是0或1时，消除混合RGB混合(没有夹具)和"
+"混合材质节点。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:33
-#, fuzzy
 msgid ""
 "Eliminate no-op Mix RGB (except Color Burn, Dodge, Lighten, or enabled "
 "Clamp), Invert, RGB Curves and Vector Curves nodes with known zero "
 "Factor."
-msgstr "消除无操作混合RGB(除了燃烧，躲避，发亮，或启动夹具)，反转，RGB曲线和具有已知0因子的向量曲线节点。"
+msgstr ""
+"消除无操作混合RGB(除了燃烧，躲避，发亮，或启动钳制)，反转，RGB曲线和具有"
+"已知0因子的矢量曲线节点。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:35
 msgid ""
 "Eliminate Emission and Background shader nodes that do not emit any "
 "light, and Add Shader nodes with one or both input arguments missing."
-msgstr "消除发射和不发射任何光的背景材质节点，和一个或两个输入参数缺失的情况下添加材质节点。"
+msgstr ""
+"消除发射和不发射任何光的背景材质节点，和一个或两个输入参数缺失的情况下添"
+"加材质节点。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:37
 msgid ""
@@ -109,11 +119,10 @@ msgid ""
 msgstr "组合有相同输入的相同节点的多个拷贝成一个实例。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:40
-#, fuzzy
 msgid ""
 "Finally, any nodes that end up not connected either directly or "
 "indirectly to the Output node are removed."
-msgstr "最终，任何最终没有直接或间接连接到输出节点的节点被删除。"
+msgstr "最终，最终没有直接或间接连接到输出节点的节点将被删除。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:44
 msgid "Run-Time Optimizations"
@@ -124,14 +133,18 @@ msgid ""
 "When executing shaders, a special optimization is applied to Mix Shader "
 "nodes. If Factor evaluates to 0 or 1, any nodes that are only reachable "
 "via the unused branch of the mix are not evaluated."
-msgstr "当执行着色器，一个特殊的优化被用于混合材质节点。如果因子评估是0或1，任何只有通过混合的未使用分支才可达的节点不被评估。"
+msgstr ""
+"当执行着色器，一个特殊的优化被用于混合材质节点。如果因子评估是0或1，任何"
+"只有通过混合的未使用分支才可达的节点不被评估。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:49
 msgid ""
 "This can substantially reduce the performance cost of combining multiple "
 "materials in one shader with vertex color, texture, or other input used "
 "as a switch."
-msgstr "这可以本质上减少在一个具有顶点颜色，纹理，和其他输入作为交换的着色器内组合多种材质的运行消耗。"
+msgstr ""
+"这可以本质上减少在一个具有顶点颜色，纹理，和其他输入作为交换的着色器内组"
+"合多种材质的运行消耗。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:54
 msgid "Open Shading Language"
@@ -144,8 +157,9 @@ msgid ""
 "OSL runtime. In the process it applies its own extensive set of "
 "optimizations, both at compile time and run-time."
 msgstr ""
-"如果开放着色语言被选作渲染后端，节点着色器被翻译成开放着色语言代码，然后编译，并通过 OSL "
-"运行时执行。在这个过程，它应用自己的大量优化，包括编译时和运行时。"
+"如果开放着色语言被选作渲染后端，节点着色器被翻译成开放着色语言代码，然后"
+"编译，并通过 OSL 运行时执行。在这个过程，它应用自己的大量优化，包括编译时"
+"和运行时。"
 
 #: ../../manual/render/cycles/optimizations/nodes.rst:60
 msgid ""
@@ -156,7 +170,7 @@ msgid ""
 "generally not be used for passing information forward in the graph; "
 "explicitly passing information through sockets should be preferred."
 msgstr ""
-"开放着色语言可以优化脚本节点，如果它们的输出未使用或不变的，即使它们的 OSL 着色器有令人困惑的调试追踪和消息传递的副作用。因此用 "
-"``setmessage`` 和 ``getmessage`` 的消息传递一般不应该用作在图中向前传递消息；准确地讲，通过套接字 "
-"(sockets)传递消息更好。"
-
+"开放着色语言可以优化脚本节点，如果它们的输出未使用或不变的，即使它们的 "
+"OSL 着色器有令人困惑的调试追踪和消息传递的副作用。因此用 ``setmessage`` "
+"和 ``getmessage`` 的消息传递一般不应该用作在图中向前传递消息；准确地讲，"
+"通过套接字 (sockets)传递消息更好。"
