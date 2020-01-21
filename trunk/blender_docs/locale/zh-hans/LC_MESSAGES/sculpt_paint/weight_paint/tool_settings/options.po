@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-19 23:24+0800\n"
+"POT-Creation-Date: 2020-01-21 13:55-0500\n"
 "PO-Revision-Date: 2019-08-01 22:21+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
@@ -19,38 +19,104 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:4
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:10
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:4
 msgid "Options"
 msgstr "选项"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:6
-msgid "See the :ref:`Brush Display <sculpt-paint-brush-display>` options."
-msgstr "参考 :ref:`笔刷 <sculpt-paint-brush-display>` 选项。"
-
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:15
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:9
 msgid "Paint options."
 msgstr "绘制选项。"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:17
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:11
 msgid "The Weight Paint Options modify the overall brush behavior:"
 msgstr "权重绘制选项控制笔刷的行为："
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:20
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:22
+msgid "Auto Normalize"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:14
+msgid ""
+"Ensures that all deforming vertex groups add up to one while painting. "
+"When this option is turned off, then all weights of a vertex can have any"
+" value between 0.0 and 1.0. However, when Vertex Groups are used as "
+"Deform Groups for character animation then Blender always interprets the "
+"weight values relative to each other. That is, Blender always does a "
+"normalization over all deform bones. Hence in practice it is not "
+"necessary to maintain a strict normalization and further normalizing "
+"weights should not affect animation at all."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:22
+msgid ""
+"This option works most intuitively when used to maintain normalization "
+"while painting on top of weights that are already normalized with some "
+"other tool."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:51
+msgid "Multi-Paint"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:25
+msgid ""
+"Paint on all selected Vertex Groups simultaneously, in a way that "
+"preserves their relative influence. This can be useful when tweaking "
+"weights in an area that is affected by more than three bones at once, "
+"e.g. certain areas on a character's face."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:29
+msgid ""
+"This option is only useful in the Armature tab, where you can select "
+"multiple Vertex Groups by selecting multiple Pose bones. Once at least "
+"two Vertex Groups are selected, viewport colors and paint logic switch to"
+" Multi-Paint Mode, using the sum of the selected groups' weights if Auto "
+"Normalize is enabled, and the average otherwise. Any paint operations "
+"aimed at this collective weight are applied to individual Vertex Group "
+"weights in such way that their ratio stays the same."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:36
+msgid ""
+"Since the ratio is undefined if all weights are zero, Multi-Paint cannot "
+"operate on vertices that do not have any weight assigned to the relevant "
+"Vertex Groups. For this reason it also does not allow reducing the weight"
+" all the way to zero. When used with X Mirror, it only guarantees "
+"completely a symmetrical result if weights are initially symmetrical."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:44
+msgid ""
+"While Multi-Paint cannot directly paint on zero-weight vertices, it is "
+"possible to use the *Smooth Weight* tool to copy a reasonable non-zero "
+"weight distribution from adjacent vertices without leaving Multi-Paint "
+"Mode or changing bone selection."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:49
+msgid ""
+"To do that, enable vertex selection, select target vertices, and apply "
+"one iteration of the tool using vertex groups from *Selected Pose Bones* "
+"with low Factor. After that simply paint on top to set the desired "
+"collective weight."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:54
 msgid "Restrict"
 msgstr "限定"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:20
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:54
 msgid ""
 "This option limits the influence of painting to vertices (even with "
 "weight 0) belonging to the selected vertex group."
 msgstr "控制绘制只对选定顶点组的顶点(即使权重为0)生效。"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:27
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:61
 msgid "X Mirror"
 msgstr "X向镜像"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:23
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:57
 msgid ""
 "Use the X Mirror option for mirrored painting on groups that have "
 "symmetrical names, like with extension \".R\"/ \".L\" or \"_R\" / \"_L\"."
@@ -63,11 +129,11 @@ msgstr ""
 "“_L”。如果一个组没有镜像对应，它将在活动组本身上对称绘制。您可以在 :ref:`骨架编辑: 命名习惯 <armature-editing-"
 "naming-conventions>` 查看更多。骨架/骨骼命名习惯在此也适用。"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:30
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:66
 msgid "Topology Mirror"
 msgstr "拓扑镜像"
 
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:30
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:64
 msgid ""
 "Use topology-based mirroring, for when both sides of a mesh have matching"
 " mirrored topology. See :ref:`here <modeling_meshes_editing_topology-"
@@ -76,15 +142,9 @@ msgstr ""
 "使用拓扑镜像，适用于网格两侧具备匹配的拓扑镜像时。参考 :ref:`这里 <modeling_meshes_editing_topology-"
 "mirror>` 查看更多。"
 
-#: ../../<generated>:1
-msgid "Unified Settings"
-msgstr "统一笔刷"
-
-#: ../../manual/sculpt_paint/weight_paint/tool_settings/options.rst:33
-msgid ""
-"The *Size*, *Strength* and *Weight* of the brush can be set to be shared "
-"across different brushes, as opposed to per brush."
-msgstr "设置不同笔刷为同样的 *尺寸* *强度/力度* 和 *权重*，和单独设置笔刷相反。"
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:70
+msgid "See the :ref:`Brush Display <sculpt-paint-brush-display>` options."
+msgstr "参考 :ref:`笔刷 <sculpt-paint-brush-display>` 选项。"
 
 #~ msgid "Show Zero Weights"
 #~ msgstr "显示零权重"
@@ -114,4 +174,14 @@ msgstr "设置不同笔刷为同样的 *尺寸* *强度/力度* 和 *权重*，�
 
 #~ msgid "All groups."
 #~ msgstr "所有组。"
+
+#~ msgid "Unified Settings"
+#~ msgstr "统一笔刷"
+
+#~ msgid ""
+#~ "The *Size*, *Strength* and *Weight* of"
+#~ " the brush can be set to be "
+#~ "shared across different brushes, as "
+#~ "opposed to per brush."
+#~ msgstr "设置不同笔刷为同样的 *尺寸* *强度/力度* 和 *权重*，和单独设置笔刷相反。"
 
