@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.80 Manual 2.80\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-21 13:55-0500\n"
+"POT-Creation-Date: 2020-01-29 17:18-0500\n"
 "PO-Revision-Date: 2019-08-01 22:21+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
@@ -28,7 +28,8 @@ msgid "Paint options."
 msgstr "绘制选项。"
 
 #: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:11
-msgid "The Weight Paint Options modify the overall brush behavior:"
+#, fuzzy
+msgid "The weight paint options change the overall brush behavior:"
 msgstr "权重绘制选项控制笔刷的行为："
 
 #: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:22
@@ -39,9 +40,9 @@ msgstr ""
 msgid ""
 "Ensures that all deforming vertex groups add up to one while painting. "
 "When this option is turned off, then all weights of a vertex can have any"
-" value between 0.0 and 1.0. However, when Vertex Groups are used as "
-"Deform Groups for character animation then Blender always interprets the "
-"weight values relative to each other. That is, Blender always does a "
+" value between 0 and 1. However, when vertex groups are used as deform "
+"groups for character animation then Blender always interprets the weight "
+"values relative to each other. That is, Blender always does a "
 "normalization over all deform bones. Hence in practice it is not "
 "necessary to maintain a strict normalization and further normalizing "
 "weights should not affect animation at all."
@@ -54,13 +55,13 @@ msgid ""
 "other tool."
 msgstr ""
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:51
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:50
 msgid "Multi-Paint"
 msgstr ""
 
 #: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:25
 msgid ""
-"Paint on all selected Vertex Groups simultaneously, in a way that "
+"Paint on all selected vertex groups simultaneously, in a way that "
 "preserves their relative influence. This can be useful when tweaking "
 "weights in an area that is affected by more than three bones at once, "
 "e.g. certain areas on a character's face."
@@ -68,12 +69,12 @@ msgstr ""
 
 #: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:29
 msgid ""
-"This option is only useful in the Armature tab, where you can select "
-"multiple Vertex Groups by selecting multiple Pose bones. Once at least "
-"two Vertex Groups are selected, viewport colors and paint logic switch to"
-" Multi-Paint Mode, using the sum of the selected groups' weights if Auto "
-"Normalize is enabled, and the average otherwise. Any paint operations "
-"aimed at this collective weight are applied to individual Vertex Group "
+"This option is only useful in the *Armature* tab, where you can select "
+"multiple vertex groups by selecting multiple pose bones. Once at least "
+"two vertex groups are selected, viewport colors and paint logic switch to"
+" Multi-Paint mode, using the sum of the selected groups' weights if *Auto"
+" Normalize* is enabled, and the average otherwise. Any paint operations "
+"aimed at this collective weight are applied to individual vertex group "
 "weights in such way that their ratio stays the same."
 msgstr ""
 
@@ -81,8 +82,8 @@ msgstr ""
 msgid ""
 "Since the ratio is undefined if all weights are zero, Multi-Paint cannot "
 "operate on vertices that do not have any weight assigned to the relevant "
-"Vertex Groups. For this reason it also does not allow reducing the weight"
-" all the way to zero. When used with X Mirror, it only guarantees "
+"vertex groups. For this reason it also does not allow reducing the weight"
+" all the way to zero. When used with *X Mirror*, it only guarantees "
 "completely a symmetrical result if weights are initially symmetrical."
 msgstr ""
 
@@ -91,10 +92,10 @@ msgid ""
 "While Multi-Paint cannot directly paint on zero-weight vertices, it is "
 "possible to use the *Smooth Weight* tool to copy a reasonable non-zero "
 "weight distribution from adjacent vertices without leaving Multi-Paint "
-"Mode or changing bone selection."
+"mode or changing bone selection."
 msgstr ""
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:49
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:48
 msgid ""
 "To do that, enable vertex selection, select target vertices, and apply "
 "one iteration of the tool using vertex groups from *Selected Pose Bones* "
@@ -102,21 +103,21 @@ msgid ""
 "collective weight."
 msgstr ""
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:54
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:53
 msgid "Restrict"
 msgstr "限定"
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:54
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:53
 msgid ""
 "This option limits the influence of painting to vertices (even with "
 "weight 0) belonging to the selected vertex group."
 msgstr "控制绘制只对选定顶点组的顶点(即使权重为0)生效。"
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:61
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:60
 msgid "X Mirror"
 msgstr "X向镜像"
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:57
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:56
 msgid ""
 "Use the X Mirror option for mirrored painting on groups that have "
 "symmetrical names, like with extension \".R\"/ \".L\" or \"_R\" / \"_L\"."
@@ -129,11 +130,11 @@ msgstr ""
 "“_L”。如果一个组没有镜像对应，它将在活动组本身上对称绘制。您可以在 :ref:`骨架编辑: 命名习惯 <armature-editing-"
 "naming-conventions>` 查看更多。骨架/骨骼命名习惯在此也适用。"
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:66
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:65
 msgid "Topology Mirror"
 msgstr "拓扑镜像"
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:64
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:63
 msgid ""
 "Use topology-based mirroring, for when both sides of a mesh have matching"
 " mirrored topology. See :ref:`here <modeling_meshes_editing_topology-"
@@ -142,7 +143,7 @@ msgstr ""
 "使用拓扑镜像，适用于网格两侧具备匹配的拓扑镜像时。参考 :ref:`这里 <modeling_meshes_editing_topology-"
 "mirror>` 查看更多。"
 
-#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:70
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/sculpt_paint/weight_paint/tool_settings/options.rst:69
 msgid "See the :ref:`Brush Display <sculpt-paint-brush-display>` options."
 msgstr "参考 :ref:`笔刷 <sculpt-paint-brush-display>` 选项。"
 
@@ -184,4 +185,73 @@ msgstr "参考 :ref:`笔刷 <sculpt-paint-brush-display>` 选项。"
 #~ "shared across different brushes, as "
 #~ "opposed to per brush."
 #~ msgstr "设置不同笔刷为同样的 *尺寸* *强度/力度* 和 *权重*，和单独设置笔刷相反。"
+
+#~ msgid ""
+#~ "Ensures that all deforming vertex groups"
+#~ " add up to one while painting. "
+#~ "When this option is turned off, "
+#~ "then all weights of a vertex can"
+#~ " have any value between 0.0 and "
+#~ "1.0. However, when Vertex Groups are "
+#~ "used as Deform Groups for character "
+#~ "animation then Blender always interprets "
+#~ "the weight values relative to each "
+#~ "other. That is, Blender always does "
+#~ "a normalization over all deform bones."
+#~ " Hence in practice it is not "
+#~ "necessary to maintain a strict "
+#~ "normalization and further normalizing weights"
+#~ " should not affect animation at all."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Paint on all selected Vertex Groups "
+#~ "simultaneously, in a way that preserves"
+#~ " their relative influence. This can "
+#~ "be useful when tweaking weights in "
+#~ "an area that is affected by more"
+#~ " than three bones at once, e.g. "
+#~ "certain areas on a character's face."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This option is only useful in the"
+#~ " Armature tab, where you can select"
+#~ " multiple Vertex Groups by selecting "
+#~ "multiple Pose bones. Once at least "
+#~ "two Vertex Groups are selected, viewport"
+#~ " colors and paint logic switch to "
+#~ "Multi-Paint Mode, using the sum of"
+#~ " the selected groups' weights if Auto"
+#~ " Normalize is enabled, and the "
+#~ "average otherwise. Any paint operations "
+#~ "aimed at this collective weight are "
+#~ "applied to individual Vertex Group "
+#~ "weights in such way that their "
+#~ "ratio stays the same."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Since the ratio is undefined if "
+#~ "all weights are zero, Multi-Paint "
+#~ "cannot operate on vertices that do "
+#~ "not have any weight assigned to "
+#~ "the relevant Vertex Groups. For this "
+#~ "reason it also does not allow "
+#~ "reducing the weight all the way to"
+#~ " zero. When used with X Mirror, "
+#~ "it only guarantees completely a "
+#~ "symmetrical result if weights are "
+#~ "initially symmetrical."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "While Multi-Paint cannot directly paint"
+#~ " on zero-weight vertices, it is "
+#~ "possible to use the *Smooth Weight* "
+#~ "tool to copy a reasonable non-zero"
+#~ " weight distribution from adjacent vertices"
+#~ " without leaving Multi-Paint Mode or"
+#~ " changing bone selection."
+#~ msgstr ""
 

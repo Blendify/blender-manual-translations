@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender 2.78 Manual 2.78\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-30 09:48+1000\n"
+"POT-Creation-Date: 2020-01-29 17:18-0500\n"
 "PO-Revision-Date: 2019-04-27 09:03+0200\n"
 "Last-Translator: phan <phahoatho@gmail.com>\n"
 "Language-Team: français <bf-docboard@blender.org>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../manual/render/layers/denoising.rst:4
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:4
 msgid "Denoising"
 msgstr "Denoising (débruitage)"
 
-#: ../../manual/render/layers/denoising.rst:6
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:6
 msgid "Reference"
 msgstr "Référence"
 
-#: ../../manual/render/layers/denoising.rst
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst
 msgid "Panel"
 msgstr "Panneau "
 
-#: ../../manual/render/layers/denoising.rst:9
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:9
 msgid ":menuselection:`Render Layers --> Denoising`"
 msgstr ""
 
-#: ../../manual/render/layers/denoising.rst:11
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:11
 msgid ""
 "Denoising filters the resulting image using information (known as feature"
 " passes) gathered during rendering to get rid of noise, while preserving "
@@ -44,11 +44,11 @@ msgstr ""
 "(connues comme passes ) rassemblées pendant le rendu pour se débarrasser "
 "du bruit, tout en préservant les détails visuels autant que possible."
 
-#: ../../manual/render/layers/denoising.rst:16
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:16
 msgid "The denoising panel is only available for the Cycles render engine."
 msgstr ""
 
-#: ../../manual/render/layers/denoising.rst:18
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:18
 msgid ""
 "To use the option, enable it in the render layers tab of the Properties "
 "editor. On rendering, it will denoise tile by tile once all the "
@@ -64,7 +64,7 @@ msgstr ""
 "fignoler des réglages individuels pour trouver le bon compromis entre une"
 " image exempte de bruit, les détails d'image, et le temps de calcul."
 
-#: ../../manual/render/layers/denoising.rst:25
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:25
 #, fuzzy
 msgid ""
 "See the other ways to reduce noise on the general :doc:`Noise "
@@ -74,19 +74,58 @@ msgstr ""
 "d':doc:`Optimisation du bruit "
 "</render/cycles/optimizations/reducing_noise>`__."
 
-#: ../../manual/render/layers/denoising.rst:30
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:30
 msgid "Options"
 msgstr ""
 
-#: ../../manual/render/layers/denoising.rst:34
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:34
 msgid "Denoising panel."
 msgstr "Panneau Denoising."
 
-#: ../../manual/render/layers/denoising.rst:37
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:53
+msgid "Optix AI Denoising"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:37
+msgid ""
+"Uses an artificial intelligence algorithm to remove noise from renders. "
+"It is based on the :ref:`render-cycles-gpu-optix` acceleration engine and"
+" therefore has the same GPU requirements as rendering with Optix."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:41
+msgid ""
+"*Optix AI Denoising* can be enabled when one or more compatible Optix "
+"GPUs are selected in the :ref:`System Preferences "
+"<editors_preferences_cycles>`."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:44
+msgid ""
+"This denoiser is less suited for animations, because it is not "
+"temporarily stable, but is considerably faster than the other denoising "
+"options and therefore especially useful to denoise previews or final "
+"single-frame images with high quality."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:53
+msgid "Input Passes"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:49
+msgid ""
+"Controls which :ref:`passes <render-cycles-passes>` the OptiX AI denoiser"
+" should use as input, which can have different effects on the denoised "
+"image. Generally, the more passes the denoiser has to denoise the better "
+"the result. It is recommended to at least use *Color + Albedo* as just "
+"*Color* can blur out details, especially at lower sample counts."
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:61
 msgid "Radius"
 msgstr ""
 
-#: ../../manual/render/layers/denoising.rst:37
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:56
 msgid ""
 "Size of the image area that is used to denoise a pixel. Higher values are"
 " smoother, but might lose detail and are slower."
@@ -95,85 +134,7 @@ msgstr ""
 "valeurs élevées donnent des images plus lisses, mais pourraient faire "
 "perdre des détails et les rendus sont plus lents."
 
-#: ../../manual/render/layers/denoising.rst:41
-msgid "Strength"
-msgstr ""
-
-#: ../../manual/render/layers/denoising.rst:40
-msgid ""
-"Controls how different the area around a neighbor pixel can look compared"
-" to the center pixel before it's no longer used for denoising. Lower "
-"values preserve more detail, but aren't as smooth."
-msgstr ""
-"Contrôle à quoi peut ressembler la zone autour d'un pixel voisin, "
-"comparée au pixel central avant qu'il ne soit plus utilisé pour le "
-"débruitage. Des valeurs basses préservent plus de détails, mais ne sont "
-"pas aussi lisses."
-
-#: ../../manual/render/layers/denoising.rst:46
-msgid "Feature Strength"
-msgstr ""
-
-#: ../../manual/render/layers/denoising.rst:44
-msgid ""
-"Controls removal of noisy and redundant image feature passes before the "
-"actual denoising. This is required in some cases like DoF or Motion Blur "
-"to avoid splotchy results, but might cause fine texture/geometrical "
-"detail to be lost. Lower values preserve more detail, but aren't as "
-"smooth."
-msgstr ""
-"Contrôle la suppression des passes de fonction d'image bruitée et "
-"redondante avant le débruitage réel. Ceci est requis dans certains cas "
-"comme la *DoF* (profondeur de champ) ou le *Motion Blur* (flou de "
-"mouvement) pour éviter des résultats sous forme de taches, mais pourrait "
-"faire perdre des détails fins de texture/géométrie. Des valeurs basses "
-"préservent plus de détails, mais ne sont pas aussi lisses."
-
-#: ../../manual/render/layers/denoising.rst:50
-msgid "Relative Filter"
-msgstr ""
-
-#: ../../manual/render/layers/denoising.rst:49
-msgid ""
-"When removing features that don't carry information, decide which to keep"
-" based on the total amount of information in the features. This can help "
-"to reduce artifacts, but might cause detail loss around edges."
-msgstr ""
-"Pendant la suppression d'éléments qui ne portent pas d'information, "
-"décidez de ce qui est à garder en vous basant sur la quantité totale "
-"d'informations dans les éléments. Ceci peut contribuer à réduire les "
-"artefacts, mais pourrait entraîner une perte de détails autour des bords."
-
-#: ../../manual/render/layers/denoising.rst:55
-msgid "Passes"
-msgstr ""
-
-#: ../../manual/render/layers/denoising.rst:53
-#, fuzzy
-msgid ""
-"You can choose to selectively choose which :doc:`Render Passes "
-"</render/layers/passes>` you want to denoise."
-msgstr ""
-"Vous pouvez opter pour choisir sélectivement les :doc:`Passes de rendu "
-"</render/cycles/settings/scene/render_layers/passes>` que vous voulez "
-"débruiter."
-
-#: ../../manual/render/layers/denoising.rst:58
-msgid "Notes and Issues"
-msgstr "Notes et problèmes"
-
-#: ../../manual/render/layers/denoising.rst:60
-msgid ""
-"The denoiser will change in the future and some features are not "
-"implemented yet. If denoising fails to produce good results, more samples"
-" or clamping will often resolve the issue."
-msgstr ""
-"Le débruiteur va changer dans le futur et certaines fonctions ne sont pas"
-" encore implémentées. Si le débruitage échoue à donner de bons résultats,"
-" un plus grand nombre d'échantillons ou le *clamping* vont souvent "
-"résoudre le problème. "
-
-#: ../../manual/render/layers/denoising.rst:63
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:59
 msgid ""
 "Setting the radius too high is generally not advisable. It increases "
 "denoising time a lot and, while the result might be smoother, it is not "
@@ -188,11 +149,89 @@ msgstr ""
 "rayon d'environ 15, le temps de rendu supplémentaire est probablement "
 "mieux investi en augmentant le nombre d'échantillons."
 
-#: ../../manual/render/layers/denoising.rst:67
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:65
+msgid "Strength"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:64
+msgid ""
+"Controls how different the area around a neighbor pixel can look compared"
+" to the center pixel before it's no longer used for denoising. Lower "
+"values preserve more detail, but aren't as smooth."
+msgstr ""
+"Contrôle à quoi peut ressembler la zone autour d'un pixel voisin, "
+"comparée au pixel central avant qu'il ne soit plus utilisé pour le "
+"débruitage. Des valeurs basses préservent plus de détails, mais ne sont "
+"pas aussi lisses."
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:70
+msgid "Feature Strength"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:68
+msgid ""
+"Controls removal of noisy and redundant image feature passes before the "
+"actual denoising. This is required in some cases like DoF or Motion Blur "
+"to avoid splotchy results, but might cause fine texture/geometrical "
+"detail to be lost. Lower values preserve more detail, but aren't as "
+"smooth."
+msgstr ""
+"Contrôle la suppression des passes de fonction d'image bruitée et "
+"redondante avant le débruitage réel. Ceci est requis dans certains cas "
+"comme la *DoF* (profondeur de champ) ou le *Motion Blur* (flou de "
+"mouvement) pour éviter des résultats sous forme de taches, mais pourrait "
+"faire perdre des détails fins de texture/géométrie. Des valeurs basses "
+"préservent plus de détails, mais ne sont pas aussi lisses."
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:74
+msgid "Relative Filter"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:73
+msgid ""
+"When removing features that don't carry information, decide which to keep"
+" based on the total amount of information in the features. This can help "
+"to reduce artifacts, but might cause detail loss around edges."
+msgstr ""
+"Pendant la suppression d'éléments qui ne portent pas d'information, "
+"décidez de ce qui est à garder en vous basant sur la quantité totale "
+"d'informations dans les éléments. Ceci peut contribuer à réduire les "
+"artefacts, mais pourrait entraîner une perte de détails autour des bords."
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:79
+msgid "Passes"
+msgstr ""
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:77
+#, fuzzy
+msgid ""
+"You can choose to selectively choose which :doc:`Render Passes "
+"</render/layers/passes>` you want to denoise."
+msgstr ""
+"Vous pouvez opter pour choisir sélectivement les :doc:`Passes de rendu "
+"</render/cycles/settings/scene/render_layers/passes>` que vous voulez "
+"débruiter."
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:82
+msgid "Notes and Issues"
+msgstr "Notes et problèmes"
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:84
+msgid ""
+"The denoiser will change in the future and some features are not "
+"implemented yet. If denoising fails to produce good results, more samples"
+" or clamping will often resolve the issue."
+msgstr ""
+"Le débruiteur va changer dans le futur et certaines fonctions ne sont pas"
+" encore implémentées. Si le débruitage échoue à donner de bons résultats,"
+" un plus grand nombre d'échantillons ou le *clamping* vont souvent "
+"résoudre le problème. "
+
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:87
 msgid "Denoising cannot be used for baking yet."
 msgstr "Le débruitage ne peut pas être encore utilisé pour le précalcul."
 
-#: ../../manual/render/layers/denoising.rst:68
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:88
 #, fuzzy
 msgid ""
 "For animation denoising can be used, however it still requires high "
@@ -206,22 +245,23 @@ msgstr ""
 "être visible en animation, même si ce n'est pas immédiatement apparent "
 "dans les images fixes."
 
-#: ../../manual/render/layers/denoising.rst:71
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:91
+#, fuzzy
 msgid ""
-"When using GPU rendering, the denoising process may use a significant "
-"amount of vRAM. If the GPU runs out of memory but renders fine without "
-"denoising, try reducing the tile size."
+"When using GPU rendering, the denoising (non Optix) process may use a "
+"significant amount of vRAM. If the GPU runs out of memory but renders "
+"fine without denoising, try reducing the tile size."
 msgstr ""
 "Pendant le rendu GPU, le processus de débruitage peut utiliser une "
 "quantité significative de vRAM. Si le GPU se trouve en manque de mémoire "
 "mais fait un bon rendu sans débruitage, essayez de réduire la taille du "
 "*tile*."
 
-#: ../../manual/render/layers/denoising.rst:76
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:96
 msgid "Examples"
 msgstr "Exemples"
 
-#: ../../manual/render/layers/denoising.rst:78
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:98
 msgid ""
 "Below is an example render by `The Pixelary "
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
@@ -231,11 +271,11 @@ msgstr ""
 "<http://blog.thepixelary.com/post/160451378592/denoising-in-cycles-"
 "tested>`__."
 
-#: ../../manual/render/layers/denoising.rst:85
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:105
 msgid "Example render before denoising."
 msgstr "Exemple de rendu avant débruitage."
 
-#: ../../manual/render/layers/denoising.rst:89
+#: C:/Users/Aaron/Documents/Projects/Blender_Foundation/blender_docs/manual/render/layers/denoising.rst:109
 msgid "Example render after denoising."
 msgstr "Exemple de rendu après débruitage."
 
